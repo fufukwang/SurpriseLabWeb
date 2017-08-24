@@ -1,0 +1,74 @@
+@import url(http://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+body {
+  
+  font-family: "helvetica Neue", helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.countdown {
+  max-width: 470px;
+  margin: 0 auto;
+    padding-top: 1px;
+}
+.countdown h1 {
+  padding: 70px 0 10px;
+    margin-bottom: 15px;
+    color: #444;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 7px;
+}
+
+.countdown h2 {
+    color: #555;
+    font-size: 22px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    margin: 0 auto;
+}
+
+.countdown h5 {
+    color: #555;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    margin: 3px auto;
+}
+
+.countdown .date {
+  width: 23%;
+  margin: 1%;
+  padding: 2%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  display: block;
+  float: left;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  color: #6d6d6d;
+  margin-top: 35px;
+    margin-bottom: 30px;
+  background-color: white;
+}
+.countdown .date-amount, .countdown .integer {
+  display: block;
+}
+.countdown .integer {
+  font-size: 4em;
+}
+.countdown .date-amount {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}

@@ -1,0 +1,125 @@
+@media (min-width: 1680) {
+  /* line 6, ../sass/media.scss */
+  .folks {
+    background: url(../images/cut1-intro/24.png) !important;
+  }
+}
+@media (max-width: 1481px) {
+  /* line 13, ../sass/media.scss */
+  .folks {
+    background: url(../images/cut1-intro/15.png) !important;
+  }
+}
+@media (max-width: 1281px) {
+  /* line 20, ../sass/media.scss */
+  .folks {
+    background: url(../images/cut1-intro/13.png) !important;
+  }
+}
+@media (max-width: 990px) {
+  /* line 30, ../sass/media.scss */
+  .footer-section {
+    padding: 25px 10px;
+  }
+
+  /* line 34, ../sass/media.scss */
+  .footer-container-md {
+    display: none;
+  }
+
+  /* line 39, ../sass/media.scss */
+  .footer-container-xs ul {
+    text-align: left;
+  }
+  /* line 43, ../sass/media.scss */
+  .footer-container-xs .copyright {
+    bottom: 15px !important;
+  }
+
+  /* line 48, ../sass/media.scss */
+  .folks {
+    background: url(../images/cut1-intro/pad.png) !important;
+  }
+}
+@media (max-width: 776px) {
+  /* line 56, ../sass/media.scss */
+  .main-container {
+    padding: 45px 15px;
+  }
+
+  /* line 60, ../sass/media.scss */
+  .folks {
+    background: url(../images/cut1-intro/phone.png) !important;
+  }
+
+  /* line 64, ../sass/media.scss */
+  .chef-flex {
+    display: block;
+    text-align: center;
+  }
+  /* line 68, ../sass/media.scss */
+  .chef-flex > .chef-photo {
+    height: 300px;
+    width: 220px;
+    margin: 0 auto 45px;
+  }
+  /* line 74, ../sass/media.scss */
+  .chef-flex .chef-info {
+    padding: 0px;
+  }
+  /* line 78, ../sass/media.scss */
+  .chef-flex > div {
+    text-align: center;
+  }
+
+  /* line 85, ../sass/media.scss */
+  .contact-section .contact-alert-container {
+    display: block;
+    margin: 0 15px;
+  }
+  /* line 88, ../sass/media.scss */
+  .contact-section .contact-alert-container .left-box {
+    padding-bottom: 25px;
+  }
+  /* line 90, ../sass/media.scss */
+  .contact-section .contact-alert-container .left-box:after {
+    display: none;
+  }
+
+  /* line 99, ../sass/media.scss */
+  .rules-section .main-container {
+    padding: 55px 15px 25px;
+  }
+  /* line 104, ../sass/media.scss */
+  .rules-section .pull-left span {
+    padding-left: 0px !important;
+  }
+  /* line 112, ../sass/media.scss */
+  .rules-section .btn-standard {
+    margin: 45px auto 15px;
+  }
+
+  /* line 116, ../sass/media.scss */
+  .main-slogan {
+    margin-top: 120px !important;
+  }
+  /* line 118, ../sass/media.scss */
+  .main-slogan .slogan-img {
+    left: 0px !important;
+    width: 100%;
+    text-align: center;
+  }
+  /* line 123, ../sass/media.scss */
+  .main-slogan .slogan-img img {
+    width: 100%;
+  }
+  /* line 128, ../sass/media.scss */
+  .main-slogan .landing-btn {
+    opacity: 1 !important;
+  }
+
+  /* line 134, ../sass/media.scss */
+  .contact-section .btn-standard {
+    margin: 0 auto;
+  }
+}
