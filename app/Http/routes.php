@@ -10,6 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+if(App::environment('local')) {
+    $url = 'suprise.dev';
+}else if(App::environment('tester')) {
+    $url = 'hellokiki.info';
+}else if(App::environment('production')) {
+    $url = 'surpriselab.com.tw';
+}else {
+    $url = '';
+}
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,13 +35,11 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
+// 管理
+Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
+    // deploy 
+    Route::post('/deploy/suprise', 'DeployController@supriseDeploy'); 
 
-    /*surprise*/
-    Route::resource('/','SurpriseController');
-    Route::get('/about','SurpriseController@about');
-    Route::get('/complete','SurpriseController@complete');
-    Route::get('/fail','SurpriseController@fail');
     /*backstage login*/
     Route::get('login','LoginController@index'); //連結資料，基本的連結 response
     Route::post('login','LoginController@session'); //接收post資料
@@ -60,9 +67,37 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('contactstore','BackendController@contactstore');
     Route::delete('contact/{cid}/delete','BackendController@deleteContact');
 
-    //Route::get('test3',function(){ return view('backstage.order.list'); });
-    //Route::get('test4',function(){ return view('backstage.order.edit'); });
+    Route::group(['prefix' => 'TableForOne'], function(){
+        // 場次
+        Route::get('rooms','TFO\BackController@Rooms');
+        Route::get('room/{id}/edit','TFO\BackController@RoomEdit');
+        Route::post('room/{id}/update','TFO\BackController@RoomUpdate');
+        Route::delete('room/{id}/delete','TFO\BackController@RoomDelete');
 
+        // 訂單
+        Route::get('orders/{id}','TFO\BackController@Orders');
+        Route::get('order/{id}/edit','TFO\BackController@OrderEdit');
+        Route::post('order/{id}/update','TFO\BackController@OrderUpdate');
+        Route::delete('order/{id}/delete','TFO\BackController@OrderDelete');
+
+        // Gift
+        Route::get('gifts','TFO\BackController@Gifts');
+        Route::get('gift/{id}/edit','TFO\BackController@GiftEdit');
+        Route::post('gift/{id}/update','TFO\BackController@GiftUpdate');
+        Route::delete('gift/{id}/delete','TFO\BackController@GiftDelete');
+
+        // 報表列印
+        Route::get('print','TFO\BackController@Print');
+    });
+});
+
+
+Route::group(['middleware' => ['web']], function () {
+    /*surprise*/
+    Route::resource('/','SurpriseController');
+    Route::get('/about','SurpriseController@about');
+    Route::get('/complete','SurpriseController@complete');
+    Route::get('/fail','SurpriseController@fail');
     /* frontend */
     Route::group(['prefix' => 'dininginthedark'], function(){
         Route::get('about.html',function(){ return view('frontend.about'); });
@@ -105,4 +140,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('storeres','HomeController@storeres');
     Route::post('checkres','HomeController@checkres');
     
+});
+
+
+
+/********************************
+*****    TableForOne     ********
+********************************/
+Route::group(['prefix' => 'TableForOne','middleware' => ['web']], function(){
+
+
 });

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
     <meta name="author" content="Coderthemes">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" href="/surprise/images/favi.png" >
     <title>Surprise Lab</title>
@@ -84,17 +85,24 @@
                         <a href="/admin"><i class="md md-dashboard"></i>Admin</a>
                     </li>
                     <li class="has-submenu">
-                        <a href="/email"><i class="md md-dashboard"></i>Email</a>
+                        <a href="#"><i class="md md-color-lens"></i>dininginthedark</a>
+                        <ul class="submenu">
+                            <li><a href="/acts">Activaty</a></li>
+                            <li><a href="/printdaily">Print Daily</a></li>
+                        </ul>
                     </li>
                     <li class="has-submenu">
-                        <a href="/acts"><i class="md md-dashboard"></i>Activaty</a>
+                        <a href="#"><i class="md md-invert-colors-on"></i>Table For ONe</a>
+                        <ul class="submenu">
+                            <li><a href="/TableForOne/rooms">Activaty</a></li>
+                            <li><a href="/TableForOne/gift">Gift Card</a></li>
+                            <li><a href="/TableForOne/print">Order</a></li>
+                        </ul>
                     </li>
-                    <li class="has-submenu">
-                        <a href="/contacts"><i class="md md-dashboard"></i>Contacts</a>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="/printdaily"><i class="md md-dashboard"></i>Print Daily</a>
-                    </li>
+                    <li class="has-submenu"><a href="/email"><i class="md md-email"></i>Email</a></li>
+                    <li class="has-submenu"><a href="/contacts"><i class="md md-quick-contacts-mail"></i>Contacts</a></li>
+
+
                 </ul>
                 <!-- End navigation menu -->
             </div>

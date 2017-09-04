@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Mailchimp\MailchimpServiceProvider::class,
         'Maatwebsite\Excel\ExcelServiceProvider',
+        flamelin\ECPay\EcpayServiceProvider::class,
     ],
 
     /*
@@ -204,6 +205,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'MC' => Mailchimp\MailchimpFacade::class,
         'Excel' => 'Maatwebsite\Excel\Facades\Excel',
+        'Ecpay' => flamelin\ECPay\Facade\Ecpay::class,
     ],
 
 ];
