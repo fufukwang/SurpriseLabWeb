@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">營業日 <a href="/TableForOne/room/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a></h4>
+                        <h4 class="page-title">營業日 <a href="/TableForOne/gift/0/edit" class="btn btn-primary waves-effect waves-light">新增禮物卡 <i class="fa fa-plus"></i></a></h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -59,7 +59,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-@forelse ($gift as $row)
+@forelse ($gifts as $row)
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->day }}</td>
                                                 <td>{{ $row->day }}</td>
@@ -85,7 +85,7 @@
                                     </table>
 
 
-                                    <div class="text-align-center">{{ $gift->links() }}</div>
+                                    <div class="text-align-center">{{ $gifts->links() }}</div>
                                 </div></div>
 
                             </div>
@@ -125,6 +125,7 @@
 @include('backstage.jquery')
 <link href="/backstage/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
 <script src="/backstage/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="/backstage/plugins/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-TW.min.js"></script>
 <link href="/backstage/plugins/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
 
 <!-- Examples -->
@@ -142,7 +143,7 @@
         <script src="/backstage/js/jquery.app.js"></script>
 
         <script>
-        $('#datatable').dataTable();
+        //$('#datatable').dataTable();
 			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 $(function(){
     $('.btn-danger').bind('click',function(){
@@ -161,7 +162,9 @@ $(function(){
     jQuery('#datepicker-autoclose').datepicker({
         format: "yyyy-mm-dd",
         autoclose: true,
-        todayHighlight: true
+        todayHighlight: true,
+        orientation:'top',
+        language: 'zh-TW',
     });
 
 });

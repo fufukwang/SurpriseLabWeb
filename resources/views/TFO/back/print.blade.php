@@ -50,11 +50,10 @@
                                                     <option value="信用卡">信用卡</option>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-1">
-                                                <label>顯示電話</label>
-                                                <input name="Psn" value="1" type="checkbox" checked data-plugin="switchery" data-color="#ffaa00"/>
-
-                                            </div>
+<div class="form-group col-sm-1"><div class="checkbox checkbox-primary"><input name="notel" value="1" id="none1" type="checkbox"@if($request->notel == 1) checked @endif><label for="none1">不顯示電話</label></div></div>
+<div class="form-group col-sm-1"><div class="checkbox checkbox-primary"><input name="notool" value="1" id="none2" type="checkbox"@if($request->notool == 1) checked @endif><label for="none2">不顯示功能</label></div></div>
+<div class="form-group col-sm-1"><div class="checkbox checkbox-primary"><input name="noemail" value="1" id="none3" type="checkbox"@if($request->noemail == 1) checked @endif><label for="none3">不顯示信箱</label></div></div>
+ 
 
                                             <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
 
@@ -66,10 +65,10 @@
                                             <tr>
                                                 <th>序號</th>
                                                 <th>姓名</th>
-                                                <th>電話</th>
-                                                <th>信箱</th>
+                                                @if($request->notel != 1)<th>電話</th>@endif
+                                                @if($request->noemail != 1)<th>信箱</th>@endif
                                                 <th>付款狀態</th>
-                                                <th data-orderable="false">功能</th>
+                                                @if($request->notool != 1)<th data-orderable="false">功能</th>@endif
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -77,12 +76,13 @@
                                             <tr>
                                                 <td>{{ $row->sn }}</td>
                                                 <td>{{ $row->name }}</td>
-                                                <td>{{ $row->tel }}</td>
-                                                <td>{{ $row->email }}</td>
-                                                <td class="actions">
+                                                @if($request->notel != 1)<td>{{ $row->tel }}</td>@endif
+                                                @if($request->noemail != 1)<td>{{ $row->email }}</td>@endif
+                                                <td>{{ $row->paystatus }}</td>
+                                                @if($request->notool != 1)<td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/TableForOne/order/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
-                                                </td>
+                                                </td>@endif
                                             </tr>
 @empty
 <tr><td colspan="6" align="center">尚無資料</td></tr>
@@ -155,9 +155,10 @@
         <script src="/backstage/plugins/datatables/dataTables.responsive.min.js"></script>
         <script src="/backstage/plugins/datatables/responsive.bootstrap.min.js"></script>
         <script src="/backstage/plugins/datatables/dataTables.scroller.min.js"></script>
+        <!--
 <link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
 <script src="/backstage/plugins/switchery/switchery.min.js"></script>
-
+    -->
 
 
         <script src="/backstage/js/jquery.core.js"></script>

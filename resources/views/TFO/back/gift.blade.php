@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>訂單內容</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>禮物卡</b></h4>
                                 </div>
                             </div>
 
@@ -23,18 +23,44 @@
 {!! csrf_field() !!}
 
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">姓名</label>
+                                                <label class="control-label col-sm-4">收禮人姓名</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" readonly value="{{ $order->name or ''  }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">收禮人電話</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" readonly value="{{ $order->name or ''  }}">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">寄送方式</label>
+                                                <div class="col-sm-8">
+                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="EMail" id="none1" type="radio" checked><label for="none1">EMail</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="in" id="none2" type="radio"><label for="none2">國內地址</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="out" id="none3" type="radio" disabled><label for="none3">國外地址</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4"></label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" value="{{ $order->name or ''  }}">
                                                 </div>
                                             </div>
 
 
 
 
-
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">管理</label>
+                                                <label class="control-label col-sm-4">邀請文字</label>
+                                                <div class="col-sm-8">
+                                                    <textarea class="form-control" name="manage" style="min-height:120px;">{{ $order->manage or '' }}</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">收禮人背景</label>
                                                 <div class="col-sm-8">
                                                     <textarea class="form-control" name="manage" style="min-height:120px;">{{ $order->manage or '' }}</textarea>
                                                 </div>

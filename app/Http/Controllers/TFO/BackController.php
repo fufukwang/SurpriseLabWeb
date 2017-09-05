@@ -147,10 +147,10 @@ class BackController extends Controller
     }
 
     // 禮物卡
-    public function Gifts(Request $request,$id){
-        $order = TFOOrder::orderBy('updated_at','desc');
-        $order = $order->paginate($this->perpage);
-        return view('TFO.back.orders',compact('order'));
+    public function Gifts(Request $request){
+        $gifts = TFOOrder::orderBy('updated_at','desc');
+        $gifts = $gifts->paginate($this->perpage);
+        return view('TFO.back.gifts',compact('gifts'));
     }
     public function GiftEdit(Request $request,$id){
         $order = collect();
@@ -161,7 +161,7 @@ class BackController extends Controller
                 abort(404);
             }
         }
-        return view('TFO.back.orderEdit',compact('order'));
+        return view('TFO.back.gift',compact('order'));
     }
     public function GiftUpdate(Request $request,$id){
 
@@ -200,6 +200,6 @@ class BackController extends Controller
         $order = $order->get();
         
 
-        return view('TFO.back.print',compact('order'));
+        return view('TFO.back.print',compact('order','request'));
     }
 }

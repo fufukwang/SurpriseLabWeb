@@ -95,7 +95,7 @@
                         <a href="#"><i class="md md-invert-colors-on"></i>Table For ONe</a>
                         <ul class="submenu">
                             <li><a href="/TableForOne/rooms">Activaty</a></li>
-                            <li><a href="/TableForOne/gift">Gift Card</a></li>
+                            <li><a href="/TableForOne/gifts">Gift Card</a></li>
                             <li><a href="/TableForOne/print">Order</a></li>
                         </ul>
                     </li>
