@@ -14,5 +14,6 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [
         '/dininginthedark/getPayDone',
         '/dininginthedark/en/getPayDone',
+        '/deploy/suprise',
     ];
 }
