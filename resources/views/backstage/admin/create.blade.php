@@ -25,6 +25,18 @@
                                 <label for="userName">account*</label>
                                 <input type="text" name="account" parsley-trigger="change" required placeholder="account" class="form-control" id="userName">
                             </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>power admin</label>
+                                        <input type="checkbox" data-plugin="switchery" name="admin" value="1" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>gift add</label>
+                                        <input type="checkbox" data-plugin="switchery" name="giftadd" value="1" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">

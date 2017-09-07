@@ -27,7 +27,7 @@ class LoginController extends Controller
         if($auth==1){
             //將登入訊息寫入sesson
             $request->session()->put('key',admin::where('account',$input['account'])->where('password',md5($input['password']))->first());
-            return redirect('/admin');
+            return redirect('/welcome');
         } else {
             return redirect('/login')->withErrors(['fail'=>'username or password error']);
         }

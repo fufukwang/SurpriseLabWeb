@@ -29,8 +29,11 @@
                     <table class="table table-striped" id="datatable-editable">
                         <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Creatdate</th>
+                            <th>Power Admin</th>
+                            <th>Gift Add</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -40,6 +43,9 @@
                             <td>{{$row->id}}</td>
                                 <td>{{$row->account}}</td>
                                 <td>{{$row->created_at}}</td>
+                                <td>@if($row->admin) yes @else no @endif</td>
+                                <td>@if($row->giftadd) yes @else no @endif</td>
+
                             <td class="actions">
                                 <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
                                 <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>

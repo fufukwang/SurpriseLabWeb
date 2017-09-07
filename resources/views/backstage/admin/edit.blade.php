@@ -24,6 +24,18 @@
                                     <label for="userName">account</label>
                                     <input type="text" name="account" parsley-trigger="change" required placeholder="account" class="form-control" id="userName" value="{{ $admin->account }}">
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>power admin</label>
+                                        <input type="checkbox" @if($admin->admin)checked @endif name="admin" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>gift add</label>
+                                        <input type="checkbox" @if($admin->giftadd)checked @endif name="giftadd" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
@@ -65,6 +77,9 @@
 <script src="/backstage/js/wow.min.js"></script>
 <script src="/backstage/js/jquery.nicescroll.js"></script>
 <script src="/backstage/js/jquery.scrollTo.min.js"></script>
+
+<link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
+<script src="/backstage/plugins/switchery/switchery.min.js"></script>
 
 <!-- Parsleyjs -->
 <script type="text/javascript" src="/backstage/plugins/parsleyjs/dist/parsley.min.js"></script>

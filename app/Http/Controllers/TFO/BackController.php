@@ -40,6 +40,10 @@ class BackController extends Controller
         DB::enableQueryLog();
     }
 
+    public function Welcome(Request $request){
+        return view('TFO.back.welcome');
+    }
+
 
 
     /**
@@ -175,7 +179,10 @@ class BackController extends Controller
         ];
         if(is_numeric($id) && $id>0){
             TFOOrder::where('id',$id)->update($data);
-        } 
+        } else {
+            if($this->user->giftadd == 0) return redirect('/welcome')->send()->with('message','權限不足!');
+            
+        }
         return redirect('/TableForOne/orders/'.$id)->with('message','編輯完成!');
     }
     public function GiftDelete(Request $request,$id){

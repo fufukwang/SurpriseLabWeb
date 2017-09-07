@@ -20,6 +20,9 @@ class AdminController extends Controller
         } else {
             $this->user = $request->session()->get('key');
         }
+        if($this->user->admin == 0){
+            return redirect('/welcome')->send()->with('message','權限不足!');
+        }
     }
     /**
      * Display a listing of the resource.
@@ -55,7 +58,9 @@ class AdminController extends Controller
     {
         $input = $request->all();
         $admin = new admin;
-        $admin->account = $input['account'];
+        $admin->account  = $input['account'];
+        $admin->admin = $request->has('admin') ? $input['admin'] : 0;
+        $admin->giftadd = $request->has('giftadd') ? $input['giftadd'] : 0;
         $admin->password = md5($input['password']);
         $admin->save();
 
@@ -97,7 +102,9 @@ class AdminController extends Controller
         $input = $request->all(); //接收from傳來的資料
 
         $admin = admin::find($id);
-        $admin->account = $input['account'];
+        $admin->account  = $input['account'];
+        $admin->admin = $request->has('admin') ? $input['admin'] : 0;
+        $admin->giftadd = $request->has('giftadd') ? $input['giftadd'] : 0;
         $admin->password = md5($input['password']); //將$input裡面的資料中的title指定到table中的title欄位
         $admin->save();
         return redirect('/admin');

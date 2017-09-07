@@ -67,6 +67,8 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
     Route::post('contactstore','BackendController@contactstore');
     Route::delete('contact/{cid}/delete','BackendController@deleteContact');
 
+    Route::get('/welcome','TFO\BackController@Welcome');
+
     Route::group(['prefix' => 'TableForOne'], function(){
         // 場次
         Route::get('rooms','TFO\BackController@Rooms');
