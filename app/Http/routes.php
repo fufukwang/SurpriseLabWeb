@@ -142,6 +142,23 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('storeres','HomeController@storeres');
     Route::post('checkres','HomeController@checkres');
     
+
+
+    // Table For One
+    Route::group(['prefix' => 'dininginthedark'], function(){
+        Route::get('index.html',function(){ return view('TFO.front.home'); });
+        Route::get('/',function(){ return view('TFO.front.home'); });
+        Route::get('about.html',function(){ return view('TFO.front.about'); });
+        Route::get('menu.html',function(){ return view('TFO.front.menu'); });
+        Route::get('rules.html',function(){ return view('TFO.front.rules'); });
+        Route::get('contact.html',function(){ return view('TFO.front.contact'); });
+        Route::get('qa.html',function(){ return view('TFO.front.qa'); });
+
+        Route::get('reservation.html',function(){ return view('TFO.front.reservation'); });
+        Route::get('gift.html',function(){ return view('TFO.front.gift'); });
+
+
+    });
 });
 
 
