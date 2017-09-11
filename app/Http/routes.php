@@ -153,9 +153,20 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('rules.html',function(){ return view('TFO.front.rules'); });
         Route::get('contact.html',function(){ return view('TFO.front.contact'); });
         Route::get('qa.html',function(){ return view('TFO.front.qa'); });
-
         Route::get('reservation.html',function(){ return view('TFO.front.reservation'); });
         Route::get('gift.html',function(){ return view('TFO.front.gift'); });
+
+        Route::group(['prefix' => 'm'], function(){
+
+        });
+
+        Route::group(['prefix' => 'en'], function(){
+
+        });
+
+        Route::group(['prefix' => 'm.en'], function(){
+
+        });
 
 
     });
