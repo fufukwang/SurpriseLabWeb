@@ -1410,7 +1410,7 @@ h4 { color: #000; font-weight: normal; line-height: 1.75em; font-size: 17px; let
 
 a { color: auto; text-decoration: none; }
 
-hr { background: url(../../../images/menu/line.png); height: 12px; border: 0; background-size: auto 100%; margin: 60px auto; }
+hr { background: url(/T41/images/menu/line.png); height: 12px; border: 0; background-size: auto 100%; margin: 60px auto; }
 
 .wrapper { border: solid 10px #000; position: relative; height: 100%; width: 100%; overflow: auto; background-repeat: repeat; }
 @media (max-width: 776px) { .wrapper { border-width: 7px; } }
@@ -1526,42 +1526,42 @@ svg { position: absolute; height: 100%; width: 100%; }
 
 #index-btn { margin-top: 65vh; }
 
-#red-theme { background-image: url(../../../images/landing-page/pattern1.png); }
+#red-theme { background-image: url(/T41/images/landing-page/pattern1.png); }
 #red-theme svg path { fill: #f76363; }
 #red-theme #index-btn { background: #f76363; }
 @media (max-width: 776px) { #red-theme #index-btn { background: #F4F0E9; } }
 #red-theme #index-btn:after { background: #f76363; }
 @media (max-width: 776px) { #red-theme #index-btn:after { background: #F4F0E9; } }
 
-#green-theme { background-image: url(../../../images/landing-page/pattern3.png); }
+#green-theme { background-image: url(/T41/images/landing-page/pattern3.png); }
 #green-theme svg path { fill: #51b67c; }
 #green-theme #index-btn { background: #51b67c; }
 @media (max-width: 776px) { #green-theme #index-btn { background: #F4F0E9; } }
 #green-theme #index-btn:after { background: #51b67c; }
 @media (max-width: 776px) { #green-theme #index-btn:after { background: #F4F0E9; } }
 
-#purple-theme { background-image: url(../../../images/landing-page/pattern6.png); }
+#purple-theme { background-image: url(/T41/images/landing-page/pattern6.png); }
 #purple-theme svg path { fill: #db85ff; }
 #purple-theme #index-btn { background: #db85ff; }
 @media (max-width: 776px) { #purple-theme #index-btn { background: #F4F0E9; } }
 #purple-theme #index-btn:after { background: #db85ff; }
 @media (max-width: 776px) { #purple-theme #index-btn:after { background: #F4F0E9; } }
 
-#yellow-theme { background-image: url(../../../images/landing-page/pattern2.png); }
+#yellow-theme { background-image: url(/T41/images/landing-page/pattern2.png); }
 #yellow-theme svg path { fill: #ffdc2e; }
 #yellow-theme #index-btn { background: #ffdc2e; }
 @media (max-width: 776px) { #yellow-theme #index-btn { background: #F4F0E9; } }
 #yellow-theme #index-btn:after { background: #ffdc2e; }
 @media (max-width: 776px) { #yellow-theme #index-btn:after { background: #F4F0E9; } }
 
-#orange-theme { background-image: url(../../../images/landing-page/pattern5.png); }
+#orange-theme { background-image: url(/T41/images/landing-page/pattern5.png); }
 #orange-theme svg path { fill: #ff9248; }
 #orange-theme #index-btn { background: #ff9248; }
 @media (max-width: 776px) { #orange-theme #index-btn { background: #F4F0E9; } }
 #orange-theme #index-btn:after { background: #ff9248; }
 @media (max-width: 776px) { #orange-theme #index-btn:after { background: #F4F0E9; } }
 
-#blue-theme { background-image: url(../../../images/landing-page/pattern4.png); }
+#blue-theme { background-image: url(/T41/images/landing-page/pattern4.png); }
 #blue-theme svg path { fill: #61cbd6; }
 #blue-theme #index-btn { background: #61cbd6; }
 @media (max-width: 776px) { #blue-theme #index-btn { background: #F4F0E9; } }

@@ -145,7 +145,7 @@ Route::group(['middleware' => ['web']], function () {
 
 
     // Table For One
-    Route::group(['prefix' => 'dininginthedark'], function(){
+    Route::group(['prefix' => 'TableForOne'], function(){
         Route::get('index.html',function(){ return view('TFO.front.home'); });
         Route::get('/',function(){ return view('TFO.front.home'); });
         Route::get('about.html',function(){ return view('TFO.front.about'); });
@@ -174,10 +174,3 @@ Route::group(['middleware' => ['web']], function () {
 
 
 
-/********************************
-*****    TableForOne     ********
-********************************/
-Route::group(['prefix' => 'TableForOne','middleware' => ['web']], function(){
-
-
-});
