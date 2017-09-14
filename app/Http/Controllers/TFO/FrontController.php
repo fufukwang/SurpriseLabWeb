@@ -106,8 +106,8 @@ class FrontController extends Controller
 
     public function EcPayBackCallBack(Request $request){
         $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
-        TFOOrder::update(['result'=>Ecpay::i()->getResponse($arFeedback)]);
-
+        TFOOrder::where('id',1)->update(['result'=>$arFeedback]);
+        print Ecpay::i()->getResponse($arFeedback)
     }
 
 
