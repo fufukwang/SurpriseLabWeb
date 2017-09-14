@@ -84,7 +84,7 @@ class FrontController extends Controller
 
 
 
-        Ecpay::i()->Send['ReturnURL']         = "https://surpriselab.com.tw/TableForOne/ECPayBackCallBack" ;
+        Ecpay::i()->Send['ReturnURL']         = "http://surpriselab.hellokiki.info/TableForOne/ECPayBackCallBack" ;
         Ecpay::i()->Send['MerchantTradeNo']   = $data['sn'];              //訂單編號
         Ecpay::i()->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');      //交易時間
         Ecpay::i()->Send['TotalAmount']       = $data['money'];           //交易金額
@@ -106,7 +106,7 @@ class FrontController extends Controller
 
     public function EcPayBackCallBack(Request $request){
         $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
-        TFOOrder::where('id',1)->update(['result'=>$arFeedback]);
+        TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update(['result'=>json_encode($arFeedback)]);
         print Ecpay::i()->getResponse($arFeedback)
     }
 
