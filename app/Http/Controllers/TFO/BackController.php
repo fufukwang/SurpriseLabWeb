@@ -52,9 +52,20 @@ class BackController extends Controller
      * 產品分類.
      */
     public function Rooms(Request $request){
-        $pros = TFOPro::orderBy('updated_at','desc');
+        if($request->isMethod('post') && $request->has('id')){
+            foreach($request->id as $row){
+                TFOPro::where('id',$row)->update(['open'=>1]);
+            }
+        }
+        $pros = TFOPro::where('id','>',0);
         if($request->has('day')) $pros = $pros->where('day',$request->day);
         if($request->has('dayparts')) $pros = $pros->where('dayparts',$request->dayparts);
+        if($request->has('order')){
+            $order = explode('|',$request->order);
+            if(count($order)>0){
+                $pros = $pros->OrderBy($order[0],$order[1]);
+            }
+        } else { $pros = $pros->orderBy('updated_at','desc'); }
         
         $pros = $pros->paginate($this->perpage);
         return view('TFO.back.pros',compact('pros','request'));

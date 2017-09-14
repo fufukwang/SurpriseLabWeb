@@ -42,6 +42,13 @@
                                                     <option value="下午茶"@if(isset($request->dayparts) && $request->dayparts=='下午茶') selected @endif>下午茶</option>
                                                 </select>
                                             </div>
+                                            <div class="form-group col-sm-2">
+                                                <select name="order" class="form-control">
+                                                    <option value="">排序(預設為修改時間反序)</option>
+                                                    <option value="day|asc"@if(isset($request->order) && $request->order=='day|asc') selected @endif>日期正序</option>
+                                                    <option value="day|desc"@if(isset($request->order) && $request->order=='day|desc') selected @endif>日期反序</option>
+                                                </select>
+                                            </div>
 
                                             <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
 
@@ -49,7 +56,7 @@
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
                                     <div class="sticky-table-header fixed-solution" style="width: auto;">
-                                    <form action="/" method="post" id="openForm">
+                                    <form method="post" id="openForm">
                                     {!! csrf_field() !!}
                                     <table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
@@ -83,6 +90,7 @@
 @endforelse
                                         </tbody>
                                     </table>
+                                    <div><button class="btn btn-primary">開放前台定位</button></div>
                                     </form>
 
                                     <div align="center">{{ $pros->appends(Request::capture()->except('page'))->links() }}</div>

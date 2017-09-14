@@ -75,6 +75,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('room/{id}/edit','TFO\BackController@RoomEdit');
         Route::post('room/{id}/update','TFO\BackController@RoomUpdate');
         Route::delete('room/{id}/delete','TFO\BackController@RoomDelete');
+        Route::post('rooms','TFO\BackController@Rooms');
 
         // 訂單
         Route::get('orders/{id}','TFO\BackController@Orders');
