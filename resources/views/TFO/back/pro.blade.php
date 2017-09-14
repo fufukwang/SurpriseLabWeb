@@ -68,12 +68,12 @@
                                                     </select>
                                                 </div>
                                             </div>
-
+@if(isset($pro->id) && $pro->id>0)
                                             <label class="control-label col-sm-4">區間</label>
                                             <div class="col-sm-4">
                                                 <div class="input-group m-b-15">
                                                     <div class="bootstrap-timepicker">
-                                                        <input name="rangstart" type="text" value="{{ $act->STime or '' }}" class="form-control timepicker">
+                                                        <input name="rangstart" type="text" value="{{ $pro->STime or '' }}" class="form-control timepicker">
                                                     </div>
                                                     <span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span>
                                                 </div><!-- input-group -->
@@ -81,11 +81,20 @@
                                             <div class="col-sm-4">
                                                 <div class="input-group m-b-15">
                                                     <div class="bootstrap-timepicker">
-                                                        <input name="rangend" type="text" value="{{ $act->ETime or '' }}" class="form-control timepicker">
+                                                        <input name="rangend" type="text" value="{{ $pro->ETime or '' }}" class="form-control timepicker">
                                                     </div>
                                                     <span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span>
                                                 </div><!-- input-group -->
                                             </div>
+@else
+                                        <div class="form-group" id="rangebox">
+
+
+
+
+
+                                        </div>
+@endif
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">定價</label>
@@ -97,6 +106,15 @@
                                                 <label class="control-label col-sm-4">+佐餐飲</label>
                                                 <div class="col-sm-8" style="padding:0 10px;">
                                                     <input type="text" value="{{ $pro->wine or 0 }}" name="wine" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">開放訂位</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control" name="open">
+                                                        <option value="0"@if(isset($pro->open) && $pro->open<=0) selected @endif>關閉</option>
+                                                        <option value="1"@if(isset($pro->open) && $pro->open>1) selected @endif>開放</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div align="right">
@@ -173,9 +191,7 @@
         <script>
         $(function(){
             // Time Picker
-            jQuery('.timepicker').timepicker({
-                showMeridian : false
-            });
+            $('.timepicker').timepicker({ showMeridian : false});
             $("input[name='sites'],input[name='money'],input[name='wine']").TouchSpin();
 
 
@@ -201,14 +217,41 @@ $("#datepicker").datetimepicker({
     "maxDate":'{{ config('setting.tfoend') }}',
 });
 $('select[name=dayparts]').bind('change',function(){
-    $('input[name=rangstart]').val($(this).find('option:selected').data('rangstart'));
-    $('input[name=rangend]').val($(this).find('option:selected').data('rangend'));
+    //$('input[name=rangstart]').val($(this).find('option:selected').data('rangstart'));
+    //$('input[name=rangend]').val($(this).find('option:selected').data('rangend'));
     
 });
 
+@if(isset($pro->id) && $pro->id>0)
+@else
+
+$('#rangebox').on('click','.btn-info',function(){
+    $(this).removeClass('btn-info');
+    $(this).addClass('btn-danger');
+    var $i = $(this).find('.fa-plus');
+    $i.removeClass('fa-plus');
+    $i.addClass('fa-minus');
+    var rand = getRand(0,99999);
+    var html = addHtml(rand);
+    $('#rangebox').append(html);
+    $('.timepicker').timepicker({ showMeridian : false});
+});
+$('#rangebox').on('click','.btn-danger',function(){
+    var id = $(this).data('id');
+    $('.ro-'+id).remove();
+});
+
+$('#rangebox').append(addHtml(getRand(0,99999)));
+$('.timepicker').timepicker({ showMeridian : false});
+@endif
         });
 
-
+function addHtml(rand){
+    return '<label class="control-label col-sm-4 ro-'+rand+'"">區間</label><div class="col-sm-3 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangstart[]" type="text" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><div class="col-sm-3 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangend[]" type="text" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><label class="control-label col-sm-2 ro-'+rand+'"><button type="button" class="btn btn-info btn-xs" data-id="'+rand+'"><i class="fa fa-plus"></i></button></label>'
+}
+function getRand(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
         </script>
 

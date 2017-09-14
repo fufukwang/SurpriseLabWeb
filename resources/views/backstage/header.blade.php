@@ -89,6 +89,8 @@
                         <ul class="submenu">
                             <li><a href="/acts">Activaty</a></li>
                             <li><a href="/printdaily">Print Daily</a></li>
+                            <li><a href="/email">Email</a></li>
+                            <li><a href="/contacts">Contacts</a></li>
                         </ul>
                     </li>
                     <li class="has-submenu">
@@ -97,10 +99,10 @@
                             <li><a href="/TableForOne/rooms">Activaty</a></li>
                             <li><a href="/TableForOne/gifts">Gift Card</a></li>
                             <li><a href="/TableForOne/print">Order</a></li>
+                            <li><a href="/TableForOne/contacts">Contacts</a></li>
                         </ul>
                     </li>
-                    <li class="has-submenu"><a href="/email"><i class="md md-email"></i>Email</a></li>
-                    <li class="has-submenu"><a href="/contacts"><i class="md md-quick-contacts-mail"></i>Contacts</a></li>
+                    
 
 
                 </ul>

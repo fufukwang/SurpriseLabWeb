@@ -3,8 +3,18 @@
 namespace App\Http\Controllers\TFO;
 
 use Illuminate\Http\Request;
+use Response;
 use Mail;
 use Exception;
+use App\model\TFOPro;
+use App\model\TFOOrder;
+use App\model\TFOContact;
+use App\model\TFOGift;
+
+use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use DB;
+use Ecpay;
 
 class FrontController extends Controller
 {
@@ -15,256 +25,128 @@ class FrontController extends Controller
      */
     public function __construct()
     {
-        // 購物車內容
 
     }
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function home()
-    {
-        return view('front.home');
-    }
 
-    public function about(){
-        return view('front.about');
-    }
-
-    public function conceptstore(){
-        return view('front.conceptstore');
-    }
-    public function conceptstoreTaipei(){
-        return view('front.conceptstore_taipei');
-    }
-
-    public function contact(){
-        return view('front.contact');
-    }   
-    // 訂單查詢
-    public function OrderChecks(Request $request){
-        $token = md5(time());
-
-        $request->session()->flash($token, 1);
-        return view('front.order-checks',compact('token'));
-    }
-    public function OrderStatus(Request $request){
-        $token = $request->token;
-        if($token==null || empty($request->session()->get($token))) {
-            return $this->returnError('請勿重複提交表單');
-        }
-        if(Order::where('sn',$request->SN)->count()>0){
-            $order = Order::where('sn',$request->SN)->first();
-        } else {
-            return $this->returnError('查無訂單編號');
-        }
-        $type = 'search';
-        return view('front.order-status',compact('order','type'));
-    }
-
-    // 產品
-    public function products(Request $request){
-        $cats = Cate::orderBy('sort','desc')->get();
-
-        return view('front.products',compact('cats'));
-    }
-
-    public function product(Request $request,$slug){
-        $product = Product::where('slug',$slug)->first();
-        $product->intro = json_decode($product->intro);
-        $product->info  = json_decode($product->info);
-        return view('front.product',compact('product'));
-    }
-
-    // 購物車
-    public function cart(Request $request){
-        $token = md5(time());
-
-        $request->session()->flash($token, 1);
-        return view('front.cart',compact('token'));
-    }
-    // 生成定單 
-    public function GenerateOrder(Request $request){
-        $token = $request->token;
-        if($token==null || empty($request->session()->get($token))) {
-            return $this->returnError('請勿重複提交表單');
-        }
-
-        $sn = $this->GenerateSN();
+    public function ContentStore(Request $request){
         $data = [
-            'sn'       => $sn,
-            'tel'      => $request->telInput,
-            'address'  => $request->addressInput,
-            'name'     => $request->nameInput,
-            'email'    => $request->emailInput,
-            'status'   => '未處理',
-            'payStatus'=> '未付款',
-            'money'    => 0,
-            'freight'  => 80,
-            'pay_type' => $request->pay_type,
-            'sex'      => $request->sexInput,
-            'zip'      => $request->zipInput,
-            'shipper'  => '',
-            'country'  => $request->countInput,
-            'cardcode' => '',
-            'notes'    => '',
+            'tel'    => $request->tel,
+            'status' => '未處理',
+            'email'  => $request->email,
+            'name'   => $request->name,
+            'notes'  => $request->notes,
         ];
-        $order = Order::create($data);
+        Mail::send('TFO.email.Contact',$data,function($m) use ($data){
+            /*
+            $m->from('service@surpriselab.com.tw', 'Table For One');
+            $m->sender('service@surpriselab.com.tw', 'Table For One');
+            $m->replyTo('service@surpriselab.com.tw', 'Table For One');
 
-        $orderDetail = []; $money = 0;
-        foreach(json_decode($request->OrderDetail) as $row){
-            $product = Product::find($row->product_id);
-            if( strtotime($product->discount_start)>time() && strtotime($product->discount_end)<time()){ $price = $product->discount; } else { $price = $product->price; }
-            $singe = $price * $row->num;
-            $detail = [
-                'order_id'   => $order->id,
-                'product_id' => $product->id,
-                'dis_start'  => $product->discount_start,
-                'dis_end'    => $product->discount_end,
-                'discount'   => $product->discount,
-                'price'      => $price,
-                'size'       => $row->size,
-                'num'        => $row->num,
-                'sub'        => $singe,
-            ];
-            $money = $money + $singe;
-            array_push($orderDetail,$detail);
+            $m->to('service@surpriselab.com.tw', 'Table For One');
+            */
+            $m->from('king.no1.wang@gmail.com', 'Table For One');
+            $m->sender('king.no1.wang@gmail.com', 'Table For One');
+            $m->replyTo('king.no1.wang@gmail.com', 'Table For One');
+
+            $m->to('king.no1.wang@gmail.com', 'Table For One');
+            $m->subject('Table For One，聯絡我們-通知');
+        });
+        TFOContact::insert($data);
+        return redirect("/TableForOne/index.html")->with('message','留言完成!');
+    }
+    // 生成訂單並送給金流
+    public function generateOrder(Request $request){
+        $pro = TFOPro::find($request->pro_id);
+        if($request->SelSet == 'money'){
+            $money = $pro->money;
+        } else {
+            $money = $pro->money + $pro->wine;
         }
-        OrderDetail::insert($orderDetail);
+
+        $data = [
+            'name'       => $request->name,
+            'tel'        => $request->tel,
+            'email'      => $request->email,
+            'paystatus'  => '未付款',
+            'sn'         => $this->GenerateSN(),
+            'tfopro_id'  => $request->pro_id,
+            'tfogife_id' => 0,
+            'meal'       => $request->meal,
+            'money'      => $money,
+            'notes'      => $request->notes,
+            'story'      => '',
+            'manage'     => '',
+            'result'     => '',
+            'paytype'    => '信用卡',
+            'item'       => $request->item,
+        ];
+        TFOOrder::create($data);
 
 
-        // 回填 money
-        $order->money = $money;
-        $order->save();
 
-        // 訂單成立 發送 email
-        try{
-            $from = [
-                'email' => $order->email,
-                'name'  => $order->name
-            ];
-            $to = [
-                'email' => $order->email,
-                'name'  => $order->name
-            ];
-            $parameter = Parameter::firstOrCreate(['slug'=>'setting']);
-            if(!isnull($parameter->json)){
-                $setting = json_decode($parameter->json);
-                $from = [
-                    'email' => $setting->email,
-                    'name'  => $setting->name
-                ];
+        Ecpay::i()->Send['ReturnURL']         = "https://surpriselab.com.tw/TableForOne/ECPayBackCallBack" ;
+        Ecpay::i()->Send['MerchantTradeNo']   = $data['sn'];              //訂單編號
+        Ecpay::i()->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');      //交易時間
+        Ecpay::i()->Send['TotalAmount']       = $data['money'];           //交易金額
+        Ecpay::i()->Send['TradeDesc']         = $data['item'];            //交易描述
+        Ecpay::i()->Send['ChoosePayment']     = \ECPay_PaymentMethod::ALL ;     //付款方式
+
+        //訂單的商品資料
+        array_push(Ecpay::i()->Send['Items'], [
+            'Name'     => $data['item'], 
+            'Price'    => (int)$data['money'],
+            'Currency' => "元", 
+            'Quantity' => (int) "1", 
+            'URL'      => "dedwed"]);
+
+        //Go to ECPay
+        echo "緑界頁面導向中...";
+        echo Ecpay::i()->CheckOutString();
+    }
+
+    public function EcPayBackCallBack(Request $request){
+        $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
+        TFOOrder::update(['result'=>Ecpay::i()->getResponse($arFeedback)]);
+
+    }
+
+
+    public function getRoomData(Request $request){
+        if($request->ajax() && $request->isMethod('post') && $request->has('act')){
+            switch ($request->act) {
+                case 'getDayByDefault':
+                    $pro = TFOPro::select('day')->where('open',1)->where('day','>=',Carbon::now()->format('yy-mm-dd'))->groupBy('day')->get();
+                    return $pro->toJson();
+                break;
+                case 'getDatepartByDay':
+                    $day = $request->day;
+                    $pro = TFOPro::select('dayparts')->where('open',1)->where('day',$day)->groupBy('dayparts')->get();
+                    return $pro->toJson();
+                break;
+                case 'getIDByDatepart':
+                    $day      = $request->day;
+                    $dayparts = $request->dayparts;
+                    $pro = TFOPro::select('id','rangstart','rangend','money','wine')->where('open',1)->where('day',$day)->where('dayparts',$dayparts)->get();
+                    return $pro->toJson();
+                break;
             }
-            //寄出信件
-            Mail::send('emails.newOrderCustomer', ['order'=>$order], function($message) use ($from, $to) {
-                $message->from($from['email'], $from['name']);
-                $message->to($to['email'], $to['name'])->subject('訂單成立通知');
-            });
-            Mail::send('emails.newOrderManage', ['order'=>$order], function($message) use ($from, $to) {
-                $message->from($from['email'], $from['name']);
-                $message->to($from['email'], $from['name'])->subject('訂單成立通知');
-            });
-        } catch (Exception $exception) {
-            // 先不做紀錄
-        }
-            
 
-        if($data['pay_type'] == '信用卡付款'){
-            //return $this->returnError('等待刷卡權限中');
-            $web_password = env('BUYSAFE_PWD', '');
-            // 回填 buysafeForm 表單 
-            $form = [
-                'web'          => env('BUYSAFE_WEB', ''),
-                'MN'           => $money + $data['freight'],
-                'OrderInfo'    => '商品訂購',
-                'Td'           => $order->sn,
-                'sna'          => $order->name,
-                'sdt'          => $order->tel,
-                'email'        => $order->email,
-                'note1'        => '',
-                'note2'        => '',
-                'card_Type'    => '',
-                'Country_Type' => '',
-                'Term'         => '',
-                'ChkValue'     => '',
-            ];
-            $form['ChkValue'] = $ChkValue = strtoupper(sha1($form['web'].$web_password.$form['MN'].$form['Term']));
-            return view('front.buysafeForm',compact('form'));
-            
-        } elseif($data['pay_type'] == '貨到付款') {
-            $type = 'aftershipperPay';
-            return view('front.order-status',compact('order','type'));
+
         }
     }
-    // 處理刷卡回傳
-    public function SunTechSuccess(Request $request){
-        $json = $this->saveRequest($request);
-        if($this->CheckBuySafeValue($json['buysafeno'].$json['MN'].$json['errcode'],$json['ChkValue'])){
-            $data = [
-                'cardcode' => json_encode($json),
-            ];
-            if($json['errcode'] == '00'){
-                $data['payStatus'] = '已付款';
-            }
-            Order::where('sn',$json['Td'])->update($data);
-        }
-    }
-    public function SunTechFail(Request $request){
-        $json = $this->saveRequest($request);
-        if($this->CheckBuySafeValue($json['buysafeno'].$json['MN'].$json['errcode'],$json['ChkValue'])){
-            $data = [
-                'cardcode' => json_encode($json),
-            ];
-            Order::where('sn',$json['Td'])->update($data);
-        }
-    }
-    // 前端使用邏輯
+
+
     private function GenerateSN(){
-        $random = 10;$SN = '';
+        $random = 12;$SN = '';
         for($i=1;$i<=$random;$i++){
             $b = rand(0,9);
             $SN .= $b;
         }
-        if(Order::where('sn',$SN)->count()>0){
+        if(TFOOrder::where('sn',$SN)->count()>0){
             $this->GenerateSN();
         } else {
             return $SN;
         }
     }
-    private function returnError($txt = ''){
-        return view('front._errorMsg',compact('txt'));
-    }
-
-
-    // 紅陽處理
-    private function CheckBuySafeValue($arg,$ChkValue){
-        $web          = env('BUYSAFE_WEB', '');
-        $web_password = env('BUYSAFE_PWD', '');
-        $Checker = strtoupper(sha1($web.$web_password.$arg));
-        return ($Checker == $ChkValue);
-    }
-    private function saveRequest($request){
-        return [
-            'buysafeno'   => $request->buysafeno,
-            'web'         => $request->web,
-            'Td'          => $request->Td,
-            'MN'          => $request->MN,
-            'webname'     => $request->webname,
-            'Name'        => $request->Name,
-            'note1'       => $request->note1,
-            'note2'       => $request->note2,
-            'ApproveCode' => $request->ApproveCode,
-            'Card_NO'     => $request->Card_NO,
-            'SendType'    => $request->SendType,
-            'errcode'     => $request->errcode,
-            'errmsg'      => $request->errmsg,
-            'Card_Type'   => $request->Card_Type,
-            'InvoiceNo'   => $request->InvoiceNo,
-            'ChkValue'    => $request->ChkValue,
-        ];
-    }
-
-
 
 }

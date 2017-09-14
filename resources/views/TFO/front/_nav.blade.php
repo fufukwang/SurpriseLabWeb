@@ -13,12 +13,12 @@
                             <img src="/T41/images/welcome-page/icon2-01.png" alt=""> <span>menu</span>
                         </li>
                     </a>
-                    <a href="rule.html">
+                    <a href="rules.html">
                         <li>
                             <img src="/T41/images/welcome-page/icon3-01.png" alt=""> <span>rules</span>
                         </li>
                     </a>
-                    <a href="reservation-1.html">
+                    <a href="reservation.html">
                         <li>
                             <img src="/T41/images/welcome-page/icon4-01.png" alt=""> <span>reservation</span>
                         </li>    

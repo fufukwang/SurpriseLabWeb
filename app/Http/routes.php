@@ -82,6 +82,12 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('order/{id}/update','TFO\BackController@OrderUpdate');
         Route::delete('order/{id}/delete','TFO\BackController@OrderDelete');
 
+        // 聯絡我們
+        Route::get('contacts','TFO\BackController@Contacts');
+        Route::get('contact/{id}/edit','TFO\BackController@ContactEdit');
+        Route::post('contact/{id}/update','TFO\BackController@ContactUpdate');
+        Route::delete('contact/{id}/delete','TFO\BackController@ContactDelete');
+
         // Gift
         Route::get('gifts','TFO\BackController@Gifts');
         Route::get('gift/{id}/edit','TFO\BackController@GiftEdit');
@@ -147,7 +153,7 @@ Route::group(['middleware' => ['web']], function () {
     // Table For One
     Route::group(['prefix' => 'TableForOne'], function(){
         Route::get('index.html',function(){ return view('TFO.front.home'); });
-        Route::get('/',function(){ return view('TFO.front.home'); });
+        Route::get('/',function(){ return redirect("/TableForOne/index.html"); });
         Route::get('about.html',function(){ return view('TFO.front.about'); });
         Route::get('menu.html',function(){ return view('TFO.front.menu'); });
         Route::get('rules.html',function(){ return view('TFO.front.rules'); });
@@ -157,18 +163,45 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('gift.html',function(){ return view('TFO.front.gift'); });
 
         Route::group(['prefix' => 'm'], function(){
-
+            Route::get('index.html',function(){ return view('TFO.front.home'); });
+            Route::get('/',function(){ return redirect("/TableForOne/index.html"); });
+            Route::get('about.html',function(){ return view('TFO.front.about'); });
+            Route::get('menu.html',function(){ return view('TFO.front.menu'); });
+            Route::get('rules.html',function(){ return view('TFO.front.rules'); });
+            Route::get('contact.html',function(){ return view('TFO.front.contact'); });
+            Route::get('qa.html',function(){ return view('TFO.front.qa'); });
+            Route::get('reservation.html',function(){ return view('TFO.front.reservation'); });
+            Route::get('gift.html',function(){ return view('TFO.front.gift'); });
         });
 
         Route::group(['prefix' => 'en'], function(){
-
+            Route::get('index.html',function(){ App::setLocale('en'); return view('TFO.front.home'); });
+            Route::get('/',function(){ App::setLocale('en'); return redirect("/TableForOne/index.html"); });
+            Route::get('about.html',function(){ App::setLocale('en'); return view('TFO.front.about'); });
+            Route::get('menu.html',function(){ App::setLocale('en'); return view('TFO.front.menu'); });
+            Route::get('rules.html',function(){ App::setLocale('en'); return view('TFO.front.rules'); });
+            Route::get('contact.html',function(){ App::setLocale('en'); return view('TFO.front.contact'); });
+            Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.front.qa'); });
+            Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.front.reservation'); });
+            Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
         });
 
         Route::group(['prefix' => 'm.en'], function(){
-
+            Route::get('index.html',function(){ App::setLocale('en'); return view('TFO.front.home'); });
+            Route::get('/',function(){ App::setLocale('en'); return redirect("/TableForOne/index.html"); });
+            Route::get('about.html',function(){ App::setLocale('en'); return view('TFO.front.about'); });
+            Route::get('menu.html',function(){ App::setLocale('en'); return view('TFO.front.menu'); });
+            Route::get('rules.html',function(){ App::setLocale('en'); return view('TFO.front.rules'); });
+            Route::get('contact.html',function(){ App::setLocale('en'); return view('TFO.front.contact'); });
+            Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.front.qa'); });
+            Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.front.reservation'); });
+            Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
         });
 
-
+        Route::post('getRoomData','TFO\FrontController@getRoomData');
+        Route::post('frontcontactstore','TFO\FrontController@ContentStore');
+        Route::post('generateOrder','TFO\FrontController@generateOrder');
+        Route::post('ECPayBackCallBack','TFO\FrontController@EcPayBackCallBack');
     });
 });
 

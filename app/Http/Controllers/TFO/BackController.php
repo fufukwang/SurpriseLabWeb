@@ -13,6 +13,8 @@ use Mail;
 use Exception;
 use App\model\TFOPro;
 use App\model\TFOOrder;
+use App\model\TFOContact;
+use App\model\TFOGift;
 
 
 use App\Http\Controllers\Controller;
@@ -57,15 +59,15 @@ class BackController extends Controller
         return view('TFO.back.pros',compact('pros','request'));
     }
     public function RoomEdit(Request $request,$id){
-        $cats = collect();
+        $pro = collect();
         if(is_numeric($id) && $id>0){
             if(TFOPro::where('id',$id)->count()>0){
-                $cats = TFOPro::find($id);
+                $pro = TFOPro::find($id);
             } else {
                 abort(404);
             }
         }
-        return view('TFO.back.pro',compact('cats'));
+        return view('TFO.back.pro',compact('pro'));
     }
     public function RoomUpdate(Request $request,$id){
 
@@ -74,27 +76,32 @@ class BackController extends Controller
             'sites'     => $request->sites,
             'money'     => $request->money,
             'wine'      => $request->wine,
-            'rangstart' => $request->rangstart,
-            'rangend'   => $request->rangend,
+            'open'      => $request->open,
         ];
         if(is_numeric($id) && $id>0){
-            $data['day'] = $request->day;
+            $data['day']       = $request->day;
+            $data['rangstart'] = $request->rangstart;
+            $data['rangend']   = $request->rangend;
             TFOPro::where('id',$id)->update($data);
         } else {
             // 日期範圍新增多筆
             $arr = [];
-            if($request->daystart == ''){
-                $data['day'] = Carbon::today()->format('Y-m-d');
-                array_push($arr,$data);
-            } else {
-                $daystart = Carbon::createFromFormat('Y-m-d', $request->daystart);
-                $dayend   = Carbon::createFromFormat('Y-m-d', $request->dayend);
-                do {
-                    $data['day'] = $daystart->format('Y-m-d');
+            for($i=0 ; $i<count($request->rangstart) ; $i++){
+                $data['rangstart'] = $request->rangstart[$i];
+                $data['rangend']   = $request->rangend[$i];
+                if($request->daystart == ''){
+                    $data['day'] = Carbon::today()->format('Y-m-d');
                     array_push($arr,$data);
-                    $daystart = $daystart->addDay();
-                } while ($daystart->timestamp <= $dayend->timestamp);
-                
+                } else {
+                    $daystart = Carbon::createFromFormat('Y-m-d', $request->daystart);
+                    $dayend   = Carbon::createFromFormat('Y-m-d', $request->dayend);
+                    do {
+                        $data['day'] = $daystart->format('Y-m-d');
+                        array_push($arr,$data);
+                        $daystart = $daystart->addDay();
+                    } while ($daystart->timestamp <= $dayend->timestamp);
+                    
+                }
             }
             TFOPro::insert($arr);
         }
@@ -196,7 +203,42 @@ class BackController extends Controller
 
 
 
+    /**
+     * 聯絡我們.
+     */
+    public function Contacts(Request $request){
+        $contacts = TFOContact::orderBy('updated_at','desc');
+        
+        $contacts = $contacts->paginate($this->perpage);
+        return view('TFO.back.contacts',compact('contacts','request'));
+    }
+    public function ContactEdit(Request $request,$id){
+        $contact = collect();
+        if(is_numeric($id) && $id>0){
+            if(TFOContact::where('id',$id)->count()>0){
+                $contact = TFOContact::find($id);
+            } else {
+                abort(404);
+            }
+        }
+        return view('TFO.back.contact',compact('contact'));
+    }
+    public function ContactUpdate(Request $request,$id){
 
+        $data = [
+            'status' => $request->status,
+            'manage' => $request->manage,
+        ];
+        if(is_numeric($id) && $id>0){
+            TFOContact::where('id',$id)->update($data);
+        }
+        return redirect('/TableForOne/contacts')->with('message','編輯完成!');
+    }
+    public function ContactDelete(Request $request,$id){
+        TFOContact::where('id', $id)->delete();
+        return Response::json(['message'=> '留言已刪除'], 200);
+
+    }
 
 
 
