@@ -107,7 +107,7 @@ class FrontController extends Controller
     public function EcPayBackCallBack(Request $request){
         $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
         TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update(['result'=>json_encode($arFeedback)]);
-        print Ecpay::i()->getResponse($arFeedback)
+        print Ecpay::i()->getResponse($arFeedback);
     }
 
 
