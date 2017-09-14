@@ -109,9 +109,10 @@ class FrontController extends Controller
         $data = [
             'result' => json_encode($arFeedback)
         ];
+        /*
         if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
             $data['paystatus'] = '已付款';
-        } 
+        } */
         TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update($data);
         print Ecpay::i()->getResponse($arFeedback);
     }
