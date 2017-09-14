@@ -58,7 +58,7 @@
                     <p>
                         一頓飯的時間，我們一起，一個人
                     </p>
-                    <a href="reservation-1.html">
+                    <a href="reservation.html">
                         <div class="standard-btn btn mg-auto">
                             立即訂位
                         </div>    

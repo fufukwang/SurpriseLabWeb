@@ -110,7 +110,7 @@
                     *以上金額已含服務費
                 </p>
                 <div class="btn-box mg-b-md">
-                    <a href="reservation-1.html">
+                    <a href="reservation.html">
                         <div class="standard-btn btn">
                             立即訂位
                         </div>    

@@ -186,7 +186,7 @@
                         table for ONE 為了 - 因為任何原因想要或需要一個人的你 - 存在
                     </h3>
                     <div class="btn-box mg-b-md">
-                        <a href="reservation-1.html">
+                        <a href="reservation.html">
                             <div class="standard-btn btn">
                                 立即訂位
                             </div>    

@@ -54,6 +54,7 @@ class BackController extends Controller
     public function Rooms(Request $request){
         $pros = TFOPro::orderBy('updated_at','desc');
         if($request->has('day')) $pros = $pros->where('day',$request->day);
+        if($request->has('dayparts')) $pros = $pros->where('dayparts',$request->dayparts);
         
         $pros = $pros->paginate($this->perpage);
         return view('TFO.back.pros',compact('pros','request'));

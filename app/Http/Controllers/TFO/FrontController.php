@@ -132,7 +132,9 @@ class FrontController extends Controller
                 case 'getIDByDatepart':
                     $day      = $request->day;
                     $dayparts = $request->dayparts;
-                    $pro = TFOPro::select('id','rangstart','rangend','money','wine')->where('open',1)->where('day',$day)->where('dayparts',$dayparts)->get();
+                    $pro = TFOPro::select('id','rangstart','rangend','money','wine')->where('open',1)->where('day',$day)->where('dayparts',$dayparts)
+                    ->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")
+                    ->get();
                     return $pro->toJson();
                 break;
             }

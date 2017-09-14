@@ -25,41 +25,31 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">姓名</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->name or ''  }}">
+                                                    <input type="text" class="form-control" name="name" readonly value="{{ $order->name or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">電話</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->tel or ''  }}">
+                                                    <input type="text" class="form-control" name="tel" readonly value="{{ $order->tel or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">EMail</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->email or ''  }}">
+                                                    <input type="text" class="form-control" name="email" readonly value="{{ $order->email or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">訂單號碼</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->sn or '' }}">
+                                                    <input type="text" class="form-control" readonly value="{{ $order->sn or '請留白系統會自動生成' }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">主餐</label>
-                                                <div class="col-sm-8">@if(isset($order->meal) && $order->meal=='V') 素食 @else 葷食 @endif</div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">付款方式</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->paystatus or '' }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">付款狀態</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->paytype or '' }}">
+                                                    <input type="text" class="form-control" readonly value="@if(isset($order->meal) && $order->meal=='V') 素食 @else 葷食 @endif">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -78,6 +68,24 @@
                                                 <label class="control-label col-sm-4">故事</label>
                                                 <div class="col-sm-8">
                                                     <textarea class="form-control" readonly style="min-height:120px;">{{ $order->story or '' }}</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">付款方式</label>
+                                                <div class="col-sm-8">
+                                                    <select name="paytype" class="form-control">
+                                                        <option value="後台編輯"@if(isset($order->paytype) && $order->paytype=='後台編輯') selected @endif>後台編輯</option>
+                                                        <option value="信用卡"@if(isset($order->paytype) && $order->paytype=='信用卡') selected @endif>信用卡</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">付款方式</label>
+                                                <div class="col-sm-8">
+                                                    <select name="paystatus" class="form-control">
+                                                        <option value="未付款"@if(isset($order->paystatus) && $order->paystatus=='未付款') selected @endif>未付款</option>
+                                                        <option value="已付款"@if(isset($order->paystatus) && $order->paystatus=='已付款') selected @endif>已付款</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">

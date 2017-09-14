@@ -34,15 +34,28 @@
                                                     </div><!-- input-group -->
                                                 </div>
                                             </div>
+                                            <div class="form-group col-sm-2">
+                                                <select name="dayparts" class="form-control">
+                                                    <option value="">全部</option>
+                                                    <option value="午餐"@if(isset($request->dayparts) && $request->dayparts=='午餐') selected @endif>午餐</option>
+                                                    <option value="晚餐"@if(isset($request->dayparts) && $request->dayparts=='晚餐') selected @endif>晚餐</option>
+                                                    <option value="下午茶"@if(isset($request->dayparts) && $request->dayparts=='下午茶') selected @endif>下午茶</option>
+                                                </select>
+                                            </div>
 
                                             <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
 
 
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
-                                    <div class="sticky-table-header fixed-solution" style="width: auto;"><table id="tech-companies-1-clone" class="table table-striped table-hover">
+                                    <div class="sticky-table-header fixed-solution" style="width: auto;">
+                                    <form action="/" method="post" id="openForm">
+                                    {!! csrf_field() !!}
+                                    <table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
+                                                <th><input type="checkbox" id="checkAll"></th>
+                                                <th>開放訂位</th>
                                                 <th>營業日期</th>
                                                 <th>營業時段</th>
                                                 <th>目前訂位 / 開放位置</th>
@@ -53,9 +66,11 @@
                                         <tbody>
 @forelse ($pros as $row)
                                             <tr id="tr_{{ $row->id }}">
+                                                <td><input type="checkbox" name="id[]" value="{{ $row->id }}"></td>
+                                                <td>@if($row->open>0) 開放中 @else 關閉中 @endif</td>
                                                 <td>{{ $row->day }}</td>
                                                 <td>{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
-                                                <td>0 / {{ $row->sites }}</td>
+                                                <td>{{ App\model\TFOOrder::where('paystatus','已付款')->where('tfopro_id',$row->id)->count('id') }} / {{ $row->sites }}</td>
                                                 <td>{{ $row->money }} / {{ $row->wine }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-info btn-xs" href="/TableForOne/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
@@ -64,13 +79,13 @@
                                                 </td>
                                             </tr>
 @empty
-<tr><td colspan="5" align="center">尚無資料</td></tr>
+<tr><td colspan="7" align="center">尚無資料</td></tr>
 @endforelse
                                         </tbody>
                                     </table>
+                                    </form>
 
-
-                                    <div class="text-align-center">{{ $pros->links() }}</div>
+                                    <div align="center">{{ $pros->appends(Request::capture()->except('page'))->links() }}</div>
                                 </div></div>
 
                             </div>
@@ -78,11 +93,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
 
 
 
@@ -142,6 +152,9 @@ $(function(){
                 $('#tr_'+id).remove();
             });
         }
+    });
+    $('#checkAll').bind('click',function(){
+        $('input[name="id[]"]').prop('checked',$(this).prop('checked'));
     });
     jQuery('#datepicker-autoclose').datepicker({
         format: "yyyy-mm-dd",

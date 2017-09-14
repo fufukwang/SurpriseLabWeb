@@ -104,7 +104,7 @@
                     </tr>
                 </table>
                 <div class="btn-box mg-b-md align-left">
-                    <a href="reservation-1.html">
+                    <a href="reservation.html">
                         <div style="margin-top: 15px" class="standard-btn btn">
                             送出
                         </div>    

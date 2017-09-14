@@ -47,7 +47,7 @@
                         一個人，一張餐桌，<br>二十四位陌生人<br>
                         一頓飯的時間，<br>我們一起，一個人
                     </p>
-                    <a href="reservation-1.html">
+                    <a href="reservation.html">
                         <div class="standard-btn btn mg-auto">
                             立即訂位
                         </div>    

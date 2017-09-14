@@ -158,7 +158,7 @@
                         </a>
                     </div>
                     <div class="btn-box">
-                        <a href="reservation-1.html">
+                        <a href="reservation.html">
                             <div class="standard-btn btn">
                                 立即訂位
                             </div>    
