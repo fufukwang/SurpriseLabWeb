@@ -141,11 +141,12 @@
 
         <script src="/backstage/js/jquery.core.js"></script>
         <script src="/backstage/js/jquery.app.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
         <script>
         //$('#datatable').dataTable();
 			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 $(function(){
+    $('.wrapper').block({ message: '尚未啟用' });
     $('.btn-danger').bind('click',function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除禮物卡?如有訂單將一併刪除")) {

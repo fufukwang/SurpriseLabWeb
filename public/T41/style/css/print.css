@@ -1448,7 +1448,7 @@ svg { position: absolute; z-index: -1; }
 .nav-box .social-nav li { display: inline-block; width: 42px; }
 .nav-box .social-nav li img { width: 100%; }
 
-.content-box { text-align: center; widt: 100%; padding-left: 370px; display: flex; height: 100%; align-items: center; justify-content: center; position: relative; }
+.content-box { text-align: center; widt: 100%; padding-left: 410px; display: flex; height: 100%; align-items: center; justify-content: center; position: relative; }
 @media (max-width: 1440px) { .content-box { padding-left: 430px; } }
 @media (max-width: 776px) { .content-box { padding-left: 0; display: block; } }
 .content-box img { width: 100%; }

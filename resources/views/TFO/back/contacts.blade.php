@@ -43,7 +43,7 @@
                                                 <th>處理狀態</th>
                                                 <th>電話 / 信箱</th>
                                                 <th>留言內容</th>
-                                                <th>留言時間</th>
+                                                <th>更新時間</th>
                                                 <th>功能</th>
                                             </tr>
                                         </thead>
@@ -54,7 +54,7 @@
                                                 <td>{{ $row->status }}</td>
                                                 <td>{{ $row->tel }} / {{ $row->email }}</td>
                                                 <td>{{ $row->notes }}</td>
-                                                <td>{{ $row->created_at }}</td>
+                                                <td>{{ $row->updated_at }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/TableForOne/contact/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
