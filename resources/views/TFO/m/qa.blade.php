@@ -9,7 +9,7 @@
 
 <body>
     <div class="wrapper" id="red-theme" key="1">    
-        @include('TFO.front._logo')
+        @include('TFO.m._logo')
 
         <!--  mobile menu  -->
         <div class="hamburger-box">
@@ -200,9 +200,7 @@
                     </a>
                 </div>
             </div>
-            <span class="copyright align-center mg-b-md">
-                copyright © 2017 驚喜製造
-            </span>
+            @include('TFO.front._footer')
         </div>
     </div>
 </body>

@@ -32,7 +32,7 @@
                     <img src="/T41/images/landing-page/gif1.gif" alt="">
                 </div>
                 <div class="btn standard-btn mg-auto" id="index-btn">
-                    開始探索
+                    {!! trans('tfo.home.btn') !!}
                 </div>
             </div>
 
@@ -52,17 +52,7 @@
             <div class="content-box">
                 <div>
                     <h1><img style="max-width: 175px" src="/T41/images/welcome-page/welcome-01.png" alt=""></h1>
-                    <p>
-                        一個人，一張餐桌，二十四位陌生人
-                    </p>
-                    <p>
-                        一頓飯的時間，我們一起，一個人
-                    </p>
-                    <a href="reservation.html">
-                        <div class="standard-btn btn mg-auto">
-                            立即訂位
-                        </div>    
-                    </a>
+                    {!! trans('tfo.home.text') !!}
                 </div>
             </div>
         </div>

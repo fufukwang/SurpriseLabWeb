@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="wrapper" id="red-theme" key="1">    
-        @include('TFO.front._logo')
+        @include('TFO.m._logo')
         
         <!--  mobile menu  -->
         <div class="hamburger-box">
@@ -25,7 +25,7 @@
             </p>
             <div class="index-box">
                 <div class="plate-img-box">
-                    <img src="images/landing-page/mobile1.png" alt="">
+                    <img src="/T41/images/landing-page/mobile1.png" alt="">
                 </div>
                 <div class="btn standard-btn mg-auto" id="index-btn">
                     開始探索
@@ -42,7 +42,7 @@
         <div class="main-box" id="main">
             <div class="content-box">
                 <div>
-                    <h1><img style="max-width: 175px" src="images/welcome-page/welcome-01.png" alt=""></h1>
+                    <h1><img style="max-width: 175px" src="/T41/images/welcome-page/welcome-01.png" alt=""></h1>
                     <p>
                         一個人，一張餐桌，<br>二十四位陌生人<br>
                         一頓飯的時間，<br>我們一起，一個人

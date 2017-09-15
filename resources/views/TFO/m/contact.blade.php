@@ -9,7 +9,7 @@
 
 <body>
     <div class="wrapper" id="red-theme" key="1">    
-        @include('TFO.front._logo')
+        @include('TFO.m._logo')
 
         <!--  mobile menu  -->
         <div class="hamburger-box">
@@ -64,6 +64,8 @@
                 <h1>
                     有話想說？
                 </h1>
+                <form action="/TableForOne/frontcontactstore" method="post" id="contentForm">
+                {!! csrf_field() !!}
                 <table class="reservation-table contact-table">
                     <tr>
                         <td>
@@ -72,7 +74,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text">
+                            <input type="text" name="name" required>
                             <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入姓名</span>
                         </td>
                     </tr>
@@ -80,8 +82,8 @@
                         <td>＊電子信箱</td>
                     </tr>
                     <tr>
-                        <td class="error">
-                            <input type="text">
+                        <td class="">
+                            <input type="email" name="email" required>
                             <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入E-mail</span>
                         </td>
                     </tr>
@@ -90,7 +92,7 @@
                     </tr>
                     <tr>
                         <td class="">
-                            <input type="text">
+                            <input type="text" name="tel">
                         </td>
                     </tr>
                     <tr>
@@ -98,23 +100,23 @@
                     </tr>
                     <tr>
                         <td> 
-                            <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
+                            <textarea name="notes" cols="30" rows="10" placeholder="" required></textarea>
                             <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入問題</span>
                         </td>
                     </tr>
                 </table>
+                </form>
                 <div class="btn-box mg-b-md align-left">
-                    <a href="reservation.html">
+                    <a href="javascript:;" id="contentBtn">
                         <div style="margin-top: 15px" class="standard-btn btn">
                             送出
                         </div>    
                     </a>
                 </div>
             </div>
-            <span class="copyright align-center mg-b-md">
-                copyright © 2017 驚喜製造
-            </span>
+            @include('TFO.front._footer')
         </div>
     </div>
+    <script src="/T41/js/contact.js"></script>
 </body>
 </html>

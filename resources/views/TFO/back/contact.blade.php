@@ -29,7 +29,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/TableForOne/contact/{{ $pro->id or 0}}/update" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/TableForOne/contact/{{ $contact->id or 0}}/update" class="form-horizontal">
 {!! csrf_field() !!}
 
 

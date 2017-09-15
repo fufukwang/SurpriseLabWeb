@@ -103,9 +103,9 @@ $(document).ready(function(){
                 $indicatorDot.removeAttr('class');
                 $indicatorDot.eq(val-1).addClass('active');
                 
-                var _src = "images/landing-page/mobile"+val+".png",
-                    _gifSrc = "images/landing-page/gif"+val+".gif",
-                    _plateSrc = "images/welcome-page/half-palte"+val+".png";
+                var _src = "/T41/images/landing-page/mobile"+val+".png",
+                    _gifSrc = "/T41/images/landing-page/gif"+val+".gif",
+                    _plateSrc = "/T41/images/welcome-page/half-palte"+val+".png";
                 
                 if(val == 1){ var _theme = "red-theme" }
                 if(val == 2){ var _theme = "yellow-theme" }

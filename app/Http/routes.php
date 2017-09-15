@@ -164,15 +164,15 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('gift.html',function(){ return view('TFO.front.gift'); });
 
         Route::group(['prefix' => 'm'], function(){
-            Route::get('index.html',function(){ return view('TFO.front.home'); });
-            Route::get('/',function(){ return redirect("/TableForOne/index.html"); });
-            Route::get('about.html',function(){ return view('TFO.front.about'); });
-            Route::get('menu.html',function(){ return view('TFO.front.menu'); });
-            Route::get('rules.html',function(){ return view('TFO.front.rules'); });
-            Route::get('contact.html',function(){ return view('TFO.front.contact'); });
-            Route::get('qa.html',function(){ return view('TFO.front.qa'); });
-            Route::get('reservation.html',function(){ return view('TFO.front.reservation'); });
-            Route::get('gift.html',function(){ return view('TFO.front.gift'); });
+            Route::get('index.html',function(){ return view('TFO.m.home'); });
+            Route::get('/',function(){ return redirect("/TableForOne/m/index.html"); });
+            Route::get('about.html',function(){ return view('TFO.m.about'); });
+            Route::get('menu.html',function(){ return view('TFO.m.menu'); });
+            Route::get('rules.html',function(){ return view('TFO.m.rules'); });
+            Route::get('contact.html',function(){ return view('TFO.m.contact'); });
+            Route::get('qa.html',function(){ return view('TFO.m.qa'); });
+            Route::get('reservation.html',function(){ return view('TFO.m.reservation'); });
+            Route::get('gift.html',function(){ return view('TFO.m.gift'); });
         });
 
         Route::group(['prefix' => 'en'], function(){

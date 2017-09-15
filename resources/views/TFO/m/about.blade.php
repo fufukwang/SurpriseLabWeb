@@ -9,7 +9,7 @@
 
 <body>
     <div class="wrapper" id="red-theme" key="1">    
-        @include('TFO.front._logo')
+        @include('TFO.m._logo')
 
         <!--  mobile menu  -->
         <div class="hamburger-box">
@@ -24,7 +24,7 @@
                     一人飲食體驗
                 </h1>
                 <div class="img-box">
-                    <img src="images/about/image1-01.png" alt="">    
+                    <img src="/T41/images/about/image1-01.png" alt="">    
                 </div>
                 <p>
                     一個人慶祝，與慶祝一個人，順序不同，故事也不同。<br>
@@ -38,7 +38,7 @@
                     一個人
                 </h1>
                 <div class="img-box">
-                    <img src="images/about/image2.png" alt="">
+                    <img src="/T41/images/about/image2.png" alt="">
                 </div>
                 <p>
                     嘿，還記得上一次，沒有手機、沒有電視 - 只有自己，與自己的雙眼、雙耳與思緒 - 的那種相處，是什麼時候嗎？
@@ -53,7 +53,7 @@
                     一張餐桌
                 </h1>
                 <div class="img-box">
-                    <img src="images/about/image3.png" alt="">
+                    <img src="/T41/images/about/image3.png" alt="">
                 </div>
 
                 <p>
@@ -67,7 +67,7 @@
                     <ul class="align-center">
                         <li>
                             <div class="img-box">
-                                <img src="images/about/meal1.png" alt="">
+                                <img src="/T41/images/about/meal1.png" alt="">
                             </div>
                             <p>
                                 【 開胃飲 】
@@ -76,7 +76,7 @@
                         </li>
                         <li>
                             <div class="img-box">
-                                <img src="images/about/meal2.png" alt="">
+                                <img src="/T41/images/about/meal2.png" alt="">
                             </div>
                             <p>
                                 【 第一前菜 】
@@ -85,7 +85,7 @@
                         </li>
                         <li>
                             <div class="img-box">
-                                <img src="images/about/meal3.png" alt="">
+                                <img src="/T41/images/about/meal3.png" alt="">
                             </div>
                             <p>
                                 【 第二前菜 】
@@ -94,7 +94,7 @@
                         </li>
                         <li>
                             <div class="img-box">
-                                <img src="images/about/meal4.png" alt="">
+                                <img src="/T41/images/about/meal4.png" alt="">
                             </div>
                             <p>
                                 【 主菜 】<br>信件
@@ -103,7 +103,7 @@
                         </li>
                         <li>
                             <div class="img-box">2
-                                <img src="images/about/meal5.png" alt="">
+                                <img src="/T41/images/about/meal5.png" alt="">
                             </div>
                             <p>
                                 【 甜點 】<br>調色盤
@@ -117,7 +117,7 @@
                 </h1>
 
                 <div class="img-box">
-                    <img src="images/about/image4.png" alt="">
+                    <img src="/T41/images/about/image4.png" alt="">
                 </div>
                 <p>
                     二十四個座位、二十四位陌生人，<br>我們陪你一起，一個人。
@@ -128,7 +128,7 @@
                     發掘探索的一切
                 </h1>
                 <div class="img-box">
-                    <img src="images/about/image5-1.png">
+                    <img src="/T41/images/about/image5-1.png">
                 </div>
                 <p>
                     仔細看看找找翻翻隱藏在天上、地上、桌上的一切，每個發現都值得慶祝、值得玩味。
@@ -149,35 +149,33 @@
                     </h1>
                     <ul>
                         <li>
-                            <img src="images/about/ig-01.png" alt="">
+                            <img src="/T41/images/about/ig-01.png" alt="">
                         </li>
                         <li>
-                            <img src="images/about/ig-02.png" alt="">
+                            <img src="/T41/images/about/ig-02.png" alt="">
                         </li>
                         <li>
-                            <img src="images/about/ig-03.png" alt="">
+                            <img src="/T41/images/about/ig-03.png" alt="">
                         </li>
                         <li>
-                            <img src="images/about/ig-04.png" alt="">
+                            <img src="/T41/images/about/ig-04.png" alt="">
                         </li>
                         <li>
-                            <img src="images/about/ig-05.png" alt="">
+                            <img src="/T41/images/about/ig-05.png" alt="">
                         </li>
                         <li>
-                            <img src="images/about/ig-06.png" alt="">
+                            <img src="/T41/images/about/ig-06.png" alt="">
                         </li>
                         <li>
-                            <img src="images/about/ig-07.png" alt="">
+                            <img src="/T41/images/about/ig-07.png" alt="">
                         </li>
                         <li>
-                            <img src="images/about/ig-08.png" alt="">
+                            <img src="/T41/images/about/ig-08.png" alt="">
                         </li>                            
                     </ul>
                 </div>
             </div>
-            <span class="copyright align-center mg-b-md">
-                copyright © 2017 驚喜製造
-            </span>
+            @include('TFO.front._footer')
         </div>
     </div>
 </body>
