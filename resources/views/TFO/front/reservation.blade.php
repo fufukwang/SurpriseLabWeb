@@ -91,12 +91,7 @@
         
     </div>
     <!--lightbox-->
-    <div class="lightbox">
-        <div class="lightbox-container">
-            {!! trans('tfo.reser.lightbox') !!}
-            
-        </div>
-    </div>
+    {!! trans('tfo.reser.lightbox') !!}
 </body>
 <style type="text/css">
 .bootstrap-datetimepicker-widget table td.disabled,.bootstrap-datetimepicker-widget table td.disabled:hover{color:#CCCCCC;}

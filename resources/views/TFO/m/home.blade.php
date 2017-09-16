@@ -21,14 +21,14 @@
         <!-- landing part -->
         <div id="landing-cut">
             <p class="landing-slogan">
-                當你獨自一人，你感到?
+                {!! trans('tfom.home.slogan') !!}
             </p>
             <div class="index-box">
                 <div class="plate-img-box">
                     <img src="/T41/images/landing-page/mobile1.png" alt="">
                 </div>
                 <div class="btn standard-btn mg-auto" id="index-btn">
-                    開始探索
+                    {!! trans('tfom.home.btn') !!}
                 </div>
             </div>
 
@@ -43,15 +43,7 @@
             <div class="content-box">
                 <div>
                     <h1><img style="max-width: 175px" src="/T41/images/welcome-page/welcome-01.png" alt=""></h1>
-                    <p>
-                        一個人，一張餐桌，<br>二十四位陌生人<br>
-                        一頓飯的時間，<br>我們一起，一個人
-                    </p>
-                    <a href="reservation.html">
-                        <div class="standard-btn btn mg-auto">
-                            立即訂位
-                        </div>    
-                    </a>
+                    {!! trans('tfom.home.text') !!}
                 </div>
             </div>
         </div>
