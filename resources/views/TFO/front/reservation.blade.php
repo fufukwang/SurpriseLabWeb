@@ -74,7 +74,7 @@
                         <li class="active">4</li>
                         <li>5</li>
                     </ul>
-                    {!! trans('tfo.reser.step3') !!}
+                    {!! trans('tfo.reser.step4') !!}
                 </div>
 
 
