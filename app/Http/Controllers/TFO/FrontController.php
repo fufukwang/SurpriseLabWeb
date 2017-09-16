@@ -137,7 +137,7 @@ class FrontController extends Controller
         if($request->ajax() && $request->isMethod('post') && $request->has('act')){
             switch ($request->act) {
                 case 'getDayByDefault':
-                    $pro = TFOPro::select('day')->where('open',1)->where('day','>=',Carbon::now()->format('yy-mm-dd'))->groupBy('day')->get();
+                    $pro = TFOPro::select('day')->where('open',1)->where('day','>=',Carbon::now()->toDateString())->groupBy('day')->get();
                     return $pro->toJson();
                 break;
                 case 'getDatepartByDay':
