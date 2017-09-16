@@ -90,7 +90,7 @@ class FrontController extends Controller
         $result = MC::checksub('1ffcba4562',$data);
         $json = json_decode($result,true);
         if($json['status']==404){
-            $data = array(
+            $mcArray = array(
                 'email_address' => $data['email'],
                 'status'        => 'subscribed',
                 'merge_fields'  => array(
@@ -98,7 +98,7 @@ class FrontController extends Controller
                 )
             );
             //訂閱的動作
-            $rr = MC::subscribe('1ffcba4562',$data);
+            $rr = MC::subscribe('1ffcba4562',$mcArray);
         }
 
         Ecpay::i()->Send['ReturnURL']         = "http://surpriselab.hellokiki.info/TableForOne/ECPayBackCallBack" ;
