@@ -90,7 +90,7 @@ class FrontController extends Controller
         $json = json_decode($result,true);
         if($json['status']==404){
             $data = array(
-                'email_address' => $data['email',
+                'email_address' => $data['email'],
                 'status'        => 'subscribed',
                 'merge_fields'  => array(
                     'FNAME' => $data['name']
