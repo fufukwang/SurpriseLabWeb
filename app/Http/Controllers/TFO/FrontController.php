@@ -84,10 +84,10 @@ class FrontController extends Controller
         TFOOrder::create($data);
 
         // 加入電子報
-        $data = array(
+        $mcAdd = array(
             'email_address' => $data['email']
         );
-        $result = MC::checksub('1ffcba4562',$data);
+        $result = MC::checksub('1ffcba4562',$mcAdd);
         $json = json_decode($result,true);
         if($json['status']==404){
             $mcArray = array(
