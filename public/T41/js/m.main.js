@@ -1,5 +1,22 @@
 $(document).ready(function(){
     var $body = $('body');
+    if(location.pathname.indexOf('index.html')>0){
+        var images = new Array()
+        function preload() {
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
+        }
+        preload(
+            location.protocol+"//"+location.host+"/T41/images/landing-page/mobile1.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/mobile2.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/mobile3.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/mobile4.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/mobile5.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/mobile6.png",
+        );
+    }
     // 確認圖片讀完後
     $body.imagesLoaded(function(){
         // selector
@@ -18,7 +35,11 @@ $(document).ready(function(){
             $hamburgerBtn    = $('.hamburger-box'),
             $navBox          = $('.nav-box'),
             $contentBox      = $('.content-box'),
-            $landingCut      = $('#landing-cut');
+            $landingCut      = $('#landing-cut'),
+            $lightboxTrigger = $('#light-trigger'),
+            $lightboxCancel  = $('.lightbox-cancel'),
+            $lightbox        = $('.lightbox');
+        
 
         // value
         var _wrapperH       = $wrapper.outerHeight(),
@@ -29,6 +50,15 @@ $(document).ready(function(){
         $hamburgerBtn.click(function(){
             $(this).find('i').toggleClass('active');
             $navBox.fadeToggle(400);
+        })
+        
+
+        $lightboxTrigger.click(function(){
+            $lightbox.fadeIn(500);
+        })
+
+        $lightboxCancel.click(function(){
+            $lightbox.fadeOut(500);
         })
         
         // Index function

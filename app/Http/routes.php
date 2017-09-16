@@ -203,6 +203,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('frontcontactstore','TFO\FrontController@ContentStore');
         Route::post('generateOrder','TFO\FrontController@generateOrder');
         Route::post('ECPayBackCallBack','TFO\FrontController@EcPayBackCallBack');
+
+
+        
     });
 });
 

@@ -1,5 +1,22 @@
 $(document).ready(function(){
     var $body = $('body');
+    if(location.pathname.indexOf('index.html')>0){
+        var images = new Array()
+        function preload() {
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
+        }
+        preload(
+            location.protocol+"//"+location.host+"/T41/images/landing-page/set1.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/set2.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/set3.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/set4.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/set5.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/set6.png",
+        );
+    }
     // 確認圖片讀完後
     $body.imagesLoaded(function(){
         // selector
@@ -138,9 +155,4 @@ $(document).ready(function(){
             });
         }
     });  
-
-
-
-
-
 });
