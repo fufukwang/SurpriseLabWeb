@@ -130,6 +130,17 @@ class FrontController extends Controller
         } 
         TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update($data);
         print Ecpay::i()->getResponse($arFeedback);
+
+        $order = TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->first();
+
+        Mail::send('TFO.email.order',$order,function($m) use ($order){
+            $m->from('service@surpriselab.com.tw', 'Table For One');
+            $m->sender('service@surpriselab.com.tw', 'Table For One');
+            $m->replyTo('service@surpriselab.com.tw', 'Table For One');
+
+            $m->to($order->email, $order->name);
+            $m->subject('Table For One 訂位成功 !');
+        });
     }
 
 
