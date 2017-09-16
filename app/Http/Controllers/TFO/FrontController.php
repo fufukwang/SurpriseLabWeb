@@ -82,7 +82,23 @@ class FrontController extends Controller
         ];
         TFOOrder::create($data);
 
-
+        // 加入電子報
+        $data = array(
+            'email_address' => $data['email']
+        );
+        $result = MC::checksub('1ffcba4562',$data);
+        $json = json_decode($result,true);
+        if($json['status']==404){
+            $data = array(
+                'email_address' => $data['email',
+                'status'        => 'subscribed',
+                'merge_fields'  => array(
+                    'FNAME' => $data['name']
+                )
+            );
+            //訂閱的動作
+            $rr = MC::subscribe('1ffcba4562',$data);
+        }
 
         Ecpay::i()->Send['ReturnURL']         = "http://surpriselab.hellokiki.info/TableForOne/ECPayBackCallBack" ;
         Ecpay::i()->Send['MerchantTradeNo']   = $data['sn'];              //訂單編號
