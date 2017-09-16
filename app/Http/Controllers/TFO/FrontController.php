@@ -146,7 +146,7 @@ class FrontController extends Controller
             $m->sender('service@surpriselab.com.tw', 'Table For One');
             $m->replyTo('service@surpriselab.com.tw', 'Table For One');
 
-            $m->to($arr->email, $arr->name);
+            $m->to($arr['email'], $arr['name']);
             $m->subject('Table For One 訂位成功 !');
         });
     }
