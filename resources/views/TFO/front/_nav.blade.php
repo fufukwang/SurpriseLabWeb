@@ -23,11 +23,11 @@
                             <img src="/T41/images/welcome-page/icon4-01.png" alt=""> <span>reservation</span>
                         </li>    
                     </a>
-                    <a href="#">
+                    <!--a href="#">
                         <li>
                             <img src="/T41/images/welcome-page/icon5-01.png" alt="">  <span>gift </span>
                         </li>
-                    </a>
+                    </a-->
                     <a href="contact.html">
                         <li>
                             <img src="/T41/images/welcome-page/icon6-01.png" alt="">  <span>contact</span>
