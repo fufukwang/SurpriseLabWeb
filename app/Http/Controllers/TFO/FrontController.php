@@ -15,6 +15,7 @@ use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use DB;
 use Ecpay;
+use MC;
 
 class FrontController extends Controller
 {
