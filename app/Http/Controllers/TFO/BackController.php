@@ -257,10 +257,43 @@ class BackController extends Controller
 
 
     public function Print(Request $request){
-        $order = TFOOrder::orderBy('updated_at','desc');
-        $order = $order->get();
+        $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
+        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
+        if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
+
+
+        if($request->has('order') && $request->order!=''){
+            $ord = explode('|',$request->order);
+            if(count($ord)>0){
+                $order = $order->OrderBy($ord[0],$ord[1]);
+            }
+        } else { $order = $order->orderBy('TFOOrder.updated_at','desc'); }
+        $order = $order->paginate($this->perpage);
         
 
         return view('TFO.back.print',compact('order','request'));
     }
+
+    public function Table(Request $request){
+        $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine');
+        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
+        if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
+
+
+        if($request->has('order') && $request->order!=''){
+            $ord = explode('|',$request->order);
+            if(count($ord)>0){
+                $order = $order->OrderBy($ord[0],$ord[1]);
+            }
+        } else { $order = $order->orderBy('TFOOrder.updated_at','desc'); }
+        $order = $order->get();
+        
+
+        return view('TFO.back.table',compact('order','request'));
+    }
 }
+
+

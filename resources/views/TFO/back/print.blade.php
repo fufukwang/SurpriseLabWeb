@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/TableForOne/print">
+                                        <div class="btn-group focus-btn-group"><form action="/TableForOne/print" id="SearchForm">
 
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -39,8 +39,14 @@
                                                     <option value="">付款狀態</option>
                                                     <option value="已付款">已付款</option>
                                                     <option value="未付款">未付款</option>
-                                                    <option value="付款失敗">付款失敗</option>
-                                                    <option value="取消訂單">取消訂單</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-1">
+                                                <select name="dayparts" class="form-control">
+                                                    <option value="">時段</option>
+                                                    <option value="午餐">午餐</option>
+                                                    <option value="下午茶">下午茶</option>
+                                                    <option value="晚餐">晚餐</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
@@ -50,13 +56,21 @@
                                                     <option value="信用卡">信用卡</option>
                                                 </select>
                                             </div>
-<div class="form-group col-sm-1"><div class="checkbox checkbox-primary"><input name="notel" value="1" id="none1" type="checkbox"@if($request->notel == 1) checked @endif><label for="none1">不顯示電話</label></div></div>
-<div class="form-group col-sm-1"><div class="checkbox checkbox-primary"><input name="notool" value="1" id="none2" type="checkbox"@if($request->notool == 1) checked @endif><label for="none2">不顯示功能</label></div></div>
-<div class="form-group col-sm-1"><div class="checkbox checkbox-primary"><input name="noemail" value="1" id="none3" type="checkbox"@if($request->noemail == 1) checked @endif><label for="none3">不顯示信箱</label></div></div>
+                                            <div class="form-group col-sm-2">
+                                                <select name="order" class="form-control">
+                                                    <option value="">排序(預設為修改時間反序)</option>
+                                                    <option value="rangstart|asc"@if(isset($request->order) && $request->order=='rangstart|asc') selected @endif>開始時間正序</option>
+                                                    <option value="rangstart|desc"@if(isset($request->order) && $request->order=='rangstart|desc') selected @endif>開始時間反序</option>
+                                                </select>
+                                            </div>
+
  
-
-                                            <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
-
+                                            <div class="form-group col-sm-1">
+                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+                                            </div>
+                                            <div class="form-group col-sm-1">
+                                                <button type="button" class="btn btn-primary" id="grTable"><span class="glyphicon glyphicon-search"></span> 產生列印表格</button>
+                                            </div>
 
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
@@ -178,32 +192,28 @@ $(function(){
     });
 
 
-        var datatable = $("#datatable-buttons").DataTable({
-            dom: "Bfrtip",
-            buttons: [{
-                extend: "copy",
-                className: "btn-sm"
-            }, {
-                extend: "csv",
-                className: "btn-sm"
-            }, {
-                extend: "excel",
-                className: "btn-sm"
-            }, {
-                extend: "print",
-                className: "btn-sm"
-            }],
-            responsive: !0
-        })
-
-
-
-
-
-
-
+    $('#grTable').bind('click',function(){
+        var day      = $('input[name=day]').val();
+        var dayparts = $('select[name=dayparts]').val();
+        if(day == '' || dayparts == ''){
+            console.log('test');
+            if(confirm("尚未選擇日期或時段確定要產生此表格?!")){
+                submitSearchForm();
+            }
+        } else {
+            submitSearchForm();
+        }
+       
+    });
 
 });
+function submitSearchForm(){
+    $('#SearchForm').attr('target','_blank')
+    $('#SearchForm').attr('action','/TableForOne/table')
+    $('#SearchForm').submit();
+    $('#SearchForm').attr('target','_top');
+    $('#SearchForm').attr('action','/TableForOne/print');
+}
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
 		</script>
 

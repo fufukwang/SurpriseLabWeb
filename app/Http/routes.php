@@ -97,6 +97,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
         // 報表列印
         Route::get('print','TFO\BackController@Print');
+        Route::get('table','TFO\BackController@Table');
     });
 });
 
@@ -204,8 +205,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('generateOrder','TFO\FrontController@generateOrder');
         Route::post('ECPayBackCallBack','TFO\FrontController@EcPayBackCallBack');
 
-
-        
+        Route::post('ECPaySuccess','TFO\FrontController@ECPaySuccess');
+        Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
+        Route::get('ECPayFail','TFO\FrontController@ECPayFail');
     });
 });
 
