@@ -165,7 +165,7 @@ function redirectme(){
         if(location.pathname.indexOf()>0){
             var href = location.pathname.replace('tableforone/en','tableforone/m.en');
         } else {
-            var href = location.pathname.replace('tableforone/','tableforone/m');    
+            var href = location.pathname.replace('tableforone/','tableforone/m/');    
         }
         document.location.href = href;
     }
