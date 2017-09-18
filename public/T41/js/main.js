@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    redirectme();
     var $body = $('body');
     if(location.pathname.indexOf('index.html')>0){
         var images = new Array()
@@ -156,3 +157,16 @@ $(document).ready(function(){
         }
     });  
 });
+
+
+function redirectme(){
+    var width = $(window).width();
+    if(width<=600){
+        if(location.pathname.indexOf()>0){
+            var href = location.pathname.replace('TableForOne/en','TableForOne/m.en');
+        } else {
+            var href = location.pathname.replace('TableForOne/','TableForOne/m');    
+        }
+        document.location.href = href;
+    }
+}
