@@ -259,6 +259,7 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.updated_at AS updated_at','paystatus','email','sn','TFOOrder.id');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
