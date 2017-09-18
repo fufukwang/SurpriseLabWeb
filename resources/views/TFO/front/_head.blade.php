@@ -6,3 +6,4 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="/T41/T41.png" type="image/vnd.microsoft.icon" />
 	<link rel="icon" href="/T41/T41.png" type="image/vnd.microsoft.icon" />
+	<meta property="og:image" content="https://surpriselab.com.tw/T41/fb_share.jpg"/> 

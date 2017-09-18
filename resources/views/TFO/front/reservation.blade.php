@@ -45,8 +45,6 @@
                 </div>
 
 
-
-
                 <!-- step 3-->
                 <div id="step3">
                     <ul class="step-box mg-b-lg">
@@ -56,10 +54,11 @@
                         <li>4</li>
                         <li>5</li>
                     </ul>
-                    <form action="/TableForOne/generateOrder" method="post" id="reservationForm">
+                    <form action="/tableforone/generateOrder" method="post" id="reservationForm">
                     {!! csrf_field() !!}
                     <input type="hidden" name="pro_id" id="pro_id">
                     <input type="hidden" name="item" id="item">
+                    <input type="hidden" name="lang" value="{{ $_SERVER['REQUEST_URI'] }}">
                     {!! trans('tfo.reser.step3') !!}
                 </div>
 

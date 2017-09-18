@@ -21,7 +21,7 @@
         <div class="content-box align-left">
             <div>
                 {!! trans('tfom.contact.text') !!}
-                <form action="/TableForOne/frontcontactstore" method="post" id="contentForm">
+                <form action="/tableforone/frontcontactstore" method="post" id="contentForm">
                 {!! csrf_field() !!}
                 {!! trans('tfom.contact.form') !!}
             </div>

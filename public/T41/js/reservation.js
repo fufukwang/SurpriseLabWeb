@@ -9,7 +9,7 @@ $(function(){
         if($('#agrenRule').prop('checked')){
             $('#agrenRule').parent().removeClass('error');
             $('#step1').hide();
-            $.post('/TableForOne/getRoomData',{act:'getDayByDefault'},function(data){
+            $.post('/tableforone/getRoomData',{act:'getDayByDefault'},function(data){
                 var elbdate = [];
                 for(i=0;i<data.length;i++) elbdate.push(data[i].day);
                 $('.form_date').datetimepicker({
@@ -19,7 +19,7 @@ $(function(){
                     enabledDates:elbdate
                 }).on('dp.change',function(e){
                     var $day = e.date.format('YYYY-MM-DD');
-                    $.post('/TableForOne/getRoomData',{act:'getDatepartByDay',day:$day},function(data){
+                    $.post('/tableforone/getRoomData',{act:'getDatepartByDay',day:$day},function(data){
                         var html = '<option value="">請選擇時段</option>';
                         for(i=0;i<data.length;i++) html += '<option value="'+data[i].dayparts+'">'+data[i].dayparts+'</option>';
                         $('#datepart').html(html);
@@ -45,9 +45,20 @@ $(function(){
     $('#datepart').bind('change',function(){
         var $day = $(this).data('day');
         var $val = $(this).val();
-        $.post('/TableForOne/getRoomData',{act:'getIDByDatepart',day:$day,dayparts:$val},function(data){
+        $.post('/tableforone/getRoomData',{act:'getIDByDatepart',day:$day,dayparts:$val},function(data){
             var html = '<option value="">請選擇時段</option>';
-            for(i=0;i<data.length;i++) html += '<option value="'+data[i].id+'" data-money="'+data[i].money+'" data-wine="'+data[i].wine+'">'+data[i].rangstart.substring(0,5)+' ~ '+data[i].rangend.substring(0,5)+'</option>';
+            for(i=0;i<data.length;i++){
+                var disable = '';
+                var text    = '';
+                if(data[i].site>0){
+                    disable = '';
+                    text    = '';
+                } else {
+                    disable = 'disabled';
+                    text    = ' (額滿)';
+                }
+                html += '<option value="'+data[i].id+'" data-money="'+data[i].money+'" data-wine="'+data[i].wine+'" '+disable+'>'+data[i].rangstart.substring(0,5)+' ~ '+data[i].rangend.substring(0,5)+text+'</option>';
+            }
             $('#id').html(html);
         },'json');
     });

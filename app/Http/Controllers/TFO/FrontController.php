@@ -53,7 +53,7 @@ class FrontController extends Controller
             $m->subject('Table For One，聯絡我們-通知');
         });
         TFOContact::insert($data);
-        return redirect("/TableForOne/index.html")->with('message','留言完成!');
+        return redirect("/tableforone/index.html")->with('message','留言完成!');
     }
     // 生成訂單並送給金流
     public function generateOrder(Request $request){
@@ -81,7 +81,7 @@ class FrontController extends Controller
             'paytype'    => '信用卡',
             'item'       => $request->item,
         ];
-        TFOOrder::create($data);
+        $order = TFOOrder::create($data);
 
         // 加入電子報
         $mcAdd = array(
@@ -101,7 +101,12 @@ class FrontController extends Controller
             $rr = MC::subscribe('1ffcba4562',$mcArray);
         }
 
-        Ecpay::i()->Send['ReturnURL']         = "http://surpriselab.hellokiki.info/TableForOne/ECPayBackCallBack" ;
+        $request->session()->put('OrderData', [
+            'lang' => $request->lang,
+            'id'   => $order->id,
+        ]);
+
+        Ecpay::i()->Send['ReturnURL']         = $request->getSchemeAndHttpHost()."/tableforone/ECPayBackCallBack" ;
         Ecpay::i()->Send['MerchantTradeNo']   = $data['sn'];              //訂單編號
         Ecpay::i()->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');      //交易時間
         Ecpay::i()->Send['TotalAmount']       = $data['money'];           //交易金額
@@ -120,6 +125,50 @@ class FrontController extends Controller
         echo "緑界頁面導向中...";
         echo Ecpay::i()->CheckOutString();
     }
+
+
+
+    public function ECPaySuccess(Request $result){
+        if($request->ajax() && $request->isMethod('post') && $request->has('act')){
+            $data = [
+                'sotry' => $request->sotry,
+            ];
+            if(is_numeric($request->id) && $request->id>0){
+                TFOOrder::where('id',$id)->update($data);
+            } 
+            return Response::json(['message'=> '已更新'], 200);
+        }
+
+        $session = $request->session()->get('OrderData', 'emp');
+        if($session == 'emp'){
+            abort(404);
+        } else {
+
+        }
+
+
+    }
+
+    public function ECPayFail(Request $result){
+        $session = $request->session()->get('OrderData', 'emp');
+        if($session == 'emp'){
+            abort(404);
+        } else {
+            $reduri = '';
+            if($session['lang']=='/tableforone/m/reservation.html'){
+                $reduri = '/tableforone/m/ECPayFail.html';
+            } elseif($session['lang']=='/tableforone/en/reservation.html'){
+                $reduri = '/tableforone/en/ECPayFail.html';
+            } elseif($session['lang']=='/tableforone/m.en/reservation.html'){
+                $reduri = '/tableforone/m.en/ECPayFail.html';
+            }
+            if($reduri!='') return redirect($reduri);
+            $request->session()->forget('OrderData');
+            return view('TFO.front.ECPayFail');
+        }
+    }
+
+
 
     public function EcPayBackCallBack(Request $request){
         $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
@@ -156,7 +205,7 @@ class FrontController extends Controller
         if($request->ajax() && $request->isMethod('post') && $request->has('act')){
             switch ($request->act) {
                 case 'getDayByDefault':
-                    $pro = TFOPro::select('day')->where('open',1)->where('day','>=',Carbon::now()->toDateString())->groupBy('day')->get();
+                    $pro = TFOPro::select('day')->where('open',1)->where('day','>=',Carbon::now()->toDateString())->groupBy('day')->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")->get();
                     return $pro->toJson();
                 break;
                 case 'getDatepartByDay':
@@ -167,9 +216,10 @@ class FrontController extends Controller
                 case 'getIDByDatepart':
                     $day      = $request->day;
                     $dayparts = $request->dayparts;
-                    $pro = TFOPro::select('id','rangstart','rangend','money','wine')->where('open',1)->where('day',$day)->where('dayparts',$dayparts)
-                    ->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")
-                    ->get();
+                    $pro = TFOPro::select(DB::raw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS site,id,rangstart,rangend,money,wine"))
+                        ->where('open',1)->where('day',$day)->where('dayparts',$dayparts)
+                    //->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")
+                        ->get();
                     return $pro->toJson();
                 break;
             }

@@ -153,9 +153,9 @@ Route::group(['middleware' => ['web']], function () {
 
 
     // Table For One
-    Route::group(['prefix' => 'TableForOne'], function(){
+    Route::group(['prefix' => 'tableforone'], function(){
         Route::get('index.html',function(){ return view('TFO.front.home'); });
-        Route::get('/',function(){ return redirect("/TableForOne/index.html"); });
+        Route::get('/',function(){ return redirect("/tableforone/index.html"); });
         Route::get('about.html',function(){ return view('TFO.front.about'); });
         Route::get('menu.html',function(){ return view('TFO.front.menu'); });
         Route::get('rules.html',function(){ return view('TFO.front.rules'); });
@@ -166,7 +166,7 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::group(['prefix' => 'm'], function(){
             Route::get('index.html',function(){ return view('TFO.m.home'); });
-            Route::get('/',function(){ return redirect("/TableForOne/m/index.html"); });
+            Route::get('/',function(){ return redirect("/tableforone/m/index.html"); });
             Route::get('about.html',function(){ return view('TFO.m.about'); });
             Route::get('menu.html',function(){ return view('TFO.m.menu'); });
             Route::get('rules.html',function(){ return view('TFO.m.rules'); });
@@ -174,11 +174,14 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('qa.html',function(){ return view('TFO.m.qa'); });
             Route::get('reservation.html',function(){ return view('TFO.m.reservation'); });
             Route::get('gift.html',function(){ return view('TFO.m.gift'); });
+
+            Route::get('ECPaySuccess.html',function(){ return view('TFO.m.ECPaySuccess'); });
+            Route::get('ECPayFail.html',function(){ return view('TFO.m.ECPayFail'); });
         });
 
         Route::group(['prefix' => 'en'], function(){
             Route::get('index.html',function(){ App::setLocale('en'); return view('TFO.front.home'); });
-            Route::get('/',function(){ App::setLocale('en'); return redirect("/TableForOne/index.html"); });
+            Route::get('/',function(){ App::setLocale('en'); return redirect("/tableforone/index.html"); });
             Route::get('about.html',function(){ App::setLocale('en'); return view('TFO.front.about'); });
             Route::get('menu.html',function(){ App::setLocale('en'); return view('TFO.front.menu'); });
             Route::get('rules.html',function(){ App::setLocale('en'); return view('TFO.front.rules'); });
@@ -186,18 +189,24 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.front.qa'); });
             Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.front.reservation'); });
             Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
+
+            Route::get('ECPaySuccess.html',function(){ App::setLocale('en'); return view('TFO.front.ECPaySuccess'); });
+            Route::get('ECPayFail.html',function(){ App::setLocale('en'); return view('TFO.front.ECPayFail'); });
         });
 
         Route::group(['prefix' => 'm.en'], function(){
-            Route::get('index.html',function(){ App::setLocale('en'); return view('TFO.front.home'); });
-            Route::get('/',function(){ App::setLocale('en'); return redirect("/TableForOne/index.html"); });
-            Route::get('about.html',function(){ App::setLocale('en'); return view('TFO.front.about'); });
-            Route::get('menu.html',function(){ App::setLocale('en'); return view('TFO.front.menu'); });
-            Route::get('rules.html',function(){ App::setLocale('en'); return view('TFO.front.rules'); });
-            Route::get('contact.html',function(){ App::setLocale('en'); return view('TFO.front.contact'); });
-            Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.front.qa'); });
-            Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.front.reservation'); });
-            Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
+            Route::get('index.html',function(){ App::setLocale('en'); return view('TFO.m.home'); });
+            Route::get('/',function(){ App::setLocale('en'); return redirect("/tableforone/index.html"); });
+            Route::get('about.html',function(){ App::setLocale('en'); return view('TFO.m.about'); });
+            Route::get('menu.html',function(){ App::setLocale('en'); return view('TFO.m.menu'); });
+            Route::get('rules.html',function(){ App::setLocale('en'); return view('TFO.m.rules'); });
+            Route::get('contact.html',function(){ App::setLocale('en'); return view('TFO.m.contact'); });
+            Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.m.qa'); });
+            Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.m.reservation'); });
+            Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.m.gift'); });
+
+            Route::get('ECPaySuccess.html',function(){ App::setLocale('en'); return view('TFO.m.ECPaySuccess'); });
+            Route::get('ECPayFail.html',function(){ App::setLocale('en'); return view('TFO.m.ECPayFail'); });
         });
 
         Route::post('getRoomData','TFO\FrontController@getRoomData');

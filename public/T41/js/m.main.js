@@ -166,9 +166,9 @@ function redirectme(){
     var width = $(window).width();
     if(width>600){
         if(location.pathname.indexOf()>0){
-            var href = location.pathname.replace('TableForOne/m.en/','TableForOne/en/');
+            var href = location.pathname.replace('tableforone/m.en/','tableforone/en/');
         } else {
-            var href = location.pathname.replace('TableForOne/m/','TableForOne/'); 
+            var href = location.pathname.replace('tableforone/m/','tableforone/'); 
         }
         document.location.href = href;
     }

@@ -137,7 +137,7 @@ class BackController extends Controller
     }*/
 
     public function Orders(Request $request,$id){
-        $order = TFOOrder::orderBy('updated_at','desc');
+        $order = TFOOrder::orderBy('updated_at','desc')->where('tfopro_id',$id);
         $order = $order->get();
         return view('TFO.back.orders',compact('order'));
     }
@@ -155,14 +155,15 @@ class BackController extends Controller
     public function OrderUpdate(Request $request,$id){
 
         $data = [
-            //'paystatus' => $request->paystatus,
+            'paystatus' => $request->paystatus,
             'manage'    => $request->manage,
-            //'paytype'   => $request->paytype,
+            'paytype'   => $request->paytype,
         ];
         if(is_numeric($id) && $id>0){
             TFOOrder::where('id',$id)->update($data);
+            $order = TFOOrder::find($id);
         } 
-        return redirect('/TableForOne/orders/'.$id)->with('message','編輯完成!');
+        return redirect('/TableForOne/orders/'.$order->tfopro_id)->with('message','編輯完成!');
     }
     public function OrderDelete(Request $request,$id){
         TFOOrder::where('id',$id)->delete();
