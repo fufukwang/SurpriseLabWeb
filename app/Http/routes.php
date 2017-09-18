@@ -175,7 +175,7 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('reservation.html',function(){ return view('TFO.m.reservation'); });
             Route::get('gift.html',function(){ return view('TFO.m.gift'); });
 
-            Route::get('ECPaySuccess.html',function(){ return view('TFO.m.ECPaySuccess'); });
+            Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail.html',function(){ return view('TFO.m.ECPayFail'); });
         });
 
@@ -190,7 +190,7 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.front.reservation'); });
             Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
 
-            Route::get('ECPaySuccess.html',function(){ App::setLocale('en'); return view('TFO.front.ECPaySuccess'); });
+            Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail.html',function(){ App::setLocale('en'); return view('TFO.front.ECPayFail'); });
         });
 
@@ -205,7 +205,7 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.m.reservation'); });
             Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.m.gift'); });
 
-            Route::get('ECPaySuccess.html',function(){ App::setLocale('en'); return view('TFO.m.ECPaySuccess'); });
+            Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail.html',function(){ App::setLocale('en'); return view('TFO.m.ECPayFail'); });
         });
 

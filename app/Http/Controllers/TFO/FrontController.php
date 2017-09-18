@@ -129,24 +129,26 @@ class FrontController extends Controller
 
 
     public function ECPaySuccess(Request $result){
+        $session = $request->session()->get('OrderData', 'emp');
         if($request->ajax() && $request->isMethod('post') && $request->has('act')){
             $data = [
                 'sotry' => $request->sotry,
             ];
-            if(is_numeric($request->id) && $request->id>0){
+            $id = $session['id'];
+            if(is_numeric($id) && $id>0){
                 TFOOrder::where('id',$id)->update($data);
+                $request->session()->forget('OrderData');
             } 
             return Response::json(['message'=> '已更新'], 200);
         }
 
-        $session = $request->session()->get('OrderData', 'emp');
         if($session == 'emp'){
             abort(404);
         } else {
 
+
+            return view('TFO.front.ECPaySuccess');
         }
-
-
     }
 
     public function ECPayFail(Request $result){
