@@ -661,7 +661,7 @@ $home = <<<'FOOBAR'
                     <p>
                         一頓飯的時間，我們一起，一個人
                     </p>
-                    <a href="reservation.html">
+                    <a href="about.html">
                         <div class="standard-btn btn mg-auto">
                             了解更多
                         </div>    
