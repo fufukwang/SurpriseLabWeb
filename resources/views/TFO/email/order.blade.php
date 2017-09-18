@@ -557,7 +557,7 @@
 <span style="font-family:trebuchet ms,lucida grande,lucida sans unicode,lucida sans,tahoma,sans-serif"><span style="font-size:15px"><strong>table for ONE - Reservation Confirmation</strong></span></span></span><br>
 <br>
 <span style="color:#000000"><span style="font-family:trebuchet ms,lucida grande,lucida sans unicode,lucida sans,tahoma,sans-serif"><span style="font-size:14px">我們將於以下日期為您備席<br>
-{{ $day }}&nbsp;<br />{{ substr($rangstart,0,5) }}~{{ substr($rangend,0,5) }} </span></span></span></h1>
+{{ $day }}<br />{{ substr($rangstart,0,5) }}~{{ substr($rangend,0,5) }} </span></span></span></h1>
 
 <p style="text-align: center;"><br>
 <span style="font-size:14px">一個人時，一切都好</span></p>
@@ -573,7 +573,7 @@
 <span style="font-size:14px"><span style="font-family:trebuchet ms,lucida grande,lucida sans unicode,lucida sans,tahoma,sans-serif">Hi, welcome.<br>
 <br>
 Your reservation for 1 is as follows :<br>
-{{ $day }}&nbsp;<br />{{ substr($rangstart,0,5) }}~{{ substr($rangend,0,5) }}<br>
+{{ $day }}<br />{{ substr($rangstart,0,5) }}~{{ substr($rangend,0,5) }}<br>
 <br>
 Have Fun. Enjoy yourself!<br>
 <br>
