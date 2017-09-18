@@ -82,6 +82,7 @@
                                                 @if($request->notel != 1)<th>電話</th>@endif
                                                 @if($request->noemail != 1)<th>信箱</th>@endif
                                                 <th>付款狀態</th>
+                                                <th>更新日期</th>
                                                 @if($request->notool != 1)<th data-orderable="false">功能</th>@endif
                                             </tr>
                                         </thead>
@@ -93,6 +94,7 @@
                                                 @if($request->notel != 1)<td>{{ $row->tel }}</td>@endif
                                                 @if($request->noemail != 1)<td>{{ $row->email }}</td>@endif
                                                 <td>{{ $row->paystatus }}</td>
+                                                <th>{{ $row->updated_at }}</th>
                                                 @if($request->notool != 1)<td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/TableForOne/order/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>

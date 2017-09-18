@@ -106,7 +106,7 @@ class FrontController extends Controller
             'id'   => $order->id,
         ]);
 
-        Ecpay::i()->Send['ReturnURL']         = $request->getSchemeAndHttpHost()."/tableforone/ECPayBackCallBack" ;
+        Ecpay::i()->Send['ReturnURL']         = "http://surpriselab.com.tw/tableforone/ECPayBackCallBack" ;
         Ecpay::i()->Send['MerchantTradeNo']   = $data['sn'];              //訂單編號
         Ecpay::i()->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');      //交易時間
         Ecpay::i()->Send['TotalAmount']       = $data['money'];           //交易金額
