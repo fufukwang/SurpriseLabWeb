@@ -40,12 +40,12 @@
                     </a>
                 </ul>
                 <ul class="social-nav">
-                    <a href="#" target="_blank">
+                    <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
                         <li>
                             <img src="/T41/images/welcome-page/ig-01.png" alt="">
                         </li>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://www.facebook.com/surpriselabtw" target="_blank">
                         <li>
                             <img src="/T41/images/welcome-page/fb-01.png" alt="">
                         </li>    
