@@ -460,7 +460,7 @@
 				<!--[if mso]>
 				<td valign="top" width="210" style="width:210px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:210px;" width="100%" class="mcnTextContentContainer">
+                <!--table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:210px;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-left:18px; padding-bottom:9px; padding-right:18px;">
@@ -468,7 +468,7 @@
                             <a href="*|ARCHIVE|*" target="_blank">View this email in your browser</a>
                         </td>
                     </tr>
-                </tbody></table>
+                </tbody></table-->
 				<!--[if mso]>
 				</td>
 				<![endif]-->
@@ -557,7 +557,7 @@
 <span style="font-family:trebuchet ms,lucida grande,lucida sans unicode,lucida sans,tahoma,sans-serif"><span style="font-size:15px"><strong>table for ONE - Reservation Confirmation</strong></span></span></span><br>
 <br>
 <span style="color:#000000"><span style="font-family:trebuchet ms,lucida grande,lucida sans unicode,lucida sans,tahoma,sans-serif"><span style="font-size:14px">我們將於以下日期為您備席<br>
-{{ $day }}&nbsp;{{ substr($rangstart,0,5) }}-{{ substr($rangend,0,5) }} </span></span></span></h1>
+{{ $day }}&nbsp;<br />{{ substr($rangstart,0,5) }}~{{ substr($rangend,0,5) }} </span></span></span></h1>
 
 <p style="text-align: center;"><br>
 <span style="font-size:14px">一個人時，一切都好</span></p>
@@ -573,7 +573,7 @@
 <span style="font-size:14px"><span style="font-family:trebuchet ms,lucida grande,lucida sans unicode,lucida sans,tahoma,sans-serif">Hi, welcome.<br>
 <br>
 Your reservation for 1 is as follows :<br>
-{{ $day }}&nbsp;{{ substr($rangstart,0,5) }}-{{ substr($rangend,0,5) }}<br>
+{{ $day }}&nbsp;<br />{{ substr($rangstart,0,5) }}~{{ substr($rangend,0,5) }}<br>
 <br>
 Have Fun. Enjoy yourself!<br>
 <br>

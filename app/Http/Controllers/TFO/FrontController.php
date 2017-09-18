@@ -38,18 +38,12 @@ class FrontController extends Controller
             'notes'  => $request->notes,
         ];
         Mail::send('TFO.email.Contact',$data,function($m) use ($data){
-            /*
-            $m->from('service@surpriselab.com.tw', 'Table For One');
-            $m->sender('service@surpriselab.com.tw', 'Table For One');
-            $m->replyTo('service@surpriselab.com.tw', 'Table For One');
+            $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+            $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+            $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
 
-            $m->to('service@surpriselab.com.tw', 'Table For One');
-            */
-            $m->from('king.no1.wang@gmail.com', 'Table For One');
-            $m->sender('king.no1.wang@gmail.com', 'Table For One');
-            $m->replyTo('king.no1.wang@gmail.com', 'Table For One');
+            $m->to('tableforone@surpriselab.com.tw', 'Table For One');
 
-            $m->to('king.no1.wang@gmail.com', 'Table For One');
             $m->subject('Table For One，聯絡我們-通知');
         });
         TFOContact::insert($data);
@@ -183,7 +177,7 @@ class FrontController extends Controller
         TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update($data);
         print Ecpay::i()->getResponse($arFeedback);
 
-        $order = TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->first();
+        $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('day','rangstart','rangend','name','email')->where('sn',$arFeedback['MerchantTradeNo'])->first();
 
         $arr = [
             'day'       => $order->day,
@@ -193,9 +187,9 @@ class FrontController extends Controller
             'email'     => $order->email,
         ];
         Mail::send('TFO.email.order',$arr,function($m) use ($arr){
-            $m->from('service@surpriselab.com.tw', 'Table For One');
-            $m->sender('service@surpriselab.com.tw', 'Table For One');
-            $m->replyTo('service@surpriselab.com.tw', 'Table For One');
+            $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+            $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+            $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
 
             $m->to($arr['email'], $arr['name']);
             $m->subject('Table For One 訂位成功 !');

@@ -217,6 +217,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('ECPaySuccess','TFO\FrontController@ECPaySuccess');
         Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
         Route::get('ECPayFail','TFO\FrontController@ECPayFail');
+
+
     });
 });
 
