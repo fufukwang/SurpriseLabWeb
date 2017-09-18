@@ -128,7 +128,7 @@ class FrontController extends Controller
 
 
 
-    public function ECPaySuccess(Request $result){
+    public function ECPaySuccess(Request $request){
         $session = $request->session()->get('OrderData', 'emp');
         if($request->ajax() && $request->isMethod('post') && $request->has('act')){
             $data = [
