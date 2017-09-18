@@ -8,3 +8,12 @@
     <link rel="shortcut icon" href="/T41/T41.png" type="image/vnd.microsoft.icon" />
 	<link rel="icon" href="/T41/T41.png" type="image/vnd.microsoft.icon" />
 	<meta property="og:image" content="https://surpriselab.com.tw/T41/fb_share.jpg"/> 
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-75329055-5');
+</script>
