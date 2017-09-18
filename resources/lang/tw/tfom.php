@@ -107,9 +107,6 @@ $about = <<<'FOOBAR'
                 <p>
                     仔細看看找找翻翻隱藏在天上、地上、桌上的一切，每個發現都值得慶祝、值得玩味。
                 </p>
-                <a href="#">
-                    Want to know more?
-                </a>
                 <div class="btn-box">
                     <a href="reservation.html">
                         <div class="standard-btn btn">
