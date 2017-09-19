@@ -127,13 +127,13 @@ class FrontController extends Controller
     public function ECPaySuccess(Request $request){
         if($request->ajax() && $request->isMethod('post')){
             $data = [
-                'sotry' => $request->sotry,
+                'sotry' => $request->story,
             ];
             if($request->has('sn')){
                 TFOOrder::where('sn',$request->sn)->update($data);
-                $request->session()->forget('OrderData');
+                //$request->session()->forget('OrderData');
             } 
-            $request->session()->forget('OrderData');
+            //$request->session()->forget('OrderData');
             return Response::json(['message'=> '已更新'], 200);
         }
 
