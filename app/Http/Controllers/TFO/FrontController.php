@@ -133,13 +133,22 @@ class FrontController extends Controller
                 TFOOrder::where('id',$id)->update($data);
                 $request->session()->forget('OrderData');
             } 
+            $request->session()->forget('OrderData');
             return Response::json(['message'=> '已更新'], 200);
         }
 
         if($session == 'emp'){
             abort(404);
         } else {
-
+            $reduri = '';
+            if($session['lang']=='/tableforone/m/reservation.html'){
+                $reduri = '/tableforone/m/ECPaySuccess';
+            } elseif($session['lang']=='/tableforone/en/reservation.html'){
+                $reduri = '/tableforone/en/ECPaySuccess';
+            } elseif($session['lang']=='/tableforone/m.en/reservation.html'){
+                $reduri = '/tableforone/m.en/ECPaySuccess';
+            }
+            if($reduri!='') return redirect($reduri);
 
             return view('TFO.front.ECPaySuccess');
         }
@@ -177,23 +186,25 @@ class FrontController extends Controller
         TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update($data);
         print Ecpay::i()->getResponse($arFeedback);
 
-        $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('day','rangstart','rangend','name','email')->where('sn',$arFeedback['MerchantTradeNo'])->first();
+        if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
+            $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('day','rangstart','rangend','name','email')->where('sn',$arFeedback['MerchantTradeNo'])->first();
 
-        $arr = [
-            'day'       => $order->day,
-            'rangstart' => $order->rangstart,
-            'rangend'   => $order->rangend,
-            'name'      => $order->name,
-            'email'     => $order->email,
-        ];
-        Mail::send('TFO.email.order',$arr,function($m) use ($arr){
-            $m->from('tableforone@surpriselab.com.tw', 'Table For One');
-            $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
-            $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
+            $arr = [
+                'day'       => $order->day,
+                'rangstart' => $order->rangstart,
+                'rangend'   => $order->rangend,
+                'name'      => $order->name,
+                'email'     => $order->email,
+            ];
+            Mail::send('TFO.email.order',$arr,function($m) use ($arr){
+                $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
 
-            $m->to($arr['email'], $arr['name']);
-            $m->subject('Table For One 訂位成功 !');
-        });
+                $m->to($arr['email'], $arr['name']);
+                $m->subject('Table For One 訂位成功 !');
+            });
+        }
     }
 
 
