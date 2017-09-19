@@ -127,7 +127,7 @@ class FrontController extends Controller
     public function ECPaySuccess(Request $request){
         if($request->ajax() && $request->isMethod('post')){
             $data = [
-                'sotry' => $request->story,
+                'story' => $request->story,
             ];
             if($request->has('sn')){
                 TFOOrder::where('sn',$request->sn)->update($data);
