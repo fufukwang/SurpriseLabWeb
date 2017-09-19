@@ -678,7 +678,8 @@ $step1 = <<<'FOOBAR'
                             *B套餐之佐餐飲，可任選酒水單上飲品乙杯<br> 
                             *以上價格均已含服務費<br> 
                             *每人用餐時間為90分鐘<br> 
-                            *選擇日期、填寫資料、線上預付，即完成訂位服務
+                            *選擇日期、填寫資料、線上預付，即完成訂位服務<br> 
+                            <span style="color: #f76565;">*若訂位時遇到任何問題，歡迎來信詢問 tableforone@surpriselab.com.tw</span>
                         </p>
                         <h4>
                             <input type="checkbox" id="agrenRule"> 我已詳讀並遵守一<a href="rules.html" target="_blank"><span class="lightbox-trigger">人餐桌訂位與用餐規則</a></span>。
