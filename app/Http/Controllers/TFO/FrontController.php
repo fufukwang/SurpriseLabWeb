@@ -105,7 +105,7 @@ class FrontController extends Controller
         Ecpay::i()->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');      //交易時間
         Ecpay::i()->Send['TotalAmount']       = $data['money'];           //交易金額
         Ecpay::i()->Send['TradeDesc']         = $data['item'];            //交易描述
-        Ecpay::i()->Send['ChoosePayment']     = \ECPay_PaymentMethod::ALL ;     //付款方式
+        Ecpay::i()->Send['ChoosePayment']     = \ECPay_PaymentMethod::Credit ;     //付款方式
 
         //訂單的商品資料
         array_push(Ecpay::i()->Send['Items'], [
