@@ -164,7 +164,6 @@ class FrontController extends Controller
         }
         */
         $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
-        dd($arFeedback);
         if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
             return view('TFO.front.ECPaySuccess');
         } else {
@@ -177,6 +176,7 @@ class FrontController extends Controller
         if($session == 'emp'){
             abort(404);
         } else {
+            /*
             $reduri = '';
             if($session['lang']=='/tableforone/m/reservation.html'){
                 $reduri = '/tableforone/m/ECPayFail.html';
@@ -187,6 +187,7 @@ class FrontController extends Controller
             }
             if($reduri!='') return redirect($reduri);
             $request->session()->forget('OrderData');
+            */
             return view('TFO.front.ECPayFail');
         }
     }
