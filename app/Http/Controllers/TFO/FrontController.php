@@ -107,7 +107,7 @@ class FrontController extends Controller
         Ecpay::i()->Send['TradeDesc']         = $data['item'];            //交易描述
         Ecpay::i()->Send['ChoosePayment']     = \ECPay_PaymentMethod::Credit ;     //付款方式
         ECpay::i()->Send['ClientBackURL']     = 'https://www.surpriselab.com.tw/';
-        ECpay::i()->Send['OrderResultURL']    = 'https://www.surpriselab.com.tw/tableforone/ECPaySuccess';
+        //ECpay::i()->Send['OrderResultURL']    = 'https://www.surpriselab.com.tw/tableforone/ECPaySuccess';
 
         //訂單的商品資料
         array_push(Ecpay::i()->Send['Items'], [
@@ -166,7 +166,7 @@ class FrontController extends Controller
             $sn = $arFeedback['MerchantTradeNo'];
             return view('TFO.front.ECPaySuccess',compact('sn'));
         } else {
-            return redirect('/tableforone/m/ECPayFail');
+            return redirect('/tableforone/ECPayFail');
         }
     }
 
