@@ -163,7 +163,7 @@ class FrontController extends Controller
         */
         $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
         if($arFeedback['RtnCode'] == 1){
-            $sn = $arFeedback['sn'];
+            $sn = $arFeedback['MerchantTradeNo'];
             return view('TFO.front.ECPaySuccess',compact('sn'));
         } else {
             return redirect('/tableforone/m/ECPayFail');
