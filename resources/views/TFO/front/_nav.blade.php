@@ -1,6 +1,6 @@
             <div class="nav-box"> 
                 <div class="nav-bg">
-                    <img src="/T41/images/welcome-page/half-palte1.png" alt="">
+                    <img src="" alt="">
                 </div>
                 <ul class="site-nav">
                     <a href="about.html">

@@ -1,3 +1,5 @@
+var storage   = $.localStorage;
+var storeName = 'tableforone';
 $(document).ready(function(){
     redirectme();
     var $body = $('body');
@@ -101,6 +103,7 @@ $(document).ready(function(){
         $indexBtn.click(function(){
             $wrapper.addClass('welcome');
             _autoPlay = false;
+            storage.set(storeName,$navBg.attr('src'));
             $('#landing-cut').hide('slow');
         })
         
@@ -154,6 +157,16 @@ $(document).ready(function(){
                 $SwitchPlateItem.fadeIn(500);
                 _switching = false;
             });
+        }
+
+
+        // 
+        if(storage.isEmpty(storeName)){
+            $navBg.attr('src',"/T41/images/welcome-page/half-palte1.png");
+        } else {
+            var Ptah = storage.get(storeName);
+            $navBg.attr('src',Ptah);
+            
         }
     });  
 });
