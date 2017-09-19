@@ -176,7 +176,7 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('gift.html',function(){ return view('TFO.m.gift'); });
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
-            Route::get('ECPayFail.html',function(){ return view('TFO.m.ECPayFail'); });
+            Route::get('ECPayFail',function(){ return view('TFO.m.ECPayFail'); });
         });
 
         Route::group(['prefix' => 'en'], function(){
@@ -191,7 +191,7 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
-            Route::get('ECPayFail.html',function(){ App::setLocale('en'); return view('TFO.front.ECPayFail'); });
+            Route::get('ECPayFail',function(){ App::setLocale('en'); return view('TFO.front.ECPayFail'); });
         });
 
         Route::group(['prefix' => 'm.en'], function(){
@@ -206,7 +206,7 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.m.gift'); });
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
-            Route::get('ECPayFail.html',function(){ App::setLocale('en'); return view('TFO.m.ECPayFail'); });
+            Route::get('ECPayFail',function(){ App::setLocale('en'); return view('TFO.m.ECPayFail'); });
         });
 
         Route::post('getRoomData','TFO\FrontController@getRoomData');
