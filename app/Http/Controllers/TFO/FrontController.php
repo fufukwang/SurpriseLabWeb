@@ -171,7 +171,7 @@ class FrontController extends Controller
         }
     }
 
-    public function ECPayFail(Request $result){
+    public function ECPayFail(Request $request){
         $session = $request->session()->get('OrderData', 'emp');
         if($session == 'emp'){
             abort(404);
