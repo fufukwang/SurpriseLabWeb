@@ -102,8 +102,8 @@
                                             <div align="right">
                                                 <button type="submit" class="btn btn-primary btn-custom waves-effect w-md waves-light m-b-5">送出</button>
                                             </div>
-                                        </form>
-@if(isset($order->result) && $order->result!='')<?php $res = json_decode($order->result); ?>
+                                        
+@if(isset($order->result) && $order->result!='')<?php $res = json_decode($order->result,true); ?>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">回傳交易時間</label>
                                                 <div class="col-sm-8">
@@ -122,7 +122,8 @@
                                                     <input type="text" class="form-control" readonly value="{{ $res['TradeNo'] or ''  }}">
                                                 </div>
                                             </div>
-@endif
+@endif  
+                                        </form>
                                     </div>
 
 
