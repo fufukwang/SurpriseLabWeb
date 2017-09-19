@@ -125,8 +125,8 @@ class FrontController extends Controller
 
 
     public function ECPaySuccess(Request $request){
-        $session = $request->session()->get('OrderData', 'emp');
-        if($request->ajax() && $request->isMethod('post') && $request->has('act')){
+        //$session = $request->session()->get('OrderData', 'emp');
+        if($request->ajax() && $request->isMethod('post')){
             $data = [
                 'sotry' => $request->sotry,
             ];
@@ -139,6 +139,11 @@ class FrontController extends Controller
             return Response::json(['message'=> '已更新'], 200);
         }
 
+
+
+
+        return view('TFO.front.ECPaySuccess');
+/*
         if($session == 'emp'){
             abort(404);
         } else {
@@ -158,6 +163,13 @@ class FrontController extends Controller
             if($reduri!='') return redirect($reduri);
 
             return view('TFO.front.ECPaySuccess');
+        }
+        */
+        $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
+        if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
+            return view('TFO.front.ECPaySuccess');
+        } else {
+            return redirect('/tableforone/m/ECPayFail');
         }
     }
 

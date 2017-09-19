@@ -16,5 +16,6 @@ class VerifyCsrfToken extends BaseVerifier
         '/dininginthedark/en/getPayDone',
         '/deploy/suprise',
         '/tableforone/ECPayBackCallBack',
+        '/tableforone/ECPaySuccess',
     ];
 }

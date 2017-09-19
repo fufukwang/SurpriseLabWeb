@@ -215,7 +215,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('ECPayBackCallBack','TFO\FrontController@EcPayBackCallBack');
 
         Route::post('ECPaySuccess','TFO\FrontController@ECPaySuccess');
-        Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
+        //Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
         Route::get('ECPayFail','TFO\FrontController@ECPayFail');
 
 
