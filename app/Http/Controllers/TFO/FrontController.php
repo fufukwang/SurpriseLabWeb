@@ -164,6 +164,7 @@ class FrontController extends Controller
         }
         */
         $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
+        dd($arFeedback);
         if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
             return view('TFO.front.ECPaySuccess');
         } else {
