@@ -85,7 +85,7 @@ $(function(){
         }
     });
     $('#sent').bind('click',function(){
-        $.post('/tableforone/ECPaySuccess',{story:$('#story').val()},function(){
+        $.post('/tableforone/ECPaySuccess',{story:$('#story').val(),sn:'{{ $sn }}'},function(){
             $('#storybox').hide();
             $('#fin').show();
         },'json');
