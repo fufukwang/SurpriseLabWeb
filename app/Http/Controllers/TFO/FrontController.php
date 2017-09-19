@@ -198,13 +198,13 @@ class FrontController extends Controller
         $data = [
             'result' => json_encode($arFeedback)
         ];
-        if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
+        if($arFeedback['RtnCode'] == 1 ){
             $data['paystatus'] = '已付款';
         } 
         TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update($data);
         print Ecpay::i()->getResponse($arFeedback);
 
-        if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
+        if($arFeedback['RtnCode'] == 1 ){
             $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('day','rangstart','rangend','name','email')->where('sn',$arFeedback['MerchantTradeNo'])->first();
 
             $arr = [
