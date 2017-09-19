@@ -125,7 +125,7 @@ class FrontController extends Controller
 
 
     public function ECPaySuccess(Request $request){
-        //$session = $request->session()->get('OrderData', 'emp');
+        $session = $request->session()->get('OrderData', 'emp');
         if($request->ajax() && $request->isMethod('post')){
             $data = [
                 'sotry' => $request->sotry,
@@ -185,9 +185,9 @@ class FrontController extends Controller
             } elseif($session['lang']=='/tableforone/m.en/reservation.html'){
                 $reduri = '/tableforone/m.en/ECPayFail.html';
             }
-            if($reduri!='') return redirect($reduri);
+            if($reduri!='') return redirect($reduri);*/
             $request->session()->forget('OrderData');
-            */
+            
             return view('TFO.front.ECPayFail');
         }
     }
