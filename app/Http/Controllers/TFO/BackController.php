@@ -174,6 +174,52 @@ class BackController extends Controller
         return Response::json(['message'=> '訂單已刪除'], 200);
     }
 
+    
+    public function Appointment(Request $request,$pro_id){
+        $pro = TFOPro::find($pro_id);
+        return view('TFO.back.orderAppointment',compact('pro_id','pro'));
+    }
+    public function AppointmentUpdate(Request $request,$pro_id){
+        $data = [
+            'paystatus'  => $request->paystatus,
+            'paytype'    => $request->paytype,
+            'name'       => $request->name,
+            'tel'        => $request->tel,
+            'email'      => $request->email,
+            'sn'         => $this->GenerateSN(),
+            'tfopro_id'  => $pro_id,
+            'tfogife_id' => 0,
+            'meal'       => $request->meal,
+            'money'      => $request->money,
+            'notes'      => $request->notes,
+            'story'      => $request->story,
+            'manage'     => $request->manage,
+            'result'     => '',
+            'item'       => $request->item,
+        ];
+        $order = TFOOrder::create($data);
+        return redirect('/TableForOne/rooms?')->with('message','新增完成!');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // 禮物卡
     public function Gifts(Request $request){
         $gifts = TFOOrder::orderBy('updated_at','desc');
@@ -214,7 +260,6 @@ class BackController extends Controller
         return Response::json(['message'=> '訂單已刪除'], 200);
 
     }
-
 
 
 
@@ -305,6 +350,20 @@ class BackController extends Controller
         
 
         return view('TFO.back.table',compact('order','request'));
+    }
+
+
+    private function GenerateSN(){
+        $random = 12;$SN = '';
+        for($i=1;$i<=$random;$i++){
+            $b = rand(0,9);
+            $SN .= $b;
+        }
+        if(TFOOrder::where('sn',$SN)->count()>0){
+            $this->GenerateSN();
+        } else {
+            return $SN;
+        }
     }
 }
 

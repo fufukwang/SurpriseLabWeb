@@ -113,7 +113,7 @@
                                                 <div class="col-sm-8">
                                                     <select class="form-control" name="open">
                                                         <option value="0"@if(isset($pro->open) && $pro->open<=0) selected @endif>關閉</option>
-                                                        <option value="1"@if(isset($pro->open) && $pro->open>1) selected @endif>開放</option>
+                                                        <option value="1"@if(isset($pro->open) && $pro->open>0) selected @endif>開放</option>
                                                     </select>
                                                 </div>
                                             </div>
