@@ -5,7 +5,7 @@
     </title>
     @include('TFO.front._head')
     <script>
-        fbq('track', 'Purchase', {value: '0.00', currency: 'NT'});
+        fbq('track', 'Purchase', {value: '0.00', currency: 'USD'});
     </script>
 </head>
 <body>
