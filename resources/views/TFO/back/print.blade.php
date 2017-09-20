@@ -193,8 +193,18 @@
 
 
 $(function(){
-    $('.delbtn').bind('click',function(){
-        if(confirm("確定要刪除此活動?如有訂單將一併刪除")) $(this).parent().submit();
+    $('.btn-danger').bind('click',function(){
+        var id = $(this).data('id');
+        if(confirm("確定要刪除此訂單")) {
+             $.ajax({
+                url: '/TableForOne/order/'+id+'/delete',
+                method: 'delete',
+                dataType:'json'
+            }).done(function(data){
+                swal(data.message);
+                $('#tr_'+id).remove();
+            });
+        }
     });
     jQuery('#datepicker-autoclose').datepicker({
         format: "yyyy-mm-dd",
