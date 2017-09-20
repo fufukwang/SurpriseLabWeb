@@ -126,20 +126,18 @@ class FrontController extends Controller
 
     public function ECPaySuccess(Request $request){
         if($request->ajax() && $request->isMethod('post')){
-            $session = $request->session()->get('OrderData', 'emp');
             $data = [
                 'story' => $request->story,
             ];
-            $id = isset($session['id']) ? $$session['id'] : 0;
-            if($session['id']>0){
-                TFOOrder::where('id',$session['id'])->update($data);
+            if($request->has('sn')){
+                TFOOrder::where('sn',$request->sn)->update($data);
                 //$request->session()->forget('OrderData');
             } 
             //$request->session()->forget('OrderData');
             return Response::json(['message'=> '已更新'], 200);
         }
 
-        return view('TFO.front.ECPaySuccess');
+
 
 /*
         if($session == 'emp'){
@@ -163,7 +161,12 @@ class FrontController extends Controller
             return view('TFO.front.ECPaySuccess');
         }
         */
-        $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
+        $arFeedback = $request->all();
+        $data = [
+            'return_result' => json_encode($arFeedback)
+        ];
+        TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update($data);
+
         if($arFeedback['RtnCode'] == 1){
             $sn = $arFeedback['MerchantTradeNo'];
             return view('TFO.front.ECPaySuccess',compact('sn'));
@@ -173,7 +176,6 @@ class FrontController extends Controller
     }
 
     public function ECPayFail(Request $request){
-        return view('TFO.front.ECPayFail');
         $session = $request->session()->get('OrderData', 'emp');
         if($session == 'emp'){
             abort(404);
