@@ -94,7 +94,7 @@
                                         </thead>
                                         <tbody>
 @forelse ($order as $row)
-                                            <tr>
+                                            <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->sn }}</td>
                                                 <td>{{ $row->day }}<br />{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
                                                 <td>{{ $row->name }}</td>
