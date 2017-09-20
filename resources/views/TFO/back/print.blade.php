@@ -94,14 +94,14 @@
                                         </thead>
                                         <tbody>
 @forelse ($order as $row)
-                                            <tr>
+                                            <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->sn }}</td>
                                                 <td>{{ $row->day }}<br />{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
                                                 <td>{{ $row->name }}</td>
                                                 <td>phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
                                                 <td>@if($row->meal=='V')素@else 葷@endif <br >{{ $row->item }}</td>
                                                 <td class="@if($row->paystatus=='已付款')success @elseif($row->paystatus=='未付款')danger @elseif($row->paystatus=='取消訂位')warning @endif">{{ $row->paystatus }}</td>
-                                                <td>{{ $row->notes }}</td>
+                                                <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
                                                 <td></td>
                                                 <td>{{ $row->manage }}</td>
                                                 
@@ -158,6 +158,7 @@
 @include('backstage.jquery')
 <link href="/backstage/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
 <script src="/backstage/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<link href="/backstage/plugins/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
 <!-- Examples -->
 	    <script src="/backstage/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 	    <!--script src="/backstage/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
@@ -180,6 +181,7 @@
         <script src="/backstage/plugins/datatables/dataTables.responsive.min.js"></script>
         <script src="/backstage/plugins/datatables/responsive.bootstrap.min.js"></script>
         <script src="/backstage/plugins/datatables/dataTables.scroller.min.js"></script>
+        <script src="/backstage/plugins/sweetalert/dist/sweetalert.min.js"></script>
         <!--
 <link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
 <script src="/backstage/plugins/switchery/switchery.min.js"></script>
@@ -193,8 +195,18 @@
 
 
 $(function(){
-    $('.delbtn').bind('click',function(){
-        if(confirm("確定要刪除此活動?如有訂單將一併刪除")) $(this).parent().submit();
+    $('.btn-danger').bind('click',function(){
+        var id = $(this).data('id');
+        if(confirm("確定要刪除此訂單")) {
+             $.ajax({
+                url: '/TableForOne/order/'+id+'/delete',
+                method: 'delete',
+                dataType:'json'
+            }).done(function(data){
+                swal(data.message);
+                $('#tr_'+id).remove();
+            });
+        }
     });
     jQuery('#datepicker-autoclose').datepicker({
         format: "yyyy-mm-dd",

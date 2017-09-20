@@ -81,7 +81,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">付款方式</label>
+                                                <label class="control-label col-sm-4">付款狀態</label>
                                                 <div class="col-sm-8">
                                                     <select name="paystatus" class="form-control">
                                                         <option value="未付款"@if(isset($order->paystatus) && $order->paystatus=='未付款') selected @endif>未付款</option>
