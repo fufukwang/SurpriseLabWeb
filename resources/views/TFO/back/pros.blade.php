@@ -80,6 +80,7 @@
                                                 <td>{{ App\model\TFOOrder::where('paystatus','已付款')->where('tfopro_id',$row->id)->count('id') }} / {{ $row->sites }}</td>
                                                 <td>{{ $row->money }} / {{ $row->wine }}</td>
                                                 <td class="actions">
+                                                    <a class="btn btn-purple btn-xs" href="/TableForOne/order/{{ $row->id }}/appointment">預約席</a>
                                                     <a class="btn btn-info btn-xs" href="/TableForOne/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
                                                     <a class="btn btn-primary btn-xs" href="/TableForOne/room/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>

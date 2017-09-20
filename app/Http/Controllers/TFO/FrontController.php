@@ -106,7 +106,7 @@ class FrontController extends Controller
         Ecpay::i()->Send['TotalAmount']       = $data['money'];           //交易金額
         Ecpay::i()->Send['TradeDesc']         = $data['item'];            //交易描述
         Ecpay::i()->Send['ChoosePayment']     = \ECPay_PaymentMethod::Credit ;     //付款方式
-        ECpay::i()->Send['ClientBackURL']     = 'https://www.surpriselab.com.tw/';
+        ECpay::i()->Send['ClientBackURL']     = 'https://www.surpriselab.com.tw/tableforone/';
         ECpay::i()->Send['OrderResultURL']    = 'https://www.surpriselab.com.tw/tableforone/ECPaySuccess';
 
         //訂單的商品資料
@@ -125,17 +125,15 @@ class FrontController extends Controller
 
 
     public function ECPaySuccess(Request $request){
-        $session = $request->session()->get('OrderData', 'emp');
         if($request->ajax() && $request->isMethod('post')){
             $data = [
-                'sotry' => $request->sotry,
+                'story' => $request->story,
             ];
-            $id = $session['id'];
-            if(is_numeric($id) && $id>0){
-                TFOOrder::where('id',$id)->update($data);
-                $request->session()->forget('OrderData');
+            if($request->has('sn')){
+                TFOOrder::where('sn',$request->sn)->update($data);
+                //$request->session()->forget('OrderData');
             } 
-            $request->session()->forget('OrderData');
+            //$request->session()->forget('OrderData');
             return Response::json(['message'=> '已更新'], 200);
         }
 
@@ -163,11 +161,17 @@ class FrontController extends Controller
             return view('TFO.front.ECPaySuccess');
         }
         */
-        $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
-        if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
-            return view('TFO.front.ECPaySuccess');
+        $arFeedback = $request->all();
+        $data = [
+            'return_result' => json_encode($arFeedback)
+        ];
+        TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update($data);
+
+        if($arFeedback['RtnCode'] == 1){
+            $sn = $arFeedback['MerchantTradeNo'];
+            return view('TFO.front.ECPaySuccess',compact('sn'));
         } else {
-            return redirect('/tableforone/m/ECPayFail');
+            return redirect('/tableforone/ECPayFail');
         }
     }
 
@@ -199,13 +203,13 @@ class FrontController extends Controller
         $data = [
             'result' => json_encode($arFeedback)
         ];
-        if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
+        if($arFeedback['RtnCode'] == 1 ){
             $data['paystatus'] = '已付款';
         } 
         TFOOrder::where('sn',$arFeedback['MerchantTradeNo'])->update($data);
         print Ecpay::i()->getResponse($arFeedback);
 
-        if($arFeedback['RtnCode'] == 1 && $arFeedback['RtnMsg'] == '交易成功'){
+        if($arFeedback['RtnCode'] == 1 ){
             $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('day','rangstart','rangend','name','email')->where('sn',$arFeedback['MerchantTradeNo'])->first();
 
             $arr = [

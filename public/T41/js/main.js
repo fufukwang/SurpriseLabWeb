@@ -173,6 +173,7 @@ $(document).ready(function(){
 
 
 function redirectme(){
+    if(location.pathname.indexOf('ECPaySuccess')>0) return false;
     var width = $(window).width();
     if(width<=600){
         if(location.pathname.indexOf()>0){

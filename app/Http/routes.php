@@ -82,6 +82,8 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('order/{id}/edit','TFO\BackController@OrderEdit');
         Route::post('order/{id}/update','TFO\BackController@OrderUpdate');
         Route::delete('order/{id}/delete','TFO\BackController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','TFO\BackController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','TFO\BackController@AppointmentUpdate');
 
         // 聯絡我們
         Route::get('contacts','TFO\BackController@Contacts');
@@ -216,7 +218,7 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::post('ECPaySuccess','TFO\FrontController@ECPaySuccess');
         //Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
-        Route::get('ECPayFail','TFO\FrontController@ECPayFail');
+        Route::get('ECPayFail',function(){ return view('TFO.front.ECPayFail'); });
 
 
     });

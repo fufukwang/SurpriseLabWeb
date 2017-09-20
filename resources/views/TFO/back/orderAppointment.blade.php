@@ -19,64 +19,45 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/TableForOne/order/{{ $order->id or 0}}/update" class="form-horizontal">
-                                            <input type="hidden" name="qxx" value="{{ Request::getQueryString() }}">
+                                        <form  data-parsley-validate novalidate method="post" action="/TableForOne/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
 {!! csrf_field() !!}
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">姓名</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="name" readonly value="{{ $order->name or ''  }}">
+                                                    <input type="text" class="form-control" name="name" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">電話</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="tel" readonly value="{{ $order->tel or ''  }}">
+                                                    <input type="text" class="form-control" name="tel" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">EMail</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="email" readonly value="{{ $order->email or ''  }}">
+                                                    <input type="email" class="form-control" name="email" required email>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">訂單號碼</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->sn or '請留白系統會自動生成' }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">主餐</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="@if(isset($order->meal) && $order->meal=='V') 素食 @else 葷食 @endif">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">訂餐類型</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->item or '' }}">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">備註</label>
                                                 <div class="col-sm-8">
-                                                    <textarea class="form-control" readonly style="min-height:120px;">{{ $order->notes or '' }}</textarea>
+                                                    <textarea class="form-control" name="notes" style="min-height:120px;"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">故事</label>
                                                 <div class="col-sm-8">
-                                                    <textarea class="form-control" readonly style="min-height:120px;">{{ $order->story or '' }}</textarea>
+                                                    <textarea class="form-control" name="story"  style="min-height:120px;"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">付款方式</label>
                                                 <div class="col-sm-8">
                                                     <select name="paytype" class="form-control">
-                                                        <option value="後台編輯"@if(isset($order->paytype) && $order->paytype=='後台編輯') selected @endif>後台編輯</option>
-                                                        <option value="信用卡"@if(isset($order->paytype) && $order->paytype=='信用卡') selected @endif>信用卡</option>
+                                                        <option value="後台編輯">後台編輯</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -84,12 +65,34 @@
                                                 <label class="control-label col-sm-4">付款方式</label>
                                                 <div class="col-sm-8">
                                                     <select name="paystatus" class="form-control">
-                                                        <option value="未付款"@if(isset($order->paystatus) && $order->paystatus=='未付款') selected @endif>未付款</option>
-                                                        <option value="已付款"@if(isset($order->paystatus) && $order->paystatus=='已付款') selected @endif>已付款</option>
-                                                        <option value="取消訂位"@if(isset($order->paystatus) && $order->paystatus=='取消訂位') selected @endif>取消訂位</option>
+                                                        <option value="未付款">未付款</option>
+                                                        <option value="已付款">已付款</option>
+                                                        <option value="取消訂位">取消訂位</option>
                                                     </select>
                                                 </div>
                                             </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">主餐</label>
+                                                <div class="col-sm-8">
+                                                    <select name="meal" class="form-control">
+                                                        <option value="H">葷食</option>
+                                                        <option value="V">素食</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">訂餐類型</label>
+                                                <div class="col-sm-8">
+                                                    <select name="money" id="money" class="form-control">
+                                                        <option value="{{ $pro->money }}">{{ $pro->money }} 元 | 五道料理</option>
+                                                        <option value="{{ $pro->money + $pro->wine }}">{{ $pro->money + $pro->wine }} 元 | 五道料理 + 佐餐飲乙杯</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="item" id="item" value="{{ $pro->money }} 元 | 五道料理">
+
+
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">管理</label>
                                                 <div class="col-sm-8">
@@ -105,26 +108,7 @@
                                                 <button type="submit" class="btn btn-primary btn-custom waves-effect w-md waves-light m-b-5">送出</button>
                                             </div>
                                         
-@if(isset($order->result) && $order->result!='')<?php $res = json_decode($order->result,true); ?>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">回傳交易時間</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $res['TradeDate'] or ''  }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">交易結果</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $res['RtnMsg'] or ''  }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">綠界交易序號</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $res['TradeNo'] or ''  }}">
-                                                </div>
-                                            </div>
-@endif  
+
                                         </form>
                                     </div>
 
@@ -195,7 +179,9 @@
 
         <script>
         $(function(){
-
+$('#money').bind('change',function(){
+    $('#item').val($('#money option:selected').text());
+});
         });
 
 
