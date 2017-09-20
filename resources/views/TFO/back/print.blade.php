@@ -158,6 +158,7 @@
 @include('backstage.jquery')
 <link href="/backstage/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
 <script src="/backstage/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<link href="/backstage/plugins/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
 <!-- Examples -->
 	    <script src="/backstage/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 	    <!--script src="/backstage/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
@@ -180,6 +181,7 @@
         <script src="/backstage/plugins/datatables/dataTables.responsive.min.js"></script>
         <script src="/backstage/plugins/datatables/responsive.bootstrap.min.js"></script>
         <script src="/backstage/plugins/datatables/dataTables.scroller.min.js"></script>
+        <script src="/backstage/plugins/sweetalert/dist/sweetalert.min.js"></script>
         <!--
 <link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
 <script src="/backstage/plugins/switchery/switchery.min.js"></script>
