@@ -37,16 +37,17 @@
                                             <div class="form-group col-sm-1">
                                                 <select name="paystatus" class="form-control">
                                                     <option value="">付款狀態</option>
-                                                    <option value="已付款">已付款</option>
-                                                    <option value="未付款">未付款</option>
+                                                    <option value="已付款"@if(isset($request->paystatus) && $request->paystatus=='已付款') selected @endif>已付款</option>
+                                                    <option value="未付款"@if(isset($request->paystatus) && $request->paystatus=='未付款') selected @endif>未付款</option>
+                                                    <option value="取消訂位"@if(isset($request->paystatus) && $request->paystatus=='取消訂位') selected @endif>取消訂位</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
                                                 <select name="dayparts" class="form-control">
                                                     <option value="">時段</option>
-                                                    <option value="午餐">午餐</option>
-                                                    <option value="下午茶">下午茶</option>
-                                                    <option value="晚餐">晚餐</option>
+                                                    <option value="午餐"@if(isset($request->order) && $request->order=='午餐') selected @endif>午餐</option>
+                                                    <option value="下午茶"@if(isset($request->order) && $request->order=='下午茶') selected @endif>下午茶</option>
+                                                    <option value="晚餐"@if(isset($request->order) && $request->order=='晚餐') selected @endif>晚餐</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
@@ -63,7 +64,9 @@
                                                     <option value="rangstart|desc"@if(isset($request->order) && $request->order=='rangstart|desc') selected @endif>開始時間反序</option>
                                                 </select>
                                             </div>
-
+                                            <div class="form-group col-sm-2">
+                                                <input type="text" name="search" placeholder="搜尋姓名、電話、信箱" class="form-control" value="{{ $request->search or ''}}">
+                                            </div>
  
                                             <div class="form-group col-sm-1">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
@@ -78,30 +81,37 @@
                                         <thead>
                                             <tr>
                                                 <th>序號</th>
+                                                <th>場次</th>
                                                 <th>姓名</th>
-                                                @if($request->notel != 1)<th>電話</th>@endif
-                                                @if($request->noemail != 1)<th>信箱</th>@endif
+                                                <th>資訊</th>
+                                                <th>主餐</th>
                                                 <th>付款狀態</th>
-                                                <th>更新日期</th>
-                                                @if($request->notool != 1)<th data-orderable="false">功能</th>@endif
+                                                <th>餐飲備註</th>
+                                                <th>禮物卡</th>
+                                                <th>註記</th>
+                                                <th data-orderable="false">功能</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 @forelse ($order as $row)
                                             <tr>
                                                 <td>{{ $row->sn }}</td>
+                                                <td>{{ $row->day }}<br />{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
                                                 <td>{{ $row->name }}</td>
-                                                @if($request->notel != 1)<td>{{ $row->tel }}</td>@endif
-                                                @if($request->noemail != 1)<td>{{ $row->email }}</td>@endif
-                                                <td>{{ $row->paystatus }}</td>
-                                                <td>{{ $row->updated_at }}</td>
-                                                @if($request->notool != 1)<td class="actions">
-                                                    <a class="btn btn-primary btn-xs" href="/TableForOne/order/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
+                                                <td>phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
+                                                <td>@if($row->meal=='V')素@else 葷@endif <br >{{ $row->item }}</td>
+                                                <td class="@if($row->paystatus=='已付款')success @elseif($row->paystatus=='未付款')danger @elseif($row->paystatus=='取消訂位')warning @endif">{{ $row->paystatus }}</td>
+                                                <td>{{ $row->notes }}</td>
+                                                <td></td>
+                                                <td>{{ $row->manage }}</td>
+                                                
+                                                <td class="actions">
+                                                    <a class="btn btn-primary btn-xs" href="/TableForOne/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
-                                                </td>@endif
+                                                </td>
                                             </tr>
 @empty
-<tr><td colspan="6" align="center">尚無資料</td></tr>
+<tr><td colspan="10" align="center">尚無資料</td></tr>
 @endforelse
 
 
@@ -109,7 +119,7 @@
                                         </tbody>
                                     </table>
 
-
+                                    <div align="center">{{ $order->appends(Request::capture()->except('page'))->links() }}</div>
                                 </div></div>
 
                             </div>
@@ -117,7 +127,6 @@
                         </div>
                     </div>
                 </div>
-
 
 
 

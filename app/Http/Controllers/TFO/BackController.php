@@ -163,7 +163,11 @@ class BackController extends Controller
             TFOOrder::where('id',$id)->update($data);
             $order = TFOOrder::find($id);
         } 
-        return redirect('/TableForOne/orders/'.$order->tfopro_id)->with('message','編輯完成!');
+        if($request->has('qxx') && $request->qxx != ''){
+            return redirect('/TableForOne/print?'.$request->qxx)->with('message','編輯完成!');
+        } else {
+            return redirect('/TableForOne/orders/'.$order->tfopro_id)->with('message','編輯完成!');
+        }
     }
     public function OrderDelete(Request $request,$id){
         TFOOrder::where('id',$id)->delete();
@@ -259,11 +263,14 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.updated_at AS updated_at','paystatus','email','sn','TFOOrder.id');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
-
+        if($request->has('search') && $request->search!=''){
+            $search = $request->search;
+            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
+        }
 
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
@@ -279,11 +286,14 @@ class BackController extends Controller
 
     public function Table(Request $request){
         $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
-
+        if($request->has('search') && $request->search!=''){
+            $search = $request->search;
+            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
+        }
 
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);

@@ -20,6 +20,7 @@
 
                                     <div class="p-20">
                                         <form  data-parsley-validate novalidate method="post" action="/TableForOne/order/{{ $order->id or 0}}/update" class="form-horizontal">
+                                            <input type="hidden" name="qxx" value="{{ Request::getQueryString() }}">
 {!! csrf_field() !!}
 
                                             <div class="form-group">
@@ -85,6 +86,7 @@
                                                     <select name="paystatus" class="form-control">
                                                         <option value="未付款"@if(isset($order->paystatus) && $order->paystatus=='未付款') selected @endif>未付款</option>
                                                         <option value="已付款"@if(isset($order->paystatus) && $order->paystatus=='已付款') selected @endif>已付款</option>
+                                                        <option value="取消訂位"@if(isset($order->paystatus) && $order->paystatus=='取消訂位') selected @endif>取消訂位</option>
                                                     </select>
                                                 </div>
                                             </div>
