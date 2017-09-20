@@ -28,6 +28,7 @@ $(function(){
                     $('#id').html('<option value="">請先選擇時段</option>');
                 });
                 $('#step2').show();
+                fbq('track', 'AddToCart');
             },'json');
             
         } else{
@@ -39,7 +40,9 @@ $(function(){
     $('#goStep3').bind('click',function(){
         if($('#day').val() == ''){ $('#day').parent().parent().parent().addClass('error'); } else{ $('#day').parent().parent().parent().removeClass('error'); }
         if($('#datepart').val() == ''){ $('#datepart').parent().addClass('error'); } else { $('#datepart').parent().removeClass('error'); }
-        if($('#id').val() == ''){ $('#id').parent().addClass('error'); } else { $('#id').parent().removeClass('error'); $('#step2').hide(); $('#step3').show(); }
+        if($('#id').val() == ''){ $('#id').parent().addClass('error'); } else { $('#id').parent().removeClass('error'); $('#step2').hide(); $('#step3').show(); 
+                                                                               fbq('track', 'AddPaymentInfo');
+                                                                              }
     });
 
     $('#datepart').bind('change',function(){
@@ -131,6 +134,7 @@ $(function(){
     $('#goPay').bind('click',function(){
         $('#pro_id').val($('#id').val());
         $.blockUI();
+        fbq('track', 'InitiateCheckout');
         $('#reservationForm').submit();
     });
     // 剛開啟關閉

@@ -4,7 +4,9 @@
         Table For One
     </title>
     @include('TFO.front._head')
-    
+    <script>
+        fbq('track', 'Lead');
+    </script>
 </head>
 <body>
     <div class="wrapper" id="red-theme" key="1">    
