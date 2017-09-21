@@ -27,7 +27,7 @@ gulp.task('compass',function(){
         time: true,
         css: './style/css/',
         sass: './style/scss/',
-        style: 'compact' //nested, expanded, compact, compressed
+        style: 'compressed' //nested, expanded, compact, compressed
     }))
         .pipe(gulp.dest('./style/css/'));
 }); 

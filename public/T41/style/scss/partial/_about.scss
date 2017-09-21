@@ -183,7 +183,8 @@
                     width: 100%!important;
                 }
                 img{
-                    width: 100%;
+                    width: auto;
+                    height: 100%;
                     position: absolute;
                     top: 0px;
                     left: 0;
@@ -213,34 +214,38 @@
                 }
                 &:nth-child(1){
                     img{
-                        left: 31%;
+                       // left: 31%;
                     }
                 }
                 &:nth-child(2){
                     img{
-                        left: 31%;
-                        top: 10px;
+                       // left: 31%;
+                    //    top: 10px;
                     }
                 }
                 &:nth-child(3){
                     img{
-                        top: 15px;
-                        left: 24%;
-                        width: 105%;
-                        top: 10px;
+                        //top: 15px;
+                        //left: 24%;
+                        //width: 105%;
+                        //top: 10px;
                     }
                 }
                 &:nth-child(4){
                     img{
-                        width: 125%;
-                        left: -42%;
+                       // width: 125%;
+                    //    left: -42%;
+                        left: auto;
+                        right: 0;
                     }
                 }
                 &:nth-child(5){
                     img{
-                        left: -31%;
-                        width: 105%;
-                        top: 10px;
+                     //   left: -31%;
+                      //  width: 105%;
+                    //    top: 10px;
+                        left: auto;
+                        right: 0;
                     }
                 }
                 

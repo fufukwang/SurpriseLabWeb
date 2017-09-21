@@ -102,6 +102,7 @@
     input[type="radio"]{
         width: auto;
         height: auto;
+        -webkit-appearance:radio;
     }
     
     .radio-span {
@@ -160,3 +161,5 @@
     max-width: 540px;
     margin: 25px auto 0;
 }
+
+#id option:disabled{ color:red; }

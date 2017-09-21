@@ -1,5 +1,8 @@
 /vendor
 /node_modules
+/public/T41/node_modules
+/public/T41/.sass-cache
+/public/T41/style/.sass-cache
 Homestead.yaml
 Homestead.json
 .env
