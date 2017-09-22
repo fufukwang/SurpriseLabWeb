@@ -6,7 +6,7 @@
     @include('TFO.front._head')
     <script>
         fbq('track', 'ViewContent', { 
-            content_type: 'Rules',
+            content_name: 'Rules',
         });
     </script>
 </head>

@@ -8,7 +8,7 @@
     @include('TFO.front._head')
     <script>
         fbq('track', 'ViewContent', { 
-            content_type: 'Reservation',
+            content_name: 'Reservation',
         });
     </script>
 </head>
