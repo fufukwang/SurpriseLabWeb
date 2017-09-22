@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="/T41/style/css/bootstrap.min.css">
     @include('TFO.front._head')
-    <script>
-        fbq('track', 'AddToCart');
-    </script>
 </head>
 <body>
     <div class="wrapper" id="red-theme" key="1">    
