@@ -5,7 +5,9 @@
     </title>
     @include('TFO.front._head')
     <script>
-        fbq('track', 'ViewContent');
+        fbq('track', 'ViewContent', { 
+            content_type: 'QA',
+        });
     </script>
 </head>
 <body>

@@ -4,7 +4,11 @@
         Table For One
     </title>
     @include('TFO.m._head')
-
+    <script>
+        fbq('track', 'ViewContent', { 
+            content_type: 'Rules',
+        });
+    </script>
 </head>
 
 <body>
