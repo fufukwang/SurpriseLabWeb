@@ -158,24 +158,24 @@ Route::group(['middleware' => ['web']], function () {
     Route::group(['prefix' => 'tableforone'], function(){
         Route::get('index.html','TFO\TurnPageController@home');
         Route::get('/',function(){ return redirect("/tableforone/index.html"); });
-        Route::get('about.html',function(){ return view('TFO.front.about'); });
-        Route::get('menu.html',function(){ return view('TFO.front.menu'); });
-        Route::get('rules.html',function(){ return view('TFO.front.rules'); });
-        Route::get('contact.html',function(){ return view('TFO.front.contact'); });
-        Route::get('qa.html',function(){ return view('TFO.front.qa'); });
-        Route::get('reservation.html',function(){ return view('TFO.front.reservation'); });
-        Route::get('gift.html',function(){ return view('TFO.front.gift'); });
+        Route::get('about.html','TFO\TurnPageController@about');
+        Route::get('menu.html','TFO\TurnPageController@menu');
+        Route::get('rules.html','TFO\TurnPageController@rules');
+        Route::get('contact.html','TFO\TurnPageController@contact');
+        Route::get('qa.html','TFO\TurnPageController@qa');
+        Route::get('reservation.html','TFO\TurnPageController@reservation');
+        Route::get('gift.html','TFO\TurnPageController@gift');
 
         Route::group(['prefix' => 'm'], function(){
-            Route::get('index.html',function(){ return view('TFO.m.home'); });
+            Route::get('index.html','TFO\TurnPageController@mhome');
             Route::get('/',function(){ return redirect("/tableforone/m/index.html"); });
-            Route::get('about.html',function(){ return view('TFO.m.about'); });
-            Route::get('menu.html',function(){ return view('TFO.m.menu'); });
-            Route::get('rules.html',function(){ return view('TFO.m.rules'); });
-            Route::get('contact.html',function(){ return view('TFO.m.contact'); });
-            Route::get('qa.html',function(){ return view('TFO.m.qa'); });
-            Route::get('reservation.html',function(){ return view('TFO.m.reservation'); });
-            Route::get('gift.html',function(){ return view('TFO.m.gift'); });
+            Route::get('about.html','TFO\TurnPageController@mabout');
+            Route::get('menu.html','TFO\TurnPageController@mmenu');
+            Route::get('rules.html','TFO\TurnPageController@mrules');
+            Route::get('contact.html','TFO\TurnPageController@mcontact');
+            Route::get('qa.html','TFO\TurnPageController@mqa');
+            Route::get('reservation.html','TFO\TurnPageController@mreservation');
+            Route::get('gift.html','TFO\TurnPageController@mgift');
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail',function(){ return view('TFO.m.ECPayFail'); });
