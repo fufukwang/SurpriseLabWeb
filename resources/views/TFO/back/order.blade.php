@@ -22,6 +22,25 @@
                                         <form  data-parsley-validate novalidate method="post" action="/TableForOne/order/{{ $order->id or 0}}/update" class="form-horizontal">
                                             <input type="hidden" name="qxx" value="{{ Request::getQueryString() }}">
 {!! csrf_field() !!}
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">日期</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" readonly value="{{ $order->day or ''  }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">時段</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" readonly value="{{ $order->dayparts or ''  }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">區間</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" readonly value="{{ substr($order->rangstart,0,5)  }} ~ {{ substr($order->rangend,0,5)  }}">
+                                                </div>
+                                            </div>
+
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">姓名</label>

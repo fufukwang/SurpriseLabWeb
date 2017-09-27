@@ -145,7 +145,7 @@ class BackController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(TFOOrder::where('id',$id)->count()>0){
-                $order = TFOOrder::find($id);
+                $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->find($id);
             } else {
                 abort(404);
             }
