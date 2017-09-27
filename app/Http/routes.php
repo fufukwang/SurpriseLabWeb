@@ -156,7 +156,7 @@ Route::group(['middleware' => ['web']], function () {
 
     // Table For One
     Route::group(['prefix' => 'tableforone'], function(){
-        Route::get('index.html',function(){ return view('TFO.front.home'); });
+        Route::get('index.html','TFO\TurnPageController@home');
         Route::get('/',function(){ return redirect("/tableforone/index.html"); });
         Route::get('about.html',function(){ return view('TFO.front.about'); });
         Route::get('menu.html',function(){ return view('TFO.front.menu'); });

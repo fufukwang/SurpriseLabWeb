@@ -103,16 +103,14 @@ $(document).ready(function(){
         $indexBtn.click(function(){
             $wrapper.addClass('welcome');
             _autoPlay = false;
-            console.log($navBg.attr('src'));
-            if($navBg.attr('src') !='' ) storage.set(storeName,$navBg.attr('src'));
+            storage.set(storeName,$navBg.attr('src'));
             $('#landing-cut').hide('slow');
             if(location.pathname.indexOf('index.html')>0){
                 if($navBg.attr('src')==''){
                     $navBg.attr('src',"/T41/images/welcome-page/half-palte1.png");
                     storage.set(storeName,"/T41/images/welcome-page/half-palte1.png");
                 } else {
-                    var Ptah = storage.get(storeName);
-                    $navBg.attr('src',Ptah);
+                    $navBg.attr('src',storage.get(storeName));
                     
                 }
             }
@@ -177,9 +175,8 @@ $(document).ready(function(){
                 $navBg.attr('src',"/T41/images/welcome-page/half-palte1.png");
                 storage.set(storeName,"/T41/images/welcome-page/half-palte1.png");
             } else {
-                var Ptah = storage.get(storeName);
-                $navBg.attr('src',Ptah);
-                
+                $navBg.attr('src',storage.get(storeName));
+                    
             }
         }
     });  
