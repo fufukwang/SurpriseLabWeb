@@ -198,6 +198,27 @@ class BackController extends Controller
             'item'       => $request->item,
         ];
         $order = TFOOrder::create($data);
+
+        if($request->paystatus == '已付款'){
+
+            $newdata = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('day','rangstart','rangend','name','email')->find($order->id);
+            $arr = [
+                'day'       => $newdata->day,
+                'rangstart' => $newdata->rangstart,
+                'rangend'   => $newdata->rangend,
+                'name'      => $newdata->name,
+                'email'     => $newdata->email,
+            ];
+            Mail::send('TFO.email.order',$arr,function($m) use ($arr){
+                $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
+
+                $m->to($arr['email'], $arr['name']);
+                $m->subject('Table For One 訂位成功 !');
+            });
+        }
+
         return redirect('/TableForOne/rooms?')->with('message','新增完成!');
     }
 
