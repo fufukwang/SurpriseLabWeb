@@ -103,8 +103,19 @@ $(document).ready(function(){
         $indexBtn.click(function(){
             $wrapper.addClass('welcome');
             _autoPlay = false;
-            storage.set(storeName,$navBg.attr('src'));
+            console.log($navBg.attr('src'));
+            if($navBg.attr('src') !='' ) storage.set(storeName,$navBg.attr('src'));
             $('#landing-cut').hide('slow');
+            if(location.pathname.indexOf('index.html')>0){
+                if($navBg.attr('src')==''){
+                    $navBg.attr('src',"/T41/images/welcome-page/half-palte1.png");
+                    storage.set(storeName,"/T41/images/welcome-page/half-palte1.png");
+                } else {
+                    var Ptah = storage.get(storeName);
+                    $navBg.attr('src',Ptah);
+                    
+                }
+            }
         })
         
         
@@ -161,12 +172,15 @@ $(document).ready(function(){
 
 
         // 
-        if(storage.isEmpty(storeName)){
-            $navBg.attr('src',"/T41/images/welcome-page/half-palte1.png");
-        } else {
-            var Ptah = storage.get(storeName);
-            $navBg.attr('src',Ptah);
-            
+        if(location.pathname.indexOf('index.html')<0){
+            if(storage.isEmpty(storeName)){
+                $navBg.attr('src',"/T41/images/welcome-page/half-palte1.png");
+                storage.set(storeName,"/T41/images/welcome-page/half-palte1.png");
+            } else {
+                var Ptah = storage.get(storeName);
+                $navBg.attr('src',Ptah);
+                
+            }
         }
     });  
 });
