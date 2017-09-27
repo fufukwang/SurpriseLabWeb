@@ -49,7 +49,7 @@ class TurnPageController extends Controller
 
 
 
-
+    // 手機
 	public function mhome(){ 
 		if(!$this->isMobile()) return redirect('/tableforone/index.html');
 		return view('TFO.m.home'); 
@@ -183,6 +183,7 @@ class TurnPageController extends Controller
                 'lenovo',
                 'iphone',
                 'ipod',
+                'ipad',
                 'blackberry',
                 'meizu',
                 'android',

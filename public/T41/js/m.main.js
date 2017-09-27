@@ -165,7 +165,7 @@ $(document).ready(function(){
 function redirectme(){
     var width = $(window).width();
     if(width>600){
-        if(location.pathname.indexOf()>0){
+        if(location.pathname.indexOf('/m.en')>0){
             var href = location.pathname.replace('tableforone/m.en/','tableforone/en/');
         } else {
             var href = location.pathname.replace('tableforone/m/','tableforone/'); 
