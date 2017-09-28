@@ -41,8 +41,6 @@ $(function(){
         if($('#day').val() == ''){ $('#day').parent().parent().parent().addClass('error'); } else{ $('#day').parent().parent().parent().removeClass('error'); }
         if($('#datepart').val() == ''){ $('#datepart').parent().addClass('error'); } else { $('#datepart').parent().removeClass('error'); }
         if($('#id').val() == ''){ $('#id').parent().addClass('error'); } else { $('#id').parent().removeClass('error'); $('#step2').hide(); $('#step3').show(); 
-                                                                               fbq('track', 'AddPaymentInfo');
-                                                                              }
     });
 
     $('#datepart').bind('change',function(){
@@ -127,6 +125,8 @@ $(function(){
             $('#notesText').text($('textarea[name="notes"]').val());
             $('#step3').hide();
             $('#step4').show();
+            fbq('track', 'AddPaymentInfo');
+        }
         }
     });
     /* step 4 */
