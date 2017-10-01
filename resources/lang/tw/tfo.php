@@ -707,7 +707,7 @@ $step2 = <<<'FOOBAR'
                             <td>
                                 <div class="form-group">
                                     <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                        <input class="form-control" id="day" size="14" type="text" value="">
+                                        <input class="form-control" readonly id="day" size="14" type="text" value="">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     </div>
                                     <input type="hidden" id="dtp_input2" value="" /><br/>
