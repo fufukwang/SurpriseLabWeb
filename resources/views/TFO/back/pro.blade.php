@@ -73,7 +73,7 @@
                                             <div class="col-sm-4">
                                                 <div class="input-group m-b-15">
                                                     <div class="bootstrap-timepicker">
-                                                        <input name="rangstart" type="text" value="{{ $pro->STime or '' }}" class="form-control timepicker">
+                                                        <input name="rangstart" type="text" value="{{ $pro->rangstart or '' }}" class="form-control timepicker">
                                                     </div>
                                                     <span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span>
                                                 </div><!-- input-group -->
@@ -81,7 +81,7 @@
                                             <div class="col-sm-4">
                                                 <div class="input-group m-b-15">
                                                     <div class="bootstrap-timepicker">
-                                                        <input name="rangend" type="text" value="{{ $pro->ETime or '' }}" class="form-control timepicker">
+                                                        <input name="rangend" type="text" value="{{ $pro->rangend or '' }}" class="form-control timepicker">
                                                     </div>
                                                     <span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span>
                                                 </div><!-- input-group -->
