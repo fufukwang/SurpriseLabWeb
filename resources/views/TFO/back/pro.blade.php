@@ -62,9 +62,9 @@
                                                 <label class="control-label col-sm-4">時段</label>
                                                 <div class="col-sm-8">
                                                     <select class="form-control" name="dayparts">
-                                                        <option value="午餐" data-rangstart='11:00' data-rangend='13:00'>午餐</option>
-                                                        <option value="晚餐" data-rangstart='14:00' data-rangend='16:00'>晚餐</option>
-                                                        <option value="下午茶" data-rangstart='18:00' data-rangend='20:00'>下午茶</option>
+                                                        <option value="午餐" data-rangstart='11:00' data-rangend='13:00'@if(isset($pro->dayparts) && $pro->dayparts=='午餐') selected @endif>午餐</option>
+                                                        <option value="晚餐" data-rangstart='14:00' data-rangend='16:00'@if(isset($pro->dayparts) && $pro->dayparts=='晚餐') selected @endif>晚餐</option>
+                                                        <option value="下午茶" data-rangstart='18:00' data-rangend='20:00'@if(isset($pro->dayparts) && $pro->dayparts=='下午茶') selected @endif>下午茶</option>
                                                     </select>
                                                 </div>
                                             </div>
