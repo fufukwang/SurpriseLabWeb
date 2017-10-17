@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>
-        Table For One
+        table for ONE 一人餐桌
     </title>
     @include('TFO.m._head')
 </head>

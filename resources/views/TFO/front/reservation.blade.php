@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>
-        Table For One
+        table for ONE 一人餐桌
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="/T41/style/css/bootstrap.min.css">
