@@ -84,11 +84,13 @@ class BackController extends Controller
     public function RoomUpdate(Request $request,$id){
 
         $data = [
-            'dayparts'  => $request->dayparts,
-            'sites'     => $request->sites,
-            'money'     => $request->money,
-            'wine'      => $request->wine,
-            'open'      => $request->open,
+            'dayparts'   => $request->dayparts,
+            'sites'      => $request->sites,
+            'money'      => $request->money,
+            'wine'       => $request->wine,
+            'open'       => $request->open,
+            'cash_money' => $request->cash_money,
+            'cash_wine'  => $request->cash_wine,
         ];
         if(is_numeric($id) && $id>0){
             $data['day']       = $request->day;

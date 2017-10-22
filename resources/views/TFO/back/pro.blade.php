@@ -108,6 +108,20 @@
                                                     <input type="text" value="{{ $pro->wine or 0 }}" name="wine" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"/>
                                                 </div>
                                             </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">現場價格</label>
+                                                <div class="col-sm-8" style="padding:0 10px;">
+                                                    <input type="text" value="{{ $pro->cash_money or 0 }}" name="cash_money" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">現場價格+佐餐飲</label>
+                                                <div class="col-sm-8" style="padding:0 10px;">
+                                                    <input type="text" value="{{ $pro->cash_wine or 0 }}" name="cash_wine" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"/>
+                                                </div>
+                                            </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">開放訂位</label>
                                                 <div class="col-sm-8">
@@ -192,7 +206,7 @@
         $(function(){
             // Time Picker
             $('.timepicker').timepicker({ showMeridian : false});
-            $("input[name='sites'],input[name='money'],input[name='wine']").TouchSpin();
+            $("input[name='sites'],input[name='money'],input[name='wine'],input[name='cash_money'],input[name='cash_wine']").TouchSpin();
 
 
 

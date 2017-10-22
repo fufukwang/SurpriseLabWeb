@@ -66,7 +66,7 @@
                                                 <th>營業日期</th>
                                                 <th>營業時段</th>
                                                 <th>目前訂位 / 開放位置</th>
-                                                <th>金額 / +佐餐飲</th>
+                                                <th>金額 / +佐餐飲<br />現場價</th>
                                                 <th>功能</th>
                                             </tr>
                                         </thead>
@@ -78,7 +78,7 @@
                                                 <td>{{ $row->day }}</td>
                                                 <td>{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
                                                 <td>{{ App\model\TFOOrder::where('paystatus','已付款')->where('tfopro_id',$row->id)->count('id') }} / {{ $row->sites }}</td>
-                                                <td>{{ $row->money }} / {{ $row->wine }}</td>
+                                                <td>{{ $row->money }} / {{ $row->wine }}<br />{{ $row->cash_money }} / {{ $row->cash_wine }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-purple btn-xs" href="/TableForOne/order/{{ $row->id }}/appointment">預約席</a>
                                                     <a class="btn btn-info btn-xs" href="/TableForOne/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
