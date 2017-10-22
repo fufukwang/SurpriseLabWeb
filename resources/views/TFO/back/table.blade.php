@@ -58,9 +58,9 @@
 			<td>{{ $row->name }}</td>
 			<td>{{ $row->tel }}</td>
 			<td>@if($row->meal=='V') 素@else 葷@endif </td>
-			<td>{{ nl2br($row->notes) }}</td>
+			<td>{!! nl2br($row->notes) !!}</td>
 			<td></td>
-			<td>{{ nl2br($row->manage) }}</td>
+			<td>{!! nl2br($row->manage) !!}</td>
 		</tr>
 @empty
 <tr><td colspan="9" align="center">此搜尋條件尚無資料</td></tr>
