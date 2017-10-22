@@ -96,6 +96,7 @@
                                                     <select name="paytype" class="form-control">
                                                         <option value="後台編輯"@if(isset($order->paytype) && $order->paytype=='後台編輯') selected @endif>後台編輯</option>
                                                         <option value="信用卡"@if(isset($order->paytype) && $order->paytype=='信用卡') selected @endif>信用卡</option>
+                                                        <option value="現場付款"@if(isset($order->paytype) && $order->paytype=='現場付款') selected @endif>現場付款</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -103,7 +104,7 @@
                                                 <label class="control-label col-sm-4">付款狀態</label>
                                                 <div class="col-sm-8">
                                                     <select name="paystatus" class="form-control">
-                                                        <option value="未付款"@if(isset($order->paystatus) && $order->paystatus=='未付款') selected @endif>未付款</option>
+                                                        <option value="未完成"@if(isset($order->paystatus) && $order->paystatus=='未完成') selected @endif>未完成</option>
                                                         <option value="已付款"@if(isset($order->paystatus) && $order->paystatus=='已付款') selected @endif>已付款</option>
                                                         <option value="取消訂位"@if(isset($order->paystatus) && $order->paystatus=='取消訂位') selected @endif>取消訂位</option>
                                                     </select>

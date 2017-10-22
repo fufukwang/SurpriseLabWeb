@@ -38,23 +38,25 @@
                                                 <select name="paystatus" class="form-control">
                                                     <option value="">付款狀態</option>
                                                     <option value="已付款"@if(isset($request->paystatus) && $request->paystatus=='已付款') selected @endif>已付款</option>
-                                                    <option value="未付款"@if(isset($request->paystatus) && $request->paystatus=='未付款') selected @endif>未付款</option>
+                                                    <option value="未完成"@if(isset($request->paystatus) && $request->paystatus=='未完成') selected @endif>未完成</option>
                                                     <option value="取消訂位"@if(isset($request->paystatus) && $request->paystatus=='取消訂位') selected @endif>取消訂位</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
                                                 <select name="dayparts" class="form-control">
                                                     <option value="">時段</option>
-                                                    <option value="午餐"@if(isset($request->order) && $request->order=='午餐') selected @endif>午餐</option>
-                                                    <option value="下午茶"@if(isset($request->order) && $request->order=='下午茶') selected @endif>下午茶</option>
-                                                    <option value="晚餐"@if(isset($request->order) && $request->order=='晚餐') selected @endif>晚餐</option>
+                                                    <option value="午餐"@if(isset($request->dayparts) && $request->dayparts=='午餐') selected @endif>午餐</option>
+                                                    <option value="下午茶"@if(isset($request->dayparts) && $request->dayparts=='下午茶') selected @endif>下午茶</option>
+                                                    <option value="晚餐"@if(isset($request->dayparts) && $request->dayparts=='晚餐') selected @endif>晚餐</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
                                                 <select name="paytype" class="form-control">
                                                     <option value="">付款類型</option>
-                                                    <option value="禮物卡">禮物卡</option>
-                                                    <option value="信用卡">信用卡</option>
+                                                    <option value="禮物卡"@if(isset($request->paytype) && $request->paytype=='禮物卡') selected @endif>禮物卡</option>
+                                                    <option value="信用卡"@if(isset($request->paytype) && $request->paytype=='信用卡') selected @endif>信用卡</option>
+                                                    <option value="現場付款"@if(isset($request->paytype) && $request->paytype=='現場付款') selected @endif>現場付款</option>
+                                                    <option value="後台編輯"@if(isset($request->paytype) && $request->paytype=='後台編輯') selected @endif>後台編輯</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2">
@@ -100,7 +102,7 @@
                                                 <td>{{ $row->name }}</td>
                                                 <td>phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
                                                 <td>@if($row->meal=='V')素@else 葷@endif <br >{{ $row->item }}</td>
-                                                <td class="@if($row->paystatus=='已付款')success @elseif($row->paystatus=='未付款')danger @elseif($row->paystatus=='取消訂位')warning @endif">{{ $row->paystatus }}</td>
+                                                <td class="@if($row->paystatus=='已付款')success @elseif($row->paystatus=='未完成')danger @elseif($row->paystatus=='取消訂位')warning @endif">{{ $row->paytype }} / {{ $row->paystatus }}</td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
                                                 <td></td>
                                                 <td>{{ $row->manage }}</td>

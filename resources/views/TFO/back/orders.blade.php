@@ -58,7 +58,7 @@
                                                 <td>{{ $row->name }}</td>
                                                 <td>{{ $row->tel }}</td>
                                                 <td>{{ $row->email }}</td>
-                                                <td>{{ $row->paystatus }}</td>
+                                                <td>{{ $row->paytype }} / {{ $row->paystatus }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/TableForOne/order/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>

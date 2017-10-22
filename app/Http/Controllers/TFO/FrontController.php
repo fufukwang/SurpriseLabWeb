@@ -62,7 +62,7 @@ class FrontController extends Controller
             'name'       => $request->name,
             'tel'        => $request->tel,
             'email'      => $request->email,
-            'paystatus'  => '未付款',
+            'paystatus'  => '未完成',
             'sn'         => $this->GenerateSN(),
             'tfopro_id'  => $request->pro_id,
             'tfogife_id' => 0,

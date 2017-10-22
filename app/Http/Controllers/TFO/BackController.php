@@ -329,10 +329,11 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item','paytype');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
+        if($request->has('paytype') && $request->paytype!='') $order->where('paytype',$request->paytype);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
@@ -352,10 +353,11 @@ class BackController extends Controller
 
     public function Table(Request $request){
         $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item','paytype');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
+        if($request->has('paytype') && $request->paytype!='') $order->where('paytype',$request->paytype);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");

@@ -65,7 +65,7 @@
                                                 <label class="control-label col-sm-4">付款狀態</label>
                                                 <div class="col-sm-8">
                                                     <select name="paystatus" class="form-control">
-                                                        <option value="未付款">未付款</option>
+                                                        <option value="未完成">未完成</option>
                                                         <option value="已付款">已付款</option>
                                                         <option value="取消訂位">取消訂位</option>
                                                     </select>
