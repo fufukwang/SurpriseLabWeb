@@ -155,16 +155,19 @@ $menu = <<<'FOOBAR'
                     </h3>
                     <p>
                         A: 880 NTD / 五道料理 <br>
-                        B: 1050 NTD /  五道料理 + 佐餐飲乙杯
+                        B: 1050 NTD /  五道料理 + 佐餐飲乙杯<br>
+                        <span class="font-size-sm">以上價格，需另收一成服務費</span>
                     </p>
                     <h3>
-                        現場⾃來客 walk-in
+                        現場自來客 walk-in
                     </h3>
                     <p>
-                        C: 1200 NTD / 五道料理 +  佐餐飲乙杯 
+                        C: 1000 NTD / 五道料理 <br>
+                        D: 1200 NTD /  五道料理 + 佐餐飲乙杯<br>
+                        <span class="font-size-sm">以上價格，需另收一成服務費</span>
                     </p>
                     <p class="little-things">
-                        *B、C套餐之佐餐飲，可任選酒水單上任何飲品乙杯<br>
+                        *B、D套餐之佐餐飲，可任選酒水單上任何飲品乙杯<br>
                         *以上價格均已含服務費<br>
                         *每人用餐時間為90分鐘<br>
                         *為避免臨時到店時無座位，建議線上訂位&線上預付預留座位
@@ -707,7 +710,7 @@ $step2 = <<<'FOOBAR'
                             <td>
                                 <div class="form-group">
                                     <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                        <input class="form-control" id="day" size="14" type="text" value="">
+                                        <input class="form-control" id="day" size="14" type="text" readonly>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     </div>
                                     <input type="hidden" id="dtp_input2" value="" /><br/>

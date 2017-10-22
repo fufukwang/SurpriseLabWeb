@@ -16,7 +16,9 @@ $(function(){
                     locale:'zh-TW',
                     format:'YYYY-MM-DD',
                     showTodayButton:true,
-                    enabledDates:elbdate
+                    enabledDates:elbdate,
+                    ignoreReadonly:true,
+                    allowInputToggle:true,
                 }).on('dp.change',function(e){
                     var $day = e.date.format('YYYY-MM-DD');
                     $.post('/tableforone/getRoomData',{act:'getDatepartByDay',day:$day},function(data){
@@ -138,6 +140,10 @@ $(function(){
         $.blockUI();
         fbq('track', 'InitiateCheckout');
         $('#reservationForm').submit();
+    });
+    // 現場付款
+    $('#goCash').bind('click',function(){
+
     });
     // 剛開啟關閉
     $('#step2,#step3,#step4').hide();

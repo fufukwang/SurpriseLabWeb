@@ -50,8 +50,39 @@
     background: $theme-color;
 }
 
+.thick-btn{
+    font-size: 15px;
+    display: inline-block;
+    @media(max-width:$xs){
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    &:after{
+        height: 64px;
+        @media(max-width:$xs){
+            height: 59px!important;
+        }
+    }
+}
+
+.fake-btn {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+//.mobile-last-thick-btn {
+//    float: right;
+//    margin-top: 5px!important;
+//    margin-right: 12px!important;
+//}
+
 .btn-box {
     text-align: center;
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
 	.standard-btn {
 	    display: inline-block;
         width: 140px;
@@ -68,7 +99,7 @@
         }
     }
     
-    a:first-child{
+    a{
         .standard-btn {
             margin-right: 15px;    
             margin-left: 15px;
@@ -76,6 +107,10 @@
                 margin-left: -2.5px;
                 margin-right: 5px;
             }
+        }
+        
+        &:last-child{
+            margin: 0;
         }
     }
 }
