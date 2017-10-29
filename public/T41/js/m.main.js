@@ -15,7 +15,7 @@ $(document).ready(function(){
             location.protocol+"//"+location.host+"/T41/images/landing-page/mobile3.png",
             location.protocol+"//"+location.host+"/T41/images/landing-page/mobile4.png",
             location.protocol+"//"+location.host+"/T41/images/landing-page/mobile5.png",
-            location.protocol+"//"+location.host+"/T41/images/landing-page/mobile6.png",
+            location.protocol+"//"+location.host+"/T41/images/landing-page/mobile6.png"
         );
     }
     // 確認圖片讀完後
@@ -162,13 +162,6 @@ $(document).ready(function(){
       
 });
 
-function getEvent(){
-    
-    $('#landing-cut').fadeOut(500);
-    $('.content-box').fadeIn(500);
-
-        
-}
 
 function redirectme(){
     var width = $(window).width();
@@ -181,6 +174,6 @@ function redirectme(){
         document.location.href = href;
     }
     if(/iPad/i.test(navigator.userAgent)) {   
-        getEvent();
+        //getEvent();
     } 
 }
