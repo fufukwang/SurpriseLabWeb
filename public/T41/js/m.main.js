@@ -159,9 +159,7 @@ $(document).ready(function(){
             });
         }
     });  
-    if(/iPad/i.test(navigator.userAgent)) {   
-        getEvent();
-    }   
+      
 });
 
 function getEvent(){
@@ -182,4 +180,7 @@ function redirectme(){
         }
         document.location.href = href;
     }
+    if(/iPad/i.test(navigator.userAgent)) {   
+        getEvent();
+    } 
 }
