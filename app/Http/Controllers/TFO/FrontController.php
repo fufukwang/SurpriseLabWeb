@@ -58,7 +58,7 @@ class FrontController extends Controller
             } else {
                 $money = $pro->cash_money + $pro->cash_wine;
             }
-            $money = $money * 1.1; // 服務費
+            //$money = $money * 1.1; // 服務費
             $data = [
                 'name'       => $request->name,
                 'tel'        => $request->tel,
@@ -137,7 +137,7 @@ class FrontController extends Controller
         } else {
             $money = $pro->money + $pro->wine;
         }
-        $money = $money * 1.1; // 服務費
+        //$money = $money * 1.1; // 服務費
 
         $data = [
             'name'       => $request->name,
