@@ -36,7 +36,8 @@
                                             </div>
                                             <div class="form-group col-sm-1">
                                                 <select name="paystatus" class="form-control">
-                                                    <option value="">付款狀態</option>
+                                                    <option value="">狀態</option>
+                                                    <option value="已預約"@if(isset($request->paystatus) && $request->paystatus=='已預約') selected @endif>已預約</option>
                                                     <option value="已付款"@if(isset($request->paystatus) && $request->paystatus=='已付款') selected @endif>已付款</option>
                                                     <option value="未完成"@if(isset($request->paystatus) && $request->paystatus=='未完成') selected @endif>未完成</option>
                                                     <option value="取消訂位"@if(isset($request->paystatus) && $request->paystatus=='取消訂位') selected @endif>取消訂位</option>

@@ -334,7 +334,11 @@ class BackController extends Controller
         $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item','paytype');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
-        if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
+        if($request->has('paystatus') && $request->paystatus=='已預約'){
+            $order->whereRaw("(paystatus='已付款' OR paytype='現場付款')");
+        } elseif($request->paystatus!=''){
+            $order->where('paystatus',$request->paystatus);  
+        } 
         if($request->has('paytype') && $request->paytype!='') $order->where('paytype',$request->paytype);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
@@ -358,7 +362,11 @@ class BackController extends Controller
         $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item','paytype');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
-        if($request->has('paystatus') && $request->paystatus!='') $order->where('paystatus',$request->paystatus);
+        if($request->has('paystatus') && $request->paystatus=='已預約'){
+            $order->whereRaw("(paystatus='已付款' OR paytype='現場付款')");
+        } elseif($request->paystatus!=''){
+            $order->where('paystatus',$request->paystatus);  
+        } 
         if($request->has('paytype') && $request->paytype!='') $order->where('paytype',$request->paytype);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
