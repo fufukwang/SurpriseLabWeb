@@ -335,7 +335,7 @@ class BackController extends Controller
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus=='已預約'){
-            $order->whereRaw("(paystatus='已付款' OR paytype='現場付款')");
+            $order->whereRaw("(paystatus='已付款' OR (paytype='現場付款' AND paystatus<>'取消訂位'))");
         } elseif($request->paystatus!=''){
             $order->where('paystatus',$request->paystatus);  
         } 
@@ -363,7 +363,7 @@ class BackController extends Controller
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus=='已預約'){
-            $order->whereRaw("(paystatus='已付款' OR paytype='現場付款')");
+            $order->whereRaw("(paystatus='已付款' OR (paytype='現場付款' AND paystatus<>'取消訂位'))");
         } elseif($request->paystatus!=''){
             $order->where('paystatus',$request->paystatus);  
         } 
