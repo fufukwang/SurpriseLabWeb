@@ -187,7 +187,7 @@ function redirectme(){
     if(location.pathname.indexOf('ECPaySuccess')>0 || location.pathname.indexOf('CashPay')>0) return false;
     //navigator.userAgent.match(/android|ipad|iphone|ipod|windows phone|symbian|blackberry/i)
     var width = $(window).width();
-    if(width<=600){
+    if(width<=768){
         if(location.pathname.indexOf('/en')>0){
             var href = location.pathname.replace('tableforone/en','tableforone/m.en');
         } else {
