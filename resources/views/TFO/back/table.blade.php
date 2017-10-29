@@ -44,6 +44,7 @@
 			<td>桌號</td>
 			<td>時間</td>
 			<td>姓名</td>
+			<td>付款</td>
 			<td>電話</td>
 			<td>主餐</td>
 			<td>備註</td>
@@ -56,6 +57,7 @@
 			<td></td>
 			<td>{{ substr($row->rangstart,0,5) }}-{{ substr($row->rangend,0,5) }}</td>
 			<td>{{ $row->name }}</td>
+			<td>@if($row->paytype=='現場付款') 現場 @else 其他 @endif （ @if($row->paystatus=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
 			<td>@if($row->meal=='V') 素@else 葷@endif </td>
 			<td>{!! nl2br($row->notes) !!}</td>

@@ -62,7 +62,7 @@ $(function(){
                     disable = 'disabled';
                     text    = ' (額滿)';
                 }
-                html += '<option value="'+data[i].id+'" data-money="'+data[i].money+'" data-wine="'+data[i].wine+'" '+disable+'>'+data[i].rangstart.substring(0,5)+' ~ '+data[i].rangend.substring(0,5)+text+'</option>';
+                html += '<option value="'+data[i].id+'" data-money="'+data[i].money+'" data-wine="'+data[i].wine+'" data-cash_money="'+data[i].cash_money+'" data-cash_wine="'+data[i].cash_wine+'" '+disable+'>'+data[i].rangstart.substring(0,5)+' ~ '+data[i].rangend.substring(0,5)+text+'</option>';
             }
             $('#id').html(html);
         },'json');
@@ -71,6 +71,8 @@ $(function(){
         var item = $('#id option:selected');
         $('#money').text(item.data('money'));
         $('#wine').text(parseInt(item.data('money')) +parseInt(item.data('wine')));
+        $('#cash_money').text(item.data('cash_money'));
+        $('#cash_wine').text(parseInt(item.data('cash_money')) +parseInt(item.data('cash_wine')));
     });
 
     /* step 3 */
@@ -125,6 +127,7 @@ $(function(){
             $('#mealText').text($('input[name=meal]:checked').val()=='H' ? '葷食' : '素食');
             var item = $('#'+$('input[name=SelSet]:checked').val()+'_item').text();
             $('#itemText').text(item);
+            
             $('#item').val(item);
             $('#notesText').text($('textarea[name="notes"]').val());
             $('#step3').hide();
@@ -143,10 +146,25 @@ $(function(){
     });
     // 現場付款
     $('#goCash').bind('click',function(){
+        $('#pro_id').val($('#id').val());
+        $.blockUI();
 
+        /*
+        $('#reservationForm').attr('action','/tableforone/CashPay');
+        $('#reservationForm').submit(); 
+        */
+        $.post('/tableforone/CashPay',$("#reservationForm").serialize(),function(data){
+            if(data.status == 'success'){
+                window.location.href = '/tableforone/CashPay?sn='+data.sn;
+            }
+        },'json');
     });
     // 剛開啟關閉
     $('#step2,#step3,#step4').hide();
+
+
+
+
     
 });
 function validateEmail(email) {

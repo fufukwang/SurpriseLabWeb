@@ -49,6 +49,86 @@ class FrontController extends Controller
         TFOContact::insert($data);
         return redirect("/tableforone/index.html")->with('message','留言完成!');
     }
+    // 生成訂單並顯示內容
+    public function CashPay(Request $request){
+        if($request->ajax() && $request->isMethod('post')){
+            $pro = TFOPro::find($request->pro_id);
+            if($request->SelSet == 'money'){
+                $money = $pro->cash_money;
+            } else {
+                $money = $pro->cash_money + $pro->cash_wine;
+            }
+            $money = $money * 1.1; // 服務費
+            $data = [
+                'name'       => $request->name,
+                'tel'        => $request->tel,
+                'email'      => $request->email,
+                'paystatus'  => '未完成',
+                'sn'         => $this->GenerateSN(),
+                'tfopro_id'  => $request->pro_id,
+                'tfogife_id' => 0,
+                'meal'       => $request->meal,
+                'money'      => $money,
+                'notes'      => $request->notes,
+                'story'      => '',
+                'manage'     => '',
+                'result'     => '',
+                'paytype'    => '現場付款',
+                'item'       => $request->item,
+            ];
+
+            $order = TFOOrder::create($data);
+
+
+            // 加入電子報
+            $mcAdd = array(
+                'email_address' => $data['email']
+            );
+            $result = MC::checksub('1ffcba4562',$mcAdd);
+            $json = json_decode($result,true);
+            if($json['status']==404){
+                $mcArray = array(
+                    'email_address' => $data['email'],
+                    'status'        => 'subscribed',
+                    'merge_fields'  => array(
+                        'FNAME' => $data['name']
+                    )
+                );
+                //訂閱的動作
+                $rr = MC::subscribe('1ffcba4562',$mcArray);
+            }
+
+            try {
+
+                $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('day','rangstart','rangend','name','email')->where('sn',$data['sn'])->first();
+
+                $arr = [
+                    'day'       => $order->day,
+                    'rangstart' => $order->rangstart,
+                    'rangend'   => $order->rangend,
+                    'name'      => $order->name,
+                    'email'     => $order->email,
+                ];
+                Mail::send('TFO.email.order',$arr,function($m) use ($arr){
+                    $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+                    $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+                    $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
+
+                    $m->to($arr['email'], $arr['name']);
+                    $m->subject('Table For One 訂位成功 !');
+                });
+            } catch(Exception $e) {
+
+            }
+            return Response::json(['status'=> 'success','sn'=>$data['sn']], 200);
+        }
+        
+        $order = TFOOrder::where('sn',$request['sn'])->first();
+        $sn    = $order->sn;
+        $money = $order->money;        
+        return view('TFO.front.CashPay',compact('sn','money'));
+
+    }
     // 生成訂單並送給金流
     public function generateOrder(Request $request){
         $pro = TFOPro::find($request->pro_id);
@@ -57,6 +137,7 @@ class FrontController extends Controller
         } else {
             $money = $pro->money + $pro->wine;
         }
+        $money = $money * 1.1; // 服務費
 
         $data = [
             'name'       => $request->name,
@@ -235,7 +316,7 @@ class FrontController extends Controller
         if($request->ajax() && $request->isMethod('post') && $request->has('act')){
             switch ($request->act) {
                 case 'getDayByDefault':
-                    $pro = TFOPro::select('day')->where('open',1)->where('day','>=',Carbon::now()->toDateString())->groupBy('day')->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")->get();
+                    $pro = TFOPro::select('day')->where('open',1)->where('day','>=',Carbon::now()->toDateString())->groupBy('day')->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR paytype='現場付款' OR (paystatus='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")->get();
                     return $pro->toJson();
                 break;
                 case 'getDatepartByDay':
@@ -246,7 +327,7 @@ class FrontController extends Controller
                 case 'getIDByDatepart':
                     $day      = $request->day;
                     $dayparts = $request->dayparts;
-                    $pro = TFOPro::select(DB::raw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS site,id,rangstart,rangend,money,wine"))
+                    $pro = TFOPro::select(DB::raw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR paytype='現場付款' OR (paystatus='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS site,id,rangstart,rangend,money,wine,cash_wine,cash_money"))
                         ->where('open',1)->where('day',$day)->where('dayparts',$dayparts)
                     //->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")
                         ->get();

@@ -77,7 +77,7 @@
                                                 <td>@if($row->open>0) 開放中 @else 關閉中 @endif</td>
                                                 <td>{{ $row->day }}</td>
                                                 <td>{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
-                                                <td>{{ App\model\TFOOrder::where('paystatus','已付款')->where('tfopro_id',$row->id)->count('id') }} / {{ $row->sites }}</td>
+                                                <td>{{ App\model\TFOOrder::whereRaw("(`paystatus`='已付款' OR paytype='現場付款') AND `tfopro_id`=".$row->id)->count('id') }} / {{ $row->sites }}</td>
                                                 <td>{{ $row->money }} / {{ $row->wine }}<br />{{ $row->cash_money }} / {{ $row->cash_wine }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-purple btn-xs" href="/TableForOne/order/{{ $row->id }}/appointment">預約席</a>

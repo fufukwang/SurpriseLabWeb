@@ -100,11 +100,12 @@
 <style type="text/css">
 .bootstrap-datetimepicker-widget table td.disabled,.bootstrap-datetimepicker-widget table td.disabled:hover{color:#CCCCCC;}
 .bootstrap-datetimepicker-widget table td {color:block;font-weight: bold;}
+.btn{padding:12px;font-size: 15px;line-height: normal;vertical-align: baseline;}
 </style>
 <script src="/T41/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
-<script src="/T41/js/reservation.js?v=0.2"></script>
+<script src="/T41/js/reservation.js?v=0.3"></script>
 
 </html>

@@ -107,6 +107,7 @@
 <style type="text/css">
 .bootstrap-datetimepicker-widget table td.disabled,.bootstrap-datetimepicker-widget table td.disabled:hover{color:#CCCCCC;}
 .bootstrap-datetimepicker-widget table td {color:block;font-weight: bold;}
+.btn{padding:12px;font-size: 15px;line-height: normal;vertical-align: baseline;}
 </style>
 <script src="/T41/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script>

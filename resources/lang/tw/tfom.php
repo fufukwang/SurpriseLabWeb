@@ -580,7 +580,7 @@ $qa = <<<'FOOBAR'
                     於用餐日三天前取消訂位，於扣除金流系統手續費 5% 後，將獲全額退費；於用餐日兩天前取消訂位，因廚房已完成備料，扣除金流系統手續費 5% 與廚房備料成本，將退回 50% 之費用。用餐當日未出席、也未事先來信或來電告知者，table for ONE 將不進行退費。有任何特殊突發狀況，歡迎來電與我們聯繫。
                 </p>
                 <p>
-                    詳細內容可詳<a class="underline-a" href="rule.html">rule</a>頁面
+                    詳細內容可詳<a class="underline-a" href="rules.html">rule</a>頁面
                 </p>
                 <h3>
                     Q14 請問有參加過無光晚餐的客人們 (老客回流)，有什麼特別的嘿嘿 (好康)，或是哈哈 (隱藏體驗)嗎？
@@ -649,16 +649,24 @@ FOOBAR;
 
 $step1 = <<<'FOOBAR'
                         <h4>
-                            線上訂位 pre-book &<br>
-                            線上預付 pre-pay <br>
-                            A: 880 元 | 五道料理 <br>
-                            B: 1050 元 | 五道料理 + 佐餐飲乙杯
+                            線上訂位 pre-book & 線上預付 pre-pay 
                         </h4>
+                        <p>
+                            A: 880 元 | 五道料理 <br>
+                            B: 1050 元 | 五道料理 + 佐餐飲乙杯<br>
+                            <span class="font-size-sm">以上價格，需另收一成服務費</span><br>
+                        </p>
+                        <h4>
+                            現場付費 walk-in
+                        </h4>
+                        <p>
+                            C: 1000 NTD / 五道料理 <br>
+                            D: 1200 NTD /  五道料理 + 佐餐飲乙杯<br>
+                            <span class="font-size-sm">以上價格，需另收一成服務費</span>
+                        </p>
                         <p class="mg-b-lg">
-                            *B套餐之佐餐飲，可任選酒水單上飲品乙杯<br> 
-                            *以上價格均已含服務費<br> 
+                            *B、D套餐之佐餐飲，可任選酒水單上任何飲品乙杯<br> 
                             *每人用餐時間為90分鐘<br> 
-                            *選擇日期、填寫資料、線上預付，即完成訂位服務
                             <span style="color: #f76565;">*若訂位時遇到任何問題，歡迎來信詢問 tableforone@surpriselab.com.tw</span>
                         </p>
                         <h4>
@@ -764,11 +772,12 @@ $step3 = <<<'FOOBAR'
                     <tr>
                         <td style="vertical-align: top">＊套餐選擇</td>
                         <td> 
-                            <input type="radio" value="money" name="SelSet"> <span class="radio-span" id="money_item"><span id="money"></span>元 五道料理</span><br>
-                            <input type="radio" value="wine" name="SelSet"> <span class="radio-span" id="wine_item"><span id="wine"></span>元 五道料理與佐餐酒乙杯</span>
-                            <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇套餐</span>
-                        </td>
+                                <input type="radio" value="money" name="SelSet"> <span class="radio-span" id="money_item">五道料理</span><span class="font-size-xs">(線上預付<span id="money"></span>元 / 現場付費 <span id="cash_money"></span>元)</span><br>
+                                <input type="radio" value="wine" name="SelSet"> <span class="radio-span" id="wine_item">五道料理與佐餐酒乙杯</span><span class="font-size-xs">(線上預付<span id="wine"></span>元 / 現場付費 <span id="cash_wine"></span>元)</span>
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇套餐</span>
+                            </td>
                     </tr>
+
                     <tr>
                         <td style="vertical-align: top">備註</td>
                         <td> 
@@ -838,17 +847,30 @@ $step4 = <<<'FOOBAR'
                     </tr>
                 </table>
                 <div class="btn-box">
-                    <a href="javascript:;" id="backStep3">
+                    <a href="javascript:;" style="line-height: 38px;position: relative;top:-10px" id="backStep3">
                         <div class="standard-btn btn">
                             上一步
                         </div>    
                     </a>
-                    <a href="javascript:;" id="goPay">
-                        <div class="standard-btn theme-btn btn">
-                            付款
+                    <a href="javascript:;" id="goPay" class="service-alert">
+                        <div class="standard-btn theme-btn btn thick-btn">
+                            線上預付<br>
+                            880 NTD
+                        </div>    
+                    </a>
+                    <a class="fake-btn" href="#">
+                        <div style="line-height: 38px;position: relative;top:-10px;margin-top: 5px;" class="standard-btn btn thick-btn">
+                            上一步
+                        </div>    
+                    </a>
+                    <a href="javascript:;" id="goCash" class="service-alert">
+                        <div style="margin-top: 25px;" class="standard-btn btn thick-btn">
+                            現場付費<br>
+                            1000 NTD
                         </div>    
                     </a>
                 </div>
+
 FOOBAR;
 
 $lightbox = <<<'FOOBAR'

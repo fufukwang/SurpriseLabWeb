@@ -48,17 +48,17 @@ $(document).ready(function(){
             _switching      = false,
             _autoPlay       = true;
         
-        $hamburgerBtn.click(function(){
+        $hamburgerBtn.bind('click touchstart',function(){
             $(this).find('i').toggleClass('active');
             $navBox.fadeToggle(400);
         })
         
 
-        $lightboxTrigger.click(function(){
+        $lightboxTrigger.bind('click touchstart',function(){
             $lightbox.fadeIn(500);
         })
 
-        $lightboxCancel.click(function(){
+        $lightboxCancel.bind('click touchstart',function(){
             $lightbox.fadeOut(500);
         })
         
@@ -75,13 +75,13 @@ $(document).ready(function(){
             $indexBtn.css("margin-top",_wrapperH*0.78);
             
             //slider
-            $indicatorBtn.click(function(){
+            $indicatorBtn.bind('click touchstart',function(){
                 var _thisValue = $(this).attr('val');
                 WhitchPlate(_thisValue);
                 _autoPlay = false;
             })
             
-            $indicatorDot.click(function(){
+            $indicatorDot.bind('click touchstart',function(){
                 var _thisValue = $(this).index()+1;
                 SwitchPlate(_thisValue);
                 _autoPlay = false;
@@ -100,7 +100,7 @@ $(document).ready(function(){
         }
         
         // trigger welcome
-        $indexBtn.click(function(){
+        $indexBtn.bind('click touchstart',function(){
             $landingCut.fadeOut(500);
             $contentBox.fadeIn(500);
 

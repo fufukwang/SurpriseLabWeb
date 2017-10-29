@@ -179,6 +179,10 @@ Route::group(['middleware' => ['web']], function () {
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail',function(){ return view('TFO.m.ECPayFail'); });
+
+
+            Route::post('CashPay','TFO\FrontController@CashPay');
+            Route::get('CashPay','TFO\FrontController@CashPay');
         });
 
         Route::group(['prefix' => 'en'], function(){
@@ -194,6 +198,9 @@ Route::group(['middleware' => ['web']], function () {
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail',function(){ App::setLocale('en'); return view('TFO.front.ECPayFail'); });
+
+            Route::post('CashPay','TFO\FrontController@CashPay');
+            Route::get('CashPay','TFO\FrontController@CashPay');
         });
 
         Route::group(['prefix' => 'm.en'], function(){
@@ -209,6 +216,8 @@ Route::group(['middleware' => ['web']], function () {
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail',function(){ App::setLocale('en'); return view('TFO.m.ECPayFail'); });
+            Route::post('CashPay','TFO\FrontController@CashPay');
+            Route::get('CashPay','TFO\FrontController@CashPay');
         });
 
         Route::post('getRoomData','TFO\FrontController@getRoomData');
@@ -219,6 +228,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('ECPaySuccess','TFO\FrontController@ECPaySuccess');
         //Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
         Route::get('ECPayFail',function(){ return view('TFO.front.ECPayFail'); });
+
+        Route::post('CashPay','TFO\FrontController@CashPay');
+        Route::get('CashPay','TFO\FrontController@CashPay');
 
 
     });

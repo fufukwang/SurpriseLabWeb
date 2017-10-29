@@ -124,3 +124,17 @@
         }
     }
 }
+
+.service-alert{
+    position: relative;
+    
+    &:after{
+        content: "以上價格，須另收一成服務費";
+        font-size: 10px;
+        position: absolute;
+        width: 130px;
+        left: 50%;
+        margin-left: -65px;
+        bottom: -35px;
+    }
+}
