@@ -15,7 +15,7 @@
 <!-- End Facebook Pixel Code -->
    	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="/T41/style/css/print.css?v=0.3">
+    <link rel="stylesheet" href="/T41/style/css/print.css?v=0.4">
     <script src="/T41/js/jquery.js"></script>
     <script src="/T41/js/imageloaded.js"></script>
     <script src="/T41/js/m.main.js?v=0.5"></script>

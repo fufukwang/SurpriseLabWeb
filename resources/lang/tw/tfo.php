@@ -882,13 +882,13 @@ $step4 = <<<'FOOBAR'
                                 上一步
                             </div>    
                         </a>
-                        <a href="javascript:;" id="goPay">
+                        <a href="javascript:;" id="goPay" class="service-alert">
                             <div class="standard-btn theme-btn btn thick-btn">
                                 線上預付<br>
                                 880 NTD
                             </div>    
                         </a>
-                        <a href="javascript:;" id="goCash">
+                        <a href="javascript:;" id="goCash" class="service-alert">
                             <div class="standard-btn btn thick-btn">
                                 現場付費<br>
                                 1000 NTD
