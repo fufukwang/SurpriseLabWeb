@@ -130,6 +130,9 @@ $(function(){
             
             $('#item').val(item);
             $('#notesText').text($('textarea[name="notes"]').val());
+
+            $('#Sel_online').text($('#'+$('input[name=SelSet]:checked').val()).text());
+            $('#Sel_onsite').text($('#cash_'+$('input[name=SelSet]:checked').val()).text());
             $('#step3').hide();
             $('#step4').show();
             fbq('track', 'AddPaymentInfo');

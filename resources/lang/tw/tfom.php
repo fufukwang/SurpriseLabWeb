@@ -855,7 +855,7 @@ $step4 = <<<'FOOBAR'
                     <a href="javascript:;" id="goPay" class="service-alert">
                         <div class="standard-btn theme-btn btn thick-btn">
                             線上預付<br>
-                            880 NTD
+                            <span id="Sel_online"></span> NTD
                         </div>    
                     </a>
                     <a class="fake-btn" href="#">
@@ -866,7 +866,7 @@ $step4 = <<<'FOOBAR'
                     <a href="javascript:;" id="goCash" class="service-alert">
                         <div style="margin-top: 25px;" class="standard-btn btn thick-btn">
                             現場付費<br>
-                            1000 NTD
+                            <span id="Sel_onsite"></span> NTD
                         </div>    
                     </a>
                 </div>
