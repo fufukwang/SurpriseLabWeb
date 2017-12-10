@@ -9,6 +9,27 @@
     text-align: right!important;
 }
 
+.mg-t-lg{
+    margin-top: 65px;
+    @media(max-width:$xs){
+        margin-top: 45px;
+    }
+}
+
+.mg-t-md{
+    margin-top: 45px;
+    @media(max-width:$xs){
+        margin-top: 25px;
+    }
+}
+
+.mg-t-sm{
+    margin-top: 25px;
+    @media(max-width:$xs){
+        margin-top: 20px;
+    }
+}
+
 .mg-b-lg{
     margin-bottom: 65px;
     @media(max-width:$xs){

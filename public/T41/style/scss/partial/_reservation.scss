@@ -67,6 +67,28 @@
         margin-bottom: 0px;
     }
     
+    th{
+        font-size: 19px;
+        padding: 20px 15px;
+        position: relative;
+        line-height: 1.65em;
+        letter-spacing: 1px;
+        font-weight: normal;
+        
+        @media(max-width:$xs){
+            padding: 15px 7px;
+            font-size: 16px;
+        }
+        .alerter{
+            left: 15px;
+            top: 80%;
+            @media(max-width:$xs){
+                left: 7px;
+                top: 65%;
+            }
+        }
+    }
+    
     td{
         vertical-align: middle;
         padding: 20px 15px;
@@ -75,11 +97,21 @@
         @media(max-width:$xs){
             font-size: 14px;
             padding: 15px 7px;
+            vertical-align: top;
         }
         
         .alerter{
             left: 15px;
             margin-top: -12px;
+        }
+    }
+    
+    input{
+        &::-webkit-input-placeholder {
+            font-size: 14px;
+            @media(max-width:$xs){
+                font-size: 12px;
+            }
         }
     }
     
@@ -127,7 +159,7 @@
     
     h4{
         @media(max-width:$xs){
-            font-size: 16px;
+            font-size: 15px;
         }
     }
     p{

@@ -65,6 +65,7 @@
                                                         <option value="午餐" data-rangstart='11:00' data-rangend='13:00'@if(isset($pro->dayparts) && $pro->dayparts=='午餐') selected @endif>午餐</option>
                                                         <option value="晚餐" data-rangstart='14:00' data-rangend='16:00'@if(isset($pro->dayparts) && $pro->dayparts=='晚餐') selected @endif>晚餐</option>
                                                         <option value="下午茶" data-rangstart='18:00' data-rangend='20:00'@if(isset($pro->dayparts) && $pro->dayparts=='下午茶') selected @endif>下午茶</option>
+                                                        <option value="特別活動" data-rangstart='18:00' data-rangend='20:00'@if(isset($pro->dayparts) && $pro->dayparts=='特別活動') selected @endif>特別活動</option>
                                                     </select>
                                                 </div>
                                             </div>

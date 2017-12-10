@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">營業日 <a href="/TableForOne/gift/0/edit" class="btn btn-primary waves-effect waves-light">新增禮物卡 <i class="fa fa-plus"></i></a></h4>
+                        <h4 class="page-title">禮物卡 <a href="/TableForOne/gift/0/edit" class="btn btn-primary waves-effect waves-light">新增禮物卡 <i class="fa fa-plus"></i></a></h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/TableForOne/rooms">
+                                        <div class="btn-group focus-btn-group"><form action="/TableForOne/gifts">
 
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -34,8 +34,16 @@
                                                     </div><!-- input-group -->
                                                 </div>
                                             </div>
+                                            <div class="form-group col-sm-2">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="搜尋" name="search" id="datepicker-autoclose" value="{{ $request->search or ''}}">
+                                                    </div><!-- input-group -->
+                                                </div>
+                                            </div>
 
-                                            <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+                                            <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>&nbsp;
+                                            <button type="button" class="btn btn-info" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 列印</button>
 
 
                                         </form></div>
@@ -61,18 +69,20 @@
                                         <tbody>
 @forelse ($gifts as $row)
                                             <tr id="tr_{{ $row->id }}">
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
-                                                <td>{{ $row->day }}</td>
+                                                <td>{{ $row->sn }}</td>
+                                                <td>{{ $row->created_at }}</td>
+                                                <td>{{ $row->bname }}</td>
+                                                <td>{{ $row->btel }}</td>
+                                                <td>{{ $row->bemail }}</td>
+                                                <td>{{ $row->rname }}</td>
+                                                <td>{{ $row->rtel }}</td>
+                                                <td>{{ $row->sendtype }}</td>
+                                                <td>{{ $row->code }}</td>
+                                                <td>@if($row->tfoorder_id > 0) 
+                                                    {{ App\model\TFOOrder::find($row->tfoorder_id)->created_at }}
+                                                @endif</td>
+                                                <td><input type="checkbox" class="sendbox" value="{{ $row->id }}" @if($row->send)checked @endif /></td>
+                                                <td>{{ $row->manage }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
@@ -142,11 +152,24 @@
         <script src="/backstage/js/jquery.core.js"></script>
         <script src="/backstage/js/jquery.app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+        <!-- Notification js -->
+        <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
+        <script src="/backstage/plugins/notifications/notify-metro.js"></script>
+
         <script>
         //$('#datatable').dataTable();
 			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 $(function(){
-    $('.wrapper').block({ message: '尚未啟用' });
+    $('.sendbox').bind('click',function(){
+        var send = $(this).prop('checked');
+        var id   = $(this).val();
+        $.post('/TableForOne/gift/'+id+'/sendUpdate',{
+            send : (send ? 1 : 0)
+        },function(data){
+            $.Notification.notify('success','bottom left','已更新', '發送狀態已更新')
+        },'json');
+        console.log(send);
+    });
     $('.btn-danger').bind('click',function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除禮物卡?如有訂單將一併刪除")) {

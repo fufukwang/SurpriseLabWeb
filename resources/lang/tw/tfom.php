@@ -919,6 +919,709 @@ $lightbox = <<<'FOOBAR'
     </div>
 FOOBAR;
 
+$gift = <<<'FOOBAR'
+                    <p>
+                        一張餐桌，佐以寧靜，綴上些許樂趣<br>包裝成一份心意
+                    </p>
+                    <p>
+                        「一個人，很好」
+                    </p>
+                    <div class="btn-box mg-b-lg">
+                        <a href="giftcard.html">
+                            <div class="standard-btn btn mg-auto with-icon-btn buy-btn">
+                                購買禮物卡
+                            </div>    
+                        </a>
+                        <a href="redeem.html">
+                            <div style="margin-top: 25px;" class="standard-btn btn mg-auto with-icon-btn redeem-btn">
+                                兌換禮物卡
+                            </div>    
+                        </a>
+                    </div>
+FOOBAR;
+
+
+
+$giftStep1 = <<<'FOOBAR'
+                    <p class="mg-b-lg mg-t-lg">
+                        <img src="/T41/images/giftcard/one-1.png" alt="">
+                        <img src="/T41/images/giftcard/one-2.png" alt="">
+                        嘿！<br>
+                        你腦中是否浮起一個人，<br>
+                        總是說著需要陪伴，<br>
+                        但他其實足夠獨立，<br>
+                        能嘗試自己吃一頓飯，<br>
+                        只差一點點勇氣。
+                    </p>
+                    <p class="mg-b-lg">
+                        <img src="/T41/images/giftcard/one-3.png" alt="">
+                        你腦中是否浮起一個人，<br>
+                        總是忙碌著，<br>
+                        忘了留一點時間給自己，<br>
+                        而你覺得心疼。
+                    </p>
+                    <p class="mg-b-lg">
+                        <img src="/T41/images/giftcard/one-4.png" alt="">
+                        <img src="/T41/images/giftcard/one-5.png" alt="">
+                        <img src="/T41/images/giftcard/one-6.png" alt="">
+                        <img src="/T41/images/giftcard/one-7.png" alt="">
+                        你腦中是否浮起一個人，<br>
+                        他很能悠遊地與自己相處，<br>
+                        而你正想推薦他有趣好玩的體驗。
+                    </p>
+                    <p class="mg-b-lg">
+                        <img src="/T41/images/giftcard/one-8.png" alt="">
+                        你腦中是否浮起一個人，<br>
+                        不明原因的，<br>
+                        想起他，想送他點什麼。
+                    </p>
+                    <h5>
+                        table for ONE , table for ALL
+                    </h5>
+                    <div class="btn-box">
+                        <a href="gift.html">
+                            <div class="standard-btn btn">
+                                上一步
+                            </div>    
+                        </a>
+                        <a href="javascript:;" id="goStep2">
+                            <div class="standard-btn theme-btn btn">
+                                下一步
+                            </div>    
+                        </a>
+                    </div>
+
+FOOBAR;
+
+$giftStep2 = <<<'FOOBAR'
+                    <div class="table-box">
+                        <h4>
+                            關於禮物卡
+                        </h4>
+                        <table class="reservation-table">
+                            <tr>
+                                <td style="width: 85px">禮卡內容：</td>
+                                <td>table for ONE一人餐桌活動體驗</td>
+                            </tr>
+                            <tr>
+                                <td>體驗內容：</td>
+                                <td>一人體驗+一份固定套餐+一份禮物卡</td>
+                            </tr>
+                            <tr>
+                                <td>套餐內容：</td>
+                                <td>晚間套餐+佐餐飲乙杯</td>
+                            </tr>
+                            <tr>
+                                <td>體驗時間：</td>
+                                <td>90分鐘</td>
+                            </tr>
+                            <tr>
+                                <td>禮卡形式：</td>
+                                <td>電子卡 或 實體卡</td>
+                            </tr>
+                            <tr>
+                                <td>寄送方式：</td>
+                                <td>Email寄送、 到店自取、國內掛號、國外郵寄
+                                    (依據禮卡寄送方式不同而酌收價格不等郵寄費用)</td>
+                            </tr>
+                            <tr>
+                                <td>票面價格：</td>
+                                <td>1200元</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>活動場地：</td>
+                                <td>台北市松山區健康路九號</td>
+                            </tr>
+                            <tr>
+                                <td>活動期限：</td>
+                                <td>2017/11/01-2018/04/30</td>
+                            </tr>
+                        </table>
+                        <div class="color-img-box giftCart-color-img-box">
+                            <ul class="align-center">
+                                <li>
+                                    <div class="img-box">
+                                        <img src="/T41/images/giftcard/picture1-1.png" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-box">
+                                        <img src="/T41/images/giftcard/picture2-1.png" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-box">
+                                        <img src="/T41/images/giftcard/picture3-1.png" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h4 class="mg-t-md">
+                            <input type="checkbox" id="agrenRule"> 我已詳讀並遵守<a href="rules.html" target="_blank"><span class="lightbox-trigger">禮物卡相關規則</span></a>。
+                            <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已閱讀禮物卡相關規則</span>
+                        </h4>
+
+
+                        <div class="btn-box mg-t-md">
+                            <a href="javascript:;" id="backStep1">
+                                <div class="standard-btn btn">
+                                    上一步
+                                </div>    
+                            </a>
+                            <a href="javascript:;" id="goStep3">
+                                <div class="standard-btn theme-btn btn">
+                                    下一步
+                                </div>    
+                            </a>
+                        </div>
+FOOBAR;
+
+$giftStep3 = <<<'FOOBAR'
+                    <table class="reservation-table">
+                        <tr>
+                            <th colspan="2">
+                                送禮人
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                ＊姓名
+                            </td>
+                            <td>
+                                <input type="text" name="bname" maxlength="20">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入姓名</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>＊電話</td>
+                            <td class="">
+                                <input type="text" name="btel" maxlength="20">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入電話</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>＊E-mail</td>
+                            <td class="">
+                                <input type="email" name="bemail">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入E-mail</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                收禮人
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                ＊姓名
+                            </td>
+                            <td>
+                                <input type="text" name="rname" maxlength="20">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入姓名</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>＊電話</td>
+                            <td class="">
+                                <input type="text" name="rtel" maxlength="20">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入電話</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>＊E-mail</td>
+                            <td class="">
+                                <input type="email" name="remail" maxlength="20">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入E-mail</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="sendtypeth" colspan="2">
+                                寄送方式   <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇寄送方式</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> 
+                                <input type="radio" name="sendtype" value="Email"> <span class="radio-span">Email  (完成購買後，即寄送電子禮物卡給收禮人)
+                                </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> 
+                                <input type="radio" name="sendtype" value="到店自取"> <span class="radio-span">到店自取 (完成購買後，可在餐廳營業時間至餐廳領取)
+                                </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 110px;"> 
+                                <input type="radio" name="sendtype" value="國內郵寄"> <span class="radio-span" style="display: inline-block;vertical-align: top;">國內地址<br>+$100</span>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <input type="text" placeholder="以掛號方式寄送，請填寫收禮人地址" name="inaddress">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請輸入收禮人地址</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <input type="radio" name="sendtype" value="國外郵寄"> <span class="radio-span" style="display: inline-block;vertical-align: top;">國外地址<br>+$200</span>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <input type="text" placeholder="以掛號方式寄送，請填寫收禮人地址" name="outaddress">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請輸入收禮人地址</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                邀請文字
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> 
+                                <textarea name="InvitationText" cols="30" rows="10" placeholder=""></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <h4 class="align-left privacy-check">
+                        <input type="checkbox" id="agreePrev"> 我已閱讀並遵守<a href="#" id="light-trigger"><span class="lightbox-trigger">隱私條款</span></a>。
+                        <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已閱讀訂位與用餐規則</span>
+                    </h4>
+
+                    <div class="btn-box">
+                        <a href="javascript:;" id="backStep2">
+                            <div class="standard-btn btn">
+                                上一步
+                            </div>    
+                        </a>
+                        <a href="javascript:;" id="goStep4">
+                            <div class="standard-btn theme-btn btn">
+                                下一步
+                            </div>    
+                        </a>
+                    </div>
+FOOBAR;
+
+$giftStep4 = <<<'FOOBAR'
+                    <table class="reservation-table">
+                        <tr>
+                            <th colspan="2">
+                                送禮人
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                姓名
+                            </td>
+                            <td>
+                                ｜<span id="bnameSpan"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>電話</td>
+                            <td class="">
+                                ｜<span id="btelSpan"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td class="error">
+                                ｜<span id="bemailSpan"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                收禮人
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                姓名
+                            </td>
+                            <td>
+                                ｜<span id="rnameSpan">猛如</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>電話</td>
+                            <td class="">
+                                ｜<span id="rtelSpan"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td class="error">
+                                ｜<span id="remailSpan"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                寄送方式
+                            </th>
+                        </tr>
+                        <tr>
+                            <td id="sendtypeSpan">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                邀請文字
+                            </th>
+                        </tr>
+                        <tr>
+                            <td id="InvitationTextSpan">
+                                
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <div class="btn-box">
+                        <a href="javascript:;" id="backStep3">
+                            <div class="standard-btn btn">
+                                上一步
+                            </div>    
+                        </a>
+                        <a href="javascript:;" id="goPay">
+                            <div class="standard-btn theme-btn btn">
+                                前往付款
+                            </div>    
+                        </a>
+                    </div>
+FOOBAR;
+
+
+$redeemStep1 = <<<'FOOBAR'
+                    <table class="reservation-table mg-t-lg align-center">
+                        <tr>
+                            <th colspan="2">
+                                禮物卡序號<br>
+                                Gift Card Code
+                            </th>
+                        </tr>
+                        <tr>
+                            <tdid="codetd">
+                                <input style="max-width: 220px;border-color:#444;" type="text" id="code" maxlength=8>    
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已輸入正確序號</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                   <div class="btn-box">
+                        <a href="gift.html">
+                            <div class="standard-btn btn">
+                                上一步
+                            </div>    
+                        </a>
+                        <a href="javascript:;" id="goStep2">
+                            <div class="standard-btn theme-btn btn">
+                                下一步
+                            </div>    
+                        </a>
+                    </div>
+
+FOOBAR;
+
+$redeemStep2 = <<<'FOOBAR'
+                    <p class="mg-b-lg">
+                        <img src="/T41/images/giftcard/one-1.png" alt="">
+                        <img src="/T41/images/giftcard/one-2.png" alt="">
+                        嘿！<br><br>
+                        「 一個人的晚餐」<br>
+                        或許讓你困惑<br>這是什麼樣的禮物，<br>
+                        抽象的概念轉化為心意<br>總有獨特的理由。
+                    </p>
+                    <p class="mg-b-lg">
+                        <img src="/T41/images/giftcard/one-3.png" alt="">
+                        你身邊有位朋友<br>
+                        為你在繁忙生活中<br>留下一頓飯的時間<br>只給自己。
+                    </p>
+                    <p class="mg-b-lg">
+                        <img src="/T41/images/giftcard/one-4.png" alt="">
+                        <img src="/T41/images/giftcard/one-5.png" alt="">
+                        <img src="/T41/images/giftcard/one-6.png" alt="">
+                        <img src="/T41/images/giftcard/one-7.png" alt="">
+                        你身邊有位朋友，<br>
+                        想讓你在喧雜的世界<br>聽聽自己的聲音<br>好好享受。
+                    </p>
+                    <p class="mg-b-lg">
+                        <img style="top: -85px" src="/T41/images/giftcard/one-8.png" alt="">
+                        你身邊有位朋友，<br>
+                        邀請你一同品味 —<br>
+                        『工作跟家中間，有種東西叫生活。』
+
+                    </p>
+                    <p class="mg-b-lg">
+                     
+                        歡迎來到 table for ONE 一人餐桌 <br>
+                        各種一個人的樂趣待你獨自發掘
+                    </p>
+                    <p class="mg-b-lg">
+
+                    </p>
+                    <p class="mg-b-lg">
+                        為自己安排一個舒服的時間<br>
+                        享受一頓飽含心意的體驗 
+                    </p>
+
+                    <h5>
+                        table for ONE , table for ALL
+                    </h5>
+                    <div class="btn-box">
+                        <a href="javascript:;" id="backStep1">
+                            <div class="standard-btn btn">
+                                上一步
+                            </div>    
+                        </a>
+                        <a href="javascript:;" id="goStep3">
+                            <div class="standard-btn theme-btn btn">
+                                下一步
+                            </div>    
+                        </a>
+                    </div>
+
+FOOBAR;
+
+$redeemStep3 = <<<'FOOBAR'
+                    <div class="table-box">
+                        <h4>
+                            table for ONE一人餐桌活動體驗
+                        </h4>
+                        <p class="mg-b-sm">
+                            體驗時間：90分鐘<br>
+                            套餐內容：晚間套餐+佐餐飲乙杯<br>
+                            活動場地：台北市松山區健康路九號<br>
+                            活動期限：2017/11/01-2018/04/30<br>
+                            (依訂位系統開立的日期為準) <br>
+                        </p>
+                        <p class="mg-b-lg">
+                            想瞭解更詳細的體驗介紹可至  <a class="lightbox-trigger" href="about.html">About</a> 頁面 
+                        </p>
+                        <h4 class="mg-t-md">
+                            <input type="checkbox" id="agrenRule"> 我已詳讀並遵守<a href="rules.html" target="_blank"><span class="lightbox-trigger">禮物卡相關規則</span></a>。
+                            <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已閱讀禮物卡相關規則</span>
+                        </h4>
+                        
+                        <div class="btn-box mg-t-md">
+                            <a href="javascript:;" id="backStep2">
+                                <div class="standard-btn btn">
+                                    上一步
+                                </div>    
+                            </a>
+                            <a href="javascript:;" id="goStep4">
+                                <div class="standard-btn theme-btn btn">
+                                    下一步
+                                </div>    
+                            </a>
+                        </div>
+                    </div>
+
+FOOBAR;
+
+$redeemStep4 = <<<'FOOBAR'
+                        <table class="reservation-table">
+                        <tr>
+                            <td>
+                                人數
+                            </td>
+                            <td>
+                                ONE
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>日期</td>
+                            <td>
+                                <div class="form-group">
+                                    <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                        <input class="form-control" id="day" size="14" type="text" readonly>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                    </div>
+                                    <input type="hidden" id="dtp_input2" value="" /><br/>
+                                </div>
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇日期</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>時段</td>
+                            <td>
+                                <select name="datepart" id="datepart">
+                                    <option value="">請先選擇日期</option>
+                                </select>
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇時段</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>時間</td>
+                            <td>
+                                <select name="id" id="id">
+                                    <option value="">請先選擇時段</option>
+                                </select>
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇時間</span>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    <div class="btn-box">
+                        <a href="javascript:;" id="backStep3">
+                            <div class="standard-btn btn">
+                                上一步
+                            </div>    
+                        </a>
+                        <a href="javascript:;" id="goStep5">
+                            <div class="standard-btn theme-btn btn">
+                                下一步
+                            </div>    
+                        </a>
+                    </div>
+FOOBAR;
+
+$redeemStep5 = <<<'FOOBAR'
+                    <table class="reservation-table">
+                        <tr>
+                            <td>
+                                ＊姓名
+                            </td>
+                            <td>
+                                <input type="text" name="name">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入姓名</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>＊電話</td>
+                            <td class="">
+                                <input type="text" name="tel">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入電話</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>＊E-mail</td>
+                            <td class="">
+                                <input type="text" name="email">
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請填入E-mail</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>＊用餐選擇</td>
+                            <td class="">
+                                <input type="radio" value="H" name="meal"> <span class="radio-span">葷</span>
+                                <input type="radio" value="V" name="meal"> <span class="radio-span">素</span>
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇餐點</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="vertical-align: top">備註</td>
+                            <td> 
+                                <textarea name="notes" cols="30" rows="10" placeholder="過敏、特殊飲食限制。 
+ex: 因宗教因素不吃牛、豬。
+                                
+                                "></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <h4 class="align-left privacy-check">
+                        <input type="checkbox" id="aggPrive"> 我已閱讀並遵守<a href="#" id="light-trigger"><span class="lightbox-trigger">隱私條款</span></a></span>。
+                    <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已閱讀訂位與用餐規則</span>
+                    </h4>
+                    </form>
+                    <div class="btn-box">
+                        <a href="javascript:;" id="backStep4">
+                            <div class="standard-btn btn">
+                                上一步
+                            </div>    
+                        </a>
+                        <a href="javascript:;" id="goStep6">
+                            <div class="standard-btn theme-btn btn">
+                                下一步
+                            </div>    
+                        </a>
+                    </div>
+FOOBAR;
+
+$redeemStep6 = <<<'FOOBAR'
+                    <table class="reservation-table">
+                        <tr>
+                            <td>
+                                姓名
+                            </td>
+                            <td>
+                                ｜<span id="nameText"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>電話</td>
+                            <td class="">
+                                ｜<span id="telText"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td class="error">
+                                ｜<span id="emailText"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>用餐選擇</td>
+                            <td class="">
+                                ｜<span id="mealText"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top">備註</td>
+                            <td> 
+                                ｜<span id="notesText"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <div class="btn-box">
+                        <a href="javascript:;" id="backStep5">
+                            <div class="standard-btn btn">
+                                上一步
+                            </div>    
+                        </a>
+                        <a href="javascript:;" id="goPay">
+                            <div class="standard-btn theme-btn btn">
+                                完成訂位
+                            </div>    
+                        </a>
+                    </div>
+
+FOOBAR;
+
+$redeemSuccess = <<<'FOOBAR'
+                    <div class="table-box">
+                        <h4 style="font-weight: bold;">
+                            訂位成功，已為您預留座位<br>
+                            table for ONE 期待您 一人光臨<br>
+                            請至信箱確認訂位信件與詳細的用餐規則
+                        </h4>
+                        <p>
+                            若有任何問題歡迎來信至官方信箱<br>
+                            <a href="mailto:tableforone@surpriselab.com.tw">tableforone@surpriselab.com.tw</a>
+                        </p>
+                    </div>
+FOOBAR;
+
+
+$redeemFail = <<<'FOOBAR'
+                    <div class="table-box">
+                        <h4 class="alert-color" style="font-weight: bold;">
+                            您的購買未能成功<br>
+                            請至兌換禮物卡頁面再試一次
+                        </h4>
+                        <p class="alert-color">
+                            若有任何問題歡迎來信至官方信箱<br>
+                            <a class="alert-color" href="mailto:tableforone@surpriselab.com.tw">tableforone@surpriselab.com.tw</a>
+                        </p>
+                        <div class="btn-box">
+                            <a href="gift.html">
+                                <div class="standard-btn btn">
+                                    再次購買
+                                </div>    
+                            </a>
+                        </div>
+                    </div>
+FOOBAR;
+
+
+
 return [
     'about'   => $about,
     'menu'    => $menu,
@@ -940,8 +1643,22 @@ return [
         'step4'    => $step4,
         'lightbox' => $lightbox,
     ],
-    'gaft'    => [
-
+    'gift'    => $gift,
+    'card'    => [
+        'giftStep1'   => $giftStep1,
+        'giftStep2'   => $giftStep2,
+        'giftStep3'   => $giftStep3,
+        'giftStep4'   => $giftStep4,
     ],
+    'redeem'  => [
+        'redeemStep1' => $redeemStep1,
+        'redeemStep2' => $redeemStep2,
+        'redeemStep3' => $redeemStep3,
+        'redeemStep4' => $redeemStep4,
+        'redeemStep5' => $redeemStep5,
+        'redeemStep6' => $redeemStep6,
+        'Success'     => $redeemSuccess,
+        'Fail'        => $redeemFail,
+    ]
 
 ];

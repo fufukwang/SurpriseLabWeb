@@ -125,6 +125,36 @@
     }
 }
 
+.with-icon-btn {
+	font-size: 17px;
+    letter-spacing: 0;
+    width: 155px!important;
+    padding-left: 35px;
+    background-size: 25px;
+    background-position: 15px 10px;
+    background-repeat: no-repeat;
+    
+    &:after{
+        width: 155px!important;
+    }
+    
+    &.buy-btn{
+        background-image: url(../../images/giftcard/button-1.png);
+    }
+    
+    &.redeem-btn{
+        background-image: url(../../images/giftcard/button-2.png);
+    }
+}
+
+.buy-btn{
+    background-image: url(../../images/giftcard/)
+}
+
+.redeem-btn {
+	
+}
+
 .service-alert{
     position: relative;
     

@@ -97,6 +97,8 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('gift/{id}/update','TFO\BackController@GiftUpdate');
         Route::delete('gift/{id}/delete','TFO\BackController@GiftDelete');
 
+        Route::post('gift/{id}/sendUpdate','TFO\BackController@sendUpdate');
+
         // 報表列印
         Route::get('print','TFO\BackController@Print');
         Route::get('table','TFO\BackController@Table');
@@ -165,6 +167,10 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('qa.html','TFO\TurnPageController@qa');
         Route::get('reservation.html','TFO\TurnPageController@reservation');
         Route::get('gift.html','TFO\TurnPageController@gift');
+        Route::get('giftcard.html','TFO\TurnPageController@giftcard');
+        Route::get('redeem.html','TFO\TurnPageController@redeem');
+
+
 
         Route::group(['prefix' => 'm'], function(){
             Route::get('index.html','TFO\TurnPageController@mhome');
@@ -176,6 +182,8 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('qa.html','TFO\TurnPageController@mqa');
             Route::get('reservation.html','TFO\TurnPageController@mreservation');
             Route::get('gift.html','TFO\TurnPageController@mgift');
+            Route::get('giftcard.html','TFO\TurnPageController@mgiftcard');
+            Route::get('redeem.html','TFO\TurnPageController@mredeem');
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail',function(){ return view('TFO.m.ECPayFail'); });
@@ -183,6 +191,10 @@ Route::group(['middleware' => ['web']], function () {
 
             Route::post('CashPay','TFO\FrontController@CashPay');
             Route::get('CashPay','TFO\FrontController@CashPay');
+
+
+
+
         });
 
         Route::group(['prefix' => 'en'], function(){
@@ -195,6 +207,8 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.front.qa'); });
             Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.front.reservation'); });
             Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
+            Route::get('giftcard.html',function(){ App::setLocale('en'); return view('TFO.front.giftcard'); });
+            Route::get('redeem.html',function(){ App::setLocale('en'); return view('TFO.front.redeem'); });
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail',function(){ App::setLocale('en'); return view('TFO.front.ECPayFail'); });
@@ -213,6 +227,8 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.m.qa'); });
             Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.m.reservation'); });
             Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.m.gift'); });
+            Route::get('giftcard.html',function(){ App::setLocale('en'); return view('TFO.m.giftcard'); });
+            Route::get('redeem.html',function(){ App::setLocale('en'); return view('TFO.m.redeem'); });
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
             Route::get('ECPayFail',function(){ App::setLocale('en'); return view('TFO.m.ECPayFail'); });
@@ -232,7 +248,13 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('CashPay','TFO\FrontController@CashPay');
         Route::get('CashPay','TFO\FrontController@CashPay');
 
-
+        // 禮物卡
+        Route::post('generateGiftCardOrder','TFO\FrontController@generateGiftCardOrder');
+        Route::post('EcPayGiftCardBackCallBack','TFO\FrontController@EcPayGiftCardBackCallBack');
+        Route::post('EcPayGiftCardBack','TFO\FrontController@EcPayGiftCardBack');
+        
+        Route::post('checkGiftCardStatus','TFO\FrontController@checkGiftCardStatus');
+        Route::post('checkAndGenerateOrder','TFO\FrontController@checkAndGenerateOrder');
     });
 });
 

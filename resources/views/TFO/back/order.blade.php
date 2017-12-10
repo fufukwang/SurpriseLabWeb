@@ -97,6 +97,7 @@
                                                         <option value="後台編輯"@if(isset($order->paytype) && $order->paytype=='後台編輯') selected @endif>後台編輯</option>
                                                         <option value="信用卡"@if(isset($order->paytype) && $order->paytype=='信用卡') selected @endif>信用卡</option>
                                                         <option value="現場付款"@if(isset($order->paytype) && $order->paytype=='現場付款') selected @endif>現場付款</option>
+                                                        <option value="禮物卡"@if(isset($order->paytype) && $order->paytype=='禮物卡') selected @endif>禮物卡</option>
                                                     </select>
                                                 </div>
                                             </div>

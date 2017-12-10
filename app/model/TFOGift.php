@@ -13,7 +13,7 @@ class TFOGift extends Model
      *
      * @var array
      */
-    protected $fillable = ['code','satatus','paystatus','tfoorder_id','bname','btel','bemail','rname','rtel','address','send','manage','admin_id','sendtype'];
+    protected $fillable = ['code','satatus','paystatus','tfoorder_id','bname','btel','bemail','rname','rtel','remail','address','send','manage','admin_id','sendtype','backresult','result','InvitionText','sn'];
     protected $guarded = [];
     protected $primaryKey = 'id';
     protected $dates = ['created_at', 'updated_at'];

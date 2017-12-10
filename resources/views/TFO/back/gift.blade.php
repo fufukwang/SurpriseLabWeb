@@ -19,34 +19,60 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/TableForOne/order/{{ $order->id or 0}}/update" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/TableForOne/gift/{{ $gift->id or 0}}/update" class="form-horizontal">
 {!! csrf_field() !!}
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">送禮人姓名</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" name="bname" value="{{ $gift->bname or ''  }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">送禮人電話</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" name="btel" value="{{ $gift->btel or ''  }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">送禮人信箱</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" name="bemail" value="{{ $gift->bemail or ''  }}">
+                                                </div>
+                                            </div>
+                                            <hr>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">收禮人姓名</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->name or ''  }}">
+                                                    <input type="text" class="form-control" name="rname" value="{{ $gift->rname or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">收禮人電話</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->name or ''  }}">
+                                                    <input type="text" class="form-control" name="rtel" value="{{ $gift->rtel or ''  }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">收禮人信箱</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" name="remail" value="{{ $gift->remail or ''  }}">
                                                 </div>
                                             </div>
                                             <hr>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">寄送方式</label>
                                                 <div class="col-sm-8">
-                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="EMail" id="none1" type="radio" checked><label for="none1">EMail</label></div>
-                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="in" id="none2" type="radio"><label for="none2">國內地址</label></div>
-                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="out" id="none3" type="radio" disabled><label for="none3">國外地址</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="Email" id="none1" type="radio" @if(!isset($gift->sendtype)) checked @elseif($gift->sendtype=='Email') checked @endif><label for="none1">EMail</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="到店自取" id="none4" type="radio" @if(isset($gift->sendtype) && $gift->sendtype=='到店自取') checked @endif><label for="none4">到店自取</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="國內郵寄" id="none2" type="radio" @if(isset($gift->sendtype) && $gift->sendtype=='國內郵寄') checked @endif><label for="none2">國內郵寄</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="sendtype" value="國外郵寄" id="none3" type="radio" @if(isset($gift->sendtype) && $gift->sendtype=='國外郵寄') checked @endif><label for="none3">國外郵寄</label></div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4"></label>
+                                                <label class="control-label col-sm-4">地址</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" value="{{ $order->name or ''  }}">
+                                                    <input type="text" class="form-control" name="address" value="{{ $gift->address or ''  }}">
                                                 </div>
                                             </div>
 
@@ -56,17 +82,30 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">邀請文字</label>
                                                 <div class="col-sm-8">
-                                                    <textarea class="form-control" name="manage" style="min-height:120px;">{{ $order->manage or '' }}</textarea>
+                                                    <textarea class="form-control" name="InvitationText" style="min-height:120px;">{{ $gift->InvitationText or '' }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">收禮人背景</label>
+                                                <label class="control-label col-sm-4">附註欄位</label>
                                                 <div class="col-sm-8">
-                                                    <textarea class="form-control" name="manage" style="min-height:120px;">{{ $order->manage or '' }}</textarea>
+                                                    <textarea class="form-control" name="manage" style="min-height:120px;">{{ $gift->manage or '' }}</textarea>
                                                 </div>
                                             </div>
 
-
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">是否寄送</label>
+                                                <div class="col-sm-8">
+                                                    <div class="radio radio-primary radio-inline"><input name="send" value="1" id="send1" type="radio" @if(!isset($gift->send)) checked @elseif($gift->send===1) checked @endif><label for="send1">已寄送</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="send" value="0" id="send2" type="radio" @if(isset($gift->send) && $gift->send===0) checked @endif><label for="send2">尚未寄送</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">是否付款</label>
+                                                <div class="col-sm-8">
+                                                    <div class="radio radio-primary radio-inline"><input name="paystatus" value="1" id="send3" type="radio" @if(!isset($gift->paystatus)) checked @elseif($gift->paystatus===1) checked @endif><label for="send3">已付款</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="paystatus" value="0" id="send4" type="radio" @if(isset($gift->paystatus) && $gift->paystatus===0) checked @endif><label for="send4">尚未付款</label></div>
+                                                </div>
+                                            </div>
 
 
                                             

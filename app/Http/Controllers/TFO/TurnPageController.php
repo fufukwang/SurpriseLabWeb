@@ -46,6 +46,14 @@ class TurnPageController extends Controller
         if($this->isMobile()) return redirect('/tableforone/m/gift.html');
         return view('TFO.front.gift');    
     }
+    public function giftcard(){
+        if($this->isMobile()) return redirect('/tableforone/m/giftcard.html');
+        return view('TFO.front.giftcard');    
+    }
+    public function redeem(){
+        if($this->isMobile()) return redirect('/tableforone/m/redeem.html');
+        return view('TFO.front.redeem');    
+    }
 
 
 
@@ -78,7 +86,18 @@ class TurnPageController extends Controller
         if(!$this->isMobile()) return redirect('/tableforone/reservation.html');
         return view('TFO.m.reservation');    
     }
-
+    public function mgift(){
+        if(!$this->isMobile()) return redirect('/tableforone/gift.html');
+        return view('TFO.m.gift');    
+    }
+    public function mgiftcard(){
+        if(!$this->isMobile()) return redirect('/tableforone/giftcard.html');
+        return view('TFO.m.giftcard');    
+    }
+    public function mredeem(){
+        if(!$this->isMobile()) return redirect('/tableforone/redeem.html');
+        return view('TFO.m.redeem');    
+    }
 
 
 

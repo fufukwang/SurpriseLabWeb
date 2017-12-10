@@ -240,48 +240,84 @@ class BackController extends Controller
 
 
 
-
-
-
     // 禮物卡
     public function Gifts(Request $request){
-        $gifts = TFOOrder::orderBy('updated_at','desc');
+        $gifts = TFOGift::orderBy('updated_at','desc');
+        if($request->has('day')) $gifts = $gifts->where('created_at',$request->day);
+        if($request->has('search')){
+            $search = $request->search;
+            $gifts = $gifts->whereRaw("(sendtype LIKE '%{$search}%' OR 
+                sn LIKE '%{$search}%' OR 
+                code LIKE '%{$search}%' OR 
+                btel LIKE '%{$search}%' OR 
+                bname LIKE '%{$search}%' OR 
+                bemail LIKE '%{$search}%' OR 
+                rtel LIKE '%{$search}%' OR 
+                rname LIKE '%{$search}%' OR 
+                remail LIKE '%{$search}%' OR 
+                address LIKE '%{$search}%' OR 
+                InvitationText LIKE '%{$search}%' OR 
+                manage LIKE '%{$search}%')");
+        }
+
         $gifts = $gifts->paginate($this->perpage);
-        return view('TFO.back.gifts',compact('gifts'));
+
+        return view('TFO.back.gifts',compact('gifts','request'));
     }
     public function GiftEdit(Request $request,$id){
-        $order = collect();
+        $gift = collect();
         if(is_numeric($id) && $id>0){
-            if(TFOOrder::where('id',$id)->count()>0){
-                $order = TFOOrder::find($id);
+            if(TFOGift::where('id',$id)->count()>0){
+                $gift = TFOGift::find($id);
             } else {
                 abort(404);
             }
         }
-        return view('TFO.back.gift',compact('order'));
+        return view('TFO.back.gift',compact('gift'));
     }
     public function GiftUpdate(Request $request,$id){
 
         $data = [
-            'dayparts'  => $request->dayparts,
-            'sites'     => $request->sites,
-            'money'     => $request->money,
-            'wine'      => $request->wine,
-            'rangstart' => $request->rangstart,
-            'rangend'   => $request->rangend,
+            'paystatus'      => $request->paystatus, // 付款狀態
+            'bname'          => $request->bname,
+            'btel'           => $request->btel,
+            'bemail'         => $request->bemail,
+            'rname'          => $request->rname,
+            'rtel'           => $request->rtel,
+            'remail'         => $request->remail,
+            'address'        => $request->address,
+            'send'           => $request->send,
+            'manage'         => $request->manage,
+            'sendtype'       => $request->sendtype,
+            'InvitationText' => $request->InvitationText,
         ];
         if(is_numeric($id) && $id>0){
-            TFOOrder::where('id',$id)->update($data);
+            TFOGift::where('id',$id)->update($data);
         } else {
-            if($this->user->giftadd == 0) return redirect('/welcome')->send()->with('message','權限不足!');
-            
+            if($this->user->giftadd == 0) return redirect('/welcome')->send()->with('message','您沒有新增禮物卡的權限!');
+            $data['sn']         = $this->GenerateGiftSN();
+            $data['code']       = $this->GenerateGiftCodeSN();
+            $data['backresult'] = '';
+            $data['result']     = '';
+            $data['admin_id']   = $this->user->id;
+            $data['tfoorder_id']= 0;
+            $data['status']     = 0;
+            $order = TFOGift::create($data);
         }
-        return redirect('/TableForOne/orders/'.$id)->with('message','編輯完成!');
+        return redirect('/TableForOne/gifts')->with('message','編輯完成!');
     }
     public function GiftDelete(Request $request,$id){
-        TFOOrder::where('tfopro_id',$id)->delete();
-        return Response::json(['message'=> '訂單已刪除'], 200);
+        $gift = TFOGift::find($id);
+        TFOGift::where('id',$id)->delete();
+        TFOOrder::where('id',$gift->id)->delete();
+        return Response::json(['message'=> '禮物卡已刪除'], 200);
 
+    }
+    public function sendUpdate(Request $request,$id){
+        TFOGift::where('id',$id)->update([
+            'send' => $request->send
+        ]);
+        return Response::json(['message'=> '發送狀態已更新'], 200);
     }
 
 
@@ -398,6 +434,34 @@ class BackController extends Controller
             return $SN;
         }
     }
+    private function GenerateGiftSN(){
+        $random = 10;$SN = 'G';
+        for($i=1;$i<=$random;$i++){
+            $b = rand(0,9);
+            $SN .= $b;
+        }
+        if(TFOGift::where('sn','G'.$SN)->count()>0){
+            $this->GenerateGiftSN();
+        } else {
+            return $SN;
+        }
+    }
+
+    private function GenerateGiftCodeSN(){
+        $random = 8;$SN = '';
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        for($i=1;$i<=$random;$i++){
+            $b = $characters[rand(0, strlen($characters))];
+            $SN .= $b;
+        }
+        if(TFOGift::where('code',$SN)->count()>0){
+            $this->GenerateGiftCodeSN();
+        } else {
+            return $SN;
+        }
+    }
+
+
 }
 
 
