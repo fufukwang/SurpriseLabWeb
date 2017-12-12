@@ -106,7 +106,12 @@ $(function(){
             $('#rnameSpan').text($('input[name="rname"]').val());
             $('#remailSpan').text($('input[name="remail"]').val());
             var sendtypeVal = $('input[name="sendtype"]:checked').val();
-            if(sendtypeVal = '國內郵寄'){
+            if(sendtypeVal == '國內郵寄' || sendtypeVal == '國外郵寄' || sendtypeVal == '到店自取'){
+                $('#prevCard').show();
+            } else {
+                $('#prevCard').hide();
+            }
+            if(sendtypeVal == '國內郵寄'){
                 sendtypeVal += ' '+$('input[name="inaddress"]').val();
             } else if(sendtypeVal == '國外郵寄'){
                 sendtypeVal += ' '+$('input[name="outaddress"]').val();

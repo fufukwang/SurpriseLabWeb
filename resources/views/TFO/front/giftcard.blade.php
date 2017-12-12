@@ -66,6 +66,7 @@
                         <li class="active">3</li>
                         <li>4</li>
                     </ul>
+                    <div align="center" id="prevCard" style="display: none;"><img src="/T41/images/giftcard-preview.png" style="width:100%;max-width: 768px;"></div>
                     {!! trans('tfo.card.giftStep4') !!}
                 </div>
 
