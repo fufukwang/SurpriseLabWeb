@@ -61,6 +61,7 @@
                                                 <th>寄送方式</th>
                                                 <th>Code</th>
                                                 <th>兌換日期</th>
+                                                <th>付款狀態</th>
                                                 <th>寄送</th>
                                                 <th>註記</th>
                                                 <th>功能</th>
@@ -81,6 +82,7 @@
                                                 <td>@if($row->tfoorder_id > 0) 
                                                     {{ App\model\TFOOrder::find($row->tfoorder_id)->created_at }}
                                                 @endif</td>
+                                                <td class="@if($row->paystatus)success @else warning @endif">@if($row->paystatus) 已付款 @else 未付款 @endif</td>
                                                 <td><input type="checkbox" class="sendbox" value="{{ $row->id }}" @if($row->send)checked @endif /></td>
                                                 <td>{{ $row->manage }}</td>
                                                 <td class="actions">

@@ -257,7 +257,7 @@ $roles = <<<'FOOBAR'
                         若有活動包場需求、任何特殊訂位服務、天馬行空的奇想，請來信詢問 <a href="mailto:service@surpriselab.com.tw">service@surpriselab.com.tw</a>
                     </li>
                 </ul>
-                <hr>
+                <!--hr>
                 <h1>
                     禮物卡 
                 </h1>
@@ -382,7 +382,7 @@ $roles = <<<'FOOBAR'
                 </h3>
                 <ul class="list">
                     <li>禮物卡購買線上付款透過綠界科技第三方平台支付。</li>
-                </ul>
+                </ul-->
                 <hr>
                 <h1>
                     線上預付、退費、轉讓機制 
@@ -712,14 +712,14 @@ $qa = <<<'FOOBAR'
                 <p>
                     詳細內容可詳<a class="underline-a" href="rule.html">rule</a>頁面
                 </p>
-                <h3>
+                <!--h3>
                     Q14 請問可以把table for ONE當作禮物送人嗎？
                 </h3>
                 <p>
                     「一個人的餐飲體驗」可以是一個禮物嗎？真是好問題。可以的，今年最有趣的禮物，我想「table for ONE一人餐桌的禮物卡」可能可以進入前三百名，至於有沒有機會進入前五名，如果可以就真的太好了！有興趣者，可以點入<a href="giftcard-0.html">Gift Card</a>頁面，會有較詳細的購買資訊，與吸引你購買的文案，流程上需要花點心意完成的資料填寫。今年，送一點不一樣的禮物吧。
-                </p>
+                </p-->
                 <h3>
-                    Q15 請問有參加過無光晚餐的客人們 (老客回流)，有什麼特別的嘿嘿 (好康)，或是哈哈 (隱藏體驗)嗎？
+                    Q14 請問有參加過無光晚餐的客人們 (老客回流)，有什麼特別的嘿嘿 (好康)，或是哈哈 (隱藏體驗)嗎？
                 </h3>
                 <p>
                     感謝無光晚餐 2016年07月-12月大家的支持，table for ONE為同一團隊驚喜製造策劃的驚喜二號計畫。<br>
@@ -1178,17 +1178,17 @@ $giftStep2 = <<<'FOOBAR'
                             <ul class="align-center">
                                 <li>
                                     <div class="img-box">
-                                        <img src="/T41/images/giftcard/picture1-1.png" alt="">
+                                        <img src="/T41/images/giftcard/m-picture-1.png" alt="">
                                     </div>
                                 </li>
                                 <li>
                                     <div class="img-box">
-                                        <img src="/T41/images/giftcard/picture2-1.png" alt="">
+                                        <img src="/T41/images/giftcard/m-picture-2.png" alt="">
                                     </div>
                                 </li>
                                 <li>
                                     <div class="img-box">
-                                        <img src="/T41/images/giftcard/picture3-1.png" alt="">
+                                        <img src="/T41/images/giftcard/m-picture-3.png" alt="">
                                     </div>
                                 </li>
                             </ul>

@@ -308,6 +308,7 @@ class FrontController extends Controller
                 $m->to($arr['email'], $arr['name']);
                 $m->subject('Table For One 訂位成功 !');
             });
+            return '1|OK';
         }
     }
 
@@ -532,7 +533,7 @@ class FrontController extends Controller
                 });
                 TFOGift::where('id',$gift->id)->update(['send',1]);
             }
-
+            return '1|OK';
         }
     }
     public function EcPayGiftCardBack(Request $request){
