@@ -523,7 +523,7 @@ class FrontController extends Controller
                     'InvitationText' => $gift->InvitationText,
                     'code'           => $gift->code
                 ];
-                Mail::send('TFO.email.order',$arr,function($m) use ($arr){
+                Mail::send('TFO.email.giftcard',$arr,function($m) use ($arr){
                     $m->from('tableforone@surpriselab.com.tw', 'Table For One');
                     $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
                     $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
@@ -533,6 +533,22 @@ class FrontController extends Controller
                 });
                 TFOGift::where('id',$gift->id)->update(['send',1]);
             }
+            $arr = [
+                'bname'          => $gift->bname,
+                'bemail'         => $gift->bmail,
+                'rname'          => $gift->rname,
+                'rtel'           => $gift->rtel,
+                'remail'         => $gift->remail,
+                'InvitationText' => $gift->InvitationText,
+            ];
+            Mail::send('TFO.email.giftorder',$arr,function($m) use ($arr){
+                $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
+
+                $m->to($arr['bemail'], $arr['bname']);
+                $m->subject('table for ONE 一人餐桌 !');
+            });
             return '1|OK';
         }
     }
