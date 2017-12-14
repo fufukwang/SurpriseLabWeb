@@ -144,6 +144,7 @@ $menu = <<<'FOOBAR'
                         菜單
                     </h1>
                     <p>
+                        午餐時段 1200-1430<br>
                         晚餐時段 1730-2230
                     </p>
                     <p class="little-things mg-b-md">
@@ -509,8 +510,12 @@ $contactText = <<<'FOOBAR'
                                 營業時間 | Opening Hours
                             </h3>
                             <p>                            
-                                週一至週日 Monday - Sunday <br>    
+                                週一至週日 Monday - Sunday <br>   
+                                午餐時段 12:00-14:30 | Lunch 12:00-14:30<br /> 
                                 晚餐時段 17:30-22:30 | Dinner 17:30-22:30
+                            </p>
+                            <p class="little-things mg-b-md">
+                                *不定時店休，變化莫測。請鎖定粉絲⾴，或來電詢問
                             </p>
                         </div>
                         <div class="right-block">
@@ -667,9 +672,10 @@ $qa = <<<'FOOBAR'
                     </h3>
                     <p>
                         午餐時段  12:00 至 14:30
-                        晚餐時段  18:00 至 22:30
+                        晚餐時段  17:30 至 22:30
                     </p>
                     <p class="little-things">
+                        *試營運期間僅開放晚餐時段<br />
                         *至於正式營運開始後會不會有下午茶時段15:00-17:00，真是讓人好奇
                     </p>
                     <h3>
@@ -827,6 +833,8 @@ $step1 = <<<'FOOBAR'
                         <p class="mg-b-lg">
                             *B、D套餐之佐餐飲，可任選酒水單上任何飲品乙杯<br> 
                             *每人用餐時間為90分鐘<br> 
+                            *(期間限定優惠) 12/15起，晚餐20:30時段880套餐⾃動升級為1050套餐<br >
+                            *詢問當日訂位可以直接撥打02-27192960<br>
                             <span style="color: #f76565;">*若訂位時遇到任何問題，歡迎來信詢問 tableforone@surpriselab.com.tw</span>
                         </p>
 
