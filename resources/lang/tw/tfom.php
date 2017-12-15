@@ -1712,7 +1712,10 @@ $redeemStep6 = <<<'FOOBAR'
                             </td>
                         </tr>
                     </table>
-                    
+                    <h4 class="align-left privacy-check">
+                        <input type="checkbox" id="aggdispear"> 我知道當完成訂位後，禮物卡序號隨即失效。
+                        <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認注意事項</span>
+                    </h4>
                     <div class="btn-box">
                         <a href="javascript:;" id="backStep5">
                             <div class="standard-btn btn">

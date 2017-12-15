@@ -238,12 +238,10 @@ class BackController extends Controller
 
 
 
-
-
     // 禮物卡
     public function Gifts(Request $request){
         $gifts = TFOGift::orderBy('updated_at','desc');
-        if($request->has('day')) $gifts = $gifts->where('created_at',$request->day);
+        if($request->has('day')) $gifts = $gifts->where('created_at','like',$request->day.'%');
         if($request->has('search')){
             $search = $request->search;
             $gifts = $gifts->whereRaw("(sendtype LIKE '%{$search}%' OR 
@@ -261,7 +259,6 @@ class BackController extends Controller
         }
 
         $gifts = $gifts->paginate($this->perpage);
-
         return view('TFO.back.gifts',compact('gifts','request'));
     }
     public function GiftEdit(Request $request,$id){

@@ -173,18 +173,27 @@ $(function(){
     /* step 6 */
     $('#backStep5').bind('click',function(){ $('#step6').hide();$('#step5').show(); });
     $('#goPay').bind('click',function(){
-        $('#pro_id').val($('#id').val());
-        $.blockUI();
-        //$('#reservationForm').submit();
-        // 後端送出   /tableforone/checkAndGenerateOrder     reservationForm
-        $.post('/tableforone/checkAndGenerateOrder',$('#reservationForm').serialize(),function(data){
-            $('#step6').hide();
-            if(data.status =='OK' && data.activate == 'YES'){
-                $('#stepSuccess').show();
-            } else {
-                $('#stepFail').show();
-            }
-        },'json');
+        var goPay = true;
+        if($('#aggdispear').prop('checked')){
+            $('#aggdispear').parent().removeClass('error');
+        } else {
+            $('#aggdispear').parent().addClass('error');
+            goPay = false;
+        }
+
+
+        if(goPay){
+            $('#pro_id').val($('#id').val());
+            $.blockUI();
+            $.post('/tableforone/checkAndGenerateOrder',$('#reservationForm').serialize(),function(data){
+                $('#step6').hide();
+                if(data.status =='OK' && data.activate == 'YES'){
+                    $('#stepSuccess').show();
+                } else {
+                    $('#stepFail').show();
+                }
+            },'json');
+        }
     });
 
     // 剛開啟關閉
