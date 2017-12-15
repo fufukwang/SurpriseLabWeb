@@ -1318,7 +1318,7 @@ $giftStep3 = <<<'FOOBAR'
                         </tr>
                         <tr>
                             <td colspan="2"> 
-                                <textarea name="InvitationText" cols="30" rows="10" placeholder=""></textarea>
+                                <textarea name="InvitationText" cols="30" rows="10" placeholder="" maxlength="100"></textarea>
                             </td>
                         </tr>
                     </table>
