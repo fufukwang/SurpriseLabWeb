@@ -17,5 +17,7 @@ class VerifyCsrfToken extends BaseVerifier
         '/deploy/suprise',
         '/tableforone/ECPayBackCallBack',
         '/tableforone/ECPaySuccess',
+        '/tableforone/EcPayGiftCardBackCallBack',
+        '/tableforone/EcPayGiftCardBack',
     ];
 }
