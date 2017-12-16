@@ -531,7 +531,7 @@ class FrontController extends Controller
                     $m->to($arr['remail'], $arr['rname']);
                     $m->subject('【一人餐桌來信】嘿！你的朋友，捎來了份禮物給你');
                 });
-                TFOGift::where('id',$gift->id)->update(['send',1]);
+                TFOGift::where('id',$gift->id)->update(['send'=>1]);
             }
             $arr = [
                 'bname'          => $gift->bname,
