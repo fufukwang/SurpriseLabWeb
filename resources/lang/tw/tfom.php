@@ -1323,7 +1323,7 @@ $giftStep3 = <<<'FOOBAR'
 可在此欄寫下你想對他或她說的話，
 將為您印製在禮物卡上送給對方。
                                 
-                                "></textarea>
+                                " onkeydown="if(event.keyCode == 13) return false;"></textarea>
                             </td>
                         </tr>
                     </table>

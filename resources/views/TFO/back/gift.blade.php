@@ -82,7 +82,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">邀請文字</label>
                                                 <div class="col-sm-8">
-                                                    <textarea class="form-control" name="InvitationText" style="min-height:120px;">{{ $gift->InvitationText or '' }}</textarea>
+                                                    <textarea class="form-control" name="InvitationText" onkeydown="if(event.keyCode == 13) return false;" style="min-height:120px;">{{ $gift->InvitationText or '' }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
