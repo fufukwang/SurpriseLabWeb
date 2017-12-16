@@ -103,6 +103,7 @@
                                                 <label class="control-label col-sm-4">是否付款</label>
                                                 <div class="col-sm-8">
                                                     <div class="radio radio-primary radio-inline"><input name="paystatus" value="1" id="send3" type="radio" @if(!isset($gift->paystatus)) checked @elseif($gift->paystatus===1) checked @endif><label for="send3">已付款</label></div>
+                                                    <div class="radio radio-primary radio-inline"><input name="paystatus" value="-1" id="send5" type="radio" @if(isset($gift->paystatus) && $gift->paystatus===-1) checked @endif><label for="send5">已取消</label></div>
                                                     <div class="radio radio-primary radio-inline"><input name="paystatus" value="0" id="send4" type="radio" @if(isset($gift->paystatus) && $gift->paystatus===0) checked @endif><label for="send4">尚未付款</label></div>
                                                 </div>
                                             </div>

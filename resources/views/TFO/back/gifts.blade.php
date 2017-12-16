@@ -82,7 +82,7 @@
                                                 <td>@if($row->tfoorder_id > 0) 
                                                     {{ App\model\TFOOrder::find($row->tfoorder_id)->created_at }}
                                                 @endif</td>
-                                                <td class="@if($row->paystatus)success @else warning @endif">@if($row->paystatus) 已付款 @else 未付款 @endif</td>
+                                                <td class="@if($row->paystatus==1)success @elseif($row->paystatus==-1) warning @else danger @endif">@if($row->admin>0) 後台新增 @else 前台付款 @endif / @if($row->paystatus==1) 已付款 @elseif($row->paystatus==-1) 已取消 @else 未付款 @endif</td>
                                                 <td><input type="checkbox" class="sendbox" value="{{ $row->id }}" @if($row->send)checked @endif /></td>
                                                 <td>{{ $row->manage }}</td>
                                                 <td class="actions">
