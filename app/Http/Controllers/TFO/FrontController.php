@@ -535,7 +535,7 @@ class FrontController extends Controller
             }
             $arr = [
                 'bname'          => $gift->bname,
-                'bemail'         => $gift->bmail,
+                'bemail'         => $gift->bemail,
                 'rname'          => $gift->rname,
                 'rtel'           => $gift->rtel,
                 'remail'         => $gift->remail,
