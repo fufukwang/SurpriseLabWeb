@@ -506,7 +506,7 @@ class FrontController extends Controller
     public function EcPayGiftCardBackCallBack(Request $request){
         $arFeedback = Ecpay::i()->CheckOutFeedback($request->all());
         $data = [
-            'result' => json_encode($arFeedback)
+            'backresult' => json_encode($arFeedback)
         ];
         if($arFeedback['RtnCode'] == 1 ){
             $data['paystatus'] = 1;
@@ -529,7 +529,7 @@ class FrontController extends Controller
                     $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
 
                     $m->to($arr['remail'], $arr['rname']);
-                    $m->subject('table for ONE 一人餐桌 !');
+                    $m->subject('【一人餐桌來信】嘿！你的朋友，捎來了份禮物給你');
                 });
                 TFOGift::where('id',$gift->id)->update(['send',1]);
             }
