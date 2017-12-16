@@ -300,6 +300,49 @@ class BackController extends Controller
             $data['tfoorder_id']= 0;
             $data['status']     = 0;
             $order = TFOGift::create($data);
+
+
+            if($data['sendtype'] == 'Email' && $data['rname']!='' && $data['remail']!=''){
+                $arr = [
+                    'bname'          => $data['bname'],
+                    'rname'          => $data['rname'],
+                    'remail'         => $data['remail'],
+                    'InvitationText' => $data['InvitationText'],
+                    'code'           => $data['code']
+                ];
+                Mail::send('TFO.email.giftcard',$arr,function($m) use ($arr){
+                    $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+                    $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+                    $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
+
+                    $m->to($arr['remail'], $arr['rname']);
+                    $m->subject('【一人餐桌來信】嘿！你的朋友，捎來了份禮物給你');
+                });
+                TFOGift::where('id',$gift->id)->update(['send'=>1]);
+            }
+            if($data['bemail']!='' && $data['bname']!=''){
+                $arr = [
+                    'bname'          => $data['bname'],
+                    'bemail'         => $data['bemail'],
+                    'rname'          => $data['rname'],
+                    'rtel'           => $data['rtel'],
+                    'remail'         => $data['remail'],
+                    'InvitationText' => $data['InvitationText'],
+                ];
+                Mail::send('TFO.email.giftorder',$arr,function($m) use ($arr){
+                    $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+                    $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+                    $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
+
+                    $m->to($arr['bemail'], $arr['bname']);
+                    $m->subject('table for ONE 一人餐桌 !');
+                });
+            }
+
+
+
+
+
         }
         return redirect('/TableForOne/gifts')->with('message','編輯完成!');
     }
@@ -448,7 +491,7 @@ class BackController extends Controller
         $random = 8;$SN = '';
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         for($i=1;$i<=$random;$i++){
-            $b = $characters[rand(0, strlen($characters))];
+            $b = $characters[rand(0, strlen($characters)-1)];
             $SN .= $b;
         }
         if(TFOGift::where('code',$SN)->count()>0){

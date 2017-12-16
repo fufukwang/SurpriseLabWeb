@@ -600,7 +600,7 @@ class FrontController extends Controller
         $random = 8;$SN = '';
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         for($i=1;$i<=$random;$i++){
-            $b = $characters[rand(0, strlen($characters))];
+            $b = $characters[rand(0, strlen($characters)-1)];
             $SN .= $b;
         }
         if(TFOGift::where('code',$SN)->count()>0){
