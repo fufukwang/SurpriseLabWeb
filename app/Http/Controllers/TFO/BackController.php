@@ -299,7 +299,7 @@ class BackController extends Controller
             $data['admin_id']   = $this->user->id;
             $data['tfoorder_id']= 0;
             $data['status']     = 0;
-            $order = TFOGift::create($data);
+            $gift = TFOGift::create($data);
 
 
             if($data['sendtype'] == 'Email' && $data['rname']!='' && $data['remail']!=''){
