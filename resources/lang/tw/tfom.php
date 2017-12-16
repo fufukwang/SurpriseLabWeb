@@ -1318,7 +1318,12 @@ $giftStep3 = <<<'FOOBAR'
                         </tr>
                         <tr>
                             <td colspan="2"> 
-                                <textarea name="InvitationText" cols="30" rows="10" placeholder="" maxlength="100"></textarea>
+                                <textarea name="InvitationText" cols="30" rows="10" maxlength="100" placeholder="字數上限一百字。
+
+可在此欄寫下你想對他或她說的話，
+將為您印製在禮物卡上送給對方。
+                                
+                                "></textarea>
                             </td>
                         </tr>
                     </table>
