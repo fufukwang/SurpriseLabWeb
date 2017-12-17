@@ -43,7 +43,7 @@
                                             </div>
 
                                             <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>&nbsp;
-                                            <button type="button" class="btn btn-info" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 列印</button>
+                                            <button type="button" class="btn btn-info" onclick="alert('not yet');" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 列印</button>
 
 
                                         </form></div>
