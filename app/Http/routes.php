@@ -98,6 +98,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::delete('gift/{id}/delete','TFO\BackController@GiftDelete');
 
         Route::post('gift/{id}/sendUpdate','TFO\BackController@sendUpdate');
+        Route::get('GiftsToCsv','TFO\BackController@GiftsToCsv');
 
         // 報表列印
         Route::get('print','TFO\BackController@Print');

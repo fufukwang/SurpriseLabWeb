@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/TableForOne/gifts">
+                                        <div class="btn-group focus-btn-group"><form action="/TableForOne/gifts" id="SearchForm">
 
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -43,7 +43,7 @@
                                             </div>
 
                                             <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>&nbsp;
-                                            <button type="button" class="btn btn-info" onclick="alert('not yet');" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 列印</button>
+                                            <button type="button" class="btn btn-info" onclick="submitSearchForm();" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 列印</button>
 
 
                                         </form></div>
@@ -194,6 +194,13 @@ $(function(){
     });
 
 });
+function submitSearchForm(){
+    $('#SearchForm').attr('target','_blank')
+    $('#SearchForm').attr('action','/TableForOne/GiftsToCsv')
+    $('#SearchForm').submit();
+    $('#SearchForm').attr('target','_top');
+    $('#SearchForm').attr('action','/TableForOne/gifts');
+}
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
 		</script>
 

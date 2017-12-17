@@ -261,6 +261,71 @@ class BackController extends Controller
         $gifts = $gifts->paginate($this->perpage);
         return view('TFO.back.gifts',compact('gifts','request'));
     }
+
+    public function GiftsToCsv(Request $request){
+        $headers = [
+            'Cache-Control'       => 'must-revalidate, post-check=0, pre-check=0',
+            'Content-type'        => 'text/csv',
+            'Content-Disposition' => 'attachment; filename=gifts.csv',
+            'Expires'             => '0',
+            'Pragma'              => 'public',
+        ];
+
+        $gifts = TFOGift::orderBy('updated_at','desc');
+        if($request->has('day')) $gifts = $gifts->where('created_at','like',$request->day.'%');
+        if($request->has('search')){
+            $search = $request->search;
+            $gifts = $gifts->whereRaw("(sendtype LIKE '%{$search}%' OR 
+                sn LIKE '%{$search}%' OR 
+                code LIKE '%{$search}%' OR 
+                btel LIKE '%{$search}%' OR 
+                bname LIKE '%{$search}%' OR 
+                bemail LIKE '%{$search}%' OR 
+                rtel LIKE '%{$search}%' OR 
+                rname LIKE '%{$search}%' OR 
+                remail LIKE '%{$search}%' OR 
+                address LIKE '%{$search}%' OR 
+                InvitationText LIKE '%{$search}%' OR 
+                manage LIKE '%{$search}%')");
+        }
+
+        $gifts = $gifts->get();
+
+        $csv = "\xFF\xFE";
+        foreach($gifts as $gift){
+            $csv .= "{$gift->rname},{$gift->InvitationText},{$gift->bname},{$gift->code}\r\n";
+        }
+
+
+        $stream = fopen('php://temp', 'r+b');
+        fwrite($stream, $csv);
+        rewind($stream);
+        $csv = str_replace(PHP_EOL, "\r\n", stream_get_contents($stream));
+        $csv = mb_convert_encoding($stream, 'UTF-16LE', 'UTF-8');
+        fclose($stream);
+        return Response::make($csv, 200, $headers);
+
+
+        /*
+        $csv = "\xFF\xFE";
+        foreach($gifts as $gift){
+            $csv .= "{$gift->rname},{$gift->InvitationText},{$gift->bname},{$gift->code}\r\n";
+        }
+
+        
+        $callback = function() use ($csv) 
+        {
+            mb_convert_encoding($csv, 'UTF-16LE', "auto");
+            $FH = fopen('php://output', 'w');
+            fwrite($FH, $csv);
+            fclose($FH);
+        };
+
+        return response()->download($callback, 200, $headers);
+        */
+    }
+
+
     public function GiftEdit(Request $request,$id){
         $gift = collect();
         if(is_numeric($id) && $id>0){
