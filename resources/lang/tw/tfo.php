@@ -144,7 +144,7 @@ $menu = <<<'FOOBAR'
                         菜單
                     </h1>
                     <p>
-                        午餐時段 1200-1430<br>
+                        午餐時段 1200-1400<br>
                         晚餐時段 1730-2230
                     </p>
                     <p class="little-things mg-b-md">
@@ -511,7 +511,7 @@ $contactText = <<<'FOOBAR'
                             </h3>
                             <p>                            
                                 週一至週日 Monday - Sunday <br>   
-                                午餐時段 12:00-14:30 | Lunch 12:00-14:30<br /> 
+                                午餐時段 12:00-14:00 | Lunch 12:00-14:00<br /> 
                                 晚餐時段 17:30-22:30 | Dinner 17:30-22:30
                             </p>
                             <p class="little-things mg-b-md">
@@ -671,7 +671,7 @@ $qa = <<<'FOOBAR'
                         Q10 請問營業時間為何呢？
                     </h3>
                     <p>
-                        午餐時段  12:00 至 14:30
+                        午餐時段  12:00 至 14:00
                         晚餐時段  17:30 至 22:30
                     </p>
                     <p class="little-things">
