@@ -301,7 +301,7 @@ class BackController extends Controller
         fwrite($stream, $csv);
         rewind($stream);
         $csv = str_replace(PHP_EOL, "\r\n", stream_get_contents($stream));
-        $csv = mb_convert_encoding($stream, 'UTF-16LE', 'UTF-8');
+        $csv = mb_convert_encoding($csv, 'UTF-16LE', 'UTF-8');
         fclose($stream);
         return Response::make($csv, 200, $headers);
 
