@@ -21,6 +21,7 @@ use App\Http\Controllers\Controller;
 use Validator;
 use Carbon\Carbon;
 use DB;
+use Excel;
 
 class BackController extends Controller
 {
@@ -291,6 +292,36 @@ class BackController extends Controller
 
         $gifts = $gifts->get();
 
+
+
+        Excel::create('gifts', function($excel) use($gifts) {
+
+            // Our first sheet
+            $excel->sheet('First sheet', function($sheet) use($gifts) {
+                $sheet->mergeCells('A1:D1');
+                $sheet->freezeFirstRowAndColumn();
+                $sheet->row(1, ['表格 1']);
+                $sheet->row(2, ['收件人','信件內容','禮物卡序號','寄件人']);
+                $i = 3;
+                foreach($gifts as $gift){
+                    $sheet->row($i, [$gift->rname,$gift->InvitationText,$gift->code,$gift->bname]);
+                    $i++;
+                }
+            });
+
+
+
+        })->export('xlsx');
+
+
+
+
+
+
+
+
+
+/*
         $csv = "\xFF\xFE";
         foreach($gifts as $gift){
             $csv .= "{$gift->rname},{$gift->InvitationText},{$gift->bname},{$gift->code}\r\n";
@@ -304,7 +335,7 @@ class BackController extends Controller
         $csv = mb_convert_encoding($csv, 'UTF-16LE', 'UTF-8');
         fclose($stream);
         return Response::make($csv, 200, $headers);
-
+*/
 
         /*
         $csv = "\xFF\xFE";
