@@ -9,6 +9,7 @@ $(function(){
         $('#step1').hide();
         $('.gift-card-main img').removeClass('active');
         $('#step2').show();
+        fbq('track', 'ViewContent');
     });
     /* step 2 */
     $('#backStep1').bind('click',function(){
@@ -23,6 +24,7 @@ $(function(){
             $('#agrenRule').parent().removeClass('error');
             $('#step2').hide();
             $('#step3').show(); 
+            fbq('track', 'AddToCart');
         } else {
             $('#agrenRule').parent().addClass('error');
         }
@@ -121,12 +123,14 @@ $(function(){
 
             $('#step3').hide();
             $('#step4').show();
+            fbq('track', 'AddPaymentInfo');
         }
     });
     /* step 4 */
     $('#backStep3').bind('click',function(){ $('#step4').hide();$('#step3').show(); });
     $('#goPay').bind('click',function(){
         $.blockUI();
+        fbq('track', 'InitiateCheckout');
         $('#giftcardForm').submit();
     });
 
