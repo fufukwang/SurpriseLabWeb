@@ -298,11 +298,11 @@ class BackController extends Controller
 
             // Our first sheet
             $excel->sheet('First sheet', function($sheet) use($gifts) {
-                $sheet->mergeCells('A1:D1');
+                //$sheet->mergeCells('A1:D1');
                 $sheet->freezeFirstRowAndColumn();
-                $sheet->row(1, ['表格 1']);
-                $sheet->row(2, ['收件人','信件內容','禮物卡序號','寄件人']);
-                $i = 3;
+                //$sheet->row(1, ['表格 1']);
+                $sheet->row(1, ['收件人','信件內容','禮物卡序號','寄件人']);
+                $i = 2;
                 foreach($gifts as $gift){
                     $sheet->row($i, [$gift->rname,$gift->InvitationText,$gift->code,$gift->bname]);
                     $i++;
