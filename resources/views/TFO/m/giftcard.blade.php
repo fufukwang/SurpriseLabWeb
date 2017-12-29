@@ -20,18 +20,13 @@
 
 
         <div class="main-box">
-            <div id="git" class="content-box align-center">
+            <div id="git" class="content-box align-center" style="height:100%;">
 
 
 
-                <div class="gift-card-main" id="step1" style="height:100%;">
+                <div class="gift-card-main" id="step1">
                     {!! trans('tfom.card.giftStep1') !!}
                 </div>
-
-
-
-
-
 
 
 
