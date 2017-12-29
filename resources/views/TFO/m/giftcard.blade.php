@@ -24,7 +24,7 @@
 
 
 
-                <div class="gift-card-main" id="step1">
+                <div class="gift-card-main" id="step1" style="height:100%;">
                     {!! trans('tfom.card.giftStep1') !!}
                 </div>
 
