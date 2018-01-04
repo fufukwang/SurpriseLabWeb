@@ -1315,19 +1315,17 @@ $giftStep3 = <<<'FOOBAR'
                                 <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請輸入收禮人地址</span>
                             </td>
                         </tr>
+
+
                         <tr>
                             <th colspan="2">
                                 邀請文字
                             </th>
                         </tr>
                         <tr>
-                            <td colspan="2"> 
-                                <textarea name="InvitationText" cols="30" rows="10" maxlength="100" placeholder="字數上限一百字。
-
-可在此欄寫下你想對他或她說的話，
-將為您印製在禮物卡上送給對方。
-                                
-                                " onkeydown="if(event.keyCode == 13) return false;"></textarea>
+                            <td class="gift-card-box" colspan="2">
+                                <img src="/T41/images/giftcard/giftcard.png" alt="">
+                                <textarea name="InvitationText" cols="30" rows="10" maxlength="100" placeholder="字數上限一百字。可在此欄你想對他或她說的話，將為您印製在禮物卡上送給對方。" onkeydown="if(event.keyCode == 13) return false;"></textarea>
                             </td>
                         </tr>
                     </table>

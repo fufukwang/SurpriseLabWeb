@@ -25,7 +25,7 @@
                     </a>
                     <a href="gift.html">
                         <li>
-                            <img src="/T41/images/welcome-page/icon5-01.png" alt="">  <span>gift </span>
+                            <img src="/T41/images/welcome-page/icon5-01.png" alt="">  <span>gift card</span>
                         </li>
                     </a>
                     <a href="contact.html">
