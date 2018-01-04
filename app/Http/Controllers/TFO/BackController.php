@@ -263,6 +263,43 @@ class BackController extends Controller
         return view('TFO.back.gifts',compact('gifts','request'));
     }
 
+    public function GiftsCoverToCsv(Request $request){
+        $gifts = TFOGift::orderBy('updated_at','desc');
+        if($request->has('day')) $gifts = $gifts->where('created_at','like',$request->day.'%');
+        if($request->has('search')){
+            $search = $request->search;
+            $gifts = $gifts->whereRaw("(sendtype LIKE '%{$search}%' OR 
+                sn LIKE '%{$search}%' OR 
+                code LIKE '%{$search}%' OR 
+                btel LIKE '%{$search}%' OR 
+                bname LIKE '%{$search}%' OR 
+                bemail LIKE '%{$search}%' OR 
+                rtel LIKE '%{$search}%' OR 
+                rname LIKE '%{$search}%' OR 
+                remail LIKE '%{$search}%' OR 
+                address LIKE '%{$search}%' OR 
+                InvitationText LIKE '%{$search}%' OR 
+                manage LIKE '%{$search}%')");
+        }
+
+        $gifts = $gifts->get();
+
+
+
+        Excel::create('giftscover', function($excel) use($gifts) {
+            // Our first sheet
+            $excel->sheet('First sheet', function($sheet) use($gifts) {
+                $sheet->freezeFirstRowAndColumn();
+                $sheet->row(1, ['收件人','收件地址','寄件人']);
+                $i = 2;
+                foreach($gifts as $gift){
+                    $sheet->row($i, [$gift->rname,$gift->address,$gift->bname]);
+                    $i++;
+                }
+            });
+        })->export('xlsx');
+    }
+
     public function GiftsToCsv(Request $request){
         $headers = [
             'Cache-Control'       => 'must-revalidate, post-check=0, pre-check=0',

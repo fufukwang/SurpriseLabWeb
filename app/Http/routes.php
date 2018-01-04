@@ -99,6 +99,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
         Route::post('gift/{id}/sendUpdate','TFO\BackController@sendUpdate');
         Route::get('GiftsToCsv','TFO\BackController@GiftsToCsv');
+        Route::get('GiftsCoverToCsv','TFO\BackController@GiftsCoverToCsv');
 
         // 報表列印
         Route::get('print','TFO\BackController@Print');

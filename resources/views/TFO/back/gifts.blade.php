@@ -44,6 +44,7 @@
 
                                             <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>&nbsp;
                                             <button type="button" class="btn btn-info" onclick="submitSearchForm();" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 列印</button>
+                                            <button type="button" class="btn btn-info" onclick="submitPrintCover();" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 封面列印</button>
 
 
                                         </form></div>
@@ -197,6 +198,13 @@ $(function(){
 function submitSearchForm(){
     $('#SearchForm').attr('target','_blank')
     $('#SearchForm').attr('action','/TableForOne/GiftsToCsv')
+    $('#SearchForm').submit();
+    $('#SearchForm').attr('target','_top');
+    $('#SearchForm').attr('action','/TableForOne/gifts');
+}
+function submitPrintCover(){
+    $('#SearchForm').attr('target','_blank')
+    $('#SearchForm').attr('action','/TableForOne/GiftsCoverToCsv')
     $('#SearchForm').submit();
     $('#SearchForm').attr('target','_top');
     $('#SearchForm').attr('action','/TableForOne/gifts');
