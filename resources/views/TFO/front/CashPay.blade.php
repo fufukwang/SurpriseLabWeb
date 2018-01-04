@@ -28,10 +28,13 @@
                         已幫您預留座位
                     </h4>
                     <p>
+                        座位僅保留15分鐘，請準時入場
+                    </p>
+                    <p>
                         table for ONE 期待您 一人光臨<br>
                         請至信箱確認訂位信件與詳細的用餐規則
                     </p>
-                    <p>
+                    <!--p>
                         若您有30秒的空閒，歡迎與我們簡短分享<br>
                         「您，為何想來 table for ONE 」<br>的心情與故事。
                     </p>
@@ -42,7 +45,7 @@
                                 送出
                             </div>    
                         </a>
-                    </div>
+                    </div-->
                 </table>
                 <span class="copyright align-center">
                     copyright © 2017 驚喜製造
@@ -64,6 +67,9 @@
                         <h4 style="font-weight: bold;">
                             已幫您預留座位
                         </h4>
+                        <p>
+                        座位僅保留15分鐘，請準時入場
+                    </p>
                         <p>
                             table for ONE 期待您 一人光臨<br>
                             請至信箱確認訂位信件與詳細的用餐規則

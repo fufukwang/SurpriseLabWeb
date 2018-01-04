@@ -1742,6 +1742,7 @@ $redeemSuccess = <<<'FOOBAR'
                     <div class="table-box">
                         <h4 style="font-weight: bold;">
                             訂位成功，已為您預留座位<br>
+                            座位僅保留15分鐘，請準時入場<br>
                             table for ONE 期待您 一人光臨<br>
                             請至信箱確認訂位信件與詳細的用餐規則
                         </h4>

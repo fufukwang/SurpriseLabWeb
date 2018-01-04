@@ -559,7 +559,11 @@
 <span style="color:#000000"><span style="font-family:trebuchet ms,lucida grande,lucida sans unicode,lucida sans,tahoma,sans-serif"><span style="font-size:14px">我們將於以下日期為您備席<br>
 {{ $day }}<br />{{ substr($rangstart,0,5) }}~{{ substr($rangend,0,5) }} </span></span></span></h1>
 
-<p style="text-align: center;"><br>
+<p style="text-align: center;">
+座位僅保留15分鐘<br>
+請於 {{ substr($rangstart,0,5) }} 準時入場
+
+	<br>
 <span style="font-size:14px">一個人時，一切都好</span></p>
 
 <p style="text-align: center;"><span style="font-size:14px">所有感受，都是驚喜<br>
