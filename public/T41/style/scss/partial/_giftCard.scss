@@ -138,3 +138,19 @@
         }
     }
 }
+
+.gift-card-box {
+    position: relative;
+    img{
+        width: 100%;
+        box-shadow: 1px 1px 5px rgba(92, 92, 92, 0.35);
+    }
+    
+    textarea{
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 78%!important;
+        padding: 10px;
+    }
+}
