@@ -107,7 +107,7 @@
                                                 <td>@if($row->meal=='V')素@else 葷@endif <br >{{ $row->item }}</td>
                                                 <td class="@if($row->paystatus=='已付款')success @elseif($row->paystatus=='未完成')danger @elseif($row->paystatus=='取消訂位')warning @endif">{{ $row->paytype }} / {{ $row->paystatus }}</td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
-                                                <td></td>
+                                                <td>{{ $row->code }}</td>
                                                 <td>{{ $row->manage }}</td>
                                                 
                                                 <td class="actions">

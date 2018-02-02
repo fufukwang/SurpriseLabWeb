@@ -61,7 +61,7 @@
 			<td>{{ $row->tel }}</td>
 			<td>@if($row->meal=='V') 素@else 葷@endif </td>
 			<td>{!! nl2br($row->notes) !!}</td>
-			<td></td>
+			<td>{{ $row->code }}</td>
 			<td>{!! nl2br($row->manage) !!}</td>
 		</tr>
 @empty

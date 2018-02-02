@@ -539,8 +539,8 @@ class BackController extends Controller
 
 
     public function Print(Request $request){
-        $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item','paytype');
+        $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->leftJoin('TFOGift', 'TFOOrder.id', '=', 'TFOGift.tfoorder_id');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','TFOOrder.manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','TFOOrder.paystatus','email','TFOOrder.sn','TFOOrder.id','dayparts','day','email','item','paytype','code');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus=='已預約'){
@@ -561,14 +561,13 @@ class BackController extends Controller
             }
         } else { $order = $order->orderBy('TFOOrder.updated_at','desc'); }
         $order = $order->paginate($this->perpage);
-        
 
         return view('TFO.back.print',compact('order','request'));
     }
 
     public function Table(Request $request){
-        $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','paystatus','email','sn','TFOOrder.id','dayparts','day','email','item','paytype');
+        $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->leftJoin('TFOGift', 'TFOOrder.id', '=', 'TFOGift.tfoorder_id');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','TFOOrder.manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','TFOOrder.paystatus','email','TFOOrder.sn','TFOOrder.id','dayparts','day','email','item','paytype','code');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus=='已預約'){
