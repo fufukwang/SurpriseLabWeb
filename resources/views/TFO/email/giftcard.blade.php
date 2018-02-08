@@ -11,7 +11,7 @@
 		</style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
         <!--*|IF:MC_PREVIEW_TEXT|*-->
-        <!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*</span><!--<![endif]-->
+        <!--[if !gte mso 9]><!----><!--span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*</span--><!--<![endif]-->
         <!--*|END:IF|*-->
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
@@ -151,7 +151,7 @@ table for YOU</span></span>
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: &quot;Playfair Display&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-size: 14px; padding: 15px;">
-                                <a class="mcnButton " title="兌換禮物卡" href="https://www.surpriselab.com.tw/tableforone/gift.html" target="_blank" style="font-weight: bold;letter-spacing: 2px;line-height: 100%;text-align: center;text-decoration: none;color: #222222;">兌換禮物卡</a>
+                                <a class="mcnButton " title="兌換早鳥" href="https://www.surpriselab.com.tw/tableforone/redeem.html" target="_blank" style="font-weight: bold;letter-spacing: 2px;line-height: 100%;text-align: center;text-decoration: none;color: #222222;">兌換早鳥</a>
                             </td>
                         </tr>
                     </tbody>
