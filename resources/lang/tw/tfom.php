@@ -1576,7 +1576,7 @@ $redeemStep3 = <<<'FOOBAR'
                         </p>
                         <h4 class="mg-t-md">
                             <input type="checkbox" id="agrenRule"> 我已詳讀並遵守<a href="rules.html" target="_blank"><span class="lightbox-trigger">禮物卡相關規則</span></a>。
-                            <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已閱讀禮物卡相關規則</span>
+                            <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已閱讀早鳥相關規則</span>
                         </h4>
                         
                         <div class="btn-box mg-t-md">
@@ -1751,7 +1751,7 @@ $redeemStep6 = <<<'FOOBAR'
                         </tr>
                     </table>
                     <h4 class="align-left privacy-check">
-                        <input type="checkbox" id="aggdispear"> 我知道當完成訂位後，早鳥禮物卡序號隨即失效。
+                        <input type="checkbox" id="aggdispear"> 我知道當完成訂位後，早鳥序號隨即失效。
                         <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認注意事項</span>
                     </h4>
                     <div class="btn-box">
