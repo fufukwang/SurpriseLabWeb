@@ -127,7 +127,7 @@ From {{ $bname }}
                             <span style="font-family:times new roman,times,baskerville,georgia,serif"><span style="font-size:12px">table for ONE<br>
 table for YOU</span></span>
 
-<hr><span style="font-family:times new roman,times,baskerville,georgia,serif"><span style="font-size:12px">禮物卡序號 ｜{{ $code }}</span></span><br>
+<hr><span style="font-family:times new roman,times,baskerville,georgia,serif"><span style="font-size:12px">早鳥序號 ｜{{ $code }}</span></span><br>
 &nbsp;
                         </td>
                     </tr>
