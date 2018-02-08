@@ -13,7 +13,9 @@ $(function(){
         $.post('/tableforone/checkGiftCardStatus',{code:$('#code').val()},function(data){
             if(data.status =='OK' && data.activate == 'YES'){
                 $('#step1').hide();
-                $('#step2').show(); 
+
+                $('#step3').show();
+                //$('#step2').show(); 
                 var $Img = $('.gift-card-main img'),
                     _ImgLength = $Img.length;
                 countdownToShow($Img,_ImgLength);
@@ -45,7 +47,8 @@ $(function(){
         var $Img = $('.gift-card-main img'),
             _ImgLength = $Img.length;
         countdownToShow($Img,_ImgLength);
-        $('#step2').show(); 
+        //$('#step2').show(); 
+        $('#step1').show();
     });
     $('#goStep4').bind('click',function(){
         if($('#agrenRule').prop('checked')){

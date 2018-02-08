@@ -1434,9 +1434,13 @@ FOOBAR;
 $redeemStep1 = <<<'FOOBAR'
                     <table class="reservation-table mg-t-lg align-center">
                         <tr>
-                            <th colspan="2">
+                            <!--th colspan="2">
                                 禮物卡序號<br>
                                 Gift Card Code
+                            </th-->
+                            <th colspan="2">
+                                早鳥序號<br>
+                                Early Bird Code
                             </th>
                         </tr>
                         <tr>
@@ -1536,6 +1540,39 @@ $redeemStep3 = <<<'FOOBAR'
                         </p>
                         <p class="mg-b-lg">
                             想瞭解更詳細的體驗介紹可至  <a class="lightbox-trigger" href="about.html">About</a> 頁面 
+                        </p>
+                        <h4 class="mg-t-md">
+                            <input type="checkbox" id="agrenRule"> 我已詳讀並遵守<a href="rules.html" target="_blank"><span class="lightbox-trigger">禮物卡相關規則</span></a>。
+                            <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已閱讀禮物卡相關規則</span>
+                        </h4>
+                        
+                        <div class="btn-box mg-t-md">
+                            <a href="javascript:;" id="backStep2">
+                                <div class="standard-btn btn">
+                                    上一步
+                                </div>    
+                            </a>
+                            <a href="javascript:;" id="goStep4">
+                                <div class="standard-btn theme-btn btn">
+                                    下一步
+                                </div>    
+                            </a>
+                        </div>
+                    </div>
+
+FOOBAR;
+
+$redeemStep3 = <<<'FOOBAR'
+                    <div class="table-box">
+                        <h4>
+                            table for ONE 一人餐桌第二季早鳥劃位
+                        </h4>
+                        <p class="mg-b-sm">
+                            體驗時間：90分鐘<br>
+                            套餐內容：第二季完整套餐 + 佐餐飲乙杯<br>
+                            活動場地：台北市松山區健康路九號<br>
+                            活動期限：2018/02/23 - 2018/05/31<br>
+                            (依訂位系統開立的日期為準) <br>
                         </p>
                         <h4 class="mg-t-md">
                             <input type="checkbox" id="agrenRule"> 我已詳讀並遵守<a href="rules.html" target="_blank"><span class="lightbox-trigger">禮物卡相關規則</span></a>。
@@ -1714,7 +1751,7 @@ $redeemStep6 = <<<'FOOBAR'
                         </tr>
                     </table>
                     <h4 class="align-left privacy-check">
-                        <input type="checkbox" id="aggdispear"> 我知道當完成訂位後，禮物卡序號隨即失效。
+                        <input type="checkbox" id="aggdispear"> 我知道當完成訂位後，早鳥禮物卡序號隨即失效。
                         <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認注意事項</span>
                     </h4>
                     <div class="btn-box">
