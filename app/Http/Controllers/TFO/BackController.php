@@ -449,7 +449,9 @@ class BackController extends Controller
                     $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
 
                     $m->to($arr['remail'], $arr['rname']);
-                    $m->subject('【一人餐桌來信】嘿！你的朋友，捎來了份禮物給你');
+                    //$m->subject('【一人餐桌來信】嘿！你的朋友，捎來了份禮物給你');
+                    $m->subject('【一人餐桌早鳥來信】嗨，你的早鳥劃位序號來囉！');
+
                 });
                 TFOGift::where('id',$gift->id)->update(['send'=>1]);
             }
