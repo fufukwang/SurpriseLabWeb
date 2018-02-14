@@ -127,7 +127,7 @@ From {{ $bname }}
                             <span style="font-family:times new roman,times,baskerville,georgia,serif"><span style="font-size:12px">table for ONE<br>
 table for YOU</span></span>
 
-<hr><span style="font-family:times new roman,times,baskerville,georgia,serif"><span style="font-size:12px">早鳥序號 ｜{{ $code }}</span></span><br>
+<hr><span style="font-family:times new roman,times,baskerville,georgia,serif"><span style="font-size:12px">禮物卡序號 ｜{{ $code }}</span></span><br>
 &nbsp;
                         </td>
                     </tr>
@@ -151,7 +151,7 @@ table for YOU</span></span>
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: &quot;Playfair Display&quot;, Georgia, &quot;Times New Roman&quot;, serif; font-size: 14px; padding: 15px;">
-                                <a class="mcnButton " title="兌換早鳥" href="https://www.surpriselab.com.tw/tableforone/redeem.html" target="_blank" style="font-weight: bold;letter-spacing: 2px;line-height: 100%;text-align: center;text-decoration: none;color: #222222;">兌換早鳥</a>
+                                <a class="mcnButton " title="兌換禮物卡" href="https://www.surpriselab.com.tw/tableforone/redeem.html" target="_blank" style="font-weight: bold;letter-spacing: 2px;line-height: 100%;text-align: center;text-decoration: none;color: #222222;">兌換禮物卡</a>
                             </td>
                         </tr>
                     </tbody>
@@ -245,19 +245,21 @@ table for YOU</span></span>
                         
                             <span style="color:#888888">娛樂票<br>
 table for ONE 一人餐桌<br>
-<br><!--
+<br>
 票種： 預售票<br>
 預售票價： 1200<br>
 場地： 台北市松山區健康路9號<br>
 活動期間： 2017/11/01-2018/04/30<br>
-活動內容： table for ONE 一人餐桌活動體驗<br-->
+活動內容： table for ONE 一人餐桌活動體驗<br>
+<!--
 票種： 預售票/早鳥票<br>
 預售票價： 1050<br>
 場地： 台北市松山區健康路9號<br>
 活動期間： 2018/02/23-2018/05/31<br>
 活動內容： table for ONE 一人餐桌 第二季 老客人早鳥票<br>
+-->
 <br>
-注意事項：<br><!--
+注意事項：<br>
 - 禮物卡適用於「table for ONE一人餐桌」體驗活動，不得與其他優惠合併使用<br>
 - 禮物卡限單人單次兌換，適用於週一到週日晚餐時段，不限成人或兒童使用<br>
 - 每月店休日期請參考線上訂位系統與官方臉書公告<br>
@@ -269,7 +271,7 @@ table for ONE 一人餐桌<br>
 - 請保管好禮物卡序號，若因序號外流而受影響之權益，主辦單位不介入與賠償<br>
 - 禮物卡一旦售出，若有退費問題，須請原購者於活動期間內向一人餐桌辦理退費<br>
 - 退票以第三方支付系統退費，郵資無法退費，逾2018/04/30恕不退換票及退費&nbsp;<br>
--->
+<!--
 - 預售票適用於「table for ONE一人餐桌」體驗活動，不得與其他優惠合併使用<br>
 - 每月店休日期請參考線上訂位系統與官方臉書公告<br>
 - 預售票限單人單次兌換，適用於營業期間之晚餐時段，不限成人或兒童使用<br>
@@ -282,6 +284,7 @@ table for ONE 一人餐桌<br>
 - 預售票一旦售出，若有退費問題，須請原購者於活動期間內向一人餐桌辦理退費<br>
 - 預售票的退費規則與禮物卡退費規則相同，請參考網站禮物卡退費事項<br>
 - 退票以第三方支付系統退費，逾2018/05/31恕不退換票及退費 <br>
+-->
 <br>
 持票人須知：<br>
 1. 未盡事宜以主辦單位官網公告為依據，使用前請上官網確認確保權益。<br>

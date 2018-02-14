@@ -63,8 +63,8 @@ $about = <<<'FOOBAR'
                                     <img src="/T41/images/about/meal1.png" alt="">
                                 </div>
                                 <p>
-                                    【 開胃飲 】
-                                    <br>小酒瓶
+                                    【 第一前菜 】
+                                    <br>音樂
                                 </p>
                             </li>
                             <li>
@@ -73,8 +73,8 @@ $about = <<<'FOOBAR'
                                     <img src="/T41/images/about/meal2.png" alt="">
                                 </div>
                                 <p>
-                                    【 第一前菜 】
-                                    <br>沙漏
+                                    【 第二前菜 】
+                                    <br>鏡子
                                 </p>
                             </li>
                             <li>
@@ -83,8 +83,8 @@ $about = <<<'FOOBAR'
                                     <img src="/T41/images/about/meal3.png" alt="">
                                 </div>
                                 <p>
-                                    【 第二前菜 】
-                                    <br>單眼眼鏡
+                                    【 主菜 】
+                                    <br>故事
                                 </p>
                             </li>
                             <li>
@@ -93,7 +93,7 @@ $about = <<<'FOOBAR'
                                     <img src="/T41/images/about/meal4.png" alt="">
                                 </div>
                                 <p>
-                                    【 主菜 】<br>腳本
+                                    【 甜點 】<br>畫盤
                                 </p>
                             </li>
                             <li>
@@ -102,7 +102,7 @@ $about = <<<'FOOBAR'
                                     <img src="/T41/images/about/meal5.png" alt="">
                                 </div>
                                 <p>
-                                    【 甜點 】<br>調色盤
+                                    【 餐後 】<br>笑臉
                                 </p>
                             </li>
                         </ul>
@@ -143,7 +143,7 @@ $menu = <<<'FOOBAR'
                     <h1>
                         菜單
                     </h1>
-                    <p>
+                    <!--p>
                         午餐時段 1200-1400<br>
                         晚餐時段 1730-2230
                     </p>
@@ -238,7 +238,67 @@ $menu = <<<'FOOBAR'
                     <p class="little-things">
                         *可樂、零卡可樂、瓶裝水、氣泡水 可續杯<br>
                         *以上金額已含服務費
+                    </p-->
+
+
+                    <h3>第二季 體驗 & 菜單 <br />Season 2 experience & menu</h3>
+
+                    <h3 class="mg-b-sm">體驗內容：完整套餐五道料理+各式一人行為+空間好奇寶寶探索+(!)+(?)(?)(?)</h3>
+
+                    <p>
+線上預付  $950元<br />
+現場付費  $1100元</p>
+                    <p class="little-things">*以上價格需另收一成服務費</p>
+                    <hr>
+                    <h3 class="mg-b-sm">體驗流程 the journey</h3>
+
+                    <p>手機布藥袋 No phone today</p>
+                    <h3 class="mg-b-sm">music for ONE</h3>
+                    <h3>第一前菜</h3>
+                    <p>沈浸在音樂之中，讓它帶你前往某個地方</p>
+
+                    <h3>第二前菜</h3>
+                    <p>換個角度欣賞事物，往往更多可能，往往充滿驚喜</p>
+                    
+                    <h3 class="mg-b-sm">story for ONE</h3>
+
+                    <h3>主菜</h3>
+                    <p>走進一段故事，<br/>
+重拾那些已經存在，卻被遺漏的美好</p>
+
+                    <h3>甜點</h3>
+                    <p>創造屬於自己的甜點，如同你是世界中獨一無二的存在</p>
+
+                    <h3>餐後</h3>
+                    <p>餐後，帶著______的自己離開</p>
+
+                    <h3 class="mg-b-sm">letter for ONE</h3>
+                    <hr>
+                    <h3 class="mg-b-sm">
+                        酒水單 Drink List
+                    </h3>
+                    <p class="mg-b-sm">
+                        紅酒 Red Wine $270 <br>
+                        白酒 White Wine $270<br>
+                        氣泡酒 Sparkling Wine $270
                     </p>
+                    <p class="mg-b-sm">
+                        茶 Tea $150
+                    </p>
+                    <p class="mg-b-sm">
+                        可樂 Coke $100<br>
+                        零卡可樂 Coke Zero $100
+                    </p>
+                    <p class="mg-b-sm">
+                        氣泡水 Sparkling Water $100<br>
+                        瓶裝水 Still Water $100
+                    </p>
+                    <p class="little-things">
+                        *以上價格需另收一成服務費<br>
+                        *可樂、零卡可樂、瓶裝水、氣泡水 可勇敢續杯
+                    </p>
+
+
                     <div class="btn-box mg-b-md">
                         <a href="reservation.html">
                             <div class="standard-btn btn">
@@ -254,11 +314,11 @@ $roles = <<<'FOOBAR'
                     </h1>
                     <ul class="list">
                         <li>
-                            table for ONE 為一人飲食體驗，每次訂位僅供單人訂位。
+                            table for ONE 為一人飲食體驗，於第二季推出「一起，一個人」方案，提供單人以上訂位。
                         </li>
-                        <li>
+                        <!--li>
                             訂位系統上不提供超過一人訂位的選項，但不限定每人在同時段可以訂位的次數與人數上限。
-                        </li>
+                        </li-->
                         <li>
                             座位依現場服務人員指示安排。所有座位將各自獨立，並不提供併桌、多人共桌等服務，敬請見諒。
                         </li>
@@ -266,7 +326,7 @@ $roles = <<<'FOOBAR'
                             沒有用餐服裝的需求，西裝、套裝、吊嘎、睡衣，以自己最舒服的姿態出現都好。
                         </li>
                         <li>
-                            用餐過程中，請開啟飛航模式，限制使用網路與通訊程式。拍照、錄影則不加以限制。
+                            用餐過程中，歡迎使用飛航模式，開啟碼表計時，挑戰不受網路世界干擾的一餐。
                         </li>
                         <li>
                             為確保最佳的一人體驗，希望來賓以不負面打擾其他客人為用餐原則。
@@ -512,7 +572,7 @@ $contactText = <<<'FOOBAR'
                             <p>                            
                                 週一至週日 Monday - Sunday <br>   
                                 午餐時段 12:00-14:00 | Lunch 12:00-14:00<br /> 
-                                晚餐時段 17:30-22:30 | Dinner 17:30-22:30
+                                晚餐時段 18:00-22:30 | Dinner 18:00-22:30
                             </p>
                             <p class="little-things mg-b-md">
                                 *不定時店休，變化莫測。請鎖定粉絲⾴，或來電詢問
@@ -637,7 +697,7 @@ $qa = <<<'FOOBAR'
                         Q5 請問可以與朋友一同前往嗎？
                     </h3>
                     <p>
-                        您能與朋友一同前來。table for ONE 僅提供單人訂位，但您可以與朋友預訂同一時段，屆時一同前來。table for ONE 為一人飲食體驗，故不提供併桌或是兩桌靠近一點的服務。為了體驗品質，您與您的朋友也將會被安排於視線不易相互交會的座位。
+                        table for ONE 於第二季新體驗中推出「一起，一個人」方案，僅提供單人以上至四人的網路訂位，讓您能與朋友一同前來，體驗不一樣的一人用餐。table for ONE 為一人飲食體驗，故不提供併桌或是兩桌靠近一點的服務。為了體驗品質，您與您的朋友也將會被安排於視線不易相互交會的座位，也呼籲客人以不打擾他人為原則在空間中互動。
                     </p>
                     <h3>
                         Q6 請問table for ONE僅限單身的人報名嗎？
@@ -662,7 +722,7 @@ $qa = <<<'FOOBAR'
                         Q9 在體驗過程中，有什麼特別的限制嗎？可以用手機看劇、看書、或是工作嗎？
                     </h3>
                     <p>
-                        體驗過程中會請來賓把手機與電子產品調整成飛航模式，並希望來賓避免積極對外聯繫，以及頻繁使用手機或其他電子產品等。我們相信在獨自一人時，是更能體會、觀察、探索眼前的各種美好，就像是在國外旅遊時沒了3G網路，反而更能留心在街頭上所經歷的種種當下呢。
+                        體驗過程中會請賓把手機與電子產品調整成飛航模式，開啟碼錶功能，挑戰挑戰不受網路世界干擾的一餐。我們相信在獨自一人時，是更能體會、觀察、探索眼前的各種美好，就像是在國外旅遊時沒了3G網路，反而更能留心在街頭上所經歷的種種當下呢。
                     </p>
                     <p>
                         table for ONE不會特別設限來賓的任何行為(當然以不影響他人為前提)，相比於一如平時生活般的吃飯配劇、配本書、配著晚點要交的報告，我們更希望來賓們能體驗一個人的當下，與自己的一餐。
@@ -672,19 +732,23 @@ $qa = <<<'FOOBAR'
                     </h3>
                     <p>
                         午餐時段  12:00 至 14:00
-                        晚餐時段  17:30 至 22:30
+                        晚餐時段  18:00 至 22:30
                     </p>
                     <p class="little-things">
-                        *試營運期間僅開放晚餐時段<br />
-                        *至於正式營運開始後會不會有下午茶時段15:00-17:00，真是讓人好奇
+                        *第二季首先開放晚餐時段<br />
+                        *至於會不會有下午茶時段15:00-17:00，真是讓人好奇
                     </p>
                     <h3>
                         Q11 請問一人的價位為多少呢？
                     </h3>
                     <p>
-                        table for ONE 有兩種付費方式，分別為線上預付與現場付費。 不同付費方式與餐點選擇，在價位上皆有些微不同，如下：
+                        體驗內容：完整套餐五道料理+各式一人行為+空間好奇寶寶探索+(!)+(?)(?)(?)
                     </p>
-                    <table style="margin:15px auto;" class="qa-talbe">
+                    <p>
+                        A: 線上預付  $950元+10%服務費<br />
+                        B: 現場付費  $1100元+10%服務費
+                    </p>
+                    <!--table style="margin:15px auto;" class="qa-talbe">
                         <tr>
                             <td></td>
                             <td>價位</td>
@@ -713,15 +777,15 @@ $qa = <<<'FOOBAR'
                             <td>D: 五道料理 + 佐餐飲乙杯</td>
                             <td>依現場狀況為您安排</td>
                         </tr>
-                    </table>
+                    </table-->
                     <p>
                         若有特殊飲食限制（食物過敏等），建議採用線上預付訂位，並註明飲食習慣，我們將盡力為您調整餐點。
                     </p>
-                    <p class="little-things">
+                    <!--p class="little-things">
                         *吃餐點會想配飲料喝可以選B，內含一杯飲料比較划算<br>
                         *心情像是雙子座變來變去可以選A，A很不錯<br>
                         *不喜歡撲空的人千萬不能選C，雖然餐廳離小巨蛋捷運站只有5分鐘路程，好像很方便
-                    </p>
+                    </p-->
                     <p>
                         詳細內容可詳<a class="underline-a" href="menu.html">menu</a>頁面
                     </p>   
@@ -814,7 +878,7 @@ $home = <<<'FOOBAR'
 FOOBAR;
 
 $step1 = <<<'FOOBAR'
-                        <h4>
+                        <!--h4>
                             線上訂位 pre-book & 線上預付 pre-pay 
                         </h4>
                         <p>
@@ -836,8 +900,33 @@ $step1 = <<<'FOOBAR'
                             *(期間限定優惠) 12/15起，晚餐20:30時段880套餐⾃動升級為1050套餐<br >
                             *詢問當日訂位可以直接撥打02-27192960<br>
                             <span style="color: #f76565;">*若訂位時遇到任何問題，歡迎來信詢問 tableforone@surpriselab.com.tw</span>
-                        </p>
+                        </p-->
 
+
+                        <h4>
+                            第二季 體驗 & 菜單 <br >
+                            Season 2 experience & menu
+                        </h4>
+                        <p>
+午餐時段：1200-1400<br >
+晚餐時段：1800-2230<br >
+體驗內容：完整套餐五道料理+各式一人行為+空間好奇寶寶探索+(!)+(?)(?)(?)
+                        </p>
+                        <p>
+A: 線上預付  $950元<br >
+B: 現場付費  $1100元
+                        </p>
+                        <p class="mg-b-lg">
+*以上價格需另收一成服務費<br >
+*每人用餐時間約為90分鐘<br >
+*提供葷食與素食兩種套餐<br >
+*午餐、晚餐供應相同料理<br >
+*詢問當日訂位可以直接撥打02-27192960<br >
+*各式訂位問題、大組客人訂位、活動洽詢，歡迎來信詢問<br >
+tableforone@surpriselab.com.tw<br >
+<br >
+<!--人數：(開放1-4位訂位)-->
+                        </p>
 
 
 
@@ -934,26 +1023,55 @@ $step3 = <<<'FOOBAR'
                             </td>
                         </tr>
                         <tr>
-                            <td>＊用餐選擇</td>
+                            <td>＊人數</td>
                             <td class="">
-                                <input type="radio" value="H" name="meal"> <span class="radio-span">葷</span>
+                                <input type="radio" class="pop1" value="1" name="pople" checked> <span class="radio-span pop1">1</span>
+                                <!--input type="radio" class="pop2" value="2" name="pople"> <span class="radio-span pop2">2</span>
+                                <input type="radio" class="pop3" value="3" name="pople"> <span class="radio-span pop3">3</span>
+                                <input type="radio" class="pop4" value="4" name="pople"> <span class="radio-span pop4">4</span-->
+
+
+                                <!--input type="radio" value="H" name="meal"> <span class="radio-span">葷</span>
                                 <input type="radio" value="V" name="meal"> <span class="radio-span">素</span>
-                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇餐點</span>
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇餐點</span-->
                             </td>
                         </tr>
                         <tr>
-                            <td style="vertical-align: top">＊套餐選擇</td>
+                            <td>＊用餐選擇</td>
+                            <td class="">
+                                <div id="meal-1">
+                                    <input type="radio" value="葷" name="mv1" checked> <span class="radio-span">葷</span>
+                                    <input type="radio" value="素" name="mv1"> <span class="radio-span">素</span>
+                                </div>
+                                <div id="meal-2">
+                                    <input type="radio" value="葷" name="mv2" checked> <span class="radio-span">葷</span>
+                                    <input type="radio" value="素" name="mv2"> <span class="radio-span">素</span>
+                                </div>
+                                <div id="meal-3">
+                                    <input type="radio" value="葷" name="mv3" checked> <span class="radio-span">葷</span>
+                                    <input type="radio" value="素" name="mv3"> <span class="radio-span">素</span>
+                                </div>
+                                <div id="meal-4">
+                                    <input type="radio" value="葷" name="mv4" checked> <span class="radio-span">葷</span>
+                                    <input type="radio" value="素" name="mv4"> <span class="radio-span">素</span>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top">套餐內容</td>
                             <td> 
-                                <input type="radio" value="money" name="SelSet"> <span class="radio-span" id="money_item">五道料理</span><span class="font-size-xs">(線上預付<span id="money"></span>元 / 現場付費 <span id="cash_money"></span>元)</span><br>
+                                五道料理 (線上預付950元/現場付費1100元)
+                                <!--input type="radio" value="money" name="SelSet"> <span class="radio-span" id="money_item">五道料理</span><span class="font-size-xs">(線上預付<span id="money"></span>元 / 現場付費 <span id="cash_money"></span>元)</span><br>
                                 <input type="radio" value="wine" name="SelSet"> <span class="radio-span" id="wine_item">五道料理與佐餐酒乙杯</span><span class="font-size-xs">(線上預付<span id="wine"></span>元 / 現場付費 <span id="cash_wine"></span>元)</span>
-                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇套餐</span>
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇套餐</span-->
                             </td>
                         </tr>
 
                         <tr>
                             <td style="vertical-align: top">備註</td>
                             <td> 
-                                <textarea name="notes" cols="30" rows="10" placeholder="過敏、特殊飲食限制。 
+                                <textarea name="notes" cols="30" rows="10" placeholder="過敏、特殊飲食限制。(單人以上客人請協助詢問其他客人)
 ex: 因宗教因素不吃牛、豬。
                                 
                                 "></textarea>
@@ -1007,7 +1125,7 @@ $step4 = <<<'FOOBAR'
                             </td>
                         </tr>
                         <tr>
-                            <td>套餐選擇</td>
+                            <td>套餐內容</td>
                             <td> 
                                 ｜<span id="itemText"></span>
                             </td>
@@ -1029,13 +1147,13 @@ $step4 = <<<'FOOBAR'
                         <a href="javascript:;" id="goPay" class="service-alert">
                             <div class="standard-btn theme-btn btn thick-btn">
                                 線上預付<br>
-                                <span id="Sel_online"></span> NTD
+                                <span id="Sel_online">950</span> NTD
                             </div>    
                         </a>
                         <a href="javascript:;" id="goCash" class="service-alert">
                             <div class="standard-btn btn thick-btn">
                                 現場付費<br>
-                                <span id="Sel_onsite"></span> NTD
+                                <span id="Sel_onsite">1100</span> NTD
                             </div>    
                         </a>
                     </div>
@@ -1441,13 +1559,9 @@ $redeemStep1 = <<<'FOOBAR'
                     <table class="reservation-table align-center">
                         <tr>
                             <th style="padding-bottom: 0px;" colspan="2" class="align-center">
-                                早鳥序號<br>
-                                Early Bird Code
-                            </th>
-                            <!--th style="padding-bottom: 0px;" colspan="2" class="align-center">
                                 禮物卡序號<br>
                                 Gift Card Code
-                            </th-->
+                            </th>
                         </tr>
                         <tr>
                            <td id="codetd">
@@ -1566,38 +1680,6 @@ $redeemStep3 = <<<'FOOBAR'
 
 FOOBAR;
 
-$redeemStep3 = <<<'FOOBAR'
-                    <div class="table-box">
-                        <h4>
-                            table for ONE 一人餐桌第二季早鳥劃位
-                        </h4>
-                        <p class="mg-b-sm">
-                            體驗時間：90分鐘<br>
-                            套餐內容：第二季完整套餐 + 佐餐飲乙杯<br>
-                            活動場地：台北市松山區健康路九號<br>
-                            活動期限：2018/02/23 - 2018/05/31<br>
-                            (依訂位系統開立的日期為準) <br>
-                        </p>
-                        <h4 class="mg-t-md">
-                            <input type="checkbox" id="agrenRule"> 我已詳讀並遵守<a href="rules.html" target="_blank"><span class="lightbox-trigger">禮物卡相關規則</span></a>。
-                            <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認您已閱讀早鳥相關規則</span>
-                        </h4>
-                        
-                        <div class="btn-box mg-t-md">
-                            <a href="javascript:;" id="backStep2">
-                                <div class="standard-btn btn">
-                                    上一步
-                                </div>    
-                            </a>
-                            <a href="javascript:;" id="goStep4">
-                                <div class="standard-btn theme-btn btn">
-                                    下一步
-                                </div>    
-                            </a>
-                        </div>
-                    </div>
-
-FOOBAR;
 
 
 $redeemStep4 = <<<'FOOBAR'
@@ -1756,7 +1838,7 @@ $redeemStep6 = <<<'FOOBAR'
                         </tr>
                     </table>
                     <h4 class="align-left privacy-check">
-                        <input type="checkbox" id="aggdispear"> 我知道當完成訂位後，早鳥序號隨即失效。
+                        <input type="checkbox" id="aggdispear"> 我知道當完成訂位後，禮物卡序號隨即失效。
                         <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請確認注意事項</span>
                     </h4>
                     <div class="btn-box">

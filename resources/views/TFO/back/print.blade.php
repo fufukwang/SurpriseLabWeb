@@ -104,7 +104,7 @@
                                                 <td>{{ $row->day }}<br />{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
                                                 <td>{{ $row->name }}</td>
                                                 <td>phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
-                                                <td>@if($row->meal=='V')素@else 葷@endif <br >{{ $row->item }}</td>
+                                                <td>@if($row->mv!=''){{implode(",",json_decode($row->mv))}}@else @if($row->meal=='V')素@else 葷 @endif @endif <br >{{ $row->item }}</td>
                                                 <td class="@if($row->paystatus=='已付款')success @elseif($row->paystatus=='未完成')danger @elseif($row->paystatus=='取消訂位')warning @endif">{{ $row->paytype }} / {{ $row->paystatus }}</td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
                                                 <td>{{ $row->code }}</td>

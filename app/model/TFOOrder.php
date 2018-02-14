@@ -13,7 +13,7 @@ class TFOOrder extends Model
      *
      * @var array
      */
-    protected $fillable = ['name','tel','email','paystatus','paytype','sn','tfopro_id','tfogift_id','meal','money','notes','story','manage','result','item'];
+    protected $fillable = ['name','tel','email','paystatus','paytype','sn','tfopro_id','tfogift_id','meal','money','notes','story','manage','result','item','pople','mv'];
     protected $guarded = [];
     protected $primaryKey = 'id';
     protected $dates = ['created_at', 'updated_at'];

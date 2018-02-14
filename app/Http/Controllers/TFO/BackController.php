@@ -148,7 +148,7 @@ class BackController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(TFOOrder::where('id',$id)->count()>0){
-                $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('TFOOrder.id','day','dayparts','rangend','rangstart','name','tel','email','sn','meal','item','notes','story','paytype','paystatus','manage','result')->find($id);
+                $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->select('TFOOrder.id','day','dayparts','rangend','rangstart','name','tel','email','sn','meal','item','notes','story','paytype','paystatus','manage','result','pople','mv')->find($id);
             } else {
                 abort(404);
             }
@@ -449,8 +449,8 @@ class BackController extends Controller
                     $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
 
                     $m->to($arr['remail'], $arr['rname']);
-                    //$m->subject('【一人餐桌來信】嘿！你的朋友，捎來了份禮物給你');
-                    $m->subject('【一人餐桌早鳥來信】嗨，你的早鳥劃位序號來囉！');
+                    $m->subject('【一人餐桌來信】嘿！你的朋友，捎來了份禮物給你');
+                    //$m->subject('【一人餐桌早鳥來信】嗨，你的早鳥劃位序號來囉！');
 
                 });
                 TFOGift::where('id',$gift->id)->update(['send'=>1]);
@@ -542,7 +542,7 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->leftJoin('TFOGift', 'TFOOrder.id', '=', 'TFOGift.tfoorder_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','TFOOrder.manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','TFOOrder.paystatus','email','TFOOrder.sn','TFOOrder.id','dayparts','day','email','item','paytype','code');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','TFOOrder.manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','TFOOrder.paystatus','email','TFOOrder.sn','TFOOrder.id','dayparts','day','email','item','paytype','code','pople','mv');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus=='已預約'){
@@ -569,7 +569,7 @@ class BackController extends Controller
 
     public function Table(Request $request){
         $order = TFOOrder::leftJoin('TFOPro', 'TFOPro.id', '=', 'TFOOrder.tfopro_id')->leftJoin('TFOGift', 'TFOOrder.id', '=', 'TFOGift.tfoorder_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','TFOOrder.manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','TFOOrder.paystatus','email','TFOOrder.sn','TFOOrder.id','dayparts','day','email','item','paytype','code');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','TFOOrder.manage','TFOPro.money AS PM','TFOOrder.money AS OM','wine','TFOOrder.created_at AS created_at','TFOOrder.paystatus','email','TFOOrder.sn','TFOOrder.id','dayparts','day','email','item','paytype','code','pople','mv');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('paystatus') && $request->paystatus=='已預約'){

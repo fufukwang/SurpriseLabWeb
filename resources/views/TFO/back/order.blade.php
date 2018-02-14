@@ -69,7 +69,13 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">主餐</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="@if(isset($order->meal) && $order->meal=='V') 素食 @else 葷食 @endif">
+                                                    <input type="text" class="form-control" readonly value="@if(isset($order->meal)) @if($order->mv!=''){{implode(",",json_decode($order->mv))}}@else @if($order->meal=='V')素@else 葷 @endif @endif @endif">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">人數</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" readonly value="{{ $order->pople or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">

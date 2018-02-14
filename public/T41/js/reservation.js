@@ -43,7 +43,11 @@ $(function(){
         if($('#day').val() == ''){ $('#day').parent().parent().parent().addClass('error'); } else{ $('#day').parent().parent().parent().removeClass('error'); }
         if($('#datepart').val() == ''){ $('#datepart').parent().addClass('error'); } else { $('#datepart').parent().removeClass('error'); }
 
-        if($('#id').val() == ''){ $('#id').parent().addClass('error'); } else { $('#id').parent().removeClass('error'); $('#step2').hide(); $('#step3').show(); }
+        if($('#id').val() == ''){ $('#id').parent().addClass('error'); } else { 
+            $('input[name="pople"][value=1]').prop('checked',true);
+            $('input[name="pople"][value=1]').trigger('change');
+            $('#id').parent().removeClass('error'); $('#step2').hide(); $('#step3').show(); 
+        }
 
     });
 
@@ -62,7 +66,7 @@ $(function(){
                     disable = 'disabled';
                     text    = ' (額滿)';
                 }
-                html += '<option value="'+data[i].id+'" data-money="'+data[i].money+'" data-wine="'+data[i].wine+'" data-cash_money="'+data[i].cash_money+'" data-cash_wine="'+data[i].cash_wine+'" '+disable+'>'+data[i].rangstart.substring(0,5)+' ~ '+data[i].rangend.substring(0,5)+text+'</option>';
+                html += '<option value="'+data[i].id+'" data-site="'+data[i].site+'" data-money="'+data[i].money+'" data-wine="'+data[i].wine+'" data-cash_money="'+data[i].cash_money+'" data-cash_wine="'+data[i].cash_wine+'" '+disable+'>'+data[i].rangstart.substring(0,5)+' ~ '+data[i].rangend.substring(0,5)+text+' ('+data[i].site+')</option>';
             }
             $('#id').html(html);
         },'json');
@@ -73,6 +77,16 @@ $(function(){
         $('#wine').text(parseInt(item.data('money')) +parseInt(item.data('wine')));
         $('#cash_money').text(item.data('cash_money'));
         $('#cash_wine').text(parseInt(item.data('cash_money')) +parseInt(item.data('cash_wine')));
+        var site = item.data('site');
+        if(site==3){
+            $('.pop4').prop('disabled',true);
+        } else if(site==2){
+            $('.pop4,.pop3').prop('disabled',true);
+        } else if(site==1){
+            $('.pop4,.pop3,.pop2').prop('disabled',true);
+        } else {
+            $('input[name="pople"]').prop('disabled',false);
+        }
     });
 
     /* step 3 */
@@ -98,7 +112,7 @@ $(function(){
         } else{
             $('input[name="email"]').parent().removeClass('error');            
         }
-
+        /*
         if($('input[name=meal]:checked').length>0){
             $('input[name="meal"]').parent().removeClass('error');            
         } else {
@@ -111,6 +125,7 @@ $(function(){
             $('input[name="SelSet"]').parent().addClass('error');
             goNext = false;
         }
+        */
         if($('#aggPrive').prop('checked')){
             $('#aggPrive').parent().removeClass('error');
         } else {
@@ -120,23 +135,47 @@ $(function(){
 
 
         if(goNext){
+            var pop = $('input[name="pople"]:checked').val();
             $('#nameText').text($('input[name="name"]').val());
             $('#telText').text($('input[name="tel"]').val());
             $('#emailText').text($('input[name="email"]').val());
 
-            $('#mealText').text($('input[name=meal]:checked').val()=='H' ? '葷食' : '素食');
-            var item = $('#'+$('input[name=SelSet]:checked').val()+'_item').text();
-            $('#itemText').text(item);
-            
-            $('#item').val(item);
+            var meal = $('input[name=mv1]:checked').val();
+            if($('#meal-2').is(":visible")){
+                meal += ','+$('input[name=mv2]:checked').val();
+            }
+            if($('#meal-3').is(":visible")){
+                meal += ','+$('input[name=mv3]:checked').val();
+            }
+            if($('#meal-4').is(":visible")){
+                meal += ','+$('input[name=mv4]:checked').val();
+            }
+            $('#mealText').text(pop+'人套餐 '+meal);
+            $('#itemText').text('五道料理 * '+pop);
+            $('#item').val('五道料理 * '+pop);
             $('#notesText').text($('textarea[name="notes"]').val());
 
-            $('#Sel_online').text($('#'+$('input[name=SelSet]:checked').val()).text());
-            $('#Sel_onsite').text($('#cash_'+$('input[name=SelSet]:checked').val()).text());
+            $('#Sel_online').text('950*' + pop);
+            $('#Sel_onsite').text('1100*' + pop);
             $('#step3').hide();
             $('#step4').show();
             fbq('track', 'AddPaymentInfo');
 
+        }
+    });
+    $('input[name="pople"]').bind('change',function(){
+        var site = $(this).val();
+        if(site==1){
+            $('#meal-2,#meal-3,#meal-4').hide();
+            $('#meal-1').show();
+        } else if(site==2){
+            $('#meal-3,#meal-4').hide();
+            $('#meal-1,#meal-2').show();
+        } else if(site==3){
+            $('#meal-4').hide();
+            $('#meal-1,#meal-2,#meal-3').show();
+        } else if(site==4){
+            $('#meal-1,#meal-2,#meal-3,#meal-4').show();
         }
     });
     /* step 4 */

@@ -53,21 +53,34 @@ class FrontController extends Controller
     public function CashPay(Request $request){
         if($request->ajax() && $request->isMethod('post')){
             $pro = TFOPro::find($request->pro_id);
+            /*
             if($request->SelSet == 'money'){
                 $money = $pro->cash_money;
             } else {
                 $money = $pro->cash_money + $pro->cash_wine;
             }
-            $money = $money * 1.1; // 服務費
+            */
+            $money = ($pro->cash_money * $request->pople) * 1.1; // 服務費
+            // 處理葷素選擇
+            $tmp = [$request->mv1];
+            if($request->pople==2){
+                array_push($tmp,$request->mv2);
+            } else if($request->pople==3){
+                array_push($tmp,$request->mv2,$request->mv3);
+            } else if($request->pople>=4){
+                array_push($tmp,$request->mv2,$request->mv3,$request->mv4);
+            }
+            $mv = json_encode($tmp);
             $data = [
                 'name'       => $request->name,
                 'tel'        => $request->tel,
                 'email'      => $request->email,
+                'pople'      => $request->pople,
                 'paystatus'  => '未完成',
                 'sn'         => $this->GenerateSN(),
                 'tfopro_id'  => $request->pro_id,
                 'tfogife_id' => 0,
-                'meal'       => $request->meal,
+                'meal'       => '',
                 'money'      => $money,
                 'notes'      => $request->notes,
                 'story'      => '',
@@ -75,6 +88,7 @@ class FrontController extends Controller
                 'result'     => '',
                 'paytype'    => '現場付款',
                 'item'       => $request->item,
+                'mv'         => $mv,
             ];
 
             $order = TFOOrder::create($data);
@@ -132,6 +146,7 @@ class FrontController extends Controller
     // 生成訂單並送給金流
     public function generateOrder(Request $request){
         $pro = TFOPro::find($request->pro_id);
+        /*
         if($request->SelSet == 'money'){
             $money = $pro->money;
         } else {
@@ -155,6 +170,37 @@ class FrontController extends Controller
             'result'     => '',
             'paytype'    => '信用卡',
             'item'       => $request->item,
+        ];
+        */
+        $money = ($pro->money * $request->pople) * 1.1; // 服務費
+            // 處理葷素選擇
+        $tmp = [$request->mv1];
+        if($request->pople==2){
+            array_push($tmp,$request->mv2);
+        } else if($request->pople==3){
+            array_push($tmp,$request->mv2,$request->mv3);
+        } else if($request->pople>=4){
+            array_push($tmp,$request->mv2,$request->mv3,$request->mv4);
+        }
+        $mv = json_encode($tmp);
+        $data = [
+            'name'       => $request->name,
+            'tel'        => $request->tel,
+            'email'      => $request->email,
+            'pople'      => $request->pople,
+            'paystatus'  => '未完成',
+            'sn'         => $this->GenerateSN(),
+            'tfopro_id'  => $request->pro_id,
+            'tfogife_id' => 0,
+            'meal'       => '',
+            'money'      => $money,
+            'notes'      => $request->notes,
+            'story'      => '',
+            'manage'     => '',
+            'result'     => '',
+            'paytype'    => '信用卡',
+            'item'       => $request->item,
+            'mv'         => $mv,
         ];
         $order = TFOOrder::create($data);
 

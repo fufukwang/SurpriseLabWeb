@@ -59,7 +59,7 @@
 			<td>{{ $row->name }}</td>
 			<td>@if($row->paytype=='現場付款') 現場 @elseif($row->paytype=='信用卡') 信用卡 @elseif($row->paytype='後臺編輯') 後台 @endif {{ $row->OM }} （ @if($row->paystatus=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
-			<td>@if($row->meal=='V') 素@else 葷@endif </td>
+			<td>{{ $row->pople }} 人 @if($row->mv!=''){{implode(",",json_decode($row->mv))}}@else @if($row->meal=='V')素@else 葷 @endif @endif </td>
 			<td>{!! nl2br($row->notes) !!}</td>
 			<td>{{ $row->code }}</td>
 			<td>{!! nl2br($row->manage) !!}</td>
