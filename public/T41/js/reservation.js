@@ -66,8 +66,9 @@ $(function(){
                     disable = 'disabled';
                     text    = ' (額滿)';
                 }
-                html += '<option value="'+data[i].id+'" data-site="'+data[i].site+'" data-money="'+data[i].money+'" data-wine="'+data[i].wine+'" data-cash_money="'+data[i].cash_money+'" data-cash_wine="'+data[i].cash_wine+'" '+disable+'>'+data[i].rangstart.substring(0,5)+' ~ '+data[i].rangend.substring(0,5)+text+' ('+data[i].site+')</option>';
+                html += '<option value="'+data[i].id+'" data-site="'+data[i].site+'" data-money="'+data[i].money+'" data-wine="'+data[i].wine+'" data-cash_money="'+data[i].cash_money+'" data-cash_wine="'+data[i].cash_wine+'" '+disable+'>'+data[i].rangstart.substring(0,5)+' ~ '+data[i].rangend.substring(0,5)+text+'</option>';
             }
+            // ('+data[i].site+')
             $('#id').html(html);
         },'json');
     });
