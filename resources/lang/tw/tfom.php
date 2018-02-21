@@ -836,9 +836,9 @@ $step3 = <<<'FOOBAR'
                             <td>＊人數</td>
                             <td class="">
                                 <input type="radio" class="pop1" value="1" name="pople" checked> <span class="radio-span pop1">1</span>
-                                <input type="radio" class="pop2" value="2" name="pople"> <span class="radio-span pop2">2</span>
+                                <!--input type="radio" class="pop2" value="2" name="pople"> <span class="radio-span pop2">2</span>
                                 <input type="radio" class="pop3" value="3" name="pople"> <span class="radio-span pop3">3</span>
-                                <input type="radio" class="pop4" value="4" name="pople"> <span class="radio-span pop4">4</span>
+                                <input type="radio" class="pop4" value="4" name="pople"> <span class="radio-span pop4">4</span-->
 
 
                                 <!--input type="radio" value="H" name="meal"> <span class="radio-span">葷</span>
