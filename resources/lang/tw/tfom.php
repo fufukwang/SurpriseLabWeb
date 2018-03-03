@@ -756,14 +756,14 @@ FOOBAR;
 
 $step2 = <<<'FOOBAR'
                         <table class="reservation-table">
-                        <tr>
+                        <!--tr>
                             <td>
                                 人數
                             </td>
                             <td>
                                 ONE
                             </td>
-                        </tr>
+                        </tr-->
                         <tr>
                             <td>日期</td>
                             <td>
@@ -842,11 +842,6 @@ $step3 = <<<'FOOBAR'
                                 <input type="radio" class="pop2" value="2" name="pople"> <span class="radio-span pop2">2</span>
                                 <input type="radio" class="pop3" value="3" name="pople"> <span class="radio-span pop3">3</span>
                                 <input type="radio" class="pop4" value="4" name="pople"> <span class="radio-span pop4">4</span>
-
-
-                                <input type="radio" value="H" name="meal"> <span class="radio-span">葷</span>
-                                <input type="radio" value="V" name="meal"> <span class="radio-span">素</span>
-                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇餐點</span>
                             </td>
                         </tr>
                         <tr>
@@ -856,7 +851,7 @@ $step3 = <<<'FOOBAR'
                                     <input type="radio" value="葷" name="mv1" checked> <span class="radio-span">葷</span>
                                     <input type="radio" value="素" name="mv1"> <span class="radio-span">素</span>
                                 </div>
-                                <!--div id="meal-2">
+                                <div id="meal-2">
                                     <input type="radio" value="葷" name="mv2" checked> <span class="radio-span">葷</span>
                                     <input type="radio" value="素" name="mv2"> <span class="radio-span">素</span>
                                 </div>
@@ -867,7 +862,7 @@ $step3 = <<<'FOOBAR'
                                 <div id="meal-4">
                                     <input type="radio" value="葷" name="mv4" checked> <span class="radio-span">葷</span>
                                     <input type="radio" value="素" name="mv4"> <span class="radio-span">素</span>
-                                </div-->
+                                </div>
 
                             </td>
                         </tr>
