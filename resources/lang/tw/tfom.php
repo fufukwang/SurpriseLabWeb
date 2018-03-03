@@ -350,10 +350,12 @@ $roles = <<<'FOOBAR'
                 </h3>
                 <ul class="list">
                     <li>
-                        在用餐當日三天前，來信或來電取消訂位，扣除金流系統手續費 5% 後，將獲全額退費。 如：若預訂 9/04 的座位，於 9/01 (含) 前寄信或來電取消訂位，可獲全額退費
+                        在用餐當日三天前，來信或來電取消訂位，扣除金流系統手續費 5% 後，將獲全額退費。
+如：若預訂 9/04 的座位，於 9/01 (含) 前寄信或來電取消訂位，可獲全額退費
                     </li>
                     <li>
-                        在用餐當日兩天前，來信或來電取消訂位，因廚房已完成備料，扣除金流系統手續費 5% 與廚房備料成本，僅將退回 50% 之費用。建議來賓可以將訂位轉讓給朋友、家人。 如：若預訂 9/04 的座位，於 09/02、09/03 寄信或來電取消訂位，可退回50%之費用
+                        在用餐當日兩天前，來信或來電取消訂位，因廚房已完成備料，扣除金流系統手續費 5% 與廚房備料成本，僅將退回 50% 之費用。建議來賓可以將訂位轉讓給朋友、家人。
+如：若預訂 9/04 的座位，於 09/02、09/03 寄信或來電取消訂位，可退回50%之費用
                     </li>
                     <li>
                         用餐當日未出席、也未事先來信或來電取消，將不進行退費。
@@ -367,7 +369,8 @@ $roles = <<<'FOOBAR'
                 </h3>
                 <ul class="list">
                     <li>
-                        若需更改訂位日期，請於用餐日三天前 ，來信或來電告知。 如：欲更改 9/04 的訂位，請於 9/01 (含) 前來信或來電告知，我們將為您調整
+                        若需更改訂位日期，請於用餐日三天前 ，來信或來電告知。
+如：欲更改 9/04 的訂位，請於 9/01 (含) 前來信或來電告知，我們將為您調整
                     </li>
                     <li>
                         用餐日兩天前與當日恕不提供日期更改，建議來賓可將訂位轉讓給朋友、家人。
@@ -738,7 +741,7 @@ B: 現場付費  $1100元
 *各式訂位問題、大組客人訂位、活動洽詢，歡迎來信詢問<br >
 tableforone@surpriselab.com.tw<br >
 <br >
-<!--人數：(開放1-4位訂位)-->
+人數：(開放1-4位訂位)
                         </p>
                         <h4>
                             <input type="checkbox" id="agrenRule"> 我已詳讀並遵守一<a href="rules.html" target="_blank"><span class="lightbox-trigger">人餐桌訂位與用餐規則</a></span>。
@@ -836,14 +839,14 @@ $step3 = <<<'FOOBAR'
                             <td>＊人數</td>
                             <td class="">
                                 <input type="radio" class="pop1" value="1" name="pople" checked> <span class="radio-span pop1">1</span>
-                                <!--input type="radio" class="pop2" value="2" name="pople"> <span class="radio-span pop2">2</span>
+                                <input type="radio" class="pop2" value="2" name="pople"> <span class="radio-span pop2">2</span>
                                 <input type="radio" class="pop3" value="3" name="pople"> <span class="radio-span pop3">3</span>
-                                <input type="radio" class="pop4" value="4" name="pople"> <span class="radio-span pop4">4</span-->
+                                <input type="radio" class="pop4" value="4" name="pople"> <span class="radio-span pop4">4</span>
 
 
-                                <!--input type="radio" value="H" name="meal"> <span class="radio-span">葷</span>
+                                <input type="radio" value="H" name="meal"> <span class="radio-span">葷</span>
                                 <input type="radio" value="V" name="meal"> <span class="radio-span">素</span>
-                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇餐點</span-->
+                                <span class="alerter"><i class="fa fa-exclamation-triangle "></i> 請選擇餐點</span>
                             </td>
                         </tr>
                         <tr>
