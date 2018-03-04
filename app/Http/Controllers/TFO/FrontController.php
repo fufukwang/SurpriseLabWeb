@@ -374,14 +374,14 @@ class FrontController extends Controller
                 case 'getIDByDatepart':
                     $day      = $request->day;
                     $dayparts = $request->dayparts;
-                    $pro = TFOPro::select(DB::raw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paytype='現場付款' AND paystatus<>'取消訂位') OR (paystatus='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS site,id,rangstart,rangend,money,wine,cash_wine,cash_money"))
+                    $pro = TFOPro::select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paytype='現場付款' AND paystatus<>'取消訂位') OR (paystatus='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS site,id,rangstart,rangend,money,wine,cash_wine,cash_money"))
                         ->where('open',1)->where('day',$day)->where('dayparts',$dayparts)
                     //->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paystatus='' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")
                         ->get();
                     return $pro->toJson();
                 break;
                 case 'getDayByRedeem':
-                    $pro = TFOPro::select('day')->where('open',1)->where('dayparts','晚餐')->where('day','>=',Carbon::now()->toDateString())->groupBy('day')->whereRaw("(sites-IFNULL((SELECT COUNT(id) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paytype='現場付款' AND paystatus<>'取消訂位') OR (paystatus='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")->get();
+                    $pro = TFOPro::select('day')->where('open',1)->where('dayparts','晚餐')->where('day','>=',Carbon::now()->toDateString())->groupBy('day')->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(TFOOrder) WHERE TFOOrder.tfopro_id=TFOPro.id AND (paystatus='已付款' OR (paytype='現場付款' AND paystatus<>'取消訂位') OR (paystatus='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=1")->get();
                     return $pro->toJson();
                 break;
                 case 'getDatepartByDayRedeem':
