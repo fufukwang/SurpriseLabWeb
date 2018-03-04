@@ -83,7 +83,7 @@
                                                     <td>{{ $row->day }}</td>
                                                     <td>{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
                                                     <td>{{ App\model\TFOOrder::whereRaw("(`paystatus`='已付款' OR (paytype='現場付款' AND paystatus
-                                                        <>'取消訂位')) AND `tfopro_id`=".$row->id)->sum('people') }} / {{ $row->sites }}</td>
+                                                        <>'取消訂位')) AND `tfopro_id`=".$row->id)->sum('pople') }} / {{ $row->sites }}</td>
                                                     <td>{{ $row->money }} / {{ $row->wine }}<br />{{ $row->cash_money }} / {{ $row->cash_wine }}</td>
                                                     <td class="actions">
                                                         <a class="btn btn-purple btn-xs" href="/TableForOne/order/{{ $row->id }}/appointment">預約席</a>
