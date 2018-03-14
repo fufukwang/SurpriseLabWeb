@@ -881,7 +881,7 @@ $home = <<<'FOOBAR'
 FOOBAR;
 
 $step1 = <<<'FOOBAR'
-                        <h4>
+                        <!--h4>
                             線上訂位 pre-book & 線上預付 pre-pay 
                         </h4>
                         <p>
@@ -903,7 +903,7 @@ $step1 = <<<'FOOBAR'
                             *(期間限定優惠) 12/15起，晚餐20:30時段880套餐⾃動升級為1050套餐<br >
                             *詢問當日訂位可以直接撥打02-27192960<br>
                             <span style="color: #f76565;">*若訂位時遇到任何問題，歡迎來信詢問 tableforone@surpriselab.com.tw</span>
-                        </p>
+                        </p-->
 
 
                         <h4>
@@ -925,8 +925,8 @@ B: 現場付費  $1100元
 *提供葷食與素食兩種套餐<br >
 *午餐、晚餐供應相同料理<br >
 *詢問當日訂位可以直接撥打02-27192960<br >
-*各式訂位問題、大組客人訂位、活動洽詢，歡迎來信詢問<br >
-tableforone@surpriselab.com.tw<br >
+<span style="color: #f76565;">*各式訂位問題、大組客人訂位、活動洽詢，歡迎來信詢問<br >
+tableforone@surpriselab.com.tw<br ></span>
 <br >
 人數：(開放1-4位訂位)
                         </p>
