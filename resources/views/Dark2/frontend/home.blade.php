@@ -245,6 +245,7 @@
         </div>
 
     </div>
+    {{ config('setting.dark2') }}
     @if(Session::has('message')) <script type="text/javascript">alert('{{ Session::get('message') }}');</script> @endif
     <script type="text/javascript">
     $(function(){
