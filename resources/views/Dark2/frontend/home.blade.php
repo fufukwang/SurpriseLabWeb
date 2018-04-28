@@ -245,7 +245,7 @@
         </div>
 
     </div>
-    {{ config('setting.dark2') }}
+    {{ config('setting.dark2.ptah') }}
     @if(Session::has('message')) <script type="text/javascript">alert('{{ Session::get('message') }}');</script> @endif
     <script type="text/javascript">
     $(function(){
