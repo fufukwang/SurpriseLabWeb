@@ -102,7 +102,12 @@
                             <li><a href="/TableForOne/contacts">Contacts</a></li>
                         </ul>
                     </li>
-                    
+                    <li class="has-submenu">
+                        <a href="#"><i class="md md-invert-colors-on"></i>dininginthedark S2</a>
+                        <ul class="submenu">
+                            <li><a href="/dark2/contacts">Contacts</a></li>
+                        </ul>
+                    </li>
 
 
                 </ul>

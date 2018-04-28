@@ -105,6 +105,16 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('print','TFO\BackController@Print');
         Route::get('table','TFO\BackController@Table');
     });
+
+    // Dark2
+    Route::group(['prefix' => 'dark2'], function(){
+
+        // 聯絡我們
+        Route::get('contacts','Dark2\BackController@Contacts');
+        Route::get('contact/{id}/edit','Dark2\BackController@ContactEdit');
+        Route::post('contact/{id}/update','Dark2\BackController@ContactUpdate');
+        Route::delete('contact/{id}/delete','Dark2\BackController@ContactDelete');
+    });
 });
 
 
@@ -258,6 +268,59 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('checkGiftCardStatus','TFO\FrontController@checkGiftCardStatus');
         Route::post('checkAndGenerateOrder','TFO\FrontController@checkAndGenerateOrder');
     });
+
+
+
+    // dark2
+    Route::group(['prefix' => config('setting.dark2.path')], function(){
+        Route::get('about.html',function(){ return view('Dark2.frontend.about'); });
+        Route::get('chef.html',function(){ return view('Dark2.frontend.chef'); });
+        Route::get('rules.html',function(){ return view('Dark2.frontend.rules'); });
+        Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
+        Route::get('index.html',function(){ return view('Dark2.frontend.home'); });
+        Route::get('/',function(){ return view('Dark2.frontend.home'); });
+        //Route::get('reservation.html',function(){ return view('frontend.reservation'); });
+        Route::get('people.html',function(){ return view('Dark2.frontend.people'); });
+        //Route::get('event.html',function(){ return view('frontend.event'); });
+        //Route::get('event-landing.html',function(){ return view('frontend.event-landing'); });
+        Route::get('press.html',function(){ return view('Dark2.frontend.press'); });
+        //Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
+        //Route::post('ReOrderData','FrontendController@ReOrderData');
+        //Route::post('getPayDone','FrontendController@getPayDone');
+        Route::get('pre-order.html',function(){ return view('Dark2.frontend.pre-order'); });
+        Route::group(['prefix' => 'en'], function(){
+            Route::get('about.html',function(){ App::setLocale('en'); return view('Dark2.frontend.about'); });
+            Route::get('chef.html',function(){ App::setLocale('en'); return view('Dark2.frontend.chef'); });
+            Route::get('rules.html',function(){ App::setLocale('en'); return view('Dark2.frontend.rules'); });
+            Route::get('contact.html',function(){ App::setLocale('en'); return view('Dark2.frontend.contact'); });
+            Route::get('index.html',function(){ App::setLocale('en'); return view('Dark2.frontend.home'); });
+            Route::get('/',function(){ App::setLocale('en'); return view('Dark2.frontend.home'); });
+            //Route::get('reservation.html',function(){ App::setLocale('en'); return view('frontend.reservation'); });
+            Route::get('people.html',function(){ App::setLocale('en'); return view('Dark2.frontend.people'); });
+            Route::get('press.html',function(){ App::setLocale('en'); return view('Dark2.frontend.press'); });
+            //Route::get('event.html',function(){ App::setLocale('en'); return view('frontend.event'); });
+            //Route::get('event-landing.html',function(){ App::setLocale('en'); return view('frontend.event-landing'); });
+            //Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
+            Route::get('pre-order.html',function(){ App::setLocale('en'); return view('Dark2.frontend.pre-order'); });
+        });
+
+        
+        Route::post('contactstore','Dark2\HomeController@contactstore');
+    });
+    /*
+    Route::post('/frontcontactstore','FrontendController@contactstore');
+    // 動態取得資料
+    Route::get('GetAjaxData','FrontendController@GetAjaxData');
+
+    // 存入資料
+    Route::post('contact','HomeController@contact');
+    Route::post('storeres','HomeController@storeres');
+    Route::post('checkres','HomeController@checkres');
+*/
+
+
+
+
 });
 
 
