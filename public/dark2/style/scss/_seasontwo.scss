@@ -1,0 +1,500 @@
+$xs: 776px;
+$font-color: #cbcbcb;
+$theme-color:#a47c52;
+$lighter-bg-color: rgba(250, 250, 250, 0.05);
+
+a{
+    color: $font-color;
+    &:hover{
+        color: #cbcbcb;
+    }
+}
+
+.seasontwo {
+	position: absolute;
+    bottom: 45px;
+    right: 15%;
+    width: 65px;
+    img{
+        width: 100%;
+    }
+}
+
+.main-logo{
+    position: relative;
+}
+
+.main-slogan{
+    padding-top: 15vh;
+    i{
+        margin-top: 90px;
+        color: $theme-color;
+        font-size: 24px;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    
+    .show{
+        opacity: 1;
+    }
+}
+
+.slogan-img{
+    img{
+        width: 100%;    
+    }
+}
+
+.rules-box {
+    max-width: 720px;
+    p{
+        &:nth-child(2){
+            margin-top: 45px;
+        }
+        text-align: left;
+        padding: 5px 0px;
+    }
+}
+
+.new-about{
+    margin-top: 350px;
+    color: $font-color;
+    opacity: 0;
+    transition: 1s all;
+    text-align: center;
+    padding: 20px;
+    
+    @media(max-width:$xs){
+        margin-top: 150px;
+    }
+    
+    p{
+        font-size: 16px;
+        line-height: 1.55em;
+        letter-spacing: 1px;
+    }
+
+    h1{
+        font-size: 18px;
+        letter-spacing: 2.5px;
+        line-height: 1.55em;
+        margin-bottom: 60px;
+    }
+    
+    .pre-order-info{
+        margin: auto;
+        max-width: 880px;
+        @media(max-width:$xs){
+            padding: 0 25px;
+        }
+    }
+    
+    .progress-bar-box {
+        margin-top: 80px;
+	    padding: 7px;
+        border: solid 1px $font-color;
+        
+        .bar-box{
+            position: relative;
+            height: 35px;
+            &:after,&:before{
+                position: absolute;
+                bottom: -45px;
+                width: 120px;
+                color: $font-color;
+                font-size: 14px;
+            }
+            
+            &:after{
+                content: "預售開始";
+                left: 0%;
+                margin-left: -68px;
+            }
+            
+            &:before{
+                content: '目標 3000張';
+                right: 0%;
+                margin-right: -68px;
+                
+            }
+        }
+        
+        .bar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 45%;
+            background: $theme-color;
+        }
+    }
+    
+    .info-box{
+        margin-top: 120px;
+        text-align: center;
+        padding-bottom: 120px;
+        
+        h1{
+            color: $font-color;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+        
+        p{
+            color: $theme-color;
+            font-size: 36px;
+        }
+    }
+}
+
+.season-two-about{
+    background: $lighter-bg-color;
+    width: 100%;
+    padding: 60px 25px;
+    @media(max-width:$xs){
+        margin: 0 -15px;
+        width: auto;
+    }
+    
+    p{
+        font-size: 14px;
+        line-height: 1.55em;
+        letter-spacing: 1px;
+        padding: 10px 10px; 
+    }
+}
+.timeline-box{
+
+    padding: 60px 25px;
+    
+    span{
+        font-size: 14px;
+        color: #999;
+    }
+
+}
+
+.timeline {
+    max-width: 480px;
+    margin: auto;
+    margin-bottom: 45px;
+    
+    li{
+        position: relative;
+        padding-left: 85px;
+        color: #999999;
+        text-align: left;
+        padding-bottom: 25px;
+        font-size: 14px;
+        
+        &:nth-child(3),&:nth-child(4){
+            .dot{
+                &:after{
+                    height: 70px;
+                }
+            }
+        }
+        
+        &:last-child{
+            .dot{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+        
+        p{
+            font-size: 14px;
+        }
+        
+        .date{
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+        .dot{
+            position: absolute;
+            top: 4px;
+            left: 52px;
+            border: solid 1px $theme-color;
+            border-radius: 100%;
+            height: 14px;
+            width: 14px;
+            z-index: 10;
+            &:before{
+                content: '';
+                background: $theme-color;
+                height: 8px;
+                width: 8px;
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                margin-top: -4px;
+                margin-left: -4px;
+                position: absolute;
+                z-index: 10;
+            }
+            &:after{
+                content: '';
+                width: 1px;
+                position: absolute;
+                top: 3px;
+                left: 50%;
+                background: #ccc;
+                height: 50px;
+                z-index: -1;
+            }
+        }
+    }
+
+    .important{
+        .dot{
+            transform: scale(1.25);
+            transform-origin: center;
+            top: 2px;
+            &:after{
+                height: 45px;
+            }
+        }
+        p,.date{
+            color: $font-color;
+        }
+    }
+}
+
+.mask-box {
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1001;
+}
+
+.active{
+    .new-about{
+        opacity: 1;
+    }
+    .mask-box{
+        overflow: auto;
+        padding-bottom: 5px;
+    }
+}
+
+.season-2-footer{
+    padding: 60px;
+    text-align: center;
+    
+    .footer-box{
+        position: relative;
+        
+        .contact-box{
+            position: absolute;
+            bottom: 0;
+            text-align: left;
+            color: $font-color;
+            h4{
+                @media(max-width:$xs){
+                    margin-bottom: 25px;
+                }
+            }
+            p{
+                margin-bottom: 0;
+                @media(max-width:$xs){
+                    line-height: 1.75em;
+                }
+            }
+            @media(max-width:$xs){
+                position: relative;
+                text-align: center;
+            }
+        }
+        
+        .copyright {
+	        position: absolute;
+            bottom: 0px;
+            width: 100%;
+            color: $font-color;
+            @media(max-width:$xs){
+                position: relative;
+                text-align: center;
+            }
+        }
+        
+        .hyper-link {
+	        text-align: right;
+            @media(max-width:$xs){
+                text-align: center;
+                margin: 40px auto;
+            }
+            li{
+                display: inline-block;
+                padding-left: 17px;
+                font-size: 18px;
+                @media(max-width:$xs){
+                    padding: 15px 15px;
+                }
+                i{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+.presale-logo-box{
+    width: 300px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    margin-bottom: 60px;
+    @media(max-width:$xs){
+        max-width: 210px;
+    }
+    img{
+        &:first-child{
+            width: 100%;
+        }
+        
+        &:nth-child(2){
+            position: absolute;
+            left: 100%;
+            bottom: 0;
+            width: 80px;
+            @media(max-width:$xs){
+                max-width: 45px;
+            }
+        }
+    }
+}
+
+.strong-words{
+    color: $theme-color;
+}
+
+.pre-order-section{
+    text-align: center;
+    color: $font-color;
+    
+    p{
+        line-height: 1.75em;
+        letter-spacing: 1px;
+    }
+    
+    .pre-order-box{
+        max-width: 720px;
+        margin: 45px auto;
+        @media(max-width:$xs){
+            margin-bottom: 0px;
+        }
+    }
+    .row{
+        @media(max-width:$xs){
+            padding: 25px;
+        }
+        .col-md-6{
+            >a div{
+                position: relative;
+             
+                >img{
+                    filter: brightness(100%);
+                    transition: 0.5s all;
+                    
+                    &:hover{
+                        filter: brightness(85%);
+                    }
+                }
+            }
+
+            .limit{
+                position: absolute;
+                top: -15px;
+                left: -25px;
+                width: 50px;
+            }
+            p{
+                padding-top: 5px;
+                height: 1.75em;
+                margin-bottom: 25px;
+            }
+        }
+        
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.wrap{
+    @media(max-width:$xs){
+        padding-top: 45px;
+    }
+}
+
+.mobile-menu{
+    .page-list{
+
+        li{
+            padding: 20px;
+        }
+
+        a{
+            &:last-child{
+                li{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    
+    .social-list {
+        text-align: center;
+        li{
+            font-size: 24px;
+            display: inline-block;
+            padding: 15px;
+        }
+    }
+} 
+
+.color-white{
+    color: #fff!important;
+}
+
+.supriselab-logo {
+	max-width: 275px;
+    margin-bottom: -15px!important;
+}
+
+.team-box{
+    margin-top: 45px;
+
+    img{
+        width: 100%;
+        margin: 25px auto;
+    }
+    
+    div{
+        display: inline-block;
+        text-align: left;
+        padding: 7px;
+
+        @media(max-width:$xs){
+            text-align: center;
+        }
+        
+        &:nth-of-type(odd){
+            width: 30%;
+            @media(max-width:$xs){
+                width: 100%;
+            }
+        }
+        &:nth-of-type(even){
+            width: 60%;
+            color: $theme-color;
+            @media(max-width:$xs){
+                width: 100%;
+            }
+        }
+    }
+}

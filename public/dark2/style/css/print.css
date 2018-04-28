@@ -1,0 +1,114 @@
+@charset "UTF-8";
+a { color: #cbcbcb; }
+a:hover { color: #cbcbcb; }
+
+.seasontwo { position: absolute; bottom: 45px; right: 15%; width: 65px; }
+.seasontwo img { width: 100%; }
+
+.main-logo { position: relative; }
+
+.main-slogan { padding-top: 15vh; }
+.main-slogan i { margin-top: 90px; color: #a47c52; font-size: 24px; opacity: 0; transition: all 0.5s; }
+.main-slogan .show { opacity: 1; }
+
+.slogan-img img { width: 100%; }
+
+.rules-box { max-width: 720px; }
+.rules-box p { text-align: left; padding: 5px 0px; }
+.rules-box p:nth-child(2) { margin-top: 45px; }
+
+.new-about { margin-top: 350px; color: #cbcbcb; opacity: 0; transition: 1s all; text-align: center; padding: 20px; }
+@media (max-width: 776px) { .new-about { margin-top: 150px; } }
+.new-about p { font-size: 16px; line-height: 1.55em; letter-spacing: 1px; }
+.new-about h1 { font-size: 18px; letter-spacing: 2.5px; line-height: 1.55em; margin-bottom: 60px; }
+.new-about .pre-order-info { margin: auto; max-width: 880px; }
+@media (max-width: 776px) { .new-about .pre-order-info { padding: 0 25px; } }
+.new-about .progress-bar-box { margin-top: 80px; padding: 7px; border: solid 1px #cbcbcb; }
+.new-about .progress-bar-box .bar-box { position: relative; height: 35px; }
+.new-about .progress-bar-box .bar-box:after, .new-about .progress-bar-box .bar-box:before { position: absolute; bottom: -45px; width: 120px; color: #cbcbcb; font-size: 14px; }
+.new-about .progress-bar-box .bar-box:after { content: "預售開始"; left: 0%; margin-left: -68px; }
+.new-about .progress-bar-box .bar-box:before { content: '目標 3000張'; right: 0%; margin-right: -68px; }
+.new-about .progress-bar-box .bar { position: absolute; top: 0; left: 0; height: 100%; width: 45%; background: #a47c52; }
+.new-about .info-box { margin-top: 120px; text-align: center; padding-bottom: 120px; }
+.new-about .info-box h1 { color: #cbcbcb; margin-bottom: 25px; font-size: 18px; }
+.new-about .info-box p { color: #a47c52; font-size: 36px; }
+
+.season-two-about { background: rgba(250, 250, 250, 0.05); width: 100%; padding: 60px 25px; }
+@media (max-width: 776px) { .season-two-about { margin: 0 -15px; width: auto; } }
+.season-two-about p { font-size: 14px; line-height: 1.55em; letter-spacing: 1px; padding: 10px 10px; }
+
+.timeline-box { padding: 60px 25px; }
+.timeline-box span { font-size: 14px; color: #999; }
+
+.timeline { max-width: 480px; margin: auto; margin-bottom: 45px; }
+.timeline li { position: relative; padding-left: 85px; color: #999999; text-align: left; padding-bottom: 25px; font-size: 14px; }
+.timeline li:nth-child(3) .dot:after, .timeline li:nth-child(4) .dot:after { height: 70px; }
+.timeline li:last-child .dot:after { display: none; }
+.timeline li p { font-size: 14px; }
+.timeline li .date { position: absolute; left: 0; top: 1px; }
+.timeline li .dot { position: absolute; top: 4px; left: 52px; border: solid 1px #a47c52; border-radius: 100%; height: 14px; width: 14px; z-index: 10; }
+.timeline li .dot:before { content: ''; background: #a47c52; height: 8px; width: 8px; border-radius: 100%; top: 50%; left: 50%; margin-top: -4px; margin-left: -4px; position: absolute; z-index: 10; }
+.timeline li .dot:after { content: ''; width: 1px; position: absolute; top: 3px; left: 50%; background: #ccc; height: 50px; z-index: -1; }
+.timeline .important .dot { transform: scale(1.25); transform-origin: center; top: 2px; }
+.timeline .important .dot:after { height: 45px; }
+.timeline .important p, .timeline .important .date { color: #cbcbcb; }
+
+.mask-box { position: absolute; top: 0; left: 0; height: 100vh; width: 100%; z-index: 1001; }
+
+.active .new-about { opacity: 1; }
+.active .mask-box { overflow: auto; padding-bottom: 5px; }
+
+.season-2-footer { padding: 60px; text-align: center; }
+.season-2-footer .footer-box { position: relative; }
+.season-2-footer .footer-box .contact-box { position: absolute; bottom: 0; text-align: left; color: #cbcbcb; }
+@media (max-width: 776px) { .season-2-footer .footer-box .contact-box h4 { margin-bottom: 25px; } }
+.season-2-footer .footer-box .contact-box p { margin-bottom: 0; }
+@media (max-width: 776px) { .season-2-footer .footer-box .contact-box p { line-height: 1.75em; } }
+@media (max-width: 776px) { .season-2-footer .footer-box .contact-box { position: relative; text-align: center; } }
+.season-2-footer .footer-box .copyright { position: absolute; bottom: 0px; width: 100%; color: #cbcbcb; }
+@media (max-width: 776px) { .season-2-footer .footer-box .copyright { position: relative; text-align: center; } }
+.season-2-footer .footer-box .hyper-link { text-align: right; }
+@media (max-width: 776px) { .season-2-footer .footer-box .hyper-link { text-align: center; margin: 40px auto; } }
+.season-2-footer .footer-box .hyper-link li { display: inline-block; padding-left: 17px; font-size: 18px; }
+@media (max-width: 776px) { .season-2-footer .footer-box .hyper-link li { padding: 15px 15px; } }
+.season-2-footer .footer-box .hyper-link li i { font-size: 24px; }
+
+.presale-logo-box { width: 300px; text-align: center; position: relative; margin: auto; margin-bottom: 60px; }
+@media (max-width: 776px) { .presale-logo-box { max-width: 210px; } }
+.presale-logo-box img:first-child { width: 100%; }
+.presale-logo-box img:nth-child(2) { position: absolute; left: 100%; bottom: 0; width: 80px; }
+@media (max-width: 776px) { .presale-logo-box img:nth-child(2) { max-width: 45px; } }
+
+.strong-words { color: #a47c52; }
+
+.pre-order-section { text-align: center; color: #cbcbcb; }
+.pre-order-section p { line-height: 1.75em; letter-spacing: 1px; }
+.pre-order-section .pre-order-box { max-width: 720px; margin: 45px auto; }
+@media (max-width: 776px) { .pre-order-section .pre-order-box { margin-bottom: 0px; } }
+@media (max-width: 776px) { .pre-order-section .row { padding: 25px; } }
+.pre-order-section .row .col-md-6 > a div { position: relative; }
+.pre-order-section .row .col-md-6 > a div > img { filter: brightness(100%); transition: 0.5s all; }
+.pre-order-section .row .col-md-6 > a div > img:hover { filter: brightness(85%); }
+.pre-order-section .row .col-md-6 .limit { position: absolute; top: -15px; left: -25px; width: 50px; }
+.pre-order-section .row .col-md-6 p { padding-top: 5px; height: 1.75em; margin-bottom: 25px; }
+.pre-order-section .row img { width: 100%; }
+
+@media (max-width: 776px) { .wrap { padding-top: 45px; } }
+
+.mobile-menu .page-list li { padding: 20px; }
+.mobile-menu .page-list a:last-child li { border-bottom: none; }
+.mobile-menu .social-list { text-align: center; }
+.mobile-menu .social-list li { font-size: 24px; display: inline-block; padding: 15px; }
+
+.color-white { color: #fff !important; }
+
+.supriselab-logo { max-width: 275px; margin-bottom: -15px !important; }
+
+.team-box { margin-top: 45px; }
+.team-box img { width: 100%; margin: 25px auto; }
+.team-box div { display: inline-block; text-align: left; padding: 7px; }
+@media (max-width: 776px) { .team-box div { text-align: center; } }
+.team-box div:nth-of-type(odd) { width: 30%; }
+@media (max-width: 776px) { .team-box div:nth-of-type(odd) { width: 100%; } }
+.team-box div:nth-of-type(even) { width: 60%; color: #a47c52; }
+@media (max-width: 776px) { .team-box div:nth-of-type(even) { width: 100%; } }
