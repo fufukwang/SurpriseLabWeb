@@ -21,7 +21,7 @@
         <div class="section-02 reservation-section">
             <div class="main-container">
                 <div class="main-box rules-box">
-                    <div class="main-container"><form action="/{{ config('setting.dark2.ptah') }}/contactstore" method="post" id="contentForm">
+                    <div class="main-container"><form action="/dininginthedark2/contactstore" method="post" id="contentForm">
                         {!! csrf_field() !!}
                         <h1>
                             Contact

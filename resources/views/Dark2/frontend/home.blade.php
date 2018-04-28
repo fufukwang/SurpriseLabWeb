@@ -251,12 +251,12 @@
     $(function(){
         $('a').each(function(){
             var href = $(this).attr('href');
-            if(href.indexOf('{{ config('setting.dark2.ptah') }}')<0){
+            if(href.indexOf('dininginthedark2')<0){
                 if(href!='#'){
                     if(location.pathname.indexOf('en')>0){
-                        $(this).attr('href','/{{ config('setting.dark2.ptah') }}/en/'+href);
+                        $(this).attr('href','/dininginthedark2/en/'+href);
                     } else {
-                        $(this).attr('href','/{{ config('setting.dark2.ptah') }}/'+href);
+                        $(this).attr('href','/dininginthedark2/'+href);
                     }
                 }
             }
