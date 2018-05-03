@@ -70,7 +70,7 @@ a:hover { color: #cbcbcb; }
 .season-2-footer .footer-box .contact-box p { margin-bottom: 0; }
 @media (max-width: 776px) { .season-2-footer .footer-box .contact-box p { line-height: 1.75em; } }
 @media (max-width: 776px) { .season-2-footer .footer-box .contact-box { position: relative; text-align: center; } }
-.season-2-footer .footer-box .copyright { position: absolute; bottom: 0px; width: 100%; color: #cbcbcb; }
+.season-2-footer .footer-box .copyright { position: absolute; bottom: 0px; width: 60%;margin-left:20%; color: #cbcbcb; }
 @media (max-width: 776px) { .season-2-footer .footer-box .copyright { position: relative; text-align: center; } }
 .season-2-footer .footer-box .hyper-link { text-align: right; }
 @media (max-width: 776px) { .season-2-footer .footer-box .hyper-link { text-align: center; margin: 40px auto; } }
