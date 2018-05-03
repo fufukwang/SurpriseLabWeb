@@ -102,7 +102,7 @@
                     <div class="new-about">
                         <div class="pre-order-info">
                             <p>
-                                <a name="nolight">t</a>無光晚餐重磅回歸<br>
+                                無光晚餐重磅回歸<br>
                                 這次，別再錯過
                             </p>
                             <div class="progress-bar-box">
@@ -250,9 +250,9 @@
     $(function(){
         $('a').each(function(){
             var href = $(this).attr('href');
-            if(href.indexOf('dininginthedark2')<0){
+            if(href.indexOf("dininginthedark2")<0){
                 if(href!='#'){
-                    if(location.pathname.indexOf('en')>0){
+                    if(window.location.pathname.indexOf('en')>0){
                         $(this).attr('href','/dininginthedark2/en/'+href);
                     } else {
                         $(this).attr('href','/dininginthedark2/'+href);
@@ -289,7 +289,9 @@
 
         },'json');
 
-
+        if(window.location.pathname.indexOf('about\.html')>0){
+            $('.main-logo .landing-btn').trigger('click');
+        }
 
     });
     </script>

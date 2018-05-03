@@ -1,7 +1,9 @@
 var defaultSec = 1300;
 if(window.location.pathname.indexOf('about\.html')>0){
     defaultSec = 1;
-    $('.main-slogan').hide();
+    setTimeout(function(){
+        $('.main-slogan').hide();
+    },500);
 }
 // landing bg fn
 $(document).on('mousemove', function(e){
