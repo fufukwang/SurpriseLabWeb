@@ -9,7 +9,7 @@ a:hover { color: #cbcbcb; }
 .main-logo img { max-width: 107px; }
 
 .main-slogan { padding-top: 15vh; }
-.main-slogan i { margin-top: 90px; color: #a47c52; font-size: 24px; opacity: 0; transition: all 0.5s; }
+.main-slogan i { margin-top: 40px; color: #a47c52; font-size: 24px; opacity: 0; transition: all 0.5s; }
 .main-slogan .show { opacity: 1; }
 
 .slogan-img img { width: 100%; }
