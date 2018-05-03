@@ -1,6 +1,7 @@
     <title>Dining In The Dark 2</title>
     <meta charset="utf-8">
     <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link rel="icon" href="/images/tab-icon.png" >
     <link rel="stylesheet" href="/dark2/stylesheets/screen.css">
     <link rel="stylesheet" href="/dark2/stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="/dark2/css/font-awesome.min.css">
