@@ -102,7 +102,7 @@
                     <div class="new-about">
                         <div class="pre-order-info">
                             <p>
-                                無光晚餐重磅回歸<br>
+                                <a name="nolight">t</a>無光晚餐重磅回歸<br>
                                 這次，別再錯過
                             </p>
                             <div class="progress-bar-box">
@@ -245,7 +245,6 @@
         </div>
 
     </div>
-    {{ config('setting.dark2.ptah') }}
     @if(Session::has('message')) <script type="text/javascript">alert('{{ Session::get('message') }}');</script> @endif
     <script type="text/javascript">
     $(function(){
@@ -290,9 +289,7 @@
 
         },'json');
 
-        if(window.location.pathname.indexOf('about\.html')>0){
-            $('.main-logo .landing-btn').trigger('click')
-        }
+
 
     });
     </script>

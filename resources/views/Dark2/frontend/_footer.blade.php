@@ -42,23 +42,25 @@
 $(function(){
     $('a').each(function(){
         var href = $(this).attr('href');
-        if(href.indexOf('about\.html')>0){
-            fbq('track', 'ViewContent', { 
-                content_name: 'About'
-            });
-        } else if(href.indexOf('pre\-order\.html')>0){
-            fbq('track', 'AddToCart');
-        } else if(href.indexOf('backme\.tw')>0){
-            if(href.indexOf('4380')>0){
-                fbq('trackCustom', 'normal2');
-            } else if(href.indexOf('4386')>0){
-                fbq('trackCustom', 'limit2');
-            } else if(href.indexOf('4385')>0){
-                fbq('trackCustom', 'normal4');
-            } else if(href.indexOf('4387')>0){
-                fbq('trackCustom', 'limit4');
-            } else if(href.indexOf('4388')>0){
-                fbq('trackCustom', 'limit6');
+        if(typeof href !== 'undefined' && href != '#'){
+            if(href == 'about.html'){
+                fbq('track', 'ViewContent', { 
+                    content_name: 'About'
+                });
+            } else if(href == 'pre-order.html' ){
+                fbq('track', 'AddToCart');
+            } else if(href.indexOf('backme')>0){
+                if(href.indexOf('4380')>0){
+                    fbq('trackCustom', 'normal2');
+                } else if(href.indexOf('4386')>0){
+                    fbq('trackCustom', 'limit2');
+                } else if(href.indexOf('4385')>0){
+                    fbq('trackCustom', 'normal4');
+                } else if(href.indexOf('4387')>0){
+                    fbq('trackCustom', 'limit4');
+                } else if(href.indexOf('4388')>0){
+                    fbq('trackCustom', 'limit6');
+                }
             }
         }
     });
