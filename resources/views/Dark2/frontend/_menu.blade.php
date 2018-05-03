@@ -15,6 +15,16 @@
                         Rules
                     </li>
                 </a>
+                <a href="food.html">
+                    <li @if($key == 'food')class="active"@endif>
+                        Food
+                    </li>
+                </a>
+                <a href="experience.html">
+                    <li @if($key == 'experience')class="active"@endif>
+                        Experience
+                    </li>
+                </a>
                 <a href="press.html">
                     <li @if($key == 'press')class="active"@endif>
                         Press

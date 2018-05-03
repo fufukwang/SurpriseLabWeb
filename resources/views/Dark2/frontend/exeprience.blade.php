@@ -6,12 +6,12 @@
     <div class="wrap">
        
         <!-- mobile menu -->
-        @include('Dark2.frontend._menu',['key'=>'exeprience'])  
+        @include('Dark2.frontend._menu',['key'=>'experience'])  
       
         <!-- header -->
         
         <div class="header-contaier clearfix">
-            @include('Dark2.frontend._m_menu',['key'=>'exeprience'])
+            @include('Dark2.frontend._m_menu',['key'=>'experience'])
         </div>
        
         <!-- landing cut -->
