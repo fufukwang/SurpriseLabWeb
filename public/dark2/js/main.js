@@ -1,3 +1,7 @@
+var defaultSec = 1300;
+if(window.location.pathname.indexOf('about\.html')>0){
+    defaultSec = 1;
+}
 // landing bg fn
 $(document).on('mousemove', function(e){
     
@@ -81,11 +85,11 @@ function ShowBg(){
     startValue++;
     if (i>4){
         $('.wrap').addClass('active');
-        $('.main-slogan i').addClass('show')
+        $('.main-slogan i').addClass('show');
         return false;  
     } 
     
-    setTimeout(ShowBg,1300);   
+    setTimeout(ShowBg,defaultSec);   
 }
 
 
