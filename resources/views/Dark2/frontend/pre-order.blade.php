@@ -46,10 +46,18 @@
             </div>
             <div class="season-two-about pre-order-section">
                 <p>
-                    選擇您想要預購的商品 ⬇
+                    請點選商品前往付款 ⬇
                 </p>
                 <div class="pre-order-box">
                     <div class="row">
+                        <div class="col-md-6">
+                            <a href="https://surpriselab.backme.tw/checkout/820/4380?locale=zh-TW">
+                                <div>
+                                    <img src="/dark2/images/Pre-sale/Button_4.png" alt="">    
+                                </div>
+                            </a>
+                            <p></p>
+                        </div>
                         <div class="col-md-6">
                             <a href="https://surpriselab.backme.tw/checkout/820/4386?locale=zh-TW">
                                 <div>
@@ -62,6 +70,14 @@
                             <p>
                                 剩餘 <span id="count_4386"></span> 份
                             </p>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="https://surpriselab.backme.tw/checkout/820/4385?locale=zh-TW">
+                                <div>
+                                    <img src="/dark2/images/Pre-sale/Button_5.png" alt="">    
+                                </div>
+                            </a>
+                            <p></p>
                         </div>
                         <div class="col-md-6">
                             <a href="https://surpriselab.backme.tw/checkout/820/4387?locale=zh-TW">
@@ -89,24 +105,9 @@
                             <p>
                                 剩餘 <span id="count_4388"></span> 份
                             </p>
-
                         </div>
-                        <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/820/4380?locale=zh-TW">
-                                <div>
-                                    <img src="/dark2/images/Pre-sale/Button_4.png" alt="">    
-                                </div>
-                            </a>
-                            <p></p>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/820/4385?locale=zh-TW">
-                                <div>
-                                    <img src="/dark2/images/Pre-sale/Button_5.png" alt="">    
-                                </div>
-                            </a>
-                            <p></p>
-                        </div>
+                        
+                        
                     </div>    
                 </div>
                 <p>

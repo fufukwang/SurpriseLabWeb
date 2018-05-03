@@ -158,7 +158,7 @@
                             </h1>
                             <ul class="timeline">
                                 <li class="important">
-                                    <div class="date">05/01</div>
+                                    <div class="date">05/04</div>
                                     <div class="dot"></div>
                                     <p>
                                         預售開始:目標預售 3000張

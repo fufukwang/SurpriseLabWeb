@@ -20,7 +20,7 @@
                         <a href="#">
                             <li>Team</li>
                         </a>
-                        <a href="#">
+                        <a href="http://pse.im/5LS4G">
                             <li>Join Mailing List</li>
                         </a>
                     </ul>

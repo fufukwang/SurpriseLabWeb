@@ -22,6 +22,9 @@ a{
 
 .main-logo{
     position: relative;
+    img{
+        max-width: 107px;
+    }
 }
 
 .main-slogan{
@@ -66,6 +69,7 @@ a{
     
     @media(max-width:$xs){
         margin-top: 150px;
+        opacity: 1;
     }
     
     p{
@@ -109,13 +113,21 @@ a{
                 content: "預售開始";
                 left: 0%;
                 margin-left: -68px;
+
+                @media(max-width:$xs){
+                    margin-left: -7px;
+                    text-align: left;
+                }
             }
             
             &:before{
                 content: '目標 3000張';
                 right: 0%;
                 margin-right: -68px;
-                
+                @media(max-width:$xs){
+                    margin-right: -7px;
+                    text-align: right;
+                }
             }
         }
         
@@ -269,6 +281,13 @@ a{
     height: 100vh;
     width: 100%;
     z-index: 1001;
+    @media(max-width:$xs){
+        overflow: auto;
+    }
+    
+    .fa-angle-down{
+        cursor: pointer;
+    }
 }
 
 .active{
@@ -376,6 +395,14 @@ a{
     text-align: center;
     color: $font-color;
     
+    @media(max-width:$xs){
+        padding-top: 45px;
+    }
+    
+    h4{
+        margin: 65px auto 45px;
+    }
+    
     p{
         line-height: 1.75em;
         letter-spacing: 1px;
@@ -388,11 +415,21 @@ a{
             margin-bottom: 0px;
         }
     }
+    
+    .food-box {
+	    max-width: 1080px;
+    }
+    
     .row{
         @media(max-width:$xs){
             padding: 25px;
         }
+        
+        .col-md-4{
+            margin: 20px auto;
+        }
         .col-md-6{
+            margin: 20px auto;
             >a div{
                 position: relative;
              

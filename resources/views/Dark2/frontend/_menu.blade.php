@@ -7,7 +7,7 @@
                 </a>
                 <a href="pre-order.html">
                     <li @if($key == 'pre-order')class="active"@endif>
-                        Pre-Order
+                        Pre-sale
                     </li>
                 </a>
                 <a href="rules.html">
@@ -22,15 +22,15 @@
                 </a>
                 <a href="contact.html">
                     <li @if($key == 'contact')class="active"@endif>
-                        contact
+                        Contact
                     </li>
                 </a>
             </ul>
             <ul class="social-list">
-                <a href="#">
+                <a href="https://www.facebook.com/surpriselabtw/">
                     <li><i class="fa fa-facebook"></i></li>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/surpriselabtw/">
                     <li><i class="fa fa-instagram"></i></li>
                 </a>
             </ul>

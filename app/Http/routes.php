@@ -273,7 +273,7 @@ Route::group(['middleware' => ['web']], function () {
 
     // dark2
     Route::group(['prefix' => config('setting.dark2.path')], function(){
-        Route::get('about.html',function(){ return view('Dark2.frontend.about'); });
+        Route::get('about.html',function(){ return view('Dark2.frontend.home'); });
         Route::get('chef.html',function(){ return view('Dark2.frontend.chef'); });
         Route::get('rules.html',function(){ return view('Dark2.frontend.rules'); });
         Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
@@ -288,8 +288,10 @@ Route::group(['middleware' => ['web']], function () {
         //Route::post('ReOrderData','FrontendController@ReOrderData');
         //Route::post('getPayDone','FrontendController@getPayDone');
         Route::get('pre-order.html',function(){ return view('Dark2.frontend.pre-order'); });
+        Route::get('exeprience.html',function(){ return view('Dark2.frontend.exeprience'); });
+        Route::get('food.html',function(){ return view('Dark2.frontend.food'); });
         Route::group(['prefix' => 'en'], function(){
-            Route::get('about.html',function(){ App::setLocale('en'); return view('Dark2.frontend.about'); });
+            Route::get('about.html',function(){ App::setLocale('en'); return view('Dark2.frontend.home'); });
             Route::get('chef.html',function(){ App::setLocale('en'); return view('Dark2.frontend.chef'); });
             Route::get('rules.html',function(){ App::setLocale('en'); return view('Dark2.frontend.rules'); });
             Route::get('contact.html',function(){ App::setLocale('en'); return view('Dark2.frontend.contact'); });
@@ -302,6 +304,8 @@ Route::group(['middleware' => ['web']], function () {
             //Route::get('event-landing.html',function(){ App::setLocale('en'); return view('frontend.event-landing'); });
             //Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
             Route::get('pre-order.html',function(){ App::setLocale('en'); return view('Dark2.frontend.pre-order'); });
+            Route::get('exeprience.html',function(){ App::setLocale('en'); return view('Dark2.frontend.exeprience'); });
+            Route::get('food.html',function(){ App::setLocale('en'); return view('Dark2.frontend.food'); });
         });
 
         

@@ -6,13 +6,13 @@
     <div class="wrap">
        
         <!-- mobile menu -->
-        @include('Dark2.frontend._menu',['key'=>'team'])
+        @include('Dark2.frontend._menu',['key'=>'about'])
      
       
         <!-- header -->
         
         <div class="header-contaier clearfix">
-            @include('Dark2.frontend._m_menu',['key'=>'team'])
+            @include('Dark2.frontend._m_menu',['key'=>'about'])
         </div>
        
         <!-- landing cut -->

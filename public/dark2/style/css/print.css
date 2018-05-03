@@ -6,6 +6,7 @@ a:hover { color: #cbcbcb; }
 .seasontwo img { width: 100%; }
 
 .main-logo { position: relative; }
+.main-logo img { max-width: 107px; }
 
 .main-slogan { padding-top: 15vh; }
 .main-slogan i { margin-top: 90px; color: #a47c52; font-size: 24px; opacity: 0; transition: all 0.5s; }
@@ -18,7 +19,7 @@ a:hover { color: #cbcbcb; }
 .rules-box p:nth-child(2) { margin-top: 45px; }
 
 .new-about { margin-top: 350px; color: #cbcbcb; opacity: 0; transition: 1s all; text-align: center; padding: 20px; }
-@media (max-width: 776px) { .new-about { margin-top: 150px; } }
+@media (max-width: 776px) { .new-about { margin-top: 150px; opacity: 1; } }
 .new-about p { font-size: 16px; line-height: 1.55em; letter-spacing: 1px; }
 .new-about h1 { font-size: 18px; letter-spacing: 2.5px; line-height: 1.55em; margin-bottom: 60px; }
 .new-about .pre-order-info { margin: auto; max-width: 880px; }
@@ -27,7 +28,9 @@ a:hover { color: #cbcbcb; }
 .new-about .progress-bar-box .bar-box { position: relative; height: 35px; }
 .new-about .progress-bar-box .bar-box:after, .new-about .progress-bar-box .bar-box:before { position: absolute; bottom: -45px; width: 120px; color: #cbcbcb; font-size: 14px; }
 .new-about .progress-bar-box .bar-box:after { content: "預售開始"; left: 0%; margin-left: -68px; }
+@media (max-width: 776px) { .new-about .progress-bar-box .bar-box:after { margin-left: -7px; text-align: left; } }
 .new-about .progress-bar-box .bar-box:before { content: '目標 3000張'; right: 0%; margin-right: -68px; }
+@media (max-width: 776px) { .new-about .progress-bar-box .bar-box:before { margin-right: -7px; text-align: right; } }
 .new-about .progress-bar-box .bar { position: absolute; top: 0; left: 0; height: 100%; width: 45%; background: #a47c52; }
 .new-about .info-box { margin-top: 120px; text-align: center; padding-bottom: 120px; }
 .new-about .info-box h1 { color: #cbcbcb; margin-bottom: 25px; font-size: 18px; }
@@ -54,6 +57,8 @@ a:hover { color: #cbcbcb; }
 .timeline .important p, .timeline .important .date { color: #cbcbcb; }
 
 .mask-box { position: absolute; top: 0; left: 0; height: 100vh; width: 100%; z-index: 1001; }
+@media (max-width: 776px) { .mask-box { overflow: auto; } }
+.mask-box .fa-angle-down { cursor: pointer; }
 
 .active .new-about { opacity: 1; }
 .active .mask-box { overflow: auto; padding-bottom: 5px; }
@@ -82,10 +87,15 @@ a:hover { color: #cbcbcb; }
 .strong-words { color: #a47c52; }
 
 .pre-order-section { text-align: center; color: #cbcbcb; }
+@media (max-width: 776px) { .pre-order-section { padding-top: 45px; } }
+.pre-order-section h4 { margin: 65px auto 45px; }
 .pre-order-section p { line-height: 1.75em; letter-spacing: 1px; }
 .pre-order-section .pre-order-box { max-width: 720px; margin: 45px auto; }
 @media (max-width: 776px) { .pre-order-section .pre-order-box { margin-bottom: 0px; } }
+.pre-order-section .food-box { max-width: 1080px; }
 @media (max-width: 776px) { .pre-order-section .row { padding: 25px; } }
+.pre-order-section .row .col-md-4 { margin: 20px auto; }
+.pre-order-section .row .col-md-6 { margin: 20px auto; }
 .pre-order-section .row .col-md-6 > a div { position: relative; }
 .pre-order-section .row .col-md-6 > a div > img { filter: brightness(100%); transition: 0.5s all; }
 .pre-order-section .row .col-md-6 > a div > img:hover { filter: brightness(85%); }

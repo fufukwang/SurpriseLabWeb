@@ -21,7 +21,7 @@
                     </a>
                     <a href="pre-order.html">
                         <li @if($key == 'pre-order')class="active"@endif>
-                            Pre-Order
+                            Pre-sale
                         </li>
                     </a>
                     <a href="rules.html">
