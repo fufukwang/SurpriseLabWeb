@@ -44,22 +44,25 @@ $(function(){
         var href = $(this).attr('href');
         if(typeof href !== 'undefined' && href != '#'){
             if(href == 'about.html'){
-                fbq('track', 'ViewContent', { 
-                    content_name: 'About'
+                $(this).click(function(){
+                    fbq('track', 'ViewContent', { 
+                        content_name: 'About'
+                    });
                 });
+                
             } else if(href == 'pre-order.html' ){
-                fbq('track', 'AddToCart');
+                $(this).click(function(){ fbq('track', 'AddToCart'); });
             } else if(href.indexOf('backme')>0){
                 if(href.indexOf('4380')>0){
-                    fbq('trackCustom', 'normal2');
+                    $(this).click(function(){ fbq('trackCustom', 'normal2'); });
                 } else if(href.indexOf('4386')>0){
-                    fbq('trackCustom', 'limit2');
+                    $(this).click(function(){ fbq('trackCustom', 'limit2'); });
                 } else if(href.indexOf('4385')>0){
-                    fbq('trackCustom', 'normal4');
+                    $(this).click(function(){ fbq('trackCustom', 'normal4'); });
                 } else if(href.indexOf('4387')>0){
-                    fbq('trackCustom', 'limit4');
+                    $(this).click(function(){ fbq('trackCustom', 'limit4'); });
                 } else if(href.indexOf('4388')>0){
-                    fbq('trackCustom', 'limit6');
+                    $(this).click(function(){ fbq('trackCustom', 'limit6'); });
                 }
             }
         }
