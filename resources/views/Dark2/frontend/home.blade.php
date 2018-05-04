@@ -251,7 +251,7 @@
         $('a').each(function(){
             var href = $(this).attr('href');
             if(href.indexOf("dininginthedark2")<0){
-                if(href!='#'){
+                if(href!='#' && href.indexOf('http')==-1 && href.indexOf('mailto')==-1 && href.indexOf('https')==-1){
                     if(window.location.pathname.indexOf('en')>0){
                         $(this).attr('href','/dininginthedark2/en/'+href);
                     } else {
