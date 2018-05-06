@@ -124,6 +124,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/about','SurpriseController@about');
     Route::get('/complete','SurpriseController@complete');
     Route::get('/fail','SurpriseController@fail');
+    Route::get('dininginthedark/{everything?}', function ($everything = null) {
+        return redirect(config('setting.dark2.path'))->send();
+    });
     /* frontend */
     Route::group(['prefix' => 'dininginthedark'], function(){
         Route::get('about.html',function(){ return view('frontend.about'); });
