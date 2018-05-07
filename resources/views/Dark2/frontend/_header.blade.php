@@ -20,7 +20,7 @@
     <meta property="og:description" content="06/04前滿3000人響應，無光晚餐將於7、8月回歸快閃兩個月！" />
     <meta property="og:url" content="https://{{ $_SERVER['HTTP_HOST'] }}{{ $_SERVER['REQUEST_URI'] }}" />
     <meta property="og:site_name" content="無光晚餐第二季 - 回歸與否，由你決定！" />
-    <meta property="og:image" content="https://www.surpriselab.com.tw/images/share.jpg" />
+    <meta property="og:image" content="https://www.surpriselab.com.tw/dark2/S__9076871.jpg" />
     <meta property="og:type" content="website" />
     <meta name="description" content="06/04前滿3000人響應，無光晚餐將於7、8月回歸快閃兩個月！">
     <meta name="keywords" content="無光晚餐、無光餐廳、約會餐廳、黑暗餐廳、黑暗體驗">
