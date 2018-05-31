@@ -114,6 +114,35 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('contact/{id}/edit','Dark2\BackController@ContactEdit');
         Route::post('contact/{id}/update','Dark2\BackController@ContactUpdate');
         Route::delete('contact/{id}/delete','Dark2\BackController@ContactDelete');
+
+        // backme data
+        Route::get('backmes','Dark2\BackController@BackMes');
+        Route::get('backme/{id}','Dark2\BackController@BackMe');
+        Route::delete('backme/{id}/delete','Dark2\BackController@BackMeDelete');
+
+        // coupon
+        Route::get('coupons','Dark2\BackController@Coupons');
+        Route::get('coupon/{id}','Dark2\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','Dark2\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','Dark2\BackController@Pros');
+        Route::get('pro/{id}/edit','Dark2\BackController@ProEdit');
+        Route::post('pro/{id}/update','Dark2\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','Dark2\BackController@ProDelete');
+        Route::post('pros','Dark2\BackController@Pros');
+
+        // 訂單
+        Route::get('orders/{id}','Dark2\BackController@Orders');
+        Route::get('order/{id}/edit','Dark2\BackController@OrderEdit');
+        Route::post('order/{id}/update','Dark2\BackController@OrderUpdate');
+        Route::delete('order/{id}/delete','Dark2\BackController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','Dark2\BackController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','Dark2\BackController@AppointmentUpdate');
+
+        
+
+        Route::get('test','Dark2\BackController@Xls2Db');
     });
 });
 
