@@ -140,9 +140,12 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('order/{pro_id}/appointment','Dark2\BackController@Appointment');  // 後臺預約
         Route::post('order/{pro_id}/appointmentUpdate','Dark2\BackController@AppointmentUpdate');
 
-        
+        // 報表列印
+        Route::get('print','Dark2\BackController@Print');
+        Route::get('table','Dark2\BackController@Table');
 
-        Route::get('test','Dark2\BackController@Xls2Db');
+        //Route::get('test','Dark2\BackController@Xls2Db');
+        //Route::get('cup','Dark2\BackController@Db2Coupon');
     });
 });
 

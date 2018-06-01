@@ -100,12 +100,6 @@ class BackController extends Controller
 
 
     /**
-     * XLS data.
-     */
-
-
-
-    /**
      * 產品分類.
      */
     public function Pros(Request $request){
@@ -184,8 +178,28 @@ class BackController extends Controller
     }
 
 
-
-
+    /**
+     * coupon
+     */
+    public function coupons(Request $request){
+        if($request->isMethod('post') && $request->has('id')){
+            foreach($request->id as $row){
+                d2pro::where('id',$row)->update(['open'=>1]);
+            }
+        }
+        $pros = d2pro::where('id','>',0);
+        if($request->has('day')) $pros = $pros->where('day',$request->day);
+        if($request->has('dayparts')) $pros = $pros->where('dayparts',$request->dayparts);
+        if($request->has('order')){
+            $order = explode('|',$request->order);
+            if(count($order)>0){
+                $pros = $pros->OrderBy($order[0],$order[1]);
+            }
+        } else { $pros = $pros->orderBy('updated_at','desc'); }
+        
+        $pros = $pros->paginate($this->perpage);
+        return view('Dark2.backend.coupons',compact('pros','request'));
+    }
 
 
 
@@ -197,17 +211,154 @@ class BackController extends Controller
     /**
      * orders.
      */
+    public function Orders(Request $request,$id){
+        $order = d2order::orderBy('updated_at','desc')->where('pro_id',$id);
+        $order = $order->get();
+        return view('dark2.backend.orders',compact('order'));
+    }
+    public function OrderEdit(Request $request,$id){
+        $order = collect();
+        if(is_numeric($id) && $id>0){
+            if(d2order::where('id',$id)->count()>0){
+                $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id')->select('d2order.id','day','dayparts','rangend','rangstart','name','tel','email','sn','meal','item','notes','story','paytype','paystatus','manage','result','pople','mv')->find($id);
+            } else {
+                abort(404);
+            }
+        }
+        return view('dark2.backend.order',compact('order'));
+    }
+    public function OrderUpdate(Request $request,$id){
+
+        $data = [
+            'paystatus' => $request->paystatus,
+            'manage'    => $request->manage,
+            'paytype'   => $request->paytype,
+        ];
+        if(is_numeric($id) && $id>0){
+            d2order::where('id',$id)->update($data);
+            $order = d2order::find($id);
+        } 
+        if($request->has('qxx') && $request->qxx != ''){
+            return redirect('/dark2/print?'.$request->qxx)->with('message','編輯完成!');
+        } else {
+            return redirect('/dark2/orders/'.$order->tfopro_id)->with('message','編輯完成!');
+        }
+    }
+    public function OrderDelete(Request $request,$id){
+        d2order::where('id',$id)->delete();
+        return Response::json(['message'=> '訂單已刪除'], 200);
+    }
+
+    
+    public function Appointment(Request $request,$pro_id){
+        $pro = d2pro::find($pro_id);
+        return view('dark2.backend.orderAppointment',compact('pro_id','pro'));
+    }
+    public function AppointmentUpdate(Request $request,$pro_id){
+        $data = [
+            'paystatus'  => $request->paystatus,
+            'paytype'    => $request->paytype,
+            'name'       => $request->name,
+            'tel'        => $request->tel,
+            'email'      => $request->email,
+            'sn'         => $this->GenerateSN(),
+            'tfopro_id'  => $pro_id,
+            'tfogife_id' => 0,
+            'meal'       => $request->meal,
+            'money'      => $request->money,
+            'notes'      => $request->notes,
+            'story'      => $request->story,
+            'manage'     => $request->manage,
+            'result'     => '',
+            'item'       => $request->item,
+        ];
+        $order = d2order::create($data);
+
+        if($request->paystatus == '已付款'){
+
+            $newdata = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id')->select('day','rangstart','rangend','name','email')->find($order->id);
+            $arr = [
+                'day'       => $newdata->day,
+                'rangstart' => $newdata->rangstart,
+                'rangend'   => $newdata->rangend,
+                'name'      => $newdata->name,
+                'email'     => $newdata->email,
+            ];
+            Mail::send('dark2.email.order',$arr,function($m) use ($arr){
+                $m->from('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
+
+                $m->to($arr['email'], $arr['name']);
+                $m->subject('Table For One 訂位成功 !');
+            });
+        }
+
+        return redirect('/dark2/pros?')->with('message','新增完成!');
+    }
+
+
+    public function Print(Request $request){
+        $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','wine','d2order.created_at AS created_at','d2order.paystatus','email','d2order.sn','d2order.id','dayparts','day','email','item','paytype','code','pople','mv');
+        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
+        if($request->has('paystatus') && $request->paystatus=='已預約'){
+            $order->whereRaw("(d2order.paystatus='已付款' OR (d2order.paytype='現場付款' AND d2order.paystatus<>'取消訂位'))");
+        } elseif($request->paystatus!=''){
+            $order->where('d2order.paystatus',$request->paystatus);  
+        } 
+        if($request->has('paytype') && $request->paytype!='') $order->where('paytype',$request->paytype);
+        if($request->has('search') && $request->search!=''){
+            $search = $request->search;
+            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
+        }
+
+        if($request->has('order') && $request->order!=''){
+            $ord = explode('|',$request->order);
+            if(count($ord)>0){
+                $order = $order->OrderBy($ord[0],$ord[1]);
+            }
+        } else { $order = $order->orderBy('d2order.updated_at','desc'); }
+        $order = $order->paginate($this->perpage);
+
+        return view('dark2.backend.print',compact('order','request'));
+    }
+
+    public function Table(Request $request){
+        $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
+        $order = $order->select('rangstart','rangend','name','tel','meal','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','wine','d2order.created_at AS created_at','d2order.paystatus','email','d2order.sn','d2order.id','dayparts','day','email','item','paytype','code','pople','mv');
+        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
+        if($request->has('paystatus') && $request->paystatus=='已預約'){
+            $order->whereRaw("(d2order.paystatus='已付款' OR (d2order.paytype='現場付款' AND d2order.paystatus<>'取消訂位'))");
+        } elseif($request->paystatus!=''){
+            $order->where('d2order.paystatus',$request->paystatus);  
+        } 
+        if($request->has('paytype') && $request->paytype!='') $order->where('paytype',$request->paytype);
+        if($request->has('search') && $request->search!=''){
+            $search = $request->search;
+            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
+        }
+
+        if($request->has('order') && $request->order!=''){
+            $ord = explode('|',$request->order);
+            if(count($ord)>0){
+                $order = $order->OrderBy($ord[0],$ord[1]);
+            }
+        } else { $order = $order->orderBy('d2order.updated_at','desc'); }
+        $order = $order->get();
+        
+
+        return view('dark2.backend.table',compact('order','request'));
+    }
 
 
 
 
 
 
-
-
-
-
-
+/*
     public function Xls2Db(Request $request){
         $filePath = 'storage/app/dark2_report.xlsx';
         Excel::load($filePath, function($reader) {
@@ -243,8 +394,48 @@ class BackController extends Controller
     }
 
     public function Db2Coupon(Request $request){
-        
+        $xls = d2xls::select('ot1','ot2','ot3','id','ot4','ot5')->get();
+        foreach($xls as $row){
+            $data = [
+                'xls_id' => $row->id
+            ];
+            if($row->ot1 == 1){
+                $data['wine'] = 0;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+            } elseif($row->ot2 == 1){
+                $data['wine'] = 0;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+                $data['wine'] = 0;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+            } elseif($row->ot3 == 1){
+                $data['wine'] = 1;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+            } elseif($row->ot4 == 1){
+                $data['wine'] = 1;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+                $data['wine'] = 1;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+            } elseif($row->ot5 == 1){
+                $data['wine'] = 1;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+                $data['wine'] = 1;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+                $data['wine'] = 1;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+            }
+        }
+
     }
+    */
     private function GenerateGiftCodeSN(){
         $random = 8;$SN = '';
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -252,7 +443,7 @@ class BackController extends Controller
             $b = $characters[rand(0, strlen($characters)-1)];
             $SN .= $b;
         }
-        if(TFOGift::where('code',$SN)->count()>0){
+        if(d2coupon::where('code',$SN)->count()>0){
             $this->GenerateGiftCodeSN();
         } else {
             return $SN;

@@ -165,21 +165,21 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <div class="date">06/04</div>
+                                    <div class="date">06/15</div>
                                     <div class="dot"></div>
                                     <p>
-                                        預售截止
+                                        預售截止 (從6/4延長至6/15)
                                     </p>
                                 </li>
                                 <li class="important">
-                                    <div class="date">06/05</div>
+                                    <div class="date">06/16</div>
                                     <div class="dot"></div>
                                     <p>
                                         第一階段發放序號劃位:前500名購買者
                                     </p>
                                 </li>
                                 <li class="important">
-                                    <div class="date">06/15</div>
+                                    <div class="date">06/20</div>
                                     <div class="dot"></div>
                                     <p>
                                         第二階段發放序號劃位:其餘預售購買者
@@ -193,7 +193,7 @@
                                     </p>
                                 </li>
                                 <li class="important">
-                                    <div class="date">07/01</div>
+                                    <div class="date">07/04</div>
                                     <div class="dot"></div>
                                     <p>
                                         快閃開始
