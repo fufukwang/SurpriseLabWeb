@@ -209,7 +209,7 @@ class BackController extends Controller
     public function Orders(Request $request,$id){
         $order = d2order::orderBy('updated_at','desc')->where('pro_id',$id);
         $order = $order->get();
-        return view('dark2.backend.orders',compact('order'));
+        return view('Dark2.backend.orders',compact('order'));
     }
     public function OrderEdit(Request $request,$id){
         $order = collect();
@@ -220,7 +220,7 @@ class BackController extends Controller
                 abort(404);
             }
         }
-        return view('dark2.backend.order',compact('order'));
+        return view('Dark2.backend.order',compact('order'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -247,7 +247,7 @@ class BackController extends Controller
     
     public function Appointment(Request $request,$pro_id){
         $pro = d2pro::find($pro_id);
-        return view('dark2.backend.orderAppointment',compact('pro_id','pro'));
+        return view('Dark2.backend.orderAppointment',compact('pro_id','pro'));
     }
     public function AppointmentUpdate(Request $request,$pro_id){
         $data = [
@@ -317,7 +317,7 @@ class BackController extends Controller
         } else { $order = $order->orderBy('d2order.updated_at','desc'); }
         $order = $order->paginate($this->perpage);
 
-        return view('dark2.backend.print',compact('order','request'));
+        return view('Dark2.backend.print',compact('order','request'));
     }
 
     public function Table(Request $request){
@@ -345,7 +345,7 @@ class BackController extends Controller
         $order = $order->get();
         
 
-        return view('dark2.backend.table',compact('order','request'));
+        return view('Dark2.backend.table',compact('order','request'));
     }
 
 
