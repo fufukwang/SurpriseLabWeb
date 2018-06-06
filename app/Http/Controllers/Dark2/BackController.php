@@ -182,23 +182,18 @@ class BackController extends Controller
      * coupon
      */
     public function coupons(Request $request){
-        if($request->isMethod('post') && $request->has('id')){
-            foreach($request->id as $row){
-                d2pro::where('id',$row)->update(['open'=>1]);
-            }
+
+        $coupons = d2coupon::orderBy('updated_at','desc');
+        //if($request->has('day')) $coupons = $coupons->where('created_at','like',$request->day.'%');
+        if($request->has('search')){
+            $search = $request->search;
+            $coupons = $coupons->whereRaw("(
+                code LIKE '%{$search}%'
+            )");
         }
-        $pros = d2pro::where('id','>',0);
-        if($request->has('day')) $pros = $pros->where('day',$request->day);
-        if($request->has('dayparts')) $pros = $pros->where('dayparts',$request->dayparts);
-        if($request->has('order')){
-            $order = explode('|',$request->order);
-            if(count($order)>0){
-                $pros = $pros->OrderBy($order[0],$order[1]);
-            }
-        } else { $pros = $pros->orderBy('updated_at','desc'); }
-        
-        $pros = $pros->paginate($this->perpage);
-        return view('Dark2.backend.coupons',compact('pros','request'));
+
+        $coupons = $coupons->paginate($this->perpage);
+        return view('Dark2.backend.coupons',compact('coupons','request'));
     }
 
 
@@ -220,7 +215,7 @@ class BackController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(d2order::where('id',$id)->count()>0){
-                $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id')->select('d2order.id','day','dayparts','rangend','rangstart','name','tel','email','sn','meal','item','notes','story','paytype','paystatus','manage','result','pople','mv')->find($id);
+                $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id')->select('d2order.id','day','dayparts','rangend','rangstart','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople')->find($id);
             } else {
                 abort(404);
             }
@@ -230,9 +225,9 @@ class BackController extends Controller
     public function OrderUpdate(Request $request,$id){
 
         $data = [
-            'paystatus' => $request->paystatus,
+            'pay_status' => $request->pay_status,
             'manage'    => $request->manage,
-            'paytype'   => $request->paytype,
+            'pay_type'   => $request->pay_type,
         ];
         if(is_numeric($id) && $id>0){
             d2order::where('id',$id)->update($data);
@@ -256,15 +251,15 @@ class BackController extends Controller
     }
     public function AppointmentUpdate(Request $request,$pro_id){
         $data = [
-            'paystatus'  => $request->paystatus,
-            'paytype'    => $request->paytype,
+            'pay_status'  => $request->pay_status,
+            'pay_type'    => $request->pay_type,
             'name'       => $request->name,
             'tel'        => $request->tel,
             'email'      => $request->email,
             'sn'         => $this->GenerateSN(),
             'tfopro_id'  => $pro_id,
             'tfogife_id' => 0,
-            'meal'       => $request->meal,
+            'meat'       => $request->meat,
             'money'      => $request->money,
             'notes'      => $request->notes,
             'story'      => $request->story,
@@ -274,7 +269,7 @@ class BackController extends Controller
         ];
         $order = d2order::create($data);
 
-        if($request->paystatus == '已付款'){
+        if($request->pay_status == '已付款'){
 
             $newdata = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id')->select('day','rangstart','rangend','name','email')->find($order->id);
             $arr = [
@@ -300,15 +295,15 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','wine','d2order.created_at AS created_at','d2order.paystatus','email','d2order.sn','d2order.id','dayparts','day','email','item','paytype','code','pople','mv');
+        $order = $order->select('rangstart','rangend','name','tel','meat','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','d2order.created_at AS created_at','d2order.pay_status','email','d2order.sn','d2order.id','dayparts','day','email','pay_type','pople');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
-        if($request->has('paystatus') && $request->paystatus=='已預約'){
-            $order->whereRaw("(d2order.paystatus='已付款' OR (d2order.paytype='現場付款' AND d2order.paystatus<>'取消訂位'))");
-        } elseif($request->paystatus!=''){
-            $order->where('d2order.paystatus',$request->paystatus);  
+        if($request->has('pay_status') && $request->pay_status=='已預約'){
+            $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
+        } elseif($request->pay_status!=''){
+            $order->where('d2order.pay_status',$request->pay_status);  
         } 
-        if($request->has('paytype') && $request->paytype!='') $order->where('paytype',$request->paytype);
+        if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
@@ -327,15 +322,15 @@ class BackController extends Controller
 
     public function Table(Request $request){
         $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meal','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','wine','d2order.created_at AS created_at','d2order.paystatus','email','d2order.sn','d2order.id','dayparts','day','email','item','paytype','code','pople','mv');
+        $order = $order->select('rangstart','rangend','name','tel','meat','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','d2order.created_at AS created_at','d2order.pay_status','email','d2order.sn','d2order.id','dayparts','day','email','pay_type','pople');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
-        if($request->has('paystatus') && $request->paystatus=='已預約'){
-            $order->whereRaw("(d2order.paystatus='已付款' OR (d2order.paytype='現場付款' AND d2order.paystatus<>'取消訂位'))");
-        } elseif($request->paystatus!=''){
-            $order->where('d2order.paystatus',$request->paystatus);  
+        if($request->has('pay_status') && $request->pay_status=='已預約'){
+            $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
+        } elseif($request->pay_status!=''){
+            $order->where('d2order.pay_status',$request->pay_status);  
         } 
-        if($request->has('paytype') && $request->paytype!='') $order->where('paytype',$request->paytype);
+        if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");

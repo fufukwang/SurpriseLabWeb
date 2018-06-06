@@ -39,23 +39,27 @@
                                     <div class="sticky-table-header fixed-solution" style="width: auto;"><table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
+                                                <th>流水號</th>
                                                 <th>姓名</th>
                                                 <th>訂購內容</th>
                                                 <th>電話 / 信箱</th>
                                                 <th>酷碰</th>
+                                                <th>寄送狀態</th>
+                                                <th>功能</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 @forelse ($mes as $row)
                                             <tr id="tr_{{ $row->id }}">
+                                                <td>{{ $row->id }}</td>
                                                 <td>{{ $row->name }}</td>
                                                 <td>{{ $row->detail }}</td>
                                                 <td>{{ $row->tel }} / {{ $row->email }}</td>
-                                                <td>{{ $row->name }}</td>
-                                                <!--td class="actions">
-                                                    <a class="btn btn-primary btn-xs" href="/dark2/contact/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
-                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
-                                                </td-->
+                                                <td>@forelse(App\model\d2coupon::where('xls_id',$row->id)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif<br >@empty 無優惠券 @endforelse</td>
+                                                <td><input type="checkbox" class="sendbox" value="{{ $row->id }}" @if($row->is_send)checked @endif /></td>
+                                                <td class="actions">
+                                                    <a class="btn btn-primary btn-xs">寄送優惠券</a>
+                                                </td>
                                             </tr>
 @empty
 <tr><td colspan="6" align="center">尚無資料</td></tr>

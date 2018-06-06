@@ -69,7 +69,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">主餐</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="@if(isset($order->meal)) @if($order->mv!=''){{implode(",",json_decode($order->mv))}}@else @if($order->meal=='V')素@else 葷 @endif @endif @endif">
+                                                    <input type="text" class="form-control" readonly value="{{ implode('/',json_decode($order->meat,true)) }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -79,41 +79,28 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">訂餐類型</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->item or '' }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
                                                 <label class="control-label col-sm-4">備註</label>
                                                 <div class="col-sm-8">
                                                     <textarea class="form-control" readonly style="min-height:120px;">{{ $order->notes or '' }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">故事</label>
-                                                <div class="col-sm-8">
-                                                    <textarea class="form-control" readonly style="min-height:120px;">{{ $order->story or '' }}</textarea>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
                                                 <label class="control-label col-sm-4">付款方式</label>
                                                 <div class="col-sm-8">
-                                                    <select name="paytype" class="form-control">
-                                                        <option value="後台編輯"@if(isset($order->paytype) && $order->paytype=='後台編輯') selected @endif>後台編輯</option>
-                                                        <option value="信用卡"@if(isset($order->paytype) && $order->paytype=='信用卡') selected @endif>信用卡</option>
-                                                        <option value="現場付款"@if(isset($order->paytype) && $order->paytype=='現場付款') selected @endif>現場付款</option>
-                                                        <option value="禮物卡"@if(isset($order->paytype) && $order->paytype=='禮物卡') selected @endif>禮物卡</option>
+                                                    <select name="pay_type" class="form-control">
+                                                        <option value="後台編輯"@if(isset($order->pay_type) && $order->pay_type=='後台編輯') selected @endif>後台編輯</option>
+                                                        <option value="信用卡"@if(isset($order->pay_type) && $order->pay_type=='信用卡') selected @endif>信用卡</option>
+                                                        <option value="現場付款"@if(isset($order->pay_type) && $order->pay_type=='現場付款') selected @endif>現場付款</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">付款狀態</label>
                                                 <div class="col-sm-8">
-                                                    <select name="paystatus" class="form-control">
-                                                        <option value="未完成"@if(isset($order->paystatus) && $order->paystatus=='未完成') selected @endif>未完成</option>
-                                                        <option value="已付款"@if(isset($order->paystatus) && $order->paystatus=='已付款') selected @endif>已付款</option>
-                                                        <option value="取消訂位"@if(isset($order->paystatus) && $order->paystatus=='取消訂位') selected @endif>取消訂位</option>
+                                                    <select name="pay_status" class="form-control">
+                                                        <option value="未完成"@if(isset($order->pay_status) && $order->pay_status=='未完成') selected @endif>未完成</option>
+                                                        <option value="已付款"@if(isset($order->pay_status) && $order->pay_status=='已付款') selected @endif>已付款</option>
+                                                        <option value="取消訂位"@if(isset($order->pay_status) && $order->pay_status=='取消訂位') selected @endif>取消訂位</option>
                                                     </select>
                                                 </div>
                                             </div>

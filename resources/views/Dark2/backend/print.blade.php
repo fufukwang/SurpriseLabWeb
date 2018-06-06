@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/TableForOne/print" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/dark2/print" id="SearchForm">
 
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -35,12 +35,12 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-sm-1">
-                                                <select name="paystatus" class="form-control">
+                                                <select name="pay_status" class="form-control">
                                                     <option value="">狀態</option>
-                                                    <option value="已預約"@if(isset($request->paystatus) && $request->paystatus=='已預約') selected @endif>已預約</option>
-                                                    <option value="已付款"@if(isset($request->paystatus) && $request->paystatus=='已付款') selected @endif>已付款</option>
-                                                    <option value="未完成"@if(isset($request->paystatus) && $request->paystatus=='未完成') selected @endif>未完成</option>
-                                                    <option value="取消訂位"@if(isset($request->paystatus) && $request->paystatus=='取消訂位') selected @endif>取消訂位</option>
+                                                    <option value="已預約"@if(isset($request->pay_status) && $request->pay_status=='已預約') selected @endif>已預約</option>
+                                                    <option value="已付款"@if(isset($request->pay_status) && $request->pay_status=='已付款') selected @endif>已付款</option>
+                                                    <option value="未完成"@if(isset($request->pay_status) && $request->pay_status=='未完成') selected @endif>未完成</option>
+                                                    <option value="取消訂位"@if(isset($request->pay_status) && $request->pay_status=='取消訂位') selected @endif>取消訂位</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
@@ -53,12 +53,11 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
-                                                <select name="paytype" class="form-control">
+                                                <select name="pay_type" class="form-control">
                                                     <option value="">付款類型</option>
-                                                    <option value="禮物卡"@if(isset($request->paytype) && $request->paytype=='禮物卡') selected @endif>禮物卡</option>
-                                                    <option value="信用卡"@if(isset($request->paytype) && $request->paytype=='信用卡') selected @endif>信用卡</option>
-                                                    <option value="現場付款"@if(isset($request->paytype) && $request->paytype=='現場付款') selected @endif>現場付款</option>
-                                                    <option value="後台編輯"@if(isset($request->paytype) && $request->paytype=='後台編輯') selected @endif>後台編輯</option>
+                                                    <option value="信用卡"@if(isset($request->pay_type) && $request->pay_type=='信用卡') selected @endif>信用卡</option>
+                                                    <option value="現場付款"@if(isset($request->pay_type) && $request->pay_type=='現場付款') selected @endif>現場付款</option>
+                                                    <option value="後台編輯"@if(isset($request->pay_type) && $request->pay_type=='後台編輯') selected @endif>後台編輯</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2">
@@ -92,7 +91,7 @@
                                                 <th>主餐</th>
                                                 <th>付款狀態</th>
                                                 <th>餐飲備註</th>
-                                                <th>禮物卡</th>
+                                                <th>優惠券</th>
                                                 <th>註記</th>
                                                 <th data-orderable="false">功能</th>
                                             </tr>
@@ -104,14 +103,13 @@
                                                 <td>{{ $row->day }}<br />{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
                                                 <td>{{ $row->name }}</td>
                                                 <td>phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
-                                                <td>@if($row->mv!=''){{implode(",",json_decode($row->mv))}}@else @if($row->meal=='V')素@else 葷 @endif @endif <br >{{ $row->item }}</td>
-                                                <td class="@if($row->paystatus=='已付款')success @elseif($row->paystatus=='未完成')danger @elseif($row->paystatus=='取消訂位')warning @endif">{{ $row->paytype }} / {{ $row->paystatus }}</td>
+                                                <td>{{ implode('/',json_decode($row->meat,true)) }}</td>
+                                                <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}</td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
-                                                <td>{{ $row->code }}</td>
+                                                <th>@forelse(App\model\d2coupon::where('order_id',$row->sn)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif<br >@empty 無使用優惠券 @endforelse</th>
                                                 <td>{{ $row->manage }}</td>
-                                                
                                                 <td class="actions">
-                                                    <a class="btn btn-primary btn-xs" href="/TableForOne/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-primary btn-xs" href="/dark2/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
@@ -204,7 +202,7 @@ $(function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此訂單")) {
              $.ajax({
-                url: '/TableForOne/order/'+id+'/delete',
+                url: '/dark2/order/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
@@ -237,10 +235,10 @@ $(function(){
 });
 function submitSearchForm(){
     $('#SearchForm').attr('target','_blank')
-    $('#SearchForm').attr('action','/TableForOne/table')
+    $('#SearchForm').attr('action','/dark2/table')
     $('#SearchForm').submit();
     $('#SearchForm').attr('target','_top');
-    $('#SearchForm').attr('action','/TableForOne/print');
+    $('#SearchForm').attr('action','/dark2/print');
 }
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
 		</script>

@@ -82,12 +82,10 @@
                                                     <td>@if($row->open>0) 開放中 @else 關閉中 @endif</td>
                                                     <td>{{ $row->day }}</td>
                                                     <td>{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
-                                                    <td>@if(App\model\TFOOrder::whereRaw("(`paystatus`='已付款' OR (paytype='現場付款' AND paystatus
-                                                        <>'取消訂位')) AND `tfopro_id`=".$row->id)->count('pople')>0){{ App\model\TFOOrder::whereRaw("(`paystatus`='已付款' OR (paytype='現場付款' AND paystatus
-                                                        <>'取消訂位')) AND `tfopro_id`=".$row->id)->sum('pople') }}@else 0 @endif / {{ $row->sites }}</td>
+                                                    <td>{{ App\model\d2pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(d2order) WHERE d2order.pro_id=d2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
                                                     <td>{{ $row->money }} / {{ $row->cash }} </td>
                                                     <td class="actions">
-                                                        <a class="btn btn-purple btn-xs" href="/dark2/order/{{ $row->id }}/appointment">預約席</a>
+                                                        <!--a class="btn btn-purple btn-xs" href="/dark2/order/{{ $row->id }}/appointment">預約席</a-->
                                                         <a class="btn btn-info btn-xs" href="/dark2/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
                                                         <a class="btn btn-primary btn-xs" href="/dark2/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                         <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
@@ -183,7 +181,7 @@
             });
 
         });
-        @if(Session::has('message')) alert('{{ Session::get(' message ') }}'); @endif
+        @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
 
     </script>
 

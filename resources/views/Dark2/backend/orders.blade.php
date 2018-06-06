@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/dark2/rooms">
+                                        <div class="btn-group focus-btn-group"><form action="/dark2/pros">
 
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -58,7 +58,7 @@
                                                 <td>{{ $row->name }}</td>
                                                 <td>{{ $row->tel }}</td>
                                                 <td>{{ $row->email }}</td>
-                                                <td>{{ $row->paytype }} / {{ $row->paystatus }}</td>
+                                                <td>{{ $row->pay_type }} / {{ $row->pay_status }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/dark2/order/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>

@@ -314,7 +314,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
         Route::get('index.html',function(){ return view('Dark2.frontend.home'); });
         Route::get('/',function(){ return view('Dark2.frontend.home'); });
-        //Route::get('reservation.html',function(){ return view('frontend.reservation'); });
+        Route::get('reservation.html',function(){ return view('Dark2.frontend.reservation'); });
         Route::get('people.html',function(){ return view('Dark2.frontend.people'); });
         //Route::get('event.html',function(){ return view('frontend.event'); });
         //Route::get('event-landing.html',function(){ return view('frontend.event-landing'); });
@@ -343,7 +343,8 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('food.html',function(){ App::setLocale('en'); return view('Dark2.frontend.food'); });
         });
 
-        
+        Route::get('GetAjaxData','Dark2\HomeController@GetAjaxData');
+        Route::post('ReOrderData','Dark2\HomeController@ReOrderData');
         Route::post('contactstore','Dark2\HomeController@contactstore');
     });
     /*
