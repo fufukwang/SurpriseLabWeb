@@ -7,7 +7,7 @@
     margin: 0 auto;
     text-align: center;
     color: #999;}
-.rules-nav li{border-right: solid 1px #777;}
+.rules-nav li{border-right: solid 1px #777;cursor: pointer;}
 ol{list-style:decimal;text-align: left;margin:5px 8px;}
 ol li{margin:15px 0;letter-spacing:1px;}
 h4{text-align: left;margin:30px 0 15px;font-weight:bold;}
