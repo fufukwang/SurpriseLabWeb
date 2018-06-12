@@ -99,14 +99,14 @@
                     {{ trans('front.reservation.slug1title') }}
                 </p>    
                 <table>
-                    <tbody><tr>
+                    <tbody><!--tr>
                         <td width="100px"> 每位單價：</td>
                         <td>1700+10% 線上預付</td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>2000+10% 現場付現</td>
-                    </tr>
+                    </tr-->
                     <tr>
                         <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，可享折抵優惠。</td>
                     </tr>
