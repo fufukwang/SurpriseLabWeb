@@ -20,12 +20,12 @@
 
             <div class="lightbox-container">
                 <div class="lightbox-header">
-                    隱私權政策
+                    隱私權政策 
                 </div>
 
                 <div class="lightbox-content">
                     <p>
-                        無光晚餐官方網站 http://www.surpriselab.com.tw/dininginthedark2（以下稱「無光晚餐網站」）為驚喜製造有限公司（以下稱「本公司」）所經營，無光晚餐網站尊重您的隱私權，並致力於保護您的個人資料。於使用無光晚餐網站前，請您詳細閱讀本條之「隱私權政策」（以下稱「本政策」），並隨時注意無光晚餐網站所公告之相關修改或變更，本公司有權於任何時間修改或變更本隱私權政策之內容。當您使用無光晚餐網站時，或於任何修改、變更後繼續使用無光晚餐網站，即表示您已閱讀、瞭解並同意接受本政策，或該等修改、變更後之內容，及同意無光晚餐網站依據本政策蒐集、處理與利用您的個人資料；如果您無法遵守或不同意本政策之內容，或您所屬的國家、地區排除本政策內容之全部或一部時，請您立即停止使用無光晚餐網站。此外，無光晚餐網站於未經您許可的情形下，絕不會將您的個人資料提供予任何第三方。
+                        無光晚餐官⽅網站 http://www.surpriselab.com.tw/dininginthedark2（以下稱「無光晚餐網站」）為驚喜製造有限公司（以下稱「本公司」）所經營，無光晚餐網站尊重您的隱私權，並致⼒於保護您的個⼈資料。於使⽤無光晚餐網站前，請您詳細閱讀本條之「隱私權政策」（以下稱「本政策」），並隨時注意無光晚餐網站所公告之相關修改或變更，本公司有權於任何時間修改或變更本隱私權政策之內容。當您使⽤無光晚餐網站時，或於任何修改、變更後繼續使⽤無光晚餐網站，即表⽰您已閱讀、瞭解並同意接受本政策，或該等修改、變更後之內容，及同意無光晚餐網站依據本政策蒐集、處理與利⽤您的個⼈資料；如果您無法遵守或不同意本政策之內容，或您所屬的國家、地區排除本政策內容之全部或⼀部時，請您⽴即停⽌使⽤無光晚餐網站。此外，無光晚餐網站於未經您許可的情形下，絕不會將您的個⼈資料提供予任何第三⽅。
                     </p>
                     <p>
                         若您為未滿二十歲或無完全行為能力，除應符合上述規定外，請於您的法定代理人或監護人閱讀、瞭解並同意本政策及其後修改、變更後之所有內容後，方得使用或繼續使用無光晚餐網站，否則請立即停止使用無光晚餐網站。當您使用或繼續使用無光晚餐網站時，即視為您的法定代理人或監護人已閱讀、瞭解並同意接受本政策及其後修改、變更之所有內容。個人資料之類別：當您使用無光晚餐網站之服務，本公司會請您提供您下列類別的個人資料，如：<br>
@@ -98,7 +98,22 @@
                 <p>
                     {{ trans('front.reservation.slug1title') }}
                 </p>    
-                {!! trans('front.reservation.slug1table') !!}
+                <table>
+                    <tbody><tr>
+                        <td width="100px"> 每位單價：</td>
+                        <td>1700+10% 線上預付</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2000+10% 現場付現</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，可享折抵優惠。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:service@surpriselab.com.tw">service@surpriselab.com.tw</a></td>
+                    </tr>
+                </tbody></table>
                 <p style="margin-top:25px;">
                     <input id="agree" type="checkbox">
                     <label class="agree-check" for="agree"><span></span></label>
@@ -277,7 +292,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <textarea rows="5" name="Notes" id="Notes"></textarea>
+                            <textarea rows="5" name="Notes" id="Notes" placeholder="⻝材過敏、特殊飲⻝禁忌。
+ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
                         </td>
                     </tr>
                     <!--tr>
@@ -370,9 +386,9 @@
                 </table>
 
                 <a href="javascript:;" id="fourth-btn-back"><div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">{{ trans('front.reservation.prev') }}</div></a>
-                <a href="javascript:;" id="fourth-btn-online"><div class="btn btn-standard btn-pay">{!! trans('front.reservation.Online') !!}<span id="CardView"></span></div></a>
-                <a href="javascript:;" id="fourth-btn-onsite"><div class="btn btn-standard btn-pay btn-negative">{!! trans('front.reservation.Self') !!}<span id="MoneyView"></span></div></a>
-                <a href="javascript:;" id="fourth-btn-zero"><div class="btn btn-standard btn-pay">確認訂單<br />NT歸零才能送<!--span id="MoneyView"></span--></div></a>
+                <!--a href="javascript:;" id="fourth-btn-online"><div class="btn btn-standard btn-pay">{!! trans('front.reservation.Online') !!}<span id="CardView"></span></div></a>
+                <a href="javascript:;" id="fourth-btn-onsite"><div class="btn btn-standard btn-pay btn-negative">{!! trans('front.reservation.Self') !!}<span id="MoneyView"></span></div></a-->
+                <a href="javascript:;" id="fourth-btn-zero"><div class="btn btn-standard btn-pay">確認訂單<br />NT <span id="MoneyView"></span></div></a>
             </div>
         
 

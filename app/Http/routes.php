@@ -12,6 +12,8 @@
 */
 if(App::environment('local')) {
     $url = 'suprise.local';
+}else if(App::environment('bymail')) {
+    $url = 'suprise';
 }else if(App::environment('tester')) {
     $url = 'hellokiki.info';
 }else if(App::environment('production')) {
@@ -119,6 +121,10 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('backmes','Dark2\BackController@BackMes');
         Route::get('backme/{id}','Dark2\BackController@BackMe');
         Route::delete('backme/{id}/delete','Dark2\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','Dark2\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','Dark2\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','Dark2\BackController@sendManageUpdate');
+        Route::post('backmes/CanelCoupon','Dark2\BackController@CanelCoupon');
 
         // coupon
         Route::get('coupons','Dark2\BackController@Coupons');
@@ -137,8 +143,8 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('order/{id}/edit','Dark2\BackController@OrderEdit');
         Route::post('order/{id}/update','Dark2\BackController@OrderUpdate');
         Route::delete('order/{id}/delete','Dark2\BackController@OrderDelete');
-        Route::get('order/{pro_id}/appointment','Dark2\BackController@Appointment');  // 後臺預約
-        Route::post('order/{pro_id}/appointmentUpdate','Dark2\BackController@AppointmentUpdate');
+        //Route::get('order/{pro_id}/appointment','Dark2\BackController@Appointment');  // 後臺預約
+        //Route::post('order/{pro_id}/appointmentUpdate','Dark2\BackController@AppointmentUpdate');
 
         // 報表列印
         Route::get('print','Dark2\BackController@Print');
@@ -311,6 +317,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('about.html',function(){ return view('Dark2.frontend.home'); });
         Route::get('chef.html',function(){ return view('Dark2.frontend.chef'); });
         Route::get('rules.html',function(){ return view('Dark2.frontend.rules'); });
+        Route::get('rules0616.html',function(){ return view('Dark2.frontend.rules0616'); });
         Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
         Route::get('index.html',function(){ return view('Dark2.frontend.home'); });
         Route::get('/',function(){ return view('Dark2.frontend.home'); });

@@ -83,6 +83,10 @@ $(function(){
             $('#CardView').text(money);
             $('#MoneyView').data('money',cash).data('cut1',0).data('cut2',0);
             $('#CardView').data('money',money).data('cut1',0).data('cut2',0);
+            coupon = [];
+            discount = '';
+            $('#discountList').text('');
+            $('#couponList').html('');
             ChangeSectionNav('fourth','third',3);
         }
     });
@@ -130,8 +134,9 @@ $(function(){
     $('#CouponBtn').bind('click',function(){
         $.blockUI();
         var code = $('#code').val().toLowerCase();
-        if($('#CardView').text()==0){
+        if($('#MoneyView').text()==0){
             alert('已不需要使用優惠券!');
+            $.unblockUI();
             return false;
         }
         if(code!=''){
@@ -144,7 +149,7 @@ $(function(){
                 case 'vogueinthedark': cut = 100; discount = 'vogueinthedark'; break;
                 case 'sdinthedark': cut = 100; discount = 'sdinthedark'; break;
             }
-            $('#MoneyView,#CardView').data('cut2',cut);
+            if($('#MoneyView').data('cut2') == 0 || cut>0) $('#MoneyView,#CardView').data('cut2',cut);
             changeMoneyView();
             if(discount != '' && cut > 0){
                 $('#discountList').text('折扣碼:'+discount+'折扣 ' +cut+ ' 元');
@@ -164,6 +169,8 @@ $(function(){
                         if(data.wine>0) wine = '(含調飲)';
                         $('#couponList').append('優惠序號'+ num +':'+code+'雙人套票'+wine+'<br>');
             
+                    } else {
+                        alert('優惠碼 '+code+' 無法使用!');
                     }
                 },'json');
             }
@@ -317,6 +324,10 @@ function changeMoneyView(){
     $('#MoneyView').text(Math.max(money,0));
     var money = $('#CardView').data('money') - $('#CardView').data('cut1') - $('#CardView').data('cut2');
     $('#CardView').text(Math.max(money,0));
+    if($('#MoneyView').text() == 0){
+        $('#fourth-btn-online').hide();
+        $('#fourth-btn-onsite').html('<div class="btn btn-standard btn-pay" style="height:54px;line-height:39px">完成劃位</div>');
+    }
 }
 
 function ChangeSectionNav(show,hide,nav){

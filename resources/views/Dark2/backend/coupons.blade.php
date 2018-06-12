@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/darks/coupons" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/dark2/coupons" id="SearchForm">
 
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -55,6 +55,7 @@
                                                 <th>Code</th>
                                                 <th>含飲料</th>
                                                 <th>兌換日期</th>
+                                                <th>訂單編號</th>
                                                 <!--th>功能</th-->
                                             </tr>
                                         </thead>
@@ -67,6 +68,7 @@
                                                     {{ App\model\d2order::where('sn',$row->order_id)->first()->created_at }}
                                                 @else 尚未兌換
                                                 @endif</td>
+                                                <th>{{ $row->order_id }}</th>
                                                 <!--td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
@@ -135,7 +137,6 @@
 
         <script src="/backstage/js/jquery.core.js"></script>
         <script src="/backstage/js/jquery.app.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
         <!-- Notification js -->
         <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
         <script src="/backstage/plugins/notifications/notify-metro.js"></script>
@@ -152,7 +153,6 @@ $(function(){
         },function(data){
             $.Notification.notify('success','bottom left','已更新', '發送狀態已更新')
         },'json');
-        console.log(send);
     });
     $('.btn-danger').bind('click',function(){
         var id = $(this).data('id');

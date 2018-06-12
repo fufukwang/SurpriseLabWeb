@@ -137,10 +137,10 @@ class HomeController extends Controller
 
             if($request->Pay == 'onsite'){
                 $pay_type = '現場付款';
-                $money = $act->cash * $people;
+                $money = $act->cash * $people * 1.1;
             } else {
                 $pay_type = '信用卡';
-                $money = $act->money * $people;
+                $money = $act->money * $people * 1.1;
             }
             $cut1 = 0; $cut2 = 0;
             // 確認庫碰碼
@@ -152,9 +152,9 @@ class HomeController extends Controller
                         $coupon++;
                         d2coupon::where('code',$value)->where('order_id',0)->update(['order_id'=>$count]);
                         if($request->Pay == 'onsite'){
-                            $cut1 += $act->cash * 2;
+                            $cut1 += $act->cash * 2 * 1.1;
                         } else {
-                            $cut1 += $act->money * 2;
+                            $cut1 += $act->money * 2 * 1.1;
                         }
                     }
                 }
@@ -294,6 +294,26 @@ class HomeController extends Controller
                 ]);
             }
             */
+
+
+
+            if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
+                $mailer = [
+                    'day'   => $act->day.' '.substr($act->rangstart,0,5).'-'.substr($act->rangend,0,5),
+                    'pople' => $request->Pople,
+                    'email' => $data['email'],
+                    'name'  => $data['name'],
+                ];
+                Mail::send('dark2.email.order',$mailer,function($m) use ($mailer){
+                    $m->from('service@surpriselab.com.tw', '無光晚餐第二季');
+                    $m->sender('service@surpriselab.com.tw', '無光晚餐第二季');
+                    $m->replyTo('service@surpriselab.com.tw', '無光晚餐第二季');
+
+                    $m->to($mailer['email'], $mailer['name']);
+                    $m->subject('無光晚餐第二季-訂單完成信件!');
+                });
+            }
+            
 
             return Response::json(array(
                 'success'   => true,

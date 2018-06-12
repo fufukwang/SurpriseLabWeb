@@ -88,14 +88,65 @@ class BackController extends Controller
         /*
         if($request->isMethod('post') && $request->has('id')){
             foreach($request->id as $row){
-                TFOPro::where('id',$row)->update(['open'=>1]);
+                d2xls::where('id',$row)->update(['is_sent'=>1]);
             }
         }*/
         $mes = d2xls::where('id','>',0);
-
+        if($request->has('search')){
+            $search = $request->search;
+            $mes = $mes->whereRaw("(
+                name LIKE '%{$search}%' OR 
+                tel LIKE '%{$search}%' OR 
+                email LIKE '%{$search}%' OR 
+                (SELECT COUNT(id) FROM(d2coupon) WHERE code LIKE '%{$search}%' AND d2coupon.xls_id=d2xls.id)
+            )");
+        }
         
         $mes = $mes->paginate($this->perpage);
+        //dd(DB::getQueryLog());
         return view('Dark2.backend.BackMes',compact('mes','request'));
+    }
+    public function sendUpdate(Request $request,$id){
+        d2xls::where('id',$id)->update([
+            'is_sent' => $request->send
+        ]);
+        return Response::json(['message'=> '發送狀態已更新'], 200);
+    }
+    public function sendManageUpdate(Request $request,$id){
+        d2xls::where('id',$id)->update([
+            'manage' => $request->manage
+        ]);
+        return Response::json(['message'=> '已更新'], 200);
+    }
+    public function CanelCoupon(Request $request){
+        $id   = $request->xls_id;
+        $code = $request->code;
+        d2coupon::where('xls_id',$id)->where('code',$code)->update([
+            'order_id' => 0
+        ]);
+        return Response::json(['message'=> '已更新'], 200);
+    }
+    public function SentCouponCode(Request $request,$id){
+        if($request->isMethod('post')){
+            $id = $id;
+            $xls     = d2xls::find($id);
+            $coupons = d2coupon::where('xls_id',$id)->get();
+            $data = [
+                'xls'     => $xls,
+                'coupons' => $coupons,
+            ];
+            Mail::send('dark2.email.coupon',$data,function($m) use ($data){
+                $m->from('service@surpriselab.com.tw', '無光晚餐第二季');
+                $m->sender('service@surpriselab.com.tw', '無光晚餐第二季');
+                $m->replyTo('service@surpriselab.com.tw', '無光晚餐第二季');
+
+                $m->to($data['xls']->email, $data['xls']->name);
+                $m->subject('無光晚餐第二季-劃位序號信件!');
+            });
+            d2xls::where('id',$id)->update(['is_sent'=>1]);
+            return Response::json(['message'=> 'success'], 200);
+        }
+        return Response::json(['message'=> 'error'], 200);
     }
 
 
@@ -306,7 +357,7 @@ class BackController extends Controller
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
-            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
+            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -389,7 +440,7 @@ class BackController extends Controller
     }
 
     public function Db2Coupon(Request $request){
-        $xls = d2xls::select('ot1','ot2','ot3','id','ot4','ot5')->get();
+        $xls = d2xls::select('ot1','ot2','ot3','id','ot4','ot5','id')->where('gen_coup',0)->get();
         foreach($xls as $row){
             $data = [
                 'xls_id' => $row->id
@@ -427,6 +478,7 @@ class BackController extends Controller
                 $data['code'] = $this->GenerateGiftCodeSN();
                 d2coupon::insert($data);
             }
+            d2coupon::where('id',$row->id)->update(['gen_coup'=>1]);
         }
 
     }

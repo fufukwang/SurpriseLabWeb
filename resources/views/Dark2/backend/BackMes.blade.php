@@ -19,14 +19,13 @@
                         <div class="card-box">
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
-                                    <!--div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/TableForOne/rooms">
+                                    <div class="btn-toolbar">
+                                        <div class="btn-group focus-btn-group"><form action="/dark2/backmes">
 
-                                            <div class="form-group col-sm-2">
+                                            <div class="form-group col-sm-6">
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="day" id="datepicker-autoclose" value="{{ $request->day or ''}}">
-                                                        <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
+                                                        <input type="text" class="form-control" placeholder="搜尋" name="search" id="datepicker-autoclose" value="{{ $request->search or ''}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -35,7 +34,7 @@
 
 
                                         </form></div>
-                                    </div--><div class="table-responsive" data-pattern="priority-columns">
+                                    </div><div class="table-responsive" data-pattern="priority-columns">
                                     <div class="sticky-table-header fixed-solution" style="width: auto;"><table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
@@ -44,6 +43,7 @@
                                                 <th>訂購內容</th>
                                                 <th>電話 / 信箱</th>
                                                 <th>酷碰</th>
+                                                <th>註記</th>
                                                 <th>寄送狀態</th>
                                                 <th>功能</th>
                                             </tr>
@@ -54,15 +54,16 @@
                                                 <td>{{ $row->id }}</td>
                                                 <td>{{ $row->name }}</td>
                                                 <td>{{ $row->detail }}</td>
-                                                <td>{{ $row->tel }} / {{ $row->email }}</td>
-                                                <td>@forelse(App\model\d2coupon::where('xls_id',$row->id)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif<br >@empty 無優惠券 @endforelse</td>
-                                                <td><input type="checkbox" class="sendbox" value="{{ $row->id }}" @if($row->is_send)checked @endif /></td>
+                                                <td>{{ $row->tel }} <br /> {{ $row->email }}</td>
+                                                <td>@forelse(App\model\d2coupon::where('xls_id',$row->id)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif @if($coup->order_id>0) <a href="javascript:;" class="canelCoupon" data-id="{{ $row->id }}" data-code="{{ $coup->code }}"><i class="fa fa-times"></i></a> @endif<br >@empty 無優惠券 @endforelse</td>
+                                                <td class="editable" style="border:1px solid #eee" data-id="{{ $row->id }}" contenteditable="true">{!! $row->manage !!}</td>
+                                                <td><input type="checkbox" class="sendbox" value="{{ $row->id }}" @if($row->is_sent)checked @endif /></td>
                                                 <td class="actions">
-                                                    <a class="btn btn-primary btn-xs">寄送優惠券</a>
+                                                    <a href="javascript:;" class="btn btn-primary btn-xs sent_mail" data-id="{{ $row->id }}">寄送優惠券</a>
                                                 </td>
                                             </tr>
 @empty
-<tr><td colspan="6" align="center">尚無資料</td></tr>
+<tr><td colspan="7" align="center">尚無資料</td></tr>
 @endforelse
                                         </tbody>
                                     </table>
@@ -123,11 +124,15 @@
 
         <script src="/backstage/js/jquery.core.js"></script>
         <script src="/backstage/js/jquery.app.js"></script>
+        <!-- Notification js -->
+        <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
+        <script src="/backstage/plugins/notifications/notify-metro.js"></script>
 
         <script>
         $('#datatable').dataTable();
 			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 $(function(){
+    /*
     $('.btn-danger').bind('click',function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此留言?")) {
@@ -140,8 +145,53 @@ $(function(){
                 $('#tr_'+id).remove();
             });
         }
+    });*/
+
+
+    $('.canelCoupon').bind('click',function(){
+        var id   = $(this).data('id');
+        var code = $(this).data('code');
+        if(confirm("確定要移除此優惠碼的使用紀錄?!(此動作無法復原)")) {
+            $.post('/dark2/backmes/CanelCoupon',{
+                xls_id : id,
+                code   : code,
+            },function(data){
+                $('.canelCoupon[data-id="'+id+'"]').remove();
+                $.Notification.notify('success','bottom left','已更新', '備註已更新')
+            },'json');
+        }
     });
 
+    $('.editable').bind('blur',function(){
+        var val = $(this).html();
+        var id  = $(this).data('id');
+        $.post('/dark2/backmes/'+id+'/sendManageUpdate',{
+            manage : val
+        },function(data){
+            $.Notification.notify('success','bottom left','已更新', '備註已更新')
+        },'json');
+    });
+    $('.sendbox').bind('click',function(){
+        var send = $(this).prop('checked');
+        var id   = $(this).val();
+        $.post('/dark2/backmes/'+id+'/sendUpdate',{
+            send : (send ? 1 : 0)
+        },function(data){
+            $.Notification.notify('success','bottom left','已更新', '發送狀態已更新')
+        },'json');
+    });
+    $('.sent_mail').bind('click',function(){
+        var id   = $(this).data('id');
+        $.post('/dark2/backmes/'+id+'/sentcoupon',{},function(data){
+            if(data.message == 'success'){
+                $('.sendbox[value="'+id+'"]').prop('checked',true);
+                $.Notification.notify('success','bottom left','已更新', '發送狀態已更新');
+            } else {
+                $('.sendbox[value="'+id+'"]').prop('checked',false);
+                $.Notification.notify('error','bottom left','錯誤', '寄信失敗');
+            }
+        },'json');
+    });
 
 });
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif

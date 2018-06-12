@@ -65,7 +65,7 @@
                                                         <option value="午餐" data-rangstart='11:00' data-rangend='13:00'@if(isset($pro->dayparts) && $pro->dayparts=='午餐') selected @endif>午餐</option>
                                                         <option value="晚餐" data-rangstart='14:00' data-rangend='16:00'@if(isset($pro->dayparts) && $pro->dayparts=='晚餐') selected @endif>晚餐</option>
                                                         <option value="下午茶" data-rangstart='18:00' data-rangend='20:00'@if(isset($pro->dayparts) && $pro->dayparts=='下午茶') selected @endif>下午茶</option>
-                                                        <option value="特別活動" data-rangstart='18:00' data-rangend='20:00'@if(isset($pro->dayparts) && $pro->dayparts=='特別活動') selected @endif>特別活動</option>
+                                                        <!--option value="特別活動" data-rangstart='18:00' data-rangend='20:00'@if(isset($pro->dayparts) && $pro->dayparts=='特別活動') selected @endif>特別活動</option-->
                                                     </select>
                                                 </div>
                                             </div>
@@ -100,14 +100,14 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">定價</label>
                                                 <div class="col-sm-8" style="padding:0 10px;">
-                                                    <input type="text" value="{{ $pro->money or 950 }}" name="money" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"/>
+                                                    <input type="text" value="{{ $pro->money or 1700 }}" name="money" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"/>
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">現場價格</label>
                                                 <div class="col-sm-8" style="padding:0 10px;">
-                                                    <input type="text" value="{{ $pro->cash or 1100 }}" name="cash" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"/>
+                                                    <input type="text" value="{{ $pro->cash or 2000 }}" name="cash" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"/>
                                                 </div>
                                             </div>
 
