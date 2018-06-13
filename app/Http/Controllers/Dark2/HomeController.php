@@ -233,8 +233,8 @@ class HomeController extends Controller
                 //$pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
                 $postData = [
                     "prime"       => $request->prime,
-                    "partner_key" => "partner_5jNwC8sfACq49UWf9fT2MRo00lv1M28kYkGtGfdJ5QRFOpa3rTCNViiF",
-                    "merchant_id" => "fufukwang_CTBC",
+                    "partner_key" => "partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC",
+                    "merchant_id" => "surpriselab_TAISHIN",
                     "details"     => "無光晚餐",
                     "amount"      => $money - $cut1 - $cut2,
                     "order_number"=> $count,
@@ -251,7 +251,7 @@ class HomeController extends Controller
 
                 $r = curl_init();
                 curl_setopt($r, CURLOPT_URL, $pay_by_prime);
-                curl_setopt($r, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'x-api-key:partner_5jNwC8sfACq49UWf9fT2MRo00lv1M28kYkGtGfdJ5QRFOpa3rTCNViiF'));
+                curl_setopt($r, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'x-api-key:partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC'));
                 curl_setopt($r, CURLOPT_POST, 1);
                 curl_setopt($r, CURLOPT_POSTFIELDS, json_encode($postData));
                 curl_setopt($r, CURLOPT_RETURNTRANSFER, 1);

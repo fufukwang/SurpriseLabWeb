@@ -222,7 +222,7 @@ $(function(){
     });
 
 
-    TPDirect.setupSDK('12126', 'app_XjlfXqQFdxLlY1JJGIJ6beAdppcgzciaeo356asbZ5ASVzD2Pryt0dErylTj', 'sandbox');
+    TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'sandbox');
     TPDirect.card.setup({
         fields: {
             number: {
@@ -311,6 +311,7 @@ function SendOrderData(Pay,prime){
         $.unblockUI();
     },'json').fail(function() {
         alert('服務繁忙中請稍後在試!');
+        window.location.reload(true);
         $.unblockUI();
     }).always(function() {
         
