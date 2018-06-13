@@ -304,7 +304,7 @@ class HomeController extends Controller
                     'email' => $data['email'],
                     'name'  => $data['name'],
                 ];
-                Mail::send('dark2.email.order',$mailer,function($m) use ($mailer){
+                Mail::send('Dark2.email.order',$mailer,function($m) use ($mailer){
                     $m->from('service@surpriselab.com.tw', '無光晚餐第二季');
                     $m->sender('service@surpriselab.com.tw', '無光晚餐第二季');
                     $m->replyTo('service@surpriselab.com.tw', '無光晚餐第二季');

@@ -135,7 +135,7 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
-            Mail::send('dark2.email.coupon',$data,function($m) use ($data){
+            Mail::send('Dark2.email.coupon',$data,function($m) use ($data){
                 $m->from('service@surpriselab.com.tw', '無光晚餐第二季');
                 $m->sender('service@surpriselab.com.tw', '無光晚餐第二季');
                 $m->replyTo('service@surpriselab.com.tw', '無光晚餐第二季');
@@ -330,7 +330,7 @@ class BackController extends Controller
                 'name'      => $newdata->name,
                 'email'     => $newdata->email,
             ];
-            Mail::send('dark2.email.order',$arr,function($m) use ($arr){
+            Mail::send('Dark2.email.order',$arr,function($m) use ($arr){
                 $m->from('tableforone@surpriselab.com.tw', 'Table For One');
                 $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
                 $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
