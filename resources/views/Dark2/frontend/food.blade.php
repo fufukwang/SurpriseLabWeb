@@ -19,12 +19,15 @@
         
         <div class="section-02">
             <div class="pre-order-section">
+                <h4 class="color-white" style="font-weight:bold;">
+                    你確定，你真的了解自己的味蕾嗎?
+                </h4>
                 <p>
                     五道料理，暫不揭曉<br>留於黑暗中讓你猜測翻玩
                 </p>
-                <h4 class="color-white">
-                    『你確定，你真的了解自己的味蕾嗎?』
-                </h4>
+                <div style="    margin-top: 33px;font-size: 12px;margin-bottom: -50px;">
+                    若有蛋奶素需求，或飲⻝過敏與禁忌，請於訂位時備註
+                </div>
                 <div class="pre-order-box food-box">
                     <div class="row">
                         <div class="col-md-4">

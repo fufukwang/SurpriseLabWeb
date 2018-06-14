@@ -56,7 +56,7 @@
                                                 <th>含飲料</th>
                                                 <th>兌換日期</th>
                                                 <th>訂單編號</th>
-                                                <!--th>功能</th-->
+                                                <th>功能</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -69,10 +69,10 @@
                                                 @else 尚未兌換
                                                 @endif</td>
                                                 <th>{{ $row->order_id }}</th>
-                                                <!--td class="actions">
-                                                    <a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
-                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
-                                                </td-->
+                                                <td class="actions">
+                                                    <!--a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a-->
+                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-order_id={{ $row->order_id }} data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                </td>
                                             </tr>
 @empty
 <tr><td colspan="13" align="center">尚無資料</td></tr>
@@ -145,20 +145,16 @@
         //$('#datatable').dataTable();
 			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 $(function(){
-    $('.sendbox').bind('click',function(){
-        var send = $(this).prop('checked');
-        var id   = $(this).val();
-        $.post('/dark2/conpou/'+id+'/sendUpdate',{
-            send : (send ? 1 : 0)
-        },function(data){
-            $.Notification.notify('success','bottom left','已更新', '發送狀態已更新')
-        },'json');
-    });
+
     $('.btn-danger').bind('click',function(){
-        var id = $(this).data('id');
-        if(confirm("確定要刪除禮物卡?如有訂單將一併刪除")) {
+        var id  = $(this).data('id');
+        var txt = '';
+        if($(this).data('order_id') > 0){
+            txt = '此優惠券已被使用(訂單不會被刪除),';
+        }
+        if(confirm(txt + "確定要刪除此優惠券")) {
              $.ajax({
-                url: '/dark2/conpou/'+id+'/delete',
+                url: '/dark2/coupon/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){

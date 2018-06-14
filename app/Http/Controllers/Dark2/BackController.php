@@ -232,7 +232,7 @@ class BackController extends Controller
     /**
      * coupon
      */
-    public function coupons(Request $request){
+    public function Coupons(Request $request){
 
         $coupons = d2coupon::orderBy('updated_at','desc');
         //if($request->has('day')) $coupons = $coupons->where('created_at','like',$request->day.'%');
@@ -246,7 +246,11 @@ class BackController extends Controller
         $coupons = $coupons->paginate($this->perpage);
         return view('Dark2.backend.coupons',compact('coupons','request'));
     }
+    public function CouponDelete(Request $request,$id){
+        d2coupon::where('id', $id)->delete();
+        return Response::json(['message'=> '已刪除'], 200);
 
+    }
 
 
 

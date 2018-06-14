@@ -108,7 +108,7 @@
                         <td>2000+10% 現場付現</td>
                     </tr-->
                     <tr>
-                        <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，可享折抵優惠。</td>
+                        <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，將⾦額扣抵為零，確認訂單，即可完成劃位</td>
                     </tr>
                     <tr>
                         <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:service@surpriselab.com.tw">service@surpriselab.com.tw</a></td>

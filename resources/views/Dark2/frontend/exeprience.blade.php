@@ -19,14 +19,13 @@
         
         <div class="section-02">
             <div class="pre-order-section">
-                <p>
-                    拋下你所習慣的一切，<br>
-                    在 黑 暗 中，玩!翻!這!頓!飯!
-               
-                </p>
-                <h4 class="color-white">
-                    『放下平常吃飯那套，這裡不適用』
+                <h4 class="color-white" style="font-weight:bold;">
+                    ⽤各種的⽅式，吃出⼀頓最特別的晚餐
                 </h4>
+                <p>
+                    ⽇常中的稀鬆平常<br>
+                    在⿊暗之中，都將添⾊
+                </p>
                 <div class="pre-order-box food-box">
                     <div class="row hidden-xs">
                         <div class="col-md-6">
