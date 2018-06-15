@@ -408,7 +408,7 @@ class BackController extends Controller
 
 
 
-/*
+
     public function Xls2Db(Request $request){
         $filePath = 'storage/app/dark2_report.xlsx';
         Excel::load($filePath, function($reader) {
@@ -482,11 +482,11 @@ class BackController extends Controller
                 $data['code'] = $this->GenerateGiftCodeSN();
                 d2coupon::insert($data);
             }
-            d2coupon::where('id',$row->id)->update(['gen_coup'=>1]);
+            d2xls::where('id',$row->id)->update(['gen_coup'=>1]);
         }
 
     }
-    */
+    
     private function GenerateGiftCodeSN(){
         $random = 8;$SN = '';
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
