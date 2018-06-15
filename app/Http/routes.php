@@ -316,9 +316,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::group(['prefix' => config('setting.dark2.path')], function(){
         Route::get('about.html',function(){ return view('Dark2.frontend.home'); });
         Route::get('chef.html',function(){ return view('Dark2.frontend.chef'); });
-        Route::get('rules.html',function(){ return view('Dark2.frontend.rules'); });
-        Route::get('rules0616.html',function(){ return view('Dark2.frontend.rules0616'); });
-        Route::get('reservation_pay.html',function(){ return view('Dark2.frontend.reservation_pay'); });
+        Route::get('rules.html',function(){ return view('Dark2.frontend.rules0616'); });
+        //Route::get('rules0616.html',function(){ return view('Dark2.frontend.rules0616'); });
+        //Route::get('reservation_pay.html',function(){ return view('Dark2.frontend.reservation_pay'); });
 
         Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
         Route::get('index.html',function(){ return view('Dark2.frontend.home'); });
@@ -331,7 +331,7 @@ Route::group(['middleware' => ['web']], function () {
         //Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
         //Route::post('ReOrderData','FrontendController@ReOrderData');
         //Route::post('getPayDone','FrontendController@getPayDone');
-        Route::get('pre-order.html',function(){ return view('Dark2.frontend.pre-order'); });
+        //Route::get('pre-order.html',function(){ return view('Dark2.frontend.pre-order'); });
         Route::get('experience.html',function(){ return view('Dark2.frontend.exeprience'); });
         Route::get('food.html',function(){ return view('Dark2.frontend.food'); });
         Route::group(['prefix' => 'en'], function(){

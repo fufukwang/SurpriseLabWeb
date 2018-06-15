@@ -136,9 +136,9 @@ class BackController extends Controller
                 'coupons' => $coupons,
             ];
             Mail::send('Dark2.email.coupon',$data,function($m) use ($data){
-                $m->from('service@surpriselab.com.tw', '無光晚餐第二季');
-                $m->sender('service@surpriselab.com.tw', '無光晚餐第二季');
-                $m->replyTo('service@surpriselab.com.tw', '無光晚餐第二季');
+                $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+                $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+                $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
 
                 $m->to($data['xls']->email, $data['xls']->name);
                 $m->subject('無光晚餐第二季-劃位序號信件!');
@@ -335,9 +335,9 @@ class BackController extends Controller
                 'email'     => $newdata->email,
             ];
             Mail::send('Dark2.email.order',$arr,function($m) use ($arr){
-                $m->from('tableforone@surpriselab.com.tw', 'Table For One');
-                $m->sender('tableforone@surpriselab.com.tw', 'Table For One');
-                $m->replyTo('tableforone@surpriselab.com.tw', 'Table For One');
+                $m->from('dininginthedark@surpriselab.com.tw', 'Table For One');
+                $m->sender('dininginthedark@surpriselab.com.tw', 'Table For One');
+                $m->replyTo('dininginthedark@surpriselab.com.tw', 'Table For One');
 
                 $m->to($arr['email'], $arr['name']);
                 $m->subject('Table For One 訂位成功 !');

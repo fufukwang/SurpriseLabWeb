@@ -19,16 +19,21 @@
                             About
                         </li>
                     </a>
-                    <a href="pre-order.html">
+                    <!--a href="pre-order.html">
                         <li @if($key == 'pre-order')class="active"@endif>
                             Pre-sale
                         </li>
-                    </a>
+                    </a-->
                     <a href="rules.html">
                         <li @if($key == 'rules')class="active"@endif>
                             Rules
                         </li>
                     </a>
+                    <!--a href="reservation.html">
+                        <li @if($key == 'reservation')class="active"@endif>
+                            Reservation
+                        </li>
+                    </a-->
                     <a href="food.html">
                         <li @if($key == 'food')class="active"@endif>
                             Food

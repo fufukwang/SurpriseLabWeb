@@ -28,8 +28,8 @@
                         </h1>
                         <p>
                             02-27192960 <br>
-                            <a href="mailto:service@surpriselab.com.tw">
-                                service@surpriselab.com.tw
+                            <a href="mailto:dininginthedark@surpriselab.com.tw">
+                                dininginthedark@surpriselab.com.tw
                             </a>
                         </p>
                         <br>

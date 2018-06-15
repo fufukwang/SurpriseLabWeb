@@ -6,13 +6,13 @@
     <div class="wrap">
        
         <!-- mobile menu -->
-        @include('Dark2.frontend._menu',['key'=>'people'])
+        @include('Dark2.frontend._menu',['key'=>'reservation'])
      
       
         <!-- header -->
         
         <div class="header-contaier clearfix">
-            @include('Dark2.frontend._m_menu',['key'=>'people'])
+            @include('Dark2.frontend._m_menu',['key'=>'reservation'])
         </div>
 
 <!-- privacy lightbox -->
@@ -111,7 +111,7 @@
                         <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，將⾦額扣抵為零，確認訂單，即可完成劃位</td>
                     </tr>
                     <tr>
-                        <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:service@surpriselab.com.tw">service@surpriselab.com.tw</a></td>
+                        <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></td>
                     </tr>
                 </tbody></table>
                 <p style="margin-top:25px;">

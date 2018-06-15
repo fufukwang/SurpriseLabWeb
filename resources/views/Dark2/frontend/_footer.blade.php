@@ -3,8 +3,9 @@
                 <div class="contact-box">
                     <h4>Contact</h4>
                     <p>
-                        02-27192960<br>
-                        <a href="mailto:service@surpriselab.com.tw">service@surpriselab.com.tw</a>
+                        02-2719-2960 / 
+                        <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a><br>
+                        台北市松⼭區健康路九號
                     </p>
                 </div>
                 <div class="hyper-link">

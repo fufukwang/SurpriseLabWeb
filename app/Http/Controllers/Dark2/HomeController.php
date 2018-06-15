@@ -37,11 +37,11 @@ class HomeController extends Controller
             'notes'  => $request->notes,
         ];
         Mail::send('TFO.email.Contact',$data,function($m) use ($data){
-            $m->from('service@surpriselab.com.tw', 'Dinner In The Dark 2');
-            $m->sender('service@surpriselab.com.tw', 'Dinner In The Dark 2');
-            $m->replyTo('service@surpriselab.com.tw', 'Dinner In The Dark 2');
+            $m->from('dininginthedark@surpriselab.com.tw', 'Dinner In The Dark 2');
+            $m->sender('dininginthedark@surpriselab.com.tw', 'Dinner In The Dark 2');
+            $m->replyTo('dininginthedark@surpriselab.com.tw', 'Dinner In The Dark 2');
 
-            $m->to('service@surpriselab.com.tw', 'Dinner In The Dark 2');
+            $m->to('dininginthedark@surpriselab.com.tw', 'Dinner In The Dark 2');
 
             $m->subject('Dinner In The Dark 2，聯絡我們-通知');
         });
@@ -305,9 +305,9 @@ class HomeController extends Controller
                     'name'  => $data['name'],
                 ];
                 Mail::send('Dark2.email.order',$mailer,function($m) use ($mailer){
-                    $m->from('service@surpriselab.com.tw', '無光晚餐第二季');
-                    $m->sender('service@surpriselab.com.tw', '無光晚餐第二季');
-                    $m->replyTo('service@surpriselab.com.tw', '無光晚餐第二季');
+                    $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+                    $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+                    $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
 
                     $m->to($mailer['email'], $mailer['name']);
                     $m->subject('無光晚餐第二季-訂單完成信件!');

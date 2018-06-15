@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <head>
     @include('Dark2.frontend._header',['index' => true])
-
+<style type="text/css">
+.section-index .logo-container .main-slogan{
+    padding-top: 460px;
+    margin-top: 100px;
+}
+@media (max-width: 776px){
+    .section-index .logo-container .main-slogan {
+        padding-top: 250px;
+    }
+}
+</style>
 </head>
 <body>
     <div class="wrap">
@@ -61,7 +71,7 @@
                 <div class="mask-box">
                     <!-- LOGO z: 1000 -->
                     <div class="main-slogan">
-                        <div class="slogan-img show-1 shadow hidden-xs">
+                        <!--div class="slogan-img show-1 shadow hidden-xs">
                             <img src="/dark2/images/About/Wording_1_2.png" alt="">
                         </div>
                         <div class="slogan-img show-2 shadow hidden-xs">
@@ -69,7 +79,7 @@
                         </div>
                         <div class="slogan-img show-3 shadow hidden-xs">
                             <img src="/dark2/images/About/Wording_3_2.png" alt="">
-                        </div>
+                        </div-->
 
 
                         <div class="slogan-img show-1 hidden-xs">
@@ -78,78 +88,81 @@
                         <div class="slogan-img show-2 hidden-xs">
                             <img src="/dark2/images/About/Wording_2.png" alt="">
                         </div>
-                        <div class="slogan-img show-3 hidden-xs">
+                        <div class="slogan-img show-3 shadow hidden-xs">
                             <img src="/dark2/images/About/Wording_3.png" alt="">
                         </div>
-
-                        <div class="visible-xs slogan-img ">
-                            <img src="/dark2/images/cut2_index/slogan-phone2.png" alt="">
-                        </div>
-                        <div class="visible-xs slogan-img ">
-                            <img src="/dark2/images/cut2_index/slogan-phone1.png" alt="">
+                        <div class="slogan-img show-3 shadow hidden-xs">
+                            <img src="/dark2/images/About/Wording_4.png" alt="">
                         </div>
 
-                        <a href="pre-order.html">
+                        <div class="visible-xs slogan-img ">
+                            <img src="/dark2/images/cut2_index/wording-mobile.png" alt="">
+                        </div>
+
+
+                        <!--a href="reservation.html">
                             <div class="btn btn-standard landing-btn show-4">
-                                前往預售
+                                我了解
                             </div>
                         </a>
                         <div>
                             <i class="fa fa-angle-down"></i>    
-                        </div>
+                        </div-->
                     </div>
 
                     <div class="new-about">
                         <div class="pre-order-info">
                             <p>
-                                無光晚餐重磅回歸<br>
-                                這次，別再錯過
+                                無光晚餐第⼆季 第⼀階段預售計畫<br />
+                                已於 05/05-06/15 集資成功、正式啟動
                             </p>
                             <div class="progress-bar-box">
                                 <div class="bar-box">
-                                    <div class="bar" style="width: 0%"></div>
+                                    <div class="bar" style="width: 100%"></div>
                                 </div>
                             </div>
                             <div class="info-box">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h1>
-                                            // 啟動進度 //
+                                            // 達標結果 //
                                         </h1>
                                         <p>
-                                            <span class="percent">0</span>%
+                                            <span class="percent">119</span>%
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 已售出張數 //
+                                            // 預售張數 //
                                         </h1>
                                         <p>
-                                            <span class="tickets">0</span>張
+                                            <span class="tickets">3598</span>張
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 啟動進度 //
+                                            // 預售天數 //
                                         </h1>
                                         <p>
-                                            <span class="days">0</span>天
+                                            <span class="days">42</span>天
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="season-two-about">
-                            <h1>無光晚餐 第二季<br>
+                            <h1>無 光 晚 餐 第 ⼆ 季<br>
                             DINING IN THE DARK</h1>
                             <p>
-                                暫時關起視覺，讓一切回歸未知
+                                “真正重要的東⻄，⽤眼睛是看不⾒的”<br />
+                                “What is essential is invisible to the eye.”<br /><br />
+                                - ⼩王⼦ Le Petit Prince -
                             </p>
                             <p>
-                                用 僅 剩 的 聽 覺、嗅 覺、觸 覺、味 覺<br> 重新探索你我熟悉的人、事、物，甚至世界
+                                在⿊暗中，⽤僅剩的感官<br> 重新發掘、探索、感受，你我熟悉的⼈事物
                             </p>
                             <p>
-                                每晚為你準時熄燈，<br>端上前所未有的黑暗用餐體驗
+                                無光，所以更清楚
                             </p>
                         </div>
                         <div class="timeline-box">
@@ -186,7 +199,7 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <div class="date">06/25</div>
+                                    <div class="date">07/01</div>
                                     <div class="dot"></div>
                                     <p>
                                         開放一般訂位
@@ -200,7 +213,7 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <div class="date">08/31</div>
+                                    <div class="date">09/09</div>
                                     <div class="dot"></div>
                                     <p>
                                         快閃結束
@@ -208,19 +221,24 @@
                                 </li>
                             </ul>
                             <span>
-                                *為確保提供最好品質的無光體驗，確切劃位與快閃日期會依情況微調。
+                                *為提供最好品質的無光體驗，上述⽇期會依情況彈性調整
                             </span>
+                            <!--a href="reservation.html">
+                                <div class="btn btn-standard landing-btn">
+                                    前往劃位
+                                </div>
+                            </a-->
                         </div>
                         <div class="hashtag-box season-two-about">
                             <h1>
                                 #無光晚餐
                             </h1>
                             <div class="hashtag-container" style="pointer-events: none;"><div><iframe src="https://live.memopresso.com/embed?token=albert&title=new&titlePosition=0&displayType=waterfall&initCount=20&showLoadMore=true&showLogo=false&showTitle=false&contentColor=999999&tagColor=89229b&displaySequence=RANDOM&" id="memopresso_embed" width="100%" scrolling="No" frameborder="0"></iframe><script type="text/javascript">window.onmessage = function(event) {document.getElementById("memopresso_embed").height = event.data};setInterval(function(){document.getElementById("memopresso_embed").contentWindow.postMessage("","*");}, 500);</script></div></div>
-                            <a href="pre-order.html">
+                            <!--a href="reservation.html">
                                 <div class="btn btn-standard landing-btn">
-                                    前往預售
+                                    前往劃位
                                 </div>
-                            </a>
+                            </a-->
                         </div>
                     </div>
                     @include('Dark2.frontend._footer')
@@ -261,7 +279,7 @@
             }
         });
 
-
+/*
         $.get('https://surpriselab.backme.tw/api/projects/820.json?token=15171aa66ababafd4464a1c194b66102',function(data){
             var item = data.rewards;
             var count = 0;
@@ -288,7 +306,7 @@
             $('.days').text(days);
 
         },'json');
-
+*/
         if(window.location.pathname.indexOf('about\.html')>0){
             $('.main-logo .landing-btn').trigger('click');
         }
