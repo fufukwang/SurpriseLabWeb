@@ -83,16 +83,16 @@
 
 
                         <div class="slogan-img show-1 hidden-xs">
-                            <img src="/dark2/images/About/Wording_1.png" alt="">
+                            <img src="/dark2/images/About/Wording_1.png?v1" alt="">
                         </div>
                         <div class="slogan-img show-2 hidden-xs">
-                            <img src="/dark2/images/About/Wording_2.png" alt="">
+                            <img src="/dark2/images/About/Wording_2.png?v1" alt="">
                         </div>
                         <div class="slogan-img show-3 shadow hidden-xs">
-                            <img src="/dark2/images/About/Wording_3.png" alt="">
+                            <img src="/dark2/images/About/Wording_3.png?v1" alt="">
                         </div>
                         <div class="slogan-img show-3 shadow hidden-xs">
-                            <img src="/dark2/images/About/Wording_4.png" alt="">
+                            <img src="/dark2/images/About/Wording_4.png?v1" alt="">
                         </div>
 
                         <div class="visible-xs slogan-img ">
