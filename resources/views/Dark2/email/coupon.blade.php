@@ -128,7 +128,7 @@
 4人套票(含調飲)
 @elseif($xls->ot5>0)
 6人套票 (含調飲)
-@endif
+@endif<br />
 ----------------------------------------</span></span></p>
 
 <p style="color: #FDFDFD;"><span style="font-size:17px"><span style="color:#FFFFFF">劃 位 序 號 為</span></span></p>
