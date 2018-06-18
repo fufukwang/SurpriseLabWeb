@@ -36,6 +36,8 @@ class HomeController extends Controller
             'name'   => $request->name,
             'notes'  => $request->notes,
         ];
+        config(['mail.username' => env('MAIL_DARK2_USER')]);
+        config(['mail.password' => env('MAIL_DARK2_PASS')]);
         Mail::send('TFO.email.Contact',$data,function($m) use ($data){
             $m->from('dininginthedark@surpriselab.com.tw', 'Dinner In The Dark 2');
             $m->sender('dininginthedark@surpriselab.com.tw', 'Dinner In The Dark 2');
@@ -304,6 +306,8 @@ class HomeController extends Controller
                     'email' => $data['email'],
                     'name'  => $data['name'],
                 ];
+                config(['mail.username' => env('MAIL_DARK2_USER')]);
+                config(['mail.password' => env('MAIL_DARK2_PASS')]);
                 Mail::send('Dark2.email.order',$mailer,function($m) use ($mailer){
                     $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
                     $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');

@@ -143,8 +143,8 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('order/{id}/edit','Dark2\BackController@OrderEdit');
         Route::post('order/{id}/update','Dark2\BackController@OrderUpdate');
         Route::delete('order/{id}/delete','Dark2\BackController@OrderDelete');
-        //Route::get('order/{pro_id}/appointment','Dark2\BackController@Appointment');  // 後臺預約
-        //Route::post('order/{pro_id}/appointmentUpdate','Dark2\BackController@AppointmentUpdate');
+        Route::get('order/{pro_id}/appointment','Dark2\BackController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','Dark2\BackController@AppointmentUpdate');
 
         // 報表列印
         Route::get('print','Dark2\BackController@Print');

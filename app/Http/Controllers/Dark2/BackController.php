@@ -135,6 +135,8 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
+            config(['mail.username' => env('MAIL_DARK2_USER')]);
+            config(['mail.password' => env('MAIL_DARK2_PASS')]);
             Mail::send('Dark2.email.coupon',$data,function($m) use ($data){
                 $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
                 $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
@@ -334,6 +336,8 @@ class BackController extends Controller
                 'name'      => $newdata->name,
                 'email'     => $newdata->email,
             ];
+            config(['mail.username' => env('MAIL_DARK2_USER')]);
+            config(['mail.password' => env('MAIL_DARK2_PASS')]);
             Mail::send('Dark2.email.order',$arr,function($m) use ($arr){
                 $m->from('dininginthedark@surpriselab.com.tw', 'Table For One');
                 $m->sender('dininginthedark@surpriselab.com.tw', 'Table For One');

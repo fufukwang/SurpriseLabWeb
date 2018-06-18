@@ -82,24 +82,6 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <!--div class="form-group">
-                                                <label class="control-label col-sm-4">訂餐類型</label>
-                                                <div class="col-sm-8">
-                                                    <select name="money" id="money" class="form-control">
-                                                        <option value="{{ $pro->money }}">{{ $pro->money }} 元 | 五道料理</option>
-                                                        <option value="{{ $pro->money + $pro->wine }}">{{ $pro->money + $pro->wine }} 元 | 五道料理 + 佐餐飲乙杯</option>
-                                                    </select>
-                                                </div>
-                                            </div-->
-                                            <input type="hidden" name="item" id="item" value="{{ $pro->money }} 元 | 五道料理">
-
-
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">管理</label>
-                                                <div class="col-sm-8">
-                                                    <textarea class="form-control" name="manage" style="min-height:120px;">{{ $order->manage or '' }}</textarea>
-                                                </div>
-                                            </div>
 
 
 
