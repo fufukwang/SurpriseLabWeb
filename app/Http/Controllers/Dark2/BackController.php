@@ -22,6 +22,7 @@ use App\Http\Controllers\Controller;
 use Validator;
 use Carbon\Carbon;
 use DB;
+use Log;
 use Excel;
 
 class BackController extends Controller
@@ -303,52 +304,73 @@ class BackController extends Controller
 
     
     public function Appointment(Request $request,$pro_id){
-        $pro = d2pro::find($pro_id);
-        return view('Dark2.backend.orderAppointment',compact('pro_id','pro'));
+        try {
+            $pro = d2pro::find($pro_id);
+            return view('Dark2.backend.orderAppointment',compact('pro_id','pro'));
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return redirect('/dark2/pros?')->with('message','此編號無座位表!');
+        }
     }
     public function AppointmentUpdate(Request $request,$pro_id){
-        $data = [
-            'pay_status'  => $request->pay_status,
-            'pay_type'    => $request->pay_type,
-            'name'       => $request->name,
-            'tel'        => $request->tel,
-            'email'      => $request->email,
-            'sn'         => $this->GenerateSN(),
-            'tfopro_id'  => $pro_id,
-            'tfogife_id' => 0,
-            'meat'       => $request->meat,
-            'money'      => $request->money,
-            'notes'      => $request->notes,
-            'story'      => $request->story,
-            'manage'     => $request->manage,
-            'result'     => '',
-            'item'       => $request->item,
-        ];
-        $order = d2order::create($data);
-
-        if($request->pay_status == '已付款'){
-
-            $newdata = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id')->select('day','rangstart','rangend','name','email')->find($order->id);
-            $arr = [
-                'day'       => $newdata->day,
-                'rangstart' => $newdata->rangstart,
-                'rangend'   => $newdata->rangend,
-                'name'      => $newdata->name,
-                'email'     => $newdata->email,
+        try {
+            $now = Carbon::now()->toDateString();
+            $count = d2order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
+            $people = $request->people;
+            if($count>0){
+                $count += 1;
+            } else {
+                $count = Carbon::now()->format('Ymd').'001';
+            }
+            $act = d2pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(d2order) WHERE d2order.pro_id=d2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rangstart','rangend')->first();
+            $meat = [];
+            for($i=0;$i<$people;$i++){
+                array_push($meat,$request->input('Meal.'.$i));
+            }
+            $money = $act->cash * $people * 1.1;
+            $data = [
+                'pro_id'     => $pro_id,
+                'pople'      => $people,
+                'name'       => $request->name,
+                'tel'        => $request->tel,
+                'email'      => $request->email,
+                'notes'      => $request->notes,
+                'meat'       => json_encode($meat),
+                'coupon'     => 0,
+                'sn'         => $count,
+                'money'      => $money,
+                'pay_type'   => $request->pay_type,
+                'pay_status' => $request->pay_status,
+                'result'     => '',
+                'manage'     => $request->manage,
+                'discount'   => '',
             ];
-            config(['mail.username' => env('MAIL_DARK2_USER')]);
-            config(['mail.password' => env('MAIL_DARK2_PASS')]);
-            Mail::send('Dark2.email.order',$arr,function($m) use ($arr){
-                $m->from('dininginthedark@surpriselab.com.tw', 'Table For One');
-                $m->sender('dininginthedark@surpriselab.com.tw', 'Table For One');
-                $m->replyTo('dininginthedark@surpriselab.com.tw', 'Table For One');
+            $order = d2order::create($data);
 
-                $m->to($arr['email'], $arr['name']);
-                $m->subject('Table For One 訂位成功 !');
-            });
+            if($request->pay_status == '已付款'){
+                $mailer = [
+                    'day'   => $act->day.' '.substr($act->rangstart,0,5).'-'.substr($act->rangend,0,5),
+                    'pople' => $people,
+                    'email' => $data['email'],
+                    'name'  => $data['name'],
+                ];
+                config(['mail.username' => env('MAIL_DARK2_USER')]);
+                config(['mail.password' => env('MAIL_DARK2_PASS')]);
+                Mail::send('Dark2.email.order',$mailer,function($m) use ($mailer){
+                    $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+                    $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+                    $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+
+                    $m->to($mailer['email'], $mailer['name']);
+                    $m->subject('無光晚餐第二季-訂單完成信件!');
+                });
+            }
+
+            return redirect('/dark2/pros?')->with('message','新增完成!');
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return redirect('/dark2/pros?')->with('message','新增失敗!');
         }
-
-        return redirect('/dark2/pros?')->with('message','新增完成!');
     }
 
 

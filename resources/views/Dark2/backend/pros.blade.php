@@ -85,7 +85,7 @@
                                                     <td>{{ App\model\d2pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(d2order) WHERE d2order.pro_id=d2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
                                                     <td>{{ $row->money }} / {{ $row->cash }} </td>
                                                     <td class="actions">
-                                                        <!--a class="btn btn-purple btn-xs" href="/dark2/order/{{ $row->id }}/appointment">預約席</a-->
+                                                        <a class="btn btn-purple btn-xs" href="/dark2/order/{{ $row->id }}/appointment">預約席</a>
                                                         <a class="btn btn-info btn-xs" href="/dark2/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
                                                         <a class="btn btn-primary btn-xs" href="/dark2/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                         <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>

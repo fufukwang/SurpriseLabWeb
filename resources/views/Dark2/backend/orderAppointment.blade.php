@@ -21,6 +21,24 @@
                                     <div class="p-20">
                                         <form  data-parsley-validate novalidate method="post" action="/dark2/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
 {!! csrf_field() !!}
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">日期</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" name="day" value="{{ $pro->day }}" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">時段</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" name="daypart" value="{{ $pro->dayparts }}" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">區間</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" name="range" value="{{ substr($pro->rangstart,0,5) }} ~ {{ substr($pro->rangend,0,5) }}" readonly>
+                                                </div>
+                                            </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">姓名</label>
@@ -40,6 +58,18 @@
                                                     <input type="email" class="form-control" name="email" required email>
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">人數</label>
+                                                <div class="col-sm-8">
+                                                    <select name="people" id="pople" class="form-control">
+                                                        <option value="2">2</option>
+                                                        <option value="4">4</option>
+                                                        <option value="6">6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
                                             
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">備註</label>
@@ -48,15 +78,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">故事</label>
-                                                <div class="col-sm-8">
-                                                    <textarea class="form-control" name="story"  style="min-height:120px;"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
                                                 <label class="control-label col-sm-4">付款方式</label>
                                                 <div class="col-sm-8">
-                                                    <select name="paytype" class="form-control">
+                                                    <select name="pay_type" class="form-control">
                                                         <option value="後台編輯">後台編輯</option>
                                                     </select>
                                                 </div>
@@ -64,7 +88,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">付款狀態</label>
                                                 <div class="col-sm-8">
-                                                    <select name="paystatus" class="form-control">
+                                                    <select name="pay_status" class="form-control">
                                                         <option value="未完成">未完成</option>
                                                         <option value="已付款">已付款</option>
                                                         <option value="取消訂位">取消訂位</option>
@@ -76,14 +100,71 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">主餐</label>
                                                 <div class="col-sm-8">
-                                                    <select name="meal" class="form-control">
-                                                        <option value="H">葷食</option>
-                                                        <option value="V">素食</option>
-                                                    </select>
+<style type="text/css">
+.btn-group{border-right: 3px solid #aaa;padding-right:5px;}
+.btn-group:last-child{border:none;}
+</style>
+<div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default active form-check-label">
+        <input name="Meal[0]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
+    </label>
+    <label class="btn btn-default form-check-label">
+        <input name="Meal[0]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
+    </label>
+</div>
+<div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default active form-check-label">
+        <input name="Meal[1]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
+    </label>
+    <label class="btn btn-default form-check-label">
+        <input name="Meal[1]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
+    </label>
+</div>
+<div class="btn-group group-4 group-6" data-toggle="buttons">
+    <label class="btn btn-default active form-check-label">
+        <input name="Meal[2]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
+    </label>
+    <label class="btn btn-default form-check-label">
+        <input name="Meal[2]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
+    </label>
+</div>
+<div class="btn-group group-4 group-6" data-toggle="buttons">
+    <label class="btn btn-default active form-check-label">
+        <input name="Meal[3]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
+    </label>
+    <label class="btn btn-default form-check-label">
+        <input name="Meal[3]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
+    </label>
+</div>
+<div class="btn-group group-6" data-toggle="buttons"> 
+    <label class="btn btn-default active form-check-label">
+        <input name="Meal[4]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
+    </label>
+    <label class="btn btn-default form-check-label">
+        <input name="Meal[4]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
+    </label>
+</div>
+<div class="btn-group group-6" data-toggle="buttons">
+    <label class="btn btn-default active form-check-label">
+        <input name="Meal[5]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
+    </label>
+    <label class="btn btn-default form-check-label">
+        <input name="Meal[5]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
+    </label>
+</div>
+
+
+
+
                                                 </div>
                                             </div>
 
-
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">管理</label>
+                                                <div class="col-sm-8">
+                                                    <textarea class="form-control" name="manage" style="min-height:120px;"></textarea>
+                                                </div>
+                                            </div>
 
 
                                             
@@ -165,8 +246,21 @@
 $('#money').bind('change',function(){
     $('#item').val($('#money option:selected').text());
 });
+$('#pople').bind('change',function(){
+    changeToPople($(this).val());
+})
+changeToPople(2);
         });
 
+
+function changeToPople(pople){
+    $('.group-6').hide();
+    if(pople == 4){
+        $('.group-4').show();
+    } else if(pople == 6){
+        $('.group-6').show();
+    }
+}
 
 
         </script>
