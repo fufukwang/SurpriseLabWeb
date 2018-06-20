@@ -149,6 +149,10 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         // 報表列印
         Route::get('print','Dark2\BackController@Print');
         Route::get('table','Dark2\BackController@Table');
+        Route::post('order/{id}/resent','Dark2\BackController@beSentOrderMail');
+
+
+        //Route::get('gg','Dark2\BackController@gg');
 
         //Route::get('test','Dark2\BackController@Xls2Db');
         //Route::get('cup','Dark2\BackController@Db2Coupon');

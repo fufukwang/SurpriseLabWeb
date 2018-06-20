@@ -376,7 +376,7 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meat','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','d2order.created_at AS created_at','d2order.pay_status','email','d2order.sn','d2order.id','dayparts','day','email','pay_type','pople');
+        $order = $order->select('rangstart','rangend','name','tel','meat','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','d2order.created_at AS created_at','d2order.pay_status','email','d2order.sn','d2order.id','dayparts','day','email','pay_type','pople','pro_id');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
@@ -429,7 +429,26 @@ class BackController extends Controller
         return view('Dark2.backend.table',compact('order','request'));
     }
 
+    public function beSentOrderMail(Request $request,$id){
+        $act = d2pro::select('day','rangstart','rangend')->find($id);
+        $mailer = [
+            'day'   => $act->day.' '.substr($act->rangstart,0,5).'-'.substr($act->rangend,0,5),
+            'pople' => $request->pople,
+            'email' => $request->email,
+            'name'  => $request->name,
+        ];
+        config(['mail.username' => env('MAIL_DARK2_USER')]);
+        config(['mail.password' => env('MAIL_DARK2_PASS')]);
+        Mail::send('Dark2.email.order',$mailer,function($m) use ($mailer){
+            $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+            $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+            $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
 
+            $m->to($mailer['email'], $mailer['name']);
+            $m->subject('無光晚餐第二季-訂單完成信件!');
+        });
+        return Response::json(['message'=> '已更新'], 200);
+    }
 
 
 
@@ -479,6 +498,13 @@ class BackController extends Controller
                 $data['wine'] = 0;
                 $data['code'] = $this->GenerateGiftCodeSN();
                 d2coupon::insert($data);
+            } elseif($row->ot1 == 2){
+                $data['wine'] = 0;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+                $data['wine'] = 0;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
             } elseif($row->ot2 == 1){
                 $data['wine'] = 0;
                 $data['code'] = $this->GenerateGiftCodeSN();
@@ -487,6 +513,13 @@ class BackController extends Controller
                 $data['code'] = $this->GenerateGiftCodeSN();
                 d2coupon::insert($data);
             } elseif($row->ot3 == 1){
+                $data['wine'] = 1;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
+            } elseif($row->ot3 == 2){
+                $data['wine'] = 1;
+                $data['code'] = $this->GenerateGiftCodeSN();
+                d2coupon::insert($data);
                 $data['wine'] = 1;
                 $data['code'] = $this->GenerateGiftCodeSN();
                 d2coupon::insert($data);
@@ -512,7 +545,9 @@ class BackController extends Controller
         }
 
     }
-    
+    public function gg(){
+        return $this->GenerateGiftCodeSN(); 
+    }
     private function GenerateGiftCodeSN(){
         $random = 8;$SN = '';
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';

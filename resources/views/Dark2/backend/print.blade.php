@@ -109,6 +109,7 @@
                                                 <th>@forelse(App\model\d2coupon::where('order_id',$row->sn)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif<br >@empty 無使用優惠券 @endforelse</th>
                                                 <td>{{ $row->manage }}</td>
                                                 <td class="actions">
+                                                    <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i></a>
                                                     <a class="btn btn-primary btn-xs" href="/dark2/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
@@ -193,7 +194,9 @@
 
         <script src="/backstage/js/jquery.core.js"></script>
         <script src="/backstage/js/jquery.app.js"></script>
-
+        <!-- Notification js -->
+        <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
+        <script src="/backstage/plugins/notifications/notify-metro.js"></script>
         <script>
 
 
@@ -211,6 +214,21 @@ $(function(){
             });
         }
     });
+    $('.resent').bind('click',function(){
+        var name  = $(this).data('name');
+        var email = $(this).data('email');
+        var id    = $(this).data('id');
+        var pople = $(this).data('pople');
+        $.post('/dark2/order/'+id+'/resent',{
+            name  : name,
+            email : email,
+            pople : pople
+        },function(data){
+            $.Notification.notify('success','bottom left','已重發', '信件已重新發送');
+        },'json');
+    });
+
+
     jQuery('#datepicker-autoclose').datepicker({
         format: "yyyy-mm-dd",
         autoclose: true,
