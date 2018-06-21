@@ -177,7 +177,7 @@ class HomeController extends Controller
                 array_push($meat,$request->input('Meal.'.$i));
             }
             $pay_status = '未完成';
-            if($money - $cut1 - $cut2  == 0){
+            if(intval($money - $cut1 - $cut2)  == 0){
                 $pay_status = '已付款';
             }
             $data = [
