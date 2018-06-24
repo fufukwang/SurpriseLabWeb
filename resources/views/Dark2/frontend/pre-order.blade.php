@@ -21,7 +21,8 @@
         <div class="section-02">
             <div class="main-container">
                 <div class="main-box">
-                    <div class="presale-logo-box">
+                    <h1>無光晚餐第二季 第二階段預售計畫 於 7/23 啟動</h1>
+                    <!--div class="presale-logo-box">
                         <img src="/dark2/images/Pre-sale/Logo.png" alt="">
                         <img src="/dark2/images/Pre-sale/Seasontwo_small.png" alt="">    
                     </div>
@@ -41,10 +42,10 @@
                     </p>
                     <p style="margin-top: 25px;" class="strong-words">
                         ★ 前500名購買者，將優先於6/5收到劃位序號搶先訂位
-                    </p>
+                    </p-->
                 </div>
             </div>
-            <div class="season-two-about pre-order-section">
+            <!--div class="season-two-about pre-order-section">
                 <p>
                     請點選商品前往付款 ⬇
                 </p>
@@ -114,13 +115,13 @@
                     *以上套票價格均已含一成服務費<br>
                     <span class="strong-words">*預售票價可享75折，最高67折優惠</span><br>
                     *預計快閃日期 2018/07-2018/08<br>
-                    <!--*預售套票人數不可拆開始用-->
                 </p>
-            </div>
+            </div-->
         </div>   
         @include('Dark2.frontend._footer')
     </div>
 <script type="text/javascript">
+    /*
 $(function(){
     $.get('https://surpriselab.backme.tw/api/projects/820.json?token=15171aa66ababafd4464a1c194b66102',function(data){
         var item = data.rewards;
@@ -131,6 +132,7 @@ $(function(){
 
     },'json');
 });
+*/
 </script>
 </body>
 </html>

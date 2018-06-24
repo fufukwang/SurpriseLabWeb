@@ -1,4 +1,4 @@
-    <title>Dining In The Dark 2</title>
+    <title>無光晚餐第二季 Dining In The Dark Season 2</title>
     <meta charset="utf-8">
     <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <link rel="icon" href="/images/tab-icon.png" >
@@ -22,5 +22,5 @@
     <meta property="og:site_name" content="無光晚餐第二季 Dining In The Dark Season 2" />
     <meta property="og:image" content="https://www.surpriselab.com.tw/dark2/S__9076871.jpg" />
     <meta property="og:type" content="website" />
-    <meta name="description" content="07/04-09/09 無光晚餐夏季快閃現正進行中">
+    <meta name="description" content="無光晚餐第二季，限時快閃，現正進行中">
     <meta name="keywords" content="無光晚餐、無光餐廳、約會餐廳、黑暗餐廳、黑暗體驗">

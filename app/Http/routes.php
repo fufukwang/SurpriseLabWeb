@@ -335,7 +335,7 @@ Route::group(['middleware' => ['web']], function () {
         //Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
         //Route::post('ReOrderData','FrontendController@ReOrderData');
         //Route::post('getPayDone','FrontendController@getPayDone');
-        //Route::get('pre-order.html',function(){ return view('Dark2.frontend.pre-order'); });
+        Route::get('pre-sale.html',function(){ return view('Dark2.frontend.pre-order'); });
         Route::get('experience.html',function(){ return view('Dark2.frontend.exeprience'); });
         Route::get('food.html',function(){ return view('Dark2.frontend.food'); });
         Route::group(['prefix' => 'en'], function(){
@@ -351,7 +351,7 @@ Route::group(['middleware' => ['web']], function () {
             //Route::get('event.html',function(){ App::setLocale('en'); return view('frontend.event'); });
             //Route::get('event-landing.html',function(){ App::setLocale('en'); return view('frontend.event-landing'); });
             //Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
-            Route::get('pre-order.html',function(){ App::setLocale('en'); return view('Dark2.frontend.pre-order'); });
+            Route::get('pre-sale.html',function(){ App::setLocale('en'); return view('Dark2.frontend.pre-order'); });
             Route::get('experience.html',function(){ App::setLocale('en'); return view('Dark2.frontend.exeprience'); });
             Route::get('food.html',function(){ App::setLocale('en'); return view('Dark2.frontend.food'); });
         });
