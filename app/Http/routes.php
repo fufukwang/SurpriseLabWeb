@@ -222,9 +222,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('rules.html','TFO\TurnPageController@rules');
         Route::get('contact.html','TFO\TurnPageController@contact');
         Route::get('qa.html','TFO\TurnPageController@qa');
-        Route::get('reservation.html','TFO\TurnPageController@reservation');
-        Route::get('gift.html','TFO\TurnPageController@gift');
-        Route::get('giftcard.html','TFO\TurnPageController@giftcard');
+        Route::get('reservation.html',function(){ return redirect("/tableforone/index.html"); });
+        Route::get('gift.html',function(){ return redirect("/tableforone/index.html"); });
+        Route::get('giftcard.html',function(){ return redirect("/tableforone/index.html"); });
         Route::get('redeem.html','TFO\TurnPageController@redeem');
 
 
@@ -237,9 +237,9 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('rules.html','TFO\TurnPageController@mrules');
             Route::get('contact.html','TFO\TurnPageController@mcontact');
             Route::get('qa.html','TFO\TurnPageController@mqa');
-            Route::get('reservation.html','TFO\TurnPageController@mreservation');
-            Route::get('gift.html','TFO\TurnPageController@mgift');
-            Route::get('giftcard.html','TFO\TurnPageController@mgiftcard');
+            Route::get('reservation.html',function(){ return redirect("/tableforone/index.html"); });
+            Route::get('gift.html',function(){ return redirect("/tableforone/index.html"); });
+            Route::get('giftcard.html',function(){ return redirect("/tableforone/index.html"); });
             Route::get('redeem.html','TFO\TurnPageController@mredeem');
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
@@ -262,9 +262,9 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('rules.html',function(){ App::setLocale('en'); return view('TFO.front.rules'); });
             Route::get('contact.html',function(){ App::setLocale('en'); return view('TFO.front.contact'); });
             Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.front.qa'); });
-            Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.front.reservation'); });
-            Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
-            Route::get('giftcard.html',function(){ App::setLocale('en'); return view('TFO.front.giftcard'); });
+            //Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.front.reservation'); });
+            //Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.front.gift'); });
+            //Route::get('giftcard.html',function(){ App::setLocale('en'); return view('TFO.front.giftcard'); });
             Route::get('redeem.html',function(){ App::setLocale('en'); return view('TFO.front.redeem'); });
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');
@@ -282,9 +282,9 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('rules.html',function(){ App::setLocale('en'); return view('TFO.m.rules'); });
             Route::get('contact.html',function(){ App::setLocale('en'); return view('TFO.m.contact'); });
             Route::get('qa.html',function(){ App::setLocale('en'); return view('TFO.m.qa'); });
-            Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.m.reservation'); });
-            Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.m.gift'); });
-            Route::get('giftcard.html',function(){ App::setLocale('en'); return view('TFO.m.giftcard'); });
+            //Route::get('reservation.html',function(){ App::setLocale('en'); return view('TFO.m.reservation'); });
+            //Route::get('gift.html',function(){ App::setLocale('en'); return view('TFO.m.gift'); });
+            //Route::get('giftcard.html',function(){ App::setLocale('en'); return view('TFO.m.giftcard'); });
             Route::get('redeem.html',function(){ App::setLocale('en'); return view('TFO.m.redeem'); });
 
             Route::get('ECPaySuccess','TFO\FrontController@ECPaySuccess');

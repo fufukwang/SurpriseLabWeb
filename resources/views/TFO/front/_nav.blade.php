@@ -18,17 +18,17 @@
                             <img src="/T41/images/welcome-page/icon3-01.png" alt=""> <span>rules</span>
                         </li>
                     </a>
-                    <a href="reservation.html">
+                    <a href="index.html">
                         <li>
                             <img src="/T41/images/welcome-page/icon4-01.png" alt=""> <span>reservation</span>
                         </li>    
                     </a>
-                    <a href="gift.html">
+                    <a href="index.html">
                         <li>
                             <img src="/T41/images/welcome-page/icon5-01.png" alt="">  <span>gift card</span>
                         </li>
                     </a>
-                    <a href="contact.html">
+                    <a href="index.html">
                         <li>
                             <img src="/T41/images/welcome-page/icon6-01.png" alt="">  <span>contact</span>
                         </li>

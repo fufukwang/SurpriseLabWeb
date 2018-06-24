@@ -130,13 +130,13 @@ $about = <<<'FOOBAR'
                             每個發現都值得慶祝、值得玩味。
                         </p>
                     </div>
-                    <div class="btn-box">
+                    <!--div class="btn-box">
                         <a href="reservation.html">
                             <div class="standard-btn btn">
                                 立即訂位
                             </div>    
                         </a>
-                    </div>
+                    </div-->
 FOOBAR;
 
 $menu = <<<'FOOBAR'
@@ -299,13 +299,13 @@ $menu = <<<'FOOBAR'
                     </p>
 
 
-                    <div class="btn-box mg-b-md">
+                    <!--div class="btn-box mg-b-md">
                         <a href="reservation.html">
                             <div class="standard-btn btn">
                                 立即訂位
                             </div>    
                         </a>
-                    </div>
+                    </div-->
 FOOBAR;
 
 $roles = <<<'FOOBAR'
@@ -555,13 +555,13 @@ $roles = <<<'FOOBAR'
                     <p>
                         table for ONE 線上付款透過綠界科技第三方平台支付。
                     </p>
-                    <div class="btn-box mg-b-lg">
+                    <!--div class="btn-box mg-b-lg">
                         <a href="reservation.html">
                             <div class="standard-btn btn">
                                 立即訂位
                             </div>    
                         </a>
-                    </div>
+                    </div-->
 FOOBAR;
 $contactText = <<<'FOOBAR'
                     <h1>
@@ -858,24 +858,27 @@ $qa = <<<'FOOBAR'
                     <h3>
                         table for ONE 為了 - 因為任何原因想要或需要一個人的你 - 存在
                     </h3>
-                    <div class="btn-box mg-b-md">
+                    <!--div class="btn-box mg-b-md">
                         <a href="reservation.html">
                             <div class="standard-btn btn">
                                 立即訂位
                             </div>    
                         </a>
-                    </div>
+                    </div-->
 FOOBAR;
 $home = <<<'FOOBAR'
                     <p>
-                        一個人，一張餐桌，二十四位陌生人
+                        table for ONE 一人餐桌<br />已於 2018 / 06 / 10 快閃結束
                     </p>
                     <p>
-                        一頓飯的時間，我們一起，一個人
+                        歡迎看看驚喜製造最新快閃計畫 - <br />無光晚餐第二季 Dining In he Dark Season 2
                     </p>
-                    <a href="about.html">
-                        <div class="standard-btn btn mg-auto">
-                            了解更多
+                    <p>
+                        希望我們有機會，與你在黑暗中相見。
+                    </p>
+                    <a href="https://www.surpriselab.com.tw/dininginthedark2">
+                        <div class="standard-btn btn mg-auto" style="letter-spacing: 1px;">
+                            無光晚餐第二季
                         </div>    
                     </a>
 FOOBAR;
