@@ -199,7 +199,7 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <div class="date">07/01</div>
+                                    <div class="date">07/02</div>
                                     <div class="dot"></div>
                                     <p>
                                         開放一般訂位
@@ -213,7 +213,7 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <div class="date">09/09</div>
+                                    <div class="date">09/16</div>
                                     <div class="dot"></div>
                                     <p>
                                         快閃結束
