@@ -15,11 +15,11 @@
                         Rules
                     </li>
                 </a>
-                <!--a href="reservation.html">
+                <!-- <a href="reservation.html">
                     <li @if($key == 'reservation')class="active"@endif>
                         Reservation
                     </li>
-                </a-->
+                </a> -->
                 <a href="food.html">
                     <li @if($key == 'food')class="active"@endif>
                         Food

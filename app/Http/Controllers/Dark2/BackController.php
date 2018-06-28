@@ -494,52 +494,48 @@ class BackController extends Controller
             $data = [
                 'xls_id' => $row->id
             ];
-            if($row->ot1 == 1){
-                $data['wine'] = 0;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-            } elseif($row->ot1 == 2){
-                $data['wine'] = 0;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-                $data['wine'] = 0;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-            } elseif($row->ot2 == 1){
-                $data['wine'] = 0;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-                $data['wine'] = 0;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-            } elseif($row->ot3 == 1){
-                $data['wine'] = 1;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-            } elseif($row->ot3 == 2){
-                $data['wine'] = 1;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-                $data['wine'] = 1;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-            } elseif($row->ot4 == 1){
-                $data['wine'] = 1;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-                $data['wine'] = 1;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-            } elseif($row->ot5 == 1){
-                $data['wine'] = 1;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-                $data['wine'] = 1;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
-                $data['wine'] = 1;
-                $data['code'] = $this->GenerateGiftCodeSN();
-                d2coupon::insert($data);
+            if($row->ot1 >= 1){
+                for($i=0;$i<$row->ot1;$i++){
+                    $data['wine'] = 0;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                }
+            } elseif($row->ot2 >= 1){
+                for($i=0;$i<$row->ot2;$i++){
+                    $data['wine'] = 0;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                    $data['wine'] = 0;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                }
+            } elseif($row->ot3 >= 1){
+                for($i=0;$i<$row->ot3;$i++){
+                    $data['wine'] = 1;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                }
+            } elseif($row->ot4 >= 1){
+                for($i=0;$i<$row->ot4;$i++){
+                    $data['wine'] = 1;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                    $data['wine'] = 1;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                }
+            } elseif($row->ot5 >= 1){
+                for($i=0;$i<$row->ot5;$i++){
+                    $data['wine'] = 1;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                    $data['wine'] = 1;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                    $data['wine'] = 1;
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    d2coupon::insert($data);
+                }
             }
             d2xls::where('id',$row->id)->update(['gen_coup'=>1]);
         }

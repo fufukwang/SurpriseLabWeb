@@ -156,6 +156,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
         //Route::get('test','Dark2\BackController@Xls2Db');
         //Route::get('cup','Dark2\BackController@Db2Coupon');
+        //Route::get('');
     });
 });
 
@@ -322,7 +323,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('chef.html',function(){ return view('Dark2.frontend.chef'); });
         Route::get('rules.html',function(){ return view('Dark2.frontend.rules0616'); });
         //Route::get('rules0616.html',function(){ return view('Dark2.frontend.rules0616'); });
-        //Route::get('reservation_pay.html',function(){ return view('Dark2.frontend.reservation_pay'); });
+        Route::get('reservation_pay.html',function(){ return view('Dark2.frontend.reservation_pay'); });
 
         Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
         Route::get('index.html',function(){ return view('Dark2.frontend.home'); });

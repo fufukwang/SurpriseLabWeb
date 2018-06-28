@@ -388,12 +388,14 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
                 <a href="javascript:;" id="fourth-btn-back"><div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">{{ trans('front.reservation.prev') }}</div></a>
                 <a href="javascript:;" id="fourth-btn-online"><div class="btn btn-standard btn-pay">{!! trans('front.reservation.Online') !!}<span id="CardView"></span></div></a>
                 <a href="javascript:;" id="fourth-btn-onsite"><div class="btn btn-standard btn-pay btn-negative">{!! trans('front.reservation.Self') !!}<span id="MoneyView"></span></div></a>
+                <div style="font-size: 12px;margin-top: -12px;">費用需額外加上10%服務費</div>
             </div>
         
 
         	<div style="padding: 60px 15px 140px;display: none;" class="main-container" id="done-section">
                 {!! trans('front.reservation.Done') !!}
             </div>
+            
         </div>
 
 
@@ -412,7 +414,7 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
                 </div>
 
                 <div class="lightbox-cancel-container">
-                    <div class="btn btn-standard" id="SurePay" style="display: inline-block;">確認付款</div>
+                    <div class="btn btn-standard" id="SurePay" style="display: inline-block;">確認</div>
                     <div class="btn btn-standard" id="CanalPay" style="display: inline-block;">取消</div>
                 </div>
                 
@@ -456,7 +458,7 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
 .lightbox2pay {display: none;position: fixed;height: 100%;width: 100%;top: 0px;left: 0px;z-index: 9999;background: rgba(0, 0, 0, 0.6);}
 </style>
 <script src="https://js.tappaysdk.com/tpdirect/v3"></script>
-<script type="text/javascript" src="/dark2/js/reservation.js"></script>
+<script type="text/javascript" src="/dark2/js/reservation.js?=0.1"></script>
 
 
 <script type="text/javascript">

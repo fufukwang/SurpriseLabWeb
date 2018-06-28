@@ -231,12 +231,12 @@ class HomeController extends Controller
                 $sentSuccess = true;
             } else {
                 // 送到金流
-                $pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
-                //$pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
+                //$pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
+                $pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
                 $postData = [
                     "prime"       => $request->prime,
                     "partner_key" => "partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC",
-                    "merchant_id" => "surpriselab_TAISHIN",
+                    "merchant_id" => "surpriselab_00001",
                     "details"     => "無光晚餐",
                     "amount"      => $money - $cut1 - $cut2,
                     "order_number"=> $count,
