@@ -100,11 +100,11 @@
                         </div>
 
 
-                        <!-- <a href="reservation.html">
+                        <a href="reservation.html">
                             <div class="btn btn-standard landing-btn show-4">
                                 我了解
                             </div>
-                        </a> -->
+                        </a>
                         <!--div>
                             <i class="fa fa-angle-down"></i>    
                         </div-->
@@ -216,29 +216,29 @@
                                     <div class="date">09/16</div>
                                     <div class="dot"></div>
                                     <p>
-                                        快閃結束
+                                        第一階段快閃結束
                                     </p>
                                 </li>
                             </ul>
                             <span>
                                 *為提供最好品質的無光體驗，上述⽇期會依情況彈性調整
                             </span>
-                            <!-- <a href="reservation.html">
+                            <a href="reservation.html">
                                 <div class="btn btn-standard landing-btn">
                                     前往訂位
                                 </div>
-                            </a> -->
+                            </a>
                         </div>
                         <div class="hashtag-box season-two-about">
                             <h1>
                                 #無光晚餐第一季
                             </h1>
                             <div class="hashtag-container" style="pointer-events: none;"><div><iframe src="https://live.memopresso.com/embed?token=albert&title=new&titlePosition=0&displayType=waterfall&initCount=20&showLoadMore=true&showLogo=false&showTitle=false&contentColor=999999&tagColor=89229b&displaySequence=RANDOM&" id="memopresso_embed" width="100%" scrolling="No" frameborder="0"></iframe><script type="text/javascript">window.onmessage = function(event) {document.getElementById("memopresso_embed").height = event.data};setInterval(function(){document.getElementById("memopresso_embed").contentWindow.postMessage("","*");}, 500);</script></div></div>
-                            <!-- <a href="reservation.html">
+                            <a href="reservation.html">
                                 <div class="btn btn-standard landing-btn">
                                     前往訂位
                                 </div>
-                            </a> -->
+                            </a>
                         </div>
                     </div>
                     @include('Dark2.frontend._footer')
