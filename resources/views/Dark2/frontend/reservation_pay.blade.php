@@ -111,7 +111,7 @@
                         <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，可享折抵優惠。</td>
                     </tr>
                     <tr>
-                        <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:service@surpriselab.com.tw">service@surpriselab.com.tw</a></td>
+                        <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></td>
                     </tr>
                 </tbody></table>
                 <p style="margin-top:25px;">
