@@ -110,6 +110,14 @@ class BackController extends Controller
         //dd(DB::getQueryLog());
         return view('Dark2.backend.BackMes',compact('mes','request'));
     }
+    public function NotUseXls(Request $request){
+        $cellData = d2xls::select('name','email')->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE order_id=0 AND d2coupon.xls_id=d2xls.id)>0")->get()->toArray();
+        Excel::create('匯出未兌換名單',function ($excel) use ($cellData){
+            $excel->sheet('data', function ($sheet) use ($cellData){
+                $sheet->rows($cellData);
+            });
+        })->export('xls');
+    }
     public function sendUpdate(Request $request,$id){
         d2xls::where('id',$id)->update([
             'is_sent' => $request->send
@@ -430,6 +438,38 @@ class BackController extends Controller
         
 
         return view('Dark2.backend.table',compact('order','request'));
+    }
+
+    public function XlsDataOuput(Request $request){
+        $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
+        $order = $order->select('day','dayparts','rangstart','rangend','name','email');
+        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
+        if($request->has('pay_status') && $request->pay_status=='已預約'){
+            $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
+        } elseif($request->pay_status!=''){
+            $order->where('d2order.pay_status',$request->pay_status);  
+        } 
+        if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
+        if($request->has('search') && $request->search!=''){
+            $search = $request->search;
+            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
+        }
+
+        if($request->has('order') && $request->order!=''){
+            $ord = explode('|',$request->order);
+            if(count($ord)>0){
+                $order = $order->OrderBy($ord[0],$ord[1]);
+            }
+        } else { $order = $order->orderBy('d2order.updated_at','desc'); }
+        $order = $order->get();
+
+        $cellData = $order->toArray();
+        Excel::create('名單',function ($excel) use ($cellData){
+            $excel->sheet('data', function ($sheet) use ($cellData){
+                $sheet->rows($cellData);
+            });
+        })->export('xls');
     }
 
     public function beSentOrderMail(Request $request,$id){

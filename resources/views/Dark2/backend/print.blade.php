@@ -78,6 +78,9 @@
                                             <div class="form-group col-sm-1">
                                                 <button type="button" class="btn btn-primary" id="grTable"><span class="glyphicon glyphicon-search"></span> 產生列印表格</button>
                                             </div>
+                                            <div class="form-group col-sm-1">
+                                                <button type="button" class="btn btn-warning" id="exportXls">匯出XLS</button>
+                                            </div>
 
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
@@ -249,8 +252,23 @@ $(function(){
         }
        
     });
+    $('#exportXls').bind('click',function(){
+        var day      = $('input[name=day]').val();
+        if(day == ''){
+            alert('請選擇日期');
+        } else {
+            submitXLSForm();
+        }
+    })
 
 });
+function submitXLSForm(){
+    $('#SearchForm').attr('target','_blank')
+    $('#SearchForm').attr('action','/dark2/xls/data/output')
+    $('#SearchForm').submit();
+    $('#SearchForm').attr('target','_top');
+    $('#SearchForm').attr('action','/dark2/print');
+}
 function submitSearchForm(){
     $('#SearchForm').attr('target','_blank')
     $('#SearchForm').attr('action','/dark2/table')

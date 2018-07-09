@@ -20,20 +20,23 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/dark2/backmes">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/dark2/backmes">
 
-                                            <div class="form-group col-sm-6">
+                                            <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="搜尋" name="search" id="datepicker-autoclose" value="{{ $request->search or ''}}">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group col-sm-4">
+                                            <div class="form-group col-sm-1">
                                                 <label><input type="checkbox" name="isdone" value="1" @if($request->isdone) checked @endif>未兌換</label>
                                             </div>
-                                            <div class="form-group col-sm-2">
+                                            <div class="form-group col-sm-1">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+                                            </div>
+                                            <div class="form-group col-sm-1">
+                                                <a target="_blank" href="/dark2/backmenouse/xls" class="btn btn-danger">匯出未兌換名單</a>
                                             </div>
 
                                         </form></div>

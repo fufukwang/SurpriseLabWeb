@@ -125,6 +125,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('backmes/{id}/sendUpdate','Dark2\BackController@sendUpdate');
         Route::post('backmes/{id}/sendManageUpdate','Dark2\BackController@sendManageUpdate');
         Route::post('backmes/CanelCoupon','Dark2\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','Dark2\BackController@NotUseXls');
 
         // coupon
         Route::get('coupons','Dark2\BackController@Coupons');
@@ -149,6 +150,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         // 報表列印
         Route::get('print','Dark2\BackController@Print');
         Route::get('table','Dark2\BackController@Table');
+        Route::get('xls/data/output','Dark2\BackController@XlsDataOuput');
         Route::post('order/{id}/resent','Dark2\BackController@beSentOrderMail');
 
 
