@@ -29,9 +29,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
-
+                                            <div class="form-group col-sm-4">
+                                                <label><input type="checkbox" name="isdone" value="1" @if($request->isdone) checked @endif>未兌換</label>
+                                            </div>
+                                            <div class="form-group col-sm-2">
+                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+                                            </div>
 
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
@@ -69,7 +72,7 @@
                                     </table>
 
 
-                                    <div class="text-align-center">{{ $mes->links() }}</div>
+                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone])->links() }}</div>
                                 </div></div>
 
                             </div>

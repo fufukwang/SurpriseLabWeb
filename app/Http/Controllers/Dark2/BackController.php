@@ -102,6 +102,9 @@ class BackController extends Controller
                 (SELECT COUNT(id) FROM(d2coupon) WHERE code LIKE '%{$search}%' AND d2coupon.xls_id=d2xls.id)
             )");
         }
+        if($request->has('isdone')){
+            $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE order_id=0 AND d2coupon.xls_id=d2xls.id)>0");
+        }
         
         $mes = $mes->paginate($this->perpage);
         //dd(DB::getQueryLog());

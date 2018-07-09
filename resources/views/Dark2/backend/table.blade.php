@@ -61,7 +61,7 @@
 			<td>{{ $row->tel }}</td>
 			<td>{{ $row->pople }} 人 {{ implode('/',json_decode($row->meat,true)) }} </td>
 			<td>{!! nl2br($row->notes) !!}</td>
-			<td>@forelse(App\model\d2coupon::where('order_id',$row->sn)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif<br >@empty 無使用優惠券 @endforelse</td>
+			<td>@forelse(App\model\d2coupon::where('order_id',$row->sn)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif [{{App\model\d2xls::select('money')->find($coup->xls_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
 			<td>{!! nl2br($row->manage) !!}</td>
 		</tr>
 @empty
