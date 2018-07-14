@@ -442,7 +442,7 @@ class BackController extends Controller
 
     public function XlsDataOuput(Request $request){
         $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
-        $order = $order->select('day','dayparts','rangstart','rangend','name','email');
+        $order = $order->select('day','dayparts','rangstart','rangend','name','email','tel');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
