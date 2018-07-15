@@ -10,7 +10,7 @@
                         Rules
                     </li>
                 </a>
-                <a href="pre-order.html">
+                <a href="pre-sale.html">
                     <li @if($key == 'pre-order')class="active"@endif>
                         Pre-sale
                     </li>
