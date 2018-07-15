@@ -113,38 +113,42 @@
                     <div class="new-about">
                         <div class="pre-order-info">
                             <p>
-                                無光晚餐第⼆季 第⼀階段預售計畫<br />
-                                已於 05/05-06/15 集資成功、正式啟動
+                                <div style="font-size:24px;letter-spacing: 2px">無光晚餐第二季</div>
+<div style="letter-spacing: 8px;font-size:22px;">第二階段預售正式啟動<br /><br /></div>
+07/04-09/16座位已因第一階段預售全數額滿<br />
+想參與無光晚餐的你，別錯過第二階段預售計畫<br /><br />
+本階段將劃 09/22-11/04 期間之座位
+
                             </p>
                             <div class="progress-bar-box">
                                 <div class="bar-box">
-                                    <div class="bar" style="width: 100%"></div>
+                                    <div class="bar" style="width: 0%"></div>
                                 </div>
                             </div>
                             <div class="info-box">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h1>
-                                            // 達標結果 //
+                                            // 啟動進度 //
                                         </h1>
                                         <p>
-                                            <span class="percent">119</span>%
+                                            <span class="percent">0</span>%
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 預售張數 //
+                                            // 已售出張數 //
                                         </h1>
                                         <p>
-                                            <span class="tickets">3598</span>張
+                                            <span class="tickets">0</span>張
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 預售天數 //
+                                            // 目標 2000 張 //
                                         </h1>
                                         <p>
-                                            <span class="days">42</span>天
+                                            <span class="days">0</span>天
                                         </p>
                                     </div>
                                 </div>
@@ -170,7 +174,7 @@
                                 Timeline
                             </h1>
                             <ul class="timeline">
-                                <li class="important">
+                                <!--li class="important">
                                     <div class="date">05/04</div>
                                     <div class="dot"></div>
                                     <p>
@@ -218,14 +222,68 @@
                                     <p>
                                         第一階段快閃結束
                                     </p>
+                                </li-->
+                                <li class="important">
+                                    <div class="date">07/16</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        第二階段預售開始
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">08/31</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        預售截止<br />
+<span style="font-size:12px;">若達2000人預購將開啟劃位 <br />
+未達2000人，將公布第二階段開始失敗<br />
+並於 09/20 前全額退費給預售參與者<span>
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">09/01</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        發放劃位序號，前500明預售購買者<br />
+                                        <span style="font-size:12px;">收到序號後，即可開始劃位</span>
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">09/10</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        發放劃位序號，前500明預售購買者<br />
+                                        <span style="font-size:12px;">收到序號後，即可開始劃位</span>
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">09/20</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        開放一般訂位
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">09/22</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        第二階段快閃開始
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">11/04</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        第二階段快閃結束
+                                    </p>
                                 </li>
                             </ul>
                             <span>
                                 *為提供最好品質的無光體驗，上述⽇期會依情況彈性調整
                             </span>
-                            <a href="reservation.html">
+                            <a href="pre-sale.html">
                                 <div class="btn btn-standard landing-btn">
-                                    前往訂位
+                                    前往預售
                                 </div>
                             </a>
                         </div>
@@ -279,8 +337,8 @@
             }
         });
 
-/*
-        $.get('https://surpriselab.backme.tw/api/projects/820.json?token=15171aa66ababafd4464a1c194b66102',function(data){
+
+        $.get('https://surpriselab.backme.tw/api/projects/855.json?token=15171aa66ababafd4464a1c194b66102',function(data){
             var item = data.rewards;
             var count = 0;
             for(var i=0;item.length>i;i++){
@@ -306,7 +364,7 @@
             $('.days').text(days);
 
         },'json');
-*/
+
         if(window.location.pathname.indexOf('about\.html')>0){
             $('.main-logo .landing-btn').trigger('click');
         }

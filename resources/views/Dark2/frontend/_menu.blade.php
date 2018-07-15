@@ -5,14 +5,14 @@
                         About
                     </li>
                 </a>
-                <!--a href="pre-order.html">
-                    <li @if($key == 'pre-order')class="active"@endif>
-                        Pre-sale
-                    </li>
-                </a-->
                 <a href="rules.html">
                     <li @if($key == 'rules')class="active"@endif>
                         Rules
+                    </li>
+                </a>
+                <a href="pre-order.html">
+                    <li @if($key == 'pre-order')class="active"@endif>
+                        Pre-sale
                     </li>
                 </a>
                 <a href="reservation.html">
