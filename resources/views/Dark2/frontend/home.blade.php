@@ -344,11 +344,11 @@
             for(var i=0;item.length>i;i++){
                 var item_count = parseInt(item[i].pledged_count);
                 switch(item[i].id){
-                    case 4380: item_count *= 2; break;
-                    case 4386: item_count *= 2; break;
-                    case 4385: item_count *= 4; break;
-                    case 4387: item_count *= 4; break;
-                    case 4388: item_count *= 6; break;
+                    case 4615: item_count *= 2; break;
+                    case 4617: item_count *= 2; break;
+                    case 4616: item_count *= 4; break;
+                    case 4618: item_count *= 4; break;
+                    case 4619: item_count *= 6; break;
                 }
                 count += item_count;
             }
