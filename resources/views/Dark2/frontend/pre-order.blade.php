@@ -58,7 +58,7 @@
                 <div class="pre-order-box">
                     <div class="row">
                         <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/855/4380?locale=zh-TW">
+                            <a href="https://surpriselab.backme.tw/checkout/855/4615?locale=zh-TW">
                                 <div>
                                     <img src="/dark2/images/Pre-sale/Button_4.png" alt="">    
                                 </div>
@@ -79,7 +79,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/855/4385?locale=zh-TW">
+                            <a href="https://surpriselab.backme.tw/checkout/855/4616?locale=zh-TW">
                                 <div>
                                     <img src="/dark2/images/Pre-sale/Button_5.png" alt="">    
                                 </div>

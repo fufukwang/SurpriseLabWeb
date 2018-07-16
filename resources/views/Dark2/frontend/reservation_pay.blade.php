@@ -95,11 +95,11 @@
             </div>
            
             <div class="main-container" id="first-section" style="padding-top: 0px;">
-                <div style="color:#a67c52;">
-<div style="font-weight:bold;font-size:24px;">第一階段7/4-9/16座位已全數額滿</div>
-將不定時釋出座位，可留意訂位系統<br><br>
-若無法訂位但也想購票者，可至<a href="pre-sale.html" style="color:#a67c52;">第二階段預售</a>購票<br>
-第二階段將開放9/22-11/4之座位
+                <div style="color:#E3514A;">
+<div style="font-weight:bold;font-size:24px;line-height:30px;">第一階段7/4-9/16座位已全數額滿<br >建議你參與第⼆階段預售，搶先留位</div>
+(第⼆階段將開放 09/22-11/04 之座位)<br><br>
+但！若你真的很想訂七⽉⾄九⽉中座位<br>
+可留意本⾴⾯，將不定期有座位釋出
                 </div>
                 <p>
                     {{ trans('front.reservation.slug1title') }}
