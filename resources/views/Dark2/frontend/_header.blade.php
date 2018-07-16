@@ -22,5 +22,5 @@
     <meta property="og:site_name" content="無光晚餐第二季 Dining In The Dark Season 2" />
     <meta property="og:image" content="https://www.surpriselab.com.tw/dark2/S__9076871.jpg" />
     <meta property="og:type" content="website" />
-    <meta name="description" content="無光晚餐第二季，限時快閃，現正進行中">
+    <meta name="description" content="09/22-11/04 座位，現正預售中 (夏季座位已全數售罄)">
     <meta name="keywords" content="無光晚餐、無光餐廳、約會餐廳、黑暗餐廳、黑暗體驗">

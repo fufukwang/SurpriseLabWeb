@@ -100,7 +100,7 @@
                         </div>
 
 
-                        <a href="reservation.html">
+                        <a href="pre-sale.html">
                             <div class="btn btn-standard landing-btn show-4">
                                 我了解
                             </div>
@@ -114,9 +114,9 @@
                         <div class="pre-order-info">
                             <p>
                                 <div style="font-size:24px;letter-spacing: 2px">無光晚餐第二季</div>
-<div style="letter-spacing: 8px;font-size:22px;">第二階段預售正式啟動<br /><br /></div>
-07/04-09/16座位已因第一階段預售全數額滿<br />
-想參與無光晚餐的你，別錯過第二階段預售計畫<br /><br />
+<div style="letter-spacing: 8px;font-size:22px;">第二階段預售啟動<br /><br /></div>
+07/04-09/16座位已全數額滿<br />
+想參與無光晚餐的你，別錯過第⼆階段預售<br /><br />
 本階段將劃 09/22-11/04 期間之座位
 
                             </p>
@@ -235,25 +235,25 @@
                                     <div class="dot"></div>
                                     <p>
                                         預售截止<br />
-<span style="font-size:12px;">若達2000人預購將開啟劃位 <br />
-未達2000人，將公布第二階段開始失敗<br />
-並於 09/20 前全額退費給預售參與者<span>
+<span style="font-size:12px;">若達2000人預購將開啟快閃 <br />
+未達2000人，將公布預售失敗<br />
+並於 09/20 前全額退費給參與者<span>
                                     </p>
                                 </li>
                                 <li class="important">
                                     <div class="date">09/01</div>
                                     <div class="dot"></div>
                                     <p>
-                                        發放劃位序號，前500明預售購買者<br />
-                                        <span style="font-size:12px;">收到序號後，即可開始劃位</span>
+                                        發放劃位序號，前500名預售購買者<br />
+                                        <span style="font-size:12px;">收到序號後，即可劃位</span>
                                     </p>
                                 </li>
                                 <li class="important">
                                     <div class="date">09/10</div>
                                     <div class="dot"></div>
                                     <p>
-                                        發放劃位序號，前500明預售購買者<br />
-                                        <span style="font-size:12px;">收到序號後，即可開始劃位</span>
+                                        發放劃位序號，其餘預售購買者<br />
+                                        <span style="font-size:12px;">收到序號後，即可劃位</span>
                                     </p>
                                 </li>
                                 <li class="important">
@@ -278,8 +278,8 @@
                                     </p>
                                 </li>
                             </ul>
-                            <span>
-                                *為提供最好品質的無光體驗，上述⽇期會依情況彈性調整
+                            <span style="color:white;">
+                                為提供最好品質的無光體驗<br />上述⽇期會依情況彈性調整
                             </span>
                             <a href="pre-sale.html">
                                 <div class="btn btn-standard landing-btn">

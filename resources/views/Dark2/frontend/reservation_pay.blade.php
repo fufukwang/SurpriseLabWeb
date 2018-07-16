@@ -96,7 +96,7 @@
            
             <div class="main-container" id="first-section" style="padding-top: 0px;">
                 <div style="color:#E3514A;">
-<div style="font-weight:bold;font-size:24px;line-height:30px;">第一階段7/4-9/16座位已全數額滿<br >建議你參與第⼆階段預售，搶先留位</div>
+<div style="font-weight:bold;font-size:24px;line-height:30px;">07/04-09/16座位已額滿<br >建議你參與第⼆階段預售，搶先留位</div>
 (第⼆階段將開放 09/22-11/04 之座位)<br><br>
 但！若你真的很想訂七⽉⾄九⽉中座位<br>
 可留意本⾴⾯，將不定期有座位釋出
