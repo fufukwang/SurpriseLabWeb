@@ -244,7 +244,7 @@
                                     <div class="date">09/01</div>
                                     <div class="dot"></div>
                                     <p>
-                                        發放劃位序號，前500名預售購買者<br />
+                                        發放劃位序號 -<br >前500名預售購買者<br />
                                         <span style="font-size:12px;">收到序號後，即可劃位</span>
                                     </p>
                                 </li>
@@ -252,7 +252,7 @@
                                     <div class="date">09/10</div>
                                     <div class="dot"></div>
                                     <p>
-                                        發放劃位序號，其餘預售購買者<br />
+                                        發放劃位序號 -<br >其餘預售購買者<br />
                                         <span style="font-size:12px;">收到序號後，即可劃位</span>
                                     </p>
                                 </li>
