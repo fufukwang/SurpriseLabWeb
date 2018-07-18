@@ -352,7 +352,7 @@
                 }
                 count += item_count;
             }
-            var percent = parseInt((count / 3000) * 100);
+            var percent = parseInt((count / 2000) * 100);
             $('.percent').text( percent );
             if(percent>100) percent = 100;
             $('.bar').css("width",percent+"%");
