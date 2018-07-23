@@ -471,6 +471,18 @@ class BackController extends Controller
             });
         })->export('xls');
     }
+    public function XlsEmailDataOuput(Request $request){
+        $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
+        $order = $order->select('name','email')->groupBy('email');
+        $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
+        $order = $order->orderBy('d2order.updated_at','desc')->get();
+        $cellData = $order->toArray();
+        Excel::create('Email 名單',function ($excel) use ($cellData){
+            $excel->sheet('data', function ($sheet) use ($cellData){
+                $sheet->rows($cellData);
+            });
+        })->export('xls');
+    }
 
     public function beSentOrderMail(Request $request,$id){
         $act = d2pro::select('day','rangstart','rangend')->find($id);

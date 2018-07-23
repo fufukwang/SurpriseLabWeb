@@ -130,16 +130,25 @@
                                 </div></div>
 
                             </div>
-
+                            
                         </div>
                     </div>
                 </div>
 
 
 
-
-
-
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="/dark2/xls/emaildata/output" class="btn btn-warning">下載成功付款的 EMail 名單</a>
+                                    <span style="font-size: 12px;color:red;"><br>需要較多的伺服器資源.請在離峰時刻使用</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 

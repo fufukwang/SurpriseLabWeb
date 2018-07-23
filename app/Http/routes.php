@@ -151,6 +151,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('print','Dark2\BackController@Print');
         Route::get('table','Dark2\BackController@Table');
         Route::get('xls/data/output','Dark2\BackController@XlsDataOuput');
+        Route::get('xls/emaildata/output','Dark2\BackController@XlsEmailDataOuput');
         Route::post('order/{id}/resent','Dark2\BackController@beSentOrderMail');
 
 
