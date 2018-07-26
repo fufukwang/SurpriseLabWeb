@@ -331,11 +331,12 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
         Route::get('index.html',function(){ return view('Dark2.frontend.home'); });
         Route::get('/',function(){ return view('Dark2.frontend.home'); });
+        /*
         Route::get('reservation.html', function () {
             return redirect('/dininginthedark2/pre-sale.html')->send();
         });
-
-        //Route::get('reservation.html',function(){ return view('Dark2.frontend.reservation_pay'); });
+*/
+        Route::get('reservation.html',function(){ return view('Dark2.frontend.reservation_pay'); });
         Route::get('people.html',function(){ return view('Dark2.frontend.people'); });
         //Route::get('event.html',function(){ return view('frontend.event'); });
         //Route::get('event-landing.html',function(){ return view('frontend.event-landing'); });
