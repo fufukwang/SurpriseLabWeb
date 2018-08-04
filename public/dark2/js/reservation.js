@@ -109,7 +109,7 @@ $(function(){
         if( Math.max(money,0) === 0 ){
             SendOrderData('onsite','');
         } else {
-            alert('目前僅供使用優惠券使用!');
+            alert('僅能以劃位碼劃位!');
         }
     });
 

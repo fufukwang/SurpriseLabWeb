@@ -94,7 +94,10 @@
                 </ul>
             </div>
            
-            <div class="main-container" id="first-section">
+            <div class="main-container" id="first-section"style="padding-top: 0px;">
+                <div style="color:#a67c52;">
+<div style="font-weight:bold;font-size:24px;line-height:30px;">第二階段座位開放劃位<br >劃位⽇期為 09/01-11/04</div>
+                </div>
                 <p>
                     {{ trans('front.reservation.slug1title') }}
                 </p>    
@@ -111,6 +114,9 @@
                         <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，將⾦額扣抵為零，確認訂單，即可完成劃位</td>
                     </tr>
                     <tr>
+                        <td colspan="2"> - 無光晚餐固定每週⼀、⼆公休<br > - 若⾮公休⽇之⽇期無法選擇，代表座位已滿<br > - 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況</td>
+                    </tr>
+                    <tr>
                         <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></td>
                     </tr>
                 </tbody></table>
@@ -125,6 +131,11 @@
                         {{ trans('front.home.order') }}
                     </div>
                 </a>
+                <!--a href="pre-sale.html">
+                    <div class="btn btn-standard">
+                        前往預售
+                    </div>
+                </a-->
             </div>
             
 
@@ -388,7 +399,7 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
                 <a href="javascript:;" id="fourth-btn-back"><div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">{{ trans('front.reservation.prev') }}</div></a>
                 <!--a href="javascript:;" id="fourth-btn-online"><div class="btn btn-standard btn-pay">{!! trans('front.reservation.Online') !!}<span id="CardView"></span></div></a>
                 <a href="javascript:;" id="fourth-btn-onsite"><div class="btn btn-standard btn-pay btn-negative">{!! trans('front.reservation.Self') !!}<span id="MoneyView"></span></div></a-->
-                <a href="javascript:;" id="fourth-btn-zero"><div class="btn btn-standard btn-pay">確認訂單<br />NT <span id="MoneyView"></span></div></a>
+                <a href="javascript:;" id="fourth-btn-zero"><div class="btn btn-standard btn-pay">完成劃位<br />NT <span id="MoneyView"></span></div></a>
             </div>
         
 
