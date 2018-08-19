@@ -3,7 +3,7 @@
                 <div class="contact-box">
                     <h4>Contact</h4>
                     <p>
-                        02-2719-2960 / 
+                        <!--02-2719-2960 / -->
                         <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a><br>
                         台北市松⼭區健康路九號
                     </p>
@@ -18,9 +18,9 @@
                         </a>
                     </ul>
                     <ul>
-                        <a href="#">
+                        <!--a href="#">
                             <li>Team</li>
-                        </a>
+                        </a-->
                         <a href="http://pse.im/5LS4G">
                             <li>Join Mailing List</li>
                         </a>

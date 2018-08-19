@@ -58,7 +58,7 @@
                 <div class="pre-order-box">
                     <div class="row">
                         <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/855/4615?locale=zh-TW">
+                            <a href="https://surpriselab.backme.tw/checkout/855/4615?locale=zh-TW" id="a_4615">
                                 <div>
                                     <img src="/dark2/images/Pre-sale/Button_4.png" alt="">    
                                 </div>
@@ -66,7 +66,7 @@
                             <p></p>
                         </div>
                         <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/855/4617?locale=zh-TW">
+                            <a href="https://surpriselab.backme.tw/checkout/855/4617?locale=zh-TW" id="a_4617">
                                 <div>
                                     <img src="/dark2/images/Pre-sale/Button_1.png" alt="">  
                                     <div class="limit">
@@ -79,7 +79,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/855/4616?locale=zh-TW">
+                            <a href="https://surpriselab.backme.tw/checkout/855/4616?locale=zh-TW" id="a_4616">
                                 <div>
                                     <img src="/dark2/images/Pre-sale/Button_5.png" alt="">    
                                 </div>
@@ -87,7 +87,7 @@
                             <p></p>
                         </div>
                         <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/855/4618?locale=zh-TW">
+                            <a href="https://surpriselab.backme.tw/checkout/855/4618?locale=zh-TW" id="a_4618">
                                 <div>
                                     <img src="/dark2/images/Pre-sale/Button_2.png" alt="">    
                                     <div class="limit">
@@ -101,7 +101,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <a href="https://surpriselab.backme.tw/checkout/855/4619?locale=zh-TW">
+                            <a href="https://surpriselab.backme.tw/checkout/855/4619?locale=zh-TW" id="a_4619">
                                 <div>
                                     <img src="/dark2/images/Pre-sale/Button_3.png" alt="">    
                                     <div class="limit">
@@ -134,6 +134,14 @@ $(function(){
         for(var i=0;item.length>i;i++){
             var count = parseInt(item[i].quantity_limit) - parseInt(item[i].pledged_count) - parseInt(item[i].wait_pledged_count);
             $('#count_'+item[i].id).text(count);
+            if(count == 0){
+                $('#a_'+item[i].id+' div img').css({"-webkit-filter":"grayscale(1)"});
+                $('#a_'+item[i].id).bind('click',function(){
+                    alert('限量已完售!!');
+                    return false;
+                });
+                $('#count_'+item[i].id).text('已完售');
+            }
         }
 
     },'json');

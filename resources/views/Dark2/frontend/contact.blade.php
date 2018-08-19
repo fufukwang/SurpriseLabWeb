@@ -27,7 +27,7 @@
                             Contact
                         </h1>
                         <p>
-                            02-27192960 <br>
+                            若有任何問題，請先參考<a href="rules.html">規則</a>⾴⾯，或是來信詢問 <br>
                             <a href="mailto:dininginthedark@surpriselab.com.tw">
                                 dininginthedark@surpriselab.com.tw
                             </a>
