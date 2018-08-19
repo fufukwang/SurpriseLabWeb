@@ -140,7 +140,7 @@ $(function(){
                     alert('限量已完售!!');
                     return false;
                 });
-                $('#count_'+item[i].id).text('已完售');
+                $('#count_'+item[i].id).parent().text('已完售');
             }
         }
 
