@@ -23,6 +23,16 @@
                 <div class="main-box rules-box">
                     <div class="main-container"><form action="/dininginthedark2/contactstore" method="post" id="contentForm">
                         {!! csrf_field() !!}
+                        <h1>預約時間 Reservation Times</h1>
+<p>
+Mon Closed<br >
+Tue Closed<br >
+Wed 18:00-22:30<br >
+Thu 18:00-22:30<br >
+Fri 12:00-14:00 / 18:00-22:30<br >
+Sat 12:00-14:00 / 17:30-22:30<br >
+Sun 12:00-14:00 / 17:30 - 22:30<br >
+</p>
                         <h1>
                             Contact
                         </h1>

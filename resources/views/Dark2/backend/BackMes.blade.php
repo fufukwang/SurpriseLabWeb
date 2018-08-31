@@ -33,6 +33,13 @@
                                                 <label><input type="checkbox" name="isdone" value="1" @if($request->isdone) checked @endif>未兌換</label>
                                             </div>
                                             <div class="form-group col-sm-1">
+                                                <select name="season" class="form-control">
+                                                    <option value="">選擇</option>
+                                                    <option value="1"@if($request->season==1) selected @endif>18夏之季</option>
+                                                    <option value="2"@if($request->season==2) selected @endif>18秋之季</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-1">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
                                             </div>
                                             <div class="form-group col-sm-1">
@@ -75,7 +82,7 @@
                                     </table>
 
 
-                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone])->links() }}</div>
+                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season])->links() }}</div>
                                 </div></div>
 
                             </div>

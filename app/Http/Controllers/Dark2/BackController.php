@@ -105,6 +105,9 @@ class BackController extends Controller
         if($request->has('isdone')){
             $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE order_id=0 AND d2coupon.xls_id=d2xls.id)>0");
         }
+        if($request->has('season')){
+            $mes = $mes->where('quarter',$request->season);
+        }
         
         $mes = $mes->paginate($this->perpage);
         //dd(DB::getQueryLog());
@@ -525,20 +528,20 @@ class BackController extends Controller
                     'tel'        => $row['tel'],
                     'sponsor_id' => $row['sponsor_id'],
                     'ot1'        => $row['ot1'],
-                    'ot1text'    => json_encode([$row['ot1'],$row['ot1_1'],$row['ot1_2'],$row['ot1_3']]),
+                    'ot1text'    => json_encode([$row['ot1'],$row['ot1_1'],$row['ot1_2']]),
                     'ot2'        => $row['ot2'],
-                    'ot2text'    => json_encode([$row['ot2'],$row['ot2_1'],$row['ot2_2'],$row['ot2_3']]),
+                    'ot2text'    => json_encode([$row['ot2'],$row['ot2_1'],$row['ot2_2']]),
                     'ot3'        => $row['ot3'],
-                    'ot3text'    => json_encode([$row['ot3'],$row['ot3_1'],$row['ot3_2'],$row['ot3_3']]),
+                    'ot3text'    => json_encode([$row['ot3'],$row['ot3_1'],$row['ot3_2']]),
                     'ot4'        => $row['ot4'],
-                    'ot4text'    => json_encode([$row['ot4'],$row['ot4_1'],$row['ot4_2'],$row['ot4_3']]),
+                    'ot4text'    => json_encode([$row['ot4'],$row['ot4_1'],$row['ot4_2']]),
                     'ot5'        => $row['ot5'],
-                    'ot5text'    => json_encode([$row['ot5'],$row['ot5_1'],$row['ot5_2'],$row['ot5_3']]),
+                    'ot5text'    => json_encode([$row['ot5'],$row['ot5_1'],$row['ot5_2']]),
                     'result'     => json_encode($row),
+                    'quarter'    => 2,  // 產出季度
                 ];
                 array_push($data, $r);
             }
-            //dd($data);
             d2xls::insert($data);
         });
     }

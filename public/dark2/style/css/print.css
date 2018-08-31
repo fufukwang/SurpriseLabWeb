@@ -123,6 +123,6 @@ a:hover { color: #cbcbcb; }
 .team-box div:nth-of-type(even) { width: 60%; color: #a47c52; }
 @media (max-width: 776px) { .team-box div:nth-of-type(even) { width: 100%; } }
 
-.timeline .important:nth-child(2) .dot:after {
-    height: 100px;
+.timeline .important:nth-child(2) .dot:after,.timeline .important:nth-child(3) .dot:after,.timeline .important:nth-child(4) .dot:after {
+    height: 80px;
 }

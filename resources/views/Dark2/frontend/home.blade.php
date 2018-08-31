@@ -114,10 +114,12 @@
                         <div class="pre-order-info">
                             <p>
                                 <div style="font-size:24px;letter-spacing: 2px">無光晚餐第二季</div>
-<div style="letter-spacing: 8px;font-size:22px;">第二階段預售啟動<br /><br /></div>
-07/04-09/16座位已全數額滿<br />
-想參與無光晚餐的你，別錯過第⼆階段預售<br /><br />
-本階段將劃 09/22-11/04 期間之座位
+<div style="letter-spacing: 8px;font-size:22px;">秋 季 預 售 最 後 倒 數<br /><br /></div>
+原訂於 08/31 截⽌的秋季預售將延⻑⾄ 09/05<br /><br />
+有興趣的你、在猶豫的你<br />
+請把握最後倒數的⽇⼦，別再錯過<br /><br />
+秋季預售可劃位 09/22-11/04 期間之座位<br />
+若預購⼈數踴躍，將加開劃位⽇期⾄11⽉中後
 
                             </p>
                             <div class="progress-bar-box">
@@ -145,7 +147,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 目標 2000 張 //
+                                            // 預售倒數 //
                                         </h1>
                                         <p>
                                             <span class="days">0</span>天
@@ -227,17 +229,16 @@
                                     <div class="date">07/16</div>
                                     <div class="dot"></div>
                                     <p>
-                                        第二階段預售開始
+                                        秋季座位預售開始
                                     </p>
                                 </li>
                                 <li class="important">
-                                    <div class="date">08/31</div>
+                                    <div class="date">09/05</div>
                                     <div class="dot"></div>
                                     <p>
-                                        預售截止<br />
-<span style="font-size:12px;">若達2000人預購將開啟快閃 <br />
-未達2000人，將公布預售失敗<br />
-並於 09/20 前全額退費給參與者<span>
+                                        秋季座位預售截⽌<br />
+<span style="font-size:12px;">秋季預售截⽌⽇延⻑⾄ 09/05<br />
+請各位把握最後時間為⾃⼰留下座位<span>
                                     </p>
                                 </li>
                                 <li class="important">
@@ -256,25 +257,27 @@
                                         <span style="font-size:12px;">收到序號後，即可劃位</span>
                                     </p>
                                 </li>
-                                <li class="important">
+                                <!--li class="important">
                                     <div class="date">09/20</div>
                                     <div class="dot"></div>
                                     <p>
                                         開放一般訂位
                                     </p>
-                                </li>
+                                </li-->
                                 <li class="important">
                                     <div class="date">09/22</div>
                                     <div class="dot"></div>
                                     <p>
-                                        第二階段快閃開始
+                                        秋季座位快閃開始
                                     </p>
                                 </li>
                                 <li class="important">
                                     <div class="date">11/04</div>
                                     <div class="dot"></div>
                                     <p>
-                                        第二階段快閃結束
+                                        秋季座位快閃截⽌<br />
+<span style="font-size:12px;">依照訂位⼈數，將於劃位階段延後結束時間<br />
+可能延後⾄11中或11⽉中後<span>
                                     </p>
                                 </li>
                             </ul>
