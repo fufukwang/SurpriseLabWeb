@@ -282,6 +282,9 @@
                 </table>
             </td>
         </tr>
+        <tr>   
+            <td align="center" style="color:white;">如按鈕無法連結請使用以下網址:<br /><a title="無光晚餐第二季 劃位頁面 這裡請" href="https://www.surpriselab.com.tw/dininginthedark2/reservation.html" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">https://www.surpriselab.com.tw/dininginthedark2/reservation.html</a></td>
+        </tr>
     </tbody>
 </table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
     <tbody class="mcnImageBlockOuter">
