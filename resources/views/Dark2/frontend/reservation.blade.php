@@ -97,10 +97,13 @@
             <div class="main-container" id="first-section"style="padding-top: 0px;">
                 <div style="color:#a67c52;">
 <div style="font-weight:bold;font-size:24px;line-height:30px;">秋 季 座 位 開 放 劃 位</div>
-<div style="font-size: 12px">原 定 劃 位 區 間 為 09/22-11/04<br >
+<div style="font-size: 16px">
+    劃 位 ⽇ 期 為 09/22-11/25
+    <!--
+    原 定 劃 位 區 間 為 09/22-11/04<br >
 若 預 購 ⼈ 數 踴 躍<br >
 將 加 開 劃 位 ⽇ 期 ⾄ 11 ⽉ 中 後<br >
-( 以 系 統 中 開 放 之 ⽇ 期 為 主 )</div>
+( 以 系 統 中 開 放 之 ⽇ 期 為 主 )--></div>
                 </div>
                 <p>
                     {{ trans('front.reservation.slug1title') }}

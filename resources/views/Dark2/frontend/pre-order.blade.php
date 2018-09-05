@@ -31,10 +31,14 @@
                     </h1-->
                     <h1 style="letter-spacing: 3px;">無 光 晚 餐 秋 季 段 預 售 套 票</h1>
                     <p style="margin-top: 25px;" class="strong-words">
+無光晚餐 09/01-11/25 座位已全數售罄<br >
+錯 過 秋 季 預 售 且 有 興 趣 者<br >
+歡 迎 來 信 無 光 晚 餐 客 服 信 箱 詢 問<br >
+<!--
                         無光晚餐 07/04-09/16 座位已全數售罄<br >
 秋季座位 09/22-11/04 座位，現正預售中<br >
 若預購⼈數踴躍，將加開劃位⽇期⾄11⽉中後
-
+-->
                     </p>
                     <p>
                         【 無光體驗 】<br><br>
@@ -59,7 +63,7 @@
                     </p>
                 </div>
             </div>
-            <div class="season-two-about pre-order-section">
+            <!--div class="season-two-about pre-order-section">
                 <p>
                     請點選商品前往付款 ⬇
                 </p>
@@ -127,15 +131,14 @@
                 </div>
                 <p>
                     *以上套票價格均已含一成服務費<br>
-                    <!--span class="strong-words">*預售票價可享75折，最高67折優惠</span><br-->
                     *預計第二階段日期為 09/22-11/04<br>
                 </p>
-            </div>
+            </div-->
         </div>   
         @include('Dark2.frontend._footer')
     </div>
 <script type="text/javascript">
-    
+/*
 $(function(){
     $.get('https://surpriselab.backme.tw/api/projects/855.json?token=15171aa66ababafd4464a1c194b66102',function(data){
         var item = data.rewards;
@@ -154,7 +157,7 @@ $(function(){
 
     },'json');
 });
-
+*/
 </script>
 </body>
 </html>

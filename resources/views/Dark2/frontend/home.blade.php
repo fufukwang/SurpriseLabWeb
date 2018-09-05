@@ -114,13 +114,18 @@
                         <div class="pre-order-info">
                             <p>
                                 <div style="font-size:24px;letter-spacing: 2px">無光晚餐第二季</div>
-<div style="letter-spacing: 8px;font-size:22px;">秋 季 預 售 最 後 倒 數<br /><br /></div>
+<div style="letter-spacing: 8px;font-size:22px;">秋季預售結束<br /><br /></div>
+
+無光晚餐即⽇起⾄ 11/25之座位<br />已於秋季預售全數售罄<br /><br />
+錯過預售仍想購買者<br />請寄信⾄無光晚餐客服信箱<br /><br />
+冬季預售是否開放尚未確定<br />請隨時上來晃晃
+<!--
 原訂於 08/31 截⽌的秋季預售將延⻑⾄ 09/05<br /><br />
 有興趣的你、在猶豫的你<br />
 請把握最後倒數的⽇⼦，別再錯過<br /><br />
 秋季預售可劃位 09/22-11/04 期間之座位<br />
 若預購⼈數踴躍，將加開劃位⽇期⾄11⽉中後
-
+-->
                             </p>
                             <div class="progress-bar-box">
                                 <div class="bar-box">
@@ -147,10 +152,10 @@
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 預售倒數 //
+                                            // 預售總天數 //
                                         </h1>
                                         <p>
-                                            <span class="days">0</span>天
+                                            <span class="dayss">52</span>天
                                         </p>
                                     </div>
                                 </div>
