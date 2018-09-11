@@ -518,30 +518,44 @@ class BackController extends Controller
             $data = [];
             $xlsx = $reader->toArray();
             foreach($xlsx as $row){
-                $r = [
-                    'sn'         => $row['sn'],
-                    'detail'     => $row['detail'],
-                    'num'        => $row['num'],
-                    'money'      => $row['money'],
-                    'name'       => $row['name'],
-                    'email'      => $row['email'],
-                    'tel'        => $row['tel'],
-                    'sponsor_id' => $row['sponsor_id'],
-                    'ot1'        => $row['ot1'],
-                    'ot1text'    => json_encode([$row['ot1'],$row['ot1_1'],$row['ot1_2']]),
-                    'ot2'        => $row['ot2'],
-                    'ot2text'    => json_encode([$row['ot2'],$row['ot2_1'],$row['ot2_2']]),
-                    'ot3'        => $row['ot3'],
-                    'ot3text'    => json_encode([$row['ot3'],$row['ot3_1'],$row['ot3_2']]),
-                    'ot4'        => $row['ot4'],
-                    'ot4text'    => json_encode([$row['ot4'],$row['ot4_1'],$row['ot4_2']]),
-                    'ot5'        => $row['ot5'],
-                    'ot5text'    => json_encode([$row['ot5'],$row['ot5_1'],$row['ot5_2']]),
-                    'result'     => json_encode($row),
-                    'quarter'    => 2,  // 產出季度
-                ];
-                array_push($data, $r);
+                if($row['sn'] == '' && $row['name'] == '' && $row['detail'] == ''){
+                    break;
+                } else {
+                    //echo $row['sn'].'<br />';
+                    if($row['sn'] == '') $row['sn'] = 0;
+                    if($row['sponsor_id'] == '') $row['sponsor_id'] = 0;
+                    if($row['ot1'] == '') $row['ot1'] = 0;
+                    if($row['ot2'] == '') $row['ot2'] = 0;
+                    if($row['ot3'] == '') $row['ot3'] = 0;
+                    if($row['ot4'] == '') $row['ot4'] = 0;
+                    if($row['ot5'] == '') $row['ot5'] = 0;
+                    $r = [
+                        'sn'         => $row['sn'],
+                        'detail'     => $row['detail'],
+                        'num'        => $row['num'],
+                        'money'      => $row['money'],
+                        'name'       => $row['name'],
+                        'email'      => $row['email'],
+                        'tel'        => $row['tel'],
+                        'sponsor_id' => $row['sponsor_id'],
+                        'ot1'        => $row['ot1'],
+                        //'ot1text'    => json_encode([$row['ot1'],$row['ot1_1'],$row['ot1_2']]),
+                        'ot2'        => $row['ot2'],
+                        //'ot2text'    => json_encode([$row['ot2'],$row['ot2_1'],$row['ot2_2']]),
+                        'ot3'        => $row['ot3'],
+                        //'ot3text'    => json_encode([$row['ot3'],$row['ot3_1'],$row['ot3_2']]),
+                        'ot4'        => $row['ot4'],
+                        //'ot4text'    => json_encode([$row['ot4'],$row['ot4_1'],$row['ot4_2']]),
+                        'ot5'        => $row['ot5'],
+                        //'ot5text'    => json_encode([$row['ot5'],$row['ot5_1'],$row['ot5_2']]),
+                        //'result'     => json_encode($row),
+                        'quarter'    => 2,  // 產出季度
+                    ];
+                    array_push($data, $r);
+                }
+                
             }
+
             d2xls::insert($data);
         });
     }
