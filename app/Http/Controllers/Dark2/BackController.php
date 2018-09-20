@@ -114,7 +114,7 @@ class BackController extends Controller
         return view('Dark2.backend.BackMes',compact('mes','request'));
     }
     public function NotUseXls(Request $request){
-        $cellData = d2xls::select('name','email')->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE order_id=0 AND d2coupon.xls_id=d2xls.id)>0")->get()->toArray();
+        $cellData = d2xls::select('name','email','tel')->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE order_id=0 AND d2coupon.xls_id=d2xls.id)>0")->get()->toArray();
         Excel::create('匯出未兌換名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $sheet->rows($cellData);
