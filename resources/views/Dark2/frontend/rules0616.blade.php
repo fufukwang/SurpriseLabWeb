@@ -101,7 +101,7 @@ h4{text-align: left;margin:30px 0 15px;font-weight:bold;}
 <li>預售套票可以兩人為單位拆開使用。舉例：購買四人套票，可以兩兩分開劃位。</li>
 <li>為確保提供最好的無光體驗，確切劃位與啟動日期，驚喜製造團隊保留最後決定權利，若有更動，會立即通知所有預售購買者，以確保大家權利。</li>
                 </ol-->
-                <h4>秋季座位預售票之退費事宜</h4>
+                <!--h4>秋季座位預售票之退費事宜</h4>
                 <ol>
 <li>購買預售票卷後，若需退費，請於 08/31 前寄信至 <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>，可享全額退費。</li>
 <li>09/01 起至秋季座位活動結束前 (11/25)，若未劃位且需退費，扣除5%金流手續費後，可享全額退費。</li>
@@ -113,14 +113,31 @@ h4{text-align: left;margin:30px 0 15px;font-weight:bold;}
 <li>夏季座位預售票若還未劃位，請參照官方寄送之未劃位者通知，詳細處理機制可以到信箱內查閱。</li>
 <li>第⼀階段預售票在劃位後，僅能使⽤於第⼀階段7/4-9/16，無法更改⾄第⼆階段。
 若有需要更改⽇期或是辦理退費，請依照「已劃位者-更改訂位與退費」規則辦理。
-有問題可來信詢問 <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>
-
-
-
-
+有問題可來信詢問 <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a-->
 <!--li>夏季座位預售票在劃位後，僅能使用於夏季座位計畫期間 7/4-9/16，無法更改至秋季座位。</li>
 <li>若有需要更改日期，或是辦理退費，請依照已劃位者 - 更改訂位與退費規則辦理，或來信詢問 <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></li-->
-                </ol>
+                <!--/ol-->
+<h4>冬季預售預售票之退費事宜</h4>
+<ol>
+<li>冬季預售票販售⽇期為 09/25 - 11/18，冬季座位區間為 12/07 - 02/02。</li>
+<li>購買冬季預售票券後，若需退費，於 11/18 前來信  ，可享全額退費。</li>
+<li>11/19 起⾄冬季體驗結束前（02/02），若未劃位且需退費，請來信 <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a> ，退費款項將扣除 5%⾦流⼿續費。</li>
+<li>若劃位序號已兌換，則依照「已劃位者 - 更改訂位與退費」規則辦理。</li>
+</ol>
+<h4>秋季座位預售票之注意事項</h4>
+<ol>
+<li>秋季預售票販售⽇期為 07/16 - 09/05，秋季座位區間為 09/22 - 12/02。</li>
+<li>秋季預售票若尚未劃位，請參照官⽅寄送之未劃位者通知，詳細處理機制可⾄信箱內查閱。</li>
+<li>秋季預售票在劃位後，僅能使⽤於秋季座位（09/22 - 12/02），無法更改⾄冬季座位。</li>
+<li>若有需要更改訂位⽇期，或辦理退費，請依照「已劃位者 - 更改訂位與退費」規則辦理，若有任何問題，可來信 <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>  詢問。</li>
+</ol>
+<h4>夏季座位預售票之注意事項</h4>
+<ol>
+<li>夏季預售票販售⽇期為 05/25 - 06/15，夏季座位區間為 07/04 - 09/16。</li>
+<li>夏季座位預售票若尚未劃位，且需退費，請於 09/16 前來信 <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a> ，並請參考「已劃位者 - 更改訂位與退費」規則。超過 09/16 來信，因已過無光晚餐夏季體驗時間，將不予受理。</li>
+<li>夏季預售票在劃位後，僅能使⽤於夏季座位（07/04 - 09/16），無法更改⾄秋季或冬季。</li>
+</ol>
+
             </div>
             <!--div class="main-container">
                 <h1>預售劃位</h1>

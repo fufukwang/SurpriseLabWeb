@@ -98,7 +98,7 @@
                 <div style="color:#a67c52;">
 <div style="font-weight:bold;font-size:24px;line-height:30px;">秋 季 座 位 開 放 劃 位</div>
 <div style="font-size: 16px">
-    劃 位 ⽇ 期 為 09/22-11/25
+    劃 位 ⽇ 期 為 09/22-12/02
     <!--
     原 定 劃 位 區 間 為 09/22-11/04<br >
 若 預 購 ⼈ 數 踴 躍<br >
