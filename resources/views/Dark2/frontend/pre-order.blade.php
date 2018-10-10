@@ -64,11 +64,17 @@
                     <p>
 <b>【 訂位機制 】</b><br /><br />
 無光晚餐採先預購、後劃位制<br /><br />
+將於 11 ⽉中寄出劃位信件<br />
+詳細時間點如下<br /><br />
 <b>11/12 寄送劃位信 -<br />
 特殊節⽇購買者</b><br />
+
+享最優先劃位權<br />
+限量 200 名<br />
+<!--
 如有特定⽇⼦想要選擇<br />
 可最優先劃位<br />
-限量兩百名<br /><br />
+限量兩百名<br /--><br />
 <b>11/19 寄送劃位信 -<br />
 前500名購買者</b><br />
 收到劃位信後即可劃位<br /><br />
@@ -147,7 +153,13 @@
                                     </div> 
                                     <div class="limit" style="left: 25px;top: -30px;">
                                         <img src="/dark2/images/Pre-sale/sp-tip.png" alt="">
+                                    </div>
+                                    <div class="limit" style="left: 75px;top: -30px;">
+                                        <img src="/dark2/images/Pre-sale/sp-tip1.png" alt="">
                                     </div> 
+                                    <div class="limit" style="left: 125px;top: -30px;">
+                                        <img src="/dark2/images/Pre-sale/sp-tip2.png" alt="">
+                                    </div>  
                                 </div>
                             </a>
                             <p>
@@ -187,7 +199,7 @@
                 </div>
                 <p>
                     *以上套票價格均已含一成服務費<br>
-                    *預計第二階段日期為 09/22-11/04<br>
+                    <!--*預計第二階段日期為 09/22-11/04<br-->
                 </p>
             </div>
         </div>   

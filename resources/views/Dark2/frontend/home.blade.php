@@ -114,13 +114,13 @@
                         <div class="pre-order-info">
                             <p>
                                 <div style="font-size:24px;letter-spacing: 2px">無光晚餐第二季</div>
-<div style="letter-spacing: 8px;font-size:22px;">冬季票券現正預售中<br>限量2600張，售完為⽌<br /><br /></div>
+<div style="letter-spacing: 8px;font-size:22px;">冬季票券現正預售中<br>限量票券，售完為⽌<br /><br /></div>
 
 冬季預售票卷，可劃 12/07-02/02 之座位<br />
 (12/02 前的座位，已於秋季預售售罄)<br /><br />
 無光晚餐冬季將推出全新菜單與體驗<br /><br />
 曾經錯過的你，這次，別再錯過<br />
-曾經於夏秋兩季來過的你，歡迎於冬季再次拜訪
+來過的你，歡迎於冬季再次拜訪
 
 <!--
 無光晚餐即⽇起⾄ 11/25之座位<br />已於秋季預售全數售罄<br /><br />
@@ -144,7 +144,7 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h1>
-                                            // 預售進度 //
+                                            // 售出票卷 //
                                         </h1>
                                         <p>
                                             <span class="percent">0</span>%
@@ -152,7 +152,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 剩餘張數 //
+                                            // 已售出張數 //
                                         </h1>
                                         <p>
                                             <span class="tickets">0</span>張
@@ -160,7 +160,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 預售倒數 //
+                                            // 預售啟動 //
                                         </h1>
                                         <p>
                                             <span class="days">52</span>天
@@ -188,7 +188,7 @@
                             <h1>
                                 Timeline
                             </h1>
-                            <ul class="timeline">
+                            <ul class="timeline" style="padding-left: 6%;">
                                 <!--li class="important">
                                     <div class="date">07/16</div>
                                     <div class="dot"></div>
@@ -377,7 +377,7 @@
             $('.percent').text( percent );
             if(percent>100) percent = 100;
             $('.bar').css("width",percent+"%");
-            $('.tickets').text( (pcent - count) );
+            $('.tickets').text( count );
             var now  = new Date();
             var day  = new Date(data.end_date);
             var days = Math.ceil( (day.getTime()-now.getTime())/(24*60*60*1000) );
