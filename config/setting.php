@@ -5,6 +5,6 @@ return [
     'tfoend'   => '2018-12-31',
     'dark2' => [
     	'path'    => 'dininginthedark2',
-    	'enddate' => '2018-12-02'
+    	'enddate' => '2019-02-08'
     ]
 ];
