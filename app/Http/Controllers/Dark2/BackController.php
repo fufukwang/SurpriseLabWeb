@@ -549,7 +549,7 @@ class BackController extends Controller
                         'ot5'        => $row['ot5'],
                         //'ot5text'    => json_encode([$row['ot5'],$row['ot5_1'],$row['ot5_2']]),
                         //'result'     => json_encode($row),
-                        'quarter'    => 2,  // 產出季度
+                        'quarter'    => 3,  // 產出季度
                     ];
                     array_push($data, $r);
                 }
