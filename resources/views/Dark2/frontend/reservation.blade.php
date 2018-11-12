@@ -96,9 +96,9 @@
            
             <div class="main-container" id="first-section"style="padding-top: 0px;">
                 <div style="color:#a67c52;">
-<div style="font-weight:bold;font-size:24px;line-height:30px;">秋 季 座 位 開 放 劃 位</div>
+<div style="font-weight:bold;font-size:24px;line-height:30px;">冬 季 座 位 開 放 劃 位</div>
 <div style="font-size: 16px">
-    劃 位 ⽇ 期 為 09/22-12/02
+    劃 位 ⽇ 期 為 12/07-02/03
     <!--
     原 定 劃 位 區 間 為 09/22-11/04<br >
 若 預 購 ⼈ 數 踴 躍<br >
@@ -121,7 +121,7 @@
                         <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，將⾦額扣抵為零，確認訂單，即可完成劃位</td>
                     </tr>
                     <tr>
-                        <td colspan="2"> - 無光晚餐固定每週⼀、⼆公休<br > - 若⾮公休⽇之⽇期無法選擇，代表座位已滿<br > - 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況</td>
+                        <td colspan="2"> - 無光晚餐每週⼀、週⼆公休。特殊節⽇會依照情況調整。<br > - 若⾮公休⽇之⽇期無法選擇，代表座位已滿<br > - 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況</td>
                     </tr>
                     <tr>
                         <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></td>
