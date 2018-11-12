@@ -484,7 +484,7 @@ $('#form_date').datetimepicker({
     format: "YYYY-MM-DD",
     minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
     maxDate:'{{ config('setting.dark2.enddate') }}',
-    daysOfWeekDisabled: [1],
+    //daysOfWeekDisabled: [1],
     ignoreReadonly:true,
 }).on('dp.change',function(event){
     $('#dayparts').data('day',event.date.format('YYYY-MM-DD'));
