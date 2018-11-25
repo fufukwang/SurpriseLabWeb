@@ -81,9 +81,12 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
+                    @if( Session::get('key')->admin )
                     <li class="has-submenu">
                         <a href="/admin"><i class="md md-dashboard"></i>Admin</a>
                     </li>
+                    @endif
+                    @if( Session::get('key')->oldview )
                     <li class="has-submenu">
                         <a href="#"><i class="md md-color-lens"></i>dininginthedark</a>
                         <ul class="submenu">
@@ -93,6 +96,8 @@
                             <li><a href="/contacts">Contacts</a></li>
                         </ul>
                     </li>
+                    @endif
+                    @if( Session::get('key')->oldview )
                     <li class="has-submenu">
                         <a href="#"><i class="md md-invert-colors-on"></i>Table For ONe</a>
                         <ul class="submenu">
@@ -102,6 +107,8 @@
                             <li><a href="/TableForOne/contacts">Contacts</a></li>
                         </ul>
                     </li>
+                    @endif
+                    @if( Session::get('key')->oldview )
                     <li class="has-submenu">
                         <a href="#"><i class="md md-invert-colors-on"></i>dininginthedark S2</a>
                         <ul class="submenu">
@@ -112,7 +119,16 @@
                             <li><a href="/dark2/contacts">Contacts</a></li>
                         </ul>
                     </li>
+                    @endif
+                    @if( Session::get('key')->thegreattipsy )
+                    <li class="has-submenu">
+                        <a href="#"><i class="md md-invert-colors-on"></i>微醺大飯店</a>
+                        <ul class="submenu">
+                            <li><a href="#" onclick="alert('還沒有')">還沒有</a></li>
 
+                        </ul>
+                    </li>
+                    @endif
 
                 </ul>
                 <!-- End navigation menu -->

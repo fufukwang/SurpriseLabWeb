@@ -161,6 +161,10 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         //Route::get('cup','Dark2\BackController@Db2Coupon');
         //Route::get('');
     });
+
+    Route::group(['prefix' => 'thegreattipsy'], function(){
+
+    });
 });
 
 
@@ -381,7 +385,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('checkres','HomeController@checkres');
 */
 
-
+    Route::group(['prefix' => 'thegreattipsy'], function(){
+        Route::get('index.html',function(){ return view('thegreattipsy.frontend.home'); });
+        Route::get('/',function(){ return view('thegreattipsy.frontend.home'); });
+        Route::get('rules.html',function(){ return view('thegreattipsy.frontend.rules'); });
+        // 劃位
+        
+    });
 
 
 });

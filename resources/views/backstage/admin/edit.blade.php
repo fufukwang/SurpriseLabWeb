@@ -36,6 +36,18 @@
                                         <input type="checkbox" @if($admin->giftadd)checked @endif name="giftadd" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>微醺大飯店</label>
+                                        <input type="checkbox" @if($admin->thegreattipsy)checked @endif name="thegreattipsy" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>無光,T41</label>
+                                        <input type="checkbox" @if($admin->oldview)checked @endif name="oldview" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">

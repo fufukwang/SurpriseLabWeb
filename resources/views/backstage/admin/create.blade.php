@@ -37,6 +37,18 @@
                                         <input type="checkbox" data-plugin="switchery" name="giftadd" value="1" data-color="#ffaa00"/>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>微醺大飯店</label>
+                                        <input type="checkbox" name="thegreattipsy" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>無光,T41</label>
+                                        <input type="checkbox" name="oldview" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
@@ -78,6 +90,8 @@
 <script src="/backstage/js/jquery.nicescroll.js"></script>
 <script src="/backstage/js/jquery.scrollTo.min.js"></script>
 
+<link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
+<script src="/backstage/plugins/switchery/switchery.min.js"></script>
 <!-- Parsleyjs -->
 <script type="text/javascript" src="/backstage/plugins/parsleyjs/dist/parsley.min.js"></script>
 

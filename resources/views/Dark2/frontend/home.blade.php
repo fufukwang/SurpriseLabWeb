@@ -114,14 +114,18 @@
                         <div class="pre-order-info">
                             <p>
                                 <div style="font-size:24px;letter-spacing: 2px">無光晚餐第二季</div>
-<div style="letter-spacing: 8px;font-size:22px;">冬季票券現正預售中<br>限量票券，售完為⽌<br /><br /></div>
+<div style="letter-spacing: 8px;font-size:22px;">冬季預售已結束<br /><br /></div>
 
+02/10 前的座位，已於冬季預售售罄<br />
+未來是否進行下階段的預售，團隊正在討論中<br />
+若有興趣得知第一手消息，請來信<a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">客服信箱</a>詢問
+<!--
 冬季預售票卷，可劃 12/07-02/02 之座位<br />
 (12/02 前的座位，已於秋季預售售罄)<br /><br />
 無光晚餐冬季將推出全新菜單與體驗<br /><br />
 曾經錯過的你，這次，別再錯過<br />
 來過的你，歡迎於冬季再次拜訪
-
+-->
 <!--
 無光晚餐即⽇起⾄ 11/25之座位<br />已於秋季預售全數售罄<br /><br />
 錯過預售仍想購買者<br />請寄信⾄無光晚餐客服信箱<br /><br />
@@ -137,7 +141,7 @@
                             </p>
                             <div class="progress-bar-box">
                                 <div class="bar-box">
-                                    <div class="bar" style="width: 0%"></div>
+                                    <div class="bar" style="width: 100%"></div>
                                 </div>
                             </div>
                             <div class="info-box">
@@ -147,7 +151,7 @@
                                             // 售出票卷 //
                                         </h1>
                                         <p>
-                                            <span class="percent">0</span>%
+                                            <span class="percent">106</span>%
                                         </p>
                                     </div>
                                     <div class="col-md-4">
@@ -155,15 +159,15 @@
                                             // 已售出張數 //
                                         </h1>
                                         <p>
-                                            <span class="tickets">0</span>張
+                                            <span class="tickets">2762</span>張
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 預售啟動 //
+                                            // 預售天數 //
                                         </h1>
                                         <p>
-                                            <span class="days">52</span>天
+                                            <span class="days">42</span>天
                                         </p>
                                     </div>
                                 </div>
@@ -357,7 +361,7 @@
             }
         });
 
-
+/*
         $.get('https://surpriselab.backme.tw/api/projects/902.json?token=15171aa66ababafd4464a1c194b66102',function(data){
             var item = data.rewards;
             var count = 0;
@@ -385,7 +389,7 @@
             $('.days').text(days);
 
         },'json');
-
+*/
         if(window.location.pathname.indexOf('about\.html')>0){
             $('.main-logo .landing-btn').trigger('click');
         }

@@ -29,33 +29,25 @@
                     <h1>
                         限定快閃 預售套票
                     </h1-->
-                    <h1 style="letter-spacing: 3px;">無 光 晚 餐 冬 季 預 售 套 票</h1>
+                    <h1 style="letter-spacing: 8px;">無光晚餐第二季 冬季預售已結束</h1>
                     <p style="margin-top: 25px;" class="strong-words">
-冬季座位 12/07 - 02/02 現正預售中<br >
-(無光晚餐 12/02 前之座位已全數售罄)<br >
+02/10 前的座位，已於冬季預售售罄<br />
+未來是否進行下階段的預售，團隊正在討論中<br />
+若有興趣得知第一手消息，請來信<a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">客服信箱</a>詢問
 <!--
                         無光晚餐 07/04-09/16 座位已全數售罄<br >
 秋季座位 09/22-11/04 座位，現正預售中<br >
 若預購⼈數踴躍，將加開劃位⽇期⾄11⽉中後
 -->
                     </p>
-                    <p>
+                    <!--p>
                         【 無光體驗 】<br><br>
                         五道料理<br>
                         +<br>
                         餐後小禮<br>
                         + <br>⼀百⼆⼗分鐘的旅程<br><br>
                         【 預售優惠 】<br> 1650元 / 每人<br><br><span style="font-size:12px;color:rgba(255,255,255,.3);">(原價2200元)<br>以上價格已含一成服務費</span>
-                        <!--span class="strong-words">
-                            【 預售優惠 】<br><br> 1650元 / 每人
-                        </span-->
                     </p>
-                    <!--p>
-購買者將於九⽉初寄出劃位信件，收到信件即可劃位<br >
-劃位階段可⾃⾏選擇欲前來⽇期、時段<br >
-與選擇葷⻝或蛋奶素，並備註飲⻝過敏<br ><br >
-無光晚餐固定週⼀、週⼆公休
-                    </p-->
                     <p style="margin-top: 25px;" class="strong-words">
                         購買預售，享88折⾄67折優惠<br />
 前500名預購者，享優先劃位權<br /><br />
@@ -70,11 +62,7 @@
 特殊節⽇購買者</b><br />
 
 享最優先劃位權<br />
-限量 200 名<br />
-<!--
-如有特定⽇⼦想要選擇<br />
-可最優先劃位<br />
-限量兩百名<br /--><br />
+限量 200 名<br /><br />
 <b>11/19 寄送劃位信 -<br />
 前500名購買者</b><br />
 收到劃位信後即可劃位<br /><br />
@@ -87,7 +75,7 @@
 週三、週四 | 開放晚餐時段<br />
 週五⾄週⽇ | 開放午餐、晚餐時段<br />
 
-                    </p>
+                    </p-->
 
 
 
@@ -117,7 +105,7 @@
 
                 </div>
             </div>
-            <div class="season-two-about pre-order-section">
+            <!--div class="season-two-about pre-order-section">
                 <p>
                     請點選商品前往付款 ⬇
                 </p>
@@ -199,14 +187,13 @@
                 </div>
                 <p>
                     *以上套票價格均已含一成服務費<br>
-                    <!--*預計第二階段日期為 09/22-11/04<br-->
                 </p>
-            </div>
+            </div-->
         </div>   
         @include('Dark2.frontend._footer')
     </div>
 <script type="text/javascript">
-
+/*
 $(function(){
     $.get('https://surpriselab.backme.tw/api/projects/902.json?token=15171aa66ababafd4464a1c194b66102',function(data){
         var item = data.rewards;
@@ -227,7 +214,7 @@ $(function(){
 
     },'json');
 });
-
+*/
 </script>
 </body>
 </html>
