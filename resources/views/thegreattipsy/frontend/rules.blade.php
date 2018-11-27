@@ -155,6 +155,16 @@
                                     <div id="qa1" class="collapse" aria-labelledby="qa1-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
+《微醺大飯店 The Great Tipsy》為驚喜製造 Surprise Lab. 團隊繼《無光晚餐 Dining In The Dark》與《table for ONE 一人餐桌》後，推出的第四號作品。
+<br/><br/>
+不同於以往，《微醺大飯店 The Great Tipsy》是一場結合飯店場域、表演、調酒與食物設計的沉浸式體驗。故事的發展方向也將交給參與者 - 「你所做的選擇，將決定你所看到的故事」。
+<br/><br/>
+整趟旅程約九十分鐘，共有五條故事線來回交錯。在這段時間中，你將探索五間客房，參與不同房間之間，各個角色交織而成的故事，並觀看一場又一場的表演。另外，你也將品嚐到微醺大飯店中的奇異調酒與小點，獲得一場由外在感官刺激到內在心靈的體驗。
+<br/><br/>
+沉浸式體驗 Immersive Experience. <br/>
+唯有親身經歷，你才會知道這是怎麼一回事。
+                                        </div>
+                                        <!--div class="card-body">
                                             《微醺大飯店 The Great Tipsy》為驚喜製造 Surprise Lab. 團隊繼《無光晚餐 Dining In The Dark》與《table for ONE 一人餐桌》後，推出的第四項沉浸式體驗作品。
                                             <br/><br/>
                                             不同於以往，在《微醺大飯店 The Great Tipsy》中，驚喜製造打破了以食為中心的設計型式，改以「故事」為軸心，結合飯店場域、表演、調酒與食物設計，並將故事的發展方向交予參與者 - 「你所做的選擇，將決定你所看到的故事」，期待帶給參與者一場由外在感官刺激到內在心靈的體驗。
@@ -162,7 +172,7 @@
                                             沉浸式體驗 Immersive Experience.
                                             <br/>
                                             唯有親身經歷，你才會知道這是怎麼一回事。
-                                        </div>
+                                        </div-->
                                     </div>
                                 </div>
 
