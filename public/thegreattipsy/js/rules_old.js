@@ -9,18 +9,6 @@ jQuery(function($){
     var smoothScroll = $('.smoothScroll');
     var mobileCurrent = $('.current-section');
 
-    function setIntervalX(callback, delay, repetitions) {
-        var x = 0;
-        var intervalID = window.setInterval(function () {
-
-            callback();
-
-            if (++x === repetitions) {
-                window.clearInterval(intervalID);
-            }
-        }, delay);
-    }
-
     // Rules slider
     var owl = $('.rules.owl-carousel').owlCarousel({
         loop: true,
@@ -29,14 +17,6 @@ jQuery(function($){
         dots: true,
         autoHeight: true,
         dotsContainer: '#rules-tab-switcher',
-    });
-
-    setIntervalX(function(){
-        owl.trigger('refresh.owl.carousel');
-    }, 300 , 5);
-
-    win.on('load', function () {
-        owl.trigger('refresh.owl.carousel');
     });
 
     // Rules fadeIn
