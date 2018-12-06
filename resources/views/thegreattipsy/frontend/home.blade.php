@@ -836,6 +836,6 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=0.1"></script>
 </body>
 </html>
