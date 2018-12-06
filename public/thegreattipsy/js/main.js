@@ -153,7 +153,7 @@ $(document).ready(function () {
     $.getJSON(progress_api).done(function (data) {
 
         var goal = 2000; // 目標張數
-        var amount = data["backer_count"]; // 已售出總票數
+        var amount = data["pledged_count"]; // 已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
 
@@ -161,7 +161,7 @@ $(document).ready(function () {
         sale_progress = Math.floor(sale_progress);
 
         // 時間有點限制票
-        var timeLimit_sale = data['rewards'][1].backer_count; // 已銷售張數
+        var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
         var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
         var timeLimit_rest = timeLimit_limit - timeLimit_sale; // 剩餘可銷售張數
 
