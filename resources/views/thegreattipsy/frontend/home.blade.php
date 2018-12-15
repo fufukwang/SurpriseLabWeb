@@ -432,7 +432,7 @@
         <div class="container ticket-type-area" data-aos="fade">
 
             <!------------->
-            <h3>票卷種類</h3>
+            <h3>選擇票卷</h3>
             <!------------->
             <div class="sub-title-wrapper">
                 <h4>
