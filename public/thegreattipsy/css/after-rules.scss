@@ -141,6 +141,8 @@
 
   .ticket-area-preinfo {
     @include baseCounter('padding-top', 45);
+    color: $color-lighter-yellow;
+    font-family: $font-serif;
   }
 
   .ticket-area-note {
@@ -157,7 +159,7 @@
 
     @media (min-width: 480px) {
       &:hover {
-        .type-item {
+        .type-item:not(.sold) {
           &:hover {
             .ticket-frame {
               &::before {
@@ -165,11 +167,11 @@
               }
             }
           }
-        }
 
-        .ticket-frame {
-          &::before {
-            opacity: 0.3;
+          .ticket-frame {
+            &::before {
+              opacity: 0.3;
+            }
           }
         }
       }
@@ -207,6 +209,12 @@
         &::after {
           display: none;
         }
+      }
+    }
+
+    .sold {
+      .ticket-frame {
+        cursor: not-allowed;
       }
     }
 

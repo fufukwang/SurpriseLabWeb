@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .normal-lineHeight, .normal-lineHeight p {
   line-height: 1; }
 
@@ -193,21 +192,24 @@
         padding-left: 0; }
       #Ticket .experience .middle .exp-text {
         left: inherit; } }
-@media (min-width: 1200px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc((608px + 30px) * 0.04025); } }
-@media (min-width: 1440px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc((768px + 30px) * 0.04025); } }
-@media (min-width: 1920px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc((1088px + 30px) * 0.04025); } }
-@media (max-width: 1199.98px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc((520px + 30px) * 0.04025); } }
-@media (max-width: 480px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc(100% * 0.04025); } }
+#Ticket .ticket-area-preinfo {
+  color: #eee9c5;
+  font-family: "Noto Serif TC", serif; }
+  @media (min-width: 1200px) {
+    #Ticket .ticket-area-preinfo {
+      padding-top: calc((608px + 30px) * 0.04025); } }
+  @media (min-width: 1440px) {
+    #Ticket .ticket-area-preinfo {
+      padding-top: calc((768px + 30px) * 0.04025); } }
+  @media (min-width: 1920px) {
+    #Ticket .ticket-area-preinfo {
+      padding-top: calc((1088px + 30px) * 0.04025); } }
+  @media (max-width: 1199.98px) {
+    #Ticket .ticket-area-preinfo {
+      padding-top: calc((520px + 30px) * 0.04025); } }
+  @media (max-width: 480px) {
+    #Ticket .ticket-area-preinfo {
+      padding-top: calc(100% * 0.04025); } }
 #Ticket .ticket-area-note {
   line-height: 2; }
 #Ticket .ticket-type {
@@ -246,9 +248,9 @@
     #Ticket .ticket-type {
       padding-bottom: calc(100% * 0.07156); } }
   @media (min-width: 480px) {
-    #Ticket .ticket-type:hover .type-item:hover .ticket-frame::before {
+    #Ticket .ticket-type:hover .type-item:not(.sold):hover .ticket-frame::before {
       opacity: 0; }
-    #Ticket .ticket-type:hover .ticket-frame::before {
+    #Ticket .ticket-type:hover .type-item:not(.sold) .ticket-frame::before {
       opacity: 0.3; } }
   #Ticket .ticket-type .type-item {
     position: relative;
@@ -354,6 +356,8 @@
         padding-left: calc(100% * 0.04204); } }
     #Ticket .ticket-type .type-item:last-child::after {
       display: none; }
+  #Ticket .ticket-type .sold .ticket-frame {
+    cursor: not-allowed; }
   #Ticket .ticket-type .ticket-frame {
     position: relative;
     display: block; }
@@ -393,7 +397,7 @@
     #Ticket .ticket-type .ticket-state .highlight {
       font-size: 24px;
       font-weight: bold;
-      font-family: "Kozuka Mincho Pro", "KozMinPro", "Yu Mincho Light", YuMincho, "Yu Mincho", 游明朝体, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif;
+      font-family: "Noto Serif TC", serif;
       letter-spacing: 2.9px; }
     #Ticket .ticket-type .ticket-state.timeLimit {
       opacity: 0; }
@@ -533,7 +537,7 @@
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 2.4px;
-    font-family: "Kozuka Mincho Pro", "KozMinPro", "Yu Mincho Light", YuMincho, "Yu Mincho", 游明朝体, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif; }
+    font-family: "Noto Serif TC", serif; }
   #Ticket .time-session hr {
     border-color: #595330; }
   @media (max-width: 1199.98px) {
@@ -673,7 +677,7 @@
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2.4px;
-    font-family: "Kozuka Mincho Pro", "KozMinPro", "Yu Mincho Light", YuMincho, "Yu Mincho", 游明朝体, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif; }
+    font-family: "Noto Serif TC", serif; }
   #Ticket .sale-progress .sale-progress-info .info-text {
     text-align: left;
     line-height: 2; }
@@ -1026,7 +1030,7 @@
     right: 0; }
   #Contact .contact-sec .contact-sec-title {
     font-weight: bold;
-    font-family: "Kozuka Mincho Pro", "KozMinPro", "Yu Mincho Light", YuMincho, "Yu Mincho", 游明朝体, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif;
+    font-family: "Noto Serif TC", serif;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 1.9px;

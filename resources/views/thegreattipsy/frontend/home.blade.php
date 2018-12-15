@@ -33,7 +33,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/after-rules.css"/>
+    <link rel="stylesheet" href="css/after-rules.css?v=0.1"/>
 </head>
 <body class="loading">
 <!-- Anchor menu -->
@@ -836,6 +836,6 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.1"></script>
+<script src="js/main.js?v=0.2"></script>
 </body>
 </html>

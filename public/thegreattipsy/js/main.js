@@ -163,7 +163,16 @@ $(document).ready(function () {
         // 時間有點限制票
         var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
         var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
-        var timeLimit_rest = timeLimit_limit - timeLimit_sale; // 剩餘可銷售張數
+        var timeLimit_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
+        var timeLimit_rest = timeLimit_limit - timeLimit_sale - timeLimit_wait; // 剩餘可銷售張數
+
+        if (timeLimit_rest <= 0) {
+            timeLimit_rest = 0;
+            $('.type-matinee').addClass('sold');
+            $('.type-matinee').find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_2_soldout.png');
+            $('.type-matinee').find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_2_soldout_mobile.png');
+            $('.type-matinee').find('.ticket-state').html('已售完');
+        }
 
         var timeLimit = $('.timeLimit');
         timeLimit.find('.total-ticket').html(timeLimit_limit); // 更新時間有點限制票限量張數
@@ -200,10 +209,17 @@ $(document).ready(function () {
         sale_info.fadeTo(300, 1);
     });
 
+    // 當時間有點限制票售完時
+    $('.type-matinee').on('click', function () {
+        if ($(this).hasClass('sold')) {
+            return false;
+        }
+    });
+
     var timer = setInterval(function () {
         // 剩餘時間倒數器
         var Today = new Date();
-        var EndDay = new Date(2019, 1, 5);
+        var EndDay = new Date(2019, 0, 5);
         var distance = EndDay - Today;
         var time_rest = $('.time-rest');
         var days, hours, minutes, seconds;
