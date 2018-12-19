@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/dark2/css/font-awesome.min.css">
     <link rel="stylesheet" href="/dark2/stylesheets/print.css">
     <link rel="stylesheet" href="/dark2/stylesheets/media.css">
-    <link rel="stylesheet" href="/dark2/style/css/print.css?v=0.4">
+    <link rel="stylesheet" href="/dark2/style/css/print.css?v=0.5">
     <script src="/dark2/js/jquery-1.11.3.min.js"></script>
     @if(isset($index) && $index)
     <script src="/dark2/js/imagesLoaded.js"></script>
