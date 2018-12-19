@@ -126,6 +126,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('backmes/{id}/sendManageUpdate','Dark2\BackController@sendManageUpdate');
         Route::post('backmes/CanelCoupon','Dark2\BackController@CanelCoupon');
         Route::get('backmenouse/xls','Dark2\BackController@NotUseXls');
+        Route::post('uploadxlsx','Dark2\BackController@UploadXlsx2Db');
 
         // coupon
         Route::get('coupons','Dark2\BackController@Coupons');
@@ -163,7 +164,43 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
     });
 
     Route::group(['prefix' => 'thegreattipsy'], function(){
+        Route::get('backmes','tgt\BackController@BackMes');
+        Route::get('backme/{id}','tgt\BackController@BackMe');
+        Route::delete('backme/{id}/delete','tgt\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','tgt\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','tgt\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','tgt\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','tgt\BackController@infoUpdate');
+        Route::post('backmes/CanelCoupon','tgt\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','tgt\BackController@NotUseXls');
+        Route::post('uploadxlsx','tgt\BackController@UploadXlsx2Db');
 
+        // coupon
+        Route::get('coupons','tgt\BackController@Coupons');
+        Route::get('coupon/{id}','tgt\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','tgt\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','tgt\BackController@Pros');
+        Route::get('pro/{id}/edit','tgt\BackController@ProEdit');
+        Route::post('pro/{id}/update','tgt\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','tgt\BackController@ProDelete');
+        Route::post('pros','tgt\BackController@Pros');
+
+        // 訂單
+        Route::get('orders/{id}','tgt\BackController@Orders');
+        Route::get('order/{id}/edit','tgt\BackController@OrderEdit');
+        Route::post('order/{id}/update','tgt\BackController@OrderUpdate');
+        Route::delete('order/{id}/delete','tgt\BackController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','tgt\BackController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','tgt\BackController@AppointmentUpdate');
+
+        // 報表列印
+        Route::get('print','tgt\BackController@Print');
+        Route::get('table','tgt\BackController@Table');
+        Route::get('xls/data/output','tgt\BackController@XlsDataOuput');
+        Route::get('xls/emaildata/output','tgt\BackController@XlsEmailDataOuput');
+        Route::post('order/{id}/resent','tgt\BackController@beSentOrderMail');
     });
 });
 

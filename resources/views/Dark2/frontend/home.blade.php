@@ -113,12 +113,24 @@
                     <div class="new-about">
                         <div class="pre-order-info">
                             <p>
-                                <div style="font-size:24px;letter-spacing: 2px">無光晚餐第二季</div>
-<div style="letter-spacing: 8px;font-size:22px;">冬季預售已結束<br /><br /></div>
+                                <div style="font-size:24px;letter-spacing: 2px">無光晚餐</div>
+<div style="letter-spacing: 8px;font-size:22px;">春季票卷現正預售中<br />限量座位，售完為止<br /><br /></div>
 
+本次開放02/28-04/14之座位<br />
+（02/12前的座位，已於冬季預售售罄)<br /><br />
+
+訂位採取先購票，後劃位的方式<br />
+依照購買順序與票種分三梯次劃位<br /><br />
+
+此階段延續冬季新推出的菜單與體驗<br />
+曾經錯過的你，這次別再錯過<br />
+來過的你，歡迎再次造訪<br />
+
+<!--
 02/10 前的座位，已於冬季預售售罄<br />
 未來是否進行下階段的預售，團隊正在討論中<br />
 若有興趣得知第一手消息，請來信<a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">客服信箱</a>詢問
+-->
 <!--
 冬季預售票卷，可劃 12/07-02/02 之座位<br />
 (12/02 前的座位，已於秋季預售售罄)<br /><br />
@@ -151,7 +163,7 @@
                                             // 售出票卷 //
                                         </h1>
                                         <p>
-                                            <span class="percent">106</span>%
+                                            <span class="percent">0</span>%
                                         </p>
                                     </div>
                                     <div class="col-md-4">
@@ -159,15 +171,15 @@
                                             // 已售出張數 //
                                         </h1>
                                         <p>
-                                            <span class="tickets">2762</span>張
+                                            <span class="tickets">0</span>張
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <h1>
-                                            // 預售天數 //
+                                            // 預售啟動 //
                                         </h1>
                                         <p>
-                                            <span class="days">42</span>天
+                                            <span class="days">0</span>天
                                         </p>
                                     </div>
                                 </div>
@@ -194,55 +206,6 @@
                             </h1>
                             <ul class="timeline" style="padding-left: 6%;">
                                 <!--li class="important">
-                                    <div class="date">07/16</div>
-                                    <div class="dot"></div>
-                                    <p>
-                                        秋季座位預售開始
-                                    </p>
-                                </li>
-                                <li class="important">
-                                    <div class="date">09/05</div>
-                                    <div class="dot"></div>
-                                    <p>
-                                        秋季座位預售截⽌<br />
-<span style="font-size:12px;">秋季預售截⽌⽇延⻑⾄ 09/05<br />
-請各位把握最後時間為⾃⼰留下座位<span>
-                                    </p>
-                                </li>
-                                <li class="important">
-                                    <div class="date">09/01</div>
-                                    <div class="dot"></div>
-                                    <p>
-                                        發放劃位序號 -<br >前500名預售購買者<br />
-                                        <span style="font-size:12px;">收到序號後，即可劃位</span>
-                                    </p>
-                                </li>
-                                <li class="important">
-                                    <div class="date">09/10</div>
-                                    <div class="dot"></div>
-                                    <p>
-                                        發放劃位序號 -<br >其餘預售購買者<br />
-                                        <span style="font-size:12px;">收到序號後，即可劃位</span>
-                                    </p>
-                                </li>
-                                <li class="important">
-                                    <div class="date">09/22</div>
-                                    <div class="dot"></div>
-                                    <p>
-                                        秋季座位快閃開始
-                                    </p>
-                                </li>
-                                <li class="important">
-                                    <div class="date">11/04</div>
-                                    <div class="dot"></div>
-                                    <p>
-                                        秋季座位快閃截⽌<br />
-<span style="font-size:12px;">依照訂位⼈數，將於劃位階段延後結束時間<br />
-可能延後⾄11中或11⽉中後<span>
-                                    </p>
-                                </li-->
-
-                                <li class="important">
                                     <div class="date">09/25</div>
                                     <div class="dot"></div>
                                     <p>
@@ -294,8 +257,61 @@
                                     <p>
                                         冬季快閃結束
                                     </p>
+                                </li-->
+                                <li class="important">
+                                    <div class="date">12/20</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        春季座位 預售啟動<br />
+                                        <span style="font-size:12px;">目標2000張</span>
+                                    </p>
                                 </li>
-
+                                <li class="important">
+                                    <div class="date">02/05</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        第一梯次寄送劃位信-<br />
+                                        <span style="font-size:12px;">購買「優先劃位票」者<br />收到序號後，即可劃位</span>
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">02/12</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        第二梯次寄送劃位信-<br />
+                                        <span style="font-size:12px;">「01/15日前」購買者<br />收到序號後，即可劃位</span>
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">02/14</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        春季座位預售截止<br />
+                                        <span style="font-size:12px;">目標2000張</span>
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">02/19</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        第三梯次寄送劃位信-<br />
+                                        <span style="font-size:12px;">01/16日後－截止前購買者<br />收到序號後，即可劃位</span>
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">02/28</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        春季快閃開始
+                                    </p>
+                                </li>
+                                <li class="important">
+                                    <div class="date">04/14</div>
+                                    <div class="dot"></div>
+                                    <p>
+                                        春季快閃結束
+                                    </p>
+                                </li>
 
 
                             </ul>
@@ -313,7 +329,8 @@
                                 #無光晚餐
                             </h1>
                             <!--div class="hashtag-container" style="pointer-events: none;"><div-->
-<iframe src="https://live.memopresso.com/embed?token=albert&title=new&titlePosition=0&displayType=waterfall&initCount=20&showLoadMore=true&showLogo=false&showTitle=false&contentColor=999999&tagColor=89229b&displaySequence=RANDOM" id="memopresso_embed" name ="memopresso_embed" width="100%"height="100%" scrolling="No" frameborder="0" allowfullscreen></iframe><script type="text/javascript" src="https://ai.livepresso.com/api/static/js/embed.js"></script>
+                            <iframe src="https://www.tagnology.co/embed?iframeId=09434d98df&folderId=w9pL3t1QL&title=&pattern=GRID&showLoadmore=TRUE&showLogo=TRUE&order=DESC&initItems=24&maxCol=6&minCol=1&titleColor=%23353541&textColor=%236C84AF&tagColor=%2300CB4D&buttonColor=%2300CB4D&" id="09434d98df" width="100%" scrolling="No" frameborder="0"></iframe><script src="https://www.tagnology.co/api/static/js/embed.js"></script>
+
 
 
                             <a href="pre-sale.html">
@@ -361,19 +378,18 @@
             }
         });
 
-/*
-        $.get('https://surpriselab.backme.tw/api/projects/902.json?token=15171aa66ababafd4464a1c194b66102',function(data){
+
+        $.get('https://surpriselab.backme.tw/api/projects/922.json?token=15171aa66ababafd4464a1c194b66102',function(data){
             var item = data.rewards;
             var count = 0;
-            var pcent = 2600
+            var pcent = 2000
             for(var i=0;item.length>i;i++){
                 var item_count = parseInt(item[i].pledged_count);
                 switch(item[i].id){
-                    case 4987: item_count *= 2; break;
-                    case 4988: item_count *= 2; break;
-                    case 4989: item_count *= 4; break;
-                    case 4990: item_count *= 6; break;
-                    case 4991: item_count *= 2; break;
+                    case 5423: item_count *= 2; break;
+                    case 5421: item_count *= 2; break;
+                    case 5422: item_count *= 4; break;
+                    case 5420: item_count *= 2; break;
                 }
                 count += item_count;
             }
@@ -389,7 +405,7 @@
             $('.days').text(days);
 
         },'json');
-*/
+
         if(window.location.pathname.indexOf('about\.html')>0){
             $('.main-logo .landing-btn').trigger('click');
         }

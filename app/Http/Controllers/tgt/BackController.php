@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dark2;
+namespace App\Http\Controllers\tgt;
 
 use Illuminate\Http\Request;
 use Response;
@@ -11,11 +11,10 @@ use Hash;
 use Illuminate\Support\Facades\Storage;
 use Mail;
 use Exception;
-use App\model\DarkContact;
-use App\model\d2coupon;
-use App\model\d2order;
-use App\model\d2pro;
-use App\model\d2xls;
+use App\model\tgt\coupon;
+use App\model\tgt\order;
+use App\model\tgt\pro;
+use App\model\tgt\backme;
 
 
 use App\Http\Controllers\Controller;
@@ -42,49 +41,13 @@ class BackController extends Controller
         } else {
             $this->user = $request->session()->get('key');
         }
-        if($this->user->oldview == 0){
+        if($this->user->thegreattipsy == 0){
             return redirect('/welcome')->send()->with('message','權限不足!');
         }
         DB::enableQueryLog();
     }
 
 
-    /**
-     * 聯絡我們.
-     */
-    public function Contacts(Request $request){
-        $contacts = DarkContact::orderBy('updated_at','desc');
-        
-        $contacts = $contacts->paginate($this->perpage);
-        return view('Dark2.backend.contacts',compact('contacts','request'));
-    }
-    public function ContactEdit(Request $request,$id){
-        $contact = collect();
-        if(is_numeric($id) && $id>0){
-            if(DarkContact::where('id',$id)->count()>0){
-                $contact = DarkContact::find($id);
-            } else {
-                abort(404);
-            }
-        }
-        return view('Dark2.backend.contact',compact('contact'));
-    }
-    public function ContactUpdate(Request $request,$id){
-
-        $data = [
-            'status' => $request->status,
-            'manage' => $request->manage,
-        ];
-        if(is_numeric($id) && $id>0){
-            DarkContact::where('id',$id)->update($data);
-        }
-        return redirect('/dark2/contacts')->with('message','編輯完成!');
-    }
-    public function ContactDelete(Request $request,$id){
-        DarkContact::where('id', $id)->delete();
-        return Response::json(['message'=> '留言已刪除'], 200);
-
-    }
     /**
      * XLS data.
      */
@@ -95,30 +58,30 @@ class BackController extends Controller
                 d2xls::where('id',$row)->update(['is_sent'=>1]);
             }
         }*/
-        $mes = d2xls::where('id','>',0);
+        $mes = backme::where('id','>',0);
         if($request->has('search')){
             $search = $request->search;
             $mes = $mes->whereRaw("(
                 name LIKE '%{$search}%' OR 
                 tel LIKE '%{$search}%' OR 
                 email LIKE '%{$search}%' OR 
-                (SELECT COUNT(id) FROM(d2coupon) WHERE code LIKE '%{$search}%' AND d2coupon.xls_id=d2xls.id)
+                (SELECT COUNT(id) FROM(tgtcoupon) WHERE code LIKE '%{$search}%' AND tgtcoupon.b_id=tgtbackme.id)
             )");
         }
         if($request->has('isdone')){
-            $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE order_id=0 AND d2coupon.xls_id=d2xls.id)>0");
+            $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE o_id=0 AND tgtcoupon.b_id=tgtbackme.id)>0");
         }
         if($request->has('season')){
             $mes = $mes->where('quarter',$request->season);
         }
         
         $mes = $mes->paginate($this->perpage);
-        $quart = d2xls::select('quarter')->groupBy('quarter')->get();
+        $quart = backme::select('quarter')->groupBy('quarter')->get();
         //dd(DB::getQueryLog());
-        return view('Dark2.backend.BackMes',compact('mes','request','quart'));
+        return view('thegreattipsy.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $cellData = d2xls::select('name','email','tel')->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE order_id=0 AND d2coupon.xls_id=d2xls.id)>0")->get()->toArray();
+        $cellData = backme::select('name','email','tel')->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE o_id=0 AND tgtcoupon.b_id=tgtbackme.id)>0")->get()->toArray();
         Excel::create('匯出未兌換名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $sheet->rows($cellData);
@@ -126,37 +89,45 @@ class BackController extends Controller
         })->export('xls');
     }
     public function sendUpdate(Request $request,$id){
-        d2xls::where('id',$id)->update([
+        backme::where('id',$id)->update([
             'is_sent' => $request->send
         ]);
         return Response::json(['message'=> '發送狀態已更新'], 200);
     }
     public function sendManageUpdate(Request $request,$id){
-        d2xls::where('id',$id)->update([
+        backme::where('id',$id)->update([
             'manage' => $request->manage
         ]);
         return Response::json(['message'=> '已更新'], 200);
     }
+    public function infoUpdate(Request $request,$id){
+        backme::where('id',$id)->update([
+            'name'  => $request->name,
+            'tel'   => $request->tel,
+            'email' => $request->email
+        ]);
+        return Response::json(['message'=> '已更新'], 200);
+    }
     public function CanelCoupon(Request $request){
-        $id   = $request->xls_id;
+        $id   = $request->b_id;
         $code = $request->code;
-        d2coupon::where('xls_id',$id)->where('code',$code)->update([
-            'order_id' => 0
+        coupon::where('b_id',$id)->where('code',$code)->update([
+            'o_id' => 0
         ]);
         return Response::json(['message'=> '已更新'], 200);
     }
     public function SentCouponCode(Request $request,$id){
         if($request->isMethod('post')){
             $id = $id;
-            $xls     = d2xls::find($id);
-            $coupons = d2coupon::where('xls_id',$id)->get();
+            $xls     = backme::find($id);
+            $coupons = coupon::where('b_id',$id)->get();
             $data = [
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
             config(['mail.username' => env('MAIL_DARK2_USER')]);
             config(['mail.password' => env('MAIL_DARK2_PASS')]);
-            Mail::send('Dark2.email.coupon',$data,function($m) use ($data){
+            Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
                 $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
                 $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
                 $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
@@ -164,7 +135,7 @@ class BackController extends Controller
                 $m->to($data['xls']->email, $data['xls']->name);
                 $m->subject('無光晚餐第二季-劃位序號信件!');
             });
-            d2xls::where('id',$id)->update(['is_sent'=>1]);
+            backme::where('id',$id)->update(['is_sent'=>1]);
             return Response::json(['message'=> 'success'], 200);
         }
         return Response::json(['message'=> 'error'], 200);
@@ -177,12 +148,12 @@ class BackController extends Controller
     public function Pros(Request $request){
         if($request->isMethod('post') && $request->has('id')){
             foreach($request->id as $row){
-                d2pro::where('id',$row)->update(['open'=>1]);
+                pro::where('id',$row)->update(['open'=>1]);
             }
         }
-        $pros = d2pro::where('id','>',0);
+        $pros = pro::where('id','>',0);
         if($request->has('day')) $pros = $pros->where('day',$request->day);
-        if($request->has('dayparts')) $pros = $pros->where('dayparts',$request->dayparts);
+        if($request->has('dayparts')) $pros = $pros->where('day_parts',$request->dayparts);
         if($request->has('order')){
             $order = explode('|',$request->order);
             if(count($order)>0){
@@ -191,23 +162,23 @@ class BackController extends Controller
         } else { $pros = $pros->orderBy('updated_at','desc'); }
         
         $pros = $pros->paginate($this->perpage);
-        return view('Dark2.backend.pros',compact('pros','request'));
+        return view('thegreattipsy.backend.pros',compact('pros','request'));
     }
     public function ProEdit(Request $request,$id){
         $pro = collect();
         if(is_numeric($id) && $id>0){
-            if(d2pro::where('id',$id)->count()>0){
-                $pro = d2pro::find($id);
+            if(pro::where('id',$id)->count()>0){
+                $pro = pro::find($id);
             } else {
                 abort(404);
             }
         }
-        return view('Dark2.backend.pro',compact('pro'));
+        return view('thegreattipsy.backend.pro',compact('pro'));
     }
     public function ProUpdate(Request $request,$id){
 
         $data = [
-            'dayparts'   => $request->dayparts,
+            'day_parts'   => $request->dayparts,
             'sites'      => $request->sites,
             'money'      => $request->money,
             'open'       => $request->open,
@@ -215,15 +186,15 @@ class BackController extends Controller
         ];
         if(is_numeric($id) && $id>0){
             $data['day']       = $request->day;
-            $data['rangstart'] = $request->rangstart;
-            $data['rangend']   = $request->rangend;
-            d2pro::where('id',$id)->update($data);
+            $data['rang_start'] = $request->rangstart;
+            $data['rang_end']   = $request->rangend;
+            pro::where('id',$id)->update($data);
         } else {
             // 日期範圍新增多筆
             $arr = [];
             for($i=0 ; $i<count($request->rangstart) ; $i++){
-                $data['rangstart'] = $request->rangstart[$i];
-                $data['rangend']   = $request->rangend[$i];
+                $data['rang_start'] = $request->rangstart[$i];
+                $data['rang_end']   = $request->rangend[$i];
                 if($request->daystart == ''){
                     $data['day'] = Carbon::today()->format('Y-m-d');
                     array_push($arr,$data);
@@ -238,13 +209,13 @@ class BackController extends Controller
                     
                 }
             }
-            d2pro::insert($arr);
+            pro::insert($arr);
         }
-        return redirect('/dark2/pros')->with('message','編輯完成!');
+        return redirect('/thegreattipsy/pros')->with('message','編輯完成!');
     }
     public function ProDelete(Request $request,$id){
-        d2order::where('pro_id',$id)->delete();
-        d2pro::where('id', $id)->delete();
+        order::where('pro_id',$id)->delete();
+        pro::where('id', $id)->delete();
         return Response::json(['message'=> '營業日已刪除'], 200);
 
     }
@@ -255,7 +226,7 @@ class BackController extends Controller
      */
     public function Coupons(Request $request){
 
-        $coupons = d2coupon::orderBy('updated_at','desc');
+        $coupons = coupon::orderBy('updated_at','desc');
         //if($request->has('day')) $coupons = $coupons->where('created_at','like',$request->day.'%');
         if($request->has('search')){
             $search = $request->search;
@@ -265,10 +236,10 @@ class BackController extends Controller
         }
 
         $coupons = $coupons->paginate($this->perpage);
-        return view('Dark2.backend.coupons',compact('coupons','request'));
+        return view('thegreattipsy.backend.coupons',compact('coupons','request'));
     }
     public function CouponDelete(Request $request,$id){
-        d2coupon::where('id', $id)->delete();
+        coupon::where('id', $id)->delete();
         return Response::json(['message'=> '已刪除'], 200);
 
     }
@@ -283,20 +254,20 @@ class BackController extends Controller
      * orders.
      */
     public function Orders(Request $request,$id){
-        $order = d2order::orderBy('updated_at','desc')->where('pro_id',$id);
+        $order = order::orderBy('updated_at','desc')->where('pro_id',$id);
         $order = $order->get();
-        return view('Dark2.backend.orders',compact('order'));
+        return view('thegreattipsy.backend.orders',compact('order'));
     }
     public function OrderEdit(Request $request,$id){
         $order = collect();
         if(is_numeric($id) && $id>0){
-            if(d2order::where('id',$id)->count()>0){
-                $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id')->select('d2order.id','day','dayparts','rangend','rangstart','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople')->find($id);
+            if(order::where('id',$id)->count()>0){
+                $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id')->select('tgtorder.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople')->find($id);
             } else {
                 abort(404);
             }
         }
-        return view('Dark2.backend.order',compact('order'));
+        return view('thegreattipsy.backend.order',compact('order'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -306,41 +277,41 @@ class BackController extends Controller
             'pay_type'   => $request->pay_type,
         ];
         if(is_numeric($id) && $id>0){
-            d2order::where('id',$id)->update($data);
-            $order = d2order::find($id);
+            order::where('id',$id)->update($data);
+            $order = order::find($id);
         } 
         if($request->has('qxx') && $request->qxx != ''){
-            return redirect('/dark2/print?'.$request->qxx)->with('message','編輯完成!');
+            return redirect('/thegreattipsy/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
-            return redirect('/dark2/orders/'.$order->tfopro_id)->with('message','編輯完成!');
+            return redirect('/thegreattipsy/orders/'.$order->tfopro_id)->with('message','編輯完成!');
         }
     }
     public function OrderDelete(Request $request,$id){
-        d2order::where('id',$id)->delete();
+        order::where('id',$id)->delete();
         return Response::json(['message'=> '訂單已刪除'], 200);
     }
 
     
     public function Appointment(Request $request,$pro_id){
         try {
-            $pro = d2pro::find($pro_id);
-            return view('Dark2.backend.orderAppointment',compact('pro_id','pro'));
+            $pro = pro::find($pro_id);
+            return view('thegreattipsy.backend.orderAppointment',compact('pro_id','pro'));
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/dark2/pros?')->with('message','此編號無座位表!');
+            return redirect('/thegreattipsy/pros?')->with('message','此編號無座位表!');
         }
     }
     public function AppointmentUpdate(Request $request,$pro_id){
         try {
             $now = Carbon::now()->toDateString();
-            $count = d2order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
+            $count = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
             $people = $request->people;
             if($count>0){
                 $count += 1;
             } else {
                 $count = Carbon::now()->format('Ymd').'001';
             }
-            $act = d2pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(d2order) WHERE d2order.pro_id=d2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rangstart','rangend')->first();
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end')->first();
             $meat = [];
             for($i=0;$i<$people;$i++){
                 array_push($meat,$request->input('Meal.'.$i));
@@ -363,18 +334,18 @@ class BackController extends Controller
                 'manage'     => $request->manage,
                 'discount'   => '',
             ];
-            $order = d2order::create($data);
+            $order = order::create($data);
 
             if($request->pay_status == '已付款'){
                 $mailer = [
-                    'day'   => $act->day.' '.substr($act->rangstart,0,5).'-'.substr($act->rangend,0,5),
+                    'day'   => $act->day.' '.substr($act->rang_start,0,5).'-'.substr($act->rang_end,0,5),
                     'pople' => $people,
                     'email' => $data['email'],
                     'name'  => $data['name'],
                 ];
                 config(['mail.username' => env('MAIL_DARK2_USER')]);
                 config(['mail.password' => env('MAIL_DARK2_PASS')]);
-                Mail::send('Dark2.email.order',$mailer,function($m) use ($mailer){
+                Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
                     $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
                     $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
                     $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
@@ -384,62 +355,55 @@ class BackController extends Controller
                 });
             }
 
-            return redirect('/dark2/pros?')->with('message','新增完成!');
+            return redirect('/thegreattipsy/pros?')->with('message','新增完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/dark2/pros?')->with('message','新增失敗!');
+            return redirect('/thegreattipsy/pros?')->with('message','新增失敗!');
         }
     }
 
 
     public function Print(Request $request){
-        $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meat','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','d2order.created_at AS created_at','d2order.pay_status','email','d2order.sn','d2order.id','dayparts','day','email','pay_type','pople','pro_id');
+        $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
+            $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
-            $order->where('d2order.pay_status',$request->pay_status);  
+            $order->where('tgtorder.pay_status',$request->pay_status);  
         } 
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
-        if($request->has('code') && $request->code!=''){
-            $order = $order->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE code='{$request->code}' AND d2coupon.order_id=d2order.sn)>0");
-        }
-
 
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
             if(count($ord)>0){
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
-        } else { $order = $order->orderBy('d2order.updated_at','desc'); }
+        } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
         $order = $order->paginate($this->perpage);
 
-        return view('Dark2.backend.print',compact('order','request'));
+        return view('thegreattipsy.backend.print',compact('order','request'));
     }
 
     public function Table(Request $request){
-        $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
-        $order = $order->select('rangstart','rangend','name','tel','meat','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','d2order.created_at AS created_at','d2order.pay_status','email','d2order.sn','d2order.id','dayparts','day','email','pay_type','pople');
+        $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
+            $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
-            $order->where('d2order.pay_status',$request->pay_status);  
+            $order->where('tgtorder.pay_status',$request->pay_status);  
         } 
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
-            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
-        }
-        if($request->has('code') && $request->code!=''){
-            $order = $order->whereRaw("(SELECT COUNT(id) FROM(d2coupon) WHERE code='{$request->code}' AND d2coupon.order_id=d2order.sn)>0");
+            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -447,27 +411,27 @@ class BackController extends Controller
             if(count($ord)>0){
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
-        } else { $order = $order->orderBy('d2order.updated_at','desc'); }
+        } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
         $order = $order->get();
         
 
-        return view('Dark2.backend.table',compact('order','request'));
+        return view('thegreattipsy.backend.table',compact('order','request'));
     }
 
     public function XlsDataOuput(Request $request){
-        $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
-        $order = $order->select('day','dayparts','rangstart','rangend','name','email','tel');
+        $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
         if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
+            $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
-            $order->where('d2order.pay_status',$request->pay_status);  
+            $order->where('tgtorder.pay_status',$request->pay_status);  
         } 
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
-            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%'");
+            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -475,7 +439,7 @@ class BackController extends Controller
             if(count($ord)>0){
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
-        } else { $order = $order->orderBy('d2order.updated_at','desc'); }
+        } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
         $order = $order->get();
 
         $cellData = $order->toArray();
@@ -486,10 +450,10 @@ class BackController extends Controller
         })->export('xls');
     }
     public function XlsEmailDataOuput(Request $request){
-        $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
+        $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
         $order = $order->select('name','email')->groupBy('email');
-        $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
-        $order = $order->orderBy('d2order.updated_at','desc')->get();
+        $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
+        $order = $order->orderBy('tgtorder.updated_at','desc')->get();
         $cellData = $order->toArray();
         Excel::create('Email 名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
@@ -499,7 +463,7 @@ class BackController extends Controller
     }
 
     public function beSentOrderMail(Request $request,$id){
-        $act = d2pro::select('day','rangstart','rangend')->find($id);
+        $act = pro::select('day','rang_start','rang_end')->find($id);
         $mailer = [
             'day'   => $act->day.' '.substr($act->rangstart,0,5).'-'.substr($act->rangend,0,5),
             'pople' => $request->pople,
@@ -508,7 +472,7 @@ class BackController extends Controller
         ];
         config(['mail.username' => env('MAIL_DARK2_USER')]);
         config(['mail.password' => env('MAIL_DARK2_PASS')]);
-        Mail::send('Dark2.email.order',$mailer,function($m) use ($mailer){
+        Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
             $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
             $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
             $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
@@ -523,73 +487,24 @@ class BackController extends Controller
 
 
 
-    public function Xls2Db(Request $request){
-        $filePath = 'storage/app/dark2_report.xlsx';
-        Excel::load($filePath, function($reader) {
-            $data = [];
-            $xlsx = $reader->toArray();
-            foreach($xlsx as $row){
-                if($row['sn'] == '' && $row['name'] == '' && $row['detail'] == ''){
-                    break;
-                } else {
-                    //echo $row['sn'].'<br />';
-                    if($row['sn'] == '') $row['sn'] = 0;
-                    if($row['sponsor_id'] == '') $row['sponsor_id'] = 0;
-                    if($row['ot1'] == '') $row['ot1'] = 0;
-                    if($row['ot2'] == '') $row['ot2'] = 0;
-                    if($row['ot3'] == '') $row['ot3'] = 0;
-                    if($row['ot4'] == '') $row['ot4'] = 0;
-                    if($row['ot5'] == '') $row['ot5'] = 0;
-                    $r = [
-                        'sn'         => $row['sn'],
-                        'detail'     => $row['detail'],
-                        'num'        => $row['num'],
-                        'money'      => $row['money'],
-                        'name'       => $row['name'],
-                        'email'      => $row['email'],
-                        'tel'        => $row['tel'],
-                        'sponsor_id' => $row['sponsor_id'],
-                        'ot1'        => $row['ot1'],
-                        //'ot1text'    => json_encode([$row['ot1'],$row['ot1_1'],$row['ot1_2']]),
-                        'ot2'        => $row['ot2'],
-                        //'ot2text'    => json_encode([$row['ot2'],$row['ot2_1'],$row['ot2_2']]),
-                        'ot3'        => $row['ot3'],
-                        //'ot3text'    => json_encode([$row['ot3'],$row['ot3_1'],$row['ot3_2']]),
-                        'ot4'        => $row['ot4'],
-                        //'ot4text'    => json_encode([$row['ot4'],$row['ot4_1'],$row['ot4_2']]),
-                        'ot5'        => $row['ot5'],
-                        //'ot5text'    => json_encode([$row['ot5'],$row['ot5_1'],$row['ot5_2']]),
-                        //'result'     => json_encode($row),
-                        'quarter'    => 3,  // 產出季度
-                    ];
-                    array_push($data, $r);
-                }
-                
-            }
-
-            d2xls::insert($data);
-        });
-    }
-
-
     public function UploadXlsx2Db(Request $request){
         $filePath = '';
 
         try{
             $rules = [
-                'xlsx'    => 'required|mimes:xlsx,zip,xls',
+                'xlsx'    => 'required|mimes:xlsx',
                 'quarter' => 'required|numeric'
             ];
             $validator = Validator::make($request->all(), $rules);
             if ($validator->fails()) {
-                return redirect('/dark2/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
+                return redirect('/thegreattipsy/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
             } else {
                 if ($request->hasFile('xlsx')) {
                     if ($request->file('xlsx')->isValid())
                     {
                         $destinationPath = base_path() . '/storage/app';
                         $extension = $request->file('xlsx')->getClientOriginalExtension();
-                        $fileName = 'dark2_' . date('YmdHis') . '.' . $extension;
+                        $fileName = 'tgt_' . date('YmdHis') . '.' . $extension;
                         $request->file('xlsx')->move($destinationPath, $fileName);
                         $filePath = '/storage/app/' . $fileName;
                     }
@@ -608,11 +523,9 @@ class BackController extends Controller
                         //echo $row['sn'].'<br />';
                         if($row['sn'] == '') $row['sn'] = 0;
                         if($row['sponsor_id'] == '') $row['sponsor_id'] = 0;
-                        if($row['ot1'] == '') $row['ot1'] = 0;
-                        if($row['ot2'] == '') $row['ot2'] = 0;
-                        if($row['ot3'] == '') $row['ot3'] = 0;
-                        if($row['ot4'] == '') $row['ot4'] = 0;
-                        if($row['ot5'] == '') $row['ot5'] = 0;
+                        if($row['l1'] == '') $row['l1'] = 0;
+                        if($row['a1'] == '') $row['a1'] = 0;
+                        if($row['a4'] == '') $row['a4'] = 0;
                         $r = [
                             'sn'         => $row['sn'],
                             'detail'     => $row['detail'],
@@ -622,15 +535,13 @@ class BackController extends Controller
                             'email'      => $row['email'],
                             'tel'        => $row['tel'],
                             'sponsor_id' => $row['sponsor_id'],
-                            'ot1'        => $row['ot1'],
-                            'ot2'        => $row['ot2'],
-                            'ot3'        => $row['ot3'],
-                            'ot4'        => $row['ot4'],
-                            'ot5'        => $row['ot5'],
+                            'l1'         => $row['l1'],
+                            'a1'         => $row['a1'],
+                            'a4'         => $row['a4'],
                             'quarter'    => $quarter,  // 產出季度
                         ];
-                        if(d2xls::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){
-                            d2xls::insert($r);
+                        if(backme::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){
+                            backme::insert($r);
                             $i++;
                         }
                         //array_push($data, $r);
@@ -640,69 +551,43 @@ class BackController extends Controller
                 //backme::insert($data);
                 $this->Db2Coupon();
             });
-            return redirect('/dark2/backmes')->with('message','新增完成!共新增'.$i.'筆資料');
+            return redirect('/thegreattipsy/backmes')->with('message','新增完成!!共新增'.$i.'筆資料');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/dark2/backmes')->with('message','新增失敗!');
+            return redirect('/thegreattipsy/backmes')->with('message','新增失敗!');
         }
     }
 
     private function Db2Coupon(){
-        $xls = d2xls::select('ot1','ot2','ot3','id','ot4','ot5','id')->where('gen_coup',0)->get();
+        $xls = backme::select('l1','a1','a4','id')->where('gen_coup',0)->get();
         foreach($xls as $row){
             $data = [
-                'xls_id' => $row->id
+                'b_id' => $row->id
             ];
-            if($row->ot1 >= 1){
-                for($i=0;$i<$row->ot1;$i++){
-                    $data['wine'] = 0;
+            if($row->l1 >= 1){
+                for($i=0;$i<$row->l1;$i++){
+                    $data['type'] = 'l1';
                     $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
+                    coupon::insert($data);
                 }
-            } elseif($row->ot2 >= 1){
-                for($i=0;$i<$row->ot2;$i++){
-                    $data['wine'] = 0;
+            } elseif($row->a1 >= 1){
+                for($i=0;$i<$row->a1;$i++){
+                    $data['type'] = 'a1';
                     $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
-                    $data['wine'] = 0;
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
+                    coupon::insert($data);
                 }
-            } elseif($row->ot3 >= 1){
-                for($i=0;$i<$row->ot3;$i++){
-                    $data['wine'] = 1;
+            } elseif($row->a4 >= 1){
+                for($i=0;$i<$row->a4;$i++){
+                    $data['type'] = 'a4';
                     $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
-                }
-            } elseif($row->ot4 >= 1){
-                for($i=0;$i<$row->ot4;$i++){
-                    $data['wine'] = 1;
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
-                    $data['wine'] = 1;
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
-                }
-            } elseif($row->ot5 >= 1){
-                for($i=0;$i<$row->ot5;$i++){
-                    $data['wine'] = 1;
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
-                    $data['wine'] = 1;
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
-                    $data['wine'] = 1;
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    d2coupon::insert($data);
+                    coupon::insert($data);
                 }
             }
-            d2xls::where('id',$row->id)->update(['gen_coup'=>1]);
+            backme::where('id',$row->id)->update(['gen_coup'=>1]);
         }
 
     }
-    public function gg(){
-        return $this->GenerateGiftCodeSN(); 
-    }
+
     private function GenerateGiftCodeSN(){
         $random = 8;$SN = '';
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -710,7 +595,7 @@ class BackController extends Controller
             $b = $characters[rand(0, strlen($characters)-1)];
             $SN .= $b;
         }
-        if(d2coupon::where('code',$SN)->count()>0){
+        if(coupon::where('code',$SN)->count()>0){
             $this->GenerateGiftCodeSN();
         } else {
             return $SN;

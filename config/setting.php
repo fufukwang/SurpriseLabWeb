@@ -6,5 +6,8 @@ return [
     'dark2' => [
     	'path'    => 'dininginthedark2',
     	'enddate' => '2019-06-30'  // 前台開放時間
-    ]
+    ],
+    'tgt' =>[
+    	'enddate' =>  '2019-02-03'
+    ], 
 ];

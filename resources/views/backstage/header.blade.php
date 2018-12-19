@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" href="/surprise/images/favi.png" >
-    <title>Surprise Lab</title>
+    <title>{{ $title or '' }}  Surprise Lab</title>
 
     <!-- Plugin Css-->
     <link rel="stylesheet" href="/backstage/plugins/magnific-popup/dist/magnific-popup.css" />
@@ -124,7 +124,11 @@
                     <li class="has-submenu">
                         <a href="#"><i class="md md-invert-colors-on"></i>微醺大飯店</a>
                         <ul class="submenu">
-                            <li><a href="#" onclick="alert('還沒有')">還沒有</a></li>
+
+                            <li><a href="/thegreattipsy/pros">Activaty</a></li>
+                            <li><a href="/thegreattipsy/backmes">Backme</a></li>
+                            <li><a href="/thegreattipsy/coupons">Coupon</a></li>
+                            <li><a href="/thegreattipsy/print">Order</a></li>
 
                         </ul>
                     </li>

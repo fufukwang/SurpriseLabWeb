@@ -1,4 +1,4 @@
-@include('backstage.header')
+@include('backstage.header',['title' => '微醺大飯店訂單列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">訂單 </h4>
+                        <h4 class="page-title">微醺大飯店訂單列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/dark2/print" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/thegreattipsy/print" id="SearchForm">
 
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -46,10 +46,10 @@
                                             <div class="form-group col-sm-1">
                                                 <select name="dayparts" class="form-control">
                                                     <option value="">時段</option>
-                                                    <option value="午餐"@if(isset($request->dayparts) && $request->dayparts=='午餐') selected @endif>午餐</option>
-                                                    <option value="下午茶"@if(isset($request->dayparts) && $request->dayparts=='下午茶') selected @endif>下午茶</option>
-                                                    <option value="晚餐"@if(isset($request->dayparts) && $request->dayparts=='晚餐') selected @endif>晚餐</option>
-                                                    <option value="特別活動"@if(isset($request->dayparts) && $request->dayparts=='特別活動') selected @endif>特別活動</option>
+                                                    <option value="午場"@if(isset($request->dayparts) && $request->dayparts=='午場') selected @endif>午場</option>
+                                                    <!--option value="下午茶"@if(isset($request->dayparts) && $request->dayparts=='下午茶') selected @endif>下午茶</option-->
+                                                    <option value="晚場"@if(isset($request->dayparts) && $request->dayparts=='晚場') selected @endif>晚場</option>
+                                                    <!--option value="特別活動"@if(isset($request->dayparts) && $request->dayparts=='特別活動') selected @endif>特別活動</option-->
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
@@ -116,7 +116,7 @@
                                                 <td>{{ $row->manage }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i></a>
-                                                    <a class="btn btn-primary btn-xs" href="/dark2/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-primary btn-xs" href="/thegreattipsy/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
@@ -145,7 +145,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <a href="/dark2/xls/emaildata/output" class="btn btn-warning">下載成功付款的 EMail 名單</a>
+                                    <a href="/thegreattipsy/xls/emaildata/output" class="btn btn-warning">下載成功付款的 EMail 名單</a>
                                     <span style="font-size: 12px;color:red;"><br>需要較多的伺服器資源.請在離峰時刻使用</span>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@ $(function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此訂單")) {
              $.ajax({
-                url: '/dark2/order/'+id+'/delete',
+                url: '/thegreattipsy/order/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
@@ -234,7 +234,7 @@ $(function(){
         var email = $(this).data('email');
         var id    = $(this).data('id');
         var pople = $(this).data('pople');
-        $.post('/dark2/order/'+id+'/resent',{
+        $.post('/thegreattipsy/order/'+id+'/resent',{
             name  : name,
             email : email,
             pople : pople
@@ -276,17 +276,17 @@ $(function(){
 });
 function submitXLSForm(){
     $('#SearchForm').attr('target','_blank')
-    $('#SearchForm').attr('action','/dark2/xls/data/output')
+    $('#SearchForm').attr('action','/thegreattipsy/xls/data/output')
     $('#SearchForm').submit();
     $('#SearchForm').attr('target','_top');
-    $('#SearchForm').attr('action','/dark2/print');
+    $('#SearchForm').attr('action','/thegreattipsy/print');
 }
 function submitSearchForm(){
     $('#SearchForm').attr('target','_blank')
-    $('#SearchForm').attr('action','/dark2/table')
+    $('#SearchForm').attr('action','/thegreattipsy/table')
     $('#SearchForm').submit();
     $('#SearchForm').attr('target','_top');
-    $('#SearchForm').attr('action','/dark2/print');
+    $('#SearchForm').attr('action','/thegreattipsy/print');
 }
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
 		</script>
