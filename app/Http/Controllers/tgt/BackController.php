@@ -537,7 +537,7 @@ class BackController extends Controller
                             'sponsor_id' => $row['sponsor_id'],
                             'l1'         => $row['l1'],
                             'a1'         => $row['a1'],
-                            'a4'         => $row['a4'],
+                            'a4'         => $row['a4'] / 4,
                             'quarter'    => $quarter,  // 產出季度
                         ];
                         if(backme::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){

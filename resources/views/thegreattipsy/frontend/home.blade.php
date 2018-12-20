@@ -10,7 +10,7 @@
     <meta property="og:site_name" content="微醺大飯店 The Great Tipsy"/>
     <meta property="og:description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。"/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy"/>
-    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy/img/opengraph.png"/>
+    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy/img/opengraph.png?v=0.1"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/after-rules.css?v=0.1"/>
+    <link rel="stylesheet" href="css/style.css?v=0.1"/>
+    <link rel="stylesheet" href="css/after-rules.css"/>
 </head>
 <body class="loading">
 <!-- Anchor menu -->
@@ -432,7 +432,7 @@
         <div class="container ticket-type-area" data-aos="fade">
 
             <!------------->
-            <h3>選擇票卷</h3>
+            <h3>選擇票券</h3>
             <!------------->
             <div class="sub-title-wrapper">
                 <h4>
@@ -836,6 +836,6 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.2"></script>
+<script src="js/main.js?v=0.3"></script>
 </body>
 </html>
