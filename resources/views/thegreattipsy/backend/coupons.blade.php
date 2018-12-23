@@ -64,14 +64,14 @@
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->code }}</td>
                                                 <td>@if( $row->type == 'l1' ) 時間有點限制票 @elseif( $row->type == 'a1' ) 暢行無阻票 @elseif( $row->type == 'a4' ) 四人沉醉票 @endif</td>
-                                                <td>@if($row->order_id > 0) 
-                                                    {{ App\model\d2order::where('sn',$row->order_id)->first()->created_at }}
+                                                <td>@if($row->o_id > 0) 
+                                                    {{ App\model\tgt\order::where('sn',$row->o_id)->first()->created_at }}
                                                 @else 尚未兌換
                                                 @endif</td>
-                                                <th>{{ $row->order_id }}</th>
+                                                <th>{{ $row->o_id }}</th>
                                                 <td class="actions">
                                                     <!--a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a-->
-                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-order_id={{ $row->order_id }} data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-o_id={{ $row->o_id }} data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
 @empty
@@ -149,7 +149,7 @@ $(function(){
     $('.btn-danger').bind('click',function(){
         var id  = $(this).data('id');
         var txt = '';
-        if($(this).data('order_id') > 0){
+        if($(this).data('o_id') > 0){
             txt = '此優惠券已被使用(訂單不會被刪除),';
         }
         if(confirm(txt + "確定要刪除此優惠券")) {

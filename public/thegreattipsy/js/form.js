@@ -7,13 +7,18 @@ var activeIndex;
 var isAllowToNextStep; // 是否可以進入下一步
 var passTimes = 1; // 票券代碼輸入次數
 var amountToGo = $('.amountToGo'); // 完成劃位金額
+/*
 var ticketInfos = [
     { type: 0, name: '暢行無阻票', price: 2000},
-    { type: 1, name: '時間有點限制票', price: 1750},
-    { type: 2, name: '四人沈醉票', price: 1750}
+    { type: 1, name: '時間有點限制票', price: 2000},
+    { type: 2, name: '四人沈醉票', price: 2000}
 ];
+*/
 var usedCoupons = []; // 暫存已輸入的票券代碼
 var submitDatas = []; // 暫存所有欄位資料
+var proObject   = []; // 暫存的
+var proSingle  = 0; // 單價
+var cutPelple  = 0; // 折抵人數
 var paidAmount = 0; // 已折抵金額
 var restAmount = 0; // 剩餘折抵金額
 
@@ -107,6 +112,18 @@ function filledDataChecker() {
 
        food_types = '';
     });
+    // 寫入價格
+    if(cutPelple == 0){
+        for(var i=0;i<proObject.length;i++){
+            if(proObject[i].id == $('#booking_time').val()){
+                proSingle = proObject[i].money;
+            }
+            var summary = formatPrice($('[name="booking_people"]').val() * proSingle); // 數字變成貨幣格式
+
+            // 更新完成劃位金額
+            amountToGo.text(summary);
+        }
+    }
 }
 
 // 取得陣列型態的葷素食選項
@@ -256,7 +273,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
     if ($(this).attr('id') === 'booking_people') {
         submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
         update_isVegetarian(submitDatas['booking_people']);
-        update_amountToGo(submitDatas['booking_people']);
+        //update_amountToGo(submitDatas['booking_people']);
 
         usedCoupons = []; // 清空已使用的票券代碼
 
@@ -275,10 +292,24 @@ $('.step-3 input, .step-3 select').on('change', function () {
         });
 
         // 可選擇的日期
-        var enableDays = ["2018-12-21", "2018-12-22", "2018-12-23",  "2018-12-28",  "2018-12-29",  "2018-12-30"];
-
-        booking_date.datepicker("destroy");
-        booking_date.datepicker({dateFormat: 'yy-mm-dd', beforeShowDay: enableAllTheseDays});
+        var enableDays = [];
+        if(!isNaN(submitDatas['booking_people'])){
+            $.blockUI();
+            $.get('/thegreattipsy/GetAjaxData',{'act':'getBypople','pople':submitDatas['booking_people']},function(data){
+                for(i=0;i<data.length;i++){
+                    enableDays.push(data[i].day);
+                }
+                booking_date.datepicker("destroy");
+                booking_date.datepicker({
+                    minDate:0,
+                    maxDate:"+3m",
+                    dateFormat: 'yy-mm-dd', 
+                    beforeShowDay: enableAllTheseDays
+                });
+                $.unblockUI();
+            },'json');
+        }
+        
 
         function enableAllTheseDays(date) {
             var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
@@ -293,33 +324,57 @@ $('.step-3 input, .step-3 select').on('change', function () {
         var data;
 
         if (nextFieldID === 'booking_time_slot') { // 時段
-            data = [
-                {
-                    id: 0,
-                    text: '上午',
-                },
-                {
-                    id: 1,
-                    text: '下午',
+            $.get('/thegreattipsy/GetAjaxData',{
+                'act':'getByday',
+                'ticketType':$('input[name="ticket-type"]:checked').val(),
+                'day':$('#booking_date').val(),
+                'pople':submitDatas['booking_people']
+            },function(obj){
+                data = [];
+                if(obj.length>0){
+                    for(i=0;i<obj.length;i++){
+                        data.push({
+                            id   : obj[i].day_parts,
+                            text : obj[i].day_parts
+                        });
+                    }
+                    updateOptions(nextField, data);
+                } else {
+                    if($('#booking_date').val() != ''){
+                        alert("此日期午場座位不足喔!!\n請再重新選擇日期!");
+                        return false;
+                    }
                 }
-            ];
+            },'json');
+            
         } else if (nextFieldID === 'booking_time') { // 時間
-            data = [
-                {
-                    id: 0,
-                    text: '09:00-10:30',
-                },
-                {
-                    id: 1,
-                    text: '18:00-19:30',
-                },
-                {
-                    id: 2,
-                    text: '20:00-21:30'
+            $.get('/thegreattipsy/GetAjaxData',{
+                'act':'getBydartpart',
+                'ticketType':$('input[name="ticket-type"]:checked').val(),
+                'day':$('#booking_date').val(),
+                'day_parts':$('#booking_time_slot').val(),
+                'pople':submitDatas['booking_people']
+            },function(obj){
+                data = [];
+                proObject = [];
+                if(obj.length>0){
+                    proObject = obj;
+                    for(i=0;i<obj.length;i++){
+                        var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5)
+                        data.push({
+                            id   : obj[i].id,
+                            text : range
+                        });
+                    }
+                    updateOptions(nextField, data);
                 }
-            ];
+            },'json');
         }
-
+        // 優惠券初始化
+        usedCoupons = [];
+        cutPelple = 0;
+        passTimes = 1;
+        $('.submit-coupon-wrapper').html('');
         // 更新下拉選單的選項
         updateOptions(nextField, data);
     }
@@ -336,7 +391,7 @@ function update_isVegetarian(people) {
     radioGroup.slice(0,people).addClass('show-radioGroup');
     $('.show-radioGroup').last().addClass('last-row');
 }
-
+/*
 // 更新完成劃位所需金額
 function update_amountToGo(people) {
     ticketInfo = ticketInfos[$('input[name="ticket-type"]:checked').val()];
@@ -352,7 +407,7 @@ function update_amountToGo(people) {
     paidAmount = 0;
     passTimes = 1;
 }
-
+*/
 // 更新下拉選項的 Option 值
 function updateOptions(select_filed, data) {
     var placeholder = select_filed.data('placeholder');
@@ -389,6 +444,7 @@ function updateField(fieldGroup, accessHide) {
 // ===================================
 // Coupon Code Start
 // ===================================
+/*
 var coupons = [ // 測試用票券代碼
     { type: '0', couponcode: '054JXQH8'},
     { type: '0', couponcode: '3MNF5RUE'},
@@ -407,16 +463,49 @@ var coupons = [ // 測試用票券代碼
     { type: '2', couponcode: 'TUN07VAB'},
     { type: '2', couponcode: 'UPVEJT6U'}
 ];
+*/
 
 $('.verification-code').on('click', function () {
     var coupon = $('input[name="coupon"]');
     var couponVal = coupon.val(); // 取得用戶輸入的票券代碼
-
+/*
     // 票券代碼是否存在
     var couponIndex = coupons.map(function (couponData) {
         return couponData.couponcode;
     }).indexOf(couponVal);
-
+    */
+    if(submitDatas['booking_people'] - cutPelple == 0){
+        alert('已經不需要扣抵囉!');
+        return false;
+    }
+    // ajax 取得票券
+    couponVal = couponVal.toUpperCase();
+    $.get('/thegreattipsy/GetAjaxData',{
+        'act':'CheckCoupon',
+        'code':couponVal,
+        'ticketType':$('input[name="ticket-type"]:checked').val(),
+        'day':$('#booking_date').val(),
+        'pople':submitDatas['booking_people'] - cutPelple,
+        'coupon':usedCoupons
+    },function(data){
+        if(data.success == 'Y'){
+            usedCoupons.push(couponVal);
+            var ticketName = '';
+            $('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
+            // 折扣人數
+            switch(data.ticket){
+                case '暢⾏無阻票':case '時間有點限制票': cutPelple++; break;
+                case '四⼈沈醉票': cutPelple = cutPelple + 4; break;
+            }
+            passTimes++; // 通過人數
+            // 改寫金額
+            var summary = formatPrice(($('[name="booking_people"]').val()-cutPelple) * proSingle); // 數字變成貨幣格式
+            amountToGo.text(summary);
+        } else {
+            alert('優惠碼 '+couponVal+" 無法使用!\n" + data.message);
+        }
+    },'json');
+/*
     // 票券是否在表單送出前重複使用
     var isAllow = $.inArray(couponVal, usedCoupons);
 
@@ -448,18 +537,18 @@ $('.verification-code').on('click', function () {
         $(this).closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' 序號錯誤或已使用</p>');
 
     }
-
+*/
     coupon.val('').trigger('change');
-    passTimes++;
+    
     return false;
 });
-
+/*
 function couponAmount(couponType, price) {
     // 如果票券序號為四人沈醉
     // 則票券折扣額為當下的票券金額 X 4
     return couponType == 2 ? price * 4 : price;
 }
-
+*/
 // ===================================
 // Coupon Code End
 // ===================================
@@ -477,6 +566,96 @@ jQuery(function($){
             minimumResultsForSearch: Infinity
         })
     })
+    // ajax 送出 token
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    // tappay
+    TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'production');
+    TPDirect.card.setup({
+        fields: {
+            number: {
+                // css selector
+                element: '#card-number',
+                placeholder: '**** **** **** ****'
+            },
+            expirationDate: {
+                // DOM object
+                element: document.getElementById('card-expiration-date'),
+                placeholder: 'MM / YY'
+            },
+            ccv: {
+                element: '#card-ccv',
+                placeholder: 'ccv'
+            }
+        },
+        styles: {
+            // Style all elements
+            'input': {
+                'color': 'gray'
+            },
+            // Styling ccv field
+            'input.cvc': {
+                // 'font-size': '16px'
+            },
+            // Styling expiration-date field
+            'input.expiration-date': {
+                // 'font-size': '16px'
+            },
+            // Styling card-number field
+            'input.card-number': {
+                // 'font-size': '16px'
+            },
+            // style focus state
+            ':focus': {
+                // 'color': 'black'
+            },
+            // style valid state
+            '.valid': {
+                'color': 'green'
+            },
+            // style invalid state
+            '.invalid': {
+                'color': 'red'
+            },
+            // Media queries
+            // Note that these apply to the iframe, not the root window.
+            '@media screen and (max-width: 400px)': {
+                'input': {
+                    'color': 'orange'
+                }
+            }
+        }
+    });
+    $('#SurePay').bind('click',function(){
+        TPDirect.card.getPrime(function(result) {
+            if (result.status !== 0) {
+                alert('卡片資料有誤!無法取得認證!');
+                console.log('getPrime error');
+                return false;
+            }
+            var prime = result.card.prime
+            console.log('getPrime success');
+            $('#lightbox2pay').fadeToggle(700);
+            SendOrderData('online',prime);
+        })
+    });
+    $('#CanalPay').bind('click',function(){
+        $('#lightbox2pay').fadeToggle(700);
+    });
+    $('#btn-online-submit').bind('click',function(){
+        // 判斷是否到達可過關的地方
+        if($('[name="booking_people"]').val() - cutPelple == 0){
+            SendOrderData('online','');
+        } else {
+            
+
+            // 開啟刷卡介面
+            $('#lightbox2pay').fadeToggle(700);   
+        }
+    });
 });
 
 // ===================================
@@ -497,3 +676,50 @@ function formatPrice(n) {
 $('#phone').bind('keyup paste', function(){
     this.value = this.value.replace(/[^0-9\+\-\ ]/g, '');
 });
+
+
+// 送出資料
+function SendOrderData(Pay,prime){
+    $.blockUI();
+    var Meal = [];
+    var people = $('[name="booking_people"]').val();
+    for (i = 0; i < people; i++) {
+        Meal[i] = $('[name="food-type[' + i + ']"]:checked').val()=='葷食' ? '葷' : '素';
+    }
+    var obj = {
+        'name'  : $('[name=name]').val(),
+        'tel'   : $('[name=phone]').val(),
+        'email' : $('[name=email]').val(),
+        'notes' : $('[name=notice]').val(),
+        'pro_id': $('[name=booking_time]').find(':selected').val(),
+        'Pople' : people,
+        'prime' : prime,
+        'Meal'  : Meal,
+        'Pay'   : Pay,
+        'coupon': usedCoupons,
+    };
+    $.post('/thegreattipsy/ReOrderData',obj,function(data){
+        $('<link>').appendTo('head')
+            .attr({
+                type: 'text/css', 
+                rel: 'stylesheet',
+                href: '/thegreattipsy/css/submit.css'
+            });
+        $('#bookingPage').hide();
+        if(data.success==true){
+            $('#bookingSuccess').show();
+            console.log('成功')
+        } else {
+            $('#bookingError').show();
+            console.log('失敗')
+        }
+        $.unblockUI();
+    },'json').fail(function() {
+        alert('服務繁忙中請稍後在試!');
+        window.location.reload(true);
+        console.log('錯誤')
+        $.unblockUI();
+    }).always(function() {
+        
+    });
+}

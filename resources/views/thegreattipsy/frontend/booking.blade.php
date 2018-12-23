@@ -14,6 +14,7 @@
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
     <title>微醺大飯店 The Great Tipsy</title>
 
@@ -117,7 +118,7 @@
         </button>
     </header>
 
-    <div class="container">
+    <div class="container" id="bookingPage">
         <!-- form -->
         <form id="booking">
             <!--progress title-->
@@ -536,14 +537,98 @@
                     </table>
                     <div class="feature-btn d-flex justify-content-between multi-btn">
                         <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
-                        <button type="submit" name="submit" class="btn-outline submit">
+                        <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
                             完成劃位 NT$<span class="amountToGo"></span>
                         </button>
                     </div>
+
+
+
+
+
+
+
+<div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
+  <div class="modal-dialog" role="document" style="top: 10%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">信用卡付款</h5>
+      </div>
+      <div class="modal-body">
+<div class="tpfield" id="card-number" style="height: 30px;"></div>
+<div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
+<div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
+<p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
+<div style="text-align:center;"><a href="https://www.tappaysdk.com/tch" target="_blank"><img src="https://docs.tappaysdk.com/images/logo.png" width="100"></a></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
+        <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
             </fieldset>
         </form>
     </div>
+
+
+
+
+
+    <div class="submit-page success" id="bookingSuccess" style="display:none;">
+        <div class="container">
+            <h3 class="page-title">
+                恭喜你已完成劃位！
+            </h3>
+            <p class="page-sub-title">
+                請至你的信箱確認劃位完成信件
+            </p>
+            <p class="page-info">
+                將於體驗日期靠近一點時<br/>
+                我們會寄送提醒信件與一些行前注意事項給你<br/>
+                <br/>
+                屆時請注意Email<br class="d-block d-sm-none"/><span class="d-none d-sm-inline-block">，</span>有時候也會跑到垃圾郵件，可以翻找一下<br/>
+                <br/>
+                期待，你的來訪
+            </p>
+            <div class="feature-btn" style="text-align: center;">
+                <a class="btn-outline" href="index.html">關於微醺大飯店</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="submit-page error" id="bookingError" style="display:none;">
+        <div class="container">
+            <h3 class="page-title">
+                很抱歉，劃位未成功！
+            </h3>
+            <p class="page-info">
+                可能是，某些地方出錯了，還請再試一次<br/>
+                <br/>
+                若有任何問題，歡迎來信詢問：<br/>
+                <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
+            </p>
+            <div class="feature-btn" style="text-align: center;">
+                <a class="btn-outline" href="booking.html">我要訂房</a>
+            </div>
+        </div>
+    </div>
+
+
 </main>
 
 <!-- Screen Rotate Hint -->
@@ -582,7 +667,10 @@
 
 <!-- Select2 script-->
 <script src="js/select2.js"></script>
-
+<!-- blockUI script-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+<!-- tappaysdk -->
+<script src="https://js.tappaysdk.com/tpdirect/v3"></script>
 <!-- Custom Js -->
 <script src="js/form.js"></script>
 </body>

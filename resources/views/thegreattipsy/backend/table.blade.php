@@ -55,13 +55,13 @@
 		<tr>
 			<td></td>
 			<td></td>
-			<td>{{ substr($row->rangstart,0,5) }}-{{ substr($row->rangend,0,5) }}</td>
+			<td>{{ substr($row->rang_start,0,5) }}-{{ substr($row->rang_end,0,5) }}</td>
 			<td>{{ $row->name }}</td>
 			<td>@if($row->pay_type=='現場付款') 現場 @elseif($row->pay_type=='信用卡') 信用卡 @elseif($row->pay_type='後臺編輯') 後台 @endif {{ $row->OM }} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
 			<td>{{ $row->pople }} 人 {{ implode('/',json_decode($row->meat,true)) }} </td>
 			<td>{!! nl2br($row->notes) !!}</td>
-			<td>@forelse(App\model\d2coupon::where('order_id',$row->sn)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif [{{App\model\d2xls::select('money')->find($coup->xls_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
+			<td>@forelse(App\model\tgt\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
 			<td>{!! nl2br($row->manage) !!}</td>
 		</tr>
 @empty
