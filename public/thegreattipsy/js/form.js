@@ -325,6 +325,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
         var data;
 
         if (nextFieldID === 'booking_time_slot') { // 時段
+            nextField.html('').trigger('change');
             $.get('/thegreattipsy/GetAjaxData',{
                 'act':'getByday',
                 'ticketType':$('input[name="ticket-type"]:checked').val(),
