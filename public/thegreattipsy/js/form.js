@@ -258,6 +258,7 @@ $('input[name="ticket-type"]').on('click', function () {
         // 選擇其他票種時，清空已選擇人數
         $('#booking_people').val('').prop('disabled', false).trigger('change');
     }
+    $(".action-button.next:eq(1)").trigger('click');
 });
 
 // Step 3 - 人數、日期、時段選擇
@@ -348,6 +349,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
             },'json');
             
         } else if (nextFieldID === 'booking_time') { // 時間
+            nextField.html('').trigger('change');
             $.get('/thegreattipsy/GetAjaxData',{
                 'act':'getBydartpart',
                 'ticketType':$('input[name="ticket-type"]:checked').val(),
@@ -376,7 +378,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
         passTimes = 1;
         $('.submit-coupon-wrapper').html('');
         // 更新下拉選單的選項
-        updateOptions(nextField, data);
+        //updateOptions(nextField, data);
     }
 
     // 每次重新點選選項後，除了下一個選項會重新載入外，後面的選項都會隱藏並清空值
@@ -410,8 +412,8 @@ function update_amountToGo(people) {
 */
 // 更新下拉選項的 Option 值
 function updateOptions(select_filed, data) {
+    
     var placeholder = select_filed.data('placeholder');
-
     // Ajax 參考文件
     // https://select2.org/data-sources/ajax
     select_filed.select2({
@@ -419,6 +421,7 @@ function updateOptions(select_filed, data) {
         placeholder: placeholder,
         minimumResultsForSearch: Infinity
     });
+    
 }
 
 function updateField(fieldGroup, accessHide) {

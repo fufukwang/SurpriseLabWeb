@@ -125,15 +125,18 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
-            config(['mail.username' => env('MAIL_DARK2_USER')]);
-            config(['mail.password' => env('MAIL_DARK2_PASS')]);
+            config(['mail.username' => env('MAIL_TGT_USER')]);
+            config(['mail.password' => env('MAIL_TGT_PASS')]);
+
+
+
             Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
-                $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
-                $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
-                $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+                $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
 
                 $m->to($data['xls']->email, $data['xls']->name);
-                $m->subject('無光晚餐第二季-劃位序號信件!');
+                $m->subject('微醺大飯店-劃位序號信件!');
             });
             backme::where('id',$id)->update(['is_sent'=>1]);
             return Response::json(['message'=> 'success'], 200);
@@ -287,6 +290,10 @@ class BackController extends Controller
         }
     }
     public function OrderDelete(Request $request,$id){
+        $order = order::select('sn')->find($id);
+        if($order){
+            coupon::where('o_id',$order->sn)->update(['o_id'=>-1]);
+        }
         order::where('id',$id)->delete();
         return Response::json(['message'=> '訂單已刪除'], 200);
     }
@@ -337,21 +344,27 @@ class BackController extends Controller
             $order = order::create($data);
 
             if($request->pay_status == '已付款'){
+                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
+                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
+                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
+                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
                 $mailer = [
-                    'day'   => $act->day.' '.substr($act->rang_start,0,5).'-'.substr($act->rang_end,0,5),
+                    'day'   => Carbon::parse($act->day)->format('m/d'),
+                    'time'  => $act->day_parts.$rangTS.'-'.$rangTE,
                     'pople' => $people,
                     'email' => $data['email'],
                     'name'  => $data['name'],
+                    'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                config(['mail.username' => env('MAIL_DARK2_USER')]);
-                config(['mail.password' => env('MAIL_DARK2_PASS')]);
+                config(['mail.username' => env('MAIL_TGT_USER')]);
+                config(['mail.password' => env('MAIL_TGT_PASS')]);
                 Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
-                    $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
-                    $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
-                    $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
 
                     $m->to($mailer['email'], $mailer['name']);
-                    $m->subject('無光晚餐第二季-訂單完成信件!');
+                    $m->subject('微醺大飯店-訂單完成信件!');
                 });
             }
 
@@ -464,21 +477,31 @@ class BackController extends Controller
 
     public function beSentOrderMail(Request $request,$id){
         $act = pro::select('day','rang_start','rang_end')->find($id);
+
+
+        $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
+        $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
+        $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
+        $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
         $mailer = [
-            'day'   => $act->day.' '.substr($act->rangstart,0,5).'-'.substr($act->rangend,0,5),
+            'day'   => Carbon::parse($act->day)->format('m/d'),
+            'time'  => $act->day_parts.$rangTS.'-'.$rangTE,
             'pople' => $request->pople,
             'email' => $request->email,
             'name'  => $request->name,
+            'gday'  => $rangStart.'/'.$rangEnd,
         ];
-        config(['mail.username' => env('MAIL_DARK2_USER')]);
-        config(['mail.password' => env('MAIL_DARK2_PASS')]);
+
+
+        config(['mail.username' => env('MAIL_TGT_USER')]);
+        config(['mail.password' => env('MAIL_TGT_PASS')]);
         Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
-            $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
-            $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
-            $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐第二季');
+            $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+            $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+            $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
 
             $m->to($mailer['email'], $mailer['name']);
-            $m->subject('無光晚餐第二季-訂單完成信件!');
+            $m->subject('微醺大飯店-訂單完成信件!');
         });
         return Response::json(['message'=> '已更新'], 200);
     }

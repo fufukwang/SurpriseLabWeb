@@ -55,7 +55,8 @@
 		<tr>
 			<td></td>
 			<td></td>
-			<td>{{ substr($row->rang_start,0,5) }}-{{ substr($row->rang_end,0,5) }}</td>
+			<td>{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
+{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
 			<td>{{ $row->name }}</td>
 			<td>@if($row->pay_type=='現場付款') 現場 @elseif($row->pay_type=='信用卡') 信用卡 @elseif($row->pay_type='後臺編輯') 後台 @endif {{ $row->OM }} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>

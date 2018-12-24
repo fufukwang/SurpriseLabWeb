@@ -106,7 +106,9 @@
 @forelse ($order as $row)
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->sn }}</td>
-                                                <td>{{ $row->day }}<br />{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
+                                                <td>{{ $row->day }}<br />{{ $row->day_parts }}<br />
+{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
+{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
                                                 <td>{{ $row->name }}</td>
                                                 <td>phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
                                                 <td>{{ implode('/',json_decode($row->meat,true)) }}</td>

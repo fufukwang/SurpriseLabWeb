@@ -68,7 +68,7 @@
                                                     {{ App\model\tgt\order::where('sn',$row->o_id)->first()->created_at }}
                                                 @else 尚未兌換
                                                 @endif</td>
-                                                <th>{{ $row->o_id }}</th>
+                                                <th>{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
                                                 <td class="actions">
                                                     <!--a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a-->
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-o_id={{ $row->o_id }} data-id={{ $row->id }}><i class="fa fa-remove"></i></a>

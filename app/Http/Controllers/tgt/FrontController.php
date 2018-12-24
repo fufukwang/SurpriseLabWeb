@@ -118,7 +118,7 @@ class FrontController extends Controller
             }
             $people = $request->Pople;
 
-            $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end')->first();
+            $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 return Response::json(array(
                     'success' => false,
@@ -239,19 +239,22 @@ class FrontController extends Controller
             if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
+                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
+                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
                 $mailer = [
-                    'day'   => $act->day.' '.substr($act->rang_start,0,5).'-'.substr($act->rang_end,0,5),
+                    'day'   => Carbon::parse($act->day)->format('m/d'),
+                    'time'  => $act->day_parts.$rangTS.'-'.$rangTE,
                     'pople' => $request->Pople,
                     'email' => $data['email'],
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                config(['mail.username' => env('MAIL_DARK2_USER')]);
-                config(['mail.password' => env('MAIL_DARK2_PASS')]);
+                config(['mail.username' => env('MAIL_TGT_USER')]);
+                config(['mail.password' => env('MAIL_TGT_PASS')]);
                 Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
-                    $m->from('dininginthedark@surpriselab.com.tw', '微醺大飯店');
-                    $m->sender('dininginthedark@surpriselab.com.tw', '微醺大飯店');
-                    $m->replyTo('dininginthedark@surpriselab.com.tw', '微醺大飯店');
+                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
 
                     $m->to($mailer['email'], $mailer['name']);
                     $m->subject('微醺大飯店-訂單完成信件!');

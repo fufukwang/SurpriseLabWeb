@@ -521,7 +521,7 @@
                             <td>劃位序號</td>
                             <td>
                                 填入劃位序號，按下確認，完成扣抵<br/>
-                                可輸入多組序號完成扣抵
+                                扣抵後，可在欄位輸入下組序號
                             </td>
                         </tr>
                         <tr class="coupon-code">
@@ -672,6 +672,6 @@
 <!-- tappaysdk -->
 <script src="https://js.tappaysdk.com/tpdirect/v3"></script>
 <!-- Custom Js -->
-<script src="js/form.js"></script>
+<script src="js/form.js?v=1"></script>
 </body>
 </html>
