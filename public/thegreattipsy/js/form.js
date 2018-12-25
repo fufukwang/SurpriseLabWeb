@@ -325,52 +325,59 @@ $('.step-3 input, .step-3 select').on('change', function () {
         var data;
 
         if (nextFieldID === 'booking_time_slot') { // 時段
-            $.get('/thegreattipsy/GetAjaxData',{
-                'act':'getByday',
-                'ticketType':$('input[name="ticket-type"]:checked').val(),
-                'day':$('#booking_date').val(),
-                'pople':submitDatas['booking_people']
-            },function(obj){
-                data = [];
-                if(obj.length>0){
-                    for(i=0;i<obj.length;i++){
-                        data.push({
-                            id   : obj[i].day_parts,
-                            text : obj[i].day_parts
-                        });
+            nextField.html('');
+            if($('#booking_date').val()!=''){
+                $.get('/thegreattipsy/GetAjaxData',{
+                    'act':'getByday',
+                    'ticketType':$('input[name="ticket-type"]:checked').val(),
+                    'day':$('#booking_date').val(),
+                    'pople':submitDatas['booking_people']
+                },function(obj){
+                    data = [];
+                    if(obj.length>0){
+                        for(i=0;i<obj.length;i++){
+                            data.push({
+                                id   : obj[i].day_parts,
+                                text : obj[i].day_parts
+                            });
+                        }
+                        updateOptions(nextField, data);
+                    } else {
+                        if($('#booking_date').val() != ''){
+                            alert("此日期午場座位不足喔!!\n請再重新選擇日期!");
+                            return false;
+                        }
                     }
-                    updateOptions(nextField, data);
-                } else {
-                    if($('#booking_date').val() != ''){
-                        alert("此日期午場座位不足喔!!\n請再重新選擇日期!");
-                        return false;
-                    }
-                }
-            },'json');
+                    nextField.val(null).trigger('change');
+                    updateField(nextFieldset, accessHide);
+                },'json');
+            }
             
         } else if (nextFieldID === 'booking_time') { // 時間
             nextField.html('').trigger('change');
-            $.get('/thegreattipsy/GetAjaxData',{
-                'act':'getBydartpart',
-                'ticketType':$('input[name="ticket-type"]:checked').val(),
-                'day':$('#booking_date').val(),
-                'day_parts':$('#booking_time_slot').val(),
-                'pople':submitDatas['booking_people']
-            },function(obj){
-                data = [];
-                proObject = [];
-                if(obj.length>0){
-                    proObject = obj;
-                    for(i=0;i<obj.length;i++){
-                        var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5)
-                        data.push({
-                            id   : obj[i].id,
-                            text : range
-                        });
+            if($('#booking_date').val()!='' && $('#booking_time_slot').val() != ''){
+                $.get('/thegreattipsy/GetAjaxData',{
+                    'act':'getBydartpart',
+                    'ticketType':$('input[name="ticket-type"]:checked').val(),
+                    'day':$('#booking_date').val(),
+                    'day_parts':$('#booking_time_slot').val(),
+                    'pople':submitDatas['booking_people']
+                },function(obj){
+                    data = [];
+                    proObject = [];
+                    if(obj.length>0){
+                        proObject = obj;
+                        for(i=0;i<obj.length;i++){
+                            var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5)
+                            data.push({
+                                id   : obj[i].id,
+                                text : range
+                            });
+                        }
+                        updateOptions(nextField, data);
                     }
-                    updateOptions(nextField, data);
-                }
-            },'json');
+                },'json');
+            }
         }
         // 優惠券初始化
         usedCoupons = [];
