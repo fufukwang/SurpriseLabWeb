@@ -512,10 +512,10 @@ class BackController extends Controller
 
     public function UploadXlsx2Db(Request $request){
         $filePath = '';
-
+//dd($request->file('xlsx')->getMimeType());
         try{
             $rules = [
-                'xlsx'    => 'required|mimes:xlsx',
+                'xlsx'    => 'required|mimetypes:application/octet-stream,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip',
                 'quarter' => 'required|numeric'
             ];
             $validator = Validator::make($request->all(), $rules);

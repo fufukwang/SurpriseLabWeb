@@ -97,7 +97,7 @@
                             <p style="color: #FDFDFD;"><span style="font-size:17px">
 @if($xls->l1>0)
 時間有點限制票&nbsp;<br>
-{{ $xls->l4 }}張<br>
+{{ $xls->l1 }}張<br>
 @elseif($xls->a1>0)
 暢行無阻票&nbsp;<br>
 {{ $xls->a1 }}張<br>

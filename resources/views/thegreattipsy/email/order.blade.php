@@ -110,7 +110,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 15px;">
-                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97&dates={{ $gday }}&location=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5219%E4%B9%8B2%E8%99%9F1%E6%A8%93&details=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">加入行事曆</a>
+                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97&dates={{ $gday }}&location=106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5219-2%E8%99%9F&details=%E5%98%BF%EF%BC%8C%E5%88%A5%E5%BF%98%E4%BA%86%E4%BE%86%EF%BC%8C%3Cbr%3E%E4%BE%9D%E4%BD%A0%E8%88%92%E9%81%A9%E7%9A%84%E8%A3%9D%E6%89%AE%EF%BC%8C%3Cbr%3E%E8%A8%98%E5%BE%97%E6%8F%90%E6%97%A915%E5%88%86%E9%90%98%E6%8A%B5%E9%81%94%E3%80%82%3Cbr%3E%3Cbr%3E%E6%9C%9F%E5%BE%85%EF%BC%8C%E4%BD%A0%E7%9A%84%E4%BE%86%E8%A8%AA%E3%80%82%3Cbr%3E%3Cbr%3EYours+Truly,%3Cbr%3E%E5%BE%AE%E9%86%BA%E7%AE%A1%E5%AE%B6+Mr.Tipsy" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">加入行事曆</a>
                             </td>
                         </tr>
                     </tbody>
