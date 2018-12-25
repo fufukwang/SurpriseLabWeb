@@ -40,11 +40,8 @@ main {
 }
 
 .submit-page {
-  position: absolute;
-  top: 45%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
+  @include baseCounter('padding-top', 73);
+  padding-bottom: 50px;
   text-align: center;
 
   .page-title {
@@ -94,13 +91,13 @@ main {
       font-size: 14px;
       line-height: 2;
       letter-spacing: 1.4px;
-      padding: 90px 0 150px;
+      padding: 90px 0 60px;
     }
 
     // Error page
     &.error {
       .page-info {
-        padding: 150px 0;
+        padding: 100px 0;
       }
     }
   }

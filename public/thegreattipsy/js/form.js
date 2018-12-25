@@ -375,6 +375,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
                             });
                         }
                         updateOptions(nextField, data);
+                        nextField.val(null).trigger('change');
                     }
                 },'json');
             }
@@ -713,7 +714,7 @@ function SendOrderData(Pay,prime){
             .attr({
                 type: 'text/css', 
                 rel: 'stylesheet',
-                href: '/thegreattipsy/css/submit.css'
+                href: '/thegreattipsy/css/submit.css?v=1'
             });
         $('#bookingPage').hide();
         if(data.success==true){

@@ -666,12 +666,12 @@
 <script src="js/imagesloaded.pkgd.min.js"></script>
 
 <!-- Select2 script-->
-<script src="js/select2.js"></script>
+<script src="js/select2.js?v=1"></script>
 <!-- blockUI script-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 <!-- tappaysdk -->
 <script src="https://js.tappaysdk.com/tpdirect/v3"></script>
 <!-- Custom Js -->
-<script src="js/form.js?v=4"></script>
+<script src="js/form.js?v=5"></script>
 </body>
 </html>
