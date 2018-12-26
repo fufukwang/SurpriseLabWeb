@@ -672,6 +672,6 @@
 <!-- tappaysdk -->
 <script src="https://js.tappaysdk.com/tpdirect/v3"></script>
 <!-- Custom Js -->
-<script src="js/form.js?v=6"></script>
+<script src="js/form.js?v=7"></script>
 </body>
 </html>

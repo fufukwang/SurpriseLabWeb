@@ -662,10 +662,10 @@ jQuery(function($){
         if($('[name="booking_people"]').val() - cutPelple == 0){
             SendOrderData('online','');
         } else {
-            
+            alert('請輸入兌換碼兌換');
 
             // 開啟刷卡介面
-            $('#lightbox2pay').fadeToggle(700);   
+            //$('#lightbox2pay').fadeToggle(700);   
         }
     });
 });
