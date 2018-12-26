@@ -91,7 +91,7 @@ class FrontController extends Controller
                                 return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                             }
                             // 有點限制票選擇到周末晚場
-                            if(($dayOW == 0 || $dayOW == 5 || $dayOW == 6) && $me->type == 'l1' ){
+                            if(($dayOW == 0 || $dayOW == 5 || $dayOW == 6) && $me->type == 'l1' && $request->day_parts=='晚場' ){
                                 return Response::json(['success'=> 'N','message'=>'票券選擇時間錯誤'], 200);
                             }
                             return Response::json(['success'=> 'Y','ticket'=>$type], 200);    
@@ -147,7 +147,7 @@ class FrontController extends Controller
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                         }
                         // 有點限制票選擇到周末晚場
-                        if(($dayOW == 0 || $dayOW == 5 || $dayOW == 6) && $me->type == 'l1' ){
+                        if(($dayOW == 0 || $dayOW == 5 || $dayOW == 6) && $me->type == 'l1' && $act->day_parts=='晚場' ){
                             return Response::json(['success'=> 'N','message'=>'票券選擇時間錯誤'], 200);
                         }
 

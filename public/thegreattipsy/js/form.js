@@ -497,6 +497,7 @@ $('.verification-code').on('click', function () {
         'ticketType':$('input[name="ticket-type"]:checked').val(),
         'day':$('#booking_date').val(),
         'pople':submitDatas['booking_people'] - cutPelple,
+        'day_parts':$('#booking_time_slot').val(),
         'coupon':usedCoupons
     },function(data){
         if(data.success == 'Y'){
