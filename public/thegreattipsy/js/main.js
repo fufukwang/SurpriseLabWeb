@@ -149,7 +149,7 @@ $(document).ready(function () {
     });
 
     // 售票進度 API
-    var progress_api = 'https://surpriselab.backme.tw/api/projects/916json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api = 'https://surpriselab.backme.tw/api/projects/949json?token=15171aa66ababafd4464a1c194b66102';
     $.getJSON(progress_api).done(function (data) {
 
         var goal = 2000; // 目標張數
@@ -207,6 +207,35 @@ $(document).ready(function () {
         }
 
         sale_info.fadeTo(300, 1);
+        var timer = setInterval(function () {
+            // 剩餘時間倒數器
+            var Today = new Date();
+            //var EndDay = new Date(2019, 0, 25, 23, 59);
+            var EndDay = new Date(data.end_date);
+            var distance = EndDay - Today;
+            var time_rest = $('.time-rest');
+            var days, hours, minutes, seconds;
+
+            if (distance > 0) {
+
+                days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                time_rest.find('.days').html(days);
+                time_rest.find('.hours').html(hours);
+                time_rest.find('.minutes').html(minutes);
+                time_rest.find('.seconds').html(seconds);
+            } else {
+                // 第一階段售票時間結束時，售票狀況區塊上移，不顯示剩餘張數，不顯示倒數器，不顯示完成進度百分比
+                $('.sec-ticket-status').addClass('up').appendTo('.sec-experience');
+                $('.over-2000').hide();
+                $('.time-counter').remove();
+                $('.progress-percent-area').remove();
+                clearInterval(timer);
+            }
+        }, 1000);
     });
 
     // 當時間有點限制票售完時
@@ -216,34 +245,7 @@ $(document).ready(function () {
         }
     });
 
-    var timer = setInterval(function () {
-        // 剩餘時間倒數器
-        var Today = new Date();
-        var EndDay = new Date(2019, 0, 5);
-        var distance = EndDay - Today;
-        var time_rest = $('.time-rest');
-        var days, hours, minutes, seconds;
 
-        if (distance > 0) {
-
-            days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            time_rest.find('.days').html(days);
-            time_rest.find('.hours').html(hours);
-            time_rest.find('.minutes').html(minutes);
-            time_rest.find('.seconds').html(seconds);
-        } else {
-            // 第一階段售票時間結束時，售票狀況區塊上移，不顯示剩餘張數，不顯示倒數器，不顯示完成進度百分比
-            $('.sec-ticket-status').addClass('up').appendTo('.sec-experience');
-            $('.over-2000').hide();
-            $('.time-counter').remove();
-            $('.progress-percent-area').remove();
-            clearInterval(timer);
-        }
-    }, 1000);
 
     // mobile hamburger button effect
     var hamburger = $('.hamburger');

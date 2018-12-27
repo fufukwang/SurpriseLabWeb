@@ -371,11 +371,15 @@
 
             <div class="ticket">
                 <p class="d-none d-sm-inline-block">
-                    我們來回穿梭在各個城市，⼈們的好奇⼼讓我們得以實際存在
+                    我們來回穿梭在各個城市，⼈們的好奇⼼讓我們得以實際存在<br/>
+                    第一批房客2000位已登記額滿，微醺大飯店即將開啟<br/><br/>
+                    
+
+                    <!--我們來回穿梭在各個城市，⼈們的好奇⼼讓我們得以實際存在
                     <br/>
                     登記滿 2000 位房客，微醺⼤飯店將在台北的某個⾓落悄悄開啟
-                    <br/>
-                    <span class="highlight text-center">期待，你的來訪</span>
+                    <br/>-->
+                    <span class="highlight text-center">第二批房客開放2/10至03/03登記<br />期待，你的來訪</span>
                     <br/>
                     - 微醺管家 Mr. Tipsy
                 </p>
@@ -446,14 +450,14 @@
 
             <div class="ticket-type">
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/916/5253?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/949/5529?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
                     </a>
                 </div>
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/916/5254?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/949/5530?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="有點限制票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="有點限制票">
@@ -464,7 +468,7 @@
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/916/5255?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/949/5532?locale=zh-TW
                     " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
@@ -500,8 +504,8 @@
             </div>
 
             <p class="time-slots-preinfo">
-                預計活動時間為 01/09 - 02/03<br/>
-                週⼀週二公休
+                第二批房客開放2/10至03/03登記<br/>
+                週⼀公休
             </p>
 
             <div class="time-session">
@@ -510,29 +514,35 @@
                         晚場
                     </p>
                     <p>
+                        <span class="ticket-blue">週二：18:00｜19:30｜21:00｜22:30</span>
+                    </p>
+                    <p>
                         <span class="ticket-blue">週三：18:00｜19:30｜21:00｜22:30</span>
                     </p>
                     <p>
                         <span class="ticket-blue">週四：18:00｜19:30｜21:00｜22:30</span>
                     </p>
                     <p>
-                        週五：18:00｜19:30｜21:00｜22:30｜24:00</span>
+                        週五：18:00｜19:30｜21:00｜22:30</span>
                     </p>
                     <p>
-                        週六：18:00｜19:30｜21:00｜22:30｜24:00
+                        週六：18:00｜19:30｜21:00｜22:30
                     </p>
                     <p>
-                        週⽇：18:00｜19:30｜21:00｜22:30｜24:00
+                        週⽇：18:00｜19:30｜21:00｜22:30
                     </p>
                     <hr/>
                     <p>
                         午場
                     </p>
                     <p>
-                        <span class="ticket-blue">週六：13:00｜14:30</span>
+                        <span class="ticket-blue">週五：15:30</span>
                     </p>
                     <p>
-                        <span class="ticket-blue">週⽇：13:00｜14:30</span>
+                        <span class="ticket-blue">週六：12:30｜14:00｜15:30</span>
+                    </p>
+                    <p>
+                        <span class="ticket-blue">週⽇：12:30｜14:00｜15:30</span>
                     </p>
                     <p>&nbsp;</p>
                     <p class="ticket-color-diff-note">
@@ -585,7 +595,8 @@
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        *預計活動時間為 01/09 - 02/03<br/>
+                        *第一批房客來訪時間為 01/16 - 02/03<br/>
+                        *第二批房客來訪時間為 02/10 - 03/03<br/>
                         *會依實際情況延⻑縮短時間
                     </p>
                 </div>
@@ -602,10 +613,45 @@
                     <span>schedule</span>
                 </h4>
             </div>
+            <p>
+                第二批房客時程表
+            </p>
 
             <div class="schedule">
                 <table>
                     <tr>
+                        <td>
+                            12/28
+                        </td>
+                        <td>
+                            第二批房客開放登記（目標2000名）
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            01/23
+                        </td>
+                        <td>
+                            寄送劃位信－前五百名購買者（收到劃位序號，即可劃位）
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            01/30
+                        </td>
+                        <td>
+                            寄送劃位信－其餘購買者
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="line-height: 1.5;text-align: center;">
+                            02/10<br>|<br>03/03
+                        </td>
+                        <td>
+                            第二批房客來訪時間
+                        </td>
+                    </tr>
+                    <!--tr>
                         <td>
                             11/27
                         </td>
@@ -654,7 +700,7 @@
                         <td>
                             微醺⼤飯店閉幕
                         </td>
-                    </tr>
+                    </tr-->
                 </table>
 
                 <p class="schedule-sub-title d-none d-sm-block">
@@ -741,35 +787,41 @@
                             晚場
                         </p>
                         <p>
+                            週二：18:00｜19:30｜21:00｜22:30
+                        </p>
+                        <p>
                             週三：18:00｜19:30｜21:00｜22:30
                         </p>
                         <p>
                             週四：18:00｜19:30｜21:00｜22:30
                         </p>
                         <p>
-                            週五：18:00｜19:30｜21:00｜22:30｜24:00
+                            週五：18:00｜19:30｜21:00｜22:30
                         </p>
                         <p>
-                            週六：18:00｜19:30｜21:00｜22:30｜24:00
+                            週六：18:00｜19:30｜21:00｜22:30
                         </p>
                         <p>
-                            週⽇：18:00｜19:30｜21:00｜22:30｜24:00
+                            週⽇：18:00｜19:30｜21:00｜22:30
                         </p>
                         <p>&nbsp;</p>
                         <p>
                             午場
                         </p>
                         <p>
-                            週六：13:00｜14:30
+                            週五：15:30
                         </p>
                         <p>
-                            週⽇：13:00｜14:30
+                            週六：12:30｜14:00｜15:30
+                        </p>
+                        <p>
+                            週⽇：12:30｜14:00｜15:30
                         </p>
                         <p>&nbsp;</p>
                         <p class="contact-footer">
-                            *每場次約為九⼗分鐘<br/>
-                            *週⼀週⼆為公休⽇<br/>
-                            *喝酒不開車，建議搭乘計程車或大眾運輸工具前來
+                            <!--*每場次約為九⼗分鐘<br/-->
+                            *週⼀為公休⽇
+                            <!--*喝酒不開車，建議搭乘計程車或大眾運輸工具前來-->
                         </p>
                     </div>
                 </div>
@@ -836,6 +888,6 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.3"></script>
+<script src="js/main.js?v=0.4"></script>
 </body>
 </html>

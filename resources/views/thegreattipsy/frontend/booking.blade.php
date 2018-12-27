@@ -404,8 +404,8 @@
                     </div>
 
                     <div class="form-group textarea-with-label">
-                        <label for="notice">飲食禁忌</label>
-                        <textarea id="notice" name="notice" rows="2" placeholder="食材過敏，特殊飲食禁忌。&#x0a;ex.一位不吃牛，一位蝦蟹過敏"></textarea>
+                        <label for="notice">飲食禁忌 / 其他備註</label>
+                        <textarea id="notice" name="notice" rows="2" placeholder="食材過敏，特殊飲食禁忌 / 其他備註。&#x0a;ex.一位不吃牛，一位蝦蟹過敏 / 發票打統編、與xxx同行"></textarea>
                     </div>
 
                     <div class="form-group radio__button">
@@ -486,7 +486,7 @@
                     </div>
                 </div>
             </fieldset>
-            <fieldset class="step step-5" title="確認資料與折扣碼填寫">
+            <fieldset class="step step-5" title="確認資料與劃位序號填寫">
                 <div class="form-container">
                     <table class="filled-data">
                         <tr>
@@ -520,8 +520,8 @@
                         <tr class="coupon-note">
                             <td>劃位序號</td>
                             <td>
-                                填入劃位序號，按下確認，完成扣抵<br/>
-                                扣抵後，可在欄位輸入下組序號
+                                填入劃位序號，按下確認，完成折抵<br/>
+                                折抵後，可在欄位輸入下組序號
                             </td>
                         </tr>
                         <tr class="coupon-code">

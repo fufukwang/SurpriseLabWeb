@@ -662,7 +662,7 @@ jQuery(function($){
         if($('[name="booking_people"]').val() - cutPelple == 0){
             SendOrderData('online','');
         } else {
-            alert('請輸入兌換碼兌換');
+            alert('請輸入劃位序號完成人數折抵');
 
             // 開啟刷卡介面
             //$('#lightbox2pay').fadeToggle(700);   

@@ -21,11 +21,11 @@ if(App::environment('local')) {
 }else {
     $url = '';
 }
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -206,11 +206,13 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
 
 Route::group(['middleware' => ['web']], function () {
+    Route::get('/',function(){ return view('landingPage.home'); });
     /*surprise*/
-    Route::resource('/','SurpriseController');
+    //Route::resource('/','SurpriseController');
     Route::get('/about','SurpriseController@about');
     Route::get('/complete','SurpriseController@complete');
     Route::get('/fail','SurpriseController@fail');
+    
     Route::get('dininginthedark/{everything?}', function ($everything = null) {
         return redirect(config('setting.dark2.path'))->send();
     });
