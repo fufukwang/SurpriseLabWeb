@@ -63,8 +63,8 @@
                                             <div class="form-group col-sm-2">
                                                 <select name="order" class="form-control">
                                                     <option value="">排序(預設為修改時間反序)</option>
-                                                    <option value="rangstart|asc"@if(isset($request->order) && $request->order=='rangstart|asc') selected @endif>開始時間正序</option>
-                                                    <option value="rangstart|desc"@if(isset($request->order) && $request->order=='rangstart|desc') selected @endif>開始時間反序</option>
+                                                    <option value="rang_start|asc"@if(isset($request->order) && $request->order=='rang_start|asc') selected @endif>開始時間正序</option>
+                                                    <option value="rang_start|desc"@if(isset($request->order) && $request->order=='rang_start|desc') selected @endif>開始時間反序</option>
                                                     <option value="created_at|desc"@if(isset($request->order) && $request->order=='created_at|desc') selected @endif>訂單時間反序</option>
                                                 </select>
                                             </div>

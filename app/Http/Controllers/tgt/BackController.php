@@ -391,6 +391,9 @@ class BackController extends Controller
             $search = $request->search;
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
+        if($request->has('code') && $request->code!=''){
+            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE code='{$request->code}' AND tgtcoupon.o_id=tgtorder.sn)>0");
+        }
 
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
@@ -417,6 +420,9 @@ class BackController extends Controller
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
+        }
+        if($request->has('code') && $request->code!=''){
+            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE code='{$request->code}' AND tgtcoupon.o_id=tgtorder.sn)>0");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -445,6 +451,9 @@ class BackController extends Controller
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
+        }
+        if($request->has('code') && $request->code!=''){
+            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE code='{$request->code}' AND tgtcoupon.o_id=tgtorder.sn)>0");
         }
 
         if($request->has('order') && $request->order!=''){
