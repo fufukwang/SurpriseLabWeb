@@ -255,7 +255,12 @@ function addHtml(rand){
 function getRand(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-
+@if(Session::get('key')->id == 4 )
+    $(function(){
+        $('.form-group').block({ message: null }); 
+        $('.form-group').last().unblock();
+    });
+@endif
         </script>
 
 

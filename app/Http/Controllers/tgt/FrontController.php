@@ -119,6 +119,7 @@ class FrontController extends Controller
 
             $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
+                Log::error('人數滿了');
                 return Response::json(array(
                     'success' => false,
                     'message' => 'full'
@@ -143,10 +144,12 @@ class FrontController extends Controller
                         $dayOW      = Carbon::parse($act->day)->dayOfWeek;
                         // 人數小於 4 但是又輸入四人沉醉票
                         if($me->type == 'a4' && $people<4){
+                            Log::error('序號錯誤或已使用 ' . $value . ' | ' . $act->id);
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                         }
                         // 有點限制票選擇到周末晚場
                         if(($dayOW == 0 || $dayOW == 5 || $dayOW == 6) && $me->type == 'l1' && $act->day_parts=='晚場' ){
+                            Log::error('票券選擇時間錯誤 ' . $value . ' | ' . $act->id);
                             return Response::json(['success'=> 'N','message'=>'票券選擇時間錯誤'], 200);
                         }
 
@@ -263,9 +266,7 @@ class FrontController extends Controller
 
             return Response::json(array(
                 'success'   => true,
-                'SN'        => $count,
-                'cut'      => $cut1,
-                'data'=>$data
+                'SN'        => $count
             ), 200);
         } catch (Exception $exception) {
             Log::error($exception);

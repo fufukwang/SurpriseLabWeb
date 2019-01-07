@@ -102,9 +102,9 @@ class BackController extends Controller
     }
     public function infoUpdate(Request $request,$id){
         backme::where('id',$id)->update([
-            'name'  => $request->name,
-            'tel'   => $request->tel,
-            'email' => $request->email
+            'name'  => strip_tags($request->name),
+            'tel'   => strip_tags($request->tel),
+            'email' => strip_tags($request->email)
         ]);
         return Response::json(['message'=> '已更新'], 200);
     }

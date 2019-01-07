@@ -81,6 +81,7 @@
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
+                @if (Session::has('key')) 
                     @if( Session::get('key')->admin )
                     <li class="has-submenu">
                         <a href="/admin"><i class="md md-dashboard"></i>Admin</a>
@@ -123,7 +124,7 @@
                     @if( Session::get('key')->thegreattipsy )
                     <li class="has-submenu">
                         <a href="#"><i class="md md-invert-colors-on"></i>微醺大飯店</a>
-                        <ul class="submenu">
+                        <ul class="submenu" style="left:0;right:auto">
 
                             <li><a href="/thegreattipsy/pros">Activaty</a></li>
                             <li><a href="/thegreattipsy/backmes">Backme</a></li>
@@ -133,7 +134,7 @@
                         </ul>
                     </li>
                     @endif
-
+                @endif
                 </ul>
                 <!-- End navigation menu -->
             </div>
