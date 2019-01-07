@@ -65,10 +65,9 @@ class FrontController extends Controller
                         if($ticketType == 1 && ($dayOW == 0 || $dayOW == 5 || $dayOW == 6)){
                             $pro = $pro->where('day_parts','午場');
                         }
-                        $pro = $pro->select('id','rang_start','rang_end','money','cash')->where('day_parts',$dayparts)->where('day',$day)->get();
+                        $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->get();
                         return $pro->toJson();
                     break;
-
 
                     case 'CheckCoupon':
                         $coupon = coupon::where('code',$request->code)->where('o_id',0);
