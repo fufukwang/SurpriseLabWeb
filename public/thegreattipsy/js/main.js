@@ -88,7 +88,7 @@ $(document).ready(function () {
                 $(this).addClass('active');
                 nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('active');
                 var str = nav.find('a[href="#' + $(this).attr('id') + '"]').text();
-                
+
                 if (str !== 'Welcome') {
                     mobileCurrent.html(str);
                 }
@@ -149,11 +149,22 @@ $(document).ready(function () {
     });
 
     // 售票進度 API
-    var progress_api = 'https://surpriselab.backme.tw/api/projects/949json?token=15171aa66ababafd4464a1c194b66102';
-    $.getJSON(progress_api).done(function (data) {
+    var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/916json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/949json?token=15171aa66ababafd4464a1c194b66102';
+    
+    $.when(
+      $.getJSON(progress_api_SaleStep1),
+      $.getJSON(progress_api_SaleStep2)
+    ).done(function(data1, data2) {
 
-        var goal = 2000; // 目標張數
-        var amount = data["pledged_count"]; // 已售出總票數
+        data1 = data1[0];
+        var data = data2[0];
+
+        // 第一階段已售出總票數
+        var SaleStep1_amount = data1['pledged_count'];
+
+        var goal = 3984; // 目標張數｜第一階段與第二階段實際會開出的座位數
+        var amount = data["pledged_count"] + SaleStep1_amount; // 第一階段+第二階段已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
 
@@ -210,7 +221,6 @@ $(document).ready(function () {
         var timer = setInterval(function () {
             // 剩餘時間倒數器
             var Today = new Date();
-            //var EndDay = new Date(2019, 0, 25, 23, 59);
             var EndDay = new Date(data.end_date);
             var distance = EndDay - Today;
             var time_rest = $('.time-rest');

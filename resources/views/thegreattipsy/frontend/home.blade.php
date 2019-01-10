@@ -379,7 +379,7 @@
                     <br/>
                     登記滿 2000 位房客，微醺⼤飯店將在台北的某個⾓落悄悄開啟
                     <br/>-->
-                    <span class="highlight text-center">期待，你的來訪</span>
+                    <span class="highlight text-center">別錯過了<br />期待，你的來訪</span>
                     <br/>
                     - 微醺管家 Mr. Tipsy
                 </p>
@@ -597,7 +597,7 @@
                     </div>
                     <p class="info-text highlight-dark">
                         <!--*第一批房客來訪時間為 01/16 - 02/03<br/-->
-                        *02/10 前場次登記已滿，02/10-03/03 票券現正預售中<br/>
+                        *02/10 前場次登記已滿<br>&nbsp;02/10-03/03 票券現正預售中<br/>
                         *依實際情況延⻑或縮短日期
                     </p>
                 </div>
@@ -615,7 +615,7 @@
                 </h4>
             </div>
             <p>
-                第二批房客時程表
+                第二批房客<br>預購02/10-03/03座位
             </p>
 
             <div class="schedule">
@@ -625,7 +625,7 @@
                             12/28
                         </td>
                         <td>
-                            第二階段票券開賣（目標2000名）
+                            第二階段票券開賣
                         </td>
                     </tr>
                     <tr>
@@ -889,6 +889,6 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.4"></script>
+<script src="js/main.js?v=0.5"></script>
 </body>
 </html>
