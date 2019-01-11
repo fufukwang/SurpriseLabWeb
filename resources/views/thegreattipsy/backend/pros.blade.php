@@ -114,7 +114,45 @@
             </div>
 
 
+            <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="page-title">下載未滿席資料 </h4>
+                    </div>
+                </div>
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <div class="table-rep-plugin">
+                                <div class="table-wrapper">
+                                    <div class="btn-toolbar">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/thegreattipsy/pros/output/only" method="post">
+                                            {{ csrf_field() }}
+                                            <div class="form-group col-sm-1">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        期間查詢
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-2">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        <input name="dayrange" type="text" class="form-control" placeholder="yyyy-mm-dd">
+<input type="hidden" name="daystart">
+<input type="hidden" name="dayend">
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <div class="form-group col-sm-1">
+                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 下載</button>
+                                            </div>
+                                        </form></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
@@ -141,7 +179,7 @@
     <link href="/backstage/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <script src="/backstage/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <link href="/backstage/plugins/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
-
+<link href="/backstage/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Examples -->
     <script src="/backstage/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/backstage/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
@@ -155,7 +193,9 @@
 
     <script src="/backstage/js/jquery.core.js"></script>
     <script src="/backstage/js/jquery.app.js"></script>
-
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <script>
         $('#datatable').dataTable();
         //$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
@@ -184,7 +224,20 @@
 
         });
         @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
-
+$('input[name="dayrange"]').daterangepicker({
+        locale: {
+          format: 'YYYY-MM-DD'
+        },
+        startDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
+        endDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
+        minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
+        maxDate:'{{ config('setting.tgt.enddate') }}',
+    }, 
+    function(start, end, label) {
+        $('input[name=daystart]').val(start.format('YYYY-MM-DD') );
+        $('input[name=dayend]').val(end.format('YYYY-MM-DD') );
+        //alert("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
     </script>
 
 

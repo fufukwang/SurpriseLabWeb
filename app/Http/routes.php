@@ -186,6 +186,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('pro/{id}/update','tgt\BackController@ProUpdate');
         Route::delete('pro/{id}/delete','tgt\BackController@ProDelete');
         Route::post('pros','tgt\BackController@Pros');
+        Route::post('pros/output/only','tgt\BackController@ProOutputSite');
 
         // 訂單
         Route::get('orders/{id}','tgt\BackController@Orders');
