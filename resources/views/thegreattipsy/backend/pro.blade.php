@@ -257,7 +257,7 @@ function getRand(min,max) {
 }
 @if(Session::get('key')->id == 4 )
     $(function(){
-        $('.form-group').block({ message: null }); 
+        $('.form-group').block({ overlayCSS: { opacity: 0},message: null }); 
         $('.form-group').last().unblock();
     });
 @endif
