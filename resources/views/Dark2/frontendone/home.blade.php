@@ -11,7 +11,7 @@
                 <div class="main-logo">
                     <img src="/d2one/images/cut1-intro/logo-big.png" alt="">
                     <img src="/d2one/images/Landing-page/Seasontwo.png" class="seasontwo" alt="">
-                    <a href="about.html">
+                    <a href="/dininginthedark2/about.html">
                         <div class="btn btn-standard landing-btn">
                             ENTER
                         </div>    
