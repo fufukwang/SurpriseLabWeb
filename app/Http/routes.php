@@ -366,50 +366,38 @@ Route::group(['middleware' => ['web']], function () {
 
     // dark2
     Route::group(['prefix' => config('setting.dark2.path')], function(){
-        Route::get('about.html',function(){ return view('Dark2.frontend.home'); });
-        Route::get('chef.html',function(){ return view('Dark2.frontend.chef'); });
-        Route::get('rules.html',function(){ return view('Dark2.frontend.rules0616'); });
-        //Route::get('rules0616.html',function(){ return view('Dark2.frontend.rules0616'); });
-        //Route::get('reservation_pay.html',function(){ return view('Dark2.frontend.reservation_pay'); });
+        Route::get('about.html',function(){ return view('Dark2.frontendone.about'); });
+        Route::get('experience.html',function(){ return view('Dark2.frontendone.experience'); });
+        Route::get('rules.html',function(){ return view('Dark2.frontendone.rules'); });
+        Route::get('contact.html',function(){ return view('Dark2.frontendone.contact'); });
+        Route::get('index.html',function(){ return view('Dark2.frontendone.home'); });
+        Route::get('/',function(){ return view('Dark2.frontendone.home'); });
 
+        
+        Route::get('chef.html',function() { return redirect('/dininginthedark2/about.html')->send(); });
+        Route::get('people.html',function() { return redirect('/dininginthedark2/about.html')->send(); });
+        Route::get('press.html',function() { return redirect('/dininginthedark2/about.html')->send(); });
+        Route::get('pre-sale.html',function() { return redirect('/dininginthedark2/about.html')->send(); });
+        Route::get('food.html',function() { return redirect('/dininginthedark2/about.html')->send(); });
+
+/*
+        Route::get('about.html',function(){ return view('Dark2.frontend.home'); });
+        Route::get('experience.html',function(){ return view('Dark2.frontend.exeprience'); });
+        Route::get('rules.html',function(){ return view('Dark2.frontend.rules0616'); });
         Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
         Route::get('index.html',function(){ return view('Dark2.frontend.home'); });
         Route::get('/',function(){ return view('Dark2.frontend.home'); });
-        /*
-        Route::get('reservation.html', function () {
-            return redirect('/dininginthedark2/pre-sale.html')->send();
-        });
 */
-        Route::get('reservation.html',function(){ return view('Dark2.frontend.reservation'); });
-        //Route::get('reservation.html',function(){ return view('Dark2.frontend.reservation_pay'); });
+/*
+        Route::get('chef.html',function(){ return view('Dark2.frontend.chef'); });
         Route::get('people.html',function(){ return view('Dark2.frontend.people'); });
-        //Route::get('event.html',function(){ return view('frontend.event'); });
-        //Route::get('event-landing.html',function(){ return view('frontend.event-landing'); });
         Route::get('press.html',function(){ return view('Dark2.frontend.press'); });
-        //Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
-        //Route::post('ReOrderData','FrontendController@ReOrderData');
-        //Route::post('getPayDone','FrontendController@getPayDone');
         Route::get('pre-sale.html',function(){ return view('Dark2.frontend.pre-order'); });
-        Route::get('experience.html',function(){ return view('Dark2.frontend.exeprience'); });
         Route::get('food.html',function(){ return view('Dark2.frontend.food'); });
-        Route::group(['prefix' => 'en'], function(){
-            Route::get('about.html',function(){ App::setLocale('en'); return view('Dark2.frontend.home'); });
-            Route::get('chef.html',function(){ App::setLocale('en'); return view('Dark2.frontend.chef'); });
-            Route::get('rules.html',function(){ App::setLocale('en'); return view('Dark2.frontend.rules'); });
-            Route::get('contact.html',function(){ App::setLocale('en'); return view('Dark2.frontend.contact'); });
-            Route::get('index.html',function(){ App::setLocale('en'); return view('Dark2.frontend.home'); });
-            Route::get('/',function(){ App::setLocale('en'); return view('Dark2.frontend.home'); });
-            //Route::get('reservation.html',function(){ App::setLocale('en'); return view('frontend.reservation'); });
-            Route::get('people.html',function(){ App::setLocale('en'); return view('Dark2.frontend.people'); });
-            Route::get('press.html',function(){ App::setLocale('en'); return view('Dark2.frontend.press'); });
-            //Route::get('event.html',function(){ App::setLocale('en'); return view('frontend.event'); });
-            //Route::get('event-landing.html',function(){ App::setLocale('en'); return view('frontend.event-landing'); });
-            //Route::get('event_{page}.html',function(Request $request,$page){ return view('frontend.event-'.$page); });
-            Route::get('pre-sale.html',function(){ App::setLocale('en'); return view('Dark2.frontend.pre-order'); });
-            Route::get('experience.html',function(){ App::setLocale('en'); return view('Dark2.frontend.exeprience'); });
-            Route::get('food.html',function(){ App::setLocale('en'); return view('Dark2.frontend.food'); });
-        });
+*/
 
+
+        Route::get('reservation.html',function(){ return view('Dark2.frontend.reservation'); });
         Route::get('GetAjaxData','Dark2\HomeController@GetAjaxData');
         Route::post('ReOrderData','Dark2\HomeController@ReOrderData');
         Route::post('contactstore','Dark2\HomeController@contactstore');

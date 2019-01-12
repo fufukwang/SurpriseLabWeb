@@ -6,14 +6,8 @@
     <div class="wrap">
        
         <!-- mobile menu -->
-        @include('Dark2.frontend._menu',['key'=>'reservation'])
+        @include('Dark2.frontendone._menu')
      
-      
-        <!-- header -->
-        
-        <div class="header-contaier clearfix">
-            @include('Dark2.frontend._m_menu',['key'=>'reservation'])
-        </div>
 
 <!-- privacy lightbox -->
         <div class="lightbox">
@@ -556,7 +550,7 @@ $(function(){
 });
 </script>
 <!-- footer -->
-        @include('Dark2.frontend._footer')
+        @include('Dark2.frontendone._footer')
 
 
     </div>
