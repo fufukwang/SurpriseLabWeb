@@ -1,4 +1,4 @@
-@include('Dark2.frontendone._header')
+@include('Dark2.frontendone._header',['index' => true])
 <body>
     <div class="wrap index">
 
