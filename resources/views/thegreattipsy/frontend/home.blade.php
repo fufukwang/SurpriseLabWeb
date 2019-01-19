@@ -386,9 +386,9 @@
                 <p class="d-block d-sm-none">
                     我們來回穿梭在各個城市<br/>
                     ⼈們的好奇⼼讓我們得以實際存在<br/>
-                    登記滿 2000 位房客<br/>
-                    微醺⼤飯店將在台北的某個⾓落悄悄開啟<br/>
-                    <span class="highlight text-center">期待，你的來訪</span><br/><br/>
+                    01/16 至 02/03 場次已額滿<br/>
+                    02/10 至 03/03 票券，現正預售中<br/>
+                    <span class="highlight text-center">別錯過了<br />期待，你的來訪</span><br/><br/>
                     - 微醺管家 Mr. Tipsy
                 </p>
             </div>
