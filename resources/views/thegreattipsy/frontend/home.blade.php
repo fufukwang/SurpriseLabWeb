@@ -34,6 +34,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
     <link rel="stylesheet" href="css/after-rules.css"/>
+    <style type="text/css">
+    #td_day{line-height: 1.5;text-align: center;}
+    @media (max-width: 480px) { #td_day{text-align:left;}}
+    </style>
 </head>
 <body class="loading">
 <!-- Anchor menu -->
@@ -385,9 +389,9 @@
                 </p>
                 <p class="d-block d-sm-none">
                     我們來回穿梭在各個城市<br/>
-                    ⼈們的好奇⼼讓我們得以實際存在<br/>
+                    ⼈們的好奇⼼讓我們得以實際存在<br/><br/>
                     01/16 至 02/03 場次已額滿<br/>
-                    02/10 至 03/03 票券，現正預售中<br/>
+                    02/10 至 03/03 票券，現正預售中<br/><br/>
                     <span class="highlight text-center">別錯過了<br />期待，你的來訪</span><br/><br/>
                     - 微醺管家 Mr. Tipsy
                 </p>
@@ -644,14 +648,20 @@
                             寄送劃位信－其餘購買者
                         </td>
                     </tr>
+
                     <tr>
-                        <td style="line-height: 1.5;text-align: center;">
-                            02/10<br>|<br>03/03
+                        <td id="td_day">
+                            <span class="d-none">02/10<br>|<br>03/03</span>
+                            <span class="d-sm-none">02/10-03/03</span>
                         </td>
                         <td>
                             期待見到你
                         </td>
                     </tr>
+
+
+
+
                     <!--tr>
                         <td>
                             11/27
