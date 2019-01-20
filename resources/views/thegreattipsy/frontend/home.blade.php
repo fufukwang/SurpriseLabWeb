@@ -651,16 +651,13 @@
 
                     <tr>
                         <td id="td_day">
-                            <span class="d-none">02/10<br>|<br>03/03</span>
+                            <span class="d-none d-sm-inline-block">02/10<br>|<br>03/03</span>
                             <span class="d-sm-none">02/10-03/03</span>
                         </td>
                         <td>
                             期待見到你
                         </td>
                     </tr>
-
-
-
 
                     <!--tr>
                         <td>
