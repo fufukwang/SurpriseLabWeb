@@ -249,6 +249,53 @@ class BackController extends Controller
 
     }
 
+    public function ProOutputSite(Request $request){
+        $pro = d2pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(d2order) WHERE d2order.pro_id=d2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>0")
+            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(d2order) WHERE d2order.pro_id=d2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rangstart,rangend,day"));
+        if($request->daystart == ''){
+            $pro = $pro->where('day',Carbon::today()->format('Y-m-d'));
+        } else {
+            $daystart = Carbon::createFromFormat('Y-m-d', $request->daystart);
+            $dayend   = Carbon::createFromFormat('Y-m-d', $request->dayend);
+            $pro = $pro->where('day','>=',$daystart);
+            $pro = $pro->where('day','<=',$dayend);    
+        }
+        $pro = $pro->orderBy('day','asc')->orderBy('rangstart','asc')->get();
+
+        $cellData = $pro->toArray();
+        Excel::create('無光座位狀況',function ($excel) use ($cellData){
+            $excel->sheet('data', function ($sheet) use ($cellData){
+                $data = [[
+                    'day'  => '日期',
+                    'mon'  => '星期',
+                    'part' => '時段',
+                    'site' => '座位數'
+                ]];
+                foreach($cellData as $row){
+                    $day = Carbon::parse($row['day']);
+                    switch ($day->dayOfWeek) {
+                        case 1: $mon = '一'; break;
+                        case 2: $mon = '二'; break;
+                        case 3: $mon = '三'; break;
+                        case 4: $mon = '四'; break;
+                        case 5: $mon = '五'; break;
+                        case 6: $mon = '六'; break;
+                        default: $mon = '日'; break;
+                    }
+                    $tmp = [
+                        'day'  => $day->format('m/d'),
+                        'mon'  => $mon,
+                        'part' => substr($row['rangstart'],0,5).'~'.substr($row['rangend'],0,5),
+                        'site' => $row['sites']
+                    ];
+                    array_push($data,$tmp);
+                }
+                $sheet->rows($data);
+            });
+        })->export('xls');
+        return redirect('/dark2/pros');
+    }
+
 
     /**
      * coupon

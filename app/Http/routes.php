@@ -139,6 +139,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('pro/{id}/update','Dark2\BackController@ProUpdate');
         Route::delete('pro/{id}/delete','Dark2\BackController@ProDelete');
         Route::post('pros','Dark2\BackController@Pros');
+        Route::post('pros/output/only','Dark2\BackController@ProOutputSite');
 
         // 訂單
         Route::get('orders/{id}','Dark2\BackController@Orders');

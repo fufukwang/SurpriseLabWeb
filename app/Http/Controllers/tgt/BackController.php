@@ -234,7 +234,7 @@ class BackController extends Controller
             $pro = $pro->where('day','>=',$daystart);
             $pro = $pro->where('day','<=',$dayend);    
         }
-        $pro = $pro->get();
+        $pro = $pro->orderBy('day','asc')->orderBy('rang_start','asc')->get();
 
         $cellData = $pro->toArray();
         Excel::create('座位狀況',function ($excel) use ($cellData){
