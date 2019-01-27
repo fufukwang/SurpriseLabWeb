@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>微醺大飯店 劃位序號</title>
-<style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td,h1{line-height:100%}#bodyTable,#templateBody,#templateColumns,#templateFooter,#templateHeader,#templatePreheader,body{background-color:#000}#templateBody,#templateColumns,#templateFooter,#templateHeader{border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}h1,h2,h3,h4,h5,h6{display:block;margin:0}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}h1,h2{font-family:Helvetica;text-align:center}h1,h2,h3,h4{display:block;font-style:normal;font-weight:700;margin:0}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}#bodyCell{border-top:0}#templateContainer{border:0}h1{color:#FFF!important;font-size:40px;letter-spacing:-1px}h2{color:#000!important;font-size:36px;line-height:125%;letter-spacing:-.75px}h3,h4{line-height:125%;text-align:left;font-family:Helvetica}h3{color:#606060!important;font-size:18px;letter-spacing:-.5px}h4{color:grey!important;font-size:16px;letter-spacing:normal}#templatePreheader{border-top:0;border-bottom:1px solid #000}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left}.preheaderContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}.headerContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{font-size:14px;line-height:150%;font-family:Helvetica;text-align:center;color:#000}.bodyContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.leftColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.rightColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}#bodyCell{padding-top:10px!important}.templateContainer{max-width:600px!important;width:100%!important}.columnsContainer{display:block!important;max-width:600px!important;padding-bottom:18px!important;padding-left:0!important;width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{height:auto!important;width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:24px!important;line-height:125%!important}h2{font-size:20px!important;line-height:125%!important}.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p,h3{font-size:18px!important;line-height:125%!important}h4{font-size:16px!important;line-height:125%!important}#templatePreheader{display:block!important}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p,.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}
-		</style></head>
+<style type="text/css">
+#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td,h1{line-height:100%}#bodyTable,#templateBody,#templateColumns,#templateFooter,#templateHeader,#templatePreheader,body{background-color:#000}#templateBody,#templateColumns,#templateFooter,#templateHeader{border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}h1,h2,h3,h4,h5,h6{display:block;margin:0}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}h1,h2{font-family:Helvetica;text-align:center}h1,h2,h3,h4{display:block;font-style:normal;font-weight:700;margin:0}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}#bodyCell{border-top:0}#templateContainer{border:0}h1{color:#FFF!important;font-size:40px;letter-spacing:-1px}h2{color:#000!important;font-size:36px;line-height:125%;letter-spacing:-.75px}h3,h4{line-height:125%;text-align:left;font-family:Helvetica}h3{color:#606060!important;font-size:18px;letter-spacing:-.5px}h4{color:grey!important;font-size:16px;letter-spacing:normal}#templatePreheader{border-top:0;border-bottom:1px solid #000}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left}.preheaderContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}.headerContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{font-size:14px;line-height:150%;font-family:Helvetica;text-align:center;color:#000}.bodyContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.leftColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.rightColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}#bodyCell{padding-top:10px!important}.templateContainer{max-width:600px!important;width:100%!important}.columnsContainer{display:block!important;max-width:600px!important;padding-bottom:18px!important;padding-left:0!important;width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{height:auto!important;width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:24px!important;line-height:125%!important}h2{font-size:20px!important;line-height:125%!important}.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p,h3{font-size:18px!important;line-height:125%!important}h4{font-size:16px!important;line-height:125%!important}#templatePreheader{display:block!important}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p,.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}</style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
         <span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">微醺大飯店 - 劃位序號</span>
         <center>
@@ -29,6 +29,7 @@
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px; text-align: center;">
+                        
                             surprise lab' black surprise.
                         </td>
                     </tr>
@@ -58,7 +59,11 @@
                     <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
                         <tbody><tr>
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
                                         <img align="center" alt="" src="https://gallery.mailchimp.com/703b108a2ad1da1887fe106f9/_compresseds/5fb329ca-6d65-401a-86bf-47121866ff4d.jpg" width="564" style="max-width:2009px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
                             </td>
                         </tr>
                     </tbody></table>
@@ -71,12 +76,10 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <!-- // END HEADER -->
                                 </td>
                             </tr>
                             <tr>
                                 <td align="center" valign="top">
-                                    <!-- BEGIN BODY // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
                                         <tr>
                                             <td align="center" valign="top">
@@ -86,8 +89,9 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;background:#000;" width="100%" class="mcnTextContentContainer">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;background: #000" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
+                        
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #FDFDFD;">
                         
                             <p style="color: #FDFDFD;"><span style="font-size:17px">
@@ -101,6 +105,7 @@
 四人沈醉票&nbsp;<br>
 {{ $xls->a4 }}張<br>
 @endif
+
 <br>
 ---------------------------------------------------------<br>
 <br>
@@ -126,6 +131,7 @@
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -136,7 +142,9 @@
                     <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
                         <tbody><tr>
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
-                                        <img align="center" alt="" src="https://gallery.mailchimp.com/703b108a2ad1da1887fe106f9/images/f95a8b07-f0c4-4b05-8670-11f0814d3ed2.jpg" width="564" style="max-width:2009px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                
+                                    
+                                        <img align="center" alt="" src="https://gallery.mailchimp.com/703b108a2ad1da1887fe106f9/images/15ca9068-4042-4851-9f99-09245968c9f6.jpg" width="564" style="max-width:2009px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -156,6 +164,7 @@
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -182,7 +191,11 @@
                     <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
                         <tbody><tr>
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
                                         <img align="center" alt="" src="https://gallery.mailchimp.com/703b108a2ad1da1887fe106f9/images/e9f5e0ec-682e-4060-8e85-e526a8cb04ac.jpg" width="564" style="max-width:2009px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
                             </td>
                         </tr>
                     </tbody></table>
@@ -200,6 +213,7 @@
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -230,6 +244,7 @@
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -298,6 +313,7 @@
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -328,6 +344,7 @@
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -342,6 +359,7 @@
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -369,12 +387,10 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <!-- // END BODY -->
                                 </td>
                             </tr>
                             <tr>
                                 <td align="center" valign="top">
-                                    <!-- BEGIN COLUMNS // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
                                         <tr>
                                             <td align="center" valign="top" style="padding-top:10px; padding-bottom:10px;">
@@ -423,6 +439,7 @@
                         <table align="center" border="0" cellpadding="0" cellspacing="0">
                             <tbody><tr>
                                 <td align="center" valign="top">
+
                                             <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
                                                 <tbody><tr>
                                                     <td valign="top" style="padding-right:10px; padding-bottom:9px;" class="mcnFollowContentItemContainer">
@@ -445,6 +462,7 @@
                                                     </td>
                                                 </tr>
                                             </tbody></table>
+     
                                             <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
                                                 <tbody><tr>
                                                     <td valign="top" style="padding-right:0; padding-bottom:9px;" class="mcnFollowContentItemContainer">
@@ -467,6 +485,8 @@
                                                     </td>
                                                 </tr>
                                             </tbody></table>
+                                        
+
                                 </td>
                             </tr>
                         </tbody></table>
@@ -484,12 +504,13 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <div style="text-align: center;"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="font-size:10px"><span style="color:#808080"><em>Copyright © 2019 surpriselab, All rights reserved.</em><br>
+                            <div style="text-align: center;"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="font-size:10px"><span style="color:#808080"><em>Copyright © 2018 surpriselab, All rights reserved.</em><br>
 <br>
 <strong>Our mailing address is:</strong><br>
 <a href="mailto:thegreattipsy@surpriselab.com.tw" target="_blank">thegreattipsy@surpriselab.com.tw</a><br>
@@ -501,6 +522,7 @@ You can </span><a href="*|UPDATE_PROFILE|*"><span style="color:#808080">update y
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -515,6 +537,7 @@ You can </span><a href="*|UPDATE_PROFILE|*"><span style="color:#808080">update y
                         </td>
                     </tr>
                 </tbody></table>
+
             </td>
         </tr>
     </tbody>
@@ -524,11 +547,9 @@ You can </span><a href="*|UPDATE_PROFILE|*"><span style="color:#808080">update y
                                             </td>
                                         </tr>
                                     </table>
-                                    <!-- // END FOOTER -->
                                 </td>
                             </tr>
                         </table>
-                        <!-- // END TEMPLATE -->
                     </td>
                 </tr>
             </table>
