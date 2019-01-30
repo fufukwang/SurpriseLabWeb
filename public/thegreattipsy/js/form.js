@@ -303,7 +303,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
                     minDate:0,
-                    maxDate:"+3m",
+                    maxDate:"+5m",
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: enableAllTheseDays
                 });
