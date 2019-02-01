@@ -8,7 +8,7 @@ $(function(){
                 var quantity_limit = parseInt(item[i].quantity_limit);
                 $('#limit_'+item[i].id).text(quantity_limit);
                 var count = parseInt(item[i].pledged_count) + parseInt(item[i].wait_pledged_count);
-                $('#count_'+item[i].id).text(count);
+                $('#count_'+item[i].id).text(quantity_limit - count);
                 if((quantity_limit - count) == 0){
                     $('#a_'+item[i].id+' div img').css({"-webkit-filter":"grayscale(1)"});
                     $('#a_'+item[i].id).bind('click',function(){

@@ -2,7 +2,7 @@
 
         <div class="mobile-menu">
             <ul class="page-list">
-                <a href="about#ticket">
+                <a href="about.html#ticket">
                     <li class="ticket">
                         Ticket <i class="fa fa-ticket"></i>
                     </li>
