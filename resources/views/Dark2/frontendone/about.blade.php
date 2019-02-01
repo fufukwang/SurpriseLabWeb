@@ -69,7 +69,8 @@
                                                 <img src="/d2one/images/about-2-shadow.png" alt="">
                                             </div>
                                             <p class="golden-font">
-                                                五道料理
+                                                五道料理<br >
+                                                <span style="font-size: 16px;letter-spacing: 1px;color: white;">（葷／蛋奶素）</span>
                                             </p>
                                         </div>
                                     </div>
