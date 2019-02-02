@@ -624,7 +624,7 @@ class BackController extends Controller
 
         try{
             $rules = [
-                'xlsx'    => 'required|mimes:xlsx,zip,xls',
+                'xlsx'    => 'required|mimetypes:application/octet-stream,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip',
                 'quarter' => 'required|numeric'
             ];
             $validator = Validator::make($request->all(), $rules);
