@@ -376,9 +376,9 @@
             <div class="ticket">
                 <p class="d-none d-sm-inline-block">
                     我們來回穿梭在各個城市，⼈們的好奇⼼讓我們得以實際存在<br/><br/>
-                    
-                    01/16 至 02/03 場次已額滿<br/>
-                    02/10 至 03/03 票券，現正預售中<br/><br/>
+                    <span class="highlight text-center">
+                    01/16 至 03/03 場次已額滿<br/>
+                    03/04 至 03/23 票券，最後預售中<br/><br/></span>
                     <!--我們來回穿梭在各個城市，⼈們的好奇⼼讓我們得以實際存在
                     <br/>
                     登記滿 2000 位房客，微醺⼤飯店將在台北的某個⾓落悄悄開啟
@@ -389,9 +389,9 @@
                 </p>
                 <p class="d-block d-sm-none">
                     我們來回穿梭在各個城市<br/>
-                    ⼈們的好奇⼼讓我們得以實際存在<br/><br/>
-                    01/16 至 02/03 場次已額滿<br/>
-                    02/10 至 03/03 票券，現正預售中<br/><br/>
+                    ⼈們的好奇⼼讓我們得以實際存在<br/><br/><span class="highlight text-center">
+                    01/16 至 03/03 場次已額滿<br/>
+                    03/04 至 03/23 票券，最後預售中<br/><br/></span>
                     <span class="highlight text-center">別錯過了<br />期待，你的來訪</span><br/><br/>
                     - 微醺管家 Mr. Tipsy
                 </p>
@@ -454,14 +454,14 @@
 
             <div class="ticket-type">
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/949/5529?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/981/5818?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
                     </a>
                 </div>
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/949/5530?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/981/5819?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="有點限制票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="有點限制票">
@@ -472,7 +472,7 @@
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/949/5532?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/981/5820?locale=zh-TW
                     " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
@@ -508,7 +508,7 @@
             </div>
 
             <p class="time-slots-preinfo">
-                02/10 - 03/03 體驗時間<br/>
+                <!--02/10 - 03/03 體驗時間<br/>-->
                 每日場次表請參考下方時段<br/><br/>
                 <!--週⼀公休-->
             </p>
@@ -604,7 +604,7 @@
                     </div>
                     <p class="info-text highlight-dark">
                         <!--*第一批房客來訪時間為 01/16 - 02/03<br/-->
-                        *02/10 前場次登記已滿<br>&nbsp;02/10-03/03 票券現正預售中<br/>
+                        *03/03 前場次登記已滿<br>&nbsp;03/04-03/23 票券現正預售中<br/>
                         *依實際情況延⻑或縮短日期
                     </p>
                 </div>
@@ -622,14 +622,14 @@
                 </h4>
             </div>
             <p>
-                第二批房客<br>預購02/10-03/03座位
+                第三批房客<br>預購03/04-03/23座位
             </p>
 
             <div class="schedule">
                 <table>
                     <tr>
                         <td>
-                            12/28
+                            02/03
                         </td>
                         <td>
                             票券開賣
@@ -637,33 +637,33 @@
                     </tr>
                     <tr>
                         <td>
-                            01/23
+                            02/13
                         </td>
                         <td>
-                            寄送劃位信－前五百名購買者
+                            寄送劃位信－前五百名購買者（收到信後，即可劃位）
                         </td>
                     </tr>
-                    <tr>
+                    <!--tr>
                         <td>
                             01/30
                         </td>
                         <td>
                             寄送劃位信－01/29前購買者（收到信後，即可劃位）
                         </td>
-                    </tr>
+                    </tr-->
                     <tr>
                         <td>
-                            02/03
+                            02/27
                         </td>
                         <td>
-                            寄送劃位信－02/02前購買者
+                            寄送劃位信－剩餘購買者
                         </td>
                     </tr>
 
                     <tr>
                         <td id="td_day">
-                            <span class="d-none d-sm-inline-block">02/10<br>|<br>03/03</span>
-                            <span class="d-sm-none">02/10-03/03</span>
+                            <span class="d-none d-sm-inline-block">03/04<br>|<br>03/23</span>
+                            <span class="d-sm-none">03/04-03/23</span>
                         </td>
                         <td>
                             期待見到你
@@ -910,6 +910,6 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.5"></script>
+<script src="js/main.js?v=0.6"></script>
 </body>
 </html>

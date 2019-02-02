@@ -151,20 +151,24 @@ $(document).ready(function () {
     // 售票進度 API
     var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/916json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/949json?token=15171aa66ababafd4464a1c194b66102';
-    
+    var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/981json?token=15171aa66ababafd4464a1c194b66102';
+
     $.when(
       $.getJSON(progress_api_SaleStep1),
-      $.getJSON(progress_api_SaleStep2)
-    ).done(function(data1, data2) {
+      $.getJSON(progress_api_SaleStep2),
+      $.getJSON(progress_api_SaleStep3)
+    ).done(function(data1, data2, data3) {
 
         data1 = data1[0];
-        var data = data2[0];
+        data2 = data2[0];
+        var data = data3[0];
 
         // 第一階段已售出總票數
         var SaleStep1_amount = data1['pledged_count'];
+        var SaleStep2_amount = data2['pledged_count'];
 
-        var goal = 3984; // 目標張數｜第一階段與第二階段實際會開出的座位數
-        var amount = data["pledged_count"] + SaleStep1_amount; // 第一階段+第二階段已售出總票數
+        var goal = 5500; // 目標張數｜第一、二、三階段實際會開出的座位數
+        var amount = data["pledged_count"] + SaleStep1_amount + SaleStep2_amount; // 第一、二、三階段已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
 
@@ -172,6 +176,7 @@ $(document).ready(function () {
         sale_progress = Math.floor(sale_progress);
 
         // 時間有點限制票
+        var ticket_matinee = $('.type-matinee');
         var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
         var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
         var timeLimit_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
@@ -179,16 +184,29 @@ $(document).ready(function () {
 
         if (timeLimit_rest <= 0) {
             timeLimit_rest = 0;
-            $('.type-matinee').addClass('sold');
-            $('.type-matinee').find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_2_soldout.png');
-            $('.type-matinee').find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_2_soldout_mobile.png');
-            $('.type-matinee').find('.ticket-state').html('已售完');
+            ticket_matinee.addClass('sold');
+            ticket_matinee.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_2_soldout.png');
+            ticket_matinee.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_2_soldout_mobile.png');
+            ticket_matinee.find('.ticket-state').html('已售完');
         }
 
         var timeLimit = $('.timeLimit');
         timeLimit.find('.total-ticket').html(timeLimit_limit); // 更新時間有點限制票限量張數
         timeLimit.find('.rest-ticket').html(timeLimit_rest); // 更新時間有點限制票剩餘可銷售張數
         timeLimit.fadeTo(300, 1);
+
+        // 四人沈醉票 票銷售完之後改顯示sold out圖
+        var ticket_group = $('.type-group');
+        var groupTicket_sale = data['rewards'][2].pledged_count; // 已銷售張數
+        var groupTicket_limit = data['rewards'][2].quantity_limit; // 限量張數
+        var groupTicket_wait = data['rewards'][2].wait_pledged_count; // 等待付款中張數
+        var groupTicket_rest = groupTicket_limit - groupTicket_sale - groupTicket_wait; // 剩餘可銷售張數
+
+        if (groupTicket_rest <= 0) {
+            ticket_group.addClass('sold');
+            ticket_group.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_3_soldout.png');
+            ticket_group.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_3_soldout_mobile.png');
+        }
 
         var sale_info = $('.sale-progress-info');
         sale_info.find('.total-sale').html(amount); // 更新總售出張數
@@ -249,13 +267,11 @@ $(document).ready(function () {
     });
 
     // 當時間有點限制票售完時
-    $('.type-matinee').on('click', function () {
+    $('.type-item').on('click', function () {
         if ($(this).hasClass('sold')) {
             return false;
         }
     });
-
-
 
     // mobile hamburger button effect
     var hamburger = $('.hamburger');
