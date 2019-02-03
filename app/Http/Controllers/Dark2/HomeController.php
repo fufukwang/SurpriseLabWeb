@@ -300,12 +300,20 @@ class HomeController extends Controller
 
 
             if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
+                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
+                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
+                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
+                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
                 $mailer = [
-                    'day'   => $act->day.' '.substr($act->rangstart,0,5).'-'.substr($act->rangend,0,5),
+                    'day'   => Carbon::parse($act->day)->format('m/d'),
+                    'time'  => $rangTS.'-'.$rangTE,
                     'pople' => $request->Pople,
                     'email' => $data['email'],
                     'name'  => $data['name'],
+                    'gday'  => $rangStart.'/'.$rangEnd,
                 ];
+
+
                 config(['mail.username' => env('MAIL_DARK2_USER')]);
                 config(['mail.password' => env('MAIL_DARK2_PASS')]);
                 Mail::send('Dark2.email.order',$mailer,function($m) use ($mailer){

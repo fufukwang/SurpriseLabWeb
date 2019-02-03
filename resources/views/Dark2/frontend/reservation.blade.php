@@ -90,32 +90,33 @@
            
             <div class="main-container" id="first-section"style="padding-top: 0px;">
                 <div style="color:#a67c52;">
-<div style="font-weight:bold;font-size:24px;line-height:30px;">冬 季 座 位 開 放 劃 位</div>
-<div style="font-size: 16px">
-    劃 位 ⽇ 期 為 12/07-02/03
-    <!--
-    原 定 劃 位 區 間 為 09/22-11/04<br >
-若 預 購 ⼈ 數 踴 躍<br >
-將 加 開 劃 位 ⽇ 期 ⾄ 11 ⽉ 中 後<br >
-( 以 系 統 中 開 放 之 ⽇ 期 為 主 )--></div>
+<div style="font-weight:bold;font-size:24px;line-height:30px;">無光晚餐秘密貴客登記表</div>
+<div style="font-size: 18px">劃位日期 02/28-04/14</div>
                 </div>
-                <p>
+                <p style="font-size:16px;">
                     {{ trans('front.reservation.slug1title') }}
-                </p>    
-                <table>
-                    <tbody><!--tr>
-                        <td width="100px"> 每位單價：</td>
-                        <td>1700+10% 線上預付</td>
+                </p>  
+
+
+                <table style="font-size:16px;">
+                    <tbody>
+                    <tr>
+                        <td colspan="2">
+                            Step 1 選擇人數、日期、時段<br >
+​​Step 2 填寫訂位資料<br >
+​​Step 3 確認訂單，輸入劃位序號<br >
+​​Step 4 完成訂位
+                        </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td>2000+10% 現場付現</td>
-                    </tr-->
-                    <tr>
-                        <td colspan="2">預售票卷：按照訂位流程，選擇⽇期，填寫資料後，請於步驟四「優惠序號」欄位輸⼊序號，將⾦額扣抵為零，確認訂單，即可完成劃位</td>
+                        <td colspan="2">－NOTICE－</td>
                     </tr>
                     <tr>
-                        <td colspan="2"> - 無光晚餐每週⼀、週⼆公休。特殊節⽇會依照情況調整。<br > - 若⾮公休⽇之⽇期無法選擇，代表座位已滿<br > - 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況</td>
+                        <td colspan="2">
+                            - 無光晚餐每週⼀、週⼆公休，特殊節⽇會依情況調整<br >
+​​- 若⾮公休⽇之⽇期無法選擇，代表座位已滿，或是當日不開放<br >
+​​- 請確實填寫正確的Email與電話，將以此發佈最新須知<br >
+​​- 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況</td>
                     </tr>
                     <tr>
                         <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></td>
@@ -385,8 +386,8 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
                     <tr>
                         <td colspan="2">
 <div class="col-sm-9">
-  <label>優惠序號</label>
-  <input type="text" class="form-control" placeholder="優惠序號" id="code">
+  <label>劃位序號</label>
+  <input type="text" class="form-control" placeholder="劃位序號" id="code">
 </div>
 <div class="col-sm-3">
     <div class="btn btn-standard" id="CouponBtn" style="margin: 25px 0px;">確認</div>
