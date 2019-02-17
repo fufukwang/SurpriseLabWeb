@@ -100,8 +100,8 @@
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.1" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.1" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.2" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.2" alt="">
                             </div>
                         </div>
                         <div id="ticket" class="season-two-about ticket-type">
@@ -353,7 +353,6 @@
         </div>
 
     </div>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script src="/d2one/js/backme.js?v=0.3"></script>
 </body>
 </html>
