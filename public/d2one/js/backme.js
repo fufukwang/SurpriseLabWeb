@@ -10,6 +10,7 @@ $(function(){
                 var count = parseInt(item[i].pledged_count) + parseInt(item[i].wait_pledged_count);
                 $('#count_'+item[i].id).text(quantity_limit - count);
                 if((quantity_limit - count) == 0){
+                    /*
                     $('#a_'+item[i].id).parent().block({
                         message: '<h2>Sold Out</h2>',
                         overlayCSS:{
@@ -24,7 +25,9 @@ $(function(){
                             width:"80%"
                         }
                     });
-                    $('#a_'+item[i].id+' div img').css({"-webkit-filter":"grayscale(1)"});
+                    */
+                    //$('#a_'+item[i].id+' img').css({"-webkit-filter":"grayscale(1)"});
+                    $('#a_'+item[i].id+' img').attr("src",'/d2one/images/soldout-ticket.png');
                     $('#a_'+item[i].id).bind('click',function(){
                         alert('限量已完售!!');
                         return false;
