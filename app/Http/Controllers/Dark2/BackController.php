@@ -137,6 +137,14 @@ class BackController extends Controller
         ]);
         return Response::json(['message'=> '已更新'], 200);
     }
+    public function infoUpdate(Request $request,$id){
+        d2xls::where('id',$id)->update([
+            'name'  => strip_tags($request->name),
+            'tel'   => strip_tags($request->tel),
+            'email' => strip_tags($request->email)
+        ]);
+        return Response::json(['message'=> '已更新'], 200);
+    }
     public function CanelCoupon(Request $request){
         $id   = $request->xls_id;
         $code = $request->code;

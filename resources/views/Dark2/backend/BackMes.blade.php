@@ -2,7 +2,21 @@
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
+<style type="text/css">
+[contenteditable="true"].single-line {
+    white-space: nowrap;
+    overflow: hidden;
+    border:0.5px solid #eee;
+} 
+[contenteditable="true"].single-line br {
+    display:none;
 
+}
+[contenteditable="true"].single-line * {
+    display:inline;
+    white-space:nowrap;
+}
+        </style>
         <div class="wrapper">
             <div class="container">
 
@@ -66,13 +80,14 @@
 @forelse ($mes as $row)
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->id }}</td>
-                                                <td>{{ $row->name }}</td>
+                                                <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div></td>
                                                 <td>{{ $row->detail }}</td>
-                                                <td>{{ $row->tel }} <br /> {{ $row->email }}</td>
+                                                <td><div class="single-line tel_{{ $row->id }}">{{ $row->tel }}</div><div class="single-line email_{{ $row->id }}">{{ $row->email }}</div></td>
                                                 <td>@forelse(App\model\d2coupon::where('xls_id',$row->id)->get() as $coup){{ $coup->code }}@if($coup->wine) (含調飲) @endif @if($coup->order_id>0) <a href="javascript:;" class="canelCoupon" data-id="{{ $row->id }}" data-code="{{ $coup->code }}"><i class="fa fa-times"></i></a> @endif<br >@empty 無優惠券 @endforelse</td>
                                                 <td class="editable" style="border:1px solid #eee" data-id="{{ $row->id }}" contenteditable="true">{!! $row->manage !!}</td>
                                                 <td><input type="checkbox" class="sendbox" value="{{ $row->id }}" @if($row->is_sent)checked @endif /></td>
                                                 <td class="actions">
+                                                    <a href="javascript:;" class="btn btn-info btn-xs edit_info" data-id="{{ $row->id }}">修改</a>
                                                     <a href="javascript:;" class="btn btn-primary btn-xs sent_mail" data-id="{{ $row->id }}">寄送優惠券</a>
                                                 </td>
                                             </tr>
@@ -250,6 +265,30 @@ $(function(){
             $.Notification.notify('success','bottom left','已更新', '備註已更新')
         },'json');
     });
+    $('.edit_info').bind('click',function(){
+        var id  = $(this).data('id');
+        if($(this).hasClass('btn-info')){ // 出現表格
+            $(".name_"+id+" ,.tel_"+id+" ,.email_"+id).prop('contenteditable',true)
+            $(this).removeClass('btn-info')
+            $(this).addClass('btn-warning')
+            $(this).text('送出')
+        } else if($(this).hasClass('btn-warning')){ // 送出資料
+            $(".name_"+id+" ,.tel_"+id+" ,.email_"+id).prop('contenteditable',false)
+            $(this).removeClass('btn-warning')
+            $(this).addClass('btn-info')
+            $(this).text('修改')
+            var name  = $('.name_'+id).html();
+            var tel   = $('.tel_'+id).html();
+            var email = $('.email_'+id).html();
+            $.post('/dark2/backmes/'+id+'/infoUpdate',{
+                name  : name,
+                tel   : tel,
+                email : email
+            },function(data){
+                $.Notification.notify('success','bottom left','已更新', '資訊已更新')
+            },'json');
+        }
+    })
     $('.sendbox').bind('click',function(){
         var send = $(this).prop('checked');
         var id   = $(this).val();

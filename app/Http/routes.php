@@ -124,6 +124,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('backmes/{id}/sentcoupon','Dark2\BackController@SentCouponCode');
         Route::post('backmes/{id}/sendUpdate','Dark2\BackController@sendUpdate');
         Route::post('backmes/{id}/sendManageUpdate','Dark2\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','Dark2\BackController@infoUpdate');
         Route::post('backmes/CanelCoupon','Dark2\BackController@CanelCoupon');
         Route::get('backmenouse/xls','Dark2\BackController@NotUseXls');
         Route::post('uploadxlsx','Dark2\BackController@UploadXlsx2Db');
