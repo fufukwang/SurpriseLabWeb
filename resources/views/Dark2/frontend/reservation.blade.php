@@ -232,6 +232,7 @@
             </div>
             
             <div style="max-width:300px;display: none;" class="main-container" id="third-section">
+                <p>請填寫正確Email與電話，將寄送行前通知與提醒訊息</p>
                 <table>
                     <tr>
                         <td>＊{{ trans('front.reservation.Name') }}</td>
@@ -388,11 +389,12 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
 <div class="col-sm-9">
   <label>劃位序號</label>
   <input type="text" class="form-control" placeholder="劃位序號" id="code">
+  <p style="letter-spacing:-0.5px">填入劃位序號，按下確認，完成折抵<br/>折抵後，可在欄位輸入下組序號</p>
 </div>
 <div class="col-sm-3">
     <div class="btn btn-standard" id="CouponBtn" style="margin: 25px 0px;">確認</div>
 </div>
-
+<style type="text/css">.reservation-section input::placeholder{color:#555;}</style>
 
                     </tr>
                     <tr><td colspan="2"><div class="col-sm-12" id="couponList"></div><div class="col-sm-12" id="discountList"></div></td></tr>

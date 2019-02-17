@@ -910,6 +910,6 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.6"></script>
+<script src="js/main.js?v=0.7"></script>
 </body>
 </html>

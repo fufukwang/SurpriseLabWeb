@@ -143,6 +143,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--
                             <div class="sec-title">
                                 優先劃位票
                                 <span>
@@ -166,6 +167,7 @@
                                     </p>
                                 </div>
                             </div>
+                        -->
                         </div>
                         <div class="time-slot">
                             <h1 class="title">
@@ -197,7 +199,7 @@
                                     </tr>
                                     <tr>
                                         <td>週五</td>
-                                        <td>12:00｜12:15｜12:30<br >17:30｜18:00｜18:30｜19:30｜20:00｜20:30</td>
+                                        <td>17:30｜18:00｜18:30｜19:30｜20:00｜20:30</td>
                                     </tr>
                                     <tr>
                                         <td>週六</td>
@@ -351,6 +353,7 @@
         </div>
 
     </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script src="/d2one/js/backme.js?v=0.1"></script>
 </body>
 </html>

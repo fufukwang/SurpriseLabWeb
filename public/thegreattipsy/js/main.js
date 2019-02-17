@@ -1,4 +1,4 @@
-// Ripple Effect
+﻿// Ripple Effect
 var spriteImages = document.querySelectorAll('.slide-item__image');
 var spriteImagesSrc = [];
 
@@ -167,7 +167,7 @@ $(document).ready(function () {
         var SaleStep1_amount = data1['pledged_count'];
         var SaleStep2_amount = data2['pledged_count'];
 
-        var goal = 5500; // 目標張數｜第一、二、三階段實際會開出的座位數
+        var goal = 6000; // 目標張數｜第一、二、三階段實際會開出的座位數
         var amount = data["pledged_count"] + SaleStep1_amount + SaleStep2_amount; // 第一、二、三階段已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數

@@ -10,6 +10,20 @@ $(function(){
                 var count = parseInt(item[i].pledged_count) + parseInt(item[i].wait_pledged_count);
                 $('#count_'+item[i].id).text(quantity_limit - count);
                 if((quantity_limit - count) == 0){
+                    $('#a_'+item[i].id).parent().block({
+                        message: '<h2>Sold Out</h2>',
+                        overlayCSS:{
+                            backgroundColor: '#000', 
+                            opacity:         0.1, 
+                            cursor:          'not-allowed'
+                        },
+                        css:{
+                            border:"none",
+                            color:"red",
+                            backgroundColor:"none",
+                            width:"80%"
+                        }
+                    });
                     $('#a_'+item[i].id+' div img').css({"-webkit-filter":"grayscale(1)"});
                     $('#a_'+item[i].id).bind('click',function(){
                         alert('限量已完售!!');
