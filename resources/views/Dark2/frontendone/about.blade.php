@@ -100,8 +100,8 @@
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.2" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.2" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.3" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.3" alt="">
                             </div>
                         </div>
                         <div id="ticket" class="season-two-about ticket-type">
