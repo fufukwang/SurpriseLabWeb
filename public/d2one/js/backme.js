@@ -1,5 +1,5 @@
 $(function(){
-    $.get('https://surpriselab.backme.tw/api/projects/922.json?token=15171aa66ababafd4464a1c194b66102',function(data){
+    $.get('https://surpriselab.backme.tw/api/projects/937.json?token=15171aa66ababafd4464a1c194b66102',function(data){
         var item  = data.rewards;
         var sum   = 0;
         var pcent = 2000
@@ -36,10 +36,10 @@ $(function(){
             }
             var item_count = parseInt(item[i].pledged_count);
             switch(item[i].id){
-                case 5423: item_count *= 2; break;
-                case 5421: item_count *= 2; break;
-                case 5422: item_count *= 4; break;
-                case 5420: item_count *= 2; break;
+                case 5962: item_count *= 2; break;
+                case 5963: item_count *= 2; break;
+                case 5964: item_count *= 4; break;
+                case 5965: item_count *= 2; break;
             }
             sum += item_count;
         }

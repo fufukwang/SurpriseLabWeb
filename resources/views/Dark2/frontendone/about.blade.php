@@ -100,8 +100,8 @@
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.3" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.3" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.4" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.4" alt="">
                             </div>
                         </div>
                         <div id="ticket" class="season-two-about ticket-type">
@@ -121,29 +121,29 @@
                             <div class="ticket-box">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <a href="https://surpriselab.backme.tw/checkout/922/5420?locale=zh-TW" id="a_5420">
+                                        <a href="https://surpriselab.backme.tw/checkout/937/5962?locale=zh-TW" id="a_5962">
                                             <img src="/d2one/images/ticket-1.png" alt="">
                                         </a>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="https://surpriselab.backme.tw/checkout/922/5421?locale=zh-TW" id="a_5421">
+                                        <a href="https://surpriselab.backme.tw/checkout/937/5963?locale=zh-TW" id="a_5963">
                                             <img src="/d2one/images/ticket-2.png" alt="">
                                         </a>
                                         <p>
-                                            限量<span id="limit_5421"></span>組｜剩餘<span id="count_5421"></span>組    
+                                            限量<span id="limit_5963"></span>組｜剩餘<span id="count_5963"></span>組    
                                         </p>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="https://surpriselab.backme.tw/checkout/922/5422?locale=zh-TW" id="a_5422">
+                                        <a href="https://surpriselab.backme.tw/checkout/937/5964?locale=zh-TW" id="a_5964">
                                             <img src="/d2one/images/ticket-3.png" alt="">
                                         </a>
                                         <p>
-                                            限量<span id="limit_5422"></span>組｜剩餘<span id="count_5422"></span>組    
+                                            限量<span id="limit_5964"></span>組｜剩餘<span id="count_5964"></span>組    
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <!--
+                            
                             <div class="sec-title">
                                 優先劃位票
                                 <span>
@@ -155,19 +155,19 @@
                                 有特定日期需要慶祝、紀念、見面或是海外旅客，優先劃位票是最佳選擇
                             </p>
                             <p class="golden-font m-text-align-left">
-                                優先劃位票享第一梯次最優先劃位權<br class="hidden-xs">於02/05搶先選擇日期與時段劃位
+                                優先劃位票享第一梯次最優先劃位權<br class="hidden-xs">於03/26搶先選擇日期與時段劃位
                             </p>
                             <div class="special-ticket">
                                 <div>
-                                    <a href="https://surpriselab.backme.tw/checkout/922/5423?locale=zh-TW" id="a_5423">
+                                    <a href="https://surpriselab.backme.tw/checkout/937/5965?locale=zh-TW" id="a_5965">
                                         <img src="/d2one/images/ticket-4.png" alt="">
                                     </a>
                                     <p>
-                                        限量<span id="limit_5423"></span>組｜剩餘<span id="count_5423"></span>組    
+                                        限量<span id="limit_5965"></span>組｜剩餘<span id="count_5965"></span>組    
                                     </p>
                                 </div>
                             </div>
-                        -->
+                        
                         </div>
                         <div class="time-slot">
                             <h1 class="title">
@@ -178,7 +178,7 @@
                             </h3>
                             <div class="time-slot-box">
                                 <p class="golden-font">
-                                    春季座位 02/28-04/14<br>開放場次如下
+                                    初夏座位 04/17-06/02<br>開放場次如下
                                 </p>
                                 <table>
                                     <tr>
@@ -225,9 +225,9 @@
                                     Ticket Status
                                 </h3>
                                 <p>
-                                    春季預售<br>
-                                    訂購02/28-04/14座位<br>
-                                    錯過冬季的你，這次，別再錯過
+                                    初夏預售<br>
+                                    訂購04/17-06/02座位<br>
+                                    曾經錯過的你，這次，別再錯過
                                 </p>
                                 <div class="progress-bar-box">
                                     <div class="bar-box">
@@ -353,6 +353,6 @@
         </div>
 
     </div>
-    <script src="/d2one/js/backme.js?v=0.3"></script>
+    <script src="/d2one/js/backme.js?v=0.4"></script>
 </body>
 </html>
