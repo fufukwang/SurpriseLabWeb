@@ -375,15 +375,21 @@
 
             <div class="ticket">
                 <p class="d-none d-sm-inline-block">
-                    我們來回穿梭在各個城市，⼈們的好奇⼼讓我們得以實際存在<br/><br/>
+                    我們來回穿梭在各個城市，人們的好奇心讓我們得以實際存在<br/>
+                    01/16至03/23的場次已全數售罄，第一階段將告一段落<br/><br/>
+                    <!--我們來回穿梭在各個城市，⼈們的好奇⼼讓我們得以實際存在<br/><br/>-->
                     <span class="highlight text-center">
-                    01/16 至 03/03 場次已額滿<br/>
-                    03/04 至 03/23 票券，最後預售中<br/><br/></span>
+                        微醺大飯店是否能延長，將來自於你的「選擇」<br/><br/>
+                        若4/16前房客登記滿2500人，微醺大飯店則能以延續<br/>
+                        我們將會加開 4/16 至 05/19 的場次，來迎接你的來訪<br/><br/>
+                    <!--01/16 至 03/03 場次已額滿<br/>
+                    03/04 至 03/23 票券，最後預售中<br/><br/-->
+                    </span>
                     <!--我們來回穿梭在各個城市，⼈們的好奇⼼讓我們得以實際存在
                     <br/>
                     登記滿 2000 位房客，微醺⼤飯店將在台北的某個⾓落悄悄開啟
                     <br/>-->
-                    <span class="highlight text-center">別錯過了<br />期待，你的來訪</span>
+                    <span class="highlight text-center">期待，跟你微醺一下</span>
                     <br/>
                     - 微醺管家 Mr. Tipsy
                 </p>
@@ -454,14 +460,14 @@
 
             <div class="ticket-type">
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/981/5818?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/994/5966?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
                     </a>
                 </div>
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/981/5819?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/994/5967?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="有點限制票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="有點限制票">
@@ -472,7 +478,7 @@
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/981/5820?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/994/5968?locale=zh-TW
                     " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
@@ -518,26 +524,26 @@
                     <p>
                         晚場
                     </p>
+                    <!--p>
+                        <span class="ticket-blue">週一：19:00｜20:30｜22:00</span>
+                    </p-->
                     <p>
-                        <span class="ticket-blue">週一：18:00｜19:30｜21:00｜22:30</span>
+                        <span class="ticket-blue">週二：19:00｜20:30｜22:00</span>
                     </p>
                     <p>
-                        <span class="ticket-blue">週二：18:00｜19:30｜21:00｜22:30</span>
+                        <span class="ticket-blue">週三：19:00｜20:30｜22:00</span>
                     </p>
                     <p>
-                        <span class="ticket-blue">週三：18:00｜19:30｜21:00｜22:30</span>
+                        <span class="ticket-blue">週四：19:00｜20:30｜22:00</span>
                     </p>
                     <p>
-                        <span class="ticket-blue">週四：18:00｜19:30｜21:00｜22:30</span>
+                        週五：19:00｜20:30｜22:00
                     </p>
                     <p>
-                        週五：18:00｜19:30｜21:00｜22:30
+                        週六：19:00｜20:30｜22:00
                     </p>
                     <p>
-                        週六：18:00｜19:30｜21:00｜22:30
-                    </p>
-                    <p>
-                        週⽇：18:00｜19:30｜21:00｜22:30
+                        週⽇：19:00｜20:30｜22:00
                     </p>
                     <hr/>
                     <p>
@@ -547,10 +553,10 @@
                         <span class="ticket-blue">週五：15:30</span>
                     </p-->
                     <p>
-                        <span class="ticket-blue">週六：12:30｜14:00｜15:30</span>
+                        <span class="ticket-blue">週六：13:00｜14:30｜16:00</span>
                     </p>
                     <p>
-                        <span class="ticket-blue">週⽇：12:30｜14:00｜15:30</span>
+                        <span class="ticket-blue">週⽇：13:00｜14:30｜16:00</span>
                     </p>
                     <p>&nbsp;</p>
                     <p class="ticket-color-diff-note">
@@ -604,7 +610,10 @@
                     </div>
                     <p class="info-text highlight-dark">
                         <!--*第一批房客來訪時間為 01/16 - 02/03<br/-->
-                        *03/03 前場次登記已滿<br>&nbsp;03/04-03/23 票券現正預售中<br/>
+                        <!--*03/03 前場次登記已滿<br>&nbsp;03/04-03/23 票券現正預售中<br/-->
+                        *第一階段01/16-03/23的場次皆已售罄<br>
+                        *若房客登記滿2500人，將加開4/16-5/19間的座位<br>
+                        *若4/16未滿2500人，將全額退費，取消延長。<br>
                         *依實際情況延⻑或縮短日期
                     </p>
                 </div>
@@ -622,112 +631,57 @@
                 </h4>
             </div>
             <p>
-                第三批房客<br>預購03/04-03/23座位
+                第四批房客<br>預購04/16-05/19座位
             </p>
 
             <div class="schedule">
                 <table>
                     <tr>
                         <td>
-                            02/03
-                        </td>
-                        <td>
-                            票券開賣
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            02/13
-                        </td>
-                        <td>
-                            寄送劃位信－前五百名購買者（收到信後，即可劃位）
-                        </td>
-                    </tr>
-                    <!--tr>
-                        <td>
-                            01/30
-                        </td>
-                        <td>
-                            寄送劃位信－01/29前購買者（收到信後，即可劃位）
-                        </td>
-                    </tr-->
-                    <tr>
-                        <td>
                             02/27
                         </td>
                         <td>
-                            寄送劃位信－剩餘購買者
+                            票卷開賣 (目標2500人)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            04/03
+                        </td>
+                        <td>
+                            寄送劃位信 - 前五百名購買者（收到信後，即可劃位）
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            04/10
+                        </td>
+                        <td>
+                            寄送劃位信 - 其餘購買者
                         </td>
                     </tr>
 
                     <tr>
                         <td id="td_day">
-                            <span class="d-none d-sm-inline-block">03/04<br>|<br>03/23</span>
-                            <span class="d-sm-none">03/04-03/23</span>
+                            <span class="d-none d-sm-inline-block">04/16<br>|<br>05/19</span>
+                            <span class="d-sm-none">04/16-05/19</span>
                         </td>
                         <td>
-                            期待見到你
+                            累計滿2500人，即延長加開第四批座位
                         </td>
                     </tr>
 
-                    <!--tr>
-                        <td>
-                            11/27
-                        </td>
-                        <td>
-                            開始預售（限量2000張）
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            12/26
-                        </td>
-                        <td>
-                            寄送劃位信-前五百名購買者（收到劃位序號後，即可劃位）
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            12/31
-                        </td>
-                        <td>
-                            結束預售<br class="d-block d-sm-none"/>（未達2000張，將全額退費）
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            01/02
-                        </td>
-                        <td>
-                            寄送劃位信-其餘購買者<br class="d-block d-sm-none"/>（收到劃位序號後，即可劃位）
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            01/09
-                        </td>
-                        <td>
-                            微醺⼤飯店開幕
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            02/03
-                        </td>
-                        <td>
-                            微醺⼤飯店閉幕
-                        </td>
-                    </tr-->
                 </table>
 
                 <p class="schedule-sub-title d-none d-sm-block">
+                    若04/16前未能達標2500人，將會全額退費，取消延長<br>
                     為提供最好品質的微醺體驗，上述日期會依實際狀況彈性調整
                 </p>
 
                 <div class="text-center d-block d-sm-none">
                     <p class="schedule-sub-title d-inline-block text-left">
+                        若04/16前未能達標2500人，將會全額退費，取消延長
                         為提供最好品質的微醺體驗，上述⽇期<br/>會依情況彈性調整
                     </p>
                 </div>
@@ -797,7 +751,7 @@
                     </p>
                 </div>
 
-                <div class="contact-sec middle d-xl-flex">
+                <!--div class="contact-sec middle d-xl-flex">
                     <div class="contact-sec-title highlight">
                         活動場次
                     </div>
@@ -805,48 +759,42 @@
                         <p>
                             晚場
                         </p>
+
                         <p>
-                            週一：18:00｜19:30｜21:00｜22:30
+                            週二：19:00｜20:30｜22:00
                         </p>
                         <p>
-                            週二：18:00｜19:30｜21:00｜22:30
+                            週三：19:00｜20:30｜22:00
                         </p>
                         <p>
-                            週三：18:00｜19:30｜21:00｜22:30
+                            週四：19:00｜20:30｜22:00
                         </p>
                         <p>
-                            週四：18:00｜19:30｜21:00｜22:30
+                            週五：19:00｜20:30｜22:00
                         </p>
                         <p>
-                            週五：18:00｜19:30｜21:00｜22:30
+                            週六：19:00｜20:30｜22:00
                         </p>
                         <p>
-                            週六：18:00｜19:30｜21:00｜22:30
-                        </p>
-                        <p>
-                            週⽇：18:00｜19:30｜21:00｜22:30
+                            週⽇：19:00｜20:30｜22:00
                         </p>
                         <p>&nbsp;</p>
                         <p>
                             午場
                         </p>
-                        <!--p>
-                            週五：15:30
-                        </p-->
+
                         <p>
-                            週六：12:30｜14:00｜15:30
+                            週六：13:00｜14:30｜16:00
                         </p>
                         <p>
-                            週⽇：12:30｜14:00｜15:30
+                            週⽇：13:00｜14:30｜16:00
                         </p>
                         <p>&nbsp;</p>
                         <p class="contact-footer">
-                            <!--*每場次約為九⼗分鐘<br/>
-                            *週⼀為公休⽇
-                            <*喝酒不開車，建議搭乘計程車或大眾運輸工具前來-->
+
                         </p>
                     </div>
-                </div>
+                </div-->
 
                 <div class="contact-sec d-xl-flex">
                     <div class="contact-sec-title highlight">
@@ -910,6 +858,6 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.7"></script>
+<script src="js/main.js?v=0.8"></script>
 </body>
 </html>

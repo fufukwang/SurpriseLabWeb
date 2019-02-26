@@ -1,4 +1,4 @@
-﻿// Ripple Effect
+// Ripple Effect
 var spriteImages = document.querySelectorAll('.slide-item__image');
 var spriteImagesSrc = [];
 
@@ -149,26 +149,15 @@ $(document).ready(function () {
     });
 
     // 售票進度 API
-    var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/916json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/949json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/981json?token=15171aa66ababafd4464a1c194b66102';
+    // var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/916json?token=15171aa66ababafd4464a1c194b66102';
+    // var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/949json?token=15171aa66ababafd4464a1c194b66102';
+    // var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/981json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/994json?token=15171aa66ababafd4464a1c194b66102';
 
-    $.when(
-      $.getJSON(progress_api_SaleStep1),
-      $.getJSON(progress_api_SaleStep2),
-      $.getJSON(progress_api_SaleStep3)
-    ).done(function(data1, data2, data3) {
-
-        data1 = data1[0];
-        data2 = data2[0];
-        var data = data3[0];
-
-        // 第一階段已售出總票數
-        var SaleStep1_amount = data1['pledged_count'];
-        var SaleStep2_amount = data2['pledged_count'];
-
-        var goal = 6000; // 目標張數｜第一、二、三階段實際會開出的座位數
-        var amount = data["pledged_count"] + SaleStep1_amount + SaleStep2_amount; // 第一、二、三階段已售出總票數
+    $.getJSON(progress_api_SaleStep4, function (data) {
+        
+        var goal = 2500; // 目標張數
+        var amount = data["pledged_count"]; //已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
 
