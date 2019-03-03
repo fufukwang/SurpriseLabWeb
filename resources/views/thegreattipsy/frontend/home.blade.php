@@ -394,11 +394,14 @@
                     - 微醺管家 Mr. Tipsy
                 </p>
                 <p class="d-block d-sm-none">
-                    我們來回穿梭在各個城市<br/>
-                    ⼈們的好奇⼼讓我們得以實際存在<br/><br/><span class="highlight text-center">
-                    01/16 至 03/03 場次已額滿<br/>
-                    03/04 至 03/23 票券，最後預售中<br/><br/></span>
-                    <span class="highlight text-center">別錯過了<br />期待，你的來訪</span><br/><br/>
+                    我們來回穿梭在各個城市<br/>人們的好奇心讓我們得以實際存在<br/>
+                    01/16至03/23的場次已全數售罄<br/>第一階段將告一段落<br/><br/>
+                    <span class="highlight text-center">
+                        微醺大飯店是否能延長<br/>將來自於你的「選擇」<br/><br/>
+                        若4/16前房客登記滿2500人<br/>微醺大飯店則能以延續<br/>
+                        我們將會加開 4/16 至 05/19 的場次<br/>來迎接你的來訪<br/><br/>
+                    </span>
+                    <span class="highlight text-center">期待，跟你微醺一下</span><br/><br/>
                     - 微醺管家 Mr. Tipsy
                 </p>
             </div>
