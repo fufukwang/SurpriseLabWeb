@@ -682,5 +682,15 @@
 <script src="https://js.tappaysdk.com/tpdirect/v3"></script>
 <!-- Custom Js -->
 <script src="js/form.js?v=10"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-75329055-6');
+</script>
+
 </body>
 </html>
