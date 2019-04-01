@@ -104,7 +104,54 @@
                                 <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.4" alt="">
                             </div>
                         </div>
-                        <div id="ticket" class="season-two-about ticket-type">
+                        <div class="grey-box">
+                            <div class="pre-order-info">
+                                <h1 class="title">
+                                    售票狀況
+                                </h1>
+                                <h3 class="sub-title">
+                                    Ticket Status
+                                </h3>
+                                <p>
+                                    04/17-06/02 初夏座位現正預售中<br>
+                                    曾經錯過的你，這次，別再錯過
+                                </p>
+                                <div class="progress-bar-box">
+                                    <div class="bar-box">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
+                                <div class="info-box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h1>
+                                                // 啟動進度 //
+                                            </h1>
+                                            <p>
+                                                <span class="percent">87</span>%
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1>
+                                                // 已售出張數 //
+                                            </h1>
+                                            <p>
+                                                <span class="tickets">1780</span>張
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1>
+                                                // 預售倒數 //
+                                            </h1>
+                                            <p>
+                                                <span class="days">50</span>天
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div id="ticket" class="season-two-about ticket-type" style="background: none;">
                             <h1 class="title">
                                 選擇票券
                             </h1>
@@ -120,12 +167,19 @@
                             </span>
                             <div class="ticket-box">
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="sec-title">一般票<span>Standard Ticket</span></div>
+                                    </div>
                                     <div class="col-md-4">
                                         <a href="https://surpriselab.backme.tw/checkout/937/5962?locale=zh-TW" id="a_5962">
                                             <img src="/d2one/images/ticket-1.png" alt="">
                                         </a>
+                                        <p>
+                                            熱售中
+                                        </p>
                                     </div>
                                     <div class="col-md-4">
+                                        
                                         <a href="https://surpriselab.backme.tw/checkout/937/5963?locale=zh-TW" id="a_5963">
                                             <img src="/d2one/images/ticket-2.png" alt="">
                                         </a>
@@ -169,7 +223,7 @@
                             </div>
                         
                         </div>
-                        <div class="time-slot">
+                        <div class="time-slot" style="background: rgba(250, 250, 250, 0.05);">
                             <h1 class="title">
                                 體驗場次
                             </h1>
@@ -216,55 +270,8 @@
                             </div>
                            
                         </div>
-                        <div class="grey-box">
-                            <div class="pre-order-info">
-                                <h1 class="title">
-                                    售票狀況
-                                </h1>
-                                <h3 class="sub-title">
-                                    Ticket Status
-                                </h3>
-                                <p>
-                                    初夏預售<br>
-                                    訂購04/17-06/02座位<br>
-                                    曾經錯過的你，這次，別再錯過
-                                </p>
-                                <div class="progress-bar-box">
-                                    <div class="bar-box">
-                                        <div class="bar"></div>
-                                    </div>
-                                </div>
-                                <div class="info-box">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <h1>
-                                                // 啟動進度 //
-                                            </h1>
-                                            <p>
-                                                <span class="percent">87</span>%
-                                            </p>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h1>
-                                                // 已售出張數 //
-                                            </h1>
-                                            <p>
-                                                <span class="tickets">1780</span>張
-                                            </p>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h1>
-                                                // 預售啟動 //
-                                            </h1>
-                                            <p>
-                                                <span class="days">50</span>天
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>    
-                        </div>
-                        <div class="black-box">
+                        
+                        <div class="black-box" style="background:none">
                             <h1 class="title">
                                 其他服務
                             </h1>
