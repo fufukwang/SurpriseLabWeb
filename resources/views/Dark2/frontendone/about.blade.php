@@ -100,8 +100,8 @@
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.4" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.4" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.5" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.5" alt="">
                             </div>
                         </div>
                         <div class="grey-box">
@@ -172,7 +172,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <a href="https://surpriselab.backme.tw/checkout/937/5962?locale=zh-TW" id="a_5962">
-                                            <img src="/d2one/images/ticket-1.png" alt="">
+                                            <img src="/d2one/images/ticket-1.png?v=1" alt="">
                                         </a>
                                         <p>
                                             熱售中
@@ -181,7 +181,7 @@
                                     <div class="col-md-4">
                                         
                                         <a href="https://surpriselab.backme.tw/checkout/937/5963?locale=zh-TW" id="a_5963">
-                                            <img src="/d2one/images/ticket-2.png" alt="">
+                                            <img src="/d2one/images/ticket-2.png?v=1" alt="">
                                         </a>
                                         <p>
                                             限量<span id="limit_5963"></span>組｜剩餘<span id="count_5963"></span>組    
@@ -189,7 +189,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <a href="https://surpriselab.backme.tw/checkout/937/5964?locale=zh-TW" id="a_5964">
-                                            <img src="/d2one/images/ticket-3.png" alt="">
+                                            <img src="/d2one/images/ticket-3.png?v=1" alt="">
                                         </a>
                                         <p>
                                             限量<span id="limit_5964"></span>組｜剩餘<span id="count_5964"></span>組    
@@ -214,7 +214,7 @@
                             <div class="special-ticket">
                                 <div>
                                     <a href="https://surpriselab.backme.tw/checkout/937/5965?locale=zh-TW" id="a_5965">
-                                        <img src="/d2one/images/ticket-4.png" alt="">
+                                        <img src="/d2one/images/ticket-4.png?v=1" alt="">
                                     </a>
                                     <p>
                                         限量<span id="limit_5965"></span>組｜剩餘<span id="count_5965"></span>組    
