@@ -100,8 +100,8 @@
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.5" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.5" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.6" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.6" alt="">
                             </div>
                         </div>
                         <div class="grey-box">
