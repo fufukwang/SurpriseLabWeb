@@ -223,7 +223,7 @@
                             </div>
                         
                         </div>
-                        <div class="time-slot" style="background: rgba(250, 250, 250, 0.05);">
+                        <div class="time-slot grey-box">
                             <h1 class="title">
                                 體驗場次
                             </h1>
