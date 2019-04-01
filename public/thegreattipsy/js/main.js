@@ -156,7 +156,7 @@ $(document).ready(function () {
 
     $.getJSON(progress_api_SaleStep4, function (data) {
         
-        var goal = 2500; // 目標張數
+        var goal = 2000; // 目標張數
         var amount = data["pledged_count"]; //已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
