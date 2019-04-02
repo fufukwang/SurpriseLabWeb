@@ -374,6 +374,7 @@
             </div>
 
             <div class="ticket">
+                <!--PC Start-->
                 <p class="d-none d-sm-inline-block">
 微醺大飯店第一階段已於 03/24 告一段落<br/><br/>
 <span class="highlight text-center">
@@ -387,6 +388,8 @@
 
 - 微醺管家 Mr. Tipsy
                 </p>
+                <!--PC End-->
+                <!--Mobile Start-->
                 <p class="d-block d-sm-none">
 微醺大飯店第一階段已於 03/24 告一段落
 <br/><br/>
@@ -400,6 +403,7 @@
 
 - 微醺管家 Mr. Tipsy
                 </p>
+                <!--Mobile End-->
             </div>
 
         </div>
@@ -672,18 +676,20 @@
                     </tr>
 
                 </table>
-
+                <!--PC Start-->
                 <p class="schedule-sub-title d-none d-sm-block">
                     若 04/10 前訂房未滿 2000 人，微醺大飯店將不延長並全額退費<br>
                     為提供最好的沉浸式體驗，上述日期會依實際狀況彈性調整
                 </p>
-
+                <!--PC End-->
+                <!--Mobile Start-->
                 <div class="text-center d-block d-sm-none">
                     <p class="schedule-sub-title d-inline-block text-left">
                         若 04/10 前訂房未滿 2000 人，<br/>微醺大飯店將不延長並全額退費<br/>
                         為提供最好的沉浸式體驗，<br/>上述日期會依實際狀況彈性調整
                     </p>
                 </div>
+                <!--Mobile End-->
             </div>
 
             <div class="feature-btn text-center">
