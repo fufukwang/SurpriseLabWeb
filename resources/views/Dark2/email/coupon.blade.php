@@ -130,7 +130,7 @@
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
-                        <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #FDFDFD;">
+                        <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #FDFDFD;background-color:#000;">
                         
                             <p style="color: #FDFDFD;"><span style="font-family:georgia,times,times new roman,serif"><span style="font-size:17px"><span style="color:#996633"><strong>-&nbsp; 以 下 為 你 的 劃 位 資 訊&nbsp; -</strong></span><br>
 <br>
@@ -152,7 +152,7 @@
 
 <p style="color: #FDFDFD;"><span style="font-family:georgia,times,times new roman,serif"><span style="font-size:17px"><span style="color:#FFFFFF">劃 位 序 號 為</span></span></span></p>
 
-<p style="color: #FDFDFD;"><span style="font-family:georgia,times,times new roman,serif">@foreach($coupons as $key => $row)
+<p style="color: #FDFDFD;background-color:#000;"><span style="font-family:georgia,times,times new roman,serif">@foreach($coupons as $key => $row)
     @if($key > 0) / @endif{{ $row->code }}
 @endforeach<br>
 <br>
