@@ -1,4 +1,11 @@
 @include('Dark2.frontendone._header',['index' => true])
+<style type="text/css">
+@media (max-width: 767px){
+.visible-xs {
+    display: inline!important;
+}
+}
+</style>
 <body>
     <div class="wrap">
 
@@ -16,14 +23,14 @@
                     <!-- LOGO z: 1000 -->
                     <div class="main-slogan">
                         <div class="slogan-img show-1 shadow">
-                            <img src="/d2one/images/slogan-bg.svg" alt="">
+                            <img src="/d2one/images/slogan-bg.png" alt="">
                             <img src="/d2one/images/m-slogan-shadow.png" alt="">
                         </div>
 
 
                         <div class="slogan-img show-1">
-                            <img src="/d2one/images/slogan.svg" alt="">
-                            <img src="/d2one/images/m-slogan.png" alt="">
+                            <img src="/d2one/images/slogan.png" alt="">
+                            <img src="/d2one/images/m-slogan.png?v=0.1" alt="">
                         </div>
 
 <!--
@@ -96,12 +103,12 @@
                                 Pre-Sale Schedule
                             </h3>
                             <p class="m-text-align-left">
-                                無光晚餐採取先預購、後劃位的方式<b>訂位</b><br class="hidden-xs">依照購買票券、購買日期<b>順序</b>，分三梯次寄送劃位信
+                                無光晚餐採取先預購、後劃位的方式<span class="visible-xs">。</span><b>訂位</b><br class="hidden-xs">依照購買票券、購買日期<b>順序</b>，分三梯次寄送劃位信
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.6" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.6" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.7" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.7" alt="">
                             </div>
                         </div>
                         <div class="grey-box">
@@ -113,8 +120,9 @@
                                     Ticket Status
                                 </h3>
                                 <p>
-                                    04/17-06/02 初夏座位現正預售中<br>
-                                    曾經錯過的你，這次，別再錯過
+                                    無光晚餐將在六月底正式結束，不再重啟<br>
+                                    2019/05/24-06/30 <u>最終場座位</u>現正預售中<br>
+                                    這次，別再錯過
                                 </p>
                                 <div class="progress-bar-box">
                                     <div class="bar-box">
@@ -171,8 +179,8 @@
                                         <div class="sec-title">一般票<span>Standard Ticket</span></div>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="https://surpriselab.backme.tw/checkout/937/5962?locale=zh-TW" id="a_5962">
-                                            <img src="/d2one/images/ticket-1.png?v=1" alt="">
+                                        <a href="https://surpriselab.backme.tw/checkout/1011/6101?locale=zh-TW" id="a_6101">
+                                            <img src="/d2one/images/ticket-1.png?v=2" alt="">
                                         </a>
                                         <p>
                                             熱售中
@@ -180,19 +188,19 @@
                                     </div>
                                     <div class="col-md-4">
                                         
-                                        <a href="https://surpriselab.backme.tw/checkout/937/5963?locale=zh-TW" id="a_5963">
-                                            <img src="/d2one/images/ticket-2.png?v=1" alt="">
+                                        <a href="https://surpriselab.backme.tw/checkout/1011/6102?locale=zh-TW" id="a_6102">
+                                            <img src="/d2one/images/ticket-2.png?v=2" alt="">
                                         </a>
                                         <p>
-                                            限量<span id="limit_5963"></span>組｜剩餘<span id="count_5963"></span>組    
+                                            限量<span id="limit_6102"></span>組｜剩餘<span id="count_6102"></span>組    
                                         </p>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="https://surpriselab.backme.tw/checkout/937/5964?locale=zh-TW" id="a_5964">
-                                            <img src="/d2one/images/ticket-3.png?v=1" alt="">
+                                        <a href="https://surpriselab.backme.tw/checkout/1011/6103?locale=zh-TW" id="a_6103">
+                                            <img src="/d2one/images/ticket-3.png?v=2" alt="">
                                         </a>
                                         <p>
-                                            限量<span id="limit_5964"></span>組｜剩餘<span id="count_5964"></span>組    
+                                            限量<span id="limit_6103"></span>組｜剩餘<span id="count_6103"></span>組    
                                         </p>
                                     </div>
                                 </div>
@@ -209,15 +217,15 @@
                                 有特定日期需要慶祝、紀念、見面或是海外旅客，優先劃位票是最佳選擇
                             </p>
                             <p class="golden-font m-text-align-left">
-                                優先劃位票享第一梯次最優先劃位權<br class="hidden-xs">於03/26搶先選擇日期與時段劃位
+                                優先劃位票享第一梯次最優先劃位權<br class="hidden-xs">於05/08搶先選擇日期與時段劃位
                             </p>
                             <div class="special-ticket">
                                 <div>
-                                    <a href="https://surpriselab.backme.tw/checkout/937/5965?locale=zh-TW" id="a_5965">
-                                        <img src="/d2one/images/ticket-4.png?v=1" alt="">
+                                    <a href="https://surpriselab.backme.tw/checkout/1011/6104?locale=zh-TW" id="a_6104">
+                                        <img src="/d2one/images/ticket-4.png?v=2" alt="">
                                     </a>
                                     <p>
-                                        限量<span id="limit_5965"></span>組｜剩餘<span id="count_5965"></span>組    
+                                        限量<span id="limit_6104"></span>組｜剩餘<span id="count_6104"></span>組    
                                     </p>
                                 </div>
                             </div>
@@ -360,6 +368,6 @@
         </div>
 
     </div>
-    <script src="/d2one/js/backme.js?v=0.4"></script>
+    <script src="/d2one/js/backme.js?v=0.5"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/d2one/css/font-awesome.min.css">
     <link rel="stylesheet" href="/d2one/stylesheets/print.css">
     <link rel="stylesheet" href="/d2one/stylesheets/media.css">
-    <link rel="stylesheet" href="/d2one/style/css/print.css">
+    <link rel="stylesheet" href="/d2one/style/css/print.css?v=0.1">
     <script src="/d2one/js/jquery-1.11.3.min.js"></script>
     <script src="/d2one/js/imagesLoaded.js"></script>
     @if(isset($index) && $index)
@@ -18,11 +18,11 @@
     <script src="/d2one/js/main.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta property="og:title" content="無光晚餐第二季 Dining In The Dark Season 2" />
-    <meta property="og:description" content="限量冬季座位預售票，現正預售中" />
+    <meta property="og:description" content="黑暗，帶你看見更多驚喜！無光晚餐最終場限量預售票，現正熱賣中" />
     <meta property="og:url" content="https://{{ $_SERVER['HTTP_HOST'] }}{{ $_SERVER['REQUEST_URI'] }}" />
     <meta property="og:site_name" content="無光晚餐第二季 Dining In The Dark Season 2" />
     <meta property="og:image" content="https://www.surpriselab.com.tw/dark2/S__9076871.jpg" />
     <meta property="og:type" content="website" />
-    <meta name="description" content="限量冬季座位預售票，現正預售中">
+    <meta name="description" content="黑暗，帶你看見更多驚喜！無光晚餐最終場限量預售票，現正熱賣中">
     <meta name="keywords" content="無光晚餐、無光餐廳、約會餐廳、黑暗餐廳、黑暗體驗">
 </head>

@@ -233,9 +233,9 @@
                     </h4>
                 </div>
                 <p>
-                    「微醺，介在清醒與酒醉之間」
+                    微醺，介在清醒與酒醉之間
                     <br/>
-                    「唯有進入微醺狀態，才能在微醺大飯店之中，看見故事的全貌」
+                    唯有微醺，才能看見故事的全貌
                     <br/>
                     <br/>
                     <span class="highlight">喝個幾杯，在所難免</span>
@@ -245,13 +245,19 @@
 
         <section class="fullpage" id="space" data-aos="fade">
             <div class="container">
-                <h3>空間</h3>
+                <h3>選擇</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>space</span>
+                        <span>YOUR CHOICES</span>
                     </h4>
                 </div>
                 <p>
+在微醺大飯店中<br/>
+所有事件都由選擇所構成<br/><br/>
+
+時間不可逆，你無法回頭更改<br/>
+請謹慎選擇<br/><br/>
+<!--
                     「在這，有許多扇⾨」
                     <br/>
                     「你現在看到的這扇⾨，可能會通往泳池」
@@ -259,8 +265,8 @@
                     「其他⾨則可能是酒吧、廚房、電話亭」
                     <br/>
                     「當然，也可能會通往我們也不知道的地⽅」
-                    <br/>
-                    <span class="highlight">每扇⾨後，住著各是⼀段與你我有關的故事</span>
+                    <br/-->
+                    <span class="highlight">你的選擇，將決定你看到的故事</span>
                 </p>
             </div>
             <div class="space-img">
@@ -270,13 +276,19 @@
 
         <section class="fullpage" id="character" data-aos="fade">
             <div class="container">
-                <h3>角色</h3>
+                <h3>房客</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>character</span>
+                        <span>OUR GUESTS</span>
                     </h4>
                 </div>
                 <p>
+在這，有許多扇門<br />
+每扇門後，都住著一位房客<br /><br />
+
+有些人離不開、有些人不想離開<br />
+有些人一直在等著一個人帶著她離開<br /><br />
+<!--
                     「他是醒不過來的 lobby boy，待了好一陣子」
                     <br/>
                     「他幾年前來的時候，喝醉了，
@@ -286,8 +298,8 @@
                     「他會對新進房客不停灌酒，
                     <br/>
                     希望能把人留在這世界中陪伴他」
-                    <br/>
-                    <span class="highlight">也有許多離不開這裡的房客，<br/>有機會再一一為你介紹</span>
+                    <br/-->
+                    <span class="highlight">你將一一拜訪久居在此的房客<br />聽著他們訴說一段，與你我有關的故事</span>
                 </p>
             </div>
             <div class="character-img">
@@ -297,13 +309,23 @@
 
         <section class="fullpage" id="food" data-aos="fade">
             <div class="container">
-                <h3>調酒、食物</h3>
+                <h3>調酒</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>cocktail, food</span>
+                        <span>cocktail</span>
                     </h4>
                 </div>
                 <p>
+這裡有著長年流傳的三份酒譜<br />
+它們總能神奇地讓人微醺<br /><br />
+
+第一杯能讓你尋得入口<br />
+第二杯能讓你想起過去<br />
+第三杯能讓你回到當下<br /><br />
+
+你也會嘗試三種房客為你準備的小點<br />
+份量不多，但都是房客們的心意<br /><br />
+<!--
                     「微醺大飯店中，有著長年流傳下來的
                     <br/>
                     酒譜、食譜」
@@ -313,8 +335,8 @@
                     「同時，你也會嘗試三種特色小點，份量不多，
                     <br/>
                     但絕對值得一試」
-                    <br/>
-                    <span class="highlight">請接受我們的款待</span>
+                    <br/-->
+                    <span class="highlight">準備好接受我們的款待了嗎？</span>
                 </p>
             </div>
         </section>
@@ -328,6 +350,18 @@
                     </h4>
                 </div>
                 <p>
+為了保護你不會迷失在微醺之中<br />
+每位訪客的入住時間為九十分鐘<br /><br />
+<span class="highlight">
+「來過的人，都會想起一個人」<br />
+「你，會想起誰呢？」<br /><br />
+</span>
+願你我在這趟旅程之後<br />
+都能因微醺，而更清醒
+
+
+
+                    <!--
                     「為了保護你不會迷失在微醺狀態中，
                     <br/>
                     每個人的入住時間為九十分鐘」
@@ -336,6 +370,7 @@
                     「記住，微醺，是一面鏡子」
                     <br/>
                     「願你在走出這裡之後，能因此更清醒」
+                -->
                 </p>
             </div>
             <div class="check-img">
@@ -349,9 +384,15 @@
                     <p class="highlight">
                         《微醺大飯店》
                         <br/>
-                        誠摯地邀請你，成為我們的房客。
+                        誠摯地邀請你，成為我們的房客
                     </p>
                     <a class="btn-outline smoothScroll" href="#Ticket">我要訂房</a>
+                    <p class="highlight">
+                        <br/>你絕對無法相信，我有多期待見到你<br/><br/>
+
+Yours Truly,<br/>
+微醺管家 Mr. Tipsy
+                    </p>
                 </div>
             </div>
         </section>
@@ -376,30 +417,28 @@
             <div class="ticket">
                 <!--PC Start-->
                 <p class="d-none d-sm-inline-block">
-微醺大飯店第一階段已於 03/24 告一段落<br/><br/>
+你會遇到一群久居在此的房客<br/>
+近距離參與他們的喜怒哀樂<br/><br/>
 <span class="highlight text-center">
-現在，微醺大飯店是否延長，將來自於你的「選擇」<br/><br/>
-
-04/10 前訂房滿 2000 位房客，微醺大飯店將得以延續<br/>
-我們將開啟  04/11 - 05/19 的場次，迎接你的來訪<br/><br/>
+05/12 前場次已額滿<br/>
+05/15至06/16 場次票券，現正預售中<br/><br/>
 </span>
-你的選擇，將決定故事是否繼續<br/>
-期待與你見面，也期待與你一同微醺<br/><br/>
+你的選擇，將決定看到的故事<br/>
+期待，你的來訪<br/><br/>
 
 - 微醺管家 Mr. Tipsy
                 </p>
                 <!--PC End-->
                 <!--Mobile Start-->
                 <p class="d-block d-sm-none">
-微醺大飯店第一階段已於 03/24 告一段落
-<br/><br/>
-                    <span class="highlight text-center">
-現在，微醺大飯店是否延長，來自於你的「選擇」<br/><br/>
-04/10 前訂房滿 2000 位房客，<br/>微醺大飯店將得以延續<br/>
-我們將開啟  04/11 - 05/19 的場次，<br/>迎接你的來訪<br/><br/>
-                    </span>
-你的選擇，將決定故事是否繼續<br/>
-期待與你見面，<br/>也期待與你一同微醺<br/><br/>
+你會遇到一群久居在此的房客<br/>
+近距離參與他們的喜怒哀樂<br/><br/>
+<span class="highlight text-center">
+05/12 前場次已額滿<br/>
+05/15至06/16 場次票券，現正預售中<br/><br/>
+</span>
+你的選擇，將決定看到的故事<br/>
+期待，你的來訪<br/><br/>
 
 - 微醺管家 Mr. Tipsy
                 </p>
@@ -459,19 +498,19 @@
 
             <p class="ticket-area-preinfo">
                 點選票卷，進入購買頁面後可選擇票卷數量<br >
-                本票卷將預購 04/11-05/19 區間之場次
+                本票券將預購 05/15–06/16 區間之場次
             </p>
 
             <div class="ticket-type">
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/994/5966?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1014/6151?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
                     </a>
                 </div>
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/994/5967?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1014/6152?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="有點限制票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="有點限制票">
@@ -482,7 +521,7 @@
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/994/5968?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1014/6153?locale=zh-TW
                     " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
@@ -499,7 +538,7 @@
 
             <p class="ticket-area-note">
 訂房採先預購、後劃位之機制<br/>
-現在預購，將於 04/10 收到劃位電子郵件<br/>
+現在預購，將於05/01 收到劃位電子郵件<br/>
 詳細劃位時間軸，請見本頁最下方
             </p>
 
@@ -614,10 +653,9 @@
                     </div>
                     <p class="info-text highlight-dark">
 
-* 微醺大飯店故事是否延續，由你決定<br>
-* 訂房滿 2000人，將開啟 04/11-05/19 間之場次<br>
-* 若 04/10 前訂房未滿 2000 人，將辦理全額退費<br>
-* 將依實際預售情況加開或縮短可劃位日期
+* 05/12前場次已額滿<br>
+&nbsp;&nbsp;現正預售 05/15—06/16 場次票券<br>
+* 可劃位日期將依實際預售情況加開或縮短
                     </p>
                 </div>
             </div>
@@ -641,51 +679,52 @@
                 <table>
                     <tr>
                         <td>
-                            02/27
-                        </td>
-                        <td>
-                            04/11-05/19 場次開賣，目標 2000 人 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            04/03
-                        </td>
-                        <td>
-                            寄送劃位信 - 前五百名購買者（收到信後，即可劃位）
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
                             04/10
                         </td>
                         <td>
-                            寄送劃位信 - 其餘購買者
+                            開賣05/15–06/16 場次票券，目標2500人
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            05/01
+                        </td>
+                        <td>
+                            寄送劃位信–前五百名購買者（收到信後，即可劃位）
                         </td>
                     </tr>
 
                     <tr>
-                        <td id="td_day">
-                            <span class="d-none d-sm-inline-block">04/11<br>|<br>05/19</span>
-                            <span class="d-sm-none">04/16-05/19</span>
+                        <td>
+                            05/08
                         </td>
                         <td>
-                            你的選擇，將決定到時候故事是否延續
+                            寄送劃位信–05/01到05/07購票者
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!--td id="td_day">
+                            <span class="d-none d-sm-inline-block">04/11<br>|<br>05/19</span>
+                            <span class="d-sm-none">04/16-05/19</span>
+                        </td-->
+                        <td>
+                            05/14
+                        </td>
+                        <td>
+                            寄送劃位信–其餘購買者
                         </td>
                     </tr>
 
                 </table>
                 <!--PC Start-->
                 <p class="schedule-sub-title d-none d-sm-block">
-                    若 04/10 前訂房未滿 2000 人，微醺大飯店將不延長並全額退費<br>
                     為提供最好的沉浸式體驗，上述日期會依實際狀況彈性調整
                 </p>
                 <!--PC End-->
                 <!--Mobile Start-->
                 <div class="text-center d-block d-sm-none">
                     <p class="schedule-sub-title d-inline-block text-left">
-                        若 04/10 前訂房未滿 2000 人，<br/>微醺大飯店將不延長並全額退費<br/>
                         為提供最好的沉浸式體驗，<br/>上述日期會依實際狀況彈性調整
                     </p>
                 </div>
@@ -863,7 +902,7 @@
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=1.0"></script>
+<script src="js/main.js?v=1.1"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
 <script>

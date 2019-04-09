@@ -152,7 +152,7 @@ $(document).ready(function () {
     // var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/916json?token=15171aa66ababafd4464a1c194b66102';
     // var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/949json?token=15171aa66ababafd4464a1c194b66102';
     // var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/981json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/994json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/1014json?token=15171aa66ababafd4464a1c194b66102';
 
     $.getJSON(progress_api_SaleStep4, function (data) {
         
