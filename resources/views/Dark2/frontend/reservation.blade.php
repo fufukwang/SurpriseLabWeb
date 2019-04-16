@@ -91,7 +91,7 @@
             <div class="main-container" id="first-section"style="padding-top: 0px;">
                 <div style="color:#a67c52;">
 <div style="font-weight:bold;font-size:24px;line-height:30px;">無光晚餐秘密貴客登記表</div>
-<div style="font-size: 18px">劃位日期 02/28-04/14</div>
+<div style="font-size: 18px"><br>劃位04/17-05/19座位</div>
                 </div>
                 <p style="font-size:16px;">
                     {{ trans('front.reservation.slug1title') }}

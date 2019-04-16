@@ -936,7 +936,8 @@ header.logo {
       padding-top: calc(100% * 0.11091); } }
   @media (max-width: 320px) {
     #About #food {
-      padding-bottom: 255px; } }
+      padding-bottom: 430px;
+      /*padding-bottom: 255px;*/ } }
   #About #food::before {
     content: '';
     position: absolute;

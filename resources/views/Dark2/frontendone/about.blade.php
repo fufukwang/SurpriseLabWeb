@@ -23,13 +23,13 @@
                     <!-- LOGO z: 1000 -->
                     <div class="main-slogan">
                         <div class="slogan-img show-1 shadow">
-                            <img src="/d2one/images/slogan-bg.png" alt="">
+                            <img src="/d2one/images/slogan-bg.png?v=0.1" alt="">
                             <img src="/d2one/images/m-slogan-shadow.png" alt="">
                         </div>
 
 
                         <div class="slogan-img show-1">
-                            <img src="/d2one/images/slogan.png" alt="">
+                            <img src="/d2one/images/slogan.png?v=0.1" alt="">
                             <img src="/d2one/images/m-slogan.png?v=0.1" alt="">
                         </div>
 
@@ -120,9 +120,10 @@
                                     Ticket Status
                                 </h3>
                                 <p>
-                                    無光晚餐將在六月底正式結束，不再重啟<br>
-                                    2019/05/24-06/30 <u>最終場座位</u>現正預售中<br>
-                                    這次，別再錯過
+無光晚餐將在六月底正式結束，不再重啟<br>
+最終場座位現正預售中<br>
+最後一次，別再錯過
+
                                 </p>
                                 <div class="progress-bar-box">
                                     <div class="bar-box">
@@ -161,10 +162,10 @@
                         </div>
                         <div id="ticket" class="season-two-about ticket-type" style="background: none;">
                             <h1 class="title">
-                                選擇票券
+                                購買票卷 
                             </h1>
                             <h3 class="sub-title">
-                                Ticket Type
+                                Buy Ticket
                             </h3>
                             <p>
                                 點選票券，進入購買頁面<br>
@@ -240,7 +241,7 @@
                             </h3>
                             <div class="time-slot-box">
                                 <p class="golden-font">
-                                    初夏座位 04/17-06/02<br>開放場次如下
+                                    最終場座位 05/24-06/30<br>開放場次如下
                                 </p>
                                 <table>
                                     <tr>
