@@ -103,12 +103,12 @@
                                 Pre-Sale Schedule
                             </h3>
                             <p class="m-text-align-left">
-                                無光晚餐採取先預購、後劃位的方式<span class="visible-xs">。</span><b>訂位</b><br class="hidden-xs">依照購買票券、購買日期<b>順序</b>，分三梯次寄送劃位信
+                                無光晚餐採取先預購、後劃位的方式<span class="visible-xs">。</span><b>訂位</b><br class="hidden-xs">依照購買票券、購買日期<b>順序</b>寄送劃位信
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.7" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.7" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.8" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.8" alt="">
                             </div>
                         </div>
                         <div class="grey-box">
@@ -181,7 +181,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <a href="https://surpriselab.backme.tw/checkout/1011/6101?locale=zh-TW" id="a_6101">
-                                            <img src="/d2one/images/ticket-1.png?v=2" alt="">
+                                            <img src="/d2one/images/ticket-1.png?v=3" alt="">
                                         </a>
                                         <p>
                                             熱售中
@@ -190,7 +190,7 @@
                                     <div class="col-md-4">
                                         
                                         <a href="https://surpriselab.backme.tw/checkout/1011/6102?locale=zh-TW" id="a_6102">
-                                            <img src="/d2one/images/ticket-2.png?v=2" alt="">
+                                            <img src="/d2one/images/ticket-2.png?v=3" alt="">
                                         </a>
                                         <p>
                                             限量<span id="limit_6102"></span>組｜剩餘<span id="count_6102"></span>組    
@@ -198,7 +198,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <a href="https://surpriselab.backme.tw/checkout/1011/6103?locale=zh-TW" id="a_6103">
-                                            <img src="/d2one/images/ticket-3.png?v=2" alt="">
+                                            <img src="/d2one/images/ticket-3.png?v=3" alt="">
                                         </a>
                                         <p>
                                             限量<span id="limit_6103"></span>組｜剩餘<span id="count_6103"></span>組    
@@ -218,12 +218,12 @@
                                 有特定日期需要慶祝、紀念、見面或是海外旅客，優先劃位票是最佳選擇
                             </p>
                             <p class="golden-font m-text-align-left">
-                                優先劃位票享第一梯次最優先劃位權<br class="hidden-xs">於05/08搶先選擇日期與時段劃位
+                                優先劃位票享第一梯次最優先劃位權<br class="hidden-xs">於05/01搶先選擇日期與時段劃位
                             </p>
                             <div class="special-ticket">
                                 <div>
                                     <a href="https://surpriselab.backme.tw/checkout/1011/6104?locale=zh-TW" id="a_6104">
-                                        <img src="/d2one/images/ticket-4.png?v=2" alt="">
+                                        <img src="/d2one/images/ticket-4.png?v=3" alt="">
                                     </a>
                                     <p>
                                         限量<span id="limit_6104"></span>組｜剩餘<span id="count_6104"></span>組    
