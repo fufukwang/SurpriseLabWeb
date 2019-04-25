@@ -107,8 +107,8 @@
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.8" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.8" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.9" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.9" alt="">
                             </div>
                         </div>
                         <div class="grey-box">
@@ -179,23 +179,25 @@
                                     <div class="col-md-12">
                                         <div class="sec-title">一般票<span>Standard Ticket</span></div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <!--div class="col-md-4">
                                         <a href="https://surpriselab.backme.tw/checkout/1011/6101?locale=zh-TW" id="a_6101">
                                             <img src="/d2one/images/ticket-1.png?v=3" alt="">
                                         </a>
                                         <p>
                                             熱售中
                                         </p>
-                                    </div>
+                                    </div-->
+                                    <div class="col-md-1"></div>
                                     <div class="col-md-4">
                                         
                                         <a href="https://surpriselab.backme.tw/checkout/1011/6102?locale=zh-TW" id="a_6102">
                                             <img src="/d2one/images/ticket-2.png?v=3" alt="">
                                         </a>
-                                        <p>
-                                            限量<span id="limit_6102"></span>組｜剩餘<span id="count_6102"></span>組    
+                                        <p>熱售中
+                                            <!--限量<span id="limit_6102"></span>組｜剩餘<span id="count_6102"></span>組    -->
                                         </p>
                                     </div>
+                                    <div class="col-md-2"></div>
                                     <div class="col-md-4">
                                         <a href="https://surpriselab.backme.tw/checkout/1011/6103?locale=zh-TW" id="a_6103">
                                             <img src="/d2one/images/ticket-3.png?v=3" alt="">
@@ -204,6 +206,7 @@
                                             限量<span id="limit_6103"></span>組｜剩餘<span id="count_6103"></span>組    
                                         </p>
                                     </div>
+                                    <div class="col-md-1"></div>
                                 </div>
                             </div>
                             
@@ -241,7 +244,7 @@
                             </h3>
                             <div class="time-slot-box">
                                 <p class="golden-font">
-                                    最終場座位 05/24-06/30<br>開放場次如下
+                                    最終場座位 05/15-06/30<br>開放場次如下
                                 </p>
                                 <table>
                                     <tr>
