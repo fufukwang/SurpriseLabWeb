@@ -428,8 +428,11 @@ class BackController extends Controller
         $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
 
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
-        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+        if($request->has('srday')  && $request->srday!=1){
+            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
+        }
+        
 
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
@@ -463,8 +466,10 @@ class BackController extends Controller
         $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
         $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
-        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+        if($request->has('srday')  && $request->srday!=1){
+            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+        }
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
@@ -498,9 +503,10 @@ class BackController extends Controller
         $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
         $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
-        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
-
+        if($request->has('srday')  && $request->srday!=1){
+            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+        }
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){

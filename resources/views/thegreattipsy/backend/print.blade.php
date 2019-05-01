@@ -38,6 +38,11 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-sm-1">
+                                                <div class="col-sm-12">
+<label><input type="checkbox" name="srday" value="1"@if($request->srday==1) checked @endif>不搜尋日期</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-1">
                                                 <select name="pay_status" class="form-control">
                                                     <option value="">狀態</option>
                                                     <option value="已預約"@if(isset($request->pay_status) && $request->pay_status=='已預約') selected @endif>已預約</option>
