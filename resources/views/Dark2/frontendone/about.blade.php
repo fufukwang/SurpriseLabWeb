@@ -187,7 +187,7 @@
                                             熱售中
                                         </p>
                                     </div-->
-                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2"></div>
                                     <div class="col-md-4">
                                         
                                         <a href="https://surpriselab.backme.tw/checkout/1011/6102?locale=zh-TW" id="a_6102">
@@ -197,7 +197,6 @@
                                             <!--限量<span id="limit_6102"></span>組｜剩餘<span id="count_6102"></span>組    -->
                                         </p>
                                     </div>
-                                    <div class="col-md-2"></div>
                                     <div class="col-md-4">
                                         <a href="https://surpriselab.backme.tw/checkout/1011/6103?locale=zh-TW" id="a_6103">
                                             <img src="/d2one/images/ticket-3.png?v=3" alt="">
@@ -206,7 +205,7 @@
                                             限量<span id="limit_6103"></span>組｜剩餘<span id="count_6103"></span>組    
                                         </p>
                                     </div>
-                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2"></div>
                                 </div>
                             </div>
                             
@@ -257,23 +256,23 @@
                                     </tr>
                                     <tr>
                                         <td>週三</td>
-                                        <td>17:30｜18:00｜18:30｜19:30｜20:00｜20:30</td>
+                                        <td>17:30｜18:00｜19:30｜20:00</td>
                                     </tr>
                                     <tr>
                                         <td>週四</td>
-                                        <td>17:30｜18:00｜18:30｜19:30｜20:00｜20:30</td>
+                                        <td>17:30｜18:00｜19:30｜20:00</td>
                                     </tr>
                                     <tr>
                                         <td>週五</td>
-                                        <td>17:30｜18:00｜18:30｜19:30｜20:00｜20:30</td>
+                                        <td>17:30｜18:00｜19:30｜20:00</td>
                                     </tr>
                                     <tr>
                                         <td>週六</td>
-                                        <td>12:00｜12:15｜12:30<br >17:30｜18:00｜18:30｜19:30｜20:00｜20:30</td>
+                                        <td>12:00｜12:30<br >17:30｜18:00｜19:30｜20:00</td>
                                     </tr>
                                     <tr>
                                         <td>週日</td>
-                                        <td>12:00｜12:15｜12:30<br >17:30｜18:00｜18:30｜19:30｜20:00｜20:30</td>
+                                        <td>12:00｜12:30<br >17:30｜18:00｜19:30｜20:00</td>
                                     </tr>
                                 </table>
                                 <span>
