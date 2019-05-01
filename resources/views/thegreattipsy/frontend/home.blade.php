@@ -539,7 +539,7 @@ Yours Truly,<br/>
 
             <p class="ticket-area-note">
 訂房採先預購、後劃位之機制<br/>
-現在預購，將於05/01 收到劃位電子郵件<br/>
+現在預購，將於05/08 收到劃位電子郵件<br/>
 詳細劃位時間軸，請見本頁最下方
             </p>
 
@@ -570,10 +570,10 @@ Yours Truly,<br/>
                     </p>
                     <!--p>
                         <span class="ticket-blue">週一：19:00｜20:30｜22:00</span>
-                    </p-->
+                    </p>
                     <p>
                         <span class="ticket-blue">週二：19:00｜20:30｜22:00</span>
-                    </p>
+                    </p-->
                     <p>
                         <span class="ticket-blue">週三：19:00｜20:30｜22:00</span>
                     </p>

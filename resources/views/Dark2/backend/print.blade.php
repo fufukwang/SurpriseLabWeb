@@ -42,6 +42,10 @@
                                                         <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
                                                     </div--><!-- input-group -->
                                                 </div>
+                                                <div class="col-sm-12">不搜尋日期
+<label><input type="radio" name="srday" value="1"@if($request->srday==1) checked @endif>是</label>
+<label><input type="radio" name="srday" value="0"@if($request->srday!=1) checked @endif>否</label>
+                                                </div>
                                             </div>
                                             <div class="form-group col-sm-1">
                                                 <select name="pay_status" class="form-control">
