@@ -28,10 +28,13 @@
 
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
-                                                    <div class="input-group">
+<input name="dayrange" type="text" class="form-control" placeholder="yyyy-mm-dd">
+<input type="hidden" name="daystart" value="{{ $request->daystart or Carbon\Carbon::today()->format('Y-m-d H:i:s')}}">
+<input type="hidden" name="dayend" value="{{ $request->dayend or Carbon\Carbon::today()->format('Y-m-d H:i:s')}}">
+                                                    <!--div class="input-group">
                                                         <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="day" id="datepicker-autoclose" value="{{ $request->day or ''}}">
                                                         <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
-                                                    </div><!-- input-group -->
+                                                    </div--><!-- input-group -->
                                                 </div>
                                             </div>
                                             <div class="form-group col-sm-1">
@@ -203,6 +206,9 @@
         <script src="/backstage/plugins/datatables/responsive.bootstrap.min.js"></script>
         <script src="/backstage/plugins/datatables/dataTables.scroller.min.js"></script>
         <script src="/backstage/plugins/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
         <!--
 <link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
 <script src="/backstage/plugins/switchery/switchery.min.js"></script>
@@ -218,6 +224,20 @@
 
 
 $(function(){
+    $('input[name="dayrange"]').daterangepicker({
+        locale: {
+          format: 'YYYY-MM-DD'
+        },
+        startDate: '{{ $request->daystart or Carbon\Carbon::today()->format('Y-m-d H:i:s')}}',
+        endDate: '{{ $request->dayend or Carbon\Carbon::today()->format('Y-m-d H:i:s')}}',
+        minDate:moment().add(-1, 'y').format('YYYY-MM-DD'),
+        maxDate:moment().add(6, 'M').format('YYYY-MM-DD'),
+    }, 
+    function(start, end, label) {
+        $('input[name=daystart]').val(start.format('YYYY-MM-DD') );
+        $('input[name=dayend]').val(end.format('YYYY-MM-DD') );
+        //alert("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
     $('.btn-danger').bind('click',function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此訂單")) {

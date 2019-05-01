@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>@if(isset($request->day)){{ str_replace('-','/',substr($request->day,5)) }} @endif 『{{ $request->dayparts or '' }}』外場表單</title>
+	<title>@if(isset($request->dayrange)){{ $request->dayrange }} @endif 『{{ $request->dayparts or '' }}』外場表單</title>
 	<meta charset="utf-8">
 	<style type="text/css">
 		body{
@@ -36,7 +36,7 @@
 </head>
 <body>
 	<h1>
-		<span class="date">@if(isset($request->day)){{ str_replace('-','/',substr($request->day,5)) }} @endif</span> 『{{ $request->dayparts or '' }}』外場表單
+		<span class="date">@if(isset($request->dayrange)){{ $request->dayrange }} @endif</span> 『{{ $request->dayparts or '' }}』外場表單
 	</h1>
 	<table>
 		<tr>

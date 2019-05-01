@@ -426,7 +426,12 @@ class BackController extends Controller
     public function Print(Request $request){
         $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
         $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
-        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+
+        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+
+
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
@@ -445,6 +450,7 @@ class BackController extends Controller
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
             if(count($ord)>0){
+                if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
         } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
@@ -456,7 +462,10 @@ class BackController extends Controller
     public function Table(Request $request){
         $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
         $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
-        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
@@ -475,6 +484,7 @@ class BackController extends Controller
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
             if(count($ord)>0){
+                if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
         } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
@@ -487,7 +497,11 @@ class BackController extends Controller
     public function XlsDataOuput(Request $request){
         $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
         $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
-        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+
+
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
@@ -506,6 +520,7 @@ class BackController extends Controller
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
             if(count($ord)>0){
+                if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
         } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
@@ -554,8 +569,8 @@ class BackController extends Controller
         ];
 
 
-        config(['mail.username' => env('MAIL_TGT_USER')]);
-        config(['mail.password' => env('MAIL_TGT_PASS')]);
+        config(['mail.username' => env('MAIL_DARK2_USER')]);
+        config(['mail.password' => env('MAIL_DARK2_PASS')]);
         Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
             $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
             $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');

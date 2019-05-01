@@ -251,8 +251,8 @@ class FrontController extends Controller
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                config(['mail.username' => env('MAIL_TGT_USER')]);
-                config(['mail.password' => env('MAIL_TGT_PASS')]);
+                config(['mail.username' => env('MAIL_DARK2_USER')]);
+                config(['mail.password' => env('MAIL_DARK2_PASS')]);
                 Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
                     $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');

@@ -456,7 +456,19 @@ class BackController extends Controller
     public function Print(Request $request){
         $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
         $order = $order->select('rangstart','rangend','name','tel','meat','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','d2order.created_at AS created_at','d2order.pay_status','email','d2order.sn','d2order.id','dayparts','day','email','pay_type','pople','pro_id');
-        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        
+
+        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+
+
+        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        
+
+
+
+
+
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
@@ -476,6 +488,7 @@ class BackController extends Controller
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
             if(count($ord)>0){
+                if($ord[0] == 'rangstart') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
         } else { $order = $order->orderBy('d2order.updated_at','desc'); }
@@ -487,7 +500,10 @@ class BackController extends Controller
     public function Table(Request $request){
         $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
         $order = $order->select('rangstart','rangend','name','tel','meat','notes','d2order.manage','d2pro.money AS PM','d2order.money AS OM','d2order.created_at AS created_at','d2order.pay_status','email','d2order.sn','d2order.id','dayparts','day','email','pay_type','pople');
-        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
@@ -506,6 +522,7 @@ class BackController extends Controller
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
             if(count($ord)>0){
+                if($ord[0] == 'rangstart') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
         } else { $order = $order->orderBy('d2order.updated_at','desc'); }
@@ -518,7 +535,11 @@ class BackController extends Controller
     public function XlsDataOuput(Request $request){
         $order = d2order::leftJoin('d2pro', 'd2pro.id', '=', 'd2order.pro_id');
         $order = $order->select('day','dayparts','rangstart','rangend','name','email','tel');
-        if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+        if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+        if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
+
+        
         if($request->has('dayparts') && $request->dayparts!='') $order->where('dayparts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(d2order.pay_status='已付款' OR (d2order.pay_type='現場付款' AND d2order.pay_status<>'取消訂位'))");
@@ -534,6 +555,7 @@ class BackController extends Controller
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
             if(count($ord)>0){
+                if($ord[0] == 'rangstart') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
         } else { $order = $order->orderBy('d2order.updated_at','desc'); }
