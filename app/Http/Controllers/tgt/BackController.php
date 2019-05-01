@@ -575,8 +575,8 @@ class BackController extends Controller
         ];
 
 
-        config(['mail.username' => env('MAIL_DARK2_USER')]);
-        config(['mail.password' => env('MAIL_DARK2_PASS')]);
+        config(['mail.username' => env('MAIL_TGT_USER')]);
+        config(['mail.password' => env('MAIL_TGT_PASS')]);
         Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
             $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
             $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
