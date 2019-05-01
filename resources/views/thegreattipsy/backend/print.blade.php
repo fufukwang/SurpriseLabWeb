@@ -38,8 +38,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-sm-1">
-                                                <div class="col-sm-12">
-<label><input type="checkbox" name="srday" value="1"@if($request->srday==1) checked @endif>不搜尋日期</label>
+                                                <div class="col-sm-12">不搜尋日期
+<label><input type="radio" name="srday" value="1"@if($request->srday==1) checked @endif>是</label>
+<label><input type="radio" name="srday" value="0"@if($request->srday!=1) checked @endif>否</label>
                                                 </div>
                                             </div>
                                             <div class="form-group col-sm-1">
