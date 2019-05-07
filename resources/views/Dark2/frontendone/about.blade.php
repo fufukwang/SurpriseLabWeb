@@ -142,7 +142,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <h1>
-                                                // 已售出張數 //
+                                                // 剩餘張數 //
                                             </h1>
                                             <p>
                                                 <span class="tickets">1780</span>張
@@ -227,9 +227,9 @@
                                     <a href="https://surpriselab.backme.tw/checkout/1011/6104?locale=zh-TW" id="a_6104">
                                         <img src="/d2one/images/ticket-4.png?v=3" alt="">
                                     </a>
-                                    <p>
+                                    <!--p>
                                         限量<span id="limit_6104"></span>組｜剩餘<span id="count_6104"></span>組    
-                                    </p>
+                                    </p-->
                                 </div>
                             </div>
                         
@@ -371,6 +371,6 @@
         </div>
 
     </div>
-    <script src="/d2one/js/backme.js?v=0.6"></script>
+    <script src="/d2one/js/backme.js?v=0.7"></script>
 </body>
 </html>

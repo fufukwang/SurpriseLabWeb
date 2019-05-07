@@ -421,7 +421,7 @@ Yours Truly,<br/>
 近距離參與他們的喜怒哀樂<br/><br/>
 <span class="highlight text-center">
 05/12 前場次已額滿<br/>
-05/15至06/16 場次票券，現正預售中<br/><br/>
+05/15至06/13 場次票券，現正預售中<br/><br/>
 </span>
 你的選擇，將決定看到的故事<br/>
 期待，你的來訪<br/><br/>
@@ -435,7 +435,7 @@ Yours Truly,<br/>
 近距離參與他們的喜怒哀樂<br/><br/>
 <span class="highlight text-center">
 05/12 前場次已額滿<br/>
-05/15至06/16 場次票券，現正預售中<br/><br/>
+05/15至06/13 場次票券，現正預售中<br/><br/>
 </span>
 你的選擇，將決定看到的故事<br/>
 期待，你的來訪<br/><br/>
@@ -499,7 +499,7 @@ Yours Truly,<br/>
 
             <p class="ticket-area-preinfo">
                 點選票卷，進入購買頁面後可選擇票卷數量<br >
-                本票券將預購 05/15–06/16 區間之場次
+                本票券將預購 05/15–06/13 區間之場次
             </p>
 
             <div class="ticket-type">
@@ -655,7 +655,7 @@ Yours Truly,<br/>
                     <p class="info-text highlight-dark">
 
 * 05/12前場次已額滿<br>
-&nbsp;&nbsp;現正預售 05/15—06/16 場次票券<br>
+&nbsp;&nbsp;現正預售 05/15—06/13 場次票券<br>
 * 可劃位日期將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -683,7 +683,7 @@ Yours Truly,<br/>
                             04/10
                         </td>
                         <td>
-                            開賣05/15–06/16 場次票券，目標2500人
+                            開賣05/15–06/13 場次票券，目標2500人
                         </td>
                     </tr>
                     <tr>
