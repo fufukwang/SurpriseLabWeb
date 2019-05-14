@@ -539,7 +539,7 @@ Yours Truly,<br/>
 
             <p class="ticket-area-note">
 訂房採先預購、後劃位之機制<br/>
-現在預購，將於05/08 收到劃位電子郵件<br/>
+<!--現在預購，將於05/08 收到劃位電子郵件<br/-->
 詳細劃位時間軸，請見本頁最下方
             </p>
 
@@ -713,7 +713,15 @@ Yours Truly,<br/>
                             05/14
                         </td>
                         <td>
-                            寄送劃位信–其餘購買者
+                            寄送劃位信－05/08-05/13購買者
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            05/21
+                        </td>
+                        <td>
+                            寄送劃位信－其餘購買者
                         </td>
                     </tr>
 
@@ -903,7 +911,7 @@ Yours Truly,<br/>
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=1.2"></script>
+<script src="js/main.js?v=1.3"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
 <script>

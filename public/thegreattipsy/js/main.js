@@ -177,7 +177,7 @@ $(document).ready(function () {
         var SaleStep3_amount = data3['pledged_count'];
         var SaleStep4_amount = data4['pledged_count'];
         
-        var goal = 10000; // 目標張數
+        var goal = 10000 + 400; // 目標張數
         var amount = data["pledged_count"] + SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount; //已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數

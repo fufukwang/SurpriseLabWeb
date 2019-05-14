@@ -2,7 +2,7 @@ $(function(){
     $.get('https://surpriselab.backme.tw/api/projects/1011.json?token=15171aa66ababafd4464a1c194b66102',function(data){
         var item  = data.rewards;
         var sum   = 0;
-        var pcent = 2200
+        var pcent = 2200 - 350;
         for(var i=0;item.length>i;i++){
             if(parseInt(item[i].quantity_limit) > 0){
                 var quantity_limit = parseInt(item[i].quantity_limit);
@@ -48,7 +48,7 @@ $(function(){
         $('.percent').text( percent );
         if(percent>100) percent = 100;
         $('.bar').css("width",percent+"%");
-        $('.tickets').text( 2200 - sum );
+        $('.tickets').text( pcent - sum );
         var now  = new Date();
         var day  = new Date(data.end_date);
         var days = Math.ceil( (day.getTime()-now.getTime())/(24*60*60*1000) );
