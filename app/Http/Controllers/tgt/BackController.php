@@ -81,7 +81,7 @@ class BackController extends Controller
         return view('thegreattipsy.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $cellData = backme::select('name','email','tel')->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE o_id=0 AND tgtcoupon.b_id=tgtbackme.id)>0")->get()->toArray();
+        $cellData = backme::select('name','email','tel','num','detail')->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE o_id=0 AND tgtcoupon.b_id=tgtbackme.id)>0")->get()->toArray();
         Excel::create('匯出未兌換名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $sheet->rows($cellData);
@@ -150,8 +150,14 @@ class BackController extends Controller
      */
     public function Pros(Request $request){
         if($request->isMethod('post') && $request->has('id')){
-            foreach($request->id as $row){
-                pro::where('id',$row)->update(['open'=>1]);
+            $act = $request->act;
+            if($act == 'muUpdate'){
+                foreach($request->id as $row){
+                    pro::where('id',$row)->update(['open'=>$request->muopVal]);
+                }    
+            } elseif($act == 'oneUpdate'){
+                pro::where('id',$request->id)->update(['open'=>$request->muopVal]);
+                return Response::json(['success'=> true], 200);
             }
         }
         $pros = pro::where('id','>',0);
@@ -181,7 +187,7 @@ class BackController extends Controller
     public function ProUpdate(Request $request,$id){
 
         $data = [
-            'day_parts'   => $request->dayparts,
+            //'day_parts'   => $request->dayparts,
             'sites'      => $request->sites,
             'money'      => $request->money,
             'open'       => $request->open,
@@ -189,6 +195,7 @@ class BackController extends Controller
         ];
         if(is_numeric($id) && $id>0){
             $data['day']       = $request->day;
+            $data['day_parts']  = $request->dayparts;
             $data['rang_start'] = $request->rangstart;
             $data['rang_end']   = $request->rangend;
             pro::where('id',$id)->update($data);
@@ -196,6 +203,7 @@ class BackController extends Controller
             // 日期範圍新增多筆
             $arr = [];
             for($i=0 ; $i<count($request->rangstart) ; $i++){
+                $data['day_parts'] = $request->dayparts[$i];
                 $data['rang_start'] = $request->rangstart[$i];
                 $data['rang_end']   = $request->rangend[$i];
                 if($request->daystart == ''){

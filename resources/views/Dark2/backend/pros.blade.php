@@ -62,6 +62,8 @@
                             <div class="table-responsive" data-pattern="priority-columns">
                                 <div class="sticky-table-header fixed-solution" style="width: auto;">
                                     <form method="post" id="openForm">
+                                        <input type="hidden" name="muopVal" id="muopVal">
+                                        <input type="hidden" name="act" value="muUpdate">
                                         {!! csrf_field() !!}
                                         <table id="tech-companies-1-clone" class="table table-striped table-hover">
                                             <thead>
@@ -79,7 +81,7 @@
                                                 @forelse ($pros as $row)
                                                 <tr id="tr_{{ $row->id }}">
                                                     <td><input type="checkbox" name="id[]" value="{{ $row->id }}"></td>
-                                                    <td>@if($row->open>0) 開放中 @else 關閉中 @endif</td>
+                                                    <td><a href="javascript:;" class="oclink" data-id="{{ $row->id }}">@if($row->open>0) 開放中 @else 關閉中 @endif</a></td>
                                                     <td>{{ $row->day }}</td>
                                                     <td>{{ $row->dayparts }}<br />{{ substr($row->rangstart,0,5) }} ~ {{ substr($row->rangend,0,5) }}</td>
                                                     <td>{{ App\model\d2pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(d2order) WHERE d2order.pro_id=d2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
@@ -98,7 +100,10 @@
                                                 @endforelse
                                             </tbody>
                                         </table>
-                                        <div><button class="btn btn-primary">開放前台定位</button></div>
+                                        <div>
+                                            <button class="btn btn-primary ocBtn" data-oc="1" type="button">開放前台訂位</button>
+                                            <button class="btn btn-primary ocBtn" data-oc="0" type="button">關閉前台訂位</button>
+                                        </div>
                                     </form>
 
                                     <div align="center">{{ $pros->appends(Request::capture()->except('page'))->links() }}</div>
@@ -187,7 +192,9 @@
 
     <script src="/backstage/pages/datatables.editable.init.js"></script>
     <script src="/backstage/plugins/sweetalert/dist/sweetalert.min.js"></script>
-
+    <!-- Notification js -->
+        <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
+        <script src="/backstage/plugins/notifications/notify-metro.js"></script>
 
     <script src="/backstage/js/jquery.core.js"></script>
     <script src="/backstage/js/jquery.app.js"></script>
@@ -219,6 +226,31 @@
                 autoclose: true,
                 todayHighlight: true
             });
+
+
+$('.ocBtn').bind('click',function(){
+    $('#muopVal').val($(this).data('oc'));
+    $('#openForm').submit();
+});
+$('.oclink').bind('click',function(){
+    var id = $(this).data('id');
+    var text = $(this).text().trim();
+    var obj = $(this);
+    var val = 0;
+    if(text == "關閉中") val = 1;
+    $.post('/dark2/pros',{
+        "act" : "oneUpdate",
+        "id"  : id,
+        "muopVal" : val
+    },function(data){
+        if(data.success){
+            $.Notification.notify('success','bottom left','已更新', '狀態已更新');
+            obj.text(val ? "開放中" : "關閉中")
+        }
+    },'json');
+});
+
+
 
         });
         @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif

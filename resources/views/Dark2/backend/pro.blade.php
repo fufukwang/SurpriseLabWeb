@@ -58,9 +58,10 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">時段</label>
-                                                <div class="col-sm-8">
+                                            
+@if(isset($pro->id) && $pro->id>0)
+                                            <label class="control-label col-sm-4">時段 / 區間</label>
+                                                <div class="col-sm-2">
                                                     <select class="form-control" name="dayparts">
                                                         <option value="午餐" data-rangstart='11:00' data-rangend='13:00'@if(isset($pro->dayparts) && $pro->dayparts=='午餐') selected @endif>午餐</option>
                                                         <option value="晚餐" data-rangstart='14:00' data-rangend='16:00'@if(isset($pro->dayparts) && $pro->dayparts=='晚餐') selected @endif>晚餐</option>
@@ -68,10 +69,7 @@
                                                         <!--option value="特別活動" data-rangstart='18:00' data-rangend='20:00'@if(isset($pro->dayparts) && $pro->dayparts=='特別活動') selected @endif>特別活動</option-->
                                                     </select>
                                                 </div>
-                                            </div>
-@if(isset($pro->id) && $pro->id>0)
-                                            <label class="control-label col-sm-4">區間</label>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="input-group m-b-15">
                                                     <div class="bootstrap-timepicker">
                                                         <input name="rangstart" type="text" value="{{ $pro->rangstart or '' }}" class="form-control timepicker">
@@ -79,7 +77,7 @@
                                                     <span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span>
                                                 </div><!-- input-group -->
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-3">
                                                 <div class="input-group m-b-15">
                                                     <div class="bootstrap-timepicker">
                                                         <input name="rangend" type="text" value="{{ $pro->rangend or '' }}" class="form-control timepicker">
@@ -250,7 +248,7 @@ $('.timepicker').timepicker({ showMeridian : false});
         });
 
 function addHtml(rand){
-    return '<label class="control-label col-sm-4 ro-'+rand+'"">區間</label><div class="col-sm-3 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangstart[]" type="text" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><div class="col-sm-3 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangend[]" type="text" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><label class="control-label col-sm-2 ro-'+rand+'"><button type="button" class="btn btn-info btn-xs" data-id="'+rand+'"><i class="fa fa-plus"></i></button></label>'
+    return '<label class="control-label col-sm-4 ro-'+rand+'"">時段 / 區間</label><div class="col-sm-2 ro-'+rand+'"><select class="form-control" name="dayparts[]"><option value="午餐">午餐</option><option value="晚餐">晚餐</option><option value="下午茶">下午茶</option></select></div><div class="col-sm-2 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangstart[]" type="text" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><div class="col-sm-2 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangend[]" type="text" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><label class="control-label col-sm-2 ro-'+rand+'"><button type="button" class="btn btn-info btn-xs" data-id="'+rand+'"><i class="fa fa-plus"></i></button></label>'
 }
 function getRand(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
