@@ -134,7 +134,11 @@
                                 </div>
                                 <div class="info-box">
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-12" style="font-size:16px;line-height:32px;">
+                                            自 2018 年 7 月 4 日至 2019 年 6 月 30 日，在 240 個營業天內，<br />
+                                            共有 11,080 人次到訪無光晚餐，完成這趟黑暗旅程
+                                        </div>
+                                        <!--div class="col-md-4">
                                             <h1>
                                                 // 啟動進度 //
                                             </h1>
@@ -157,7 +161,7 @@
                                             <p>
                                                 <span class="days">0</span>天
                                             </p>
-                                        </div>
+                                        </div-->
                                     </div>
                                 </div>
                             </div>    
