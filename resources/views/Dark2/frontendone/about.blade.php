@@ -120,10 +120,12 @@
                                     Ticket Status
                                 </h3>
                                 <p>
-無光晚餐將在六月底正式結束，不再重啟<br>
+<!--無光晚餐將在六月底正式結束，不再重啟<br>
 最終場座位現正預售中<br>
-最後一次，別再錯過
-
+最後一次，別再錯過-->
+經過 36 天的預售<br>
+無光晚餐最終場 2200 張票卷已全數售罄<br>
+感謝每一位曾光臨黑暗的你
                                 </p>
                                 <div class="progress-bar-box">
                                     <div class="bar-box">
@@ -137,7 +139,7 @@
                                                 // 啟動進度 //
                                             </h1>
                                             <p>
-                                                <span class="percent">87</span>%
+                                                <span class="percent">101</span>%
                                             </p>
                                         </div>
                                         <div class="col-md-4">
@@ -145,7 +147,7 @@
                                                 // 剩餘張數 //
                                             </h1>
                                             <p>
-                                                <span class="tickets">1780</span>張
+                                                <span class="tickets">0</span>張
                                             </p>
                                         </div>
                                         <div class="col-md-4">
@@ -153,14 +155,14 @@
                                                 // 預售倒數 //
                                             </h1>
                                             <p>
-                                                <span class="days">50</span>天
+                                                <span class="days">0</span>天
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>    
                         </div>
-                        <div id="ticket" class="season-two-about ticket-type" style="background: none;">
+                        <!--div id="ticket" class="season-two-about ticket-type" style="background: none;">
                             <h1 class="title">
                                 購買票卷 
                             </h1>
@@ -179,14 +181,6 @@
                                     <div class="col-md-12">
                                         <div class="sec-title">一般票<span>Standard Ticket</span></div>
                                     </div>
-                                    <!--div class="col-md-4">
-                                        <a href="https://surpriselab.backme.tw/checkout/1011/6101?locale=zh-TW" id="a_6101">
-                                            <img src="/d2one/images/ticket-1.png?v=3" alt="">
-                                        </a>
-                                        <p>
-                                            熱售中
-                                        </p>
-                                    </div-->
                                     <div class="col-md-2"></div>
                                     <div class="col-md-4">
                                         
@@ -194,7 +188,6 @@
                                             <img src="/d2one/images/ticket-2.png?v=3" alt="">
                                         </a>
                                         <p>熱售中
-                                            <!--限量<span id="limit_6102"></span>組｜剩餘<span id="count_6102"></span>組    -->
                                         </p>
                                     </div>
                                     <div class="col-md-4">
@@ -227,9 +220,6 @@
                                     <a href="https://surpriselab.backme.tw/checkout/1011/6104?locale=zh-TW" id="a_6104">
                                         <img src="/d2one/images/ticket-4.png?v=3" alt="">
                                     </a>
-                                    <!--p>
-                                        限量<span id="limit_6104"></span>組｜剩餘<span id="count_6104"></span>組    
-                                    </p-->
                                 </div>
                             </div>
                         
@@ -280,7 +270,7 @@
                                 </span>
                             </div>
                            
-                        </div>
+                        </div-->
                         
                         <div class="black-box" style="background:none">
                             <h1 class="title">
@@ -371,6 +361,6 @@
         </div>
 
     </div>
-    <script src="/d2one/js/backme.js?v=0.8"></script>
+    <script src="/d2one/js/backme.js?v=0.9"></script>
 </body>
 </html>

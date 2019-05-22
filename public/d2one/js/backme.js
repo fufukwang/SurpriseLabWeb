@@ -48,7 +48,9 @@ $(function(){
         $('.percent').text( percent );
         if(percent>100) percent = 100;
         $('.bar').css("width",percent+"%");
-        $('.tickets').text( pcent - sum );
+        var only = pcent - sum;
+        if(only<0) only = 0;
+        $('.tickets').text( only );
         var now  = new Date();
         var day  = new Date(data.end_date);
         var days = Math.ceil( (day.getTime()-now.getTime())/(24*60*60*1000) );

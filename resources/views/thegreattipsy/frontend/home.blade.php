@@ -419,10 +419,7 @@ Yours Truly,<br/>
                 <p class="d-none d-sm-inline-block">
 你會遇到一群久居在此的房客<br/>
 近距離參與他們的喜怒哀樂<br/><br/>
-<span class="highlight text-center">
-05/12 前場次已額滿<br/>
-05/15至06/13 場次票券，現正預售中<br/><br/>
-</span>
+<span class="highlight text-center">06/19至07/14場次票券，現正預售中<br/><br/></span>
 你的選擇，將決定看到的故事<br/>
 期待，你的來訪<br/><br/>
 
@@ -433,10 +430,11 @@ Yours Truly,<br/>
                 <p class="d-block d-sm-none">
 你會遇到一群久居在此的房客<br/>
 近距離參與他們的喜怒哀樂<br/><br/>
-<span class="highlight text-center">
+<span class="highlight text-center">06/19至07/14場次票券，現正預售中<br/><br/></span>
+<!--span class="highlight text-center">
 05/12 前場次已額滿<br/>
 05/15至06/13 場次票券，現正預售中<br/><br/>
-</span>
+</span-->
 你的選擇，將決定看到的故事<br/>
 期待，你的來訪<br/><br/>
 
@@ -499,19 +497,19 @@ Yours Truly,<br/>
 
             <p class="ticket-area-preinfo">
                 點選票卷，進入購買頁面後可選擇票卷數量<br >
-                本票券將預購 05/15–06/13 區間之場次
+                本票券將預購 06/19－07/14 區間之場次
             </p>
 
             <div class="ticket-type">
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/1014/6151?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1037/6441?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
                     </a>
                 </div>
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/1014/6152?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1037/6440?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="有點限制票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="有點限制票">
@@ -522,16 +520,16 @@ Yours Truly,<br/>
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/1014/6153?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1037/6442?locale=zh-TW
                     " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
                         <p class="ticket-state d-none d-sm-block">
-                            僅能劃同一個時段日期<br/>
-                            不能分開使用
+                            四人以上未滿八人者<br/>
+                            可依數量加購暢行無阻票
                         </p>
                         <p class="ticket-state d-block d-sm-none">
-                            僅能劃同一個時段日期，不能分開使用
+                            四人以上未滿八人者 可依數量加購暢行無阻票
                         </p>
                     </a>
                 </div>
@@ -581,7 +579,7 @@ Yours Truly,<br/>
                         <span class="ticket-blue">週四：19:00｜20:30｜22:00</span>
                     </p>
                     <p>
-                        週五：19:00｜20:30｜22:00
+                        <span class="ticket-blue">週五：19:00｜20:30｜22:00</span>
                     </p>
                     <p>
                         週六：19:00｜20:30｜22:00
@@ -597,10 +595,10 @@ Yours Truly,<br/>
                         <span class="ticket-blue">週五：15:30</span>
                     </p-->
                     <p>
-                        <span class="ticket-blue">週六：13:00｜14:30｜16:00</span>
+                        週六：13:00｜14:30｜16:00
                     </p>
                     <p>
-                        <span class="ticket-blue">週⽇：13:00｜14:30｜16:00</span>
+                        週⽇：13:00｜14:30｜16:00
                     </p>
                     <p>&nbsp;</p>
                     <p class="ticket-color-diff-note">
@@ -654,8 +652,7 @@ Yours Truly,<br/>
                     </div>
                     <p class="info-text highlight-dark">
 
-* 05/12前場次已額滿<br>
-&nbsp;&nbsp;現正預售 05/15—06/13 場次票券<br>
+* 現正預售06/19－07/14票券<br>
 * 可劃位日期將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -680,45 +677,33 @@ Yours Truly,<br/>
                 <table>
                     <tr>
                         <td>
-                            04/10
+                            05/22
                         </td>
                         <td>
-                            開賣05/15–06/13 場次票券，目標2500人
+                            開賣06/19－07/14場次票券，目標2000人
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            05/01
+                            06/05
                         </td>
                         <td>
-                            寄送劃位信–前五百名購買者（收到信後，即可劃位）
+                            寄送劃位信—06/04前購票者（收到信後，即可劃位）
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            06/12
+                        </td>
+                        <td>
+                            寄送劃位信—06/05到06/11購票者
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            05/08
-                        </td>
-                        <td>
-                            寄送劃位信–05/01到05/07購票者
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <!--td id="td_day">
-                            <span class="d-none d-sm-inline-block">04/11<br>|<br>05/19</span>
-                            <span class="d-sm-none">04/16-05/19</span>
-                        </td-->
-                        <td>
-                            05/14
-                        </td>
-                        <td>
-                            寄送劃位信－05/08-05/13購買者
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            05/21
+                            06/19
                         </td>
                         <td>
                             寄送劃位信－其餘購買者
@@ -911,7 +896,7 @@ Yours Truly,<br/>
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=1.3"></script>
+<script src="js/main.js?v=1.4"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
 <script>

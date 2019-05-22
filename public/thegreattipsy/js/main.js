@@ -154,6 +154,7 @@ $(document).ready(function () {
     var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/981json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/994json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep5 = 'https://surpriselab.backme.tw/api/projects/1014json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep6 = 'https://surpriselab.backme.tw/api/projects/1037json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
@@ -162,23 +163,26 @@ $(document).ready(function () {
       $.getJSON(progress_api_SaleStep2),
       $.getJSON(progress_api_SaleStep3),
       $.getJSON(progress_api_SaleStep4),
-      $.getJSON(progress_api_SaleStep5)
-    ).done(function(data1, data2, data3, data4, data5) {
+      $.getJSON(progress_api_SaleStep5),
+      $.getJSON(progress_api_SaleStep6)
+    ).done(function(data1, data2, data3, data4, data5, data6) {
 
         data1 = data1[0];
         data2 = data2[0];
         data3 = data3[0];
         data4 = data4[0];
-        var data = data5[0];
+        data5 = data5[0];
+        var data = data6[0];
 
         // 第一階段已售出總票數
         var SaleStep1_amount = data1['pledged_count'];
         var SaleStep2_amount = data2['pledged_count'];
         var SaleStep3_amount = data3['pledged_count'];
         var SaleStep4_amount = data4['pledged_count'];
+        var SaleStep5_amount = data5['pledged_count'];
         
-        var goal = 10000 + 400; // 目標張數
-        var amount = data["pledged_count"] + SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount; //已售出總票數
+        var goal = 10000 + 400 + 2010; // 目標張數
+        var amount = data["pledged_count"] + SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount; //已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
 
@@ -187,9 +191,9 @@ $(document).ready(function () {
 
         // 時間有點限制票
         var ticket_matinee = $('.type-matinee');
-        var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
-        var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
-        var timeLimit_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
+        var timeLimit_sale = data['rewards'][0].pledged_count; // 已銷售張數
+        var timeLimit_limit = data['rewards'][0].quantity_limit; // 限量張數
+        var timeLimit_wait = data['rewards'][0].wait_pledged_count; // 等待付款中張數
         var timeLimit_rest = timeLimit_limit - timeLimit_sale - timeLimit_wait; // 剩餘可銷售張數
 
         if (timeLimit_rest <= 0) {
