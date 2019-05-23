@@ -33,7 +33,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.2"/>
-    <link rel="stylesheet" href="css/after-rules.css"/>
+    <link rel="stylesheet" href="css/after-rules.css?v=0.1"/>
     <style type="text/css">
     #td_day{line-height: 1.5;text-align: center;}
     @media (max-width: 480px) { #td_day{text-align:left;}}
@@ -501,13 +501,7 @@ Yours Truly,<br/>
             </p>
 
             <div class="ticket-type">
-                <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/1037/6441?locale=zh-TW
-                " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
-                    </a>
-                </div>
+                
                 <div class="type-item type-matinee">
                     <a href="https://surpriselab.backme.tw/checkout/1037/6440?locale=zh-TW
                 " class="ticket-frame" target="_blank">
@@ -517,6 +511,13 @@ Yours Truly,<br/>
                             限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                 class="highlight rest-ticket">XXX</span> 張
                         </p>
+                    </a>
+                </div>
+                <div class="type-item type-great-tipsy">
+                    <a href="https://surpriselab.backme.tw/checkout/1037/6441?locale=zh-TW
+                " class="ticket-frame" target="_blank">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
                     </a>
                 </div>
                 <div class="type-item type-group">
