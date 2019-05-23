@@ -23,15 +23,15 @@
                     <!-- LOGO z: 1000 -->
                     <div class="main-slogan">
                         <div class="slogan-img show-1 shadow">
-                            <img src="/d2one/images/slogan-bg.png?v=0.1" alt="">
-                            <img src="/d2one/images/m-slogan-shadow.png" alt="">
+                            <img src="/d2one/images/slogan-fin-bg.png?v=0.1" alt="">
+                            <img src="/d2one/images/slogan-fin-bg.png" alt="">
                         </div>
 
 
-                        <div class="slogan-img show-1">
-                            <img src="/d2one/images/slogan.png?v=0.1" alt="">
-                            <img src="/d2one/images/m-slogan.png?v=0.1" alt="">
-                        </div>
+                        <div class="slogan-img show-1"><a href="https://www.surpriselab.com.tw/thegreattipsy/index.html">
+                            <img src="/d2one/images/slogan-fin.png?v=0.1" alt="">
+                            <img src="/d2one/images/slogan-fin.png?v=0.1" alt="">
+                        </a></div>
 
 <!--
                         <div class="visible-xs slogan-img ">
@@ -107,8 +107,8 @@
                             </p>
                             
                             <div style="max-width: 860px;margin: 120px auto">
-                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.10" alt="">
-                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.10" alt="">
+                                <img style="width: 100%;" src="/d2one/images/timetable.png?v=0.11" alt="">
+                                <img style="width: 100%;" src="/d2one/images/m-timetable.png?v=0.11" alt="">
                             </div>
                         </div>
                         <div class="grey-box">
