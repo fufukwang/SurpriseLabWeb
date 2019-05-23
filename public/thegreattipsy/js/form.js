@@ -296,7 +296,11 @@ $('.step-3 input, .step-3 select').on('change', function () {
         var enableDays = [];
         if(!isNaN(submitDatas['booking_people'])){
             $.blockUI();
-            $.get('/thegreattipsy/GetAjaxData',{'act':'getBypople','pople':submitDatas['booking_people']},function(data){
+            $.get('/thegreattipsy/GetAjaxData',{
+                'act':'getBypople',
+                'pople':submitDatas['booking_people'],
+                'ticketType':$('input[name="ticket-type"]:checked').val(),
+            },function(data){
                 for(i=0;i<data.length;i++){
                     enableDays.push(data[i].day);
                 }

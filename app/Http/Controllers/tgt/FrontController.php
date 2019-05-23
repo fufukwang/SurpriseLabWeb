@@ -42,18 +42,23 @@ class FrontController extends Controller
 
                 switch ($request->act) {
                     case 'getBypople': // 票種 & 人數 取得 day
-
-//select DATEDIFF(DAY, '17530101', tb.CreationOn) % 7 / 5 FROM tb;
-                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->get();
+                        $ticketType = $request->ticketType;
+                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today());
+                        if($ticketType == 1){
+                            $pro = $pro->whereRaw("floor(ABS(DATEDIFF( '17530101', `tgtpro`.`day`)) % 7 / 5)=0");
+                        }
+                        $pro = $pro->get();
                         return $pro->toJson();
                     break;
                     case 'getByday': // 日期 取得 時段
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
+                        /*
                         $dayOW      = Carbon::parse($day)->dayOfWeek;
                         if($ticketType == 1 && ($dayOW == 0 || $dayOW == 5 || $dayOW == 6)){
                             $pro = $pro->where('day_parts','午場');
                         }
+                        */
                         $pro = $pro->select('day_parts','day')->groupBy('day_parts')->where('day',$day)->get();
                         return $pro->toJson();
                     break;
@@ -61,10 +66,12 @@ class FrontController extends Controller
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
+                        /*
                         $dayOW      = Carbon::parse($day)->dayOfWeek;
                         if($ticketType == 1 && ($dayOW == 0 || $dayOW == 5 || $dayOW == 6)){
                             $pro = $pro->where('day_parts','午場');
                         }
+                        */
                         $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->get();
                         return $pro->toJson();
                     break;
@@ -90,7 +97,7 @@ class FrontController extends Controller
                                 return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                             }
                             // 有點限制票選擇到周末晚場
-                            if(($dayOW == 0 || $dayOW == 5 || $dayOW == 6) && $me->type == 'l1' && $request->day_parts=='晚場' ){
+                            if(($dayOW == 0 || $dayOW == 6) && $me->type == 'l1'){
                                 return Response::json(['success'=> 'N','message'=>'票券選擇時間錯誤'], 200);
                             }
                             return Response::json(['success'=> 'Y','ticket'=>$type], 200);    
@@ -148,7 +155,7 @@ class FrontController extends Controller
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                         }
                         // 有點限制票選擇到周末晚場
-                        if(($dayOW == 0 || $dayOW == 5 || $dayOW == 6) && $me->type == 'l1' && $act->day_parts=='晚場' ){
+                        if(($dayOW == 0 || $dayOW == 6) && $me->type == 'l1'){
                             Log::error('票券選擇時間錯誤 ' . $value . ' | ' . $act->id);
                             return Response::json(['success'=> 'N','message'=>'票券選擇時間錯誤'], 200);
                         }
