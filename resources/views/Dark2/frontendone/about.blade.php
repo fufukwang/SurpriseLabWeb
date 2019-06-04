@@ -23,14 +23,14 @@
                     <!-- LOGO z: 1000 -->
                     <div class="main-slogan">
                         <div class="slogan-img show-1 shadow">
-                            <img src="/d2one/images/slogan-fin-bg.png?v=0.1" alt="">
-                            <img src="/d2one/images/slogan-fin-bg.png" alt="">
+                            <img src="/d2one/images/slogan-fin-bg.png?v=0.2" alt="">
+                            <img src="/d2one/images/slogan-fin-bg.png?v=0.2" alt="">
                         </div>
 
 
                         <div class="slogan-img show-1"><a href="https://www.surpriselab.com.tw/thegreattipsy/index.html">
-                            <img src="/d2one/images/slogan-fin.png?v=0.1" alt="">
-                            <img src="/d2one/images/slogan-fin.png?v=0.1" alt="">
+                            <img src="/d2one/images/slogan-fin.png?v=0.2" alt="">
+                            <img src="/d2one/images/slogan-fin.png?v=0.2" alt="">
                         </a></div>
 
 <!--

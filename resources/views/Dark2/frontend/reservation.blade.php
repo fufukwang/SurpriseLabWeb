@@ -90,8 +90,8 @@
            
             <div class="main-container" id="first-section"style="padding-top: 0px;">
                 <div style="color:#a67c52;">
-<div style="font-weight:bold;font-size:24px;line-height:30px;">無光晚餐秘密貴客登記表</div>
-<div style="font-size: 18px"><br>劃位05/15-06/30座位</div>
+<div style="font-weight:bold;font-size:24px;line-height:30px;">無光晚餐最終場訂位登記表</div>
+<div style="font-size: 18px"><br>座位最後開放至07/14</div>
                 </div><br><br>
                 <p style="font-size:16px;">
                     {{ trans('front.reservation.slug1title') }}
@@ -104,7 +104,7 @@
                         <td colspan="2">
                             Step 1 選擇人數、日期、時段<br >
 ​​Step 2 填寫訂位資料<br >
-​​Step 3 確認訂單，輸入劃位序號<br >
+​​Step 3 確認訂單，信用卡付費或輸入劃位序號<br >
 ​​Step 4 完成訂位
                         </td>
                     </tr>
@@ -112,11 +112,19 @@
                         <td colspan="2">－NOTICE－</td>
                     </tr>
                     <tr>
-                        <td colspan="2">
-                            - 無光晚餐每週⼀、週⼆公休，特殊節⽇會依情況調整<br >
+                        <td colspan="2" style="font-size:12px;">
+- 六月無光晚餐每週⼀、週⼆公休<br >
+- 七月無光晚餐僅加開週四至週日晚上時段<br >
+- ⾮公休⽇之⽇期無法選擇，代表座位已滿，或是當日不開放<br >
+- 信用卡確認訂位後將無法改期，僅接受退費（需扣除金流手續費），請審慎選擇<br >
+- 請確實填寫正確的Email與電話，將以此發佈最新須知<br >
+- 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況
+
+<!--
+- 無光晚餐每週⼀、週⼆公休，特殊節⽇會依情況調整<br >
 ​​- 若⾮公休⽇之⽇期無法選擇，代表座位已滿，或是當日不開放<br >
 ​​- 請確實填寫正確的Email與電話，將以此發佈最新須知<br >
-​​- 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況</td>
+​​- 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況--></td>
                     </tr>
                     <tr>
                         <td colspan="2">有任何訂位問題，歡迎來信：<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></td>

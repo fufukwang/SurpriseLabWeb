@@ -46,12 +46,17 @@
                                </p>
                                </li>
 
-                            <li>為什麼一定要提早10分鐘抵達？
+                            <!--li>為什麼一定要提早10分鐘抵達？
                                <p>
                                    若你的訂位時間為 18:30，請於 18:20 抵達。原因為無光晚餐體驗，採按時段場次分批入場制，若遲到導致超過入場時間，將會錯過部分體驗甚至無法入場，又因訂位狀況踴躍，無法臨時前後調動體驗場次，無光晚餐亦不予以退費（無光晚餐比起用餐，更像是一場體驗，去看秀、看劇場表演，表演開始後將無法入場與退費)。
                                </p>
+                              </li-->
+                              <li>我應該何時抵達無光晚餐？是否需要提早報到？
+                                <p>
+    我們會在行前通知信（體驗日四天前寄出）以及提醒簡訊（體驗當日寄出）中，告知你報到時間，請協助確認信箱與簡訊。<br >
+    另外，無光晚餐體驗採按時段、場次分批入場制，若遲到導致超過入場時間，將會錯過部分體驗甚至無法入場；又因訂位狀況踴躍，無法臨時前後調動體驗場次亦不予以退費（無光晚餐比起用餐，更像是一場體驗，去看秀、看劇場表演，表演開始後將無法入場與退費）。
+                                </p>
                               </li>
-
 
                             <li>現場可以寄物嗎？
                                <p>
@@ -157,7 +162,10 @@
                         </ol-->
                         <ol>
                             <li>⽤餐當⽇四天前，來信至無光晚餐客服信箱<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>取消訂位，扣除⾦流系統⼿續費 5% 後，將獲全額退費。<br >
-                                如：預訂 9/05 座位，於 9/01 （含） 前寄信取消訂位，可獲全額退費</li>
+                                如：預訂 9/05 座位，於 9/01 （含） 前寄信取消訂位，可獲扣除金流系統手續費 5% 後的全額退費
+                            </li>
+                            <!--li>⽤餐當⽇四天前，來信至無光晚餐客服信箱<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>取消訂位，扣除⾦流系統⼿續費 5% 後，將獲全額退費。<br >
+                                如：預訂 9/05 座位，於 9/01 （含） 前寄信取消訂位，可獲全額退費</li-->
                             <li>⽤餐當日的前三日，來信至無光晚餐客服信箱<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>取消訂位，僅將退回 50% 之費⽤，建議將訂位轉讓給朋友、家⼈。<br >
                                 如：預訂 9/05 座位，於 09/02– 09/04 寄信取消訂位，可退回50%之費⽤</li>
                             <li>用餐當日聯繫取消訂位，或未出席，將不進⾏退費。</li>
@@ -165,11 +173,15 @@
                             <li>退費金額比例的計算日期，以申請退費信件寄達無光晚餐客服信箱<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>的日期為準。</li>
                         </ol>
                         <h4>更改訂位⽇期</h4>
-                        <ol>
+                        <p>
+                            完成劃位後，無法更改訂位日期，建議將訂位轉讓給朋友、家⼈。<br />
+                            若欲轉讓、退費，或有相關疑問，請來信無光晚餐客服信箱<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>協助處理。
+                        </p>
+                        <!--ol>
                             <li>若需更改訂位⽇期，請於⽤餐⽇四天前 ，來信至無光晚餐客服信箱<a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>告知。<br>
                                 如：欲更改 9/05 的訂位，請於 9/01 (含) 前來信或來電告知，我們將為您調整</li>
                             <li>⽤餐日前三日與當日無法提供日期更改，建議將訂位轉讓給朋友、家⼈。</li>
-                        </ol>
+                        </ol-->
                             <table class="rules-table">
                                 <tbody><tr>
                                     <th style="width: 80px">天數</th>
@@ -197,8 +209,8 @@
                                 </tr>
                                 <tr>
                                     <th>更改訂位</th>
-                                    <td colspan="2">可來信更改日期</td>
-                                    <td colspan="4">不提供日期更改，建議來賓可將訂位轉讓給朋友、家人</td>
+                                    <!--td colspan="2">可來信更改日期</td-->
+                                    <td colspan="6">不提供日期更改，建議來賓可將訂位轉讓給朋友、家人</td>
                                 </tr>
                             </tbody></table>
                             
