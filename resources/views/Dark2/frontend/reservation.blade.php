@@ -112,7 +112,7 @@
                         <td colspan="2">－NOTICE－</td>
                     </tr>
                     <tr>
-                        <td colspan="2" style="font-size:12px;">
+                        <td colspan="2">
 - 六月無光晚餐每週⼀、週⼆公休<br >
 - 七月無光晚餐僅加開週四至週日晚上時段<br >
 - ⾮公休⽇之⽇期無法選擇，代表座位已滿，或是當日不開放<br >
