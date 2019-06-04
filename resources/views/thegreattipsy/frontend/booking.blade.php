@@ -681,7 +681,7 @@
 <!-- tappaysdk -->
 <script src="https://js.tappaysdk.com/tpdirect/v3"></script>
 <!-- Custom Js -->
-<script src="js/form.js?v=0.11"></script>
+<script src="js/form.js?v=0.12"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
 <script>

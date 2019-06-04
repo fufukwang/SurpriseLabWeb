@@ -251,6 +251,7 @@ $(".submit").click(function(){
 
 // Step 2 - 選擇票券
 $('input[name="ticket-type"]').on('click', function () {
+    /*
     if ($(this).val() == 2) {
         // 選擇四人沈醉票時，人數自動選擇四人
         $('#booking_people').val(4).prop('disabled', true).trigger('change');
@@ -258,6 +259,8 @@ $('input[name="ticket-type"]').on('click', function () {
         // 選擇其他票種時，清空已選擇人數
         $('#booking_people').val('').prop('disabled', false).trigger('change');
     }
+*/
+    $('#booking_people').val('').prop('disabled', false).trigger('change');
     $(".action-button.next:eq(1)").trigger('click');
 });
 
@@ -509,10 +512,12 @@ $('.verification-code').on('click', function () {
             var ticketName = '';
             $('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
             // 折扣人數
+            /*
             switch(data.ticket){
                 case '暢⾏無阻票':case '時間有點限制票': cutPelple++; break;
                 case '四⼈沈醉票': cutPelple = cutPelple + 4; break;
-            }
+            }*/
+            cutPelple++;
             passTimes++; // 通過人數
             // 改寫金額
             var summary = formatPrice(($('[name="booking_people"]').val()-cutPelple) * proSingle); // 數字變成貨幣格式

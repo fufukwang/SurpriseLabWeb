@@ -93,9 +93,11 @@ class FrontController extends Controller
                             $ticketType = $request->ticketType;
                             $dayOW      = Carbon::parse($request->day)->dayOfWeek;
                             // 人數小於 4 但是又輸入四人沉醉票
+                            /*
                             if($me->type == 'a4' && $pople<4){
                                 return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                             }
+                            */
                             // 有點限制票選擇到周末晚場
                             if(($dayOW == 0 || $dayOW == 6) && $me->type == 'l1'){
                                 return Response::json(['success'=> 'N','message'=>'票券選擇時間錯誤'], 200);
@@ -150,10 +152,12 @@ class FrontController extends Controller
                         $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
                         $dayOW      = Carbon::parse($act->day)->dayOfWeek;
                         // 人數小於 4 但是又輸入四人沉醉票
+                        /*
                         if($me->type == 'a4' && $people<4){
                             Log::error('序號錯誤或已使用 ' . $value . ' | ' . $act->id);
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                         }
+                        */
                         // 有點限制票選擇到周末晚場
                         if(($dayOW == 0 || $dayOW == 6) && $me->type == 'l1'){
                             Log::error('票券選擇時間錯誤 ' . $value . ' | ' . $act->id);
@@ -163,9 +167,11 @@ class FrontController extends Controller
                         $coupon++;
                         coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
                         if($request->Pay == 'onsite'){
-                            $cut1 += ($me->type == 'a4') ? ($act->cash * 4) : $act->cash;
+                            $cut1 += $act->cash;
+                            //$cut1 += ($me->type == 'a4') ? ($act->cash * 4) : $act->cash;
                         } else {
-                            $cut1 += ($me->type == 'a4') ? ($act->money * 4) : $act->money;
+                            $cut1 += $act->money;
+                            //$cut1 += ($me->type == 'a4') ? ($act->money * 4) : $act->money;
                         }
                     }
                 }
