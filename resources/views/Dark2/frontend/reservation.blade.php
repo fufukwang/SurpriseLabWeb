@@ -182,7 +182,7 @@
                         </td>
                     </tr>
                     <tr class="date_tr">
-                        <td>{{ trans('front.reservation.s2date') }}</td>
+                        <td>{{ trans('front.reservation.s2date') }}（請稍等五秒顯示正確座位）</td>
                     </tr>
                     <tr class="date_tr">
                         <td>
