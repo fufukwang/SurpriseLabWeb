@@ -104,7 +104,7 @@
                         <td colspan="2">
                             Step 1 選擇人數、日期、時段<br >
 ​​Step 2 填寫訂位資料<br >
-​​Step 3 確認訂單，信用卡付費或輸入劃位序號<br >
+​​Step 3 確認訂單，信用卡付費<br >
 ​​Step 4 完成訂位
                         </td>
                     </tr>
@@ -391,7 +391,7 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
                         <td>{{ trans('front.reservation.Notes') }}：</td>
                         <th id="NotesCheck"></th>
                     </tr>
-                    <tr><td colspan="2">&nbsp;</td></tr>
+                    <!--tr><td colspan="2">&nbsp;</td></tr>
                     <tr>
                         <td colspan="2">
 <div class="col-sm-9">
@@ -405,13 +405,13 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
 <style type="text/css">.reservation-section input::placeholder{color:#555;}</style>
 
                     </tr>
-                    <tr><td colspan="2"><div class="col-sm-12" id="couponList"></div><div class="col-sm-12" id="discountList"></div></td></tr>
+                    <tr><td colspan="2"><div class="col-sm-12" id="couponList"></div><div class="col-sm-12" id="discountList"></div></td></tr-->
                 </table>
-
+<style type="text/css">#fourth-btn-online .btn-pay::after{content: "（此金額不含10%服務費）";position: absolute;margin: 30px 0px 0px -114px;}</style>
                 <a href="javascript:;" id="fourth-btn-back"><div style="height:54px;line-height:39px" class="btn btn-standard btn-pay btn-negative">{{ trans('front.reservation.prev') }}</div></a>
                 <a href="javascript:;" id="fourth-btn-online"><div class="btn btn-standard btn-pay">{!! trans('front.reservation.Online') !!}<span id="CardView"></span></div></a>
                 <!--a href="javascript:;" id="fourth-btn-onsite"><div class="btn btn-standard btn-pay btn-negative">{!! trans('front.reservation.Self') !!}<span id="MoneyView"></span></div></a-->
-                <a href="javascript:;" id="fourth-btn-zero"><div class="btn btn-standard btn-pay">完成劃位<br />NT <span id="MoneyView"></span></div></a>
+                <!--a href="javascript:;" id="fourth-btn-zero"><div class="btn btn-standard btn-pay">完成劃位<br />NT <span id="MoneyView"></span></div></a-->
             </div>
         
 
