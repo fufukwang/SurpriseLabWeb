@@ -421,6 +421,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('rules.html',function(){ return view('thegreattipsy.frontend.rules'); });
         // 劃位
         Route::get('booking.html',function(){ return view('thegreattipsy.frontend.booking'); });
+        Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
         Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt\FrontController@ReOrderData');
     });
