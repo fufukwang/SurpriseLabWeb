@@ -67,6 +67,7 @@
                                                     <option value="現場付款"@if(isset($request->pay_type) && $request->pay_type=='現場付款') selected @endif>現場付款</option>
                                                     <option value="後台編輯"@if(isset($request->pay_type) && $request->pay_type=='後台編輯') selected @endif>後台編輯</option>
                                                 </select>
+                                                <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label>
                                             </div>
                                             <div class="form-group col-sm-2">
                                                 <select name="order" class="form-control">
@@ -120,9 +121,12 @@
                                                 <td>{{ $row->name }}</td>
                                                 <td>phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
                                                 <td>{{ implode('/',json_decode($row->meat,true)) }}</td>
-                                                <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}</td>
+                                                <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
+@if($row->is_overseas) <br />海外刷卡 @endif
+                                                </td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
-                                                <th>@forelse(App\model\tgt\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 無使用優惠券 @endforelse</th>
+                                                <th>@forelse(App\model\tgt\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
+@if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse</th>
                                                 <td>{{ $row->manage }}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i></a>

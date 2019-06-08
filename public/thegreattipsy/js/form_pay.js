@@ -718,6 +718,7 @@ function SendOrderData(Pay,prime){
         'Meal'  : Meal,
         'Pay'   : Pay,
         'coupon': usedCoupons,
+        'is_overseas':1,
     };
     $.post('/thegreattipsy/ReOrderData',obj,function(data){
         $('<link>').appendTo('head')

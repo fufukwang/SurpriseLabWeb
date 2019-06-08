@@ -433,7 +433,7 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
 
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
@@ -441,7 +441,7 @@ class BackController extends Controller
             if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
         }
         
-
+        if($request->has('is_overseas')  && $request->is_overseas==1) $order->where('is_overseas',1); 
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
@@ -472,12 +472,14 @@ class BackController extends Controller
 
     public function Table(Request $request){
         $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
             if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
         }
+
+        if($request->has('is_overseas')  && $request->is_overseas==1) $order->where('is_overseas',1); 
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
@@ -509,12 +511,14 @@ class BackController extends Controller
 
     public function XlsDataOuput(Request $request){
         $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
             if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
         }
+
+        if($request->has('is_overseas')  && $request->is_overseas==1) $order->where('is_overseas',1); 
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){

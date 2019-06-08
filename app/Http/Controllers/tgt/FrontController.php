@@ -202,6 +202,7 @@ class FrontController extends Controller
                 'pay_status' => $pay_status,
                 'result'     => '',
                 'manage'     => $request->manage,
+                'is_overseas'=> $request->has('is_overseas') ? 1 : 0,
             ];
 
             $order = order::create($data);
