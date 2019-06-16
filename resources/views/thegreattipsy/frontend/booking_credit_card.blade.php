@@ -152,7 +152,7 @@
                         <span class="prefix">Step 1</span>選擇購買的票種<br/>
                         <span class="prefix">Step 2</span>選擇人數、日期、時段<br/>
                         <span class="prefix">Step 3</span>填寫房客資料<br/>
-                        <span class="prefix">Step 4</span>確認訂單，<span class="color-pink">輸入劃位序號</span><br/>
+                        <span class="prefix">Step 4</span>確認訂單，<span class="color-pink">線上付費</span><br/>
                         <span class="prefix">Step 5</span>完成入住登記
                     </p>
                     <p>&nbsp;</p>
@@ -163,27 +163,13 @@
                     </div>
                     <p>&nbsp;</p>
                     <ul class="prefix-dash">
-                        <!--li>
-                            微醺大飯店每週⼀、週⼆公休。特殊節⽇會依照情況調整。
-                        </li>
-                        <li>
-                            若⾮公休⽇之⽇期無法選擇，代表座位已滿，或是當日不開放。
-                        </li>
-                        <li>
-                            請確實填寫正確的Email與電話，將以此發佈最新須知。
-                        </li>
-                        <li>
-                            請確實選擇葷⻝與蛋奶素，備註飲⻝過敏狀況。
-                        </li-->
-                        <li>
-                            若⽇期無法選擇，代表座位已滿，或是當日不開放。
-                        </li>
-                        <li>
-                            請確實填寫正確的Email與電話，將以此發佈最新須知。
-                        </li>
-                        <li>
-                            請確實選擇葷⻝與蛋奶素，備註飲⻝過敏狀況。
-                        </li>
+<li>僅提供購買06/20-06/30座位，票價2000 元。</li>
+<li>信用卡付費僅提供「暢行無阻票」選項，四人沈醉票與時間有點限制票為限量預購票券。</li>
+<li>信用卡確認訂位後將無法改期，僅接受退費（需扣除金流手續費5%），請審慎選擇。</li>
+<li>⽇期無法選擇，代表座位已滿，或是當日不開放。</li>
+<li>請確實填寫正確的Email與電話，將以此發佈最新須知。</li>
+<li>請確實選擇葷⻝與蛋奶素，備註飲⻝過敏狀況。</li>
+
                     </ul>
                     <p>&nbsp;</p>
                     <p>
@@ -210,9 +196,9 @@
             </fieldset>
             <fieldset class="step step-2" title="選擇票卷">
                 <div class="form-container">
-                    <p class="field-intro">
+                    <!--p class="field-intro">
                         請點選您所要兌換的票卷
-                    </p>
+                    </p-->
 
                     <div class="form-check">
                         <input type="radio" name="ticket-type" id="ticket-1" value="0">
@@ -221,7 +207,7 @@
                         </label>
                     </div>
 
-                    <div class="form-check">
+                    <!--div class="form-check">
                         <input type="radio" name="ticket-type" id="ticket-2" value="1">
                         <label class="form-check-label" for="ticket-2">
                             時間有點限制票 <span>Matinee&Weekdays Ticket</span>
@@ -233,7 +219,7 @@
                         <label class="form-check-label" for="ticket-3">
                             四人沈醉票 Group Ticket
                         </label>
-                    </div>
+                    </div-->
 
 
                     <div class="feature-btn d-flex justify-content-between multi-btn">
@@ -547,7 +533,7 @@
                     <div class="feature-btn d-flex justify-content-between multi-btn">
                         <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
                         <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
-                            完成劃位 NT$<span class="amountToGo"></span>
+                            確認付款 NT$<span class="amountToGo"></span>
                         </button>
                     </div>
 
@@ -679,7 +665,7 @@
 <!-- blockUI script-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 <!-- tappaysdk -->
-<script src="https://js.tappaysdk.com/tpdirect/v3"></script>
+<script src="https://js.tappaysdk.com/tpdirect/v5.1.0"></script>
 <!-- Custom Js -->
 <script src="js/form_credit_card.js?v=0.1"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -113,13 +113,18 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-- 六月無光晚餐每週⼀、週⼆公休<br >
+<!--- 六月無光晚餐每週⼀、週⼆公休<br >
 - 七月無光晚餐僅加開週四至週日晚上時段<br >
 - ⾮公休⽇之⽇期無法選擇，代表座位已滿，或是當日不開放<br >
 - 信用卡確認訂位後將無法改期，僅接受退費（需扣除金流手續費），請審慎選擇<br >
 - 請確實填寫正確的Email與電話，將以此發佈最新須知<br >
+- 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況-->
+- 雙人套票票價 3740 元（3400 元加一成服務費；此票價含兩杯調飲）<br >
+- 無光晚餐每週⼀、週⼆公休，七月僅開週四至週日晚上時段<br >
+- ⾮公休⽇之⽇期無法選擇，代表座位已滿，或是當日不開放<br >
+- 信用卡確認訂位後將無法改期，僅接受退費（需扣除金流手續費5%），請審慎選擇<br >
+- 請確實填寫正確的Email與電話，將以此發佈最新須知<br >
 - 請確實選擇葷⻝與蛋奶素，與備註飲⻝過敏狀況
-
 <!--
 - 無光晚餐每週⼀、週⼆公休，特殊節⽇會依情況調整<br >
 ​​- 若⾮公休⽇之⽇期無法選擇，代表座位已滿，或是當日不開放<br >
@@ -479,8 +484,8 @@ ex: ⼀位客⼈不吃⽜，⼀位客⼈蝦蟹過敏"></textarea>
 .tpfield {height: 40px;width: 300px;border: 1px solid gray;margin: 5px 0;padding: 5px;}
 .lightbox2pay {display: none;position: fixed;height: 100%;width: 100%;top: 0px;left: 0px;z-index: 9999;background: rgba(0, 0, 0, 0.6);}
 </style>
-<script src="https://js.tappaysdk.com/tpdirect/v3"></script>
-<script type="text/javascript" src="/dark2/js/reservation.js"></script>
+<script src="https://js.tappaysdk.com/tpdirect/v5.1.0"></script>
+<script type="text/javascript" src="/dark2/js/reservation.js?v=0.1"></script>
 
 
 <script type="text/javascript">

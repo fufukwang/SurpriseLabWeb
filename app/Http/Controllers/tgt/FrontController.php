@@ -202,7 +202,7 @@ class FrontController extends Controller
                 'pay_status' => $pay_status,
                 'result'     => '',
                 'manage'     => $request->manage,
-                'is_overseas'=> $request->has('is_overseas') ? 1 : 0,
+                'is_overseas'=> $request->has('is_overseas') ? $request->is_overseas : 0,
             ];
 
             $order = order::create($data);
@@ -212,14 +212,25 @@ class FrontController extends Controller
                 $sentSuccess = true;
             } else {
                 // 送到金流
-                //$pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
+                /*
+                $pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
+                $partner_key  = 'partner_5jNwC8sfACq49UWf9fT2MRo00lv1M28kYkGtGfdJ5QRFOpa3rTCNViiF';
+                $merchant_id  = 'fufukwang_CTBC';
+                */
                 $pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
+                $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
+                $merchant_id  = 'surpriselab_00001';
+                
+                $amount = $money - $cut1 - $cut2;
+                if($data['is_overseas'] == 1){
+                    $amount *= 1.1;
+                }
                 $postData = [
                     "prime"       => $request->prime,
-                    "partner_key" => "partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC",
-                    "merchant_id" => "surpriselab_00001",
+                    "partner_key" => $partner_key,
+                    "merchant_id" => $merchant_id,
                     "details"     => "微醺",
-                    "amount"      => $money - $cut1 - $cut2,
+                    "amount"      => $amount,
                     "order_number"=> $count,
                     "cardholder"  => [
                         "phone_number" => $request->tel,
@@ -234,7 +245,7 @@ class FrontController extends Controller
 
                 $r = curl_init();
                 curl_setopt($r, CURLOPT_URL, $pay_by_prime);
-                curl_setopt($r, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'x-api-key:partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC'));
+                curl_setopt($r, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'x-api-key:'.$partner_key));
                 curl_setopt($r, CURLOPT_POST, 1);
                 curl_setopt($r, CURLOPT_POSTFIELDS, json_encode($postData));
                 curl_setopt($r, CURLOPT_RETURNTRANSFER, 1);
@@ -279,7 +290,7 @@ class FrontController extends Controller
             
 
             return Response::json(array(
-                'success'   => true,
+                'success'   => $sentSuccess,
                 'SN'        => $count
             ), 200);
         } catch (Exception $exception) {
