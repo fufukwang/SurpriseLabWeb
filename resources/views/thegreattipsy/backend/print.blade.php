@@ -68,6 +68,7 @@
                                                     <option value="後台編輯"@if(isset($request->pay_type) && $request->pay_type=='後台編輯') selected @endif>後台編輯</option>
                                                 </select>
                                                 <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label>
+                                                <label><input type="checkbox" name="is_overseas" value="2"@if($request->is_overseas==2) checked @endif>國內信用卡</label>
                                             </div>
                                             <div class="form-group col-sm-2">
                                                 <select name="order" class="form-control">

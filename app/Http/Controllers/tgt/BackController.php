@@ -441,7 +441,7 @@ class BackController extends Controller
             if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
         }
         
-        if($request->has('is_overseas')  && $request->is_overseas==1) $order->where('is_overseas',1); 
+        if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
@@ -479,7 +479,7 @@ class BackController extends Controller
             if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
         }
 
-        if($request->has('is_overseas')  && $request->is_overseas==1) $order->where('is_overseas',1); 
+        if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
@@ -518,7 +518,7 @@ class BackController extends Controller
             if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
         }
 
-        if($request->has('is_overseas')  && $request->is_overseas==1) $order->where('is_overseas',1); 
+        if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
