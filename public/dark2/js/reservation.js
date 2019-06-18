@@ -305,7 +305,8 @@ function SendOrderData(Pay,prime){
         if(data.success==true){
             ChangeSectionNav('done','fourth',4); 
         } else {
-            alert('本場次人數已滿!');
+            alert('信用卡付款未成功，請重新操作一次。');
+            window.location.reload(true);
             //$.unblockUI();
         }
         $.unblockUI();

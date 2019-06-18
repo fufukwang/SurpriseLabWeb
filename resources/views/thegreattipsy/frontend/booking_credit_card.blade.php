@@ -612,7 +612,7 @@
                 很抱歉，劃位未成功！
             </h3>
             <p class="page-info">
-                可能是，某些地方出錯了，還請再試一次<br/>
+                信用卡付款未完成，請重新操作一次。<br/>
                 <br/>
                 若有任何問題，歡迎來信詢問：<br/>
                 <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>

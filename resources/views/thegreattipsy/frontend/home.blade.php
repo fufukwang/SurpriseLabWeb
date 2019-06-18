@@ -419,7 +419,7 @@ Yours Truly,<br/>
                 <p class="d-none d-sm-inline-block">
 你會遇到一群久居在此的房客<br/>
 近距離參與他們的喜怒哀樂<br/><br/>
-<span class="highlight text-center">06/19至07/14場次票券，現正預售中<br/><br/></span>
+<span class="highlight text-center">微醺最終場07/17至08/25票券，最後預售中<br/><br/></span>
 你的選擇，將決定看到的故事<br/>
 期待，你的來訪<br/><br/>
 
@@ -430,7 +430,7 @@ Yours Truly,<br/>
                 <p class="d-block d-sm-none">
 你會遇到一群久居在此的房客<br/>
 近距離參與他們的喜怒哀樂<br/><br/>
-<span class="highlight text-center">06/19至07/14場次票券，現正預售中<br/><br/></span>
+<span class="highlight text-center">微醺最終場07/17至08/25票券，最後預售中<br/><br/></span>
 <!--span class="highlight text-center">
 05/12 前場次已額滿<br/>
 05/15至06/13 場次票券，現正預售中<br/><br/>
@@ -497,13 +497,13 @@ Yours Truly,<br/>
 
             <p class="ticket-area-preinfo">
                 點選票卷，進入購買頁面後可選擇票卷數量<br >
-                本票券將預購 06/19－07/14 區間之場次
+                最終場票券，預購07/17-08/25區間之場次
             </p>
 
             <div class="ticket-type">
                 
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/1037/6440?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1056/6558?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="有點限制票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="有點限制票">
@@ -514,14 +514,14 @@ Yours Truly,<br/>
                     </a>
                 </div>
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/1037/6441?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1056/6559?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/1037/6442?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1056/6560?locale=zh-TW
                     " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
@@ -653,7 +653,7 @@ Yours Truly,<br/>
                     </div>
                     <p class="info-text highlight-dark">
 
-* 現正預售06/19－07/14票券<br>
+* 微醺最終場，預售07/17-08/25票券<br>
 * 可劃位日期將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -678,33 +678,33 @@ Yours Truly,<br/>
                 <table>
                     <tr>
                         <td>
-                            05/22
+                            06/29
                         </td>
                         <td>
-                            開賣06/19－07/14場次票券，目標2000人
+                            開賣微醺大飯店最終場 07/17—08/25場次票券，目標2500人
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            06/05
+                            07/03
                         </td>
                         <td>
-                            寄送劃位信—06/04前購票者（收到信後，即可劃位）
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            06/12
-                        </td>
-                        <td>
-                            寄送劃位信—06/05到06/11購票者
+                            寄送劃位信—07/10前購票者（收到信後，即可劃位）
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            06/19
+                            07/10
+                        </td>
+                        <td>
+                            寄送劃位信—07/10到07/16購票者
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            07/17
                         </td>
                         <td>
                             寄送劃位信－其餘購買者
@@ -897,7 +897,7 @@ Yours Truly,<br/>
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=1.4"></script>
+<script src="js/main.js?v=1.5"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
 <script>

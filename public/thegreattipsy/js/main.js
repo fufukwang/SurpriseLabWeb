@@ -155,6 +155,7 @@ $(document).ready(function () {
     var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/994json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep5 = 'https://surpriselab.backme.tw/api/projects/1014json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep6 = 'https://surpriselab.backme.tw/api/projects/1037json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep7 = 'https://surpriselab.backme.tw/api/projects/1056json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
@@ -164,15 +165,17 @@ $(document).ready(function () {
       $.getJSON(progress_api_SaleStep3),
       $.getJSON(progress_api_SaleStep4),
       $.getJSON(progress_api_SaleStep5),
-      $.getJSON(progress_api_SaleStep6)
-    ).done(function(data1, data2, data3, data4, data5, data6) {
+      $.getJSON(progress_api_SaleStep6),
+      $.getJSON(progress_api_SaleStep7)
+    ).done(function(data1, data2, data3, data4, data5, data6, data7) {
 
         data1 = data1[0];
         data2 = data2[0];
         data3 = data3[0];
         data4 = data4[0];
         data5 = data5[0];
-        var data = data6[0];
+        data6 = data6[0];
+        var data = data7[0];
 
         // 第一階段已售出總票數
         var SaleStep1_amount = data1['pledged_count'];
@@ -180,9 +183,10 @@ $(document).ready(function () {
         var SaleStep3_amount = data3['pledged_count'];
         var SaleStep4_amount = data4['pledged_count'];
         var SaleStep5_amount = data5['pledged_count'];
+        var SaleStep6_amount = data6['pledged_count'];
         
-        var goal = 10000 + 400 + 2010; // 目標張數
-        var amount = data["pledged_count"] + SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount; //已售出總票數
+        var goal = 10000 + 400 + 2010 + 2500; // 目標張數
+        var amount = data["pledged_count"] + SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount; //已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
 
