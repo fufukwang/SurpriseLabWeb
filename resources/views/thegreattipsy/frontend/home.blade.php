@@ -527,10 +527,10 @@ Yours Truly,<br/>
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
                         <p class="ticket-state d-none d-sm-block">
                             四人以上未滿八人者<br/>
-                            可依數量加購暢行無阻票
+                            可依數量加購原價暢行無阻票
                         </p>
                         <p class="ticket-state d-block d-sm-none">
-                            四人以上未滿八人者 可依數量加購暢行無阻票
+                            四人以上未滿八人者 可依數量加購原價暢行無阻票
                         </p>
                     </a>
                 </div>
@@ -689,7 +689,7 @@ Yours Truly,<br/>
                             07/03
                         </td>
                         <td>
-                            寄送劃位信—07/10前購票者（收到信後，即可劃位）
+                            寄送劃位信—07/03前購票者（收到信後，即可劃位）
                         </td>
                     </tr>
 
