@@ -422,13 +422,16 @@ Route::group(['middleware' => ['web']], function () {
         // 劃位
         Route::get('booking.html',function(){ return view('thegreattipsy.frontend.booking'); });
         Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
-        Route::get('booking_credit_card.html',function(){ 
+        Route::get('booking_credit_card.html',function(){ //return redirect("/thegreattipsy/index.html");
+            /*
             $now = \Carbon\Carbon::now()->timestamp;
             if($now>1562072400){
                 return redirect("/thegreattipsy/index.html");
             } else {
                 return view('thegreattipsy.frontend.booking_credit_card');     
             }
+            */
+            return view('thegreattipsy.frontend.booking_credit_card');  
         });
         Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt\FrontController@ReOrderData');
