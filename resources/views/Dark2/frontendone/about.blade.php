@@ -23,14 +23,14 @@
                     <!-- LOGO z: 1000 -->
                     <div class="main-slogan">
                         <div class="slogan-img show-1 shadow">
-                            <img src="/d2one/images/slogan-fin-bg.png?v=0.3" alt="">
-                            <img src="/d2one/images/slogan-fin-bg.png?v=0.3" alt="">
+                            <img src="/d2one/images/slogan-fin-bg.png?v=0.4" alt="">
+                            <img src="/d2one/images/slogan-fin-bg.png?v=0.4" alt="">
                         </div>
 
 
-                        <div class="slogan-img show-1"><a href="https://www.surpriselab.com.tw/dininginthedark2/reservation.html">
-                            <img src="/d2one/images/slogan-fin.png?v=0.3" alt="">
-                            <img src="/d2one/images/slogan-fin.png?v=0.3" alt="">
+                        <div class="slogan-img show-1"><a href="https://www.surpriselab.com.tw/thegreattipsy/index.html">
+                            <img src="/d2one/images/slogan-fin.png?v=0.4" alt="">
+                            <img src="/d2one/images/slogan-fin.png?v=0.4" alt="">
                         </a></div>
 
 <!--
