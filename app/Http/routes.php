@@ -431,6 +431,7 @@ Route::group(['middleware' => ['web']], function () {
                 return view('thegreattipsy.frontend.booking_credit_card');     
             }
             */
+            //return view('thegreattipsy.frontend.booking_credit_card');  
         });
         Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt\FrontController@ReOrderData');
