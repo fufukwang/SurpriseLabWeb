@@ -161,8 +161,22 @@ class BackController extends Controller
             }
         }
         $pros = pro::where('id','>',0);
-        if($request->has('day')) $pros = $pros->where('day',$request->day);
+        if($request->has('day')) $pros = $pros->where('day','>=',$request->day);
+        if($request->has('day_end')) $pros = $pros->where('day','<=',$request->day_end);
         if($request->has('dayparts')) $pros = $pros->where('day_parts',$request->dayparts);
+        if($request->has('open')){
+            if($request->open==1 || $request->open==0){
+                $pros = $pros->where('open',$request->open);
+            } else {
+                $pros = $pros->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
+            }
+        }
+        if($request->has('open_limit') && $request->has('open_number')){
+            $open_number = $request->open_number;
+            if($request->open_limit==1 && is_numeric($open_number)){
+                $pros = $pros->where('sites','<',$open_number);
+            }
+        }
         if($request->has('order')){
             $order = explode('|',$request->order);
             if(count($order)>0){

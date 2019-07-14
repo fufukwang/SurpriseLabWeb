@@ -25,18 +25,27 @@
                         <div class="table-wrapper">
                             <div class="btn-toolbar">
                                 <div class="btn-group focus-btn-group">
-                                    <form action="/thegreattipsy/pros">
+                                    <form action="/thegreattipsy/pros" autocomplete="off">
 
                                         <div class="form-group col-sm-2">
                                             <div class="col-sm-12">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="day" id="datepicker-autoclose" value="{{ $request->day or ''}}">
+                                                    <input type="text" class="form-control dayinput" placeholder="搜尋範圍起始" name="day" value="{{ $request->day or ''}}">
                                                     <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
                                                 </div>
                                                 <!-- input-group -->
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-2">
+                                            <div class="col-sm-12">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control dayinput" placeholder="搜尋範圍結束" name="day_end" value="{{ $request->day_end or ''}}">
+                                                    <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
+                                                </div>
+                                                <!-- input-group -->
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-1">
                                             <select name="dayparts" class="form-control">
                                                     <option value="">全部</option>
                                                     <option value="午場"@if(isset($request->dayparts) && $request->dayparts=='午場') selected @endif>午場</option>
@@ -45,13 +54,31 @@
                                                     <option value="特別活動"@if(isset($request->dayparts) && $request->dayparts=='特別活動') selected @endif>特別活動</option-->
                                                 </select>
                                         </div>
-                                        <div class="form-group col-sm-2">
+                                        <div class="form-group col-sm-1">
                                             <select name="order" class="form-control">
                                                     <option value="">排序(預設為修改時間反序)</option>
                                                     <option value="day|asc"@if(isset($request->order) && $request->order=='day|asc') selected @endif>日期正序</option>
                                                     <option value="day|desc"@if(isset($request->order) && $request->order=='day|desc') selected @endif>日期反序</option>
                                                 </select>
                                         </div>
+                                        <div class="form-group col-sm-1">
+                                            <select name="open" class="form-control">
+                                                    <option value="">開放狀態</option>
+                                                    <option value="1"@if(isset($request->open) && $request->open==1) selected @endif>開放中</option>
+                                                    <option value="0"@if(isset($request->open) && $request->open===0) selected @endif>關閉中</option>
+                                                    <option value="-1"@if(isset($request->open) && $request->open==-1) selected @endif>未來關閉中</option>
+                                                </select>
+                                        </div>
+
+<div class="form-group col-sm-1">
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input type="checkbox" name="open_limit" value="1"@if(isset($request->open_limit) && $request->open_limit==1) checked @endif>
+      </span>
+      <input type="number" name="open_number" class="form-control" placeholder="開放位置" @if(isset($request->open_number) && $request->open_number>0) value="{{ $request->open_number }}" @else value="24" @endif>
+    </div>
+</div>
+
 
                                         <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
 
@@ -223,7 +250,7 @@
             $('#checkAll').bind('click', function() {
                 $('input[name="id[]"]').prop('checked', $(this).prop('checked'));
             });
-            jQuery('#datepicker-autoclose').datepicker({
+            jQuery('.dayinput').datepicker({
                 format: "yyyy-mm-dd",
                 autoclose: true,
                 todayHighlight: true
