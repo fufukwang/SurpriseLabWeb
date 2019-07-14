@@ -496,6 +496,13 @@ $('.verification-code').on('click', function () {
         alert('已經不需要扣抵囉!');
         return false;
     }
+    // 清除空白並驗證
+    couponVal = couponVal.trim();
+    console.log(couponVal.length)
+    if(couponVal.length != 8){
+        alert('一次請輸入一組序號，／與／之間是不同序號');
+        return false;
+    }
     // ajax 取得票券
     couponVal = couponVal.toUpperCase();
     $.get('/thegreattipsy/GetAjaxData',{
