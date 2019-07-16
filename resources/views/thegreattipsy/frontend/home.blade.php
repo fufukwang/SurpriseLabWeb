@@ -647,12 +647,20 @@ Yours Truly,<br/>
                 </div>
 
                 <div class="sale-progress-info">
-                    <div class="d-inline-block d-sm-flex normal-lineHeight">
+                    <!--div class="d-inline-block d-sm-flex normal-lineHeight">
                         <p>
                             已售出 <span class="highlight total-sale">1600</span> 票<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 票</span>
                         </p>
                         <p class="ml-auto text-right highlight-dark progress-percent-area">
                             已完成 <span class="highlight progress-percent">80</span> %
+                        </p>
+                    </div-->
+                    <div class="d-inline-block d-sm-flex normal-lineHeight">
+                        <p>
+                            已售出 <span class="highlight ">14610</span> 票
+                        </p>
+                        <p class="ml-auto text-right highlight-dark progress-percent-area">
+                            已完成 <span class="highlight ">100</span> %
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
