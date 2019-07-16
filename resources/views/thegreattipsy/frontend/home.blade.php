@@ -419,9 +419,8 @@ Yours Truly,<br/>
                 <p class="d-none d-sm-inline-block">
 你會遇到一群久居在此的房客<br/>
 近距離參與他們的喜怒哀樂<br/><br/>
-<span class="highlight text-center">微醺最終場07/17至08/25票券，最後預售中<br/><br/></span>
-你的選擇，將決定看到的故事<br/>
-期待，你的來訪<br/><br/>
+<span class="highlight text-center">微醺最終場07/17至08/25票券已全數售出<br/><br/></span>
+你的選擇，將決定看到的故事<br/><br/>
 
 - 微醺管家 Mr. Tipsy
                 </p>
@@ -430,13 +429,12 @@ Yours Truly,<br/>
                 <p class="d-block d-sm-none">
 你會遇到一群久居在此的房客<br/>
 近距離參與他們的喜怒哀樂<br/><br/>
-<span class="highlight text-center">微醺最終場07/17至08/25票券，最後預售中<br/><br/></span>
+<span class="highlight text-center">微醺最終場07/17至08/25票券已全數售出<br/><br/></span>
 <!--span class="highlight text-center">
 05/12 前場次已額滿<br/>
 05/15至06/13 場次票券，現正預售中<br/><br/>
 </span-->
-你的選擇，將決定看到的故事<br/>
-期待，你的來訪<br/><br/>
+你的選擇，將決定看到的故事<br/><br/>
 
 
 - 微醺管家 Mr. Tipsy
@@ -496,8 +494,10 @@ Yours Truly,<br/>
             </div>
 
             <p class="ticket-area-preinfo">
-                點選票卷，進入購買頁面後可選擇票卷數量<br >
-                最終場票券，預購07/17-08/25區間之場次
+                <!--點選票卷，進入購買頁面後可選擇票卷數量<br >
+                最終場票券，預購07/17-08/25區間之場次-->
+最終場07/17-08/25區間預售票<br >
+已全數售出
             </p>
 
             <div class="ticket-type">
@@ -513,11 +513,14 @@ Yours Truly,<br/>
                         </p>
                     </a>
                 </div>
-                <div class="type-item type-great-tipsy">
+                <div class="type-item type-great-tipsy sold">
                     <a href="https://surpriselab.backme.tw/checkout/1056/6559?locale=zh-TW
                 " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="暢行無阻票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="暢行無阻票">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1_soldout.png" alt="暢行無阻票">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_soldout_mobile.png" alt="暢行無阻票">
+                        <p class="ticket-state timeLimit">
+                            已售完
+                        </p>
                     </a>
                 </div>
                 <div class="type-item type-group">
@@ -526,11 +529,12 @@ Yours Truly,<br/>
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
                         <p class="ticket-state d-none d-sm-block">
+                            已售完<!--
                             四人以上未滿八人者<br/>
-                            可依數量加購原價暢行無阻票
+                            可依數量加購原價暢行無阻票-->
                         </p>
                         <p class="ticket-state d-block d-sm-none">
-                            四人以上未滿八人者 可依數量加購原價暢行無阻票
+                            已售完<!--四人以上未滿八人者 可依數量加購原價暢行無阻票-->
                         </p>
                     </a>
                 </div>
@@ -630,10 +634,10 @@ Yours Truly,<br/>
                     剩餘時間
                 </p>
                 <div class="d-flex time-rest d-flex align-items-center justify-content-center">
-                    <span class="days"></span>天
-                    <span class="hours"></span>時
-                    <span class="minutes"></span>分
-                    <span class="seconds"></span>秒
+                    <span class="days">0</span>天
+                    <span class="hours">00</span>時
+                    <span class="minutes">00</span>分
+                    <span class="seconds">00</span>秒
                 </div>
             </div>
 
@@ -897,7 +901,7 @@ Yours Truly,<br/>
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=1.7"></script>
+<script src="js/main.js?v=1.8"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
 <script>
