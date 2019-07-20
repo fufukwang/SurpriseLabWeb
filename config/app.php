@@ -158,6 +158,8 @@ return [
         Mailchimp\MailchimpServiceProvider::class,
         'Maatwebsite\Excel\ExcelServiceProvider',
         flamelin\ECPay\EcpayServiceProvider::class,
+        // self service
+        App\Providers\HelperServiceProvider::class,
     ],
 
     /*
@@ -206,6 +208,7 @@ return [
         'MC' => Mailchimp\MailchimpFacade::class,
         'Excel' => 'Maatwebsite\Excel\Facades\Excel',
         'Ecpay' => flamelin\ECPay\Facade\Ecpay::class,
+        'SLS'       => App\Service\HelperServiceFacade::class,
     ],
 
 ];

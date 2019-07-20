@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500&display=swap");
+@font-face {
+  font-family: "OCR A Std";
+  src: url(../fonts/OCRAStd.otf);
+  font-weight: 400; }
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Noto Sans TC", sans-serif; }
+
+body {
+  background-color: #03030D;
+  color: #00f8f8;
+  font-family: "Noto Sans TC", sans-serif; }
+  @media (max-width: 480px) {
+    body {
+      padding: 0 20px; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1.8px;
+  margin-bottom: 0; }
+  @media (max-width: 480px) {
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: 1.4px; } }
+
+h1 {
+  font-family: "OCR A Std", sans-serif;
+  font-size: 36px; }
+
+h2 {
+  font-size: 24px; }
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 18px;
+      letter-spacing: 1.8px; } }
+
+h5 {
+  font-family: "Press Start 2P", cursive, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase; }
+  @media (max-width: 480px) {
+    h5 {
+      font-size: 14px; } }
+
+h6 {
+  font-family: "Press Start 2P", cursive, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.2px; }
+  @media (max-width: 480px) {
+    h6 {
+      font-size: 8px;
+      letter-spacing: 0.8px; } }
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.88;
+  letter-spacing: 1.6px;
+  display: block; }
+  @media (max-width: 480px) {
+    p {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 1.4px; } }
+
+a {
+  transition: 0.3s; }
+
+.intro-wrapper {
+  text-align: center;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100); }
+  .intro-wrapper.el-fill .headline .headline-sub {
+    font-size: 12px;
+    padding-top: calc(100vh * 76 / 900);
+    padding-bottom: calc(100vh * 20 / 900);
+    letter-spacing: 1.2px; }
+  .intro-wrapper.el-fill .headline .master-vision {
+    width: 536px;
+    height: auto;
+    padding-bottom: calc(100vh * 30 / 900); }
+  .intro-wrapper.el-fill .headline .time-counter {
+    font-size: 18px;
+    padding-bottom: calc(100vh * 47 / 900); }
+  .intro-wrapper.el-fill .phoneNumberCollection {
+    max-height: 1000px;
+    padding-top: calc(100vh * 48 / 900);
+    padding-bottom: calc(100vh * 118 / 900);
+    overflow: inherit; }
+  .intro-wrapper.el-fill .glitch p {
+    opacity: 0.5;
+    cursor: initial;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none; }
+  @media (max-width: 1128px) {
+    .intro-wrapper.el-fill .headline .master-vision {
+      width: 100%;
+      height: auto;
+      padding-bottom: 12px; } }
+  @media (max-width: 480px) {
+    .intro-wrapper.el-fill .headline .headline-sub {
+      font-size: 8px;
+      padding-top: 35px;
+      padding-bottom: 12px;
+      letter-spacing: 0.8px; }
+    .intro-wrapper.el-fill .headline .time-counter {
+      padding-bottom: 0;
+      font-size: 14px;
+      letter-spacing: 1.4px; }
+    .intro-wrapper.el-fill .phoneNumberCollection {
+      padding-top: 50px;
+      padding-bottom: 75px; } }
+  .intro-wrapper .intro-inner {
+    transition: max-height 0.3s, padding 0.2s; }
+
+.headline .headline-sub {
+  text-transform: uppercase;
+  padding-bottom: calc(100vh * 30 / 900);
+  margin-bottom: 0; }
+.headline .master-vision {
+  transition: width 0.2s;
+  padding-bottom: calc(100vh * 60 / 900);
+  width: 1088px; }
+@media (max-width: 1128px) {
+  .headline .master-vision {
+    width: 100%;
+    padding-bottom: 30px; } }
+
+.time-counter {
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: 1.8px;
+  padding-bottom: calc(100vh * 72 / 900);
+  transition: font-size 0.3s; }
+  .time-counter span {
+    font-family: "Press Start 2P", cursive, sans-serif; }
+    .time-counter span::after {
+      content: ':'; }
+    .time-counter span:last-child::after {
+      display: none; }
+  @media (max-width: 480px) {
+    .time-counter {
+      font-size: 18px;
+      letter-spacing: 1.2px;
+      padding-bottom: 30px; } }
+
+.phoneNumberCollection {
+  max-height: 0;
+  overflow: hidden; }
+  .phoneNumberCollection .shell {
+    position: absolute;
+    width: 240px;
+    margin-left: 132px;
+    padding: 0 30px;
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 3.6px;
+    font-weight: 300;
+    height: 48px;
+    top: 4px;
+    right: 0;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Set text color to transparent to hide the default caret */
+    color: transparent; }
+    .phoneNumberCollection .shell::before, .phoneNumberCollection .shell::after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 18px;
+      vertical-align: middle; }
+    .phoneNumberCollection .shell::after {
+      position: relative;
+      bottom: 1px;
+      left: 0;
+      background: #01ffff;
+      animation: blinky 0.7s linear infinite alternate;
+      -webkit-animation: blinky 0.7s linear infinite alternate; }
+  .phoneNumberCollection .button-wrapper {
+    padding-top: calc(100vh * 40 / 900); }
+  @media (max-width: 480px) {
+    .phoneNumberCollection .shell {
+      height: 36px;
+      padding-left: 10px !important;
+      padding-right: 10px;
+      margin-left: 113px;
+      font-size: 18px;
+      letter-spacing: 1.8px;
+      max-width: 160px; }
+      .phoneNumberCollection .shell::after {
+        left: 5px; }
+    .phoneNumberCollection .button-wrapper {
+      padding-top: calc(100vh * 65 / 557); } }
+
+@keyframes blinky {
+  0% {
+    background: transparent; }
+  100% {
+    background: #01ffff; } }
+@-webkit-keyframes blinky {
+  0% {
+    background: transparent; }
+  100% {
+    background: #01ffff; } }
+.actionText-container {
+  width: 300px;
+  margin: 0 auto; }
+
+.glitch .display,
+.glitch .layer {
+  width: 100%; }
+.glitch p {
+  padding-bottom: 0;
+  cursor: pointer; }
+
+.iti__flag-container {
+  width: 120px;
+  font-size: 20px;
+  letter-spacing: 3.6px; }
+  .iti__flag-container .iti__selected-flag {
+    width: 100%;
+    justify-content: center;
+    padding: 0 12px; }
+    .iti__flag-container .iti__selected-flag:focus {
+      outline: 0; }
+  @media (max-width: 480px) {
+    .iti__flag-container {
+      width: 100px;
+      font-size: 18px;
+      letter-spacing: 1.8px; }
+      .iti__flag-container .iti__selected-flag {
+        height: 35px; } }
+
+.iti__arrow {
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-image: url("../img/icon-arrow.svg");
+  background-size: contain; }
+
+.iti__country-list {
+  max-height: inherit;
+  overflow: hidden;
+  width: 118px;
+  background: #03030D;
+  box-shadow: none;
+  border: solid 1px;
+  margin: -1px 0 0; }
+
+.iti__country {
+  font-weight: 300; }
+  .iti__country:hover {
+    background: #01ffff; }
+    .iti__country:hover .iti__dial-code {
+      color: #03030D; }
+
+.iti__dial-code {
+  color: #01ffff; }
+
+.iti__flag-box {
+  display: none; }
+
+.iti--separate-dial-code .iti__selected-dial-code {
+  margin-left: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none; }
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent;
+  border-bottom: solid 1px #01ffff;
+  background-image: linear-gradient(to bottom, rgba(1, 255, 255, 0) 0%, rgba(1, 255, 255, 0) 50%, rgba(1, 255, 255, 0.2) 100%); }
+
+.iti__country-name {
+  display: none; }
+
+.iti__flag {
+  display: none;
+  background-image: url("../img/iti/flags.png"); }
+
+.iti-mobile .iti__country-list {
+  width: 118px;
+  max-height: inherit; }
+@media (max-width: 480px) {
+  .iti-mobile .iti__country-list {
+    width: 98px; } }
+
+#error-msg {
+  display: none;
+  text-align: center;
+  width: 240px;
+  margin-left: auto;
+  background: #01ffff;
+  margin-top: 6px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #02020c; }
+  #error-msg.show {
+    display: block; }
+  @media (max-width: 480px) {
+    #error-msg {
+      width: 100%; } }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../img/iti/flags@2x.png"); } }
+.form-group {
+  position: relative;
+  margin-bottom: 0; }
+
+input#phone {
+  background-color: transparent;
+  height: 48px;
+  padding-left: 30px !important;
+  padding-right: 30px;
+  margin-left: 132px;
+  background-image: linear-gradient(to bottom, rgba(1, 255, 255, 0) 0%, rgba(1, 255, 255, 0) 50%, rgba(1, 255, 255, 0.2) 100%);
+  color: #01ffff;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 3.6px;
+  text-align: left;
+  max-width: 240px;
+  caret-color: transparent;
+  border-style: solid;
+  border-color: #01ffff;
+  border-width: 0 0 1px;
+  border-radius: 0; }
+  input#phone::placeholder {
+    color: transparent; }
+  @media (max-width: 480px) {
+    input#phone {
+      height: 36px;
+      padding-left: 10px !important;
+      padding-right: 10px;
+      margin-left: 113px;
+      font-size: 18px;
+      letter-spacing: 1.8px;
+      max-width: 160px; } }
+input:focus {
+  outline: 0; }
+
+.radio__button {
+  letter-spacing: 1.6px;
+  padding-bottom: 0;
+  padding-top: calc(100vh * 70 / 900); }
+  .radio__button .toggle__modal {
+    position: relative;
+    color: #01ffff;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none; }
+    .radio__button .toggle__modal:hover {
+      opacity: 0.7;
+      text-decoration: none; }
+    .radio__button .toggle__modal::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      left: 0;
+      bottom: -2px;
+      height: 1px;
+      background-color: #01ffff; }
+  .radio__button .custom-control {
+    padding-left: 20px; }
+    .radio__button .custom-control.custom-checkbox {
+      cursor: pointer;
+      min-height: auto; }
+      .radio__button .custom-control.custom-checkbox input {
+        display: none; }
+      .radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: #01ffff; }
+      .radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+        display: none; }
+      .radio__button .custom-control.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+        box-shadow: none; }
+      .radio__button .custom-control.custom-checkbox .custom-control-label {
+        line-height: 1;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        color: #009e9e; }
+        .radio__button .custom-control.custom-checkbox .custom-control-label::before {
+          width: 12px;
+          height: 12px;
+          border-radius: 0;
+          border: solid 1px #01ffff;
+          top: .2rem;
+          background: transparent; }
+  @media (max-width: 575.98px) {
+    .radio__button {
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      padding-top: 40px; }
+      .radio__button .custom-control {
+        padding-left: 15px; }
+        .radio__button .custom-control.custom-checkbox .custom-control-label::before {
+          width: 9px;
+          height: 9px;
+          top: .15rem; } }
+
+.btn-default {
+  border-color: #01ffff;
+  min-width: 180px;
+  font-size: 18px;
+  font-family: "Press Start 2P", cursive, sans-serif;
+  letter-spacing: 1.8px;
+  color: #01ffff;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(1, 255, 255, 0) 0%, rgba(1, 255, 255, 0) 50%, rgba(1, 255, 255, 0.2) 100%);
+  padding: 11px 0;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  transition: opacity 0.3s; }
+  .btn-default:disabled {
+    border-color: #009e9e;
+    color: #009e9e; }
+  .btn-default:focus, .btn-default:active {
+    outline: 0; }
+  .btn-default:not(:disabled):hover {
+    opacity: 0.7; }
+  @media (max-width: 480px) {
+    .btn-default {
+      min-width: 160px; } }
+
+.modal.show .modal-dialog {
+  max-width: 812px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+.modal-content {
+  border-radius: 0;
+  border: solid 1px #01ffff;
+  background: #03030D; }
+
+.modal-header {
+  background-color: #01ffff;
+  color: #03030D;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  justify-content: center;
+  padding: 12px 0 11px;
+  border-radius: 0;
+  border-bottom: solid 1px #01ffff; }
+  .modal-header .modal-title {
+    line-height: 1;
+    font-family: "Noto Sans TC", sans-serif; }
+  @media (max-width: 480px) {
+    .modal-header {
+      padding: 14px 0 13px; }
+      .modal-header .modal-title {
+        font-weight: bold;
+        letter-spacing: 1.4px; } }
+
+.modal-body-container {
+  position: relative;
+  max-height: 550px;
+  margin: 30px 0; }
+  .modal-body-container::after {
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 159px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to bottom, rgba(3, 3, 13, 0), #03030d); }
+  @media (max-width: 480px) {
+    .modal-body-container {
+      max-height: 50vh; }
+      .modal-body-container::after {
+        height: 15vh;
+        width: calc(100vw - 40px); } }
+
+.modal-body {
+  border: 0;
+  padding: 30px 100px;
+  word-break: break-all; }
+  .modal-body a {
+    color: #fff;
+    word-break: break-all; }
+  @media (max-width: 480px) {
+    .modal-body {
+      padding: 0 0 0 20px; } }
+
+.modal-footer {
+  justify-content: center;
+  border-top: solid 1px #01ffff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  color: #01ffff;
+  background-color: #03030D;
+  opacity: 1;
+  text-shadow: none;
+  display: block;
+  text-align: center; }
+  .modal-footer:hover {
+    color: rgba(1, 255, 255, 0.7);
+    opacity: 1; }
+  @media (max-width: 480px) {
+    .modal-footer {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      font-weight: bold;
+      padding: 13px 0 14px; } }
+
+#submitInfo.modal.show .modal-dialog {
+  max-width: 536px; }
+#submitInfo .modal-body-container {
+  height: 198px;
+  margin: 0; }
+  #submitInfo .modal-body-container::after {
+    display: none; }
+  @media (max-width: 480px) {
+    #submitInfo .modal-body-container {
+      height: 155px; } }
+#submitInfo .modal-body {
+  padding: 0;
+  text-align: center; }
+  #submitInfo .modal-body h2 {
+    margin-bottom: 20px; }
+    @media (max-width: 480px) {
+      #submitInfo .modal-body h2 {
+        margin-bottom: 12px; } }
+#submitInfo .modal-header .modal-title {
+  font-family: "Press Start 2P", cursive, sans-serif;
+  font-weight: normal;
+  text-transform: inherit; }
+#submitInfo .modal-footer {
+  font-family: "Press Start 2P", cursive, sans-serif;
+  font-weight: normal; }
+
+.simplebar-scrollbar:before {
+  border-radius: 0;
+  background: #01ffff; }
+
+.simplebar-track {
+  background: #03030D; }
+
+.simplebar-scrollbar {
+  right: 21px; }
+
+/*# sourceMappingURL=intro.css.map */

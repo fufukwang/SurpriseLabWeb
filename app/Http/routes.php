@@ -437,7 +437,13 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('ReOrderData','tgt\FrontController@ReOrderData');
     });
 
+    Route::group(['prefix' => 'clubtomorrow'], function(){
+        Route::get('intro.html',function(){ return view('clubtomorrow.frontend.intro'); });
 
+
+        // 驗證SMS & SMS寄送
+        Route::post('getting_intro_sms','clubT\FrontController@getting_intro_sms');
+    });
 });
 
 

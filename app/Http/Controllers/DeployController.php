@@ -12,6 +12,16 @@ class DeployController extends Controller
 
    public function supriseDeploy(Request $request){
         if(substr($request->header('User-Agent'), 0,15)=='GitHub-Hookshot'){
+            $dev_data = array(
+                'LOCAL_ROOT'      => '/home/web/dev/SurpriseLabWeb',
+                'LOCAL_REPO_NAME' => 'SurpriseLabWeb',
+                'LOCAL_REPO'      => '/home/web/dev/SurpriseLabWeb',
+                'REMOTE_REPO'     => 'git@github.com:fufukwang/SurpriseLabWeb.git',
+                'BRANCH'          => 'dev'
+            );
+
+            $dev = $this->doexec($dev_data);
+
             $data = array(
                 'LOCAL_ROOT'      => '/home/web/SurpriseLabWeb',
                 'LOCAL_REPO_NAME' => 'SurpriseLabWeb',

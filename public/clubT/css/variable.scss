@@ -1,0 +1,65 @@
+// fonts
+@font-face {
+  font-family: "OCR A Std";
+  src: url(../fonts/OCRAStd.otf);
+  font-weight: 400;
+}
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500&display=swap');
+
+$font-ocraStd: 'OCR A Std', sans-serif;
+$font-pressStart: 'Press Start 2P', cursive, sans-serif;
+$font-sans: 'Noto Sans TC', sans-serif;
+
+// Normal colors
+$color-black: #03030D;
+$color-purple: #c062f0;
+$color-pink: #ff66d2;
+$color-bright-blue: #01ffff;
+$color-dark-blue: #009e9e;
+$color-bright-green: #15ffbc;
+$color-blue: #0300f9;
+
+// V2 colors
+$color-yellow: #ffe000;
+$color-orange: #fc8f00;
+
+
+// Start================================================================
+// Space counter base on width percentage
+// How to use
+// @include baseCounter(style name, space when is 1920);
+// Example @include baseCounter('padding-top', 75);
+
+@mixin baseCounter($e, $width-1920) {
+  // Padding-left & Padding-right = 15 + 15 = 30
+  $bs4-padding: 30px;
+  $percent : $width-1920 / 1118;
+
+  @media (min-width: 1200px) {
+    #{$e}: calc((608px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (min-width: 1440px) {
+    #{$e}: calc((768px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (min-width: 1920px) {
+    #{$e}: calc((1088px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (max-width: 1199.98px) {
+    #{$e}: calc((520px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (max-width: 480px) {
+    @if ($e != 'max-width') {
+      #{$e}: calc(100% * #{$percent});
+    } @else {
+      #{$e}: 100%;
+    }
+
+  }
+}
+
+// End================================================================

@@ -1,0 +1,8 @@
+@media screen and (max-width: 1170px) {
+  #Contents {
+    width: 960px; } }
+@media screen and (min-width: 1171px) {
+  #Contents {
+    width: 1160px; } }
+
+/*# sourceMappingURL=mixin.css.map */
