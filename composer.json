@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "fufukwang/mailchimp_apiv3": "dev-master",
         "maatwebsite/excel": "~2.1.0",
-        "flamelin/ecpay": "dev-master"
+        "flamelin/ecpay": "dev-master",
+        "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

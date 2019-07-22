@@ -37,11 +37,25 @@ class FrontController extends Controller
                         $count = club_sms::where('dial_code',$dial_code)->where('phone',$phone)->count();
                         if($count==0 && $agree==1){
                             // 傳送 SMS 
+                            if($dial_code = "+886"){
+                                $phone_number = "0".$phone;
+                            } else {
+                                $phone_number = str_replace('+','',$dial_code).$phone;
+                            }
+                            $sent_obj = SLS::sent_single_sms($phone_number);
+                            $sent_result_0 = json_encode($sent_obj);
+                            if($sent_obj['is_error']){
+                                $is_sms_0 = 1;
+                            } else {
+                                $is_sms_0 = 0;                                
+                            }
 
                             club_sms::create([
                                 'dial_code' => $dial_code,
                                 'agree'     => $agree,
-                                'phone'     => $phone
+                                'phone'     => $phone,
+                                'is_sms_0'  => $is_sms_0,
+                                'sent_result_0' => $sent_result_0,
                             ]);
 
                             return Response::json(['success'=> true,'message'=>'ok'], 200);  
