@@ -43,19 +43,19 @@ class FrontController extends Controller
                                 $phone_number = str_replace('+','',$dial_code).$phone;
                             }
                             $sent_obj = SLS::sent_single_sms($phone_number);
-                            $sent_result_0 = json_encode($sent_obj);
+                            $sent_result = json_encode($sent_obj);
                             if($sent_obj['is_error']){
-                                $is_sms_0 = 1;
+                                $is_sms = 1;
                             } else {
-                                $is_sms_0 = 0;                                
+                                $is_sms = 0; 
                             }
 
                             club_sms::create([
                                 'dial_code' => $dial_code,
                                 'agree'     => $agree,
                                 'phone'     => $phone,
-                                'is_sms_0'  => $is_sms_0,
-                                'sent_result_0' => $sent_result_0,
+                                'is_sms'    => $is_sms,
+                                'sent_result' => $sent_result,
                             ]);
 
                             return Response::json(['success'=> true,'message'=>'ok'], 200);  

@@ -30,8 +30,8 @@ jQuery(function($){
         },
         {
             'title': 'already connected ',
-              'tw': '已寄過此通訊裝置',
-              'en': 'Check your message box again'
+            'tw': '已寄過此通訊裝置',
+            'en': 'Check your message box again'
         }
     ];
     var modalContent = modalMessage[0];
@@ -46,6 +46,7 @@ jQuery(function($){
 
     // 方便測試資料重複時的畫面，串接後可刪除
     // =================================
+    /*
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = window.location.search.substring(1),
           sURLVariables = sPageURL.split('&'),
@@ -70,6 +71,7 @@ jQuery(function($){
     } else if (get_value === 'timeout') { // 超過倒數日
         timeout = true;
     }
+    */
     // =================================
 
     // ----------------------------
