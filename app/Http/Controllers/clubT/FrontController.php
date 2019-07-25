@@ -45,9 +45,9 @@ class FrontController extends Controller
                             $sent_obj = SLS::sent_single_sms($phone_number);
                             $sent_result = json_encode($sent_obj);
                             if($sent_obj['is_error']){
-                                $is_sms = 1;
+                                $is_sms = 0;
                             } else {
-                                $is_sms = 0; 
+                                $is_sms = 1; 
                             }
 
                             club_sms::create([
