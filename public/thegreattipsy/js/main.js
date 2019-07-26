@@ -199,7 +199,7 @@ $(document).ready(function () {
         var timeLimit_limit = data['rewards'][0].quantity_limit; // 限量張數
         var timeLimit_wait = data['rewards'][0].wait_pledged_count; // 等待付款中張數
         var timeLimit_rest = timeLimit_limit - timeLimit_sale - timeLimit_wait; // 剩餘可銷售張數
-
+timeLimit_rest = 0;  // 歸零
         if (timeLimit_rest <= 0) {
             timeLimit_rest = 0;
             ticket_matinee.addClass('sold');
@@ -219,7 +219,7 @@ $(document).ready(function () {
         var groupTicket_limit = data['rewards'][2].quantity_limit; // 限量張數
         var groupTicket_wait = data['rewards'][2].wait_pledged_count; // 等待付款中張數
         var groupTicket_rest = groupTicket_limit - groupTicket_sale - groupTicket_wait; // 剩餘可銷售張數
-
+groupTicket_rest = 0;  // 歸零
         if (groupTicket_rest <= 0) {
             ticket_group.addClass('sold');
             ticket_group.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_3_soldout.png');
