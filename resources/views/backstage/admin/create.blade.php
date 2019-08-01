@@ -49,6 +49,12 @@
                                         <input type="checkbox" name="oldview" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>明日俱樂部</label>
+                                        <input type="checkbox" name="clubtomorrow" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
