@@ -15,7 +15,7 @@
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1.0">
     <title>明日俱樂部 Club Tomorrow</title>
 
     <link rel="icon" href="/clubT/favicon.png" type="image/x-icon">
@@ -61,7 +61,7 @@
             <form action="">
                 <div class="form-group d-inline-block">
                     <p class="shell"></p>
-                    <input id="phone" type="tel" title="phoneNumber" class="error" maxlength="11"/>
+                    <input id="phone" type="tel" placeholder="請輸入電話號碼" title="phoneNumber" class="error" maxlength="11"/>
                     <input type="hidden" name="dial-code"/>
                     <div id="error-msg"></div>
                 </div>
@@ -126,7 +126,7 @@
                     <p>
                         準備好進入另一個世界了嗎？
                         <br/>
-                        點擊進入，一切即將開始
+                        點此進入，一切即將開始
                     </p>
                 </div>
             </div>
