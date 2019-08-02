@@ -6,12 +6,12 @@
   font-weight: 400; }
 * {
   -webkit-font-smoothing: antialiased;
-  font-family: "Noto Sans TC", sans-serif; }
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif; }
 
 body {
   background-color: #03030D;
   color: #00f8f8;
-  font-family: "Noto Sans TC", sans-serif; }
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif; }
   @media (max-width: 480px) {
     body {
       padding: 0 20px; } }
@@ -122,7 +122,7 @@ a {
       padding-top: 50px;
       padding-bottom: 75px; } }
   .intro-wrapper .intro-inner {
-    transition: max-height 0.3s, padding 0.2s; }
+    transition: max-height 0.3s; }
 
 .headline .headline-sub {
   text-transform: uppercase;
@@ -256,7 +256,7 @@ a {
   width: 20px;
   height: 20px;
   border: 0;
-  background-image: url("../img/icon-arrow.svg");
+  background-image: url("../img/icon/icon-arrow.svg");
   background-size: contain; }
 
 .iti__country-list {
@@ -355,7 +355,10 @@ input#phone {
   border-width: 0 0 1px;
   border-radius: 0; }
   input#phone::placeholder {
-    color: transparent; }
+    color: #01ffff;
+    opacity: 0.5;
+    padding-left: 20px;
+    font-size: 16px; }
   @media (max-width: 480px) {
     input#phone {
       height: 36px;
@@ -364,7 +367,9 @@ input#phone {
       margin-left: 113px;
       font-size: 18px;
       letter-spacing: 1.8px;
-      max-width: 160px; } }
+      max-width: 160px; }
+      input#phone::placeholder {
+        font-size: 15px; } }
 input:focus {
   outline: 0; }
 
@@ -499,7 +504,7 @@ input:focus {
   border-bottom: solid 1px #01ffff; }
   .modal-header .modal-title {
     line-height: 1;
-    font-family: "Noto Sans TC", sans-serif; }
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif; }
   @media (max-width: 480px) {
     .modal-header {
       padding: 14px 0 13px; }
@@ -511,6 +516,8 @@ input:focus {
   position: relative;
   max-height: 550px;
   margin: 30px 0; }
+  .modal-body-container.toEnd::after {
+    opacity: 0; }
   .modal-body-container::after {
     position: absolute;
     content: '';
@@ -519,7 +526,8 @@ input:focus {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-image: linear-gradient(to bottom, rgba(3, 3, 13, 0), #03030d); }
+    background-image: linear-gradient(to bottom, rgba(3, 3, 13, 0), #03030d);
+    transition: opacity 0.3s; }
   @media (max-width: 480px) {
     .modal-body-container {
       max-height: 50vh; }
