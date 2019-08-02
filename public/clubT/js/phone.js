@@ -171,24 +171,6 @@ jQuery(function($){
     }
 
     // ----------------------------
-    // Custom Caret
-    // ----------------------------
-    $(function () {
-        return phoneField.val(shell.text());
-    });
-
-    textCheck = function () {
-        var cur, oldVal;
-        cur = phoneField.val();
-        if (cur !== oldVal) {
-            shell.text(phoneField.val());
-        }
-        return oldVal = cur;
-    };
-
-    var sentinel = setInterval(textCheck, .1);
-
-    // ----------------------------
     // Form Checker
     // ----------------------------
     /**
@@ -283,6 +265,25 @@ jQuery(function($){
      */
     phoneField.bind('keyup paste', function() {
         this.value = this.value.replace(/[^0-9 ]/g, '');
+        textCheck();
+    });
+
+    // ----------------------------
+    // Custom Caret
+    // ----------------------------
+    textCheck = function () {
+        var cur, oldVal;
+        cur = phoneField.val();
+        if (cur !== oldVal) {
+            shell.text(phoneField.val());
+        }
+        return oldVal = cur;
+    };
+
+    phoneField.on('focus', function () {
+        $('html, body').animate({
+            scrollTop: $('.master-vision').offset().top
+        }, 300);
     });
 
     /**
@@ -291,6 +292,20 @@ jQuery(function($){
     new SimpleBar($('.modal-body-container')[0], {
         autoHide: true,
         scrollbarMinSize: 6
+    });
+
+    /**
+     * Modal Content Scroll to end, hide mask.
+     */
+    $('.simplebar-scroll-content').on('scroll', function () {
+        var o = this;
+        var modalContainer = $('.modal-body-container');
+
+        if (o.offsetHeight + o.scrollTop == o.scrollHeight) {
+            modalContainer.addClass('toEnd');
+        } else {
+            modalContainer.removeClass('toEnd');
+        }
     });
 
     /**
