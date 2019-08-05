@@ -48,8 +48,8 @@ class BackController extends Controller
         if($request->isMethod('post')){
             try {
                 $cellData = club_sms::where('is_sent',1);
-                if($request->has('day')) $cellData = $cellData->where('day','>=',$request->day);
-                if($request->has('day_end')) $cellData = $cellData->where('day','<=',$request->day_end);
+                if($request->has('day')) $cellData = $cellData->where('created_at','>=',$request->day);
+                if($request->has('day_end')) $cellData = $cellData->where('created_at','<=',$request->day_end);
                 $cellData = $cellData->get();
 
 
