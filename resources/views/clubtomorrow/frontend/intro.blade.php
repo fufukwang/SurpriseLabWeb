@@ -3,19 +3,19 @@
 <head>
     <!-- Metadata -->
     <meta charset="UTF-8">
-    <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
-    <meta name="description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。">
+    <meta name="keywords" content="驚喜製造、明日俱樂部、明日、劇場、表演">
+    <meta name="description" content="在你所熟悉的世界之外，還有另一個世界同時存在⋯ 你，準備好遊戲其中了嗎？">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="明日俱樂部 Club Tomorrow"/>
     <meta property="og:site_name" content="明日俱樂部 Club Tomorrow"/>
-    <meta property="og:description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。"/>
+    <meta property="og:description" content="在你所熟悉的世界之外，還有另一個世界同時存在⋯ 你，準備好遊戲其中了嗎？"/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/clubtomorrow/intro.html"/>
     <meta property="og:image" content="https://www.surpriselab.com.tw/clubT/img/og/og-2_PhoneNumberCollection.jpg"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1.0">
     <title>明日俱樂部 Club Tomorrow</title>
 
     <link rel="icon" href="/clubT/favicon.png" type="image/x-icon">
@@ -32,6 +32,16 @@
     <!-- Loading Style -->
     <link rel="stylesheet" type="text/css" href="/clubT/css/plugins/loading.css"/>
     <script>document.documentElement.className = 'js';</script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-75329055-7');
+    </script>
 </head>
 
 <body class="loading">
@@ -51,7 +61,7 @@
             <form action="">
                 <div class="form-group d-inline-block">
                     <p class="shell"></p>
-                    <input id="phone" type="tel" title="phoneNumber" class="error" maxlength="11"/>
+                    <input id="phone" type="tel" placeholder="請輸入電話號碼" title="phoneNumber" class="error" maxlength="11"/>
                     <input type="hidden" name="dial-code"/>
                     <div id="error-msg"></div>
                 </div>
@@ -116,7 +126,7 @@
                     <p>
                         準備好進入另一個世界了嗎？
                         <br/>
-                        點擊進入，一切即將開始
+                        點此進入，一切即將開始
                     </p>
                 </div>
             </div>
