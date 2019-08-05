@@ -134,6 +134,20 @@
                         </ul>
                     </li>
                     @endif
+                    @if( Session::get('key')->clubtomorrow )
+                    <li class="has-submenu">
+                        <a href="#"><i class="md md-invert-colors-on"></i>明日俱樂部</a>
+                        <ul class="submenu" style="left:0;right:auto">
+                            <li><a href="/clubtomorrow/sms">sms</a></li>
+                            <!--li><a href="/thegreattipsy/pros">Activaty</a></li>
+                            <li><a href="/thegreattipsy/backmes">Backme</a></li>
+                            <li><a href="/thegreattipsy/coupons">Coupon</a></li>
+                            <li><a href="/thegreattipsy/print">Order</a></li-->
+
+                        </ul>
+                    </li>
+
+                    @endif
                 @endif
                 </ul>
                 <!-- End navigation menu -->

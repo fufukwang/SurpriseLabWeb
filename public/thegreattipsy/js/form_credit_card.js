@@ -310,7 +310,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
                     minDate:0,
-                    maxDate:"+9d",
+                    maxDate:"+3m",
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: enableAllTheseDays
                 });

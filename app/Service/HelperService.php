@@ -13,7 +13,8 @@ class HelperService {
 
 	// 送出 SMS
 	public function sent_single_sms($phone_number){
-		$message = "[嘿！你有一則來自《明日俱樂部》的新訊息。]\n\n通往另一個世界的大門，將在以下連結內開啟。\n連結將在期限內自動銷毀，請把握時間：https://pse.is/JH4R4";
+		$message = "[你有一則來自《明日俱樂部》的新訊息]\n\n你的進入申請已送出。\n請立刻點擊以下連結，與《明日俱樂部》正式連接。\n連結將在期限內自動銷毀，請把握時間：http://bit.ly/316nSWM";
+		//$message = "[嘿！你有一則來自《明日俱樂部》的新訊息。]\n\n通往另一個世界的大門，將在以下連結內開啟。\n連結將在期限內自動銷毀，請把握時間：https://pse.is/JH4R4";
 	    $client = new \GuzzleHttp\Client();
 	    $response = $client->request('POST','https://api.smartdove.net/index.php?r=smsApi/SendOneSms', [
 	      'headers' => [

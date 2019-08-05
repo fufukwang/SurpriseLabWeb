@@ -36,6 +36,7 @@
                             <th>Gift Add</th>
                             <th>微醺大飯店</th>
                             <th>無光&T41</th>
+                            <th>明日俱樂部</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -49,6 +50,7 @@
                                 <td>@if($row->giftadd) yes @else no @endif</td>
                                 <td>@if($row->thegreattipsy) yes @else no @endif</td>
                                 <td>@if($row->oldview) yes @else no @endif</td>
+                                <td>@if($row->clubtomorrow) yes @else no @endif</td>
 
                             <td class="actions">
                                 <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
