@@ -9,7 +9,7 @@
 
 $font-ocraStd: 'OCR A Std', sans-serif;
 $font-pressStart: 'Press Start 2P', cursive, sans-serif;
-$font-sans: 'Noto Sans TC', sans-serif;
+$font-sans: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
 
 // Normal colors
 $color-black: #03030D;
@@ -19,6 +19,7 @@ $color-bright-blue: #01ffff;
 $color-dark-blue: #009e9e;
 $color-bright-green: #15ffbc;
 $color-blue: #0300f9;
+$color-bright-purple: #C8C8FF;
 
 // V2 colors
 $color-yellow: #ffe000;

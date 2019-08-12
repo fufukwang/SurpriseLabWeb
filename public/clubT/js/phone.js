@@ -1,9 +1,4 @@
 jQuery(function($){
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
     // Image Loading 頁面載入動畫
     document.body.classList.add('render');
 
@@ -34,7 +29,6 @@ jQuery(function($){
             'en': 'Check your message box again'
         }
     ];
-    var modalContent = modalMessage[0];
 
     // ----------------------------
     // glitch 文字雜訊效果
@@ -46,7 +40,6 @@ jQuery(function($){
 
     // 方便測試資料重複時的畫面，串接後可刪除
     // =================================
-    /*
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = window.location.search.substring(1),
           sURLVariables = sPageURL.split('&'),
@@ -65,13 +58,10 @@ jQuery(function($){
     var get_value = getUrlParameter('status');
 
     if (get_value === 'data-repeat') { // 電話號碼重複
-        glitch.html('').html(glitch_origin); // 清除文字雜訊效果
-        modalContent = modalMessage[1];
-        showModal(modalContent);
+        showModal(modalMessage[1]);
     } else if (get_value === 'timeout') { // 超過倒數日
         timeout = true;
     }
-    */
     // =================================
 
     // ----------------------------
@@ -119,10 +109,9 @@ jQuery(function($){
 
     var timer = setInterval(function () {
         var Today = new Date();
-        var EndDay = new Date(2019,8,3);
+        var EndDay = new Date(2019, 7, 3);
         var distance = EndDay - Today;
-
-        if (distance > 0 && !timeout) {
+        if ( Today < EndDay && !timeout ) {
 
             days = Math.floor(distance / (1000 * 60 * 60 * 24));
             hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -212,28 +201,14 @@ jQuery(function($){
             phoneField.val(parseInt(phoneField.val()).toString());
         }
         $('input[name="dial-code"]').val($('.iti__selected-dial-code').text());
+
         if (phoneValChecker()) {
-            //showModal(modalContent);
-            $.post('/clubtomorrow/getting_intro_sms',{
-                act       : 'checker',
-                agree     : $('input[name="agree"]').prop('checked') ? 1 : 0,
-                dial_code : $('input[name="dial-code"]').val(),
-                phone     : $('#phone').val(),
-            },function(data){
-                if(data.success==true){
-                    showModal(modalMessage[0]);
-                } else {
-                    showModal(modalMessage[1]);
-                }
-            },'json').fail(function() {
-                showModal(modalMessage[1]);
-            })
+            showModal(modalMessage[0]);
         }
     });
 
     function phoneValChecker() {
         if (phoneField.hasClass('error')) {
-            // errorMsg.innerHTML = "電話號碼重複，請重新輸入";
             errorMsg.classList.add("show");
             phoneField.val('').focus();
             startGameButton.attr('disabled', true);
@@ -257,7 +232,7 @@ jQuery(function($){
      * 表單成功送出視窗，點擊Ok後，恢復成剛進入頁面的樣式
      */
     submitInfo.find('.close').on('click', function () {
-        introWrapper.toggleClass('el-fill').change();
+        introWrapper.toggleClass('el-fill').trigger('change');
     });
 
     /**
@@ -265,6 +240,7 @@ jQuery(function($){
      */
     phoneField.bind('keyup paste', function() {
         this.value = this.value.replace(/[^0-9 ]/g, '');
+        // $(this).attr('placeholder', '');
         textCheck();
     });
 
@@ -292,16 +268,14 @@ jQuery(function($){
     new SimpleBar($('.modal-body-container')[0], {
         autoHide: true,
         scrollbarMinSize: 6
-    });
+    })
 
-    /**
-     * Modal Content Scroll to end, hide mask.
-     */
     $('.simplebar-scroll-content').on('scroll', function () {
         var o = this;
         var modalContainer = $('.modal-body-container');
 
-        if (o.offsetHeight + o.scrollTop == o.scrollHeight) {
+        if(o.offsetHeight + o.scrollTop == o.scrollHeight)
+        {
             modalContainer.addClass('toEnd');
         } else {
             modalContainer.removeClass('toEnd');
