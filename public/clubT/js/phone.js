@@ -1,4 +1,9 @@
 jQuery(function($){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     // Image Loading 頁面載入動畫
     document.body.classList.add('render');
 
@@ -194,6 +199,7 @@ jQuery(function($){
     /**
      * 表單送出
      */
+     /*
     startGameButton.on('click', function () {
         var dialCode = $('.iti__selected-dial-code').text();
         if (dialCode === '+886') {
@@ -204,6 +210,32 @@ jQuery(function($){
 
         if (phoneValChecker()) {
             showModal(modalMessage[0]);
+        }
+    });
+    */
+    startGameButton.on('click', function () {
+        var dialCode = $('.iti__selected-dial-code').text();
+        if (dialCode === '+886') {
+            // 去除多餘的0
+            phoneField.val(parseInt(phoneField.val()).toString());
+        }
+        $('input[name="dial-code"]').val($('.iti__selected-dial-code').text());
+        if (phoneValChecker()) {
+            //showModal(modalContent);
+            $.post('/clubtomorrow/getting_intro_sms',{
+                act       : 'checker',
+                agree     : $('input[name="agree"]').prop('checked') ? 1 : 0,
+                dial_code : $('input[name="dial-code"]').val(),
+                phone     : $('#phone').val(),
+            },function(data){
+                if(data.success==true){
+                    showModal(modalMessage[0]);
+                } else {
+                    showModal(modalMessage[1]);
+                }
+            },'json').fail(function() {
+                showModal(modalMessage[1]);
+            })
         }
     });
 
