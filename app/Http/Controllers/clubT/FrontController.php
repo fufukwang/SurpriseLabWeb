@@ -37,7 +37,7 @@ class FrontController extends Controller
                         $count = club_sms::where('dial_code',$dial_code)->where('phone',$phone)->count();
                         if($count==0 && $agree==1){
                             // 傳送 SMS 
-                            if($dial_code = "+886"){
+                            if($dial_code == "+886"){
                                 $phone_number = "0".$phone;
                             } else {
                                 $phone_number = str_replace('+','',$dial_code).$phone;
