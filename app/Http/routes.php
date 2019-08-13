@@ -448,9 +448,9 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::group(['prefix' => 'clubtomorrow'], function(){
         Route::get('intro.html',function(){ return view('clubtomorrow.frontend.intro'); });
-        Route::get('/',function(){ return view('clubtomorrow.frontend.home'); });
-        Route::get('index.html',function(){ return view('clubtomorrow.frontend.home'); });
-        Route::get('rules.html',function(){ return view('clubtomorrow.frontend.rules'); });
+        //Route::get('/',function(){ return view('clubtomorrow.frontend.home'); });
+        //Route::get('index.html',function(){ return view('clubtomorrow.frontend.home'); });
+        //Route::get('rules.html',function(){ return view('clubtomorrow.frontend.rules'); });
 
 
         // 驗證SMS & SMS寄送
