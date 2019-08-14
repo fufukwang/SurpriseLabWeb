@@ -313,7 +313,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-4">
-                                    <a href="https://surpriselab.backme.tw/checkout/1066/6877?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1066/6877?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_2.png" alt="四人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_2_mobile@2x.png" alt="四人票">
@@ -324,7 +324,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-10">
-                                    <a href="https://surpriselab.backme.tw/checkout/1066/6878?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1066/6878?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_3.png" alt="十人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_3_mobile@2x.png" alt="十人票">
