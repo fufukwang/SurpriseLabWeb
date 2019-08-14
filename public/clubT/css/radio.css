@@ -18,8 +18,19 @@ header {
   top: 0;
   background-color: rgba(3, 3, 13, 0.7); }
   @media (max-width: 1199.99px) {
-    header .logo-wrapper .logo {
-      justify-content: center; } }
+    header {
+      height: auto;
+      padding: 15px 0; }
+      header .logo-wrapper .logo {
+        height: auto;
+        justify-content: center; }
+        header .logo-wrapper .logo img {
+          height: 48px; } }
+  @media (max-width: 374.99px) {
+    header {
+      padding: 9px 0; }
+      header .logo-wrapper .logo img {
+        height: 30px; } }
 
 .page-intro {
   font-size: 16px;
@@ -53,14 +64,25 @@ header {
   .sec-top .radio-screen {
     transition: 0.5s; }
   .sec-top .fade {
-    opacity: 0 !important;
-    cursor: initial !important; }
-  .sec-top .radio-switch-buttons .radio-switch-button img {
-    display: block;
-    transition: 0.3s;
-    cursor: pointer; }
-    .sec-top .radio-switch-buttons .radio-switch-button img:hover {
+    opacity: 0 !important; }
+    .sec-top .fade img {
+      cursor: auto !important; }
+  .sec-top .radio-switch-button {
+    transition: 0.3s; }
+    .sec-top .radio-switch-button.is-disabled:hover {
+      opacity: 1; }
+    .sec-top .radio-switch-button.is-disabled img {
+      display: none;
+      cursor: auto; }
+      .sec-top .radio-switch-button.is-disabled img.disabled {
+        display: block; }
+    .sec-top .radio-switch-button:hover {
       opacity: 0.7; }
+    .sec-top .radio-switch-button img {
+      display: block;
+      cursor: pointer; }
+      .sec-top .radio-switch-button img.disabled {
+        display: none; }
 
 .sec-middle {
   position: absolute;
@@ -77,7 +99,9 @@ header {
     font-weight: 500;
     color: #f45a0c;
     padding: 9px 15px 8px;
-    border: solid 2px #000; }
+    border: solid 2px #000;
+    border-radius: 0;
+    min-width: calc(100% - 112px); }
     .sec-middle #radio-password::placeholder {
       opacity: 0.7;
       color: #f45a0c; }
@@ -97,39 +121,62 @@ header {
     font-weight: 500;
     line-height: 1;
     letter-spacing: 1.8px;
-    background-color: #e4eee6;
-    border: solid 5px #abb0aa;
-    outline: solid 5px #03030D;
-    border-radius: 2px;
-    width: 122px;
+    background-color: transparent;
+    background-image: url("../img/radio/play.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+    min-width: 112px;
     margin-left: 16px;
-    height: 38px;
-    margin-top: 5px;
+    height: 48px;
     transition: 0.3s;
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(3, 3, 13, 0.7);
+    padding: 0; }
+    .sec-middle .submit::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 0 7px 12.1px;
+      border-color: transparent transparent transparent rgba(3, 3, 13, 0.7);
+      margin-left: 9px;
+      display: inline-block; }
     .sec-middle .submit:hover {
       opacity: 0.7; }
   @media (max-width: 575.98px) {
     .sec-middle #radio-password {
       font-size: 14px;
       letter-spacing: 1.4px;
-      width: calc(100% - (100vw * 0.192)); }
+      min-width: calc(100% - 76px);
+      padding: 5px 15px; }
     .sec-middle .radio-message {
       font-size: 14px;
       letter-spacing: 1.4px; }
     .sec-middle .submit {
       font-size: 14px;
       letter-spacing: 1.4px;
-      width: calc(100vw * 0.192);
+      min-width: 70px;
       margin-left: 6px;
-      margin-top: 5px;
-      height: 32px;
-      padding: 0; } }
+      margin-top: 2px;
+      height: 30px;
+      padding: 0; }
+      .sec-middle .submit::after {
+        border-width: 5.4px 0 5.4px 9.4px;
+        margin-left: 5px;
+        margin-top: 1px; } }
   @media (max-width: 320px) {
     .sec-middle {
       bottom: 25px; }
       .sec-middle .radio-message {
-        font-size: 12px; } }
+        font-size: 12px; }
+      .sec-middle .submit {
+        font-size: 12px; }
+        .sec-middle .submit::after {
+          border-width: 4.6px 0 4.6px 8px;
+          margin-left: 3px; } }
 
 .sec-bottom {
   position: relative; }

@@ -4,6 +4,7 @@ jQuery(function($){
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+    fbq('trackCustom', 'introview');
     // Image Loading 頁面載入動畫
     document.body.classList.add('render');
 
@@ -173,6 +174,7 @@ jQuery(function($){
     glitch.on('click', function () {
         introWrapper.addClass('el-fill').trigger('change');
         glitch.html('').html(glitch_origin); // 清除文字雜訊效果
+        fbq('trackCustom', 'intro');
     });
 
     /**
@@ -214,6 +216,7 @@ jQuery(function($){
     });
     */
     startGameButton.on('click', function () {
+        fbq('track', "Lead");
         var dialCode = $('.iti__selected-dial-code').text();
         if (dialCode === '+886') {
             // 去除多餘的0

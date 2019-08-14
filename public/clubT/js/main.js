@@ -144,4 +144,12 @@ $(document).ready(function () {
             main.removeClass('menu-open');
         }
     });
+    $('.fbpx').bind('click',function(){
+        var event = $(this).data('event');
+        if(event==="ViewContent" || event==="AddToCart" || event==='Lead'){
+            fbq('track', event);
+        } else {
+            fbq('trackCustom', event);
+        }
+    });
 });

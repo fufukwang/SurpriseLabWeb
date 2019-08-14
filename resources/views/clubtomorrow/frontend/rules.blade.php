@@ -26,6 +26,7 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
+    @include('clubtomorrow.frontend._fbpixel')
 </head>
 
 <body class="loading">

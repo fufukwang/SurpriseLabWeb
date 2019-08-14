@@ -38,6 +38,7 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
+    @include('clubtomorrow.frontend._fbpixel')
 </head>
 <body class="home loading">
 
@@ -55,7 +56,7 @@
                 <a class="smoothScroll" href="#About">_About</a>
             </li>
             <li>
-                <a class="smoothScroll" href="radio.html">_Radio</a>
+                <a class="smoothScroll fbpx" data-event="sitetoradio" href="radio.html">_Radio</a>
             </li>
             <li>
                 <a class="smoothScroll" href="#Ticket">_Ticket</a>
@@ -119,7 +120,7 @@
                 <a class="smoothScroll" href="#About">About</a>
             </li>
             <li class="menu-item">
-                <a class="smoothScroll" href="radio.html">Radio</a>
+                <a class="smoothScroll fbpx" data-event="sitetoradio" href="radio.html">Radio</a>
             </li>
             <li class="menu-item">
                 <a class="smoothScroll" href="#Ticket">Ticket</a>
@@ -185,11 +186,11 @@
                             準備好遊戲其中了嗎？
                         </p>
                         <div class="entrance-wrapper">
-                            <a class="smoothScroll entrance-link" href="#About">
+                            <a class="smoothScroll entrance-link fbpx" href="#About" data-event="viewcontent1">
                                 <img src="/clubT/img/icon/icon_about.png" srcset="/clubT/img/icon/icon_about@2x.png 2x" alt="探索世界">
                                 <div class="entrance-link-text">探索世界</div>
                             </a>
-                            <a class="smoothScroll entrance-link" href="#Ticket">
+                            <a class="smoothScroll entrance-link fbpx" href="#Ticket" data-event="viewcontent2">
                                 <img src="/clubT/img/icon/icon_ticket.png" srcset="/clubT/img/icon/icon_ticket@2x.png 2x" alt="成為玩家">
                                 <div class="entrance-link-text">成為玩家</div>
                             </a>
@@ -280,7 +281,7 @@
                                     避免讓狂歡變成混亂<br/><span class="v2-highlight">這世界</span>的入口每晚限時開啟<br/><span class="v2-visible v2-highlight">在倒數</span><br/><span class="v2-visible v2-highlight">時</span>進來後，什麼都無需擔心<span class="v2-visible v2-highlight">稀</span><br/><span class="v2-visible v2-highlight">間</span>只需要盡情遊戲<span class="v2-visible v2-highlight">少</span><br/><br/>我是 Emily，這是我的世界<br/><span class="v2-visible v2-highlight">需要</span><br/>只差<span class="v2-highlight">你</span>，一切就完美了<br/>準備好成為玩家了嗎？<br/><br/>嘿，<span class="v2-highlight">快來</span>吧
                                 </p>
                             </div>
-                            <a class="smoothScroll btn-bright-blue" href="#Ticket">成為玩家</a>
+                            <a class="smoothScroll btn-bright-blue fbpx" href="#Ticket" data-event="ViewContent">成為玩家</a>
                         </div>
                     </div>
                 </div>
@@ -304,7 +305,7 @@
 
                             <div class="ticket-type">
                                 <div class="type-item type-single-player">
-                                    <a href="https://surpriselab.backme.tw/checkout/1066/6875?locale=zh-TW" class="ticket-frame" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1066/6875?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_1.png" alt="一人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_1_mobile@2x.png" alt="一人票">
@@ -312,7 +313,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-4">
-                                    <a href="https://surpriselab.backme.tw/checkout/1066/6877?locale=zh-TW" class="ticket-frame" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1066/6877?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_2.png" alt="四人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_2_mobile@2x.png" alt="四人票">
@@ -323,7 +324,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-10">
-                                    <a href="https://surpriselab.backme.tw/checkout/1066/6878?locale=zh-TW" class="ticket-frame" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1066/6878?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_3.png" alt="十人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_3_mobile@2x.png" alt="十人票">
@@ -378,7 +379,7 @@
                             <p class="section-paragraph">
                                 體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限<br/><br/>體驗空間外設有接待區，提供需付費之餐點飲料<br/>歡迎提前抵達，或於結束後與夥伴一同停留
                             </p>
-                            <a class="link-bright-green" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
+                            <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
                         </div>
                     </div>
                 </div>

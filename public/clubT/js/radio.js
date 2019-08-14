@@ -2,7 +2,7 @@ jQuery(function($){
     // Element
     var channel = 0;
     var screen = $('.radio-screen');
-    var switchBotton = $('.radio-switch-button');
+    var switchButton = $('.radio-switch-button');
     var switchForward = $('.forward');
     var switchBack = $('.back');
 
@@ -37,6 +37,7 @@ jQuery(function($){
             sound_url: 'Channel-02-welcome.mp3',
         }
     ];
+    var channelLength = radioList.length - 1;
 
     // 預設為靜音
     audioElement.volume = 0;
@@ -70,44 +71,53 @@ jQuery(function($){
      * 頻道切換按鈕
      * 更新 Channel 並更換頻道圖
      */
-    switchBotton.on('click', function () {
-        window.clearInterval(window.timer); // 重置提示動畫
-        radioMessage.text(''); // 清空提示訊息
-        radioInput.val(''); // 清空密碼欄位
+    switchButton.on('click', function () {
+        var isSwitch = true; // 判定本次是否要有畫面切換
 
-        $(this).hasClass('forward') ? channel++ : channel--;
+        $(this).hasClass('forward') ? channel++ : channel--; // 預算點擊後會到哪個頻道
 
-        if (channel === 0) {
-            playMusic();
-            radioInput.attr('placeholder', '無須密碼，直接收聽');
-        } else {
-            StopMusic();
-            resetPlaceholder();
+        if (channel < 0) { // 是否超過頻道範圍
+            channel = 0;
+            isSwitch = false;
+        } else if (channel > channelLength) {
+            channel = channelLength;
+            isSwitch = false;
         }
 
-        var imgRoute = 'img/radio/3_screen-' + radioList[channel].num + '.png';
-        screen.addClass('fade');
+        if (isSwitch) {
+            window.clearInterval(window.timer); // 重置提示動畫
+            radioMessage.text(''); // 清空提示訊息
+            radioInput.val(''); // 清空密碼欄位
 
-        setTimeout(() => {
-            screen.find('img').attr('src', imgRoute);
-            screen.removeClass('fade')
-        }, 500);
+            if ( channel === 0 ) {
+                radioInput.attr('placeholder', '無須密碼，直接收聽');
+            } else {
+                StopMusic();
+                resetPlaceholder();
+            }
 
-        switchChecker(); // 確認按鈕是否需要隱藏
+            var imgRoute = '/clubT/img/radio/3_screen-' + radioList[channel].num + '.png';
+            screen.addClass('fade');
+
+            setTimeout(() => {
+                screen.find('img').attr('src', imgRoute);
+                screen.removeClass('fade')
+            }, 500);
+
+            switchChecker(); // 確認按鈕是否需要隱藏
+        }
     });
 
     /**
      * 確認頻道按鈕是否需要隱藏
      */
     function switchChecker() {
-        var channelLength = radioList.length;
-
-        switchBotton.removeClass('fade');
+        switchButton.removeClass('is-disabled');
 
         if (channel === 0) {
-            switchBack.addClass('fade');
-        } else if (channel === (channelLength - 1)) {
-            switchForward.addClass('fade');
+            switchBack.addClass('is-disabled');
+        } else if (channel === (channelLength)) {
+            switchForward.addClass('is-disabled');
         }
     }
 
@@ -115,20 +125,22 @@ jQuery(function($){
      * 播放音檔
      */
     function playMusic() {
-        audioElement.setAttribute('src', 'audio/' + radioList[channel].sound_url);
+        audioElement.setAttribute('src', '/clubT/audio/' + radioList[channel].sound_url);
         audioElement.play();
-        audiojQuery.animate({
-            volume: 0.4
-        }, 500);
+        audioElement.volume = 0.4;
     }
 
     /**
      * 停止音檔
      */
     function StopMusic() {
-        audiojQuery.animate({
-            volume: 0
-        }, 2000);
+        if (isMobile.any) {
+            audioElement.pause();
+        } else {
+            audiojQuery.animate({
+                volume: 0
+            }, 2000);
+        }
     }
 
     /**
@@ -148,5 +160,10 @@ jQuery(function($){
             }
         } ), 400);
     }
+
+    /**
+     * 禁止圖片拖曳
+     */
+    $('img').on('dragstart', function(event) { event.preventDefault(); });
 });
 
