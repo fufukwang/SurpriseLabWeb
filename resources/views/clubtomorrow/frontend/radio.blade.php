@@ -37,10 +37,9 @@
                 <!-- Header LOGO -->
                 <div class="logo-wrapper">
                     <div class="logo">
-                        <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
-                        <!--<a class="smoothScroll" href="index.html">-->
-                            <!--<img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">-->
-                        <!--</a>-->
+                        <a class="smoothScroll" href="index.html">
+                            <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -82,7 +81,7 @@
 
                 <div class="radio-inner sec-bottom">
                     <img src="/clubT/img/radio/3_bottom.png" alt="">
-                    <a href="index.html#About" class="d-none btn-bright-blue cat-button fbpx" data-event="radiotosite">了解明日俱樂部</a>
+                    <a href="index.html#About" class="btn-bright-blue cat-button fbpx" data-event="radiotosite">了解明日俱樂部</a>
                 </div>
             </div>
 
