@@ -81,7 +81,7 @@
 
                 <div class="radio-inner sec-bottom">
                     <img src="/clubT/img/radio/3_bottom.png" alt="">
-                    <a href="index.html#About" class="btn-bright-blue cat-button fbpx" data-event="radiotosite">了解明日俱樂部</a>
+                    <a href="index.html#aboutSec" class="btn-bright-blue cat-button fbpx" data-event="radiotosite">了解明日俱樂部</a>
                 </div>
             </div>
 
