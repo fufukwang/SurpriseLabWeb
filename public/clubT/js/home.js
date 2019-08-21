@@ -60,7 +60,13 @@ $(document).ready(function () {
     $.getJSON(progress_api).done(function (data) {
 
         let goal = 3500; // 目標張數
-        let amount = data["pledged_count"]; // 已售出總票數
+        let amount = 0; // 已售出總票數
+
+        $.each(data['rewards'], function (index, ticket) {
+            // 計算已售出總票數
+            amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        });
+
         let sale_progress = amount / goal * 100; // 募款進度
         let rest_tickets = goal - amount; // 剩餘可銷售票數
 
