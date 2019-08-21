@@ -37,9 +37,7 @@
                 <!-- Header LOGO -->
                 <div class="logo-wrapper">
                     <div class="logo">
-                        <a class="smoothScroll" href="index.html">
-                            <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
-                        </a>
+                        <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
                     </div>
                 </div>
             </div>
@@ -81,7 +79,7 @@
 
                 <div class="radio-inner sec-bottom">
                     <img src="/clubT/img/radio/3_bottom.png" alt="">
-                    <a href="index.html#aboutSec" class="btn-bright-blue cat-button fbpx" data-event="radiotosite">了解明日俱樂部</a>
+                    <a href="index.html#aboutSec" class="d-none btn-bright-blue cat-button fbpx" data-event="radiotosite">了解明日俱樂部</a>
                 </div>
             </div>
 
