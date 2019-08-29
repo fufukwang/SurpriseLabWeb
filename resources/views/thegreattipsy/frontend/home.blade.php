@@ -40,6 +40,34 @@
     </style>
 </head>
 <body class="loading">
+
+<!-- Modal Start -->
+<div class="ending-modal">
+    <div class="mask ending-close"></div>
+    <div class="ending-content">
+        <div class="ending-logo">
+            <img src="img/web_title_small.png" alt="The Great Tipsy">
+        </div>
+        <div class="ending-text">
+            <p>
+                <span class="highlight">親愛的房客，晚安</span>
+                <br/>
+                《微醺大飯店 The Great Tipsy》
+                <br/>
+                已於 2019.08.25 正式結束
+                <br/><br/>
+                <span class="highlight">歡迎前往驚喜製造五號作品</span>
+                <br/>
+                <span class="highlight">《明日俱樂部 Club Tomorrow》</span>
+                <br/>
+                <span class="highlight">微醺之後，我們迎來明日</span>
+            </p>
+        </div>
+        <a class="btn-outline" href="https://www.surpriselab.com.tw/clubtomorrow/">前往明日俱樂部</a>
+    </div>
+</div>
+<!-- Modal End -->
+
 <!-- Anchor menu -->
 <nav class="anchor-wrapper">
     <div class="mobile-menu-hand">

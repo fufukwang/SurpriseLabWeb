@@ -1180,3 +1180,116 @@ header.logo {
     }
   }
 }
+
+// 微醺已完結
+.ending-modal {
+  &.hiding-modal {
+    .mask,
+    .ending-content {
+      opacity: 0;
+    }
+  }
+
+  .mask {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    opacity: 1;
+    transition: 0.3s opacity 0.5s;
+  }
+
+  .ending-content {
+    width: 512px;
+    background-color: rgba($color-black, 0.8);
+    box-shadow: 0 0 0 2px $color-ending-yellow, 0 0 0 12px rgba($color-black, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 10001;
+    padding: 54px;
+    text-align: center;
+    opacity: 1;
+    transition: 0.3s opacity;
+
+    &::before {
+      content: '';
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border: 3px solid rgba($color-ending-yellow, 0.3);
+      pointer-events: none;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 336px;
+      padding: 36px 0 48px;
+    }
+
+    @media (max-width: 374.98px) {
+      width: 286px;
+      padding: 24px 0 36px;
+    }
+  }
+
+  .ending-logo {
+    width: 220px;
+    margin: 0 auto 40px;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 182px;
+    }
+
+    @media (max-width: 374.98px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .ending-text {
+    margin-bottom: 40px;
+
+    p {
+      line-height: 2.33;
+    }
+
+    @media (max-width: 575.98px) {
+      margin-bottom: 32px;
+
+      p {
+        line-height: 2;
+      }
+    }
+
+    @media (max-width: 374.98px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .btn-outline {
+    width: 190px;
+    color: $color-ending-blue;
+    background-image: linear-gradient(to bottom, rgba($color-ending-blue, 0), rgba($color-ending-blue, 0.2));
+    border: 1px solid $color-ending-blue;
+    border-radius: 0;
+    padding: 6.5px 0;
+
+    &:hover {
+      background: none;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 180px;
+      font-size: 14px;
+    }
+  }
+}
