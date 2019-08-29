@@ -14,18 +14,18 @@ $(document).ready(function () {
     let v2_visible = $('.v2-visible');
 
     if (isMobile.any) {
-        header_logo.attr('src', '/clubT/img/logo_2_mobile@2x.png');
+        header_logo.attr('src', 'img/logo_2_mobile@2x.png');
 
         v2_copywriting.on('touchstart', function(){
             $(this).addClass('v2-shake');
             v2_sec.addClass('v2-glitch-effect');
-            header_logo.attr('src', '/clubT/img/landing/1.2_logo_mobile@2x.png');
+            header_logo.attr('src', 'img/landing/1.2_logo_mobile@2x.png');
             v2_hightlight.css('color', '#ffe000');
             v2_visible.css('opacity', 1);
         }).on('touchend', function(){
             $(this).removeClass('v2-shake');
             v2_sec.removeClass('v2-glitch-effect');
-            header_logo.attr('src', '/clubT/img/logo_2_mobile@2x.png');
+            header_logo.attr('src', 'img/logo_2_mobile@2x.png');
             v2_hightlight.css('color', '#01ffff');
             v2_visible.css('opacity', 0);
         });
@@ -33,13 +33,13 @@ $(document).ready(function () {
         v2_copywriting.on('mouseenter', function(){
             $(this).addClass('v2-shake');
             v2_sec.addClass('v2-glitch-effect');
-            header_logo.attr('src', '/clubT/img/landing/1.2_logo.png');
+            header_logo.attr('src', 'img/landing/1.2_logo.png');
             v2_hightlight.css('color', '#ffe000');
             v2_visible.css('opacity', 1);
         }).on('mouseleave', function(){
             $(this).removeClass('v2-shake');
             v2_sec.removeClass('v2-glitch-effect');
-            header_logo.attr('src', '/clubT/img/header_logo.png');
+            header_logo.attr('src', 'img/header_logo.png');
             v2_hightlight.css('color', '#01ffff');
             v2_visible.css('opacity', 0);
         });
@@ -83,6 +83,15 @@ $(document).ready(function () {
         set_4.find('.rest-ticket').html(set_4_rest); // 更新時間有點限制票剩餘可銷售張數
         set_4.fadeTo(300, 1);
 
+        if (set_4_rest === 0) {
+            set_4.find('.ticket-frame').attr({
+                'href': 'javascript://',
+                'target': '_self'
+            }).addClass('soldout');
+            set_4.find('.d-none').attr('src', 'img/landing/1.3_ticket_2_soldout.png');
+            set_4.find('.d-block').attr('src', 'img/landing/1.3_ticket_2_mobile_soldout.png')
+        }
+
         // 十人票
         let set_10_sale = data['rewards'][2].pledged_count; // 已銷售張數
         let set_10_limit = data['rewards'][2].quantity_limit; // 限量張數
@@ -92,6 +101,15 @@ $(document).ready(function () {
         set_10.find('.total-ticket').html(set_10_limit); // 更新時間有點限制票限量張數
         set_10.find('.rest-ticket').html(set_10_rest); // 更新時間有點限制票剩餘可銷售張數
         set_10.fadeTo(300, 1);
+
+        if (set_10_rest === 0) {
+            set_10.find('.ticket-frame').attr({
+                'href': 'javascript://',
+                'target': '_self'
+            }).addClass('soldout');
+            set_10.find('.d-none').attr('src', 'img/landing/1.3_ticket_3_soldout.png');
+            set_10.find('.d-block').attr('src', 'img/landing/1.3_ticket_3_mobile_soldout.png')
+        }
 
         let sale_info = $('.sale-progress-info');
         sale_info.find('.total-sale').html(amount); // 更新總售出張數
