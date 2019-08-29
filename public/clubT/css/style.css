@@ -529,6 +529,7 @@ header {
   height: 120px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 999998;
   column-rule: #01ffff;
   background-image: linear-gradient(to bottom, #03030D, rgba(3, 3, 13, 0));
@@ -1035,6 +1036,8 @@ header {
       letter-spacing: 1.6px;
       line-height: 1.5;
       margin: 8px 0 0; }
+#Ticket .ticket-sec-type .ticket-frame.soldout {
+  cursor: not-allowed; }
 #Ticket .ticket-sec-type .ticket-frame.has-not-hover .type-img::after {
   opacity: 1; }
 @media (max-width: 1440px) {

@@ -495,6 +495,7 @@ header {
   height: 120px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 999998;
   column-rule: $color-bright-blue;
   background-image: linear-gradient(to bottom, $color-black, rgba($color-black, 0));
@@ -1251,6 +1252,10 @@ header {
     }
 
     .ticket-frame {
+      &.soldout {
+        cursor: not-allowed;
+      }
+
       &.has-not-hover {
         .type-img {
           &::after {
