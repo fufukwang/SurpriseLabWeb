@@ -88,8 +88,8 @@ $(document).ready(function () {
                 'href': 'javascript://',
                 'target': '_self'
             }).addClass('soldout');
-            set_4.find('.d-none').attr('src', 'clubT/img/landing/1.3_ticket_2_soldout.png');
-            set_4.find('.d-block').attr('src', 'clubT/img/landing/1.3_ticket_2_mobile_soldout.png')
+            set_4.find('.d-none').attr('src', '/clubT/img/landing/1.3_ticket_2_soldout.png');
+            set_4.find('.d-block').attr('src', '/clubT/img/landing/1.3_ticket_2_mobile_soldout.png')
         }
 
         // 十人票
@@ -107,8 +107,8 @@ $(document).ready(function () {
                 'href': 'javascript://',
                 'target': '_self'
             }).addClass('soldout');
-            set_10.find('.d-none').attr('src', 'clubT/img/landing/1.3_ticket_3_soldout.png');
-            set_10.find('.d-block').attr('src', 'clubT/img/landing/1.3_ticket_3_mobile_soldout.png')
+            set_10.find('.d-none').attr('src', '/clubT/img/landing/1.3_ticket_3_soldout.png');
+            set_10.find('.d-block').attr('src', '/clubT/img/landing/1.3_ticket_3_mobile_soldout.png')
         }
 
         let sale_info = $('.sale-progress-info');
