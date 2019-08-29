@@ -14,18 +14,18 @@ $(document).ready(function () {
     let v2_visible = $('.v2-visible');
 
     if (isMobile.any) {
-        header_logo.attr('src', 'img/logo_2_mobile@2x.png');
+        header_logo.attr('src', '/clubT/img/logo_2_mobile@2x.png');
 
         v2_copywriting.on('touchstart', function(){
             $(this).addClass('v2-shake');
             v2_sec.addClass('v2-glitch-effect');
-            header_logo.attr('src', 'img/landing/1.2_logo_mobile@2x.png');
+            header_logo.attr('src', '/clubT/img/landing/1.2_logo_mobile@2x.png');
             v2_hightlight.css('color', '#ffe000');
             v2_visible.css('opacity', 1);
         }).on('touchend', function(){
             $(this).removeClass('v2-shake');
             v2_sec.removeClass('v2-glitch-effect');
-            header_logo.attr('src', 'img/logo_2_mobile@2x.png');
+            header_logo.attr('src', '/clubT/img/logo_2_mobile@2x.png');
             v2_hightlight.css('color', '#01ffff');
             v2_visible.css('opacity', 0);
         });
@@ -33,13 +33,13 @@ $(document).ready(function () {
         v2_copywriting.on('mouseenter', function(){
             $(this).addClass('v2-shake');
             v2_sec.addClass('v2-glitch-effect');
-            header_logo.attr('src', 'img/landing/1.2_logo.png');
+            header_logo.attr('src', '/clubT/img/landing/1.2_logo.png');
             v2_hightlight.css('color', '#ffe000');
             v2_visible.css('opacity', 1);
         }).on('mouseleave', function(){
             $(this).removeClass('v2-shake');
             v2_sec.removeClass('v2-glitch-effect');
-            header_logo.attr('src', 'img/header_logo.png');
+            header_logo.attr('src', '/clubT/img/header_logo.png');
             v2_hightlight.css('color', '#01ffff');
             v2_visible.css('opacity', 0);
         });
