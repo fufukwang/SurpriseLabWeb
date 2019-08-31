@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css?v=0.3"/>
     <link rel="stylesheet" href="css/after-rules.css?v=0.1"/>
     <style type="text/css">
     #td_day{line-height: 1.5;text-align: center;}
@@ -938,7 +938,7 @@ Yours Truly,<br/>
 <script src="js/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2.0"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
 <script>
