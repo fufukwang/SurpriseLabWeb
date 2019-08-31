@@ -1266,6 +1266,22 @@ header.logo {
     .ending-modal .ending-content {
       width: 286px;
       padding: 24px 0 36px; } }
+.ending-modal .ending-close {
+  position: absolute;
+  top: 5px;
+  right: 10px; }
+  .ending-modal .ending-close .ending-close-button {
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+    color: #eee9c5;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; }
+    .ending-modal .ending-close .ending-close-button:focus {
+      outline: none; }
 .ending-modal .ending-logo {
   width: 220px;
   margin: 0 auto 40px; }
@@ -1280,7 +1296,8 @@ header.logo {
 .ending-modal .ending-text {
   margin-bottom: 40px; }
   .ending-modal .ending-text p {
-    line-height: 2.33; }
+    line-height: 2.33;
+    padding: 0 !important; }
   @media (max-width: 575.98px) {
     .ending-modal .ending-text {
       margin-bottom: 32px; }
