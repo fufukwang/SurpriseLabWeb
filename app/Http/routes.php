@@ -491,7 +491,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('index.html',function(){ return view('clubtomorrow.frontend.home'); });
         Route::get('rules.html',function(){ return view('clubtomorrow.frontend.rules'); });
         Route::get('radio.html',function(){ return view('clubtomorrow.frontend.radio'); });
-
+        // 劃位
+        Route::get('booking.html',function(){ return view('clubtomorrow.frontend.booking'); });
 
         // 驗證SMS & SMS寄送
         Route::post('getting_intro_sms','clubT\FrontController@getting_intro_sms');
