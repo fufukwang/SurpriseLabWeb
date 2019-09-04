@@ -1,0 +1,170 @@
+// Variable
+@import 'variable';
+
+@media (max-width: 480px) {
+  header.logo {
+    justify-content: center;
+
+    a {
+      height: 23px;
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+
+  .social-wrapper {
+    display: none;
+  }
+}
+
+a {
+  color: $color-bright-green;
+
+  &:hover {
+    color: $color-bright-blue;
+  }
+}
+
+p {
+  margin-bottom: 0;
+}
+
+body {
+  .booking {
+    &::before {
+      background-image: url('../img/bg_starry.jpg');
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// Global
+main {
+  position: relative;
+  min-height: 100vh;
+  color: $color-bright-blue;
+}
+
+// List style with "-"
+.prefix-number {
+  margin: 0;
+  padding-left: 25px;
+  list-style-type: none;
+  text-align: left;
+  @include baseCounter('padding-bottom', 36);
+  counter-reset:num;
+
+  li {
+    line-height: 1.5;
+    padding-bottom: 15px;
+
+    &::before {
+      counter-increment:num;
+      content:counter(num) '. ';
+      position: absolute;
+      margin-left: -25px;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    margin-top: 14px;
+  }
+}
+
+.submit-page {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 50px;
+  text-align: center;
+  @include baseCounter('padding-top', 96);
+
+  .feature-btn .btn-bright-blue {
+    margin-top: 0;
+  }
+
+  .page-title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    color: $color-bright-blue;
+  }
+
+  .page-sub-title {
+    line-height: 1;
+    color: $color-bright-green;
+    margin: 0;
+    @include baseCounter('padding-top', 16);
+  }
+
+  .page-info {
+    @include baseCounter('padding-top', 52);
+    @include baseCounter('padding-bottom', 69);
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    line-height: 2;
+  }
+
+  // Error page
+  &.error {
+    .page-info {
+      max-width: 560px;
+      text-align: left;
+      @include baseCounter('padding-top', 52);
+      @include baseCounter('padding-bottom', 39);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 65px;
+
+    .page-title {
+      font-size: 20px;
+      line-height: 1.45;
+      letter-spacing: 2px;
+    }
+
+    .page-sub-title {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      padding-top: 14px;
+    }
+
+    .page-info {
+      font-size: 14px;
+      line-height: 2;
+      letter-spacing: 1.4px;
+      padding: 36px 0 68px;
+    }
+
+    // Error page
+    &.error {
+      .page-info {
+        padding: 36px 0 36px;
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    .page-info {
+      padding: 30px 0 40px;
+      line-height: 1.5;
+    }
+
+    &.error {
+      .page-info {
+        padding: 30px 0;
+      }
+    }
+  }
+}

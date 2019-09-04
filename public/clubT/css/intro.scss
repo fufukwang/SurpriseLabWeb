@@ -646,6 +646,10 @@ input {
 }
 
 // Override Modal
+.modal-backdrop {
+  z-index: 1024;
+}
+
 .modal.show .modal-dialog {
   max-width: 812px;
   padding: 0 20px;

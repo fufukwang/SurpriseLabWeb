@@ -18,6 +18,12 @@ $(document).ready(function () {
         })
     }, 1000);
 
+    // v2 Styling
+    let header_logo = $('.logo').find('img');
+    if (isMobile.any) {
+        header_logo.attr('src', '/clubT/img/logo_2_mobile@2x.png');
+    }
+
     // Header Menu Hover Effect
     let menuLink = $('.menu-link');
     let win = $(window);
