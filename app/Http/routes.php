@@ -209,9 +209,48 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
 
     Route::group(['prefix' => 'clubtomorrow'], function(){
-        // 
+        // SMS
         Route::get('sms','clubT\BackController@sms');
         Route::post('sms','clubT\BackController@sms');
+        // 其他功能
+        Route::get('backmes','clubT\BackController@BackMes');
+        Route::get('backme/{id}','clubT\BackController@BackMe');
+        Route::delete('backme/{id}/delete','clubT\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','clubT\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','clubT\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','clubT\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','clubT\BackController@infoUpdate');
+        Route::post('backmes/CanelCoupon','clubT\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','clubT\BackController@NotUseXls');
+        Route::post('uploadxlsx','clubT\BackController@UploadXlsx2Db');
+
+        // coupon
+        Route::get('coupons','clubT\BackController@Coupons');
+        Route::get('coupon/{id}','clubT\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','clubT\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','clubT\BackController@Pros');
+        Route::get('pro/{id}/edit','clubT\BackController@ProEdit');
+        Route::post('pro/{id}/update','clubT\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','clubT\BackController@ProDelete');
+        Route::post('pros','clubT\BackController@Pros');
+        Route::post('pros/output/only','clubT\BackController@ProOutputSite');
+
+        // 訂單
+        Route::get('orders/{id}','clubT\BackController@Orders');
+        Route::get('order/{id}/edit','clubT\BackController@OrderEdit');
+        Route::post('order/{id}/update','clubT\BackController@OrderUpdate');
+        Route::delete('order/{id}/delete','clubT\BackController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','clubT\BackController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','clubT\BackController@AppointmentUpdate');
+
+        // 報表列印
+        Route::get('print','clubT\BackController@Print');
+        Route::get('table','clubT\BackController@Table');
+        Route::get('xls/data/output','clubT\BackController@XlsDataOuput');
+        Route::get('xls/emaildata/output','clubT\BackController@XlsEmailDataOuput');
+        Route::post('order/{id}/resent','clubT\BackController@beSentOrderMail');
     });
 });
 
@@ -432,15 +471,15 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
         Route::get('booking_credit_card.html',function(){ 
             //return redirect("/thegreattipsy/index.html");
-            
+            /*
             $now = \Carbon\Carbon::now('Asia/Taipei')->timestamp;
             if($now>1566576000){
                 return redirect("/thegreattipsy/index.html");
             } else {
                 return view('thegreattipsy.frontend.booking_credit_card');     
             }
-            
-            //return view('thegreattipsy.frontend.booking_credit_card');  
+            */
+            return redirect("/thegreattipsy/index.html");
         });
         Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt\FrontController@ReOrderData');
