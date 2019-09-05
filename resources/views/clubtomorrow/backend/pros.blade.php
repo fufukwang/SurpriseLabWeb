@@ -113,7 +113,7 @@
                                                     <td>{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
-                                                    <td>{{ App\model\tgt\pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
+                                                    <td>{{ App\model\club\pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(club_order) WHERE club_order.pro_id=club_pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
                                                     <td>{{ $row->money }} / {{ $row->cash }} </td>
                                                     <td class="actions">
                                                         <a class="btn btn-purple btn-xs" href="/clubtomorrow/order/{{ $row->id }}/appointment">預約席</a>
@@ -287,7 +287,7 @@ $('input[name="dayrange"]').daterangepicker({
         startDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
         endDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
         minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
-        maxDate:'{{ config('setting.tgt.enddate') }}',
+        maxDate:"+5m",
     }, 
     function(start, end, label) {
         $('input[name=daystart]').val(start.format('YYYY-MM-DD') );

@@ -126,7 +126,7 @@
 @if($row->is_overseas) <br />海外刷卡 @endif
                                                 </td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
-                                                <th>@forelse(App\model\tgt\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
+                                                <th>@forelse(App\model\club\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\club\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse</th>
                                                 <td>{{ $row->manage }}</td>
                                                 <td class="actions">

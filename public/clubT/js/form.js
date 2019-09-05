@@ -23,6 +23,8 @@ var selectType = 0; // 用戶選擇的票種
 var passTimes = 1; // 票券代碼輸入次數
 var amountToGo = $('.amountToGo'); // 完成劃位金額
 var restPeople = 0; // 尚須折抵人數
+
+
 var ticketInfos = [
     { type: 0, name: '單人票', price: 2000, counter: 0},
     { type: 1, name: '四人票', price: 1850, counter: 0},
@@ -73,6 +75,7 @@ $(".action-button").on('click', function(){
         // 如果下一步為最後一步驟，抓取已填寫的資料使用
         filledDataChecker();
     }
+
 
     if (current_fs.hasClass('step-2') && $(this).hasClass('next')) {
         // 模擬人數選擇完畢後的Loading
@@ -297,7 +300,37 @@ $('input[name="coupon"]').on('keyup', function () {
  * 暫時不送出表單，待前後台串接後可移除
  */
 $(".submit").click(function(){
-    return false;
+    //return false;
+    var people = $('[name="booking_people"]').val();
+    var obj = {
+        'name'  : $('[name=name]').val(),
+        'tel'   : $('[name=phone]').val(),
+        'email' : $('[name=email]').val(),
+        'notes' : $('[name=notice]').val(),
+        'pro_id': $('[name=booking_time]').find(':selected').val(),
+        'Pople' : people,
+        'prime' : '',
+        'Pay'   : 'online',
+        'coupon': usedCoupons,
+        'is_overseas':0,
+    };
+    $.post('/clubtomorrow/ReOrderData',obj,function(data){
+        $('#submit-main').hide();
+        if(data.success==true){
+            $('#submit-success').addClass("d-flex").show();
+            console.log('成功');
+        } else {
+            $('#submit-error').addClass("d-flex").show();
+            console.log('失敗');
+        }
+    },'json').fail(function() {
+        $('#submit-error').addClass("d-flex").show();
+        console.log('錯誤');
+    })
+
+    
+    
+    
 });
 
 // ===================================
@@ -341,6 +374,40 @@ $('.step-3 input, .step-3 select').on('change', function () {
             }
         ];
     } else if (nextFieldID === 'booking_time') { // 時間
+
+
+        nextField.html('').trigger('change');
+        if($('#booking_date').val()!=''){
+            $.get('/clubtomorrow/GetAjaxData',{
+                'act':'getByday',
+                'day':$('#booking_date').val(),
+                'pople':submitDatas['booking_people']
+            },function(obj){
+                data = [];
+                proObject = [];
+                if(obj.length>0){
+                    proObject = obj;
+                    for(i=0;i<obj.length;i++){
+                        var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位';
+                        nextField.html('<option value="'+obj[i].id+'" data-money="'+obj[i].money+'">'+range+'</option>');
+                        /*
+                        data.push({
+                            id   : obj[i].id,
+                            text : range
+                        });*/
+                    }
+                    updateOptions(nextField, data);
+                    nextField.val(null).trigger('change');
+                }
+            },'json');
+        }
+
+
+
+
+
+
+/*
         data = [
             {
                 id: 0,
@@ -351,6 +418,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
                 text: '20:00 - 21:30 剩餘 6 位'
             }
         ];
+        */
     }
 
     // 更新下拉選單的選項
@@ -387,10 +455,28 @@ function updateDatePicker() {
     });
 
     // 可選擇的日期
-    var enableDays = ["2019-08-24", "2019-08-25", "2019-08-26", "2019-08-27", "2019-08-28", "2019-08-29", "2019-08-30", "2019-08-31", "2019-09-01", "2019-09-03", "2019-09-06", "2019-09-07"];
+    //var enableDays = ["2019-08-24", "2019-08-25", "2019-08-26", "2019-08-27", "2019-08-28", "2019-08-29", "2019-08-30", "2019-08-31", "2019-09-01", "2019-09-03", "2019-09-06", "2019-09-07"];
+    var enableDays = [];
+    if(!isNaN(submitDatas['booking_people'])){
+        $.get('/clubtomorrow/GetAjaxData',{
+            'act':'getBypople',
+            'pople':submitDatas['booking_people'],
+        },function(data){
+            for(i=0;i<data.length;i++){
+                enableDays.push(data[i].day);
+            }
+            booking_date.datepicker("destroy");
+            booking_date.datepicker({
+                minDate:0,
+                maxDate:"+5m",
+                dateFormat: 'yy-mm-dd', 
+                beforeShowDay: enableAllTheseDays
+            });
+        },'json');
+    }
 
-    booking_date.datepicker("destroy");
-    booking_date.datepicker({dateFormat: 'yy-mm-dd', beforeShowDay: enableAllTheseDays});
+    //booking_date.datepicker("destroy");
+    //booking_date.datepicker({dateFormat: 'yy-mm-dd', beforeShowDay: enableAllTheseDays});
 
     function enableAllTheseDays(date) {
         var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
@@ -471,6 +557,7 @@ $('.simplebar-scroll-content').on('scroll', function () {
 // ===================================
 // Coupon Code Start
 // ===================================
+/*
 var coupons = [ // 測試用票券代碼
     { type: '0', couponcode: '054JXQH8', amount: 1},
     { type: '0', couponcode: '3MNF5RUE', amount: 1},
@@ -487,6 +574,7 @@ var coupons = [ // 測試用票券代碼
     { type: '2', couponcode: 'TUN07VAB', amount: 10},
     { type: '2', couponcode: '4MIUFV8I', amount: 10},
 ];
+*/
 
 /**
  * 票券代碼，確認按鈕點擊時
@@ -495,16 +583,60 @@ verificationCode.on('click', function () {
     var coupon = $('input[name="coupon"]');
     var couponVal = coupon.val(); // 取得用戶輸入的票券代碼
     var couponMsg = $('.coupon-code-message .error-message');
+    couponVal = couponVal.toUpperCase();
 
     couponMsg.html('');
-
+/*
     // 票券代碼是否存在
     var couponIndex = coupons.map(function (couponData) {
         return couponData.couponcode;
     }).indexOf(couponVal);
-
+*/
     // 票券是否在表單送出前重複使用
     var isAllow = $.inArray(couponVal, usedCoupons);
+    if (couponVal.includes('/')) couponMsg.append('<p>一次請輸入一組序號，「／」為兩組序號之間的分隔</p>');
+    if (isAllow !== -1){
+        couponMsg.append('<p>序號錯誤或已使用</p>');
+        return false;
+    }
+
+    if(submitDatas['booking_people'] - restPeople <= 0){
+        if (couponVal.includes('/')) couponMsg.append('<p>已經不需要扣抵囉</p>');
+    } else {
+
+        $.get('/clubtomorrow/GetAjaxData',{
+            'act':'CheckCoupon',
+            'code':couponVal,
+            'day':$('#booking_date').val(),
+            'pople':submitDatas['booking_people'] ,
+            'restPeople':restPeople,
+            'coupon':usedCoupons
+        },function(data){
+            if(data.success == 'Y'){
+                var ticketAmount = data.ticketAmount;
+                var ticketMoney  = $('#booking_time option:selected').data('money');
+                restPeople = restPeople - ticketAmount;
+
+                // 更新暫存已使用代碼
+                usedCoupons.push(couponVal);
+
+                // 更新完成劃位所需金額
+                paidAmount = paidAmount + ticketAmount * ticketMoney;
+                restAmount = submitDatas['booking_people'] * ticketMoney - paidAmount ;
+
+                amountToGo.text(formatPrice(restAmount));
+                $(this).closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
+
+                //updateTicketField();
+                passTimes++; // 通過人數
+
+            } else {
+                couponMsg.append('<p>'+data.message+'</p>');
+            }
+        },'json');
+    }
+
+/*
 
     // 如果票券代碼可使用，且尚未重複輸入
     if (couponIndex !== -1 && isAllow == -1) {
@@ -539,6 +671,12 @@ verificationCode.on('click', function () {
     } else {
         couponMsg.append('<p>序號錯誤或已使用</p>');
     }
+
+*/
+
+
+
+
 
     coupon.val('').trigger('change');
     return false;

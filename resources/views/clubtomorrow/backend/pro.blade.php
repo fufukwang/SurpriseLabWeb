@@ -210,7 +210,7 @@ $('input[name="dayrange"]').daterangepicker({
         startDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
         endDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
         minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
-        maxDate:'{{ config('setting.tgt.enddate') }}',
+        maxDate:"+5m",
     }, 
     function(start, end, label) {
         $('input[name=daystart]').val(start.format('YYYY-MM-DD') );
@@ -221,7 +221,7 @@ $('input[name="dayrange"]').daterangepicker({
 $("#datepicker").datetimepicker({
     "format": "YYYY-MM-DD",
     "minDate":'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
-    "maxDate":'{{ config('setting.tgt.enddate') }}',
+    "maxDate":"+5m",
 });
 $('select[name=dayparts]').bind('change',function(){
     //$('input[name=rangstart]').val($(this).find('option:selected').data('rangstart'));

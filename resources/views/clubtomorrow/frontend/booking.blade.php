@@ -136,7 +136,7 @@
             </ul>
         </div>
 
-        <main class="sections">
+        <main class="sections" id="submit-main">
             <div class="container">
                 <!-- form -->
                 <form id="booking">
@@ -386,10 +386,10 @@
                                     <td>時段</td>
                                     <td class="filled" data-filled="booking_time"></td>
                                 </tr>
-                                <tr>
+                                <!--tr>
                                     <td>票券</td>
                                     <td class="filled" data-filled="ticket-type"></td>
-                                </tr>
+                                </tr-->
                                 <tr class="notice">
                                     <td>其他備註</td>
                                     <td class="filled" data-filled="notice"></td>
@@ -426,6 +426,65 @@
                 </form>
             </div>
         </main>
+
+
+        <main class="align-items-center justify-content-center" id="submit-success" style="display:none;">
+            <div class="submit-page success">
+                <div class="container">
+                    <h1 class="page-title">
+                        你已完成玩家登入
+                    </h1>
+                    <p class="page-sub-title">
+                        請至你的信箱確認登入完成信件
+                    </p>
+                    <p class="page-info">
+                        接近體驗日期時<br/>
+                        明日俱樂部將會寄送提醒信件與行前訊息給你<br/>
+                        <br/>
+                        屆時請注意電子信箱<span class="d-none d-md-inline-block">，</span><br class="d-block d-md-none"/>它有時候會跑到垃圾郵件，可以翻找一下<br/>
+                        <br/>
+                        準備好遊戲其中了嗎？
+                    </p>
+                    <div class="feature-btn">
+                        <a class="btn-bright-blue" href="index.html#aboutSec">關於明日俱樂部</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <main class="align-items-center justify-content-center" id="submit-error" style="display:none;">
+            <div class="submit-page error">
+                <div class="container">
+                    <h1 class="page-title">
+                        whoops！登入未成功
+                    </h1>
+                    <p class="page-sub-title">
+                        可能是某些地方出錯了，還請再試一次
+                    </p>
+                    <div class="page-info">
+                        <p>可能發生以下狀況：</p>
+                        <ul class="prefix-number">
+                            <li>
+                                網路中斷，請確認通訊良好的狀況下再次劃位
+                            </li>
+                            <li>
+                                同時刻有人與你選擇同樣的日期與時段，他比你早完成登入，因而你的登入受到排擠，請再試一次
+                            </li>
+                        </ul>
+                        <br/>
+                        若非以上兩種狀況，歡迎來信明日俱樂部詢問：<br/>
+                        <a href="mailto:clubtomorrow@surpriselab.com.tw">clubtomorrow@surpriselab.com.tw</a>
+                    </div>
+                    <div class="feature-btn">
+                        <a class="btn-bright-blue" href="booking.html">重新劃位</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
     </div>
 
     <div class="loading-wrapper">

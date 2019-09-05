@@ -65,7 +65,7 @@
                                                 <td>{{ $row->code }}</td>
                                                 <td>@if( $row->type == 'l1' ) 時間有點限制票 @elseif( $row->type == 'a1' ) 暢行無阻票 @elseif( $row->type == 'a4' ) 四人沉醉票 @endif</td>
                                                 <td>@if($row->o_id > 0) 
-                                                    {{ App\model\tgt\order::where('sn',$row->o_id)->first()->created_at }}
+                                                    {{ App\model\club\order::where('sn',$row->o_id)->first()->created_at }}
                                                 @else 尚未兌換
                                                 @endif</td>
                                                 <th>{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
