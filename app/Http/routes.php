@@ -495,7 +495,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('booking.html',function(){ return view('clubtomorrow.frontend.booking'); });
         
         Route::get('GetAjaxData','clubT\FrontController@GetAjaxData');
-        Route::post('ReOrderData','tgt\FrontController@ReOrderData');
+        Route::post('ReOrderData','clubT\FrontController@ReOrderData');
         // 驗證SMS & SMS寄送
         Route::post('getting_intro_sms','clubT\FrontController@getting_intro_sms');
     });

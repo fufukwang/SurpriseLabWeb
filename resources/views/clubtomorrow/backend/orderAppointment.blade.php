@@ -48,7 +48,10 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">電話</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="dial_code" maxlength="4" required>
+                                                </div>
+                                                <div class="col-sm-5">
                                                     <input type="text" class="form-control" name="tel" required>
                                                 </div>
                                             </div>
@@ -100,67 +103,6 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">主餐</label>
-                                                <div class="col-sm-8">
-<style type="text/css">
-.btn-group{border-right: 3px solid #aaa;padding-right:5px;}
-.btn-group:last-child{border:none;}
-</style>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[0]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[0]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[1]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[1]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[2]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[2]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[3]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[3]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons"> 
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[4]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[4]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[5]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[5]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-
-
-
-
-                                                </div>
-                                            </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">管理</label>

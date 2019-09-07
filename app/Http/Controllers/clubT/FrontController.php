@@ -127,7 +127,7 @@ class FrontController extends Controller
                                 case 'p10': $type = '十人票'; $ticketAmount = 10; break;
                             }
                             // 人數小於 兌換券人數
-                            if($people - $restPeople < $ticketAmount){
+                            if($restPeople < $ticketAmount){
                                 return Response::json(['success'=> 'N','message'=>'您輸入的序號已超過剩餘折抵人數，請重新檢查'], 200);
                             }
 
@@ -198,11 +198,12 @@ class FrontController extends Controller
                         }
                     }
                 }
+                // 人數小於 兌換券人數
+                if($totleCut > $people){
+                    return Response::json(['success'=> 'N','message'=>'您輸入的序號已超過剩餘折抵人數，請重新檢查'.$totleCut.'-'.$people], 200);
+                }
             }
-            // 人數小於 兌換券人數
-            if($totleCut > $people){
-                return Response::json(['success'=> 'N','message'=>'您輸入的序號已超過剩餘折抵人數，請重新檢查'], 200);
-            }
+            
 
 
             $pay_status = '未完成';
@@ -213,10 +214,11 @@ class FrontController extends Controller
                 'pro_id'     => $request->pro_id,
                 'pople'      => $people,
                 'name'       => $request->name,
+                'dial_code'  => $request->dial_code,
                 'tel'        => $request->tel,
                 'email'      => $request->email,
                 'notes'      => $request->notes,
-                'meat'       => json_encode($meat),
+                'meat'       => '',
                 'coupon'     => $coupon,
                 'sn'         => $count,
                 'money'      => $money - $cut1 - $cut2,
@@ -282,6 +284,7 @@ class FrontController extends Controller
 
 
             if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
+                /*
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
                 $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
@@ -304,6 +307,7 @@ class FrontController extends Controller
                     $m->to($mailer['email'], $mailer['name']);
                     $m->subject('明日俱樂部-訂單完成信件!');
                 });
+                */
             }
             
 

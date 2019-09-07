@@ -300,20 +300,26 @@ $('input[name="coupon"]').on('keyup', function () {
  * 暫時不送出表單，待前後台串接後可移除
  */
 $(".submit").click(function(){
-    //return false;
     var people = $('[name="booking_people"]').val();
     var obj = {
         'name'  : $('[name=name]').val(),
-        'tel'   : $('[name=phone]').val(),
+        'tel'   : $('[name=field_phone]').val(),
+        'dial_code' : $('[name="dial-code"]').val(),
         'email' : $('[name=email]').val(),
         'notes' : $('[name=notice]').val(),
         'pro_id': $('[name=booking_time]').find(':selected').val(),
-        'Pople' : people,
+        'pople' : people,
         'prime' : '',
         'Pay'   : 'online',
         'coupon': usedCoupons,
         'is_overseas':0,
     };
+    $('<link>').appendTo('head')
+        .attr({
+            type: 'text/css', 
+            rel: 'stylesheet',
+            href: '/clubT/css/submit.css'
+        });
     $.post('/clubtomorrow/ReOrderData',obj,function(data){
         $('#submit-main').hide();
         if(data.success==true){
@@ -323,14 +329,15 @@ $(".submit").click(function(){
             $('#submit-error').addClass("d-flex").show();
             console.log('失敗');
         }
+
+
+
+
     },'json').fail(function() {
         $('#submit-error').addClass("d-flex").show();
         console.log('錯誤');
-    })
-
-    
-    
-    
+    });
+    return false;
 });
 
 // ===================================
@@ -583,7 +590,7 @@ verificationCode.on('click', function () {
     var coupon = $('input[name="coupon"]');
     var couponVal = coupon.val(); // 取得用戶輸入的票券代碼
     var couponMsg = $('.coupon-code-message .error-message');
-    couponVal = couponVal.toUpperCase();
+    couponVal = couponVal.toUpperCase().trim();
 
     couponMsg.html('');
 /*
@@ -592,6 +599,11 @@ verificationCode.on('click', function () {
         return couponData.couponcode;
     }).indexOf(couponVal);
 */
+    // 代碼長度是否正確
+    if(couponVal.length !== 8){
+        couponMsg.append('<p>序號錯誤</p>');
+        return false;
+    }
     // 票券是否在表單送出前重複使用
     var isAllow = $.inArray(couponVal, usedCoupons);
     if (couponVal.includes('/')) couponMsg.append('<p>一次請輸入一組序號，「／」為兩組序號之間的分隔</p>');
@@ -600,10 +612,10 @@ verificationCode.on('click', function () {
         return false;
     }
 
-    if(submitDatas['booking_people'] - restPeople <= 0){
+    if(restPeople <= 0){
+        console.log('test1')
         if (couponVal.includes('/')) couponMsg.append('<p>已經不需要扣抵囉</p>');
     } else {
-
         $.get('/clubtomorrow/GetAjaxData',{
             'act':'CheckCoupon',
             'code':couponVal,
@@ -625,11 +637,11 @@ verificationCode.on('click', function () {
                 restAmount = submitDatas['booking_people'] * ticketMoney - paidAmount ;
 
                 amountToGo.text(formatPrice(restAmount));
-                $(this).closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
+                verificationCode.closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
 
                 //updateTicketField();
                 passTimes++; // 通過人數
-
+                coupon.val('').trigger('change');
             } else {
                 couponMsg.append('<p>'+data.message+'</p>');
             }
@@ -713,6 +725,12 @@ jQuery(function($){
             placeholder: placeholder,
             minimumResultsForSearch: Infinity
         })
+    });
+    // 送出 csrf-token
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
     });
 });
 

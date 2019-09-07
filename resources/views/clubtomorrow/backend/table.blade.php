@@ -46,7 +46,6 @@
 			<td>姓名</td>
 			<td>付款</td>
 			<td>電話</td>
-			<td>主餐</td>
 			<td>備註</td>
 			<td>優惠券</td>
 			<td>註記</td>
@@ -60,7 +59,6 @@
 			<td>{{ $row->name }}</td>
 			<td>@if($row->pay_type=='現場付款') 現場 @elseif($row->pay_type=='信用卡') 信用卡 @elseif($row->pay_type='後臺編輯') 後台 @endif {{ $row->OM }} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
-			<td>{{ $row->pople }} 人 {{ implode('/',json_decode($row->meat,true)) }} </td>
 			<td>{!! nl2br($row->notes) !!}</td>
 			<td>@forelse(App\model\club\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\club\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
 			<td>{!! nl2br($row->manage) !!}</td>

@@ -431,19 +431,22 @@ class BackController extends Controller
                 $count = Carbon::now()->format('Ymd').'001';
             }
             $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(club_order) WHERE club_order.pro_id=club_pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end')->first();
+            /*
             $meat = [];
             for($i=0;$i<$people;$i++){
                 array_push($meat,$request->input('Meal.'.$i));
             }
+            */
             $money = $act->cash * $people * 1.1;
             $data = [
                 'pro_id'     => $pro_id,
                 'pople'      => $people,
                 'name'       => $request->name,
+                'dial_code'  => $request->dial_code,
                 'tel'        => $request->tel,
                 'email'      => $request->email,
                 'notes'      => $request->notes,
-                'meat'       => json_encode($meat),
+                //'meat'       => json_encode($meat),
                 'coupon'     => 0,
                 'sn'         => $count,
                 'money'      => $money,
@@ -490,7 +493,7 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
+        $order = $order->select('rang_start','rang_end','name','tel','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','dial_code');
 
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
@@ -529,7 +532,7 @@ class BackController extends Controller
 
     public function Table(Request $request){
         $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
+        $order = $order->select('rang_start','rang_end','name','tel','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','dial_code');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -568,7 +571,7 @@ class BackController extends Controller
 
     public function XlsDataOuput(Request $request){
         $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
+        $order = $order->select('rang_start','rang_end','name','dial_code','tel','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -606,7 +609,7 @@ class BackController extends Controller
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
                 foreach($cellData as $row){
-                    $row['meat'] = implode(',',json_decode($row['meat'],true));
+                    //$row['meat'] = implode(',',json_decode($row['meat'],true));
                     array_push($data,$row);
                 }
                 $sheet->rows($data);
