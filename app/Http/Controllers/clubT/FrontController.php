@@ -243,7 +243,7 @@ class FrontController extends Controller
                 
                 $amount = $money - $cut1 - $cut2;
                 if($data['is_overseas'] == 1){
-                    $amount *= 1.1;
+                    $amount *= 1.1; // 一成服務費
                 }
                 $postData = [
                     "prime"       => $request->prime,
@@ -297,8 +297,8 @@ class FrontController extends Controller
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                config(['mail.username' => env('MAIL_TGT_USER')]);
-                config(['mail.password' => env('MAIL_TGT_PASS')]);
+                config(['mail.username' => env('MAIL_CLUB_USER')]);
+                config(['mail.password' => env('MAIL_CLUB_PASS')]);
                 Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
                     $m->from('thegreattipsy@surpriselab.com.tw', '明日俱樂部');
                     $m->sender('thegreattipsy@surpriselab.com.tw', '明日俱樂部');

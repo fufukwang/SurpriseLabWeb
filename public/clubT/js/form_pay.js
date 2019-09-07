@@ -135,7 +135,7 @@ function allowChecker(thisStep){
     isAllowToNextStep = true;
 
     if (thisStep.hasClass('step-5')) {
-
+/*
         // 最後一步驟要確認已輸入的票券代碼數量是否與人數相符
         if (restAmount === 0) {
             if (usedCoupons.length === 0) {
@@ -144,7 +144,7 @@ function allowChecker(thisStep){
         } else {
             isAllowToNextStep = false;
         }
-
+*/
     } else {
 
         thisStep.find('input:not([type="hidden"]), select').each(function () {
@@ -300,45 +300,8 @@ $('input[name="coupon"]').on('keyup', function () {
  * 暫時不送出表單，待前後台串接後可移除
  */
 $(".submit").click(function(){
-    var people = $('[name="booking_people"]').val();
-    var obj = {
-        'name'  : $('[name=name]').val(),
-        'tel'   : $('[name=field_phone]').val(),
-        'dial_code' : $('[name="dial-code"]').val(),
-        'email' : $('[name=email]').val(),
-        'notes' : $('[name=notice]').val(),
-        'pro_id': $('[name=booking_time]').find(':selected').val(),
-        'pople' : people,
-        'prime' : '',
-        'Pay'   : 'online',
-        'coupon': usedCoupons,
-        'is_overseas':0,
-    };
-    $('.loading-wrapper').addClass('show');
-    $('<link>').appendTo('head')
-        .attr({
-            type: 'text/css', 
-            rel: 'stylesheet',
-            href: '/clubT/css/submit.css'
-        });
-    $.post('/clubtomorrow/ReOrderData',obj,function(data){
-        $('#submit-main').hide();
-        if(data.success==true){
-            $('#submit-success').addClass("d-flex").show();
-            console.log('成功');
-        } else {
-            $('#submit-error').addClass("d-flex").show();
-            console.log('失敗');
-        }
-
-
-        $('.loading-wrapper').removeClass('show');
-
-    },'json').fail(function() {
-        $('#submit-error').addClass("d-flex").show();
-        console.log('錯誤');
-        $('.loading-wrapper').removeClass('show');
-    });
+    $('#lightbox2pay').fadeToggle(700);
+    
     return false;
 });
 
@@ -734,6 +697,127 @@ jQuery(function($){
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+    // tappay
+    TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'production');
+    TPDirect.card.setup({
+        fields: {
+            number: {
+                // css selector
+                element: '#card-number',
+                placeholder: '**** **** **** ****'
+            },
+            expirationDate: {
+                // DOM object
+                element: document.getElementById('card-expiration-date'),
+                placeholder: 'MM / YY'
+            },
+            ccv: {
+                element: '#card-ccv',
+                placeholder: 'ccv'
+            }
+        },
+        styles: {
+            // Style all elements
+            'input': {
+                'color': 'gray'
+            },
+            // Styling ccv field
+            'input.cvc': {
+                // 'font-size': '16px'
+            },
+            // Styling expiration-date field
+            'input.expiration-date': {
+                // 'font-size': '16px'
+            },
+            // Styling card-number field
+            'input.card-number': {
+                // 'font-size': '16px'
+            },
+            // style focus state
+            ':focus': {
+                // 'color': 'black'
+            },
+            // style valid state
+            '.valid': {
+                'color': 'green'
+            },
+            // style invalid state
+            '.invalid': {
+                'color': 'red'
+            },
+            // Media queries
+            // Note that these apply to the iframe, not the root window.
+            '@media screen and (max-width: 400px)': {
+                'input': {
+                    'color': 'orange'
+                }
+            }
+        }
+    });
+    $('#SurePay').bind('click',function(){
+        TPDirect.card.getPrime(function(result) {
+            if (result.status !== 0) {
+                alert('卡片資料有誤!無法取得認證!');
+                console.log('getPrime error');
+                return false;
+            }
+            var prime = result.card.prime
+            console.log('getPrime success');
+            $('#lightbox2pay').fadeToggle(700);
+            //SendOrderData('online',prime);
+            $('.loading-wrapper').addClass('show');
+
+          
+            var people = $('[name="booking_people"]').val();
+            var obj = {
+                'name'  : $('[name=name]').val(),
+                'tel'   : $('[name=field_phone]').val(),
+                'dial_code' : $('[name="dial-code"]').val(),
+                'email' : $('[name=email]').val(),
+                'notes' : $('[name=notice]').val(),
+                'pro_id': $('[name=booking_time]').find(':selected').val(),
+                'pople' : people,
+                'prime' : prime,
+                'Pay'   : 'online',
+                'coupon': usedCoupons,
+                'is_overseas':0,
+            };
+            $('<link>').appendTo('head')
+                .attr({
+                    type: 'text/css', 
+                    rel: 'stylesheet',
+                    href: '/clubT/css/submit.css'
+                });
+            $.post('/clubtomorrow/ReOrderData',obj,function(data){
+                $('#submit-main').hide();
+                if(data.success==true){
+                    $('#submit-success').addClass("d-flex").show();
+                    console.log('成功');
+                } else {
+                    $('#submit-error').addClass("d-flex").show();
+                    console.log('失敗');
+                }
+                $('.loading-wrapper').removeClass('show');
+
+
+
+            },'json').fail(function() {
+                $('#submit-error').addClass("d-flex").show();
+                console.log('錯誤');
+                $('.loading-wrapper').removeClass('show');
+            });
+
+
+
+
+
+
+        })
+    });
+    $('#CanalPay').bind('click',function(){
+        $('#lightbox2pay').fadeToggle(700);
+    });
+
 });
 
 /**
