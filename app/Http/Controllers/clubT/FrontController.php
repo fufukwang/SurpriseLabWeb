@@ -131,7 +131,7 @@ class FrontController extends Controller
                                 return Response::json(['success'=> 'N','message'=>'您輸入的序號已超過剩餘折抵人數，請重新檢查'], 200);
                             }
 
-                            return Response::json(['success'=> 'Y','ticketAmount'=>$ticketAmount,'ticket'=>$type], 200);    
+                            return Response::json(['success'=> 'Y','ticketAmount'=>$ticketAmount,'ticketType'=>$me->type,'ticket'=>$type], 200);    
                         } else {
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                         }
