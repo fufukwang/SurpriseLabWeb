@@ -13,8 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\Inspire::class,
-        Commands\SmsSent::class,
+        //Commands\Inspire::class,
+        //Commands\SmsSent::class,
+        Commands\ClubSentMail::class,
     ];
 
     /**
