@@ -291,6 +291,48 @@
         <!-- Section3 Ticket -->
         <section class="anchor-section" id="Ticket" data-aos="fade">
 
+            <!-- 體驗內容 -->
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-experience" data-section-name="Ticket" data-aos="fade">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="section-title">體驗內容</h2>
+                            <div class="section-subtitle">EXPERIENCE</div>
+                            <div class="exp-wrapper">
+                                <div class="exp-item">
+                                    <div class="exp-img">
+                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
+                                    </div>
+                                    <div class="exp-title">
+                                        120分鐘沈浸式體驗
+                                    </div>
+                                </div>
+                                <div class="exp-item">
+                                    <div class="exp-img">
+                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
+                                    </div>
+                                    <div class="exp-title">
+                                        7位表演者 60位玩家
+                                    </div>
+                                </div>
+                                <div class="exp-item">
+                                    <div class="exp-img">
+                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
+                                    </div>
+                                    <div class="exp-title">
+                                        兩大陣營 五種角色
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="section-paragraph">
+                                體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限<br/><br/>體驗空間外設有接待區，提供需付費之餐點飲料<br/>歡迎提前抵達，或於結束後與夥伴一同停留
+                            </p>
+                            <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- 選擇票券 -->
             <section id="ticketSec" class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-type" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
@@ -338,48 +380,6 @@
                             <p class="section-paragraph d-sm-block d-none">
                                 訂位採先預購、後劃位之機制<br/>若有包場需求，歡迎來信詢問<br/><br/>詳細劃位時間軸，請見下方「劃位時程」
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 體驗內容 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-experience" data-section-name="Ticket" data-aos="fade">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="section-title">體驗內容</h2>
-                            <div class="section-subtitle">EXPERIENCE</div>
-                            <div class="exp-wrapper">
-                                <div class="exp-item">
-                                    <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
-                                    </div>
-                                    <div class="exp-title">
-                                        120分鐘沈浸式體驗
-                                    </div>
-                                </div>
-                                <div class="exp-item">
-                                    <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
-                                    </div>
-                                    <div class="exp-title">
-                                        7位表演者 60位玩家
-                                    </div>
-                                </div>
-                                <div class="exp-item">
-                                    <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
-                                    </div>
-                                    <div class="exp-title">
-                                        兩大陣營 五種角色
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="section-paragraph">
-                                體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限<br/><br/>體驗空間外設有接待區，提供需付費之餐點飲料<br/>歡迎提前抵達，或於結束後與夥伴一同停留
-                            </p>
-                            <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
                         </div>
                     </div>
                 </div>
