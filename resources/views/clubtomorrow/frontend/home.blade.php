@@ -478,14 +478,6 @@
                                             寄送劃位信 — 09/20 09/27 下午15:00前購票者
                                         </div>
                                     </div>
-                                    <div class="schedule-item">
-                                        <div class="schedule-title">
-                                            10/08
-                                        </div>
-                                        <div class="schedule-content">
-                                            寄送劃位信 — 10/01-10/07 間的購票者
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <p class="section-paragraph">
