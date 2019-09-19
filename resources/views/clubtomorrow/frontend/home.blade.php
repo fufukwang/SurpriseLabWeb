@@ -291,6 +291,48 @@
         <!-- Section3 Ticket -->
         <section class="anchor-section" id="Ticket" data-aos="fade">
 
+            <!-- 體驗內容 -->
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-experience" data-section-name="Ticket" data-aos="fade">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="section-title">體驗內容</h2>
+                            <div class="section-subtitle">EXPERIENCE</div>
+                            <div class="exp-wrapper">
+                                <div class="exp-item">
+                                    <div class="exp-img">
+                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
+                                    </div>
+                                    <div class="exp-title">
+                                        120分鐘沈浸式體驗
+                                    </div>
+                                </div>
+                                <div class="exp-item">
+                                    <div class="exp-img">
+                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
+                                    </div>
+                                    <div class="exp-title">
+                                        7位表演者 60位玩家
+                                    </div>
+                                </div>
+                                <div class="exp-item">
+                                    <div class="exp-img">
+                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
+                                    </div>
+                                    <div class="exp-title">
+                                        兩大陣營 五種角色
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="section-paragraph">
+                                體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限
+                            </p>
+                            <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- 選擇票券 -->
             <section id="ticketSec" class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-type" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
@@ -300,7 +342,7 @@
                             <div class="section-subtitle">TICKET</div>
 
                             <p class="section-paragraph">
-                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 10/30-11/30 之場次
+                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇之場次
                             </p>
 
                             <div class="ticket-type">
@@ -338,48 +380,6 @@
                             <p class="section-paragraph d-sm-block d-none">
                                 訂位採先預購、後劃位之機制<br/>若有包場需求，歡迎來信詢問<br/><br/>詳細劃位時間軸，請見下方「劃位時程」
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 體驗內容 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-experience" data-section-name="Ticket" data-aos="fade">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="section-title">體驗內容</h2>
-                            <div class="section-subtitle">EXPERIENCE</div>
-                            <div class="exp-wrapper">
-                                <div class="exp-item">
-                                    <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
-                                    </div>
-                                    <div class="exp-title">
-                                        120分鐘沈浸式體驗
-                                    </div>
-                                </div>
-                                <div class="exp-item">
-                                    <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
-                                    </div>
-                                    <div class="exp-title">
-                                        7位表演者 60位玩家
-                                    </div>
-                                </div>
-                                <div class="exp-item">
-                                    <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
-                                    </div>
-                                    <div class="exp-title">
-                                        兩大陣營 五種角色
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="section-paragraph">
-                                體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限<br/><br/>體驗空間外設有接待區，提供需付費之餐點飲料<br/>歡迎提前抵達，或於結束後與夥伴一同停留
-                            </p>
-                            <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
                         </div>
                     </div>
                 </div>
@@ -459,7 +459,7 @@
                                             08/14
                                         </div>
                                         <div class="schedule-content">
-                                            開賣 10/30-11/30 場次票卷，目標3500人
+                                            開賣 11/20-12/15 場次票卷，目標3500人
                                         </div>
                                     </div>
                                     <div class="schedule-item">
@@ -467,7 +467,7 @@
                                             09/24
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信 — 09/23 前購票者
+                                            寄送劃位信 — 09/20 下午15:00前購票者
                                         </div>
                                     </div>
                                     <div class="schedule-item">
@@ -475,7 +475,7 @@
                                             10/01
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信 — 09/24-09/30 間的購票者
+                                            寄送劃位信 — 09/20 09/27 下午15:00前購票者
                                         </div>
                                     </div>
                                     <div class="schedule-item">
@@ -513,7 +513,7 @@
                                                 週三
                                             </div>
                                             <div class="time-slots-content">
-                                                18:30 | 21:00
+                                                19:00 | 21:00
                                             </div>
                                         </div>
                                         <div class="time-slots-item">
@@ -521,7 +521,7 @@
                                                 週四
                                             </div>
                                             <div class="time-slots-content">
-                                                18:30 | 21:00
+                                                19:00 | 21:00
                                             </div>
                                         </div>
                                         <div class="time-slots-item">
@@ -529,7 +529,7 @@
                                                 週五
                                             </div>
                                             <div class="time-slots-content">
-                                                18:30 | 21:00
+                                                19:00 | 21:00
                                             </div>
                                         </div>
                                     </div>
@@ -539,7 +539,7 @@
                                                 週六
                                             </div>
                                             <div class="time-slots-content">
-                                                13:00 | 15:30 | 18:30 | 21:00
+                                                13:00 | 15:00 | 19:00 | 21:00
                                             </div>
                                         </div>
                                         <div class="time-slots-item">
@@ -547,7 +547,7 @@
                                                 週日
                                             </div>
                                             <div class="time-slots-content">
-                                                13:00 | 15:30 | 18:30 | 21:00
+                                                13:00 | 15:00 | 19:00 | 21:00
                                             </div>
                                         </div>
                                     </div>
@@ -555,7 +555,7 @@
                             </div>
                             <p class="section-paragraph text-center">每場次約120分鐘<br/><br/></p>
                             <p class="section-paragraph">
-                                現場設有接待區提供付費餐點，歡迎提早抵達或體驗後停留，為提供最好的體驗品質，上述場次時段會依實際狀況彈性調整
+                                為提供最好的體驗品質，上述場次時段會依實際狀況彈性調整
                             </p>
                         </div>
                     </div>
@@ -599,7 +599,7 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售 10/30-11/30 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
+                                        * 現正預售票券<br/>* 可劃位區間將依實際預售情況加開或縮短
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
