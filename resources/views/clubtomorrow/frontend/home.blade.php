@@ -342,7 +342,7 @@
                             <div class="section-subtitle">TICKET</div>
 
                             <p class="section-paragraph">
-                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇之場次
+                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 11/20-12/15 之場次
                             </p>
 
                             <div class="ticket-type">
@@ -599,7 +599,7 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售票券<br/>* 可劃位區間將依實際預售情況加開或縮短
+                                        * 現正預售 11/20-12/15 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
