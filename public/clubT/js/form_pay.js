@@ -26,9 +26,9 @@ var restPeople = 0; // 尚須折抵人數
 
 
 var ticketInfos = [
-    { type: 0, name: '單人票', price: 2000, counter: 0},
-    { type: 1, name: '四人票', price: 1850, counter: 0},
-    { type: 2, name: '十人票', price: 1750, counter: 0}
+    { type: 'p1', name: '單人票', price: 2000, counter: 0},
+    { type: 'p4', name: '四人票', price: 1850, counter: 0},
+    { type: 'p10', name: '十人票', price: 1750, counter: 0}
 ];
 
 // ===================================
@@ -603,8 +603,11 @@ verificationCode.on('click', function () {
 
                 amountToGo.text(formatPrice(restAmount));
                 verificationCode.closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
-
-                //updateTicketField();
+                $.each(ticketInfos, function (index, ticket) {
+                    if(ticket.type === data.ticketType) ticket.counter++;
+                });// 該票券使用次數+1
+                //ticketInfos[data.ticketType].counter++; // 該票券使用次數+1
+                updateTicketField();
                 passTimes++; // 通過人數
                 coupon.val('').trigger('change');
             } else {

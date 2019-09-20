@@ -172,7 +172,6 @@ class BackController extends Controller
             config(['mail.password' => env('MAIL_CLUB_PASS')]);
 
 
-
             Mail::send('clubtomorrow.email.coupon',$data,function($m) use ($data){
                 $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
                 $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');

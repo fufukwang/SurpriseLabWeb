@@ -1340,7 +1340,7 @@ header {
 #Ticket .ticket-sec-schedule .section-subtitle {
   margin-bottom: 48px; }
 #Ticket .ticket-sec-schedule .schedule-wrapper {
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   display: flex;
   justify-content: center; }
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-inner {

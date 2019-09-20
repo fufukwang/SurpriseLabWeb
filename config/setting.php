@@ -10,4 +10,8 @@ return [
     'tgt' =>[
     	'enddate' =>  '2019-10-31'
     ], 
+    'club' => [
+        'order_sms' => '訂單完成',
+        'order_12'  => '12送'
+    ],
 ];

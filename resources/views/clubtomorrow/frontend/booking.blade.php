@@ -386,10 +386,10 @@
                                     <td>時段</td>
                                     <td class="filled" data-filled="booking_time"></td>
                                 </tr>
-                                <!--tr>
+                                <tr>
                                     <td>票券</td>
                                     <td class="filled" data-filled="ticket-type"></td>
-                                </tr-->
+                                </tr>
                                 <tr class="notice">
                                     <td>其他備註</td>
                                     <td class="filled" data-filled="notice"></td>

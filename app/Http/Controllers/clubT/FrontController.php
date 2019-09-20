@@ -45,7 +45,8 @@ class FrontController extends Controller
                             } else {
                                 $phone_number = str_replace('+','',$dial_code).$phone;
                             }
-                            $sent_obj = SLS::sent_single_sms($phone_number);
+                            $message = "[ 嘿！你有一則來自《明日俱樂部》的訊息 ]\n\n一切即將開始 - 進入以下連結，你將與《明日俱樂部》正式連接：https://bit.ly/316nSWM \n\n記住，連結將在期限內自動銷毀，請把握時間。";
+                            $sent_obj = SLS::sent_single_sms($phone_number,$message);
                             $sent_result = json_encode($sent_obj);
                             if($sent_obj['is_error']){
                                 $is_sent = 0;
@@ -131,7 +132,7 @@ class FrontController extends Controller
                                 return Response::json(['success'=> 'N','message'=>'您輸入的序號已超過剩餘折抵人數，請重新檢查'], 200);
                             }
 
-                            return Response::json(['success'=> 'Y','ticketAmount'=>$ticketAmount,'ticket'=>$type], 200);    
+                            return Response::json(['success'=> 'Y','ticketAmount'=>$ticketAmount,'ticketType'=>$me->type,'ticket'=>$type], 200);    
                         } else {
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                         }
@@ -249,11 +250,11 @@ class FrontController extends Controller
                     "prime"       => $request->prime,
                     "partner_key" => $partner_key,
                     "merchant_id" => $merchant_id,
-                    "details"     => "微醺",
+                    "details"     => "明日俱樂部",
                     "amount"      => $amount,
                     "order_number"=> $count,
                     "cardholder"  => [
-                        "phone_number" => $request->tel,
+                        "phone_number" => $request->dial_code.$request->tel,
                         "name"         => $request->name,
                         "email"        => $request->email,
                         "zip_code"     => "",
@@ -284,7 +285,7 @@ class FrontController extends Controller
 
 
             if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
-                /*
+                
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
                 $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
@@ -307,7 +308,15 @@ class FrontController extends Controller
                     $m->to($mailer['email'], $mailer['name']);
                     $m->subject('明日俱樂部-訂單完成信件!');
                 });
-                */
+                $phone = $request->tel;
+                if($request->dial_code == "+886"){
+                    $phone_number = "0".$phone;
+                } else {
+                    $phone_number = str_replace('+','',$request->dial_code).$phone;
+                }
+                $message = Config::get('setting.club.order_sms');
+                $sent_obj = SLS::sent_single_sms($phone_number,$message);
+                
             }
             
 
