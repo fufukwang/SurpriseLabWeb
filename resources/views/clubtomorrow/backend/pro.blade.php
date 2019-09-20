@@ -210,7 +210,7 @@ $('input[name="dayrange"]').daterangepicker({
         startDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
         endDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
         minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
-        maxDate:"+5m",
+        maxDate:'{{ Carbon\Carbon::today()->addMonths(5)->format('Y-m-d') }}',
     }, 
     function(start, end, label) {
         $('input[name=daystart]').val(start.format('YYYY-MM-DD') );

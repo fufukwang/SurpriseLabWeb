@@ -492,7 +492,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('rules.html',function(){ return view('clubtomorrow.frontend.rules'); });
         Route::get('radio.html',function(){ return view('clubtomorrow.frontend.radio'); });
         // 劃位
-        Route::get('booking.html',function(){ return view('clubtomorrow.frontend.booking'); });
+        //Route::get('booking.html',function(){ return view('clubtomorrow.frontend.booking'); });
         //Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
         
         Route::get('GetAjaxData','clubT\FrontController@GetAjaxData');
