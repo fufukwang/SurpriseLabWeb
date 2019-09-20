@@ -460,12 +460,10 @@ class BackController extends Controller
             if($request->pay_status == '已付款'){
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
                 $mailer = [
-                    'day'   => Carbon::parse($act->day)->format('m/d'),
-                    'time'  => $act->day_parts.$rangTS.'-'.$rangTE,
-                    'pople' => $people,
+                    'day'   => implode(" ",str_split(Carbon::parse($act->day)->format('Y/m/d'))),
+                    'time'  => implode(" ",str_split($act->rang_start)),
+                    'pople' => $data['pople'],
                     'email' => $data['email'],
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
@@ -634,11 +632,9 @@ class BackController extends Controller
 
         $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
         $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-        $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-        $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
         $mailer = [
-            'day'   => Carbon::parse($act->day)->format('m/d'),
-            'time'  => $act->day_parts.$rangTS.'-'.$rangTE,
+            'day'   => implode(" ",str_split(Carbon::parse($act->day)->format('Y/m/d'))),
+            'time'  => implode(" ",str_split($act->rang_start)),
             'pople' => $request->pople,
             'email' => $request->email,
             'name'  => $request->name,
