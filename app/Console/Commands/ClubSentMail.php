@@ -70,7 +70,7 @@ class ClubSentMail extends Command
                 } else {
                     $phone_number = str_replace('+','',$order->dial_code).$phone;
                 }
-                $message = "有你的信件喔";
+                $message = config('setting.club.order_12');
                 $sent_obj = SLS::sent_single_sms($phone_number,$message);
                 */
             }

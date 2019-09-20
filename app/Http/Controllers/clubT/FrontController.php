@@ -312,7 +312,7 @@ class FrontController extends Controller
                 } else {
                     $phone_number = str_replace('+','',$request->dial_code).$phone;
                 }
-                $message = Config::get('setting.club.order_sms');
+                $message = config('setting.club.order_sms');
                 $sent_obj = SLS::sent_single_sms($phone_number,$message);
                 
             }
