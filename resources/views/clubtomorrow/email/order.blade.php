@@ -156,7 +156,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://gallery.mailchimp.com/703b108a2ad1da1887fe106f9/images/6c3ca4be-bec8-459d-b918-baf72861c298.jpg" width="564" style="max-width:1004px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://gallery.mailchimp.com/703b108a2ad1da1887fe106f9/images/3d2466a3-1d74-47b4-8d7b-a5a8ac41481e.jpg" width="564" style="max-width:1004px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -173,7 +173,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif; font-size: 20px; padding: 22px;">
-                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97&dates={{ $gday }}&location=106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5219-2%E8%99%9F&details=%E5%98%BF%EF%BC%8C%E5%88%A5%E5%BF%98%E4%BA%86%E4%BE%86%EF%BC%8C%3Cbr%3E%E4%BE%9D%E4%BD%A0%E8%88%92%E9%81%A9%E7%9A%84%E8%A3%9D%E6%89%AE%EF%BC%8C%3Cbr%3E%E8%A8%98%E5%BE%97%E6%8F%90%E6%97%A915%E5%88%86%E9%90%98%E6%8A%B5%E9%81%94%E3%80%82%3Cbr%3E%3Cbr%3E%E6%9C%9F%E5%BE%85%EF%BC%8C%E4%BD%A0%E7%9A%84%E4%BE%86%E8%A8%AA%E3%80%82%3Cbr%3E%3Cbr%3EYours+Truly,%3Cbr%3E%E5%BE%AE%E9%86%BA%E7%AE%A1%E5%AE%B6+Mr.Tipsy" target="_blank" style="font-weight: bold;letter-spacing: 5px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">加入行事曆</a>
+                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/r/eventedit?text=明日俱樂部&dates={{ $gday }}&location=106台北市大安區復興南路一段2號B2&sf=true" target="_blank" style="font-weight: bold;letter-spacing: 5px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">加入行事曆</a>
                             </td>
                         </tr>
                     </tbody>
