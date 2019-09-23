@@ -476,7 +476,7 @@ function updateDatePicker() {
             }
             booking_date.datepicker("destroy");
             booking_date.datepicker({
-                minDate:0,
+                minDate:new Date(2019, 11, 1),  // 11月過後要調整
                 maxDate:"+5m",
                 dateFormat: 'yy-mm-dd', 
                 beforeShowDay: enableAllTheseDays
