@@ -397,8 +397,8 @@ $('.step-3 input, .step-3 select').on('change', function () {
                 if(obj.length>0){
                     proObject = obj;
                     for(i=0;i<obj.length;i++){
-                        var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位';
-                        nextField.append('<option value="'+obj[i].id+'" data-money="'+obj[i].money+'">'+range+'</option>');
+                        //var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位';
+                        nextField.html('<option value="'+obj[i].id+'" data-money="'+obj[i].money+'">'+range+'</option>');
                         /*
                         data.push({
                             id   : obj[i].id,
@@ -476,7 +476,7 @@ function updateDatePicker() {
             }
             booking_date.datepicker("destroy");
             booking_date.datepicker({
-                minDate:new Date(2019, 11, 1),  // 11月過後要調整
+                minDate:0,
                 maxDate:"+5m",
                 dateFormat: 'yy-mm-dd', 
                 beforeShowDay: enableAllTheseDays
