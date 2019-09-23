@@ -360,7 +360,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
                 if(obj.length>0){
                     proObject = obj;
                     for(i=0;i<obj.length;i++){
-                        //var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位';
+                        var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位';
                         nextField.append('<option value="'+obj[i].id+'" data-money="'+obj[i].money+'">'+range+'</option>');
                         /*
                         data.push({
