@@ -168,8 +168,8 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
-            config(['mail.username' => env('MAIL_CLUB_USER')]);
-            config(['mail.password' => env('MAIL_CLUB_PASS')]);
+            //config(['mail.username' => env('MAIL_CLUB_USER')]);
+            //config(['mail.password' => env('MAIL_CLUB_PASS')]);
 
 
             Mail::send('clubtomorrow.email.coupon',$data,function($m) use ($data){
@@ -468,8 +468,8 @@ class BackController extends Controller
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                config(['mail.username' => env('MAIL_CLUB_USER')]);
-                config(['mail.password' => env('MAIL_CLUB_PASS')]);
+                //config(['mail.username' => env('MAIL_CLUB_USER')]);
+                //config(['mail.password' => env('MAIL_CLUB_PASS')]);
                 Mail::send('clubtomorrow.email.order',$mailer,function($m) use ($mailer){
                     $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
                     $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
@@ -642,8 +642,8 @@ class BackController extends Controller
         ];
 
 
-        config(['mail.username' => env('MAIL_CLUB_USER')]);
-        config(['mail.password' => env('MAIL_CLUB_PASS')]);
+        //config(['mail.username' => env('MAIL_CLUB_USER')]);
+        //config(['mail.password' => env('MAIL_CLUB_PASS')]);
         Mail::send('clubtomorrow.email.order',$mailer,function($m) use ($mailer){
             $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
             $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');

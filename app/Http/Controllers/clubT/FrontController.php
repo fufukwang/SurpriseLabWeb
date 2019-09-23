@@ -296,8 +296,8 @@ class FrontController extends Controller
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                config(['mail.username' => env('MAIL_CLUB_USER')]);
-                config(['mail.password' => env('MAIL_CLUB_PASS')]);
+                //config(['mail.username' => env('MAIL_CLUB_USER')]);
+                //config(['mail.password' => env('MAIL_CLUB_PASS')]);
                 Mail::send('clubtomorrow.email.order',$mailer,function($m) use ($mailer){
                     $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
                     $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');

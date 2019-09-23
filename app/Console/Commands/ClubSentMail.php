@@ -44,8 +44,6 @@ class ClubSentMail extends Command
     {
         try {
             // 取得前一天的內容
-            config(['mail.username' => env('MAIL_CLUB_USER')]);
-            config(['mail.password' => env('MAIL_CLUB_PASS')]);
             $orders = order::whereRaw("TO_DAYS(NOW())-TO_DAYS(created_at)=1")->where('pay_status','已付款')->get();
             foreach ($orders as $order) {
                 // sent email
@@ -62,7 +60,7 @@ class ClubSentMail extends Command
                     $m->to($mailer['email'], $mailer['name']);
                     $m->subject('明日俱樂部Emily來信請建立你的玩家ID!');
                 });
-                /*
+                
                 // sent sms
                 $phone = $order->tel;
                 if($order->dial_code == "+886"){
@@ -72,7 +70,7 @@ class ClubSentMail extends Command
                 }
                 $message = config('setting.club.order_12');
                 $sent_obj = SLS::sent_single_sms($phone_number,$message);
-                */
+                
             }
 
         } catch (Exception $exception) {
