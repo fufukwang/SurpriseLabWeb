@@ -291,7 +291,7 @@ class FrontController extends Controller
                 $mailer = [
                     'day'   => implode(" ",str_split(Carbon::parse($act->day)->format('Y/m/d'))),
                     'time'  => implode(" ",str_split($act->rang_start)),
-                    'pople' => $request->Pople,
+                    'pople' => $people,
                     'email' => $data['email'],
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
