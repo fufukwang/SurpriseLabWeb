@@ -51,6 +51,11 @@ class ClubSentMail extends Command
                     'email' => $order->email,
                     'name'  => $order->name,
                 ];
+                if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                    config(['mail.host' => 'smtp.gmail.com']);
+                    config(['mail.username' => env('MAIL_CLUB_USER')]);
+                    config(['mail.password' => env('MAIL_CLUB_PASS')]);
+                }
                 
                 Mail::send('clubtomorrow.email.t12',$mailer,function($m) use ($mailer){
                     $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');

@@ -171,7 +171,11 @@ class BackController extends Controller
             //config(['mail.username' => env('MAIL_CLUB_USER')]);
             //config(['mail.password' => env('MAIL_CLUB_PASS')]);
 
-
+            if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
+                config(['mail.host' => 'smtp.gmail.com']);
+                config(['mail.username' => env('MAIL_CLUB_USER')]);
+                config(['mail.password' => env('MAIL_CLUB_PASS')]);
+            }
             Mail::send('clubtomorrow.email.coupon',$data,function($m) use ($data){
                 $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
                 $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
@@ -470,6 +474,11 @@ class BackController extends Controller
                 ];
                 //config(['mail.username' => env('MAIL_CLUB_USER')]);
                 //config(['mail.password' => env('MAIL_CLUB_PASS')]);
+                if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                    config(['mail.host' => 'smtp.gmail.com']);
+                    config(['mail.username' => env('MAIL_CLUB_USER')]);
+                    config(['mail.password' => env('MAIL_CLUB_PASS')]);
+                }
                 Mail::send('clubtomorrow.email.order',$mailer,function($m) use ($mailer){
                     $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
                     $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
@@ -640,10 +649,11 @@ class BackController extends Controller
             'name'  => $request->name,
             'gday'  => $rangStart.'/'.$rangEnd,
         ];
-
-
-        //config(['mail.username' => env('MAIL_CLUB_USER')]);
-        //config(['mail.password' => env('MAIL_CLUB_PASS')]);
+        if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+            config(['mail.host' => 'smtp.gmail.com']);
+            config(['mail.username' => env('MAIL_CLUB_USER')]);
+            config(['mail.password' => env('MAIL_CLUB_PASS')]);
+        }
         Mail::send('clubtomorrow.email.order',$mailer,function($m) use ($mailer){
             $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
             $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
