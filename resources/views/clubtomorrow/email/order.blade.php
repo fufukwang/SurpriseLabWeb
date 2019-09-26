@@ -173,7 +173,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif; font-size: 20px; padding: 22px;">
-                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/r/eventedit?text=明日俱樂部&dates={{ $gday }}&location=106台北市大安區復興南路一段2號B2&sf=true" target="_blank" style="font-weight: bold;letter-spacing: 5px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">加入行事曆</a>
+                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/r/eventedit?text=明日俱樂部&dates={{ $gday }}&sf=true" target="_blank" style="font-weight: bold;letter-spacing: 5px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">加入行事曆</a>
                             </td>
                         </tr>
                     </tbody>
