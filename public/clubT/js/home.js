@@ -56,14 +56,27 @@ $(document).ready(function () {
     });
 
     // 售票進度 API
-    let progress_api = 'https://surpriselab.backme.tw/api/projects/1066json?token=15171aa66ababafd4464a1c194b66102';
-    $.getJSON(progress_api).done(function (data) {
+    let progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1066json?token=15171aa66ababafd4464a1c194b66102';
+    let progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1136json?token=15171aa66ababafd4464a1c194b66102';
 
-        let goal = 3500; // 目標張數
+    $.when(
+      $.getJSON(progress_api_SaleStep1),
+      $.getJSON(progress_api_SaleStep2)
+    ).done(function (data1, data2) {
+
+        data1 = data1[0];
+        var data = data2[0];
+
+        let goal = 7840; // 目標張數
         let amount = 0; // 已售出總票數
 
+        $.each(data1['rewards'], function (index, ticket) {
+            // 計算第一階段已售出總票數
+            amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        });
+
         $.each(data['rewards'], function (index, ticket) {
-            // 計算已售出總票數
+            // 計算第二階段已售出總票數
             amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
 
