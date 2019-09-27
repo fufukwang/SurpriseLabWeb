@@ -273,6 +273,21 @@ p {
   list-style-type: none;
   padding: 0; }
   @media (min-width: 1200px) {
+    #Rules ul + .small-title {
+      padding-top: calc((608px + 30px) * 0.02683); } }
+  @media (min-width: 1440px) {
+    #Rules ul + .small-title {
+      padding-top: calc((768px + 30px) * 0.02683); } }
+  @media (min-width: 1920px) {
+    #Rules ul + .small-title {
+      padding-top: calc((1088px + 30px) * 0.02683); } }
+  @media (max-width: 1199.98px) {
+    #Rules ul + .small-title {
+      padding-top: calc((520px + 30px) * 0.02683); } }
+  @media (max-width: 480px) {
+    #Rules ul + .small-title {
+      padding-top: calc(100% * 0.02683); } }
+  @media (min-width: 1200px) {
     #Rules ul + ul {
       padding-top: calc((608px + 30px) * 0.02683); } }
   @media (min-width: 1440px) {

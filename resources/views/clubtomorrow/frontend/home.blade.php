@@ -342,20 +342,20 @@
                             <div class="section-subtitle">TICKET</div>
 
                             <p class="section-paragraph">
-                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 11/20-12/15 之場次
+                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 12/18-01/20 之場次
                             </p>
 
                             <div class="ticket-type">
                                 <div class="type-item type-single-player">
-                                    <a href="https://surpriselab.backme.tw/checkout/1066/6875?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1136/7260?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
-                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_1.png" alt="一人票">
-                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_1_mobile@2x.png" alt="一人票">
+                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_1.png" alt="單人票">
+                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_1_mobile@2x.png" alt="單人票">
                                         </div>
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-4">
-                                    <a href="https://surpriselab.backme.tw/checkout/1066/6877?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1136/7261?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_2.png" alt="四人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_2_mobile@2x.png" alt="四人票">
@@ -366,7 +366,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-10">
-                                    <a href="https://surpriselab.backme.tw/checkout/1066/6878?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1136/7262?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_3.png" alt="十人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_3_mobile@2x.png" alt="十人票">
@@ -456,26 +456,34 @@
                                 <div class="schedule-inner">
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            08/14
+                                            09/27
                                         </div>
                                         <div class="schedule-content">
-                                            開賣 11/20-12/15 場次票卷，目標3500人
+                                            開賣 12/18-01/20 場次票券
                                         </div>
                                     </div>
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            09/24
+                                            11/12
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信 — 09/20 下午15:00前購票者
+                                            寄送劃位信 — 前 500 位購票者
                                         </div>
                                     </div>
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            10/01
+                                            11/19
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信 — 09/20-09/27 下午15:00前購票者
+                                            寄送劃位信 — 後 500 位到 11/15 下午15:00 前購票者
+                                        </div>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="schedule-title">
+                                            11/26
+                                        </div>
+                                        <div class="schedule-content">
+                                            寄送劃位信 — 11/15-11/22 下午15:00 前購票者
                                         </div>
                                     </div>
                                 </div>
@@ -591,7 +599,7 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售 11/20-12/15 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
+                                        * 現正預售 12/18-01/20 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>

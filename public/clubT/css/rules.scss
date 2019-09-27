@@ -221,6 +221,10 @@ p {
     list-style-type: none;
     padding: 0;
 
+    & + .small-title {
+      @include baseCounter('padding-top', 30);
+    }
+
     & + ul {
       @include baseCounter('padding-top', 30);
 
