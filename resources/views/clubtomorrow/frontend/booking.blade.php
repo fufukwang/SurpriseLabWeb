@@ -139,7 +139,7 @@
         <main class="sections" id="submit-main">
             <div class="container">
                 <!-- form -->
-                <form id="booking">
+                <form id="booking" onsubmit="return false;">
                     <!--progress title-->
                     <h2 class="progress-title"></h2>
                     <!-- progressbar -->
@@ -417,7 +417,7 @@
                             </table>
                             <div class="feature-btn d-flex justify-content-between multi-btn">
                                 <button type="button" name="previous" class="btn-bright-blue previous action-button">上一步</button>
-                                <button type="submit" name="submit" class="btn-bright-blue submit" disabled>
+                                <button type="button" name="submit" class="btn-bright-blue submit" disabled>
                                     完成劃位 NT$<span class="amountToGo"></span>
                                 </button>
                             </div>
@@ -516,6 +516,6 @@
 <script src="/clubT/js/plugins/simplebar.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
 <script src="/clubT/js/main.js"></script>
-<script src="/clubT/js/form.js?v=0.5"></script>
+<script src="/clubT/js/form.js?v=0.6"></script>
 </body>
 </html>

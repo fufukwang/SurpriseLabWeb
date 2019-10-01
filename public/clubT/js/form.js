@@ -300,6 +300,8 @@ $('input[name="coupon"]').on('keyup', function () {
  * 暫時不送出表單，待前後台串接後可移除
  */
 $(".submit").click(function(){
+    $('.submit').attr('disabled', true);
+    $('.loading-wrapper').addClass('show');
     var people = $('[name="booking_people"]').val();
     var obj = {
         'name'  : $('[name=name]').val(),
@@ -314,7 +316,6 @@ $(".submit").click(function(){
         'coupon': usedCoupons,
         'is_overseas':0,
     };
-    $('.loading-wrapper').addClass('show');
     $('<link>').appendTo('head')
         .attr({
             type: 'text/css', 
@@ -330,16 +331,13 @@ $(".submit").click(function(){
             $('#submit-error').addClass("d-flex").show();
             console.log('失敗');
         }
-
-
         $('.loading-wrapper').removeClass('show');
-
     },'json').fail(function() {
+        $('#submit-main').hide();
         $('#submit-error').addClass("d-flex").show();
         console.log('錯誤');
         $('.loading-wrapper').removeClass('show');
     });
-    return false;
 });
 
 // ===================================
