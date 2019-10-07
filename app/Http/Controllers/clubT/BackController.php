@@ -182,7 +182,7 @@ class BackController extends Controller
                 $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
 
                 $m->to($data['xls']->email, $data['xls']->name);
-                $m->subject('明日俱樂部-劃位序號信件!');
+                $m->subject('【明日俱樂部】劃位序號信件');
             });
             backme::where('id',$id)->update(['is_sent'=>1]);
             return Response::json(['message'=> 'success'], 200);
@@ -485,7 +485,7 @@ class BackController extends Controller
                     $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
 
                     $m->to($mailer['email'], $mailer['name']);
-                    $m->subject('明日俱樂部-訂單完成信件!');
+                    $m->subject('【明日俱樂部】訂位確認信');
                 });
             }
 
@@ -660,7 +660,7 @@ class BackController extends Controller
             $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
 
             $m->to($mailer['email'], $mailer['name']);
-            $m->subject('明日俱樂部-訂單完成信件!');
+            $m->subject('【明日俱樂部】訂位確認信');
         });
         return Response::json(['message'=> '已更新'], 200);
     }

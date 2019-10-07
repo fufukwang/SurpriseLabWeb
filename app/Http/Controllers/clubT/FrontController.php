@@ -309,7 +309,7 @@ class FrontController extends Controller
                     $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
 
                     $m->to($mailer['email'], $mailer['name']);
-                    $m->subject('明日俱樂部-訂單完成信件!');
+                    $m->subject('【明日俱樂部】訂位確認信');
                 });
                 $phone = $request->tel;
                 if($request->dial_code == "+886"){
