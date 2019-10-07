@@ -108,6 +108,7 @@
                                                 <th>餐飲備註</th>
                                                 <th>優惠券</th>
                                                 <th>註記</th>
+                                                <th data-orderable="false">寄信</th>
                                                 <th data-orderable="false">功能</th>
                                             </tr>
                                         </thead>
@@ -128,7 +129,10 @@
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse</th>
                                                 <td>{{ $row->manage }}</td>
                                                 <td class="actions">
-                                                    <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i></a>
+                                                    <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
+                                                    <a class="btn btn-primary btn-xs resent12" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>Emily來信</a>
+                                                </td>
+                                                <td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/clubtomorrow/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
@@ -269,7 +273,18 @@ $(function(){
             email : email,
             pople : pople
         },function(data){
-            $.Notification.notify('success','bottom left','已重發', '信件已重新發送');
+            $.Notification.notify('success','bottom left','訂位確認信 已重發', '信件已重新發送');
+        },'json');
+    });
+    $('.resent12').bind('click',function(){
+        var name  = $(this).data('name');
+        var email = $(this).data('email');
+        var id    = $(this).data('id');
+        $.post('/clubtomorrow/order/'+id+'/resent12',{
+            name  : name,
+            email : email,
+        },function(data){
+            $.Notification.notify('success','bottom left','Emily來信 已重發', '信件已重新發送');
         },'json');
     });
 

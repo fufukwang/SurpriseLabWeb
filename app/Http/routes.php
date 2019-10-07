@@ -251,6 +251,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('xls/data/output','clubT\BackController@XlsDataOuput');
         Route::get('xls/emaildata/output','clubT\BackController@XlsEmailDataOuput');
         Route::post('order/{id}/resent','clubT\BackController@beSentOrderMail');
+        Route::post('order/{id}/resent12','clubT\BackController@beSentOrderMail12');
     });
 });
 
