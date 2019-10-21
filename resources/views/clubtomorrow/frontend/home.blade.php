@@ -342,7 +342,7 @@
                             <div class="section-subtitle">TICKET</div>
 
                             <p class="section-paragraph">
-                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 12/18-01/20 之場次
+                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 01/12-02/09 之場次
                             </p>
 
                             <div class="ticket-type">
@@ -459,31 +459,23 @@
                                             09/27
                                         </div>
                                         <div class="schedule-content">
-                                            開賣 12/18-01/20 場次票券
+                                            開賣 01/12-02/09 場次票券
                                         </div>
                                     </div>
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            11/12
+                                            12/03
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信 — 前 500 位購票者
+                                            寄送劃位信 — 前 1000 位購票者
                                         </div>
                                     </div>
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            11/19
+                                            12/10
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信 — 後 500 位到 11/15 下午15:00 前購票者
-                                        </div>
-                                    </div>
-                                    <div class="schedule-item">
-                                        <div class="schedule-title">
-                                            11/26
-                                        </div>
-                                        <div class="schedule-content">
-                                            寄送劃位信 — 11/15-11/22 下午15:00 前購票者
+                                            寄送劃位信 — 其餘購票者
                                         </div>
                                     </div>
                                 </div>
@@ -513,7 +505,7 @@
                                                 週三
                                             </div>
                                             <div class="time-slots-content">
-                                                19:00 | 21:00
+                                                18:30 | 20:30
                                             </div>
                                         </div>
                                         <div class="time-slots-item">
@@ -521,7 +513,7 @@
                                                 週四
                                             </div>
                                             <div class="time-slots-content">
-                                                19:00 | 21:00
+                                                18:30 | 20:30
                                             </div>
                                         </div>
                                         <div class="time-slots-item">
@@ -529,7 +521,7 @@
                                                 週五
                                             </div>
                                             <div class="time-slots-content">
-                                                19:00 | 21:00
+                                                18:30 | 20:30
                                             </div>
                                         </div>
                                     </div>
@@ -599,7 +591,7 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售 12/18-01/20 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
+                                        * 現正預售 01/12-02/09 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
@@ -648,6 +640,14 @@
                                 </div>
                                 <div class="contact-content">
                                     <a href="mailto:clubtomorrow@surpriselab.com.tw" target="_blank">clubtomorrow@surpriselab.com.tw</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-title">
+                                    聯絡時間
+                                </div>
+                                <div class="contact-content">
+                                    週一至週五 11:00am-18:00pm
                                 </div>
                             </div>
                             <div class="contact-item">
