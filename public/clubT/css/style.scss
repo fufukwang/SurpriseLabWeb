@@ -2677,6 +2677,7 @@ header {
         text-align: right;
         color: $color-bright-green;
         min-width: 136px;
+        width: 136px;
         padding-right: 50px;
       }
 
@@ -2708,6 +2709,7 @@ header {
 
         .contact-title {
           min-width: 110px;
+          width: 110px;
           padding-right: 33px;
         }
       }
@@ -2735,6 +2737,7 @@ header {
         }
 
         .contact-title {
+          width: 100%;
           padding: 12px 9%;
           text-align: left;
         }
