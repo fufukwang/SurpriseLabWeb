@@ -65,12 +65,9 @@
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
                                                     <select name="people" id="pople" class="form-control">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
+                                                        @for($i=1;$i<31;$i++)
+                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                        @endfor
                                                     </select>
                                                 </div>
                                             </div>

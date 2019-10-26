@@ -60,7 +60,7 @@
 			<td>@if($row->pay_type=='現場付款') 現場 @elseif($row->pay_type=='信用卡') 信用卡 @elseif($row->pay_type='後臺編輯') 後台 @endif {{ $row->OM }} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
 			<td>{!! nl2br($row->notes) !!}</td>
-			<td>@forelse(App\model\club\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\club\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
+			<td>@forelse(App\model\club\coupon::where('o_id',$row->sn)->get() as $coup)@if($coup->type=='p1')單人票@elseif($coup->type=='p4')四人票@elseif($coup->type=='p10')十人票@endif {{ $coup->code }} [{{App\model\club\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
 			<td>{!! nl2br($row->manage) !!}</td>
 		</tr>
 @empty

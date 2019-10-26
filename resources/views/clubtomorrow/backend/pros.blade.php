@@ -70,12 +70,12 @@
                                                 </select>
                                         </div>
 
-<div class="form-group col-sm-1">
+<div class="form-group col-sm-2">
     <div class="input-group">
       <span class="input-group-addon">
         <input type="checkbox" name="open_limit" value="1"@if(isset($request->open_limit) && $request->open_limit==1) checked @endif>
       </span>
-      <input type="number" name="open_number" class="form-control" placeholder="開放位置" @if(isset($request->open_number) && $request->open_number>0) value="{{ $request->open_number }}" @else value="24" @endif>
+      <input type="number" name="open_number" class="form-control" placeholder="開放位置" @if(isset($request->open_number) && $request->open_number>0) value="{{ $request->open_number }}" @else value="64" @endif>
     </div>
 </div>
 

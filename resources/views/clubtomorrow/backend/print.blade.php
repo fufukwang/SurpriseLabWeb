@@ -125,12 +125,12 @@
 @if($row->is_overseas) <br />海外刷卡 @endif
                                                 </td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
-                                                <th>@forelse(App\model\club\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\club\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
+                                                <th>@forelse(App\model\club\coupon::where('o_id',$row->sn)->get() as $coup)@if($coup->type=='p1')單人票@elseif($coup->type=='p4')四人票@elseif($coup->type=='p10')十人票@endif {{ $coup->code }} [<span data-toggle="tooltip" title="{{App\model\club\backme::select('detail')->find($coup->b_id)->detail}}">{{App\model\club\backme::select('money')->find($coup->b_id)->money}}</span>]<br >@empty 
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse</th>
-                                                <td>{{ $row->manage }}</td>
+                                                <td>{!! nl2br($row->manage) !!}</td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
-                                                    <a class="btn btn-primary btn-xs resent12" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>Emily來信</a>
+                                                    <a class="btn btn-primary btn-xs resent12" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>建立玩家ID信</a>
                                                 </td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/clubtomorrow/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>

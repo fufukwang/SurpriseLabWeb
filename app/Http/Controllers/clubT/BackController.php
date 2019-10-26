@@ -124,10 +124,30 @@ class BackController extends Controller
         return view('clubtomorrow.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $cellData = backme::select('name','email','tel','num','detail')->whereRaw("(SELECT COUNT(id) FROM(club_coupon) WHERE o_id=0 AND club_coupon.b_id=club_backme.id)>0")->get()->toArray();
+        $cellData = backme::select('name','email','tel','num','detail','manage','p1','p4','p10')->whereRaw("(SELECT COUNT(id) FROM(club_coupon) WHERE o_id=0 AND club_coupon.b_id=club_backme.id)>0")->get()->toArray();
         Excel::create('匯出未兌換名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
-                $sheet->rows($cellData);
+                $data = [[
+                    'day'    => '姓名',
+                    'mon'    => '信箱',
+                    'part'   => '電話',
+                    'site'   => '票數',
+                    'detail' => '內容',
+                    'note'   => '備註',
+                ]];
+                foreach($cellData as $row){
+                    $num = ($row['p1']*1)+($row['p4']*4)+($row['p10']*10);
+                    $tmp = [
+                        'day'    => $row['name'],
+                        'mon'    => $row['email'],
+                        'part'   => $row['tel'],
+                        'site'   => $num,
+                        'detail' => $row['detail'],
+                        'note'   => $row['manage'],
+                    ];
+                    array_push($data,$tmp);
+                }
+                $sheet->rows($data);
             });
         })->export('xls');
     }
@@ -385,7 +405,9 @@ class BackController extends Controller
                 abort(404);
             }
         }
-        return view('clubtomorrow.backend.order',compact('order'));
+        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(club_order) WHERE club_order.pro_id=club_pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>0")
+            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(club_order) WHERE club_order.pro_id=club_pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+        return view('clubtomorrow.backend.order',compact('order','pro'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -394,6 +416,10 @@ class BackController extends Controller
             'manage'    => $request->manage,
             'pay_type'   => $request->pay_type,
         ];
+        if($request->has('pro_id') && $request->pro_id>0){
+            $data['pro_id'] = $request->pro_id;
+            $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
+        }
         if(is_numeric($id) && $id>0){
             order::where('id',$id)->update($data);
             $order = order::find($id);
@@ -401,7 +427,7 @@ class BackController extends Controller
         if($request->has('qxx') && $request->qxx != ''){
             return redirect('/clubtomorrow/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
-            return redirect('/clubtomorrow/orders/'.$order->tfopro_id)->with('message','編輯完成!');
+            return redirect('/clubtomorrow/orders/'.$order->pro_id)->with('message','編輯完成!');
         }
     }
     public function OrderDelete(Request $request,$id){
