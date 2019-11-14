@@ -22,9 +22,11 @@ a {
 p {
   margin-bottom: 0; }
 
-body .booking::before {
+body .booking::before,
+body .reschedule::before {
   background-image: url("../img/bg_starry.jpg"); }
-body .booking::after {
+body .booking::after,
+body .reschedule::after {
   display: none; }
 
 main {
@@ -87,6 +89,9 @@ main {
   @media (max-width: 480px) {
     .submit-page {
       padding-top: calc(100% * 0.08587); } }
+  .submit-page .feature-btn.multi-btn {
+    display: flex;
+    justify-content: space-between; }
   .submit-page .feature-btn .btn-bright-blue {
     margin-top: 0; }
   .submit-page .page-title {
@@ -185,6 +190,12 @@ main {
   @media (max-width: 480px) {
     .submit-page {
       padding-top: 65px; }
+      .submit-page .feature-btn.multi-btn {
+        display: block; }
+      .submit-page .feature-btn .btn-bright-blue {
+        max-width: 240px; }
+        .submit-page .feature-btn .btn-bright-blue + .btn-bright-blue {
+          margin-top: 20px; }
       .submit-page .page-title {
         font-size: 20px;
         line-height: 1.45;

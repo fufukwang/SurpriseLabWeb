@@ -333,4 +333,141 @@ class FrontController extends Controller
         }
     }
 
+
+
+
+
+    // 換日期
+    public function changeActivityAjax(Request $request){
+        if($request->ajax() && $request->has('act')){
+            $input = $request->all();
+            switch ($input['act']) {
+                case 'myOrder':
+                    $dial_code = $input['dial_code'];
+                    $phone     = $input['phone'];
+                    $email     = $input['email'];
+                    $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id');
+                    $order = $order->select('rang_start','rang_end','name','tel','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','dial_code','discount');
+                    // 日期(場次)範圍
+                    $order = $order->where('can_re',1); // 可自行改期
+                    $order = $order->whereRaw("(club_order.pay_status='已付款' OR club_order.pay_status='更改場次')");
+                    $order = $order->where('dial_code',$dial_code)->where('email',$email)->where('tel',$phone)->get();
+
+                    $success = false;
+                    $orders = [];
+                    foreach($order as $row){
+                        // 訂單票券
+                        $ticket = ''; $p1 = 0;$p4 = 0;$p10 = 0;
+                        $coupons = coupon::select('type')->where('o_id',$row->sn)->get();
+                        foreach($coupons as $r){
+                            switch ($r->type) {
+                                case 'p1': $p1++; break;
+                                case 'p4': $p4++; break;
+                                case 'p10': $p10++; break;
+                            }
+                        }
+                        if($p1>0) $ticket .= "單人票 Single Player * ".$p1;
+                        if($p4>0) $ticket .= "四人票 Multiplayer for 4 * ".$p4;
+                        if($p10>0) $ticket .= "十人票 Multiplayer for 10 * ".$p10;
+                        // 日期時段
+                        $cday  = '';
+                        $ctime = '';
+                        if($row->pay_status == '更改場次' && $row->discount>0){
+                            $pro = pro::leftJoin('club_order', 'club_pro.id', '=', 'club_order.pro_id')->where('club_order.id',$row->discount)->select('day','rang_start','rang_end')->first();
+                            if($pro){
+                                $cday  = $pro->day;
+                                $ctime = substr($pro->rang_start,0,5).'-'.substr($pro->rang_end,0,5);
+                            }
+                        }
+                        $tmp = [
+                            'id'        => $row->id,
+                            'name'      => $row->name,
+                            'people'    => $row->pople,
+                            'dial_code' => $row->dial_code,
+                            'phone'     => $row->tel,
+                            'email'     => $row->email,
+                            'notes'     => $row->notes,
+                            'status'    => $row->pay_status,
+                            'day'       => $row->day,
+                            'time'      => substr($row->rang_start,0,5).'-'.substr($row->rang_end,0,5),
+                            'cday'      => $cday,
+                            'ctime'     => $ctime,
+                            'ticket'    => $ticket,
+                        ];
+                        array_push($orders, $tmp);
+                        $success = true;
+                    }
+                    return Response::json(array(
+                        'success' => $success,
+                        'order'   => $orders
+                    ), 200);
+                    break;
+                case 'changeOrder':
+                    $order_id = $input['order_id'];
+                    $pro_id   = $input['pro_id'];
+                    $people   = $input['people'];
+                    $now = Carbon::now()->toDateString();
+                    $sn = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
+                    if($sn>0){
+                        $sn += 1;
+                    } else {
+                        $sn = Carbon::now()->format('Ymd').'001';
+                    }
+                    // 檢查座位是否足夠
+                    $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(club_order) WHERE club_order.pro_id=club_pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"))->first();
+                    if($people>$act->Count){
+                        Log::error('人數滿了');
+                        return Response::json(array(
+                            'success' => false,
+                            'message' => '人數已滿'
+                        ), 200);
+                    }
+                    // 建立一筆新的訂單
+                    $order = order::find($order_id);
+                    $manage = $order->manage."\n".date('Y-m-d H:i:s').' '.$order->sn." 更改場次";
+                    $newOrder = order::create([
+                        'pro_id'    => $pro_id,
+                        'pople'     => $order->pople,
+                        'name'      => $order->name,
+                        'dial_code' => $order->dial_code,
+                        'tel'       => $order->tel,
+                        'email'     => $order->email,
+                        'notes'     => $order->notes,
+                        'meat'      => $order->meat,
+                        'coupon'    => $order->coupon,
+                        'sn'        => $sn,
+                        'money'     => $order->money,
+                        'pay_type'  => $order->pay_type,
+                        'pay_status'=> '已付款',
+                        'result'    => $order->result,
+                        'manage'    => $manage,
+                        'discount'  => $order_id,
+                        'is_overseas'=> $order->is_overseas,
+                        'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+                    ]);
+                    // 更改舊訂單的狀態 已付款 -> 更改日期 並新增備註
+                    $order->pay_status = '更改場次';
+                    $order->discount   = $newOrder->id;
+                    $order->manage     = $order->manage."\n".date('Y-m-d H:i:s').' '.$sn." 更改場次";
+                    $order->save();
+                    // 更改兌換券訂單編號
+                    coupon::where('o_id',$order->sn)->update(['o_id'=>$sn]);
+                    // 寄送信件
+                    $sentSuccess = true;
+                    try {
+                        
+                    } catch (Exception $exception) {
+                        Log::error($exception);
+                        $sentSuccess = true;
+                    }
+                    return Response::json(array(
+                        'success'   => $sentSuccess,
+                        'SN'        => $sn
+                    ), 200);
+                    break;
+            }
+            
+        }
+    }
+
 }

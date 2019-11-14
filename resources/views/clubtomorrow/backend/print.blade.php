@@ -48,6 +48,9 @@
                                                     <option value="已預約"@if(isset($request->pay_status) && $request->pay_status=='已預約') selected @endif>已預約</option>
                                                     <option value="已付款"@if(isset($request->pay_status) && $request->pay_status=='已付款') selected @endif>已付款</option>
                                                     <option value="未完成"@if(isset($request->pay_status) && $request->pay_status=='未完成') selected @endif>未完成</option>
+                                                    <option value="更改場次"@if(isset($request->pay_status) && $request->pay_status=='更改場次') selected @endif>更改場次</option>
+
+                                                    
                                                     <option value="取消訂位"@if(isset($request->pay_status) && $request->pay_status=='取消訂位') selected @endif>取消訂位</option>
                                                 </select>
                                             </div>
@@ -100,9 +103,7 @@
                                     <div class="sticky-table-header fixed-solution"><table id="datatable-buttons" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                <th>序號</th>
-                                                <th>場次</th>
-                                                <th>姓名</th>
+                                                <th>序號 / 場次</th>
                                                 <th>資訊</th>
                                                 <th>付款狀態</th>
                                                 <th>餐飲備註</th>
@@ -115,22 +116,46 @@
                                         <tbody>
 @forelse ($order as $row)
                                             <tr id="tr_{{ $row->id }}">
-                                                <td>{{ $row->sn }}</td>
-                                                <td>{{ $row->day }}<br />{{ $row->day_parts }}<br />
+                                                <td>{{ $row->sn }}<br />{{ $row->day }}<br />{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
-                                                <td>{{ $row->name }}</td>
-                                                <td>phone:{{ $row->dial_code }} {{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
-                                                <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
+                                                <td>name:{{ $row->name }}<br/>phone:{{ $row->dial_code }} {{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}</td>
+                                                <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @elseif($row->pay_status=='更改場次')info @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
 @if($row->is_overseas) <br />海外刷卡 @endif
                                                 </td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
                                                 <th>@forelse(App\model\club\coupon::where('o_id',$row->sn)->get() as $coup)@if($coup->type=='p1')單人票@elseif($coup->type=='p4')四人票@elseif($coup->type=='p10')十人票@endif {{ $coup->code }} [<span data-toggle="tooltip" title="{{App\model\club\backme::select('detail')->find($coup->b_id)->detail}}">{{App\model\club\backme::select('money')->find($coup->b_id)->money}}</span>]<br >@empty 
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse</th>
                                                 <td>{!! nl2br($row->manage) !!}</td>
+
+                                                {{--
+                                                <td>
+                                                    <label><input type="radio" name="" checked>個人</label>
+                                                    <label><input type="radio" name="">公司</label>
+                                                    <span contenteditable="true">82791500</span><br>
+                                                    <span>公司行號</span>
+                                                    <a class="btn btn-info btn-xs" href="javascript:;"><i class="fa fa-pencil"></i></a><br>
+                                                    <span contenteditable="true">4000</span> =
+                                                    <span data-toggle="tooltip" title="小計">3810</span> +
+                                                    <span data-toggle="tooltip" title="稅額">190</span><br >
+@if($row->id%2==0)
+                                                    <a class="btn btn-primary btn-xs" href="javascript:;"><i class="fa fa-bolt"> 建立發票</i></a>
+@else
+                                                    <a class="btn btn-info btn-xs disabled" href="javascript:;"><i class="fa fa-bolt"> 發票已建立</i></a>
+@endif
+                                                </td>
+
+
+                                                --}}
                                                 <td class="actions">
+                                                    @if($row->pay_status=='已付款')
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
                                                     <a class="btn btn-primary btn-xs resent12" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>建立玩家ID信</a>
+                                                    @endif
+                                                    @if($row->discount>0 && $row->pay_status=='已付款')
+                                                    <br /><br />
+                                                    <a class="btn btn-primary btn-xs changeProMail" href="javascript:;"><i class="fa fa-envelope"></i>更改場次信件</a>
+                                                    @endif
                                                 </td>
                                                 <td class="actions">
                                                     <a class="btn btn-primary btn-xs" href="/clubtomorrow/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -286,6 +311,9 @@ $(function(){
         },function(data){
             $.Notification.notify('success','bottom left','Emily來信 已重發', '信件已重新發送');
         },'json');
+    });
+    $('.changeProMail').bind('click',function(){
+        $.Notification.notify('error','bottom left','等待信件版型', '等待信件版型');
     });
 
 

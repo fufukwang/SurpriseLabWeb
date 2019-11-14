@@ -32,7 +32,8 @@ p {
 }
 
 body {
-  .booking {
+  .booking,
+  .reschedule {
     &::before {
       background-image: url('../img/bg_starry.jpg');
     }
@@ -87,8 +88,15 @@ main {
   text-align: center;
   @include baseCounter('padding-top', 96);
 
-  .feature-btn .btn-bright-blue {
-    margin-top: 0;
+  .feature-btn {
+    &.multi-btn {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn-bright-blue {
+      margin-top: 0;
+    }
   }
 
   .page-title {
@@ -127,6 +135,20 @@ main {
 
   @media (max-width: 480px) {
     padding-top: 65px;
+
+    .feature-btn {
+      &.multi-btn {
+        display: block;
+      }
+
+      .btn-bright-blue {
+        max-width: 240px;
+
+        & + .btn-bright-blue {
+          margin-top: 20px;
+        }
+      }
+    }
 
     .page-title {
       font-size: 20px;

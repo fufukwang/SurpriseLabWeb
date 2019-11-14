@@ -495,6 +495,10 @@ Route::group(['middleware' => ['web']], function () {
         // 劃位
         Route::get('booking.html',function(){ return view('clubtomorrow.frontend.booking'); });
         //Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
+        // 重劃位
+        Route::get('reschedule.html',function(){ return view('clubtomorrow.frontend.reschedule'); });
+        Route::post('PostAjaxData','clubT\FrontController@changeActivityAjax');
+
         
         Route::get('GetAjaxData','clubT\FrontController@GetAjaxData');
         Route::post('ReOrderData','clubT\FrontController@ReOrderData');
