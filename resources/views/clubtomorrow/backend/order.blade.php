@@ -62,14 +62,24 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">電話</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="tel" readonly value="{{ $order->tel or ''  }}">
+                                                <div class="col-sm-3">
+                                                    <select name="dial_code" class="form-control">
+<option value="+86"@if(isset($order->dial_code) && $order->dial_code=='+86') selected @endif>+86</option>
+<option value="+852"@if(isset($order->dial_code) && $order->dial_code=='+852') selected @endif>+852</option>
+<option value="+853"@if(isset($order->dial_code) && $order->dial_code=='+853') selected @endif>+853</option>
+<option value="+60"@if(isset($order->dial_code) && $order->dial_code=='+60') selected @endif>+60</option>
+<option value="+65"@if(isset($order->dial_code) && $order->dial_code=='+65') selected @endif>+65</option>
+<option value="+886"@if(isset($order->dial_code) && $order->dial_code=='+886') selected @endif>+886</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" name="tel" value="{{ $order->tel or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">EMail</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="email" readonly value="{{ $order->email or ''  }}">
+                                                    <input type="email" class="form-control" name="email" value="{{ $order->email or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -108,6 +118,7 @@
                                                         <option value="未完成"@if(isset($order->pay_status) && $order->pay_status=='未完成') selected @endif>未完成</option>
                                                         <option value="已付款"@if(isset($order->pay_status) && $order->pay_status=='已付款') selected @endif>已付款</option>
                                                         <option value="取消訂位"@if(isset($order->pay_status) && $order->pay_status=='取消訂位') selected @endif>取消訂位</option>
+                                                        <option value="更改場次"@if(isset($order->pay_status) && $order->pay_status=='更改場次') selected @endif>更改場次</option>
                                                     </select>
                                                 </div>
                                             </div>

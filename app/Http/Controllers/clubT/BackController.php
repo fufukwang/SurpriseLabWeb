@@ -400,7 +400,7 @@ class BackController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id')->select('club_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople')->find($id);
+                $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id')->select('club_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','dial_code')->find($id);
             } else {
                 abort(404);
             }
@@ -413,8 +413,11 @@ class BackController extends Controller
 
         $data = [
             'pay_status' => $request->pay_status,
-            'manage'    => $request->manage,
+            'manage'     => $request->manage,
             'pay_type'   => $request->pay_type,
+            'dial_code'  => $request->dial_code,
+            'tel'        => $request->tel,
+            'email'      => $request->email,
         ];
         if($request->has('pro_id') && $request->pro_id>0){
             $data['pro_id'] = $request->pro_id;
@@ -669,7 +672,7 @@ class BackController extends Controller
         $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
         $mailer = [
             'day'   => implode(" ",str_split(Carbon::parse($act->day)->format('Y/m/d'))),
-            'time'  => implode(" ",str_split($act->rang_start)),
+            'time'  => implode(" ",str_split(substr($act->rang_start,0,5))),
             'pople' => $request->pople,
             'email' => $request->email,
             'name'  => $request->name,
@@ -701,14 +704,27 @@ class BackController extends Controller
             config(['mail.username' => env('MAIL_CLUB_USER')]);
             config(['mail.password' => env('MAIL_CLUB_PASS')]);
         }
-        Mail::send('clubtomorrow.email.t12',$mailer,function($m) use ($mailer){
-            $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
-            $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
-            $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+        if($request->has('mailtype') && $request->mailtype==='resmail'){
+            Mail::send('clubtomorrow.email.resmail',$mailer,function($m) use ($mailer){
+                $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+                $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+                $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
 
-            $m->to($mailer['email'], $mailer['name']);
-            $m->subject('【明日俱樂部】Emily來信：請建立你的玩家ID');
-        });
+                $m->to($mailer['email'], $mailer['name']);
+                $m->subject('【明日俱樂部】重新劃位信');
+            });  
+        } else {
+            Mail::send('clubtomorrow.email.t12',$mailer,function($m) use ($mailer){
+                $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+                $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+                $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+
+                $m->to($mailer['email'], $mailer['name']);
+                $m->subject('【明日俱樂部】Emily來信：請建立你的玩家ID');
+            });    
+        }
+        
+
         return Response::json(['message'=> '已更新'], 200);
     }
 

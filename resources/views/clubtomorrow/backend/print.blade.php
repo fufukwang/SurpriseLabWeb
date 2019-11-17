@@ -151,10 +151,8 @@
                                                     @if($row->pay_status=='已付款')
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
                                                     <a class="btn btn-primary btn-xs resent12" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>建立玩家ID信</a>
-                                                    @endif
-                                                    @if($row->discount>0 && $row->pay_status=='已付款')
                                                     <br /><br />
-                                                    <a class="btn btn-primary btn-xs changeProMail" href="javascript:;"><i class="fa fa-envelope"></i>更改場次信件</a>
+                                                    <a class="btn btn-primary btn-xs changeProMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>更改場次信件</a>
                                                     @endif
                                                 </td>
                                                 <td class="actions">
@@ -313,7 +311,16 @@ $(function(){
         },'json');
     });
     $('.changeProMail').bind('click',function(){
-        $.Notification.notify('error','bottom left','等待信件版型', '等待信件版型');
+        var name  = $(this).data('name');
+        var email = $(this).data('email');
+        var id    = $(this).data('id');
+        $.post('/clubtomorrow/order/'+id+'/resent12',{
+            name  : name,
+            email : email,
+            mailtype : 'resmail'
+        },function(data){
+            $.Notification.notify('success','bottom left','重新劃位信 已重發', '信件已重新發送');
+        },'json');
     });
 
 
