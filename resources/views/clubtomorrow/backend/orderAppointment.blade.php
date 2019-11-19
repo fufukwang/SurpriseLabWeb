@@ -49,7 +49,16 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">電話</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" name="dial_code" maxlength="4" required>
+                                                    <select name="dial_code" class="form-control" required>
+<option value="+886">+886</option>
+<option value="+86">+86</option>
+<option value="+852">+852</option>
+<option value="+853">+853</option>
+<option value="+60">+60</option>
+<option value="+65">+65</option>
+
+                                                    </select>
+                                                    <!--input type="text" class="form-control" name="dial_code" maxlength="4" required-->
                                                 </div>
                                                 <div class="col-sm-5">
                                                     <input type="text" class="form-control" name="tel" required>
