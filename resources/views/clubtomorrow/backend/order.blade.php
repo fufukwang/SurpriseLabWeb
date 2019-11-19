@@ -64,12 +64,12 @@
                                                 <label class="control-label col-sm-4">電話</label>
                                                 <div class="col-sm-3">
                                                     <select name="dial_code" class="form-control">
+<option value="+886"@if(isset($order->dial_code) && $order->dial_code=='+886') selected @endif>+886</option>
 <option value="+86"@if(isset($order->dial_code) && $order->dial_code=='+86') selected @endif>+86</option>
 <option value="+852"@if(isset($order->dial_code) && $order->dial_code=='+852') selected @endif>+852</option>
 <option value="+853"@if(isset($order->dial_code) && $order->dial_code=='+853') selected @endif>+853</option>
 <option value="+60"@if(isset($order->dial_code) && $order->dial_code=='+60') selected @endif>+60</option>
 <option value="+65"@if(isset($order->dial_code) && $order->dial_code=='+65') selected @endif>+65</option>
-<option value="+886"@if(isset($order->dial_code) && $order->dial_code=='+886') selected @endif>+886</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-sm-5">
