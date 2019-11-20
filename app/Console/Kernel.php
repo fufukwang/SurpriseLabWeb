@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
         //$schedule->command('sms:sent')->dailyAt('8:00');
         //$schedule->command('inspire')->hourly();
         // 中午12點寄送信件及簡訊
-        $schedule->command('club:sentmail')->dailyAt('12:00');
+        // $schedule->command('club:sentmail')->dailyAt('12:00');  // 191121 取消寄送
 
     }
 }
