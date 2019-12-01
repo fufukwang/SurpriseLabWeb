@@ -342,6 +342,16 @@ class FrontController extends Controller
         if($request->ajax() && $request->has('act')){
             $input = $request->all();
             switch ($input['act']) {
+                case 'getDayTime':
+                    $id = $input['id'];
+                    $pro = pro::where('id',$id)->select('day','rang_start','rang_end')->first();
+                    return Response::json(array(
+                        'success' => true,
+                        'day'     => $pro->day,
+                        'time'    => substr($pro->rang_start,0,5).'-'.substr($pro->rang_end,0,5)
+                    ), 200);
+
+                    break;
                 case 'myOrder':
                     $dial_code = $input['dial_code'];
                     $phone     = $input['phone'];

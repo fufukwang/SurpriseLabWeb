@@ -47,6 +47,9 @@
                                                 <label><input type="checkbox" name="isdone" value="1" @if($request->isdone) checked @endif>未兌換</label>
                                             </div>
                                             <div class="form-group col-sm-1">
+                                                <label><input type="checkbox" name="is_sent" value="1" @if($request->is_sent) checked @endif>未寄送</label>
+                                            </div>
+                                            <div class="form-group col-sm-1">
                                                 <select name="season" class="form-control">
                                                     <option value="">季</option>
                                                     @foreach($quart as $r)
@@ -63,9 +66,13 @@
 
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
-                                    <div class="sticky-table-header fixed-solution" style="width: auto;"><table id="tech-companies-1-clone" class="table table-striped table-hover">
+                                    <div class="sticky-table-header fixed-solution" style="width: auto;">
+                                    <form id="SentMailForm" method="post">
+                                        {!! csrf_field() !!}
+                                    <table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
+                                                <th><input type="checkbox" id="checkAll"></th>
                                                 <th>流水號</th>
                                                 <th>姓名</th>
                                                 <th>訂購內容</th>
@@ -79,6 +86,7 @@
                                         <tbody>
 @forelse ($mes as $row)
                                             <tr id="tr_{{ $row->id }}">
+                                                <td><input type="checkbox" name="id[]" value="{{ $row->id }}"></td>
                                                 <td>{{ $row->id }}</td>
                                                 <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div></td>
                                                 <td>{{ $row->detail }}</td>
@@ -96,9 +104,11 @@
 @endforelse
                                         </tbody>
                                     </table>
-
-
-                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season])->links() }}</div>
+                                    <div>
+                                        <button class="btn btn-primary muSent" type="button">寄送信件</button>
+                                    </div>
+                                    </form>
+                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'is_sent'=>$request->is_sent,'season'=>$request->season])->links() }}</div>
                                 </div></div>
 
                             </div>
@@ -286,6 +296,9 @@ $(function(){
                 $.Notification.notify('error','bottom left','錯誤', '寄信失敗');
             }
         },'json');
+    });
+    $('.muSent').bind('click',function(){
+        $('#SentMailForm').submit();
     });
 
 });

@@ -214,6 +214,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('sms','clubT\BackController@sms');
         // 其他功能
         Route::get('backmes','clubT\BackController@BackMes');
+        Route::post('backmes','clubT\BackController@BackMes');
         Route::get('backme/{id}','clubT\BackController@BackMe');
         Route::delete('backme/{id}/delete','clubT\BackController@BackMeDelete');
         Route::post('backmes/{id}/sentcoupon','clubT\BackController@SentCouponCode');

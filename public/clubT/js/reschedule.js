@@ -268,6 +268,27 @@ function gotoErrorField(field) {
  */
 function filledDataChecker() {
     var checker_name, filled_val;
+    $.post('/clubtomorrow/PostAjaxData',{
+        id  : $('[name=reschedule_time]').find(':selected').val(),
+        act : 'getDayTime'
+    },function(data){
+        var res_time = data.time;
+        var res_day  = data.day;
+        $('.filled').each(function () {
+            var checker_name = $(this).data('filled');
+            if (checker_name === 'reschedule_time'){ filled_val = res_time;
+            } else { filled_val = res_day; }
+            $(this).html(filled_val);
+        });
+    },'json').fail(function() {
+        $('.loading-wrapper').removeClass('show');
+        clearField(current_fs); // 清空資料
+        console.log('場次取得錯誤');
+        $('.loading-wrapper.error').addClass('show');
+    });
+
+    /*
+    var checker_name, filled_val;
 
     $('.filled').each(function () {
         checker_name = $(this).data('filled');
@@ -287,6 +308,7 @@ function filledDataChecker() {
 
         $(this).html(filled_val);
     });
+    */
 }
 
 /**

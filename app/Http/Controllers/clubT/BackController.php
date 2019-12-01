@@ -101,6 +101,52 @@ class BackController extends Controller
                 d2xls::where('id',$row)->update(['is_sent'=>1]);
             }
         }*/
+        if($request->isMethod('post') && $request->has('id')){
+            foreach($request->id as $row){
+                $id = $row;
+                $xls     = backme::find($id);
+                $coupons = coupon::where('b_id',$id)->get();
+                $data = [
+                    'xls'     => $xls,
+                    'coupons' => $coupons,
+                ];
+                //config(['mail.username' => env('MAIL_CLUB_USER')]);
+                //config(['mail.password' => env('MAIL_CLUB_PASS')]);
+
+                if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
+                    config(['mail.host' => 'smtp.gmail.com']);
+                    config(['mail.username' => env('MAIL_CLUB_USER')]);
+                    config(['mail.password' => env('MAIL_CLUB_PASS')]);
+                } else {
+                    config(['mail.host' => 'smtp.mailgun.org']);
+                    config(['mail.username' => env('MAIL_USERNAME')]);
+                    config(['mail.password' => env('MAIL_PASSWORD')]);
+                }
+                Mail::send('clubtomorrow.email.coupon',$data,function($m) use ($data){
+                    $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+                    $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+                    $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
+
+                    $m->to($data['xls']->email, $data['xls']->name);
+                    $m->subject('【明日俱樂部】劃位序號信件');
+                });
+                backme::where('id',$id)->update(['is_sent'=>1]);
+            }
+            $par = '?';
+            if($request->has('search')) $par .= "&search=".$request->search;
+            if($request->has('isdone')) $par .= "&isdone=".$request->isdone;
+            if($request->has('is_sent')) $par .= "&is_sent=".$request->is_sent;
+            if($request->has('season')) $par .= "&season=".$request->season;
+            return redirect('/clubtomorrow/backmes'.$par)->with('message','已寄送完成!');
+        }
+
+
+
+
+
+
+
+
         $mes = backme::where('id','>',0);
         if($request->has('search')){
             $search = $request->search;
@@ -113,6 +159,9 @@ class BackController extends Controller
         }
         if($request->has('isdone')){
             $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(club_coupon) WHERE o_id=0 AND club_coupon.b_id=club_backme.id)>0");
+        }
+        if($request->has('is_sent')){
+            $mes = $mes->where('is_sent',0);
         }
         if($request->has('season')){
             $mes = $mes->where('quarter',$request->season);

@@ -505,6 +505,6 @@
 <script src="/clubT/js/plugins/intlTelInput.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
 <script src="/clubT/js/main.js"></script>
-<script src="/clubT/js/reschedule.js"></script>
+<script src="/clubT/js/reschedule.js?v=0.1"></script>
 </body>
 </html>
