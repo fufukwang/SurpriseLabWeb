@@ -317,7 +317,9 @@ $(".submit").click(function(){
         'prime' : '',
         'Pay'   : 'online',
         'coupon': usedCoupons,
-        'is_overseas':0,
+        'is_overseas': 0,
+        'vegetarian': $('#vegetarian_food').val(),
+        'no_alcohol': $('#no_alcohol').val()
     };
     $('.loading-wrapper').addClass('show');
     $('<link>').appendTo('head')
@@ -416,7 +418,8 @@ $('.step-3 input, .step-3 select').on('change', function () {
                             text : range
                         });*/
                     }
-                    updateOptions(nextField, data);
+                    //console.log(nextField.html());
+                    //updateOptions(nextField, data);
                     nextField.val(null).trigger('change');
                 }
             },'json');
