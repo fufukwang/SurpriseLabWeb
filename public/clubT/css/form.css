@@ -1069,7 +1069,8 @@ fieldset.step-4 .form-group textarea {
     box-shadow: none;
     outline: 0; }
 fieldset.step-4 .form-group textarea {
-  line-height: 2.25; }
+  line-height: 1.75;
+  min-height: 114; }
 @media (min-width: 1200px) {
   fieldset.step-4 .feature-btn {
     padding-top: calc((608px + 30px) * 0.04472); } }
