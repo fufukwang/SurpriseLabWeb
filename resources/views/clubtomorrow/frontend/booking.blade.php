@@ -542,6 +542,6 @@
 <script src="/clubT/js/plugins/simplebar.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
 <script src="/clubT/js/main.js"></script>
-<script src="/clubT/js/form.js?v=0.6"></script>
+<script src="/clubT/js/form.js?v=0.7"></script>
 </body>
 </html>
