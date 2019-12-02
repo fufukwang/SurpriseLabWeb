@@ -527,8 +527,9 @@ form {
   }
 
   fieldset {
-    /*stacking fieldsets above each other*/
+    /* stacking fieldsets above each other */
     position: relative;
+    min-height: 50vh;
     @include baseCounter('padding-bottom', 60);
 
     /*Hide all except first fieldset*/
@@ -1187,6 +1188,12 @@ fieldset {
       text-align: left;
       font-family: $font-sans;
       @include baseCounter('padding-bottom', 60);
+
+      &.between-fields {
+        border-top: solid 1px rgba($color-bright-blue, 0.3);
+        margin-top: 40px;
+        padding: 15px 0 30px;
+      }
     }
 
     .radio__button .custom-control.custom-checkbox .custom-control-label::before {
@@ -1254,8 +1261,7 @@ fieldset {
       }
 
       textarea {
-        line-height: 1.75;
-        min-height: 114px;
+        line-height: 2.25;
       }
     }
 
@@ -1319,8 +1325,8 @@ fieldset {
 
         &:first-child {
           text-align: right;
-          padding-right: 60px;
-          min-width: 142px;
+          padding-right: 42px;
+          min-width: 160px;
           opacity: 0.8;
         }
       }

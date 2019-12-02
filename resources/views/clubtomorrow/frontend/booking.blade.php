@@ -299,9 +299,27 @@
                                 <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. clubtomorrow@surpriselab.com.tw">
                             </div>
 
+                            <div class="field-intro between-fields">
+                                基本提供葷食＋酒精，<br class="d-block d-md-none"/>若要更改請選擇蛋奶素與無酒精選項
+                            </div>
+
+                            <div class="form-group select-format">
+                                <label class="form-label" for="vegetarian_food">蛋奶素</label>
+                                <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
+                                    <option></option>
+                                </select>
+                            </div>
+
+                            <div class="form-group select-format">
+                                <label class="form-label" for="no_alcohol">無酒精飲品</label>
+                                <select id="no_alcohol" name="no_alcohol" data-placeholder="選擇人數" required>
+                                    <option></option>
+                                </select>
+                            </div>
+
                             <div class="form-group textarea-with-label">
                                 <label for="notice">其他備註</label>
-                                <textarea id="notice" name="notice" rows="2" placeholder="1. 葷／素 與食物過敏備註&#10;2. 酒／無酒精備註&#10;3. 特殊事項備註／發票是否打統編"></textarea>
+                                <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註／發票是否打統編"></textarea>
                             </div>
 
                             <div class="form-group radio__button">
