@@ -105,7 +105,7 @@
                                         </tbody>
                                     </table>
                                     <div>
-                                        <button class="btn btn-primary muSent" type="button">寄送信件</button>
+                                        <button class="btn btn-primary muSent" type="button">大量寄送</button>
                                     </div>
                                     </form>
                                     <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'is_sent'=>$request->is_sent,'season'=>$request->season])->links() }}</div>
@@ -228,7 +228,9 @@
 			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 $(function(){
 
-
+    $('#checkAll').bind('click', function() {
+        $('input[name="id[]"]').prop('checked', $(this).prop('checked'));
+    });
     $('.canelCoupon').bind('click',function(){
         var id   = $(this).data('id');
         var code = $(this).data('code');
