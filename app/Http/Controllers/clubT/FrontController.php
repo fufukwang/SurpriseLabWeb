@@ -228,6 +228,8 @@ class FrontController extends Controller
                 'result'     => '',
                 'manage'     => $request->manage,
                 'is_overseas'=> $request->has('is_overseas') ? $request->is_overseas : 0,
+                'vegetarian' => $request->vegetarian,
+                'no_alcohol' => $request->no_alcohol,
             ];
 
             $order = order::create($data);

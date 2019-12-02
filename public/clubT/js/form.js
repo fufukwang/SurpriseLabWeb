@@ -17,6 +17,7 @@ var isAllowToNextStep; // 是否可以進入下一步
 // Ticket
 var usedCoupons = []; // 暫存已輸入的票券代碼
 var submitDatas = []; // 暫存所有欄位資料
+var selectDataIsUpdate = false; // 人數資料是否改變過
 var paidAmount = 0; // 已折抵金額
 var restAmount = 0; // 剩餘折抵金額
 var selectType = 0; // 用戶選擇的票種
@@ -36,16 +37,16 @@ var ticketInfos = [
 // ===================================
 
 // 載入人數下拉選單
-updateOptions(bookingPeople, getPeopleData());
+updateOptions(bookingPeople, getPeopleData(1, 30));
 
-function getPeopleData() {
+function getPeopleData(begin, end) {
     var obj = {};
     var data = [];
 
-    for (var i = 1; i <= 30; i++) {
+    for (var i = begin; i <= end; i++) {
         obj = {
             id: i,
-            text: i
+            text: i + ' 位'
         };
 
         data.push(obj);
@@ -268,6 +269,10 @@ function filledDataChecker() {
 
         }
 
+        if ($(this).hasClass('suffix')) {
+            filled_val = filled_val + ' 位';
+        }
+
         $(this).html(filled_val);
 
         submitDatas[checker_name] = filled_val;
@@ -314,7 +319,9 @@ $(".submit").click(function(){
         'prime' : '',
         'Pay'   : 'online',
         'coupon': usedCoupons,
-        'is_overseas':0,
+        'is_overseas': 0,
+        'vegetarian': $('#vegetarian_food').val(),
+        'no_alcohol': $('#no_alcohol').val()
     };
     $('<link>').appendTo('head')
         .attr({
@@ -348,12 +355,18 @@ $(".submit").click(function(){
  * Step 2 - 選擇人數
  */
 $('select[name="booking_people"]').on('change', function () {
+    if (submitDatas['booking_people']) {
+        selectDataIsUpdate = true;
+    }
+
     // 當用戶選擇人數時，更新完成劃位所需金額
     submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
     update_amountToGo(submitDatas['booking_people']);
 
     usedCoupons = []; // 清空已使用的票券代碼
     updateDatePicker(); // 更新日期
+    updateOptions($('#vegetarian_food'), getPeopleData(0, submitDatas['booking_people']), selectDataIsUpdate); // 更新蛋奶素人數上限
+    updateOptions($('#no_alcohol'), getPeopleData(0, submitDatas['booking_people']), selectDataIsUpdate); // 更新無酒精飲品人數上限
     clearField(); // 清空步驟三的資料
 });
 
@@ -403,7 +416,8 @@ $('.step-3 input, .step-3 select').on('change', function () {
                             text : range
                         });*/
                     }
-                    updateOptions(nextField, data);
+                    //console.log(nextField.html());
+                    //updateOptions(nextField, data);
                     nextField.val(null).trigger('change');
                 }
             },'json');
@@ -498,16 +512,28 @@ function updateDatePicker() {
 /**
  * 更新下拉選項的 Option 值
  */
-function updateOptions(select_filed, data) {
+function updateOptions(select_filed, data, update = false) {
     var placeholder = select_filed.data('placeholder');
 
-    // Ajax 參考文件
-    // https://select2.org/data-sources/ajax
-    select_filed.select2({
-        data: data,
-        placeholder: placeholder,
-        minimumResultsForSearch: Infinity
-    });
+    if (select_filed.val() || update) {
+        select_filed.select2('data', data);
+
+        var options = data.map(function(item) {
+            return '<option value="' + item.id + '">' + item.text + '</option>';
+        });
+
+        select_filed.html(options.join('')).change();
+        select_filed.val(null).change();
+
+    } else {
+        // Ajax 參考文件
+        // https://select2.org/data-sources/ajax
+        select_filed.select2({
+            data: data,
+            placeholder: placeholder,
+            minimumResultsForSearch: Infinity
+        });
+    }
 }
 
 /**
