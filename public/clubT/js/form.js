@@ -307,7 +307,7 @@ $('input[name="coupon"]').on('keyup', function () {
 $(".submit").click(function(){
     $('.submit').attr('disabled', true);
     $('.loading-wrapper').addClass('show');
-    var people = $('[name="booking_people"]').val();
+    var people = parseInt($('[name="booking_people"]').val());
     var obj = {
         'name'  : $('[name=name]').val(),
         'tel'   : $('[name=field_phone]').val(),
@@ -401,7 +401,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
             $.get('/clubtomorrow/GetAjaxData',{
                 'act':'getByday',
                 'day':$('#booking_date').val(),
-                'pople':submitDatas['booking_people']
+                'pople':parseInt(submitDatas['booking_people'])
             },function(obj){
                 data = [];
                 proObject = [];
@@ -481,7 +481,7 @@ function updateDatePicker() {
     if(!isNaN(submitDatas['booking_people'])){
         $.get('/clubtomorrow/GetAjaxData',{
             'act':'getBypople',
-            'pople':submitDatas['booking_people'],
+            'pople':parseInt(submitDatas['booking_people']),
         },function(data){
             for(i=0;i<data.length;i++){
                 enableDays.push(data[i].day);
@@ -646,7 +646,7 @@ verificationCode.on('click', function () {
             'act':'CheckCoupon',
             'code':couponVal,
             'day':$('#booking_date').val(),
-            'pople':submitDatas['booking_people'] ,
+            'pople':parseInt(submitDatas['booking_people']),
             'restPeople':restPeople,
             'coupon':usedCoupons
         },function(data){
@@ -660,7 +660,7 @@ verificationCode.on('click', function () {
 
                 // 更新完成劃位所需金額
                 paidAmount = paidAmount + ticketAmount * ticketMoney;
-                restAmount = submitDatas['booking_people'] * ticketMoney - paidAmount ;
+                restAmount = parseInt(submitDatas['booking_people']) * ticketMoney - paidAmount ;
 
                 amountToGo.text(formatPrice(restAmount));
                 verificationCode.closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
