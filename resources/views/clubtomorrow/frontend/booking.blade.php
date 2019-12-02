@@ -172,7 +172,7 @@
                                 <div class="prefix-step-inner">
                                     <span class="prefix">Step 1</span>選擇欲劃位的人數<br/>
                                     <span class="prefix">Step 2</span>選擇日期、時段<br/>
-                                    <span class="prefix">Step 3</span>填寫玩家資料<br/>
+                                    <span class="prefix">Step 3</span>填寫玩家資料、備註飲食狀況<br/>
                                     <span class="prefix">Step 4</span>確認訂單，<span class="color-bright-green">輸入劃位序號</span><br/>
                                     <span class="prefix">Step 5</span>完成登入
                                 </div>
@@ -301,7 +301,7 @@
 
                             <div class="form-group textarea-with-label">
                                 <label for="notice">其他備註</label>
-                                <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註／發票是否打統編"></textarea>
+                                <textarea id="notice" name="notice" rows="2" placeholder="1. 葷／素 與食物過敏備註&#10;2. 酒／無酒精備註&#10;3. 特殊事項備註／發票是否打統編"></textarea>
                             </div>
 
                             <div class="form-group radio__button">
