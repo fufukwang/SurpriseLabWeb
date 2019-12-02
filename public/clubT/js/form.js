@@ -361,12 +361,12 @@ $('select[name="booking_people"]').on('change', function () {
 
     // 當用戶選擇人數時，更新完成劃位所需金額
     submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
-    updateOptions($('#vegetarian_food'), getPeopleData(0, submitDatas['booking_people']), selectDataIsUpdate); // 更新蛋奶素人數上限
-    updateOptions($('#no_alcohol'), getPeopleData(0, submitDatas['booking_people']), selectDataIsUpdate); // 更新無酒精飲品人數上限
     update_amountToGo(submitDatas['booking_people']);
 
     usedCoupons = []; // 清空已使用的票券代碼
     updateDatePicker(); // 更新日期
+    updateOptions($('#vegetarian_food'), getPeopleData(0, submitDatas['booking_people']), selectDataIsUpdate); // 更新蛋奶素人數上限
+    updateOptions($('#no_alcohol'), getPeopleData(0, submitDatas['booking_people']), selectDataIsUpdate); // 更新無酒精飲品人數上限
     clearField(); // 清空步驟三的資料
 });
 

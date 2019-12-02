@@ -394,7 +394,7 @@
                                 </tr>
                                 <tr>
                                     <td>人數</td>
-                                    <td class="filled" data-filled="booking_people"></td>
+                                    <td class="filled suffix" data-filled="booking_people"></td>
                                 </tr>
                                 <tr>
                                     <td>日期</td>
@@ -407,6 +407,14 @@
                                 <tr>
                                     <td>票券</td>
                                     <td class="filled" data-filled="ticket-type"></td>
+                                </tr>
+                                <tr>
+                                    <td>蛋奶素</td>
+                                    <td class="filled suffix" data-filled="vegetarian_food"></td>
+                                </tr>
+                                <tr>
+                                    <td>無酒精飲品</td>
+                                    <td class="filled suffix" data-filled="no_alcohol"></td>
                                 </tr>
                                 <tr class="notice">
                                     <td>其他備註</td>
