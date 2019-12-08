@@ -74,6 +74,26 @@
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
                                                     <select name="people" id="pople" class="form-control">
+                                                        @for($i=0;$i<31;$i++)
+                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">素食</label>
+                                                <div class="col-sm-8">
+                                                    <select name="vegetarian" id="vegetarian" class="form-control">
+                                                        @for($i=0;$i<31;$i++)
+                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">不酒</label>
+                                                <div class="col-sm-8">
+                                                    <select name="no_alcohol" id="no_alcohol" class="form-control">
                                                         @for($i=1;$i<31;$i++)
                                                         <option value="{{ $i }}">{{ $i }}</option>
                                                         @endfor

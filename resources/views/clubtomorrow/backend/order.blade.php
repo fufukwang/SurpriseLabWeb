@@ -82,6 +82,24 @@
                                                     <input type="email" class="form-control" name="email" value="{{ $order->email or ''  }}">
                                                 </div>
                                             </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">素食</label>
+                                                <div class="col-sm-8">
+                                                    <select name="vegetarian" class="form-control">
+@for($i=0;$i<$order->pople;$i++)<option value="{{$i}}"@if($order->vegetarian==$i) selected @endif>{{$i}} 位</option>@endfor
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">不酒</label>
+                                                <div class="col-sm-8">
+                                                    <select name="no_alcohol" class="form-control">
+@for($i=0;$i<$order->pople;$i++)<option value="{{$i}}"@if($order->no_alcohol==$i) selected @endif>{{$i}} 位</option>@endfor
+                                                    </select>
+                                                </div>
+                                            </div>
+
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">訂單號碼</label>
                                                 <div class="col-sm-8">

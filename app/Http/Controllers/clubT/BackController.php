@@ -449,7 +449,7 @@ class BackController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id')->select('club_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','dial_code')->find($id);
+                $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id')->select('club_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','dial_code','vegetarian','no_alcohol')->find($id);
             } else {
                 abort(404);
             }
@@ -467,6 +467,8 @@ class BackController extends Controller
             'dial_code'  => $request->dial_code,
             'tel'        => $request->tel,
             'email'      => $request->email,
+            'vegetarian' => $request->vegetarian,
+            'no_alcohol' => $request->no_alcohol,
         ];
         if($request->has('pro_id') && $request->pro_id>0){
             $data['pro_id'] = $request->pro_id;
@@ -536,6 +538,8 @@ class BackController extends Controller
                 'result'     => '',
                 'manage'     => $request->manage,
                 'discount'   => '',
+                'vegetarian' => $request->vegetarian,
+                'no_alcohol' => $request->no_alcohol,
             ];
             $order = order::create($data);
 
