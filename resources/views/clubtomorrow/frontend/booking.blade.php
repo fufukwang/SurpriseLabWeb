@@ -319,7 +319,7 @@
 
                             <div class="form-group textarea-with-label">
                                 <label for="notice">其他備註</label>
-                                <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註／發票是否打統編"></textarea>
+                                <textarea id="notice" name="notice" rows="2" placeholder="飲食過敏、特殊事項備註／發票是否打統編"></textarea>
                             </div>
 
                             <div class="form-group radio__button">
