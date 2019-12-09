@@ -1807,7 +1807,7 @@ header {
     }
 
     .schedule-wrapper {
-      margin-bottom: 72px;
+      margin-bottom: 48px;
       display: flex;
       justify-content: center;
 
@@ -2134,6 +2134,7 @@ header {
         margin-bottom: 42px;
         font-size: 24px;
         line-height: 1.5;
+        color: $color-bright-green;
 
         span {
           font-size: 36px;
@@ -2152,16 +2153,20 @@ header {
     .sale-progress {
       .progress {
         height: 12px;
-        background-color: rgba($color-bright-blue, 0.3);
+        background-color: rgba($color-bright-green, 0.3);
         border-radius: 12px;
 
         .progress-bar {
-          background-color: $color-bright-blue;
+          background-color: $color-bright-green;
         }
       }
 
       .sale-progress-info {
         margin-top: 24px;
+
+        div:first-child {
+          color: $color-bright-green;
+        }
 
         .total-sale,
         .total-rest,
@@ -2677,7 +2682,6 @@ header {
         text-align: right;
         color: $color-bright-green;
         min-width: 136px;
-        width: 136px;
         padding-right: 50px;
       }
 
@@ -2709,7 +2713,6 @@ header {
 
         .contact-title {
           min-width: 110px;
-          width: 110px;
           padding-right: 33px;
         }
       }
@@ -2737,7 +2740,6 @@ header {
         }
 
         .contact-title {
-          width: 100%;
           padding: 12px 9%;
           text-align: left;
         }
