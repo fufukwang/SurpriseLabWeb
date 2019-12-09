@@ -342,12 +342,12 @@
                             <div class="section-subtitle">TICKET</div>
 
                             <p class="section-paragraph">
-                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 01/12-02/09 之場次
+                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 02/19-03/15 之場次
                             </p>
 
                             <div class="ticket-type">
                                 <div class="type-item type-single-player">
-                                    <a href="https://surpriselab.backme.tw/checkout/1136/7260?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1200/7946?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_1.png" alt="單人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_1_mobile@2x.png" alt="單人票">
@@ -355,7 +355,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-4">
-                                    <a href="https://surpriselab.backme.tw/checkout/1136/7261?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1200/7947?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_2.png" alt="四人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_2_mobile@2x.png" alt="四人票">
@@ -366,7 +366,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-10">
-                                    <a href="https://surpriselab.backme.tw/checkout/1136/7262?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1200/7948?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_3.png" alt="十人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_3_mobile@2x.png" alt="十人票">
@@ -592,7 +592,7 @@
                                 <div class="sale-progress-info">
                                     <div class="d-inline-block d-sm-flex">
                                         <p class="section-paragraph">
-                                            已招募 <span class="total-sale">1600</span> 位玩家<span class="over-sale">，待招募 <span class="total-rest">400</span> 位</span>
+                                            已招募 <span class="total-sale">1600</span> 位<span class="over-sale">，待招募 <span class="total-rest">400</span> 位</span>
                                         </p>
                                         <p class="section-paragraph ml-auto text-right progress-percent-area">
                                             已完成 <span class="progress-percent">80</span> %
