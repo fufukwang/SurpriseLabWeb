@@ -161,7 +161,7 @@ h3.section-title {
   margin-bottom: 12px;
   color: $color-bright-purple;
 
-@media (max-width: 1440px) {
+  @media (max-width: 1440px) {
     font-size: 30px;
     letter-spacing: 3px;
     margin-bottom: 6px;
@@ -483,7 +483,7 @@ aside.social-wrapper {
     bottom: 36px;
     right: 36px;
   }
-  
+
   @media (max-width: 1199.98px) {
     display: none;
   }
@@ -1807,7 +1807,7 @@ header {
     }
 
     .schedule-wrapper {
-      margin-bottom: 48px;
+      margin-bottom: 72px;
       display: flex;
       justify-content: center;
 
@@ -2092,7 +2092,7 @@ header {
         }
 
         .time-slots-row {
-            padding: 12px 0;
+          padding: 12px 0;
 
           .time-slots-item {
             .time-slots-title {
@@ -2682,6 +2682,7 @@ header {
         text-align: right;
         color: $color-bright-green;
         min-width: 136px;
+        width: 136px;
         padding-right: 50px;
       }
 
@@ -2713,6 +2714,7 @@ header {
 
         .contact-title {
           min-width: 110px;
+          width: 110px;
           padding-right: 33px;
         }
       }
@@ -2740,6 +2742,7 @@ header {
         }
 
         .contact-title {
+          width: 100%;
           padding: 12px 9%;
           text-align: left;
         }
