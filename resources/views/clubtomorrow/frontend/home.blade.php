@@ -456,26 +456,34 @@
                                 <div class="schedule-inner">
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            09/27
-                                        </div>
-                                        <div class="schedule-content">
-                                            開賣 01/12-02/09 場次票券
-                                        </div>
-                                    </div>
-                                    <div class="schedule-item">
-                                        <div class="schedule-title">
-                                            12/03
-                                        </div>
-                                        <div class="schedule-content">
-                                            寄送劃位信 — 前 1000 位購票者
-                                        </div>
-                                    </div>
-                                    <div class="schedule-item">
-                                        <div class="schedule-title">
                                             12/10
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信 — 其餘購票者
+                                            開賣 02/19-03/15 場次票券
+                                        </div>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="schedule-title">
+                                            01/07
+                                        </div>
+                                        <div class="schedule-content">
+                                            寄送劃位信—前500位購票者
+                                        </div>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="schedule-title">
+                                            01/14
+                                        </div>
+                                        <div class="schedule-content">
+                                            寄送劃位信—後500位至1/20晚上18:00前購票者
+                                        </div>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="schedule-title">
+                                            01/21
+                                        </div>
+                                        <div class="schedule-content">
+                                            寄送劃位信—其餘購票者
                                         </div>
                                     </div>
                                 </div>
@@ -591,7 +599,7 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售 01/12-02/09 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
+                                        * 現正預售 02/19-03/15 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>

@@ -58,16 +58,19 @@ $(document).ready(function () {
     // 售票進度 API
     let progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1066json?token=15171aa66ababafd4464a1c194b66102';
     let progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1136json?token=15171aa66ababafd4464a1c194b66102';
+    let progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/1200json?token=15171aa66ababafd4464a1c194b66102';
 
     $.when(
       $.getJSON(progress_api_SaleStep1),
-      $.getJSON(progress_api_SaleStep2)
-    ).done(function (data1, data2) {
+      $.getJSON(progress_api_SaleStep2),
+      $.getJSON(progress_api_SaleStep3)
+    ).done(function (data1, data2, data3) {
 
         data1 = data1[0];
-        var data = data2[0];
+        data2 = data2[0];
+        var data = data3[0];
 
-        let goal = 7840; // 目標張數
+        let goal = 7360; // 目標張數
         let amount = 0; // 已售出總票數
 
         $.each(data1['rewards'], function (index, ticket) {
@@ -75,8 +78,13 @@ $(document).ready(function () {
             amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
 
-        $.each(data['rewards'], function (index, ticket) {
+        $.each(data2['rewards'], function (index, ticket) {
             // 計算第二階段已售出總票數
+            amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        });
+
+        $.each(data['rewards'], function (index, ticket) {
+            // 計算第三階段已售出總票數
             amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
 
