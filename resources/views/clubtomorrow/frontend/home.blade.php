@@ -566,7 +566,7 @@
                             <!-- 倒數計時器 -->
                             <div class="time-counter">
                                 <p class="section-paragraph">
-                                    剩餘時間
+                                    玩家招募中<br />登入倒數
                                 </p>
                                 <div class="time-rest d-flex align-items-center justify-content-center">
                                     <span class="days">00</span>天
@@ -584,7 +584,7 @@
                                 <div class="sale-progress-info">
                                     <div class="d-inline-block d-sm-flex">
                                         <p class="section-paragraph">
-                                            已售出 <span class="total-sale">1600</span> 票<span class="over-sale">，還剩 <span class="total-rest">400</span> 票</span>
+                                            已招募 <span class="total-sale">1600</span> 位玩家<span class="over-sale">，待招募 <span class="total-rest">400</span> 位</span>
                                         </p>
                                         <p class="section-paragraph ml-auto text-right progress-percent-area">
                                             已完成 <span class="progress-percent">80</span> %
