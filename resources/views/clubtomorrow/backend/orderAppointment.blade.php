@@ -94,7 +94,7 @@
                                                 <label class="control-label col-sm-4">不酒</label>
                                                 <div class="col-sm-8">
                                                     <select name="no_alcohol" id="no_alcohol" class="form-control">
-                                                        @for($i=1;$i<31;$i++)
+                                                        @for($i=0;$i<31;$i++)
                                                         <option value="{{ $i }}">{{ $i }}</option>
                                                         @endfor
                                                     </select>
