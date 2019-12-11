@@ -83,7 +83,7 @@
             <!-- Header LOGO -->
             <div class="logo-wrapper">
                 <div class="logo">
-                    <a class="smoothScroll" href="index.html">
+                    <a class="smoothScroll" href="buynow.html">
                         <img class="d-none d-sm-inline-block" src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
                         <img class="d-inline-block d-sm-none" src="/clubT/img/logo_2_mobile@2x.png" alt="明日俱樂部 Club Tomorrow">
                     </a>
