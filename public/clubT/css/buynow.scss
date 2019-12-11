@@ -2459,6 +2459,8 @@ header {
       opacity: 0.8;
       z-index: -1;
       background-image: url(../img/landing/bg.jpg);
+      -webkit-overflow-scrolling: touch;
+      -webkit-transform: translateZ(0);
     }
   }
 

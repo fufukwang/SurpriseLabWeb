@@ -1682,7 +1682,9 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   pointer-events: none;
   opacity: 0.8;
   z-index: -1;
-  background-image: url(../img/landing/bg.jpg); }
+  background-image: url(../img/landing/bg.jpg);
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0); }
 #teamDetail .modal-content {
   border: 0;
   position: absolute;
