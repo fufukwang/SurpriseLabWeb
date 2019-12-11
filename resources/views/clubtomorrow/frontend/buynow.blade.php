@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/buynow.css?v=0.2"/>
+    <link rel="stylesheet" href="/clubT/css/buynow.css?v=0.3"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -43,6 +43,25 @@
 <body class="home loading">
 
 <div class="homepage">
+    <!-- Anchor menu -->
+    <nav class="anchor-wrapper">
+        <ul>
+            <li class="d-none">
+                <a class="smoothScroll" href="#Home">_Home</a>
+            </li>
+            <li class="active">
+                <a class="smoothScroll" href="#About">_About</a>
+            </li>
+            <li>
+                <a class="smoothScroll" href="#Ticket">_Ticket</a>
+            </li>
+            <li>
+                <a class="smoothScroll" href="#Rules">_Rules</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End anchor menu -->
+    
     <!-- Social Links -->
     <aside class="social-wrapper">
         <ul>
@@ -64,13 +83,43 @@
             <!-- Header LOGO -->
             <div class="logo-wrapper">
                 <div class="logo">
-                    <a class="smoothScroll" href="buynow.html">
-                        <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
+                    <a class="smoothScroll" href="index.html">
+                        <img class="d-none d-sm-inline-block" src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
+                        <img class="d-inline-block d-sm-none" src="/clubT/img/logo_2_mobile@2x.png" alt="明日俱樂部 Club Tomorrow">
                     </a>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="mobile-menu">
+        <ul class="menu-wrapper">
+            <li class="menu-item d-none">
+                <a class="smoothScroll" href="#Home">Home</a>
+            </li>
+            <li class="menu-item">
+                <a class="smoothScroll" href="#About">About</a>
+            </li>
+            <li class="menu-item">
+                <a class="smoothScroll" href="#Ticket">Ticket</a>
+            </li>
+            <li class="menu-item">
+                <a class="smoothScroll" href="#Rules">Rules</a>
+            </li>
+        </ul>
+        <ul class="social-wrapper">
+            <li class="social-link">
+                <a href="https://www.facebook.com/surpriselabtw" target="_blank">
+                    <img class="img-fluid" src="/clubT/img/icon/icon_FB.svg" alt="facebook">
+                </a>
+            </li>
+            <li class="social-link">
+                <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
+                    <img class="img-fluid" src="/clubT/img/icon/icon_IG.svg" alt="instagram">
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <main>
         <!-- Landing -->
@@ -300,14 +349,16 @@
 
 <div class="modal fade" id="teamDetail" tabindex="-1" role="dialog" aria-labelledby="teamDetailTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="sticky-head d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a class="d-block d-sm-none" href="buynow.html">
+                    <img src="/clubT/img/logo_2_mobile@2x.png" alt="明日俱樂部 Club Tomorrow">
+                </a>
+            </div>
+            <button type="button" class="top close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
         <div class="modal-content">
             <div class="modal-body">
-                <div class="logo d-block d-sm-none">
-                    <a class="smoothScroll" href="buynow.html">
-                        <img src="/clubT/img/logo_2_mobile@2x.png" alt="明日俱樂部 Club Tomorrow">
-                    </a>
-                </div>
-                <button type="button" class="top close" data-dismiss="modal" aria-label="Close"></button>
                 <section class="team-vision d-flex flex-column justify-content-center">
                     <img src="/clubT/img/intro_logo.png" alt="明日俱樂部">
                     <h2>
@@ -341,7 +392,7 @@
                     </div>
                     <div class="video-wrapper">
                         <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PDGbkBUoxMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uIp7X2MEXso" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </section>
@@ -425,7 +476,6 @@
 
 <!-- Custom Js -->
 <script src="/clubT/js/buynow.js"></script>
-<script src="/clubT/js/smooth-scroll.js"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>

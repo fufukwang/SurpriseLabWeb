@@ -19,6 +19,10 @@ body {
   background-color: $color-black;
   color: $color-bright-blue;
 
+  &.modal-open {
+    height: 100vh;
+  }
+
   .homepage {
     &::before,
     &::after {
@@ -248,6 +252,7 @@ p.section-paragraph {
 
 //--- Anchor ---//
 .anchor-wrapper {
+  display: none !important;
   position: fixed;
   top: 50%;
   right: 44px;
@@ -415,14 +420,6 @@ header {
 
         img {
           height: 30px;
-        }
-      }
-
-      @media (max-width: 374.98px) {
-        height: 24px;
-
-        img {
-          height: 24px;
         }
       }
     }
@@ -2362,8 +2359,12 @@ header {
   z-index: 999999;
   padding: 0 !important;
 
+  @media (max-width: 575.98px) {
+    overflow-y: hidden;
+  }
+
   &::-webkit-scrollbar {
-    display: none;
+    width: 0 !important;
   }
 
   .section-paragraph {
@@ -2404,15 +2405,40 @@ header {
     margin: 70px auto;
 
     @media (max-width: 575.98px) {
-      margin: 42px auto;
+      margin: 42px auto 80px;
     }
   }
 
   .modal-dialog {
+    position: absolute;
     max-width: inherit;
     width: 100vw;
     padding: 0;
     margin: 0;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: all;
+
+    @media (max-width: 575.98px) {
+      position: fixed;
+      height: 100%;
+    }
+  }
+
+  .sticky-head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px;
+    margin: 0;
+    z-index: 10;
+
+    @media (max-width: 1199.98px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 9px 20px;
+    }
   }
 
   .modal-body {
@@ -2420,12 +2446,26 @@ header {
     background-color: $color-black;
   }
 
+  .modal-content {
+    border: 0;
+
+    @media (max-width: 575.98px) {
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        width: 0 !important;
+      }
+    }
+  }
+
   .logo {
-    position: fixed;
-    left: 20px;
-    top: 9px;
-    width: 165px;
+    position: relative;
     z-index: 10;
+    width: 165px;
 
     img {
       max-width: 100%;
@@ -2435,9 +2475,7 @@ header {
 
   .close {
     &.top {
-      position: fixed;
-      right: 37.5px;
-      top: 37.5px;
+      position: relative;
       z-index: 10;
       width: 18px;
       height: 18px;
@@ -2475,8 +2513,6 @@ header {
       }
 
       @media (max-width: 575.98px) {
-        top: 17px;
-        right: 14px;
         width: 16px;
         height: 16px;
 
@@ -2520,9 +2556,11 @@ header {
   }
 
   .video-wrapper {
+    position: relative;
     max-width: 1000px;
     margin: 26px auto 0;
     border: solid 2px $color-bright-green;
+    -webkit-overflow-scrolling: touch;
   }
 
   .video-container {
@@ -2798,14 +2836,6 @@ header {
 
   @media (max-width: 374.98px) {
     padding-top: 24px;
-
-    .section-subtitle {
-      margin-bottom: 42px;
-    }
-
-    a.btn-bright-blue {
-      margin-top: 42px;
-    }
   }
 }
 
