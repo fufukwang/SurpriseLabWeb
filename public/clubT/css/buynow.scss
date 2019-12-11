@@ -152,7 +152,7 @@ h3.section-title {
   margin-bottom: 12px;
   color: $color-bright-purple;
 
-@media (max-width: 1440px) {
+  @media (max-width: 1440px) {
     font-size: 30px;
     letter-spacing: 3px;
     margin-bottom: 6px;
@@ -344,7 +344,7 @@ aside.social-wrapper {
     bottom: 36px;
     right: 36px;
   }
-  
+
   @media (max-width: 1199.98px) {
     display: none;
   }
@@ -1896,7 +1896,7 @@ header {
         }
 
         .time-slots-row {
-            padding: 12px 0;
+          padding: 12px 0;
 
           .time-slots-item {
             .time-slots-title {
@@ -2624,11 +2624,6 @@ header {
     height: 100vh;
     z-index: 1;
 
-    ~ section {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
     img {
       width: 674px;
       max-width: 100%;
@@ -2651,6 +2646,13 @@ header {
       opacity: 0.8;
       z-index: -1;
       background-image: url(../img/landing/bg.jpg);
+    }
+
+    @media (max-width: 575.98px) {
+      ~ section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
   }
 
