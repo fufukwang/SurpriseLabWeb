@@ -66,12 +66,6 @@ $(document).ready(function () {
                 nav.fadeOut();
                 socialLink.fadeOut();
             }
-
-            if (ref === 'Rules' || ref === 'Contact') {
-                bg_city.addClass('hide-city');
-            } else {
-                bg_city.removeClass('hide-city');
-            }
         }
     });
 
