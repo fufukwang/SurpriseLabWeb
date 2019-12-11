@@ -475,7 +475,7 @@
 <script src="/clubT/js/plugins/isMobile.min.js"></script>
 
 <!-- Custom Js -->
-<script src="/clubT/js/buynow.js?v=0.1"></script>
+<script src="/clubT/js/buynow.js?v=0.2"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>

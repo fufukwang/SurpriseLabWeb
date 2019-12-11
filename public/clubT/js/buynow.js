@@ -118,12 +118,6 @@ $(document).ready(function () {
                         mobile_nav.find('.social-wrapper').fadeIn();
                     }
                 }
-
-                if (ref === 'Rules' || ref === 'Contact') {
-                    bg_city.addClass('hide-city');
-                } else {
-                    bg_city.removeClass('hide-city');
-                }
             }
         },
         after: function () {
