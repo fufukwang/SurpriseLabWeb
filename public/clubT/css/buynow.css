@@ -1834,7 +1834,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 #teamDetail .team-vision {
   position: relative;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100); }
 #teamDetail .team-vision::before {
   position: absolute;
   left: 50%;
