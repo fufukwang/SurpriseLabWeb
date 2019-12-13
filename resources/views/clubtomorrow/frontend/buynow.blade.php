@@ -240,7 +240,7 @@
                         </p>
                         <div class="d-block d-sm-flex justify-content-center">
                             <a class="btn-bright-blue" href="javascript://" data-toggle="modal" data-target="#teamDetail">團隊介紹</a>
-                            <a class="btn-bright-blue" href="booking.html">前往購票</a>
+                            <a class="btn-bright-blue" href="booking_pay.html">前往購票</a>
                         </div>
                     </div>
                 </div>
