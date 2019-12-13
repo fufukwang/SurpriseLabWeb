@@ -162,19 +162,18 @@
                         </p>
                         <div class="form-container">
                             <p class="color-bright-green field-intro d-none d-md-block">
-                                進入前，請花些時間詳讀規則，讓你的登入更加順暢
+                                你想要什麼時候，前來明日俱樂部呢？
                             </p>
                             <p class="color-bright-green field-intro d-block d-md-none">
-                                進入前，請花些時間詳讀規則<br/>
-                                讓你的登入更加順暢
+                                你想要什麼時候<br />前來明日俱樂部呢？
                             </p>
                             <div class="prefix-step">
                                 <div class="prefix-step-inner">
-                                    <span class="prefix">Step 1</span>選擇欲劃位的人數<br/>
-                                    <span class="prefix">Step 2</span>選擇日期、時段<br/>
-                                    <span class="prefix">Step 3</span>填寫玩家資料<br/>
-                                    <span class="prefix">Step 4</span>確認訂單，<span class="color-bright-green">輸入劃位序號</span><br/>
-                                    <span class="prefix">Step 5</span>完成登入
+                                    <span class="prefix">Step 1</span>選擇欲購買票卷數量<br/>
+                                    <span class="prefix">Step 2</span>選擇前來日期、時段<br/>
+                                    <span class="prefix">Step 3</span>填寫購買者資料<br/>
+                                    <span class="prefix">Step 4</span>確認訂票資訊<br/>
+                                    <span class="prefix">Step 5</span>完成訂票
                                 </div>
                             </div>
                             <div class="sub-title-wrapper">
@@ -184,10 +183,16 @@
                             </div>
                             <ul class="prefix-dash">
                                 <li>
-                                    若⽇期無法選擇，代表該場次已滿，或是當日不開放。
+                                    即買即劃位，票價統一2200 元（2000元加一成服務費）
                                 </li>
                                 <li>
-                                    請確實填寫正確的電子信箱與電話，將以此與玩家們聯繫溝通。
+                                    僅接受信用卡付費
+                                </li>
+                                <li>
+                                    若⽇期或時段無法選擇，代表座位已滿，或是當日不開放
+                                </li>
+                                <li>
+                                    請確實填寫 e-mail 與聯絡手機，將以此發佈最新須知
                                 </li>
                             </ul>
                             <p>
@@ -211,10 +216,10 @@
                             <button type="button" name="next" class="btn-bright-blue next action-button" disabled>開始登入</button>
                         </div>
                     </fieldset>
-                    <fieldset class="step step-2" title="選擇人數">
+                    <fieldset class="step step-2" title="選擇票卷數量">
                         <div class="form-container">
                             <p class="field-intro color-bright-green">
-                                請點選你欲劃位的人數
+                                選擇欲購買票卷數量
                             </p>
 
                             <div class="sub-title-wrapper">
@@ -247,7 +252,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset class="step step-3" title="日期、時段選擇">
+                    <fieldset class="step step-3" title="選擇前來日期、時段">
                         <div class="form-container">
                             <div class="form-group with-icon">
                                 <label class="form-label" for="booking_date">日期</label>

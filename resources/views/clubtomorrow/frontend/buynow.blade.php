@@ -209,7 +209,7 @@
                                 </div>
                             </div>
                             <p class="section-paragraph">
-                                體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限<br/><br/>體驗空間外設有接待區，提供需付費之餐點飲料<br/>歡迎提前抵達，或於結束後與夥伴一同停留
+                                體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限
                             </p>
                             <a class="link-bright-green" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
                         </div>
