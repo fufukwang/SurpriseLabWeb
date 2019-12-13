@@ -3,7 +3,7 @@
 <head>
     <!-- Metadata -->
     @include('clubtomorrow.frontend._metadata')
-    <meta property="og:url" content="https://www.surpriselab.com.tw/clubtomorrow/booking.html"/>
+    <meta property="og:url" content="https://www.surpriselab.com.tw/clubtomorrow/booking_pay.html"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>明日俱樂部 Club Tomorrow</title>
 
@@ -304,9 +304,27 @@
                                 <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. clubtomorrow@surpriselab.com.tw">
                             </div>
 
+                            <div class="field-intro between-fields">
+                                基本提供葷食＋酒精，<br class="d-block d-md-none"/>若要更改請選擇蛋奶素與無酒精選項
+                            </div>
+
+                            <div class="form-group select-format">
+                                <label class="form-label" for="vegetarian_food">蛋奶素</label>
+                                <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
+                                    <option></option>
+                                </select>
+                            </div>
+
+                            <div class="form-group select-format">
+                                <label class="form-label" for="no_alcohol">無酒精飲品</label>
+                                <select id="no_alcohol" name="no_alcohol" data-placeholder="選擇人數" required>
+                                    <option></option>
+                                </select>
+                            </div>
+
                             <div class="form-group textarea-with-label">
                                 <label for="notice">其他備註</label>
-                                <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註／發票是否打統編"></textarea>
+                                <textarea id="notice" name="notice" rows="2" placeholder="飲食過敏、特殊事項備註／發票是否打統編"></textarea>
                             </div>
 
                             <div class="form-group radio__button">
@@ -381,7 +399,7 @@
                                 </tr>
                                 <tr>
                                     <td>人數</td>
-                                    <td class="filled" data-filled="booking_people"></td>
+                                    <td class="filled suffix" data-filled="booking_people"></td>
                                 </tr>
                                 <tr>
                                     <td>日期</td>
@@ -391,25 +409,33 @@
                                     <td>時段</td>
                                     <td class="filled" data-filled="booking_time"></td>
                                 </tr>
-                                <tr>
+                                <!--tr>
                                     <td>票券</td>
                                     <td class="filled" data-filled="ticket-type"></td>
+                                </tr-->
+                                <tr>
+                                    <td>蛋奶素</td>
+                                    <td class="filled suffix" data-filled="vegetarian_food"></td>
+                                </tr>
+                                <tr>
+                                    <td>無酒精飲品</td>
+                                    <td class="filled suffix" data-filled="no_alcohol"></td>
                                 </tr>
                                 <tr class="notice">
                                     <td>其他備註</td>
                                     <td class="filled" data-filled="notice"></td>
                                 </tr>
-                                <tr class="coupon-note">
+                                <!--tr class="coupon-note">
                                     <td>劃位序號</td>
                                     <td>
                                         若有多組序號，請一次填入一組劃位序號，按下確認後折抵
                                     </td>
-                                </tr>
+                                </tr-->
                                 <tr class="coupon-code-message">
                                     <td></td>
                                     <td class="error-message"></td>
                                 </tr>
-                                <tr class="coupon-code">
+                                <!--tr class="coupon-code">
                                     <td></td>
                                     <td>
                                         <div class="d-flex justify-content-between">
@@ -418,11 +444,11 @@
                                         </div>
                                         <div class="submit-coupon-wrapper"></div>
                                     </td>
-                                </tr>
+                                </tr-->
                             </table>
                             <div class="feature-btn d-flex justify-content-between multi-btn">
                                 <button type="button" name="previous" class="btn-bright-blue previous action-button">上一步</button>
-                                <button type="submit" name="submit" class="btn-bright-blue submit" disabled>
+                                <button type="submit" name="submit" class="btn-bright-blue submit">
                                     完成劃位 NT$<span class="amountToGo"></span>
                                 </button>
                             </div>
@@ -432,6 +458,26 @@
             </div>
         </main>
 
+<div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
+  <div class="modal-dialog" role="document" style="top: 10%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">信用卡付款</h5>
+      </div>
+      <div class="modal-body">
+<div class="tpfield" id="card-number" style="height: 30px;"></div>
+<div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
+<div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
+<p style="font-size: 12px;">如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
+<div style="text-align:center;"><a href="https://www.tappaysdk.com/tch" target="_blank"><img src="https://docs.tappaysdk.com/images/logo.png" width="100"></a></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
+        <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
 
         <main class="align-items-center justify-content-center" id="submit-success" style="display:none;">
             <div class="submit-page success">
@@ -482,32 +528,13 @@
                         <a href="mailto:clubtomorrow@surpriselab.com.tw">clubtomorrow@surpriselab.com.tw</a>
                     </div>
                     <div class="feature-btn">
-                        <a class="btn-bright-blue" href="booking.html">重新劃位</a>
+                        <a class="btn-bright-blue" href="booking_pay.html">重新劃位</a>
                     </div>
                 </div>
             </div>
         </main>
 
-<div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
-  <div class="modal-dialog" role="document" style="top: 10%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">信用卡付款</h5>
-      </div>
-      <div class="modal-body">
-<div class="tpfield" id="card-number" style="height: 30px;"></div>
-<div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
-<div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
-<p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
-<div style="text-align:center;"><a href="https://www.tappaysdk.com/tch" target="_blank"><img src="https://docs.tappaysdk.com/images/logo.png" width="100"></a></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
-        <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
     </div>
 
@@ -542,6 +569,6 @@
 <script src="/clubT/js/plugins/simplebar.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
 <script src="/clubT/js/main.js"></script>
-<script src="/clubT/js/form.js"></script>
+<script src="/clubT/js/form_pay.js"></script>
 </body>
 </html>

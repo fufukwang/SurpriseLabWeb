@@ -243,11 +243,18 @@ class FrontController extends Controller
                 $pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
                 $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
                 $merchant_id  = 'surpriselab_00001';
-                
+/*
+                $pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
+                $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
+                $merchant_id  = 'surpriselab_TAISHIN';
+                */
                 $amount = $money - $cut1 - $cut2;
+                $amount *= 1.1; // 一成服務費
+                /*
                 if($data['is_overseas'] == 1){
                     $amount *= 1.1; // 一成服務費
                 }
+                */
                 $postData = [
                     "prime"       => $request->prime,
                     "partner_key" => $partner_key,

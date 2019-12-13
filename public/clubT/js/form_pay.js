@@ -17,6 +17,7 @@ var isAllowToNextStep; // 是否可以進入下一步
 // Ticket
 var usedCoupons = []; // 暫存已輸入的票券代碼
 var submitDatas = []; // 暫存所有欄位資料
+var selectDataIsUpdate = false; // 人數資料是否改變過
 var paidAmount = 0; // 已折抵金額
 var restAmount = 0; // 剩餘折抵金額
 var selectType = 0; // 用戶選擇的票種
@@ -36,16 +37,16 @@ var ticketInfos = [
 // ===================================
 
 // 載入人數下拉選單
-updateOptions(bookingPeople, getPeopleData());
+updateOptions(bookingPeople, getPeopleData(1, 30));
 
-function getPeopleData() {
+function getPeopleData(begin, end) {
     var obj = {};
     var data = [];
 
-    for (var i = 1; i <= 30; i++) {
+    for (var i = begin; i <= end; i++) {
         obj = {
             id: i,
-            text: i
+            text: i + ' 位'
         };
 
         data.push(obj);
@@ -102,7 +103,7 @@ $(".action-button").on('click', function(){
     }
 
     // 重新判別用戶是否可點選下一步按鈕
-    next_fs.find('.next, .submit').attr('disabled', true);
+    next_fs.find('.next').attr('disabled', true);
     allowChecker(next_fs);
 });
 
@@ -135,7 +136,7 @@ function allowChecker(thisStep){
     isAllowToNextStep = true;
 
     if (thisStep.hasClass('step-5')) {
-/*
+
         // 最後一步驟要確認已輸入的票券代碼數量是否與人數相符
         if (restAmount === 0) {
             if (usedCoupons.length === 0) {
@@ -144,7 +145,7 @@ function allowChecker(thisStep){
         } else {
             isAllowToNextStep = false;
         }
-*/
+
     } else {
 
         thisStep.find('input:not([type="hidden"]), select').each(function () {
@@ -170,9 +171,9 @@ function allowChecker(thisStep){
     }
 
     if (isAllowToNextStep) {
-        thisStep.find('.next, .submit').attr('disabled', false);
+        thisStep.find('.next').attr('disabled', false);
     } else {
-        thisStep.find('.next, .submit').attr('disabled', true);
+        thisStep.find('.next').attr('disabled', true);
     }
 }
 
@@ -268,6 +269,10 @@ function filledDataChecker() {
 
         }
 
+        if ($(this).hasClass('suffix')) {
+            filled_val = filled_val + ' 位';
+        }
+
         $(this).html(filled_val);
 
         submitDatas[checker_name] = filled_val;
@@ -300,10 +305,11 @@ $('input[name="coupon"]').on('keyup', function () {
  * 暫時不送出表單，待前後台串接後可移除
  */
 $(".submit").click(function(){
-    $('#lightbox2pay').fadeToggle(700);
-    
+    $('#lightbox2pay').fadeToggle(700); 
     return false;
 });
+
+
 
 // ===================================
 // Form Steps Start
@@ -313,12 +319,18 @@ $(".submit").click(function(){
  * Step 2 - 選擇人數
  */
 $('select[name="booking_people"]').on('change', function () {
+    if (submitDatas['booking_people']) {
+        selectDataIsUpdate = true;
+    }
+
     // 當用戶選擇人數時，更新完成劃位所需金額
     submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
     update_amountToGo(submitDatas['booking_people']);
 
     usedCoupons = []; // 清空已使用的票券代碼
     updateDatePicker(); // 更新日期
+    updateOptions($('#vegetarian_food'), getPeopleData(0, submitDatas['booking_people']), selectDataIsUpdate); // 更新蛋奶素人數上限
+    updateOptions($('#no_alcohol'), getPeopleData(0, submitDatas['booking_people']), selectDataIsUpdate); // 更新無酒精飲品人數上限
     clearField(); // 清空步驟三的資料
 });
 
@@ -368,7 +380,8 @@ $('.step-3 input, .step-3 select').on('change', function () {
                             text : range
                         });*/
                     }
-                    updateOptions(nextField, data);
+                    //console.log(nextField.html());
+                    //updateOptions(nextField, data);
                     nextField.val(null).trigger('change');
                 }
             },'json');
@@ -406,7 +419,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
  */
 function update_amountToGo(people) {
     restPeople = people;
-    var summary = formatPrice(people * 2000); // 數字變成貨幣格式
+    var summary = formatPrice(people * 2200); // 數字變成貨幣格式
 
     // 更新完成劃位金額
     amountToGo.text(summary);
@@ -463,16 +476,28 @@ function updateDatePicker() {
 /**
  * 更新下拉選項的 Option 值
  */
-function updateOptions(select_filed, data) {
+function updateOptions(select_filed, data, update = false) {
     var placeholder = select_filed.data('placeholder');
 
-    // Ajax 參考文件
-    // https://select2.org/data-sources/ajax
-    select_filed.select2({
-        data: data,
-        placeholder: placeholder,
-        minimumResultsForSearch: Infinity
-    });
+    if (select_filed.val() || update) {
+        select_filed.select2('data', data);
+
+        var options = data.map(function(item) {
+            return '<option value="' + item.id + '">' + item.text + '</option>';
+        });
+
+        select_filed.html(options.join('')).change();
+        select_filed.val(null).change();
+
+    } else {
+        // Ajax 參考文件
+        // https://select2.org/data-sources/ajax
+        select_filed.select2({
+            data: data,
+            placeholder: placeholder,
+            minimumResultsForSearch: Infinity
+        });
+    }
 }
 
 /**
@@ -606,7 +631,7 @@ verificationCode.on('click', function () {
                 $.each(ticketInfos, function (index, ticket) {
                     if(ticket.type === data.ticketType) ticket.counter++;
                 });// 該票券使用次數+1
-                //ticketInfos[data.ticketType].counter++; // 該票券使用次數+1
+                ///ticketInfos[data.ticketType].counter++; 
                 updateTicketField();
                 passTimes++; // 通過人數
                 coupon.val('').trigger('change');
@@ -702,6 +727,7 @@ jQuery(function($){
     });
     // tappay
     TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'production');
+    //TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'sandbox');
     TPDirect.card.setup({
         fields: {
             number: {
@@ -767,61 +793,59 @@ jQuery(function($){
             var prime = result.card.prime
             console.log('getPrime success');
             $('#lightbox2pay').fadeToggle(700);
-            //SendOrderData('online',prime);
-            $('.loading-wrapper').addClass('show');
-
-          
-            var people = $('[name="booking_people"]').val();
-            var obj = {
-                'name'  : $('[name=name]').val(),
-                'tel'   : $('[name=field_phone]').val(),
-                'dial_code' : $('[name="dial-code"]').val(),
-                'email' : $('[name=email]').val(),
-                'notes' : $('[name=notice]').val(),
-                'pro_id': $('[name=booking_time]').find(':selected').val(),
-                'pople' : people,
-                'prime' : prime,
-                'Pay'   : 'online',
-                'coupon': usedCoupons,
-                'is_overseas':0,
-            };
-            $('<link>').appendTo('head')
-                .attr({
-                    type: 'text/css', 
-                    rel: 'stylesheet',
-                    href: '/clubT/css/submit.css'
-                });
-            $.post('/clubtomorrow/ReOrderData',obj,function(data){
-                $('#submit-main').hide();
-                if(data.success==true){
-                    $('#submit-success').addClass("d-flex").show();
-                    console.log('成功');
-                } else {
-                    $('#submit-error').addClass("d-flex").show();
-                    console.log('失敗');
-                }
-                $('.loading-wrapper').removeClass('show');
-
-
-
-            },'json').fail(function() {
-                $('#submit-error').addClass("d-flex").show();
-                console.log('錯誤');
-                $('.loading-wrapper').removeClass('show');
-            });
-
-
-
-
-
-
+            sentOrderData(prime);
         })
     });
     $('#CanalPay').bind('click',function(){
         $('#lightbox2pay').fadeToggle(700);
     });
-
 });
+
+
+// 送出表單
+function sentOrderData(prime){
+    var people = $('[name="booking_people"]').val();
+    var obj = {
+        'name'  : $('[name=name]').val(),
+        'tel'   : $('[name=field_phone]').val(),
+        'dial_code' : $('[name="dial-code"]').val(),
+        'email' : $('[name=email]').val(),
+        'notes' : $('[name=notice]').val(),
+        'pro_id': $('[name=booking_time]').find(':selected').val(),
+        'pople' : people,
+        'prime' : prime,
+        'Pay'   : 'online',
+        'coupon': usedCoupons,
+        'is_overseas': 0,
+        'vegetarian': $('#vegetarian_food').val(),
+        'no_alcohol': $('#no_alcohol').val()
+    };
+    $('.loading-wrapper').addClass('show');
+    $('<link>').appendTo('head')
+        .attr({
+            type: 'text/css', 
+            rel: 'stylesheet',
+            href: '/clubT/css/submit.css'
+        });
+    $.post('/clubtomorrow/ReOrderData',obj,function(data){
+        $('#submit-main').hide();
+        if(data.success==true){
+            $('#submit-success').addClass("d-flex").show();
+            console.log('成功');
+        } else {
+            $('#submit-error').addClass("d-flex").show();
+            console.log('失敗');
+        }
+
+
+        $('.loading-wrapper').removeClass('show');
+
+    },'json').fail(function() {
+        $('#submit-error').addClass("d-flex").show();
+        console.log('錯誤');
+        $('.loading-wrapper').removeClass('show');
+    });
+}
 
 /**
  * 數字轉貨幣格式

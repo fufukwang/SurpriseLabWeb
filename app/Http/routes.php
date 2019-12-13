@@ -495,7 +495,7 @@ Route::group(['middleware' => ['web']], function () {
         
         // 劃位
         Route::get('booking.html',function(){ return view('clubtomorrow.frontend.booking'); });
-        Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
+        Route::get('booking_pay.html',function(){ return view('clubtomorrow.frontend.booking_pay'); });
         
         Route::get('GetAjaxData','clubT\FrontController@GetAjaxData');
         Route::post('ReOrderData','clubT\FrontController@ReOrderData');
