@@ -31,35 +31,7 @@
     @include('clubtomorrow.frontend._fbpixel')
 </head>
 <body class="loading">
-    <div class="homepage booking">
-        <!-- Anchor menu -->
-        <nav class="anchor-wrapper">
-            <ul>
-                <li class="d-none">
-                    <a class="smoothScroll" href="index.html#Home">_Home</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#Entrance">_Entrance</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#aboutSec">_About</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="radio.html">_Radio</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#ticketSec">_Ticket</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#Rules">_Rules</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#Contact">_Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- End anchor menu -->
-
+    <div class="homepage booking booing_pay">
         <!-- Social Links -->
         <aside class="social-wrapper">
             <ul>
@@ -82,59 +54,14 @@
                 <!-- Header LOGO -->
                 <div class="logo-wrapper">
                     <div class="logo">
-                        <a class="smoothScroll" href="index.html">
+                        <a class="smoothScroll" href="buynow.html">
                             <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
                         </a>
-                        <button class="hamburger">
-                            <span class="current-page">_Entrance</span>
-                            <span class="current-menu">_Menu</span>
-                            <span class="menu-button">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </span>
-                        </button>
+                        <div></div>
                     </div>
                 </div>
             </div>
         </header>
-
-        <div class="mobile-menu">
-            <ul class="menu-wrapper">
-                <li class="menu-item d-none">
-                    <a class="smoothScroll" href="index.html#Home">Home</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#Entrance">Entrance</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#aboutSec">About</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="radio.html">Radio</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#ticketSec">Ticket</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#Rules">Rules</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#Contact">Contact</a>
-                </li>
-            </ul>
-            <ul class="social-wrapper">
-                <li class="social-link">
-                    <a href="https://www.facebook.com/surpriselabtw" target="_blank">
-                        <img class="img-fluid" src="/clubT/img/icon/icon_FB.svg" alt="facebook">
-                    </a>
-                </li>
-                <li class="social-link">
-                    <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
-                        <img class="img-fluid" src="/clubT/img/icon/icon_IG.svg" alt="instagram">
-                    </a>
-                </li>
-            </ul>
-        </div>
 
         <main class="sections" id="submit-main">
             <div class="container">
