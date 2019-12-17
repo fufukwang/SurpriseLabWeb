@@ -733,7 +733,7 @@ jQuery(function($){
             number: {
                 // css selector
                 element: '#card-number',
-                placeholder: '**** **** **** ****'
+                placeholder: '請輸入信用卡號'
             },
             expirationDate: {
                 // DOM object
