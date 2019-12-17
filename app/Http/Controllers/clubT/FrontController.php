@@ -283,6 +283,7 @@ class FrontController extends Controller
                 $tappayData = curl_exec($r);
                 curl_close($r);
                 $order->result = $tappayData;
+                $order->money = $amount; // 加上服務費的費用
                 $tappayObj = json_decode($tappayData);
                 if($tappayObj->status == 0){
                     $order->pay_status = '已付款';
