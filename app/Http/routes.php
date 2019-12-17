@@ -493,9 +493,11 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('index.html',function(){ return view('clubtomorrow.frontend.home'); });
         Route::get('rules.html',function(){ return view('clubtomorrow.frontend.rules'); });
         Route::get('radio.html',function(){ return view('clubtomorrow.frontend.radio'); });
+        Route::get('buynow.html',function(){ return view('clubtomorrow.frontend.buynow'); });
+        
         // 劃位
         Route::get('booking.html',function(){ return view('clubtomorrow.frontend.booking'); });
-        //Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
+        Route::get('booking_pay.html',function(){ return view('clubtomorrow.frontend.booking_pay'); });
         // 重劃位
         Route::get('reschedule.html',function(){ return view('clubtomorrow.frontend.reschedule'); });
         Route::post('PostAjaxData','clubT\FrontController@changeActivityAjax');

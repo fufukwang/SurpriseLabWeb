@@ -3,7 +3,7 @@
 <head>
     <!-- Metadata -->
     @include('clubtomorrow.frontend._metadata')
-    <meta property="og:url" content="https://www.surpriselab.com.tw/clubtomorrow/booking.html"/>
+    <meta property="og:url" content="https://www.surpriselab.com.tw/clubtomorrow/booking_pay.html"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>明日俱樂部 Club Tomorrow</title>
 
@@ -31,35 +31,7 @@
     @include('clubtomorrow.frontend._fbpixel')
 </head>
 <body class="loading">
-    <div class="homepage booking">
-        <!-- Anchor menu -->
-        <nav class="anchor-wrapper">
-            <ul>
-                <li class="d-none">
-                    <a class="smoothScroll" href="index.html#Home">_Home</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#Entrance">_Entrance</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#aboutSec">_About</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="radio.html">_Radio</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#ticketSec">_Ticket</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#Rules">_Rules</a>
-                </li>
-                <li>
-                    <a class="smoothScroll" href="index.html#Contact">_Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- End anchor menu -->
-
+    <div class="homepage booking booing_pay">
         <!-- Social Links -->
         <aside class="social-wrapper">
             <ul>
@@ -82,59 +54,14 @@
                 <!-- Header LOGO -->
                 <div class="logo-wrapper">
                     <div class="logo">
-                        <a class="smoothScroll" href="index.html">
+                        <a class="smoothScroll" href="buynow.html">
                             <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
                         </a>
-                        <button class="hamburger">
-                            <span class="current-page">_Entrance</span>
-                            <span class="current-menu">_Menu</span>
-                            <span class="menu-button">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </span>
-                        </button>
+                        <div></div>
                     </div>
                 </div>
             </div>
         </header>
-
-        <div class="mobile-menu">
-            <ul class="menu-wrapper">
-                <li class="menu-item d-none">
-                    <a class="smoothScroll" href="index.html#Home">Home</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#Entrance">Entrance</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#aboutSec">About</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="radio.html">Radio</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#ticketSec">Ticket</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#Rules">Rules</a>
-                </li>
-                <li class="menu-item">
-                    <a class="smoothScroll" href="index.html#Contact">Contact</a>
-                </li>
-            </ul>
-            <ul class="social-wrapper">
-                <li class="social-link">
-                    <a href="https://www.facebook.com/surpriselabtw" target="_blank">
-                        <img class="img-fluid" src="/clubT/img/icon/icon_FB.svg" alt="facebook">
-                    </a>
-                </li>
-                <li class="social-link">
-                    <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
-                        <img class="img-fluid" src="/clubT/img/icon/icon_IG.svg" alt="instagram">
-                    </a>
-                </li>
-            </ul>
-        </div>
 
         <main class="sections" id="submit-main">
             <div class="container">
@@ -162,19 +89,18 @@
                         </p>
                         <div class="form-container">
                             <p class="color-bright-green field-intro d-none d-md-block">
-                                進入前，請花些時間詳讀規則，讓你的登入更加順暢
+                                你想要什麼時候，前來明日俱樂部呢？
                             </p>
                             <p class="color-bright-green field-intro d-block d-md-none">
-                                進入前，請花些時間詳讀規則<br/>
-                                讓你的登入更加順暢
+                                你想要什麼時候<br />前來明日俱樂部呢？
                             </p>
                             <div class="prefix-step">
                                 <div class="prefix-step-inner">
-                                    <span class="prefix">Step 1</span>選擇欲劃位的人數<br/>
-                                    <span class="prefix">Step 2</span>選擇日期、時段<br/>
-                                    <span class="prefix">Step 3</span>填寫玩家資料<br/>
-                                    <span class="prefix">Step 4</span>確認訂單，<span class="color-bright-green">輸入劃位序號</span><br/>
-                                    <span class="prefix">Step 5</span>完成登入
+                                    <span class="prefix">Step 1</span>選擇欲購買票卷數量<br/>
+                                    <span class="prefix">Step 2</span>選擇前來日期、時段<br/>
+                                    <span class="prefix">Step 3</span>填寫購買者資料<br/>
+                                    <span class="prefix">Step 4</span>確認訂票資訊<br/>
+                                    <span class="prefix">Step 5</span>完成訂票
                                 </div>
                             </div>
                             <div class="sub-title-wrapper">
@@ -184,10 +110,16 @@
                             </div>
                             <ul class="prefix-dash">
                                 <li>
-                                    若⽇期無法選擇，代表該場次已滿，或是當日不開放。
+                                    即買即劃位，票價統一2200 元（2000元加一成服務費）
                                 </li>
                                 <li>
-                                    請確實填寫正確的電子信箱與電話，將以此與玩家們聯繫溝通。
+                                    僅接受信用卡付費
+                                </li>
+                                <li>
+                                    若⽇期或時段無法選擇，代表座位已滿，或是當日不開放
+                                </li>
+                                <li>
+                                    請確實填寫 e-mail 與聯絡手機，將以此發佈最新須知
                                 </li>
                             </ul>
                             <p>
@@ -211,10 +143,10 @@
                             <button type="button" name="next" class="btn-bright-blue next action-button" disabled>開始登入</button>
                         </div>
                     </fieldset>
-                    <fieldset class="step step-2" title="選擇人數">
+                    <fieldset class="step step-2" title="選擇票卷數量">
                         <div class="form-container">
                             <p class="field-intro color-bright-green">
-                                請點選你欲劃位的人數
+                                選擇欲購買票卷數量
                             </p>
 
                             <div class="sub-title-wrapper">
@@ -247,7 +179,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset class="step step-3" title="日期、時段選擇">
+                    <fieldset class="step step-3" title="選擇前來日期、時段">
                         <div class="form-container">
                             <div class="form-group with-icon">
                                 <label class="form-label" for="booking_date">日期</label>
@@ -299,9 +231,27 @@
                                 <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. clubtomorrow@surpriselab.com.tw">
                             </div>
 
+                            <div class="field-intro between-fields">
+                                基本提供葷食＋酒精，<br class="d-block d-md-none"/>若要更改請選擇蛋奶素與無酒精選項
+                            </div>
+
+                            <div class="form-group select-format">
+                                <label class="form-label" for="vegetarian_food">蛋奶素</label>
+                                <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
+                                    <option></option>
+                                </select>
+                            </div>
+
+                            <div class="form-group select-format">
+                                <label class="form-label" for="no_alcohol">無酒精飲品</label>
+                                <select id="no_alcohol" name="no_alcohol" data-placeholder="選擇人數" required>
+                                    <option></option>
+                                </select>
+                            </div>
+
                             <div class="form-group textarea-with-label">
                                 <label for="notice">其他備註</label>
-                                <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註／發票是否打統編"></textarea>
+                                <textarea id="notice" name="notice" rows="2" placeholder="飲食過敏、特殊事項備註／發票是否打統編"></textarea>
                             </div>
 
                             <div class="form-group radio__button">
@@ -376,7 +326,7 @@
                                 </tr>
                                 <tr>
                                     <td>人數</td>
-                                    <td class="filled" data-filled="booking_people"></td>
+                                    <td class="filled suffix" data-filled="booking_people"></td>
                                 </tr>
                                 <tr>
                                     <td>日期</td>
@@ -386,25 +336,33 @@
                                     <td>時段</td>
                                     <td class="filled" data-filled="booking_time"></td>
                                 </tr>
-                                <tr>
+                                <!--tr>
                                     <td>票券</td>
                                     <td class="filled" data-filled="ticket-type"></td>
+                                </tr-->
+                                <tr>
+                                    <td>蛋奶素</td>
+                                    <td class="filled suffix" data-filled="vegetarian_food"></td>
+                                </tr>
+                                <tr>
+                                    <td>無酒精飲品</td>
+                                    <td class="filled suffix" data-filled="no_alcohol"></td>
                                 </tr>
                                 <tr class="notice">
                                     <td>其他備註</td>
                                     <td class="filled" data-filled="notice"></td>
                                 </tr>
-                                <tr class="coupon-note">
+                                <!--tr class="coupon-note">
                                     <td>劃位序號</td>
                                     <td>
                                         若有多組序號，請一次填入一組劃位序號，按下確認後折抵
                                     </td>
-                                </tr>
+                                </tr-->
                                 <tr class="coupon-code-message">
                                     <td></td>
                                     <td class="error-message"></td>
                                 </tr>
-                                <tr class="coupon-code">
+                                <!--tr class="coupon-code">
                                     <td></td>
                                     <td>
                                         <div class="d-flex justify-content-between">
@@ -413,11 +371,11 @@
                                         </div>
                                         <div class="submit-coupon-wrapper"></div>
                                     </td>
-                                </tr>
+                                </tr-->
                             </table>
                             <div class="feature-btn d-flex justify-content-between multi-btn">
                                 <button type="button" name="previous" class="btn-bright-blue previous action-button">上一步</button>
-                                <button type="submit" name="submit" class="btn-bright-blue submit" disabled>
+                                <button type="submit" name="submit" class="btn-bright-blue submit">
                                     完成劃位 NT$<span class="amountToGo"></span>
                                 </button>
                             </div>
@@ -427,6 +385,26 @@
             </div>
         </main>
 
+<div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
+  <div class="modal-dialog" role="document" style="top: 10%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">信用卡付款</h5>
+      </div>
+      <div class="modal-body">
+<div class="tpfield" id="card-number" style="height: 30px;"></div>
+<div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
+<div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
+<p style="font-size: 12px;">如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
+<div style="text-align:center;"><a href="https://www.tappaysdk.com/tch" target="_blank"><img src="https://docs.tappaysdk.com/images/logo.png" width="100"></a></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
+        <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
 
         <main class="align-items-center justify-content-center" id="submit-success" style="display:none;">
             <div class="submit-page success">
@@ -477,32 +455,13 @@
                         <a href="mailto:clubtomorrow@surpriselab.com.tw">clubtomorrow@surpriselab.com.tw</a>
                     </div>
                     <div class="feature-btn">
-                        <a class="btn-bright-blue" href="booking.html">重新劃位</a>
+                        <a class="btn-bright-blue" href="booking_pay.html">重新劃位</a>
                     </div>
                 </div>
             </div>
         </main>
 
-<div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
-  <div class="modal-dialog" role="document" style="top: 10%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">信用卡付款</h5>
-      </div>
-      <div class="modal-body">
-<div class="tpfield" id="card-number" style="height: 30px;"></div>
-<div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
-<div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
-<p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
-<div style="text-align:center;"><a href="https://www.tappaysdk.com/tch" target="_blank"><img src="https://docs.tappaysdk.com/images/logo.png" width="100"></a></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
-        <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
     </div>
 
@@ -537,6 +496,6 @@
 <script src="/clubT/js/plugins/simplebar.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
 <script src="/clubT/js/main.js"></script>
-<script src="/clubT/js/form.js"></script>
+<script src="/clubT/js/form_pay.js?v=0.2"></script>
 </body>
 </html>
