@@ -456,14 +456,6 @@
                                 <div class="schedule-inner">
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            12/10
-                                        </div>
-                                        <div class="schedule-content">
-                                            開賣 02/19-03/15 場次票券
-                                        </div>
-                                    </div>
-                                    <div class="schedule-item">
-                                        <div class="schedule-title">
                                             01/07
                                         </div>
                                         <div class="schedule-content">
