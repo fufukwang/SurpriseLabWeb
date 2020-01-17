@@ -475,7 +475,7 @@
                                             01/21
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信—01/20到02/03晚上18:00前購票者
+                                            寄送劃位信—01/13到01/20晚上18:00前購票者
                                         </div>
                                     </div>
                                     <div class="schedule-item">
@@ -483,7 +483,7 @@
                                             02/04
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信—其餘購票者
+                                            寄送劃位信—01/20到02/03晚上18:00前購票者
                                         </div>
                                     </div>
                                 </div>
