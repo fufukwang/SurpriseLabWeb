@@ -150,9 +150,9 @@
                                                 <td class="actions">
                                                     @if($row->pay_status=='已付款')
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
-                                                    <a class="btn btn-primary btn-xs resent12" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>建立玩家ID信</a>
+                                                    <!--a class="btn btn-primary btn-xs resent12" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>建立玩家ID信</a>
                                                     <br /><br />
-                                                    <a class="btn btn-primary btn-xs changeProMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>更改場次信件</a>
+                                                    <a class="btn btn-primary btn-xs changeProMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>更改場次信件</a-->
                                                     @endif
                                                 </td>
                                                 <td class="actions">

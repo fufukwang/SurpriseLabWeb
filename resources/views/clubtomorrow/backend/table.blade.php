@@ -41,9 +41,12 @@
 	<table>
 		<tr>
 			<td>確認</td>
-			<td>桌號</td>
+			<!--td>桌號</td-->
 			<td>時間</td>
 			<td>姓名</td>
+			<td>人數</td>
+			<td>素食</td>
+			<td>不酒</td>
 			<td>付款</td>
 			<td>電話</td>
 			<td>備註</td>
@@ -53,10 +56,13 @@
 @forelse ($order as $row)
 		<tr>
 			<td></td>
-			<td></td>
+			<!--td></td-->
 			<td>{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
 			<td>{{ $row->name }}</td>
+			<td>{{ $row->pople }}</td>
+			<td>{{ $row->vegetarian }}</td>
+			<td>{{ $row->no_alcohol }}</td>
 			<td>@if($row->pay_type=='現場付款') 現場 @elseif($row->pay_type=='信用卡') 信用卡 @elseif($row->pay_type='後臺編輯') 後台 @endif {{ $row->OM }} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
 			<td>{!! nl2br($row->notes) !!}</td>

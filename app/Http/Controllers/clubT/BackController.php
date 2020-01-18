@@ -620,7 +620,7 @@ class BackController extends Controller
 
     public function Table(Request $request){
         $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','dial_code');
+        $order = $order->select('rang_start','rang_end','name','tel','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','dial_code','vegetarian','no_alcohol');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);

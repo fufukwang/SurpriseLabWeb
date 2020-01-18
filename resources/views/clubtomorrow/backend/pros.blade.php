@@ -9,7 +9,7 @@
         <!-- Page-Title -->
         <div class="row">
             <div class="col-sm-12">
-                <h4 class="page-title">明日俱樂部營業日 <a href="/clubtomorrow/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a></h4>
+                <h4 class="page-title">明日俱樂部營業日 @if( Session::get('key')->admin )<a href="/clubtomorrow/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>@endif</h4>
             </div>
         </div>
         <!-- Page-Title -->
@@ -118,8 +118,10 @@
                                                     <td class="actions">
                                                         <a class="btn btn-purple btn-xs" href="/clubtomorrow/order/{{ $row->id }}/appointment">預約席</a>
                                                         <a class="btn btn-info btn-xs" href="/clubtomorrow/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
+                                                        @if( Session::get('key')->admin )
                                                         <a class="btn btn-primary btn-xs" href="/clubtomorrow/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                         <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                        @endif
                                                     </td>
                                                 </tr>
                                                 @empty
