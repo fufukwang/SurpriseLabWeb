@@ -240,7 +240,7 @@
                         </p>
                         <div class="d-block d-sm-flex justify-content-center">
                             <a class="btn-bright-blue" href="javascript://" data-toggle="modal" data-target="#teamDetail">團隊介紹</a>
-                            <a class="btn-bright-blue" href="booking_pay.html">前往購票</a>
+                            <a class="btn-bright-blue fbTrack" href="booking_pay.html">前往購票</a>
                         </div>
                     </div>
                 </div>
@@ -475,7 +475,7 @@
 <script src="/clubT/js/plugins/isMobile.min.js"></script>
 
 <!-- Custom Js -->
-<script src="/clubT/js/buynow.js?v=0.2"></script>
+<script src="/clubT/js/buynow.js?v=0.3"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>

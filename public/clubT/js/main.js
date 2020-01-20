@@ -152,7 +152,7 @@ $(document).ready(function () {
     });
     $('.fbpx').bind('click',function(){
         var event = $(this).data('event');
-        if(event==="ViewContent" || event==="AddToCart" || event==='Lead'){
+        if(event==="ViewContent" || event==="AddToCart" || event==='Lead' || event==='SubmitApplication' || event==='InitiateCheckout' || event==='Purchase'){
             fbq('track', event);
         } else {
             fbq('trackCustom', event);

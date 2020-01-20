@@ -23,6 +23,9 @@ $(document).ready(function () {
         $.scrollify.disable();
     }).on('hidden.bs.modal', function () {
         $.scrollify.enable();
+    });
+    $('.fbTrack').bind('click',function(){
+        fbq('track', "AddToCart");
     })
 });
 
@@ -73,7 +76,8 @@ $(document).ready(function () {
     intro_btn.on('click', function () {
         // 淡出 Landing 畫面
         intro_wrapper.addClass('hide-intro-wrapper');
-
+        // 
+        fbq('track', "ViewContent");
         // 移除 Landing 淡出效果
         setTimeout(function(){
             intro_wrapper.removeClass('hide-intro-wrapper');

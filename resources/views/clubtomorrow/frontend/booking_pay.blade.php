@@ -140,7 +140,7 @@
                         </div>
 
                         <div class="feature-btn text-center">
-                            <button type="button" name="next" class="btn-bright-blue next action-button" disabled>開始登入</button>
+                            <button type="button" name="next" class="btn-bright-blue next action-button fbpx" data-event="SubmitApplication" disabled>開始登入</button>
                         </div>
                     </fieldset>
                     <fieldset class="step step-2" title="選擇票卷數量">
@@ -175,7 +175,7 @@
 
                             <div class="feature-btn d-flex justify-content-between multi-btn">
                                 <button type="button" name="previous" class="btn-bright-blue previous action-button">上一步</button>
-                                <button type="button" name="next" class="btn-bright-blue next action-button">下一步</button>
+                                <button type="button" name="next" class="btn-bright-blue next action-button fbpx" data-event="ChooseTicket">下一步</button>
                             </div>
                         </div>
                     </fieldset>
@@ -204,7 +204,7 @@
 
                             <div class="feature-btn d-flex justify-content-between multi-btn">
                                 <button type="button" name="previous" class="btn-bright-blue previous action-button">上一步</button>
-                                <button type="button" name="next" class="btn-bright-blue next action-button">下一步</button>
+                                <button type="button" name="next" class="btn-bright-blue next action-button fbpx" data-event="ChooseDate">下一步</button>
                             </div>
                         </div>
                     </fieldset>
@@ -305,7 +305,7 @@
 
                             <div class="feature-btn d-flex justify-content-between multi-btn">
                                 <button type="button" name="previous" class="btn-bright-blue previous action-button">上一步</button>
-                                <button type="button" name="next" class="btn-bright-blue next action-button">下一步</button>
+                                <button type="button" name="next" class="btn-bright-blue next action-button fbpx" data-event="SubmitInfo">下一步</button>
                             </div>
                         </div>
                     </fieldset>
@@ -375,7 +375,7 @@
                             </table>
                             <div class="feature-btn d-flex justify-content-between multi-btn">
                                 <button type="button" name="previous" class="btn-bright-blue previous action-button">上一步</button>
-                                <button type="submit" name="submit" class="btn-bright-blue submit">
+                                <button type="submit" name="submit" class="btn-bright-blue submit fbpx" data-event="InitiateCheckout">
                                     完成劃位 NT$<span class="amountToGo"></span>
                                 </button>
                             </div>
@@ -399,7 +399,7 @@
 <div style="text-align:center;"><a href="https://www.tappaysdk.com/tch" target="_blank"><img src="https://docs.tappaysdk.com/images/logo.png" width="100"></a></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
+        <button type="button" class="btn btn-primary fbpx" data-event="Purchase" id="SurePay">確認付款</button>
         <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
       </div>
     </div>
@@ -495,7 +495,7 @@
 <script src="/clubT/js/plugins/intlTelInput.js"></script>
 <script src="/clubT/js/plugins/simplebar.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
-<script src="/clubT/js/main.js"></script>
+<script src="/clubT/js/main.js?v=0.1"></script>
 <script src="/clubT/js/form_pay.js?v=0.2"></script>
 </body>
 </html>
