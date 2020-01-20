@@ -321,6 +321,9 @@ class FrontController extends Controller
                     $m->to($mailer['email'], $mailer['name']);
                     $m->subject('【明日俱樂部】訂位確認信');
                 });
+
+                /*
+                取消信件寄送
                 $phone = $request->tel;
                 if($request->dial_code == "+886"){
                     $phone_number = "0".$phone;
@@ -329,6 +332,7 @@ class FrontController extends Controller
                 }
                 $message = config('setting.club.order_sms');
                 $sent_obj = SLS::sent_single_sms($phone_number,$message);
+                */
                 
             }
             
