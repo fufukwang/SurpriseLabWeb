@@ -158,7 +158,7 @@
                         <div class="intro-content-item">
                             <div class="glitch">
                                 <p class="section-paragraph intro-text">
-                                    在你所熟悉的世界之外<br/>還有另一個世界同時存在
+                                    混亂正在發生<br/>你，能成為最後贏家嗎？
                                 </p>
                             </div>
                         </div>
@@ -177,13 +177,13 @@
                     <div class="col-12">
                         <h1>明日俱樂部</h1>
                         <p class="section-paragraph">
-                            你的世界有著憂愁與煩惱，但我的世界沒有
-                            <br/><br/>
-                            我是 Emily，在我的世界中
+                            你好，我是 Emily<br/>
+                            歡迎來到明日俱樂部<br/>
                             <br/>
-                            你只需要做一件事：盡情狂歡
-                            <br/><br/>
-                            準備好遊戲其中了嗎？
+                            這世界正邁入前所未有的混亂<br/>
+                            <br/>
+                            我很好奇<br/>
+                            你們，人類們，能終止這場混亂嗎？
                         </p>
                         <div class="entrance-wrapper">
                             <a class="smoothScroll entrance-link fbpx" href="#About" data-event="viewcontent1">
@@ -214,11 +214,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="section-title">狂歡世界</h2>
+                            <h2 class="section-title">瘋狂世界</h2>
                             <div class="section-subtitle">the crazy world</div>
                             <div class="d-flex justify-content-center">
                                 <p class="section-paragraph v2-styling">
-                                    <span class="v2-highlight">這</span>個<span class="v2-highlight">世界</span>，不存在紛爭<br/>不<span class="v2-highlight">分</span>你我，只有我們<br/><br/><span class="v2-visible v2-highlight">兩</span>沒有憂慮，只有狂歡<span class="v2-visible v2-highlight">大</span><br/><span class="v2-visible v2-highlight">陣營</span><br/>別羨慕這世界<br/>現在，你有加入的機會
+                                    你好，我是 Emily<br/>
+                                    歡迎來到我打造的世界<br/>
+                                    <span class="v2-visible v2-highlight">這世界</span><br/>
+                                    這裡混亂、瘋狂、對立<br/>
+                                    大家所要的都不盡相同<br/>
+                                    <br/>
+                                    但，只要成為贏家，就能終結一切<br/>
+                                    <span class="v2-visible v2-highlight">正在分裂</span><br/>
+                                    只要成為贏家<br/>
+                                    就能打造出你想要的明天
                                 </p>
                             </div>
                         </div>
@@ -229,11 +238,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h3 class="section-title">成為玩家</h3>
-                            <div class="section-subtitle">the player</div>
+                            <h3 class="section-title">五大陣營</h3>
+                            <div class="section-subtitle">five camps</div>
                             <div class="d-flex justify-content-center">
                                 <p class="section-paragraph v2-styling">
-                                    在這個世界，<span class="v2-highlight">你們</span>不屬於任何人<br/>不是誰的父母子女、上司下屬<br/><span class="v2-visible v2-highlight">將建構</span><br/>你將是一位「玩家」<br/><span class="v2-visible v2-highlight">這裡的樣貌</span><br/><span class="v2-visible v2-highlight">記</span>遊戲規則很簡單<span class="v2-visible v2-highlight">得</span><br/>「暫停你的<span class="v2-highlight">思考</span>，玩，就對了」
+                                    在這有著相互角力的五大陣營<br/>
+                                    <span class="v2-visible v2-highlight">我們</span><br/>
+                                    有人崇尚團結、有人追求自由<br/>
+                                    有人效忠正義、有人在乎生存<br/>
+                                    也有些人質疑並試著推翻一切<br/>
+                                    <span class="v2-visible v2-highlight">被迫選邊</span><br/>
+                                    你將加入其中一方<br/>
+                                    屆時，請稱職扮演好你的角色
                                 </p>
                             </div>
                         </div>
@@ -244,11 +260,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h3 class="section-title">擂台大秀</h3>
-                            <div class="section-subtitle">the fight show</div>
+                            <h3 class="section-title">六十位玩家</h3>
+                            <div class="section-subtitle">sixty players</div>
                             <div class="d-flex justify-content-center">
                                 <p class="section-paragraph v2-styling">
-                                    在這個世界的中心<br/>有一個<span class="v2-highlight">擂台</span><br/><br/>那是屬於強者的位置<br/><span class="v2-highlight">每晚</span>都有場定時<span class="v2-highlight">開打</span>的戰鬥<br/><span class="v2-visible v2-highlight">如果站上台的</span><br/><span class="v2-visible v2-highlight">是你</span>在開拳的那一刻<span class="v2-visible v2-highlight">呢？</span><br/>請聲嘶力竭地為戰鬥者歡呼
+                                    每晚，將有六十位玩家進入這世界<br/>
+                                    <span class="v2-visible v2-highlight">阻止</span><br/>
+                                    身旁的陌生人<br/>
+                                    可能成為戰友<br/>
+                                    <span class="v2-visible v2-highlight">這場分裂</span><br/>
+                                    而你的朋友<br/>
+                                    則可能成為敵人
                                 </p>
                             </div>
                         </div>
@@ -259,11 +281,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h3 class="section-title">通訊設備</h3>
-                            <div class="section-subtitle">the communication</div>
+                            <h3 class="section-title">成為贏家</h3>
+                            <div class="section-subtitle">one winner</div>
                             <div class="d-flex justify-content-center">
                                 <p class="section-paragraph v2-styling">
-                                    在這個世界的<span class="v2-highlight">各處</span><br/><span class="v2-visible v2-highlight">散</span>裝置著各種通訊設備<span class="v2-visible v2-highlight">落</span><br/><span class="v2-visible v2-highlight">我的</span><br/>一切<span class="v2-highlight">訊息</span>僅透過螢幕與電台傳遞<br/>尤其那些好玩有趣的事<br/><br/>隨時<span class="v2-highlight">注意</span>身旁<br/>別錯過周遭出現的<span class="v2-highlight">消息</span>
+                                    在角力競爭之中<br/>
+                                    在不同信念之間<br/>
+                                    <span class="v2-visible v2-highlight">一起</span><br/>
+                                    一場大戰即將開打<br/>
+                                    <span class="v2-visible v2-highlight">活著離開</span><br/>
+                                    在五大陣營、六十位玩家中<br/>
+                                    你，能成為最終贏家嗎？
                                 </p>
                             </div>
                         </div>
@@ -278,7 +306,16 @@
                             <div class="section-subtitle">Enter the world</div>
                             <div class="d-flex justify-content-center">
                                 <p class="section-paragraph v2-styling">
-                                    避免讓狂歡變成混亂<br/><span class="v2-highlight">這世界</span>的入口每晚限時開啟<br/><span class="v2-visible v2-highlight">在倒數</span><br/><span class="v2-visible v2-highlight">時</span>進來後，什麼都無需擔心<span class="v2-visible v2-highlight">稀</span><br/><span class="v2-visible v2-highlight">間</span>只需要盡情遊戲<span class="v2-visible v2-highlight">少</span><br/><br/>我是 Emily，這是我的世界<br/><span class="v2-visible v2-highlight">需要</span><br/>只差<span class="v2-highlight">你</span>，一切就完美了<br/>準備好成為玩家了嗎？<br/><br/>嘿，<span class="v2-highlight">快來</span>吧
+                                    最後，請記住<br/>
+                                    <span class="v2-visible v2-highlight">想要的</span><br/>
+                                    這世界的結局<br/>
+                                    由你們 ─ 也就是人類 ─ 共同決定<br/>
+                                    <span class="v2-visible v2-highlight">不盡相同</span><br/>
+                                    不管最終所迎來的是明日還是末日<br/>
+                                    都沒有人能夠置身事外<br/>
+                                    <span class="v2-visible v2-highlight">就一定會</span><br/>
+                                    你，準備好進入明日俱樂部了嗎？<br/>
+                                    <span class="v2-visible v2-highlight">對立嗎</span>
                                 </p>
                             </div>
                             <a class="smoothScroll btn-bright-blue fbpx" href="#Ticket" data-event="ViewContent">成為玩家</a>
@@ -304,6 +341,8 @@
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
                                     </div>
                                     <div class="exp-title">
+                                        探索 Discover<br/>
+                                        7位表演者<br/>
                                         120分鐘沈浸式體驗
                                     </div>
                                 </div>
@@ -312,7 +351,9 @@
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
                                     </div>
                                     <div class="exp-title">
-                                        7位表演者 60位玩家
+                                        扮演 Play<br/>
+                                        化身玩家，加入5大陣營<br/>
+                                        扮演關鍵角色
                                     </div>
                                 </div>
                                 <div class="exp-item">
@@ -320,13 +361,15 @@
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
                                     </div>
                                     <div class="exp-title">
-                                        兩大陣營 五種角色
+                                        抉擇 Action<br/>
+                                        60位玩家，角逐1場大戰<br/>
+                                        結局由你決定
                                     </div>
                                 </div>
                             </div>
-                            <p class="section-paragraph">
+                            <!-- <p class="section-paragraph">
                                 體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限
-                            </p>
+                            </p> -->
                             <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
                         </div>
                     </div>
@@ -478,6 +521,14 @@
                                             寄送劃位信— 02/10到02/17晚上18:00前購票者
                                         </div>
                                     </div>
+                                    <div class="schedule-item">
+                                        <div class="schedule-title">
+                                            02/25
+                                        </div>
+                                        <div class="schedule-content">
+                                            寄送劃位信 — 02/17到02/24晚上18:00前購票者
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="section-paragraph">
@@ -531,7 +582,7 @@
                                                 週六
                                             </div>
                                             <div class="time-slots-content">
-                                                13:00 | 15:00 | 19:00 | 21:00
+                                                19:00 | 21:00
                                             </div>
                                         </div>
                                         <div class="time-slots-item">
@@ -539,7 +590,7 @@
                                                 週日
                                             </div>
                                             <div class="time-slots-content">
-                                                13:00 | 15:00 | 19:00 | 21:00
+                                                13:00 | 15:00
                                             </div>
                                         </div>
                                     </div>
@@ -676,7 +727,7 @@
                     體驗內含
                 </div>
                 <div class="modal-text">
-                    <div class="exp-wrapper">
+                    <!-- <div class="exp-wrapper">
                         <div class="exp-item">
                             <div class="exp-icon">
                                 <img src="/clubT/img/icon/ticket/icon_ticket_1-1.png" alt="舞蹈">
@@ -749,9 +800,9 @@
                                 派對
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <p class="section-paragraph">
-                        你準備好狂歡了嗎？
+                        唯有人類能夠進入<br/>現場將進行人類檢測及分類<br/><br/>請大膽在這世界穿梭<br/>你將遇見五大陣營的領導者<br/><br/>你將加入一場秘密集會<br/>請積極參與，它會是你獲勝的關鍵<br/><br/>請觀察藏在身旁的訊息<br/>獲勝的提示，就藏在你身邊<br/><br/>最後，請用盡一切方法<br/>成為贏家 － 決定這世界的明天<br/><br/>祝你勝利。<br/><br/>註：現場提供少量酒水與小點
                     </p>
                 </div>
                 <div class="modal-footer">
