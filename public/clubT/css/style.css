@@ -2883,15 +2883,19 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #expDetail .modal-header .close-modal {
-  width: 36px;
-  height: 36px;
+  width: 37px;
+  height: 37px;
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 50%;
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #expDetail .modal-header .close-modal button.close {
-  padding: 0;
+  width: 37px;
+  height: 37px;
+  padding: 10px;
   margin: 0;
   text-shadow: none;
   float: none;
@@ -2904,13 +2908,13 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   display: block;
   background-color: #03030D;
   margin: 0 auto;
-  -webkit-transform: rotate(45deg) translate(2px, 2px);
-          transform: rotate(45deg) translate(2px, 2px);
+  -webkit-transform: rotate(45deg) translate(1px, 2px);
+          transform: rotate(45deg) translate(1px, 2px);
 }
 
 #expDetail .modal-header .close-modal button.close .icon-bar + .icon-bar {
-  -webkit-transform: rotate(-45deg) translate(2px, -2px);
-          transform: rotate(-45deg) translate(2px, -2px);
+  -webkit-transform: rotate(-45deg) translate(0px, -1px);
+          transform: rotate(-45deg) translate(0px, -1px);
 }
 
 #expDetail .modal-text {
