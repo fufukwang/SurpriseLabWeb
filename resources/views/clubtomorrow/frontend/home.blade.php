@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=0.1"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=0.2"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -730,7 +730,8 @@
                     體驗內含
                     <div class="close-modal">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            ×
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
                     </div>
                 </div>

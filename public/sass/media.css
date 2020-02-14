@@ -1,0 +1,96 @@
+@media (min-width: 1680) {
+  .folks {
+    background: url(../images/cut1-intro/24.png) !important;
+  }
+}
+
+@media (max-width: 1481px) {
+  .folks {
+    background: url(../images/cut1-intro/15.png) !important;
+  }
+}
+
+@media (max-width: 1281px) {
+  .folks {
+    background: url(../images/cut1-intro/13.png) !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .footer-section {
+    padding: 25px 10px;
+  }
+  .footer-container-md {
+    display: none;
+  }
+  .footer-container-xs ul {
+    text-align: left;
+  }
+  .footer-container-xs .copyright {
+    bottom: 15px !important;
+  }
+  .folks {
+    background: url(../images/cut1-intro/pad.png) !important;
+  }
+}
+
+@media (max-width: 776px) {
+  .main-container {
+    padding: 45px 15px;
+  }
+  .folks {
+    background: url(../images/cut1-intro/phone.png) !important;
+  }
+  .chef-flex {
+    display: block;
+    text-align: center;
+  }
+  .chef-flex > .chef-photo {
+    height: 300px;
+    width: 220px;
+    margin: 0 auto 45px;
+  }
+  .chef-flex .chef-info {
+    padding: 0px;
+  }
+  .chef-flex > div {
+    text-align: center;
+  }
+  .contact-section .contact-alert-container {
+    display: block;
+    margin: 0 15px;
+  }
+  .contact-section .contact-alert-container .left-box {
+    padding-bottom: 25px;
+  }
+  .contact-section .contact-alert-container .left-box:after {
+    display: none;
+  }
+  .rules-section .main-container {
+    padding: 55px 15px 25px;
+  }
+  .rules-section .pull-left span {
+    padding-left: 0px !important;
+  }
+  .rules-section .btn-standard {
+    margin: 45px auto 15px;
+  }
+  .main-slogan {
+    margin-top: 120px !important;
+  }
+  .main-slogan .slogan-img {
+    left: 0px !important;
+    width: 100%;
+    text-align: center;
+  }
+  .main-slogan .slogan-img img {
+    width: 100%;
+  }
+  .main-slogan .landing-btn {
+    opacity: 1 !important;
+  }
+  .contact-section .btn-standard {
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=media.css.map */

@@ -1,8 +1,32 @@
-@media screen and (max-width: 1170px) {
-  #Contents {
-    width: 960px; } }
-@media screen and (min-width: 1171px) {
-  #Contents {
-    width: 1160px; } }
+@media (min-width: 1200px) {
+  .container {
+    max-width: calc(608px + 30px);
+  }
+}
 
+@media (min-width: 1440px) {
+  .container {
+    max-width: calc(768px + 30px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: calc(1088px + 30px);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: calc(520px + 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 /*# sourceMappingURL=mixin.css.map */

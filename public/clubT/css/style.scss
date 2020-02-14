@@ -1423,10 +1423,14 @@ header {
       margin-bottom: 54px;
 
       .exp-item {
-        width: 180px;
+        width: 210px;
 
         &+.exp-item {
-          margin-left: 96px;
+          margin-left: 70px;
+        }
+
+        p.section-paragraph {
+          margin-bottom: 0;
         }
 
         .exp-img {
@@ -1456,14 +1460,10 @@ header {
       }
 
       .exp-wrapper {
-        margin-top: 0;
+        margin-top: 36px;
         margin-bottom: 48px;
 
         .exp-item {
-          &+.exp-item {
-            margin-left: 114px;
-          }
-
           .exp-title {
             font-size: 16px;
             letter-spacing: 1.6px;
@@ -2362,6 +2362,36 @@ header {
     padding: 8px 0;
     border-radius: 0;
     border: none;
+    position: relative;
+
+    .close-modal {
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+
+      button.close {
+        padding: 0;
+        margin: 0;
+        text-shadow: none;
+        float: none;
+        opacity: 1;
+
+        .icon-bar {
+          width: 17px;
+          height: 3px;
+          display: block;
+          background-color: $color-black;
+          margin: 0 auto;
+          transform: rotate(45deg) translate(2px, 2px);
+
+          &+.icon-bar {
+            transform: rotate(-45deg) translate(2px, -2px);
+          }
+        }
+      }
+    }
   }
 
   .modal-text {
@@ -2546,7 +2576,7 @@ header {
     }
 
     .section-paragraph {
-      margin: 36px 0 30px;
+      margin: 24px 0;
     }
 
     .modal-footer {
