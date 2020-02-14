@@ -337,39 +337,42 @@
                             <div class="section-subtitle">EXPERIENCE</div>
                             <div class="exp-wrapper">
                                 <div class="exp-item">
+                                    <p class="section-paragraph">
+                                        探索 Discover
+                                    </p>
                                     <div class="exp-img">
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
                                     </div>
                                     <div class="exp-title">
-                                        探索 Discover<br/>
                                         7位表演者<br/>
                                         120分鐘沈浸式體驗
                                     </div>
                                 </div>
                                 <div class="exp-item">
+                                    <p class="section-paragraph">
+                                        扮演 Play
+                                    </p>
                                     <div class="exp-img">
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
                                     </div>
                                     <div class="exp-title">
-                                        扮演 Play<br/>
                                         化身玩家，加入5大陣營<br/>
                                         扮演關鍵角色
                                     </div>
                                 </div>
                                 <div class="exp-item">
+                                    <p class="section-paragraph">
+                                        抉擇 Action
+                                    </p>
                                     <div class="exp-img">
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
                                     </div>
                                     <div class="exp-title">
-                                        抉擇 Action<br/>
                                         60位玩家，角逐1場大戰<br/>
                                         結局由你決定
                                     </div>
                                 </div>
                             </div>
-                            <!-- <p class="section-paragraph">
-                                體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限
-                            </p> -->
                             <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
                         </div>
                     </div>
@@ -725,6 +728,11 @@
             <div class="modal-body">
                 <div class="modal-header">
                     體驗內含
+                    <div class="close-modal">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            ×
+                        </button>
+                    </div>
                 </div>
                 <div class="modal-text">
                     <!-- <div class="exp-wrapper">
@@ -805,11 +813,11 @@
                         唯有人類能夠進入<br/>現場將進行人類檢測及分類<br/><br/>請大膽在這世界穿梭<br/>你將遇見五大陣營的領導者<br/><br/>你將加入一場秘密集會<br/>請積極參與，它會是你獲勝的關鍵<br/><br/>請觀察藏在身旁的訊息<br/>獲勝的提示，就藏在你身邊<br/><br/>最後，請用盡一切方法<br/>成為贏家 － 決定這世界的明天<br/><br/>祝你勝利。<br/><br/>註：現場提供少量酒水與小點
                     </p>
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         關閉
                     </button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
