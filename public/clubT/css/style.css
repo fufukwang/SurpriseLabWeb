@@ -2538,6 +2538,9 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
