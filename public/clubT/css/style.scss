@@ -1423,10 +1423,14 @@ header {
       margin-bottom: 54px;
 
       .exp-item {
-        width: 180px;
+        width: 210px;
 
         &+.exp-item {
-          margin-left: 96px;
+          margin-left: 70px;
+        }
+
+        p.section-paragraph {
+          margin-bottom: 0;
         }
 
         .exp-img {
@@ -1456,14 +1460,10 @@ header {
       }
 
       .exp-wrapper {
-        margin-top: 0;
+        margin-top: 36px;
         margin-bottom: 48px;
 
         .exp-item {
-          &+.exp-item {
-            margin-left: 114px;
-          }
-
           .exp-title {
             font-size: 16px;
             letter-spacing: 1.6px;
@@ -1960,6 +1960,7 @@ header {
 
         .time-slots-item {
           display: flex;
+          justify-content: center;
 
           .time-slots-title {
             margin-right: 95px;
@@ -2362,6 +2363,42 @@ header {
     padding: 8px 0;
     border-radius: 0;
     border: none;
+    position: relative;
+
+    .close-modal {
+      width: 37px;
+      height: 37px;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+
+      button.close {
+        width: 37px;
+        height: 37px;
+        padding: 10px;
+        margin: 0;
+        text-shadow: none;
+        float: none;
+        opacity: 1;
+
+        &:focus {
+          outline: none;
+        }
+
+        .icon-bar {
+          width: 17px;
+          height: 3px;
+          display: block;
+          background-color: $color-black;
+          transform: rotate(45deg) translate(1px, 2px);
+
+          &+.icon-bar {
+            transform: rotate(-45deg) translate(0px, -1px);
+          }
+        }
+      }
+    }
   }
 
   .modal-text {
@@ -2401,27 +2438,27 @@ header {
     color: $color-bright-green;
   }
 
-  .modal-footer {
-    padding: 0;
-    border-top: 1px solid $color-bright-green;
+  // .modal-footer {
+  //   padding: 0;
+  //   border-top: 1px solid $color-bright-green;
 
-    button.close {
-      width: 100%;
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 1.8px;
-      line-height: 1.5;
-      color: $color-bright-green;
-      text-shadow: none;
-      float: none;
-      opacity: 1;
-      padding: 16px 0;
+  //   button.close {
+  //     width: 100%;
+  //     font-size: 18px;
+  //     font-weight: 500;
+  //     letter-spacing: 1.8px;
+  //     line-height: 1.5;
+  //     color: $color-bright-green;
+  //     text-shadow: none;
+  //     float: none;
+  //     opacity: 1;
+  //     padding: 16px 0;
 
-      &:focus {
-        outline: none;
-      }
-    }
-  }
+  //     &:focus {
+  //       outline: none;
+  //     }
+  //   }
+  // }
 
   @media (max-width: 1440px) {
     .modal-dialog {
@@ -2460,12 +2497,12 @@ header {
       margin: 48px 0 45px;
     }
 
-    .modal-footer {
-      button.close {
-        font-size: 16px;
-        letter-spacing: 1.6px;
-      }
-    }
+    // .modal-footer {
+    //   button.close {
+    //     font-size: 16px;
+    //     letter-spacing: 1.6px;
+    //   }
+    // }
   }
 
   @media (max-width: 575.98px) {
@@ -2509,14 +2546,14 @@ header {
       margin: 36px 0;
     }
 
-    .modal-footer {
-      button.close {
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 1.4px;
-        padding: 10px 0;
-      }
-    }
+    // .modal-footer {
+    //   button.close {
+    //     font-size: 14px;
+    //     font-weight: 600;
+    //     letter-spacing: 1.4px;
+    //     padding: 10px 0;
+    //   }
+    // }
   }
 
   @media (max-width: 374.98px) {
@@ -2524,6 +2561,22 @@ header {
       font-size: 12px;
       letter-spacing: 1.2px;
       padding: 6px 0;
+
+      .close-modal {
+        width: 30px;
+        height: 30px;
+        right: 4px;
+  
+        button.close {
+          width: 30px;
+          height: 30px;
+          padding: 8px;
+
+          .icon-bar {
+            width: 14px;
+          }
+        }
+      }
     }
 
     .modal-text {
@@ -2546,16 +2599,16 @@ header {
     }
 
     .section-paragraph {
-      margin: 36px 0 30px;
+      margin: 24px 0;
     }
 
-    .modal-footer {
-      button.close {
-        font-size: 12px;
-        letter-spacing: 1.2px;
-        padding: 8px 0;
-      }
-    }
+    // .modal-footer {
+    //   button.close {
+    //     font-size: 12px;
+    //     letter-spacing: 1.2px;
+    //     padding: 8px 0;
+    //   }
+    // }
   }
 }
 
