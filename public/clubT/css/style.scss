@@ -1531,8 +1531,8 @@ header {
         margin-bottom: 0;
 
         .exp-item {
-          width: 32vw;
-          min-width: 120px;
+          width: 35vw;
+          min-width: 145px;
           margin-bottom: 12px;
 
           &+.exp-item {
@@ -1559,6 +1559,8 @@ header {
         margin-bottom: 4px;
 
         .exp-item {
+          width: 32vw;
+          min-width: 120px;
           margin-bottom: 8px;
 
           .exp-img {

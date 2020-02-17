@@ -719,7 +719,7 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="modal-header">
-                    體驗內含
+                    玩家指南
                     <div class="close-modal">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span class="icon-bar"></span>

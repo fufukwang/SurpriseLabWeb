@@ -2132,8 +2132,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 0;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item {
-    width: 32vw;
-    min-width: 120px;
+    width: 35vw;
+    min-width: 145px;
     margin-bottom: 12px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
@@ -2157,6 +2157,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 4px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item {
+    width: 32vw;
+    min-width: 120px;
     margin-bottom: 8px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-img {
