@@ -502,14 +502,6 @@
                                 <div class="schedule-inner">
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            02/04
-                                        </div>
-                                        <div class="schedule-content">
-                                            寄送劃位信— 01/20到02/03晚上18:00前購票者
-                                        </div>
-                                    </div>
-                                    <div class="schedule-item">
-                                        <div class="schedule-title">
                                             02/11
                                         </div>
                                         <div class="schedule-content">
@@ -578,16 +570,16 @@
                                                 18:30 | 20:30
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="time-slots-row">
                                         <div class="time-slots-item">
                                             <div class="time-slots-title">
                                                 週六
                                             </div>
                                             <div class="time-slots-content">
-                                                19:00 | 21:00
+                                                18:30 | 20:30
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="time-slots-row">
                                         <div class="time-slots-item">
                                             <div class="time-slots-title">
                                                 週日
