@@ -190,6 +190,7 @@
                                                     <br/>
                                                     沈浸式體驗 Immersive Experience<br/>
                                                     唯有親身經歷，才會知道究竟是什麼一回事。
+                                                </div>
                                             </div>
                                         </div>
 
