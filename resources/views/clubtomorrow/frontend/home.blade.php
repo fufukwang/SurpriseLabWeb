@@ -333,7 +333,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="section-title">體驗內容</h2>
+                            <h2 class="section-title">玩家指南</h2>
                             <div class="section-subtitle">EXPERIENCE</div>
                             <div class="exp-wrapper">
                                 <div class="exp-item">
@@ -373,7 +373,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
+                            <a class="link-bright-green fbpx" data-event="experience" href="javascript://" data-toggle="modal" data-target="#expDetail">玩家指南</a>
                         </div>
                     </div>
                 </div>
@@ -803,7 +803,7 @@
                         </div>
                     </div> -->
                     <p class="section-paragraph">
-                        唯有人類能夠進入<br/>現場將進行人類檢測及分類<br/><br/>請大膽在這世界穿梭<br/>你將遇見五大陣營的領導者<br/><br/>你將加入一場秘密集會<br/>請積極參與，它會是你獲勝的關鍵<br/><br/>請觀察藏在身旁的訊息<br/>獲勝的提示，就藏在你身邊<br/><br/>最後，請用盡一切方法<br/>成為贏家 － 決定這世界的明天<br/><br/>祝你勝利。<br/><br/>註：現場提供少量酒水與小點
+                        唯有人類能夠進入<br/>現場將進行人類檢測及分類<br/><br/>請大膽在這世界穿梭<br/>你將遇見五大陣營的領導者<br/><br/>你將加入一場秘密集會<br/>請積極參與，它會是你獲勝的關鍵<br/><br/>最後，請用盡一切方法<br/>成為贏家 － 決定這世界的明天<br/><br/>祝你勝利。<br/><br/>註：現場提供少量酒水與小點
                     </p>
                 </div>
                 <!-- <div class="modal-footer">
