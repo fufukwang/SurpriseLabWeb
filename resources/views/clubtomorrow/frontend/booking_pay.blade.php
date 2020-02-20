@@ -495,12 +495,7 @@
 <script src="/clubT/js/plugins/intlTelInput.js"></script>
 <script src="/clubT/js/plugins/simplebar.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
-<<<<<<< HEAD
 <script src="/clubT/js/main.js?v=0.1"></script>
 <script src="/clubT/js/form_pay.js?v=0.4"></script>
-=======
-<script src="/clubT/js/main.js"></script>
-<script src="/clubT/js/form_pay.js?v=0.3"></script>
->>>>>>> dev
 </body>
 </html>
