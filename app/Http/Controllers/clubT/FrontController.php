@@ -249,7 +249,8 @@ class FrontController extends Controller
                 $merchant_id  = 'surpriselab_TAISHIN';
                 */
                 $amount = $money - $cut1 - $cut2;
-                $amount *= 1.1; // 一成服務費
+                // 疫情影響第一階段調整
+                //$amount *= 1.1; // 一成服務費
                 /*
                 if($data['is_overseas'] == 1){
                     $amount *= 1.1; // 一成服務費

@@ -419,7 +419,8 @@ $('.step-3 input, .step-3 select').on('change', function () {
  */
 function update_amountToGo(people) {
     restPeople = people;
-    var summary = formatPrice(people * 2200); // 數字變成貨幣格式
+    //var summary = formatPrice(people * 2200); // 數字變成貨幣格式
+    var summary = formatPrice(people * 2000); // 200220 調整為不含服務費
 
     // 更新完成劃位金額
     amountToGo.text(summary);
