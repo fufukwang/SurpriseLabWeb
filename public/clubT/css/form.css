@@ -1426,10 +1426,6 @@ form .btn-outline {
   }
 }
 
-fieldset {
-  display: block !important;
-}
-
 fieldset.step-1 .form-container {
   width: 526px;
   overflow: hidden;
