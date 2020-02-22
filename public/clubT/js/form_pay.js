@@ -156,6 +156,8 @@ function allowChecker(thisStep){
                 if (!element.is(':checked')) {
                     isAllowToNextStep = false;
                     return false;
+                } else if (element.attr('id') === 'agreerule') {
+                    $('#importantNotice').modal('show');
                 }
 
             } else {
@@ -419,8 +421,8 @@ $('.step-3 input, .step-3 select').on('change', function () {
  */
 function update_amountToGo(people) {
     restPeople = people;
-    //var summary = formatPrice(people * 2200); // 數字變成貨幣格式
-    var summary = formatPrice(people * 2000); // 200220 調整為不含服務費
+    var summary = formatPrice(people * 2200); // 數字變成貨幣格式
+    // var summary = formatPrice(people * 2000); // 200220 調整為不含服務費
 
     // 更新完成劃位金額
     amountToGo.text(summary);
@@ -555,24 +557,11 @@ $('.simplebar-scroll-content').on('scroll', function () {
 // ===================================
 // Coupon Code Start
 // ===================================
-/*
 var coupons = [ // 測試用票券代碼
-    { type: '0', couponcode: '054JXQH8', amount: 1},
-    { type: '0', couponcode: '3MNF5RUE', amount: 1},
-    { type: '0', couponcode: '5NIJD3FC', amount: 1},
-    { type: '0', couponcode: '7Y0CJCYB', amount: 1},
-    { type: '0', couponcode: '920T9603', amount: 1},
-    { type: '0', couponcode: 'BWCWASDU', amount: 1},
-    { type: '1', couponcode: 'D4EX2INA', amount: 4},
-    { type: '1', couponcode: 'ETL738NF', amount: 4},
-    { type: '1', couponcode: 'HSTJKWYX', amount: 4},
-    { type: '1', couponcode: 'M4ZVGYZR', amount: 4},
-    { type: '2', couponcode: 'P18PR5I9', amount: 10},
-    { type: '2', couponcode: 'QIARITDN', amount: 10},
-    { type: '2', couponcode: 'TUN07VAB', amount: 10},
-    { type: '2', couponcode: '4MIUFV8I', amount: 10},
+    { discount: '200', couponcode: 'preplayer'},
+    { discount: '450', couponcode: 'friendplayer'},
+    { discount: '700', couponcode: 'vipplayer'},
 ];
-*/
 
 /**
  * 票券代碼，確認按鈕點擊時
@@ -581,111 +570,33 @@ verificationCode.on('click', function () {
     var coupon = $('input[name="coupon"]');
     var couponVal = coupon.val(); // 取得用戶輸入的票券代碼
     var couponMsg = $('.coupon-code-message .error-message');
-    couponVal = couponVal.toUpperCase().trim();
 
+    couponVal = couponVal.toLowerCase().trim();
     couponMsg.html('');
-/*
+
     // 票券代碼是否存在
     var couponIndex = coupons.map(function (couponData) {
         return couponData.couponcode;
     }).indexOf(couponVal);
-*/
-    // 代碼長度是否正確
-    if(couponVal.length !== 8){
-        couponMsg.append('<p>序號錯誤</p>');
-        return false;
-    }
-    // 票券是否在表單送出前重複使用
-    var isAllow = $.inArray(couponVal, usedCoupons);
-    if (couponVal.includes('/')) couponMsg.append('<p>一次請輸入一組序號，「／」為兩組序號之間的分隔</p>');
-    if (isAllow !== -1){
-        couponMsg.append('<p>序號錯誤或已使用</p>');
-        return false;
-    }
 
-    if(restPeople <= 0){
-        console.log('test1')
-        if (couponVal.includes('/')) couponMsg.append('<p>已經不需要扣抵囉</p>');
+    if(couponIndex !== -1){
+        var discount = coupons[couponIndex].discount; // 折扣數
+        ticketMoney = 2200;
+
+        // 更新完成劃位所需金額
+        restAmount = submitDatas['booking_people'] * ticketMoney -  discount;
+
+        amountToGo.text(formatPrice(restAmount));
+        couponMsg.text('已輸入 ' + couponVal + ' 折抵 ' + discount +'元');
+
+        // updateTicketField();
+        passTimes++; // 通過人數
+        coupon.val('').prop('disabled', 'disabled');
+        verificationCode.prop('disabled', 'disabled');
     } else {
-        $.get('/clubtomorrow/GetAjaxData',{
-            'act':'CheckCoupon',
-            'code':couponVal,
-            'day':$('#booking_date').val(),
-            'pople':submitDatas['booking_people'] ,
-            'restPeople':restPeople,
-            'coupon':usedCoupons
-        },function(data){
-            if(data.success == 'Y'){
-                var ticketAmount = data.ticketAmount;
-                var ticketMoney  = $('#booking_time option:selected').data('money');
-                restPeople = restPeople - ticketAmount;
-
-                // 更新暫存已使用代碼
-                usedCoupons.push(couponVal);
-
-                // 更新完成劃位所需金額
-                paidAmount = paidAmount + ticketAmount * ticketMoney;
-                restAmount = submitDatas['booking_people'] * ticketMoney - paidAmount ;
-
-                amountToGo.text(formatPrice(restAmount));
-                verificationCode.closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
-                $.each(ticketInfos, function (index, ticket) {
-                    if(ticket.type === data.ticketType) ticket.counter++;
-                });// 該票券使用次數+1
-                ///ticketInfos[data.ticketType].counter++; 
-                updateTicketField();
-                passTimes++; // 通過人數
-                coupon.val('').trigger('change');
-            } else {
-                couponMsg.append('<p>'+data.message+'</p>');
-            }
-        },'json');
+        coupon.val('').trigger('change');
+        couponMsg.text('折扣碼輸入錯誤');
     }
-
-/*
-
-    // 如果票券代碼可使用，且尚未重複輸入
-    if (couponIndex !== -1 && isAllow == -1) {
-        var thisCoupon = coupons[couponIndex]; // 目前使用的折扣碼資訊
-        var ticketType = thisCoupon.type; // 折扣碼票種
-        var ticketAmount = thisCoupon.amount; // 代碼可折抵人數
-        var ticketInfo = ticketInfos[ticketType]; // 該票券種類詳細資訊
-
-        if (restPeople >= ticketAmount) {
-            ticketInfos[ticketType].counter++; // 該票券使用次數+1
-            restPeople = restPeople - ticketAmount;
-
-            // 更新暫存已使用代碼
-            usedCoupons.push(couponVal);
-
-            // 更新完成劃位所需金額
-            paidAmount = paidAmount + ticketAmount * 2000;
-            restAmount = submitDatas['booking_people'] * 2000 - paidAmount ;
-
-            amountToGo.text(formatPrice(restAmount));
-            $(this).closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + ticketInfo.name +'</p>');
-
-            updateTicketField();
-            passTimes++;
-
-        } else {
-            couponMsg.append('<p>您輸入的序號已超過剩餘折抵人數，請重新檢查</p>');
-        }
-
-    } else if (couponVal.includes('/')) {
-            couponMsg.append('<p>一次請輸入一組序號，「／」為兩組序號之間的分隔</p>');
-    } else {
-        couponMsg.append('<p>序號錯誤或已使用</p>');
-    }
-
-*/
-
-
-
-
-
-    coupon.val('').trigger('change');
-    return false;
 });
 
 function updateTicketField() {

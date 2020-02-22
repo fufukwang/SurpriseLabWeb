@@ -1007,6 +1007,29 @@ form .btn-outline {
   }
 }
 
+#importantNotice .modal-body-container::after {
+  display: none;
+}
+
+#importantNotice ul {
+  padding: 0;
+  margin: 0;
+}
+
+#importantNotice li {
+  margin-bottom: 6px;
+}
+
+#importantNotice li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+  #importantNotice .modal-body {
+    padding: 20px 20px 20px 40px;
+  }
+}
+
 .select-format label {
   display: block;
   text-align: left;
@@ -1401,6 +1424,10 @@ form .btn-outline {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
+}
+
+fieldset {
+  display: block !important;
 }
 
 fieldset.step-1 .form-container {
@@ -1861,20 +1888,20 @@ fieldset.step-5 .filled-data {
 }
 
 fieldset.step-5 .filled-data .notice td {
-  padding-bottom: 36px;
+  padding-bottom: 32px;
 }
 
 fieldset.step-5 .filled-data .notice td:last-child {
   white-space: pre-wrap;
 }
 
-fieldset.step-5 .filled-data .coupon-code-message .error-message p {
-  font-size: 14px;
+fieldset.step-5 .filled-data .coupon-code-message .error-message {
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 1.4px;
-  padding-top: 17px;
+  padding-top: 12px;
   margin: 0;
-  color: #ff66d2;
+  color: #15ffbc;
 }
 
 fieldset.step-5 .filled-data td {
@@ -1893,8 +1920,17 @@ fieldset.step-5 .filled-data td:first-child {
   opacity: 0.8;
 }
 
+fieldset .coupon-code {
+  border-top: solid 1px rgba(21, 255, 188, 0.5);
+}
+
 fieldset .coupon-code td {
-  padding-top: 24px;
+  padding-top: 20px;
+}
+
+fieldset .coupon-code td:first-child {
+  vertical-align: middle;
+  color: rgba(21, 255, 188, 0.8);
 }
 
 fieldset .coupon-code input {
@@ -2226,7 +2262,7 @@ fieldset .prefix-step .prefix {
   }
   fieldset.step-5 .filled-data .coupon-code-message td,
   fieldset.step-5 .filled-data .coupon-code td {
-    padding-top: 8px;
+    padding-top: 24px;
     width: 100%;
   }
   fieldset.step-5 .filled-data .coupon-code-message td:first-child,
@@ -2241,9 +2277,10 @@ fieldset .prefix-step .prefix {
   fieldset.step-5 .filled-data td:first-child {
     line-height: 2.14;
     padding-right: 20px;
-    min-width: 85px;
+    min-width: inherit;
+    width: 100px;
     opacity: 1;
-    text-align: left;
+    text-align: right;
   }
   fieldset.step-5 .multi-btn .previous {
     width: 120px;
