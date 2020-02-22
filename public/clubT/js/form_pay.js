@@ -558,9 +558,9 @@ $('.simplebar-scroll-content').on('scroll', function () {
 // Coupon Code Start
 // ===================================
 var coupons = [ // 測試用票券代碼
-    { discount: '200', couponcode: 'preplayer'},
-    { discount: '450', couponcode: 'friendplayer'},
-    { discount: '700', couponcode: 'vipplayer'},
+    { discount: 200, couponcode: 'preplayer'},
+    { discount: 450, couponcode: 'friendplayer'},
+    { discount: 700, couponcode: 'vipplayer'},
 ];
 
 /**
