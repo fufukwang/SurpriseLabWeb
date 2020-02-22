@@ -584,10 +584,10 @@ verificationCode.on('click', function () {
         ticketMoney = 2200;
 
         // 更新完成劃位所需金額
-        restAmount = parseInt(submitDatas['booking_people']) * ticketMoney -  discount;
+        restAmount = parseInt(submitDatas['booking_people']) * (ticketMoney -  discount);
 
         amountToGo.text(formatPrice(restAmount));
-        couponMsg.text('已輸入 ' + couponVal + ' 折抵 ' + discount +'元');
+        couponMsg.text('已輸入 ' + couponVal + ' 折抵 ' + (ticketMoney * discount) +'元');
 
         // updateTicketField();
         passTimes++; // 通過人數
