@@ -420,7 +420,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
  * 更新完成劃位所需金額
  */
 function update_amountToGo(people) {
-    restPeople = people;
+    restPeople = parseInt(people);
     var summary = formatPrice(people * 2200); // 數字變成貨幣格式
     // var summary = formatPrice(people * 2000); // 200220 調整為不含服務費
 
@@ -584,7 +584,7 @@ verificationCode.on('click', function () {
         ticketMoney = 2200;
 
         // 更新完成劃位所需金額
-        restAmount = submitDatas['booking_people'] * ticketMoney -  discount;
+        restAmount = parseInt(submitDatas['booking_people']) * ticketMoney -  discount;
 
         amountToGo.text(formatPrice(restAmount));
         couponMsg.text('已輸入 ' + couponVal + ' 折抵 ' + discount +'元');

@@ -26,7 +26,7 @@
     <link href="/clubT/css/plugins/simplebar.css" rel="stylesheet">
     <link rel="stylesheet" href="/clubT/css/style.css"/>
     <link rel="stylesheet" href="/clubT/css/intro.css"/>
-    <link rel="stylesheet" href="/clubT/css/form.css?v=0.4"/>
+    <link rel="stylesheet" href="/clubT/css/form.css?v=0.5"/>
     @include('clubtomorrow.frontend._gtm')
     @include('clubtomorrow.frontend._fbpixel')
 </head>
@@ -504,6 +504,6 @@
 <script src="/clubT/js/plugins/simplebar.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
 <script src="/clubT/js/main.js"></script>
-<script src="/clubT/js/form_pay.js?v=0.4"></script>
+<script src="/clubT/js/form_pay.js?v=0.5"></script>
 </body>
 </html>
