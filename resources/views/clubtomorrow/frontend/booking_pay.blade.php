@@ -37,12 +37,12 @@
             <ul>
                 <li class="social-link">
                     <a href="https://www.facebook.com/surpriselabtw" target="_blank">
-                        <img class="img-fluid" href="/clubT/img/icon/icon_FB.svg" alt="facebook">
+                        <img class="img-fluid" src="/clubT/img/icon/icon_FB.svg" alt="facebook">
                     </a>
                 </li>
                 <li class="social-link">
                     <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
-                        <img class="img-fluid" href="/clubT/img/icon/icon_IG.svg" alt="instagram">
+                        <img class="img-fluid" src="/clubT/img/icon/icon_IG.svg" alt="instagram">
                     </a>
                 </li>
             </ul>
@@ -55,7 +55,7 @@
                 <div class="logo-wrapper">
                     <div class="logo">
                         <a class="smoothScroll" href="buynow.html">
-                            <img href="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
+                            <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
                         </a>
                         <div></div>
                     </div>

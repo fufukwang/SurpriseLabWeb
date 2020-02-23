@@ -24,6 +24,7 @@ var selectType = 0; // 用戶選擇的票種
 var passTimes = 1; // 票券代碼輸入次數
 var amountToGo = $('.amountToGo'); // 完成劃位金額
 var restPeople = 0; // 尚須折抵人數
+var disscountVal = ''; // 送給後端二次驗證的折扣碼
 
 
 var ticketInfos = [
@@ -589,7 +590,7 @@ verificationCode.on('click', function () {
 
         amountToGo.text(formatPrice(restAmount));
         couponMsg.text('已輸入 ' + couponVal + ' 折抵 ' + (currentBookingPeople * discount) +'元');
-
+        disscountVal = couponVal;
         // updateTicketField();
         passTimes++; // 通過人數
         coupon.val('').prop('disabled', 'disabled');
@@ -731,7 +732,8 @@ function sentOrderData(prime){
         'coupon': usedCoupons,
         'is_overseas': 0,
         'vegetarian': $('#vegetarian_food').val(),
-        'no_alcohol': $('#no_alcohol').val()
+        'no_alcohol': $('#no_alcohol').val(),
+        'discount'  : disscountVal
     };
     $('.loading-wrapper').addClass('show');
     $('<link>').appendTo('head')
