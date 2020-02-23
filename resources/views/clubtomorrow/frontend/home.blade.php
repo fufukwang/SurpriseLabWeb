@@ -388,12 +388,12 @@
                             <div class="section-subtitle">TICKET</div>
 
                             <p class="section-paragraph">
-                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 02/26-03/15 之場次
+                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 03/19-04/12 之場次
                             </p>
 
                             <div class="ticket-type">
                                 <div class="type-item type-single-player">
-                                    <a href="https://surpriselab.backme.tw/checkout/1200/7946?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1241/8760?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_1.png" alt="單人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_1_mobile@2x.png" alt="單人票">
@@ -401,7 +401,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-4">
-                                    <a href="https://surpriselab.backme.tw/checkout/1200/7947?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1241/8761?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_2.png" alt="四人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_2_mobile@2x.png" alt="四人票">
@@ -412,7 +412,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-10">
-                                    <a href="https://surpriselab.backme.tw/checkout/1200/7948?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1241/8762?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_3.png" alt="十人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_3_mobile@2x.png" alt="十人票">
@@ -502,26 +502,26 @@
                                 <div class="schedule-inner">
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            02/11
+                                            03/03（二）
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信— 02/03到02/10晚上18:00前購票者
+                                            寄送劃位信 — 02/24到03/02晚上18:00前購票者
                                         </div>
                                     </div>
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            02/18
+                                            03/10（二）
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信— 02/10到02/17晚上18:00前購票者
+                                            寄送劃位信 — 03/02到03/09晚上18:00前購票者
                                         </div>
                                     </div>
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            02/25
+                                            03/17（二）
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信— 02/17到02/24晚上18:00前購票者
+                                            寄送劃位信 — 03/09到03/16晚上18:00前購票者
                                         </div>
                                     </div>
                                 </div>
@@ -546,14 +546,6 @@
                             <div class="time-slots-wrapper">
                                 <div class="time-slots-inner">
                                     <div class="time-slots-row">
-                                        <div class="time-slots-item">
-                                            <div class="time-slots-title">
-                                                週三
-                                            </div>
-                                            <div class="time-slots-content">
-                                                18:30 | 20:30
-                                            </div>
-                                        </div>
                                         <div class="time-slots-item">
                                             <div class="time-slots-title">
                                                 週四
@@ -637,7 +629,7 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售 02/26-03/15 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
+                                        * 現正預售 03/19-04/12 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
