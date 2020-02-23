@@ -581,13 +581,14 @@ verificationCode.on('click', function () {
 
     if(couponIndex !== -1){
         var discount = coupons[couponIndex].discount; // 折扣數
+        var currentBookingPeople = parseInt(submitDatas['booking_people']);
         ticketMoney = 2200;
 
         // 更新完成劃位所需金額
-        restAmount = parseInt(submitDatas['booking_people']) * (ticketMoney -  discount);
+        restAmount = currentBookingPeople * (ticketMoney -  discount);
 
         amountToGo.text(formatPrice(restAmount));
-        couponMsg.text('已輸入 ' + couponVal + ' 折抵 ' + (ticketMoney * discount) +'元');
+        couponMsg.text('已輸入 ' + couponVal + ' 折抵 ' + (currentBookingPeople * discount) +'元');
 
         // updateTicketField();
         passTimes++; // 通過人數
