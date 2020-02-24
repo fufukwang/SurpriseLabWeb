@@ -274,8 +274,8 @@
                     </div>
                 </div>
                 <div class="modal-text">
-                    <div class="exp-wrapper">
-                        <!-- <div class="exp-item">
+                    <!-- <div class="exp-wrapper">
+                        <div class="exp-item">
                             <div class="exp-icon">
                                 <img src="/clubT/img/icon/ticket/icon_ticket_1-1.png" alt="舞蹈">
                             </div>
