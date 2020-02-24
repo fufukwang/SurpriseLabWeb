@@ -218,9 +218,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="section-paragraph">
+                            <!-- <p class="section-paragraph">
                                 體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限
-                            </p>
+                            </p> -->
                             <a class="link-bright-green" href="javascript://" data-toggle="modal" data-target="#expDetail">玩家指南</a>
                         </div>
                     </div>
