@@ -26,7 +26,7 @@
     <link href="/clubT/css/plugins/simplebar.css" rel="stylesheet">
     <link rel="stylesheet" href="/clubT/css/style.css"/>
     <link rel="stylesheet" href="/clubT/css/intro.css"/>
-    <link rel="stylesheet" href="/clubT/css/form.css"/>
+    <link rel="stylesheet" href="/clubT/css/form.css?v=0.5"/>
     @include('clubtomorrow.frontend._gtm')
     @include('clubtomorrow.frontend._fbpixel')
 </head>
@@ -154,18 +154,7 @@
                                     <span>票券序號說明</span>
                                 </h4>
                             </div>
-                            <ul class="prefix-dash custom-text">
-                                <li data-name="單人票">
-                                    一張單人票對應一組序號，依此類推
-                                </li>
-                                <li data-name="四人票">
-                                    一組序號劃位四人，限同日期同場次，不可分開劃位
-                                </li>
-                                <li data-name="十人票">
-                                    一組序號劃位十人，限同日期同場次，不可分開劃位
-                                </li>
-                            </ul>
-
+                            
                             <div class="form-group select-format">
                                 <label class="form-label d-none" for="booking_people">人數</label>
                                 <select id="booking_people" name="booking_people" data-placeholder="選擇人數" required>
@@ -352,26 +341,19 @@
                                     <td>其他備註</td>
                                     <td class="filled" data-filled="notice"></td>
                                 </tr>
-                                <!--tr class="coupon-note">
-                                    <td>劃位序號</td>
-                                    <td>
-                                        若有多組序號，請一次填入一組劃位序號，按下確認後折抵
-                                    </td>
-                                </tr-->
-                                <tr class="coupon-code-message">
-                                    <td></td>
-                                    <td class="error-message"></td>
-                                </tr>
-                                <!--tr class="coupon-code">
-                                    <td></td>
+                                <tr class="coupon-code">
+                                    <td>折扣碼</td>
                                     <td>
                                         <div class="d-flex justify-content-between">
                                             <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
                                             <button type="button" class="verification-code btn-bright-blue" disabled>確認</button>
                                         </div>
-                                        <div class="submit-coupon-wrapper"></div>
                                     </td>
-                                </tr-->
+                                </tr>
+                                <tr class="coupon-code-message">
+                                    <td></td>
+                                    <td class="error-message"></td>
+                                </tr>
                             </table>
                             <div class="feature-btn d-flex justify-content-between multi-btn">
                                 <button type="button" name="previous" class="btn-bright-blue previous action-button">上一步</button>
@@ -384,6 +366,32 @@
                 </form>
             </div>
         </main>
+
+        <!-- 疫情訊息 Modal -->
+        <div class="modal fade" id="importantNotice" tabindex="-1" role="dialog" aria-labelledby="importantNoticeTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content text-left">
+                    <div class="modal-header">
+                        <h5 class="modal-title">重要資訊，關於防疫</h5>
+                    </div>
+                    <div class="modal-body-container">
+                        <div class="modal-body">
+                            <ul>
+                                <li>
+                                    若近期有發燒、咳嗽或呼吸道感染等症狀，且前 14 日內曾經到訪、或接觸過政府公告須自主隔離之地區，勿參加近期體驗，請務必留意。
+                                </li>
+                                <li>
+                                    所有玩家於體驗當日需自行備妥口罩且全程配戴，並配合體溫檢測。
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer close" data-dismiss="modal" aria-label="Close">
+                        我知道了
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
   <div class="modal-dialog" role="document" style="top: 10%;">
@@ -496,6 +504,6 @@
 <script src="/clubT/js/plugins/simplebar.js"></script>
 <script src="/clubT/js/plugins/aos.min.js"></script>
 <script src="/clubT/js/main.js?v=0.1"></script>
-<script src="/clubT/js/form_pay.js?v=0.4"></script>
+<script src="/clubT/js/form_pay.js?v=0.5"></script>
 </body>
 </html>

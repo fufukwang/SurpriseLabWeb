@@ -59,37 +59,46 @@ $(document).ready(function () {
     let progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1066json?token=15171aa66ababafd4464a1c194b66102';
     let progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1136json?token=15171aa66ababafd4464a1c194b66102';
     let progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/1200json?token=15171aa66ababafd4464a1c194b66102';
+    let progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/1241json?token=15171aa66ababafd4464a1c194b66102';
 
     $.when(
       $.getJSON(progress_api_SaleStep1),
       $.getJSON(progress_api_SaleStep2),
-      $.getJSON(progress_api_SaleStep3)
-    ).done(function (data1, data2, data3) {
+      $.getJSON(progress_api_SaleStep3),
+      $.getJSON(progress_api_SaleStep4)
+    ).done(function (data1, data2, data3, data4) {
 
         data1 = data1[0];
         data2 = data2[0];
-        var data = data3[0];
+        data3 = data3[0];
+        var data = data4[0];
 
-        let goal = 7360; // 目標張數
-        let amount = 0; // 已售出總票數
+        const goal = 1920; // 本次銷售目標票數
+        let prev_amount = 0; // 過去售出總票數
+        let current_amount = 0; // 現階段售出總票出
 
         $.each(data1['rewards'], function (index, ticket) {
             // 計算第一階段已售出總票數
-            amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+            prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
 
         $.each(data2['rewards'], function (index, ticket) {
             // 計算第二階段已售出總票數
-            amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+            prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        });
+
+        $.each(data3['rewards'], function (index, ticket) {
+            // 計算第三階段已售出總票數
+            prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
 
         $.each(data['rewards'], function (index, ticket) {
-            // 計算第三階段已售出總票數
-            amount = amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+            // 計算第四階段已售出總票數
+            current_amount = parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
 
-        let sale_progress = amount / goal * 100; // 募款進度
-        let rest_tickets = goal - amount; // 剩餘可銷售票數
+        let sale_progress = (prev_amount + current_amount) / (prev_amount + goal) * 100; // 募款進度
+        let rest_tickets = goal - current_amount; // 剩餘可銷售票數
 
         // 售票進度最小整數
         sale_progress = Math.floor(sale_progress);
@@ -133,7 +142,7 @@ $(document).ready(function () {
         }
 
         let sale_info = $('.sale-progress-info');
-        sale_info.find('.total-sale').html(amount); // 更新總售出張數
+        sale_info.find('.total-sale').html(prev_amount + current_amount); // 更新總售出張數
         sale_info.find('.total-rest').html(rest_tickets); // 更新剩餘張數
         sale_info.find('.progress-percent').html(sale_progress); // 更新完成進度百分比
 

@@ -251,6 +251,12 @@ class FrontController extends Controller
                 $amount = $money - $cut1 - $cut2;
                 // 疫情影響第一階段調整
                 //$amount *= 1.1; // 一成服務費
+                // 第二階段加入折扣碼
+                switch ($request->discount) {
+                    case 'preplayer': $amount -= 200; break;
+                    case 'friendplayer': $amount -= 450; break;
+                    case 'vipplayer': $amount -= 700; break;
+                }
                 /*
                 if($data['is_overseas'] == 1){
                     $amount *= 1.1; // 一成服務費
@@ -284,6 +290,9 @@ class FrontController extends Controller
                 $tappayData = curl_exec($r);
                 curl_close($r);
                 $order->result = $tappayData;
+                if($request->discount!=''){
+                    $order->manage = "使用折扣碼:".$request->discount;
+                }
                 $order->money = $amount; // 加上服務費的費用
                 $tappayObj = json_decode($tappayData);
                 if($tappayObj->status == 0){
