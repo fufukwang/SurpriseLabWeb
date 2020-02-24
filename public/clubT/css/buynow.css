@@ -2375,6 +2375,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   padding: 8px 0;
   border-radius: 0;
   border: none;
+  position: relative;
 }
 
 #expDetail .modal-header .close-modal {

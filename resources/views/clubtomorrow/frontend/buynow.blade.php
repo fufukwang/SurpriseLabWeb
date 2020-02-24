@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/buynow.css?v=0.7"/>
+    <link rel="stylesheet" href="/clubT/css/buynow.css?v=0.8"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
