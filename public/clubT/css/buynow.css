@@ -1540,11 +1540,15 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item {
-  width: 180px;
+  width: 210px;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
-  margin-left: 96px;
+  margin-left: 70px;
+}
+
+#Ticket .ticket-sec-experience .exp-wrapper .exp-item p.section-paragraph {
+  margin-bottom: 0;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-img img {
@@ -1569,11 +1573,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 18px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper {
-    margin-top: 0;
+    margin-top: 36px;
     margin-bottom: 48px;
-  }
-  #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
-    margin-left: 114px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
     font-size: 16px;
@@ -1630,8 +1631,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 0;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item {
-    width: 32vw;
-    min-width: 120px;
+    width: 35vw;
+    min-width: 145px;
     margin-bottom: 12px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
@@ -1655,6 +1656,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 4px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item {
+    width: 32vw;
+    min-width: 120px;
     margin-bottom: 8px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-img {
