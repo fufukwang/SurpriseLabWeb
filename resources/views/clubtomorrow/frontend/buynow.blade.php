@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/buynow.css?v=0.5"/>
+    <link rel="stylesheet" href="/clubT/css/buynow.css?v=0.8"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -133,7 +133,7 @@
                         <div class="intro-content-item">
                             <div class="glitch">
                                 <p class="section-paragraph intro-text">
-                                    為自己、為群體、為世界<br/>在所有決定背後，你為的是誰？
+                                    混亂正在發生<br/>你，能成為最後贏家嗎？
                                 </p>
                             </div>
                         </div>
@@ -157,13 +157,11 @@
                                 <p class="section-paragraph">
                                     你好，我是 Emily<br/>
                                     <br/>
-                                    明日俱樂部是一個由我所打造的狂歡世界<br/>
+                                    明日俱樂部是一個由我所打造的世界<br/>
+                                    現在，它正邁入前所未有的混亂<br/>
                                     <br/>
-                                    在這世界中，每晚都有 60 位玩家相互競爭<br/>
-                                    你的每個決定，都將影響這世界與你自己的結局<br/>
-                                    <br/>
-                                    我很好奇，在混亂與狂歡之中<br/>
-                                    你，能成為最後贏家嗎？
+                                    我很好奇<br/>
+                                    你們，人類們，能終止這場混亂嗎？
                                 </p>
                             </div>
                         </div>
@@ -180,38 +178,50 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="section-title">體驗內容</h2>
+                            <h2 class="section-title">玩家指南</h2>
                             <div class="section-subtitle">EXPERIENCE</div>
                             <div class="exp-wrapper">
                                 <div class="exp-item">
+                                    <p class="section-paragraph">
+                                        探索 Discover
+                                    </p>
                                     <div class="exp-img">
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
                                     </div>
                                     <div class="exp-title">
+                                        7位表演者<br/>
                                         120分鐘沈浸式體驗
                                     </div>
                                 </div>
                                 <div class="exp-item">
+                                    <p class="section-paragraph">
+                                        扮演 Play
+                                    </p>
                                     <div class="exp-img">
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
                                     </div>
                                     <div class="exp-title">
-                                        7位表演者 60位玩家
+                                        化身玩家，加入5大陣營<br/>
+                                        扮演關鍵角色
                                     </div>
                                 </div>
                                 <div class="exp-item">
+                                    <p class="section-paragraph">
+                                        抉擇 Action
+                                    </p>
                                     <div class="exp-img">
                                         <img class="img-fluid" src="/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
                                     </div>
                                     <div class="exp-title">
-                                        兩大陣營 五種角色
+                                        60位玩家，角逐1場大戰<br/>
+                                        結局由你決定
                                     </div>
                                 </div>
                             </div>
-                            <p class="section-paragraph">
+                            <!-- <p class="section-paragraph">
                                 體驗中會因玩家的選擇<br/>獲得調飲與小點，或進入特殊空間的權限
-                            </p>
-                            <a class="link-bright-green" href="javascript://" data-toggle="modal" data-target="#expDetail">體驗內含</a>
+                            </p> -->
+                            <a class="link-bright-green" href="javascript://" data-toggle="modal" data-target="#expDetail">玩家指南</a>
                         </div>
                     </div>
                 </div>
@@ -255,10 +265,16 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="modal-header">
-                    體驗內含
+                    玩家指南
+                    <div class="close-modal">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
                 </div>
                 <div class="modal-text">
-                    <div class="exp-wrapper">
+                    <!-- <div class="exp-wrapper">
                         <div class="exp-item">
                             <div class="exp-icon">
                                 <img src="/clubT/img/icon/ticket/icon_ticket_1-1.png" alt="舞蹈">
@@ -331,16 +347,16 @@
                                 派對
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <p class="section-paragraph">
-                        你準備好狂歡了嗎？
+                        唯有人類能夠進入<br/>現場將進行人類檢測及分類<br/><br/>請大膽在這世界穿梭<br/>你將遇見五大陣營的領導者<br/><br/>你將加入一場秘密集會<br/>請積極參與，它會是你獲勝的關鍵<br/><br/>最後，請用盡一切方法<br/>成為贏家 － 決定這世界的明天<br/><br/>祝你勝利。<br/><br/>註：現場提供少量酒水與小點
                     </p>
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         關閉
                     </button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

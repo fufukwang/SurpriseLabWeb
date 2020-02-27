@@ -1540,11 +1540,15 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item {
-  width: 180px;
+  width: 210px;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
-  margin-left: 96px;
+  margin-left: 70px;
+}
+
+#Ticket .ticket-sec-experience .exp-wrapper .exp-item p.section-paragraph {
+  margin-bottom: 0;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-img img {
@@ -1569,11 +1573,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 18px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper {
-    margin-top: 0;
+    margin-top: 36px;
     margin-bottom: 48px;
-  }
-  #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
-    margin-left: 114px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
     font-size: 16px;
@@ -1630,8 +1631,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 0;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item {
-    width: 32vw;
-    min-width: 120px;
+    width: 35vw;
+    min-width: 145px;
     margin-bottom: 12px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
@@ -1655,6 +1656,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 4px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item {
+    width: 32vw;
+    min-width: 120px;
     margin-bottom: 8px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-img {
@@ -2372,6 +2375,45 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   padding: 8px 0;
   border-radius: 0;
   border: none;
+  position: relative;
+}
+
+#expDetail .modal-header .close-modal {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#expDetail .modal-header .close-modal button.close {
+  width: 37px;
+  height: 37px;
+  padding: 10px;
+  margin: 0;
+  text-shadow: none;
+  float: none;
+  opacity: 1;
+}
+
+#expDetail .modal-header .close-modal button.close:focus {
+  outline: none;
+}
+
+#expDetail .modal-header .close-modal button.close .icon-bar {
+  width: 17px;
+  height: 3px;
+  display: block;
+  background-color: #03030D;
+  -webkit-transform: rotate(45deg) translate(1px, 2px);
+          transform: rotate(45deg) translate(1px, 2px);
+}
+
+#expDetail .modal-header .close-modal button.close .icon-bar + .icon-bar {
+  -webkit-transform: rotate(-45deg) translate(0px, -1px);
+          transform: rotate(-45deg) translate(0px, -1px);
 }
 
 #expDetail .modal-text {
@@ -2418,28 +2460,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   color: #15ffbc;
 }
 
-#expDetail .modal-footer {
-  padding: 0;
-  border-top: 1px solid #15ffbc;
-}
-
-#expDetail .modal-footer button.close {
-  width: 100%;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1.8px;
-  line-height: 1.5;
-  color: #15ffbc;
-  text-shadow: none;
-  float: none;
-  opacity: 1;
-  padding: 16px 0;
-}
-
-#expDetail .modal-footer button.close:focus {
-  outline: none;
-}
-
 @media (max-width: 1440px) {
   #expDetail .modal-dialog {
     max-width: 376px;
@@ -2466,10 +2486,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
   #expDetail .section-paragraph {
     margin: 48px 0 45px;
-  }
-  #expDetail .modal-footer button.close {
-    font-size: 16px;
-    letter-spacing: 1.6px;
   }
 }
 
@@ -2509,12 +2525,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   #expDetail .section-paragraph {
     margin: 36px 0;
   }
-  #expDetail .modal-footer button.close {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1.4px;
-    padding: 10px 0;
-  }
 }
 
 @media (max-width: 374.98px) {
@@ -2522,6 +2532,19 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     font-size: 12px;
     letter-spacing: 1.2px;
     padding: 6px 0;
+  }
+  #expDetail .modal-header .close-modal {
+    width: 30px;
+    height: 30px;
+    right: 4px;
+  }
+  #expDetail .modal-header .close-modal button.close {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+  }
+  #expDetail .modal-header .close-modal button.close .icon-bar {
+    width: 14px;
   }
   #expDetail .modal-text {
     padding: 0 20px;
@@ -2538,11 +2561,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
   #expDetail .section-paragraph {
     margin: 36px 0 30px;
-  }
-  #expDetail .modal-footer button.close {
-    font-size: 12px;
-    letter-spacing: 1.2px;
-    padding: 8px 0;
   }
 }
 

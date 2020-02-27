@@ -8,6 +8,12 @@ AOS.init({
 });
 
 $(document).ready(function () {
+    // glitch 文字雜訊效果
+    let glitch = $('.glitch');
+    glitch.glitch({
+        layers: ['#FF66D2', '#15FFBC'],
+        offset: [10, 0]
+    });
 
     // Image Loading
     document.body.classList.add('render');
