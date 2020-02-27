@@ -178,7 +178,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="section-title">體驗內容</h2>
+                            <h2 class="section-title">玩家指南</h2>
                             <div class="section-subtitle">EXPERIENCE</div>
                             <div class="exp-wrapper">
                                 <div class="exp-item">
