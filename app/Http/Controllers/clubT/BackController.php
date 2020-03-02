@@ -730,19 +730,25 @@ class BackController extends Controller
             'email' => $request->email,
             'name'  => $request->name,
             'gday'  => $rangStart.'/'.$rangEnd,
+            'sub'   => '【明日俱樂部】訂位確認信'
         ];
         if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
             config(['mail.host' => 'smtp.gmail.com']);
             config(['mail.username' => env('MAIL_CLUB_USER')]);
             config(['mail.password' => env('MAIL_CLUB_PASS')]);
         }
-        Mail::send('clubtomorrow.email.order',$mailer,function($m) use ($mailer){
+        $mailTemplate = 'order';
+        if($request->has('mailtype') && $request->mailtype==='go'){
+            $mailTemplate = 'orderGo';
+            $mailer['sub'] = '【明日俱樂部行前提醒】九項你需要知道的行前注意事項';
+        }
+        Mail::send('clubtomorrow.email.'.$mailTemplate,$mailer,function($m) use ($mailer){
             $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
             $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
             $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
 
             $m->to($mailer['email'], $mailer['name']);
-            $m->subject('【明日俱樂部】訂位確認信');
+            $m->subject($mailer['sub']);
         });
         return Response::json(['message'=> '已更新'], 200);
     }

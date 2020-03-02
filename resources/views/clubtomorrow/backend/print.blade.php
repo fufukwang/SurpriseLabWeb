@@ -150,6 +150,7 @@
                                                 <td class="actions">
                                                     @if($row->pay_status=='已付款')
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
+                                                    <a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a>
                                                     <!--a class="btn btn-primary btn-xs resent12" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>建立玩家ID信</a>
                                                     <br /><br />
                                                     <a class="btn btn-primary btn-xs changeProMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>更改場次信件</a-->
@@ -299,6 +300,21 @@ $(function(){
             $.Notification.notify('success','bottom left','訂位確認信 已重發', '信件已重新發送');
         },'json');
     });
+    $('.GoMail').bind('click',function(){
+        var name  = $(this).data('name');
+        var email = $(this).data('email');
+        var id    = $(this).data('id');
+        var pople = $(this).data('pople');
+        $.post('/clubtomorrow/order/'+id+'/resent',{
+            name  : name,
+            email : email,
+            pople : pople,
+            mailtype : 'go'
+        },function(data){
+            $.Notification.notify('success','bottom left','訂位確認信 已重發', '信件已重新發送');
+        },'json');
+    });
+
     $('.resent12').bind('click',function(){
         var name  = $(this).data('name');
         var email = $(this).data('email');

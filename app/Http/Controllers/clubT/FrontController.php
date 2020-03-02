@@ -235,6 +235,7 @@ class FrontController extends Controller
             $order = order::create($data);
             
             $sentSuccess = false;
+            $isPay = false;
             if($data['money'] == 0){
                 $sentSuccess = true;
             } else {
@@ -250,12 +251,12 @@ class FrontController extends Controller
                 */
                 $amount = $money - $cut1 - $cut2;
                 // 疫情影響第一階段調整
-                //$amount *= 1.1; // 一成服務費
+                $amount *= 1.1; // 一成服務費
                 // 第二階段加入折扣碼
                 switch ($request->discount) {
-                    case 'preplayer': $amount -= 200; break;
-                    case 'friendplayer': $amount -= 450; break;
-                    case 'vipplayer': $amount -= 700; break;
+                    case 'preplayer': $amount -= ($people*200); break;
+                    case 'friendplayer': $amount -= ($people*450); break;
+                    case 'vipplayer': $amount -= ($people*700); break;
                 }
                 /*
                 if($data['is_overseas'] == 1){
@@ -300,7 +301,7 @@ class FrontController extends Controller
                     $sentSuccess = true;
                 }
                 $order->save();
-            
+                $isPay = true;
             }
 
 
@@ -315,6 +316,7 @@ class FrontController extends Controller
                     'email' => $data['email'],
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
+                    'sub'   => '【明日俱樂部】訂位確認信'
                 ];
                 //config(['mail.username' => env('MAIL_CLUB_USER')]);
                 //config(['mail.password' => env('MAIL_CLUB_PASS')]);
@@ -323,13 +325,18 @@ class FrontController extends Controller
                     config(['mail.username' => env('MAIL_CLUB_USER')]);
                     config(['mail.password' => env('MAIL_CLUB_PASS')]);
                 }
-                Mail::send('clubtomorrow.email.order',$mailer,function($m) use ($mailer){
+                $mailTemplate = 'order';
+                if($isPay){
+                    $mailTemplate = 'orderGo';
+                    $mailer['sub'] = '【明日俱樂部行前提醒】九項你需要知道的行前注意事項';
+                }
+                Mail::send('clubtomorrow.email.'.$mailTemplate,$mailer,function($m) use ($mailer){
                     $m->from('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
                     $m->sender('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
                     $m->replyTo('clubtomorrow@surpriselab.com.tw', '明日俱樂部');
 
                     $m->to($mailer['email'], $mailer['name']);
-                    $m->subject('【明日俱樂部】訂位確認信');
+                    $m->subject($mailer['sub']);
                 });
 
                 /*
