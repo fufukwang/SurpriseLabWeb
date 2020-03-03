@@ -52,7 +52,7 @@
                         
                             <div style="text-align: center;"><span style="font-size:13px">H i _</span></div>
 
-<div style="text-align: center;"><span style="font-size:13px">以 下 體 驗 時 段 已 為 你 保 留 ：</span><br>
+<div style="color:#00ffff;text-align: center;"><span style="font-size:13px">以 下 體 驗 時 段 已 為 你 保 留 ：</span><br>
 <br>
 <span style="font-size:13px"><span style="color:#000000"><span style="background-color:#00FFFF">&nbsp; 體 驗 日 期 ：{{ $day }}</span></span><br>
 <br>
@@ -134,8 +134,8 @@
 
                             &nbsp;&nbsp;</span></span>」抵達以下地址：</span><br>
 <br>
-<span style="font-size:16px"><strong>台 北 市 復 興 南&nbsp;路 一 段 2 號</strong></span><br>
-<span style="font-size:13px">（ 八德路與復興南路十字路口，靠近匯豐銀行&nbsp;）</span><br>
+<span style="font-size:16px"><strong style="color:#00ffff;">台 北 市 復 興 南&nbsp;路 一 段 2 號</strong></span><br>
+<span style="font-size:13px;color:#00ffff;">（ 八德路與復興南路十字路口，靠近匯豐銀行&nbsp;）</span><br>
 &nbsp;</div>
 
                         </td>
