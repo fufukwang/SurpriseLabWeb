@@ -127,7 +127,12 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #00FFFF;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;text-align: center;">
                         
-                            <div style="text-align: center;"><span style="font-size:13px">請「<span style="background-color:#00FFFF">&nbsp;&nbsp;</span><span style="color:#000000"><span style="background-color:#00FFFF">準時／提早 10 分鐘&nbsp;&nbsp;</span></span>」抵達以下地址：</span><br>
+                            <div style="text-align: center;"><span style="font-size:13px">請「<span style="background-color:#00FFFF">&nbsp;&nbsp;</span><span style="color:#000000"><span style="background-color:#00FFFF">
+@if($time=='1 8 : 3 0' || $time=='1 9 : 0 0' || $time=='1 3 : 0 0')提早 10 分鐘@else準時@endif
+
+
+
+                            &nbsp;&nbsp;</span></span>」抵達以下地址：</span><br>
 <br>
 <span style="font-size:16px"><strong>台 北 市 復 興 南&nbsp;路 一 段 2 號</strong></span><br>
 <span style="font-size:13px">（ 八德路與復興南路十字路口，靠近匯豐銀行&nbsp;）</span><br>
