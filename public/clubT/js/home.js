@@ -91,12 +91,10 @@ $(document).ready(function () {
             // 計算第三階段已售出總票數
             prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
-
         $.each(data['rewards'], function (index, ticket) {
             // 計算第四階段已售出總票數
-            current_amount = parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+            current_amount = current_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
-
         let sale_progress = (prev_amount + current_amount) / (prev_amount + goal) * 100; // 募款進度
         let rest_tickets = goal - current_amount; // 剩餘可銷售票數
 
