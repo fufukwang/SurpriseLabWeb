@@ -103,9 +103,10 @@
                                     <div class="sticky-table-header fixed-solution"><table id="datatable-buttons" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
+                                                <th><input type="checkbox" id="checkAll"></th>
                                                 <th>序號 / 場次</th>
                                                 <th>資訊</th>
-                                                <th>付款狀態</th>
+                                                <th>付款狀態 / 發票號碼</th>
                                                 <th>餐飲備註</th>
                                                 <th>優惠券</th>
                                                 <th>註記</th>
@@ -116,6 +117,7 @@
                                         <tbody>
 @forelse ($order as $row)
                                             <tr id="tr_{{ $row->id }}">
+                                                <td>@if($row->pay_status=='已付款')<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
                                                 <td>{{ $row->sn }}<br />{{ $row->day }}<br />{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
@@ -157,6 +159,9 @@
                                                     @endif
                                                 </td>
                                                 <td class="actions">
+                                                    @if($row->pay_status=='已付款')
+                                                    <!--button class="btn btn-info btn-xs">發票開立</button><br /><br /-->
+                                                    @endif
                                                     <a class="btn btn-primary btn-xs" href="/clubtomorrow/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
@@ -168,6 +173,11 @@
 
 
                                         </tbody>
+                                        <!--tfoot>
+                                            <tr>
+                                                <td colspan="9"><button class="btn btn-info">B2C 發票開立</button></td>
+                                            </tr>
+                                        </tfoot-->
                                     </table>
 
                                     <div align="center">{{ $order->appends(Request::capture()->except('page'))->links() }}</div>
@@ -195,8 +205,73 @@
                 </div>
 
 
-
-
+<!--button class="btn btn-primary waves-effect waves-light m-t-10" data-toggle="modal" data-target="#con-close-modal">Responsive Modal</button-->
+                            <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title">開立發票</h4>
+                                        </div>
+                                        <div class="modal-body"><form autocomplete="off">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">發票類型</label><br>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="Category" id="B2B" value="B2B">
+                                <label for="B2B"> B2B </label>
+                            </div>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="Category" id="B2C" value="B2C" checked>
+                                <label for="B2C"> B2C </label>
+                            </div>
+                                                      
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">訂單編號</label>
+                                                        <input type="text" class="form-control" placeholder="訂單編號" readonly value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="field-4" class="control-label">City</label>
+                                                        <input type="text" class="form-control" id="field-4" placeholder="Boston">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="field-5" class="control-label">Country</label>
+                                                        <input type="text" class="form-control" id="field-5" placeholder="United States">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="field-6" class="control-label">Zip</label>
+                                                        <input type="text" class="form-control" id="field-6" placeholder="123456">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group no-margin">
+                                                        <label for="field-7" class="control-label">Personal Info</label>
+                                                        <textarea class="form-control autogrow" id="field-7" placeholder="Write something about yourself" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form></div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">關閉</button>
+                                            <button type="button" class="btn btn-info waves-effect waves-light">確認開立發票</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal -->
 
 
                 <!-- Footer -->
@@ -260,6 +335,9 @@
 
 
 $(function(){
+    $('#checkAll').bind('click', function() {
+        $('input[name="id[]"]').prop('checked', $(this).prop('checked'));
+    });
     $('input[name="dayrange"]').daterangepicker({
         locale: {
           format: 'YYYY-MM-DD'

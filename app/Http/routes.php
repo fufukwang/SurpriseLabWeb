@@ -16,6 +16,8 @@ if(App::environment('local')) {
     $url = 'suprise';
 }else if(App::environment('tester')) {
     $url = 'hellokiki.info';
+}else if(App::environment('dev')) {
+    $url = 'dev.surpriselab.com.tw';
 }else if(App::environment('production')) {
     $url = 'surpriselab.com.tw';
 }else {

@@ -388,7 +388,7 @@
                             <div class="section-subtitle">TICKET</div>
 
                             <p class="section-paragraph">
-                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 03/19-04/12 之場次
+                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 03/19-03/29 之場次
                             </p>
 
                             <div class="ticket-type">
@@ -500,14 +500,14 @@
                         <div class="col-sm-6 offset-sm-3 col-10 offset-1">
                             <div class="schedule-wrapper">
                                 <div class="schedule-inner">
-                                    <div class="schedule-item">
+                                    <!--div class="schedule-item">
                                         <div class="schedule-title">
                                             03/03（二）
                                         </div>
                                         <div class="schedule-content">
                                             寄送劃位信 — 02/24到03/02晚上18:00前購票者
                                         </div>
-                                    </div>
+                                    </div-->
                                     <div class="schedule-item">
                                         <div class="schedule-title">
                                             03/10（二）
@@ -522,6 +522,14 @@
                                         </div>
                                         <div class="schedule-content">
                                             寄送劃位信 — 03/09到03/16晚上18:00前購票者
+                                        </div>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="schedule-title">
+                                            03/24 (二)
+                                        </div>
+                                        <div class="schedule-content">
+                                            寄送劃位信 — 03/16 到 03/23 晚上18:00前購票者
                                         </div>
                                     </div>
                                 </div>
@@ -546,14 +554,14 @@
                             <div class="time-slots-wrapper">
                                 <div class="time-slots-inner">
                                     <div class="time-slots-row">
-                                        <div class="time-slots-item">
+                                        <!--div class="time-slots-item">
                                             <div class="time-slots-title">
                                                 週四
                                             </div>
                                             <div class="time-slots-content">
                                                 18:30 | 20:30
                                             </div>
-                                        </div>
+                                        </div-->
                                         <div class="time-slots-item">
                                             <div class="time-slots-title">
                                                 週五
@@ -629,7 +637,7 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售 03/19-04/12 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
+                                        * 現正預售 03/19-03/29 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
