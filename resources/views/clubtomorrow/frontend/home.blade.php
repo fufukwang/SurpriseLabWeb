@@ -526,10 +526,10 @@
                                     </div>
                                     <div class="schedule-item">
                                         <div class="schedule-title">
-                                            03/24 (二)
+                                            03/24（二）
                                         </div>
                                         <div class="schedule-content">
-                                            寄送劃位信 — 03/16 到 03/23 晚上18:00前購票者
+                                            寄送劃位信 — 03/16到03/23晚上18:00前購票者
                                         </div>
                                     </div>
                                 </div>
