@@ -99,7 +99,7 @@
                                             </div>
 
                                         </form></div>
-                                    </div><div class="table-responsive" data-pattern="priority-columns">
+                                    </div><div class="table-responsive" data-pattern="priority-columns"><form action="/clubtomorrow/order/inv/mult/open" method="post">{!! csrf_field() !!}
                                     <div class="sticky-table-header fixed-solution"><table id="datatable-buttons" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
@@ -116,18 +116,71 @@
                                         </thead>
                                         <tbody>
 @forelse ($order as $row)
+    <?php 
+        $coupons = App\model\club\coupon::where('o_id',$row->sn)->get();
+        $coupon_pople = 0;
+        $tmp_b_id = 0;
+        $totle_money = 0;
+        $inv_open = false;
+        $last_four = '';
+        if($coupons){
+            foreach($coupons as $coup){
+                $single_money = App\model\club\backme::select('money')->find($coup->b_id)->money;
+                if($tmp_b_id != $coup->b_id){
+                    $tmp_b_id = $coup->b_id;
+                    $totle_money += $single_money;
+                }
+                if($coup->type == 'p1'){ $coupon_pople += 1; } elseif ($coup->type == 'p4') { $coupon_pople += 4; } elseif ($coup->type == 'p10') { $coupon_pople += 10; }
+            }
+            // 這裡取得貝殼過來的後四碼
+            $last_four = App\model\club\backme::select('last_four')->find($coup->b_id)->last_four;
+        } else {
+            $totle_money = $row->OM;
+            if($row->pay_type == '信用卡'){
+                if($row->result !=''){
+                    $card_info = json_decode($row->result);
+                    if(isset($card_info->status) && $card_info->status==0){
+                        $last_four = $card_info->card_info->last_four;
+                    }
+                }
+                  
+            }
+        }
+        $number = App\model\club\inv::select('number','is_cancal')->where('order_id',$row->id)->first();
+        if($number){
+            $inv_open = true;
+        }
+    ?>
+
                                             <tr id="tr_{{ $row->id }}">
-                                                <td>@if($row->pay_status=='已付款')<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
+                                                <td>@if($row->pay_status=='已付款' && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
                                                 <td>{{ $row->sn }}<br />{{ $row->day }}<br />{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
                                                 <td>name:{{ $row->name }}<br/>phone:{{ $row->dial_code }} {{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />素食:{{ $row->vegetarian }}人 不酒:{{ $row->no_alcohol }}人</td>
                                                 <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @elseif($row->pay_status=='更改場次')info @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
-@if($row->is_overseas) <br />海外刷卡 @endif
+                @if($row->is_overseas) <br />海外刷卡 @endif <br />
+<span id="inv_{{ $row->id }}">{{ $inv_open ? $number->number : '' }}</span> 
+@if($inv_open)
+    @if(!$number->is_cancal)
+        <a class="btn btn-danger btn-xs remove-inv" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+    @else
+        (已報廢)
+    @endif
+@endif
+
+
+
                                                 </td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
-                                                <th>@forelse(App\model\club\coupon::where('o_id',$row->sn)->get() as $coup)@if($coup->type=='p1')單人票@elseif($coup->type=='p4')四人票@elseif($coup->type=='p10')十人票@endif {{ $coup->code }} [<span data-toggle="tooltip" title="{{App\model\club\backme::select('detail')->find($coup->b_id)->detail}}">{{App\model\club\backme::select('money')->find($coup->b_id)->money}}</span>]<br >@empty 
-@if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse</th>
+    <th>@forelse($coupons as $coup)
+            @if($coup->type=='p1')單人票@elseif($coup->type=='p4')四人票@elseif($coup->type=='p10')十人票
+            @endif {{ $coup->code }} [<span data-toggle="tooltip" title="{{App\model\club\backme::select('detail')->find($coup->b_id)->detail}}">{{ $single_money}}</span>]<br >@empty 
+@if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}]@else 無使用優惠券 @endif @endforelse 
+@if($row->pay_status=='已付款' && $totle_money>0)
+    <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{$totle_money-round($totle_money*5/100)}}<br>稅額：{{round($totle_money*5/100)}}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
+@endif
+</th>
                                                 <td>{!! nl2br($row->manage) !!}</td>
 
                                                 {{--
@@ -160,10 +213,10 @@
                                                 </td>
                                                 <td class="actions">
                                                     @if($row->pay_status=='已付款')
-                                                    <!--button class="btn btn-info btn-xs">發票開立</button><br /><br /-->
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/clubtomorrow/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
-                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                    <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
 @empty
@@ -173,15 +226,15 @@
 
 
                                         </tbody>
-                                        <!--tfoot>
+                                        <tfoot>
                                             <tr>
-                                                <td colspan="9"><button class="btn btn-info">B2C 發票開立</button></td>
+                                                <td colspan="9"><button type="submit" class="btn btn-info">B2C 發票開立</button> <br/><span> 開立稅額 5% B2C 發票可於[發票資訊] 中預覽金額是否正確</span></td>
                                             </tr>
-                                        </tfoot-->
+                                        </tfoot>
                                     </table>
 
                                     <div align="center">{{ $order->appends(Request::capture()->except('page'))->links() }}</div>
-                                </div></div>
+                                </div></form></div>
 
                             </div>
                             
@@ -205,7 +258,6 @@
                 </div>
 
 
-<!--button class="btn btn-primary waves-effect waves-light m-t-10" data-toggle="modal" data-target="#con-close-modal">Responsive Modal</button-->
                             <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -214,6 +266,7 @@
                                             <h4 class="modal-title">開立發票</h4>
                                         </div>
                                         <div class="modal-body"><form autocomplete="off">
+                                            <input type="hidden" id="inv_use_id">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
@@ -232,46 +285,242 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label">訂單編號</label>
-                                                        <input type="text" class="form-control" placeholder="訂單編號" readonly value="">
+                                                        <input type="text" class="form-control" placeholder="訂單編號" name="MerchantOrderNo" readonly value="">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-4">
+                                                <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="field-4" class="control-label">City</label>
-                                                        <input type="text" class="form-control" id="field-4" placeholder="Boston">
+                                                        <label for="BuyerName" class="control-label">買受人名稱</label>
+                                                        <input type="text" name="BuyerName" class="form-control" id="BuyerName" placeholder="買受人名稱">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-6 b2b">
                                                     <div class="form-group">
-                                                        <label for="field-5" class="control-label">Country</label>
-                                                        <input type="text" class="form-control" id="field-5" placeholder="United States">
+                                                        <label for="BuyerUBN" class="control-label">買受人統編</label>
+                                                        <input type="text" name="BuyerUBN" class="form-control" id="BuyerUBN" placeholder="買受人統編">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="field-6" class="control-label">Zip</label>
-                                                        <input type="text" class="form-control" id="field-6" placeholder="123456">
+                                                        <label for="BuyerEmail" class="control-label">買受人E-Mail</label>
+                                                        <input type="email" name="BuyerEmail" class="form-control" id="BuyerEmail" placeholder="買受人E-Mail">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="BuyerPhone" class="control-label">買受人手機</label>
+                                                        <input type="text" name="BuyerPhone" class="form-control" id="BuyerPhone" placeholder="買受人手機">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row b2c">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">是否捐贈</label><br>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="forlovecode" id="nolove" value="no" checked>
+                                <label for="nolove"> 不捐贈 </label>
+                            </div>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="forlovecode" id="yeslove" value="yes">
+                                <label for="yeslove"> 捐贈 </label>
+                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group loveyes">
+                                                        <label for="LoveCode" class="control-label">捐贈碼</label>
+                                                        <input type="text" class="form-control" name="LoveCode" id="LoveCode" placeholder="捐贈碼">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row b2c loveno">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label">載具類型</label><br>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="CarrierType" id="ct0" value="0" >
+                                <label for="ct0"> 手機條碼 </label>
+                            </div>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="CarrierType" id="ct1" value="1">
+                                <label for="ct1"> 自然人憑證條碼 </label>
+                            </div>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="CarrierType" id="ct2" value="2">
+                                <label for="ct2"> ezPay電子發票載具 </label>
+                            </div>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="CarrierType" id="ct" value="" checked>
+                                <label for="ct"> 無載具 </label>
+                            </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row ctyes loveno">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="CarrierNum" class="control-label">載具號碼</label>
+                                                        <input type="text" class="form-control" name="CarrierNum" id="CarrierNum" placeholder="載具號碼">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <div class="form-group no-margin">
-                                                        <label for="field-7" class="control-label">Personal Info</label>
-                                                        <textarea class="form-control autogrow" id="field-7" placeholder="Write something about yourself" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                                                    <table id="datatable-buttons" class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>品名</th>
+                                                <th>數量</th>
+                                                <th>單位</th>
+                                                <th>單價<span class="b2c">(含稅)</span></th>
+                                                <th>金額<span class="b2c">(含稅)</span></th>
+                                            </tr>
+                                            <tr>
+                                                <td>明日俱樂部票券</td>
+                                                <td id="inv_people"></td>
+                                                <td>張</td>
+                                                <td id="inv_price"></td>
+                                                <td id="inv_amt"></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <div class="form-group">
+                                                        <label class="control-label">課稅別</label><br>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="TaxType" id="taxyes" value="1" checked>
+                                <label for="taxyes"> 應稅 </label>
+                            </div>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="TaxType" id="tax0" value="2">
+                                <label for="tax0"> 零稅率 </label>
+                            </div>
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" name="TaxType" id="taxno" value="3">
+                                <label for="taxno"> 免稅 </label>
+                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="TaxRate" class="control-label">稅率(%)</label>
+                                                        <input type="number" class="form-control" readonly name="TaxRate" id="TaxRate" value="5" placeholder="稅率(%)">
                                                     </div>
                                                 </div>
                                             </div>
+
+
+
+
+                                            
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="Amt" class="control-label">銷售額總計</label>
+                                                        <input type="number" class="form-control" id="Amt" placeholder="銷售額總計">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="TaxAmt" class="control-label">稅額</label>
+                                                        <input type="number" class="form-control" name="TaxAmt" id="TaxAmt" placeholder="稅額">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="TotalAmt" class="control-label">總計</label>
+                                                        <input type="number" class="form-control" name="TotalAmt" readonly id="TotalAmt" placeholder="總計">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="Comment" class="control-label">備註</label>
+                                                        <input type="text" class="form-control" name="Comment" id="Comment" placeholder="備註">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
                                         </form></div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">關閉</button>
-                                            <button type="button" class="btn btn-info waves-effect waves-light">確認開立發票</button>
+                                            <button type="button" class="btn btn-info waves-effect waves-light" id="sent_inv_open">確認開立發票</button>
                                         </div>
                                     </div>
                                 </div>
                             </div><!-- /.modal -->
+
+
+
+
+
+
+
+
+
+
+
+                            <div id="inv_cancal_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title">作廢發票</h4>
+                                        </div>
+                                        <div class="modal-body"><form autocomplete="off">
+                                            <input type="hidden" id="inv_cancal_id">
+                                            
+                                            
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="inv_number" class="control-label">發票號碼</label>
+                                                        <input type="text" class="form-control" id="inv_number" readonly placeholder="發票號碼">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="inv_cancal_note" class="control-label">作廢原因</label>
+                                                        <input type="text" class="form-control" required="true" name="inv_cancal_note" id="inv_cancal_note" placeholder="作廢原因">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </form></div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">關閉</button>
+                                            <button type="button" class="btn btn-info waves-effect waves-light" id="sent_inv_cancal">確認作廢發票</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal -->
+
+
+
+
+
+
+
 
 
                 <!-- Footer -->
@@ -352,7 +601,7 @@ $(function(){
         $('input[name=dayend]').val(end.format('YYYY-MM-DD') );
         //alert("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
-    $('.btn-danger').bind('click',function(){
+    $('.remove-order').bind('click',function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此訂單")) {
              $.ajax({
@@ -429,7 +678,6 @@ $(function(){
         var day      = $('input[name=day]').val();
         var dayparts = $('select[name=dayparts]').val();
         if(day == '' || dayparts == ''){
-            console.log('test');
             if(confirm("尚未選擇日期或時段確定要產生此表格?!")){
                 submitSearchForm();
             }
@@ -446,8 +694,168 @@ $(function(){
             submitXLSForm();
         }
     })
+    shb2c();shlove();shcarr();taxchange();
+    // 預設開關
+    $('input[name="Category"]').bind('click',function(){ shb2c(); });
+    $('input[name="forlovecode"]').bind('click',function(){ shlove(); });
+    $('input[name="CarrierType"]').bind('click',function(){ shcarr(); });
+    $('input[name="TaxType"]').bind('click',function(){ taxchange(); });
 
+    // 取得發票需要的訂單資料
+    $('.inv_btn').bind('click',function(){
+        var id = $(this).data('id');
+        
+        var dial = $(this).data('dial');
+        var phone = dial.replace('+886','0') + $(this).data('phone');
+        var totle_money = $(this).data('totle_money');
+        var people = $(this).data('people');
+
+        $('input[name="MerchantOrderNo"]').val($(this).data('sn'));
+        $('#BuyerName').val($(this).data('buyername'));
+        $('#BuyerEmail').val($(this).data('buyeremail'));
+        $('#BuyerPhone').val(phone);
+        $("#B2C").prop( "checked", true );
+        $("#ct").prop( "checked", true );
+        $("#nolove").prop( "checked", true );
+        $('#LoveCode,#CarrierNum,#BuyerUBN').val('');
+        $('#Comment').val($(this).data('last_four'));
+        $('#TotalAmt').val(totle_money);
+        $('#inv_people').text(people);
+        $('#inv_price').text(totle_money/people);
+        $('#inv_amt').text(totle_money);
+        $('#inv_use_id').val(id);
+
+        var now_tax = Math.round(totle_money*5/100);
+        $('#TaxAmt').val(now_tax);
+        $('#Amt').val(totle_money - now_tax);
+        $('#con-close-modal').modal('show');
+        shb2c();shlove();shcarr();taxchange();calAmt();
+    });
+    // 送出發票資料
+    $('#sent_inv_open').bind('click',function(){
+        var id = $('#inv_use_id').val();
+        $.post('/clubtomorrow/order/inv/single/open',{
+            'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
+            'BuyerName' : $('#BuyerName').val(),
+            'BuyerUBN' : $('#BuyerUBN').val(),
+            'BuyerPhone' : $('#BuyerPhone').val(),
+            'BuyerEmail' : $('#BuyerEmail').val(),
+            'Category' : $('input[name="Category"]:checked').val(),
+            'TaxType' : $('input[name="TaxType"]:checked').val(),
+            'TaxRate': $('#TaxRate').val(),
+            'Amt' : $('#Amt').val(),
+            'TaxAmt' : $('#TaxAmt').val(),
+            'TotalAmt' : $('#TotalAmt').val(),
+            'CarrierType' : $('input[name="CarrierType"]:checked').val(),
+            'CarrierNum' : $('#CarrierNum').val(),
+            'LoveCode' : $('#LoveCode').val(),
+            'ItemName' : '明日俱樂部票券',
+            'ItemCount' : $('#inv_people').text(),
+            'ItemUnit' : '張',
+            'ItemPrice' : $('#inv_price').text(),
+            'ItemAmt' : $('#inv_amt').text(),
+            'Comment' : $('#LoveCode').val(),
+            'id' : id
+        },function(data){
+            // 顯示發票號碼
+            if(data.Status == 'SUCCESS'){
+                var result = JSON.parse(data.Result);
+                $('#inv_'+id).text(result.InvoiceNumber);
+                $('#con-close-modal').modal('hide');
+                $.Notification.notify('success','bottom left','發票已建立', '發票已建立');
+                $('.inv_btn[data-id='+id+']').remove();
+                $('input[checkbox][value='+id+']').remove();
+            } else {
+                $.Notification.notify('error','bottom left','請聯繫資訊人員', '發票建立失敗');
+            }
+            
+            
+        },'json');
+    });
+
+    // 報廢訂單確認視窗
+    $('.remove-inv').bind('click',function(){
+        var id = $(this).data('id');
+        $('#inv_cancal_id').val(id);
+        $('#inv_cancal_note').val('');
+        $('#inv_number').val($('#inv_'+id).text());
+        $('#inv_cancal_modal').modal('show');
+    });
+    $('#sent_inv_cancal').bind('click',function(){
+        var id = $('#inv_cancal_id').val();
+        if($('#inv_cancal_note').val()!=''){
+            $.post('/clubtomorrow/order/inv/cancal',{
+                'InvoiceNumber' : $('#inv_number').val(),
+                'InvalidReason' : $('#inv_cancal_note').val(),
+                'id' : id
+            },function(data){
+                // 顯示發票號碼
+                if(data.Status == 'SUCCESS'){
+                    var result = JSON.parse(data.Result);
+                    $('#inv_cancal_modal').modal('hide');
+                    $.Notification.notify('success','bottom left','發票已作廢', '發票已作廢');
+                    $('.remove-inv[data-id='+id+']').remove();
+                } else {
+                    $.Notification.notify('error','bottom left','請聯繫資訊人員', '發票作廢失敗');
+                }
+            },'json');
+        } else {
+            $.Notification.notify('error','bottom left','請輸入作廢的原因', '發票作廢失敗');
+        }
+    });
 });
+
+function shb2c(){
+    if($('input[name="Category"]:checked').val() == 'B2C'){
+        $('.b2b').hide();
+        $('.b2c').show();
+    } else {
+        $('.b2c').hide();
+        $('.b2b').show();
+    }
+    calAmt();
+}
+function shlove(){
+    if($('input[name="forlovecode"]:checked').val() == 'yes'){
+        $('.loveyes').show();
+        $('.loveno').hide();
+    } else {
+        $('.loveyes').hide();
+        $('.loveno').show();
+    }
+}
+function shcarr(){
+    if($('input[name="CarrierType"]:checked').val() == ''){
+        $('.ctyes').hide();
+    } else {
+        $('.ctyes').show();
+    }
+}
+function taxchange(){
+    if($('input[name="TaxType"]:checked').val() == 1){
+        $('#TaxRate').val(5);
+    } else {
+        $('#TaxRate').val(0);
+    }
+    calAmt();
+}
+// 重算稅額
+function calAmt(){
+    var taxrate = $('#TaxRate').val();
+    var people = $('#inv_people').text();
+    var totleamt = $('#TotalAmt').val();
+    var now_tax = Math.round(totleamt*taxrate/100);
+    $('#TaxAmt').val(now_tax);
+    $('#Amt').val(totleamt - now_tax);
+    if($('input[name="Category"]:checked').val() == 'B2C'){
+        $('#inv_price').text(totleamt / people);
+        $('#inv_amt').text(totleamt);
+    } else {
+        $('#inv_price').text((totleamt - now_tax) / people);
+        $('#inv_amt').text(totleamt - now_tax);
+    }
+}
+
 function submitXLSForm(){
     $('#SearchForm').attr('target','_blank')
     $('#SearchForm').attr('action','/clubtomorrow/xls/data/output')

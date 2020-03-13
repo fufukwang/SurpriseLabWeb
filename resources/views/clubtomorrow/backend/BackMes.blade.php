@@ -169,6 +169,7 @@
                                             email 信箱<br />
                                             tel 電話<br />
                                             sponsor_id 贊助者ID<br />
+                                            last_four 刷卡後四碼<br />
                                             p1 單人票<br />
                                             p4 四人票<br />
                                             p10 十人票<br />

@@ -581,7 +581,7 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = order::leftJoin('club_pro', 'club_pro.id', '=', 'club_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','dial_code','discount','vegetarian','no_alcohol');
+        $order = $order->select('rang_start','rang_end','name','tel','notes','club_order.manage','club_pro.money AS PM','club_order.money AS OM','club_order.created_at AS created_at','club_order.pay_status','email','club_order.sn','club_order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','dial_code','discount','vegetarian','no_alcohol','result');
 
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
@@ -837,6 +837,7 @@ class BackController extends Controller
                             'email'      => $row['email'],
                             'tel'        => $row['tel'],
                             'sponsor_id' => $row['sponsor_id'],
+                            'last_four'  => $row['last_four'],
                             'p1'         => $row['p1'],
                             'p4'         => $row['p4'],
                             'p10'        => $row['p10'],

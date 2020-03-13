@@ -255,6 +255,11 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('xls/emaildata/output','clubT\BackController@XlsEmailDataOuput');
         Route::post('order/{id}/resent','clubT\BackController@beSentOrderMail');
         Route::post('order/{id}/resent12','clubT\BackController@beSentOrderMail12');
+
+        // 發票相關
+        Route::post('order/inv/single/open','clubT\InvController@singleInvOpne');
+        Route::post('order/inv/mult/open','clubT\InvController@muInvOpen');
+        Route::post('order/inv/cancal','clubT\InvController@InvClose');
     });
 });
 
