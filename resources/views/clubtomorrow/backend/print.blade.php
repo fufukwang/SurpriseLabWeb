@@ -441,7 +441,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="TotalAmt" class="control-label">總計</label>
-                                                        <input type="number" class="form-control" name="TotalAmt" readonly id="TotalAmt" placeholder="總計">
+                                                        <input type="number" class="form-control" name="TotalAmt" id="TotalAmt" placeholder="總計">
                                                     </div>
                                                 </div>
                                             </div>
@@ -700,7 +700,7 @@ $(function(){
     $('input[name="forlovecode"]').bind('click',function(){ shlove(); });
     $('input[name="CarrierType"]').bind('click',function(){ shcarr(); });
     $('input[name="TaxType"]').bind('click',function(){ taxchange(); });
-
+    $('#TotalAmt').bind('keyup',function(){ calAmt(); })
     // 取得發票需要的訂單資料
     $('.inv_btn').bind('click',function(){
         var id = $(this).data('id');
@@ -733,44 +733,48 @@ $(function(){
     });
     // 送出發票資料
     $('#sent_inv_open').bind('click',function(){
-        var id = $('#inv_use_id').val();
-        $.post('/clubtomorrow/order/inv/single/open',{
-            'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
-            'BuyerName' : $('#BuyerName').val(),
-            'BuyerUBN' : $('#BuyerUBN').val(),
-            'BuyerPhone' : $('#BuyerPhone').val(),
-            'BuyerEmail' : $('#BuyerEmail').val(),
-            'Category' : $('input[name="Category"]:checked').val(),
-            'TaxType' : $('input[name="TaxType"]:checked').val(),
-            'TaxRate': $('#TaxRate').val(),
-            'Amt' : $('#Amt').val(),
-            'TaxAmt' : $('#TaxAmt').val(),
-            'TotalAmt' : $('#TotalAmt').val(),
-            'CarrierType' : $('input[name="CarrierType"]:checked').val(),
-            'CarrierNum' : $('#CarrierNum').val(),
-            'LoveCode' : $('#LoveCode').val(),
-            'ItemName' : '明日俱樂部票券',
-            'ItemCount' : $('#inv_people').text(),
-            'ItemUnit' : '張',
-            'ItemPrice' : $('#inv_price').text(),
-            'ItemAmt' : $('#inv_amt').text(),
-            'Comment' : $('#LoveCode').val(),
-            'id' : id
-        },function(data){
-            // 顯示發票號碼
-            if(data.Status == 'SUCCESS'){
-                var result = JSON.parse(data.Result);
-                $('#inv_'+id).text(result.InvoiceNumber);
-                $('#con-close-modal').modal('hide');
-                $.Notification.notify('success','bottom left','發票已建立', '發票已建立');
-                $('.inv_btn[data-id='+id+']').remove();
-                $('input[checkbox][value='+id+']').remove();
-            } else {
-                $.Notification.notify('error','bottom left','請聯繫資訊人員', '發票建立失敗');
-            }
-            
-            
-        },'json');
+        if($('#Amt').val() + $('#TaxAmt').val() == $('#TotalAmt').val()){
+            var id = $('#inv_use_id').val();
+            $.post('/clubtomorrow/order/inv/single/open',{
+                'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
+                'BuyerName' : $('#BuyerName').val(),
+                'BuyerUBN' : $('#BuyerUBN').val(),
+                'BuyerPhone' : $('#BuyerPhone').val(),
+                'BuyerEmail' : $('#BuyerEmail').val(),
+                'Category' : $('input[name="Category"]:checked').val(),
+                'TaxType' : $('input[name="TaxType"]:checked').val(),
+                'TaxRate': $('#TaxRate').val(),
+                'Amt' : $('#Amt').val(),
+                'TaxAmt' : $('#TaxAmt').val(),
+                'TotalAmt' : $('#TotalAmt').val(),
+                'CarrierType' : $('input[name="CarrierType"]:checked').val(),
+                'CarrierNum' : $('#CarrierNum').val(),
+                'LoveCode' : $('#LoveCode').val(),
+                'ItemName' : '明日俱樂部票券',
+                'ItemCount' : $('#inv_people').text(),
+                'ItemUnit' : '張',
+                'ItemPrice' : $('#inv_price').text(),
+                'ItemAmt' : $('#inv_amt').text(),
+                'Comment' : $('#LoveCode').val(),
+                'id' : id
+            },function(data){
+                // 顯示發票號碼
+                if(data.Status == 'SUCCESS'){
+                    var result = JSON.parse(data.Result);
+                    $('#inv_'+id).text(result.InvoiceNumber);
+                    $('#con-close-modal').modal('hide');
+                    $.Notification.notify('success','bottom left','發票已建立', '發票已建立');
+                    $('.inv_btn[data-id='+id+']').remove();
+                    $('input[checkbox][value='+id+']').remove();
+                } else {
+                    $.Notification.notify('error','bottom left','請聯繫資訊人員', '發票建立失敗');
+                }
+                
+                
+            },'json');
+        } else {
+            $.Notification.notify('error','bottom left','金額錯誤', '發票建立失敗');
+        }
     });
 
     // 報廢訂單確認視窗
