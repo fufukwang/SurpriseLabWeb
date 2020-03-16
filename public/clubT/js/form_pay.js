@@ -457,7 +457,7 @@ function updateDatePicker() {
             booking_date.datepicker("destroy");
             booking_date.datepicker({
                 minDate:0,
-                maxDate:"2020-03-15",
+                maxDate:"+14d",
                 dateFormat: 'yy-mm-dd', 
                 beforeShowDay: enableAllTheseDays
             });
