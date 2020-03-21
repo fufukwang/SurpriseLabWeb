@@ -448,14 +448,13 @@
                 </div>
             </section>
 
-            <!-- 選擇票券 -->
-            <section id="ticketSec" class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-type" data-section-name="Ticket" data-aos="fade">
+            <!-- 預售說明 -->
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="TicketAbout" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="section-title">成為玩家</h2>
-                            <div class="section-subtitle">TICKET</div>
-
+                            <h2 class="section-title">預售說明</h2>
+                            <div class="section-subtitle">ABOUT</div>
                             <p class="section-paragraph">
                                 受現實世界之影響<br/>
                                 《明日俱樂部》的入口暫時關閉<br/>
@@ -465,14 +464,28 @@
                                 <br/>
                                 若05/31 前能招募 1500 位玩家<br/>
                                 《明日俱樂部》將於疫情穩定後再次開啟<br/>
-                                <br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 選擇票券 -->
+            <section id="ticketSec" class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-type" data-section-name="Ticket" data-aos="fade">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="section-title">成為玩家</h2>
+                            <div class="section-subtitle">TICKET</div>
+
+                            <p class="section-paragraph">
                                 點入下方票卷，選擇數量付費後完成購票
                                 <!-- 點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 03/19-03/29 之場次 -->
                             </p>
 
                             <div class="ticket-type">
                                 <div class="type-item type-single-player">
-                                    <a href="https://surpriselab.backme.tw/checkout/1241/8760?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1255/8949?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_1.png" alt="單人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_1_mobile@2x.png" alt="單人票">
@@ -483,7 +496,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-4">
-                                    <a href="https://surpriselab.backme.tw/checkout/1241/8761?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1255/8950?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_2.png" alt="四人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_2_mobile@2x.png" alt="四人票">
@@ -495,7 +508,7 @@
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-10">
-                                    <a href="https://surpriselab.backme.tw/checkout/1241/8762?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
+                                    <a href="https://surpriselab.backme.tw/checkout/1255/8951?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_3.png" alt="十人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_3_mobile@2x.png" alt="十人票">
