@@ -2619,7 +2619,7 @@ header {
   z-index: 999999;
 
   .modal-dialog {
-    max-width: 536px;
+    max-width: 812px;
   }
 
   .modal-content {
@@ -2684,7 +2684,7 @@ header {
   }
 
   .modal-text {
-    padding: 5px 10px;
+    padding: 60px 100px;
   }
 
   .ticket-wrapper {
@@ -2692,17 +2692,25 @@ header {
     flex-wrap: wrap;
 
     .ticket-item {
-      width: 33.33%;
-      display: flex;
-      justify-content: center;
-      margin-top: 90px;
+      margin-top: 30px;
 
       .ticket-title,
       .ticket-content {
         font-size: 18px;
         letter-spacing: 1.8px;
         line-height: 1.5;
+      }
+
+      .ticket-title {
+        color: $color-bright-blue; 
+      }
+
+      .ticket-content {
         color: $color-bright-green;
+        border: 1px solid $color-bright-green;
+        margin-top: 10px;
+        padding-top: 7px;
+        padding-left: 20px;
       }
     }
   }
@@ -2728,8 +2736,6 @@ header {
 
     .ticket-wrapper {
       .ticket-item {
-        margin-top: 48px;
-
         .ticket-title,
         .ticket-content {
           font-size: 16px;
@@ -2756,17 +2762,13 @@ header {
     }
 
     .modal-text {
-      padding: 0 25px;
+      padding: 50px 40px;
     }
 
     .ticket-wrapper {
       .ticket-item {
-        flex-direction: column;
-        align-items: center;
-
         .ticket-title,
         .ticket-content {
-          margin-top: 6px;
           font-size: 14px;
           letter-spacing: 1.4px;
         }
@@ -2801,14 +2803,8 @@ header {
       }
     }
 
-    .modal-text {
-      padding: 0 20px;
-    }
-
     .ticket-wrapper {
       .ticket-item {
-        margin-top: 30px;
-
         .ticket-title,
         .ticket-content {
           font-size: 12px;

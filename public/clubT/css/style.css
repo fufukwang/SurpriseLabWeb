@@ -3078,7 +3078,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #ticketDetail .modal-dialog {
-  max-width: 536px;
+  max-width: 812px;
 }
 
 #ticketDetail .modal-content {
@@ -3153,7 +3153,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #ticketDetail .modal-text {
-  padding: 5px 10px;
+  padding: 60px 100px;
 }
 
 #ticketDetail .ticket-wrapper {
@@ -3165,14 +3165,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #ticketDetail .ticket-wrapper .ticket-item {
-  width: 33.33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 90px;
+  margin-top: 30px;
 }
 
 #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
@@ -3180,7 +3173,18 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   font-size: 18px;
   letter-spacing: 1.8px;
   line-height: 1.5;
+}
+
+#ticketDetail .ticket-wrapper .ticket-item .ticket-title {
+  color: #01ffff;
+}
+
+#ticketDetail .ticket-wrapper .ticket-item .ticket-content {
   color: #15ffbc;
+  border: 1px solid #15ffbc;
+  margin-top: 10px;
+  padding-top: 7px;
+  padding-left: 20px;
 }
 
 #ticketDetail .section-paragraph {
@@ -3198,9 +3202,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
   #ticketDetail .modal-text {
     padding: 0 12px;
-  }
-  #ticketDetail .ticket-wrapper .ticket-item {
-    margin-top: 48px;
   }
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
@@ -3223,20 +3224,10 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     padding: 10px 0;
   }
   #ticketDetail .modal-text {
-    padding: 0 25px;
-  }
-  #ticketDetail .ticket-wrapper .ticket-item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding: 50px 40px;
   }
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
-    margin-top: 6px;
     font-size: 14px;
     letter-spacing: 1.4px;
   }
@@ -3263,12 +3254,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
   #ticketDetail .modal-header .close-modal button.close .icon-bar {
     width: 14px;
-  }
-  #ticketDetail .modal-text {
-    padding: 0 20px;
-  }
-  #ticketDetail .ticket-wrapper .ticket-item {
-    margin-top: 30px;
   }
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
