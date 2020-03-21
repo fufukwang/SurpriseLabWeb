@@ -534,7 +534,7 @@
             </section>
 
             <!-- 關於疫情 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid1" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -547,8 +547,19 @@
                                 並採以預售模式，先行預售疫情結束後預計六月七月的票卷。<br/>
                                 <br/>
                                 會有這個決定，一方面是相信著接下來的日子中，疫情將趨於穩定；<br/>
-                                另一方面，團隊也希望更積極地加入防疫陣線。<br/>
-                                <br/>
+                                另一方面，團隊也希望更積極地加入防疫陣線。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid2" data-aos="fade">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="section-title">關於疫情</h2>
+                            <div class="section-subtitle">YOU MIGHT WORRY</div>
+                            <p class="section-paragraph">
                                 但，更重要的是，我們希望在對未來感到焦躁的社會氛圍中，能帶給大家一些能夠期待的事物 ──<br/>
                                 <br/>
                                 比如，期待六月、期待這場體驗、期待與朋友一起進入這世界、<br/>
