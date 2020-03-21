@@ -468,7 +468,7 @@
                                 將於 06/01 透過簡訊及 email 通知<br/>
                                 <br/>
                                 我們了解你可能還有些疑惑<br/>
-                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，快速了解預售機制</a>
+                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，了解更多預售說明</a>
                             </p>
                         </div>
                     </div>
