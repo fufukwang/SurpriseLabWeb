@@ -183,8 +183,7 @@
                             這世界正邁入前所未有的混亂<br/>
                             你，說不定是能結束一切的關鍵人物<br/>
                             <br/>
-                            我非常好奇<br/>
-                            你們，人類們，能終止這場混亂嗎？
+                            我非常好奇，你能終止這場混亂嗎？
                         </p>
                         <div class="entrance-wrapper">
                             <a class="smoothScroll entrance-link fbpx" href="#About" data-event="viewcontent1">
