@@ -3156,14 +3156,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   padding: 60px 100px;
 }
 
-#ticketDetail .ticket-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 #ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
   margin-top: 30px;
 }
@@ -3198,9 +3190,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   #ticketDetail .modal-header {
     font-size: 16px;
     letter-spacing: 1.6px;
-  }
-  #ticketDetail .modal-text {
-    padding: 0 12px;
   }
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {

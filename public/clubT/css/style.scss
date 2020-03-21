@@ -2688,9 +2688,6 @@ header {
   }
 
   .ticket-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-
     .ticket-item {
       &+.ticket-item {
         margin-top: 30px;
@@ -2729,10 +2726,6 @@ header {
     .modal-header {
       font-size: 16px;
       letter-spacing: 1.6px;
-    }
-
-    .modal-text {
-      padding: 0 12px;
     }
 
     .ticket-wrapper {
