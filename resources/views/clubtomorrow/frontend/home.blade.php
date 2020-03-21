@@ -183,7 +183,10 @@
                             這世界正邁入前所未有的混亂<br/>
                             <br/>
                             我很好奇<br/>
-                            你們，人類們，能終止這場混亂嗎？
+                            你們，人類們，能終止這場混亂嗎？<br/>
+                            <br/>
+                            明日俱樂部玩家現正招募中<br/>
+                            你，說不定是能結束一切的關鍵人物。
                         </p>
                         <div class="entrance-wrapper">
                             <a class="smoothScroll entrance-link fbpx" href="#About" data-event="viewcontent1">
@@ -333,7 +336,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="section-title">玩家指南</h2>
+                            <h2 class="section-title">體驗內容</h2>
                             <div class="section-subtitle">EXPERIENCE</div>
                             <div class="exp-wrapper">
                                 <div class="exp-item">
@@ -379,6 +382,74 @@
                 </div>
             </section>
 
+            <!-- 玩家口碑 -->
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-reviews" data-section-name="Reviews" data-aos="fade">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="section-title">玩家口碑</h2>
+                            <div class="section-subtitle">Reviews</div>
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        “ 這是我第一次嘗試沈浸式，完全被震撼，<br/>
+                                        很喜歡這種類似電影情節又深入其境的遊戲體驗。” 
+                                    </div>
+                                    <div class="carousel-item">
+                                        “ 這遊戲和社會有著驚人關聯，<br/>
+                                        是場人性實驗，也是真實世界的縮影。”
+                                    </div>
+                                    <div class="carousel-item">
+                                        “ 喜歡所有人都能改變結局的設定”
+                                    </div>
+                                    <div class="carousel-item">
+                                        “ 後勁太強。” <br/>
+                                        “ 很深刻。 ”
+                                    </div>
+                                    <div class="carousel-item">
+                                        “ 跟朋友進到不同組，原本有點擔心，沒想到看到了更大的世界。<br/>
+                                        但看到朋友變成敵人時，內心真的很複雜。”
+                                    </div>
+                                    <div class="carousel-item">
+                                        “ 我與妹妹面前出現一把槍，<br/>
+                                        在那當下，我們卻只想著要槍斃自己讓對方存活。 ”
+                                    </div>
+                                    <div class="carousel-item">
+                                        “我們的所作所為決定這世界的樣子，沒有人可以置身事外。” 
+                                    </div>
+                                    <div class="carousel-item">
+                                        “ 原本是保持著好玩的心情前來，結束之後完全愛上這種型態的體驗，<br/>
+                                        主角們演出專業、場景佈置很精細，<br/>
+                                        跟不同的人來會有不同的碰撞、不同的效果、不同的結局，真的很有趣。”
+                                    </div>
+                                    <div class="carousel-item">
+                                        “ 感謝製作團隊與所有不管是幕前還是幕後的工作人員，<br/>
+                                        這次的體驗真的很棒。 ”
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            <p class="section-paragraph">
+                                歡迎於社群網站尋找 #明日俱樂部<br/>
+                                一窺先前玩家經歷了什麼<br/>
+                                <br/>
+                                <a class="link-bright-green" href="https://youtu.be/uIp7X2MEXso" target="_blank">
+                                    想了解團隊的過往作品嗎？<br/>
+                                    點此觀看驚喜製造 X 進港浪過往作品《微醺大飯店》
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- 選擇票券 -->
             <section id="ticketSec" class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-type" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
@@ -388,7 +459,17 @@
                             <div class="section-subtitle">TICKET</div>
 
                             <p class="section-paragraph">
-                                點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 03/19-03/29 之場次
+                                受現實世界之影響<br/>
+                                《明日俱樂部》的入口暫時關閉<br/>
+                                <br/>
+                                但，這並不是結束<br/>
+                                《明日俱樂部》是否能重啟，將由玩家共同決定<br/>
+                                <br/>
+                                若05/31 前能招募 1500 位玩家<br/>
+                                《明日俱樂部》將於疫情穩定後再次開啟<br/>
+                                <br/>
+                                點入下方票卷，選擇數量付費後完成購票
+                                <!-- 點入下方票卷，選擇數量付費後完成購票<br/>現在預購，將可選擇 03/19-03/29 之場次 -->
                             </p>
 
                             <div class="ticket-type">
@@ -398,6 +479,9 @@
                                             <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_1.png" alt="單人票">
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_1_mobile@2x.png" alt="單人票">
                                         </div>
+                                        <p class="ticket-state timeLimit">
+                                            此優惠將於 06/01起調回至 $2000/人
+                                        </p>
                                     </a>
                                 </div>
                                 <div class="type-item type-multiplayer-for-4">
@@ -407,7 +491,8 @@
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_2_mobile@2x.png" alt="四人票">
                                         </div>
                                         <p class="ticket-state timeLimit">
-                                            不可分開劃位<span class="d-sm-none d-inline">，</span><br class="d-sm-inline d-none"/>限量 <span class="total-ticket">300</span> 組 | 剩餘 <span class="rest-ticket">XXX</span> 組
+                                            <!-- 不可分開劃位<span class="d-sm-none d-inline">，</span><br class="d-sm-inline d-none"/>限量 <span class="total-ticket">300</span> 組 | 剩餘 <span class="rest-ticket">XXX</span> 組 -->
+                                            此優惠將於 06/01起調回至 $1850/人
                                         </p>
                                     </a>
                                 </div>
@@ -418,13 +503,54 @@
                                             <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_3_mobile@2x.png" alt="十人票">
                                         </div>
                                         <p class="ticket-state timeLimit">
-                                            不可分開劃位<span class="d-sm-none d-inline">，</span><br class="d-sm-inline d-none"/>限量 <span class="total-ticket">50</span> 組 | 剩餘 <span class="rest-ticket">XXX</span> 組
+                                            <!-- 不可分開劃位<span class="d-sm-none d-inline">，</span><br class="d-sm-inline d-none"/>限量 <span class="total-ticket">50</span> 組 | 剩餘 <span class="rest-ticket">XXX</span> 組 -->
+                                            此優惠將於 06/01起調回至 $1750/人
                                         </p>
                                     </a>
                                 </div>
                             </div>
                             <p class="section-paragraph d-sm-block d-none">
-                                訂位採先預購、後劃位之機制<br/>若有包場需求，歡迎來信詢問<br/><br/>詳細劃位時間軸，請見下方「劃位時程」
+                                <!-- 訂位採先預購、後劃位之機制<br/>若有包場需求，歡迎來信詢問<br/><br/>詳細劃位時間軸，請見下方「劃位時程」 -->
+                                劃位時間、可劃位日期與時段<br/>
+                                將於 06/01 透過簡訊及 email 通知<br/>
+                                <br/>
+                                我們了解你可能還有些疑惑<br/>
+                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，快速了解預售機制</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 關於疫情 -->
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid" data-aos="fade">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="section-title">關於疫情</h2>
+                            <div class="section-subtitle">YOU MIGHT WORRY</div>
+                            <p class="section-paragraph">
+                                相信近日的現實社會，讓大家心中時不時感到緊張、擔憂。<br/>
+                                <br/>
+                                也因此，團隊決定暫停《明日俱樂部》四月、五月的演出場次，<br/>
+                                並採以預售模式，先行預售疫情結束後預計六月七月的票卷。<br/>
+                                <br/>
+                                會有這個決定，一方面是相信著接下來的日子中，疫情將趨於穩定；<br/>
+                                另一方面，團隊也希望更積極地加入防疫陣線。<br/>
+                                <br/>
+                                但，更重要的是，我們希望在對未來感到焦躁的社會氛圍中，能帶給大家一些能夠期待的事物 ──<br/>
+                                <br/>
+                                比如，期待六月、期待這場體驗、期待與朋友一起進入這世界、<br/>
+                                期待有朝一日，我們能放下擔憂，再次放鬆且安心地生活。<br/>
+                                <br/>
+                                在接下來的日子中，希望疫情趨於穩定，也希望大家身體都能健健康康的。<br/>
+                                <br/>
+                                團隊也期待著，在《明日俱樂部》大門再次開啟的那一天，能與你見上一面。<br/>
+                                <br/>
+                                明日俱樂部策劃團隊 驚喜製造 Surprise Lab.<br/>
+                                <br/>
+                                對於預售、達標失敗、退費辦法若有任何疑問，<br/>
+                                歡迎前往「<a class="link-bright-green" href="rules.html">俱樂部手冊</a>」了解更多。
                             </p>
                         </div>
                     </div>
@@ -432,7 +558,7 @@
             </section>
 
             <!-- 購票步驟 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-step" data-section-name="Ticket" data-aos="fade">
+            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-step" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -487,10 +613,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- 劃位時程 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-schedule" data-section-name="Ticket" data-aos="fade">
+            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-schedule" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 offset-sm-0 col-10 offset-1">
@@ -500,14 +626,6 @@
                         <div class="col-sm-6 offset-sm-3 col-10 offset-1">
                             <div class="schedule-wrapper">
                                 <div class="schedule-inner">
-                                    <!--div class="schedule-item">
-                                        <div class="schedule-title">
-                                            03/03（二）
-                                        </div>
-                                        <div class="schedule-content">
-                                            寄送劃位信 — 02/24到03/02晚上18:00前購票者
-                                        </div>
-                                    </div-->
                                     <div class="schedule-item">
                                         <div class="schedule-title">
                                             03/10（二）
@@ -540,10 +658,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- 體驗場次 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-time-slots" data-section-name="Ticket" data-aos="fade">
+            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-time-slots" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 offset-sm-0 col-10 offset-1">
@@ -554,14 +672,6 @@
                             <div class="time-slots-wrapper">
                                 <div class="time-slots-inner">
                                     <div class="time-slots-row">
-                                        <!--div class="time-slots-item">
-                                            <div class="time-slots-title">
-                                                週四
-                                            </div>
-                                            <div class="time-slots-content">
-                                                18:30 | 20:30
-                                            </div>
-                                        </div-->
                                         <div class="time-slots-item">
                                             <div class="time-slots-title">
                                                 週五
@@ -598,7 +708,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- 售票狀況 -->
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-status" data-section-name="Ticket" data-aos="fade">
@@ -713,7 +823,7 @@
     </main>
 </div>
 
-<!-- Modal -->
+<!-- Exp Modal -->
 <div class="modal fade" id="expDetail" tabindex="-1" role="dialog" aria-labelledby="expDetailTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -811,6 +921,53 @@
                         關閉
                     </button>
                 </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ticket Modal -->
+<div class="modal fade" id="ticketDetail" tabindex="-1" role="dialog" aria-labelledby="ticketDetailTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-header">
+                    預售機制
+                    <div class="close-modal">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-text">
+                    <div class="ticket-wrapper">
+                        <div class="ticket-item">
+                            <div class="ticket-title">
+                                Q1：明日俱樂部重啟會受疫情影響嗎？
+                            </div>
+                            <div class="ticket-content">
+                                團隊在四月、五月會不斷觀察疫情，希望在疫情穩定後再度開啟明日俱樂部。團隊也將依照疫情發展，保有停演、延後演出的彈性。若決定停演，團隊會為你進行全額退費。
+                            </div>
+                        </div>
+                        <div class="ticket-item">
+                            <div class="ticket-title">
+                                Q2：預購後的下一步是什麼？
+                            </div>
+                            <div class="ticket-content">
+                                團隊將於 06/01，透過簡訊、email，將後續的劃位時間、可劃位日期與時段寄送給你。感謝你的支持，請稍稍等待一下，希望我們很快就會見面。
+                            </div>
+                        </div>
+                        <div class="ticket-item">
+                            <div class="ticket-title">
+                                Q3：如果 05/31 沒有招募滿 1500 人呢？
+                            </div>
+                            <div class="ticket-content">
+                                團隊將為你將全額退費。但……這也代表《明日俱樂部》將不太有可能再次開啟囉。
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
