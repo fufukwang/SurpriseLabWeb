@@ -463,6 +463,12 @@
                                 <br/>
                                 若05/31 前能招募 1500 位玩家<br/>
                                 《明日俱樂部》將於疫情穩定後再次開啟<br/>
+                                <br/>
+                                劃位時間、可劃位日期與時段<br/>
+                                將於 06/01 透過簡訊及 email 通知<br/>
+                                <br/>
+                                我們了解你可能還有些疑惑<br/>
+                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，快速了解預售機制</a>
                             </p>
                         </div>
                     </div>
@@ -519,14 +525,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="section-paragraph d-sm-block d-none">
-                                <!-- 訂位採先預購、後劃位之機制<br/>若有包場需求，歡迎來信詢問<br/><br/>詳細劃位時間軸，請見下方「劃位時程」 -->
-                                劃位時間、可劃位日期與時段<br/>
-                                將於 06/01 透過簡訊及 email 通知<br/>
-                                <br/>
-                                我們了解你可能還有些疑惑<br/>
-                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，快速了解預售機制</a>
-                            </p>
+                            <!-- <p class="section-paragraph d-sm-block d-none">
+                                訂位採先預購、後劃位之機制<br/>若有包場需求，歡迎來信詢問<br/><br/>詳細劃位時間軸，請見下方「劃位時程」
+                            </p> -->
                         </div>
                     </div>
                 </div>
