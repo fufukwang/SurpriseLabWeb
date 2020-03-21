@@ -2614,6 +2614,215 @@ header {
   }
 }
 
+//--- Ticket Modal ---//
+#ticketDetail {
+  z-index: 999999;
+
+  .modal-dialog {
+    max-width: 536px;
+  }
+
+  .modal-content {
+    background-color: rgba($color-black, 0.8);
+    border-radius: 0;
+    border: 1px solid $color-bright-green;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .modal-header {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    line-height: 1.5;
+    color: $color-black;
+    background-color: $color-bright-green;
+    justify-content: center;
+    padding: 8px 0;
+    border-radius: 0;
+    border: none;
+    position: relative;
+
+    .close-modal {
+      width: 37px;
+      height: 37px;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+
+      button.close {
+        width: 37px;
+        height: 37px;
+        padding: 10px;
+        margin: 0;
+        text-shadow: none;
+        float: none;
+        opacity: 1;
+
+        &:focus {
+          outline: none;
+        }
+
+        .icon-bar {
+          width: 17px;
+          height: 3px;
+          display: block;
+          background-color: $color-black;
+          transform: rotate(45deg) translate(1px, 2px);
+
+          &+.icon-bar {
+            transform: rotate(-45deg) translate(0px, -1px);
+          }
+        }
+      }
+    }
+  }
+
+  .modal-text {
+    padding: 5px 10px;
+  }
+
+  .ticket-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ticket-item {
+      width: 33.33%;
+      display: flex;
+      justify-content: center;
+      margin-top: 90px;
+
+      .ticket-title,
+      .ticket-content {
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        line-height: 1.5;
+        color: $color-bright-green;
+      }
+    }
+  }
+
+  .section-paragraph {
+    margin: 90px 0 70px;
+    color: $color-bright-green;
+  }
+
+  @media (max-width: 1440px) {
+    .modal-dialog {
+      max-width: 376px;
+    }
+
+    .modal-header {
+      font-size: 16px;
+      letter-spacing: 1.6px;
+    }
+
+    .modal-text {
+      padding: 0 12px;
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        margin-top: 48px;
+
+        .ticket-title,
+        .ticket-content {
+          font-size: 16px;
+          letter-spacing: 1.6px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 48px 0 45px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .modal-dialog {
+      max-width: 100%;
+      margin: 20px;
+    }
+
+    .modal-header {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      padding: 10px 0;
+    }
+
+    .modal-text {
+      padding: 0 25px;
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        flex-direction: column;
+        align-items: center;
+
+        .ticket-title,
+        .ticket-content {
+          margin-top: 6px;
+          font-size: 14px;
+          letter-spacing: 1.4px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 36px 0;
+    }
+  }
+
+  @media (max-width: 374.98px) {
+    .modal-header {
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      padding: 6px 0;
+
+      .close-modal {
+        width: 30px;
+        height: 30px;
+        right: 4px;
+  
+        button.close {
+          width: 30px;
+          height: 30px;
+          padding: 8px;
+
+          .icon-bar {
+            width: 14px;
+          }
+        }
+      }
+    }
+
+    .modal-text {
+      padding: 0 20px;
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        margin-top: 30px;
+
+        .ticket-title,
+        .ticket-content {
+          font-size: 12px;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 24px 0;
+    }
+  }
+}
+
 .modal-backdrop {
   z-index: 999998;
 }
