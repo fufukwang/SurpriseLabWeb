@@ -2625,7 +2625,7 @@ header {
   .modal-content {
     background-color: rgba($color-black, 0.8);
     border-radius: 0;
-    border: 1px solid $color-bright-green;
+    border: 1px solid $color-bright-blue;
   }
 
   .modal-body {
@@ -2640,7 +2640,7 @@ header {
     letter-spacing: 1.8px;
     line-height: 1.5;
     color: $color-black;
-    background-color: $color-bright-green;
+    background-color: $color-bright-blue;
     justify-content: center;
     padding: 8px 0;
     border-radius: 0;
@@ -2692,7 +2692,9 @@ header {
     flex-wrap: wrap;
 
     .ticket-item {
-      margin-top: 30px;
+      &+.ticket-item {
+        margin-top: 30px;
+      }
 
       .ticket-title,
       .ticket-content {
@@ -2707,10 +2709,9 @@ header {
 
       .ticket-content {
         color: $color-bright-green;
-        border: 1px solid $color-bright-green;
+        border-left: 1px solid $color-bright-green;
         margin-top: 10px;
-        padding-top: 7px;
-        padding-left: 20px;
+        padding: 7px 0 7px 20px;
       }
     }
   }

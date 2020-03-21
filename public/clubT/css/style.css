@@ -3084,7 +3084,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 #ticketDetail .modal-content {
   background-color: rgba(3, 3, 13, 0.8);
   border-radius: 0;
-  border: 1px solid #15ffbc;
+  border: 1px solid #01ffff;
 }
 
 #ticketDetail .modal-body {
@@ -3104,7 +3104,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   letter-spacing: 1.8px;
   line-height: 1.5;
   color: #03030D;
-  background-color: #15ffbc;
+  background-color: #01ffff;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3164,7 +3164,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
       flex-wrap: wrap;
 }
 
-#ticketDetail .ticket-wrapper .ticket-item {
+#ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
   margin-top: 30px;
 }
 
@@ -3181,10 +3181,9 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
   color: #15ffbc;
-  border: 1px solid #15ffbc;
+  border-left: 1px solid #15ffbc;
   margin-top: 10px;
-  padding-top: 7px;
-  padding-left: 20px;
+  padding: 7px 0 7px 20px;
 }
 
 #ticketDetail .section-paragraph {
