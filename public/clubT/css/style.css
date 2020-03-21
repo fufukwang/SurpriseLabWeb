@@ -3184,9 +3184,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 @media (max-width: 1440px) {
-  #ticketDetail .modal-dialog {
-    max-width: 376px;
-  }
   #ticketDetail .modal-header {
     font-size: 16px;
     letter-spacing: 1.6px;
