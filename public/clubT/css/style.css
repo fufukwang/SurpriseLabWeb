@@ -3223,12 +3223,18 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     padding: 10px 0;
   }
   #ticketDetail .modal-text {
-    padding: 50px 40px;
+    padding: 30px 20px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
+    margin-top: 20px;
   }
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
     font-size: 14px;
     letter-spacing: 1.4px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+    padding: 0 0 0 15px;
   }
   #ticketDetail .section-paragraph {
     margin: 36px 0;
@@ -3254,10 +3260,19 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   #ticketDetail .modal-header .close-modal button.close .icon-bar {
     width: 14px;
   }
+  #ticketDetail .modal-header .modal-text {
+    padding: 20px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
+    margin-top: 5px;
+  }
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
     font-size: 12px;
     letter-spacing: 1.2px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+    padding: 0 0 0 10px;
   }
   #ticketDetail .section-paragraph {
     margin: 24px 0;

@@ -2763,15 +2763,23 @@ header {
     }
 
     .modal-text {
-      padding: 50px 40px;
+      padding: 30px 20px;
     }
 
     .ticket-wrapper {
       .ticket-item {
+        &+.ticket-item {
+          margin-top: 20px;
+        }
+
         .ticket-title,
         .ticket-content {
           font-size: 14px;
           letter-spacing: 1.4px;
+        }
+
+        .ticket-content {
+          padding: 0 0 0 15px;
         }
       }
     }
@@ -2802,14 +2810,26 @@ header {
           }
         }
       }
+
+      .modal-text {
+        padding: 20px;
+      }
     }
 
     .ticket-wrapper {
       .ticket-item {
+        &+.ticket-item {
+          margin-top: 5px;
+        }
+
         .ticket-title,
         .ticket-content {
           font-size: 12px;
           letter-spacing: 1.2px;
+        }
+
+        .ticket-content {
+          padding: 0 0 0 10px;
         }
       }
     }
