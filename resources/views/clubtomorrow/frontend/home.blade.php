@@ -439,7 +439,7 @@
                                 <br/>
                                 <a class="link-bright-green" href="https://youtu.be/uIp7X2MEXso" target="_blank">
                                     想了解團隊的過往作品嗎？<br/>
-                                    點此觀看驚喜製造 X 進港浪過往作品《微醺大飯店》
+                                    點此觀看驚喜製造 X 進港浪製作過往作品《微醺大飯店》
                                 </a>
                             </p>
                         </div>
