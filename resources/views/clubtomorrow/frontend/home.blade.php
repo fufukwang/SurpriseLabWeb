@@ -181,12 +181,10 @@
                             歡迎來到明日俱樂部<br/>
                             <br/>
                             這世界正邁入前所未有的混亂<br/>
+                            你，說不定是能結束一切的關鍵人物<br/>
                             <br/>
-                            我很好奇<br/>
-                            你們，人類們，能終止這場混亂嗎？<br/>
-                            <br/>
-                            明日俱樂部玩家現正招募中<br/>
-                            你，說不定是能結束一切的關鍵人物。
+                            我非常好奇<br/>
+                            你們，人類們，能終止這場混亂嗎？
                         </p>
                         <div class="entrance-wrapper">
                             <a class="smoothScroll entrance-link fbpx" href="#About" data-event="viewcontent1">
