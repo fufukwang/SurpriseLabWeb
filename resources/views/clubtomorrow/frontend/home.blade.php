@@ -1027,7 +1027,7 @@
 <!-- Custom Js -->
 <script src="/clubT/js/main.js"></script>
 <script src="/clubT/js/smooth-scroll.js"></script>
-<script src="/clubT/js/home.js?v=0.3"></script>
+<script src="/clubT/js/home.js?v=0.4"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>

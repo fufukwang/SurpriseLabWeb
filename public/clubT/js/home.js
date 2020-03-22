@@ -117,7 +117,7 @@ $(document).ready(function () {
         let set_1_limit = data['rewards'][0].quantity_limit; // 限量張數
         let set_1_rest = set_1_limit - set_1_sale; // 剩餘可銷售張數
 
-        let set_1 = $('.type-multiplayer-for-4');
+        let set_1 = $('.type-single-player');
         // set_1.find('.total-ticket').html(set_1_limit); // 更新時間有點限制票限量張數
         // set_1.find('.rest-ticket').html(set_1_rest); // 更新時間有點限制票剩餘可銷售張數
         set_1.fadeTo(300, 1);
@@ -127,8 +127,8 @@ $(document).ready(function () {
                 'href': 'javascript://',
                 'target': '_self'
             }).addClass('soldout');
-            set_1.find('.d-none').attr('src', '/clubT/img/landing/ticket_0319_four_big_soldout.png');
-            set_1.find('.d-block').attr('src', '/clubT/img/landing/ticket_0319_four_soldout.png')
+            set_1.find('.d-none').attr('src', '/clubT/img/landing/ticket_0319_single_big_soldout.png');
+            set_1.find('.d-block').attr('src', '/clubT/img/landing/ticket_0319_single_soldout.png')
         }
 
         // 四人票
