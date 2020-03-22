@@ -101,7 +101,7 @@ $(document).ready(function () {
         // });
         $.each(data['rewards'], function (index, ticket) {
             // 計算第五階段已售出總票數
-            current_amount = 1499;//current_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+            current_amount = current_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
 
         console.log(prev_amount, current_amount);
