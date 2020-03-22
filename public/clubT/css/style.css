@@ -2738,6 +2738,11 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     font-size: 30px;
     letter-spacing: 1.5px;
   }
+  #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
+  #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
+  #Ticket .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
+    font-size: 20px;
+  }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info {
     margin-top: 12px;
   }
@@ -2760,7 +2765,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
-    font-size: 20px;
     letter-spacing: 1px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {

@@ -2204,6 +2204,16 @@ header {
           }
         }
       }
+      
+      .sale-progress {
+        .sale-progress-info {
+          .total-sale,
+          .total-rest,
+          .progress-percent {
+              font-size: 20px;
+          }
+        }
+      }
 
       .sale-progress {
         .sale-progress-info {
@@ -2233,7 +2243,6 @@ header {
           .total-sale,
           .total-rest,
           .progress-percent {
-            font-size: 20px;
             letter-spacing: 1px;
           }
 
