@@ -492,8 +492,8 @@
                                 <div class="type-item type-single-player">
                                     <a href="https://surpriselab.backme.tw/checkout/1255/8949?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
-                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_1.png" alt="單人票">
-                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_1_mobile@2x.png" alt="單人票">
+                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/ticket_0319_single_big.png" alt="單人票">
+                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/ticket_0319_single.png" alt="單人票">
                                         </div>
                                         <p class="ticket-state timeLimit">
                                             此優惠將於 06/01起調回至 $2000/人
@@ -503,8 +503,8 @@
                                 <div class="type-item type-multiplayer-for-4">
                                     <a href="https://surpriselab.backme.tw/checkout/1255/8950?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
-                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_2.png" alt="四人票">
-                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_2_mobile@2x.png" alt="四人票">
+                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/ticket_0319_four_big.png" alt="四人票">
+                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/ticket_0319_four.png" alt="四人票">
                                         </div>
                                         <p class="ticket-state timeLimit">
                                             <!-- 不可分開劃位<span class="d-sm-none d-inline">，</span><br class="d-sm-inline d-none"/>限量 <span class="total-ticket">300</span> 組 | 剩餘 <span class="rest-ticket">XXX</span> 組 -->
@@ -515,8 +515,8 @@
                                 <div class="type-item type-multiplayer-for-10">
                                     <a href="https://surpriselab.backme.tw/checkout/1255/8951?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
-                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/1.3_ticket_3.png" alt="十人票">
-                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/1.3_ticket_3_mobile@2x.png" alt="十人票">
+                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/ticket_0319_ten_big.png" alt="十人票">
+                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/ticket_0319_ten.png" alt="十人票">
                                         </div>
                                         <p class="ticket-state timeLimit">
                                             <!-- 不可分開劃位<span class="d-sm-none d-inline">，</span><br class="d-sm-inline d-none"/>限量 <span class="total-ticket">50</span> 組 | 剩餘 <span class="rest-ticket">XXX</span> 組 -->
@@ -744,7 +744,7 @@
                             <!-- 倒數計時器 -->
                             <div class="time-counter">
                                 <p class="section-paragraph">
-                                    玩家招募中<br />登入倒數
+                                    嘿，如果你對這世界感到好奇<br />請與我們一起招募玩家吧！
                                 </p>
                                 <div class="time-rest d-flex align-items-center justify-content-center">
                                     <span class="days">00</span>天
@@ -769,7 +769,7 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售 03/19-03/29 票券<br/>* 可劃位區間將依實際預售情況加開或縮短
+                                        * 現正預售疫情穩定後之票卷<br/>* 劃位時間、可劃位日期與時段，將於 06/01 透過簡訊、email 公佈<br/>* 若05/31 前能招募 1500 位玩家《明日俱樂部》將於疫情穩定後再次開啟
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
@@ -1026,7 +1026,7 @@
 <!-- Custom Js -->
 <script src="/clubT/js/main.js"></script>
 <script src="/clubT/js/smooth-scroll.js"></script>
-<script src="/clubT/js/home.js?v=0.3"></script>
+<script src="/clubT/js/home.js?v=0.4"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>
