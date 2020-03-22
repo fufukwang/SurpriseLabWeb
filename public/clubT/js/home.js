@@ -60,20 +60,23 @@ $(document).ready(function () {
     let progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1136json?token=15171aa66ababafd4464a1c194b66102';
     let progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/1200json?token=15171aa66ababafd4464a1c194b66102';
     let progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/1241json?token=15171aa66ababafd4464a1c194b66102';
+    let progress_api_SaleStep5 = 'https://surpriselab.backme.tw/api/projects/1255json?token=15171aa66ababafd4464a1c194b66102';
 
     $.when(
       $.getJSON(progress_api_SaleStep1),
       $.getJSON(progress_api_SaleStep2),
       $.getJSON(progress_api_SaleStep3),
-      $.getJSON(progress_api_SaleStep4)
-    ).done(function (data1, data2, data3, data4) {
+      $.getJSON(progress_api_SaleStep4),
+      $.getJSON(progress_api_SaleStep5)
+    ).done(function (data1, data2, data3, data4, data5) {
 
         data1 = data1[0];
         data2 = data2[0];
         data3 = data3[0];
-        var data = data4[0];
+        data4 = data4[0];
+        var data = data5[0];
 
-        const goal = 1920; // 本次銷售目標票數
+        const goal = 1500; // 本次銷售目標票數
         let prev_amount = 0; // 過去售出總票數
         let current_amount = 0; // 現階段售出總票出
 
@@ -91,10 +94,17 @@ $(document).ready(function () {
             // 計算第三階段已售出總票數
             prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
-        $.each(data['rewards'], function (index, ticket) {
+        $.each(data4['rewards'], function (index, ticket) {
             // 計算第四階段已售出總票數
+            prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        });
+        $.each(data['rewards'], function (index, ticket) {
+            // 計算第五階段已售出總票數
             current_amount = current_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
+
+        console.log(prev_amount, current_amount);
+
         let sale_progress = (prev_amount + current_amount) / (prev_amount + goal) * 100; // 募款進度
         let rest_tickets = goal - current_amount; // 剩餘可銷售票數
 
@@ -116,8 +126,8 @@ $(document).ready(function () {
                 'href': 'javascript://',
                 'target': '_self'
             }).addClass('soldout');
-            set_4.find('.d-none').attr('src', '/clubT/img/landing/1.3_ticket_2_soldout.png');
-            set_4.find('.d-block').attr('src', '/clubT/img/landing/1.3_ticket_2_mobile_soldout.png')
+            set_4.find('.d-none').attr('src', '/clubT/img/landing/ticket_0319_four_big_soldout.png');
+            set_4.find('.d-block').attr('src', '/clubT/img/landing/ticket_0319_four_soldout.png')
         }
 
         // 十人票
@@ -135,8 +145,8 @@ $(document).ready(function () {
                 'href': 'javascript://',
                 'target': '_self'
             }).addClass('soldout');
-            set_10.find('.d-none').attr('src', '/clubT/img/landing/1.3_ticket_3_soldout.png');
-            set_10.find('.d-block').attr('src', '/clubT/img/landing/1.3_ticket_3_mobile_soldout.png')
+            set_10.find('.d-none').attr('src', '/clubT/img/landing/ticket_0319_ten_big_soldout.png');
+            set_10.find('.d-block').attr('src', '/clubT/img/landing/ticket_0319_ten_soldout.png')
         }
 
         let sale_info = $('.sale-progress-info');
