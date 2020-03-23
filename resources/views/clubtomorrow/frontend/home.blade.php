@@ -534,7 +534,7 @@
             </section>
 
             <!-- 關於疫情 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid1" data-aos="fade">
+            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid1" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -577,7 +577,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- 購票步驟 -->
             <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-step" data-section-name="Ticket" data-aos="fade">
