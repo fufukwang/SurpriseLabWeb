@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <filter id="prefix__Polygon_5" width="52" height="60" x="4" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="5"/>
+            <feFlood flood-color="#01ffff" flood-opacity=".2"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="prefix__Group_1897" data-name="Group 1897" transform="translate(-1261 -414) translate(1261 414)">
+        <path id="prefix__Rectangle_672" d="M0 0H60V60H0z" data-name="Rectangle 672" style="fill:none"/>
+        <g>
+            <g id="prefix__Polygon_5-2" data-name="Polygon 5" style="fill:none">
+                <path d="M15 0l15 22H0z" style="stroke:none" transform="rotate(90 13 28)"/>
+                <path d="M15 7.1L7.569 18H22.43L15 7.1M15 0l15 22H0L15 0z" style="fill:#01ffff;stroke:none" transform="rotate(90 13 28)"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -380,7 +380,7 @@
             </section>
 
             <!-- 玩家口碑 -->
-            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-reviews" data-section-name="Reviews" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-reviews" data-section-name="Reviews" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -398,10 +398,6 @@
                                     </div>
                                     <div class="carousel-item">
                                         “ 喜歡所有人都能改變結局的設定”
-                                    </div>
-                                    <div class="carousel-item">
-                                        “ 後勁太強。” <br/>
-                                        “ 很深刻。 ”
                                     </div>
                                     <div class="carousel-item">
                                         “ 跟朋友進到不同組，原本有點擔心，沒想到看到了更大的世界。<br/>
@@ -425,27 +421,29 @@
                                     </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
+                                    <img class="img-fluid" src="/clubT/img/btn-prev.svg" alt="prev">
                                 </a>
                                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
+                                    <img class="img-fluid" src="/clubT/img/btn-next.svg" alt="next">
                                 </a>
                             </div>
                             <p class="section-paragraph">
-                                歡迎於社群網站尋找 #明日俱樂部<br/>
-                                一窺先前玩家經歷了什麼<br/>
+                                明日俱樂部於 12/27-03/31 期間 <br/>
+                                共迎接了 6000 位玩家<br/>
                                 <br/>
+                                歡迎於社群網站尋找 #明日俱樂部<br/>
+                                一窺先前的玩家經歷了什麼
+                                <br/>
+                                想了解團隊的過往作品嗎？<br/>
                                 <a class="link-bright-green" href="https://youtu.be/uIp7X2MEXso" target="_blank">
-                                    想了解團隊的過往作品嗎？<br/>
-                                    點此觀看驚喜製造 X 進港浪製作過往作品《微醺大飯店》
+                                    點此觀看驚喜製造 X 進港浪製作過往作品<br/>
+                                    《微醺大飯店 The Great Tipsy》
                                 </a>
                             </p>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- 預售機制 -->
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="TicketAbout" data-aos="fade">
