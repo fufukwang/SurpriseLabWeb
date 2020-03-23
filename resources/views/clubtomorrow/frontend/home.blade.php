@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=1.4"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=1.5"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -386,7 +386,7 @@
                         <div class="col-lg-6 offset-lg-3 col-12">
                             <h2 class="section-title">玩家口碑</h2>
                             <div class="section-subtitle">Reviews</div>
-                            <div id="carouselReviewsControls" class="carousel slide" data-ride="false">
+                            <div id="carouselReviewsControls" class="carousel slide" data-ride="">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <p class="section-paragraph">
