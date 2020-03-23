@@ -2341,6 +2341,22 @@ header {
       margin-top: 28px;
     }
   }
+
+  // 關於疫情
+  .ticket-sec-covid {
+    p.section-paragraph {
+
+      @media (max-width: 575.98px) {
+        max-width: 80%;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 374.98px) {
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 //--- Experience Modal ---//

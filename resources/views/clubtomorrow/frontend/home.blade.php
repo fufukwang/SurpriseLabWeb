@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=1.1"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=1.2"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -538,7 +538,7 @@
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid1" data-aos="fade">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-sm-4 offset-sm-4 col-12">
                             <h2 class="section-title">關於疫情</h2>
                             <div class="section-subtitle">YOU MIGHT WORRY</div>
                             <p class="section-paragraph">
@@ -557,7 +557,7 @@
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid2" data-aos="fade">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-sm-4 offset-sm-4 col-12">
                             <h2 class="section-title">關於疫情</h2>
                             <div class="section-subtitle">YOU MIGHT WORRY</div>
                             <p class="section-paragraph">
