@@ -2367,12 +2367,17 @@ header {
 
       p.section-paragraph {
         color: $color-bright-green;
+        padding: 40px 0;
+        max-width: calc(100% - 244px);
+        min-height: 178px;
+        margin: 0 auto;
       }
 
-      .carousel-control-prev,
-      .carousel-control-next {
+      .carousel-control-next,
+      .carousel-control-prev {
         width: 60px;
         height: 60px;
+        transition: 0.3s;
       }
     }
   }

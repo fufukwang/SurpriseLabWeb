@@ -2874,12 +2874,18 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 #Ticket .ticket-sec-reviews .carousel-item p.section-paragraph {
   color: #15ffbc;
+  padding: 40px 0;
+  max-width: calc(100% - 244px);
+  min-height: 178px;
+  margin: 0 auto;
 }
 
-#Ticket .ticket-sec-reviews .carousel-item .carousel-control-prev,
-#Ticket .ticket-sec-reviews .carousel-item .carousel-control-next {
+#Ticket .ticket-sec-reviews .carousel-item .carousel-control-next,
+#Ticket .ticket-sec-reviews .carousel-item .carousel-control-prev {
   width: 60px;
   height: 60px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 575.98px) {
