@@ -2356,7 +2356,7 @@ header {
       .carousel-item {
         .reviews-wrapper {
           position: relative;
-          padding: 40px 0;
+          width: 100%;
           max-width: calc(100% - 244px);
           margin: 0 auto;
   
@@ -2382,6 +2382,11 @@ header {
 
         .reviews-inner {
           position: relative;
+          padding: 40px 0;
+          height: 178px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           &::before,
           &::after {
