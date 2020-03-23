@@ -538,7 +538,7 @@
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid1" data-aos="fade">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-4 offset-sm-4 col-12">
+                        <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 col-12">
                             <h2 class="section-title">關於疫情</h2>
                             <div class="section-subtitle">YOU MIGHT WORRY</div>
                             <p class="section-paragraph">
@@ -557,7 +557,7 @@
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid2" data-aos="fade">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-4 offset-sm-4 col-12">
+                        <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3 col-12">
                             <h2 class="section-title">關於疫情</h2>
                             <div class="section-subtitle">YOU MIGHT WORRY</div>
                             <p class="section-paragraph">
