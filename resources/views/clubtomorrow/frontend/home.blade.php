@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=1.6"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=1.7"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -390,56 +390,74 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="reviews-wrapper">
-                                            <p class="section-paragraph">
-                                                這是我第一次嘗試沈浸式，完全被震撼，很喜歡這種類似電影情節又深入其境的遊戲體驗。
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="reviews-wrapper"></div>
-                                        <p class="section-paragraph">
-                                            這遊戲和社會有著驚人關聯，是場人性實驗，也是真實世界的縮影。
-                                        </p>
-                                    </div>
-                                    <div class="carousel-item">
-                                    <div class="reviews-wrapper"></div>
-                                        <p class="section-paragraph">
-                                            喜歡所有人都能改變結局的設定
-                                        </p>   
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="reviews-wrapper">
-                                            <p class="section-paragraph">
-                                                跟朋友進到不同組，原本有點擔心，沒想到看到了更大的世界。但看到朋友變成敵人時，內心真的很複雜。
-                                            </p>
+                                            <div class="reviews-inner">
+                                                <p class="section-paragraph">
+                                                    這是我第一次嘗試沈浸式，完全被震撼，很喜歡這種類似電影情節又深入其境的遊戲體驗。
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="reviews-wrapper">
-                                            <p class="section-paragraph">
-                                                我與妹妹面前出現一把槍，在那當下，我們卻只想著要槍斃自己讓對方存活。
-                                            </p>
+                                            <div class="reviews-inner">
+                                                <p class="section-paragraph">
+                                                    這遊戲和社會有著驚人關聯，是場人性實驗，也是真實世界的縮影。
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="reviews-wrapper">
-                                            <p class="section-paragraph">
-                                                我們的所作所為決定這世界的樣子，沒有人可以置身事外。
-                                            </p>
+                                            <div class="reviews-inner">
+                                                <p class="section-paragraph">
+                                                    喜歡所有人都能改變結局的設定
+                                                </p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="reviews-wrapper">
+                                            <div class="reviews-inner">
+                                                <p class="section-paragraph">
+                                                    跟朋友進到不同組，原本有點擔心，沒想到看到了更大的世界。但看到朋友變成敵人時，內心真的很複雜。
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="reviews-wrapper">
-                                            <p class="section-paragraph">
-                                                原本是保持著好玩的心情前來，結束之後完全愛上這種型態的體驗，主角們演出專業、場景佈置很精細，跟不同的人來會有不同的碰撞、不同的效果、不同的結局，真的很有趣。
-                                            </p>
+                                            <div class="reviews-inner">
+                                                <p class="section-paragraph">
+                                                    我與妹妹面前出現一把槍，在那當下，我們卻只想著要槍斃自己讓對方存活。
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="reviews-wrapper">
-                                            <p class="section-paragraph">
-                                                感謝製作團隊與所有不管是幕前還是幕後的工作人員，這次的體驗真的很棒。
-                                            </p>
+                                            <div class="reviews-inner">
+                                                <p class="section-paragraph">
+                                                    我們的所作所為決定這世界的樣子，沒有人可以置身事外。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="reviews-wrapper">
+                                            <div class="reviews-inner">
+                                                <p class="section-paragraph">
+                                                    原本是保持著好玩的心情前來，結束之後完全愛上這種型態的體驗，主角們演出專業、場景佈置很精細，跟不同的人來會有不同的碰撞、不同的效果、不同的結局，真的很有趣。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="reviews-wrapper">
+                                            <div class="reviews-inner">
+                                                <p class="section-paragraph">
+                                                    感謝製作團隊與所有不管是幕前還是幕後的工作人員，這次的體驗真的很棒。
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

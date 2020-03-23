@@ -2851,11 +2851,26 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
 }
 
-#Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper {
-  position: relative;
+#Ticket .ticket-sec-reviews #carouselReviewsControls {
+  margin-bottom: 36px;
 }
 
-#Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper::before, #Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper::after {
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item-next,
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item-prev,
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper {
+  position: relative;
+  padding: 40px 0;
+  max-width: calc(100% - 244px);
+  margin: 0 auto;
+}
+
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before, #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
   content: '';
   width: calc(100% - 32px);
   height: 1px;
@@ -2863,44 +2878,43 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   position: absolute;
 }
 
-#Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper::before {
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before {
   top: 0;
   right: 0;
 }
 
-#Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper::after {
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
   bottom: 0;
   left: 0;
 }
 
-#Ticket .ticket-sec-reviews .carousel-item p.section-paragraph {
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
   position: relative;
-  color: #15ffbc;
-  padding: 40px 0;
-  max-width: calc(100% - 244px);
-  min-height: 178px;
-  margin: 0 auto;
 }
 
-#Ticket .ticket-sec-reviews .carousel-item p.section-paragraph::before, #Ticket .ticket-sec-reviews .carousel-item p.section-paragraph::after {
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::before, #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::after {
   position: absolute;
   color: #15ffbc;
 }
 
-#Ticket .ticket-sec-reviews .carousel-item p.section-paragraph::before {
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::before {
   content: '“ ';
   top: 0;
   left: 0;
 }
 
-#Ticket .ticket-sec-reviews .carousel-item p.section-paragraph::after {
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::after {
   content: '”';
   bottom: 0;
   right: 0;
 }
 
-#Ticket .ticket-sec-reviews .carousel-control-next,
-#Ticket .ticket-sec-reviews .carousel-control-prev {
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
+  color: #15ffbc;
+}
+
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
+#Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
   width: 60px;
   height: 60px;
   -webkit-transition: 0.3s;
