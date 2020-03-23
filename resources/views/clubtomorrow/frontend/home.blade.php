@@ -380,7 +380,7 @@
             </section>
 
             <!-- 玩家口碑 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-reviews" data-section-name="Reviews" data-aos="fade">
+            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-reviews" data-section-name="Reviews" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -445,7 +445,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- 預售說明 -->
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="TicketAbout" data-aos="fade">
