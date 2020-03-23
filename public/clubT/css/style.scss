@@ -2204,6 +2204,16 @@ header {
           }
         }
       }
+      
+      .sale-progress {
+        .sale-progress-info {
+          .total-sale,
+          .total-rest,
+          .progress-percent {
+              font-size: 20px;
+          }
+        }
+      }
 
       .sale-progress {
         .sale-progress-info {
@@ -2233,7 +2243,6 @@ header {
           .total-sale,
           .total-rest,
           .progress-percent {
-            font-size: 20px;
             letter-spacing: 1px;
           }
 
@@ -2611,6 +2620,221 @@ header {
     //     padding: 8px 0;
     //   }
     // }
+  }
+}
+
+//--- Ticket Modal ---//
+#ticketDetail {
+  z-index: 999999;
+
+  .modal-dialog {
+    max-width: 812px;
+  }
+
+  .modal-content {
+    background-color: rgba($color-black, 0.8);
+    border-radius: 0;
+    border: 1px solid $color-bright-blue;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .modal-header {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    line-height: 1.5;
+    color: $color-black;
+    background-color: $color-bright-blue;
+    justify-content: center;
+    padding: 8px 0;
+    border-radius: 0;
+    border: none;
+    position: relative;
+
+    .close-modal {
+      width: 37px;
+      height: 37px;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+
+      button.close {
+        width: 37px;
+        height: 37px;
+        padding: 10px;
+        margin: 0;
+        text-shadow: none;
+        float: none;
+        opacity: 1;
+
+        &:focus {
+          outline: none;
+        }
+
+        .icon-bar {
+          width: 17px;
+          height: 3px;
+          display: block;
+          background-color: $color-black;
+          transform: rotate(45deg) translate(1px, 2px);
+
+          &+.icon-bar {
+            transform: rotate(-45deg) translate(0px, -1px);
+          }
+        }
+      }
+    }
+  }
+
+  .modal-text {
+    padding: 60px 100px;
+  }
+
+  .ticket-wrapper {
+    .ticket-item {
+      &+.ticket-item {
+        margin-top: 30px;
+      }
+
+      .ticket-title,
+      .ticket-content {
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        line-height: 1.5;
+      }
+
+      .ticket-title {
+        color: $color-bright-blue; 
+      }
+
+      .ticket-content {
+        color: $color-bright-green;
+        border-left: 1px solid $color-bright-green;
+        margin-top: 10px;
+        padding: 7px 0 7px 20px;
+      }
+    }
+  }
+
+  .section-paragraph {
+    margin: 90px 0 70px;
+    color: $color-bright-green;
+  }
+
+  @media (max-width: 1440px) {
+    .modal-header {
+      font-size: 16px;
+      letter-spacing: 1.6px;
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        .ticket-title,
+        .ticket-content {
+          font-size: 16px;
+          letter-spacing: 1.6px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 48px 0 45px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .modal-dialog {
+      max-width: 100%;
+      margin: 20px;
+    }
+
+    .modal-header {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      padding: 10px 0;
+    }
+
+    .modal-text {
+      padding: 30px 20px;
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        &+.ticket-item {
+          margin-top: 20px;
+        }
+
+        .ticket-title,
+        .ticket-content {
+          font-size: 14px;
+          letter-spacing: 1.4px;
+        }
+
+        .ticket-content {
+          padding: 0 0 0 15px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 36px 0;
+    }
+  }
+
+  @media (max-width: 374.98px) {
+    .modal-header {
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      padding: 6px 0;
+
+      .close-modal {
+        width: 30px;
+        height: 30px;
+        right: 4px;
+  
+        button.close {
+          width: 30px;
+          height: 30px;
+          padding: 8px;
+
+          .icon-bar {
+            width: 14px;
+          }
+        }
+      }
+
+      .modal-text {
+        padding: 20px;
+      }
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        &+.ticket-item {
+          margin-top: 5px;
+        }
+
+        .ticket-title,
+        .ticket-content {
+          font-size: 12px;
+          letter-spacing: 1.2px;
+        }
+
+        .ticket-content {
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 24px 0;
+    }
   }
 }
 

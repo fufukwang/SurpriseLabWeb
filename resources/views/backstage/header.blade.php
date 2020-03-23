@@ -45,7 +45,7 @@
 
             <!-- Logo container-->
             <div class="logo">
-                <a href="/admin" class="logo"><img src="/surprise/images/favi.png"><div style="float: right;margin-top:4px;"><span style="color: #FC6E52;font-size:16px;">SUPERISE LAB</span></div></a>
+                <a href="/admin" class="logo"><img src="/surprise/images/favi.png"><div style="float: right;margin-top:4px;"><span style="color: #FC6E52;font-size:16px;">SUPERISE LAB</span>@if (env('APP_ENV')!='production')<span style="color:white;">這裡是測試站</span>@endif</div></a>
             </div>
             <!-- End Logo container-->
 

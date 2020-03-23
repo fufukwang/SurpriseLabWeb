@@ -2738,6 +2738,11 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     font-size: 30px;
     letter-spacing: 1.5px;
   }
+  #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
+  #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
+  #Ticket .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
+    font-size: 20px;
+  }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info {
     margin-top: 12px;
   }
@@ -2760,7 +2765,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
-    font-size: 20px;
     letter-spacing: 1px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
@@ -3069,6 +3073,198 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     letter-spacing: 1.2px;
   }
   #expDetail .section-paragraph {
+    margin: 24px 0;
+  }
+}
+
+#ticketDetail {
+  z-index: 999999;
+}
+
+#ticketDetail .modal-dialog {
+  max-width: 812px;
+}
+
+#ticketDetail .modal-content {
+  background-color: rgba(3, 3, 13, 0.8);
+  border-radius: 0;
+  border: 1px solid #01ffff;
+}
+
+#ticketDetail .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+
+#ticketDetail .modal-header {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+  color: #03030D;
+  background-color: #01ffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 0;
+  border-radius: 0;
+  border: none;
+  position: relative;
+}
+
+#ticketDetail .modal-header .close-modal {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#ticketDetail .modal-header .close-modal button.close {
+  width: 37px;
+  height: 37px;
+  padding: 10px;
+  margin: 0;
+  text-shadow: none;
+  float: none;
+  opacity: 1;
+}
+
+#ticketDetail .modal-header .close-modal button.close:focus {
+  outline: none;
+}
+
+#ticketDetail .modal-header .close-modal button.close .icon-bar {
+  width: 17px;
+  height: 3px;
+  display: block;
+  background-color: #03030D;
+  -webkit-transform: rotate(45deg) translate(1px, 2px);
+          transform: rotate(45deg) translate(1px, 2px);
+}
+
+#ticketDetail .modal-header .close-modal button.close .icon-bar + .icon-bar {
+  -webkit-transform: rotate(-45deg) translate(0px, -1px);
+          transform: rotate(-45deg) translate(0px, -1px);
+}
+
+#ticketDetail .modal-text {
+  padding: 60px 100px;
+}
+
+#ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
+  margin-top: 30px;
+}
+
+#ticketDetail .ticket-wrapper .ticket-item .ticket-title,
+#ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+}
+
+#ticketDetail .ticket-wrapper .ticket-item .ticket-title {
+  color: #01ffff;
+}
+
+#ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+  color: #15ffbc;
+  border-left: 1px solid #15ffbc;
+  margin-top: 10px;
+  padding: 7px 0 7px 20px;
+}
+
+#ticketDetail .section-paragraph {
+  margin: 90px 0 70px;
+  color: #15ffbc;
+}
+
+@media (max-width: 1440px) {
+  #ticketDetail .modal-header {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+  }
+  #ticketDetail .section-paragraph {
+    margin: 48px 0 45px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #ticketDetail .modal-dialog {
+    max-width: 100%;
+    margin: 20px;
+  }
+  #ticketDetail .modal-header {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    padding: 10px 0;
+  }
+  #ticketDetail .modal-text {
+    padding: 30px 20px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
+    margin-top: 20px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+    padding: 0 0 0 15px;
+  }
+  #ticketDetail .section-paragraph {
+    margin: 36px 0;
+  }
+}
+
+@media (max-width: 374.98px) {
+  #ticketDetail .modal-header {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    padding: 6px 0;
+  }
+  #ticketDetail .modal-header .close-modal {
+    width: 30px;
+    height: 30px;
+    right: 4px;
+  }
+  #ticketDetail .modal-header .close-modal button.close {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+  }
+  #ticketDetail .modal-header .close-modal button.close .icon-bar {
+    width: 14px;
+  }
+  #ticketDetail .modal-header .modal-text {
+    padding: 20px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
+    margin-top: 5px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+  #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
+    padding: 0 0 0 10px;
+  }
+  #ticketDetail .section-paragraph {
     margin: 24px 0;
   }
 }

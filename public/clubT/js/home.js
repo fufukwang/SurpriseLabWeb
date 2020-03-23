@@ -56,50 +56,80 @@ $(document).ready(function () {
     });
 
     // 售票進度 API
-    let progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1066json?token=15171aa66ababafd4464a1c194b66102';
-    let progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1136json?token=15171aa66ababafd4464a1c194b66102';
-    let progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/1200json?token=15171aa66ababafd4464a1c194b66102';
-    let progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/1241json?token=15171aa66ababafd4464a1c194b66102';
+    // let progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1066json?token=15171aa66ababafd4464a1c194b66102';
+    // let progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1136json?token=15171aa66ababafd4464a1c194b66102';
+    // let progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/1200json?token=15171aa66ababafd4464a1c194b66102';
+    // let progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/1241json?token=15171aa66ababafd4464a1c194b66102';
+    let progress_api_SaleStep5 = 'https://surpriselab.backme.tw/api/projects/1255json?token=15171aa66ababafd4464a1c194b66102';
 
-    $.when(
-      $.getJSON(progress_api_SaleStep1),
-      $.getJSON(progress_api_SaleStep2),
-      $.getJSON(progress_api_SaleStep3),
-      $.getJSON(progress_api_SaleStep4)
-    ).done(function (data1, data2, data3, data4) {
+    // $.when(
+    //   $.getJSON(progress_api_SaleStep1),
+    //   $.getJSON(progress_api_SaleStep2),
+    //   $.getJSON(progress_api_SaleStep3),
+    //   $.getJSON(progress_api_SaleStep4),
+    //   $.getJSON(progress_api_SaleStep5)
+    // ).done(function (data1, data2, data3, data4, data5) {
+    $.getJSON(progress_api_SaleStep5, function(data) {
 
-        data1 = data1[0];
-        data2 = data2[0];
-        data3 = data3[0];
-        var data = data4[0];
+        // data1 = data1[0];
+        // data2 = data2[0];
+        // data3 = data3[0];
+        // data4 = data4[0];
+        // var data = data5[0];
 
-        const goal = 1920; // 本次銷售目標票數
+        const goal = 1500; // 本次銷售目標票數
         let prev_amount = 0; // 過去售出總票數
         let current_amount = 0; // 現階段售出總票出
 
-        $.each(data1['rewards'], function (index, ticket) {
-            // 計算第一階段已售出總票數
-            prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
-        });
+        // $.each(data1['rewards'], function (index, ticket) {
+        //     // 計算第一階段已售出總票數
+        //     prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        // });
 
-        $.each(data2['rewards'], function (index, ticket) {
-            // 計算第二階段已售出總票數
-            prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
-        });
+        // $.each(data2['rewards'], function (index, ticket) {
+        //     // 計算第二階段已售出總票數
+        //     prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        // });
 
-        $.each(data3['rewards'], function (index, ticket) {
-            // 計算第三階段已售出總票數
-            prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
-        });
+        // $.each(data3['rewards'], function (index, ticket) {
+        //     // 計算第三階段已售出總票數
+        //     prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        // });
+        // $.each(data4['rewards'], function (index, ticket) {
+        //     // 計算第四階段已售出總票數
+        //     prev_amount = prev_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
+        // });
         $.each(data['rewards'], function (index, ticket) {
-            // 計算第四階段已售出總票數
+            // 計算第五階段已售出總票數
             current_amount = current_amount + parseInt(ticket.pledged_count) * parseInt(ticket.unit);
         });
+
+        console.log(prev_amount, current_amount);
+
         let sale_progress = (prev_amount + current_amount) / (prev_amount + goal) * 100; // 募款進度
         let rest_tickets = goal - current_amount; // 剩餘可銷售票數
 
         // 售票進度最小整數
         sale_progress = Math.floor(sale_progress);
+
+        // 單人票
+        let set_1_sale = data['rewards'][0].pledged_count; // 已銷售張數
+        let set_1_limit = data['rewards'][0].quantity_limit; // 限量張數
+        let set_1_rest = set_1_limit - set_1_sale; // 剩餘可銷售張數
+
+        let set_1 = $('.type-single-player');
+        // set_1.find('.total-ticket').html(set_1_limit); // 更新時間有點限制票限量張數
+        // set_1.find('.rest-ticket').html(set_1_rest); // 更新時間有點限制票剩餘可銷售張數
+        set_1.fadeTo(300, 1);
+
+        if (set_1_rest === 0 && set_1_limit !== 0) {
+            set_1.find('.ticket-frame').attr({
+                'href': 'javascript://',
+                'target': '_self'
+            }).addClass('soldout');
+            set_1.find('.d-none').attr('src', '/clubT/img/landing/ticket_0319_single_big_soldout.png');
+            set_1.find('.d-block').attr('src', '/clubT/img/landing/ticket_0319_single_soldout.png')
+        }
 
         // 四人票
         let set_4_sale = data['rewards'][1].pledged_count; // 已銷售張數
@@ -107,17 +137,17 @@ $(document).ready(function () {
         let set_4_rest = set_4_limit - set_4_sale; // 剩餘可銷售張數
 
         let set_4 = $('.type-multiplayer-for-4');
-        set_4.find('.total-ticket').html(set_4_limit); // 更新時間有點限制票限量張數
-        set_4.find('.rest-ticket').html(set_4_rest); // 更新時間有點限制票剩餘可銷售張數
+        // set_4.find('.total-ticket').html(set_4_limit); // 更新時間有點限制票限量張數
+        // set_4.find('.rest-ticket').html(set_4_rest); // 更新時間有點限制票剩餘可銷售張數
         set_4.fadeTo(300, 1);
 
-        if (set_4_rest === 0) {
+        if (set_4_rest === 0 & set_4_limit !== 0) {
             set_4.find('.ticket-frame').attr({
                 'href': 'javascript://',
                 'target': '_self'
             }).addClass('soldout');
-            set_4.find('.d-none').attr('src', '/clubT/img/landing/1.3_ticket_2_soldout.png');
-            set_4.find('.d-block').attr('src', '/clubT/img/landing/1.3_ticket_2_mobile_soldout.png')
+            set_4.find('.d-none').attr('src', '/clubT/img/landing/ticket_0319_four_big_soldout.png');
+            set_4.find('.d-block').attr('src', '/clubT/img/landing/ticket_0319_four_soldout.png')
         }
 
         // 十人票
@@ -126,22 +156,23 @@ $(document).ready(function () {
         let set_10_rest = set_10_limit - set_10_sale; // 剩餘可銷售張數
 
         let set_10 = $('.type-multiplayer-for-10');
-        set_10.find('.total-ticket').html(set_10_limit); // 更新時間有點限制票限量張數
-        set_10.find('.rest-ticket').html(set_10_rest); // 更新時間有點限制票剩餘可銷售張數
+        // set_10.find('.total-ticket').html(set_10_limit); // 更新時間有點限制票限量張數
+        // set_10.find('.rest-ticket').html(set_10_rest); // 更新時間有點限制票剩餘可銷售張數
         set_10.fadeTo(300, 1);
 
-        if (set_10_rest === 0) {
+        if (set_10_rest === 0 & set_10_limit !== 0) {
             set_10.find('.ticket-frame').attr({
                 'href': 'javascript://',
                 'target': '_self'
             }).addClass('soldout');
-            set_10.find('.d-none').attr('src', '/clubT/img/landing/1.3_ticket_3_soldout.png');
-            set_10.find('.d-block').attr('src', '/clubT/img/landing/1.3_ticket_3_mobile_soldout.png')
+            set_10.find('.d-none').attr('src', '/clubT/img/landing/ticket_0319_ten_big_soldout.png');
+            set_10.find('.d-block').attr('src', '/clubT/img/landing/ticket_0319_ten_soldout.png')
         }
 
         let sale_info = $('.sale-progress-info');
-        sale_info.find('.total-sale').html(prev_amount + current_amount); // 更新總售出張數
-        sale_info.find('.total-rest').html(rest_tickets); // 更新剩餘張數
+        // sale_info.find('.total-sale').html(prev_amount + current_amount); // 更新總售出張數
+        sale_info.find('.total-sale-number').html(prev_amount + current_amount); // 更新總售出張數
+        // sale_info.find('.total-rest').html(rest_tickets); // 更新剩餘張數
         sale_info.find('.progress-percent').html(sale_progress); // 更新完成進度百分比
 
         // 進度超過70％時，區塊上移
@@ -151,10 +182,10 @@ $(document).ready(function () {
             $('#ticketSec').after(ticketSec.clone());
             ticketSec.remove();
 
-            if (sale_progress >= 100) {
-                // 進度超過100％時，不顯示剩餘張數
-                $('.over-sale').hide();
-            }
+            // if (sale_progress >= 100) {
+            //     // 進度超過100％時，不顯示剩餘張數
+            //     $('.over-sale').hide();
+            // }
         }
 
         sale_info.fadeTo(300, 1);
