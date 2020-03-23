@@ -2851,6 +2851,28 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
 }
 
+#Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper {
+  position: relative;
+}
+
+#Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper::before, #Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper::after {
+  content: '';
+  width: calc(100% - 32px);
+  height: 1px;
+  background-color: rgba(21, 255, 188, 0.2);
+  position: absolute;
+}
+
+#Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper::before {
+  top: 0;
+  right: 0;
+}
+
+#Ticket .ticket-sec-reviews .carousel-item .reviews-wrapper::after {
+  bottom: 0;
+  left: 0;
+}
+
 #Ticket .ticket-sec-reviews .carousel-item p.section-paragraph {
   position: relative;
   color: #15ffbc;
@@ -2883,6 +2905,9 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   height: 60px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (max-width: 575.98px) {
