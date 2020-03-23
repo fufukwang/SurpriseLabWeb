@@ -762,14 +762,15 @@
                                 <div class="sale-progress-info">
                                     <div class="d-inline-block d-sm-flex">
                                         <p class="section-paragraph">
-                                            已招募 <span class="total-sale">1600</span> 位<span class="over-sale">，待招募 <span class="total-rest">400</span> 位</span>
+                                            <!-- 目標召募 <span class="total-sale">1500</span> 位<span class="over-sale">，待招募 <span class="total-rest"></span> 位</span> -->
+                                            目標召募 <span class="total-sale">1500</span> 位<span class="over-sale">，已招募 <span class="total-rest total-sale-number"></span> 位</span>
                                         </p>
                                         <p class="section-paragraph ml-auto text-right progress-percent-area">
                                             已完成 <span class="progress-percent">80</span> %
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售疫情穩定後之票卷<br/>* 劃位時間、可劃位日期與時段，將於 06/01 透過簡訊、email 公佈<br/>* 若05/31 前能招募 1500 位玩家《明日俱樂部》將於疫情穩定後再次開啟
+                                        * 現正預售疫情穩定後之票卷<br/>* 感謝第一階段12/27-3/31前來參與的6000位玩家<br/>* 若05/31 前能招募第二階段 1500 位玩家，疫情穩定後明日俱樂部將再次開啟<br/>* 劃位時間、可劃位日期與時段，將於 06/01 透過簡訊、email 公佈
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
