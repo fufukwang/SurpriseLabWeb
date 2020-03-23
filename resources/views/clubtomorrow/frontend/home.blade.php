@@ -535,20 +535,20 @@
             </section>
 
             <!-- 關於疫情 -->
-            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid1" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-covid" data-section-name="Covid1" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <h2 class="section-title">關於疫情</h2>
                             <div class="section-subtitle">YOU MIGHT WORRY</div>
                             <p class="section-paragraph">
-                                相信近日的現實社會，讓大家心中時不時感到緊張、擔憂。<br/>
+                                相信近日，大家都因疫情感到擔憂。<br/>
                                 <br/>
-                                也因此，團隊決定暫停《明日俱樂部》四月、五月的演出場次，<br/>
-                                並採以預售模式，先行預售疫情結束後預計六月七月的票卷。<br/>
+                                也因此，團隊決定暫停《明日俱樂部》四月、五月的演出場次，並以預售的方式，先行預售六月及七月的票卷。<br/>
                                 <br/>
-                                會有這個決定，一方面是相信著接下來的日子中，疫情將趨於穩定；<br/>
-                                另一方面，團隊也希望更積極地加入防疫陣線。
+                                決定暫停演出，是想更積極地加入防疫陣線；<br/>
+                                <br/>
+                                決定預售票卷，是因為相信在不久的將來，疫情將趨於穩定，而我們的生活，也將慢慢地，回到不需要緊張的日常。
                             </p>
                         </div>
                     </div>
@@ -561,24 +561,23 @@
                             <h2 class="section-title">關於疫情</h2>
                             <div class="section-subtitle">YOU MIGHT WORRY</div>
                             <p class="section-paragraph">
-                                但，更重要的是，我們希望在對未來感到焦躁的社會氛圍中，能帶給大家一些能夠期待的事物 ──<br/>
-                                <br/>
-                                比如，期待六月、期待這場體驗、期待與朋友一起進入這世界、<br/>
-                                期待有朝一日，我們能放下擔憂，再次放鬆且安心地生活。<br/>
-                                <br/>
-                                在接下來的日子中，希望疫情趨於穩定，也希望大家身體都能健健康康的。<br/>
-                                <br/>
-                                團隊也期待著，在《明日俱樂部》大門再次開啟的那一天，能與你見上一面。<br/>
-                                <br/>
-                                明日俱樂部策劃團隊 驚喜製造 Surprise Lab.<br/>
-                                <br/>
-                                對於預售、達標失敗、退費辦法若有任何疑問，<br/>
-                                歡迎前往「<a class="link-bright-green" href="rules.html">俱樂部手冊</a>」了解更多。
+                            而我們也希望，在對未來感到焦躁的社會氛圍中，能帶給大家一些能夠期待的事物 ─<br/>
+                            <br/>
+                            比如，期待六月、期待七月，<br/>
+                            比如，期待來到明日俱樂部的那一天。<br/>
+                            <br/>
+                            比如，期待有朝一日，我們能放下擔憂，<br/>
+                            再次放鬆且安心地生活、玩樂。<br/>
+                            <br/>
+                            在接下來的日子，希望大家都能健健康康的。團隊也期待著，在《明日俱樂部》大門再次開啟的那一天，能與你見上一面。<br/>
+                            <br/>
+                            明日俱樂部策劃團隊<br/>
+                            驚喜製造 Surprise Lab.
                             </p>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- 購票步驟 -->
             <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-step" data-section-name="Ticket" data-aos="fade">
