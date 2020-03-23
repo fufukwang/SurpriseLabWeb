@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500&display=swap");
 @font-face {
@@ -2848,6 +2849,37 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   #Ticket a.btn-bright-blue {
     margin-top: 28px;
   }
+}
+
+#Ticket .ticket-sec-reviews .carousel-item {
+  position: relative;
+}
+
+#Ticket .ticket-sec-reviews .carousel-item::before, #Ticket .ticket-sec-reviews .carousel-item::after {
+  position: absolute;
+  color: #15ffbc;
+}
+
+#Ticket .ticket-sec-reviews .carousel-item::before {
+  content: '“ ';
+  top: 0;
+  left: 0;
+}
+
+#Ticket .ticket-sec-reviews .carousel-item::after {
+  content: '”';
+  bottom: 0;
+  right: 0;
+}
+
+#Ticket .ticket-sec-reviews .carousel-item p.section-paragraph {
+  color: #15ffbc;
+}
+
+#Ticket .ticket-sec-reviews .carousel-item .carousel-control-prev,
+#Ticket .ticket-sec-reviews .carousel-item .carousel-control-next {
+  width: 60px;
+  height: 60px;
 }
 
 @media (max-width: 575.98px) {

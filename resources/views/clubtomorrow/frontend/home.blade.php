@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=1.2"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=1.3"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -383,47 +383,56 @@
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-reviews" data-section-name="Reviews" data-aos="fade">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-lg-6 offset-lg-3 col-12">
                             <h2 class="section-title">玩家口碑</h2>
                             <div class="section-subtitle">Reviews</div>
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div id="carouselReviewsControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        “ 這是我第一次嘗試沈浸式，完全被震撼，<br/>
-                                        很喜歡這種類似電影情節又深入其境的遊戲體驗。” 
+                                        <p class="section-paragraph">
+                                            這是我第一次嘗試沈浸式，完全被震撼，很喜歡這種類似電影情節又深入其境的遊戲體驗。
+                                        </p>
                                     </div>
                                     <div class="carousel-item">
-                                        “ 這遊戲和社會有著驚人關聯，<br/>
-                                        是場人性實驗，也是真實世界的縮影。”
+                                        <p class="section-paragraph">
+                                            這遊戲和社會有著驚人關聯，是場人性實驗，也是真實世界的縮影。
+                                        </p>
                                     </div>
                                     <div class="carousel-item">
-                                        “ 喜歡所有人都能改變結局的設定”
+                                        <p class="section-paragraph">
+                                            喜歡所有人都能改變結局的設定
+                                        </p>   
                                     </div>
                                     <div class="carousel-item">
-                                        “ 跟朋友進到不同組，原本有點擔心，沒想到看到了更大的世界。<br/>
-                                        但看到朋友變成敵人時，內心真的很複雜。”
+                                        <p class="section-paragraph">
+                                            跟朋友進到不同組，原本有點擔心，沒想到看到了更大的世界。但看到朋友變成敵人時，內心真的很複雜。
+                                        </p>
                                     </div>
                                     <div class="carousel-item">
-                                        “ 我與妹妹面前出現一把槍，<br/>
-                                        在那當下，我們卻只想著要槍斃自己讓對方存活。 ”
+                                        <p class="section-paragraph">
+                                            我與妹妹面前出現一把槍，在那當下，我們卻只想著要槍斃自己讓對方存活。
+                                        </p>
                                     </div>
                                     <div class="carousel-item">
-                                        “我們的所作所為決定這世界的樣子，沒有人可以置身事外。” 
+                                        <p class="section-paragraph">
+                                            我們的所作所為決定這世界的樣子，沒有人可以置身事外。
+                                        </p>
                                     </div>
                                     <div class="carousel-item">
-                                        “ 原本是保持著好玩的心情前來，結束之後完全愛上這種型態的體驗，<br/>
-                                        主角們演出專業、場景佈置很精細，<br/>
-                                        跟不同的人來會有不同的碰撞、不同的效果、不同的結局，真的很有趣。”
+                                        <p class="section-paragraph">
+                                            原本是保持著好玩的心情前來，結束之後完全愛上這種型態的體驗，主角們演出專業、場景佈置很精細，跟不同的人來會有不同的碰撞、不同的效果、不同的結局，真的很有趣。
+                                        </p>
                                     </div>
                                     <div class="carousel-item">
-                                        “ 感謝製作團隊與所有不管是幕前還是幕後的工作人員，<br/>
-                                        這次的體驗真的很棒。 ”
+                                        <p class="section-paragraph">
+                                            感謝製作團隊與所有不管是幕前還是幕後的工作人員，這次的體驗真的很棒。
+                                        </p>
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselReviewsControls" role="button" data-slide="prev">
                                     <img class="img-fluid" src="/clubT/img/btn-prev.svg" alt="prev">
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselReviewsControls" role="button" data-slide="next">
                                     <img class="img-fluid" src="/clubT/img/btn-next.svg" alt="next">
                                 </a>
                             </div>
@@ -432,7 +441,7 @@
                                 共迎接了 6000 位玩家<br/>
                                 <br/>
                                 歡迎於社群網站尋找 #明日俱樂部<br/>
-                                一窺先前的玩家經歷了什麼
+                                一窺先前的玩家經歷了什麼<br/>
                                 <br/>
                                 想了解團隊的過往作品嗎？<br/>
                                 <a class="link-bright-green" href="https://youtu.be/uIp7X2MEXso" target="_blank">

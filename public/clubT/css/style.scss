@@ -2342,6 +2342,41 @@ header {
     }
   }
 
+  // 玩家口碑
+  .ticket-sec-reviews {
+    .carousel-item {
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        color: $color-bright-green;
+      }
+  
+      &::before {
+        content: '“ ';
+        top: 0;
+        left: 0;
+      }
+  
+      &::after {
+        content: '”';
+        bottom: 0;
+        right: 0;
+      }
+
+      p.section-paragraph {
+        color: $color-bright-green;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
   // 關於疫情
   .ticket-sec-covid {
     p.section-paragraph {
