@@ -447,28 +447,29 @@
                 </div>
             </section> -->
 
-            <!-- 預售說明 -->
+            <!-- 預售機制 -->
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="TicketAbout" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="section-title">預售說明</h2>
+                            <h2 class="section-title">預售機制</h2>
                             <div class="section-subtitle">ABOUT</div>
                             <p class="section-paragraph">
                                 受現實世界之影響<br/>
                                 《明日俱樂部》的入口暫時關閉<br/>
                                 <br/>
                                 但，這並不是結束<br/>
-                                《明日俱樂部》是否能重啟，將由玩家共同決定<br/>
                                 <br/>
-                                若05/31 前能招募 1500 位玩家<br/>
+                                明日俱樂部是否能重啟<br/>
+                                將由玩家共同決定<br/>
+                                <br/>
+                                05/31 前能招募 1500 位玩家<br/>
                                 《明日俱樂部》將於疫情穩定後再次開啟<br/>
                                 <br/>
                                 劃位時間、可劃位日期與時段<br/>
                                 將於 06/01 透過簡訊及 email 通知<br/>
                                 <br/>
-                                我們了解你可能還有些疑惑<br/>
-                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，了解更多預售說明</a>
+                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，快速了解明日俱樂部預售機制</a>
                             </p>
                         </div>
                     </div>
@@ -744,7 +745,7 @@
                             <!-- 倒數計時器 -->
                             <div class="time-counter">
                                 <p class="section-paragraph">
-                                    嘿，如果你對這世界感到好奇<br />請與我們一起招募玩家吧！
+                                    嘿，如果你對這世界感到好奇<br/>請與我們一起招募玩家吧！<br/><br/>
                                 </p>
                                 <div class="time-rest d-flex align-items-center justify-content-center">
                                     <span class="days">00</span>天
@@ -770,7 +771,8 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 現正預售疫情穩定後之票卷<br/>* 感謝第一階段12/27-3/31前來參與的6000位玩家<br/>* 若05/31 前能招募第二階段 1500 位玩家，疫情穩定後明日俱樂部將再次開啟<br/>* 劃位時間、可劃位日期與時段，將於 06/01 透過簡訊、email 公佈
+                                        * 05/31 前招募滿 1500為玩家，《明日俱樂部》將再次開啟<br/>
+                                        * 現正預售六月至七月之座位，確切可劃位日期、詳細劃位辦法，將於 06/01 判斷疫情狀況，透過簡訊、email 通知<br/>
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
