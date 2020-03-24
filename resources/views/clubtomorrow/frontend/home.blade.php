@@ -476,10 +476,14 @@
                                 一窺先前的玩家經歷了什麼<br/>
                                 <br/>
                                 想了解團隊的過往作品嗎？<br/>
-                                <a class="link-bright-green video-play">
+                                <!-- <a class="link-bright-green video-play">
                                     點此觀看驚喜製造 X 進港浪製作過往作品<br/>
                                     《微醺大飯店 The Great Tipsy》
-                                </a>
+                                </a> -->
+                                <button class="video-play" data-toggle="modal" data-target="#videoDetail">
+                                    點此觀看驚喜製造 X 進港浪製作過往作品<br/>
+                                    《微醺大飯店 The Great Tipsy》
+                                </button>
                             </p>
                         </div>
                     </div>
