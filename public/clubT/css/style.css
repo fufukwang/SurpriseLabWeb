@@ -297,6 +297,10 @@ a.link-bright-green {
   }
 }
 
+button:focus {
+  outline: none !important;
+}
+
 h1 {
   font-size: 0;
   color: transparent;
@@ -3810,10 +3814,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
-
-.video-play:focus {
-  outline: none;
 }
 
 .video-wrapper {

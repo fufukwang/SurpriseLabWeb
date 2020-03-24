@@ -145,6 +145,12 @@ a {
   }
 }
 
+button {
+  &:focus {
+    outline: none !important;
+  }
+}
+
 h1 {
   font-size: 0;
   color: transparent;
@@ -3375,10 +3381,6 @@ header {
   border: none;
   background-color: transparent;
   cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
 }
 
 .video-wrapper {
