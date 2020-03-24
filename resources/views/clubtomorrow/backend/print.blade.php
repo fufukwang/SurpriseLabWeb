@@ -132,8 +132,10 @@
                 }
                 if($coup->type == 'p1'){ $coupon_pople += 1; } elseif ($coup->type == 'p4') { $coupon_pople += 4; } elseif ($coup->type == 'p10') { $coupon_pople += 10; }
             }
-            // 這裡取得貝殼過來的後四碼
-            $last_four = App\model\club\backme::select('last_four')->find($coup->b_id)->last_four;
+            if(isset($coup->b_id)){
+                // 這裡取得貝殼過來的後四碼
+                $last_four = App\model\club\backme::select('last_four')->find($coup->b_id)->last_four;
+            }
         } else {
             $totle_money = $row->OM;
             if($row->pay_type == '信用卡'){
