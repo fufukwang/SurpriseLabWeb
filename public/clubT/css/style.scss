@@ -2353,6 +2353,10 @@ header {
     #carouselReviewsControls {
       margin-bottom: 36px;
 
+      @media (max-width: 575.98px) {
+        margin-bottom: 24px;
+      }
+
       .carousel-item-next, 
       .carousel-item-prev, 
       .carousel-item.active {
@@ -2384,6 +2388,15 @@ header {
             bottom: 0;
             left: 0;
           }
+
+          @media (max-width: 575.98px) {
+            max-width: calc(100% - 60px);
+
+            &::before,
+            &::after {
+              width: calc(100% - 29px);
+            }
+          }
         }
 
         .reviews-inner {
@@ -2411,6 +2424,11 @@ header {
             bottom: 0;
             right: 0;
           }
+
+          @media (max-width: 575.98px) {
+            padding: 18px 0 16px;
+            height: 174px;
+          }
         }
   
         p.section-paragraph {
@@ -2424,7 +2442,23 @@ header {
         height: 60px;
         transition: 0.3s;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%);        
+      }
+
+      @media (max-width: 575.98px) {
+        .carousel-control-next,
+        .carousel-control-prev {
+          width: 36px;
+          height: 36px;
+        }
+
+        .carousel-control-prev {
+          left: -20px;
+        }
+
+        .carousel-control-next {
+          right: -20px;
+        }
       }
     }
   }
