@@ -3807,6 +3807,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 .video-play {
   color: #15ffbc;
   text-decoration: underline;
+  border: none;
   background-color: transparent;
   cursor: pointer;
 }
@@ -3817,7 +3818,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: #03030D;
+  background-color: rgba(3, 3, 13, 0.8);
   z-index: 999999;
   display: none;
 }
