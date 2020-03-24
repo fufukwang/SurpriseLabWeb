@@ -386,7 +386,7 @@
                         <div class="col-lg-6 offset-lg-3 col-12">
                             <h2 class="section-title">玩家口碑</h2>
                             <div class="section-subtitle">Reviews</div>
-                            <div id="carouselReviewsControls" class="carousel slide" data-ride="">
+                            <div id="carouselReviewsControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="reviews-wrapper">
