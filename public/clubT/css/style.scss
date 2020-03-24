@@ -145,6 +145,12 @@ a {
   }
 }
 
+button {
+  &:focus {
+    outline: none !important;
+  }
+}
+
 h1 {
   font-size: 0;
   color: transparent;
@@ -2204,6 +2210,16 @@ header {
           }
         }
       }
+      
+      .sale-progress {
+        .sale-progress-info {
+          .total-sale,
+          .total-rest,
+          .progress-percent {
+              font-size: 20px;
+          }
+        }
+      }
 
       .sale-progress {
         .sale-progress-info {
@@ -2233,7 +2249,6 @@ header {
           .total-sale,
           .total-rest,
           .progress-percent {
-            font-size: 20px;
             letter-spacing: 1px;
           }
 
@@ -2330,6 +2345,103 @@ header {
 
     @media (max-width: 374.98px) {
       margin-top: 28px;
+    }
+  }
+
+  // 玩家口碑
+  .ticket-sec-reviews {
+    #carouselReviewsControls {
+      margin-bottom: 36px;
+
+      .carousel-item-next, 
+      .carousel-item-prev, 
+      .carousel-item.active {
+        display: flex;
+      }
+
+      .carousel-item {
+        .reviews-wrapper {
+          position: relative;
+          width: 100%;
+          max-width: calc(100% - 244px);
+          margin: 0 auto;
+  
+          &::before,
+          &::after {
+            content: '';
+            width: calc(100% - 32px);
+            height: 1px;
+            background-color: rgba($color-bright-green, 0.2);
+            position: absolute;
+          }
+  
+          &::before {
+            top: 0;
+            right: 0;
+          }
+  
+          &::after {
+            bottom: 0;
+            left: 0;
+          }
+        }
+
+        .reviews-inner {
+          position: relative;
+          padding: 40px 0;
+          height: 178px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::before,
+          &::after {
+            position: absolute;
+            color: $color-bright-green;
+          }
+    
+          &::before {
+            content: '“ ';
+            top: 0;
+            left: 0;
+          }
+      
+          &::after {
+            content: '”';
+            bottom: 0;
+            right: 0;
+          }
+        }
+  
+        p.section-paragraph {
+          color: $color-bright-green;
+        }
+      }
+  
+      .carousel-control-next,
+      .carousel-control-prev {
+        width: 60px;
+        height: 60px;
+        transition: 0.3s;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  // 關於疫情
+  .ticket-sec-covid {
+    p.section-paragraph {
+
+      @media (max-width: 575.98px) {
+        max-width: 80%;
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 374.98px) {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -2611,6 +2723,221 @@ header {
     //     padding: 8px 0;
     //   }
     // }
+  }
+}
+
+//--- Ticket Modal ---//
+#ticketDetail {
+  z-index: 999999;
+
+  .modal-dialog {
+    max-width: 812px;
+  }
+
+  .modal-content {
+    background-color: rgba($color-black, 0.8);
+    border-radius: 0;
+    border: 1px solid $color-bright-blue;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .modal-header {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    line-height: 1.5;
+    color: $color-black;
+    background-color: $color-bright-blue;
+    justify-content: center;
+    padding: 8px 0;
+    border-radius: 0;
+    border: none;
+    position: relative;
+
+    .close-modal {
+      width: 37px;
+      height: 37px;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+
+      button.close {
+        width: 37px;
+        height: 37px;
+        padding: 10px;
+        margin: 0;
+        text-shadow: none;
+        float: none;
+        opacity: 1;
+
+        &:focus {
+          outline: none;
+        }
+
+        .icon-bar {
+          width: 17px;
+          height: 3px;
+          display: block;
+          background-color: $color-black;
+          transform: rotate(45deg) translate(1px, 2px);
+
+          &+.icon-bar {
+            transform: rotate(-45deg) translate(0px, -1px);
+          }
+        }
+      }
+    }
+  }
+
+  .modal-text {
+    padding: 60px 100px;
+  }
+
+  .ticket-wrapper {
+    .ticket-item {
+      &+.ticket-item {
+        margin-top: 30px;
+      }
+
+      .ticket-title,
+      .ticket-content {
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        line-height: 1.5;
+      }
+
+      .ticket-title {
+        color: $color-bright-blue; 
+      }
+
+      .ticket-content {
+        color: $color-bright-green;
+        border-left: 1px solid $color-bright-green;
+        margin-top: 10px;
+        padding: 7px 0 7px 20px;
+      }
+    }
+  }
+
+  .section-paragraph {
+    margin: 90px 0 70px;
+    color: $color-bright-green;
+  }
+
+  @media (max-width: 1440px) {
+    .modal-header {
+      font-size: 16px;
+      letter-spacing: 1.6px;
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        .ticket-title,
+        .ticket-content {
+          font-size: 16px;
+          letter-spacing: 1.6px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 48px 0 45px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .modal-dialog {
+      max-width: 100%;
+      margin: 20px;
+    }
+
+    .modal-header {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      padding: 10px 0;
+    }
+
+    .modal-text {
+      padding: 30px 20px;
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        &+.ticket-item {
+          margin-top: 20px;
+        }
+
+        .ticket-title,
+        .ticket-content {
+          font-size: 14px;
+          letter-spacing: 1.4px;
+        }
+
+        .ticket-content {
+          padding: 0 0 0 15px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 36px 0;
+    }
+  }
+
+  @media (max-width: 374.98px) {
+    .modal-header {
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      padding: 6px 0;
+
+      .close-modal {
+        width: 30px;
+        height: 30px;
+        right: 4px;
+  
+        button.close {
+          width: 30px;
+          height: 30px;
+          padding: 8px;
+
+          .icon-bar {
+            width: 14px;
+          }
+        }
+      }
+
+      .modal-text {
+        padding: 20px;
+      }
+    }
+
+    .ticket-wrapper {
+      .ticket-item {
+        &+.ticket-item {
+          margin-top: 5px;
+        }
+
+        .ticket-title,
+        .ticket-content {
+          font-size: 12px;
+          letter-spacing: 1.2px;
+        }
+
+        .ticket-content {
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+
+    .section-paragraph {
+      margin: 24px 0;
+    }
   }
 }
 
@@ -3042,6 +3369,64 @@ header {
         a.btn-bright-blue {
           margin-top: 30px;
         }
+      }
+    }
+  }
+}
+
+// 過往作品介紹影片
+.video-play {
+  color: $color-bright-green;
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.video-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color-black, 0.8);
+  z-index: 999999;
+  display: none;
+
+  .video {
+    margin-top: 15vh;
+    height: 70vh;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .video-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .btn-close-video {
+      width: 100px;
+      height: 100px;
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 50px;
+      color: $color-bright-blue;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      @media (max-width: 575.98px) {
+        width: 80px;
+        height: 80px;
       }
     }
   }
