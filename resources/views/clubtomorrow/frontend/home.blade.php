@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=1.8"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=1.9"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -1036,6 +1036,16 @@
     </div>
 </div>
 
+<!-- 團隊過往作品 《微醺大飯店 The Great Tipsy》 -->
+<div class="video-wrapper">
+    <div class="video">
+        <!-- Youtube Video Append Position -->
+    </div>
+    <div class="video-close">
+        <button class="btn-close-video">×</button>
+    </div>
+</div>
+
 <!-- Screen Rotate Hint -->
 <div class="hint-wrapper">
     <div class="hint-inner">
@@ -1067,7 +1077,7 @@
 <!-- Custom Js -->
 <script src="/clubT/js/main.js"></script>
 <script src="/clubT/js/smooth-scroll.js"></script>
-<script src="/clubT/js/home.js?v=0.4"></script>
+<script src="/clubT/js/home.js?v=0.5"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>

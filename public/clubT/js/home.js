@@ -45,6 +45,25 @@ $(document).ready(function () {
         });
     }
 
+    // Homepage Video
+    let btnPlay = $('.video-play');
+    let btnVideoClose = $('.btn-close-video');
+    let videoWrapper = $('.video-wrapper');
+    let video = $('.video');
+    let hintWrapper = $('.hint-wrapper');
+
+    btnPlay.on('click', function () {
+        video.append('<iframe src="https://www.youtube.com/embed/uIp7X2MEXso?showinfo=0&autoplay=1&repeat=1&loop=1&rel=0&controls=0&playlist=uIp7X2MEXso" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen" autoplay="autoplay"></iframe>');
+        hintWrapper.css('display', 'none');
+        videoWrapper.fadeIn();
+    });
+
+    btnVideoClose.on('click', function () {
+        videoWrapper.hide();
+        video.empty();
+        hintWrapper.css('display', '');
+    });
+
     // 選擇票券
     let ticket = $('.ticket-frame');
 
