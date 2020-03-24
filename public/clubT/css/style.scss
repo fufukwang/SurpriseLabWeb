@@ -2429,10 +2429,18 @@ header {
             padding: 18px 0 16px;
             height: 174px;
           }
+
+          @media (max-width: 374.98px) {
+            height: 154px;
+          }
         }
   
         p.section-paragraph {
           color: $color-bright-green;
+
+          @media (max-width: 575.98px) {
+            line-height: 2;
+          }
         }
       }
   

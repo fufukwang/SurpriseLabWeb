@@ -2946,8 +2946,20 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
 }
 
+@media (max-width: 374.98px) {
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
+    height: 154px;
+  }
+}
+
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
   color: #15ffbc;
+}
+
+@media (max-width: 575.98px) {
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
+    line-height: 2;
+  }
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
