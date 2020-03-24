@@ -3369,6 +3369,13 @@ header {
 }
 
 // 過往作品介紹影片
+.video-play {
+  color: $color-bright-green;
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .video-wrapper {
   position: fixed;
   left: 0;
@@ -3400,7 +3407,7 @@ header {
       font-size: 38px;
       font-weight: 400;
       line-height: 50px;
-      color: $color-white;
+      color: $color-bright-blue;
       background-color: transparent;
       border: none;
       cursor: pointer;
