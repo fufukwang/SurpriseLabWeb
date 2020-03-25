@@ -2859,6 +2859,12 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   margin-bottom: 36px;
 }
 
+@media (max-width: 575.98px) {
+  #Ticket .ticket-sec-reviews #carouselReviewsControls {
+    margin-bottom: 24px;
+  }
+}
+
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item-next,
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item-prev,
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item.active {
@@ -2890,6 +2896,15 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
   bottom: 0;
   left: 0;
+}
+
+@media (max-width: 575.98px) {
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper {
+    max-width: calc(100% - 60px);
+  }
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before, #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
+    width: calc(100% - 29px);
+  }
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
@@ -2924,8 +2939,27 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   right: 0;
 }
 
+@media (max-width: 575.98px) {
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
+    padding: 18px 0 16px;
+    height: 174px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
+    height: 154px;
+  }
+}
+
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
   color: #15ffbc;
+}
+
+@media (max-width: 575.98px) {
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
+    line-height: 2;
+  }
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
@@ -2937,6 +2971,20 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media (max-width: 575.98px) {
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
+    width: 36px;
+    height: 36px;
+  }
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
+    left: -20px;
+  }
+  #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-next {
+    right: -20px;
+  }
 }
 
 @media (max-width: 575.98px) {
