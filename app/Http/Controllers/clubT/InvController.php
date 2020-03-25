@@ -248,7 +248,11 @@ class InvController extends Controller
             ];
             $result = $this->inv_sent($post_data_array);
             $results = json_decode($result['web_info'],true);
-            $r = json_decode($results['Result'],true);
+            if($results['Status'] != 'LIB10003'){
+                if(isset($results['Result'])) $r = json_decode($results['Result'],true);
+            } else {
+                $r['InvoiceNumber'] = '';
+            }
             $inv = inv::where('order_id',$request->id)->first();
             if($inv){
                 $inv->is_cancal = 0;
