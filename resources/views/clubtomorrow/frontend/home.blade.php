@@ -808,8 +808,9 @@
                                         </p>
                                     </div>
                                     <p class="sale-remark section-paragraph">
-                                        * 05/31 前招募滿 1500為玩家，《明日俱樂部》將再次開啟<br/>
-                                        * 現正預售六月至七月之座位，確切可劃位日期、詳細劃位辦法，將於 06/01 判斷疫情狀況，透過簡訊、email 通知<br/>
+                                        * 05/31前招募滿1500位玩家，《明日俱樂部》將再次開啟<br/>
+                                        <br/>
+                                        * 現正預售六月至七月之座位，確切可劃位日期、劃位辦法，將於 06/01 判斷疫情狀況，透過簡訊、email 通知<br/>
                                     </p>
                                     <a class="smoothScroll btn-bright-blue" href="#Rules">俱樂部手冊</a>
                                 </div>
