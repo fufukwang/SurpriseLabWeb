@@ -1793,7 +1793,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec,
-#TicketPresale .ticket-sec {
+#Presale .ticket-sec {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1804,34 +1804,34 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec .section-subtitle,
-#TicketPresale .ticket-sec .section-subtitle {
+#Presale .ticket-sec .section-subtitle {
   margin-bottom: 30px;
 }
 
 @media (max-width: 1440px) {
   #Ticket .ticket-sec,
-  #TicketPresale .ticket-sec {
+  #Presale .ticket-sec {
     padding-top: 120px;
   }
 }
 
 @media (max-width: 1440px) {
   #Ticket .ticket-sec,
-  #TicketPresale .ticket-sec {
+  #Presale .ticket-sec {
     padding-top: 108px;
   }
 }
 
 @media (max-width: 1024px) {
   #Ticket .ticket-sec,
-  #TicketPresale .ticket-sec {
+  #Presale .ticket-sec {
     padding-top: 60px;
   }
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec,
-  #TicketPresale .ticket-sec {
+  #Presale .ticket-sec {
     padding-top: 48px;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1841,13 +1841,13 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 #Ticket .ticket-sec-type h2.section-title,
 #Ticket .ticket-sec-type .section-subtitle,
-#TicketPresale .ticket-sec-type h2.section-title,
-#TicketPresale .ticket-sec-type .section-subtitle {
+#Presale .ticket-sec-type h2.section-title,
+#Presale .ticket-sec-type .section-subtitle {
   color: #01ffff;
 }
 
 #Ticket .ticket-sec-type .ticket-type,
-#TicketPresale .ticket-sec-type .ticket-type {
+#Presale .ticket-sec-type .ticket-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1859,22 +1859,22 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-type .ticket-type .type-item,
-#TicketPresale .ticket-sec-type .ticket-type .type-item {
+#Presale .ticket-sec-type .ticket-type .type-item {
   width: 300px;
 }
 
 #Ticket .ticket-sec-type .ticket-type .type-item img,
-#TicketPresale .ticket-sec-type .ticket-type .type-item img {
+#Presale .ticket-sec-type .ticket-type .type-item img {
   width: 100%;
 }
 
 #Ticket .ticket-sec-type .ticket-type .type-item + .type-item,
-#TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item {
+#Presale .ticket-sec-type .ticket-type .type-item + .type-item {
   margin-left: 94px;
 }
 
 #Ticket .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before,
-#TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
+#Presale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
   content: '';
   width: 1px;
   height: 200px;
@@ -1887,12 +1887,12 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-type .ticket-type .type-item .type-img,
-#TicketPresale .ticket-sec-type .ticket-type .type-item .type-img {
+#Presale .ticket-sec-type .ticket-type .type-item .type-img {
   position: relative;
 }
 
 #Ticket .ticket-sec-type .ticket-type .type-item .type-img::after,
-#TicketPresale .ticket-sec-type .ticket-type .type-item .type-img::after {
+#Presale .ticket-sec-type .ticket-type .type-item .type-img::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -1906,7 +1906,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-type .ticket-type .type-item .ticket-state,
-#TicketPresale .ticket-sec-type .ticket-type .type-item .ticket-state {
+#Presale .ticket-sec-type .ticket-type .type-item .ticket-state {
   text-align: center;
   color: #01ffff;
   font-size: 16px;
@@ -1916,36 +1916,36 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-type .ticket-frame.soldout,
-#TicketPresale .ticket-sec-type .ticket-frame.soldout {
+#Presale .ticket-sec-type .ticket-frame.soldout {
   cursor: not-allowed;
 }
 
 #Ticket .ticket-sec-type .ticket-frame.has-not-hover .type-img::after,
-#TicketPresale .ticket-sec-type .ticket-frame.has-not-hover .type-img::after {
+#Presale .ticket-sec-type .ticket-frame.has-not-hover .type-img::after {
   opacity: 1;
 }
 
 @media (max-width: 1440px) {
   #Ticket .ticket-sec-type .ticket-type,
-  #TicketPresale .ticket-sec-type .ticket-type {
+  #Presale .ticket-sec-type .ticket-type {
     margin-top: 30px;
     margin-bottom: 36px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item {
     width: 200px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item {
     margin-left: 84px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
     height: 140px;
     left: -42px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item .ticket-state,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item .ticket-state {
+  #Presale .ticket-sec-type .ticket-type .type-item .ticket-state {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
@@ -1953,24 +1953,24 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 1280px) {
   #Ticket .ticket-sec-type,
-  #TicketPresale .ticket-sec-type {
+  #Presale .ticket-sec-type {
     padding-top: 60px;
   }
   #Ticket .ticket-sec-type .ticket-type,
-  #TicketPresale .ticket-sec-type .ticket-type {
+  #Presale .ticket-sec-type .ticket-type {
     margin-top: 20px;
     margin-bottom: 24px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item {
     width: 180px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item {
     margin-left: 62px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
     height: 100%;
     left: -31px;
   }
@@ -1978,24 +1978,24 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 1024px) {
   #Ticket .ticket-sec-type .ticket-type,
-  #TicketPresale .ticket-sec-type .ticket-type {
+  #Presale .ticket-sec-type .ticket-type {
     margin-top: 33px;
     margin-bottom: 36px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item {
     width: 156px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item {
     margin-left: 64px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
     left: -32px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item .ticket-state,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item .ticket-state {
+  #Presale .ticket-sec-type .ticket-type .type-item .ticket-state {
     font-size: 12px;
     letter-spacing: 1.2px;
   }
@@ -2003,15 +2003,15 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-type,
-  #TicketPresale .ticket-sec-type {
+  #Presale .ticket-sec-type {
     padding-top: 48px;
   }
   #Ticket .ticket-sec-type .section-subtitle,
-  #TicketPresale .ticket-sec-type .section-subtitle {
+  #Presale .ticket-sec-type .section-subtitle {
     margin-bottom: 12px;
   }
   #Ticket .ticket-sec-type .ticket-type,
-  #TicketPresale .ticket-sec-type .ticket-type {
+  #Presale .ticket-sec-type .ticket-type {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2021,26 +2021,26 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     padding: 0 18px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item {
     width: 100%;
     padding-bottom: 10px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item .type-img,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item .type-img {
+  #Presale .ticket-sec-type .ticket-type .type-item .type-img {
     padding: 0 14px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item {
     margin-left: 0;
     padding-top: 10px;
     border-top: 1px solid rgba(1, 255, 255, 0.3);
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item .type-img::before {
     display: none;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item .ticket-state,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item .ticket-state {
+  #Presale .ticket-sec-type .ticket-type .type-item .ticket-state {
     font-size: 14px;
     letter-spacing: 1.4px;
     margin: 4px 0 0;
@@ -2049,45 +2049,45 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 374.98px) {
   #Ticket .ticket-sec-type,
-  #TicketPresale .ticket-sec-type {
+  #Presale .ticket-sec-type {
     padding-top: 50px;
   }
   #Ticket .ticket-sec-type .section-subtitle,
-  #TicketPresale .ticket-sec-type .section-subtitle {
+  #Presale .ticket-sec-type .section-subtitle {
     margin-bottom: 8px;
   }
   #Ticket .ticket-sec-type .ticket-type,
-  #TicketPresale .ticket-sec-type .ticket-type {
+  #Presale .ticket-sec-type .ticket-type {
     margin-top: 4px;
     padding: 0 20px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item {
     padding-bottom: 6px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item + .type-item,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item + .type-item {
+  #Presale .ticket-sec-type .ticket-type .type-item + .type-item {
     padding-top: 6px;
   }
   #Ticket .ticket-sec-type .ticket-type .type-item .ticket-state,
-  #TicketPresale .ticket-sec-type .ticket-type .type-item .ticket-state {
+  #Presale .ticket-sec-type .ticket-type .type-item .ticket-state {
     font-size: 10px;
     letter-spacing: 1px;
   }
 }
 
 #Ticket .ticket-sec-experience,
-#TicketPresale .ticket-sec-experience {
+#Presale .ticket-sec-experience {
   text-align: center;
 }
 
 #Ticket .ticket-sec-experience button.video-play,
-#TicketPresale .ticket-sec-experience button.video-play {
+#Presale .ticket-sec-experience button.video-play {
   color: #01ffff;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper,
-#TicketPresale .ticket-sec-experience .exp-wrapper {
+#Presale .ticket-sec-experience .exp-wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2100,27 +2100,27 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item,
-#TicketPresale .ticket-sec-experience .exp-wrapper .exp-item {
+#Presale .ticket-sec-experience .exp-wrapper .exp-item {
   width: 210px;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item,
-#TicketPresale .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
+#Presale .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
   margin-left: 70px;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item p.section-paragraph,
-#TicketPresale .ticket-sec-experience .exp-wrapper .exp-item p.section-paragraph {
+#Presale .ticket-sec-experience .exp-wrapper .exp-item p.section-paragraph {
   margin-bottom: 0;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-img img,
-#TicketPresale .ticket-sec-experience .exp-wrapper .exp-item .exp-img img {
+#Presale .ticket-sec-experience .exp-wrapper .exp-item .exp-img img {
   width: 100%;
 }
 
 #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-title,
-#TicketPresale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
+#Presale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
   text-align: center;
   color: #15ffbc;
   font-size: 17px;
@@ -2130,79 +2130,79 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-experience p.section-paragraph,
-#TicketPresale .ticket-sec-experience p.section-paragraph {
+#Presale .ticket-sec-experience p.section-paragraph {
   margin-bottom: 60px;
 }
 
 @media (max-width: 1440px) {
   #Ticket .ticket-sec-experience .section-subtitle,
-  #TicketPresale .ticket-sec-experience .section-subtitle {
+  #Presale .ticket-sec-experience .section-subtitle {
     margin-bottom: 18px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper,
-  #TicketPresale .ticket-sec-experience .exp-wrapper {
+  #Presale .ticket-sec-experience .exp-wrapper {
     margin-top: 36px;
     margin-bottom: 48px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-title,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
     font-size: 16px;
     letter-spacing: 1.6px;
     margin-top: 6px;
   }
   #Ticket .ticket-sec-experience p.section-paragraph,
-  #TicketPresale .ticket-sec-experience p.section-paragraph {
+  #Presale .ticket-sec-experience p.section-paragraph {
     margin-bottom: 48px;
   }
 }
 
 @media (max-width: 1280px) {
   #Ticket .ticket-sec-experience .section-subtitle,
-  #TicketPresale .ticket-sec-experience .section-subtitle {
+  #Presale .ticket-sec-experience .section-subtitle {
     margin-bottom: 30px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper,
-  #TicketPresale .ticket-sec-experience .exp-wrapper {
+  #Presale .ticket-sec-experience .exp-wrapper {
     margin-bottom: 30px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
     margin-left: 62px;
   }
   #Ticket .ticket-sec-experience p.section-paragraph,
-  #TicketPresale .ticket-sec-experience p.section-paragraph {
+  #Presale .ticket-sec-experience p.section-paragraph {
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 1024px) {
   #Ticket .ticket-sec-experience .section-subtitle,
-  #TicketPresale .ticket-sec-experience .section-subtitle {
+  #Presale .ticket-sec-experience .section-subtitle {
     margin-bottom: 8px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper,
-  #TicketPresale .ticket-sec-experience .exp-wrapper {
+  #Presale .ticket-sec-experience .exp-wrapper {
     margin-bottom: 36px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
     margin-left: 28px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-title,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
     font-size: 14px;
     letter-spacing: 1.4px;
     margin-top: 8px;
   }
   #Ticket .ticket-sec-experience p.section-paragraph,
-  #TicketPresale .ticket-sec-experience p.section-paragraph {
+  #Presale .ticket-sec-experience p.section-paragraph {
     margin-bottom: 46px;
   }
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-experience .exp-wrapper,
-  #TicketPresale .ticket-sec-experience .exp-wrapper {
+  #Presale .ticket-sec-experience .exp-wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
@@ -2211,69 +2211,69 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
     margin-bottom: 0;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item {
     width: 35vw;
     min-width: 145px;
     margin-bottom: 12px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item + .exp-item,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item + .exp-item {
     margin-left: 0;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-title,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
     font-size: 12px;
     letter-spacing: 1.2px;
     margin-top: 0;
   }
   #Ticket .ticket-sec-experience p.section-paragraph,
-  #TicketPresale .ticket-sec-experience p.section-paragraph {
+  #Presale .ticket-sec-experience p.section-paragraph {
     margin-bottom: 18px;
   }
 }
 
 @media (max-width: 374.98px) {
   #Ticket .ticket-sec-experience,
-  #TicketPresale .ticket-sec-experience {
+  #Presale .ticket-sec-experience {
     padding-top: 24px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper,
-  #TicketPresale .ticket-sec-experience .exp-wrapper {
+  #Presale .ticket-sec-experience .exp-wrapper {
     margin-bottom: 4px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item {
     width: 32vw;
     min-width: 120px;
     margin-bottom: 8px;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-img,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item .exp-img {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item .exp-img {
     max-width: 88px;
     margin: 0 auto;
   }
   #Ticket .ticket-sec-experience .exp-wrapper .exp-item .exp-title,
-  #TicketPresale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
+  #Presale .ticket-sec-experience .exp-wrapper .exp-item .exp-title {
     margin-top: 2px;
   }
   #Ticket .ticket-sec-experience p.section-paragraph,
-  #TicketPresale .ticket-sec-experience p.section-paragraph {
+  #Presale .ticket-sec-experience p.section-paragraph {
     margin-bottom: 12px;
   }
   #Ticket .ticket-sec-experience a.link-bright-green,
-  #TicketPresale .ticket-sec-experience a.link-bright-green {
+  #Presale .ticket-sec-experience a.link-bright-green {
     font-size: 12px;
     letter-spacing: 1.2px;
   }
 }
 
 #Ticket .ticket-sec-step .section-subtitle,
-#TicketPresale .ticket-sec-step .section-subtitle {
+#Presale .ticket-sec-step .section-subtitle {
   margin-bottom: 48px;
 }
 
 #Ticket .ticket-sec-step .step-wrapper,
-#TicketPresale .ticket-sec-step .step-wrapper {
+#Presale .ticket-sec-step .step-wrapper {
   max-width: 812px;
   width: 100%;
   border: 2px solid #01ffff;
@@ -2281,7 +2281,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-step .step-wrapper div,
-#TicketPresale .ticket-sec-step .step-wrapper div {
+#Presale .ticket-sec-step .step-wrapper div {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
@@ -2289,7 +2289,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-step .step-wrapper .step-inner,
-#TicketPresale .ticket-sec-step .step-wrapper .step-inner {
+#Presale .ticket-sec-step .step-wrapper .step-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2300,7 +2300,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-step .step-wrapper .step-item,
-#TicketPresale .ticket-sec-step .step-wrapper .step-item {
+#Presale .ticket-sec-step .step-wrapper .step-item {
   width: 33.33%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2312,17 +2312,17 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-step .step-wrapper .step-item + .step-item .row-title,
-#TicketPresale .ticket-sec-step .step-wrapper .step-item + .step-item .row-title {
+#Presale .ticket-sec-step .step-wrapper .step-item + .step-item .row-title {
   border-left: 2px solid #03030D;
 }
 
 #Ticket .ticket-sec-step .step-wrapper .step-item + .step-item .row-content,
-#TicketPresale .ticket-sec-step .step-wrapper .step-item + .step-item .row-content {
+#Presale .ticket-sec-step .step-wrapper .step-item + .step-item .row-content {
   border-left: 2px solid #01ffff;
 }
 
 #Ticket .ticket-sec-step .step-wrapper .row-title,
-#TicketPresale .ticket-sec-step .step-wrapper .row-title {
+#Presale .ticket-sec-step .step-wrapper .row-title {
   font-family: "Press Start 2P", cursive, sans-serif;
   line-height: 1;
   color: #03030D;
@@ -2332,7 +2332,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-step .step-wrapper .row-content,
-#TicketPresale .ticket-sec-step .step-wrapper .row-content {
+#Presale .ticket-sec-step .step-wrapper .row-content {
   padding: 20px 24px 24px;
   vertical-align: baseline;
   -webkit-box-flex: 1;
@@ -2341,7 +2341,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-step .step-wrapper .row-content .step-title,
-#TicketPresale .ticket-sec-step .step-wrapper .row-content .step-title {
+#Presale .ticket-sec-step .step-wrapper .row-content .step-title {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -2350,122 +2350,122 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-step .step-wrapper .row-content .step-intro,
-#TicketPresale .ticket-sec-step .step-wrapper .row-content .step-intro {
+#Presale .ticket-sec-step .step-wrapper .row-content .step-intro {
   margin-top: 8px;
   line-height: 30px;
 }
 
 @media (max-width: 1440px) {
   #Ticket .ticket-sec-step .section-subtitle,
-  #TicketPresale .ticket-sec-step .section-subtitle {
+  #Presale .ticket-sec-step .section-subtitle {
     margin-bottom: 30px;
   }
   #Ticket .ticket-sec-step .step-wrapper,
-  #TicketPresale .ticket-sec-step .step-wrapper {
+  #Presale .ticket-sec-step .step-wrapper {
     max-width: 766px;
     margin-top: 30px;
   }
   #Ticket .ticket-sec-step .step-wrapper div,
-  #TicketPresale .ticket-sec-step .step-wrapper div {
+  #Presale .ticket-sec-step .step-wrapper div {
     font-size: 16px;
     letter-spacing: 1.6px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content .step-title,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content .step-title {
+  #Presale .ticket-sec-step .step-wrapper .row-content .step-title {
     font-size: 18px;
     letter-spacing: 1.8px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content .step-intro,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content .step-intro {
+  #Presale .ticket-sec-step .step-wrapper .row-content .step-intro {
     margin-top: 12px;
   }
 }
 
 @media (max-width: 1280px) {
   #Ticket .ticket-sec-step .step-wrapper,
-  #TicketPresale .ticket-sec-step .step-wrapper {
+  #Presale .ticket-sec-step .step-wrapper {
     max-width: 663px;
   }
 }
 
 @media (max-width: 1024px) {
   #Ticket .ticket-sec-step .section-subtitle,
-  #TicketPresale .ticket-sec-step .section-subtitle {
+  #Presale .ticket-sec-step .section-subtitle {
     margin-bottom: 12px;
   }
   #Ticket .ticket-sec-step .step-wrapper,
-  #TicketPresale .ticket-sec-step .step-wrapper {
+  #Presale .ticket-sec-step .step-wrapper {
     max-width: 595px;
   }
   #Ticket .ticket-sec-step .step-wrapper div,
-  #TicketPresale .ticket-sec-step .step-wrapper div {
+  #Presale .ticket-sec-step .step-wrapper div {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content {
+  #Presale .ticket-sec-step .step-wrapper .row-content {
     padding: 20px 20px 30px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content .step-title,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content .step-title {
+  #Presale .ticket-sec-step .step-wrapper .row-content .step-title {
     font-size: 16px;
     letter-spacing: 1.6px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content .step-intro,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content .step-intro {
+  #Presale .ticket-sec-step .step-wrapper .row-content .step-intro {
     margin-top: 16px;
   }
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-step .section-subtitle,
-  #TicketPresale .ticket-sec-step .section-subtitle {
+  #Presale .ticket-sec-step .section-subtitle {
     margin-bottom: 6px;
   }
   #Ticket .ticket-sec-step .step-wrapper,
-  #TicketPresale .ticket-sec-step .step-wrapper {
+  #Presale .ticket-sec-step .step-wrapper {
     max-width: 100%;
     border: 1px solid #01ffff;
     margin: 6px auto 0;
   }
   #Ticket .ticket-sec-step .step-wrapper div,
-  #TicketPresale .ticket-sec-step .step-wrapper div {
+  #Presale .ticket-sec-step .step-wrapper div {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
   #Ticket .ticket-sec-step .step-wrapper .step-inner,
-  #TicketPresale .ticket-sec-step .step-wrapper .step-inner {
+  #Presale .ticket-sec-step .step-wrapper .step-inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   #Ticket .ticket-sec-step .step-wrapper .step-item,
-  #TicketPresale .ticket-sec-step .step-wrapper .step-item {
+  #Presale .ticket-sec-step .step-wrapper .step-item {
     width: 100%;
   }
   #Ticket .ticket-sec-step .step-wrapper .step-item + .step-item .row-title,
   #Ticket .ticket-sec-step .step-wrapper .step-item + .step-item .row-content,
-  #TicketPresale .ticket-sec-step .step-wrapper .step-item + .step-item .row-title,
-  #TicketPresale .ticket-sec-step .step-wrapper .step-item + .step-item .row-content {
+  #Presale .ticket-sec-step .step-wrapper .step-item + .step-item .row-title,
+  #Presale .ticket-sec-step .step-wrapper .step-item + .step-item .row-content {
     border-left: 0;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-title,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-title {
+  #Presale .ticket-sec-step .step-wrapper .row-title {
     padding: 5px 10px;
     text-align: left;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content {
+  #Presale .ticket-sec-step .step-wrapper .row-content {
     padding: 10px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content .step-title,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content .step-title {
+  #Presale .ticket-sec-step .step-wrapper .row-content .step-title {
     font-size: 16px;
     letter-spacing: 1.6px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content .step-intro,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content .step-intro {
+  #Presale .ticket-sec-step .step-wrapper .row-content .step-intro {
     margin-top: 0;
     line-height: 24px;
   }
@@ -2473,49 +2473,49 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 374.98px) {
   #Ticket .ticket-sec-step,
-  #TicketPresale .ticket-sec-step {
+  #Presale .ticket-sec-step {
     padding-top: 24px;
   }
   #Ticket .ticket-sec-step .section-subtitle,
-  #TicketPresale .ticket-sec-step .section-subtitle {
+  #Presale .ticket-sec-step .section-subtitle {
     margin-bottom: 8px;
   }
   #Ticket .ticket-sec-step .step-wrapper,
-  #TicketPresale .ticket-sec-step .step-wrapper {
+  #Presale .ticket-sec-step .step-wrapper {
     margin: 14px auto 0;
   }
   #Ticket .ticket-sec-step .step-wrapper div,
-  #TicketPresale .ticket-sec-step .step-wrapper div {
+  #Presale .ticket-sec-step .step-wrapper div {
     font-size: 12px;
     letter-spacing: 1.2px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-title,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-title {
+  #Presale .ticket-sec-step .step-wrapper .row-title {
     padding: 5px 24px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content {
+  #Presale .ticket-sec-step .step-wrapper .row-content {
     padding: 8px 24px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content .step-title,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content .step-title {
+  #Presale .ticket-sec-step .step-wrapper .row-content .step-title {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
   #Ticket .ticket-sec-step .step-wrapper .row-content .step-intro,
-  #TicketPresale .ticket-sec-step .step-wrapper .row-content .step-intro {
+  #Presale .ticket-sec-step .step-wrapper .row-content .step-intro {
     margin-top: 0;
     line-height: 20px;
   }
 }
 
 #Ticket .ticket-sec-schedule .section-subtitle,
-#TicketPresale .ticket-sec-schedule .section-subtitle {
+#Presale .ticket-sec-schedule .section-subtitle {
   margin-bottom: 48px;
 }
 
 #Ticket .ticket-sec-schedule .schedule-wrapper,
-#TicketPresale .ticket-sec-schedule .schedule-wrapper {
+#Presale .ticket-sec-schedule .schedule-wrapper {
   margin-bottom: 72px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2526,26 +2526,26 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-inner,
-#TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-inner {
+#Presale .ticket-sec-schedule .schedule-wrapper .schedule-inner {
   display: inline-block;
 }
 
 #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-item,
-#TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-item {
+#Presale .ticket-sec-schedule .schedule-wrapper .schedule-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item,
-#TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item {
+#Presale .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item {
   margin-top: 30px;
 }
 
 #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-title,
 #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-content,
-#TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-title,
-#TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-content {
+#Presale .ticket-sec-schedule .schedule-wrapper .schedule-title,
+#Presale .ticket-sec-schedule .schedule-wrapper .schedule-content {
   font-size: 18px;
   letter-spacing: 1.8px;
   line-height: 1.5;
@@ -2555,8 +2555,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 @media (max-width: 1440px) {
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-title,
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-content,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-title,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-content {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-title,
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-content {
     font-size: 16px;
     letter-spacing: 1.6px;
   }
@@ -2565,110 +2565,110 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 @media (max-width: 1024px) {
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-title,
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-content,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-title,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-content {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-title,
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-content {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
 }
 
 #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-title,
-#TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-title {
+#Presale .ticket-sec-schedule .schedule-wrapper .schedule-title {
   margin-right: 84px;
 }
 
 #Ticket .ticket-sec-schedule p.section-paragraph,
-#TicketPresale .ticket-sec-schedule p.section-paragraph {
+#Presale .ticket-sec-schedule p.section-paragraph {
   max-width: 600px;
   margin: 0 auto;
 }
 
 @media (max-width: 1440px) {
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-title,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-title {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-title {
     margin-right: 50px;
   }
   #Ticket .ticket-sec-schedule p.section-paragraph,
-  #TicketPresale .ticket-sec-schedule p.section-paragraph {
+  #Presale .ticket-sec-schedule p.section-paragraph {
     max-width: 500px;
   }
 }
 
 @media (max-width: 1024px) {
   #Ticket .ticket-sec-schedule .section-subtitle,
-  #TicketPresale .ticket-sec-schedule .section-subtitle {
+  #Presale .ticket-sec-schedule .section-subtitle {
     margin-bottom: 36px;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-title,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-title {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-title {
     margin-right: 30px;
   }
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-schedule .section-subtitle,
-  #TicketPresale .ticket-sec-schedule .section-subtitle {
+  #Presale .ticket-sec-schedule .section-subtitle {
     margin-bottom: 20px;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper {
+  #Presale .ticket-sec-schedule .schedule-wrapper {
     margin-bottom: 30px;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-item,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-item {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item {
     margin-top: 20px;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-title,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-title {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-title {
     margin-right: 0;
     margin-bottom: 4px;
     opacity: 0.7;
   }
   #Ticket .ticket-sec-schedule p.section-paragraph,
-  #TicketPresale .ticket-sec-schedule p.section-paragraph {
+  #Presale .ticket-sec-schedule p.section-paragraph {
     text-align: justify;
   }
 }
 
 @media (max-width: 374.98px) {
   #Ticket .ticket-sec-schedule,
-  #TicketPresale .ticket-sec-schedule {
+  #Presale .ticket-sec-schedule {
     padding-top: 24px;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper {
+  #Presale .ticket-sec-schedule .schedule-wrapper {
     margin-bottom: 20px;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-item + .schedule-item {
     margin-top: 16px;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-title,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-title {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-title {
     line-height: 1.5;
     margin-bottom: 6px;
   }
   #Ticket .ticket-sec-schedule .schedule-wrapper .schedule-content,
-  #TicketPresale .ticket-sec-schedule .schedule-wrapper .schedule-content {
+  #Presale .ticket-sec-schedule .schedule-wrapper .schedule-content {
     font-size: 12px;
     letter-spacing: 0.3px;
   }
 }
 
 #Ticket .ticket-sec-time-slots .section-subtitle,
-#TicketPresale .ticket-sec-time-slots .section-subtitle {
+#Presale .ticket-sec-time-slots .section-subtitle {
   margin-bottom: 20px;
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper,
-#TicketPresale .ticket-sec-time-slots .time-slots-wrapper {
+#Presale .ticket-sec-time-slots .time-slots-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2678,19 +2678,19 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner,
-#TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
+#Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
   min-width: 536px;
   display: inline-block;
   margin-bottom: 20px;
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row,
-#TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
+#Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
   padding: 28px 0;
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div,
-#TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div {
+#Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div {
   font-size: 18px;
   letter-spacing: 1.8px;
   line-height: 1.5;
@@ -2698,12 +2698,12 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row + .time-slots-row,
-#TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row + .time-slots-row {
+#Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row + .time-slots-row {
   border-top: 1px solid rgba(21, 255, 188, 0.3);
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item,
-#TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item {
+#Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2713,169 +2713,169 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title,
-#TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
+#Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
   margin-right: 95px;
 }
 
 #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item,
-#TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item {
+#Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item {
   margin-top: 15px;
 }
 
 #Ticket .ticket-sec-time-slots p.section-paragraph,
-#TicketPresale .ticket-sec-time-slots p.section-paragraph {
+#Presale .ticket-sec-time-slots p.section-paragraph {
   max-width: 600px;
   margin: 0 auto;
 }
 
 @media (max-width: 1440px) {
   #Ticket .ticket-sec-time-slots .section-subtitle,
-  #TicketPresale .ticket-sec-time-slots .section-subtitle {
+  #Presale .ticket-sec-time-slots .section-subtitle {
     margin-bottom: 18px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
     min-width: 442px;
     margin-bottom: 6px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
     padding: 30px 0;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div {
     font-size: 16px;
     letter-spacing: 1.6px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
     margin-right: 64px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item {
     margin-top: 18px;
   }
   #Ticket .ticket-sec-time-slots p.section-paragraph,
-  #TicketPresale .ticket-sec-time-slots p.section-paragraph {
+  #Presale .ticket-sec-time-slots p.section-paragraph {
     max-width: 500px;
   }
 }
 
 @media (max-width: 1280px) {
   #Ticket .ticket-sec-time-slots .section-subtitle,
-  #TicketPresale .ticket-sec-time-slots .section-subtitle {
+  #Presale .ticket-sec-time-slots .section-subtitle {
     margin-bottom: 0;
   }
 }
 
 @media (max-width: 1024px) {
   #Ticket .ticket-sec-time-slots .section-subtitle,
-  #TicketPresale .ticket-sec-time-slots .section-subtitle {
+  #Presale .ticket-sec-time-slots .section-subtitle {
     margin-bottom: 10px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
     min-width: 380px;
     margin-bottom: 28px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
     padding: 20px 0;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row div {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
     margin-right: 40px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item {
     margin-top: 20px;
   }
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-time-slots .section-subtitle,
-  #TicketPresale .ticket-sec-time-slots .section-subtitle {
+  #Presale .ticket-sec-time-slots .section-subtitle {
     margin-bottom: 6px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
     min-width: 100%;
     margin-bottom: 18px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
     padding: 16px 0;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
     opacity: 0.7;
     margin-right: 30px;
   }
   #Ticket .ticket-sec-time-slots p.section-paragraph,
-  #TicketPresale .ticket-sec-time-slots p.section-paragraph {
+  #Presale .ticket-sec-time-slots p.section-paragraph {
     text-align: justify;
   }
 }
 
 @media (max-width: 374.98px) {
   #Ticket .ticket-sec-time-slots,
-  #TicketPresale .ticket-sec-time-slots {
+  #Presale .ticket-sec-time-slots {
     padding-top: 24px;
   }
   #Ticket .ticket-sec-time-slots .section-subtitle,
-  #TicketPresale .ticket-sec-time-slots .section-subtitle {
+  #Presale .ticket-sec-time-slots .section-subtitle {
     margin-bottom: 18px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-inner {
     margin-bottom: 18px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row {
     padding: 12px 0;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title {
     margin-right: 18px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title,
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-content,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-content {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-title,
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item .time-slots-content {
     font-size: 12px;
     letter-spacing: 1.2px;
   }
   #Ticket .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item,
-  #TicketPresale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item {
+  #Presale .ticket-sec-time-slots .time-slots-wrapper .time-slots-row .time-slots-item + .time-slots-item {
     margin-top: 12px;
   }
 }
 
 #Ticket .ticket-sec-status .section-subtitle,
-#TicketPresale .ticket-sec-status .section-subtitle {
+#Presale .ticket-sec-status .section-subtitle {
   margin-bottom: 48px;
 }
 
 #Ticket .ticket-sec-status .time-counter,
 #Ticket .ticket-sec-status .sale-progress,
-#TicketPresale .ticket-sec-status .time-counter,
-#TicketPresale .ticket-sec-status .sale-progress {
+#Presale .ticket-sec-status .time-counter,
+#Presale .ticket-sec-status .sale-progress {
   max-width: 536px;
   margin: 0 auto;
 }
 
 #Ticket .ticket-sec-status .time-counter,
-#TicketPresale .ticket-sec-status .time-counter {
+#Presale .ticket-sec-status .time-counter {
   text-align: center;
 }
 
 #Ticket .ticket-sec-status .time-counter .time-rest,
-#TicketPresale .ticket-sec-status .time-counter .time-rest {
+#Presale .ticket-sec-status .time-counter .time-rest {
   margin-top: 18px;
   margin-bottom: 42px;
   font-size: 24px;
@@ -2884,7 +2884,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-status .time-counter .time-rest span,
-#TicketPresale .ticket-sec-status .time-counter .time-rest span {
+#Presale .ticket-sec-status .time-counter .time-rest span {
   font-size: 36px;
   font-family: "Press Start 2P", cursive, sans-serif;
   letter-spacing: 1.8px;
@@ -2893,45 +2893,45 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-status .time-counter .time-rest span + span,
-#TicketPresale .ticket-sec-status .time-counter .time-rest span + span {
+#Presale .ticket-sec-status .time-counter .time-rest span + span {
   margin-left: 30px;
 }
 
 #Ticket .ticket-sec-status .sale-progress .progress,
-#TicketPresale .ticket-sec-status .sale-progress .progress {
+#Presale .ticket-sec-status .sale-progress .progress {
   height: 12px;
   background-color: rgba(21, 255, 188, 0.3);
   border-radius: 12px;
 }
 
 #Ticket .ticket-sec-status .sale-progress .progress .progress-bar,
-#TicketPresale .ticket-sec-status .sale-progress .progress .progress-bar {
+#Presale .ticket-sec-status .sale-progress .progress .progress-bar {
   background-color: #15ffbc;
 }
 
 #Ticket .ticket-sec-status .sale-progress .sale-progress-info,
-#TicketPresale .ticket-sec-status .sale-progress .sale-progress-info {
+#Presale .ticket-sec-status .sale-progress .sale-progress-info {
   margin-top: 24px;
 }
 
 #Ticket .ticket-sec-status .sale-progress .sale-progress-info div:first-child,
-#TicketPresale .ticket-sec-status .sale-progress .sale-progress-info div:first-child {
+#Presale .ticket-sec-status .sale-progress .sale-progress-info div:first-child {
   color: #15ffbc;
 }
 
 #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
 #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
 #Ticket .ticket-sec-status .sale-progress .sale-progress-info .progress-percent,
-#TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
-#TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
-#TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
+#Presale .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
+#Presale .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
+#Presale .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
   font-size: 24px;
   font-family: "OCR A Std", sans-serif;
   letter-spacing: 1.2px;
 }
 
 #Ticket .ticket-sec-status .sale-progress .sale-progress-info .sale-remark,
-#TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
+#Presale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
   margin-top: 58px;
   text-align: left;
 }
@@ -2939,174 +2939,174 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 @media (max-width: 1440px) {
   #Ticket .ticket-sec-status .time-counter,
   #Ticket .ticket-sec-status .sale-progress,
-  #TicketPresale .ticket-sec-status .time-counter,
-  #TicketPresale .ticket-sec-status .sale-progress {
+  #Presale .ticket-sec-status .time-counter,
+  #Presale .ticket-sec-status .sale-progress {
     max-width: 454px;
   }
   #Ticket .ticket-sec-status .time-counter .time-rest,
-  #TicketPresale .ticket-sec-status .time-counter .time-rest {
+  #Presale .ticket-sec-status .time-counter .time-rest {
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 18px;
   }
   #Ticket .ticket-sec-status .time-counter .time-rest span,
-  #TicketPresale .ticket-sec-status .time-counter .time-rest span {
+  #Presale .ticket-sec-status .time-counter .time-rest span {
     font-size: 30px;
     letter-spacing: 1.5px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .progress-percent,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
     font-size: 20px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info {
     margin-top: 12px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .sale-remark,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
     margin-top: 36px;
   }
 }
 
 @media (max-width: 1024px) {
   #Ticket .ticket-sec-status .section-subtitle,
-  #TicketPresale .ticket-sec-status .section-subtitle {
+  #Presale .ticket-sec-status .section-subtitle {
     margin-bottom: 36px;
   }
   #Ticket .ticket-sec-status .time-counter,
   #Ticket .ticket-sec-status .sale-progress,
-  #TicketPresale .ticket-sec-status .time-counter,
-  #TicketPresale .ticket-sec-status .sale-progress {
+  #Presale .ticket-sec-status .time-counter,
+  #Presale .ticket-sec-status .sale-progress {
     max-width: 444px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info {
     margin-top: 17px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .progress-percent,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
     letter-spacing: 1px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .sale-remark,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
     margin-top: 40px;
   }
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-status .section-subtitle,
-  #TicketPresale .ticket-sec-status .section-subtitle {
+  #Presale .ticket-sec-status .section-subtitle {
     margin-bottom: 30px;
   }
   #Ticket .ticket-sec-status .time-counter,
   #Ticket .ticket-sec-status .sale-progress,
-  #TicketPresale .ticket-sec-status .time-counter,
-  #TicketPresale .ticket-sec-status .sale-progress {
+  #Presale .ticket-sec-status .time-counter,
+  #Presale .ticket-sec-status .sale-progress {
     max-width: 100%;
   }
   #Ticket .ticket-sec-status .time-counter .time-rest,
-  #TicketPresale .ticket-sec-status .time-counter .time-rest {
+  #Presale .ticket-sec-status .time-counter .time-rest {
     margin-top: 12px;
     font-size: 12px;
   }
   #Ticket .ticket-sec-status .time-counter .time-rest span,
-  #TicketPresale .ticket-sec-status .time-counter .time-rest span {
+  #Presale .ticket-sec-status .time-counter .time-rest span {
     font-size: 20px;
     letter-spacing: 1px;
     margin-right: 6px;
   }
   #Ticket .ticket-sec-status .time-counter .time-rest span + span,
-  #TicketPresale .ticket-sec-status .time-counter .time-rest span + span {
+  #Presale .ticket-sec-status .time-counter .time-rest span + span {
     margin-left: 14px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info {
     text-align: center;
     margin-top: 12px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .progress-percent,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .total-sale,
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .total-rest,
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .progress-percent {
     font-size: 14px;
     letter-spacing: 0;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .sale-remark,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
     display: inline-block;
   }
 }
 
 @media (max-width: 374.98px) {
   #Ticket .ticket-sec-status,
-  #TicketPresale .ticket-sec-status {
+  #Presale .ticket-sec-status {
     padding-top: 24px;
   }
   #Ticket .ticket-sec-status .section-subtitle,
-  #TicketPresale .ticket-sec-status .section-subtitle {
+  #Presale .ticket-sec-status .section-subtitle {
     margin-bottom: 20px;
   }
   #Ticket .ticket-sec-status .time-counter .time-rest,
-  #TicketPresale .ticket-sec-status .time-counter .time-rest {
+  #Presale .ticket-sec-status .time-counter .time-rest {
     margin-bottom: 20px;
   }
   #Ticket .ticket-sec-status .sale-progress .sale-progress-info .sale-remark,
-  #TicketPresale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
+  #Presale .ticket-sec-status .sale-progress .sale-progress-info .sale-remark {
     margin-top: 20px;
   }
 }
 
 #Ticket a.btn-bright-blue,
-#TicketPresale a.btn-bright-blue {
+#Presale a.btn-bright-blue {
   margin-top: 84px;
 }
 
 @media (max-width: 1280px) {
   #Ticket a.btn-bright-blue,
-  #TicketPresale a.btn-bright-blue {
+  #Presale a.btn-bright-blue {
     margin-top: 90px;
   }
 }
 
 @media (max-width: 1024px) {
   #Ticket a.btn-bright-blue,
-  #TicketPresale a.btn-bright-blue {
+  #Presale a.btn-bright-blue {
     margin-top: 82px;
   }
 }
 
 @media (max-width: 575.98px) {
   #Ticket a.btn-bright-blue,
-  #TicketPresale a.btn-bright-blue {
+  #Presale a.btn-bright-blue {
     margin-top: 48px;
   }
 }
 
 @media (max-width: 374.98px) {
   #Ticket a.btn-bright-blue,
-  #TicketPresale a.btn-bright-blue {
+  #Presale a.btn-bright-blue {
     margin-top: 28px;
   }
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls {
+#Presale .ticket-sec-reviews #carouselReviewsControls {
   margin-bottom: 36px;
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-reviews #carouselReviewsControls,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls {
+  #Presale .ticket-sec-reviews #carouselReviewsControls {
     margin-bottom: 24px;
   }
 }
@@ -3114,16 +3114,16 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item-next,
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item-prev,
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item.active,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item-next,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item-prev,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item.active {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item-next,
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item-prev,
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper {
   position: relative;
   width: 100%;
   max-width: calc(100% - 244px);
@@ -3131,8 +3131,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before, #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before,
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
   content: '';
   width: calc(100% - 32px);
   height: 1px;
@@ -3141,31 +3141,31 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before {
   top: 0;
   right: 0;
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
   bottom: 0;
   left: 0;
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper {
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper {
     max-width: calc(100% - 60px);
   }
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before, #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::before,
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-wrapper::after {
     width: calc(100% - 29px);
   }
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
   position: relative;
   padding: 40px 0;
   height: 178px;
@@ -3181,21 +3181,21 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::before, #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::after,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::before,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::after {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::before,
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::after {
   position: absolute;
   color: #15ffbc;
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::before,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::before {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::before {
   content: '“ ';
   top: 0;
   left: 0;
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::after,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::after {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner::after {
   content: '”';
   bottom: 0;
   right: 0;
@@ -3203,7 +3203,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
     padding: 18px 0 16px;
     height: 174px;
   }
@@ -3211,27 +3211,27 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 374.98px) {
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item .reviews-inner {
     height: 154px;
   }
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
   color: #15ffbc;
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-item p.section-paragraph {
     line-height: 2;
   }
 }
 
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
 #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
-#TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
+#Presale .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
   width: 60px;
   height: 60px;
   -webkit-transition: 0.3s;
@@ -3244,24 +3244,24 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
     width: 36px;
     height: 36px;
   }
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-control-prev {
     left: -20px;
   }
   #Ticket .ticket-sec-reviews #carouselReviewsControls .carousel-control-next,
-  #TicketPresale .ticket-sec-reviews #carouselReviewsControls .carousel-control-next {
+  #Presale .ticket-sec-reviews #carouselReviewsControls .carousel-control-next {
     right: -20px;
   }
 }
 
 @media (max-width: 575.98px) {
   #Ticket .ticket-sec-covid p.section-paragraph,
-  #TicketPresale .ticket-sec-covid p.section-paragraph {
+  #Presale .ticket-sec-covid p.section-paragraph {
     max-width: 80%;
     text-align: left;
     margin: 0 auto;
@@ -3270,7 +3270,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 374.98px) {
   #Ticket .ticket-sec-covid p.section-paragraph,
-  #TicketPresale .ticket-sec-covid p.section-paragraph {
+  #Presale .ticket-sec-covid p.section-paragraph {
     max-width: 100%;
   }
 }
