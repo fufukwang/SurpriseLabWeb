@@ -3419,11 +3419,28 @@ header {
 
 // 過往作品介紹影片
 .video-play {
+  font-size: 18px;
+  letter-spacing: 1.8px;
   color: $color-bright-green;
   text-decoration: underline;
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (max-width: 1440px) {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+
+  @media (max-width: 374px) {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
 }
 
 .video-wrapper {

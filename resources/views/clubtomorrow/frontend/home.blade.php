@@ -318,7 +318,8 @@
                                     <span class="v2-visible v2-highlight">對立嗎</span>
                                 </p>
                             </div>
-                            <a class="smoothScroll btn-bright-blue fbpx" href="#Ticket" data-event="ViewContent">成為玩家</a>
+                            <a class="btn-bright-blue" href="javascript://" data-toggle="modal" data-target="#letterDetail">成為玩家</a>
+                            <!-- <a class="smoothScroll btn-bright-blue fbpx" href="#Ticket" data-event="ViewContent">成為玩家</a> -->
                         </div>
                     </div>
                 </div>
@@ -373,7 +374,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="video-play" data-toggle="modal" data-target="#expDetail">
+                            <button class="video-play" data-toggle="modal" data-target="#videoDetail">
                                 觀看明日俱樂部 Official Trailer
                             </button>
                         </div>
@@ -834,7 +835,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="smoothScroll btn-bright-blue" href="javascript://" data-toggle="modal" data-target="#letterDetail">成為玩家</a>
+                        <a class="smoothScroll btn-bright-blue" href="#Ticket">成為玩家</a>
                     </div>
                 </div>
             </div>
