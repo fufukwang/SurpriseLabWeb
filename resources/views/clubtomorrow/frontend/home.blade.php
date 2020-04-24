@@ -62,6 +62,9 @@
                 <a class="smoothScroll" href="#Ticket">_Ticket</a>
             </li>
             <li>
+                <a class="smoothScroll" href="#TicketPresale">_TicketPresale</a>
+            </li>
+            <li>
                 <a class="smoothScroll" href="#Rules">_Rules</a>
             </li>
             <li>
@@ -124,6 +127,9 @@
             </li>
             <li class="menu-item">
                 <a class="smoothScroll" href="#Ticket">Ticket</a>
+            </li>
+            <li class="menu-item">
+                <a class="smoothScroll" href="#TicketPresale">_TicketPresale</a>
             </li>
             <li class="menu-item">
                 <a class="smoothScroll" href="#Rules">Rules</a>
