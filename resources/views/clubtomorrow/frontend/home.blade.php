@@ -374,7 +374,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="video-play" data-toggle="modal" data-video-embed="zoNwMkMiD6g" data-video-playlist="zoNwMkMiD6g" data-target="#videoDetail">
+                            <button class="video-play" data-toggle="modal" data-video-embed="zoNwMkMiD6g" data-video-playlist="4daU2zKSslI" data-target="#videoDetail">
                                 觀看明日俱樂部 Official Trailer
                             </button>
                         </div>
