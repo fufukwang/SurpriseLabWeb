@@ -484,35 +484,6 @@
                 </div>
             </section>
 
-            <!-- 如何參與 -->
-            <section class="fullpage anchor-section fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Ticket" data-aos="fade" id="howitwork">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="section-title">如何參與</h2>
-                            <div class="section-subtitle">TICKET</div>
-                            <p class="section-paragraph">
-                                受現實世界之影響<br/>
-                                《明日俱樂部》的入口暫時關閉<br/>
-                                <br/>
-                                但，這並不是結束<br/>
-                                <br/>
-                                明日俱樂部是否能重啟<br/>
-                                將由玩家共同決定<br/>
-                                <br/>
-                                05/31 前能招募 1500 位玩家<br/>
-                                《明日俱樂部》將於疫情穩定後再次開啟<br/>
-                                <br/>
-                                劃位時間、可劃位日期與時段<br/>
-                                將於 06/01 透過簡訊及 email 通知<br/>
-                                <br/>
-                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，快速了解明日俱樂部預售機制</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!-- 選擇票券 -->
             <!-- <section id="ticketSec" class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-type" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
@@ -775,6 +746,38 @@
                     </div>
                 </div>
             </section> -->
+        </section>
+
+        <!-- Section3.5 Presale Ticket -->
+        <section class="anchor-section" id="TicketPresale" data-aos="fade">
+            <!-- 如何參與 -->
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Ticket" data-aos="fade">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="section-title">如何參與</h2>
+                            <div class="section-subtitle">TICKET</div>
+                            <p class="section-paragraph">
+                                受現實世界之影響<br/>
+                                《明日俱樂部》的入口暫時關閉<br/>
+                                <br/>
+                                但，這並不是結束<br/>
+                                <br/>
+                                明日俱樂部是否能重啟<br/>
+                                將由玩家共同決定<br/>
+                                <br/>
+                                05/31 前能招募 1500 位玩家<br/>
+                                《明日俱樂部》將於疫情穩定後再次開啟<br/>
+                                <br/>
+                                劃位時間、可劃位日期與時段<br/>
+                                將於 06/01 透過簡訊及 email 通知<br/>
+                                <br/>
+                                <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，快速了解明日俱樂部預售機制</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- 來自團隊的一封信 -->
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-letter" data-section-name="Ticket" data-aos="fade">
@@ -799,7 +802,7 @@
                                 <br/>
                                 明天一定會更好，咱們很快見面！<br/>
                                 <br/>
-                                <a class="smoothScroll link-bright-green" href="#howitwork">
+                                <a class="smoothScroll link-bright-green" href="#TicketPresale">
                                     若你對《明日俱樂部》有興趣，<br/>
                                     請留下你的資訊，這對我們是很大的鼓勵喔！
                                 </a>
