@@ -777,7 +777,7 @@
             </section> -->
 
             <!-- 來自團隊的一封信 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-letter" data-section-name="TicketLetter" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-letter" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
