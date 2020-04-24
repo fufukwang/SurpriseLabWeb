@@ -62,7 +62,7 @@
                 <a class="smoothScroll" href="#Ticket">_Ticket</a>
             </li>
             <li>
-                <a class="smoothScroll" href="#TicketPresale">_TicketPresale</a>
+                <a class="smoothScroll" href="#Presale">_Presale</a>
             </li>
             <li>
                 <a class="smoothScroll" href="#Rules">_Rules</a>
@@ -755,9 +755,9 @@
         </section>
 
         <!-- Section3.5 Presale Ticket -->
-        <section class="anchor-section" id="TicketPresale" data-aos="fade">
+        <section class="anchor-section" id="Presale" data-aos="fade">
             <!-- 如何參與 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Ticket" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Presale" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -786,7 +786,7 @@
             </section>
 
             <!-- 來自團隊的一封信 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-letter" data-section-name="Ticket" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-letter" data-section-name="Presale" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -808,7 +808,7 @@
                                 <br/>
                                 明天一定會更好，咱們很快見面！<br/>
                                 <br/>
-                                <a class="smoothScroll link-bright-green" href="#TicketPresale">
+                                <a class="smoothScroll link-bright-green" href="#Presale">
                                     若你對《明日俱樂部》有興趣，<br/>
                                     請留下你的資訊，這對我們是很大的鼓勵喔！
                                 </a>
