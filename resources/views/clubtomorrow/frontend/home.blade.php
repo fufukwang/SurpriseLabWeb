@@ -807,6 +807,10 @@
                                 若你對《明日俱樂部》有興趣，<br/>
                                 請留下你的資訊，這對我們是很大的鼓勵喔！
                             </a>
+                            <a class="smoothScroll btn-bright-blue" href="#TicketPresale">
+                                若你對《明日俱樂部》有興趣，<br/>
+                                請留下你的資訊，這對我們是很大的鼓勵喔！
+                            </a>
                             <p class="section-paragraph">
                                 <br/><br/>
                                 <i>驚喜製造 Surprise Lab.</i>
