@@ -382,7 +382,7 @@
             </section>
 
             <!-- 玩家口碑 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-reviews" data-section-name="Reviews" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-reviews" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-3 col-12">
@@ -485,7 +485,7 @@
             </section>
 
             <!-- 如何參與 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="TicketAbout" data-aos="fade" id="howitwork">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Ticket" data-aos="fade" id="howitwork">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
