@@ -51,10 +51,11 @@ $(document).ready(function () {
     let videoWrapper = $('.video-wrapper');
     let video = $('.video');
     let hintWrapper = $('.hint-wrapper');
-    let videoEmbed = btnPlay.data('video-embed');
-    let videoPlaylist = btnPlay.data('video-playlist');
 
     btnPlay.on('click', function () {
+        let videoEmbed = $(this).data('video-embed');
+        let videoPlaylist = $(this).data('video-playlist');
+
         video.append('<iframe src="https://www.youtube.com/embed/' + videoEmbed + '?showinfo=0&autoplay=1&repeat=1&loop=1&rel=0&controls=0&playlist=' + videoPlaylist + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen" autoplay="autoplay"></iframe>');
         hintWrapper.css('display', 'none');
         videoWrapper.fadeIn();
