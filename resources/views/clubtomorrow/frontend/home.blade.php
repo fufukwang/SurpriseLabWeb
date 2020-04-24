@@ -374,7 +374,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="video-play" data-toggle="modal" data-target="#videoDetail">
+                            <button class="video-play" data-toggle="modal" data-video-embed="zoNwMkMiD6g" data-video-playlist="zoNwMkMiD6g" data-target="#videoDetail">
                                 觀看明日俱樂部 Official Trailer
                             </button>
                         </div>
@@ -476,7 +476,7 @@
                                 一窺先前的玩家經歷了什麼<br/>
                                 <br/>
                                 了解更多團隊過往作品？<br/>
-                                <button class="video-play" data-toggle="modal" data-target="#videoDetail">
+                                <button class="video-play" data-toggle="modal" data-video-embed="uIp7X2MEXso" data-video-playlist="uIp7X2MEXso" data-target="#videoDetail">
                                     《微醺大飯店 The Great Tipsy》
                                 </button>
                             </p>
@@ -1043,7 +1043,7 @@
     </div>
 </div>
 
-<!-- 團隊過往作品 《微醺大飯店 The Great Tipsy》 -->
+<!-- Video Modal -->
 <div class="video-wrapper">
     <div class="video">
         <!-- Youtube Video Append Position -->
@@ -1084,7 +1084,7 @@
 <!-- Custom Js -->
 <script src="/clubT/js/main.js"></script>
 <script src="/clubT/js/smooth-scroll.js"></script>
-<script src="/clubT/js/home.js?v=0.5"></script>
+<script src="/clubT/js/home.js?v=0.6"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>
