@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=2.6"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=2.7"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -318,8 +318,7 @@
                                     <span class="v2-visible v2-highlight">對立嗎</span>
                                 </p>
                             </div>
-                            <a class="btn-bright-blue" href="javascript://" data-toggle="modal" data-target="#letterDetail">成為玩家</a>
-                            <!-- <a class="smoothScroll btn-bright-blue fbpx" href="#Ticket" data-event="ViewContent">成為玩家</a> -->
+                            <a class="smoothScroll btn-bright-blue fbpx" href="#Ticket" data-event="ViewContent">成為玩家</a>
                         </div>
                     </div>
                 </div>
@@ -374,7 +373,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="video-play" data-toggle="modal" data-video-embed="zoNwMkMiD6g" data-video-playlist="4daU2zKSslI" data-target="#videoDetail">
+                            <button class="video-play" data-toggle="modal" data-video-embed="AgIMmTDYGsQ" data-video-playlist="AgIMmTDYGsQ" data-target="#videoDetail">
                                 觀看明日俱樂部 Official Trailer
                             </button>
                         </div>
@@ -485,13 +484,13 @@
                 </div>
             </section>
 
-            <!-- 預售機制 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="TicketAbout" data-aos="fade">
+            <!-- 如何參與 -->
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="TicketAbout" data-aos="fade" id="howitwork">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="section-title">預售機制</h2>
-                            <div class="section-subtitle">ABOUT</div>
+                            <h2 class="section-title">如何參與</h2>
+                            <div class="section-subtitle">TICKET</div>
                             <p class="section-paragraph">
                                 受現實世界之影響<br/>
                                 《明日俱樂部》的入口暫時關閉<br/>
@@ -776,6 +775,41 @@
                     </div>
                 </div>
             </section> -->
+
+            <!-- 來自團隊的一封信 -->
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-letter" data-section-name="TicketLetter" data-aos="fade">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="section-title">來自團隊的一封信</h2>
+                            <div class="section-subtitle">A LETTER FROM THE TEAM</div>
+                            <p class="section-paragraph">
+                                雖然《明日俱樂部》因為疫情暫停，<br/>
+                                但，這並不是結束。<br/>
+                                <br/>
+                                在等待疫情穩定的這段日子中，<br/>
+                                希望大家都能健健康康的。<br/>
+                                <br/>
+                                期待我們的生活，回到往昔的日常，<br/>
+                                有朝一日，我們能放下擔憂地玩樂。<br/>
+                                <br/>
+                                團隊也期待著，<br/>
+                                在《明日俱樂部》重啟的那一天，<br/>
+                                能與你見上一面。<br/>
+                                <br/>
+                                明天一定會更好，咱們很快見面！<br/>
+                                <br/>
+                                <a class="smoothScroll btn-bright-blue" href="#howitwork">
+                                    若你對《明日俱樂部》有興趣，<br/>
+                                    請留下你的資訊，這對我們是很大的鼓勵喔！
+                                </a>
+                                <br/><br/>
+                                <i>驚喜製造 Surprise Lab.</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <!-- Section4 Rules -->
@@ -941,52 +975,6 @@
                         關閉
                     </button>
                 </div> -->
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Letter Modal -->
-<div class="modal fade" id="letterDetail" tabindex="-1" role="dialog" aria-labelledby="letterDetailTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="modal-header">
-                    <div class="modal-header-inner">
-                        來自團隊的一封信
-                        <br/>
-                        A LETTER FROM THE TEAM
-                    </div>
-                    <div class="close-modal">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="modal-text">
-                    <p class="section-paragraph">
-                        雖然《明日俱樂部》因為疫情暫停，<br/>
-                        但，這並不是結束。<br/>
-                        <br/>
-                        在等待疫情穩定的這段日子中，<br/>
-                        希望大家都能健健康康的。<br/>
-                        <br/>
-                        期待我們的生活，回到往昔的日常，<br/>
-                        有朝一日，我們能放下擔憂地玩樂。<br/>
-                        <br/>
-                        團隊也期待著，<br/>
-                        在《明日俱樂部》重啟的那一天，<br/>
-                        能與你見上一面。<br/>
-                        <br/>
-                        明天一定會更好，咱們很快見面！<br/>
-                        <br/>
-                        若你對《明日俱樂部》有興趣，<br/>
-                        請留下你的資訊，這對我們是很大的鼓勵喔！<br/>
-                        <br/>
-                        <i>驚喜製造 Surprise Lab.</i>
-                    </p>
-                </div>
             </div>
         </div>
     </div>
