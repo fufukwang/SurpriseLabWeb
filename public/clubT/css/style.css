@@ -3228,20 +3228,24 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
 }
 
+#letterDetail,
 #ticketDetail {
   z-index: 999999;
 }
 
+#letterDetail .modal-dialog,
 #ticketDetail .modal-dialog {
   max-width: 812px;
 }
 
+#letterDetail .modal-content,
 #ticketDetail .modal-content {
   background-color: rgba(3, 3, 13, 0.8);
   border-radius: 0;
   border: 1px solid #01ffff;
 }
 
+#letterDetail .modal-body,
 #ticketDetail .modal-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3253,6 +3257,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   padding: 0;
 }
 
+#letterDetail .modal-header,
 #ticketDetail .modal-header {
   font-size: 18px;
   font-weight: 600;
@@ -3269,6 +3274,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   position: relative;
 }
 
+#letterDetail .modal-header .close-modal,
 #ticketDetail .modal-header .close-modal {
   width: 37px;
   height: 37px;
@@ -3279,6 +3285,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
           transform: translateY(-50%);
 }
 
+#letterDetail .modal-header .close-modal button.close,
 #ticketDetail .modal-header .close-modal button.close {
   width: 37px;
   height: 37px;
@@ -3289,10 +3296,12 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   opacity: 1;
 }
 
+#letterDetail .modal-header .close-modal button.close:focus,
 #ticketDetail .modal-header .close-modal button.close:focus {
   outline: none;
 }
 
+#letterDetail .modal-header .close-modal button.close .icon-bar,
 #ticketDetail .modal-header .close-modal button.close .icon-bar {
   width: 17px;
   height: 3px;
@@ -3302,19 +3311,24 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
           transform: rotate(45deg) translate(1px, 2px);
 }
 
+#letterDetail .modal-header .close-modal button.close .icon-bar + .icon-bar,
 #ticketDetail .modal-header .close-modal button.close .icon-bar + .icon-bar {
   -webkit-transform: rotate(-45deg) translate(0px, -1px);
           transform: rotate(-45deg) translate(0px, -1px);
 }
 
+#letterDetail .modal-text,
 #ticketDetail .modal-text {
   padding: 60px 100px;
 }
 
+#letterDetail .ticket-wrapper .ticket-item + .ticket-item,
 #ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
   margin-top: 30px;
 }
 
+#letterDetail .ticket-wrapper .ticket-item .ticket-title,
+#letterDetail .ticket-wrapper .ticket-item .ticket-content,
 #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
 #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
   font-size: 18px;
@@ -3322,10 +3336,12 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   line-height: 1.5;
 }
 
+#letterDetail .ticket-wrapper .ticket-item .ticket-title,
 #ticketDetail .ticket-wrapper .ticket-item .ticket-title {
   color: #01ffff;
 }
 
+#letterDetail .ticket-wrapper .ticket-item .ticket-content,
 #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
   color: #15ffbc;
   border-left: 1px solid #15ffbc;
@@ -3333,88 +3349,111 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   padding: 7px 0 7px 20px;
 }
 
+#letterDetail .section-paragraph,
 #ticketDetail .section-paragraph {
   margin: 90px 0 70px;
   color: #15ffbc;
 }
 
 @media (max-width: 1440px) {
+  #letterDetail .modal-header,
   #ticketDetail .modal-header {
     font-size: 16px;
     letter-spacing: 1.6px;
   }
+  #letterDetail .ticket-wrapper .ticket-item .ticket-title,
+  #letterDetail .ticket-wrapper .ticket-item .ticket-content,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
     font-size: 16px;
     letter-spacing: 1.6px;
   }
+  #letterDetail .section-paragraph,
   #ticketDetail .section-paragraph {
     margin: 48px 0 45px;
   }
 }
 
 @media (max-width: 575.98px) {
+  #letterDetail .modal-dialog,
   #ticketDetail .modal-dialog {
     max-width: 100%;
     margin: 20px;
   }
+  #letterDetail .modal-header,
   #ticketDetail .modal-header {
     font-size: 14px;
     letter-spacing: 1.4px;
     padding: 10px 0;
   }
+  #letterDetail .modal-text,
   #ticketDetail .modal-text {
     padding: 30px 20px;
   }
+  #letterDetail .ticket-wrapper .ticket-item + .ticket-item,
   #ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
     margin-top: 20px;
   }
+  #letterDetail .ticket-wrapper .ticket-item .ticket-title,
+  #letterDetail .ticket-wrapper .ticket-item .ticket-content,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
+  #letterDetail .ticket-wrapper .ticket-item .ticket-content,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
     padding: 0 0 0 15px;
   }
+  #letterDetail .section-paragraph,
   #ticketDetail .section-paragraph {
     margin: 36px 0;
   }
 }
 
 @media (max-width: 374.98px) {
+  #letterDetail .modal-header,
   #ticketDetail .modal-header {
     font-size: 12px;
     letter-spacing: 1.2px;
     padding: 6px 0;
   }
+  #letterDetail .modal-header .close-modal,
   #ticketDetail .modal-header .close-modal {
     width: 30px;
     height: 30px;
     right: 4px;
   }
+  #letterDetail .modal-header .close-modal button.close,
   #ticketDetail .modal-header .close-modal button.close {
     width: 30px;
     height: 30px;
     padding: 8px;
   }
+  #letterDetail .modal-header .close-modal button.close .icon-bar,
   #ticketDetail .modal-header .close-modal button.close .icon-bar {
     width: 14px;
   }
+  #letterDetail .modal-header .modal-text,
   #ticketDetail .modal-header .modal-text {
     padding: 20px;
   }
+  #letterDetail .ticket-wrapper .ticket-item + .ticket-item,
   #ticketDetail .ticket-wrapper .ticket-item + .ticket-item {
     margin-top: 5px;
   }
+  #letterDetail .ticket-wrapper .ticket-item .ticket-title,
+  #letterDetail .ticket-wrapper .ticket-item .ticket-content,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-title,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
     font-size: 12px;
     letter-spacing: 1.2px;
   }
+  #letterDetail .ticket-wrapper .ticket-item .ticket-content,
   #ticketDetail .ticket-wrapper .ticket-item .ticket-content {
     padding: 0 0 0 10px;
   }
+  #letterDetail .section-paragraph,
   #ticketDetail .section-paragraph {
     margin: 24px 0;
   }
