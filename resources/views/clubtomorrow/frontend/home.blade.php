@@ -802,10 +802,12 @@
                                 <br/>
                                 明天一定會更好，咱們很快見面！<br/>
                                 <br/>
-                                <a class="smoothScroll link-bright-green" href="#TicketPresale">
-                                    若你對《明日俱樂部》有興趣，<br/>
-                                    請留下你的資訊，這對我們是很大的鼓勵喔！
-                                </a>
+                            </p>
+                            <a class="smoothScroll link-bright-green" href="#TicketPresale">
+                                若你對《明日俱樂部》有興趣，<br/>
+                                請留下你的資訊，這對我們是很大的鼓勵喔！
+                            </a>
+                            <p class="section-paragraph">
                                 <br/><br/>
                                 <i>驚喜製造 Surprise Lab.</i>
                             </p>
