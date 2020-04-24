@@ -3459,6 +3459,14 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
 }
 
+#letterDetail .modal-header .modal-header-inner {
+  text-align: center;
+}
+
+#letterDetail .section-paragraph {
+  margin: 0;
+}
+
 .modal-backdrop {
   z-index: 999998;
 }

@@ -952,9 +952,11 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="modal-header">
-                    來自團隊的一封信
-                    <br/>
-                    A LETTER FROM THE TEAM
+                    <div class="modal-header-inner">
+                        來自團隊的一封信
+                        <br/>
+                        A LETTER FROM THE TEAM
+                    </div>
                     <div class="close-modal">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span class="icon-bar"></span>

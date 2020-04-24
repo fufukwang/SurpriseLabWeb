@@ -2768,7 +2768,7 @@ header {
   }
 }
 
-//--- Ticket Modal ---//
+//--- Letter & Ticket Modal ---//
 #letterDetail,
 #ticketDetail {
   z-index: 999999;
@@ -2981,6 +2981,18 @@ header {
     .section-paragraph {
       margin: 24px 0;
     }
+  }
+}
+
+#letterDetail {
+  .modal-header {
+    .modal-header-inner {
+      text-align: center;
+    }
+  }
+
+  .section-paragraph {
+    margin: 0;
   }
 }
 
