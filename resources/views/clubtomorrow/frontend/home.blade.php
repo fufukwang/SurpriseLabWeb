@@ -485,7 +485,7 @@
             </section>
 
             <!-- 如何參與 -->
-            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Ticket" data-aos="fade" id="howitwork">
+            <section class="fullpage anchor-section fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Ticket" data-aos="fade" id="howitwork">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
