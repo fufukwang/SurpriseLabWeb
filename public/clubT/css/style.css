@@ -390,6 +390,10 @@ p.section-paragraph {
   margin: 0;
 }
 
+p.section-paragraph .font-underline {
+  text-decoration: underline;
+}
+
 @media (max-width: 1440px) {
   p.section-paragraph {
     font-size: 16px;

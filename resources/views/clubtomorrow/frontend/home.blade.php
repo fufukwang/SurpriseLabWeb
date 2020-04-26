@@ -8,13 +8,13 @@
     <title>明日俱樂部 Club Tomorrow</title>
 
     <!-- Style -->
-    <link rel="icon" href="/clubT/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/clubT/css/plugins/bootstrap.css"/>
-    <link rel="stylesheet" href="/clubT/css/plugins/aos.min.css"/>
-    <link rel="stylesheet" href="/clubT/css/plugins/jquery-glitch.css" >
+    <link rel="icon" href="/SurpriseLabWeb/public/clubT/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/SurpriseLabWeb/public/clubT/css/plugins/bootstrap.css"/>
+    <link rel="stylesheet" href="/SurpriseLabWeb/public/clubT/css/plugins/aos.min.css"/>
+    <link rel="stylesheet" href="/SurpriseLabWeb/public/clubT/css/plugins/jquery-glitch.css" >
 
     <!-- Loading Style -->
-    <link rel="stylesheet" type="text/css" href="/clubT/css/plugins/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="/SurpriseLabWeb/public/clubT/css/plugins/loading.css"/>
     <script>
         document.documentElement.className = 'js';
 
@@ -34,7 +34,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=2.8"/>
+    <link rel="stylesheet" href="/SurpriseLabWeb/public/clubT/css/style.css?v=2.8"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -79,12 +79,12 @@
         <ul>
             <li class="social-link">
                 <a href="https://www.facebook.com/surpriselabtw" target="_blank">
-                    <img class="img-fluid" src="/clubT/img/icon/icon_FB.svg" alt="facebook">
+                    <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/icon/icon_FB.svg" alt="facebook">
                 </a>
             </li>
             <li class="social-link">
                 <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
-                    <img class="img-fluid" src="/clubT/img/icon/icon_IG.svg" alt="instagram">
+                    <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/icon/icon_IG.svg" alt="instagram">
                 </a>
             </li>
         </ul>
@@ -96,7 +96,7 @@
             <div class="logo-wrapper">
                 <div class="logo">
                     <a class="smoothScroll" href="index.html">
-                        <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
+                        <img src="/SurpriseLabWeb/public/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
                     </a>
                     <button class="hamburger">
                         <span class="current-page">_Entrance</span>
@@ -141,12 +141,12 @@
         <ul class="social-wrapper">
             <li class="social-link">
                 <a href="https://www.facebook.com/surpriselabtw" target="_blank">
-                    <img class="img-fluid" src="/clubT/img/icon/icon_FB.svg" alt="facebook">
+                    <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/icon/icon_FB.svg" alt="facebook">
                 </a>
             </li>
             <li class="social-link">
                 <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
-                    <img class="img-fluid" src="/clubT/img/icon/icon_IG.svg" alt="instagram">
+                    <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/icon/icon_IG.svg" alt="instagram">
                 </a>
             </li>
         </ul>
@@ -158,7 +158,7 @@
             <div class="intro-wrapper">
                 <div class="intro-inner">
                     <div class="intro-header">
-                        <img class="intro-img" src="/clubT/img/landing/1.1_logo.png" alt="Club Tomorrow">
+                        <img class="intro-img" src="/SurpriseLabWeb/public/clubT/img/landing/1.1_logo.png" alt="Club Tomorrow">
                     </div>
                     <div class="intro-content">
                         <div class="intro-content-item">
@@ -193,19 +193,19 @@
                         </p>
                         <div class="entrance-wrapper">
                             <a class="smoothScroll entrance-link fbpx" href="#About" data-event="viewcontent1">
-                                <img src="/clubT/img/icon/icon_about.png" srcset="/clubT/img/icon/icon_about@2x.png 2x" alt="探索世界">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/icon_about.png" srcset="/SurpriseLabWeb/public/clubT/img/icon/icon_about@2x.png 2x" alt="探索世界">
                                 <div class="entrance-link-text">探索世界</div>
                             </a>
                             <a class="smoothScroll entrance-link fbpx" href="#Ticket" data-event="viewcontent2">
-                                <img src="/clubT/img/icon/icon_ticket.png" srcset="/clubT/img/icon/icon_ticket@2x.png 2x" alt="成為玩家">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/icon_ticket.png" srcset="/SurpriseLabWeb/public/clubT/img/icon/icon_ticket@2x.png 2x" alt="成為玩家">
                                 <div class="entrance-link-text">成為玩家</div>
                             </a>
                             <a class="smoothScroll entrance-link" href="#Rules">
-                                <img src="/clubT/img/icon/icon_rules.png" srcset="/clubT/img/icon/icon_rules@2x.png 2x" alt="重要規則">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/icon_rules.png" srcset="/SurpriseLabWeb/public/clubT/img/icon/icon_rules@2x.png 2x" alt="重要規則">
                                 <div class="entrance-link-text">重要規則</div>
                             </a>
                             <a class="smoothScroll entrance-link" href="#Contact">
-                                <img src="/clubT/img/icon/icon_contact.png" srcset="/clubT/img/icon/icon_contact@2x.png 2x" alt="聯絡管道">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/icon_contact.png" srcset="/SurpriseLabWeb/public/clubT/img/icon/icon_contact@2x.png 2x" alt="聯絡管道">
                                 <div class="entrance-link-text">聯絡管道</div>
                             </a>
                         </div>
@@ -347,7 +347,7 @@
                                         探索 Discover
                                     </p>
                                     <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
+                                        <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/landing/1.3_exp_1.png" alt="120分鐘沈浸式體驗">
                                     </div>
                                     <div class="exp-title">
                                         7位表演者<br/>
@@ -359,7 +359,7 @@
                                         扮演 Play
                                     </p>
                                     <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
+                                        <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/landing/1.3_exp_2.png" alt="7位表演者 60位玩家">
                                     </div>
                                     <div class="exp-title">
                                         化身玩家，加入5大陣營<br/>
@@ -371,7 +371,7 @@
                                         抉擇 Action
                                     </p>
                                     <div class="exp-img">
-                                        <img class="img-fluid" src="/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
+                                        <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/landing/1.3_exp_3.png" alt="兩大陣營 五種角色">
                                     </div>
                                     <div class="exp-title">
                                         60位玩家，角逐1場大戰<br/>
@@ -470,10 +470,10 @@
                                     </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselReviewsControls" role="button" data-slide="prev">
-                                    <img class="img-fluid" src="/clubT/img/btn-prev.svg" alt="prev">
+                                    <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/btn-prev.svg" alt="prev">
                                 </a>
                                 <a class="carousel-control-next" href="#carouselReviewsControls" role="button" data-slide="next">
-                                    <img class="img-fluid" src="/clubT/img/btn-next.svg" alt="next">
+                                    <img class="img-fluid" src="/SurpriseLabWeb/public/clubT/img/btn-next.svg" alt="next">
                                 </a>
                             </div>
                             <p class="section-paragraph">
@@ -507,8 +507,8 @@
                                 <div class="type-item type-single-player">
                                     <a href="https://surpriselab.backme.tw/checkout/1255/8949?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
-                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/ticket_0319_single_big.png" alt="單人票">
-                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/ticket_0319_single.png" alt="單人票">
+                                            <img class="img-fluid d-none d-sm-block" src="/SurpriseLabWeb/public/clubT/img/landing/ticket_0319_single_big.png" alt="單人票">
+                                            <img class="img-fluid d-block d-sm-none" src="/SurpriseLabWeb/public/clubT/img/landing/ticket_0319_single.png" alt="單人票">
                                         </div>
                                         <p class="ticket-state timeLimit">
                                             此優惠將於 06/01起調回至 $2000/人
@@ -518,8 +518,8 @@
                                 <div class="type-item type-multiplayer-for-4">
                                     <a href="https://surpriselab.backme.tw/checkout/1255/8950?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
-                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/ticket_0319_four_big.png" alt="四人票">
-                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/ticket_0319_four.png" alt="四人票">
+                                            <img class="img-fluid d-none d-sm-block" src="/SurpriseLabWeb/public/clubT/img/landing/ticket_0319_four_big.png" alt="四人票">
+                                            <img class="img-fluid d-block d-sm-none" src="/SurpriseLabWeb/public/clubT/img/landing/ticket_0319_four.png" alt="四人票">
                                         </div>
                                         <p class="ticket-state timeLimit">
                                             // 不可分開劃位<span class="d-sm-none d-inline">，</span><br class="d-sm-inline d-none"/>限量 <span class="total-ticket">300</span> 組 | 剩餘 <span class="rest-ticket">XXX</span> 組
@@ -530,8 +530,8 @@
                                 <div class="type-item type-multiplayer-for-10">
                                     <a href="https://surpriselab.backme.tw/checkout/1255/8951?locale=zh-TW" class="ticket-frame fbpx" data-event="AddToCart" target="_blank">
                                         <div class="type-img">
-                                            <img class="img-fluid d-none d-sm-block" src="/clubT/img/landing/ticket_0319_ten_big.png" alt="十人票">
-                                            <img class="img-fluid d-block d-sm-none" src="/clubT/img/landing/ticket_0319_ten.png" alt="十人票">
+                                            <img class="img-fluid d-none d-sm-block" src="/SurpriseLabWeb/public/clubT/img/landing/ticket_0319_ten_big.png" alt="十人票">
+                                            <img class="img-fluid d-block d-sm-none" src="/SurpriseLabWeb/public/clubT/img/landing/ticket_0319_ten.png" alt="十人票">
                                         </div>
                                         <p class="ticket-state timeLimit">
                                             // 不可分開劃位<span class="d-sm-none d-inline">，</span><br class="d-sm-inline d-none"/>限量 <span class="total-ticket">50</span> 組 | 剩餘 <span class="rest-ticket">XXX</span> 組
@@ -767,16 +767,10 @@
                                 受現實世界之影響<br/>
                                 《明日俱樂部》的入口暫時關閉<br/>
                                 <br/>
-                                但，這並不是結束<br/>
+                                <span class="font-underline">但，這並不是結束</span><br/>
+                                <span class="font-underline">如果你有興趣，請留下你的資訊</span><br/>
                                 <br/>
-                                明日俱樂部是否能重啟<br/>
-                                將由玩家共同決定<br/>
-                                <br/>
-                                05/31 前能招募 1500 位玩家<br/>
-                                《明日俱樂部》將於疫情穩定後再次開啟<br/>
-                                <br/>
-                                劃位時間、可劃位日期與時段<br/>
-                                將於 06/01 透過簡訊及 email 通知<br/>
+                                我們將在明日俱樂部重啟時通知你<br/>
                                 <br/>
                                 <a class="link-bright-green fbpx" data-event="ticket" href="javascript://" data-toggle="modal" data-target="#ticketDetail">點此，快速了解明日俱樂部預售機制</a>
                             </p>
@@ -901,7 +895,7 @@
                     <!-- <div class="exp-wrapper">
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_1-1.png" alt="舞蹈">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_1-1.png" alt="舞蹈">
                             </div>
                             <div class="exp-content">
                                 表演
@@ -909,7 +903,7 @@
                         </div>
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_1-2.png" alt="音樂">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_1-2.png" alt="音樂">
                             </div>
                             <div class="exp-content">
                                 音樂
@@ -917,7 +911,7 @@
                         </div>
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_1-3.png" alt="小點">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_1-3.png" alt="小點">
                             </div>
                             <div class="exp-content">
                                 舞蹈
@@ -925,7 +919,7 @@
                         </div>
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_2-1.png" alt="陣營">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_2-1.png" alt="陣營">
                             </div>
                             <div class="exp-content">
                                 陣營
@@ -933,7 +927,7 @@
                         </div>
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_2-2.png" alt="派別">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_2-2.png" alt="派別">
                             </div>
                             <div class="exp-content">
                                 選擇
@@ -941,7 +935,7 @@
                         </div>
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_2-3.png" alt="選擇">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_2-3.png" alt="選擇">
                             </div>
                             <div class="exp-content">
                                 倒數
@@ -949,7 +943,7 @@
                         </div>
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_3-1.png" alt="格鬥">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_3-1.png" alt="格鬥">
                             </div>
                             <div class="exp-content">
                                 格鬥
@@ -957,7 +951,7 @@
                         </div>
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_3-2.png" alt="投票">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_3-2.png" alt="投票">
                             </div>
                             <div class="exp-content">
                                 調飲
@@ -965,7 +959,7 @@
                         </div>
                         <div class="exp-item">
                             <div class="exp-icon">
-                                <img src="/clubT/img/icon/ticket/icon_ticket_3-3.png" alt="倒數">
+                                <img src="/SurpriseLabWeb/public/clubT/img/icon/ticket/icon_ticket_3-3.png" alt="倒數">
                             </div>
                             <div class="exp-content">
                                 派對
@@ -1051,7 +1045,7 @@
 <div class="hint-wrapper">
     <div class="hint-inner">
         <div class="hint-img">
-            <img src="/clubT/img/icon/rotate_turn-h.gif" alt="screen-rotate">
+            <img src="/SurpriseLabWeb/public/clubT/img/icon/rotate_turn-h.gif" alt="screen-rotate">
         </div>
         <div class="hint-text">
             請使用橫式觀看，以獲得最佳體驗
@@ -1060,25 +1054,25 @@
 </div>
 
 <!-- Plugins -->
-<script src="/clubT/js/plugins/jquery-3.3.1.min.js"></script>
-<script src="/clubT/js/plugins/popper.min.js"></script>
-<script src="/clubT/js/plugins/bootstrap.min.js"></script>
-<script src="/clubT/js/plugins/jquery.scrollify.js"></script>
-<script src="/clubT/js/plugins/jquery-glitch.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/plugins/jquery-3.3.1.min.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/plugins/popper.min.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/plugins/bootstrap.min.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/plugins/jquery.scrollify.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/plugins/jquery-glitch.js"></script>
 
 <!-- Loading Animation Js -->
-<script src="/clubT/js/plugins/imagesloaded.pkgd.min.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/plugins/imagesloaded.pkgd.min.js"></script>
 
 <!-- Aos -->
-<script src="/clubT/js/plugins/aos.min.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/plugins/aos.min.js"></script>
 
 <!-- isMobile -->
-<script src="/clubT/js/plugins/isMobile.min.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/plugins/isMobile.min.js"></script>
 
 <!-- Custom Js -->
-<script src="/clubT/js/main.js"></script>
-<script src="/clubT/js/smooth-scroll.js"></script>
-<script src="/clubT/js/home.js?v=0.7"></script>
-<script src="/clubT/js/rotate-device-hint.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/main.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/smooth-scroll.js"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/home.js?v=0.7"></script>
+<script src="/SurpriseLabWeb/public/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>
