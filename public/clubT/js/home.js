@@ -426,7 +426,6 @@ $(document).ready(function () {
     
                 if (tmp.hasClass('error')) {
                     tmp.closest('.form-group').find('.error-msg').html('號碼長度有誤或非手機號碼，請重新輸入');
-                    gotoErrorField(tmp);
                     isValid = false;
                     return false;
                 } else {
@@ -442,7 +441,6 @@ $(document).ready(function () {
             } else {
                 if (!regex.test(tmpVal)) {
                     tmp.prev().find('.error-msg').html('請確認信箱是否正確');
-                    gotoErrorField(tmp);
                     isValid = false;
                     return false;
                 } else {
@@ -452,18 +450,6 @@ $(document).ready(function () {
         });
     
         return isValid;
-    }
-
-    /**
-     * 畫面平移至錯誤欄位的位置
-     * @param field
-     */
-    function gotoErrorField(field) {
-        var offset = field.parent().offset().top - parseInt($('header').height()) - 50;
-
-        $('html, body').animate({
-            scrollTop: offset
-        }, 800);
     }
 
     /**
