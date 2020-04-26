@@ -767,8 +767,7 @@
                             <h2 class="section-title">如何參與</h2>
                             <div class="section-subtitle">TICKET</div>
                             <p class="section-paragraph">
-                                受現實世界之影響<br/>
-                                《明日俱樂部》的入口暫時關閉<br/>
+                                受疫情影響，《明日俱樂部》暫停演出<br/>
                                 <br/>
                                 <span class="font-underline">但，這並不是結束</span><br/>
                                 <span class="font-underline">如果你有興趣，請留下你的資訊</span><br/>
@@ -779,15 +778,15 @@
                             <form action="">
                                 <fieldset class="step-4">
                                     <div class="form-group input-with-label">
-                                        <label for="field_phone" class="field_phone_label">* 手機<span class="error-msg"></span></label>
-                                        <input id="field_phone" name="field_phone" type="tel" placeholder="ex. 0987654321" title="phoneNumber" class="form-control error phone has-verification" maxlength="11"/>
+                                        <!-- <label for="field_phone" class="field_phone_label">* 手機<span class="error-msg"></span></label> -->
+                                        <input id="field_phone" name="field_phone" type="tel" placeholder="請輸入手機" title="phoneNumber" class="form-control error phone has-verification" maxlength="11"/>
                                         <input type="hidden" name="dial-code"/>
                                         <!--<input type="text" name="phone" class="form-control has-verification phone" id="filed_phone" placeholder="ex. 0987654321">-->
                                     </div>
 
                                     <div class="form-group input-with-label">
-                                        <label for="email">* EMAIL<span class="error-msg"></span></label>
-                                        <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. clubtomorrow@surpriselab.com.tw">
+                                        <!-- <label for="email">* EMAIL<span class="error-msg"></span></label> -->
+                                        <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="請輸入Email">
                                     </div>
                                     <div class="button-wrapper d-flex justify-content-center">
                                         <button type="button" class="btn-default submit-form" disabled>connect</button>
