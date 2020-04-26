@@ -318,15 +318,37 @@ $(document).ready(function () {
         this.value = this.value.replace(/[^0-9]/g, '');
     });
 
+     // 方便測試資料重複時的畫面，串接後可刪除
+    // =================================
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    };
+
+    var get_value = getUrlParameter('status');
+
     /**
      * Submit 
      */
     $(".submit-form").on('click', function(event){
-        event.preventDefault
+        event.preventDefault();
+
         if (verificationChecker()) {
-            showModal(modalMessage[0]);
-        } else {
-            showModal(modalMessage[1]);
+            if (get_value === 'data-repeat') { // 電話號碼重複
+                showModal(modalMessage[1]);
+            } else {
+                showModal(modalMessage[0]);
+            }
         }
     });
 
