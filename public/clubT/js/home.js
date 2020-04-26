@@ -13,18 +13,7 @@ $(document).ready(function () {
     let v2_hightlight = $('.v2-highlight');
     let v2_visible = $('.v2-visible');
     let submitInfo = $('#submitInfo');
-    let modalMessage = [
-        {
-            'title': 'Success',
-            'tw': '您的資訊已成功送出',
-            'en': 'You are connected'
-        },
-        {
-            'title': 'already connected ',
-            'tw': '已送過重複手機或Email',
-            'en': 'Duplicate contact info'
-        }
-    ];
+    let phoneField = $('#field_phone');
 
     if (isMobile.any) {
         header_logo.attr('src', '/clubT/img/logo_2_mobile@2x.png');
@@ -309,8 +298,6 @@ $(document).ready(function () {
         }
     }
 
-    var phoneField = $('#field_phone');
-
     /**
      * 限制電話欄位僅能輸入數字
      */
@@ -318,38 +305,19 @@ $(document).ready(function () {
         this.value = this.value.replace(/[^0-9]/g, '');
     });
 
-     // 方便測試資料重複時的畫面，串接後可刪除
-    // =================================
-    var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = window.location.search.substring(1),
-          sURLVariables = sPageURL.split('&'),
-          sParameterName,
-          i;
-
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-            }
-        }
-    };
-
-    var get_value = getUrlParameter('status');
-
     /**
      * Submit 
      */
     $(".submit-form").on('click', function(event){
         event.preventDefault();
-
+        
         if (verificationChecker()) {
-            if (get_value === 'data-repeat') { // 電話號碼重複
-                showModal(modalMessage[1]);
-            } else {
-                showModal(modalMessage[0]);
-            }
+            submitInfo.modal('show');
         }
+    });
+
+    $('#submitInfo .close').on('click', function() {
+        history.go(0);
     });
 
     // ----------------------------
@@ -360,17 +328,17 @@ $(document).ready(function () {
 
     // initialise plugin
     var iti = window.intlTelInput(input, {
-    onlyCountries: ["tw","cn" ,"hk", "mo", "my", "sg"],
-    initialCountry: "tw",
-    separateDialCode: true,
-    formatOnDisplay: true,
-    nationalMode: true,
-    utilsScript: "utils.js"
+        onlyCountries: ["tw","cn" ,"hk", "mo", "my", "sg"],
+        initialCountry: "tw",
+        separateDialCode: true,
+        formatOnDisplay: true,
+        nationalMode: true,
+        utilsScript: "utils.js"
     });
 
     var reset = function() {
-    input.classList.add("error");
-    errorMsg.innerHTML = "";
+        input.classList.add("error");
+        errorMsg.innerHTML = "";
     };
 
     // on keyup, countrychange: validate field
@@ -399,17 +367,17 @@ $(document).ready(function () {
     * 如國碼為886，判斷是否為手機號碼
     */
     function isTwPhone(number, iti) {
-    if (iti.selectedCountryData.iso2 === 'tw') {
-        if (
-            number.length === 10 && number.substring(0, 2) === '09' ||
-            number.length === 9 && number.substring(0, 1) === '9') {
-            return true;
+        if (iti.selectedCountryData.iso2 === 'tw') {
+            if (
+                number.length === 10 && number.substring(0, 2) === '09' ||
+                number.length === 9 && number.substring(0, 1) === '9') {
+                return true;
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            return true;
         }
-    } else {
-        return true;
-    }
     }
 
     function verificationChecker() {
@@ -450,16 +418,5 @@ $(document).ready(function () {
         });
     
         return isValid;
-    }
-
-    /**
-     * 切換內容並開啟Modal
-     * @param modalContent json
-     */
-    function showModal(modalContent) {
-        submitInfo.find('.modal-title').html(modalContent.title);
-        submitInfo.find('.modal-body h2').html(modalContent.tw);
-        submitInfo.find('.modal-body h6').html(modalContent.en);
-        submitInfo.modal('show');
     }
 });

@@ -1070,12 +1070,12 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content text-left">
             <div class="modal-header">
-                <h5 class="modal-title"></h5>
+                <h5 class="modal-title">Success</h5>
             </div>
             <div class="modal-body-container d-flex align-items-center">
                 <div class="modal-body">
-                    <h2></h2>
-                    <h6></h6>
+                    <h2>您的資訊已成功送出</h2>
+                    <h6>You are connected</h6>
                 </div>
             </div>
             <div class="modal-footer close" data-dismiss="modal" aria-label="Close">
@@ -1118,7 +1118,7 @@
 <!-- Custom Js -->
 <script src="/clubT/js/main.js"></script>
 <script src="/clubT/js/smooth-scroll.js"></script>
-<script src="/clubT/js/home.js?v=0.9"></script>
+<script src="/clubT/js/home.js?v=1.0"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>
