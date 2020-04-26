@@ -12,6 +12,19 @@ $(document).ready(function () {
     let v2_copywriting = $('.v2-styling');
     let v2_hightlight = $('.v2-highlight');
     let v2_visible = $('.v2-visible');
+    let submitInfo = $('#submitInfo');
+    let modalMessage = [
+        {
+            'title': 'Success',
+            'tw': '您的資訊已成功送出',
+            'en': 'You are connected'
+        },
+        {
+            'title': 'already connected ',
+            'tw': '已送過重複手機或Email',
+            'en': 'Duplicate contact info'
+        }
+    ];
 
     if (isMobile.any) {
         header_logo.attr('src', '/clubT/img/logo_2_mobile@2x.png');
@@ -253,4 +266,192 @@ $(document).ready(function () {
             }
         }, 1000);
     });
+
+    /**
+     * 每當欄位資料變動時，重新判別是否可啟用下一步按鈕
+     */
+    $('fieldset input').on('keyup', function () {
+        allowChecker($(this).closest('fieldset'));
+    });
+
+    /**
+     * 檢查是否可送出表單
+     */
+    function allowChecker(thisStep){
+        isAllowToNextStep = true;
+
+        thisStep.find('input:not([type="hidden"])').each(function () {
+            var element = $(this);
+
+            if (element.attr('type') === 'checkbox') {
+
+                if (!element.is(':checked')) {
+                    isAllowToNextStep = false;
+                    return false;
+                } else if (element.attr('id') === 'agreerule') {
+                    $('#importantNotice').modal('show');
+                }
+
+            } else {
+
+                if (!$(this).val()) {
+                    isAllowToNextStep = false;
+                    return false;
+                }
+
+            }
+        });
+
+        if (isAllowToNextStep) {
+            thisStep.find('.submit-form').attr('disabled', false);
+        } else {
+            thisStep.find('.submit-form').attr('disabled', true);
+        }
+    }
+
+    var phoneField = $('#field_phone');
+
+    /**
+     * 限制電話欄位僅能輸入數字
+     */
+    phoneField.bind('keyup paste', function() {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+
+    /**
+     * Submit 
+     */
+    $(".submit-form").on('click', function(event){
+        event.preventDefault
+        if (verificationChecker()) {
+            showModal(modalMessage[0]);
+        } else {
+            showModal(modalMessage[1]);
+        }
+    });
+
+    // ----------------------------
+    // International Telephone Input
+    // ----------------------------
+    var input = document.querySelector("#field_phone"),
+    errorMsg = document.querySelector('.field_phone_label .error-msg');
+
+    // initialise plugin
+    var iti = window.intlTelInput(input, {
+    onlyCountries: ["tw","cn" ,"hk", "mo", "my", "sg"],
+    initialCountry: "tw",
+    separateDialCode: true,
+    formatOnDisplay: true,
+    nationalMode: true,
+    utilsScript: "utils.js"
+    });
+
+    var reset = function() {
+    input.classList.add("error");
+    errorMsg.innerHTML = "";
+    };
+
+    // on keyup, countrychange: validate field
+    var eventList = ['keyup', 'countrychange'];
+    for(event of eventList) {
+        input.addEventListener(event, function() {
+            reset();
+            isPhoneNumber(input);
+        });
+    }
+
+    /**
+    * 號碼是否符合選擇的國碼長度
+    */
+    function isPhoneNumber(input) {
+        if (input.value.trim()) {
+            if (iti.isValidNumber() && isTwPhone(input.value, iti)) {
+                input.classList.remove("error");
+            } else {
+                input.classList.add("error");
+            }
+        }
+    }
+
+    /**
+    * 如國碼為886，判斷是否為手機號碼
+    */
+    function isTwPhone(number, iti) {
+    if (iti.selectedCountryData.iso2 === 'tw') {
+        if (
+            number.length === 10 && number.substring(0, 2) === '09' ||
+            number.length === 9 && number.substring(0, 1) === '9') {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return true;
+    }
+    }
+
+    function verificationChecker() {
+        var verification_fields = $('.has-verification');
+        var isValid = true;
+        var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    
+        verification_fields.each(function (index, verification_field) {
+            var tmp = $(verification_field);
+            var tmpVal = tmp.val();
+    
+            if (tmp.hasClass('phone')) {
+                isPhoneNumber(input);
+    
+                if (tmp.hasClass('error')) {
+                    tmp.closest('.form-group').find('.error-msg').html('號碼長度有誤或非手機號碼，請重新輸入');
+                    gotoErrorField(tmp);
+                    isValid = false;
+                    return false;
+                } else {
+                    tmp.prev().find('.error-msg').html('');
+                    var dialCode = $('.iti__selected-dial-code').text();
+                    if (dialCode === '+886') {
+                        // 去除多餘的0
+                        phoneField.val(parseInt(phoneField.val()).toString());
+                    }
+                    $('input[name="dial-code"]').val($('.iti__selected-dial-code').text());
+    
+                }
+            } else {
+                if (!regex.test(tmpVal)) {
+                    tmp.prev().find('.error-msg').html('請確認信箱是否正確');
+                    gotoErrorField(tmp);
+                    isValid = false;
+                    return false;
+                } else {
+                    tmp.prev().find('.error-msg').html('');
+                }
+            }
+        });
+    
+        return isValid;
+    }
+
+    /**
+     * 畫面平移至錯誤欄位的位置
+     * @param field
+     */
+    function gotoErrorField(field) {
+        var offset = field.parent().offset().top - parseInt($('header').height()) - 50;
+
+        $('html, body').animate({
+            scrollTop: offset
+        }, 800);
+    }
+
+    /**
+     * 切換內容並開啟Modal
+     * @param modalContent json
+     */
+    function showModal(modalContent) {
+        submitInfo.find('.modal-title').html(modalContent.title);
+        submitInfo.find('.modal-body h2').html(modalContent.tw);
+        submitInfo.find('.modal-body h6').html(modalContent.en);
+        submitInfo.modal('show');
+    }
 });

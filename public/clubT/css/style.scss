@@ -3511,3 +3511,16 @@ header {
 .glitch .layer {
   width: 100%;
 }
+
+form {
+    margin: 0 auto;
+    max-width: 450px;
+
+    fieldset {
+        min-height: inherit;
+    }
+}
+
+.modal {
+    z-index: 999999;
+}

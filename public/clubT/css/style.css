@@ -4227,4 +4227,17 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 .glitch .layer {
   width: 100%;
 }
+
+form {
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+form fieldset {
+  min-height: inherit;
+}
+
+.modal {
+  z-index: 999999;
+}
 /*# sourceMappingURL=style.css.map */
