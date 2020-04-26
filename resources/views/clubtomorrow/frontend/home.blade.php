@@ -37,7 +37,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=2.8"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=3.0"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -778,15 +778,17 @@
                             <form action="">
                                 <fieldset class="step-4">
                                     <div class="form-group input-with-label">
-                                        <!-- <label for="field_phone" class="field_phone_label">* 手機<span class="error-msg"></span></label> -->
+                                        <!-- <label for="field_phone" class="field_phone_label">* 手機</label> -->
                                         <input id="field_phone" name="field_phone" type="tel" placeholder="請輸入手機" title="phoneNumber" class="form-control error phone has-verification" maxlength="11"/>
+                                        <span class="error-msg"></span>
                                         <input type="hidden" name="dial-code"/>
                                         <!--<input type="text" name="phone" class="form-control has-verification phone" id="filed_phone" placeholder="ex. 0987654321">-->
                                     </div>
 
                                     <div class="form-group input-with-label">
-                                        <!-- <label for="email">* EMAIL<span class="error-msg"></span></label> -->
+                                        <!-- <label for="email">* EMAIL</label> -->
                                         <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="請輸入Email">
+                                        <span class="error-msg"></span>
                                     </div>
                                     <div class="button-wrapper d-flex justify-content-center">
                                         <button type="button" class="btn-default submit-form" disabled>connect</button>

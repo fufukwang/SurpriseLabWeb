@@ -429,7 +429,7 @@ $(document).ready(function () {
                     isValid = false;
                     return false;
                 } else {
-                    tmp.prev().find('.error-msg').html('');
+                    tmp.closest('.form-group').find('.error-msg').html('');
                     var dialCode = $('.iti__selected-dial-code').text();
                     if (dialCode === '+886') {
                         // 去除多餘的0
@@ -440,11 +440,11 @@ $(document).ready(function () {
                 }
             } else {
                 if (!regex.test(tmpVal)) {
-                    tmp.prev().find('.error-msg').html('請確認信箱是否正確');
+                    tmp.closest('.form-group').find('.error-msg').html('請確認信箱是否正確');
                     isValid = false;
                     return false;
                 } else {
-                    tmp.prev().find('.error-msg').html('');
+                    tmp.closest('.form-group').find('.error-msg').html('');
                 }
             }
         });

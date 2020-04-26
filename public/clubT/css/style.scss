@@ -3518,9 +3518,40 @@ form {
 
     fieldset {
         min-height: inherit;
+        padding-bottom: 20px;
     }
+
+    .error-msg {
+        position: absolute;
+        width: 100%;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        color: $color-pink;
+        text-align: right;
+        display: block;
+    }
+}
+
+fieldset.step-4 .form-group input {
+    border-width: 0 0 1px;
+    border-radius: 0;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    border-width: 0 0 1px;
+    border-radius: 0;
 }
 
 .modal {
     z-index: 999999;
+}
+
+@media (max-width: 575.98px) {
+    fieldset.step-4 .form-group input {
+        padding: 7px 16px;
+    }
+    
+    .iti--separate-dial-code .iti__selected-flag {
+        padding: 7px 16px;
+    } 
 }
