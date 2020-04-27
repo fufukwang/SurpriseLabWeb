@@ -514,6 +514,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('ReOrderData','clubT\FrontController@ReOrderData');
         // 驗證SMS & SMS寄送
         Route::post('getting_intro_sms','clubT\FrontController@getting_intro_sms');
+        // 重新聚集能量
+        Route::post('receive_info','clubT\FrontController@receive_info');
     });
 });
 

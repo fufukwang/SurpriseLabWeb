@@ -11,6 +11,7 @@ use App\model\club\club_sms;
 use App\model\club\coupon;
 use App\model\club\order;
 use App\model\club\pro;
+use App\model\club\collect_info;
 
 
 use DB;
@@ -533,4 +534,43 @@ class FrontController extends Controller
         }
     }
 
+
+
+    // 重新聚集能量
+    public function receive_info(Request $request){
+        try{
+            if($request->ajax()){
+                $input = $request->all();
+                $dial_code = $input['dial_code'];
+                $phone     = $input['phone'];
+                $email     = $input['email'];
+                $message = '';
+                if(collect_info::where('dial_code',$dial_code)->where('phone',$phone)->count()>0){
+                    $message .= '電話號碼已登錄過!';
+                }
+                if(collect_info::where('email',$email)->count()>0){
+                    $message .= '信箱已登錄過!';
+                }
+                if($message == ''){
+                    collect_info::insert([
+                        'dial_code'  => $dial_code,
+                        'phone'      => $phone,
+                        'email'      => $email,
+                        'created_at' => date('Y-m-d H:i:s')
+                    ]);
+                    return response()->json(["success"=>true]);
+                } else {
+                    return response()->json([
+                        "success" => false,
+                        "message" => $message
+                    ]);
+                }
+            } else {
+                return response()->json(["success"=>false]);
+            }
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return response()->json(["success"=>false]);
+        }
+    }
 }

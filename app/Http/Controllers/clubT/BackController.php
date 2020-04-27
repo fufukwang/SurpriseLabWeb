@@ -16,6 +16,7 @@ use App\model\club\coupon;
 use App\model\club\order;
 use App\model\club\pro;
 use App\model\club\backme;
+use App\model\club\collect_info;
 
 
 use App\Http\Controllers\Controller;
@@ -85,7 +86,8 @@ class BackController extends Controller
                 return redirect('/clubtomorrow/sms?')->with('message','查無內容!');
             }
         } else {
-            return view('clubtomorrow.backend.smsform');
+            $count = collect_info::count();
+            return view('clubtomorrow.backend.smsform',compact('count'));
         }
     }
 

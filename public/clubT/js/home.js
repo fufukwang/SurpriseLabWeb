@@ -312,7 +312,30 @@ $(document).ready(function () {
         event.preventDefault();
         
         if (verificationChecker()) {
-            submitInfo.modal('show');
+            var obj = {
+                "dial_code": $("input[name='dial-code']").val(),
+                "phone": $('#field_phone').val(),
+                "email": $('#email').val()
+            }
+            $.post('/clubtomorrow/receive_info',obj,function(data){
+                if(data.success==true){
+                    $('#submitInfo').find('h2').text('您的資訊已成功送出');
+                    $('#submitInfo').find('h6').text('You are connected');
+                    $('#submitInfo').find('h5').text('Success');
+                    submitInfo.modal('show');
+                } else {
+                    $('#submitInfo').find('h2').text(data.message);
+                    $('#submitInfo').find('h6').text('Error');
+                    $('#submitInfo').find('h5').text('Fail');
+                    submitInfo.modal('show');
+                }
+            },'json').fail(function() {
+                $('#submitInfo').find('h2').text('送出錯誤!');
+                $('#submitInfo').find('h6').text('Error');
+                $('#submitInfo').find('h5').text('Fail');
+                submitInfo.modal('show');
+            });
+            // submitInfo.modal('show');
         }
     });
 
@@ -419,4 +442,9 @@ $(document).ready(function () {
     
         return isValid;
     }
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 });
