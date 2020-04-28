@@ -318,6 +318,7 @@ $(document).ready(function () {
                 "email": $('#email').val()
             }
             $.post('/clubtomorrow/receive_info',obj,function(data){
+                /*
                 if(data.success==true){
                     $('#submitInfo').find('h2').text('您的資訊已成功送出');
                     $('#submitInfo').find('h6').text('You are connected');
@@ -329,10 +330,14 @@ $(document).ready(function () {
                     $('#submitInfo').find('h5').text('Fail');
                     submitInfo.modal('show');
                 }
+                */
+                submitInfo.modal('show');
             },'json').fail(function() {
+                /*
                 $('#submitInfo').find('h2').text('送出錯誤!');
                 $('#submitInfo').find('h6').text('Error');
                 $('#submitInfo').find('h5').text('Fail');
+                */
                 submitInfo.modal('show');
             });
             // submitInfo.modal('show');

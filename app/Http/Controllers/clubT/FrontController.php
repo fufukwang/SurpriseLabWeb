@@ -544,6 +544,26 @@ class FrontController extends Controller
                 $dial_code = $input['dial_code'];
                 $phone     = $input['phone'];
                 $email     = $input['email'];
+                $email_count = collect_info::where('email',$email)->count();
+                $phone_count = collect_info::where('dial_code',$dial_code)->where('phone',$phone)->count();
+                if($email_count>0 && $phone_count==0){
+                    // 有信箱的帳號更新電話
+                    collect_info::where('email',$email)->update([
+                        'dial_code' => $count,
+                        'phone'     => $phone
+                    ]);
+
+                } elseif($email_count==0){
+                    // 沒這一筆信箱和電話紀錄
+                    collect_info::insert([
+                        'dial_code'  => $dial_code,
+                        'phone'      => $phone,
+                        'email'      => $email,
+                        'created_at' => date('Y-m-d H:i:s')
+                    ]);
+                }
+                return response()->json(["success"=>true]);
+                /*
                 $message = '';
                 if(collect_info::where('dial_code',$dial_code)->where('phone',$phone)->count()>0){
                     $message .= '電話號碼已登錄過!';
@@ -565,6 +585,7 @@ class FrontController extends Controller
                         "message" => $message
                     ]);
                 }
+                */
             } else {
                 return response()->json(["success"=>false]);
             }
