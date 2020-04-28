@@ -549,7 +549,7 @@ class FrontController extends Controller
                 if($email_count>0 && $phone_count==0){
                     // 有信箱的帳號更新電話
                     collect_info::where('email',$email)->update([
-                        'dial_code' => $count,
+                        'dial_code' => $dial_code,
                         'phone'     => $phone
                     ]);
 
