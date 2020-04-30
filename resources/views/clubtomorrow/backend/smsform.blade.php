@@ -73,10 +73,16 @@
                                 <div class="btn-group focus-btn-group">
                                     <form method="post" autocomplete="off" target="_blank">
                                         {!! csrf_field() !!}
-                                        <!--div class="form-group col-sm-10">
+                                        <input type="hidden" name="act" value="info">
+                                        <div class="form-group col-sm-10">
+                                            <div class="col-sm-12">
+                                                <h4>登錄總數：{{ $count }}</h4>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-10">
                                             <div class="col-sm-12">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control dayinput" placeholder="搜尋範圍起始" name="day" value="{{ $request->day or ''}}">
+                                                    <input type="text" class="form-control dayinput" placeholder="登錄時間起始" name="info_day" value="{{ $request->info_day or ''}}">
                                                     <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
                                                 </div>
                                             </div>
@@ -84,7 +90,7 @@
                                         <div class="form-group col-sm-10">
                                             <div class="col-sm-12">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control dayinput" placeholder="搜尋範圍結束" name="day_end" value="{{ $request->day_end or ''}}">
+                                                    <input type="text" class="form-control dayinput" placeholder="登錄時間結束" name="info_day_end" value="{{ $request->info_day_end or ''}}">
                                                     <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
                                                 </div>
                                             </div>
@@ -93,10 +99,8 @@
                                             <div class="col-sm-12">
                                         <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 下載</button>
                                             </div>
-                                        </div-->
-                                        <div>
-                                            <h4>登錄總數：{{ $count }}</h4>
                                         </div>
+                                        
 
                                     </form>
                                 </div>

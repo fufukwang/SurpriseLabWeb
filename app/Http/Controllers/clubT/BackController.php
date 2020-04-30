@@ -53,34 +53,59 @@ class BackController extends Controller
     public function sms(Request $request){
         if($request->isMethod('post')){
             try {
-                $cellData = club_sms::where('is_sent',1);
-                if($request->has('day')) $cellData = $cellData->where('created_at','>=',$request->day);
-                if($request->has('day_end')) $cellData = $cellData->where('created_at','<=',$request->day_end);
-                $cellData = $cellData->groupBy('phone')->orderBy("created_at","DESC")->get();
+                if($request->has('act') && $request->act == 'info'){
+                    $cellData = collect_info::where('id','>',0);
+                    if($request->has('info_day')) $cellData = $cellData->where('created_at','>=',$request->info_day);
+                    if($request->has('info_day_end')) $cellData = $cellData->where('created_at','<=',$request->info_day_end);
+                    $cellData = $cellData->groupBy('phone')->orderBy("created_at","DESC")->get();
 
 
-                //$cellData = $sms->toArray();
-                Excel::create('名單',function ($excel) use ($cellData){
-                    $excel->sheet('data', function ($sheet) use ($cellData){
-                        $data = [[
-                            'phone'   => '電話',
-                            'created' => '發送時間',
-                        ]];
-                        foreach($cellData as $row){
-                            if($row->dial_code == '+886') $row->dial_code = '0';
-                            $tmp = [
-                                'phone'   => $row->dial_code . $row->phone,
-                                'created' => $row->created_at->format('Y-m-d H:i:s')
-                            ];
-                            array_push($data,$tmp);
-                        }
-                        $sheet->rows($data);
-                    });
-                })->export('xlsx');
+                    //$cellData = $sms->toArray();
+                    Excel::create('名單',function ($excel) use ($cellData){
+                        $excel->sheet('data', function ($sheet) use ($cellData){
+                            $data = [[
+                                'phone'   => '電話',
+                                'created' => '建立時間',
+                                'email'   => '信箱'
+                            ]];
+                            foreach($cellData as $row){
+                                if($row->dial_code == '+886') $row->dial_code = '0';
+                                $tmp = [
+                                    'phone'   => $row->dial_code . $row->phone,
+                                    'created' => $row->created_at->format('Y-m-d H:i:s'),
+                                    'email'   => $row->email
+                                ];
+                                array_push($data,$tmp);
+                            }
+                            $sheet->rows($data);
+                        });
+                    })->export('xlsx');
+                } else {
+                    $cellData = club_sms::where('is_sent',1);
+                    if($request->has('day')) $cellData = $cellData->where('created_at','>=',$request->day);
+                    if($request->has('day_end')) $cellData = $cellData->where('created_at','<=',$request->day_end);
+                    $cellData = $cellData->groupBy('phone')->orderBy("created_at","DESC")->get();
 
 
-
-
+                    //$cellData = $sms->toArray();
+                    Excel::create('名單',function ($excel) use ($cellData){
+                        $excel->sheet('data', function ($sheet) use ($cellData){
+                            $data = [[
+                                'phone'   => '電話',
+                                'created' => '發送時間',
+                            ]];
+                            foreach($cellData as $row){
+                                if($row->dial_code == '+886') $row->dial_code = '0';
+                                $tmp = [
+                                    'phone'   => $row->dial_code . $row->phone,
+                                    'created' => $row->created_at->format('Y-m-d H:i:s')
+                                ];
+                                array_push($data,$tmp);
+                            }
+                            $sheet->rows($data);
+                        });
+                    })->export('xlsx');
+                }
             } catch (Exception $exception) {
                 Log::error($exception);
                 return redirect('/clubtomorrow/sms?')->with('message','查無內容!');
