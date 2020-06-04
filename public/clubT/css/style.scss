@@ -431,6 +431,7 @@ p.section-paragraph {
 
       &.active {
         background-image: url(../img/icon/icon_anchor_bg.svg);
+        background-size: cover;
 
         a {
           color: $color-black;

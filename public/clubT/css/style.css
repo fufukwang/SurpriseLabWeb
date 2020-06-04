@@ -930,6 +930,7 @@ p.section-paragraph.v2-styling .v2-visible {
 
 .anchor-wrapper ul li.active {
   background-image: url(../img/icon/icon_anchor_bg.svg);
+  background-size: cover;
 }
 
 .anchor-wrapper ul li.active a {
