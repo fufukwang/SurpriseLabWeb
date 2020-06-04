@@ -4285,7 +4285,8 @@ fieldset.step-4 .form-group input {
 
 .ending-modal.hiding-modal .mask,
 .ending-modal.hiding-modal .ending-content {
-  opacity: 1;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .ending-modal .mask {
@@ -4299,6 +4300,7 @@ fieldset.step-4 .form-group input {
   opacity: 1;
   -webkit-transition: 0.3s opacity 0.5s;
   transition: 0.3s opacity 0.5s;
+  pointer-events: none;
 }
 
 .ending-modal .ending-content {

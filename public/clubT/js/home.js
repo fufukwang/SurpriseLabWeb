@@ -1,3 +1,15 @@
+// Ending Modal
+var ending_btn_colse = $('.ending-close');
+var ending_modal = $('.ending-modal');
+
+ending_btn_colse.on('click', function () {
+    ending_modal.addClass('hiding-modal');
+
+    setTimeout(function () {
+        ending_modal.remove();
+    }, 1100);
+});
+
 $(document).ready(function () {
     // glitch 文字雜訊效果
     let glitch = $('.glitch');

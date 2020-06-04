@@ -3566,7 +3566,8 @@ fieldset.step-4 .form-group input {
   &.hiding-modal {
     .mask,
     .ending-content {
-      opacity: 1;
+      opacity: 0;
+      pointer-events: none;
     }
   }
 
@@ -3580,6 +3581,7 @@ fieldset.step-4 .form-group input {
     z-index: 10001;
     opacity: 1;
     transition: 0.3s opacity 0.5s;
+    pointer-events: none;
   }
 
   .ending-content {

@@ -37,7 +37,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=3.6"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=3.7"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -1144,7 +1144,7 @@
 <!-- Custom Js -->
 <script src="/clubT/js/main.js"></script>
 <script src="/clubT/js/smooth-scroll.js"></script>
-<script src="/clubT/js/home.js?v=1.2"></script>
+<script src="/clubT/js/home.js?v=1.3"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>
