@@ -37,7 +37,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=3.3"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=3.4"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -230,7 +230,7 @@
                             明日之後，會是什麼呢？
                         </p>
                     </div>
-                    <a class="btn-bright-blue" href="https://www.facebook.com/surpriselabtw" target="_blank">前往驚喜製造粉專</a>
+                    <a class="btn-bright-blue link-to-fb" href="https://www.facebook.com/surpriselabtw" target="_blank">前往驚喜製造粉專</a>
                 </div>
             </div>
             <!-- Modal End -->
