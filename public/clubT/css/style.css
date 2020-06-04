@@ -4351,10 +4351,11 @@ fieldset.step-4 .form-group input {
 }
 
 .ending-modal .link-to-fb {
+  width: 200px;
   margin-top: 40px;
   font-size: 18px;
   line-height: 1.5;
-  padding: 7px 22px;
+  padding: 7px 0;
 }
 
 .ending-modal .pc-hide {
@@ -4391,7 +4392,7 @@ fieldset.step-4 .form-group input {
     margin-top: 32px;
     font-size: 14px;
     line-height: 20px;
-    padding: 8px 29px;
+    padding: 8px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
