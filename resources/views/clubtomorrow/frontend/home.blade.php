@@ -37,7 +37,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=3.0"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=3.1"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -211,13 +211,13 @@
             </div>
             <!-- Modal Start -->
             <div class="ending-modal">
-                <div class="mask ending-close"></div>
+                <div class="mask"></div>
                 <div class="ending-content">
                     <div class="ending-close">
                         <button class="ending-close-button" type="button">×</button>
                     </div>
                     <div class="ending-logo">
-                        <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
+                        <img class="img-fluid" src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
                     </div>
                     <div class="ending-text">
                         <p>

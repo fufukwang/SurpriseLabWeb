@@ -3583,17 +3583,25 @@ fieldset.step-4 .form-group input {
   }
 
   .ending-content {
-    position: relative;
+    width: 512px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 2px solid $color-bright-green;
+    background-color: rgba($color-black, 0.7);
     padding: 37px 49px 52px;
+    z-index: 999999;
   }
 
   .ending-close {
     position: absolute;
-    top: 36px;
-    right: 36px;
+    top: 16px;
+    right: 16px;
 
     .ending-close-button {
+      padding: 10px;
       font-size: 20px;
     }
   }
@@ -3601,6 +3609,7 @@ fieldset.step-4 .form-group input {
   .ending-logo {
     width: 180px;
     max-width: 180px;
+    margin: 0 auto;
   }
 
   .ending-text {
