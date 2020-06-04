@@ -860,11 +860,14 @@
                         <h2 class="section-title">聯絡</h2>
                         <div class="section-subtitle">Contact</div>
                         <p class="section-paragraph">
-                            有任何問題，請先至 <a class="smoothScroll link-bright-green" href="#Rules">俱樂部手冊</a> 頁面<br class="d-sm-none d-inline"/><br class="d-sm-none d-inline"/>查看<br class="d-sm-inline d-none"/><br class="d-sm-inline d-none"/>手冊外的其他問題<br class="d-sm-none d-inline"/>（疑難雜症、企業合作、包場需求、媒體公關）<br/>歡迎來信詢問
+                            {{--有任何問題，請先至 <a class="smoothScroll link-bright-green" href="#Rules">俱樂部手冊</a> 頁面<br class="d-sm-none d-inline"/><br class="d-sm-none d-inline"/>查看<br class="d-sm-inline d-none"/><br class="d-sm-inline d-none"/>手冊外的其他問題<br class="d-sm-none d-inline"/>（疑難雜症、企業合作、包場需求、媒體公關）<br/>歡迎來信詢問--}}
+                            《明日俱樂部 Club Tomorrow》<br/>
+                            已於 2020.06.01 正式結束
                         </p>
                     </div>
                     <div class="col-lg-6 offset-lg-3">
                         <div class="contact-wrapper">
+                            {{--
                             <div class="contact-item">
                                 <div class="contact-title">
                                     聯絡⽅式
@@ -881,6 +884,7 @@
                                     週一至週五 11:00am-18:00pm
                                 </div>
                             </div>
+                            --}}
                             <div class="contact-item">
                                 <div class="contact-title">
                                     明日俱樂部地址
