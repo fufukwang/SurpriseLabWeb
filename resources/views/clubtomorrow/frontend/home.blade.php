@@ -64,9 +64,6 @@
             <li>
                 <a class="smoothScroll" href="#Ticket">_Ticket</a>
             </li>
-            <!-- <li style="display: none">
-                <a class="smoothScroll" href="#Presale">_Presale</a>
-            </li> -->
             <li>
                 <a class="smoothScroll" href="#Rules">_Rules</a>
             </li>
@@ -131,9 +128,6 @@
             <li class="menu-item">
                 <a class="smoothScroll" href="#Ticket">Ticket</a>
             </li>
-            <!-- <li class="menu-item" style="display: none">
-                <a class="smoothScroll" href="#Presale">_Presale</a>
-            </li> -->
             <li class="menu-item">
                 <a class="smoothScroll" href="#Rules">Rules</a>
             </li>
@@ -493,8 +487,9 @@
                 </div>
             </section>
 
+            {{--
             <!-- 選擇票券 -->
-            <!-- <section id="ticketSec" class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-type" data-section-name="Ticket" data-aos="fade">
+            <section id="ticketSec" class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-type" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -551,10 +546,10 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- 購票步驟 -->
-            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-step" data-section-name="Ticket" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-step" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -609,10 +604,10 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- 劃位時程 -->
-            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-schedule" data-section-name="Ticket" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-schedule" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 offset-sm-0 col-10 offset-1">
@@ -654,10 +649,10 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- 體驗場次 -->
-            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-time-slots" data-section-name="Ticket" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-time-slots" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 offset-sm-0 col-10 offset-1">
@@ -704,10 +699,10 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- 售票狀況 -->
-            <!-- <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-status" data-section-name="Ticket" data-aos="fade">
+            <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-status" data-section-name="Ticket" data-aos="fade">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 offset-sm-0 col-10 offset-1">
@@ -754,11 +749,11 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section> --}}
         </section>
 
-        <!-- Section3.5 Presale Ticket -->
         {{--
+        <!-- Section3.5 Presale Ticket -->
         <section class="anchor-section" id="Presale" data-aos="fade">
             <!-- 如何參與 -->
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Presale" data-aos="fade">
@@ -918,7 +913,7 @@
                     </div>
                 </div>
                 <div class="modal-text">
-                    <!-- <div class="exp-wrapper">
+                    {{-- <div class="exp-wrapper">
                         <div class="exp-item">
                             <div class="exp-icon">
                                 <img src="/clubT/img/icon/ticket/icon_ticket_1-1.png" alt="舞蹈">
@@ -991,16 +986,16 @@
                                 派對
                             </div>
                         </div>
-                    </div> -->
+                    </div> --}}
                     <p class="section-paragraph">
                         唯有人類能夠進入<br/>現場將進行人類檢測及分類<br/><br/>請大膽在這世界穿梭<br/>你將遇見五大陣營的領導者<br/><br/>你將加入一場秘密集會<br/>請積極參與，它會是你獲勝的關鍵<br/><br/>最後，請用盡一切方法<br/>成為贏家 － 決定這世界的明天<br/><br/>祝你勝利。<br/><br/>註：現場提供少量酒水與小點
                     </p>
                 </div>
-                <!-- <div class="modal-footer">
+                {{-- <div class="modal-footer">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         關閉
                     </button>
-                </div> -->
+                </div> --}}
             </div>
         </div>
     </div>
