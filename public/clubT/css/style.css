@@ -4371,7 +4371,7 @@ fieldset.step-4 .form-group input {
   .ending-modal .ending-content {
     width: 360px;
     max-width: calc(100% - 16px);
-    padding: 27px 36px 60px;
+    padding: 36px 27px 60px;
   }
   .ending-modal .ending-logo {
     width: 160px;
@@ -4379,6 +4379,7 @@ fieldset.step-4 .form-group input {
   }
   .ending-modal .ending-text p {
     font-size: 14px;
+    letter-spacing: 1.4px;
     line-height: 28px;
     margin-top: 15px;
   }
