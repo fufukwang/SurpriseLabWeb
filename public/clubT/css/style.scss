@@ -3597,12 +3597,16 @@ fieldset.step-4 .form-group input {
 
   .ending-close {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 18px;
+    right: 18px;
 
     .ending-close-button {
       padding: 10px;
-      font-size: 20px;
+      font-size: 28px;
+      line-height: 1;
+      border: none;
+      background-color: transparent;
+      color: $color-bright-green;
     }
   }
 
@@ -3633,5 +3637,19 @@ fieldset.step-4 .form-group input {
     font-size: 18px;
     line-height: 1.5;
     padding: 7px 22px;
+  }
+
+  .pc-hide {
+    display: none;
+  }
+
+  @media (max-width: 1199.98px) {
+    .pc-visible {
+      display: none;
+    }
+
+    .pc-hide {
+      display: inline;
+    }
   }
 }

@@ -37,7 +37,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=3.1"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=3.2"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -226,11 +226,11 @@
                             已於 2020.06.01 正式結束<br/></span>
                         </p>
                         <p>
-                            若你從頂呱呱得到特殊折扣碼而來訪，請保留折扣，它將能在驚喜製造的下個計畫使用<br/>
+                            若你從頂呱呱得到特殊折扣碼而來訪<br class="pc-visible"/><span class="pc-hide">，</span>請保留折扣，它將能在驚喜製造的下個計畫使用<br/>
                             明日之後，會是什麼呢？
                         </p>
                     </div>
-                    <a class="btn-outline" href="https://www.facebook.com/surpriselabtw">前往驚喜製造粉專</a>
+                    <a class="btn-bright-blue" href="https://www.facebook.com/surpriselabtw" target="_blank">前往驚喜製造粉專</a>
                 </div>
             </div>
             <!-- Modal End -->

@@ -4317,13 +4317,17 @@ fieldset.step-4 .form-group input {
 
 .ending-modal .ending-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 18px;
+  right: 18px;
 }
 
 .ending-modal .ending-close .ending-close-button {
   padding: 10px;
-  font-size: 20px;
+  font-size: 28px;
+  line-height: 1;
+  border: none;
+  background-color: transparent;
+  color: #15ffbc;
 }
 
 .ending-modal .ending-logo {
@@ -4351,5 +4355,18 @@ fieldset.step-4 .form-group input {
   font-size: 18px;
   line-height: 1.5;
   padding: 7px 22px;
+}
+
+.ending-modal .pc-hide {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .ending-modal .pc-visible {
+    display: none;
+  }
+  .ending-modal .pc-hide {
+    display: inline;
+  }
 }
 /*# sourceMappingURL=style.css.map */
