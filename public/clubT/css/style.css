@@ -4282,4 +4282,64 @@ fieldset.step-4 .form-group input {
     padding: 7px 16px;
   }
 }
+
+.ending-modal.hiding-modal .mask,
+.ending-modal.hiding-modal .ending-content {
+  opacity: 1;
+}
+
+.ending-modal .mask {
+  position: fixed;
+  background: rgba(3, 3, 13, 0.5);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10001;
+  opacity: 1;
+  -webkit-transition: 0.3s opacity 0.5s;
+  transition: 0.3s opacity 0.5s;
+}
+
+.ending-modal .ending-content {
+  position: relative;
+  border: 2px solid #15ffbc;
+  padding: 37px 49px 52px;
+}
+
+.ending-modal .ending-close {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+
+.ending-modal .ending-close .ending-close-button {
+  font-size: 20px;
+}
+
+.ending-modal .ending-logo {
+  width: 180px;
+  max-width: 180px;
+}
+
+.ending-modal .ending-text p {
+  line-height: 30px;
+  margin-top: 12px;
+}
+
+.ending-modal .ending-text p + p {
+  line-height: 32px;
+  margin-top: 42px;
+}
+
+.ending-modal .ending-text .highlight {
+  color: #15ffbc;
+}
+
+.ending-modal .btn-outline {
+  margin-top: 40px;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 7px 22px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -711,10 +711,6 @@ header {
         &:hover > .dropdown-menu {
           display: block;
         }
-
-        & > .dropdown-toggle:active {
-          //pointer-events: none;
-        }
       }
     }
   }
@@ -3563,4 +3559,70 @@ fieldset.step-4 .form-group input {
     .iti--separate-dial-code .iti__selected-flag {
         padding: 7px 16px;
     } 
+}
+
+// 明日已完結
+.ending-modal {
+  &.hiding-modal {
+    .mask,
+    .ending-content {
+      opacity: 1;
+    }
+  }
+
+  .mask {
+    position: fixed;
+    background: rgba($color-black, 0.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    opacity: 1;
+    transition: 0.3s opacity 0.5s;
+  }
+
+  .ending-content {
+    position: relative;
+    border: 2px solid $color-bright-green;
+    padding: 37px 49px 52px;
+  }
+
+  .ending-close {
+    position: absolute;
+    top: 36px;
+    right: 36px;
+
+    .ending-close-button {
+      font-size: 20px;
+    }
+  }
+
+  .ending-logo {
+    width: 180px;
+    max-width: 180px;
+  }
+
+  .ending-text {
+    p {
+      line-height: 30px;
+      margin-top: 12px;
+    }
+
+    p + p {
+      line-height: 32px;
+      margin-top: 42px;
+    } 
+
+    .highlight {
+      color: $color-bright-green;
+    }
+  }
+
+  .btn-outline {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 7px 22px;
+  }
 }

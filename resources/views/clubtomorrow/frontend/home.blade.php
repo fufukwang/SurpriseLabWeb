@@ -37,7 +37,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/clubT/css/style.css?v=2.9"/>
+    <link rel="stylesheet" href="/clubT/css/style.css?v=3.0"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     @include('clubtomorrow.frontend._gtm')
@@ -209,6 +209,31 @@
                     </div>
                 </div>
             </div>
+            <!-- Modal Start -->
+            <div class="ending-modal">
+                <div class="mask ending-close"></div>
+                <div class="ending-content">
+                    <div class="ending-close">
+                        <button class="ending-close-button" type="button">×</button>
+                    </div>
+                    <div class="ending-logo">
+                        <img src="/clubT/img/header_logo.png" alt="明日俱樂部 Club Tomorrow">
+                    </div>
+                    <div class="ending-text">
+                        <p>
+                            Hi，玩家<br>
+                            <span class="highlight">《明日俱樂部 Club Tomorrow》<br/>
+                            已於 2020.06.01 正式結束<br/></span>
+                        </p>
+                        <p>
+                            若你從頂呱呱得到特殊折扣碼而來訪，請保留折扣，它將能在驚喜製造的下個計畫使用<br/>
+                            明日之後，會是什麼呢？
+                        </p>
+                    </div>
+                    <a class="btn-outline" href="https://www.facebook.com/surpriselabtw">前往驚喜製造粉專</a>
+                </div>
+            </div>
+            <!-- Modal End -->
         </section>
 
         <!-- Section2 About -->
