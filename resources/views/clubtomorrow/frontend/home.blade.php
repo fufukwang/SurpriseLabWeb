@@ -64,9 +64,9 @@
             <li>
                 <a class="smoothScroll" href="#Ticket">_Ticket</a>
             </li>
-            <li style="display: none">
+            <!-- <li style="display: none">
                 <a class="smoothScroll" href="#Presale">_Presale</a>
-            </li>
+            </li> -->
             <li>
                 <a class="smoothScroll" href="#Rules">_Rules</a>
             </li>
@@ -131,9 +131,9 @@
             <li class="menu-item">
                 <a class="smoothScroll" href="#Ticket">Ticket</a>
             </li>
-            <li class="menu-item" style="display: none">
+            <!-- <li class="menu-item" style="display: none">
                 <a class="smoothScroll" href="#Presale">_Presale</a>
-            </li>
+            </li> -->
             <li class="menu-item">
                 <a class="smoothScroll" href="#Rules">Rules</a>
             </li>
@@ -758,6 +758,7 @@
         </section>
 
         <!-- Section3.5 Presale Ticket -->
+        {{--
         <section class="anchor-section" id="Presale" data-aos="fade">
             <!-- 如何參與 -->
             <section class="fullpage fixed-scroll-anchor ticket-sec ticket-sec-ticket-about" data-section-name="Presale" data-aos="fade">
@@ -835,6 +836,7 @@
                 </div>
             </section>
         </section>
+        --}}
 
         <!-- Section4 Rules -->
         <section class="fullpage anchor-section fixed-scroll-anchor" data-section-name="Rules" id="Rules" data-aos="fade">
