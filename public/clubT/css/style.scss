@@ -3565,6 +3565,9 @@ fieldset.step-4 .form-group input {
 
 // 明日已完結
 .ending-modal {
+  display: none;
+  opacity: 0;
+  
   &.hiding-modal {
     .mask,
     .ending-content {
@@ -3597,6 +3600,7 @@ fieldset.step-4 .form-group input {
     background-color: rgba($color-black, 0.7);
     padding: 37px 30px 52px;
     z-index: 999999;
+    opacity: 1;
   }
 
   .ending-close {
