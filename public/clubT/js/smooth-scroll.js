@@ -39,6 +39,8 @@ $(document).ready(function () {
                 nav.fadeOut();
                 socialLink.fadeOut();
                 ending_modal_content.hide();
+            } else {
+                ending_modal_content.fadeIn();
             }
 
             if (ref === 'Rules' || ref === 'Contact') {
