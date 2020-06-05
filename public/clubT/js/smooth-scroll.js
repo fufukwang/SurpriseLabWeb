@@ -14,7 +14,7 @@ $(document).ready(function () {
     let sections = $('.fixed-scroll-anchor');
     let intro_btn = $('.intro-btn');
     let intro_wrapper = $('#Home');
-    let ending_modal = $('.ending-modal');
+    let ending_modal_content = $('.ending-content');
 
     // 首次進入網頁，偵測目前所在位置
     let curPos = win.scrollTop();
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 header.fadeOut();
                 nav.fadeOut();
                 socialLink.fadeOut();
-                ending_modal.hide();
+                ending_modal_content.hide();
             }
 
             if (ref === 'Rules' || ref === 'Contact') {

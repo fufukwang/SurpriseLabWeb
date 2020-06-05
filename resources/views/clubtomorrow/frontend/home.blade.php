@@ -1144,7 +1144,7 @@
 <!-- Custom Js -->
 <script src="/clubT/js/main.js"></script>
 <script src="/clubT/js/smooth-scroll.js"></script>
-<script src="/clubT/js/home.js?v=1.5"></script>
+<script src="/clubT/js/home.js?v=1.6"></script>
 <script src="/clubT/js/rotate-device-hint.js"></script>
 </body>
 </html>
