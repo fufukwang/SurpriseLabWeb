@@ -4317,7 +4317,7 @@ fieldset.step-4 .form-group input {
           transform: translate(-50%, -50%);
   border: 2px solid #15ffbc;
   background-color: rgba(3, 3, 13, 0.7);
-  padding: 37px 45px 52px;
+  padding: 37px 30px 52px;
   z-index: 999999;
 }
 
@@ -4399,6 +4399,21 @@ fieldset.step-4 .form-group input {
     font-size: 14px;
     line-height: 20px;
     padding: 8px 0;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .ending-modal .ending-content {
+    padding: 20px;
+  }
+  .ending-modal .link-to-fb {
+    margin-top: 12px;
+  }
+  .ending-modal .ending-text p {
+    margin-top: 6px;
+  }
+  .ending-modal .ending-text p + p {
+    margin-top: 6px;
   }
 }
 /*# sourceMappingURL=style.css.map */

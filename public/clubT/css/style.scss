@@ -3700,13 +3700,13 @@ fieldset.step-4 .form-group input {
     }
 
    .ending-text {
+      p {
+        margin-top: 6px;
+      }
+
       p + p {
         margin-top: 6px;
       }
-    }
-
-    .ending-text p {
-      margin-top: 6px;
     }
   }
 }
