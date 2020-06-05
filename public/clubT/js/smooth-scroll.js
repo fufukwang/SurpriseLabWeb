@@ -39,8 +39,6 @@ $(document).ready(function () {
                 nav.fadeOut();
                 socialLink.fadeOut();
                 ending_modal_content.hide();
-            } else {
-                ending_modal_content.fadeIn();
             }
 
             if (ref === 'Rules' || ref === 'Contact') {
@@ -87,7 +85,10 @@ $(document).ready(function () {
                     header.fadeOut();
                     nav.fadeOut();
                     socialLink.fadeOut();
+                    ending_modal_content.hide();
                 } else {
+                    ending_modal_content.fadeIn();
+
                     if (win_width >= 1200) {
                         header.fadeIn();
                         nav.fadeIn();
