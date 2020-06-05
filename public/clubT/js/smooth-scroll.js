@@ -38,12 +38,7 @@ $(document).ready(function () {
                 header.fadeOut();
                 nav.fadeOut();
                 socialLink.fadeOut();
-            }
-
-            if (ref === 'Entrance') {
-                ending_modal.fadeIn();
-            } else {
-                ending_modal.fadeOut();
+                ending_modal.hide();
             }
 
             if (ref === 'Rules' || ref === 'Contact') {

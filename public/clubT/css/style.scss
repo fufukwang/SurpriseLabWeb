@@ -3564,10 +3564,7 @@ fieldset.step-4 .form-group input {
 }
 
 // 明日已完結
-.ending-modal {
-  display: none;
-  opacity: 0;
-  
+.ending-modal {  
   &.hiding-modal {
     .mask,
     .ending-content {

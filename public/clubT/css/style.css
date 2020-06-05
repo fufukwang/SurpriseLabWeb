@@ -4287,11 +4287,6 @@ fieldset.step-4 .form-group input {
   }
 }
 
-.ending-modal {
-  display: none;
-  opacity: 0;
-}
-
 .ending-modal.hiding-modal .mask,
 .ending-modal.hiding-modal .ending-content {
   opacity: 0;
