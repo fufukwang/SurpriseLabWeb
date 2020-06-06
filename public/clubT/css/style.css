@@ -3826,13 +3826,15 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 #Contact .contact-wrapper {
   margin-top: 65px;
-  padding: 0 17%;
 }
 
 #Contact .contact-wrapper .contact-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #Contact .contact-wrapper .contact-item .contact-title,
@@ -3851,10 +3853,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   padding-right: 50px;
 }
 
-#Contact .contact-wrapper .contact-item .contact-content {
-  width: 100%;
-}
-
 #Contact .contact-wrapper .contact-item .contact-content a {
   color: #01ffff;
 }
@@ -3866,7 +3864,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 @media (max-width: 1440px) {
   #Contact .contact-wrapper {
     margin-top: 83px;
-    padding: 0 9.5%;
   }
   #Contact .contact-wrapper .contact-item .contact-title,
   #Contact .contact-wrapper .contact-item .contact-content {
@@ -3880,15 +3877,8 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   }
 }
 
-@media (max-width: 1280px) {
-  #Contact .contact-wrapper {
-    padding: 0 3.1%;
-  }
-}
-
 @media (max-width: 1199.98px) {
   #Contact .contact-wrapper {
-    padding: 0;
     margin-top: 48px;
   }
 }
@@ -3907,6 +3897,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
   #Contact .contact-wrapper .contact-item .contact-content {
     font-size: 14px;
     letter-spacing: 1.4px;
+    text-align: center;
   }
   #Contact .contact-wrapper .contact-item .contact-title {
     width: 100%;
@@ -3925,9 +3916,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 }
 
 @media (max-width: 374.98px) {
-  #Contact .contact-wrapper {
-    padding: 0 24px;
-  }
   #Contact .contact-wrapper .contact-item .contact-title,
   #Contact .contact-wrapper .contact-item .contact-content {
     font-size: 12px;

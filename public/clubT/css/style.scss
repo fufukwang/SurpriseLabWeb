@@ -3097,10 +3097,10 @@ header {
 
   .contact-wrapper {
     margin-top: 65px;
-    padding: 0 17%;
 
     .contact-item {
       display: flex;
+      justify-content: center;
 
       .contact-title,
       .contact-content {
@@ -3119,7 +3119,6 @@ header {
       }
 
       .contact-content {
-        width: 100%;
 
         a {
           color: $color-bright-blue;
@@ -3135,7 +3134,6 @@ header {
 
     @media (max-width: 1440px) {
       margin-top: 83px;
-      padding: 0 9.5%;
 
       .contact-item {
         .contact-title,
@@ -3152,12 +3150,7 @@ header {
       }
     }
 
-    @media (max-width: 1280px) {
-      padding: 0 3.1%;
-    }
-
     @media (max-width: 1199.98px) {
-      padding: 0;
       margin-top: 48px;
     }
 
@@ -3171,6 +3164,7 @@ header {
         .contact-content {
           font-size: 14px;
           letter-spacing: 1.4px;
+          text-align: center;
         }
 
         .contact-title {
@@ -3194,8 +3188,6 @@ header {
     }
 
     @media (max-width: 374.98px) {
-      padding: 0 24px;
-
       .contact-item {
         .contact-title,
         .contact-content {
