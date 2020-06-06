@@ -3895,7 +3895,7 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 575.98px) {
   #Contact .contact-wrapper {
-    margin: 12px 0;
+    margin: 24px 0 12px;
   }
   #Contact .contact-wrapper .contact-item {
     -webkit-box-orient: vertical;
@@ -3926,7 +3926,6 @@ header .menu-wrapper .menu-link .dropdown-menu .dropdown-item:hover {
 
 @media (max-width: 374.98px) {
   #Contact .contact-wrapper {
-    margin-top: 0;
     padding: 0 24px;
   }
   #Contact .contact-wrapper .contact-item .contact-title,

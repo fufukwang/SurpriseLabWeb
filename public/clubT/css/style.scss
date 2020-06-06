@@ -3162,7 +3162,7 @@ header {
     }
 
     @media (max-width: 575.98px) {
-      margin: 12px 0;
+      margin: 24px 0 12px;
 
       .contact-item {
         flex-direction: column;
@@ -3194,7 +3194,6 @@ header {
     }
 
     @media (max-width: 374.98px) {
-      margin-top: 0;
       padding: 0 24px;
 
       .contact-item {
