@@ -493,6 +493,29 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt\FrontController@ReOrderData');
     });
+    // thegreattipsy S2
+    Route::group(['prefix' => 'thegreattipsy2'], function(){
+        Route::get('index.html',function(){ return view('thegreattipsy2.frontend.home'); });
+        Route::get('/',function(){ return view('thegreattipsy2.frontend.home'); });
+        Route::get('rules.html',function(){ return view('thegreattipsy2.frontend.rules'); });
+        // 劃位
+        Route::get('booking.html',function(){ return view('thegreattipsy2.frontend.booking'); });
+        Route::get('booking_pay.html',function(){ return view('thegreattipsy2.frontend.booking_pay'); });
+        Route::get('booking_credit_card.html',function(){ 
+            //return redirect("/thegreattipsy/index.html");
+            /*
+            $now = \Carbon\Carbon::now('Asia/Taipei')->timestamp;
+            if($now>1566576000){
+                return redirect("/thegreattipsy/index.html");
+            } else {
+                return view('thegreattipsy2.frontend.booking_credit_card');     
+            }
+            */
+            return redirect("/thegreattipsy2/index.html");
+        });
+        Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
+        Route::post('ReOrderData','tgt\FrontController@ReOrderData');
+    });
 
     Route::group(['prefix' => 'clubtomorrow'], function(){
         Route::get('intro.html',function(){ return view('clubtomorrow.frontend.intro'); });
