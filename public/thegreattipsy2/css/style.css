@@ -40,14 +40,14 @@
 }
 
 html {
-  background-color: #932c2c;
+  background-color: #281f1c;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
 
 body {
   position: relative;
-  background-color: #932c2c;
+  background-color: #281f1c;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
   color: #ffe0ba;
@@ -87,7 +87,7 @@ a:hover {
 h1 {
   font-size: 50px;
   font-weight: 600;
-  color: #f5b563;
+  color: #eab081;
 }
 
 h2 {
@@ -95,7 +95,7 @@ h2 {
   font-weight: 500;
   color: transparent;
   display: none;
-  color: #f5b563;
+  color: #eab081;
 }
 
 h3 {
@@ -107,7 +107,7 @@ h3 {
   padding-left: 4.3px;
   text-align: center;
   margin-bottom: 14px;
-  color: #f5b563;
+  color: #eab081;
 }
 
 @media (max-width: 1440px) {
@@ -261,7 +261,7 @@ h4 span::after {
 }
 
 #About {
-  background-color: #932c2c !important;
+  background-color: #281f1c !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
@@ -325,10 +325,10 @@ p {
   width: 210px;
   text-align: center;
   font-size: 18px;
-  color: #ffe0ba;
+  color: #eab081;
   letter-spacing: 1.8px;
   padding: 10px 0;
-  border: 1px solid #f5b563;
+  border: 1px solid #bc825b;
   border-radius: 30px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -384,7 +384,7 @@ p {
 }
 
 .highlight {
-  color: #ffffff;
+  color: #f5b563;
 }
 
 #canvas {
@@ -852,7 +852,7 @@ header.logo {
   top: 0;
   z-index: 9999;
   padding: 0 20px;
-  background-color: rgba(147, 44, 44, 0.8);
+  background-color: rgba(40, 31, 28, 0.8);
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
@@ -863,15 +863,15 @@ header.logo.anchor-show {
 }
 
 header.logo.scroll-background-color {
-  background-color: rgba(147, 44, 44, 0.8);
+  background-color: rgba(40, 31, 28, 0.8);
 }
 
 @media (max-width: 480px) {
   header.logo {
-    background-color: #932c2c;
+    background-color: #281f1c;
   }
   header.logo.scroll-background-color {
-    background-color: #932c2c;
+    background-color: #281f1c;
   }
 }
 
@@ -2005,7 +2005,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   z-index: 999999;
   top: 0;
   left: 0;
-  background-color: #932c2c;
+  background-color: #281f1c;
 }
 
 @media (max-width: 1024px) and (min-height: 1024px) {
@@ -2189,9 +2189,9 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 .ending-modal .ending-content {
   width: 512px;
-  background-color: rgba(147, 44, 44, 0.8);
-  -webkit-box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(147, 44, 44, 0.8);
-          box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(147, 44, 44, 0.8);
+  background-color: rgba(40, 31, 28, 0.8);
+  -webkit-box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(40, 31, 28, 0.8);
+          box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(40, 31, 28, 0.8);
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

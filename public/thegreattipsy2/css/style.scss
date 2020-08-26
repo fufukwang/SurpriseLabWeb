@@ -62,7 +62,7 @@ a {
 h1 {
   font-size: 50px;
   font-weight: 600;
-  color: $color-dark-yellow;
+  color: $color-yellow;
 }
 
 h2 {
@@ -70,7 +70,7 @@ h2 {
   font-weight: 500;
   color: transparent;
   display: none;
-  color: $color-dark-yellow;
+  color: $color-yellow;
 }
 
 h3 {
@@ -82,7 +82,7 @@ h3 {
   padding-left: 4.3px;
   text-align: center;
   margin-bottom: 14px;
-  color: $color-dark-yellow;
+  color: $color-yellow;
 
   @media (max-width: 1440px) {
     font-size: 30px;
@@ -250,10 +250,10 @@ p {
   width: 210px;
   text-align: center;
   font-size: 18px;
-  color: $color-light-yellow;
+  color: $color-yellow;
   letter-spacing: 1.8px;
   padding: 10px 0;
-  border: 1px solid $color-dark-yellow;
+  border: 1px solid $color-border;
   border-radius: 30px;
   transition: 0.3s;
 
@@ -297,7 +297,7 @@ p {
 
 // Highlight: You can use if you want highlight something in paragraph.
 .highlight {
-  color: $color-lighter-yellow;
+  color: $color-dark-yellow;
 }
 
 // Canvas
