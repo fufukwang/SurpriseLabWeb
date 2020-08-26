@@ -3,13 +3,13 @@
 
 // Override
 body {
-  background-color: $color-dark-red !important;
+  background-color: $color-dark-brown !important;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
 }
 
 header.logo {
-  background-color: $color-dark-red;
+  background-color: $color-dark-brown;
 }
 
 .anchor-wrapper {
@@ -23,7 +23,7 @@ header.logo {
   text-align: center;
   z-index: 9999;
   top: 120px;
-  background-color: $color-dark-red;
+  background-color: $color-dark-brown;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
 
@@ -379,7 +379,7 @@ header.logo {
         text-align: center;
         letter-spacing: 1.8px;
         line-height: 2;
-        background-color: $color-dark-red;
+        background-color: $color-dark-brown;
         border-right: solid 1px $color-dark-yellow;
 
         &:last-child {

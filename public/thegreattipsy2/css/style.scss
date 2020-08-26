@@ -16,14 +16,14 @@
 }
 
 html {
-  background-color: $color-dark-red;
+  background-color: $color-dark-brown;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
 }
 
 body {
   position: relative;
-  background-color: $color-dark-red;
+  background-color: $color-dark-brown;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
   color: $color-light-yellow;
@@ -194,7 +194,7 @@ h4 {
 }
 
 #About {
-  background-color: $color-dark-red !important;
+  background-color: $color-dark-brown !important;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
 }
@@ -648,7 +648,7 @@ header.logo {
   top: 0;
   z-index: 9999;
   padding: 0 20px;
-  background-color: rgba($color-dark-red, 0.8);
+  background-color: rgba($color-dark-brown, 0.8);
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
 
@@ -658,14 +658,14 @@ header.logo {
   }
 
   &.scroll-background-color {
-    background-color: rgba($color-dark-red, 0.8);
+    background-color: rgba($color-dark-brown, 0.8);
   }
 
   @media (max-width: 480px) {
-    background-color: $color-dark-red;
+    background-color: $color-dark-brown;
 
     &.scroll-background-color {
-      background-color: $color-dark-red;
+      background-color: $color-dark-brown;
     }
   }
 
@@ -1081,7 +1081,7 @@ header.logo {
   z-index: 999999;
   top: 0;
   left: 0;
-  background-color: $color-dark-red;
+  background-color: $color-dark-brown;
 
   // iPad pro size
   @media (max-width: 1024px) and (min-height: 1024px) {
@@ -1207,8 +1207,8 @@ header.logo {
 
   .ending-content {
     width: 512px;
-    background-color: rgba($color-dark-red, 0.8);
-    box-shadow: 0 0 0 2px $color-ending-yellow, 0 0 0 12px rgba($color-dark-red, 0.8);
+    background-color: rgba($color-dark-brown, 0.8);
+    box-shadow: 0 0 0 2px $color-ending-yellow, 0 0 0 12px rgba($color-dark-brown, 0.8);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
