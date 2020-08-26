@@ -19,12 +19,12 @@
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/aos.min.css"/>
+    <link rel="stylesheet" href="css/plugins/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins/aos.min.css"/>
 
     <!-- Ripple Animation Style -->
-    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/component.css"/>
     <script>document.documentElement.className = 'js';</script>
 
     <!-- OwlCarousel2 -->
@@ -218,7 +218,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal Start -->
+        {{--<!-- Modal Start -->
         <div class="ending-modal">
             <div class="mask ending-close"></div>
             <div class="ending-content">
@@ -246,7 +246,7 @@
                 <a class="btn-outline" href="https://www.surpriselab.com.tw/clubtomorrow/">前往明日俱樂部</a>
             </div>
         </div>
-        <!-- Modal End -->
+        <!-- Modal End -->--}}
     </section>
     <!-- End section1 Lobby -->
 

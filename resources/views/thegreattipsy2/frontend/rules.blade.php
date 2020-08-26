@@ -19,11 +19,11 @@
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins/bootstrap.css"/>
 
     <!-- Ripple Animation Style -->
-    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/component.css"/>
     <script>document.documentElement.className = 'js';</script>
 
     <!-- OwlCarousel2 -->

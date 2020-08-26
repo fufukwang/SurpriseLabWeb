@@ -21,11 +21,11 @@
 }
 
 a {
-  color: #9c9359;
+  color: #e2ac78;
 }
 
 a:hover {
-  color: #ccc38d;
+  color: #ffe0ba;
 }
 
 main {
@@ -74,7 +74,7 @@ main {
 
 .submit-page .page-sub-title {
   line-height: 1;
-  color: #eee9c5;
+  color: #ffffff;
   font-family: "Noto Serif TC", serif;
   font-weight: bold;
 }

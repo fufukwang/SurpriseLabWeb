@@ -20,18 +20,18 @@
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins/bootstrap.css"/>
 
     <!-- Ripple Animation Style -->
-    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/component.css"/>
     <script>document.documentElement.className = 'js';</script>
 
     <!-- Fontawesome -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome/fontawesome.min.css"/>
 
     <!-- Select2 style -->
-    <link rel="stylesheet" href="css/select2.css"/>
+    <link rel="stylesheet" href="css/plugins/select2.css"/>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>

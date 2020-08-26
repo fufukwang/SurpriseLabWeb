@@ -3,19 +3,19 @@
 }
 
 .highlight-dark {
-  color: #9c9359;
+  color: #e2ac78;
 }
 
 .ticket-yellow {
-  color: #efd97b;
+  color: #00c39a;
 }
 
 .ticket-blue {
-  color: #89b7f8;
+  color: #00808d;
 }
 
 .ticket-pink {
-  color: #ff7ea4;
+  color: #de3b52;
 }
 
 @media (min-width: 1200px) {
@@ -234,7 +234,7 @@
   font-size: 72px;
   line-height: 1.25;
   letter-spacing: 7.2px;
-  color: #eee9c5;
+  color: #ffffff;
 }
 
 #Ticket .experience .exp-text {
@@ -352,7 +352,7 @@
 }
 
 #Ticket .ticket-area-preinfo {
-  color: #eee9c5;
+  color: #ffffff;
   font-family: "Noto Serif TC", serif;
 }
 
@@ -570,7 +570,7 @@
   top: 0;
   width: 0;
   height: 100%;
-  border-right: dashed 2px #9c9359;
+  border-right: dashed 2px #e2ac78;
   -webkit-transform: scaleX(0.5);
           transform: scaleX(0.5);
 }
@@ -685,7 +685,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: #1e1c19;
+  background: #932c2c;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -699,7 +699,7 @@
           transform: translateY(100%);
   width: 100%;
   min-width: 220px;
-  color: #9c9359;
+  color: #e2ac78;
 }
 
 @media (min-width: 1200px) {
@@ -794,7 +794,7 @@
     width: 100%;
     height: 0;
     border-style: dashed;
-    border-color: #9c9359;
+    border-color: #e2ac78;
     border-width: 0 0 2px;
     -webkit-transform: scale(1, 0.5);
             transform: scale(1, 0.5);
@@ -979,7 +979,7 @@
 }
 
 #Ticket .time-session hr {
-  border-color: #595330;
+  border-color: #f5b563;
 }
 
 @media (max-width: 1199.98px) {
@@ -1005,7 +1005,7 @@
 }
 
 #Ticket .time-counter {
-  color: #9c9359;
+  color: #e2ac78;
 }
 
 @media (min-width: 1200px) {
@@ -1079,7 +1079,7 @@
   letter-spacing: 3.6px;
   padding: 0 10px;
   font-family: "Pinyon Script", cursive, sans-serif;
-  color: #ccc38d;
+  color: #ffe0ba;
 }
 
 @media (max-width: 1200px) {
@@ -1153,11 +1153,11 @@
 #Ticket .sale-progress .progress {
   height: 11.5px;
   border-radius: 12px;
-  background-color: #595330;
+  background-color: #f5b563;
 }
 
 #Ticket .sale-progress .progress .progress-bar {
-  background-color: #9c9359;
+  background-color: #e2ac78;
   border-radius: 12px;
 }
 
@@ -1341,7 +1341,7 @@
 }
 
 #Ticket .schedule table tr td:first-child {
-  color: #9c9359;
+  color: #e2ac78;
   vertical-align: top;
 }
 
@@ -1376,7 +1376,7 @@
 }
 
 #Ticket .schedule .schedule-sub-title {
-  color: #9c9359;
+  color: #e2ac78;
   text-align: center;
 }
 
@@ -1641,7 +1641,7 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 1.8px;
-  color: #9c9359;
+  color: #e2ac78;
 }
 
 @media (max-width: 1440px) {
@@ -1792,12 +1792,12 @@
 }
 
 #Contact .contact-pre-info a {
-  color: #9c9359;
+  color: #e2ac78;
   text-decoration: underline;
 }
 
 #Contact .contact-pre-info a:hover {
-  color: #eee9c5;
+  color: #ffffff;
 }
 
 #Contact .contact-sec {
@@ -1873,7 +1873,7 @@
   width: 451px;
   max-width: 100%;
   height: 1px;
-  background: #595330;
+  background: #f5b563;
   top: 0;
   right: 0;
 }
@@ -1920,7 +1920,7 @@
   #Contact .contact-sec:first-child {
     padding-bottom: 30px;
     margin-bottom: 36px;
-    border-bottom: solid 1px #595330;
+    border-bottom: solid 1px #f5b563;
   }
   #Contact .contact-sec.middle {
     margin-top: 0;
@@ -1929,7 +1929,7 @@
   #Contact .contact-sec:last-child {
     padding-top: 30px;
     margin-top: 36px;
-    border-top: solid 1px #595330;
+    border-top: solid 1px #f5b563;
   }
   #Contact .contact-sec .contact-sec-title {
     font-size: 14px;

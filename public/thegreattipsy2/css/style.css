@@ -40,17 +40,17 @@
 }
 
 html {
-  background-color: #1e1c19;
+  background-color: #932c2c;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
 
 body {
   position: relative;
-  background-color: #1e1c19;
+  background-color: #932c2c;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
-  color: #ccc38d;
+  color: #ffe0ba;
 }
 
 body.menu-open {
@@ -67,26 +67,27 @@ a:visited {
 }
 
 a {
-  color: #595330;
+  color: #f5b563;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 a.default-light {
-  color: #ccc38d;
+  color: #ffe0ba;
 }
 
 a.default-light:hover {
-  color: #595330;
+  color: #f5b563;
 }
 
 a:hover {
-  color: #ccc38d;
+  color: #ffe0ba;
 }
 
 h1 {
   font-size: 50px;
   font-weight: 600;
+  color: #f5b563;
 }
 
 h2 {
@@ -94,6 +95,7 @@ h2 {
   font-weight: 500;
   color: transparent;
   display: none;
+  color: #f5b563;
 }
 
 h3 {
@@ -105,6 +107,7 @@ h3 {
   padding-left: 4.3px;
   text-align: center;
   margin-bottom: 14px;
+  color: #f5b563;
 }
 
 @media (max-width: 1440px) {
@@ -171,7 +174,7 @@ h4 {
   line-height: 30px;
   letter-spacing: 0.8px;
   text-align: center;
-  color: #eee9c5;
+  color: #eab081;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -189,7 +192,7 @@ h4::before, h4::after {
   content: '';
   width: 500px;
   height: 1px;
-  background-color: #eee9c5;
+  background-color: #ffffff;
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -215,7 +218,7 @@ h4::after {
     letter-spacing: 0.5px;
   }
   h4::before, h4::after {
-    background-color: rgba(238, 233, 197, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -230,7 +233,7 @@ h4 span::before, h4 span::after {
   content: '';
   width: 7px;
   height: 7px;
-  border: 1px solid #eee9c5;
+  border: 1px solid #ffffff;
   position: absolute;
   top: 11px;
   -webkit-transform: rotate(45deg);
@@ -252,13 +255,13 @@ h4 span::after {
   h4 span::before, h4 span::after {
     width: 4px;
     height: 4px;
-    border: 1px solid rgba(238, 233, 197, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     top: 4.5px;
   }
 }
 
 #About {
-  background-color: #1a1816 !important;
+  background-color: #932c2c !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
@@ -322,10 +325,10 @@ p {
   width: 210px;
   text-align: center;
   font-size: 18px;
-  color: #ccc38d;
+  color: #ffe0ba;
   letter-spacing: 1.8px;
   padding: 10px 0;
-  border: 1px solid #595330;
+  border: 1px solid #f5b563;
   border-radius: 30px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -338,9 +341,9 @@ p {
 }
 
 .btn-outline:hover {
-  background-color: #eee9c5;
-  border: 1px solid #eee9c5;
-  color: #595330;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #f5b563;
 }
 
 @media (min-width: 1200px) {
@@ -381,7 +384,7 @@ p {
 }
 
 .highlight {
-  color: #eee9c5;
+  color: #ffffff;
 }
 
 #canvas {
@@ -489,7 +492,7 @@ p {
   content: '';
   width: 5px;
   height: 2px;
-  background-color: #595330;
+  background-color: #f5b563;
   position: absolute;
   top: 50%;
   right: -85px;
@@ -506,11 +509,11 @@ p {
 }
 
 .anchor-wrapper li.active a {
-  color: #ccc38d;
+  color: #ffe0ba;
 }
 
 .anchor-wrapper li.active::after {
-  background-color: #ccc38d;
+  background-color: #ffe0ba;
   width: 48px;
 }
 
@@ -521,7 +524,7 @@ p {
 }
 
 .anchor-wrapper li:hover::after {
-  background-color: #ccc38d;
+  background-color: #ffe0ba;
   width: 60px;
 }
 
@@ -564,7 +567,7 @@ p {
 }
 
 .social-wrapper .social-link:hover i {
-  color: #eee9c5;
+  color: #ffffff;
 }
 
 @media (max-width: 480px) {
@@ -610,7 +613,7 @@ p {
   font-family: "Noto Serif TC", serif;
   line-height: 1.25;
   letter-spacing: 2.9px;
-  color: #eee9c5;
+  color: #ffffff;
   position: absolute;
   z-index: 999;
 }
@@ -849,7 +852,7 @@ header.logo {
   top: 0;
   z-index: 9999;
   padding: 0 20px;
-  background-color: rgba(30, 28, 25, 0.8);
+  background-color: rgba(147, 44, 44, 0.8);
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
@@ -860,15 +863,15 @@ header.logo.anchor-show {
 }
 
 header.logo.scroll-background-color {
-  background-color: rgba(26, 24, 22, 0.8);
+  background-color: rgba(147, 44, 44, 0.8);
 }
 
 @media (max-width: 480px) {
   header.logo {
-    background-color: #1e1c19;
+    background-color: #932c2c;
   }
   header.logo.scroll-background-color {
-    background-color: #1a1816;
+    background-color: #932c2c;
   }
 }
 
@@ -940,7 +943,7 @@ header.logo .hamburger:focus {
 
 header.logo .hamburger .current-section,
 header.logo .hamburger .current-menu {
-  color: #ccc38d;
+  color: #ffe0ba;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
@@ -960,7 +963,7 @@ header.logo .hamburger .icon-bar {
   width: 20px;
   height: 1px;
   display: block;
-  background-color: #ccc38d;
+  background-color: #ffe0ba;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -2002,7 +2005,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   z-index: 999999;
   top: 0;
   left: 0;
-  background-color: #1e1c19;
+  background-color: #932c2c;
 }
 
 @media (max-width: 1024px) and (min-height: 1024px) {
@@ -2136,7 +2139,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 .hint-wrapper .hint-text {
   font-size: 14px;
   letter-spacing: 1.4px;
-  color: #ccc38d;
+  color: #ffe0ba;
   margin-top: 18px;
 }
 
@@ -2186,9 +2189,9 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 .ending-modal .ending-content {
   width: 512px;
-  background-color: rgba(30, 28, 25, 0.8);
-  -webkit-box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(30, 28, 25, 0.8);
-          box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(30, 28, 25, 0.8);
+  background-color: rgba(147, 44, 44, 0.8);
+  -webkit-box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(147, 44, 44, 0.8);
+          box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(147, 44, 44, 0.8);
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2239,7 +2242,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 36px;
   font-weight: 300;
   line-height: 1;
-  color: #eee9c5;
+  color: #ffffff;
   background-color: transparent;
   border: none;
   cursor: pointer;

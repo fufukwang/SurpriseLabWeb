@@ -1,11 +1,11 @@
 body {
-  background-color: #1a1816 !important;
+  background-color: #932c2c !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
 
 header.logo {
-  background-color: #1a1816;
+  background-color: #932c2c;
 }
 
 .anchor-wrapper {
@@ -19,7 +19,7 @@ header.logo {
   text-align: center;
   z-index: 9999;
   top: 120px;
-  background-color: #1a1816;
+  background-color: #932c2c;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
@@ -27,14 +27,14 @@ header.logo {
 #rules-tab-switcher .nav-link.active,
 #rules-tab-switcher .nav-link:hover {
   background-color: transparent;
-  border-color: #9c9359;
+  border-color: #e2ac78;
   border-radius: 0;
   border-width: 0 0 1px 0;
 }
 
 #rules-tab-switcher .nav-link {
   cursor: pointer;
-  color: #ccc38d;
+  color: #ffe0ba;
   padding: 8.5px 0;
   margin: 0 11.5px -1px;
   border-radius: 0;
@@ -443,7 +443,7 @@ header.logo {
 }
 
 #Rules .to-change-and-refund {
-  color: #9c9359;
+  color: #e2ac78;
   text-decoration: underline;
   cursor: pointer;
   -webkit-transition: color 0.3s;
@@ -451,14 +451,14 @@ header.logo {
 }
 
 #Rules .to-change-and-refund:hover {
-  color: #ccc38d;
+  color: #ffe0ba;
 }
 
 #Rules #qa-according {
   width: 500px;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: solid 1px #595330;
+  border-bottom: solid 1px #f5b563;
 }
 
 @media (min-width: 1200px) {
@@ -527,11 +527,11 @@ header.logo {
 }
 
 #Rules #qa-according .to-change-and-refund {
-  color: #ccc38d;
+  color: #ffe0ba;
 }
 
 #Rules #qa-according .to-change-and-refund:hover {
-  color: #9c9359;
+  color: #e2ac78;
 }
 
 #Rules #qa-according .card-body {
@@ -540,7 +540,7 @@ header.logo {
   padding-right: 19px;
   line-height: 2;
   letter-spacing: 1.8px;
-  color: #9c9359;
+  color: #e2ac78;
 }
 
 @media (min-width: 1200px) {
@@ -670,7 +670,7 @@ header.logo {
   height: 100%;
   left: 0;
   top: 0;
-  background: #595330;
+  background: #f5b563;
 }
 
 #Rules #qa-according .card-body.number-list p {
@@ -685,7 +685,7 @@ header.logo {
 #Rules #qa-according .card-header {
   padding: 0;
   border-style: solid;
-  border-color: #595330;
+  border-color: #f5b563;
   border-width: 1px 0 0 0;
   border-radius: 0;
 }
@@ -777,7 +777,7 @@ header.logo {
 #Rules #qa-according .card-header h6.is-open .icon-arrow {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  color: #eee9c5;
+  color: #ffffff;
 }
 
 #Rules #qa-according .card-header .icon-arrow {
@@ -788,7 +788,7 @@ header.logo {
   transition: 0.3s;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  color: #9c9359;
+  color: #e2ac78;
 }
 
 @media (max-width: 1200px) {
@@ -952,7 +952,7 @@ header.logo {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
-  border-bottom: solid 2px #9c9359;
+  border-bottom: solid 2px #e2ac78;
 }
 
 @media (min-width: 1200px) {
@@ -986,14 +986,14 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note tr {
-  border-color: #9c9359 #9c9359 #595330 #9c9359;
+  border-color: #e2ac78 #e2ac78 #f5b563 #e2ac78;
   border-style: solid;
   border-width: 0 2px 2px 2px;
 }
 
 #Rules #changeAndrefund #table-note tr:first-child {
   border-width: 2px;
-  border-color: #9c9359;
+  border-color: #e2ac78;
 }
 
 #Rules #changeAndrefund #table-note tr:last-child {
@@ -1010,8 +1010,8 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note th {
-  background: #ccc38d;
-  border-right: solid 1px #595330;
+  background: #ffe0ba;
+  border-right: solid 1px #f5b563;
   text-align: center;
   letter-spacing: 1.8px;
   color: #39351c;
@@ -1206,8 +1206,8 @@ header.logo {
   text-align: center;
   letter-spacing: 1.8px;
   line-height: 2;
-  background-color: #1a1816;
-  border-right: solid 1px #595330;
+  background-color: #932c2c;
+  border-right: solid 1px #f5b563;
 }
 
 @media (min-width: 1200px) {
@@ -1275,8 +1275,8 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note td.highlight-td {
-  background: #595330;
-  color: #eee9c5;
+  background: #f5b563;
+  color: #ffffff;
   font-weight: 500;
 }
 

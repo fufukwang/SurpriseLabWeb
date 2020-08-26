@@ -12,7 +12,7 @@
 }
 
 .ticket-yellow {
-  color: $color-mobile-yellow;
+  color: $color-mobile-green;
 }
 
 .ticket-blue {
@@ -229,7 +229,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: $color-black;
+        background: $color-dark-red;
         opacity: 0;
         transition: opacity 0.3s;
       }
