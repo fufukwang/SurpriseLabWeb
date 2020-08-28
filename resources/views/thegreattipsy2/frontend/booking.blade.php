@@ -586,16 +586,16 @@
 </main>
 
 <!-- Bootstrap -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/jquery-3.3.1.min.js"></script>
+<script src="js/plugins/jquery-ui.js"></script>
+<script src="js/plugins/popper.min.js"></script>
+<script src="js/plugins/bootstrap.min.js"></script>
 
 <!-- Ripple Animation Js -->
-<script src="js/pixi.min.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/custom-ripple.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/plugins/pixi.min.js"></script>
+<script src="js/plugins/TweenMax.min.js"></script>
+<script src="js/plugins/custom-ripple.js"></script>
+<script src="js/plugins/imagesloaded.pkgd.min.js"></script>
 
 <!-- Select2 script-->
 <script src="js/select2.js?v=1"></script>

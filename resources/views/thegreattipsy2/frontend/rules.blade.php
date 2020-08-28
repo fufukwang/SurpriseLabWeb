@@ -702,18 +702,18 @@
 <!-- End Screen Hint -->
 
 <!-- Bootstrap -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/jquery-3.3.1.min.js"></script>
+<script src="js/plugins/popper.min.js"></script>
+<script src="js/plugins/bootstrap.min.js"></script>
 
 <!-- Ripple Animation Js -->
-<script src="js/pixi.min.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/custom-ripple.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/plugins/pixi.min.js"></script>
+<script src="js/plugins/TweenMax.min.js"></script>
+<script src="js/plugins/custom-ripple.js"></script>
+<script src="js/plugins/imagesloaded.pkgd.min.js"></script>
 
 <!-- OwlCarousel2 -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="js/plugins/owl.carousel.min.js"></script>
 <script src="js/rules.js?v=0.1"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
