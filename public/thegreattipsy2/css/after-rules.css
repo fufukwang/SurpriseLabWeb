@@ -7,15 +7,15 @@
 }
 
 .ticket-yellow {
-  color: #00c39a;
+  color: #00C39A;
 }
 
 .ticket-blue {
-  color: #00808d;
+  color: #00808D;
 }
 
 .ticket-pink {
-  color: #de3b52;
+  color: #DE3B52;
 }
 
 @media (min-width: 1200px) {
@@ -684,7 +684,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: #281f1c;
+  background: #281F1C;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;

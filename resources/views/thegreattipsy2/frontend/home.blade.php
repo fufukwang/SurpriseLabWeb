@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/plugins/aos.min.css"/>
 
     <!-- Ripple Animation Style -->
-    <link rel="stylesheet" type="text/css" href="css/plugins/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/loading.css"/>
     <link rel="stylesheet" type="text/css" href="css/plugins/component.css"/>
     <script>document.documentElement.className = 'js';</script>
 

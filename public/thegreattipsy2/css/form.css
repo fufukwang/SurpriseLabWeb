@@ -10,7 +10,7 @@ body {
 }
 
 .color-pink {
-  color: #de3b52;
+  color: #DE3B52;
 }
 
 .color-yellow {
@@ -119,7 +119,7 @@ button.btn-outline:focus {
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
-  background: #281f1c;
+  background: #281F1C;
 }
 
 @media (min-width: 1200px) {
@@ -788,7 +788,7 @@ form .btn-outline {
 .select2-container--default.select2-container--open .select2-dropdown {
   border-radius: 6px;
   border: solid 1px #EFC27B;
-  background: #281f1c;
+  background: #281F1C;
   overflow: hidden;
 }
 
@@ -935,7 +935,7 @@ form .btn-outline {
   max-width: 100%;
   border: solid 1px #EFC27B;
   border-radius: 6px;
-  background-color: #281f1c;
+  background-color: #281F1C;
   padding: 8px;
 }
 
@@ -969,7 +969,7 @@ form .btn-outline {
   background: url("../img/icon-arrow.svg") no-repeat;
   background-size: cover;
   border-radius: 50%;
-  background-color: #281f1c;
+  background-color: #281F1C;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-prev {
@@ -1313,7 +1313,7 @@ fieldset.step-4 .form-group .table-label .error-msg {
   font-size: 12px;
   letter-spacing: 1.2px;
   margin-left: 10px;
-  color: #de3b52;
+  color: #DE3B52;
 }
 
 fieldset.step-4 .form-group input,
@@ -1352,7 +1352,7 @@ fieldset.step-4 .form-group textarea::placeholder {
 
 fieldset.step-4 .form-group input:-webkit-autofill,
 fieldset.step-4 .form-group textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 100px #281f1c inset;
+  -webkit-box-shadow: 0 0 0 100px #281F1C inset;
   background-color: transparent;
   color: #EFC27B;
   -webkit-text-fill-color: #EFC27B;
@@ -1363,7 +1363,7 @@ fieldset.step-4 .form-group textarea:focus,
 fieldset.step-4 .form-group textarea:-webkit-autofill:focus {
   border-color: #EFC27B;
   box-shadow: none;
-  -webkit-box-shadow: 0 0 0 100px #281f1c inset;
+  -webkit-box-shadow: 0 0 0 100px #281F1C inset;
   outline: 0;
 }
 

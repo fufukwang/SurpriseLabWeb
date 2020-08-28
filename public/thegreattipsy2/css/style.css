@@ -40,14 +40,14 @@
 }
 
 html {
-  background-color: #281f1c;
+  background-color: #281F1C;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
 
 body {
   position: relative;
-  background-color: #281f1c;
+  background-color: #281F1C;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
   color: #EFC27B;
@@ -261,7 +261,7 @@ h4 span::after {
 }
 
 #About {
-  background-color: #281f1c !important;
+  background-color: #281F1C !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
@@ -868,10 +868,10 @@ header.logo.scroll-background-color {
 
 @media (max-width: 480px) {
   header.logo {
-    background-color: #281f1c;
+    background-color: #281F1C;
   }
   header.logo.scroll-background-color {
-    background-color: #281f1c;
+    background-color: #281F1C;
   }
 }
 
@@ -2005,7 +2005,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   z-index: 999999;
   top: 0;
   left: 0;
-  background-color: #281f1c;
+  background-color: #281F1C;
 }
 
 @media (max-width: 1024px) and (min-height: 1024px) {
@@ -2190,8 +2190,8 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 .ending-modal .ending-content {
   width: 512px;
   background-color: rgba(40, 31, 28, 0.8);
-  -webkit-box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(40, 31, 28, 0.8);
-          box-shadow: 0 0 0 2px #89814d, 0 0 0 12px rgba(40, 31, 28, 0.8);
+  -webkit-box-shadow: 0 0 0 2px #89814D, 0 0 0 12px rgba(40, 31, 28, 0.8);
+          box-shadow: 0 0 0 2px #89814D, 0 0 0 12px rgba(40, 31, 28, 0.8);
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2299,10 +2299,10 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 .ending-modal .btn-outline {
   width: 190px;
-  color: #01ffff;
+  color: #01FFFF;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 255, 255, 0)), to(rgba(1, 255, 255, 0.2)));
   background-image: linear-gradient(to bottom, rgba(1, 255, 255, 0), rgba(1, 255, 255, 0.2));
-  border: 1px solid #01ffff;
+  border: 1px solid #01FFFF;
   border-radius: 0;
   padding: 6.5px 0;
 }
