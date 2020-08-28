@@ -352,8 +352,7 @@
 }
 
 #Ticket .ticket-area-preinfo {
-  color: #FFFFFF;
-  font-family: "Noto Serif TC", serif;
+  color: #FFE0BA;
 }
 
 @media (min-width: 1200px) {

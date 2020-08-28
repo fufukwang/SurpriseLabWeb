@@ -85,28 +85,6 @@
 </aside>
 <!-- End Social Links -->
 
-<!-- Loading Animation -->
-<svg class="hidden">
-    <symbol id="icon-arrow" viewBox="0 0 24 24">
-        <title>arrow</title>
-        <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-    </symbol>
-    <symbol id="icon-drop" viewBox="0 0 24 24">
-        <title>drop</title>
-        <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/>
-        <path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-    </symbol>
-    <symbol id="icon-github" viewBox="0 0 32.6 31.8">
-        <title>github</title>
-        <path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"/>
-    </symbol>
-    <symbol id="icon-arrow-nav" viewBox="208.3 352 4.2 6.4">
-        <title>arrow-nav</title>
-        <polygon points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon>
-    </symbol>
-</svg>
-<!-- End Loading Animation -->
-
 <!-- Landing -->
 <section class="anchor-section site-wrapper fixed-scroll-anchor" id="Welcome">
     <div class="content">
@@ -169,10 +147,8 @@
         <div class="container">
             <h2>Lobby</h2>
             <p>
-                「你好，我是微醺管家 Mr Tipsy. 歡迎來到
-                <br/>
-                《微醺大飯店 The Great Tipsy》
-                <br/>
+                「你好，我是微醺管家 Mr Tipsy. 歡迎來到<br/>
+                《微醺大飯店 The Great Tipsy》<br/>
                 請問有什麼我能協助你的呢？」
             </p>
             <div class="row feature-wrapper justify-content-between no-gutters">
@@ -218,6 +194,7 @@
                 </div>
             </div>
         </div>
+
         {{--<!-- Modal Start -->
         <div class="ending-modal">
             <div class="mask ending-close"></div>
@@ -247,6 +224,7 @@
             </div>
         </div>
         <!-- Modal End -->--}}
+
     </section>
     <!-- End section1 Lobby -->
 
@@ -262,11 +240,8 @@
                     </h4>
                 </div>
                 <p>
-                    微醺，介在清醒與酒醉之間
-                    <br/>
-                    唯有微醺，才能看見故事的全貌
-                    <br/>
-                    <br/>
+                    微醺，介在清醒與酒醉之間<br/>
+                    唯有微醺，才能看見故事的全貌<br/><br/>
                     <span class="highlight">喝個幾杯，在所難免</span>
                 </p>
             </div>
@@ -281,20 +256,10 @@
                     </h4>
                 </div>
                 <p>
-在微醺大飯店中<br/>
-所有事件都由選擇所構成<br/><br/>
-
-時間不可逆，你無法回頭更改<br/>
-請謹慎選擇<br/><br/>
-<!--
-                    「在這，有許多扇⾨」
-                    <br/>
-                    「你現在看到的這扇⾨，可能會通往泳池」
-                    <br/>
-                    「其他⾨則可能是酒吧、廚房、電話亭」
-                    <br/>
-                    「當然，也可能會通往我們也不知道的地⽅」
-                    <br/-->
+                    在微醺大飯店中<br/>
+                    所有事件都由選擇所構成<br/><br/>
+                    時間不可逆，你無法回頭更改<br/>
+                    請謹慎選擇<br/><br/>
                     <span class="highlight">你的選擇，將決定你看到的故事</span>
                 </p>
             </div>
@@ -312,23 +277,11 @@
                     </h4>
                 </div>
                 <p>
-在這，有許多扇門<br />
-每扇門後，都住著一位房客<br /><br />
-
-有些人離不開、有些人不想離開<br />
-有些人一直在等著一個人帶著她離開<br /><br />
-<!--
-                    「他是醒不過來的 lobby boy，待了好一陣子」
-                    <br/>
-                    「他幾年前來的時候，喝醉了，
-                    <br/>
-                    錯過了回去現實的機會」
-                    <br/>
-                    「他會對新進房客不停灌酒，
-                    <br/>
-                    希望能把人留在這世界中陪伴他」
-                    <br/-->
-                    <span class="highlight">你將一一拜訪久居在此的房客<br />聽著他們訴說一段，與你我有關的故事</span>
+                    在這，有許多扇門<br/>
+                    每扇門後，都住著一位房客<br/><br/>
+                    有些人離不開、有些人不想離開<br/>
+                    有些人一直在等著一個人帶著她離開<br/><br/>
+                    <span class="highlight">你將一一拜訪久居在此的房客<br/>聽著他們訴說一段，與你我有關的故事</span>
                 </p>
             </div>
             <div class="character-img">
@@ -345,26 +298,13 @@
                     </h4>
                 </div>
                 <p>
-這裡有著長年流傳的三份酒譜<br />
-它們總能神奇地讓人微醺<br /><br />
-
-第一杯能讓你尋得入口<br />
-第二杯能讓你想起過去<br />
-第三杯能讓你回到當下<br /><br />
-
-你也會嘗試三種房客為你準備的小點<br />
-份量不多，但都是房客們的心意<br /><br />
-<!--
-                    「微醺大飯店中，有著長年流傳下來的
-                    <br/>
-                    酒譜、食譜」
-                    <br/>
-                    「在這，有精心設計的三杯調酒讓你保持微醺」
-                    <br/>
-                    「同時，你也會嘗試三種特色小點，份量不多，
-                    <br/>
-                    但絕對值得一試」
-                    <br/-->
+                    這裡有著長年流傳的三份酒譜<br/>
+                    它們總能神奇地讓人微醺<br/><br/>
+                    第一杯能讓你尋得入口<br/>
+                    第二杯能讓你想起過去<br/>
+                    第三杯能讓你回到當下<br/><br/>
+                    你也會嘗試三種房客為你準備的小點<br/>
+                    份量不多，但都是房客們的心意<br/><br/>
                     <span class="highlight">準備好接受我們的款待了嗎？</span>
                 </p>
             </div>
@@ -379,27 +319,14 @@
                     </h4>
                 </div>
                 <p>
-為了保護你不會迷失在微醺之中<br />
-每位訪客的入住時間為九十分鐘<br /><br />
-<span class="highlight">
-「來過的人，都會想起一個人」<br />
-「你，會想起誰呢？」<br /><br />
-</span>
-願你我在這趟旅程之後<br />
-都能因微醺，而更清醒
-
-
-
-                    <!--
-                    「為了保護你不會迷失在微醺狀態中，
-                    <br/>
-                    每個人的入住時間為九十分鐘」
-                    <br/>
-                    <br/>
-                    「記住，微醺，是一面鏡子」
-                    <br/>
-                    「願你在走出這裡之後，能因此更清醒」
-                -->
+                    為了保護你不會迷失在微醺之中<br/>
+                    每位訪客的入住時間為九十分鐘<br/><br/>
+                    <span class="highlight">
+                        「來過的人，都會想起一個人」<br/>
+                        「你，會想起誰呢？」<br/><br/>
+                    </span>
+                    願你我在這趟旅程之後<br/>
+                    都能因微醺，而更清醒
                 </p>
             </div>
             <div class="check-img">
@@ -411,16 +338,14 @@
             <div class="container">
                 <div class="ticket-cta">
                     <p class="highlight">
-                        《微醺大飯店》
-                        <br/>
+                        《微醺大飯店》<br/>
                         誠摯地邀請你，成為我們的房客
                     </p>
                     <a class="btn-outline smoothScroll" href="#Ticket">我要訂房</a>
                     <p class="highlight">
                         <br/>你絕對無法相信，我有多期待見到你<br/><br/>
-
-Yours Truly,<br/>
-微醺管家 Mr. Tipsy
+                        Yours Truly,<br/>
+                        微醺管家 Mr. Tipsy
                     </p>
                 </div>
             </div>
@@ -444,33 +369,16 @@ Yours Truly,<br/>
             </div>
 
             <div class="ticket">
-                <!--PC Start-->
-                <p class="d-none d-sm-inline-block">
-你會遇到一群久居在此的房客<br/>
-近距離參與他們的喜怒哀樂<br/><br/>
-<span class="highlight text-center">微醺最終場07/17至08/25票券已全數售出<br/><br/></span>
-你的選擇，將決定看到的故事<br/><br/>
-
-- 微醺管家 Mr. Tipsy
+                <p>
+                    你會遇到一群久居在此的房客<br/>
+                    近距離參與他們的喜怒哀樂<br/><br/>
+                    <span class="highlight text-center">
+                        微醺最終場07/17至08/25票券已全數售出<br/><br/>
+                    </span>
+                    你的選擇，將決定看到的故事<br/><br/>
+                    - 微醺管家 Mr. Tipsy
                 </p>
-                <!--PC End-->
-                <!--Mobile Start-->
-                <p class="d-block d-sm-none">
-你會遇到一群久居在此的房客<br/>
-近距離參與他們的喜怒哀樂<br/><br/>
-<span class="highlight text-center">微醺最終場07/17至08/25票券已全數售出<br/><br/></span>
-<!--span class="highlight text-center">
-05/12 前場次已額滿<br/>
-05/15至06/13 場次票券，現正預售中<br/><br/>
-</span-->
-你的選擇，將決定看到的故事<br/><br/>
-
-
-- 微醺管家 Mr. Tipsy
-                </p>
-                <!--Mobile End-->
             </div>
-
         </div>
         <div class="container sec-experience" data-aos="fade">
 
@@ -523,10 +431,8 @@ Yours Truly,<br/>
             </div>
 
             <p class="ticket-area-preinfo">
-                <!--點選票卷，進入購買頁面後可選擇票卷數量<br >
-                最終場票券，預購07/17-08/25區間之場次-->
-最終場07/17-08/25區間預售票<br >
-已全數售出
+                最終場07/17-08/25區間預售票<br/>
+                已全數售出
             </p>
 
             <div class="ticket-type">
@@ -568,13 +474,10 @@ Yours Truly,<br/>
                     </a>
                 </div>
             </div>
-
             <p class="ticket-area-note">
-訂房採先預購、後劃位之機制<br/>
-<!--現在預購，將於05/08 收到劃位電子郵件<br/-->
-詳細劃位時間軸，請見本頁最下方
+                訂房採先預購、後劃位之機制<br/>
+                詳細劃位時間軸，請見本頁最下方
             </p>
-
         </div>
 
         <div class="container" data-aos="fade">
@@ -590,9 +493,7 @@ Yours Truly,<br/>
             </div>
 
             <p class="time-slots-preinfo">
-                <!--02/10 - 03/03 體驗時間<br/>-->
                 每日場次表請參考下方時段<br/><br/>
-                <!--週⼀公休-->
             </p>
 
             <div class="time-session">
@@ -600,12 +501,6 @@ Yours Truly,<br/>
                     <p>
                         晚場
                     </p>
-                    <!--p>
-                        <span class="ticket-blue">週一：19:00｜20:30｜22:00</span>
-                    </p>
-                    <p>
-                        <span class="ticket-blue">週二：19:00｜20:30｜22:00</span>
-                    </p-->
                     <p>
                         <span class="ticket-blue">週三：19:00｜20:30｜22:00</span>
                     </p>
@@ -625,9 +520,6 @@ Yours Truly,<br/>
                     <p>
                         午場
                     </p>
-                    <!--p>
-                        <span class="ticket-blue">週五：15:30</span>
-                    </p-->
                     <p>
                         週六：13:00｜14:30｜16:00
                     </p>
@@ -676,14 +568,6 @@ Yours Truly,<br/>
                 </div>
 
                 <div class="sale-progress-info">
-                    <!--div class="d-inline-block d-sm-flex normal-lineHeight">
-                        <p>
-                            已售出 <span class="highlight total-sale">1600</span> 票<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 票</span>
-                        </p>
-                        <p class="ml-auto text-right highlight-dark progress-percent-area">
-                            已完成 <span class="highlight progress-percent">80</span> %
-                        </p>
-                    </div-->
                     <div class="d-inline-block d-sm-flex normal-lineHeight">
                         <p>
                             已售出 <span class="highlight ">14610</span> 票
@@ -693,9 +577,7 @@ Yours Truly,<br/>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-
-* 微醺最終場07/17-08/25，預售票券完售<!--微醺最終場，預售07/17-08/25票券<br>
-* 可劃位日期將依實際預售情況加開或縮短-->
+                        * 微醺最終場07/17-08/25，預售票券完售
                     </p>
                 </div>
             </div>
@@ -712,7 +594,7 @@ Yours Truly,<br/>
                 </h4>
             </div>
             <p>
-                訂房採先預購、後劃位機制，詳細時程如下
+                <br/>訂房採先預購、後劃位機制，詳細時程如下
             </p>
 
             <div class="schedule">
@@ -753,18 +635,9 @@ Yours Truly,<br/>
                     </tr>
 
                 </table>
-                <!--PC Start-->
-                <p class="schedule-sub-title d-none d-sm-block">
+                <p class="schedule-sub-title">
                     為提供最好的沉浸式體驗，上述日期會依實際狀況彈性調整
                 </p>
-                <!--PC End-->
-                <!--Mobile Start-->
-                <div class="text-center d-block d-sm-none">
-                    <p class="schedule-sub-title d-inline-block text-left">
-                        為提供最好的沉浸式體驗，<br/>上述日期會依實際狀況彈性調整
-                    </p>
-                </div>
-                <!--Mobile End-->
             </div>
 
             <div class="feature-btn text-center">
@@ -830,59 +703,12 @@ Yours Truly,<br/>
                         <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
                     </p>
                 </div>
-
-                <!--div class="contact-sec middle d-xl-flex">
-                    <div class="contact-sec-title highlight">
-                        活動場次
-                    </div>
-                    <div>
-                        <p>
-                            晚場
-                        </p>
-
-                        <p>
-                            週二：19:00｜20:30｜22:00
-                        </p>
-                        <p>
-                            週三：19:00｜20:30｜22:00
-                        </p>
-                        <p>
-                            週四：19:00｜20:30｜22:00
-                        </p>
-                        <p>
-                            週五：19:00｜20:30｜22:00
-                        </p>
-                        <p>
-                            週六：19:00｜20:30｜22:00
-                        </p>
-                        <p>
-                            週⽇：19:00｜20:30｜22:00
-                        </p>
-                        <p>&nbsp;</p>
-                        <p>
-                            午場
-                        </p>
-
-                        <p>
-                            週六：13:00｜14:30｜16:00
-                        </p>
-                        <p>
-                            週⽇：13:00｜14:30｜16:00
-                        </p>
-                        <p>&nbsp;</p>
-                        <p class="contact-footer">
-
-                        </p>
-                    </div>
-                </div-->
-
                 <div class="contact-sec d-xl-flex">
                     <div class="contact-sec-title highlight">
                         地址
                     </div>
                     <p>
-                        台北市中⼼、咖啡⾊捷運沿線、易達性⾼
-                        <br/>
+                        台北市中⼼、咖啡⾊捷運沿線、易達性⾼<br/>
                         確切地點，將於完成劃位後告知
                     </p>
                 </div>

@@ -547,52 +547,34 @@
                         </button>
                     </div>
 
-
-
-
-
-
-
-<div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
-  <div class="modal-dialog" role="document" style="top: 10%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">信用卡付款</h5>
-      </div>
-      <div class="modal-body">
-<div class="tpfield" id="card-number" style="height: 30px;"></div>
-<div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
-<div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
-<p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
-<div style="text-align:center;"><a href="https://www.tappaysdk.com/tch" target="_blank"><img src="https://docs.tappaysdk.com/images/logo.png" width="100"></a></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
-        <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
+                    <div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
+                        <div class="modal-dialog" role="document" style="top: 10%;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">信用卡付款</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="tpfield" id="card-number" style="height: 30px;"></div>
+                                    <div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
+                                    <div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
+                                    <p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
+                                    <div style="text-align:center;">
+                                        <a href="https://www.tappaysdk.com/tch" target="_blank">
+                                            <img src="https://docs.tappaysdk.com/images/logo.png" width="100">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
+                                    <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
         </form>
     </div>
-
-
-
-
 
     <div class="submit-page success" id="bookingSuccess" style="display:none;">
         <div class="container">
@@ -632,31 +614,7 @@
             </div>
         </div>
     </div>
-
-
 </main>
-
-<!-- Screen Rotate Hint -->
-<!--<div class="hint-wrapper">-->
-    <!--<div class="hint-inner">-->
-        <!--<div class="logo">-->
-            <!--<img src="img/web_title_small.png" alt="The Great Tipsy">-->
-        <!--</div>-->
-        <!--<div class="hint-img rotate-turn-h">-->
-            <!--<img class="rotate-turn-h" src="img/rotate_turn-h.gif" alt="screen-rotate">-->
-        <!--</div>-->
-        <!--<div class="hint-img rotate-turn-s">-->
-            <!--<img class="rotate-turn-s" src="img/rotate_turn-s.gif" alt="screen-rotate">-->
-        <!--</div>-->
-        <!--<div class="hint-text rotate-turn-h">-->
-            <!--請使用橫式觀看，以獲得最佳體驗-->
-        <!--</div>-->
-        <!--<div class="hint-text rotate-turn-s">-->
-            <!--請使用直式觀看，以獲得最佳體驗-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<!-- End Screen Hint -->
 
 <!-- Bootstrap -->
 <script src="js/jquery-3.3.1.min.js"></script>

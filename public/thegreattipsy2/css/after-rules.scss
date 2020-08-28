@@ -141,8 +141,7 @@
 
   .ticket-area-preinfo {
     @include baseCounter('padding-top', 45);
-    color: $color-lighter-yellow;
-    font-family: $font-serif;
+    color: $color-light-yellow;
   }
 
   .ticket-area-note {
