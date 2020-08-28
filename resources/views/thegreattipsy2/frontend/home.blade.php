@@ -570,10 +570,10 @@
                 <div class="sale-progress-info">
                     <div class="d-inline-block d-sm-flex normal-lineHeight">
                         <p>
-                            已售出 <span class="highlight ">14610</span> 票
+                            已售出 <span class="highlight">14610</span> 票
                         </p>
                         <p class="ml-auto text-right highlight-dark progress-percent-area">
-                            已完成 <span class="highlight ">100</span> %
+                            已完成 <span class="highlight">50</span> %
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
