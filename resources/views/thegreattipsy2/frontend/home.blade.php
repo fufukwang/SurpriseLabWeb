@@ -33,11 +33,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.3"/>
-    <link rel="stylesheet" href="css/after-rules.css?v=0.1"/>
-    <style type="text/css">
-    #td_day{line-height: 1.5;text-align: center;}
-    @media (max-width: 480px) { #td_day{text-align:left;}}
-    </style>
 </head>
 <body class="loading">
 <!-- Anchor menu -->

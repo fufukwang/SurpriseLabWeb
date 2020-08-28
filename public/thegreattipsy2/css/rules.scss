@@ -212,8 +212,8 @@ header.logo {
 
       h6 {
         position: relative;
-        padding-left: 18px;
-        text-indent: -18px;
+        padding-left: 21px;
+        text-indent: -21px;
         @include baseCounter('padding-top', 24);
         padding-bottom: 0;
         padding-right: 40px;
@@ -266,6 +266,10 @@ header.logo {
     width: 533px;
     max-width: 100%;
     margin: 0 auto;
+
+    p {
+      line-height: 2;
+    }
 
     .feature-btn {
       @include baseCounter('padding-top', 106);
@@ -398,6 +402,17 @@ header.logo {
           margin: 0 auto;
         }
       }
+    }
+
+    .table-note-text {
+      max-width: 670px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      text-align: right;
     }
 
     .transfer-ticket {
