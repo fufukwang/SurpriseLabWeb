@@ -181,9 +181,11 @@
       text-align: center;
       @include baseCounter('padding-top', 54);
       @include baseCounter('padding-bottom', 80);
+      @include baseCounter('padding-left', 47);
+      @include baseCounter('padding-right', 47);
 
       &:first-child {
-        @include baseCounter('padding-right', 47);
+        padding-left: 0;
       }
 
       &::after {
@@ -197,13 +199,8 @@
         transform: scaleX(0.5);
       }
 
-      &.type-matinee {
-        @include baseCounter('padding-left', 47);
-        @include baseCounter('padding-right', 47);
-      }
-
       &:last-child {
-        @include baseCounter('padding-left', 47);
+        padding-right: 0;
 
         &::after {
           display: none;
