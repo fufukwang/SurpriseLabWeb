@@ -1,11 +1,11 @@
 body {
-  background-color: #932c2c !important;
+  background-color: #281f1c !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
 
 header.logo {
-  background-color: #932c2c;
+  background-color: #281f1c;
 }
 
 .anchor-wrapper {
@@ -19,7 +19,7 @@ header.logo {
   text-align: center;
   z-index: 9999;
   top: 120px;
-  background-color: #932c2c;
+  background-color: #281f1c;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
@@ -27,14 +27,14 @@ header.logo {
 #rules-tab-switcher .nav-link.active,
 #rules-tab-switcher .nav-link:hover {
   background-color: transparent;
-  border-color: #e2ac78;
+  border-color: #EFC27B;
   border-radius: 0;
   border-width: 0 0 1px 0;
 }
 
 #rules-tab-switcher .nav-link {
   cursor: pointer;
-  color: #ffe0ba;
+  color: #FFE0BA;
   padding: 8.5px 0;
   margin: 0 11.5px -1px;
   border-radius: 0;
@@ -443,7 +443,7 @@ header.logo {
 }
 
 #Rules .to-change-and-refund {
-  color: #e2ac78;
+  color: #EFC27B;
   text-decoration: underline;
   cursor: pointer;
   -webkit-transition: color 0.3s;
@@ -451,14 +451,14 @@ header.logo {
 }
 
 #Rules .to-change-and-refund:hover {
-  color: #ffe0ba;
+  color: #FFE0BA;
 }
 
 #Rules #qa-according {
   width: 500px;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: solid 1px #f5b563;
+  border-bottom: solid 1px #CCA46E;
 }
 
 @media (min-width: 1200px) {
@@ -527,11 +527,11 @@ header.logo {
 }
 
 #Rules #qa-according .to-change-and-refund {
-  color: #ffe0ba;
+  color: #FFE0BA;
 }
 
 #Rules #qa-according .to-change-and-refund:hover {
-  color: #e2ac78;
+  color: #EFC27B;
 }
 
 #Rules #qa-according .card-body {
@@ -540,7 +540,7 @@ header.logo {
   padding-right: 19px;
   line-height: 2;
   letter-spacing: 1.8px;
-  color: #e2ac78;
+  color: #EFC27B;
 }
 
 @media (min-width: 1200px) {
@@ -670,7 +670,7 @@ header.logo {
   height: 100%;
   left: 0;
   top: 0;
-  background: #f5b563;
+  background: #CCA46E;
 }
 
 #Rules #qa-according .card-body.number-list p {
@@ -685,7 +685,7 @@ header.logo {
 #Rules #qa-according .card-header {
   padding: 0;
   border-style: solid;
-  border-color: #f5b563;
+  border-color: #CCA46E;
   border-width: 1px 0 0 0;
   border-radius: 0;
 }
@@ -777,7 +777,7 @@ header.logo {
 #Rules #qa-according .card-header h6.is-open .icon-arrow {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 #Rules #qa-according .card-header .icon-arrow {
@@ -788,7 +788,7 @@ header.logo {
   transition: 0.3s;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  color: #e2ac78;
+  color: #EFC27B;
 }
 
 @media (max-width: 1200px) {
@@ -952,7 +952,7 @@ header.logo {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
-  border-bottom: solid 2px #e2ac78;
+  border-bottom: solid 2px #EFC27B;
 }
 
 @media (min-width: 1200px) {
@@ -986,14 +986,14 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note tr {
-  border-color: #e2ac78 #e2ac78 #f5b563 #e2ac78;
+  border-color: #EFC27B #EFC27B #CCA46E #EFC27B;
   border-style: solid;
   border-width: 0 2px 2px 2px;
 }
 
 #Rules #changeAndrefund #table-note tr:first-child {
   border-width: 2px;
-  border-color: #e2ac78;
+  border-color: #EFC27B;
 }
 
 #Rules #changeAndrefund #table-note tr:last-child {
@@ -1010,8 +1010,8 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note th {
-  background: #ffe0ba;
-  border-right: solid 1px #f5b563;
+  background: #FFE0BA;
+  border-right: solid 1px #CCA46E;
   text-align: center;
   letter-spacing: 1.8px;
   color: #39351c;
@@ -1206,8 +1206,8 @@ header.logo {
   text-align: center;
   letter-spacing: 1.8px;
   line-height: 2;
-  background-color: #932c2c;
-  border-right: solid 1px #f5b563;
+  background-color: #281f1c;
+  border-right: solid 1px #CCA46E;
 }
 
 @media (min-width: 1200px) {
@@ -1275,8 +1275,8 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note td.highlight-td {
-  background: #f5b563;
-  color: #ffffff;
+  background: #CCA46E;
+  color: #FFFFFF;
   font-weight: 500;
 }
 

@@ -3,7 +3,7 @@
 }
 
 .highlight-dark {
-  color: #e2ac78;
+  color: #EFC27B;
 }
 
 .ticket-yellow {
@@ -234,7 +234,7 @@
   font-size: 72px;
   line-height: 1.25;
   letter-spacing: 7.2px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 #Ticket .experience .exp-text {
@@ -352,7 +352,7 @@
 }
 
 #Ticket .ticket-area-preinfo {
-  color: #ffffff;
+  color: #FFFFFF;
   font-family: "Noto Serif TC", serif;
 }
 
@@ -570,7 +570,7 @@
   top: 0;
   width: 0;
   height: 100%;
-  border-right: dashed 2px #e2ac78;
+  border-right: dashed 2px #EFC27B;
   -webkit-transform: scaleX(0.5);
           transform: scaleX(0.5);
 }
@@ -685,7 +685,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: #932c2c;
+  background: #281f1c;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -699,7 +699,7 @@
           transform: translateY(100%);
   width: 100%;
   min-width: 220px;
-  color: #e2ac78;
+  color: #EFC27B;
 }
 
 @media (min-width: 1200px) {
@@ -794,7 +794,7 @@
     width: 100%;
     height: 0;
     border-style: dashed;
-    border-color: #e2ac78;
+    border-color: #EFC27B;
     border-width: 0 0 2px;
     -webkit-transform: scale(1, 0.5);
             transform: scale(1, 0.5);
@@ -979,7 +979,7 @@
 }
 
 #Ticket .time-session hr {
-  border-color: #f5b563;
+  border-color: #CCA46E;
 }
 
 @media (max-width: 1199.98px) {
@@ -1005,7 +1005,7 @@
 }
 
 #Ticket .time-counter {
-  color: #e2ac78;
+  color: #EFC27B;
 }
 
 @media (min-width: 1200px) {
@@ -1079,7 +1079,7 @@
   letter-spacing: 3.6px;
   padding: 0 10px;
   font-family: "Pinyon Script", cursive, sans-serif;
-  color: #ffe0ba;
+  color: #FFE0BA;
 }
 
 @media (max-width: 1200px) {
@@ -1153,11 +1153,11 @@
 #Ticket .sale-progress .progress {
   height: 11.5px;
   border-radius: 12px;
-  background-color: #f5b563;
+  background-color: #CCA46E;
 }
 
 #Ticket .sale-progress .progress .progress-bar {
-  background-color: #e2ac78;
+  background-color: #EFC27B;
   border-radius: 12px;
 }
 
@@ -1341,7 +1341,7 @@
 }
 
 #Ticket .schedule table tr td:first-child {
-  color: #e2ac78;
+  color: #EFC27B;
   vertical-align: top;
 }
 
@@ -1376,7 +1376,7 @@
 }
 
 #Ticket .schedule .schedule-sub-title {
-  color: #e2ac78;
+  color: #EFC27B;
   text-align: center;
 }
 
@@ -1641,7 +1641,7 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 1.8px;
-  color: #e2ac78;
+  color: #EFC27B;
 }
 
 @media (max-width: 1440px) {
@@ -1792,12 +1792,12 @@
 }
 
 #Contact .contact-pre-info a {
-  color: #e2ac78;
+  color: #EFC27B;
   text-decoration: underline;
 }
 
 #Contact .contact-pre-info a:hover {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 #Contact .contact-sec {
@@ -1873,7 +1873,7 @@
   width: 451px;
   max-width: 100%;
   height: 1px;
-  background: #f5b563;
+  background: #CCA46E;
   top: 0;
   right: 0;
 }
@@ -1920,7 +1920,7 @@
   #Contact .contact-sec:first-child {
     padding-bottom: 30px;
     margin-bottom: 36px;
-    border-bottom: solid 1px #f5b563;
+    border-bottom: solid 1px #CCA46E;
   }
   #Contact .contact-sec.middle {
     margin-top: 0;
@@ -1929,7 +1929,7 @@
   #Contact .contact-sec:last-child {
     padding-top: 30px;
     margin-top: 36px;
-    border-top: solid 1px #f5b563;
+    border-top: solid 1px #CCA46E;
   }
   #Contact .contact-sec .contact-sec-title {
     font-size: 14px;

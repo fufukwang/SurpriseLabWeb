@@ -50,7 +50,7 @@ body {
   background-color: #281f1c;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
-  color: #ffe0ba;
+  color: #EFC27B;
 }
 
 body.menu-open {
@@ -67,27 +67,27 @@ a:visited {
 }
 
 a {
-  color: #f5b563;
+  color: #CCA46E;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 a.default-light {
-  color: #ffe0ba;
+  color: #FFE0BA;
 }
 
 a.default-light:hover {
-  color: #f5b563;
+  color: #CCA46E;
 }
 
 a:hover {
-  color: #ffe0ba;
+  color: #FFE0BA;
 }
 
 h1 {
   font-size: 50px;
   font-weight: 600;
-  color: #eab081;
+  color: #EFC27B;
 }
 
 h2 {
@@ -95,7 +95,7 @@ h2 {
   font-weight: 500;
   color: transparent;
   display: none;
-  color: #eab081;
+  color: #EFC27B;
 }
 
 h3 {
@@ -107,7 +107,7 @@ h3 {
   padding-left: 4.3px;
   text-align: center;
   margin-bottom: 14px;
-  color: #eab081;
+  color: #EFC27B;
 }
 
 @media (max-width: 1440px) {
@@ -174,7 +174,7 @@ h4 {
   line-height: 30px;
   letter-spacing: 0.8px;
   text-align: center;
-  color: #eab081;
+  color: #FFE0BA;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -192,7 +192,7 @@ h4::before, h4::after {
   content: '';
   width: 500px;
   height: 1px;
-  background-color: #ffffff;
+  background-color: #FFE0BA;
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -218,7 +218,7 @@ h4::after {
     letter-spacing: 0.5px;
   }
   h4::before, h4::after {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 224, 186, 0.5);
   }
 }
 
@@ -233,7 +233,7 @@ h4 span::before, h4 span::after {
   content: '';
   width: 7px;
   height: 7px;
-  border: 1px solid #ffffff;
+  border: 1px solid #FFE0BA;
   position: absolute;
   top: 11px;
   -webkit-transform: rotate(45deg);
@@ -255,7 +255,7 @@ h4 span::after {
   h4 span::before, h4 span::after {
     width: 4px;
     height: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 224, 186, 0.5);
     top: 4.5px;
   }
 }
@@ -325,10 +325,10 @@ p {
   width: 210px;
   text-align: center;
   font-size: 18px;
-  color: #eab081;
+  color: #EFC27B;
   letter-spacing: 1.8px;
   padding: 10px 0;
-  border: 1px solid #bc825b;
+  border: 1px solid #CCA46E;
   border-radius: 30px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -341,9 +341,9 @@ p {
 }
 
 .btn-outline:hover {
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  color: #f5b563;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  color: #CCA46E;
 }
 
 @media (min-width: 1200px) {
@@ -384,7 +384,7 @@ p {
 }
 
 .highlight {
-  color: #f5b563;
+  color: #FFE0BA;
 }
 
 #canvas {
@@ -492,7 +492,7 @@ p {
   content: '';
   width: 5px;
   height: 2px;
-  background-color: #f5b563;
+  background-color: #CCA46E;
   position: absolute;
   top: 50%;
   right: -85px;
@@ -509,11 +509,11 @@ p {
 }
 
 .anchor-wrapper li.active a {
-  color: #ffe0ba;
+  color: #FFE0BA;
 }
 
 .anchor-wrapper li.active::after {
-  background-color: #ffe0ba;
+  background-color: #FFE0BA;
   width: 48px;
 }
 
@@ -524,7 +524,7 @@ p {
 }
 
 .anchor-wrapper li:hover::after {
-  background-color: #ffe0ba;
+  background-color: #FFE0BA;
   width: 60px;
 }
 
@@ -567,7 +567,7 @@ p {
 }
 
 .social-wrapper .social-link:hover i {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 @media (max-width: 480px) {
@@ -613,7 +613,7 @@ p {
   font-family: "Noto Serif TC", serif;
   line-height: 1.25;
   letter-spacing: 2.9px;
-  color: #ffffff;
+  color: #FFFFFF;
   position: absolute;
   z-index: 999;
 }
@@ -943,7 +943,7 @@ header.logo .hamburger:focus {
 
 header.logo .hamburger .current-section,
 header.logo .hamburger .current-menu {
-  color: #ffe0ba;
+  color: #FFE0BA;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
@@ -963,7 +963,7 @@ header.logo .hamburger .icon-bar {
   width: 20px;
   height: 1px;
   display: block;
-  background-color: #ffe0ba;
+  background-color: #FFE0BA;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -2139,7 +2139,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 .hint-wrapper .hint-text {
   font-size: 14px;
   letter-spacing: 1.4px;
-  color: #ffe0ba;
+  color: #FFE0BA;
   margin-top: 18px;
 }
 
@@ -2242,7 +2242,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 36px;
   font-weight: 300;
   line-height: 1;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: transparent;
   border: none;
   cursor: pointer;

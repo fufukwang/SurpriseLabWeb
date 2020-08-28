@@ -26,7 +26,7 @@ body {
   background-color: $color-dark-brown;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
-  color: $color-light-yellow;
+  color: $color-yellow;
 
   &.menu-open {
     height: 100vh;
@@ -114,7 +114,7 @@ h4 {
   line-height: 30px;
   letter-spacing: 0.8px;
   text-align: center;
-  color: $color-yellow;
+  color: $color-light-yellow;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +126,7 @@ h4 {
     content: '';
     width: 500px;
     height: 1px;
-    background-color: $color-lighter-yellow;
+    background-color: $color-light-yellow;
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -150,7 +150,7 @@ h4 {
 
     &::before,
     &::after {
-      background-color: rgba($color-lighter-yellow, 0.5);
+      background-color: rgba($color-light-yellow, 0.5);
     }
   }
 
@@ -165,7 +165,7 @@ h4 {
       content: '';
       width: 7px;
       height: 7px;
-      border: 1px solid $color-lighter-yellow;
+      border: 1px solid $color-light-yellow;
       position: absolute;
       top: 11px;
       transform: rotate(45deg);
@@ -186,7 +186,7 @@ h4 {
       &::after {
         width: 4px;
         height: 4px;
-        border: 1px solid rgba($color-lighter-yellow, 0.5);
+        border: 1px solid rgba($color-light-yellow, 0.5);
         top: 4.5px;
       }
     }
@@ -253,7 +253,7 @@ p {
   color: $color-yellow;
   letter-spacing: 1.8px;
   padding: 10px 0;
-  border: 1px solid $color-border;
+  border: 1px solid $color-dark-yellow;
   border-radius: 30px;
   transition: 0.3s;
 
@@ -297,7 +297,7 @@ p {
 
 // Highlight: You can use if you want highlight something in paragraph.
 .highlight {
-  color: $color-dark-yellow;
+  color: $color-light-yellow;
 }
 
 // Canvas
