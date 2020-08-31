@@ -71,11 +71,11 @@ h2 {
 
 h3 {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 900;
   font-family: $font-serif;
   line-height: 1;
-  letter-spacing: 4.3px;
-  padding-left: 4.3px;
+  letter-spacing: 10.8px;
+  padding-left: 10.8px;
   text-align: center;
   margin-bottom: 14px;
   color: $color-yellow;
@@ -105,10 +105,11 @@ h3 {
 h4 {
   position: relative;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   font-family: $font-montserrat;
+  text-transform: uppercase;
   line-height: 30px;
-  letter-spacing: 0.8px;
+  letter-spacing: 3.2px;
   text-align: center;
   color: $color-light-yellow;
   display: inline-flex;
@@ -152,8 +153,9 @@ h4 {
 
   span {
     font-family: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
     padding: 0 31.4px;
-    text-transform: uppercase;
     position: relative;
 
     &::before,
@@ -201,7 +203,7 @@ h6 {
 
 p {
   font-size: 18px;
-  line-height: 2.67;
+  line-height: 2;
   letter-spacing: 1.8px;
   text-align: center;
   margin: 0;
@@ -252,9 +254,9 @@ p {
   }
 
   &:hover {
-    background-color: $color-lighter-yellow;
-    border: 1px solid $color-lighter-yellow;
-    color: $color-dark-yellow;
+    background-color: $color-yellow;
+    border: 1px solid $color-yellow;
+    color: $color-dark-brown;
   }
 
   &.btn-outline-small {
@@ -288,6 +290,8 @@ p {
 // Highlight: You can use if you want highlight something in paragraph.
 .highlight {
   color: $color-light-yellow;
+  letter-spacing: 1.2px;
+  font-weight: 500;
 }
 
 .normal-lineHeight {
@@ -420,7 +424,8 @@ p {
 
     a {
       font-family: $font-montserrat;
-      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      letter-spacing: 3.2px;
     }
 
     &::after {
@@ -752,8 +757,9 @@ header.logo {
       color: $color-light-yellow;
       font-size: 14px;
       font-family: $font-montserrat;
+      text-transform: uppercase;
       line-height: 1;
-      letter-spacing: 0.7px;
+      letter-spacing: 2.8px;
       padding-right: 12px;
     }
 
@@ -1138,7 +1144,7 @@ header.logo {
       font-size: 72px;
       line-height: 1.25;
       letter-spacing: 7.2px;
-      color: $color-lighter-yellow;
+      color: $color-mango;
     }
 
     .exp-text {
