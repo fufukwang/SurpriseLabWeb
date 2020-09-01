@@ -448,6 +448,43 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!--Section separator-->
+                                <div class="qa-title-separator">
+                                    關於劃位序號
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa20-header">
+                                        <h6 data-toggle="collapse" data-target="#qa20" aria-expanded="false"
+                                            aria-controls="qa20" class="collapsed d-flex align-items-center">
+                                            20. 請問完成劃位後可以更改場次嗎？或是該怎麼取消退票呢？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa20" class="collapse" aria-labelledby="qa20-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
+                                            預售票券完成劃位後，若有更改日期或場次的需求，請依照<span class="to-change-and-refund">更改、退費事項</span>之流程進行。只有一次改期機會，請特別留意。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa21-header">
+                                        <h6 data-toggle="collapse" data-target="#qa21" aria-expanded="false"
+                                            aria-controls="qa21" class="collapsed d-flex align-items-center">
+                                            21. 劃位序號沒有使用的話，怎麼辦？能退費嗎？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa21" class="collapse" aria-labelledby="qa21-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
+                                            序號使用相關規定，請見<span class="to-presale-rules">預售規則</span>，不同階段之序號，僅能於指定演出區間使用，若因為超過日期為使用而失效，視為放棄權利，無法退費與要求劃位其他演出區間，請務必留意相關資訊。
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <p class="qa-note">
