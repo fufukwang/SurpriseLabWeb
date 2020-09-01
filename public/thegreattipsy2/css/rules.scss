@@ -291,7 +291,14 @@ header.logo {
     margin: 0 auto;
 
     p {
+      font-size: 16px;
       line-height: 2;
+
+      &.category-title {
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        line-height: 2.67;
+      }
     }
 
     .feature-btn {
