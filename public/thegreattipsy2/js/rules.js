@@ -52,24 +52,20 @@ jQuery(function($){
         });
     });
 
-    $('.to-presale-rules').on('click', function (e) {
-        owl.trigger('to.owl.carousel', [1, 300, true]);
-
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 300);
-        },300);
+    $('.to-presale-rules').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 300, function() {
+            owl.trigger('to.owl.carousel', [1, 300, true]);
+        });
     });
 
-    $('.to-change-and-refund').on('click', function (e) {
-        owl.trigger('to.owl.carousel', [2, 300, true]);
-
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 300);
-        },300);
+    $('.to-change-and-refund').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 300, function() {
+            owl.trigger('to.owl.carousel', [2, 300, true]);
+        });
     });
 
     // Fix QA toggle icon issue
@@ -85,20 +81,20 @@ jQuery(function($){
         }, 300);
     });
 
-    var qa_card = $('#qa-according .card');
+    // var qa_card = $('#qa-according .card');
 
-    qa_card.on('click', function () {
-        var offset = $(this).offset().top - header.height() - rulesTab.height();
-        var prevCard = qa_card.slice(0, parseInt($(this).index()));
+    // qa_card.on('click', function () {
+    //     var offset = $(this).offset().top - header.height() - rulesTab.height();
+    //     var prevCard = qa_card.slice(0, parseInt($(this).index()));
 
-        if (prevCard.find('h6').hasClass('is-open')) {
-            offset = offset - prevCard.find('h6.is-open').parent().next().height();
-        }
+    //     if (prevCard.find('h6').hasClass('is-open')) {
+    //         offset = offset - prevCard.find('h6.is-open').parent().next().height();
+    //     }
 
-        $('html, body').animate({
-            scrollTop: offset
-        }, 300);
-    });
+    //     $('html, body').animate({
+    //         scrollTop: offset
+    //     }, 300);
+    // });
 
     var qa_content = $('#qa-according .card-body');
     qa_content.on('click', function () {
