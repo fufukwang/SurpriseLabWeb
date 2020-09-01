@@ -365,13 +365,10 @@
 
             <div class="ticket">
                 <p>
-                    你會遇到一群久居在此的房客<br/>
-                    近距離參與他們的喜怒哀樂<br/><br/>
-                    <span class="highlight text-center">
-                        微醺最終場07/17至08/25票券已全數售出<br/><br/>
-                    </span>
-                    你的選擇，將決定看到的故事<br/><br/>
-                    - 微醺管家 Mr. Tipsy
+                    微醺大飯店：1980  隆重開幕<br/>
+                    帶你穿越時光，回到過去<br/><br/>
+                    跟著全新的角色<br/>
+                    探索全新的故事
                 </p>
             </div>
         </div>
@@ -389,26 +386,26 @@
             <div class="experience d-sm-flex justify-content-between">
                 <div class="exp-item">
                     <div class="exp-number">
-                        90
+                        120
                     </div>
                     <p class="exp-text">
-                        九⼗分鐘沉浸式微醺體驗
+                        一百二十分鐘沉浸式微醺體驗
                     </p>
                 </div>
                 <div class="exp-item middle">
-                    <div class="exp-number">
-                        5+5
-                    </div>
-                    <p class="exp-text">
-                        五間房間 + 五場表演
-                    </p>
-                </div>
-                <div class="exp-item ">
                     <div class="exp-number">
                         3+3
                     </div>
                     <p class="exp-text">
                         三杯調酒 + 三道小點
+                    </p>
+                </div>
+                <div class="exp-item ">
+                    <div class="exp-number">
+                        7+7
+                    </div>
+                    <p class="exp-text">
+                        七個秘密 + 七個角色
                     </p>
                 </div>
             </div>
@@ -426,8 +423,7 @@
             </div>
 
             <p class="ticket-area-preinfo">
-                最終場07/17-08/25區間預售票<br/>
-                已全數售出
+                早鳥預售票，限量 1300 張
             </p>
 
             <div class="ticket-type">
@@ -493,40 +489,12 @@
 
             <div class="time-session">
                 <div class="time-session-inner">
-                    <p>
-                        晚場
-                    </p>
-                    <p>
-                        <span class="ticket-blue">週三：19:00｜20:30｜22:00</span>
-                    </p>
-                    <p>
-                        <span class="ticket-blue">週四：19:00｜20:30｜22:00</span>
-                    </p>
-                    <p>
-                        <span class="ticket-blue">週五：19:00｜20:30｜22:00</span>
-                    </p>
-                    <p>
-                        週六：19:00｜20:30｜22:00
-                    </p>
-                    <p>
-                        週⽇：19:00｜20:30｜22:00
-                    </p>
+                    <p>週三：18:30｜20:30</p>
+                    <p>週四：18:30｜20:30</p>
+                    <p>週五：18:30｜20:30</p>
                     <hr/>
-                    <p>
-                        午場
-                    </p>
-                    <p>
-                        週六：13:00｜14:30｜16:00
-                    </p>
-                    <p>
-                        週⽇：13:00｜14:30｜16:00
-                    </p>
-                    <p>&nbsp;</p>
-                    <p class="ticket-color-diff-note">
-                        <span class="ticket-yellow">暢⾏無阻票</span>、<span class="ticket-pink">四⼈沈醉票</span>，可選擇所有時段<br/>
-                        <span class="ticket-blue">時間有點限制票</span>，僅能選藍色時段
-                    </p>
-
+                    <p>週六：13:00｜15:00｜19:00｜21:00</p>
+                    <p>週日：13:00｜15:00｜19:00｜21:00</p>
                     <div class="feature-btn text-center d-block d-sm-none">
                         <a class="btn-outline smoothScroll" href="#Ticket">我要訂房</a>
                     </div>
@@ -596,39 +564,20 @@
                 <table>
                     <tr>
                         <td>
-                            06/19
+                            10/16
                         </td>
                         <td>
-                            開賣微醺大飯店最終場 07/17—08/25場次票券，目標2500人
+                            開賣微醺大飯店早鳥票卷，限量 1300 張
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            07/03
+                            11/30
                         </td>
                         <td>
-                            寄送劃位信—07/03前購票者（收到信後，即可劃位）
+                            寄送劃位信—購買早鳥票者，收到信後即可劃位
                         </td>
                     </tr>
-
-                    <tr>
-                        <td>
-                            07/10
-                        </td>
-                        <td>
-                            寄送劃位信－07/03–07/09購票者
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            07/17
-                        </td>
-                        <td>
-                            寄送劃位信－07/10 後其餘購票者
-                        </td>
-                    </tr>
-
                 </table>
                 <p class="schedule-sub-title">
                     為提供最好的沉浸式體驗，上述日期會依實際狀況彈性調整
