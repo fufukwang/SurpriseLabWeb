@@ -48,16 +48,28 @@ jQuery(function($){
         $('html, body').animate({
             scrollTop: 0
         }, 300, function() {
-            owl.trigger('to.owl.carousel', [$(window.clickTab).index(), 300]);
+            owl.trigger('to.owl.carousel', [$(window.clickTab).index(), 300, true]);
         });
     });
 
-    $('.to-change-and-refund').on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 300, function() {
-            owl.trigger('to.owl.carousel', [2, 300]);
-        });
+    $('.to-presale-rules').on('click', function (e) {
+        owl.trigger('to.owl.carousel', [1, 300, true]);
+
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 300);
+        },300);
+    });
+
+    $('.to-change-and-refund').on('click', function (e) {
+        owl.trigger('to.owl.carousel', [2, 300, true]);
+
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 300);
+        },300);
     });
 
     // Fix QA toggle icon issue

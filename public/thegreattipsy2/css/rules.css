@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("https://fonts.googleapis.com/css?family=Pinyon+Script");
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 body {
   background-color: #281F1C !important;
   background-image: url("../img/wallpaper.jpg");
@@ -11,6 +12,14 @@ header.logo {
   background-color: #281F1C;
 }
 
+.btn-link {
+  text-decoration: underline;
+}
+
+.btn-link:hover, .btn-link:focus {
+  color: #EFC27B !important;
+}
+
 .anchor-wrapper {
   display: initial;
 }
@@ -18,7 +27,7 @@ header.logo {
 #rules-tab-switcher {
   position: sticky;
   position: -webkit-sticky;
-  border-color: #39351c;
+  border-color: #281F1C;
   text-align: center;
   z-index: 9999;
   top: 120px;
@@ -42,7 +51,7 @@ header.logo {
   margin: 0 11.5px -1px;
   border-radius: 0;
   border-width: 0 0 1px 0;
-  border-color: #39351c;
+  border-color: #281F1C;
   letter-spacing: 2.2px;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
@@ -377,6 +386,76 @@ header.logo {
   }
 }
 
+#Rules #qa .qa-title-separator {
+  font-family: "Noto Serif TC", serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 2.4px;
+  color: #FFE0BA;
+  border-top: solid 1px #E5AD5C;
+}
+
+@media (min-width: 1200px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc((608px + 30px) * 0.02147);
+  }
+}
+
+@media (min-width: 1440px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc((768px + 30px) * 0.02147);
+  }
+}
+
+@media (min-width: 1920px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc((1088px + 30px) * 0.02147);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc((520px + 30px) * 0.02147);
+  }
+}
+
+@media (max-width: 480px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc(100% * 0.02147);
+  }
+}
+
+@media (min-width: 1200px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc((608px + 30px) * 0.05367);
+  }
+}
+
+@media (min-width: 1440px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc((768px + 30px) * 0.05367);
+  }
+}
+
+@media (min-width: 1920px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc((1088px + 30px) * 0.05367);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc((520px + 30px) * 0.05367);
+  }
+}
+
+@media (max-width: 480px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc(100% * 0.05367);
+  }
+}
+
 #Rules #qa .qa-note {
   margin: 0 auto;
   text-align: left;
@@ -445,7 +524,8 @@ header.logo {
   }
 }
 
-#Rules .to-change-and-refund {
+#Rules .to-change-and-refund,
+#Rules .to-presale-rules {
   color: #EFC27B;
   text-decoration: underline;
   cursor: pointer;
@@ -453,7 +533,8 @@ header.logo {
   transition: color 0.3s;
 }
 
-#Rules .to-change-and-refund:hover {
+#Rules .to-change-and-refund:hover,
+#Rules .to-presale-rules:hover {
   color: #FFE0BA;
 }
 
@@ -461,7 +542,7 @@ header.logo {
   width: 500px;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: solid 1px #CCA46E;
+  border-bottom: solid 1px #E5AD5C;
 }
 
 @media (min-width: 1200px) {
@@ -529,11 +610,13 @@ header.logo {
   }
 }
 
-#Rules #qa-according .to-change-and-refund {
+#Rules #qa-according .to-change-and-refund,
+#Rules #qa-according .to-presale-rules {
   color: #FFE0BA;
 }
 
-#Rules #qa-according .to-change-and-refund:hover {
+#Rules #qa-according .to-change-and-refund:hover,
+#Rules #qa-according .to-presale-rules:hover {
   color: #EFC27B;
 }
 
@@ -673,7 +756,7 @@ header.logo {
   height: 100%;
   left: 0;
   top: 0;
-  background: #CCA46E;
+  background: #E5AD5C;
 }
 
 #Rules #qa-according .card-body.number-list p {
@@ -688,7 +771,7 @@ header.logo {
 #Rules #qa-according .card-header {
   padding: 0;
   border-style: solid;
-  border-color: #CCA46E;
+  border-color: #E5AD5C;
   border-width: 1px 0 0 0;
   border-radius: 0;
 }
@@ -993,7 +1076,7 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note tr {
-  border-color: #EFC27B #EFC27B #CCA46E #EFC27B;
+  border-color: #EFC27B #EFC27B #E5AD5C #EFC27B;
   border-style: solid;
   border-width: 0 2px 2px 2px;
 }
@@ -1018,7 +1101,7 @@ header.logo {
 
 #Rules #changeAndrefund #table-note th {
   background: #FFE0BA;
-  border-right: solid 1px #CCA46E;
+  border-right: solid 1px #E5AD5C;
   text-align: center;
   letter-spacing: 1.8px;
   color: #39351c;
@@ -1214,7 +1297,7 @@ header.logo {
   letter-spacing: 1.8px;
   line-height: 2;
   background-color: #281F1C;
-  border-right: solid 1px #CCA46E;
+  border-right: solid 1px #E5AD5C;
 }
 
 @media (min-width: 1200px) {
@@ -1282,7 +1365,7 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note td.highlight-td {
-  background: #CCA46E;
+  background: #E5AD5C;
   color: #FFFFFF;
   font-weight: 500;
 }

@@ -12,6 +12,15 @@ header.logo {
   background-color: $color-dark-brown;
 }
 
+.btn-link {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-yellow !important;
+  }
+}
+
 .anchor-wrapper {
   display: initial;
 }
@@ -19,7 +28,7 @@ header.logo {
 #rules-tab-switcher {
   position: sticky;
   position: -webkit-sticky;
-  border-color: #39351c;
+  border-color: $color-dark-brown;
   text-align: center;
   z-index: 9999;
   top: 120px;
@@ -42,7 +51,7 @@ header.logo {
     margin: 0 11.5px -1px;
     border-radius: 0;
     border-width: 0 0 1px 0;
-    border-color: #39351c;
+    border-color: $color-dark-brown;
     letter-spacing: 2.2px;
     transition: border-color 0.3s;
   }
@@ -123,6 +132,18 @@ header.logo {
   }
 
   #qa {
+    .qa-title-separator {
+      font-family: $font-serif;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: 2.4px;
+      color: $color-light-yellow;
+      border-top: solid 1px $color-dark-yellow;
+      @include baseCounter('margin-top', 24);
+      @include baseCounter('padding-top', 60);
+    }
+
     .qa-note {
       margin: 0 auto;
       text-align: left;
@@ -134,7 +155,8 @@ header.logo {
     }
   }
 
-  .to-change-and-refund {
+  .to-change-and-refund,
+  .to-presale-rules {
     color: $color-yellow;
     text-decoration: underline;
     cursor: pointer;
@@ -163,7 +185,8 @@ header.logo {
       }
     }
 
-    .to-change-and-refund {
+    .to-change-and-refund,
+    .to-presale-rules {
       color: $color-light-yellow;
 
       &:hover {

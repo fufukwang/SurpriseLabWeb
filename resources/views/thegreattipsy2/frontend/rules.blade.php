@@ -125,7 +125,7 @@
                                     <div class="card-header" id="qa1-header">
                                         <h6 data-toggle="collapse" data-target="#qa1" aria-expanded="false"
                                             aria-controls="qa1" class="collapsed d-flex align-items-center">
-                                            1. 請問《微醺大飯店The Great Tipsy》是怎樣的體驗呢？
+                                            1. 《微醺大飯店二：1980》是怎樣的體驗呢？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -133,13 +133,7 @@
                                     <div id="qa1" class="collapse" aria-labelledby="qa1-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            《微醺大飯店 The Great Tipsy》為驚喜製造 Surprise Lab. 團隊繼《無光晚餐 Dining In The Dark》與《table for ONE 一人餐桌》後，推出的第四項沉浸式體驗作品。
-                                            <br/><br/>
-                                            不同於以往，在《微醺大飯店 The Great Tipsy》中，驚喜製造打破了以食為中心的設計型式，改以「故事」為軸心，結合飯店場域、表演、調酒與食物設計，並將故事的發展方向交予參與者 - 「你所做的選擇，將決定你所看到的故事」，期待帶給參與者一場由外在感官刺激到內在心靈的體驗。
-                                            <br/><br/>
-                                            沉浸式體驗 Immersive Experience.
-                                            <br/>
-                                            唯有親身經歷，你才會知道這是怎麼一回事。
+                                            《微醺大飯店二：1980》為驚喜製造 Surprise Lab. 第六號沉浸式體驗作品。延續《微醺大飯店》以飯店作為演出場域、酒作為媒介，專業演員與之互動。
                                         </div>
                                     </div>
                                 </div>
@@ -148,19 +142,14 @@
                                     <div class="card-header" id="qa2-header">
                                         <h6 data-toggle="collapse" data-target="#qa2" aria-expanded="false"
                                             aria-controls="qa2" class="collapsed d-flex align-items-center">
-                                            2. 購票、劃位機制是怎麼進行呢？
+                                            2. 《微醺大飯店二：1980》和《微醺大飯店》故事上是有關聯的嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa2" class="collapse" aria-labelledby="qa2-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            微醺大飯店採先預購、後劃位之模式，流程如下：<br/>
-                                            -購票：首先，請先至我要訂房購買票卷。<br/>
-                                            -等待：依照購票的優先順序分三梯次，<br/>購買最終場07/17-08/25場次票券，將在07/03、07/10與07/17，依梯次及購買順序分別寄送劃位信件。<br/>
-                                            -劃位：劃位信內有劃位規則、劃位碼、劃位連結。僅有購票者可進入劃位。<br/>
-                                            -提醒：待體驗日期接近時，我們會寄送通知信，提醒您注意事項與地點。<br/>
-                                            -體驗：體驗當天，依照通知信件內指示，抵達指定地點。請務必準時。
+                                        沒有關連，為一新的故事與體驗，角色設定與時代背景皆不同，沒有看過2019年《微醺大飯店》也沒問題，不會有接續之問題。
                                         </div>
                                     </div>
                                 </div>
@@ -169,30 +158,35 @@
                                     <div class="card-header" id="qa3-header">
                                         <h6 data-toggle="collapse" data-target="#qa3" aria-expanded="false"
                                             aria-controls="qa3" class="collapsed d-flex align-items-center">
-                                            3. 同⼀個時段有多少參與者⼀起進⾏呢？
+                                            3. 《微醺大飯店二：1980》和《微醺大飯店》是原班人馬嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa3" class="collapse" aria-labelledby="qa3-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            同一時段，總共約24位參與者一起抵達，現場將拆成5-6人一組，以小組的方式分別探索五個不同的房間。隨著時間的推演，小組會順著故事脈落進入下一個房間。
+                                            製作團隊一樣是【驚喜製造】與【進港浪製作】，演員為重新徵選，最適合角色的方式選角，或有重複，但並非《微醺大飯店》同卡司演員。
                                         </div>
                                     </div>
+                                </div>
+
+                                <!--Section separator-->
+                                <div class="qa-title-separator">
+                                    關於預售劃位
                                 </div>
 
                                 <div class="card">
                                     <div class="card-header" id="qa4-header">
                                         <h6 data-toggle="collapse" data-target="#qa4" aria-expanded="false"
                                             aria-controls="qa4" class="collapsed d-flex align-items-center">
-                                            4. 請問體驗總⻑為多久呢？
+                                            4. 如何報名？規則是什麼呢？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa4" class="collapse" aria-labelledby="qa4-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            體驗總長約 90 分鐘。每個房間停留時間約為 15 分鐘，加上入場、體驗說明、房間轉換、離場等。
+                                            微醺大飯店採網路購票、線上劃位的方式進行，無販售現場票券。購票請至<a class="default-light btn-link" href="index.html#Ticket">我要訂房</a>購買，相關規則請參考<span class="to-presale-rules">預售規則</span>，內有詳細流程與說明。
                                         </div>
                                     </div>
                                 </div>
@@ -201,17 +195,15 @@
                                     <div class="card-header" id="qa5-header">
                                         <h6 data-toggle="collapse" data-target="#qa5" aria-expanded="false"
                                             aria-controls="qa5" class="collapsed d-flex align-items-center">
-                                            5. 請問午場、晚場開放時間為何呢？
+                                            5. 我有數個朋友想要一起來，請問要怎麼買票？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa5" class="collapse" aria-labelledby="qa5-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            平日晚場（19:00/20:30/22:00）<br/>
-                                            週末晚場（19:00/20:30/22:00）<br/>
-                                            週末午場（13:00/14:30/16:00）<br/><br/>
-                                            確切時段會依情況調整，以進入劃位網站時能選擇的時段為主。
+                                            相關數字問題，請依照單人票、雙人票、六人票的票種購買。<br/><br/>
+                                            例如：四個朋友想來，可以購買四張單人票或是兩張雙人票；七個朋友想來，可以購買七張單人票、三張雙人票＋一張單人票或是一張六人票＋一張單人票
                                         </div>
                                     </div>
                                 </div>
@@ -220,31 +212,35 @@
                                     <div class="card-header" id="qa6-header">
                                         <h6 data-toggle="collapse" data-target="#qa6" aria-expanded="false"
                                             aria-controls="qa6" class="collapsed d-flex align-items-center">
-                                            6. 請問不喝酒的人可以參加嗎？可將酒精改為無酒精飲料嗎？
+                                            6. 一次買多張票會更便宜嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa6" class="collapse" aria-labelledby="qa5-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            「微醺」為進入體驗的唯一鑰匙，過程中將提供數杯調酒，請評估自身狀況，選擇舒適的方式進入微醺狀態。微醺大飯店無法將調酒更換為無酒精飲品，不嗜酒者、因生理因素不便飲酒者可以酌量飲用，但唯有微醺，才能看見世界的全貌。
+                                            若有包場需求，請來信討論，若沒有買到36張票，將依照釋出的票種票價為最優惠。
                                         </div>
                                     </div>
+                                </div>
+
+                                <!--Section separator-->
+                                <div class="qa-title-separator">
+                                    關於體驗當下
                                 </div>
 
                                 <div class="card">
                                     <div class="card-header" id="qa7-header">
                                         <h6 data-toggle="collapse" data-target="#qa7" aria-expanded="false"
                                             aria-controls="qa7" class="collapsed d-flex align-items-center">
-                                            7. 請問餐點吃得飽嗎？
+                                            7. 同場次會有多少參與者一起進行呢？會被分組嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa7" class="collapse" aria-labelledby="qa7-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            體驗過程中將提供三道小點，可選擇葷食或蛋奶素。<br />
-                                            餐點僅為小點，不能視為正餐，建議體驗前先吃飽再來。本體驗重點為「微醺」狀態下的旅程，體驗、調酒為主，餐點為輔。
+                                            一場演出同時有 36 位參與者參與，將以 6 人為一組，分配到不同的路線，探索各個房間。不同的角色有不同的視角與詮釋，你看到的故事是什麼呢？
                                         </div>
                                     </div>
                                 </div>
@@ -253,14 +249,14 @@
                                     <div class="card-header" id="qa8-header">
                                         <h6 data-toggle="collapse" data-target="#qa8" aria-expanded="false"
                                             aria-controls="qa8" class="collapsed d-flex align-items-center">
-                                            8. 可以帶外食，或是自行攜帶酒來喝嗎？
+                                            8. 請問會與陌生參與者互動交流嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa8" class="collapse" aria-labelledby="qa8-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            現實的食物、酒飲，是無法進入微醺世界中的。場域中有額外可以用餐的餐廳、可以點酒的吧台，食物飲料不馬乎，當然也需要另外支付費用。可以在入場前後安排時間到訪看看。
+                                            廣結良緣的時間來了，演出的 120 分鐘你們是生命共同體，一起行動但不見得要有互動，依照自己舒服的方式進行即可，誰知道呢？說不定演出結束後，會再一起喝一杯。
                                         </div>
                                     </div>
                                 </div>
@@ -269,14 +265,14 @@
                                     <div class="card-header" id="qa9-header">
                                         <h6 data-toggle="collapse" data-target="#qa9" aria-expanded="false"
                                             aria-controls="qa9" class="collapsed d-flex align-items-center">
-                                            9. 請問會跟其他陌生參與者互動交流嗎？
+                                            9. 我和朋友一起報名，可以指定要在同一組嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa9" class="collapse" aria-labelledby="qa9-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            每一場次為24人，會在接待區集合一起出發，此階段的互動性較小，可能點頭之交那種互動。體驗開始後，會以每 5-6人為一組探索房間，此時的互動性較大，會一起參與房間中角色的故事，像是在同一包廂一起飲酒玩樂那樣。微醺大飯店中的角色們，會盡量輕鬆舒適的方式，引導各位一同參與。可以號招六位朋友一起獨樂樂，也可以兩兩併入新朋友認識一下，也可以隻身前往廣結良緣。
+                                            分組非常隨機，不敢隨便答應你，可能會在同組也有可能不會，唯一確定的是，超過 6 人以上的朋友一起來，絕對會是不同組。
                                         </div>
                                     </div>
                                 </div>
@@ -285,14 +281,16 @@
                                     <div class="card-header" id="qa10-header">
                                         <h6 data-toggle="collapse" data-target="#qa10" aria-expanded="false"
                                             aria-controls="qa10" class="collapsed d-flex align-items-center">
-                                            10. 衣服要怎麼穿比較好呢？
+                                            10. 一場演出多長呢？場次時間為何？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa10" class="collapse" aria-labelledby="qa10-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            建議穿著好走、好站、好穿脫的鞋子前來。
+                                            120 分鐘。場次時間如下：<br/>
+                                            平日：18:30-20:30｜20:30-22:30<br/>
+                                            週末：13:00-15:00｜15:00-17:00｜18:30-20:30｜20:30-22:30<br/>
                                         </div>
                                     </div>
                                 </div>
@@ -301,14 +299,14 @@
                                     <div class="card-header" id="qa11-header">
                                         <h6 data-toggle="collapse" data-target="#qa11" aria-expanded="false"
                                             aria-controls="qa11" class="collapsed d-flex align-items-center">
-                                            11. 可以寄物嗎？
+                                            11. 請問不喝酒的人可以參加嗎？有提供無酒精選項嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa11" class="collapse" aria-labelledby="qa11-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            建議各位輕便前來，攜帶錢包、鑰匙等物品即可，並將⼤包⼩包留在家中。若你還是帶了大包小包前來，為了讓體驗順暢舒適，並讓各位放鬆微醺，現場會請參與者將包包、⼤型⾐物（如厚重外套）寄放至接待區之寄物櫃。
+                                            「微醺」為進入體驗的唯一鑰匙，過程中將提供數杯調酒，請評估自身狀況，選擇舒適的方式進入微醺狀態。微醺大飯店無法將調酒更換為無酒精飲品，微醺，方使人更清醒。
                                         </div>
                                     </div>
                                 </div>
@@ -317,16 +315,15 @@
                                     <div class="card-header" id="qa12-header">
                                         <h6 data-toggle="collapse" data-target="#qa12" aria-expanded="false"
                                             aria-controls="qa12" class="collapsed d-flex align-items-center">
-                                            12. 如果遲到該怎麼辦？
+                                            12. 我酒量很好，怕喝不夠，可以帶酒來或調濃一點嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa12" class="collapse" aria-labelledby="qa12-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            記得要比訂位時間提早十五分鐘抵達（若訂位時間為19:00，請於18:45抵達）
-                                            <br/><br/>
-                                            本體驗採時段場次分批入場，遲到將無法入場，亦將不予退費（請想像是去看秀、看劇場表演，表演開始後將無法入場與退費）。錯過的體驗、表演、調酒與食物，無法回朔與外帶。為了自身權益，再次提醒，請務必準時抵達。
+                                            微醺大飯店提供的酒水，皆以普世價值來判斷，無法指定濃度，現場亦未提供開瓶服務，<br/>
+                                            平常血液習慣酒精通過的，建議可以來之前小小 pre-drink ，但請不要醉，會報警。
                                         </div>
                                     </div>
                                 </div>
@@ -335,14 +332,14 @@
                                     <div class="card-header" id="qa13-header">
                                         <h6 data-toggle="collapse" data-target="#qa13" aria-expanded="false"
                                             aria-controls="qa13" class="collapsed d-flex align-items-center">
-                                            13. 請問在劃位之後，可以更改場次嗎？
+                                            13. 我酒量不好，怕一杯就醉，怎麼辦？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa13" class="collapse" aria-labelledby="qa13-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            預售票券若於劃位後，有更改日期、場次之需求，請於體驗日七天前寄信微醺大飯店客服信箱（若你的訂位日為 01/08，請最晚於 01/01 (含) 來信提出更改需求，詳細規則可見「<span class="to-change-and-refund">更改、退費事項</span>」，微醺大飯店工作人員，將以當下尚有的空位日期為你更換。請注意，因體驗涉及到事先安排，你將無法於體驗前六天與當天臨時調動場次，建議將票卷轉讓給朋友、家人。若有不可抗力因素，請來信微醺大飯店客服信箱。
+                                            酒量不好不用硬乾，自在喝舒服喝即可，如果不勝酒力倒在旁邊，痾⋯⋯找不到人照顧你的狀況下，會報警。
                                         </div>
                                     </div>
                                 </div>
@@ -351,55 +348,103 @@
                                     <div class="card-header" id="qa14-header">
                                         <h6 data-toggle="collapse" data-target="#qa14" aria-expanded="false"
                                             aria-controls="qa14" class="collapsed d-flex align-items-center">
-                                            14. 請問有任何參與限制嗎？
+                                            14. 請問餐點吃得飽嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa14" class="collapse" aria-labelledby="qa14-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            體驗中會供應酒精，參與者須年滿18歲。並為顧及安全與體驗品質，不建議孕婦、酒精過敏者、容易發酒瘋的人參與。因生理因素不便飲酒者，可以現場依自身身體狀況酌量飲用。
+                                            如果是以正常成人的正常食量來說，絕對吃不飽；如果是以極端飲食控制者來說，也許會飽。建議依自己的食量，吃個七八分飽再來。
                                         </div>
                                     </div>
                                 </div>
 
-                                <!--div class="card">
+                                <div class="card">
                                     <div class="card-header" id="qa15-header">
                                         <h6 data-toggle="collapse" data-target="#qa15" aria-expanded="false"
                                             aria-controls="qa15" class="collapsed d-flex align-items-center">
-                                            15. 有沒有機會真的住在《微醺大飯店》之中呢？
+                                            15. 衣服要怎麼穿？有 dress code 嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa15" class="collapse" aria-labelledby="qa15-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            在體驗中，會透過一些公平的遊戲機制，抽選數組幸運兒，幸運兒將會獲得免費在微醺大飯店住宿一晚的機會。但注意，並不是所有房客皆能參與此遊戲，唯有用心體驗者才發現進入遊戲的方式，揭露彩蛋。而其相關規定、兌換方式，將由現場主持遊戲的工作人員說明。
+                                            待補。
                                         </div>
                                     </div>
-                                </div-->
+                                </div>
 
                                 <div class="card">
                                     <div class="card-header" id="qa16-header">
                                         <h6 data-toggle="collapse" data-target="#qa16" aria-expanded="false"
                                             aria-controls="qa16" class="collapsed d-flex align-items-center">
-                                            15. 體驗中要注意些什麼？
+                                            16. 現場可以寄物嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa16" class="collapse" aria-labelledby="qa16-header"
                                          data-parent="#qa-according">
                                         <div class="card-body number-list">
-                                            在沉浸式體驗中，請放膽探索、走動，但還是有些小事情要注意：
+                                            建議輕便前來，攜帶貴重物品即可，黃湯下肚，不見的東西會很多，帶越少越好，真心建議拜託拜託。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa17-header">
+                                        <h6 data-toggle="collapse" data-target="#qa17" aria-expanded="false"
+                                            aria-controls="qa17" class="collapsed d-flex align-items-center">
+                                            17. 如果會遲到怎麼辦？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa17" class="collapse" aria-labelledby="qa17-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
+                                            遲到將無法進場與退費，很嚴重，請務必留意。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa18-header">
+                                        <h6 data-toggle="collapse" data-target="#qa18" aria-expanded="false"
+                                            aria-controls="qa18" class="collapsed d-flex align-items-center">
+                                            18. 有任何參與限制嗎？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa18" class="collapse" aria-labelledby="qa18-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
                                             <p>
-                                                ① 歡迎參與者以不造成他人困擾為前提，在過程中盡情探索。若有特別不能做的事情，現場人員會先說明與制止。
+                                                ① 酒精不適合胚胎發育，準媽媽們請忍住想喝的衝動，做完月子後我們再見。
                                             </p>
                                             <p>
-                                                ② 請遵守現場⼈員之引導，若有不聽勸之⾏為發⽣，現場服務⼈員有權利終⽌您的體驗，請求離場，且不另⾏退費。
+                                                ② 未滿 18 歲的朋友，不是不讓你喝，是法律不允許，成年後我們再見。
                                             </p>
                                             <p>
-                                                ③ 若在體驗中身體不適，請隨時向現場工作人員反應。若因酒醉、嘔吐等因素造成設施損毀、環境髒亂，將會酌收修復費用、清潔費用，該費用與其核算方式將會另行通知。
+                                                ③ 演出過程中移動幅度很大，也有跨越樓層的可能，若需要輔助才能行動者不建議，若因行動問題導致體驗感受不佳，會非常可惜。
                                             </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa19-header">
+                                        <h6 data-toggle="collapse" data-target="#qa19" aria-expanded="false"
+                                            aria-controls="qa19" class="collapsed d-flex align-items-center">
+                                            19. 不是故意的，但不小心醉了怎麼辦？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa19" class="collapse" aria-labelledby="qa19-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
+                                            演出中如果沒有人能照顧你，工作人員第一要務是讓演出順利進行，有可能會把你放置在旁邊；演出結束如果找不到人能接你，會報警，請務必保持清醒。<br/><br/>
+                                            微醺，讓你更清醒，喝醉不會。
                                         </div>
                                     </div>
                                 </div>

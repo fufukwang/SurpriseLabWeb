@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("https://fonts.googleapis.com/css?family=Pinyon+Script");
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 html,
 body,
 header.logo {
@@ -53,7 +54,7 @@ button.btn-outline:disabled, button.btn-outline[disabled] {
 
 button.btn-outline:disabled:hover, button.btn-outline[disabled]:hover {
   color: #ccc38d;
-  border-color: #CCA46E;
+  border-color: #E5AD5C;
   background-color: transparent;
 }
 
@@ -665,7 +666,7 @@ form .btn-outline {
 
 .form-check label {
   padding: 12px;
-  border: solid 1px #CCA46E;
+  border: solid 1px #E5AD5C;
   border-radius: 6px;
   font-size: 16px;
   line-height: 1;
@@ -750,7 +751,7 @@ form .btn-outline {
   line-height: 2.25;
   letter-spacing: 1.6px;
   padding: 5px 17px;
-  border: solid 1px #CCA46E;
+  border: solid 1px #E5AD5C;
   border-radius: 6px;
   color: #EFC27B;
   text-align: left;
@@ -759,7 +760,7 @@ form .btn-outline {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -868,7 +869,7 @@ form .btn-outline {
   padding: 10px 17px;
   border-radius: 6px;
   background: transparent;
-  border: solid 1px #CCA46E;
+  border: solid 1px #E5AD5C;
   color: #EFC27B;
   cursor: pointer;
   z-index: 10;
@@ -877,19 +878,19 @@ form .btn-outline {
 }
 
 .with-icon input::-webkit-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 .with-icon input:-ms-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 .with-icon input::-ms-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 .with-icon input::placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 .with-icon input:focus {
@@ -1006,15 +1007,15 @@ form .btn-outline {
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-today::before {
   opacity: 1;
-  border-color: #CCA46E;
+  border-color: #E5AD5C;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable a, .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable span {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day a {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
@@ -1024,7 +1025,7 @@ form .btn-outline {
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {
@@ -1131,7 +1132,7 @@ form .btn-outline {
   width: calc(100% / 3);
   padding: 16px 0;
   border-style: solid;
-  border-color: #CCA46E;
+  border-color: #E5AD5C;
   border-width: 0 0 1px 1px;
 }
 
@@ -1323,7 +1324,7 @@ fieldset.step-4 .form-group input,
 fieldset.step-4 .form-group textarea {
   width: 100%;
   border-radius: 6px;
-  border: solid 1px #CCA46E;
+  border: solid 1px #E5AD5C;
   background-color: transparent;
   padding: 12px 17px;
   font-size: 16px;
@@ -1335,22 +1336,22 @@ fieldset.step-4 .form-group textarea {
 
 fieldset.step-4 .form-group input::-webkit-input-placeholder,
 fieldset.step-4 .form-group textarea::-webkit-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 fieldset.step-4 .form-group input:-ms-input-placeholder,
 fieldset.step-4 .form-group textarea:-ms-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 fieldset.step-4 .form-group input::-ms-input-placeholder,
 fieldset.step-4 .form-group textarea::-ms-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 fieldset.step-4 .form-group input::placeholder,
 fieldset.step-4 .form-group textarea::placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 fieldset.step-4 .form-group input:-webkit-autofill,
@@ -1481,7 +1482,7 @@ fieldset .coupon-code td {
 fieldset .coupon-code input {
   margin-right: 20px;
   border-radius: 6px;
-  border: solid 1px #CCA46E;
+  border: solid 1px #E5AD5C;
   background-color: transparent;
   padding: 12px 17px;
   font-size: 16px;
@@ -1493,19 +1494,19 @@ fieldset .coupon-code input {
 }
 
 fieldset .coupon-code input::-webkit-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 fieldset .coupon-code input:-ms-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 fieldset .coupon-code input::-ms-input-placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 fieldset .coupon-code input::placeholder {
-  color: #CCA46E;
+  color: #E5AD5C;
 }
 
 fieldset .coupon-code input:focus {
@@ -1758,7 +1759,7 @@ fieldset .prefix-step .prefix:first-child {
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.8px;
-  background-color: #CCA46E;
+  background-color: #E5AD5C;
   color: #FFE0BA;
   opacity: 1;
   text-shadow: none;
