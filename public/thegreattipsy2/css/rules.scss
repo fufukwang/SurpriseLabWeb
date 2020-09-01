@@ -307,6 +307,26 @@ header.logo {
   }
 
   #changeAndrefund {
+    ul {
+      width: 535px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    p {
+      width: 535px;
+      max-width: 100%;
+      margin: 0 auto;
+      line-height: 2;
+      text-align: left;
+
+      &.category-title {
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1.8px;
+      }
+    }
+
     .pre-note {
       width: 495px;
       max-width: 100%;

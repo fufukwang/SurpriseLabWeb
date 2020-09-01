@@ -587,54 +587,43 @@
 
                         <div class="tab-content-inner">
                             <p class="pre-note">
-                                預售票券若需更改體驗日期、取消訂位、退費，<br/>
-                                請直接來信至微醺大飯店客服信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/>
-                                由微醺管家為你處理。
+                                預售票券若需更改體驗日期、取消退費，<br/>
+                                請提供相應的資料，來信微醺大飯店專屬信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/>
+                                由◯◯◯◯為你處理。
                                 <br/><br/>
-                                為確保你的權益，請根據你的需求，詳細閱讀以下規則：
+                                為確保你的權益，請根據需求，詳閱以下規則：
                             </p>
 
                             <h5 class="sub-title highlight">
                                 更改日期、時段
                             </h5>
                             <ul>
-                                <li>
-                                    若需更改訂位⽇期，請於體驗⽇七天前 ，來信告知。如：欲更改 01/08 的訂位，請於 01/01 (含) 前來信告知，我們將為您調整。
-                                </li>
-                                <li>
-                                    請注意，你能夠更改的日期與時段，將與你預購時所購買的票卷種類有關。若你購買「時間有點限制票」，則只能更改至平日晚上時段。購買「暢行無阻票」、「四人沈醉票」，則可選擇所有可更改的日期更改。最終會以剩餘能更改的日期與時段為主，會由客服人員提供您可以更改的日期。
-                                </li>
-                                <li>
-                                    若需更改日期，團隊將盡力協助。若因訂位狀況踴躍，導致無法更改座位至理想時段，還請見諒。建議在劃位前先確認預劃位時段自己與夥伴們的行程，減少未來更改座位的可能性。
-                                </li>
-                                <li>
-                                    若你購買「暢行無阻票」且更改至平日晚上或是週末中午的座位，無論是自身要求，或是釋出可更換的時段只剩下平日晚上或是週末中午可以選擇，皆無法改成「時間有點限制票」，並且無法退差額。
-                                </li>
-                                <li>
-                                    體驗日六天前與當⽇恕不提供⽇期更改，建議來賓可將訂位轉讓給朋友、家⼈。
-                                </li>
+                                <li>演出前七天（包含演出當日）不提供日期更改，建議將訂位轉讓給親友。</li>
+                                <li>若需更改日期、時段，請於體驗日七天前來信告知，附上「劃位序號」與「訂位信箱」。<br/>如：欲更改 01/08 的訂位，最晚請於 01/01（含）前來信。</li>
+                                <li>可更改之日期，已屆時尚有的日期與時段為準。劃位前請先確認相關親友的行程，減少更改座位的可能性。</li>
+                                <li>一個序號僅有一次更改機會，請務必謹慎使用。</li>
                             </ul>
 
                             <h5 class="sub-title highlight cancel-order">
                                 取消訂位與退費
                             </h5>
                             <ul>
-                                <li>
-                                    在體驗當⽇七天前，來信取消訂位，扣除⾦流系統⼿續費 5% 後，將獲全額退費。如：若預訂 01/08 的體驗，於 01/01 (含) 前寄信或來電取消訂位，可獲全額退費。
-                                </li>
-                                <li>
-                                    在⽤餐當⽇六天前，來信取消訂位，僅將退回 50% 之費⽤。建議來賓可以將訂位轉讓給朋友家⼈。如：若預訂 01/08 的體驗，於 01/02 至 01/07 寄信取消訂位，可退回 50% 之費用。
-                                </li>
-                                <li>
-                                    體驗當日無法取消與退費，請務必準時到場。若會遲到請來電告知（專屬手機請見行前簡訊，將於當日寄出）。
-                                </li>
-                                <li>
-                                    本體驗採時段場次分批入場，遲到將無法入場。錯過的體驗、表演、調酒與食物，無法回朔與外帶。為了您的權益，請務必準時抵達。
-                                </li>
+                                <li>演出當日不接受改期，若取消亦無法退費，接受將票券轉讓給親友。<br/>來信取消申請日期以正常工作下班時間 18:00 為區分。<br/>如：於 01/15 18:00 前來信，屬於 01/15 之申請；若於當日 18:00 之後來信，則屬於 01/16 之申請。</li>
+                                <li>演出準時開始，遲到無法入場與退費，為了你的權益，請務必準時抵達。</li>
+                                <li>演出六天內（不包含演出當日）來信申請，僅退 50% 費用。建議將訂位轉讓給親友。</li>
+                                <li>演出七天前（包含演出當日）來信申請，將扣除金流手續費 10% 後退費。<br/>如：01/08 的訂位，最晚請於 01/01（含）前來信。</li>
+                                <li>購買預售票，寄送劃位序號的前一日申請退費，將不扣除手續費全額退費。</li>
                             </ul>
 
+                            <h5 class="sub-title highlight">
+                                不可抗力因素之更改訂位及退費辦法
+                            </h5>
+                            <p>
+                                若因天災、國際病毒等不可抗拒之因素，由政府、該縣市主管機關發布停止上班、停演之訊息，微醺大飯店也將暫停演出，並協助改期或全額退費的服務。
+                            </p>
+
                             <h5 class="sub-title highlight change-seat">
-                                更改座位、取消與退費規則一覽表
+                                更改訂位、取消與退費規則統整表
                             </h5>
 
                             <table id="table-note">
@@ -656,18 +645,17 @@
 
                                 <tr>
                                     <td class="highlight-td">
-                                        訂位日
+                                        演出當天
                                     </td>
                                     <td>
                                         01/08
                                     </td>
                                     <td class="highlight-td">
-                                        訂位日當天<br class="d-block d-sm-none"/>無法退費
+                                        無法退費
                                     </td>
                                     <td rowspan="4">
-                                        不提供日期<br class="d-block d-sm-none"/>更改，來賓<br class="d-block d-sm-none"/>可
-                                        <br class="d-none d-sm-block"/>
-                                        將訂位轉<br class="d-block d-sm-none"/>讓給朋友、<br class="d-block d-sm-none"/>家人
+                                        不提供改期<br/>
+                                        建議將訂位轉讓給親友
                                     </td>
                                 </tr>
                                 <tr class="normal-border">
@@ -678,7 +666,7 @@
                                         01/07
                                     </td>
                                     <td rowspan="3">
-                                        退回 50% 之<br class="d-block d-sm-none"/>費用
+                                        僅退 50% 費用
                                     </td>
                                 </tr>
                                 <tr class="normal-border">
@@ -697,10 +685,10 @@
                                     <td>前七日</td>
                                     <td>01/01</td>
                                     <td rowspan="2">
-                                        扣除金流系<br class="d-block d-sm-none"/>統手續費 5% <br class="d-none d-sm-block"/>後<span class="d-none d-sm-inline-block">，</span><br class="d-block d-sm-none"/>可獲全額退費
+                                        會扣除金流手續費10%
                                     </td>
                                     <td rowspan="2">
-                                        可來信<br class="d-block d-sm-none"/>更改日期
+                                        可來信更改日期
                                     </td>
                                 </tr>
                                 <tr class="light-bg">
@@ -713,37 +701,34 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <div class="table-note-text">＊上述規則僅適用於預售票券</div>
+                            <div class="table-note-text">＊上述規則僅適用於預售票券，若購買其他票券，以購買時的規則為準。</div>
 
                             <h5 class="sub-title highlight transfer-ticket">
-                                票卷轉讓
+                                轉讓、改期、退費流程說明
                             </h5>
+
+                            <p class="category-title text-center">票券轉讓</p>
                             <p>
-                                可⾃⾏轉讓票卷。若轉讓票卷⽽需更改葷素或有其他飲⻝習慣，請於盡快來信⾄<br/>
-                                <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a> 信箱。
+                                來信請提供訂位者訂位相關資訊，與被轉讓者姓名、信箱、手機號碼。
                             </p>
 
-                            <h5 class="sub-title highlight refund-process">
-                                退費流程
-                            </h5>
-                            <p>
-                                確認將予以退費後，微醺管家將於七個⼯作天內向⾦融機構提出申請，惟實際退費⽇期仍須依發卡銀⾏之規定與合約內容⽽定。
-                            </p>
+                            <p class="category-title"><br/>改期流程</p>
+                            <ul>
+                                <li>提供訂位姓名、訂位信箱、劃位序號等資訊。</li>
+                                <li>等待回信，◯◯◯◯將為你取消原先訂位與恢復序號資格，三日內可重新劃位。</li>
+                            </ul>
 
-                            <h5 class="sub-title highlight majeure-factor">
-                                不可抗⼒因素之更改訂位及退費辦法
-                            </h5>
-                            <p>
-                                若因天災等不可抗拒⼒之因素，由主管機關發布停⽌上班上課，微醺大飯店也將會暫停營業⼄⽇。
-                                <br/>
-                                當然，我們會協助你更改訂位⽇期，或是辦理全額退費，手續費也會由微醺大飯店自行吸收。
-                            </p>
+                            <p class="category-title"><br/>退費流程</p>
+                            <ul>
+                                <li>提供預售票之訂單編號與訂位姓名、訂位信箱。</li>
+                                <li>確認退費後，請等待七至十個工作天後向金融機構確認，實際退費日期須視使用的發卡銀行規定為準。</li>
+                            </ul>
 
                             <h5 class="sub-title highlight transaction-system">
-                                線上⾦流系統
+                                線上金流系統
                             </h5>
                             <p>
-                                微醺⼤飯店⽀線上付款透過⾙殼集器、智付通第三⽅平台⽀付
+                                《微醺大飯店2：1980》之線上付款透過貝殼集器、藍新金流第三方平台支付
                             </p>
 
                         </div>
