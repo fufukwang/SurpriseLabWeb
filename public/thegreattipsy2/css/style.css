@@ -1,6 +1,6 @@
 @import url("iconfont.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 @media (min-width: 1200px) {
@@ -174,7 +174,7 @@ h4 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   line-height: 30px;
-  letter-spacing: 3.2px;
+  letter-spacing: 0.8px;
   text-align: center;
   color: #FFE0BA;
   display: -webkit-inline-box;
@@ -516,7 +516,7 @@ p {
 .anchor-wrapper li a {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 3.2px;
+  letter-spacing: 0.8px;
 }
 
 .anchor-wrapper li::after {
@@ -979,7 +979,7 @@ header.logo .hamburger .current-menu {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   line-height: 1;
-  letter-spacing: 2.8px;
+  letter-spacing: 0.8px;
   padding-right: 12px;
 }
 
@@ -2241,8 +2241,8 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .experience .exp-number {
-  font-family: "Pinyon Script", cursive, sans-serif;
-  font-size: 72px;
+  font-family: "Great Vibes", cursive, sans-serif;
+  font-size: 100px;
   line-height: 1.25;
   letter-spacing: 7.2px;
   color: #E8AB31;
@@ -3036,7 +3036,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 36px;
   letter-spacing: 3.6px;
   padding: 0 10px;
-  font-family: "Pinyon Script", cursive, sans-serif;
+  font-family: "Great Vibes", cursive, sans-serif;
   color: #FFE0BA;
 }
 
@@ -3875,16 +3875,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   #Contact .contact-sec::before {
     display: none;
   }
-  #Contact .contact-sec:first-child {
-    padding-bottom: 30px;
-    margin-bottom: 36px;
-    border-bottom: solid 1px #E5AD5C;
-  }
   #Contact .contact-sec.middle {
     margin-top: 0;
     padding-top: 0;
   }
-  #Contact .contact-sec:last-child {
+  #Contact .contact-sec + .contact-sec {
     padding-top: 30px;
     margin-top: 36px;
     border-top: solid 1px #E5AD5C;

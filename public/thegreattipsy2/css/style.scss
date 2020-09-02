@@ -109,7 +109,7 @@ h4 {
   font-family: $font-montserrat;
   text-transform: uppercase;
   line-height: 30px;
-  letter-spacing: 3.2px;
+  letter-spacing: 0.8px;
   text-align: center;
   color: $color-light-yellow;
   display: inline-flex;
@@ -425,7 +425,7 @@ p {
     a {
       font-family: $font-montserrat;
       text-transform: uppercase;
-      letter-spacing: 3.2px;
+      letter-spacing: 0.8px;
     }
 
     &::after {
@@ -759,7 +759,7 @@ header.logo {
       font-family: $font-montserrat;
       text-transform: uppercase;
       line-height: 1;
-      letter-spacing: 2.8px;
+      letter-spacing: 0.8px;
       padding-right: 12px;
     }
 
@@ -1140,8 +1140,8 @@ header.logo {
     }
 
     .exp-number {
-      font-family: $font-pinyonScript;
-      font-size: 72px;
+      font-family: $font-greatVibes;
+      font-size: 100px;
       line-height: 1.25;
       letter-spacing: 7.2px;
       color: $color-mango;
@@ -1499,7 +1499,7 @@ header.logo {
         font-size: 36px;
         letter-spacing: 3.6px;
         padding: 0 10px;
-        font-family: $font-pinyonScript;
+        font-family: $font-greatVibes;
         color: $color-light-yellow;
       }
     }
@@ -1828,18 +1828,12 @@ header.logo {
         display: none;
       }
 
-      &:first-child {
-        padding-bottom: 30px;
-        margin-bottom: 36px;
-        border-bottom: solid 1px $color-dark-yellow;
-      }
-
       &.middle {
         margin-top: 0;
         padding-top: 0;
       }
 
-      &:last-child {
+      & + .contact-sec {
         padding-top: 30px;
         margin-top: 36px;
         border-top: solid 1px $color-dark-yellow;

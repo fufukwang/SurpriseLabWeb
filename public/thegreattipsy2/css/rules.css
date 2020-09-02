@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 body {
@@ -608,6 +608,11 @@ header.logo {
   #Rules #qa-according .card:not(:first-child) .card-header {
     margin-top: calc(100% * 0.02147);
   }
+}
+
+#Rules #qa-according .card ~ .card:nth-child(n+12) .card-header h6 {
+  padding-left: 29px;
+  text-indent: -29px;
 }
 
 #Rules #qa-according .to-change-and-refund,
@@ -1583,6 +1588,12 @@ header.logo {
   #Rules ul li:not(:first-child) {
     padding-top: 20px;
   }
+  #Rules #qa .qa-title-separator {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    line-height: 1.67;
+    padding-top: 42px;
+  }
   #Rules #qa .qa-note {
     padding: 20px 0 0;
   }
@@ -1591,12 +1602,17 @@ header.logo {
   }
   #Rules #qa-according .card-header h6 {
     padding: 12px 40px 0 18px;
+    text-indent: -18px;
     line-height: 2;
     font-size: 14px;
     letter-spacing: 1.4px;
   }
   #Rules #qa-according .card-header h6::after {
     height: 12px;
+  }
+  #Rules #qa-according .card ~ .card:nth-child(n+12) .card-header h6 {
+    padding-left: 28px;
+    text-indent: -28px;
   }
   #Rules #qa-according .card:not(:first-child) .card-header {
     margin-top: 12px;

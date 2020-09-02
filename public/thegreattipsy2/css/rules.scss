@@ -183,6 +183,15 @@ header.logo {
           @include baseCounter('margin-top', 24);
         }
       }
+
+      & ~ .card:nth-child(n+12) {
+        .card-header {    
+          h6 {
+            padding-left: 29px;
+            text-indent: -29px;
+          }
+        }
+      }
     }
 
     .to-change-and-refund,
@@ -543,6 +552,13 @@ header.logo {
     }
 
     #qa {
+      .qa-title-separator {
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        line-height: 1.67;
+        padding-top: 42px;
+      }
+      
       .qa-note {
         padding: 20px 0 0;
       }
@@ -556,12 +572,22 @@ header.logo {
       .card-header {
         h6 {
           padding: 12px 40px 0 18px;
+          text-indent: -18px;
           line-height: 2;
           font-size: 14px;
           letter-spacing: 1.4px;
 
           &::after {
             height: 12px;
+          }
+        }
+      }
+
+      .card ~ .card:nth-child(n+12) {
+        .card-header {    
+          h6 {
+            padding-left: 28px;
+            text-indent: -28px;
           }
         }
       }
