@@ -142,9 +142,10 @@
         <div class="container">
             <h2>Lobby</h2>
             <p>
-                「你好，我是微醺管家 Mr Tipsy. 歡迎來到<br/>
-                《微醺大飯店 The Great Tipsy》<br/>
-                請問有什麼我能協助你的呢？」
+                Ladies and gentlemen<br/>
+                《微醺大飯店：1980’s 》即將重新開幕<br/>
+                我一直在等待你的來訪<br/><br/>
+                讓我來為你帶路吧？
             </p>
             <div class="row feature-wrapper justify-content-between no-gutters">
                 <div class="col-auto d-flex justify-content-center flex-column">
@@ -170,21 +171,21 @@
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Rules">
-                            <img draggable="false" src="img/icon-rules.svg" alt="房客規則">
+                            <img draggable="false" src="img/icon-rules.svg" alt="客房規則">
                         </a>
                     </div>
                     <div class="feature-btn">
-                        <a class="btn-outline btn-outline-small smoothScroll" href="#Rules">房客規則</a>
+                        <a class="btn-outline btn-outline-small smoothScroll" href="#Rules">客房規則</a>
                     </div>
                 </div>
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Contact">
-                            <img draggable="false" src="img/icon-contact.svg" alt="聯絡管家">
+                            <img draggable="false" src="img/icon-contact.svg" alt="聯絡我們">
                         </a>
                     </div>
                     <div class="feature-btn">
-                        <a class="btn-outline btn-outline-small smoothScroll" href="#Contact">聯絡管家</a>
+                        <a class="btn-outline btn-outline-small smoothScroll" href="#Contact">聯絡我們</a>
                     </div>
                 </div>
             </div>
@@ -235,27 +236,31 @@
                     </h4>
                 </div>
                 <p>
-                    微醺，介在清醒與酒醉之間<br/>
-                    唯有微醺，才能看見故事的全貌<br/><br/>
-                    <span class="highlight">喝個幾杯，在所難免</span>
+                    現在入住的你<br/>
+                    將收到我的邀請<br/>
+                    參加一場私人開幕酒會<br/><br/>
+                    <span class="highlight">
+                        請喝下這杯迎賓酒<br/>
+                        唯有微醺，才能看見故事的全貌
+                    </span>
                 </p>
             </div>
         </section>
 
         <section class="fullpage" id="space" data-aos="fade">
             <div class="container">
-                <h3>選擇</h3>
+                <h3>邂逅</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>YOUR CHOICES</span>
+                        <span>OUR GUEST</span>
                     </h4>
                 </div>
                 <p>
-                    在微醺大飯店中<br/>
-                    所有事件都由選擇所構成<br/><br/>
-                    時間不可逆，你無法回頭更改<br/>
-                    請謹慎選擇<br/><br/>
-                    <span class="highlight">你的選擇，將決定你看到的故事</span>
+                    你將遇見我所邀請的賓客<br/>
+                    他們似乎正在尋找些什麼<br/><br/>
+                    當他們向你走來<br/>
+                    請務必留意…<br/><br/>
+                    <span class="highlight">你的回應，將決定你所看見的故事</span>
                 </p>
             </div>
             <div class="space-img">
@@ -265,18 +270,18 @@
 
         <section class="fullpage" id="character" data-aos="fade">
             <div class="container">
-                <h3>房客</h3>
+                <h3>秘密</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>OUR GUESTS</span>
+                        <span>CLUE</span>
                     </h4>
                 </div>
                 <p>
-                    在這，有許多扇門<br/>
-                    每扇門後，都住著一位房客<br/><br/>
-                    有些人離不開、有些人不想離開<br/>
-                    有些人一直在等著一個人帶著她離開<br/><br/>
-                    <span class="highlight">你將一一拜訪久居在此的房客<br/>聽著他們訴說一段，與你我有關的故事</span>
+                    賓客們將帶你參觀我們的客房<br/>
+                    每一間都是全新裝潢<br/><br/>
+                    房裡若出現時間留下的痕跡<br/>
+                    請不必在意<br/><br/>
+                    <span class="highlight">每間飯店本來就都有些秘密</span>
                 </p>
             </div>
             <div class="character-img">
@@ -289,18 +294,18 @@
                 <h3>調酒</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>cocktail</span>
+                        <span>COCKTAIL</span>
                     </h4>
                 </div>
                 <p>
-                    這裡有著長年流傳的三份酒譜<br/>
+                    我一直珍藏著三份酒譜<br/>
                     它們總能神奇地讓人微醺<br/><br/>
-                    第一杯能讓你尋得入口<br/>
-                    第二杯能讓你想起過去<br/>
+                    第一杯能讓你離開今天<br/>
+                    第二杯能讓你來到過去<br/>
                     第三杯能讓你回到當下<br/><br/>
-                    你也會嘗試三種房客為你準備的小點<br/>
-                    份量不多，但都是房客們的心意<br/><br/>
-                    <span class="highlight">準備好接受我們的款待了嗎？</span>
+                    你也會嚐到為你準備的小點<br/>
+                    份量不多，但都是我的心意<br/><br/>
+                    <span class="highlight">準備好接受款待了嗎？</span>
                 </p>
             </div>
         </section>
@@ -310,15 +315,15 @@
                 <h3>退房</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>check out</span>
+                        <span>CHECK OUT</span>
                     </h4>
                 </div>
                 <p>
                     為了保護你不會迷失在微醺之中<br/>
-                    每位訪客的入住時間為九十分鐘<br/><br/>
+                    每位訪客的入住時間為一百二十分鐘<br/><br/>
                     <span class="highlight">
-                        「來過的人，都會想起一個人」<br/>
-                        「你，會想起誰呢？」<br/><br/>
+                        「來過的人，都會想起一段時光」<br/>
+                        「你，會想起哪一天呢？」<br/><br/>
                     </span>
                     願你我在這趟旅程之後<br/>
                     都能因微醺，而更清醒
