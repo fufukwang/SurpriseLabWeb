@@ -436,8 +436,8 @@
                 <div class="type-item type-matinee">
                     <a href="https://surpriselab.backme.tw/checkout/1056/6558?locale=zh-TW
                 " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="有點限制票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="有點限制票">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="單人自在票">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="單人自在票">
                         <p class="ticket-state timeLimit">
                             限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                 class="highlight rest-ticket">XXX</span> 張
@@ -447,8 +447,8 @@
                 <div class="type-item type-great-tipsy sold">
                     <a href="https://surpriselab.backme.tw/checkout/1056/6559?locale=zh-TW
                 " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1_soldout.png" alt="暢行無阻票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_soldout_mobile.png" alt="暢行無阻票">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_0_soldout.png" alt="驚喜老客人限定">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_0_soldout_mobile.png" alt="驚喜老客人限定">
                         <p class="ticket-state timeLimit">
                             已售完
                         </p>
@@ -457,8 +457,8 @@
                 <div class="type-item type-group">
                     <a href="https://surpriselab.backme.tw/checkout/1056/6560?locale=zh-TW
                     " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="六人共享票">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="六人共享票">
                         <p class="ticket-state d-none d-sm-block">
                             已售完<!--
                             四人以上未滿八人者<br/>
