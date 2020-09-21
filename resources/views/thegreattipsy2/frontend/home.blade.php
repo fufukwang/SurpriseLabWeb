@@ -6,8 +6,8 @@
     <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
     <meta name="description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="微醺大飯店：1980’s"/>
-    <meta property="og:site_name" content="微醺大飯店：1980’s"/>
+    <meta property="og:title" content="微醺大飯店：1980s"/>
+    <meta property="og:site_name" content="微醺大飯店：1980s"/>
     <meta property="og:description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。"/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy2"/>
     <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy2/img/opengraph.png?v=0.1"/>
@@ -15,7 +15,7 @@
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>微醺大飯店：1980’s</title>
+    <title>微醺大飯店：1980s</title>
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -88,7 +88,7 @@
                 <img src="img/illustration_home_title.png" class="slide-item__image">
             </div>
         </div>
-        <h1 class="gold-text">微醺大飯店</h1>
+        <h1 class="gold-text">微醺大飯店：1980s</h1>
         <div class="cta-button">
             <a class="btn-outline smoothScroll" href="#Lobby">
                 Scroll for ENTER
@@ -142,10 +142,9 @@
         <div class="container">
             <h2>Lobby</h2>
             <p>
-                Ladies and gentlemen<br/>
-                《微醺大飯店：1980’s 》即將重新開幕<br/>
-                我一直在等待你的來訪<br/><br/>
-                讓我來為你帶路吧？
+                《微醺大飯店：1980s 》即將重新開張，<br/>
+                一場開幕酒會正等著你的來訪。<br/><br/>
+                準備好赴約了嗎？
             </p>
             <div class="row feature-wrapper justify-content-between no-gutters">
                 <div class="col-auto d-flex justify-content-center flex-column">
@@ -161,31 +160,31 @@
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Ticket">
-                            <img draggable="false" src="img/icon-ticket.svg" alt="我要訂房">
+                            <img draggable="false" src="img/icon-ticket.svg" alt="我要赴約">
                         </a>
                     </div>
                     <div class="feature-btn">
-                        <a class="btn-outline btn-outline-small smoothScroll" href="#Ticket">我要訂房</a>
+                        <a class="btn-outline btn-outline-small smoothScroll" href="#Ticket">我要赴約</a>
                     </div>
                 </div>
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Rules">
-                            <img draggable="false" src="img/icon-rules.svg" alt="客房規則">
+                            <img draggable="false" src="img/icon-rules.svg" alt="飯店規則">
                         </a>
                     </div>
                     <div class="feature-btn">
-                        <a class="btn-outline btn-outline-small smoothScroll" href="#Rules">客房規則</a>
+                        <a class="btn-outline btn-outline-small smoothScroll" href="#Rules">飯店規則</a>
                     </div>
                 </div>
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Contact">
-                            <img draggable="false" src="img/icon-contact.svg" alt="聯絡我們">
+                            <img draggable="false" src="img/icon-contact.svg" alt="聯絡飯店">
                         </a>
                     </div>
                     <div class="feature-btn">
-                        <a class="btn-outline btn-outline-small smoothScroll" href="#Contact">聯絡我們</a>
+                        <a class="btn-outline btn-outline-small smoothScroll" href="#Contact">聯絡飯店</a>
                     </div>
                 </div>
             </div>
@@ -229,20 +228,18 @@
         <h2>About</h2>
         <section class="fullpage" id="tipsy" data-aos="fade">
             <div class="container">
-                <h3>微醺</h3>
+                <h3>邀請</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>tipsy</span>
+                        <span>INVITATION</span>
                     </h4>
                 </div>
                 <p>
-                    現在入住的你<br/>
+                    選擇赴約的人<br/>
                     將收到我的邀請<br/>
-                    參加一場私人開幕酒會<br/><br/>
-                    <span class="highlight">
-                        請喝下這杯迎賓酒<br/>
-                        唯有微醺，才能看見故事的全貌
-                    </span>
+                    <span class="highlight">參加一場私人開幕酒會<br/><br/></span>
+                    請穿上衣櫃裡最好的衣裳<br/>
+                    <span class="highlight">你絕對無法想像<br/>我有多麽期待見到你</span>
                 </p>
             </div>
         </section>
@@ -252,14 +249,14 @@
                 <h3>邂逅</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>OUR GUEST</span>
+                        <span>GUEST</span>
                     </h4>
                 </div>
                 <p>
-                    你將遇見我所邀請的賓客<br/>
-                    他們似乎正在尋找些什麼<br/><br/>
+                    你會遇見我所邀請的賓客<br/>
+                    其中幾位更是我費心挑選<br/><br/>
+                    <span class="highlight">留意那些四處張望的臉孔<br/>和突然冒出的身影<br/><br/></span>
                     當他們向你走來<br/>
-                    請務必留意…<br/><br/>
                     <span class="highlight">你的回應，將決定你所看見的故事</span>
                 </p>
             </div>
@@ -273,15 +270,17 @@
                 <h3>秘密</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>CLUE</span>
+                        <span>TIME</span>
                     </h4>
                 </div>
                 <p>
-                    賓客們將帶你參觀我們的客房<br/>
-                    每一間都是全新裝潢<br/><br/>
-                    房裡若出現時間留下的痕跡<br/>
-                    請不必在意<br/><br/>
-                    <span class="highlight">每間飯店本來就都有些秘密</span>
+                    這裡的所有客房<br/>
+                    都只為今日的你開啟<br/><br/>
+                    當時間的指針與記憶重疊<br/>
+                    賓客們將在你的眼前<br/>
+                    傾吐無人知曉的祕密<br/><br/>
+                    <span class="highlight">小心反覆出現的日期<br/></span>
+                    嘿嘿嘿嘿嘿嘿嘿
                 </p>
             </div>
             <div class="character-img">
@@ -291,40 +290,38 @@
 
         <section class="fullpage" id="food" data-aos="fade">
             <div class="container">
-                <h3>調酒</h3>
+                <h3>微醺</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>COCKTAIL</span>
+                        <span>TIPSY</span>
                     </h4>
                 </div>
                 <p>
-                    我一直珍藏著三份酒譜<br/>
-                    它們總能神奇地讓人微醺<br/><br/>
-                    第一杯能讓你離開今天<br/>
-                    第二杯能讓你來到過去<br/>
-                    第三杯能讓你回到當下<br/><br/>
-                    你也會嚐到為你準備的小點<br/>
-                    份量不多，但都是我的心意<br/><br/>
-                    <span class="highlight">準備好接受款待了嗎？</span>
+                    在這裡，小酌是必須<br/>
+                    只要小心別遺落重要的記憶<br/><br/>
+                    請喝下我為你準備的迎賓酒<br/>
+                    如果過去在眼前變得清晰<br/>
+                    也不必抗拒<br/><br/>
+                    你所期待的那些事，在微醺之後<br/>
+                    全都有可能發生
                 </p>
             </div>
         </section>
 
         <section id="checkOut" data-aos="fade">
             <div class="container">
-                <h3>退房</h3>
+                <h3>送客</h3>
                 <div class="sub-title-wrapper">
                     <h4>
                         <span>CHECK OUT</span>
                     </h4>
                 </div>
                 <p>
-                    為了保護你不會迷失在微醺之中<br/>
-                    每位訪客的入住時間為一百二十分鐘<br/><br/>
-                    <span class="highlight">
-                        「來過的人，都會想起一段時光」<br/>
-                        「你，會想起哪一天呢？」<br/><br/>
-                    </span>
+                    在酒會開始的一百二十分鐘後<br/>
+                    我將親自送客<br/><br/>
+                    請記好你來時的日期<br/>
+                    別讓自己迷失在微醺之中<br/><br/>
+                    <span class="highlight">「來過的人，都會想起一段過去」<br/>「你，會想起哪一天呢？」<br/><br/></span>
                     願你我在這趟旅程之後<br/>
                     都能因微醺，而更清醒
                 </p>
@@ -338,14 +335,13 @@
             <div class="container">
                 <div class="ticket-cta">
                     <p class="highlight">
-                        《微醺大飯店》<br/>
-                        誠摯地邀請你，成為我們的房客
+                        誠摯地邀請你，成為我們的賓客
                     </p>
-                    <a class="btn-outline smoothScroll" href="#Ticket">我要訂房</a>
+                    <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
                     <p class="highlight">
                         <br/>你絕對無法相信，我有多期待見到你<br/><br/>
                         Yours Truly,<br/>
-                        微醺管家 Mr. Tipsy
+                        《微醺大飯店：1980s 》
                     </p>
                 </div>
             </div>
@@ -360,7 +356,7 @@
             <h2>Ticket</h2>
 
             <!------------->
-            <h3>我要訂房</h3>
+            <h3>我要赴約</h3>
             <!------------->
             <div class="sub-title-wrapper">
                 <h4>
@@ -494,14 +490,14 @@
 
             <div class="time-session">
                 <div class="time-session-inner">
-                    <p>週三：18:30｜20:30</p>
-                    <p>週四：18:30｜20:30</p>
-                    <p>週五：18:30｜20:30</p>
+                    <p>平日　18:30-20:30｜20:30-22:30</p>
                     <hr/>
-                    <p>週六：13:00｜15:00｜19:00｜21:00</p>
-                    <p>週日：13:00｜15:00｜19:00｜21:00</p>
+                    <p>週末　13:00-15:00｜15:00-17:00</p>
+                    <p>　　　19:00-21:00｜21:00-23:00</p>
+                    <br/>
+                    <p>＊週一週二公休</p>
                     <div class="feature-btn text-center d-block d-sm-none">
-                        <a class="btn-outline smoothScroll" href="#Ticket">我要訂房</a>
+                        <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
                     </div>
                 </div>
             </div>
@@ -545,7 +541,8 @@
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 微醺最終場07/17-08/25，預售票券完售
+                        * 現正預售 01/13 - 02/07 之票券<br/>
+                        * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
             </div>
@@ -561,36 +558,25 @@
                     <span>schedule</span>
                 </h4>
             </div>
-            <p>
-                <br/>訂房採先預購、後劃位機制，詳細時程如下
-            </p>
 
             <div class="schedule">
                 <table>
                     <tr>
                         <td>
-                            10/16
+                            12/09（三）中午12:00
                         </td>
                         <td>
-                            開賣微醺大飯店早鳥票卷，限量 1300 張
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            12/02
-                        </td>
-                        <td>
-                            寄送劃位信—購買早鳥票者，收到信後即可劃位
+                            依照購票順序寄送劃位序號，收到即可劃位
                         </td>
                     </tr>
                 </table>
                 <p class="schedule-sub-title">
-                    為提供最好的沉浸式體驗，上述日期會依實際狀況彈性調整
+                    更詳細的劃位須知，將於劃位日前兩天透過電子郵件告知。為提供最好的品質，上述日期會依照實際狀況彈性調整
                 </p>
             </div>
 
             <div class="feature-btn text-center">
-                <a class="btn-outline smoothScroll" href="#Ticket">我要訂房</a>
+                <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
             </div>
 
         </div>
@@ -601,7 +587,7 @@
     <section class="anchor-section" id="Rules" data-aos="fade">
         <div class="container">
             <!------------->
-            <h3>房客規則</h3>
+            <h3>飯店規則</h3>
             <!------------->
             <div class="sub-title-wrapper">
                 <h4>
@@ -630,7 +616,7 @@
 
         <div class="container">
             <!------------->
-            <h3>聯絡管家</h3>
+            <h3>聯絡飯店</h3>
             <!------------->
             <div class="sub-title-wrapper">
                 <h4>
@@ -639,8 +625,8 @@
             </div>
 
             <p class="contact-pre-info">
-                有任何問題，可以先至<a href="rules.html">住房規則</a>頁面查看<br/>
-                若有其他問題，歡迎來信詢問 <span class="d-none d-sm-inline-block">，</span><br class="d-block d-sm-none"/>微醺管家會盡快與您回覆
+                有任何問題，可以先至<a href="rules.html">飯店規則</a>頁面查看<br/>
+                若有其他問題，歡迎來信詢問 <span class="d-none d-sm-inline-block">，</span><br class="d-block d-sm-none"/>我會盡快與您回覆
             </p>
 
             <div class="contact-sec-wrapper">
