@@ -15,7 +15,7 @@ body {
 
 // Color
 .color-pink {
-  color: $color-mobile-pink;
+  color: $color-ticket-red;
 }
 
 .color-yellow {
@@ -112,7 +112,7 @@ header.logo {
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
-  background: $color-black;
+  background: $color-dark-brown;
 
   &::before,
   &::after {
@@ -548,7 +548,7 @@ form {
     .select2-dropdown {
       border-radius: 6px;
       border: solid 1px $color-yellow;
-      background: $color-black;
+      background: $color-dark-brown;
       overflow: hidden;
     }
 
@@ -692,7 +692,7 @@ form {
     max-width: 100%;
     border: solid 1px $color-yellow;
     border-radius: 6px;
-    background-color: $color-black;
+    background-color: $color-dark-brown;
     padding: 8px;
 
     .ui-datepicker-header {
@@ -720,7 +720,7 @@ form {
         background: url('../img/icon-arrow.svg') no-repeat;
         background-size: cover;
         border-radius: 50%;
-        background-color: $color-black;
+        background-color: $color-dark-brown;
       }
     }
 
@@ -987,7 +987,7 @@ fieldset {
           font-size: 12px;
           letter-spacing: 1.2px;
           margin-left: 10px;
-          color: $color-mobile-pink;
+          color: $color-ticket-red;
         }
       }
 
@@ -1008,7 +1008,7 @@ fieldset {
         }
 
         &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0 100px $color-black inset;
+          -webkit-box-shadow: 0 0 0 100px $color-dark-brown inset;
           background-color: transparent;
           color: $color-yellow;
           -webkit-text-fill-color: $color-yellow;
@@ -1018,7 +1018,7 @@ fieldset {
         &:-webkit-autofill:focus {
           border-color: $color-yellow;
           box-shadow: none;
-          -webkit-box-shadow: 0 0 0 100px $color-black inset;
+          -webkit-box-shadow: 0 0 0 100px $color-dark-brown inset;
           outline: 0;
         }
       }

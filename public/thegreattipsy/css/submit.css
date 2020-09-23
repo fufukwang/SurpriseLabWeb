@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 .anchor-wrapper,
 .social-wrapper {
   display: inherit;
@@ -21,11 +25,11 @@
 }
 
 a {
-  color: #9c9359;
+  color: #EFC27B;
 }
 
 a:hover {
-  color: #ccc38d;
+  color: #FFE0BA;
 }
 
 main {
@@ -74,7 +78,7 @@ main {
 
 .submit-page .page-sub-title {
   line-height: 1;
-  color: #eee9c5;
+  color: #FFFFFF;
   font-family: "Noto Serif TC", serif;
   font-weight: bold;
 }

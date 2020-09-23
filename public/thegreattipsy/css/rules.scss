@@ -3,13 +3,22 @@
 
 // Override
 body {
-  background-color: $color-dark-black !important;
+  background-color: $color-dark-brown !important;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
 }
 
 header.logo {
-  background-color: $color-dark-black;
+  background-color: $color-dark-brown;
+}
+
+.btn-link {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $color-yellow !important;
+  }
 }
 
 .anchor-wrapper {
@@ -19,11 +28,11 @@ header.logo {
 #rules-tab-switcher {
   position: sticky;
   position: -webkit-sticky;
-  border-color: #39351c;
+  border-color: $color-dark-brown;
   text-align: center;
   z-index: 9999;
   top: 120px;
-  background-color: $color-dark-black;
+  background-color: $color-dark-brown;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
 
@@ -42,7 +51,7 @@ header.logo {
     margin: 0 11.5px -1px;
     border-radius: 0;
     border-width: 0 0 1px 0;
-    border-color: #39351c;
+    border-color: $color-dark-brown;
     letter-spacing: 2.2px;
     transition: border-color 0.3s;
   }
@@ -123,6 +132,18 @@ header.logo {
   }
 
   #qa {
+    .qa-title-separator {
+      font-family: $font-serif;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: 2.4px;
+      color: $color-light-yellow;
+      border-top: solid 1px $color-dark-yellow;
+      @include baseCounter('margin-top', 24);
+      @include baseCounter('padding-top', 60);
+    }
+
     .qa-note {
       margin: 0 auto;
       text-align: left;
@@ -134,7 +155,8 @@ header.logo {
     }
   }
 
-  .to-change-and-refund {
+  .to-change-and-refund,
+  .to-presale-rules {
     color: $color-yellow;
     text-decoration: underline;
     cursor: pointer;
@@ -161,9 +183,19 @@ header.logo {
           @include baseCounter('margin-top', 24);
         }
       }
+
+      & ~ .card:nth-child(n+12) {
+        .card-header {    
+          h6 {
+            padding-left: 29px;
+            text-indent: -29px;
+          }
+        }
+      }
     }
 
-    .to-change-and-refund {
+    .to-change-and-refund,
+    .to-presale-rules {
       color: $color-light-yellow;
 
       &:hover {
@@ -212,8 +244,8 @@ header.logo {
 
       h6 {
         position: relative;
-        padding-left: 18px;
-        text-indent: -18px;
+        padding-left: 21px;
+        text-indent: -21px;
         @include baseCounter('padding-top', 24);
         padding-bottom: 0;
         padding-right: 40px;
@@ -267,12 +299,43 @@ header.logo {
     max-width: 100%;
     margin: 0 auto;
 
+    p {
+      font-size: 16px;
+      line-height: 2;
+
+      &.category-title {
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        line-height: 2.67;
+      }
+    }
+
     .feature-btn {
       @include baseCounter('padding-top', 106);
     }
   }
 
   #changeAndrefund {
+    ul {
+      width: 535px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    p {
+      width: 535px;
+      max-width: 100%;
+      margin: 0 auto;
+      line-height: 2;
+      text-align: left;
+
+      &.category-title {
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1.8px;
+      }
+    }
+
     .pre-note {
       width: 495px;
       max-width: 100%;
@@ -379,7 +442,7 @@ header.logo {
         text-align: center;
         letter-spacing: 1.8px;
         line-height: 2;
-        background-color: $color-dark-black;
+        background-color: $color-dark-brown;
         border-right: solid 1px $color-dark-yellow;
 
         &:last-child {
@@ -398,6 +461,17 @@ header.logo {
           margin: 0 auto;
         }
       }
+    }
+
+    .table-note-text {
+      max-width: 670px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      text-align: right;
     }
 
     .transfer-ticket {
@@ -478,6 +552,13 @@ header.logo {
     }
 
     #qa {
+      .qa-title-separator {
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        line-height: 1.67;
+        padding-top: 42px;
+      }
+      
       .qa-note {
         padding: 20px 0 0;
       }
@@ -491,12 +572,22 @@ header.logo {
       .card-header {
         h6 {
           padding: 12px 40px 0 18px;
+          text-indent: -18px;
           line-height: 2;
           font-size: 14px;
           letter-spacing: 1.4px;
 
           &::after {
             height: 12px;
+          }
+        }
+      }
+
+      .card ~ .card:nth-child(n+12) {
+        .card-header {    
+          h6 {
+            padding-left: 28px;
+            text-indent: -28px;
           }
         }
       }
