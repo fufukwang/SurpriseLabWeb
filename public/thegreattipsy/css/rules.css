@@ -1,11 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 body {
-  background-color: #1a1816 !important;
+  background-color: #281F1C !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
 
 header.logo {
-  background-color: #1a1816;
+  background-color: #281F1C;
+}
+
+.btn-link {
+  text-decoration: underline;
+}
+
+.btn-link:hover, .btn-link:focus {
+  color: #EFC27B !important;
 }
 
 .anchor-wrapper {
@@ -15,11 +27,11 @@ header.logo {
 #rules-tab-switcher {
   position: sticky;
   position: -webkit-sticky;
-  border-color: #39351c;
+  border-color: #281F1C;
   text-align: center;
   z-index: 9999;
   top: 120px;
-  background-color: #1a1816;
+  background-color: #281F1C;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
 }
@@ -27,19 +39,19 @@ header.logo {
 #rules-tab-switcher .nav-link.active,
 #rules-tab-switcher .nav-link:hover {
   background-color: transparent;
-  border-color: #9c9359;
+  border-color: #EFC27B;
   border-radius: 0;
   border-width: 0 0 1px 0;
 }
 
 #rules-tab-switcher .nav-link {
   cursor: pointer;
-  color: #ccc38d;
+  color: #FFE0BA;
   padding: 8.5px 0;
   margin: 0 11.5px -1px;
   border-radius: 0;
   border-width: 0 0 1px 0;
-  border-color: #39351c;
+  border-color: #281F1C;
   letter-spacing: 2.2px;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
@@ -374,6 +386,76 @@ header.logo {
   }
 }
 
+#Rules #qa .qa-title-separator {
+  font-family: "Noto Serif TC", serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 2.4px;
+  color: #FFE0BA;
+  border-top: solid 1px #E5AD5C;
+}
+
+@media (min-width: 1200px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc((608px + 30px) * 0.02147);
+  }
+}
+
+@media (min-width: 1440px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc((768px + 30px) * 0.02147);
+  }
+}
+
+@media (min-width: 1920px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc((1088px + 30px) * 0.02147);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc((520px + 30px) * 0.02147);
+  }
+}
+
+@media (max-width: 480px) {
+  #Rules #qa .qa-title-separator {
+    margin-top: calc(100% * 0.02147);
+  }
+}
+
+@media (min-width: 1200px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc((608px + 30px) * 0.05367);
+  }
+}
+
+@media (min-width: 1440px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc((768px + 30px) * 0.05367);
+  }
+}
+
+@media (min-width: 1920px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc((1088px + 30px) * 0.05367);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc((520px + 30px) * 0.05367);
+  }
+}
+
+@media (max-width: 480px) {
+  #Rules #qa .qa-title-separator {
+    padding-top: calc(100% * 0.05367);
+  }
+}
+
 #Rules #qa .qa-note {
   margin: 0 auto;
   text-align: left;
@@ -442,23 +524,25 @@ header.logo {
   }
 }
 
-#Rules .to-change-and-refund {
-  color: #9c9359;
+#Rules .to-change-and-refund,
+#Rules .to-presale-rules {
+  color: #EFC27B;
   text-decoration: underline;
   cursor: pointer;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
-#Rules .to-change-and-refund:hover {
-  color: #ccc38d;
+#Rules .to-change-and-refund:hover,
+#Rules .to-presale-rules:hover {
+  color: #FFE0BA;
 }
 
 #Rules #qa-according {
   width: 500px;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: solid 1px #595330;
+  border-bottom: solid 1px #E5AD5C;
 }
 
 @media (min-width: 1200px) {
@@ -526,12 +610,19 @@ header.logo {
   }
 }
 
-#Rules #qa-according .to-change-and-refund {
-  color: #ccc38d;
+#Rules #qa-according .card ~ .card:nth-child(n+12) .card-header h6 {
+  padding-left: 29px;
+  text-indent: -29px;
 }
 
-#Rules #qa-according .to-change-and-refund:hover {
-  color: #9c9359;
+#Rules #qa-according .to-change-and-refund,
+#Rules #qa-according .to-presale-rules {
+  color: #FFE0BA;
+}
+
+#Rules #qa-according .to-change-and-refund:hover,
+#Rules #qa-according .to-presale-rules:hover {
+  color: #EFC27B;
 }
 
 #Rules #qa-according .card-body {
@@ -540,7 +631,7 @@ header.logo {
   padding-right: 19px;
   line-height: 2;
   letter-spacing: 1.8px;
-  color: #9c9359;
+  color: #EFC27B;
 }
 
 @media (min-width: 1200px) {
@@ -670,7 +761,7 @@ header.logo {
   height: 100%;
   left: 0;
   top: 0;
-  background: #595330;
+  background: #E5AD5C;
 }
 
 #Rules #qa-according .card-body.number-list p {
@@ -685,15 +776,15 @@ header.logo {
 #Rules #qa-according .card-header {
   padding: 0;
   border-style: solid;
-  border-color: #595330;
+  border-color: #E5AD5C;
   border-width: 1px 0 0 0;
   border-radius: 0;
 }
 
 #Rules #qa-according .card-header h6 {
   position: relative;
-  padding-left: 18px;
-  text-indent: -18px;
+  padding-left: 21px;
+  text-indent: -21px;
   padding-bottom: 0;
   padding-right: 40px;
   margin-bottom: 0;
@@ -777,7 +868,7 @@ header.logo {
 #Rules #qa-according .card-header h6.is-open .icon-arrow {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  color: #eee9c5;
+  color: #FFFFFF;
 }
 
 #Rules #qa-according .card-header .icon-arrow {
@@ -788,7 +879,7 @@ header.logo {
   transition: 0.3s;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  color: #9c9359;
+  color: #EFC27B;
 }
 
 @media (max-width: 1200px) {
@@ -802,6 +893,17 @@ header.logo {
   width: 533px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+#Rules #presale-rules p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+#Rules #presale-rules p.category-title {
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  line-height: 2.67;
 }
 
 @media (min-width: 1200px) {
@@ -832,6 +934,26 @@ header.logo {
   #Rules #presale-rules .feature-btn {
     padding-top: calc(100% * 0.09481);
   }
+}
+
+#Rules #changeAndrefund ul {
+  width: 535px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#Rules #changeAndrefund p {
+  width: 535px;
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: 2;
+  text-align: left;
+}
+
+#Rules #changeAndrefund p.category-title {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1.8px;
 }
 
 #Rules #changeAndrefund .pre-note {
@@ -952,7 +1074,7 @@ header.logo {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
-  border-bottom: solid 2px #9c9359;
+  border-bottom: solid 2px #EFC27B;
 }
 
 @media (min-width: 1200px) {
@@ -986,14 +1108,14 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note tr {
-  border-color: #9c9359 #9c9359 #595330 #9c9359;
+  border-color: #EFC27B #EFC27B #E5AD5C #EFC27B;
   border-style: solid;
   border-width: 0 2px 2px 2px;
 }
 
 #Rules #changeAndrefund #table-note tr:first-child {
   border-width: 2px;
-  border-color: #9c9359;
+  border-color: #EFC27B;
 }
 
 #Rules #changeAndrefund #table-note tr:last-child {
@@ -1010,8 +1132,8 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note th {
-  background: #ccc38d;
-  border-right: solid 1px #595330;
+  background: #FFE0BA;
+  border-right: solid 1px #E5AD5C;
   text-align: center;
   letter-spacing: 1.8px;
   color: #39351c;
@@ -1206,8 +1328,8 @@ header.logo {
   text-align: center;
   letter-spacing: 1.8px;
   line-height: 2;
-  background-color: #1a1816;
-  border-right: solid 1px #595330;
+  background-color: #281F1C;
+  border-right: solid 1px #E5AD5C;
 }
 
 @media (min-width: 1200px) {
@@ -1275,8 +1397,8 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note td.highlight-td {
-  background: #595330;
-  color: #eee9c5;
+  background: #E5AD5C;
+  color: #FFFFFF;
   font-weight: 500;
 }
 
@@ -1284,6 +1406,17 @@ header.logo {
   height: 18px;
   width: auto !important;
   margin: 0 auto;
+}
+
+#Rules #changeAndrefund .table-note-text {
+  max-width: 670px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  text-align: right;
 }
 
 @media (min-width: 1200px) {
@@ -1455,6 +1588,12 @@ header.logo {
   #Rules ul li:not(:first-child) {
     padding-top: 20px;
   }
+  #Rules #qa .qa-title-separator {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    line-height: 1.67;
+    padding-top: 42px;
+  }
   #Rules #qa .qa-note {
     padding: 20px 0 0;
   }
@@ -1463,12 +1602,17 @@ header.logo {
   }
   #Rules #qa-according .card-header h6 {
     padding: 12px 40px 0 18px;
+    text-indent: -18px;
     line-height: 2;
     font-size: 14px;
     letter-spacing: 1.4px;
   }
   #Rules #qa-according .card-header h6::after {
     height: 12px;
+  }
+  #Rules #qa-according .card ~ .card:nth-child(n+12) .card-header h6 {
+    padding-left: 28px;
+    text-indent: -28px;
   }
   #Rules #qa-according .card:not(:first-child) .card-header {
     margin-top: 12px;

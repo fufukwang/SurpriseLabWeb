@@ -6,24 +6,24 @@
     <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
     <meta name="description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="微醺大飯店 The Great Tipsy"/>
-    <meta property="og:site_name" content="微醺大飯店 The Great Tipsy"/>
+    <meta property="og:title" content="微醺大飯店：1980’s"/>
+    <meta property="og:site_name" content="微醺大飯店：1980’s"/>
     <meta property="og:description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。"/>
-    <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy"/>
-    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy/img/opengraph.png"/>
+    <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy2"/>
+    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy2/img/opengraph.png"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>微醺大飯店 The Great Tipsy</title>
+    <title>微醺大飯店：1980’s</title>
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins/bootstrap.css"/>
 
     <!-- Ripple Animation Style -->
-    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/component.css"/>
     <script>document.documentElement.className = 'js';</script>
 
     <!-- OwlCarousel2 -->
@@ -77,28 +77,6 @@
 </aside>
 <!-- End Social Links -->
 
-<!-- Loading Animation -->
-<svg class="hidden">
-    <symbol id="icon-arrow" viewBox="0 0 24 24">
-        <title>arrow</title>
-        <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-    </symbol>
-    <symbol id="icon-drop" viewBox="0 0 24 24">
-        <title>drop</title>
-        <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/>
-        <path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-    </symbol>
-    <symbol id="icon-github" viewBox="0 0 32.6 31.8">
-        <title>github</title>
-        <path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"/>
-    </symbol>
-    <symbol id="icon-arrow-nav" viewBox="208.3 352 4.2 6.4">
-        <title>arrow-nav</title>
-        <polygon points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon>
-    </symbol>
-</svg>
-<!-- End Loading Animation -->
-
 <main class="sections">
     <!-- Header LOGO -->
     <header class="logo">
@@ -147,7 +125,7 @@
                                     <div class="card-header" id="qa1-header">
                                         <h6 data-toggle="collapse" data-target="#qa1" aria-expanded="false"
                                             aria-controls="qa1" class="collapsed d-flex align-items-center">
-                                            1. 請問《微醺大飯店The Great Tipsy》是怎樣的體驗呢？
+                                            1. 《微醺大飯店二：1980》是怎樣的體驗呢？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -155,13 +133,7 @@
                                     <div id="qa1" class="collapse" aria-labelledby="qa1-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            《微醺大飯店 The Great Tipsy》為驚喜製造 Surprise Lab. 團隊繼《無光晚餐 Dining In The Dark》與《table for ONE 一人餐桌》後，推出的第四項沉浸式體驗作品。
-                                            <br/><br/>
-                                            不同於以往，在《微醺大飯店 The Great Tipsy》中，驚喜製造打破了以食為中心的設計型式，改以「故事」為軸心，結合飯店場域、表演、調酒與食物設計，並將故事的發展方向交予參與者 - 「你所做的選擇，將決定你所看到的故事」，期待帶給參與者一場由外在感官刺激到內在心靈的體驗。
-                                            <br/><br/>
-                                            沉浸式體驗 Immersive Experience.
-                                            <br/>
-                                            唯有親身經歷，你才會知道這是怎麼一回事。
+                                            《微醺大飯店二：1980》為驚喜製造 Surprise Lab. 第六號沉浸式體驗作品。延續《微醺大飯店》以飯店作為演出場域、酒作為媒介，專業演員與之互動。
                                         </div>
                                     </div>
                                 </div>
@@ -170,19 +142,14 @@
                                     <div class="card-header" id="qa2-header">
                                         <h6 data-toggle="collapse" data-target="#qa2" aria-expanded="false"
                                             aria-controls="qa2" class="collapsed d-flex align-items-center">
-                                            2. 購票、劃位機制是怎麼進行呢？
+                                            2. 《微醺大飯店二：1980》和《微醺大飯店》故事上是有關聯的嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa2" class="collapse" aria-labelledby="qa2-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            微醺大飯店採先預購、後劃位之模式，流程如下：<br/>
-                                            -購票：首先，請先至我要訂房購買票卷。<br/>
-                                            -等待：依照購票的優先順序分三梯次，<br/>購買最終場07/17-08/25場次票券，將在07/03、07/10與07/17，依梯次及購買順序分別寄送劃位信件。<br/>
-                                            -劃位：劃位信內有劃位規則、劃位碼、劃位連結。僅有購票者可進入劃位。<br/>
-                                            -提醒：待體驗日期接近時，我們會寄送通知信，提醒您注意事項與地點。<br/>
-                                            -體驗：體驗當天，依照通知信件內指示，抵達指定地點。請務必準時。
+                                        沒有關連，為一新的故事與體驗，角色設定與時代背景皆不同，沒有看過2019年《微醺大飯店》也沒問題，不會有接續之問題。
                                         </div>
                                     </div>
                                 </div>
@@ -191,30 +158,35 @@
                                     <div class="card-header" id="qa3-header">
                                         <h6 data-toggle="collapse" data-target="#qa3" aria-expanded="false"
                                             aria-controls="qa3" class="collapsed d-flex align-items-center">
-                                            3. 同⼀個時段有多少參與者⼀起進⾏呢？
+                                            3. 《微醺大飯店二：1980》和《微醺大飯店》是原班人馬嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa3" class="collapse" aria-labelledby="qa3-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            同一時段，總共約24位參與者一起抵達，現場將拆成5-6人一組，以小組的方式分別探索五個不同的房間。隨著時間的推演，小組會順著故事脈落進入下一個房間。
+                                            製作團隊一樣是【驚喜製造】與【進港浪製作】，演員為重新徵選，最適合角色的方式選角，或有重複，但並非《微醺大飯店》同卡司演員。
                                         </div>
                                     </div>
+                                </div>
+
+                                <!--Section separator-->
+                                <div class="qa-title-separator">
+                                    關於預售劃位
                                 </div>
 
                                 <div class="card">
                                     <div class="card-header" id="qa4-header">
                                         <h6 data-toggle="collapse" data-target="#qa4" aria-expanded="false"
                                             aria-controls="qa4" class="collapsed d-flex align-items-center">
-                                            4. 請問體驗總⻑為多久呢？
+                                            4. 如何報名？規則是什麼呢？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa4" class="collapse" aria-labelledby="qa4-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            體驗總長約 90 分鐘。每個房間停留時間約為 15 分鐘，加上入場、體驗說明、房間轉換、離場等。
+                                            微醺大飯店採網路購票、線上劃位的方式進行，無販售現場票券。購票請至<a class="default-light btn-link" href="index.html#Ticket">我要訂房</a>購買，相關規則請參考<span class="to-presale-rules">預售規則</span>，內有詳細流程與說明。
                                         </div>
                                     </div>
                                 </div>
@@ -223,36 +195,15 @@
                                     <div class="card-header" id="qa5-header">
                                         <h6 data-toggle="collapse" data-target="#qa5" aria-expanded="false"
                                             aria-controls="qa5" class="collapsed d-flex align-items-center">
-                                            5. 請問午場、晚場開放時間為何呢？
+                                            5. 我有數個朋友想要一起來，請問要怎麼買票？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa5" class="collapse" aria-labelledby="qa5-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            <!--
-                                            3/23前的場次開放時間：<br/>
-                                            平日晚場（18:00/19:30/21:00/22:30)<br/>
-                                            週末晚場（18:00/19:30/21:00/22:30)<br/>
-                                            週末午場（12:30/14:00/15:30)<br/><br/>
-                                            4/16後的場次開放時間：<br/-->
-                                            平日晚場（19:00/20:30/22:00）<br/>
-                                            週末晚場（19:00/20:30/22:00）<br/>
-                                            週末午場（13:00/14:30/16:00）
-                                            <!--
-                                            <br/><br/>
-                                            2月10日前：週一、週二公休<br/>
-                                            2月10日後：僅週一公休
-                                            -->
-                                            <!--
-                                            微醺大飯店每週一、週二公休。
-                                            <br/><br/>
-                                            週三至週日每晚有四至五個場次 ( 18:00 / 19:30 / 21:00 / 22:30 / 24:00)。
-                                            <br/>
-                                            週六週日另外有中午場次 (13:00 / 14:30)。
-                                            -->
-                                            <br/><br/>
-                                            確切時段會依情況調整，以進入劃位網站時能選擇的時段為主。
+                                            相關數字問題，請依照單人票、雙人票、六人票的票種購買。<br/><br/>
+                                            例如：四個朋友想來，可以購買四張單人票或是兩張雙人票；七個朋友想來，可以購買七張單人票、三張雙人票＋一張單人票或是一張六人票＋一張單人票
                                         </div>
                                     </div>
                                 </div>
@@ -261,31 +212,35 @@
                                     <div class="card-header" id="qa6-header">
                                         <h6 data-toggle="collapse" data-target="#qa6" aria-expanded="false"
                                             aria-controls="qa6" class="collapsed d-flex align-items-center">
-                                            6. 請問不喝酒的人可以參加嗎？可將酒精改為無酒精飲料嗎？
+                                            6. 一次買多張票會更便宜嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa6" class="collapse" aria-labelledby="qa5-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            「微醺」為進入體驗的唯一鑰匙，過程中將提供數杯調酒，請評估自身狀況，選擇舒適的方式進入微醺狀態。微醺大飯店無法將調酒更換為無酒精飲品，不嗜酒者、因生理因素不便飲酒者可以酌量飲用，但唯有微醺，才能看見世界的全貌。
+                                            若有包場需求，請來信討論，若沒有買到36張票，將依照釋出的票種票價為最優惠。
                                         </div>
                                     </div>
+                                </div>
+
+                                <!--Section separator-->
+                                <div class="qa-title-separator">
+                                    關於體驗當下
                                 </div>
 
                                 <div class="card">
                                     <div class="card-header" id="qa7-header">
                                         <h6 data-toggle="collapse" data-target="#qa7" aria-expanded="false"
                                             aria-controls="qa7" class="collapsed d-flex align-items-center">
-                                            7. 請問餐點吃得飽嗎？
+                                            7. 同場次會有多少參與者一起進行呢？會被分組嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa7" class="collapse" aria-labelledby="qa7-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            體驗過程中將提供三道小點，可選擇葷食或蛋奶素。<br />
-                                            餐點僅為小點，不能視為正餐，建議體驗前先吃飽再來。本體驗重點為「微醺」狀態下的旅程，體驗、調酒為主，餐點為輔。
+                                            一場演出同時有 36 位參與者參與，將以 6 人為一組，分配到不同的路線，探索各個房間。不同的角色有不同的視角與詮釋，你看到的故事是什麼呢？
                                         </div>
                                     </div>
                                 </div>
@@ -294,14 +249,14 @@
                                     <div class="card-header" id="qa8-header">
                                         <h6 data-toggle="collapse" data-target="#qa8" aria-expanded="false"
                                             aria-controls="qa8" class="collapsed d-flex align-items-center">
-                                            8. 可以帶外食，或是自行攜帶酒來喝嗎？
+                                            8. 請問會與陌生參與者互動交流嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa8" class="collapse" aria-labelledby="qa8-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            現實的食物、酒飲，是無法進入微醺世界中的。場域中有額外可以用餐的餐廳、可以點酒的吧台，食物飲料不馬乎，當然也需要另外支付費用。可以在入場前後安排時間到訪看看。
+                                            廣結良緣的時間來了，演出的 120 分鐘你們是生命共同體，一起行動但不見得要有互動，依照自己舒服的方式進行即可，誰知道呢？說不定演出結束後，會再一起喝一杯。
                                         </div>
                                     </div>
                                 </div>
@@ -310,14 +265,14 @@
                                     <div class="card-header" id="qa9-header">
                                         <h6 data-toggle="collapse" data-target="#qa9" aria-expanded="false"
                                             aria-controls="qa9" class="collapsed d-flex align-items-center">
-                                            9. 請問會跟其他陌生參與者互動交流嗎？
+                                            9. 我和朋友一起報名，可以指定要在同一組嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa9" class="collapse" aria-labelledby="qa9-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            每一場次為24人，會在接待區集合一起出發，此階段的互動性較小，可能點頭之交那種互動。體驗開始後，會以每 5-6人為一組探索房間，此時的互動性較大，會一起參與房間中角色的故事，像是在同一包廂一起飲酒玩樂那樣。微醺大飯店中的角色們，會盡量輕鬆舒適的方式，引導各位一同參與。可以號招六位朋友一起獨樂樂，也可以兩兩併入新朋友認識一下，也可以隻身前往廣結良緣。
+                                            分組非常隨機，不敢隨便答應你，可能會在同組也有可能不會，唯一確定的是，超過 6 人以上的朋友一起來，絕對會是不同組。
                                         </div>
                                     </div>
                                 </div>
@@ -326,14 +281,16 @@
                                     <div class="card-header" id="qa10-header">
                                         <h6 data-toggle="collapse" data-target="#qa10" aria-expanded="false"
                                             aria-controls="qa10" class="collapsed d-flex align-items-center">
-                                            10. 衣服要怎麼穿比較好呢？
+                                            10. 一場演出多長呢？場次時間為何？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa10" class="collapse" aria-labelledby="qa10-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            建議穿著好走、好站、好穿脫的鞋子前來。
+                                            120 分鐘。場次時間如下：<br/>
+                                            平日：18:30-20:30｜20:30-22:30<br/>
+                                            週末：13:00-15:00｜15:00-17:00｜18:30-20:30｜20:30-22:30<br/>
                                         </div>
                                     </div>
                                 </div>
@@ -342,14 +299,14 @@
                                     <div class="card-header" id="qa11-header">
                                         <h6 data-toggle="collapse" data-target="#qa11" aria-expanded="false"
                                             aria-controls="qa11" class="collapsed d-flex align-items-center">
-                                            11. 可以寄物嗎？
+                                            11. 請問不喝酒的人可以參加嗎？有提供無酒精選項嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa11" class="collapse" aria-labelledby="qa11-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            建議各位輕便前來，攜帶錢包、鑰匙等物品即可，並將⼤包⼩包留在家中。若你還是帶了大包小包前來，為了讓體驗順暢舒適，並讓各位放鬆微醺，現場會請參與者將包包、⼤型⾐物（如厚重外套）寄放至接待區之寄物櫃。
+                                            「微醺」為進入體驗的唯一鑰匙，過程中將提供數杯調酒，請評估自身狀況，選擇舒適的方式進入微醺狀態。微醺大飯店無法將調酒更換為無酒精飲品，微醺，方使人更清醒。
                                         </div>
                                     </div>
                                 </div>
@@ -358,16 +315,15 @@
                                     <div class="card-header" id="qa12-header">
                                         <h6 data-toggle="collapse" data-target="#qa12" aria-expanded="false"
                                             aria-controls="qa12" class="collapsed d-flex align-items-center">
-                                            12. 如果遲到該怎麼辦？
+                                            12. 我酒量很好，怕喝不夠，可以帶酒來或調濃一點嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa12" class="collapse" aria-labelledby="qa12-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            記得要比訂位時間提早十五分鐘抵達（若訂位時間為19:00，請於18:45抵達）
-                                            <br/><br/>
-                                            本體驗採時段場次分批入場，遲到將無法入場，亦將不予退費（請想像是去看秀、看劇場表演，表演開始後將無法入場與退費）。錯過的體驗、表演、調酒與食物，無法回朔與外帶。為了自身權益，再次提醒，請務必準時抵達。
+                                            微醺大飯店提供的酒水，皆以普世價值來判斷，無法指定濃度，現場亦未提供開瓶服務，<br/>
+                                            平常血液習慣酒精通過的，建議可以來之前小小 pre-drink ，但請不要醉，會報警。
                                         </div>
                                     </div>
                                 </div>
@@ -376,14 +332,14 @@
                                     <div class="card-header" id="qa13-header">
                                         <h6 data-toggle="collapse" data-target="#qa13" aria-expanded="false"
                                             aria-controls="qa13" class="collapsed d-flex align-items-center">
-                                            13. 請問在劃位之後，可以更改場次嗎？
+                                            13. 我酒量不好，怕一杯就醉，怎麼辦？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa13" class="collapse" aria-labelledby="qa13-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            預售票券若於劃位後，有更改日期、場次之需求，請於體驗日七天前寄信微醺大飯店客服信箱（若你的訂位日為 01/08，請最晚於 01/01 (含) 來信提出更改需求，詳細規則可見「<span class="to-change-and-refund">更改、退費事項</span>」，微醺大飯店工作人員，將以當下尚有的空位日期為你更換。請注意，因體驗涉及到事先安排，你將無法於體驗前六天與當天臨時調動場次，建議將票卷轉讓給朋友、家人。若有不可抗力因素，請來信微醺大飯店客服信箱。
+                                            酒量不好不用硬乾，自在喝舒服喝即可，如果不勝酒力倒在旁邊，痾⋯⋯找不到人照顧你的狀況下，會報警。
                                         </div>
                                     </div>
                                 </div>
@@ -392,55 +348,140 @@
                                     <div class="card-header" id="qa14-header">
                                         <h6 data-toggle="collapse" data-target="#qa14" aria-expanded="false"
                                             aria-controls="qa14" class="collapsed d-flex align-items-center">
-                                            14. 請問有任何參與限制嗎？
+                                            14. 請問餐點吃得飽嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa14" class="collapse" aria-labelledby="qa14-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            體驗中會供應酒精，參與者須年滿18歲。並為顧及安全與體驗品質，不建議孕婦、酒精過敏者、容易發酒瘋的人參與。因生理因素不便飲酒者，可以現場依自身身體狀況酌量飲用。
+                                            如果是以正常成人的正常食量來說，絕對吃不飽；如果是以極端飲食控制者來說，也許會飽。建議依自己的食量，吃個七八分飽再來。
                                         </div>
                                     </div>
                                 </div>
 
-                                <!--div class="card">
+                                <div class="card">
                                     <div class="card-header" id="qa15-header">
                                         <h6 data-toggle="collapse" data-target="#qa15" aria-expanded="false"
                                             aria-controls="qa15" class="collapsed d-flex align-items-center">
-                                            15. 有沒有機會真的住在《微醺大飯店》之中呢？
+                                            15. 衣服要怎麼穿？有 dress code 嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa15" class="collapse" aria-labelledby="qa15-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            在體驗中，會透過一些公平的遊戲機制，抽選數組幸運兒，幸運兒將會獲得免費在微醺大飯店住宿一晚的機會。但注意，並不是所有房客皆能參與此遊戲，唯有用心體驗者才發現進入遊戲的方式，揭露彩蛋。而其相關規定、兌換方式，將由現場主持遊戲的工作人員說明。
+                                            待補。
                                         </div>
                                     </div>
-                                </div-->
+                                </div>
 
                                 <div class="card">
                                     <div class="card-header" id="qa16-header">
                                         <h6 data-toggle="collapse" data-target="#qa16" aria-expanded="false"
                                             aria-controls="qa16" class="collapsed d-flex align-items-center">
-                                            15. 體驗中要注意些什麼？
+                                            16. 現場可以寄物嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
                                     <div id="qa16" class="collapse" aria-labelledby="qa16-header"
                                          data-parent="#qa-according">
                                         <div class="card-body number-list">
-                                            在沉浸式體驗中，請放膽探索、走動，但還是有些小事情要注意：
+                                            建議輕便前來，攜帶貴重物品即可，黃湯下肚，不見的東西會很多，帶越少越好，真心建議拜託拜託。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa17-header">
+                                        <h6 data-toggle="collapse" data-target="#qa17" aria-expanded="false"
+                                            aria-controls="qa17" class="collapsed d-flex align-items-center">
+                                            17. 如果會遲到怎麼辦？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa17" class="collapse" aria-labelledby="qa17-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
+                                            遲到將無法進場與退費，很嚴重，請務必留意。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa18-header">
+                                        <h6 data-toggle="collapse" data-target="#qa18" aria-expanded="false"
+                                            aria-controls="qa18" class="collapsed d-flex align-items-center">
+                                            18. 有任何參與限制嗎？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa18" class="collapse" aria-labelledby="qa18-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
                                             <p>
-                                                ① 歡迎參與者以不造成他人困擾為前提，在過程中盡情探索。若有特別不能做的事情，現場人員會先說明與制止。
+                                                ① 酒精不適合胚胎發育，準媽媽們請忍住想喝的衝動，做完月子後我們再見。
                                             </p>
                                             <p>
-                                                ② 請遵守現場⼈員之引導，若有不聽勸之⾏為發⽣，現場服務⼈員有權利終⽌您的體驗，請求離場，且不另⾏退費。
+                                                ② 未滿 18 歲的朋友，不是不讓你喝，是法律不允許，成年後我們再見。
                                             </p>
                                             <p>
-                                                ③ 若在體驗中身體不適，請隨時向現場工作人員反應。若因酒醉、嘔吐等因素造成設施損毀、環境髒亂，將會酌收修復費用、清潔費用，該費用與其核算方式將會另行通知。
+                                                ③ 演出過程中移動幅度很大，也有跨越樓層的可能，若需要輔助才能行動者不建議，若因行動問題導致體驗感受不佳，會非常可惜。
                                             </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa19-header">
+                                        <h6 data-toggle="collapse" data-target="#qa19" aria-expanded="false"
+                                            aria-controls="qa19" class="collapsed d-flex align-items-center">
+                                            19. 不是故意的，但不小心醉了怎麼辦？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa19" class="collapse" aria-labelledby="qa19-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
+                                            演出中如果沒有人能照顧你，工作人員第一要務是讓演出順利進行，有可能會把你放置在旁邊；演出結束如果找不到人能接你，會報警，請務必保持清醒。<br/><br/>
+                                            微醺，讓你更清醒，喝醉不會。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Section separator-->
+                                <div class="qa-title-separator">
+                                    關於劃位序號
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa20-header">
+                                        <h6 data-toggle="collapse" data-target="#qa20" aria-expanded="false"
+                                            aria-controls="qa20" class="collapsed d-flex align-items-center">
+                                            20. 請問完成劃位後可以更改場次嗎？或是該怎麼取消退票呢？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa20" class="collapse" aria-labelledby="qa20-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
+                                            預售票券完成劃位後，若有更改日期或場次的需求，請依照<span class="to-change-and-refund">更改、退費事項</span>之流程進行。只有一次改期機會，請特別留意。
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="qa21-header">
+                                        <h6 data-toggle="collapse" data-target="#qa21" aria-expanded="false"
+                                            aria-controls="qa21" class="collapsed d-flex align-items-center">
+                                            21. 劃位序號沒有使用的話，怎麼辦？能退費嗎？
+                                            <i class="icon icon-arrow"></i>
+                                        </h6>
+                                    </div>
+                                    <div id="qa21" class="collapse" aria-labelledby="qa21-header"
+                                         data-parent="#qa-according">
+                                        <div class="card-body number-list">
+                                            序號使用相關規定，請見<span class="to-presale-rules">預售規則</span>，不同階段之序號，僅能於指定演出區間使用，若因為超過日期為使用而失效，視為放棄權利，無法退費與要求劃位其他演出區間，請務必留意相關資訊。
                                         </div>
                                     </div>
                                 </div>
@@ -473,130 +514,57 @@
 
                         <div class="tab-content-inner">
                             <h5 class="sub-title highlight">
+                                預售流程
+                            </h5>
+                            <div>
+                                <img class="img-fluid d-none d-sm-block" src="img/flow.png" alt="預售流程">
+                                <img class="img-fluid d-block d-sm-none" src="img/flow_mobile.png" alt="預售流程">
+                            </div>
+
+                            <h5 class="sub-title highlight">
+                                預售說明
+                            </h5>
+                            <p class="text-left">
+                                《微醺大飯店2：1980》早鳥票現正預售中，<br/>
+                                單人票原價 2000，早鳥票 1500 元，將於 12/02（三）劃位。<br/><br/>
+                                可劃位日期：01/13 - 02/09 之間的演出場次
+                            </p>
+
+                            <h5 class="sub-title highlight">
                                 劃位序號
                             </h5>
                             <ul>
-                                <li>
-                                    此階段為最後的房客，將依照購買優先順序分三梯次（07/03、07/10與07/17）收到劃位序號信件。若收信匣沒有看到，請到垃圾信件匣找尋，或來信詢問。
-                                </li>
-                                <!--li>
-                                    此階段為第四批購票者，將依照購買優先順序分兩梯次(04/03 與 04/10)收到劃位序號信件。若收件夾沒有看到，請到垃圾郵件夾找找，或來信詢問。
-                                </li-->
-                                <li>
-                                    若你購買的是「暢行無阻票」與「時間有點限制票」」：每一張預購票卷將配有一組序號，若你於預購時購買三張票卷，你將會收到三組劃位序號；兩張預購票則為兩組序號，以此類推。一組序號可折抵一人，每組序號可分開使用（舉例：若你收到三組序號，可分別於 01/08、01/09、01/10 分開使用）
-                                </li>
-                                <!--li>
-                                    若你購買的是「四人沈醉票」：請注意，若購買「四人沈醉票」，只會收到一組序號，該組序號可一次折抵四人，僅能一次性使用，且無法拆開個別使用。
-                                </li-->
+                                <li>劃位序號依據不同的購票梯次，能劃位的日期不同，詳情請參考下方預售劃位期限與序號規則。</li>
+                                <li>劃位序號將於劃位之指定日期當天收到，可自行選擇日期與時段，序號僅可使用一次，請務必謹慎選擇。</li>
+                                <li>單人票券：一個序號一個名額。若購買三張單人票，會收到三組序號，可分開日期使用。</li>
+                                <li>雙人票：雙人套票，僅有一組序號，無法分開使用，須參加同日期同場次演出。</li>
+                                <li>六人票：團體套票，僅有一組序號，無法分開使用，須參加同日期同場次演出。</li>
+                                <li>劃位序號過期視為放棄權益，將無法退費與劃位其他演出時段，請務必留意。</li>
                             </ul>
 
                             <h5 class="sub-title highlight">
                                 線上劃位
                             </h5>
                             <ul>
-                                <li>
-                                    欲使用劃位序號劃位者，請至劃位頁面，按照訂位流程，選定日期時段，填入基本資料，並於訂位時第五步驟劃位序號欄位，填入劃位序號，完成扣抵。
-                                </li>
-                                <li>
-                                    在訂位頁面第五步驟劃位序號欄位中，可分別填入多組劃位序號。如預訂兩組「暢行無阻票」，可輸入兩次序號，完成兩人扣抵；預定五組「時間有點限制票」，可輸入五次序號，完成五人扣抵；預定一組「四人沈醉票」，可輸入四次序號，完成四人扣抵。依此類推。
-                                </li>
-                                <li>
-                                    不同人的劃位序號可以一起使用：如A先生的序號與B先生的序號，可以一起輸入劃位序號欄位，完成扣抵。也請特別注意票卷類型與其能劃位的時間，「時間有點限制票」僅能劃平日晚上。
-                                </li>
+                                <li>劃位序號將會寄送至購票時填寫的訂位信箱，請確保信箱能正確收信。</li>
+                                <li>信件內含有專屬劃位序號與訂位頁面連結，選定日期與時段，輸入劃位序號扣抵，即完成劃位。</li>
+                                <li>同日期時段可同時填入多組劃位序號，不受票種限制。如購買三張單人票與一張六人票，可同時輸入四次序號完成扣抵。</li>
                             </ul>
 
                             <h5 class="sub-title highlight">
-                                劃位期限、預售退費
+                                預售劃位期限與序號規則
                             </h5>
-                            <!--p>
-                                第一批房客
+                            <p class="category-title">
+                                早鳥票訪客
                             </p>
                             <ul>
-                                <li>
-                                    劃位序號使用期限為12/26至02/03。
-                                </li>
-                                <li>
-                                    未收到劃位序號前，若欲退費，於12/31（含）前之申請，可享全額退費。
-                                    收到劃位序號後，於01/01至活動結束02/03（含）前提出退費申請，扣除金流系統手續費5%後，將獲全額退費。
-                                    若於活動結束前未申請退費，將不另行通知與退費。
-                                </li>
+                                <li>可劃位：01/13 - 02/09 之間的演出場次</li>
+                                <li>序號失效日期：12/15（二）18:00 整。</li>
                             </ul>
-                            <p>
-                                第二批房客
-                            </p>
-                            <ul>
-                                <li>
-                                    劃位序號使用期限為02/10至03/03。
-                                </li>
-                                <li>
-                                    未收到劃位序號前，若欲退費，於01/29（含）前之申請，可享全額退費。
-                                    收到劃位序號後，於01/30至活動結束03/03（含）前提出退費申請，扣除金流系統手續費5%後，將獲全額退費。
-                                    若於活動結束前未申請退費，將不另行通知與退費。
-                                </li>
-                            </ul>
-                            <p>
-                                第三批房客
-                            </p>
-                            <ul>
-                                <li>
-                                    劃位序號使用期限為03/04至03/23。
-                                </li>
-                                <li>
-                                    未收到劃位序號前若欲退費，於02/26（含）前之申請，可享全額退費。收到劃位序號後，於02/27至03/17（含）前提出申請，扣除金流手續費5%後，將獲全額退費。若於活動結束前未申請退費，將不另行通知與退費。
-                                </li>
-                            </ul>
-
-                            <p>
-                                第四批房客
-                            </p>
-                            <ul>
-                                <li>
-                                    劃位序號使用期限為04/16至05/19。
-                                </li>
-                                <li>
-                                    未收到劃位序號前若欲退費，於04/10(含)前申請，可享全額退費。收到劃位序號後，於4/11至5/12(含)前提出申請，扣除金流手續費5%後，將獲全額退費。若於活動結束前未申請退費，將不另行通知與退費。
-                                </li>
-                            </ul>
-
-                            <p>
-                                第五批房客
-                            </p>
-                            <ul>
-                                <li>
-                                    劃位序號使用期限為05/15至06/13。
-                                </li>
-                                <li>
-                                    未收到劃位序號前若申請退費，於05/14（含）前申請，可享全額退費。收到劃位序號後，於5/15至6/12（含）
-                                    前提出申請，扣除金流手續費5%後，將獲全額退費。若於活動結束前未申請退費，將不另行通知與退費。
-                                </li>
-                            </ul-->
-                            <p>
-                                第六批房客
-                            </p>
-                            <ul>
-                                <li>
-                                    劃位序號使用期限為06/19至07/13。
-                                </li>
-                                <li>
-                                    未收到劃位序號前申請退費，於06/19（含）前申請，可享全額退費。收到劃位序號後，於6/20至7/13（含）前提出申請，扣除金流手續費5%後，將獲全額退費。若於活動結束前未申請退費，將不另行通知與退費。
-                                </li>
-                            </ul>
-                            <p>
-                                最後的房客
-                            </p>
-                            <ul>
-                                <li>
-                                    劃位序號使用期限為07/17至08/01晚上18:00。
-                                </li>
-                                <li>
-                                    未收到劃位序號前申請退費，於07/03（含）前申請，可享全額退費。收到劃位序號後，於07/17至08/01晚上18:00前提出申請，將扣除金流手續費5%後退費。若未依上述日期申請，將不另行通知與退費。
-                                </li>
-                            </ul>
-
-
-                            <p style="font-size: 16px;text-align: left;line-height: 2;">
-                                *一旦使用序號完成劃位，劃位序號即失去效用，相關退費、更改座位需求，請參考「<span class="to-change-and-refund">更改、退費事項</span>」。<br />
-                                *若後續延長活動截止時間，會另行公佈延長之劃位與退費說明。
+                            <p class="text-left">
+                                * 序號一經使用即失效，無法重新劃位，請務必謹慎選擇。<br/>
+                                * 上述劃位與失效日期團隊保留調整與修改之權利，有所調整會另行公佈。<br/>
+                                * 本票券屬於「藝文表演票券」。
                             </p>
                         </div>
 
@@ -619,54 +587,43 @@
 
                         <div class="tab-content-inner">
                             <p class="pre-note">
-                                預售票券若需更改體驗日期、取消訂位、退費，<br/>
-                                請直接來信至微醺大飯店客服信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/>
-                                由微醺管家為你處理。
+                                預售票券若需更改體驗日期、取消退費，<br/>
+                                請提供相應的資料，來信微醺大飯店專屬信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/>
+                                由◯◯◯◯為你處理。
                                 <br/><br/>
-                                為確保你的權益，請根據你的需求，詳細閱讀以下規則：
+                                為確保你的權益，請根據需求，詳閱以下規則：
                             </p>
 
                             <h5 class="sub-title highlight">
                                 更改日期、時段
                             </h5>
                             <ul>
-                                <li>
-                                    若需更改訂位⽇期，請於體驗⽇七天前 ，來信告知。如：欲更改 01/08 的訂位，請於 01/01 (含) 前來信告知，我們將為您調整。
-                                </li>
-                                <li>
-                                    請注意，你能夠更改的日期與時段，將與你預購時所購買的票卷種類有關。若你購買「時間有點限制票」，則只能更改至平日晚上時段。購買「暢行無阻票」、「四人沈醉票」，則可選擇所有可更改的日期更改。最終會以剩餘能更改的日期與時段為主，會由客服人員提供您可以更改的日期。
-                                </li>
-                                <li>
-                                    若需更改日期，團隊將盡力協助。若因訂位狀況踴躍，導致無法更改座位至理想時段，還請見諒。建議在劃位前先確認預劃位時段自己與夥伴們的行程，減少未來更改座位的可能性。
-                                </li>
-                                <li>
-                                    若你購買「暢行無阻票」且更改至平日晚上或是週末中午的座位，無論是自身要求，或是釋出可更換的時段只剩下平日晚上或是週末中午可以選擇，皆無法改成「時間有點限制票」，並且無法退差額。
-                                </li>
-                                <li>
-                                    體驗日六天前與當⽇恕不提供⽇期更改，建議來賓可將訂位轉讓給朋友、家⼈。
-                                </li>
+                                <li>演出前七天（包含演出當日）不提供日期更改，建議將訂位轉讓給親友。</li>
+                                <li>若需更改日期、時段，請於體驗日七天前來信告知，附上「劃位序號」與「訂位信箱」。<br/>如：欲更改 01/08 的訂位，最晚請於 01/01（含）前來信。</li>
+                                <li>可更改之日期，已屆時尚有的日期與時段為準。劃位前請先確認相關親友的行程，減少更改座位的可能性。</li>
+                                <li>一個序號僅有一次更改機會，請務必謹慎使用。</li>
                             </ul>
 
                             <h5 class="sub-title highlight cancel-order">
                                 取消訂位與退費
                             </h5>
                             <ul>
-                                <li>
-                                    在體驗當⽇七天前，來信取消訂位，扣除⾦流系統⼿續費 5% 後，將獲全額退費。如：若預訂 01/08 的體驗，於 01/01 (含) 前寄信或來電取消訂位，可獲全額退費。
-                                </li>
-                                <li>
-                                    在⽤餐當⽇六天前，來信取消訂位，僅將退回 50% 之費⽤。建議來賓可以將訂位轉讓給朋友家⼈。如：若預訂 01/08 的體驗，於 01/02 至 01/07 寄信取消訂位，可退回 50% 之費用。
-                                </li>
-                                <li>
-                                    體驗當日無法取消與退費，請務必準時到場。若會遲到請來電告知（專屬手機請見行前簡訊，將於當日寄出）。
-                                </li>
-                                <li>
-                                    本體驗採時段場次分批入場，遲到將無法入場。錯過的體驗、表演、調酒與食物，無法回朔與外帶。為了您的權益，請務必準時抵達。
-                                </li>
+                                <li>演出當日不接受改期，若取消亦無法退費，接受將票券轉讓給親友。<br/>來信取消申請日期以正常工作下班時間 18:00 為區分。<br/>如：於 01/15 18:00 前來信，屬於 01/15 之申請；若於當日 18:00 之後來信，則屬於 01/16 之申請。</li>
+                                <li>演出準時開始，遲到無法入場與退費，為了你的權益，請務必準時抵達。</li>
+                                <li>演出六天內（不包含演出當日）來信申請，僅退 50% 費用。建議將訂位轉讓給親友。</li>
+                                <li>演出七天前（包含演出當日）來信申請，將扣除金流手續費 10% 後退費。<br/>如：01/08 的訂位，最晚請於 01/01（含）前來信。</li>
+                                <li>購買預售票，寄送劃位序號的前一日申請退費，將不扣除手續費全額退費。</li>
                             </ul>
 
+                            <h5 class="sub-title highlight">
+                                不可抗力因素之更改訂位及退費辦法
+                            </h5>
+                            <p>
+                                若因天災、國際病毒等不可抗拒之因素，由政府、該縣市主管機關發布停止上班、停演之訊息，微醺大飯店也將暫停演出，並協助改期或全額退費的服務。
+                            </p>
+
                             <h5 class="sub-title highlight change-seat">
-                                更改座位、取消與退費規則一覽表
+                                更改訂位、取消與退費規則統整表
                             </h5>
 
                             <table id="table-note">
@@ -688,18 +645,17 @@
 
                                 <tr>
                                     <td class="highlight-td">
-                                        訂位日
+                                        演出當天
                                     </td>
                                     <td>
                                         01/08
                                     </td>
                                     <td class="highlight-td">
-                                        訂位日當天<br class="d-block d-sm-none"/>無法退費
+                                        無法退費
                                     </td>
                                     <td rowspan="4">
-                                        不提供日期<br class="d-block d-sm-none"/>更改，來賓<br class="d-block d-sm-none"/>可
-                                        <br class="d-none d-sm-block"/>
-                                        將訂位轉<br class="d-block d-sm-none"/>讓給朋友、<br class="d-block d-sm-none"/>家人
+                                        不提供改期<br/>
+                                        建議將訂位轉讓給親友
                                     </td>
                                 </tr>
                                 <tr class="normal-border">
@@ -710,7 +666,7 @@
                                         01/07
                                     </td>
                                     <td rowspan="3">
-                                        退回 50% 之<br class="d-block d-sm-none"/>費用
+                                        僅退 50% 費用
                                     </td>
                                 </tr>
                                 <tr class="normal-border">
@@ -729,10 +685,10 @@
                                     <td>前七日</td>
                                     <td>01/01</td>
                                     <td rowspan="2">
-                                        扣除金流系<br class="d-block d-sm-none"/>統手續費 5% <br class="d-none d-sm-block"/>後<span class="d-none d-sm-inline-block">，</span><br class="d-block d-sm-none"/>可獲全額退費
+                                        會扣除金流手續費10%
                                     </td>
                                     <td rowspan="2">
-                                        可來信<br class="d-block d-sm-none"/>更改日期
+                                        可來信更改日期
                                     </td>
                                 </tr>
                                 <tr class="light-bg">
@@ -745,37 +701,34 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <div style="max-width: 670px;width: 100%;margin-left: auto;margin-right: auto;font-size: 12px;letter-spacing: 2px;margin-top: 10px;text-align: right;">＊上述規則僅適用於預售票券</div>
+                            <div class="table-note-text">＊上述規則僅適用於預售票券，若購買其他票券，以購買時的規則為準。</div>
 
                             <h5 class="sub-title highlight transfer-ticket">
-                                票卷轉讓
+                                轉讓、改期、退費流程說明
                             </h5>
+
+                            <p class="category-title text-center">票券轉讓</p>
                             <p>
-                                可⾃⾏轉讓票卷。若轉讓票卷⽽需更改葷素或有其他飲⻝習慣，請於盡快來信⾄<br/>
-                                <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a> 信箱。
+                                來信請提供訂位者訂位相關資訊，與被轉讓者姓名、信箱、手機號碼。
                             </p>
 
-                            <h5 class="sub-title highlight refund-process">
-                                退費流程
-                            </h5>
-                            <p>
-                                確認將予以退費後，微醺管家將於七個⼯作天內向⾦融機構提出申請，惟實際退費⽇期仍須依發卡銀⾏之規定與合約內容⽽定。
-                            </p>
+                            <p class="category-title"><br/>改期流程</p>
+                            <ul>
+                                <li>提供訂位姓名、訂位信箱、劃位序號等資訊。</li>
+                                <li>等待回信，◯◯◯◯將為你取消原先訂位與恢復序號資格，三日內可重新劃位。</li>
+                            </ul>
 
-                            <h5 class="sub-title highlight majeure-factor">
-                                不可抗⼒因素之更改訂位及退費辦法
-                            </h5>
-                            <p>
-                                若因天災等不可抗拒⼒之因素，由主管機關發布停⽌上班上課，微醺大飯店也將會暫停營業⼄⽇。
-                                <br/>
-                                當然，我們會協助你更改訂位⽇期，或是辦理全額退費，手續費也會由微醺大飯店自行吸收。
-                            </p>
+                            <p class="category-title"><br/>退費流程</p>
+                            <ul>
+                                <li>提供預售票之訂單編號與訂位姓名、訂位信箱。</li>
+                                <li>確認退費後，請等待七至十個工作天後向金融機構確認，實際退費日期須視使用的發卡銀行規定為準。</li>
+                            </ul>
 
                             <h5 class="sub-title highlight transaction-system">
-                                線上⾦流系統
+                                線上金流系統
                             </h5>
                             <p>
-                                微醺⼤飯店⽀線上付款透過⾙殼集器、智付通第三⽅平台⽀付
+                                《微醺大飯店2：1980》之線上付款透過貝殼集器、藍新金流第三方平台支付
                             </p>
 
                         </div>
@@ -813,18 +766,18 @@
 <!-- End Screen Hint -->
 
 <!-- Bootstrap -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/jquery-3.3.1.min.js"></script>
+<script src="js/plugins/popper.min.js"></script>
+<script src="js/plugins/bootstrap.min.js"></script>
 
 <!-- Ripple Animation Js -->
-<script src="js/pixi.min.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/custom-ripple.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/plugins/pixi.min.js"></script>
+<script src="js/plugins/TweenMax.min.js"></script>
+<script src="js/plugins/custom-ripple.js"></script>
+<script src="js/plugins/imagesloaded.pkgd.min.js"></script>
 
 <!-- OwlCarousel2 -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="js/plugins/owl.carousel.min.js"></script>
 <script src="js/rules.js?v=0.1"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>

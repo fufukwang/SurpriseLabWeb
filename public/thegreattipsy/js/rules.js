@@ -48,7 +48,15 @@ jQuery(function($){
         $('html, body').animate({
             scrollTop: 0
         }, 300, function() {
-            owl.trigger('to.owl.carousel', [$(window.clickTab).index(), 300]);
+            owl.trigger('to.owl.carousel', [$(window.clickTab).index(), 300, true]);
+        });
+    });
+
+    $('.to-presale-rules').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 300, function() {
+            owl.trigger('to.owl.carousel', [1, 300, true]);
         });
     });
 
@@ -56,7 +64,7 @@ jQuery(function($){
         $('html, body').animate({
             scrollTop: 0
         }, 300, function() {
-            owl.trigger('to.owl.carousel', [2, 300]);
+            owl.trigger('to.owl.carousel', [2, 300, true]);
         });
     });
 
@@ -70,21 +78,6 @@ jQuery(function($){
     }).on('click', function () {
         setTimeout(function () {
             owl.trigger('refresh.owl.carousel');
-        }, 300);
-    });
-
-    var qa_card = $('#qa-according .card');
-
-    qa_card.on('click', function () {
-        var offset = $(this).offset().top - header.height() - rulesTab.height();
-        var prevCard = qa_card.slice(0, parseInt($(this).index()));
-
-        if (prevCard.find('h6').hasClass('is-open')) {
-            offset = offset - prevCard.find('h6.is-open').parent().next().height();
-        }
-
-        $('html, body').animate({
-            scrollTop: offset
         }, 300);
     });
 

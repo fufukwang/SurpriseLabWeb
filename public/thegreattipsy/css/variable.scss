@@ -1,21 +1,40 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap');
+
 $font-montserrat: 'Montserrat', sans-serif;
-$font-pinyonScript: 'Pinyon Script', cursive, sans-serif;
+$font-greatVibes: 'Great Vibes', cursive, sans-serif;
+$font-sans: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
 $font-serif: 'Noto Serif TC', serif;
 
-// colors
-$color-lighter-yellow: #eee9c5;
-$color-light-yellow: #ccc38d;
-$color-yellow: #9c9359;
-$color-dark-yellow: #595330;
-$color-black: #1e1c19;
-$color-dark-black: #1a1816;
-$color-mobile-blue: #89b7f8;
-$color-mobile-yellow: #efd97b;
-$color-mobile-pink: #ff7ea4;
+// Primary Colors
+$color-red: #DD1933;
+$color-pink: #C977AE;
+$color-orange: #F77116;
+$color-mango: #E8AB31;
+$color-green: #59A993;
+$color-blue: #2761A6;
+
+// Text Colors
+$color-lighter-yellow: #FFFFFF;
+$color-light-yellow: #FFE0BA;
+$color-yellow: #EFC27B;
+$color-dark-yellow: #E5AD5C;
+
+// Background Colors
+$color-dark-brown: #281F1C;
+$color-dark-red: #932C2C;
+
+// Ticket Colors
+$color-ticket-blue: #00808D;
+$color-ticket-green: #00C39A;
+$color-ticket-red: #DE3B52;
 
 // Ending color
-$color-ending-yellow: #89814d;
-$color-ending-blue: #01ffff;
+$color-ending-yellow: #89814D;
+$color-ending-blue: #01FFFF;
 
 // Start================================================================
 // Space counter base on width percentage

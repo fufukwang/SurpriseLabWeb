@@ -1,0 +1,57 @@
+$font-montserrat: 'Montserrat', sans-serif;
+$font-pinyonScript: 'Pinyon Script', cursive, sans-serif;
+$font-serif: 'Noto Serif TC', serif;
+
+// colors
+$color-lighter-yellow: #eee9c5;
+$color-light-yellow: #ccc38d;
+$color-yellow: #9c9359;
+$color-dark-yellow: #595330;
+$color-black: #1e1c19;
+$color-dark-black: #1a1816;
+$color-mobile-blue: #89b7f8;
+$color-mobile-yellow: #efd97b;
+$color-mobile-pink: #ff7ea4;
+
+// Ending color
+$color-ending-yellow: #89814d;
+$color-ending-blue: #01ffff;
+
+// Start================================================================
+// Space counter base on width percentage
+// How to use
+// @include baseCounter(style name, space when is 1920);
+// Example @include baseCounter('padding-top', 75);
+
+@mixin baseCounter($e, $width-1920) {
+  // Padding-left & Padding-right = 15 + 15 = 30
+  $bs4-padding: 30px;
+  $percent : $width-1920 / 1118;
+
+  @media (min-width: 1200px) {
+    #{$e}: calc((608px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (min-width: 1440px) {
+    #{$e}: calc((768px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (min-width: 1920px) {
+    #{$e}: calc((1088px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (max-width: 1199.98px) {
+    #{$e}: calc((520px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (max-width: 480px) {
+    @if ($e != 'max-width') {
+      #{$e}: calc(100% * #{$percent});
+    } @else {
+      #{$e}: 100%;
+    }
+
+  }
+}
+
+// End================================================================

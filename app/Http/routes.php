@@ -438,39 +438,14 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('pre-sale.html',function() { return redirect('/dininginthedark2/about.html')->send(); });
         Route::get('food.html',function() { return redirect('/dininginthedark2/about.html')->send(); });
 
-/*
-        Route::get('about.html',function(){ return view('Dark2.frontend.home'); });
-        Route::get('experience.html',function(){ return view('Dark2.frontend.exeprience'); });
-        Route::get('rules.html',function(){ return view('Dark2.frontend.rules0616'); });
-        Route::get('contact.html',function(){ return view('Dark2.frontend.contact'); });
-        Route::get('index.html',function(){ return view('Dark2.frontend.home'); });
-        Route::get('/',function(){ return view('Dark2.frontend.home'); });
-*/
-/*
-        Route::get('chef.html',function(){ return view('Dark2.frontend.chef'); });
-        Route::get('people.html',function(){ return view('Dark2.frontend.people'); });
-        Route::get('press.html',function(){ return view('Dark2.frontend.press'); });
-        Route::get('pre-sale.html',function(){ return view('Dark2.frontend.pre-order'); });
-        Route::get('food.html',function(){ return view('Dark2.frontend.food'); });
-*/
-
 
         Route::get('reservation.html',function(){ return view('Dark2.frontend.reservation'); });
         Route::get('GetAjaxData','Dark2\HomeController@GetAjaxData');
         Route::post('ReOrderData','Dark2\HomeController@ReOrderData');
         Route::post('contactstore','Dark2\HomeController@contactstore');
     });
-    /*
-    Route::post('/frontcontactstore','FrontendController@contactstore');
-    // 動態取得資料
-    Route::get('GetAjaxData','FrontendController@GetAjaxData');
 
-    // 存入資料
-    Route::post('contact','HomeController@contact');
-    Route::post('storeres','HomeController@storeres');
-    Route::post('checkres','HomeController@checkres');
-*/
-
+    // thegreattipsy S2
     Route::group(['prefix' => 'thegreattipsy'], function(){
         Route::get('index.html',function(){ return view('thegreattipsy.frontend.home'); });
         Route::get('/',function(){ return view('thegreattipsy.frontend.home'); });
@@ -493,25 +468,25 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt\FrontController@ReOrderData');
     });
-    // thegreattipsy S2
-    Route::group(['prefix' => 'thegreattipsy2'], function(){
-        Route::get('index.html',function(){ return view('thegreattipsy2.frontend.home'); });
-        Route::get('/',function(){ return view('thegreattipsy2.frontend.home'); });
-        Route::get('rules.html',function(){ return view('thegreattipsy2.frontend.rules'); });
+    // thegreattipsy 2019
+    Route::group(['prefix' => 'thegreattipsy2019'], function(){
+        Route::get('index.html',function(){ return view('thegreattipsy2019.frontend.home'); });
+        Route::get('/',function(){ return view('thegreattipsy2019.frontend.home'); });
+        Route::get('rules.html',function(){ return view('thegreattipsy2019.frontend.rules'); });
         // 劃位
-        Route::get('booking.html',function(){ return view('thegreattipsy2.frontend.booking'); });
-        Route::get('booking_pay.html',function(){ return view('thegreattipsy2.frontend.booking_pay'); });
+        Route::get('booking.html',function(){ return view('thegreattipsy2019.frontend.booking'); });
+        Route::get('booking_pay.html',function(){ return view('thegreattipsy2019.frontend.booking_pay'); });
         Route::get('booking_credit_card.html',function(){ 
-            //return redirect("/thegreattipsy/index.html");
+            //return redirect("/thegreattipsy2019/index.html");
             /*
             $now = \Carbon\Carbon::now('Asia/Taipei')->timestamp;
             if($now>1566576000){
-                return redirect("/thegreattipsy/index.html");
+                return redirect("/thegreattipsy2019/index.html");
             } else {
-                return view('thegreattipsy2.frontend.booking_credit_card');     
+                return view('thegreattipsy2019.frontend.booking_credit_card');     
             }
             */
-            return redirect("/thegreattipsy2/index.html");
+            return redirect("/thegreattipsy2019/index.html");
         });
         Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt\FrontController@ReOrderData');

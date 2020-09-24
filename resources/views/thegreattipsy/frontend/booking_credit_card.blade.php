@@ -6,32 +6,32 @@
     <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
     <meta name="description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="微醺大飯店 The Great Tipsy"/>
-    <meta property="og:site_name" content="微醺大飯店 The Great Tipsy"/>
+    <meta property="og:title" content="微醺大飯店：1980’s"/>
+    <meta property="og:site_name" content="微醺大飯店：1980’s"/>
     <meta property="og:description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。"/>
-    <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy"/>
-    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy/img/opengraph.png"/>
+    <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy2"/>
+    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy2/img/opengraph.png"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
-    <title>微醺大飯店 The Great Tipsy</title>
+    <title>微醺大飯店：1980’s</title>
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins/bootstrap.css"/>
 
     <!-- Ripple Animation Style -->
-    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugins/component.css"/>
     <script>document.documentElement.className = 'js';</script>
 
     <!-- Fontawesome -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome/fontawesome.min.css"/>
 
     <!-- Select2 style -->
-    <link rel="stylesheet" href="css/select2.css"/>
+    <link rel="stylesheet" href="css/plugins/select2.css"/>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
@@ -79,28 +79,6 @@
     </ul>
 </aside>
 <!-- End Social Links -->
-
-<!-- Loading Animation -->
-<svg class="hidden">
-    <symbol id="icon-arrow" viewBox="0 0 24 24">
-        <title>arrow</title>
-        <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-    </symbol>
-    <symbol id="icon-drop" viewBox="0 0 24 24">
-        <title>drop</title>
-        <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/>
-        <path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-    </symbol>
-    <symbol id="icon-github" viewBox="0 0 32.6 31.8">
-        <title>github</title>
-        <path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"/>
-    </symbol>
-    <symbol id="icon-arrow-nav" viewBox="208.3 352 4.2 6.4">
-        <title>arrow-nav</title>
-        <polygon points="212.1,357.3 211.5,358 208.7,355.1 211.5,352.3 212.1,353 209.9,355.1"></polygon>
-    </symbol>
-</svg>
-<!-- End Loading Animation -->
 
 <main class="sections">
     <!-- Header LOGO -->
@@ -163,23 +141,12 @@
                     </div>
                     <p>&nbsp;</p>
                     <ul class="prefix-dash">
-
-<li>即買即劃位，票價統一2000 元。</li>
-<li>直購僅接受信用卡付費，無信用卡者不適用此訂位模式。</li>
-<li>信用卡確認訂位後將無法改期，僅接受退費（需扣除金流手續費10%），請審慎選擇。</li>
-<li>若⽇期或時段無法選擇，代表座位已滿，或是當日不開放。</li>
-<!--li>即買即劃位，可選擇06/24-07/14 區間之座位，票價統一2000 元。</li>
-<li>僅接受信用卡付費，無信用卡者不適用此訂位模式，請至微醺大飯店官網購買預售票。</li>
-<li>信用卡確認訂位後將無法改期，僅接受退費（需扣除金流手續費5%），請審慎選擇。</li>
-<li>若⽇期或時段無法選擇，代表座位已滿，或是當日不開放。</li-->
-
-<!--li>僅提供購買06/20-06/30座位，票價2000 元。</li>
-<li>信用卡付費僅提供「暢行無阻票」選項，四人沈醉票與時間有點限制票為限量預購票券。</li>
-<li>信用卡確認訂位後將無法改期，僅接受退費（需扣除金流手續費5%），請審慎選擇。</li>
-<li>⽇期無法選擇，代表座位已滿，或是當日不開放。</li-->
-<li>請確實填寫正確的Email與電話，將以此發佈最新須知。</li>
-<li>請確實選擇葷⻝與蛋奶素，備註飲⻝過敏狀況。</li>
-
+                        <li>即買即劃位，票價統一2000 元。</li>
+                        <li>直購僅接受信用卡付費，無信用卡者不適用此訂位模式。</li>
+                        <li>信用卡確認訂位後將無法改期，僅接受退費（需扣除金流手續費10%），請審慎選擇。</li>
+                        <li>若⽇期或時段無法選擇，代表座位已滿，或是當日不開放。</li>
+                        <li>請確實填寫正確的Email與電話，將以此發佈最新須知。</li>
+                        <li>請確實選擇葷⻝與蛋奶素，備註飲⻝過敏狀況。</li>
                     </ul>
                     <p>&nbsp;</p>
                     <p>
@@ -547,52 +514,34 @@
                         </button>
                     </div>
 
-
-
-
-
-
-
-<div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
-  <div class="modal-dialog" role="document" style="top: 10%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">信用卡付款</h5>
-      </div>
-      <div class="modal-body">
-<div class="tpfield" id="card-number" style="height: 30px;"></div>
-<div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
-<div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
-<p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
-<div style="text-align:center;"><a href="https://www.tappaysdk.com/tch" target="_blank"><img src="https://docs.tappaysdk.com/images/logo.png" width="100"></a></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
-        <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
+                    <div class="modal" tabindex="-1" role="dialog" id="lightbox2pay">
+                        <div class="modal-dialog" role="document" style="top: 10%;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">信用卡付款</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="tpfield" id="card-number" style="height: 30px;"></div>
+                                    <div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
+                                    <div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
+                                    <p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
+                                    <div style="text-align:center;">
+                                        <a href="https://www.tappaysdk.com/tch" target="_blank">
+                                            <img src="https://docs.tappaysdk.com/images/logo.png" width="100">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="SurePay">確認付款</button>
+                                    <button type="button" class="btn btn-secondary" id="CanalPay" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
         </form>
     </div>
-
-
-
-
 
     <div class="submit-page success" id="bookingSuccess" style="display:none;">
         <div class="container">
@@ -632,43 +581,19 @@
             </div>
         </div>
     </div>
-
-
 </main>
 
-<!-- Screen Rotate Hint -->
-<!--<div class="hint-wrapper">-->
-    <!--<div class="hint-inner">-->
-        <!--<div class="logo">-->
-            <!--<img src="img/web_title_small.png" alt="The Great Tipsy">-->
-        <!--</div>-->
-        <!--<div class="hint-img rotate-turn-h">-->
-            <!--<img class="rotate-turn-h" src="img/rotate_turn-h.gif" alt="screen-rotate">-->
-        <!--</div>-->
-        <!--<div class="hint-img rotate-turn-s">-->
-            <!--<img class="rotate-turn-s" src="img/rotate_turn-s.gif" alt="screen-rotate">-->
-        <!--</div>-->
-        <!--<div class="hint-text rotate-turn-h">-->
-            <!--請使用橫式觀看，以獲得最佳體驗-->
-        <!--</div>-->
-        <!--<div class="hint-text rotate-turn-s">-->
-            <!--請使用直式觀看，以獲得最佳體驗-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<!-- End Screen Hint -->
-
 <!-- Bootstrap -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/jquery-3.3.1.min.js"></script>
+<script src="js/plugins/jquery-ui.js"></script>
+<script src="js/plugins/popper.min.js"></script>
+<script src="js/plugins/bootstrap.min.js"></script>
 
 <!-- Ripple Animation Js -->
-<script src="js/pixi.min.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/custom-ripple.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/plugins/pixi.min.js"></script>
+<script src="js/plugins/TweenMax.min.js"></script>
+<script src="js/plugins/custom-ripple.js"></script>
+<script src="js/plugins/imagesloaded.pkgd.min.js"></script>
 
 <!-- Select2 script-->
 <script src="js/select2.js?v=1"></script>
