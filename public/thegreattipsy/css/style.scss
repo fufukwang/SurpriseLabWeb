@@ -1258,8 +1258,8 @@ header.logo {
       text-align: center;
       @include baseCounter('padding-top', 54);
       @include baseCounter('padding-bottom', 80);
-      @include baseCounter('padding-left', 47);
-      @include baseCounter('padding-right', 47);
+      @include baseCounter('padding-left', 45);
+      @include baseCounter('padding-right', 45);
 
       &:first-child {
         padding-left: 0;
