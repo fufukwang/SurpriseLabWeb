@@ -4,18 +4,18 @@
     <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
-    <meta name="description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。">
+    <meta name="description" content="歡迎來到《微醺大飯店》——那些你曾經希望能有所不同的事，在這都有可能發生。">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="微醺大飯店：1980’s"/>
-    <meta property="og:site_name" content="微醺大飯店：1980’s"/>
-    <meta property="og:description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。"/>
+    <meta property="og:title" content="微醺大飯店：1980s"/>
+    <meta property="og:site_name" content="微醺大飯店：1980s"/>
+    <meta property="og:description" content="歡迎來到《微醺大飯店》——那些你曾經希望能有所不同的事，在這都有可能發生。"/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy2"/>
     <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy2/img/opengraph.png?v=0.1"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>微醺大飯店：1980’s</title>
+    <title>微醺大飯店：1980s</title>
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -143,7 +143,7 @@
             <h2>Lobby</h2>
             <p>
                 Ladies and gentlemen<br/>
-                《微醺大飯店：1980’s 》即將重新開幕<br/>
+                《微醺大飯店：1980s 》即將重新開幕<br/>
                 我一直在等待你的來訪<br/><br/>
                 讓我來為你帶路吧？
             </p>
