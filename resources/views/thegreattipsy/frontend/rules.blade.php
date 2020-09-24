@@ -518,8 +518,8 @@
                                 預售流程
                             </h5>
                             <div>
-                                <img class="img-fluid d-none d-sm-block" src="img/flow.png" alt="預售流程">
-                                <img class="img-fluid d-block d-sm-none" src="img/flow_mobile.png" alt="預售流程">
+                                <img class="img-fluid d-none d-sm-block" src="img/other/flow.png" alt="預售流程">
+                                <img class="img-fluid d-block d-sm-none" src="img/other/flow_mobile.png" alt="預售流程">
                             </div>
 
                             <h5 class="sub-title highlight">
@@ -675,10 +675,10 @@
                                 </tr>
                                 <tr class="normal-border">
                                     <td>
-                                        <img class="img-fluid" src="img/dot.png" alt="dot">
+                                        <img class="img-fluid" src="img/icon/dot.png" alt="dot">
                                     </td>
                                     <td>
-                                        <img class="img-fluid" src="img/dot.png" alt="dot">
+                                        <img class="img-fluid" src="img/icon/dot.png" alt="dot">
                                     </td>
                                 </tr>
                                 <tr>
@@ -697,10 +697,10 @@
                                 </tr>
                                 <tr class="light-bg">
                                     <td>
-                                        <img class="img-fluid" src="img/dot.png" alt="dot">
+                                        <img class="img-fluid" src="img/icon/dot.png" alt="dot">
                                     </td>
                                     <td>
-                                        <img class="img-fluid" src="img/dot.png" alt="dot">
+                                        <img class="img-fluid" src="img/icon/dot.png" alt="dot">
                                     </td>
                                 </tr>
                                 </tbody>
@@ -754,10 +754,10 @@
             <img src="img/web_title_small.png" alt="The Great Tipsy">
         </div>
         <div class="hint-img rotate-turn-h">
-            <img class="rotate-turn-h" src="img/rotate_turn-h.gif" alt="screen-rotate">
+            <img class="rotate-turn-h" src="img/other/rotate_turn-h.gif" alt="screen-rotate">
         </div>
         <div class="hint-img rotate-turn-s">
-            <img class="rotate-turn-s" src="img/rotate_turn-s.gif" alt="screen-rotate">
+            <img class="rotate-turn-s" src="img/other/rotate_turn-s.gif" alt="screen-rotate">
         </div>
         <div class="hint-text rotate-turn-h">
             請使用橫式觀看，以獲得最佳體驗

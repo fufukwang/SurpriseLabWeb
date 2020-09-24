@@ -85,7 +85,7 @@
     <div class="content">
         <div class="slide-wrapper">
             <div class="slide-item">
-                <img src="img/illustration_home_title.png" class="slide-item__image">
+                <img src="img/illustration/illustration_home_title.png" class="slide-item__image">
             </div>
         </div>
         <h1 class="gold-text">微醺大飯店</h1>
@@ -98,20 +98,20 @@
         <!-- PC style -->
         <div class="parallax" id="scene">
             <div class="parallax-item parallax-item-pc" data-depth="0.4">
-                <img src="img/illustration_home_3.png" alt="微醺大飯店">
+                <img src="img/illustration/illustration_home_3.png" alt="微醺大飯店">
             </div>
             <div class="parallax-item parallax-item-pc" data-depth="0.3">
-                <img src="img/illustration_home_2.png" alt="微醺大飯店">
+                <img src="img/illustration/illustration_home_2.png" alt="微醺大飯店">
             </div>
             <div class="parallax-item parallax-item-pc" data-depth="0.2">
-                <img src="img/illustration_home_1.png" alt="微醺大飯店">
+                <img src="img/illustration/illustration_home_1.png" alt="微醺大飯店">
             </div>
         </div>
 
         <!-- mobile style -->
         <div class="parallax" id="sceneMobile">
             <div class="parallax-item parallax-item-mobile" data-depth="0.6">
-                <img src="img/mrtipsy_mobile_home_mobile.png" alt="微醺大飯店">
+                <img src="img/illustration/mrtipsy_mobile_home_mobile.png" alt="微醺大飯店">
             </div>
         </div>
         <div id="canvas"></div>
@@ -150,7 +150,7 @@
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#About">
-                            <img draggable="false" src="img/icon-about.svg" alt="飯店導覽">
+                            <img draggable="false" src="img/icon/icon-about.svg" alt="飯店導覽">
                         </a>
                     </div>
                     <div class="feature-btn">
@@ -160,7 +160,7 @@
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Ticket">
-                            <img draggable="false" src="img/icon-ticket.svg" alt="我要赴約">
+                            <img draggable="false" src="img/icon/icon-ticket.svg" alt="我要赴約">
                         </a>
                     </div>
                     <div class="feature-btn">
@@ -170,7 +170,7 @@
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Rules">
-                            <img draggable="false" src="img/icon-rules.svg" alt="飯店規則">
+                            <img draggable="false" src="img/icon/icon-rules.svg" alt="飯店規則">
                         </a>
                     </div>
                     <div class="feature-btn">
@@ -180,7 +180,7 @@
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Contact">
-                            <img draggable="false" src="img/icon-contact.svg" alt="聯絡飯店">
+                            <img draggable="false" src="img/icon/icon-contact.svg" alt="聯絡飯店">
                         </a>
                     </div>
                     <div class="feature-btn">
@@ -261,7 +261,7 @@
                 </p>
             </div>
             <div class="space-img">
-                <img src="img/illustration_about 2.png" alt="space" draggable="false">
+                <img src="img/illustration/illustration_about 2.png" alt="space" draggable="false">
             </div>
         </section>
 
@@ -284,7 +284,7 @@
                 </p>
             </div>
             <div class="character-img">
-                <img src="img/illustration_about 3.png" alt="character" draggable="false">
+                <img src="img/illustration/illustration_about 3.png" alt="character" draggable="false">
             </div>
         </section>
 
@@ -327,7 +327,7 @@
                 </p>
             </div>
             <div class="check-img">
-                <img src="img/illustration_about 5.png" alt="checkOut" draggable="false">
+                <img src="img/illustration/illustration_about 5.png" alt="checkOut" draggable="false">
             </div>
         </section>
 
@@ -664,10 +664,10 @@
             <img src="img/web_title_small.png" alt="The Great Tipsy">
         </div>
         <div class="hint-img rotate-turn-h">
-            <img class="rotate-turn-h" src="img/rotate_turn-h.gif" alt="screen-rotate">
+            <img class="rotate-turn-h" src="img/other/rotate_turn-h.gif" alt="screen-rotate">
         </div>
         <div class="hint-img rotate-turn-s">
-            <img class="rotate-turn-s" src="img/rotate_turn-s.gif" alt="screen-rotate">
+            <img class="rotate-turn-s" src="img/other/rotate_turn-s.gif" alt="screen-rotate">
         </div>
         <div class="hint-text rotate-turn-h">
             請使用橫式觀看，以獲得最佳體驗

@@ -604,7 +604,7 @@ form .btn-outline {
 }
 
 .radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-image: url("../img/icon-check.svg");
+  background-image: url("../img/icon/icon-check.svg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -771,7 +771,7 @@ form .btn-outline {
   height: 20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-image: url("../img/icon-arrow.svg");
+  background-image: url("../img/icon/icon-arrow.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -906,7 +906,7 @@ form .btn-outline {
   height: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-image: url("../img/icon-calendar.svg");
+  background-image: url("../img/icon/icon-calendar.svg");
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -970,7 +970,7 @@ form .btn-outline {
   font-size: 0;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-arrow.svg") no-repeat;
+  background: url("../img/icon/icon-arrow.svg") no-repeat;
   background-size: cover;
   border-radius: 50%;
   background-color: #281F1C;

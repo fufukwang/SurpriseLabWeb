@@ -367,7 +367,7 @@ p {
       position: absolute;
       left: 0;
       bottom: 0;
-      background-image: url('../img/mrtipsy_hand_mobile.png');
+      background-image: url('../img/illustration/mrtipsy_hand_mobile.png');
       background-position: center bottom;
       background-size: cover;
       background-repeat: no-repeat;
@@ -569,7 +569,7 @@ p {
 
   .btn-outline {
     width: 210px !important;
-    background-image: url('../img/wave.png');
+    background-image: url('../img/other/wave.png');
     background-position: center -200%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -801,7 +801,7 @@ header.logo {
 
 // Lobby Section
 #Lobby {
-  background-image: url('../img/illustration_lobby.png');
+  background-image: url('../img/illustration/illustration_lobby.png');
   background-size: cover;
   background-position: left bottom;
 
@@ -826,7 +826,7 @@ header.logo {
       content: '';
       width: 100%;
       height: 100%;
-      background-image: url('../img/mrtipsy_hand_mobile.png');
+      background-image: url('../img/illustration/mrtipsy_hand_mobile.png');
       background-position: center center;
       background-size: cover;
       position: absolute;
@@ -934,7 +934,7 @@ header.logo {
       position: absolute;
       @include baseCounter('left', 140);
       bottom: 0;
-      background-image: url('../img/illustration_about 1_1.png');
+      background-image: url('../img/illustration/illustration_about 1_1.png');
       background-size: contain;
       background-repeat: no-repeat;
 
@@ -959,7 +959,7 @@ header.logo {
       position: absolute;
       @include baseCounter('right', 140);
       bottom: 0;
-      background-image: url('../img/illustration_about 1-2.png');
+      background-image: url('../img/illustration/illustration_about 1-2.png');
       background-size: contain;
       background-repeat: no-repeat;
 
@@ -1031,7 +1031,7 @@ header.logo {
       @include baseCounter('left', 140);
       top: 50%;
       transform: translateY(-50%);
-      background-image: url('../img/illustration_about 4-1.png');
+      background-image: url('../img/illustration/illustration_about 4-1.png');
       background-size: contain;
       background-repeat: no-repeat;
 
@@ -1042,7 +1042,7 @@ header.logo {
         top: auto;
         bottom: 0;
         transform: none;
-        background-image: url('../img/mrtipsy_mobile_food.png');
+        background-image: url('../img/illustration/mrtipsy_mobile_food.png');
         background-position: center;
       }
     }
@@ -1055,7 +1055,7 @@ header.logo {
       @include baseCounter('right', 140);
       top: 50%;
       transform: translateY(-50%);
-      background-image: url('../img/illustration_about 4-2.png');
+      background-image: url('../img/illustration/illustration_about 4-2.png');
       background-size: contain;
       background-repeat: no-repeat;
 
