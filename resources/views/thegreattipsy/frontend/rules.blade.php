@@ -125,7 +125,7 @@
                                     <div class="card-header" id="qa1-header">
                                         <h6 data-toggle="collapse" data-target="#qa1" aria-expanded="false"
                                             aria-controls="qa1" class="collapsed d-flex align-items-center">
-                                            1. 《微醺大飯店二：1980》是怎樣的體驗呢？
+                                            1. 《微醺大飯店：1980s》是怎樣的體驗呢？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -133,7 +133,7 @@
                                     <div id="qa1" class="collapse" aria-labelledby="qa1-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            《微醺大飯店二：1980》為驚喜製造 Surprise Lab. 第六號沉浸式體驗作品。延續《微醺大飯店》以飯店作為演出場域、酒作為媒介，專業演員與之互動。
+                                            《微醺大飯店：1980s》為驚喜製造 Surprise Lab. 第六號沉浸式體驗作品。延續《微醺大飯店》以飯店作為演出場域、酒作為媒介，專業演員與之互動。
                                         </div>
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@
                                     <div class="card-header" id="qa2-header">
                                         <h6 data-toggle="collapse" data-target="#qa2" aria-expanded="false"
                                             aria-controls="qa2" class="collapsed d-flex align-items-center">
-                                            2. 《微醺大飯店二：1980》和《微醺大飯店》故事上是有關聯的嗎？
+                                            2. 《微醺大飯店：1980s》和《微醺大飯店》故事上是有關聯的嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -158,7 +158,7 @@
                                     <div class="card-header" id="qa3-header">
                                         <h6 data-toggle="collapse" data-target="#qa3" aria-expanded="false"
                                             aria-controls="qa3" class="collapsed d-flex align-items-center">
-                                            3. 《微醺大飯店二：1980》和《微醺大飯店》是原班人馬嗎？
+                                            3. 《微醺大飯店：1980s》和《微醺大飯店》是原班人馬嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -186,7 +186,7 @@
                                     <div id="qa4" class="collapse" aria-labelledby="qa4-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            微醺大飯店採網路購票、線上劃位的方式進行，無販售現場票券。購票請至<a class="default-light btn-link" href="index.html#Ticket">我要訂房</a>購買，相關規則請參考<span class="to-presale-rules">預售規則</span>，內有詳細流程與說明。
+                                            微醺大飯店採網路購票、線上劃位的方式進行，無販售現場票券。購票請至<a class="default-light btn-link" href="index.html#Ticket">我要赴約</a>購買，相關規則請參考<span class="to-presale-rules">預售規則</span>，內有詳細流程與說明。
                                         </div>
                                     </div>
                                 </div>
@@ -203,7 +203,8 @@
                                          data-parent="#qa-according">
                                         <div class="card-body">
                                             相關數字問題，請依照單人票、雙人票、六人票的票種購買。<br/><br/>
-                                            例如：四個朋友想來，可以購買四張單人票或是兩張雙人票；七個朋友想來，可以購買七張單人票、三張雙人票＋一張單人票或是一張六人票＋一張單人票
+                                            例如：四個朋友想來，可以購買四張單人票或是兩張雙人票；七個朋友想來，可以購買七張單人票、三張雙人票＋一張單人票或是一張六人票＋一張單人票<br/><br/>
+                                            ＊早鳥票適用單人票規則
                                         </div>
                                     </div>
                                 </div>
@@ -496,7 +497,7 @@
                         </div>
 
                         <div class="feature-btn">
-                            <a class="btn-outline" href="index.html#Ticket">我要訂房</a>
+                            <a class="btn-outline" href="index.html#Ticket">我要赴約</a>
                         </div>
                     </div>
                 </div>
@@ -525,8 +526,8 @@
                                 預售說明
                             </h5>
                             <p class="text-left">
-                                《微醺大飯店2：1980》早鳥票現正預售中，<br/>
-                                單人票原價 2000，早鳥票 1500 元，將於 12/02（三）劃位。<br/><br/>
+                                《微醺大飯店：1980s》早鳥票現正預售中，<br/>
+                                單人票原價 2500 元，早鳥票 1700 元，將於 12/09（三） 中午 12:00 劃位。<br/><br/>
                                 可劃位日期：01/13 - 02/09 之間的演出場次
                             </p>
 
@@ -541,6 +542,9 @@
                                 <li>六人票：團體套票，僅有一組序號，無法分開使用，須參加同日期同場次演出。</li>
                                 <li>劃位序號過期視為放棄權益，將無法退費與劃位其他演出時段，請務必留意。</li>
                             </ul>
+                            <p class="text-left">
+                                ＊早鳥票適用單人票規則
+                            </p>
 
                             <h5 class="sub-title highlight">
                                 線上劃位
@@ -555,11 +559,11 @@
                                 預售劃位期限與序號規則
                             </h5>
                             <p class="category-title">
-                                早鳥票訪客
+                                第一批訪客
                             </p>
                             <ul>
-                                <li>可劃位：01/13 - 02/09 之間的演出場次</li>
-                                <li>序號失效日期：12/15（二）18:00 整。</li>
+                                <li>可劃位：01/13 - 02/07 之間的演出場次</li>
+                                <li>序號失效日期：12/25（五）18:00 整。</li>
                             </ul>
                             <p class="text-left">
                                 * 序號一經使用即失效，無法重新劃位，請務必謹慎選擇。<br/>
@@ -569,7 +573,7 @@
                         </div>
 
                         <div class="feature-btn">
-                            <a class="btn-outline" href="index.html#Ticket">我要訂房</a>
+                            <a class="btn-outline" href="index.html#Ticket">我要赴約</a>
                         </div>
                     </div>
                 </div>
@@ -589,7 +593,7 @@
                             <p class="pre-note">
                                 預售票券若需更改體驗日期、取消退費，<br/>
                                 請提供相應的資料，來信微醺大飯店專屬信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/>
-                                由◯◯◯◯為你處理。
+                                由我為你處理。
                                 <br/><br/>
                                 為確保你的權益，請根據需求，詳閱以下規則：
                             </p>
@@ -715,7 +719,7 @@
                             <p class="category-title"><br/>改期流程</p>
                             <ul>
                                 <li>提供訂位姓名、訂位信箱、劃位序號等資訊。</li>
-                                <li>等待回信，◯◯◯◯將為你取消原先訂位與恢復序號資格，三日內可重新劃位。</li>
+                                <li>等待回信，我將為你取消原先訂位與恢復序號資格，三日內可重新劃位。</li>
                             </ul>
 
                             <p class="category-title"><br/>退費流程</p>
@@ -728,13 +732,13 @@
                                 線上金流系統
                             </h5>
                             <p>
-                                《微醺大飯店2：1980》之線上付款透過貝殼集器、藍新金流第三方平台支付
+                                《微醺大飯店：1980s》之線上付款透過貝殼集器、藍新金流第三方平台支付
                             </p>
 
                         </div>
 
                         <div class="feature-btn">
-                            <a class="btn-outline" href="index.html#Ticket">我要訂房</a>
+                            <a class="btn-outline" href="index.html#Ticket">我要赴約</a>
                         </div>
                     </div>
                 </div>
