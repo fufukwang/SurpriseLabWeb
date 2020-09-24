@@ -97,14 +97,20 @@
 
         <!-- PC style -->
         <div class="parallax" id="scene">
-            <div class="parallax-item parallax-item-pc" data-depth="0.4">
-                <img src="img/illustration/illustration_home_3.png" alt="微醺大飯店">
+            <div class="parallax-item parallax-item-pc" data-depth-x="0.4" data-depth-y="0">
+                <div class="parallax-inner">
+                    <img class="img-fluid" src="img/illustration/illustration_home_3.png" alt="微醺大飯店">
+                </div>
             </div>
-            <div class="parallax-item parallax-item-pc" data-depth="0.3">
-                <img src="img/illustration/illustration_home_2.png" alt="微醺大飯店">
+            <div class="parallax-item parallax-item-pc" data-depth-x="0.3" data-depth-y="0">
+                <div class="parallax-inner">
+                    <img class="img-fluid" src="img/illustration/illustration_home_2.png" alt="微醺大飯店">
+                </div>
             </div>
-            <div class="parallax-item parallax-item-pc" data-depth="0.2">
-                <img src="img/illustration/illustration_home_1.png" alt="微醺大飯店">
+            <div class="parallax-item parallax-item-pc" data-depth-x="0.2" data-depth-y="0">
+                <div class="parallax-inner">
+                    <img class="img-fluid" src="img/illustration/illustration_home_1.png" alt="微醺大飯店">
+                </div>
             </div>
         </div>
 

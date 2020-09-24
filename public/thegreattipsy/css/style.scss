@@ -609,9 +609,18 @@ p {
       top: 0;
       width: 100vw;
       height: 100%;
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
+
+      .parallax-inner {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: auto;
+          height: 100%;
+        }
+      }
 
       &.parallax-item-mobile {
         display: none;
@@ -626,16 +635,6 @@ p {
 
         &.parallax-item-mobile {
           display: flex !important;
-        }
-      }
-
-      img {
-        width: auto;
-        height: 100%;
-
-        @media (min-width: 1920px) {
-          width: 100%;
-          height: auto;
         }
       }
     }

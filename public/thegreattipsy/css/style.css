@@ -803,15 +803,24 @@ p {
   top: 0;
   width: 100vw;
   height: 100%;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+}
+
+.site-wrapper .parallax .parallax-item .parallax-inner {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.site-wrapper .parallax .parallax-item .parallax-inner img {
+  width: auto;
+  height: 100%;
 }
 
 .site-wrapper .parallax .parallax-item.parallax-item-mobile {
@@ -829,18 +838,6 @@ p {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-  }
-}
-
-.site-wrapper .parallax .parallax-item img {
-  width: auto;
-  height: 100%;
-}
-
-@media (min-width: 1920px) {
-  .site-wrapper .parallax .parallax-item img {
-    width: 100%;
-    height: auto;
   }
 }
 
