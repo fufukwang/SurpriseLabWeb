@@ -808,11 +808,14 @@ header.logo {
 #Lobby {
   background-image: url('../img/illustration/illustration_lobby.png');
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
+  min-height: 100vh;
+  padding-top: 120px;
 
   @media (max-width: 480px) {
     background: none;
     position: relative;
+    padding-top: 30px;
 
     &::before {
       content: '';

@@ -128,25 +128,9 @@
 <!-- End Landing -->
 
 <main class="sections fixed-scroll-anchor">
-    <!-- Header LOGO -->
-    <div class="logo-wrapper">
-        <header class="logo">
-            <a class="smoothScroll" href="#Welcome">
-                <img src="img/web_title_small.png" alt="The Great Tipsy">
-            </a>
-            <button class="hamburger">
-                <span class="current-section">Lobby</span>
-                <span class="current-menu">Menu</span>
-                <span class="menu">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </span>
-            </button>
-        </header>
-    </div>
 
     <!-- Section1 Lobby -->
-    <section class="anchor-section fullpage" id="Lobby" data-aos="fade">
+    <section class="anchor-section" id="Lobby" data-aos="fade">
         <div class="container">
             <h2>Lobby</h2>
             <p>
@@ -230,6 +214,23 @@
 
     </section>
     <!-- End section1 Lobby -->
+
+    <!-- Header LOGO -->
+    <div class="logo-wrapper">
+        <header class="logo">
+            <a class="smoothScroll" href="#Welcome">
+                <img src="img/web_title_small.png" alt="The Great Tipsy">
+            </a>
+            <button class="hamburger">
+                <span class="current-section">Lobby</span>
+                <span class="current-menu">Menu</span>
+                <span class="menu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </span>
+            </button>
+        </header>
+    </div>
 
     <!-- Section2 About -->
     <section class="section anchor-section" id="About">
