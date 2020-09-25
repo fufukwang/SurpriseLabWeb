@@ -14,6 +14,7 @@
 html {
   background-color: $color-dark-brown;
   background-image: url('../img/wallpaper.jpg');
+  background-position: center center;
   background-repeat: repeat;
 }
 
@@ -21,6 +22,7 @@ body {
   position: relative;
   background-color: $color-dark-brown;
   background-image: url('../img/wallpaper.jpg');
+  background-position: center center;
   background-repeat: repeat;
   color: $color-yellow;
 
@@ -678,6 +680,7 @@ header.logo {
   padding: 0 20px;
   background-color: rgba($color-dark-brown, 0.8);
   background-image: url('../img/wallpaper.jpg');
+  background-position: top center;
   background-repeat: repeat;
 
   &.anchor-show {
