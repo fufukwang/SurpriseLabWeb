@@ -314,6 +314,9 @@
                     全都有可能發生
                 </p>
             </div>
+            <div class="food-img d-sm-none d-block">
+                <img class="img-fluid" src="img/illustration/mrtipsy_mobile_food.png" alt="food" draggable="false">
+            </div>
         </section>
 
         <section id="checkOut" data-aos="fade">
