@@ -724,31 +724,31 @@ p {
 
 @media (min-width: 1200px) {
   .site-wrapper .cta-button {
-    bottom: calc((608px + 30px) * 0.22719);
+    bottom: calc((608px + 30px) * 0.17889);
   }
 }
 
 @media (min-width: 1440px) {
   .site-wrapper .cta-button {
-    bottom: calc((768px + 30px) * 0.22719);
+    bottom: calc((768px + 30px) * 0.17889);
   }
 }
 
 @media (min-width: 1920px) {
   .site-wrapper .cta-button {
-    bottom: calc((1088px + 30px) * 0.22719);
+    bottom: calc((1088px + 30px) * 0.17889);
   }
 }
 
 @media (max-width: 1199.98px) {
   .site-wrapper .cta-button {
-    bottom: calc((520px + 30px) * 0.22719);
+    bottom: calc((520px + 30px) * 0.17889);
   }
 }
 
 @media (max-width: 480px) {
   .site-wrapper .cta-button {
-    bottom: calc(100% * 0.22719);
+    bottom: calc(100% * 0.17889);
   }
 }
 

@@ -561,7 +561,7 @@ p {
 
   .cta-button {
     position: absolute;
-    @include baseCounter('bottom', 254);
+    @include baseCounter('bottom', 200);
     z-index: 999;
 
     @media (max-width: 480px) and (min-height: 668px) {
