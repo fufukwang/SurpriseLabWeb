@@ -372,7 +372,8 @@
                                     <div id="qa15" class="collapse" aria-labelledby="qa15-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            待補。
+                                            建議穿著舒適的衣物，<br/>
+                                            以及好走、好站、好穿脫的鞋子前來。
                                         </div>
                                     </div>
                                 </div>
@@ -482,7 +483,7 @@
                                     <div id="qa21" class="collapse" aria-labelledby="qa21-header"
                                          data-parent="#qa-according">
                                         <div class="card-body number-list">
-                                            序號使用相關規定，請見<span class="to-presale-rules">預售規則</span>，不同階段之序號，僅能於指定演出區間使用，若因為超過日期為使用而失效，視為放棄權利，無法退費與要求劃位其他演出區間，請務必留意相關資訊。
+                                            序號使用相關規定，請見<span class="to-presale-rules">預售規則</span>，不同階段之序號，僅能於指定演出區間使用，若因為超過日期未使用而失效，視為放棄權利，無法退費與要求劃位其他演出區間，請務必留意相關資訊。
                                         </div>
                                     </div>
                                 </div>
@@ -491,7 +492,6 @@
                             <p class="qa-note">
                                 若有其他任何問題<br/>
                                 歡迎來信 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/>
-                                微醺管家會為您解答。<br/>
                             </p>
 
                         </div>
@@ -528,7 +528,7 @@
                             <p class="text-left">
                                 《微醺大飯店：1980s》早鳥票現正預售中，<br/>
                                 單人票原價 2500 元，早鳥票 1700 元，將於 12/09（三） 中午 12:00 劃位。<br/><br/>
-                                可劃位日期：01/13 - 02/09 之間的演出場次
+                                可劃位日期：01/15 - 02/07 之間的演出場次
                             </p>
 
                             <h5 class="sub-title highlight">
@@ -562,7 +562,7 @@
                                 第一批訪客
                             </p>
                             <ul>
-                                <li>可劃位：01/13 - 02/07 之間的演出場次</li>
+                                <li>可劃位：01/15 - 02/07 之間的演出場次</li>
                                 <li>序號失效日期：12/25（五）18:00 整。</li>
                             </ul>
                             <p class="text-left">
@@ -592,8 +592,7 @@
                         <div class="tab-content-inner">
                             <p class="pre-note">
                                 預售票券若需更改體驗日期、取消退費，<br/>
-                                請提供相應的資料，來信微醺大飯店專屬信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/>
-                                由我為你處理。
+                                請提供相應的資料，來信微醺大飯店專屬信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
                                 <br/><br/>
                                 為確保你的權益，請根據需求，詳閱以下規則：
                             </p>
@@ -604,7 +603,7 @@
                             <ul>
                                 <li>演出前七天（包含演出當日）不提供日期更改，建議將訂位轉讓給親友。</li>
                                 <li>若需更改日期、時段，請於體驗日七天前來信告知，附上「劃位序號」與「訂位信箱」。<br/>如：欲更改 01/08 的訂位，最晚請於 01/01（含）前來信。</li>
-                                <li>可更改之日期，已屆時尚有的日期與時段為準。劃位前請先確認相關親友的行程，減少更改座位的可能性。</li>
+                                <li>可更改之日期，以屆時尚有的日期與時段為準。劃位前請先確認相關親友的行程，減少更改座位的可能性。</li>
                                 <li>一個序號僅有一次更改機會，請務必謹慎使用。</li>
                             </ul>
 
@@ -719,7 +718,7 @@
                             <p class="category-title"><br/>改期流程</p>
                             <ul>
                                 <li>提供訂位姓名、訂位信箱、劃位序號等資訊。</li>
-                                <li>等待回信，我將為你取消原先訂位與恢復序號資格，三日內可重新劃位。</li>
+                                <li>等待回信，將為你取消原先訂位與恢復序號資格，三日內可重新劃位。</li>
                             </ul>
 
                             <p class="category-title"><br/>退費流程</p>

@@ -134,9 +134,10 @@
         <div class="container">
             <h2>Lobby</h2>
             <p>
-                《微醺大飯店：1980s 》即將重新開張，<br/>
-                一場開幕酒會正等著你的來訪。<br/><br/>
-                準備好赴約了嗎？
+                《微醺大飯店：1980s 》即將重新開張<br/>
+                一場開幕酒會正等著你的來訪<br/><br/>
+                <span class="highlight">唯有微醺，才能看見故事的全貌</span><br/>
+                你準備好赴約了嗎？
             </p>
             <div class="row feature-wrapper justify-content-between no-gutters">
                 <div class="col-auto d-flex justify-content-center flex-column">
@@ -244,11 +245,10 @@
                     </h4>
                 </div>
                 <p>
-                    選擇赴約的人<br/>
-                    將收到我的邀請<br/>
-                    <span class="highlight">參加一場私人開幕酒會<br/><br/></span>
-                    請穿上衣櫃裡最好的衣裳<br/>
-                    <span class="highlight">你絕對無法想像<br/>我有多麽期待見到你</span>
+                    你將收到我的邀請<br/>
+                    參加一場私人開幕酒會<br/><br/>
+                    請穿上舊衣櫃裡珍藏的衣裳<br/>
+                    <span class="highlight">你即將前往的場所<br/>需要一點記憶裡的時光</span>
                 </p>
             </div>
         </section>
@@ -262,11 +262,11 @@
                     </h4>
                 </div>
                 <p>
-                    你會遇見我所邀請的賓客<br/>
-                    其中幾位更是我費心挑選<br/><br/>
-                    <span class="highlight">留意那些四處張望的臉孔<br/>和突然冒出的身影<br/><br/></span>
-                    當他們向你走來<br/>
-                    <span class="highlight">你的回應，將決定你所看見的故事</span>
+                    故事的開始總是相遇<br/>
+                    於是我貼心地為你準備了一場邂逅<br/><br/>
+                    <span class="highlight">注意那些不合時宜的臉孔<br/>和為你停留的身影<br/><br/></span>
+                    他們將來到你眼前<br/>
+                    <span class="highlight">傾吐賓客們的祕密</span>
                 </p>
             </div>
             <div class="space-img">
@@ -276,20 +276,17 @@
 
         <section class="fullpage" id="character" data-aos="fade">
             <div class="container">
-                <h3>秘密</h3>
+                <h3>客房</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>TIME</span>
+                        <span>SECRET</span>
                     </h4>
                 </div>
                 <p>
-                    這裡的所有客房<br/>
-                    都只為今日的你開啟<br/><br/>
-                    當時間的指針與記憶重疊<br/>
-                    賓客們將在你的眼前<br/>
-                    傾吐無人知曉的祕密<br/><br/>
-                    <span class="highlight">小心反覆出現的日期<br/></span>
-                    嘿嘿嘿嘿嘿嘿嘿
+                    我親自替許多客房重新裝潢<br/>
+                    仔細收拾好過去<br/>
+                    想迎接尚未到來的你<br/><br/>
+                    <span class="highlight">當時間與思念重疊<br/>房門將為你一一開啟</span>
                 </p>
             </div>
             <div class="character-img">
@@ -306,13 +303,11 @@
                     </h4>
                 </div>
                 <p>
-                    在這裡，小酌是必須<br/>
-                    只要小心別遺落重要的記憶<br/><br/>
-                    請喝下我為你準備的迎賓酒<br/>
-                    如果過去在眼前變得清晰<br/>
-                    也不必抗拒<br/><br/>
-                    你所期待的那些事，在微醺之後<br/>
-                    全都有可能發生
+                    請喝下我為你準備的三杯調酒<br/>
+                    試著讓自己保持微醺<br/><br/>
+                    如果過去因此變得清晰<br/>
+                    請不要抗拒<br/><br/>
+                    <span class="highlight">你的那些來不及與回不去<br/>在這裡<br/>全都有可能改變</span>
                 </p>
             </div>
             <div class="food-img d-sm-none d-block">
@@ -347,13 +342,11 @@
             <div class="container">
                 <div class="ticket-cta">
                     <p class="highlight">
-                        誠摯地邀請你，成為我們的賓客
+                        誠摯地邀請你，成為我的賓客
                     </p>
                     <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
                     <p class="highlight">
-                        <br/>你絕對無法相信，我有多期待見到你<br/><br/>
-                        Yours Truly,<br/>
-                        《微醺大飯店：1980s 》
+                        <br/>你絕對無法相信，我有多期待見到你
                     </p>
                 </div>
             </div>
@@ -377,9 +370,9 @@
             </div>
 
             <div class="ticket">
-                <p>
-                    微醺大飯店：1980  隆重開幕<br/>
-                    帶你穿越時光，回到過去<br/><br/>
+                <p class="highlight">
+                    《微醺大飯店：1980s 》即將隆重開幕<br/>
+                    請接受我的邀請<br/><br/>
                     跟著全新的角色<br/>
                     探索全新的故事
                 </p>
@@ -402,7 +395,7 @@
                         120
                     </div>
                     <p class="exp-text">
-                        一百二十分鐘沉浸式微醺體驗
+                        兩小時沈浸式微醺體驗
                     </p>
                 </div>
                 <div class="exp-item middle">
@@ -418,7 +411,7 @@
                         7+7
                     </div>
                     <p class="exp-text">
-                        七個秘密 + 七個角色
+                        七個角色 ＋ 七個秘密
                     </p>
                 </div>
             </div>
@@ -436,7 +429,7 @@
             </div>
 
             <p class="ticket-area-preinfo">
-                早鳥預售票，限量 1300 張
+                早鳥預售票，限量 1200 張
             </p>
 
             <div class="ticket-type">
@@ -555,7 +548,7 @@
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 01/13 - 02/07 之票券<br/>
+                        * 現正預售 01/15 - 02/07 之票卷<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -640,7 +633,7 @@
 
             <p class="contact-pre-info">
                 有任何問題，可以先至<a href="rules.html">飯店規則</a>頁面查看<br/>
-                若有其他問題，歡迎來信詢問 <span class="d-none d-sm-inline-block">，</span><br class="d-block d-sm-none"/>我會盡快與您回覆
+                若有其他問題，歡迎來信詢問
             </p>
 
             <div class="contact-sec-wrapper">
