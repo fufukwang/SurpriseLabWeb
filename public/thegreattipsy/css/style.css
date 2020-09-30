@@ -3918,7 +3918,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   z-index: 999999;
   top: 0;
   left: 0;
-  background-color: #281F1C;
+  background-color: #1e1c19;
 }
 
 @media (max-width: 1024px) and (min-height: 1024px) {
