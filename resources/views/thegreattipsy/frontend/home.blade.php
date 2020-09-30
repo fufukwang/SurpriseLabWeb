@@ -266,7 +266,7 @@
                     於是我貼心地為你準備了一場邂逅<br/><br/>
                     <span class="highlight">注意那些不合時宜的臉孔<br/>和為你停留的身影<br/><br/></span>
                     他們將來到你眼前<br/>
-                    <span class="highlight">傾吐賓客們的祕密</span>
+                    傾吐賓客們的祕密
                 </p>
             </div>
             <div class="space-img">
