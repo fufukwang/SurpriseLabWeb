@@ -245,7 +245,7 @@ $(document).ready(function () {
             ticket_group.addClass('sold');
             ticket_group.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_3_soldout.png');
             ticket_group.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_3_soldout_mobile.png');
-            ticket_matinee.find('.ticket-state').html('已售完');
+            ticket_group.find('.ticket-state').html('已售完');
         }
 
         

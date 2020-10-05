@@ -83,7 +83,7 @@
                 <ul class="navigation-menu">
                 @if (Session::has('key')) 
                     @if( Session::get('key')->admin )
-                    <li class="has-submenu">
+                    <li class="has-submenu @if(Request::segment(1) === 'admin')active @endif">
                         <a href="/admin"><i class="md md-dashboard"></i>Admin</a>
                     </li>
                     @endif
@@ -99,7 +99,7 @@
                     </li>
                     @endif
                     @if( Session::get('key')->oldview )
-                    <li class="has-submenu">
+                    <li class="has-submenu @if(Request::segment(1) === 'TableForOne')active @endif">
                         <a href="#"><i class="md md-invert-colors-on"></i>Table For ONe</a>
                         <ul class="submenu">
                             <li><a href="/TableForOne/rooms">Activaty</a></li>
@@ -110,7 +110,7 @@
                     </li>
                     @endif
                     @if( Session::get('key')->oldview )
-                    <li class="has-submenu">
+                    <li class="has-submenu @if(Request::segment(1) === 'dark2')active @endif">
                         <a href="#"><i class="md md-invert-colors-on"></i>dininginthedark S2</a>
                         <ul class="submenu">
                             <li><a href="/dark2/pros">Activaty</a></li>
@@ -122,7 +122,7 @@
                     </li>
                     @endif
                     @if( Session::get('key')->thegreattipsy )
-                    <li class="has-submenu">
+                    <li class="has-submenu @if(Request::segment(1) === 'thegreattipsy')active @endif">
                         <a href="#"><i class="md md-invert-colors-on"></i>微醺大飯店</a>
                         <ul class="submenu" style="left:0;right:auto">
 
@@ -135,7 +135,7 @@
                     </li>
                     @endif
                     @if( Session::get('key')->clubtomorrow )
-                    <li class="has-submenu">
+                    <li class="has-submenu @if(Request::segment(1) === 'clubtomorrow')active @endif">
                         <a href="#"><i class="md md-invert-colors-on"></i>明日俱樂部</a>
                         <ul class="submenu" style="left:0;right:auto">
                             <li><a href="/clubtomorrow/sms">Sms</a></li>
@@ -146,7 +146,19 @@
 
                         </ul>
                     </li>
+                    @endif
+                    @if( Session::get('key')->thegreattipsy )
+                    <li class="has-submenu @if(Request::segment(1) === 'thegreattipsyS2')active @endif">
+                        <a href="#"><i class="md md-invert-colors-on"></i>微醺大飯店S2</a>
+                        <ul class="submenu" style="left:0;right:auto">
 
+                            <li><a href="/thegreattipsyS2/pros">Activaty</a></li>
+                            <li><a href="/thegreattipsyS2/backmes">Backme</a></li>
+                            <li><a href="/thegreattipsyS2/coupons">Coupon</a></li>
+                            <li><a href="/thegreattipsyS2/print">Order</a></li>
+
+                        </ul>
+                    </li>
                     @endif
                 @endif
                 </ul>
