@@ -552,7 +552,7 @@
                 請至你的信箱確認預約完成信件
             </p>
             <p class="page-info">
-                它有時候會跑到垃圾郵件，可以翻找一下
+                它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
             </p>
             <div class="feature-btn" style="text-align: center;">
                 <a class="btn-outline" href="index.html">關於微醺大飯店：1980s</a>
@@ -570,7 +570,7 @@
                 可能發生以下狀況：<br/>
                 1. 付款未成功<br/>
                 2. 網路中斷，請確認通訊良好的狀況下再次劃位<br/>
-                3. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次
+                3. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次<br/><br/>
             </p>
             <div class="feature-btn" style="text-align: center;">
                 <a class="btn-outline" href="booking_pay.html">重新預約</a>
