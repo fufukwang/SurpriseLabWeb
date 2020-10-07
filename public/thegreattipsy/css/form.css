@@ -543,10 +543,6 @@ form fieldset {
   }
 }
 
-form fieldset:not(:first-of-type) {
-  display: none;
-}
-
 form .btn-outline {
   background-color: transparent;
 }

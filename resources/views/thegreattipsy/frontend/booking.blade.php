@@ -114,7 +114,7 @@
             </div>
 
             <!-- fieldsets -->
-            <fieldset class="step step-1" title="微醺大飯店　房客登記表">
+            <fieldset class="step step-1" title="微醺大飯店：1980s　賓客登記">
                 <p class="sub-title text-lining">
                     告訴我們何時可以見到你
                 </p>
@@ -328,7 +328,7 @@
                     </div>
 
                     <div class="form-group input-with-label">
-                        <label for="email">* EMAIL<span class="error-msg"></span></label>
+                        <label for="email">* 電子信箱<span class="error-msg"></span></label>
                         <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. thegreattipsy@surpriselab.com.tw">
                     </div>
 
