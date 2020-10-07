@@ -344,9 +344,13 @@ button.btn-outline:focus {
 
 .progress-title {
   margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .progress-title span {
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
   letter-spacing: 1.8px;
 }
 
