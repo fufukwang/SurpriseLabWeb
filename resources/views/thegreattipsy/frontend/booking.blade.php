@@ -530,7 +530,7 @@
                             <td class="filled" data-filled="phone"></td>
                         </tr>
                         <tr>
-                            <td>Email</td>
+                            <td>電子信箱</td>
                             <td class="filled" data-filled="email"></td>
                         </tr>
                         <tr>
@@ -610,7 +610,8 @@
         </form>
     </div>
 
-    <div class="submit-page success" id="bookingSuccess" style="display:none;">
+    <div class="submit-page success" id="bookingSuccess">
+    <!-- <div class="submit-page success" id="bookingSuccess" style="display:none;"> -->
         <div class="container">
             <h3 class="page-title">
                 你已完成訪客預約！
@@ -630,7 +631,8 @@
         </div>
     </div>
 
-    <div class="submit-page error" id="bookingError" style="display:none;">
+    <div class="submit-page error" id="bookingError">
+    <!-- <div class="submit-page error" id="bookingError" style="display:none;"> -->
         <div class="container">
             <h3 class="page-title">
                 whoops！預約未成功
