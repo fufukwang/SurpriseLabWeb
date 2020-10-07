@@ -291,7 +291,7 @@ form {
 
     /*Hide all except first fieldset*/
     &:not(:first-of-type) {
-      display: none;
+      // display: none;
     }
   }
 
