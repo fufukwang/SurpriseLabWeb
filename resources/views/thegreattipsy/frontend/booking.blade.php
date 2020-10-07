@@ -182,18 +182,19 @@
                             <span>票券序號說明</span>
                         </h4>
                     </div>
+                    <br/><br/>
                     <ul class="prefix-dash custom-text">
                         <li data-name="早鳥限定票">
-                            幾張早鳥票就有幾組序號
+                            早鳥限定票　幾張早鳥票就有幾組序號
                         </li>
                         <li data-name="單人自在票">
-                            幾張單人票就有幾組序號
+                            單人自在票　幾張單人票就有幾組序號
                         </li>
                         <li data-name="六人沈醉票">
-                            一組序號劃位六人，限同日期同場次，不可分開劃位
+                            六人沈醉票　一組序號劃位六人，限同日期同場次，不可分開劃位
                         </li>
                     </ul>
-
+                    <br/><br/>
                     <div class="form-group select-format">
                         <label class="form-label" for="booking_people">人數</label>
                         <select id="booking_people" name="booking_people" data-placeholder="選擇人數" required>
@@ -313,8 +314,7 @@
             <fieldset class="step step-4" title="資料填寫">
                 <div class="form-container">
                     <div class="field-intro">
-                        請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息。<br/>
-                        （建議避開 yahoo 與 hotmail 信箱，以免漏信）
+                        請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息。（建議避開 yahoo 與 hotmail 信箱，以免漏信）
                     </div>
 
                     <div class="form-group input-with-label">

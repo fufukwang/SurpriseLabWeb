@@ -543,6 +543,10 @@ form fieldset {
   }
 }
 
+form fieldset:not(:first-of-type) {
+  display: none;
+}
+
 form .btn-outline {
   background-color: transparent;
 }
@@ -798,10 +802,6 @@ form .btn-outline {
 
 .select2-container--default.select2-container--open .select2-dropdown--below {
   top: 5px;
-}
-
-.select2-container--default .select2-results > .select2-results__options {
-  max-height: inherit;
 }
 
 .select2-container--default .select2-results__options .select2-results__option {
