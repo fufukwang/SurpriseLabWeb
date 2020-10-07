@@ -623,7 +623,7 @@
                 接近體驗日期時<br/>
                 將會寄送提醒信件與行前訊息給你<br/>
                 <br/>
-                屆時請注意電子信箱，它有時候會跑到垃圾郵件，可以翻找一下
+                屆時請注意電子信箱，它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
             </p>
             <div class="feature-btn" style="text-align: center;">
                 <a class="btn-outline" href="index.html">關於微醺大飯店：1980s</a>
@@ -643,7 +643,7 @@
                 2. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次<br/>
                 <br/>
                 若非以上兩種狀況，歡迎來信詢問：<br/>
-                <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
+                <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/><br/>
             </p>
             <div class="feature-btn" style="text-align: center;">
                 <a class="btn-outline" href="booking.html">重新預約</a>

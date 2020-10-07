@@ -241,7 +241,7 @@ p {
 // Outline Button Style
 .btn-outline {
   display: inline-block;
-  width: 210px;
+  min-width: 210px;
   text-align: center;
   font-size: 18px;
   color: $color-yellow;
@@ -252,7 +252,7 @@ p {
   transition: 0.3s;
 
   @media (max-width: 480px) {
-    width: 240px;
+    min-width: 240px;
   }
 
   &:hover {

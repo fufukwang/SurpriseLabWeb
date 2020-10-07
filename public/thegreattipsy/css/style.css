@@ -321,7 +321,7 @@ p {
 
 .btn-outline {
   display: inline-block;
-  width: 210px;
+  min-width: 210px;
   text-align: center;
   font-size: 18px;
   color: #EFC27B;
@@ -335,7 +335,7 @@ p {
 
 @media (max-width: 480px) {
   .btn-outline {
-    width: 240px;
+    min-width: 240px;
   }
 }
 
