@@ -212,11 +212,15 @@ header.logo {
 // Head lines
 .progress-title {
   margin-bottom: 0;
+
+  span {
+    letter-spacing: 1.8px;
+  }
 }
 
 .sub-title {
   line-height: 1;
-  color: $color-lighter-yellow;
+  color: $color-light-yellow;
   font-family: $font-serif;
   @include baseCounter('padding-top', 45);
 
@@ -230,7 +234,7 @@ header.logo {
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: 0.7px;
-  color: $color-lighter-yellow;
+  color: $color-light-yellow;
 
   @media (max-width: 575.98px) {
     font-size: 10px;
@@ -967,7 +971,7 @@ fieldset {
       font-size: 16px;
       line-height: 1.88;
       letter-spacing: 1.6px;
-      color: $color-lighter-yellow;
+      color: $color-light-yellow;
       font-family: $font-serif;
       @include baseCounter('padding-bottom', 60);
     }

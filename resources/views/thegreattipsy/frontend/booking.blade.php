@@ -101,7 +101,7 @@
         <form id="booking">
             <!--progress title-->
             <h3 class="progress-title">
-                微醺大飯店：1980s　賓客登記
+                微醺大飯店：<span>1980s</span><br/>賓客登記
             </h3>
             <!-- progressbar -->
             <div class="bar-wrapper hide-steps">

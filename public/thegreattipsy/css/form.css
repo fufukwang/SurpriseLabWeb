@@ -346,9 +346,13 @@ button.btn-outline:focus {
   margin-bottom: 0;
 }
 
+.progress-title span {
+  letter-spacing: 1.8px;
+}
+
 .sub-title {
   line-height: 1;
-  color: #FFFFFF;
+  color: #FFE0BA;
   font-family: "Noto Serif TC", serif;
 }
 
@@ -393,7 +397,7 @@ button.btn-outline:focus {
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: 0.7px;
-  color: #FFFFFF;
+  color: #FFE0BA;
 }
 
 @media (max-width: 575.98px) {
@@ -1255,7 +1259,7 @@ fieldset.step-4 .field-intro {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 1.6px;
-  color: #FFFFFF;
+  color: #FFE0BA;
   font-family: "Noto Serif TC", serif;
 }
 
