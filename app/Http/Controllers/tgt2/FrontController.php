@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\tgt;
+namespace App\Http\Controllers\tgt2;
 
 use Illuminate\Http\Request;
 
 use MC;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\model\tgt\coupon;
-use App\model\tgt\order;
-use App\model\tgt\pro;
+use App\model\tgt2\coupon;
+use App\model\tgt2\order;
+use App\model\tgt2\pro;
 
 
 use DB;

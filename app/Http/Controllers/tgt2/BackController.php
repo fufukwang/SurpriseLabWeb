@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\tgt;
+namespace App\Http\Controllers\tgt2;
 
 use Illuminate\Http\Request;
 use Response;
@@ -11,10 +11,10 @@ use Hash;
 use Illuminate\Support\Facades\Storage;
 use Mail;
 use Exception;
-use App\model\tgt\coupon;
-use App\model\tgt\order;
-use App\model\tgt\pro;
-use App\model\tgt\backme;
+use App\model\tgt2\coupon;
+use App\model\tgt2\order;
+use App\model\tgt2\pro;
+use App\model\tgt2\backme;
 
 
 use App\Http\Controllers\Controller;

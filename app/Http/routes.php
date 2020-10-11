@@ -209,44 +209,44 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
     });
     // 微醺大飯店 S2
     Route::group(['prefix' => 'thegreattipsyS2'], function(){
-        Route::get('backmes','tgt\BackController@BackMes');
-        Route::get('backme/{id}','tgt\BackController@BackMe');
-        Route::delete('backme/{id}/delete','tgt\BackController@BackMeDelete');
-        Route::post('backmes/{id}/sentcoupon','tgt\BackController@SentCouponCode');
-        Route::post('backmes/{id}/sendUpdate','tgt\BackController@sendUpdate');
-        Route::post('backmes/{id}/sendManageUpdate','tgt\BackController@sendManageUpdate');
-        Route::post('backmes/{id}/infoUpdate','tgt\BackController@infoUpdate');
-        Route::post('backmes/CanelCoupon','tgt\BackController@CanelCoupon');
-        Route::get('backmenouse/xls','tgt\BackController@NotUseXls');
-        Route::post('uploadxlsx','tgt\BackController@UploadXlsx2Db');
+        Route::get('backmes','tgt2\BackController@BackMes');
+        Route::get('backme/{id}','tgt2\BackController@BackMe');
+        Route::delete('backme/{id}/delete','tgt2\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','tgt2\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','tgt2\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','tgt2\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','tgt2\BackController@infoUpdate');
+        Route::post('backmes/CanelCoupon','tgt2\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','tgt2\BackController@NotUseXls');
+        Route::post('uploadxlsx','tgt2\BackController@UploadXlsx2Db');
 
         // coupon
-        Route::get('coupons','tgt\BackController@Coupons');
-        Route::get('coupon/{id}','tgt\BackController@Coupon');
-        Route::delete('coupon/{id}/delete','tgt\BackController@CouponDelete');
+        Route::get('coupons','tgt2\BackController@Coupons');
+        Route::get('coupon/{id}','tgt2\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','tgt2\BackController@CouponDelete');
 
         // 營業日
-        Route::get('pros','tgt\BackController@Pros');
-        Route::get('pro/{id}/edit','tgt\BackController@ProEdit');
-        Route::post('pro/{id}/update','tgt\BackController@ProUpdate');
-        Route::delete('pro/{id}/delete','tgt\BackController@ProDelete');
-        Route::post('pros','tgt\BackController@Pros');
-        Route::post('pros/output/only','tgt\BackController@ProOutputSite');
+        Route::get('pros','tgt2\BackController@Pros');
+        Route::get('pro/{id}/edit','tgt2\BackController@ProEdit');
+        Route::post('pro/{id}/update','tgt2\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','tgt2\BackController@ProDelete');
+        Route::post('pros','tgt2\BackController@Pros');
+        Route::post('pros/output/only','tgt2\BackController@ProOutputSite');
 
         // 訂單
-        Route::get('orders/{id}','tgt\BackController@Orders');
-        Route::get('order/{id}/edit','tgt\BackController@OrderEdit');
-        Route::post('order/{id}/update','tgt\BackController@OrderUpdate');
-        Route::delete('order/{id}/delete','tgt\BackController@OrderDelete');
-        Route::get('order/{pro_id}/appointment','tgt\BackController@Appointment');  // 後臺預約
-        Route::post('order/{pro_id}/appointmentUpdate','tgt\BackController@AppointmentUpdate');
+        Route::get('orders/{id}','tgt2\BackController@Orders');
+        Route::get('order/{id}/edit','tgt2\BackController@OrderEdit');
+        Route::post('order/{id}/update','tgt2\BackController@OrderUpdate');
+        Route::delete('order/{id}/delete','tgt2\BackController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','tgt2\BackController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','tgt2\BackController@AppointmentUpdate');
 
         // 報表列印
-        Route::get('print','tgt\BackController@Print');
-        Route::get('table','tgt\BackController@Table');
-        Route::get('xls/data/output','tgt\BackController@XlsDataOuput');
-        Route::get('xls/emaildata/output','tgt\BackController@XlsEmailDataOuput');
-        Route::post('order/{id}/resent','tgt\BackController@beSentOrderMail');
+        Route::get('print','tgt2\BackController@Print');
+        Route::get('table','tgt2\BackController@Table');
+        Route::get('xls/data/output','tgt2\BackController@XlsDataOuput');
+        Route::get('xls/emaildata/output','tgt2\BackController@XlsEmailDataOuput');
+        Route::post('order/{id}/resent','tgt2\BackController@beSentOrderMail');
     });
 
 
@@ -505,8 +505,8 @@ Route::group(['middleware' => ['web']], function () {
             */
             return redirect("/thegreattipsy/index.html");
         });
-        Route::get('GetAjaxData','tgt\FrontController@GetAjaxData');
-        Route::post('ReOrderData','tgt\FrontController@ReOrderData');
+        Route::get('GetAjaxData','tgt2\FrontController@GetAjaxData');
+        Route::post('ReOrderData','tgt2\FrontController@ReOrderData');
     });
     // thegreattipsy 2019
     Route::group(['prefix' => 'thegreattipsy2019'], function(){
