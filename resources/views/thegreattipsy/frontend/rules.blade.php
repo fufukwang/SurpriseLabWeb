@@ -125,7 +125,7 @@
                                     <div class="card-header" id="qa1-header">
                                         <h6 data-toggle="collapse" data-target="#qa1" aria-expanded="false"
                                             aria-controls="qa1" class="collapsed d-flex align-items-center">
-                                            1. 《微醺大飯店：1980s》是怎樣的體驗呢？
+                                            ・《微醺大飯店：1980s》是怎樣的體驗呢？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -142,7 +142,7 @@
                                     <div class="card-header" id="qa2-header">
                                         <h6 data-toggle="collapse" data-target="#qa2" aria-expanded="false"
                                             aria-controls="qa2" class="collapsed d-flex align-items-center">
-                                            2. 《微醺大飯店：1980s》和《微醺大飯店》故事上是有關聯的嗎？
+                                            ・《微醺大飯店：1980s》和《微醺大飯店》故事上是有關聯的嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -158,7 +158,7 @@
                                     <div class="card-header" id="qa3-header">
                                         <h6 data-toggle="collapse" data-target="#qa3" aria-expanded="false"
                                             aria-controls="qa3" class="collapsed d-flex align-items-center">
-                                            3. 《微醺大飯店：1980s》和《微醺大飯店》是原班人馬嗎？
+                                            ・《微醺大飯店：1980s》和《微醺大飯店》是原班人馬嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -179,7 +179,7 @@
                                     <div class="card-header" id="qa4-header">
                                         <h6 data-toggle="collapse" data-target="#qa4" aria-expanded="false"
                                             aria-controls="qa4" class="collapsed d-flex align-items-center">
-                                            4. 如何報名？規則是什麼呢？
+                                            ・如何報名？規則是什麼呢？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -195,7 +195,7 @@
                                     <div class="card-header" id="qa5-header">
                                         <h6 data-toggle="collapse" data-target="#qa5" aria-expanded="false"
                                             aria-controls="qa5" class="collapsed d-flex align-items-center">
-                                            5. 我有數個朋友想要一起來，請問要怎麼買票？
+                                            ・我有數個朋友想要一起來，請問要怎麼買票？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -213,7 +213,7 @@
                                     <div class="card-header" id="qa6-header">
                                         <h6 data-toggle="collapse" data-target="#qa6" aria-expanded="false"
                                             aria-controls="qa6" class="collapsed d-flex align-items-center">
-                                            6. 一次買多張票會更便宜嗎？
+                                            ・一次買多張票會更便宜嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -234,7 +234,7 @@
                                     <div class="card-header" id="qa7-header">
                                         <h6 data-toggle="collapse" data-target="#qa7" aria-expanded="false"
                                             aria-controls="qa7" class="collapsed d-flex align-items-center">
-                                            7. 同場次會有多少參與者一起進行呢？會被分組嗎？
+                                            ・同場次會有多少參與者一起進行呢？會被分組嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -250,7 +250,7 @@
                                     <div class="card-header" id="qa8-header">
                                         <h6 data-toggle="collapse" data-target="#qa8" aria-expanded="false"
                                             aria-controls="qa8" class="collapsed d-flex align-items-center">
-                                            8. 請問會與陌生參與者互動交流嗎？
+                                            ・請問會與陌生參與者互動交流嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -266,7 +266,7 @@
                                     <div class="card-header" id="qa9-header">
                                         <h6 data-toggle="collapse" data-target="#qa9" aria-expanded="false"
                                             aria-controls="qa9" class="collapsed d-flex align-items-center">
-                                            9. 我和朋友一起報名，可以指定要在同一組嗎？
+                                            ・我和朋友一起報名，可以指定要在同一組嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -282,7 +282,7 @@
                                     <div class="card-header" id="qa10-header">
                                         <h6 data-toggle="collapse" data-target="#qa10" aria-expanded="false"
                                             aria-controls="qa10" class="collapsed d-flex align-items-center">
-                                            10. 一場演出多長呢？場次時間為何？
+                                            ・一場演出多長呢？場次時間為何？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -300,7 +300,7 @@
                                     <div class="card-header" id="qa11-header">
                                         <h6 data-toggle="collapse" data-target="#qa11" aria-expanded="false"
                                             aria-controls="qa11" class="collapsed d-flex align-items-center">
-                                            11. 請問不喝酒的人可以參加嗎？有提供無酒精選項嗎？
+                                            ・請問不喝酒的人可以參加嗎？有提供無酒精選項嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -316,7 +316,7 @@
                                     <div class="card-header" id="qa12-header">
                                         <h6 data-toggle="collapse" data-target="#qa12" aria-expanded="false"
                                             aria-controls="qa12" class="collapsed d-flex align-items-center">
-                                            12. 我酒量很好，怕喝不夠，可以帶酒來或調濃一點嗎？
+                                            ・我酒量很好，怕喝不夠，可以帶酒來或調濃一點嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -333,7 +333,7 @@
                                     <div class="card-header" id="qa13-header">
                                         <h6 data-toggle="collapse" data-target="#qa13" aria-expanded="false"
                                             aria-controls="qa13" class="collapsed d-flex align-items-center">
-                                            13. 我酒量不好，怕一杯就醉，怎麼辦？
+                                            ・我酒量不好，怕一杯就醉，怎麼辦？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -349,7 +349,7 @@
                                     <div class="card-header" id="qa14-header">
                                         <h6 data-toggle="collapse" data-target="#qa14" aria-expanded="false"
                                             aria-controls="qa14" class="collapsed d-flex align-items-center">
-                                            14. 請問餐點吃得飽嗎？
+                                            ・請問餐點吃得飽嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -365,7 +365,7 @@
                                     <div class="card-header" id="qa15-header">
                                         <h6 data-toggle="collapse" data-target="#qa15" aria-expanded="false"
                                             aria-controls="qa15" class="collapsed d-flex align-items-center">
-                                            15. 衣服要怎麼穿？有 dress code 嗎？
+                                            ・衣服要怎麼穿？有 dress code 嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -382,7 +382,7 @@
                                     <div class="card-header" id="qa16-header">
                                         <h6 data-toggle="collapse" data-target="#qa16" aria-expanded="false"
                                             aria-controls="qa16" class="collapsed d-flex align-items-center">
-                                            16. 現場可以寄物嗎？
+                                            ・現場可以寄物嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -398,7 +398,7 @@
                                     <div class="card-header" id="qa17-header">
                                         <h6 data-toggle="collapse" data-target="#qa17" aria-expanded="false"
                                             aria-controls="qa17" class="collapsed d-flex align-items-center">
-                                            17. 如果會遲到怎麼辦？
+                                            ・如果會遲到怎麼辦？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -414,7 +414,7 @@
                                     <div class="card-header" id="qa18-header">
                                         <h6 data-toggle="collapse" data-target="#qa18" aria-expanded="false"
                                             aria-controls="qa18" class="collapsed d-flex align-items-center">
-                                            18. 有任何參與限制嗎？
+                                            ・有任何參與限制嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -438,7 +438,7 @@
                                     <div class="card-header" id="qa19-header">
                                         <h6 data-toggle="collapse" data-target="#qa19" aria-expanded="false"
                                             aria-controls="qa19" class="collapsed d-flex align-items-center">
-                                            19. 不是故意的，但不小心醉了怎麼辦？
+                                            ・不是故意的，但不小心醉了怎麼辦？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -460,7 +460,7 @@
                                     <div class="card-header" id="qa20-header">
                                         <h6 data-toggle="collapse" data-target="#qa20" aria-expanded="false"
                                             aria-controls="qa20" class="collapsed d-flex align-items-center">
-                                            20. 請問完成劃位後可以更改場次嗎？或是該怎麼取消退票呢？
+                                            ・請問完成劃位後可以更改場次嗎？或是該怎麼取消退票呢？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
@@ -476,7 +476,7 @@
                                     <div class="card-header" id="qa21-header">
                                         <h6 data-toggle="collapse" data-target="#qa21" aria-expanded="false"
                                             aria-controls="qa21" class="collapsed d-flex align-items-center">
-                                            21. 劃位序號沒有使用的話，怎麼辦？能退費嗎？
+                                            ・劃位序號沒有使用的話，怎麼辦？能退費嗎？
                                             <i class="icon icon-arrow"></i>
                                         </h6>
                                     </div>
