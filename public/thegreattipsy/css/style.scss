@@ -570,7 +570,7 @@ p {
   }
 
   .btn-outline {
-    width: 210px !important;
+    min-width: 210px !important;
     background-image: url('../img/other/wave.png');
     background-position: center -200%;
     background-repeat: no-repeat;
