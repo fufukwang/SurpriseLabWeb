@@ -2709,7 +2709,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     letter-spacing: 1px;
   }
   #Ticket .ticket-type .ticket-state .highlight {
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 2px;
   }
 }
@@ -2719,7 +2719,8 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     letter-spacing: 1.4px;
   }
   #Ticket .ticket-type .ticket-state .highlight {
-    font-size: 20px;
+    font-size: 18px;
+    letter-spacing: 1.8px;
   }
 }
 
@@ -2932,9 +2933,9 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .time-session .highlight {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  letter-spacing: 2.1px;
+  letter-spacing: 2.4px;
   font-family: "Noto Serif TC", serif;
 }
 
