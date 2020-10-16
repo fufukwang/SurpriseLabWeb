@@ -1266,8 +1266,8 @@ header.logo {
       text-align: center;
       @include baseCounter('padding-top', 54);
       @include baseCounter('padding-bottom', 80);
-      @include baseCounter('padding-left', 45);
-      @include baseCounter('padding-right', 45);
+      @include baseCounter('padding-left', 42);
+      @include baseCounter('padding-right', 42);
 
       &:first-child {
         padding-left: 0;

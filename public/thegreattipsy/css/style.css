@@ -2551,61 +2551,61 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc((608px + 30px) * 0.04025);
+    padding-left: calc((608px + 30px) * 0.03757);
   }
 }
 
 @media (min-width: 1440px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc((768px + 30px) * 0.04025);
+    padding-left: calc((768px + 30px) * 0.03757);
   }
 }
 
 @media (min-width: 1920px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc((1088px + 30px) * 0.04025);
+    padding-left: calc((1088px + 30px) * 0.03757);
   }
 }
 
 @media (max-width: 1199.98px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc((520px + 30px) * 0.04025);
+    padding-left: calc((520px + 30px) * 0.03757);
   }
 }
 
 @media (max-width: 480px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc(100% * 0.04025);
+    padding-left: calc(100% * 0.03757);
   }
 }
 
 @media (min-width: 1200px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc((608px + 30px) * 0.04025);
+    padding-right: calc((608px + 30px) * 0.03757);
   }
 }
 
 @media (min-width: 1440px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc((768px + 30px) * 0.04025);
+    padding-right: calc((768px + 30px) * 0.03757);
   }
 }
 
 @media (min-width: 1920px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc((1088px + 30px) * 0.04025);
+    padding-right: calc((1088px + 30px) * 0.03757);
   }
 }
 
 @media (max-width: 1199.98px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc((520px + 30px) * 0.04025);
+    padding-right: calc((520px + 30px) * 0.03757);
   }
 }
 
 @media (max-width: 480px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc(100% * 0.04025);
+    padding-right: calc(100% * 0.03757);
   }
 }
 
