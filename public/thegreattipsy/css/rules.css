@@ -9,6 +9,12 @@ body {
   background-size: 15%;
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    background-size: auto;
+  }
+}
+
 header.logo {
   background-color: #281F1C;
 }
@@ -74,6 +80,7 @@ header.logo {
 @media (max-width: 480px) {
   #rules-tab-switcher {
     top: 60px;
+    background-size: auto;
   }
 }
 
