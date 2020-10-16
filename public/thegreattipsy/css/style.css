@@ -45,6 +45,7 @@ html {
   background-image: url("../img/wallpaper.jpg");
   background-position: center center;
   background-repeat: repeat;
+  background-size: 15%;
 }
 
 body {
@@ -53,6 +54,7 @@ body {
   background-image: url("../img/wallpaper.jpg");
   background-position: center center;
   background-repeat: repeat;
+  background-size: 15%;
   color: #EFC27B;
 }
 
@@ -456,6 +458,7 @@ p {
             transform: none;
     background-image: url("../img/wallpaper.jpg");
     background-repeat: repeat;
+    background-size: 15%;
     -webkit-transition: opacity 0.8s;
     transition: opacity 0.8s;
   }
@@ -889,6 +892,7 @@ header.logo {
   background-image: url("../img/wallpaper.jpg");
   background-position: top center;
   background-repeat: repeat;
+  background-size: 15%;
 }
 
 header.logo.anchor-show {

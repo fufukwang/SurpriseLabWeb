@@ -6,6 +6,7 @@ body {
   background-color: #281F1C !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
+  background-size: 15%;
 }
 
 header.logo {
@@ -34,6 +35,7 @@ header.logo {
   background-color: #281F1C;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
+  background-size: 15%;
 }
 
 #rules-tab-switcher .nav-link.active,

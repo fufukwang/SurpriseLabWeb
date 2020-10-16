@@ -16,6 +16,7 @@ html {
   background-image: url('../img/wallpaper.jpg');
   background-position: center center;
   background-repeat: repeat;
+  background-size: 15%;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   background-image: url('../img/wallpaper.jpg');
   background-position: center center;
   background-repeat: repeat;
+  background-size: 15%;
   color: $color-yellow;
 
   &.menu-open {
@@ -360,6 +362,7 @@ p {
     transform: none;
     background-image: url('../img/wallpaper.jpg');
     background-repeat: repeat;
+    background-size: 15%;
     transition: opacity 0.8s;
 
     .mobile-menu-hand {
@@ -681,6 +684,7 @@ header.logo {
   background-image: url('../img/wallpaper.jpg');
   background-position: top center;
   background-repeat: repeat;
+  background-size: 15%;
 
   &.anchor-show {
     position: fixed;
