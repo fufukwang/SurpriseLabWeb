@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店營業日編輯'])
+@include('backstage.header',['title' => '微醺大飯店：1980s營業日編輯'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -21,7 +21,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>微醺大飯店建立營業日</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>微醺大飯店：1980s建立營業日</b></h4>
                                     <p class="text-muted font-13 m-b-30">
                                         建立營業日期範圍與價格.
                                     </p>
@@ -32,7 +32,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsy/pro/{{ $pro->id or 0}}/update" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsyS2/pro/{{ $pro->id or 0}}/update" class="form-horizontal">
 {!! csrf_field() !!}
 
 
@@ -71,8 +71,8 @@
                                             <label class="control-label col-sm-4">時段 / 區間</label>
                                             <div class="col-sm-2">
                                                     <select class="form-control" name="dayparts">
-                                                        <option value="午場" data-rangstart='11:00' data-rangend='13:00'@if(isset($pro->day_parts) && $pro->day_parts=='午場') selected @endif>午場</option>
-                                                        <option value="晚場" data-rangstart='14:00' data-rangend='16:00'@if(isset($pro->day_parts) && $pro->day_parts=='晚場') selected @endif>晚場</option>
+                                                        <option value="午場" data-rangstart='18:30' data-rangend='20:30'@if(isset($pro->day_parts) && $pro->day_parts=='午場') selected @endif>午場</option>
+                                                        <option value="晚場" data-rangstart='20:30' data-rangend='22:30'@if(isset($pro->day_parts) && $pro->day_parts=='晚場') selected @endif>晚場</option>
                                                     </select>
                                                 </div>
                                             <div class="col-sm-3">
@@ -210,7 +210,7 @@ $('input[name="dayrange"]').daterangepicker({
         startDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
         endDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
         minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
-        maxDate:'{{ config('setting.tgt.enddate') }}',
+        maxDate:'{{ Carbon\Carbon::today()->addMonth(3)->format('Y-m-d') }}',
     }, 
     function(start, end, label) {
         $('input[name=daystart]').val(start.format('YYYY-MM-DD') );
@@ -221,7 +221,7 @@ $('input[name="dayrange"]').daterangepicker({
 $("#datepicker").datetimepicker({
     "format": "YYYY-MM-DD",
     "minDate":'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
-    "maxDate":'{{ config('setting.tgt.enddate') }}',
+    "maxDate":'{{ Carbon\Carbon::today()->addMonth(3)->format('Y-m-d') }}',
 });
 $('select[name=dayparts]').bind('change',function(){
     //$('input[name=rangstart]').val($(this).find('option:selected').data('rangstart'));
@@ -254,7 +254,7 @@ $('.timepicker').timepicker({ showMeridian : false});
         });
 
 function addHtml(rand){
-    return '<label class="control-label col-sm-4 ro-'+rand+'"">時段 / 區間</label><div class="col-sm-2 ro-'+rand+'"><select class="form-control" name="dayparts[]"><option value="午場">午場</option><option value="晚場">晚場</option></select></div><div class="col-sm-2 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangstart[]" type="text" value="18:00" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><div class="col-sm-2 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangend[]" type="text" value="19:30" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><label class="control-label col-sm-2 ro-'+rand+'"><button type="button" class="btn btn-info btn-xs" data-id="'+rand+'"><i class="fa fa-plus"></i></button></label>'
+    return '<label class="control-label col-sm-4 ro-'+rand+'"">時段 / 區間</label><div class="col-sm-2 ro-'+rand+'"><select class="form-control" name="dayparts[]"><option value="午場">午場</option><option value="晚場">晚場</option></select></div><div class="col-sm-2 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangstart[]" type="text" value="18:30" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><div class="col-sm-2 ro-'+rand+'"><div class="input-group m-b-15"><div class="bootstrap-timepicker"><input name="rangend[]" type="text" value="20:30" class="form-control timepicker"></div><span class="input-group-addon bg-primary b-0 text-white"><i class="glyphicon glyphicon-time"></i></span></div></div><label class="control-label col-sm-2 ro-'+rand+'"><button type="button" class="btn btn-info btn-xs" data-id="'+rand+'"><i class="fa fa-plus"></i></button></label>'
 }
 function getRand(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);

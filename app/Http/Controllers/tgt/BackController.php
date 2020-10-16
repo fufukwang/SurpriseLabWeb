@@ -78,7 +78,7 @@ class BackController extends Controller
         $mes = $mes->paginate($this->perpage);
         $quart = backme::select('quarter')->groupBy('quarter')->get();
         //dd(DB::getQueryLog());
-        return view('thegreattipsy.backend.BackMes',compact('mes','request','quart'));
+        return view('thegreattipsy2019.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
         $cellData = backme::select('name','email','tel','num','detail')->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE o_id=0 AND tgtcoupon.b_id=tgtbackme.id)>0")->get()->toArray();
@@ -130,7 +130,7 @@ class BackController extends Controller
 
 
 
-            Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
+            Mail::send('thegreattipsy2019.email.coupon',$data,function($m) use ($data){
                 $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                 $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                 $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
@@ -185,7 +185,7 @@ class BackController extends Controller
         } else { $pros = $pros->orderBy('updated_at','desc'); }
         
         $pros = $pros->paginate($this->perpage);
-        return view('thegreattipsy.backend.pros',compact('pros','request'));
+        return view('thegreattipsy2019.backend.pros',compact('pros','request'));
     }
     public function ProEdit(Request $request,$id){
         $pro = collect();
@@ -196,7 +196,7 @@ class BackController extends Controller
                 abort(404);
             }
         }
-        return view('thegreattipsy.backend.pro',compact('pro'));
+        return view('thegreattipsy2019.backend.pro',compact('pro'));
     }
     public function ProUpdate(Request $request,$id){
 
@@ -308,7 +308,7 @@ class BackController extends Controller
         }
 
         $coupons = $coupons->paginate($this->perpage);
-        return view('thegreattipsy.backend.coupons',compact('coupons','request'));
+        return view('thegreattipsy2019.backend.coupons',compact('coupons','request'));
     }
     public function CouponDelete(Request $request,$id){
         coupon::where('id', $id)->delete();
@@ -328,7 +328,7 @@ class BackController extends Controller
     public function Orders(Request $request,$id){
         $order = order::orderBy('updated_at','desc')->where('pro_id',$id);
         $order = $order->get();
-        return view('thegreattipsy.backend.orders',compact('order'));
+        return view('thegreattipsy2019.backend.orders',compact('order'));
     }
     public function OrderEdit(Request $request,$id){
         $order = collect();
@@ -339,7 +339,7 @@ class BackController extends Controller
                 abort(404);
             }
         }
-        return view('thegreattipsy.backend.order',compact('order'));
+        return view('thegreattipsy2019.backend.order',compact('order'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -371,7 +371,7 @@ class BackController extends Controller
     public function Appointment(Request $request,$pro_id){
         try {
             $pro = pro::find($pro_id);
-            return view('thegreattipsy.backend.orderAppointment',compact('pro_id','pro'));
+            return view('thegreattipsy2019.backend.orderAppointment',compact('pro_id','pro'));
         } catch (Exception $exception) {
             Log::error($exception);
             return redirect('/thegreattipsy/pros?')->with('message','此編號無座位表!');
@@ -427,7 +427,7 @@ class BackController extends Controller
                 ];
                 config(['mail.username' => env('MAIL_TGT_USER')]);
                 config(['mail.password' => env('MAIL_TGT_PASS')]);
-                Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
+                Mail::send('thegreattipsy2019.email.order',$mailer,function($m) use ($mailer){
                     $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
@@ -481,7 +481,7 @@ class BackController extends Controller
         } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
         $order = $order->paginate($this->perpage);
 
-        return view('thegreattipsy.backend.print',compact('order','request'));
+        return view('thegreattipsy2019.backend.print',compact('order','request'));
     }
 
     public function Table(Request $request){
@@ -520,7 +520,7 @@ class BackController extends Controller
         $order = $order->get();
         
 
-        return view('thegreattipsy.backend.table',compact('order','request'));
+        return view('thegreattipsy2019.backend.table',compact('order','request'));
     }
 
     public function XlsDataOuput(Request $request){
@@ -603,7 +603,7 @@ class BackController extends Controller
 
         config(['mail.username' => env('MAIL_TGT_USER')]);
         config(['mail.password' => env('MAIL_TGT_PASS')]);
-        Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
+        Mail::send('thegreattipsy2019.email.order',$mailer,function($m) use ($mailer){
             $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
             $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
             $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');

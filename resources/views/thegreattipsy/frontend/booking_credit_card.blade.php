@@ -36,8 +36,21 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
     <link rel="stylesheet" href="css/form.css"/>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCD7VGK');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body class="loading">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCD7VGK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <!-- Anchor menu -->
 <nav class="anchor-wrapper">
     <div class="mobile-menu-hand">
@@ -603,15 +616,6 @@
 <script src="https://js.tappaysdk.com/tpdirect/v5.1.0"></script>
 <!-- Custom Js -->
 <script src="js/form_credit_card.js?v=0.2"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75329055-6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-75329055-6');
-</script>
 
 </body>
 </html>

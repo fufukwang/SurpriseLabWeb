@@ -65,11 +65,11 @@ class BackController extends Controller
                 name LIKE '%{$search}%' OR 
                 tel LIKE '%{$search}%' OR 
                 email LIKE '%{$search}%' OR 
-                (SELECT COUNT(id) FROM(tgtcoupon) WHERE code LIKE '%{$search}%' AND tgtcoupon.b_id=tgtbackme.id)
+                (SELECT COUNT(id) FROM(tgt2coupon) WHERE code LIKE '%{$search}%' AND tgt2coupon.b_id=tgt2backme.id)
             )");
         }
         if($request->has('isdone')){
-            $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE o_id=0 AND tgtcoupon.b_id=tgtbackme.id)>0");
+            $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE o_id=0 AND tgt2coupon.b_id=tgt2backme.id)>0");
         }
         if($request->has('season')){
             $mes = $mes->where('quarter',$request->season);
@@ -81,7 +81,7 @@ class BackController extends Controller
         return view('thegreattipsy.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $cellData = backme::select('name','email','tel','num','detail')->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE o_id=0 AND tgtcoupon.b_id=tgtbackme.id)>0")->get()->toArray();
+        $cellData = backme::select('name','email','tel','num','detail')->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE o_id=0 AND tgt2coupon.b_id=tgt2backme.id)>0")->get()->toArray();
         Excel::create('匯出未兌換名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $sheet->rows($cellData);
@@ -125,8 +125,11 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
-            config(['mail.username' => env('MAIL_TGT_USER')]);
-            config(['mail.password' => env('MAIL_TGT_PASS')]);
+            if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                config(['mail.host' => 'smtp.gmail.com']);
+                config(['mail.username' => env('MAIL_TGT_USER')]);
+                config(['mail.password' => env('MAIL_TGT_PASS')]);
+            }
 
 
 
@@ -236,7 +239,7 @@ class BackController extends Controller
             }
             pro::insert($arr);
         }
-        return redirect('/thegreattipsy/pros')->with('message','編輯完成!');
+        return redirect('/thegreattipsyS2/pros')->with('message','編輯完成!');
     }
     public function ProDelete(Request $request,$id){
         order::where('pro_id',$id)->delete();
@@ -246,8 +249,8 @@ class BackController extends Controller
     }
 
     public function ProOutputSite(Request $request){
-        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>0")
-            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"));
+        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>0")
+            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"));
         if($request->daystart == ''){
             $pro = $pro->where('day',Carbon::today()->format('Y-m-d'));
         } else {
@@ -289,7 +292,7 @@ class BackController extends Controller
                 $sheet->rows($data);
             });
         })->export('xls');
-        return redirect('/thegreattipsy/pros');
+        return redirect('/thegreattipsyS2/pros');
     }
 
 
@@ -334,7 +337,7 @@ class BackController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id')->select('tgtorder.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople')->find($id);
+                $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id')->select('tgt2order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople')->find($id);
             } else {
                 abort(404);
             }
@@ -353,9 +356,9 @@ class BackController extends Controller
             $order = order::find($id);
         } 
         if($request->has('qxx') && $request->qxx != ''){
-            return redirect('/thegreattipsy/print?'.$request->qxx)->with('message','編輯完成!');
+            return redirect('/thegreattipsyS2/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
-            return redirect('/thegreattipsy/orders/'.$order->tfopro_id)->with('message','編輯完成!');
+            return redirect('/thegreattipsyS2/orders/'.$order->tfopro_id)->with('message','編輯完成!');
         }
     }
     public function OrderDelete(Request $request,$id){
@@ -374,7 +377,7 @@ class BackController extends Controller
             return view('thegreattipsy.backend.orderAppointment',compact('pro_id','pro'));
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsy/pros?')->with('message','此編號無座位表!');
+            return redirect('/thegreattipsyS2/pros?')->with('message','此編號無座位表!');
         }
     }
     public function AppointmentUpdate(Request $request,$pro_id){
@@ -387,7 +390,7 @@ class BackController extends Controller
             } else {
                 $count = Carbon::now()->format('Ymd').'001';
             }
-            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end')->first();
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end')->first();
             $meat = [];
             for($i=0;$i<$people;$i++){
                 array_push($meat,$request->input('Meal.'.$i));
@@ -437,17 +440,17 @@ class BackController extends Controller
                 });
             }
 
-            return redirect('/thegreattipsy/pros?')->with('message','新增完成!');
+            return redirect('/thegreattipsyS2/pros?')->with('message','新增完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsy/pros?')->with('message','新增失敗!');
+            return redirect('/thegreattipsyS2/pros?')->with('message','新增失敗!');
         }
     }
 
 
     public function Print(Request $request){
-        $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
+        $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
 
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
@@ -459,9 +462,9 @@ class BackController extends Controller
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
+            $order->whereRaw("(tgt2order.pay_status='已付款' OR (tgt2order.pay_type='現場付款' AND tgt2order.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
-            $order->where('tgtorder.pay_status',$request->pay_status);  
+            $order->where('tgt2order.pay_status',$request->pay_status);  
         } 
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
@@ -469,7 +472,7 @@ class BackController extends Controller
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
         if($request->has('code') && $request->code!=''){
-            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE code='{$request->code}' AND tgtcoupon.o_id=tgtorder.sn)>0");
+            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -478,15 +481,15 @@ class BackController extends Controller
                 if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
-        } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
+        } else { $order = $order->orderBy('tgt2order.updated_at','desc'); }
         $order = $order->paginate($this->perpage);
 
         return view('thegreattipsy.backend.print',compact('order','request'));
     }
 
     public function Table(Request $request){
-        $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
+        $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -497,9 +500,9 @@ class BackController extends Controller
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
+            $order->whereRaw("(tgt2order.pay_status='已付款' OR (tgt2order.pay_type='現場付款' AND tgt2order.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
-            $order->where('tgtorder.pay_status',$request->pay_status);  
+            $order->where('tgt2order.pay_status',$request->pay_status);  
         } 
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
@@ -507,7 +510,7 @@ class BackController extends Controller
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
         if($request->has('code') && $request->code!=''){
-            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE code='{$request->code}' AND tgtcoupon.o_id=tgtorder.sn)>0");
+            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -516,7 +519,7 @@ class BackController extends Controller
                 if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
-        } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
+        } else { $order = $order->orderBy('tgt2order.updated_at','desc'); }
         $order = $order->get();
         
 
@@ -524,8 +527,8 @@ class BackController extends Controller
     }
 
     public function XlsDataOuput(Request $request){
-        $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgtorder.manage','tgtpro.money AS PM','tgtorder.money AS OM','tgtorder.created_at AS created_at','tgtorder.pay_status','email','tgtorder.sn','tgtorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
+        $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -536,9 +539,9 @@ class BackController extends Controller
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
+            $order->whereRaw("(tgt2order.pay_status='已付款' OR (tgt2order.pay_type='現場付款' AND tgt2order.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
-            $order->where('tgtorder.pay_status',$request->pay_status);  
+            $order->where('tgt2order.pay_status',$request->pay_status);  
         } 
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
@@ -546,7 +549,7 @@ class BackController extends Controller
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
         if($request->has('code') && $request->code!=''){
-            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgtcoupon) WHERE code='{$request->code}' AND tgtcoupon.o_id=tgtorder.sn)>0");
+            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -555,7 +558,7 @@ class BackController extends Controller
                 if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
-        } else { $order = $order->orderBy('tgtorder.updated_at','desc'); }
+        } else { $order = $order->orderBy('tgt2order.updated_at','desc'); }
         $order = $order->get();
 
         $cellData = $order->toArray();
@@ -571,10 +574,10 @@ class BackController extends Controller
         })->export('xls');
     }
     public function XlsEmailDataOuput(Request $request){
-        $order = order::leftJoin('tgtpro', 'tgtpro.id', '=', 'tgtorder.pro_id');
+        $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
         $order = $order->select('name','email')->groupBy('email');
-        $order->whereRaw("(tgtorder.pay_status='已付款' OR (tgtorder.pay_type='現場付款' AND tgtorder.pay_status<>'取消訂位'))");
-        $order = $order->orderBy('tgtorder.updated_at','desc')->get();
+        $order->whereRaw("(tgt2order.pay_status='已付款' OR (tgt2order.pay_type='現場付款' AND tgt2order.pay_status<>'取消訂位'))");
+        $order = $order->orderBy('tgt2order.updated_at','desc')->get();
         $cellData = $order->toArray();
         Excel::create('Email 名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
@@ -628,7 +631,7 @@ class BackController extends Controller
             ];
             $validator = Validator::make($request->all(), $rules);
             if ($validator->fails()) {
-                return redirect('/thegreattipsy/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
+                return redirect('/thegreattipsyS2/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
             } else {
                 if ($request->hasFile('xlsx')) {
                     if ($request->file('xlsx')->isValid())
@@ -654,9 +657,10 @@ class BackController extends Controller
                         //echo $row['sn'].'<br />';
                         if($row['sn'] == '') $row['sn'] = 0;
                         if($row['sponsor_id'] == '') $row['sponsor_id'] = 0;
-                        if($row['l1'] == '') $row['l1'] = 0;
-                        if($row['a1'] == '') $row['a1'] = 0;
-                        if($row['a4'] == '') $row['a4'] = 0;
+                        if($row['eb1'] == '') $row['eb1'] = 0;
+                        if($row['p1'] == '') $row['p1'] = 0;
+                        if($row['p2'] == '') $row['p2'] = 0;
+                        if($row['p6'] == '') $row['p6'] = 0;
                         $r = [
                             'sn'         => $row['sn'],
                             'detail'     => $row['detail'],
@@ -666,9 +670,10 @@ class BackController extends Controller
                             'email'      => $row['email'],
                             'tel'        => $row['tel'],
                             'sponsor_id' => $row['sponsor_id'],
-                            'l1'         => $row['l1'],
-                            'a1'         => $row['a1'],
-                            'a4'         => $row['a4'],
+                            'eb1'         => $row['eb1'],
+                            'p1'         => $row['p1'],
+                            'p2'         => $row['p2'],
+                            'p6'         => $row['p6'],
                             'quarter'    => $quarter,  // 產出季度
                         ];
                         if(backme::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){
@@ -682,34 +687,40 @@ class BackController extends Controller
                 //backme::insert($data);
                 $this->Db2Coupon();
             });
-            return redirect('/thegreattipsy/backmes')->with('message','新增完成!!共新增'.$i.'筆資料');
+            return redirect('/thegreattipsyS2/backmes')->with('message','新增完成!!共新增'.$i.'筆資料');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsy/backmes')->with('message','新增失敗!');
+            return redirect('/thegreattipsyS2/backmes')->with('message','新增失敗!');
         }
     }
 
     private function Db2Coupon(){
-        $xls = backme::select('l1','a1','a4','id')->where('gen_coup',0)->get();
+        $xls = backme::select('eb1','p1','p2','p6','id')->where('gen_coup',0)->get();
         foreach($xls as $row){
             $data = [
                 'b_id' => $row->id
             ];
-            if($row->l1 >= 1){
-                for($i=0;$i<$row->l1;$i++){
-                    $data['type'] = 'l1';
+            if($row->eb1 >= 1){
+                for($i=0;$i<$row->eb1;$i++){
+                    $data['type'] = 'eb1';
                     $data['code'] = $this->GenerateGiftCodeSN();
                     coupon::insert($data);
                 }
-            } elseif($row->a1 >= 1){
-                for($i=0;$i<$row->a1;$i++){
-                    $data['type'] = 'a1';
+            } elseif($row->p1 >= 1){
+                for($i=0;$i<$row->p1;$i++){
+                    $data['type'] = 'p1';
                     $data['code'] = $this->GenerateGiftCodeSN();
                     coupon::insert($data);
                 }
-            } elseif($row->a4 >= 1){
-                for($i=0;$i<$row->a4;$i++){
-                    $data['type'] = 'a4';
+            } elseif($row->p2 >= 1){
+                for($i=0;$i<$row->p2;$i++){
+                    $data['type'] = 'p2';
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    coupon::insert($data);
+                }
+            } elseif($row->p6 >= 1){
+                for($i=0;$i<$row->p6;$i++){
+                    $data['type'] = 'p6';
                     $data['code'] = $this->GenerateGiftCodeSN();
                     coupon::insert($data);
                 }

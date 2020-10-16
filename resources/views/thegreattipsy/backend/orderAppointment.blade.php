@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店預約席次設定'])
+@include('backstage.header',['title' => '微醺大飯店：1980s預約席次設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>微醺大飯店預約席次設定</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>微醺大飯店：1980s預約席次設定</b></h4>
                                 </div>
                             </div>
 
@@ -19,7 +19,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsy/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsyS2/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
 {!! csrf_field() !!}
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">日期</label>
@@ -62,12 +62,9 @@
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
                                                     <select name="people" id="pople" class="form-control">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
+                                                        @for($i=0;$i<37;$i++)
+                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                        @endfor
                                                     </select>
                                                 </div>
                                             </div>
