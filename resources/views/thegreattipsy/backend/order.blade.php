@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店訂單列表'])
+@include('backstage.header',['title' => '微醺大飯店：1980s訂單列表'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>微醺大飯店訂單列表</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>微醺大飯店：1980s訂單列表</b></h4>
                                 </div>
                             </div>
 
@@ -19,7 +19,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsy/order/{{ $order->id or 0}}/update" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsyS2/order/{{ $order->id or 0}}/update" class="form-horizontal">
                                             <input type="hidden" name="qxx" value="{{ Request::getQueryString() }}">
 {!! csrf_field() !!}
                                             <div class="form-group">

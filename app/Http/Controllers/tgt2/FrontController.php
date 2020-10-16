@@ -14,7 +14,6 @@ use App\model\tgt2\pro;
 
 use DB;
 use Response;
-use App\model\DarkContact;
 use Carbon\Carbon;
 use Mail;
 use Log;
@@ -34,7 +33,7 @@ class FrontController extends Controller
             if($request->has('act')){
                 $pople = $request->pople;
                 if(is_numeric($pople) && $pople>0){
-                    $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$pople);
+                    $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$pople);
                 } else {
                     return Response::json(['success'=> 'N'], 200);
                 }
@@ -45,7 +44,7 @@ class FrontController extends Controller
                         $ticketType = $request->ticketType;
                         $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today());
                         if($ticketType == 1){
-                            $pro = $pro->whereRaw("floor(ABS(DATEDIFF( '17530101', `tgtpro`.`day`)) % 7 / 5)=0");
+                            $pro = $pro->whereRaw("floor(ABS(DATEDIFF( '17530101', `tgt2pro`.`day`)) % 7 / 5)=0");
                         }
                         $pro = $pro->get();
                         return $pro->toJson();
@@ -53,12 +52,6 @@ class FrontController extends Controller
                     case 'getByday': // 日期 取得 時段
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        /*
-                        $dayOW      = Carbon::parse($day)->dayOfWeek;
-                        if($ticketType == 1 && ($dayOW == 0 || $dayOW == 5 || $dayOW == 6)){
-                            $pro = $pro->where('day_parts','午場');
-                        }
-                        */
                         $pro = $pro->select('day_parts','day')->groupBy('day_parts')->where('day',$day)->get();
                         return $pro->toJson();
                     break;
@@ -66,13 +59,7 @@ class FrontController extends Controller
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        /*
-                        $dayOW      = Carbon::parse($day)->dayOfWeek;
-                        if($ticketType == 1 && ($dayOW == 0 || $dayOW == 5 || $dayOW == 6)){
-                            $pro = $pro->where('day_parts','午場');
-                        }
-                        */
-                        $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->get();
+                        $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->get();
                         return $pro->toJson();
                     break;
 
@@ -86,22 +73,12 @@ class FrontController extends Controller
                             $me = coupon::where('code',$request->code)->select('type')->first();
                             $type = '';
                             switch ($me->type) {
-                                case 'l1': $type = '時間有點限制票'; break;
-                                case 'a1': $type = '暢⾏無阻票'; break;
-                                case 'a4': $type = '四⼈沈醉票'; break;
+                                case 'eb1': $type = '驚喜早鳥限定票'; break;
+                                case 'p1': $type = '單人自在票'; break;
+                                case 'p2': $type = '雙人共享票'; break;
+                                case 'p6': $type = '六人沈醉票'; break;
                             }
                             $ticketType = $request->ticketType;
-                            $dayOW      = Carbon::parse($request->day)->dayOfWeek;
-                            // 人數小於 4 但是又輸入四人沉醉票
-                            /*
-                            if($me->type == 'a4' && $pople<4){
-                                return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
-                            }
-                            */
-                            // 有點限制票選擇到周末晚場
-                            if(($dayOW == 0 || $dayOW == 6) && $me->type == 'l1'){
-                                return Response::json(['success'=> 'N','message'=>'票券選擇時間錯誤'], 200);
-                            }
                             return Response::json(['success'=> 'Y','ticket'=>$type], 200);    
                         } else {
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
@@ -126,7 +103,7 @@ class FrontController extends Controller
             }
             $people = $request->Pople;
 
-            $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgtorder) WHERE tgtorder.pro_id=tgtpro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
+            $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
                 return Response::json(array(
@@ -150,20 +127,6 @@ class FrontController extends Controller
                     $coupon_count = coupon::where('code',$value)->where('o_id',0)->count();
                     if($coupon_count>0){
                         $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
-                        $dayOW      = Carbon::parse($act->day)->dayOfWeek;
-                        // 人數小於 4 但是又輸入四人沉醉票
-                        /*
-                        if($me->type == 'a4' && $people<4){
-                            Log::error('序號錯誤或已使用 ' . $value . ' | ' . $act->id);
-                            return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
-                        }
-                        */
-                        // 有點限制票選擇到周末晚場
-                        if(($dayOW == 0 || $dayOW == 6) && $me->type == 'l1'){
-                            Log::error('票券選擇時間錯誤 ' . $value . ' | ' . $act->id);
-                            return Response::json(['success'=> 'N','message'=>'票券選擇時間錯誤'], 200);
-                        }
-
                         $coupon++;
                         coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
                         if($request->Pay == 'onsite'){
@@ -276,8 +239,12 @@ class FrontController extends Controller
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                config(['mail.username' => env('MAIL_TGT_USER')]);
-                config(['mail.password' => env('MAIL_TGT_PASS')]);
+                if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                    config(['mail.host' => 'smtp.gmail.com']);
+                    config(['mail.username' => env('MAIL_TGT_USER')]);
+                    config(['mail.password' => env('MAIL_TGT_PASS')]);
+                }
+                
                 Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
                     $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');

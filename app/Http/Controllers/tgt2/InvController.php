@@ -11,7 +11,11 @@ use Hash;
 use Illuminate\Support\Facades\Storage;
 use Mail;
 use Exception;
-
+use App\model\tgt2\coupon;
+use App\model\tgt2\order;
+use App\model\tgt2\pro;
+use App\model\tgt2\backme;
+use App\model\tgt2\inv;
 
 
 use App\Http\Controllers\Controller;
@@ -183,7 +187,7 @@ class InvController extends Controller
                     'CarrierNum' => rawurlencode(''),
                     'LoveCode' => '',
                     'PrintFlag' => 'Y',
-                    'ItemName' => '明日俱樂部票券', //多項商品時，以「|」分開
+                    'ItemName' => '微醺大飯店票券', //多項商品時，以「|」分開
                     'ItemCount' => $row->pople, //多項商品時，以「|」分開
                     'ItemUnit' => '張', //多項商品時，以「|」分開
                     'ItemPrice' => $totleamt / $row->pople, //多項商品時，以「|」分開
@@ -202,10 +206,10 @@ class InvController extends Controller
                     'results'   => $result['web_info']
                 ]);
             }
-            return redirect('/clubtomorrow/print?')->with('message','發票開立完成!');
+            return redirect('/thegreattipsyS2/print?')->with('message','發票開立完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/clubtomorrow/print?')->with('message','發票開立失敗!');
+            return redirect('/thegreattipsyS2/print?')->with('message','發票開立失敗!');
         }
     }
     // 單一發票開立
