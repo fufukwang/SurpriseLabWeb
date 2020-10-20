@@ -586,10 +586,12 @@ $(function(){
         var email = $(this).data('email');
         var id    = $(this).data('id');
         var pople = $(this).data('pople');
+        var oid   = $(this).data('oid');
         $.post('/thegreattipsyS2/order/'+id+'/resent',{
             name  : name,
             email : email,
-            pople : pople
+            pople : pople,
+            oid   : oid
         },function(data){
             $.Notification.notify('success','bottom left','已重發', '信件已重新發送');
         },'json');

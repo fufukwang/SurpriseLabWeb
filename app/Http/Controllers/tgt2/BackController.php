@@ -58,6 +58,39 @@ class BackController extends Controller
                 d2xls::where('id',$row)->update(['is_sent'=>1]);
             }
         }*/
+        if($request->isMethod('post') && $request->has('id')){
+            foreach($request->id as $row){
+                $id = $row;
+                $xls     = backme::find($id);
+                $coupons = coupon::where('b_id',$id)->get();
+                $data = [
+                    'xls'     => $xls,
+                    'coupons' => $coupons,
+                ];
+                if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
+                    config(['mail.host' => 'smtp.gmail.com']);
+                    config(['mail.username' => env('MAIL_TGT_USER')]);
+                    config(['mail.password' => env('MAIL_TGT_PASS')]);
+                }
+                Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
+                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+
+                    $m->to($data['xls']->email, $data['xls']->name);
+                    $m->subject('微醺大飯店-劃位序號信件!');
+                });
+                backme::where('id',$id)->update(['is_sent'=>1]);
+            }
+            $par = '?';
+            if($request->has('search')) $par .= "&search=".$request->search;
+            if($request->has('isdone')) $par .= "&isdone=".$request->isdone;
+            if($request->has('is_sent')) $par .= "&is_sent=".$request->is_sent;
+            if($request->has('season')) $par .= "&season=".$request->season;
+            return redirect('/thegreattipsyS2/backmes'.$par)->with('message','已寄送完成!');
+        }
+
+
         $mes = backme::where('id','>',0);
         if($request->has('search')){
             $search = $request->search;
@@ -441,6 +474,8 @@ class BackController extends Controller
                     $m->to($mailer['email'], $mailer['name']);
                     $m->subject('微醺大飯店-訂單完成信件!');
                 });
+                $order->is_send = 1;
+                $order->save();
             }
 
             return redirect('/thegreattipsyS2/pros?')->with('message','新增完成!');
@@ -605,10 +640,12 @@ class BackController extends Controller
             'name'  => $request->name,
             'gday'  => $rangStart.'/'.$rangEnd,
         ];
+        if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+            config(['mail.host' => 'smtp.gmail.com']);
+            config(['mail.username' => env('MAIL_TGT_USER')]);
+            config(['mail.password' => env('MAIL_TGT_PASS')]);
+        }
 
-
-        config(['mail.username' => env('MAIL_TGT_USER')]);
-        config(['mail.password' => env('MAIL_TGT_PASS')]);
         Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
             $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
             $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
@@ -617,6 +654,7 @@ class BackController extends Controller
             $m->to($mailer['email'], $mailer['name']);
             $m->subject('微醺大飯店-訂單完成信件!');
         });
+        order::where('id',$request->oid)->update(['is_send'=>1]);
         return Response::json(['message'=> '已更新'], 200);
     }
 

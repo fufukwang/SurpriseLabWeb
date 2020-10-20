@@ -254,15 +254,20 @@ class FrontController extends Controller
                     config(['mail.username' => env('MAIL_TGT_USER')]);
                     config(['mail.password' => env('MAIL_TGT_PASS')]);
                 }
-                
-                Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
-                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                try {
+                    Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
+                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
 
-                    $m->to($mailer['email'], $mailer['name']);
-                    $m->subject('微醺大飯店-訂單完成信件!');
-                });
+                        $m->to($mailer['email'], $mailer['name']);
+                        $m->subject('微醺大飯店-訂單完成信件!');
+                    });
+                    $order->is_send = 1;
+                    $order->save();
+                } catch (Exception $e){
+                    Log::error($e);
+                }
             }
             
 

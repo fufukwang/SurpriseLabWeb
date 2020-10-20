@@ -210,6 +210,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
     // 微醺大飯店 S2
     Route::group(['prefix' => 'thegreattipsyS2'], function(){
         Route::get('backmes','tgt2\BackController@BackMes');
+        Route::post('backmes','tgt2\BackController@BackMes');
         Route::get('backme/{id}','tgt2\BackController@BackMe');
         Route::delete('backme/{id}/delete','tgt2\BackController@BackMeDelete');
         Route::post('backmes/{id}/sentcoupon','tgt2\BackController@SentCouponCode');
