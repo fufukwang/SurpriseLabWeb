@@ -458,31 +458,6 @@ function updateField(fieldGroup, accessHide) {
 // Form Steps End
 // ===================================
 
-
-// ===================================
-// Coupon Code Start
-// ===================================
-/*
-var coupons = [ // 測試用票券代碼
-    { type: '0', couponcode: '054JXQH8'},
-    { type: '0', couponcode: '3MNF5RUE'},
-    { type: '0', couponcode: '5NIJD3FC'},
-    { type: '0', couponcode: '7Y0CJCYB'},
-    { type: '0', couponcode: '920T9603'},
-    { type: '0', couponcode: 'BWCWASDU'},
-    { type: '1', couponcode: 'D4EX2INA'},
-    { type: '1', couponcode: 'ETL738NF'},
-    { type: '1', couponcode: 'HSTJKWYX'},
-    { type: '1', couponcode: 'I90NS2IQ'},
-    { type: '1', couponcode: 'L9KQPCVF'},
-    { type: '1', couponcode: 'M4ZVGYZR'},
-    { type: '2', couponcode: 'P18PR5I9'},
-    { type: '2', couponcode: 'QIARITDN'},
-    { type: '2', couponcode: 'TUN07VAB'},
-    { type: '2', couponcode: 'UPVEJT6U'}
-];
-*/
-
 $('.verification-code').on('click', function () {
     var coupon = $('input[name="coupon"]');
     var couponVal = coupon.val(); // 取得用戶輸入的票券代碼

@@ -99,7 +99,7 @@ class FrontController extends Controller
             if($count>0){
                 $count += 1;
             } else {
-                $count = Carbon::now()->format('Ymd').'001';
+                $count = Carbon::now()->format('Ymd').'0001';
             }
             $people = $request->Pople;
 

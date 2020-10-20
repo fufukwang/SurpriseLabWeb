@@ -125,7 +125,7 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
-            if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+            if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_TGT_USER')]);
                 config(['mail.password' => env('MAIL_TGT_PASS')]);
@@ -388,7 +388,7 @@ class BackController extends Controller
             if($count>0){
                 $count += 1;
             } else {
-                $count = Carbon::now()->format('Ymd').'001';
+                $count = Carbon::now()->format('Ymd').'0001';
             }
             $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end')->first();
             $meat = [];
@@ -428,8 +428,11 @@ class BackController extends Controller
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                config(['mail.username' => env('MAIL_TGT_USER')]);
-                config(['mail.password' => env('MAIL_TGT_PASS')]);
+                if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                    config(['mail.host' => 'smtp.gmail.com']);
+                    config(['mail.username' => env('MAIL_TGT_USER')]);
+                    config(['mail.password' => env('MAIL_TGT_PASS')]);
+                }
                 Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
                     $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');

@@ -1,13 +1,13 @@
 // Variable
 @import "variable";
-
+/*
 // Override
 html,
 body,
 header.logo {
   background-image: none;
 }
-
+*/
 html,
 body {
   overflow-x: hidden;
@@ -299,7 +299,7 @@ form {
 
     /*Hide all except first fieldset*/
     &:not(:first-of-type) {
-      // display: none;
+      display: none;
     }
   }
 

@@ -349,7 +349,7 @@
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
                                             <tr>
-                                                <td>明日俱樂部票券</td>
+                                                <td>微醺大飯店：1980s</td>
                                                 <td id="inv_people"></td>
                                                 <td>張</td>
                                                 <td id="inv_price"></td>
@@ -690,7 +690,7 @@ $(function(){
                 'CarrierType' : $('input[name="CarrierType"]:checked').val(),
                 'CarrierNum' : $('#CarrierNum').val(),
                 'LoveCode' : $('#LoveCode').val(),
-                'ItemName' : '明日俱樂部票券',
+                'ItemName' : '微醺大飯店：1980s',
                 'ItemCount' : $('#inv_people').text(),
                 'ItemUnit' : '張',
                 'ItemPrice' : $('#inv_price').text(),

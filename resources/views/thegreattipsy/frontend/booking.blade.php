@@ -623,8 +623,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </form>
     </div>
 
-    <div class="submit-page success" id="bookingSuccess">
-    <!-- <div class="submit-page success" id="bookingSuccess" style="display:none;"> -->
+    <!-- <div class="submit-page success" id="bookingSuccess"> -->
+    <div class="submit-page success" id="bookingSuccess" style="display:none;">
         <div class="container">
             <h3 class="page-title">
                 你已完成訪客預約！
@@ -644,8 +644,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <div class="submit-page error" id="bookingError">
-    <!-- <div class="submit-page error" id="bookingError" style="display:none;"> -->
+    <!-- <div class="submit-page error" id="bookingError"> -->
+    <div class="submit-page error" id="bookingError" style="display:none;">
         <div class="container">
             <h3 class="page-title">
                 whoops！預約未成功
@@ -682,7 +682,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- blockUI script-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 <!-- tappaysdk -->
-<script src="https://js.tappaysdk.com/tpdirect/v3"></script>
+<script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
 <!-- Custom Js -->
 <script src="js/form.js?v=0.13"></script>
 
