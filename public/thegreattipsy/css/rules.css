@@ -6,6 +6,13 @@ body {
   background-color: #281F1C !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
+  background-size: 15%;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-size: auto;
+  }
 }
 
 header.logo {
@@ -34,6 +41,7 @@ header.logo {
   background-color: #281F1C;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
+  background-size: 15%;
 }
 
 #rules-tab-switcher .nav-link.active,
@@ -72,6 +80,7 @@ header.logo {
 @media (max-width: 480px) {
   #rules-tab-switcher {
     top: 60px;
+    background-size: auto;
   }
 }
 
@@ -185,7 +194,6 @@ header.logo {
   font-weight: bold;
   text-align: center;
   margin-bottom: 0;
-  font-family: "Noto Serif TC", serif;
 }
 
 @media (min-width: 1200px) {
@@ -387,7 +395,6 @@ header.logo {
 }
 
 #Rules #qa .qa-title-separator {
-  font-family: "Noto Serif TC", serif;
   font-size: 24px;
   font-weight: 900;
   line-height: 1.25;
@@ -904,6 +911,7 @@ header.logo {
   font-size: 18px;
   letter-spacing: 1.8px;
   line-height: 2.67;
+  text-decoration: underline;
 }
 
 @media (min-width: 1200px) {
@@ -954,6 +962,7 @@ header.logo {
   text-align: center;
   font-size: 18px;
   letter-spacing: 1.8px;
+  text-decoration: underline;
 }
 
 #Rules #changeAndrefund .pre-note {

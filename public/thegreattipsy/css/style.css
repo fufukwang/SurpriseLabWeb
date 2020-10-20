@@ -45,6 +45,13 @@ html {
   background-image: url("../img/wallpaper.jpg");
   background-position: center center;
   background-repeat: repeat;
+  background-size: 15%;
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    background-size: auto;
+  }
 }
 
 body {
@@ -53,7 +60,14 @@ body {
   background-image: url("../img/wallpaper.jpg");
   background-position: center center;
   background-repeat: repeat;
+  background-size: 15%;
   color: #EFC27B;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-size: auto;
+  }
 }
 
 body.menu-open {
@@ -456,6 +470,7 @@ p {
             transform: none;
     background-image: url("../img/wallpaper.jpg");
     background-repeat: repeat;
+    background-size: auto;
     -webkit-transition: opacity 0.8s;
     transition: opacity 0.8s;
   }
@@ -889,6 +904,7 @@ header.logo {
   background-image: url("../img/wallpaper.jpg");
   background-position: top center;
   background-repeat: repeat;
+  background-size: 15%;
 }
 
 header.logo.anchor-show {
@@ -903,6 +919,7 @@ header.logo.scroll-background-color {
 @media (max-width: 480px) {
   header.logo {
     background-color: #281F1C;
+    background-size: auto;
   }
   header.logo.scroll-background-color {
     background-color: #281F1C;
@@ -2547,61 +2564,61 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc((608px + 30px) * 0.04025);
+    padding-left: calc((608px + 30px) * 0.03757);
   }
 }
 
 @media (min-width: 1440px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc((768px + 30px) * 0.04025);
+    padding-left: calc((768px + 30px) * 0.03757);
   }
 }
 
 @media (min-width: 1920px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc((1088px + 30px) * 0.04025);
+    padding-left: calc((1088px + 30px) * 0.03757);
   }
 }
 
 @media (max-width: 1199.98px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc((520px + 30px) * 0.04025);
+    padding-left: calc((520px + 30px) * 0.03757);
   }
 }
 
 @media (max-width: 480px) {
   #Ticket .ticket-type .type-item {
-    padding-left: calc(100% * 0.04025);
+    padding-left: calc(100% * 0.03757);
   }
 }
 
 @media (min-width: 1200px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc((608px + 30px) * 0.04025);
+    padding-right: calc((608px + 30px) * 0.03757);
   }
 }
 
 @media (min-width: 1440px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc((768px + 30px) * 0.04025);
+    padding-right: calc((768px + 30px) * 0.03757);
   }
 }
 
 @media (min-width: 1920px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc((1088px + 30px) * 0.04025);
+    padding-right: calc((1088px + 30px) * 0.03757);
   }
 }
 
 @media (max-width: 1199.98px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc((520px + 30px) * 0.04025);
+    padding-right: calc((520px + 30px) * 0.03757);
   }
 }
 
 @media (max-width: 480px) {
   #Ticket .ticket-type .type-item {
-    padding-right: calc(100% * 0.04025);
+    padding-right: calc(100% * 0.03757);
   }
 }
 

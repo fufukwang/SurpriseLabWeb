@@ -6,6 +6,11 @@ body {
   background-color: $color-dark-brown !important;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
+  background-size: 15%;
+
+  @media screen and (max-width: 480px) {
+    background-size: auto;
+  }
 }
 
 header.logo {
@@ -35,6 +40,7 @@ header.logo {
   background-color: $color-dark-brown;
   background-image: url('../img/wallpaper.jpg');
   background-repeat: repeat;
+  background-size: 15%;
 
   .nav-link.active,
   .nav-link:hover {
@@ -66,6 +72,7 @@ header.logo {
 
   @media (max-width: 480px) {
     top: 60px;
+    background-size: auto;
   }
 
   @media (max-width: 320px) {
@@ -95,7 +102,6 @@ header.logo {
     @include baseCounter('padding-bottom', 35);
     text-align: center;
     margin-bottom: 0;
-    font-family: $font-serif;
 
     &:first-child {
       padding-top: 0;
@@ -133,7 +139,6 @@ header.logo {
 
   #qa {
     .qa-title-separator {
-      font-family: $font-serif;
       font-size: 24px;
       font-weight: 900;
       line-height: 1.25;
@@ -307,6 +312,7 @@ header.logo {
         font-size: 18px;
         letter-spacing: 1.8px;
         line-height: 2.67;
+        text-decoration: underline;
       }
     }
 
@@ -333,6 +339,7 @@ header.logo {
         text-align: center;
         font-size: 18px;
         letter-spacing: 1.8px;
+        text-decoration: underline;
       }
     }
 
