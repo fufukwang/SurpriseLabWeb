@@ -130,11 +130,21 @@ class FrontController extends Controller
                         $coupon++;
                         coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
                         if($request->Pay == 'onsite'){
-                            $cut1 += $act->cash;
-                            //$cut1 += ($me->type == 'a4') ? ($act->cash * 4) : $act->cash;
+                            if($me->type == 'eb1' || $me->type == 'p1'){
+                                $cut1 += $act->cash;
+                            } elseif ($me->type == 'p2') {
+                                $cut1 += $act->cash * 2;
+                            } elseif ($me->type == 'p6') {
+                                $cut1 += $act->cash * 6;
+                            }
                         } else {
-                            $cut1 += $act->money;
-                            //$cut1 += ($me->type == 'a4') ? ($act->money * 4) : $act->money;
+                            if($me->type == 'eb1' || $me->type == 'p1'){
+                                $cut1 += $act->money;
+                            } elseif ($me->type == 'p2') {
+                                $cut1 += $act->money * 2;
+                            } elseif ($me->type == 'p6') {
+                                $cut1 += $act->money * 6;
+                            }
                         }
                     }
                 }

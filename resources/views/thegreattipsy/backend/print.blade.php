@@ -199,6 +199,11 @@
 
 
                                         </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="9"><button type="submit" class="btn btn-info">B2C 發票開立</button> <br/><span> 開立稅額 5% B2C 發票可於[發票資訊] 中預覽金額是否正確</span></td>
+                                            </tr>
+                                        </tfoot>
                                     </table>
 
                                     <div align="center">{{ $order->appends(Request::capture()->except('page'))->links() }}</div>

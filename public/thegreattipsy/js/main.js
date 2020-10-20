@@ -200,7 +200,7 @@ $(document).ready(function () {
         var SaleStep5_amount = data5['pledged_count'];
         var SaleStep6_amount = data6['pledged_count'];
         */
-        var goal = 1300; // 目標張數
+        var goal = 1200; // 目標張數
         var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
@@ -303,10 +303,10 @@ $(document).ready(function () {
                 time_rest.find('.seconds').html(seconds);
             } else {
                 // 第一階段售票時間結束時，售票狀況區塊上移，不顯示剩餘張數，不顯示倒數器，不顯示完成進度百分比
-                //$('.sec-ticket-status').addClass('up').appendTo('.sec-experience');
-                //$('.over-2000').hide();
-                //$('.time-counter').remove();
-                //$('.progress-percent-area').remove();
+                $('.sec-ticket-status').addClass('up').appendTo('.sec-experience');
+                $('.over-2000').hide();
+                $('.time-counter').remove();
+                $('.progress-percent-area').remove();
                 clearInterval(timer);
             }
         }, 1000);

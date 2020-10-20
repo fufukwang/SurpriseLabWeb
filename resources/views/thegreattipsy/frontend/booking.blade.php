@@ -546,10 +546,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <td>電子信箱</td>
                             <td class="filled" data-filled="email"></td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td>票券</td>
                             <td class="filled" data-filled="booking_ticket"></td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td>人數</td>
                             <td class="filled" data-filled="booking_people"></td>

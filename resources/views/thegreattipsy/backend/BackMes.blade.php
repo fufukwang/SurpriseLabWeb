@@ -229,8 +229,8 @@ $(function(){
         var code = $(this).data('code');
         if(confirm("確定要移除此優惠碼的使用紀錄?!(此動作無法復原)")) {
             $.post('/thegreattipsyS2/backmes/CanelCoupon',{
-                xls_id : id,
-                code   : code,
+                b_id : id,
+                code : code,
             },function(data){
                 $('.canelCoupon[data-id="'+id+'"]').remove();
                 $.Notification.notify('success','bottom left','已更新', '已移除')
