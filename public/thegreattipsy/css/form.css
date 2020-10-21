@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 /*
+// Override
 html,
 body,
 header.logo {
@@ -444,10 +445,6 @@ form .form-container {
   margin: 0 auto;
 }
 
-form fieldset:not(:first-of-type) {
-    display: none;
-}
-
 @media (min-width: 1200px) {
   form .form-container {
     padding-top: calc((608px + 30px) * 0.02683);
@@ -554,6 +551,10 @@ form fieldset {
   form fieldset {
     padding-bottom: calc(100% * 0.05367);
   }
+}
+
+form fieldset:not(:first-of-type) {
+  display: none;
 }
 
 form .btn-outline {

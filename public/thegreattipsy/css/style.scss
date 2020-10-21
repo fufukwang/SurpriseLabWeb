@@ -231,6 +231,19 @@ p {
   }
 }
 
+// Override BlockUI Style
+.blockMsg {
+  border: none !important;
+  background-color: $color-light-yellow !important;
+
+  h1 {
+    font-size: 28px;
+    font-family: $font-patuaOne;
+    letter-spacing: 1.4px;
+    color: $color-dark-brown;
+  }
+}
+
 // Full Page Style
 .fullpage {
   min-height: calc(100vh - 120px);
