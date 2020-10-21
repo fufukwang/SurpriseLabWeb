@@ -317,8 +317,9 @@ p {
 }
 
 .blockMsg h1 {
+  font-size: 40px;
   font-family: "Patua One", cursive, sans-serif;
-  letter-spacing: 2.5px;
+  letter-spacing: 1px;
   color: #281F1C;
 }
 
