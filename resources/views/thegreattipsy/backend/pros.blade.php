@@ -25,7 +25,7 @@
                         <div class="table-wrapper">
                             <div class="btn-toolbar">
                                 <div class="btn-group focus-btn-group">
-                                    <form action="/thegreattipsy/pros" autocomplete="off">
+                                    <form action="/thegreattipsyS2/pros" autocomplete="off">
 
                                         <div class="form-group col-sm-2">
                                             <div class="col-sm-12">
