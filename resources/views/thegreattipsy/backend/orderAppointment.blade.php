@@ -97,7 +97,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
+                                            <!--div class="form-group">
                                                 <label class="control-label col-sm-4">主餐</label>
                                                 <div class="col-sm-8">
 <style type="text/css">
@@ -157,7 +157,7 @@
 
 
                                                 </div>
-                                            </div>
+                                            </div-->
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">管理</label>
@@ -246,28 +246,22 @@
 $('#money').bind('change',function(){
     $('#item').val($('#money option:selected').text());
 });
+/*
 $('#pople').bind('change',function(){
     changeToPople($(this).val());
 })
 changeToPople(1);
+*/
         });
 
-
+/*
 function changeToPople(pople){
     $('.btn-group').hide()
     for(i=0;i<parseInt(pople);i++){
         $('.btn-group').eq(i).show();
     }
-    /*
-    $('.group-6').hide();
-    if(pople == 4){
-        $('.group-4').show();
-    } else if(pople == 6){
-        $('.group-6').show();
-    }
-    */
 }
-
+/*
 
         </script>
 
