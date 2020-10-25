@@ -391,7 +391,7 @@ class BackController extends Controller
         if($request->has('qxx') && $request->qxx != ''){
             return redirect('/thegreattipsyS2/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
-            return redirect('/thegreattipsyS2/orders/'.$order->tfopro_id)->with('message','編輯完成!');
+            return redirect('/thegreattipsyS2/orders/'.$order->pro_id)->with('message','編輯完成!');
         }
     }
     public function OrderDelete(Request $request,$id){
