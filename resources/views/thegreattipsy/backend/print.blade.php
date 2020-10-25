@@ -189,7 +189,7 @@
                                                     <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/thegreattipsyS2/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
-                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                    <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
 @empty
@@ -568,7 +568,7 @@ $(function(){
         $('input[name=dayend]').val(end.format('YYYY-MM-DD') );
         //alert("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
-    $('.btn-danger').bind('click',function(){
+    $('.remove-order').bind('click',function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此訂單")) {
              $.ajax({
@@ -682,7 +682,7 @@ $(function(){
     $('#sent_inv_open').bind('click',function(){
         if(parseInt($('#Amt').val()) + parseInt($('#TaxAmt').val()) == parseInt($('#TotalAmt').val())){
             var id = $('#inv_use_id').val();
-            $.post('/clubtomorrow/order/inv/single/open',{
+            $.post('/thegreattipsyS2/order/inv/single/open',{
                 'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
                 'BuyerName' : $('#BuyerName').val(),
                 'BuyerUBN' : $('#BuyerUBN').val(),
@@ -740,7 +740,7 @@ $(function(){
     $('#sent_inv_cancal').bind('click',function(){
         var id = $('#inv_cancal_id').val();
         if($('#inv_cancal_note').val()!=''){
-            $.post('/clubtomorrow/order/inv/cancal',{
+            $.post('/thegreattipsyS2/order/inv/cancal',{
                 'InvoiceNumber' : $('#inv_number').val(),
                 'InvalidReason' : $('#inv_cancal_note').val(),
                 'id' : id

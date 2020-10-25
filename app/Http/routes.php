@@ -248,6 +248,11 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('xls/data/output','tgt2\BackController@XlsDataOuput');
         Route::get('xls/emaildata/output','tgt2\BackController@XlsEmailDataOuput');
         Route::post('order/{id}/resent','tgt2\BackController@beSentOrderMail');
+
+        // 發票相關
+        Route::post('order/inv/single/open','tgt2\InvController@singleInvOpne');
+        Route::post('order/inv/mult/open','tgt2\InvController@muInvOpen');
+        Route::post('order/inv/cancal','tgt2\InvController@InvClose');
     });
 
 
