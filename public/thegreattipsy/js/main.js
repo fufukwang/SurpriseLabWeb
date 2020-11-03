@@ -162,9 +162,9 @@ $(document).ready(function () {
 
     // 售票進度 API
     var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1397json?token=15171aa66ababafd4464a1c194b66102';
-
+    var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1444json?token=15171aa66ababafd4464a1c194b66102';
     /*
-    var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/949json?token=15171aa66ababafd4464a1c194b66102';
+    
     var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/981json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/994json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep5 = 'https://surpriselab.backme.tw/api/projects/1014json?token=15171aa66ababafd4464a1c194b66102';
@@ -175,32 +175,32 @@ $(document).ready(function () {
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
     $.when(
-      $.getJSON(progress_api_SaleStep1)/*,
-      $.getJSON(progress_api_SaleStep2),
+      $.getJSON(progress_api_SaleStep1),
+      $.getJSON(progress_api_SaleStep2)/*,
       $.getJSON(progress_api_SaleStep3),
       $.getJSON(progress_api_SaleStep4),
       $.getJSON(progress_api_SaleStep5),
       $.getJSON(progress_api_SaleStep6),
       $.getJSON(progress_api_SaleStep7)*/
-    ).done(function(data1/*, data2, data3, data4, data5, data6, data7*/) {
-/*
-        data1 = data1[0];
+    ).done(function(data1, data2/*, data3, data4, data5, data6, data7*/) {
+
+        data1 = data1[0];/*
         data2 = data2[0];
         data3 = data3[0];
         data4 = data4[0];
         data5 = data5[0];
         data6 = data6[0];*/
-        var data = data1;
-/*
+        var data = data2[0];
+
         // 第一階段已售出總票數
-        var SaleStep1_amount = data1['pledged_count'];
+        var SaleStep1_amount = data1['pledged_count'];/*
         var SaleStep2_amount = data2['pledged_count'];
         var SaleStep3_amount = data3['pledged_count'];
         var SaleStep4_amount = data4['pledged_count'];
         var SaleStep5_amount = data5['pledged_count'];
         var SaleStep6_amount = data6['pledged_count'];
         */
-        var goal = 1200; // 目標張數
+        var goal = SaleStep1_amount + 1500; // 目標張數
         var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
@@ -209,7 +209,7 @@ $(document).ready(function () {
         sale_progress = Math.floor(sale_progress);
         // 測試用
         //sale_progress = 50;
-
+/*
         // 驚喜早鳥限定票
         var ticket_matinee = $('.type-great-tipsy');
         var timeLimit_sale = data['rewards'][0].pledged_count; // 已銷售張數
@@ -231,6 +231,7 @@ $(document).ready(function () {
         timeLimit.find('.total-ticket').html(timeLimit_limit); // 更新時間有點限制票限量張數
         timeLimit.find('.rest-ticket').html(timeLimit_rest); // 更新時間有點限制票剩餘可銷售張數
         timeLimit.fadeTo(300, 1);
+*/
 
         // 六人共享票 票銷售完之後改顯示sold out圖
         var ticket_group = $('.type-group');
