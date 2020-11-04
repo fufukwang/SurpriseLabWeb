@@ -142,7 +142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p class="prefix-step">
                         <span class="prefix">Step 1</span>選擇欲劃位的人數<br/>
                         <span class="prefix">Step 2</span>選擇日期、時段<br/>
-                        <span class="prefix">Step 3</span>填寫訪客資料<br/>
+                        <span class="prefix">Step 3</span>填寫賓客資料<br/>
                         <span class="prefix">Step 4</span>確認訂單，<span class="color-pink">輸入劃位序號</span><br/>
                         <span class="prefix">Step 5</span>完成預約
                     </p>
@@ -531,7 +531,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </fieldset>
-            <fieldset class="step step-5" title="確認訪客資料與劃位序號填寫">
+            <fieldset class="step step-5" title="確認賓客資料與劃位序號填寫">
                 <div class="form-container">
                     <table class="filled-data">
                         <tr>
@@ -627,7 +627,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="submit-page success" id="bookingSuccess" style="display:none;">
         <div class="container">
             <h3 class="page-title">
-                你已完成訪客預約！
+                你已完成賓客預約！
             </h3>
             <p class="page-sub-title">
                 請至你的信箱確認預約完成信件
