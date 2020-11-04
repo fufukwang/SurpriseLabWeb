@@ -440,9 +440,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span>ticket type</span>
                 </h4>
             </div>
-            {{-<!-- <p class="ticket-area-preinfo">
+            {{--<!-- <p class="ticket-area-preinfo">
                 早鳥預售票，限量 1200 張
-            </p> -->-}}
+            </p> -->--}}
             <br/><br/>
 
             <div class="ticket-type">
