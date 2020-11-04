@@ -605,8 +605,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <td>01/06（三）中午 12:00</td>
                         <td>1801 - 2600 位預約者</td>
                     </tr>
+                    <tr>
+                        <td colspan="2">＊依照購票順序寄送劃位序號，收到當下即可劃位</td>
+                    </tr>
                 </table>
-                <p class="highlight">＊依照購票順序寄送劃位序號，收到當下即可劃位</p>
                 <br/><br/>
                 <p class="schedule-sub-title">
                     更詳細的劃位須知，將於劃位日前兩天透過電子郵件告知。為提供最好的品質，上述日期會依照實際狀況彈性調整
