@@ -588,7 +588,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="schedule">
-                <table>
+                <table style="margin: 0 auto;">
                     <tr>
                         <td>12/09（三）中午 12:00</td>
                         <td>前300位預約者</td>
