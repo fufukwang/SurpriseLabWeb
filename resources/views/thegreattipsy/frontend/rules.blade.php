@@ -539,9 +539,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 預售說明
                             </h5>
                             <p class="text-left">
-                                《微醺大飯店：1980s》早鳥票現正預售中，<br/>
-                                單人票原價 2500 元，早鳥票 1700 元，將於 12/09（三） 中午 12:00 劃位。<br/><br/>
-                                可劃位日期：01/15 - 02/07 之間的演出場次
+                                《微醺大飯店：1980s》預售票現正預售中<br/>
+                                可劃位日期：02/20 - 03/31
                             </p>
 
                             <h5 class="sub-title highlight">
@@ -571,13 +570,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h5 class="sub-title highlight">
                                 預售劃位期限與序號規則
                             </h5>
+
                             <p class="category-title">
-                                第一批訪客
+                                第一批賓客
                             </p>
                             <ul>
                                 <li>可劃位：01/15 - 02/07 之間的演出場次</li>
                                 <li>序號失效日期：12/25（五）18:00 整。</li>
                             </ul>
+
+                            <p class="category-title">
+                                第二批賓客
+                            </p>
+                            <ul>
+                                <li>可劃位：02/20 - 03/31 之間的演出場次</li>
+                                <li>序號失效日期：01/29（五）18:00 整。</li>
+                            </ul>
+
                             <p class="text-left">
                                 * 序號一經使用即失效，無法重新劃位，請務必謹慎選擇。<br/>
                                 * 上述劃位與失效日期團隊保留調整與修改之權利，有所調整會另行公佈。<br/>

@@ -569,7 +569,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 01/15 - 02/07 之票卷<br/>
+                        * 現正預售 02/20 - 03/31 之票卷<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -590,14 +590,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table>
                     <tr>
-                        <td>
-                            12/09（三）中午12:00
-                        </td>
-                        <td>
-                            依照購票順序寄送劃位序號，收到即可劃位
-                        </td>
+                        <td>12/09（三）中午 12:00</td>
+                        <td>前300位預約者</td>
+                    </tr>
+                    <tr>
+                        <td>12/23（三）中午 12:00</td>
+                        <td>301 - 1000 位預約者</td>
+                    </tr>
+                    <tr>
+                        <td>12/30（三）中午 12:00</td>
+                        <td>1001 - 1800 位預約者</td>
+                    </tr>
+                    <tr>
+                        <td>01/06（三）中午 12:00</td>
+                        <td>1801 - 2600 位預約者</td>
                     </tr>
                 </table>
+                <p class="highlight">＊依照購票順序寄送劃位序號，收到當下即可劃位</p>
                 <br/><br/>
                 <p class="schedule-sub-title">
                     更詳細的劃位須知，將於劃位日前兩天透過電子郵件告知。為提供最好的品質，上述日期會依照實際狀況彈性調整
