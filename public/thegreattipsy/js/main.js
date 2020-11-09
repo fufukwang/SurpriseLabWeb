@@ -200,8 +200,15 @@ $(document).ready(function () {
         var SaleStep5_amount = data5['pledged_count'];
         var SaleStep6_amount = data6['pledged_count'];
         */
+
+        // 售出的總人數
+        var item1_amount = data['rewards'][0].pledged_count;
+        var item2_amount = data['rewards'][1].pledged_count * 2;
+        var item3_amount = data['rewards'][2].pledged_count * 6;
+
         var goal = 3000; // 目標張數 /* SaleStep1_amount + 1500 */
-        var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
+        //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
+        var amount = item1_amount + item2_amount + item3_amount;
         var sale_progress = amount / goal * 100; // 募款進度
         var rest_tickets = goal - amount; // 剩餘可銷售票數
 
