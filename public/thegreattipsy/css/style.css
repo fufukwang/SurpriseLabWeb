@@ -2728,10 +2728,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   letter-spacing: 2.9px;
 }
 
-#Ticket .ticket-type .ticket-state.timeLimit {
-  opacity: 0;
-}
-
 @media (min-width: 1441px) and (max-width: 1919px) {
   #Ticket .ticket-type .ticket-state {
     font-size: 16px;
