@@ -468,10 +468,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="雙人共享票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="雙人共享票">
-                        <!--p class="ticket-state timeLimit">
+                        <p class="ticket-state timeLimit">
                             限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                 class="highlight rest-ticket">XXX</span> 張
-                        </p-->
+                        </p>
                     </a>
                 </div>
                 <div class="type-item type-group">
@@ -505,6 +505,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
+                現在購票，將於 02/20 - 03/31 前來體驗<br/>
                 每日場次表請參考下方時段<br/><br/>
             </p>
 
@@ -562,7 +563,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div-->
                     <div class="d-inline-block d-sm-flex normal-lineHeight">
                         <p>
-                            已售出 <span class="highlight total-sale">1600</span> 票<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 票</span>
+                            已售出 <span class="highlight total-sale">1600</span> 張<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 張</span>
                         </p>
                         <p class="ml-auto text-right highlight-dark progress-percent-area">
                             已完成 <span class="highlight progress-percent">80</span> %
@@ -590,8 +591,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td>12/09（三）中午 12:00</td>
-                        <td>前300位預約者</td>
+                        <td colspan="2">現正預售 02/20 - 03/31 之票券<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
                         <td>12/23（三）中午 12:00</td>
@@ -604,9 +604,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <tr>
                         <td>01/06（三）中午 12:00</td>
                         <td>1801 - 2600 位預約者</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">＊依照購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                 </table>
                 <br/><br/>
