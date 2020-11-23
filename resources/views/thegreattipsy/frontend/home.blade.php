@@ -590,7 +590,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">現正預售 02/20 - 03/31 之票券。將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">02/20 - 03/31 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
                         <td>12/23（三）中午 12:00</td>
