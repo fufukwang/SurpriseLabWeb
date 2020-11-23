@@ -220,12 +220,12 @@ $(document).ready(function () {
         sale_progress = Math.floor(sale_progress);
         // 測試用
         //sale_progress = 50;
-/*
-        // 驚喜早鳥限定票
+
+        // 雙人共享票
         var ticket_matinee = $('.type-great-tipsy');
-        var timeLimit_sale = data['rewards'][0].pledged_count; // 已銷售張數
-        var timeLimit_limit = data['rewards'][0].quantity_limit; // 限量張數
-        var timeLimit_wait = data['rewards'][0].wait_pledged_count; // 等待付款中張數
+        var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
+        var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
+        var timeLimit_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
         var timeLimit_rest = timeLimit_limit - timeLimit_sale - timeLimit_wait; // 剩餘可銷售張數
         
         //timeLimit_rest = 0;  // 歸零
@@ -233,8 +233,8 @@ $(document).ready(function () {
         if (timeLimit_rest <= 0) {
             //timeLimit_rest = 0;
             ticket_matinee.addClass('sold');
-            ticket_matinee.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_0_soldout.png');
-            ticket_matinee.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_0_soldout_mobile.png');
+            ticket_matinee.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_2_soldout.png');
+            ticket_matinee.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_2_soldout_mobile.png');
             ticket_matinee.find('.ticket-state').html('已售完');
         }
 
@@ -242,7 +242,7 @@ $(document).ready(function () {
         timeLimit.find('.total-ticket').html(timeLimit_limit); // 更新時間有點限制票限量張數
         timeLimit.find('.rest-ticket').html(timeLimit_rest); // 更新時間有點限制票剩餘可銷售張數
         timeLimit.fadeTo(300, 1);
-*/
+
 
         // 六人共享票 票銷售完之後改顯示sold out圖
         var ticket_group = $('.type-group');
