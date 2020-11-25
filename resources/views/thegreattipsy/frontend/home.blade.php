@@ -9,8 +9,8 @@
     <meta property="og:title" content="微醺大飯店：1980s"/>
     <meta property="og:site_name" content="微醺大飯店：1980s"/>
     <meta property="og:description" content="歡迎來到《微醺大飯店》——那些你曾經希望能有所不同的事，在這都有可能發生。"/>
-    <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy2"/>
-    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy2/img/opengraph.png?v=0.1"/>
+    <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy"/>
+    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy/img/opengraph.png?v=0.1"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
