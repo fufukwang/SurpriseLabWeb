@@ -203,6 +203,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li data-name="單人自在票">
                             單人自在票　幾張單人票就有幾組序號
                         </li>
+                        <li data-name="雙人共享票">
+                            雙人共享票　一組序號劃位兩人，限同日期同場次，不可分開劃位
+                        </li>
                         <li data-name="六人沈醉票">
                             六人沈醉票　一組序號劃位六人，限同日期同場次，不可分開劃位
                         </li>
@@ -343,6 +346,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="form-group input-with-label">
                         <label for="email">* 電子信箱<span class="error-msg"></span></label>
                         <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. thegreattipsy@surpriselab.com.tw">
+                    </div>
+
+                    <div class="form-group select-format">
+                        <label class="form-label" for="vegetarian_food">* 蛋奶素</label>
+                        <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
                     </div>
 
                     <!-- <div class="form-group">

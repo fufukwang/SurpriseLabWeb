@@ -276,6 +276,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. thegreattipsy@surpriselab.com.tw">
                     </div>
 
+                    <div class="form-group select-format">
+                        <label class="form-label" for="vegetarian_food">* 蛋奶素</label>
+                        <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                    </div>
+
                     <!-- <div class="form-group">
                         <div class="table-label">
                             * 餐點選擇
