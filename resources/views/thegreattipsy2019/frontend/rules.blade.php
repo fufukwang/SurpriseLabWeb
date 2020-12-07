@@ -9,8 +9,8 @@
     <meta property="og:title" content="微醺大飯店 The Great Tipsy"/>
     <meta property="og:site_name" content="微醺大飯店 The Great Tipsy"/>
     <meta property="og:description" content="一間飯店、三杯調酒、五扇神秘的門，全台北最神秘的沉浸式體驗，待你前來一探究竟。"/>
-    <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy"/>
-    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy/img/opengraph.png"/>
+    <meta property="og:url" content="https://www.surpriselab.com.tw/thegreattipsy2019"/>
+    <meta property="og:image" content="https://www.surpriselab.com.tw/thegreattipsy2019/img/opengraph.png"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>

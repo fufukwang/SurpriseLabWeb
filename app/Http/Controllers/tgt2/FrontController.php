@@ -239,11 +239,13 @@ class FrontController extends Controller
             if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
+                /*
                 $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
                 $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
+                */
                 $mailer = [
-                    'day'   => Carbon::parse($act->day)->format('m/d'),
-                    'time'  => $act->day_parts.$rangTS.'-'.$rangTE,
+                    'day'   => Carbon::parse($act->day)->format('y / m / d'),
+                    'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
                     'pople' => $request->Pople,
                     'email' => $data['email'],
                     'name'  => $data['name'],
@@ -261,7 +263,7 @@ class FrontController extends Controller
                         $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
 
                         $m->to($mailer['email'], $mailer['name']);
-                        $m->subject('微醺大飯店-訂單完成信件!');
+                        $m->subject('【微醺大飯店：1980s】訂位確認信件');
                     });
                     $order->is_send = 1;
                     $order->save();
