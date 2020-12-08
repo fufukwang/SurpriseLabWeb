@@ -89,7 +89,7 @@ p{margin:10px 0;padding:0}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{displ
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #FFE0BA;font-size: 14px;font-style: normal;font-weight: normal;line-height: 200%;">
                         
                             <p style="color: #FFE0BA;font-size: 14px;font-style: normal;font-weight: normal;line-height: 200%;">@if($xls->eb1>0)
-早鳥票&nbsp;<br>
+驚喜早鳥限定票&nbsp;<br>
 {{ $xls->eb1 }}張<br>
 @elseif($xls->p1>0)
 單人自在票&nbsp;<br>

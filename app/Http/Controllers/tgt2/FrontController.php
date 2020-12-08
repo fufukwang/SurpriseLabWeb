@@ -152,10 +152,12 @@ class FrontController extends Controller
 
 
             //$count = str_pad($count,3,"0",STR_PAD_LEFT);
+            /*
             $meat = [];
             for($i=0;$i<$people;$i++){
                 array_push($meat,$request->input('Meal.'.$i));
             }
+            */
             $pay_status = '未完成';
             if(intval($money - $cut1 - $cut2)  == 0){
                 $pay_status = '已付款';
@@ -167,7 +169,7 @@ class FrontController extends Controller
                 'tel'        => $request->tel,
                 'email'      => $request->email,
                 'notes'      => $request->notes,
-                'meat'       => json_encode($meat),
+                'meat'       => json_encode([]),
                 'coupon'     => $coupon,
                 'sn'         => $count,
                 'money'      => $money - $cut1 - $cut2,
@@ -176,6 +178,7 @@ class FrontController extends Controller
                 'result'     => '',
                 'manage'     => $request->manage,
                 'is_overseas'=> $request->has('is_overseas') ? $request->is_overseas : 0,
+                'vegetarian' => $request->vegetarian,
             ];
 
             $order = order::create($data);

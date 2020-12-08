@@ -312,7 +312,11 @@ $('.step-2 input, .step-2 select').on('change', function () {
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
         submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
-        update_isVegetarian(submitDatas['booking_people']);
+        $('#vegetarian_food').html('');
+        for(var pc=0;pc<=submitDatas['booking_people'];pc++){
+            $('#vegetarian_food').append('<option value="'+pc+'">'+pc+'</option>');
+        }
+        //update_isVegetarian(submitDatas['booking_people']);
         //update_amountToGo(submitDatas['booking_people']);
 
         usedCoupons = []; // 清空已使用的票券代碼
@@ -747,11 +751,7 @@ $('#phone').bind('keyup paste', function(){
 // 送出資料
 function SendOrderData(Pay,prime){
     $.blockUI();
-    var Meal = [];
     var people = $('[name="booking_people"]').val();
-    for (i = 0; i < people; i++) {
-        Meal[i] = $('[name="food-type[' + i + ']"]:checked').val()=='葷食' ? '葷' : '素';
-    }
     var obj = {
         'name'  : $('[name=name]').val(),
         'tel'   : $('[name=phone]').val(),
@@ -760,9 +760,9 @@ function SendOrderData(Pay,prime){
         'pro_id': $('[name=booking_time]').find(':selected').val(),
         'Pople' : people,
         'prime' : prime,
-        'Meal'  : Meal,
         'Pay'   : Pay,
         'coupon': usedCoupons,
+        'vegetarian': $('#vegetarian_food').val(),
     };
     $.post('/thegreattipsy/ReOrderData',obj,function(data){
         $('<link>').appendTo('head')
