@@ -155,6 +155,7 @@ function filledDataChecker() {
 
        food_types = '';
     });
+    $('#filled_pv').text(parseInt($('[name="booking_people"]').val()) - parseInt($('[name="vegetarian_food"]').val()));
     // 寫入價格
     if(cutPelple == 0){
         for(var i=0;i<proObject.length;i++){

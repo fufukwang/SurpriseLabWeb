@@ -572,10 +572,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <td>時段</td>
                             <td class="filled" data-filled="booking_time"></td>
                         </tr>
-                        <!-- <tr>
-                            <td>葷素</td>
-                            <td class="filled" data-filled="food-type"></td>
-                        </tr> -->
+                        <tr>
+                            <td>飲食選項</td>
+                            <td>葷食 <span id="filled_pv"></span> 人，奶蛋素 <span class="filled" data-filled="vegetarian_food"></span> 人</td>
+                        </tr>
                         <tr class="notice">
                             <td>其他備註</td>
                             <td class="filled" data-filled="notice"></td>
