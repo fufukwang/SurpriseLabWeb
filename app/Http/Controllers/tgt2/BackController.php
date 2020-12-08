@@ -456,7 +456,7 @@ class BackController extends Controller
                 $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
                 */
                 $mailer = [
-                    'day'   => Carbon::parse($act->day)->format('y / m / d'),
+                    'day'   => Carbon::parse($act->day)->format('Y / m / d'),
                     'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
                     'pople' => $people,
                     'email' => $data['email'],
@@ -637,7 +637,7 @@ class BackController extends Controller
         $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
         */
         $mailer = [
-            'day'   => Carbon::parse($act->day)->format('y / m / d'),
+            'day'   => Carbon::parse($act->day)->format('Y / m / d'),
             'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
             'pople' => $request->pople,
             'email' => $request->email,
