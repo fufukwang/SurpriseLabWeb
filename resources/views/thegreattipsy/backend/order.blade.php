@@ -51,13 +51,13 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">電話</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="tel" readonly value="{{ $order->tel or ''  }}">
+                                                    <input type="text" class="form-control" name="tel" required value="{{ $order->tel or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">EMail</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="email" readonly value="{{ $order->email or ''  }}">
+                                                    <input type="email" class="form-control" name="email" required value="{{ $order->email or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -76,6 +76,16 @@
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" readonly value="{{ $order->pople or ''  }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">素食</label>
+                                                <div class="col-sm-8">
+                                                    <select name="vegetarian" id="vegetarian" class="form-control">
+                                                        @for($i=0;$i<=$order->pople;$i++)
+                                                        <option value="{{ $i }}"@if(isset($order->vegetarian) && $order->vegetarian==$i) selected @endif>{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">

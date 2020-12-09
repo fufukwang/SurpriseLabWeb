@@ -68,7 +68,16 @@
                                                     </select>
                                                 </div>
                                             </div>
-
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">素食</label>
+                                                <div class="col-sm-8">
+                                                    <select name="vegetarian" id="vegetarian" class="form-control">
+                                                        @for($i=0;$i<37;$i++)
+                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            </div>
 
                                             
                                             <div class="form-group">

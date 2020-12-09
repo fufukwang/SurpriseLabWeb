@@ -373,7 +373,7 @@ class BackController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id')->select('tgt2order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople')->find($id);
+                $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id')->select('tgt2order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian')->find($id);
             } else {
                 abort(404);
             }
@@ -386,6 +386,9 @@ class BackController extends Controller
             'pay_status' => $request->pay_status,
             'manage'    => $request->manage,
             'pay_type'   => $request->pay_type,
+            'tel'        => $request->tel,
+            'email'      => $request->email,
+            'vegetarian' => $request->vegetarian,
         ];
         if(is_numeric($id) && $id>0){
             order::where('id',$id)->update($data);
@@ -428,9 +431,11 @@ class BackController extends Controller
             }
             $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end')->first();
             $meat = [];
+            /*
             for($i=0;$i<$people;$i++){
                 array_push($meat,$request->input('Meal.'.$i));
             }
+            */
             $money = $act->cash * $people * 1.1;
             $data = [
                 'pro_id'     => $pro_id,
@@ -448,6 +453,7 @@ class BackController extends Controller
                 'result'     => '',
                 'manage'     => $request->manage,
                 'discount'   => '',
+                'vegetarian' => $request->vegetarian,
             ];
             $order = order::create($data);
 
