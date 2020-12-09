@@ -70,7 +70,7 @@
                                                 </select>
                                         </div>
 
-<div class="form-group col-sm-1">
+<div class="form-group col-sm-2">
     <div class="input-group">
       <span class="input-group-addon">
         <input type="checkbox" name="open_limit" value="1"@if(isset($request->open_limit) && $request->open_limit==1) checked @endif>

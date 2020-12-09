@@ -47,6 +47,9 @@
                                                 <label><input type="checkbox" name="isdone" value="1" @if($request->isdone) checked @endif>未兌換</label>
                                             </div>
                                             <div class="form-group col-sm-1">
+                                                <label><input type="checkbox" name="is_sent" value="1" @if($request->is_sent) checked @endif>未寄送</label>
+                                            </div>
+                                            <div class="form-group col-sm-1">
                                                 <select name="season" class="form-control">
                                                     <option value="">季</option>
                                                     @foreach($quart as $r)

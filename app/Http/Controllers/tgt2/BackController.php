@@ -104,6 +104,9 @@ class BackController extends Controller
         if($request->has('isdone')){
             $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE o_id=0 AND tgt2coupon.b_id=tgt2backme.id)>0");
         }
+        if($request->has('is_sent')){
+            $mes = $mes->where('is_sent',0);
+        }
         if($request->has('season')){
             $mes = $mes->where('quarter',$request->season);
         }
