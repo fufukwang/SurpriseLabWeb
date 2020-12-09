@@ -770,7 +770,7 @@ form .btn-outline {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -884,19 +884,19 @@ form .btn-outline {
 }
 
 .with-icon input::-webkit-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 .with-icon input:-ms-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 .with-icon input::-ms-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 .with-icon input::placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 .with-icon input:focus {
@@ -1342,22 +1342,22 @@ fieldset.step-4 .form-group textarea {
 
 fieldset.step-4 .form-group input::-webkit-input-placeholder,
 fieldset.step-4 .form-group textarea::-webkit-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 fieldset.step-4 .form-group input:-ms-input-placeholder,
 fieldset.step-4 .form-group textarea:-ms-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 fieldset.step-4 .form-group input::-ms-input-placeholder,
 fieldset.step-4 .form-group textarea::-ms-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 fieldset.step-4 .form-group input::placeholder,
 fieldset.step-4 .form-group textarea::placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 fieldset.step-4 .form-group input:-webkit-autofill,
@@ -1500,19 +1500,19 @@ fieldset .coupon-code input {
 }
 
 fieldset .coupon-code input::-webkit-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 fieldset .coupon-code input:-ms-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 fieldset .coupon-code input::-ms-input-placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 fieldset .coupon-code input::placeholder {
-  color: #E5AD5C;
+  color: #FFE0BA;
 }
 
 fieldset .coupon-code input:focus {

@@ -520,7 +520,7 @@ form {
     }
 
     .select2-selection__placeholder {
-      color: $color-dark-yellow;
+      color: $color-light-yellow;
     }
 
     .select2-selection__arrow {
@@ -649,7 +649,7 @@ form {
     transition: 0.3s;
 
     &::placeholder {
-      color: $color-dark-yellow;
+      color: $color-light-yellow;
     }
 
     &:focus {
@@ -1012,7 +1012,7 @@ fieldset {
         transition: 0.3s;
 
         &::placeholder {
-          color: $color-dark-yellow;
+          color: $color-light-yellow;
         }
 
         &:-webkit-autofill {
@@ -1108,7 +1108,7 @@ fieldset {
       line-height: normal;
 
       &::placeholder {
-        color: $color-dark-yellow;
+        color: $color-light-yellow;
       }
 
       &:focus {
