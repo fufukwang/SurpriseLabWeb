@@ -63,9 +63,13 @@
 
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
-                                    <div class="sticky-table-header fixed-solution" style="width: auto;"><table id="tech-companies-1-clone" class="table table-striped table-hover">
+                                    <div class="sticky-table-header fixed-solution" style="width: auto;">
+                                        <form id="SentMailForm" method="post">
+                                            {!! csrf_field() !!}
+                                        <table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
+                                                <th><input type="checkbox" id="checkAll"></th>
                                                 <th>流水號</th>
                                                 <th>姓名</th>
                                                 <th>訂購內容</th>
@@ -79,6 +83,7 @@
                                         <tbody>
 @forelse ($mes as $row)
                                             <tr id="tr_{{ $row->id }}">
+                                                <td><input type="checkbox" name="id[]" value="{{ $row->id }}"></td>
                                                 <td>{{ $row->id }}</td>
                                                 <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div></td>
                                                 <td>{{ $row->detail }}</td>
@@ -96,7 +101,10 @@
 @endforelse
                                         </tbody>
                                     </table>
-
+                                    <div>
+                                        <button class="btn btn-primary muSent" type="button">大量寄送</button>
+                                    </div>
+                                </form>
 
                                     <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season])->links() }}</div>
                                 </div></div>
@@ -223,7 +231,9 @@
 			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 $(function(){
 
-
+    $('#checkAll').bind('click', function() {
+        $('input[name="id[]"]').prop('checked', $(this).prop('checked'));
+    });
     $('.canelCoupon').bind('click',function(){
         var id   = $(this).data('id');
         var code = $(this).data('code');
@@ -291,6 +301,9 @@ $(function(){
                 $.Notification.notify('error','bottom left','錯誤', '寄信失敗');
             }
         },'json');
+    });
+    $('.muSent').bind('click',function(){
+        $('#SentMailForm').submit();
     });
 
 });
