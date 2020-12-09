@@ -77,9 +77,13 @@ $(".action-button").on('click', function(){
                 for(i=0;i<data.length;i++){
                     enableDays.push(data[i].day);
                 }
+                var minD = 0;
+                if(enableDays.length>0){
+                    minD = enableDays[0];
+                }
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
-                    minDate:0,
+                    minDate: minD,
                     maxDate:"+5m",
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: enableAllTheseDays
