@@ -22,22 +22,32 @@
                                         <form  data-parsley-validate novalidate method="post" action="/thegreattipsyS2/order/{{ $order->id or 0}}/update" class="form-horizontal">
                                             <input type="hidden" name="qxx" value="{{ Request::getQueryString() }}">
 {!! csrf_field() !!}
-                                            <div class="form-group">
+                                            <div class="form-group hpro_id">
                                                 <label class="control-label col-sm-4">日期</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" readonly value="{{ $order->day or ''  }}">
                                                 </div>
                                             </div>
-                                            <div class="form-group">
+                                            <div class="form-group hpro_id">
                                                 <label class="control-label col-sm-4">時段</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" readonly value="{{ $order->day_parts or ''  }}">
                                                 </div>
                                             </div>
-                                            <div class="form-group">
+                                            <div class="form-group hpro_id">
                                                 <label class="control-label col-sm-4">區間</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" readonly value="{{ substr($order->rang_start,0,5)  }} ~ {{ substr($order->rang_end,0,5)  }}">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group spro_id" style="display: none;">
+                                                <label class="control-label col-sm-4">日期</label>
+                                                <div class="col-sm-8">
+                                                    <select name="pro_id" class="form-control" disabled="true">
+@foreach($pro as $row)<option value="{{ $row->id }}">{{ $row->day }} {{ substr($row->rang_start,0,5)  }} ~ {{ substr($row->rang_end,0,5)  }} (剩餘座位數 {{ $row->sites }})</option>@endforeach
+                                                    </select>
+                                                    <span style="color:red">*不會再次驗證座位是否足夠請警慎使用</span>
                                                 </div>
                                             </div>
 
@@ -126,6 +136,7 @@
 
                                             
                                             <div align="right">
+                                                <button type="button" class="btn btn-info btn-custom waves-effect w-md waves-light m-b-5 change_day">我要改期</button>
                                                 <button type="submit" class="btn btn-primary btn-custom waves-effect w-md waves-light m-b-5">送出</button>
                                             </div>
                                         
@@ -219,7 +230,11 @@
 
         <script>
         $(function(){
-
+$('.change_day').bind('click',function(){
+    $('.hpro_id').hide();
+    $('.spro_id').show();
+    $('select[name=pro_id]').prop('disabled',false);
+});
         });
 
 
