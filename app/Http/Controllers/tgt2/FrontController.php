@@ -254,11 +254,11 @@ class FrontController extends Controller
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                 ];
-                if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                //if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
                     config(['mail.host' => 'smtp.gmail.com']);
                     config(['mail.username' => env('MAIL_TGT_USER')]);
                     config(['mail.password' => env('MAIL_TGT_PASS')]);
-                }
+                //}
                 try {
                     Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
                         $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');

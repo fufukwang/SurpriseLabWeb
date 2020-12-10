@@ -109,7 +109,7 @@
                                     </div>
                                 </form>
 
-                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season])->links() }}</div>
+                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season,'is_sent'=>$request->is_sent])->links() }}</div>
                                 </div></div>
 
                             </div>
