@@ -803,10 +803,12 @@ function calAmt(){
     $('#TaxAmt').val(now_tax);
     $('#Amt').val(totleamt - now_tax);
     if($('input[name="Category"]:checked').val() == 'B2C'){
-        $('#inv_price').text(totleamt / people);
+        //$('#inv_price').text(totleamt / people);
+        $('#inv_price').text(Math.round(totleamt / people *100)/100);
         $('#inv_amt').text(totleamt);
     } else {
-        $('#inv_price').text((totleamt - now_tax) / people);
+        var itemPrice = Math.round((totleamt - now_tax) / people);
+        $('#inv_price').text(itemPrice);
         $('#inv_amt').text(totleamt - now_tax);
     }
 }
