@@ -163,34 +163,27 @@ $(document).ready(function () {
     // 售票進度 API
     var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1397json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1444json?token=15171aa66ababafd4464a1c194b66102';
-    /*
-    
-    var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/981json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/994json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep5 = 'https://surpriselab.backme.tw/api/projects/1014json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep6 = 'https://surpriselab.backme.tw/api/projects/1037json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep7 = 'https://surpriselab.backme.tw/api/projects/1056json?token=15171aa66ababafd4464a1c194b66102';
-    */
+    var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/1493json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
     $.when(
       $.getJSON(progress_api_SaleStep1),
-      $.getJSON(progress_api_SaleStep2)/*,
-      $.getJSON(progress_api_SaleStep3),
+      $.getJSON(progress_api_SaleStep2),
+      $.getJSON(progress_api_SaleStep3)/*,
       $.getJSON(progress_api_SaleStep4),
       $.getJSON(progress_api_SaleStep5),
       $.getJSON(progress_api_SaleStep6),
       $.getJSON(progress_api_SaleStep7)*/
-    ).done(function(data1, data2/*, data3, data4, data5, data6, data7*/) {
+    ).done(function(data1, data2, data3/*, data4, data5, data6, data7*/) {
 
-        data1 = data1[0];/*
-        data2 = data2[0];
+        data1 = data1[0];
+        data2 = data2[0];/*
         data3 = data3[0];
         data4 = data4[0];
         data5 = data5[0];
         data6 = data6[0];*/
-        var data = data2[0];
+        var data = data3[0];
 
         // 階段總人數
         var SaleStep1_amount = data1['pledged_unit_count'];
