@@ -594,15 +594,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </tr>
                     <tr>
                         <td>02/03（三）中午 12:00</td>
-                        <td>前800位預約者</td>
+                        <td>前 800 位預約者</td>
                     </tr>
                     <tr>
                         <td>02/17（三）中午 12:00</td>
-                        <td>801-1600位預約者</td>
+                        <td>801-1600 位預約者</td>
                     </tr>
                     <tr>
                         <td>03/03（三）中午 12:00</td>
-                        <td>1601-2400位預約者</td>
+                        <td>1601-2400 位預約者</td>
                     </tr>
                     <tr>
                         <td>03/17（三）中午 12:00</td>

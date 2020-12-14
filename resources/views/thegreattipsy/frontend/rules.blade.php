@@ -374,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-header" id="qa15-header">
                                         <h6 data-toggle="collapse" data-target="#qa15" aria-expanded="false"
                                             aria-controls="qa15" class="collapsed d-flex align-items-center">
@@ -389,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             以及好走、好站、好穿脫的鞋子前來。
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="card">
                                     <div class="card-header" id="qa16-header">
@@ -540,7 +540,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </h5>
                             <p class="text-left">
                                 《微醺大飯店：1980s》預售票現正預售中<br/>
-                                可劃位日期：02/20 - 03/31
+                                可劃位日期：04/01 - 05/16
                             </p>
 
                             <h5 class="sub-title highlight">
@@ -587,6 +587,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li>序號失效日期：01/29（五）18:00 整。</li>
                             </ul>
 
+                            <p class="category-title">
+                                第三批賓客
+                            </p>
+                            <ul>
+                                <li>可劃位： 04/01 - 05/16 之間的演出場次</li>
+                                <li>序號失效日期： 03/26（五）18:00整。</li>
+                            </ul>
+
                             <p class="text-left">
                                 * 序號一經使用即失效，無法重新劃位，請務必謹慎選擇。<br/>
                                 * 上述劃位與失效日期團隊保留調整與修改之權利，有所調整會另行公佈。<br/>
@@ -623,8 +631,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 更改日期、時段
                             </h5>
                             <ul>
-                                <li>演出前七天（包含演出當日）不提供日期更改，建議將訂位轉讓給親友。</li>
-                                <li>若需更改日期、時段，請於體驗日七天前來信告知，附上「劃位序號」與「訂位信箱」。<br/>如：欲更改 01/08 的訂位，最晚請於 01/01（含）前來信。</li>
+                                <li>演出前 10 天（包含演出當日）不提供日期更改，建議將訂位轉讓給親友。</li>
+                                <li>若需更改日期、時段，請於體驗日七天前來信告知，附上「劃位序號」與「訂位信箱」。<br/>如：欲更改 01/10 的訂位，最晚請於 01/01（含）前來信。</li>
                                 <li>可更改之日期，以屆時尚有的日期與時段為準。劃位前請先確認相關親友的行程，減少更改座位的可能性。</li>
                                 <li>一個序號僅有一次更改機會，請務必謹慎使用。</li>
                             </ul>
@@ -635,8 +643,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <ul>
                                 <li>演出當日不接受改期，若取消亦無法退費，接受將票券轉讓給親友。<br/>來信取消申請日期以正常工作下班時間 18:00 為區分。<br/>如：於 01/15 18:00 前來信，屬於 01/15 之申請；若於當日 18:00 之後來信，則屬於 01/16 之申請。</li>
                                 <li>演出準時開始，遲到無法入場與退費，為了你的權益，請務必準時抵達。</li>
-                                <li>演出六天內（不包含演出當日）來信申請，僅退 50% 費用。建議將訂位轉讓給親友。</li>
-                                <li>演出七天前（包含演出當日）來信申請，將扣除金流手續費 10% 後退費。<br/>如：01/08 的訂位，最晚請於 01/01（含）前來信。</li>
+                                <li>演出九天內（不包含演出當日）來信申請，僅退 50% 費用。建議將訂位轉讓給親友。</li>
+                                <li>演出十天前（包含演出當日）來信申請，將扣除金流手續費 10% 後退費。<br/>如：01/10 的訂位，最晚請於 01/01（含）前來信。</li>
                                 <li>購買預售票，寄送劃位序號的前一日申請退費，將不扣除手續費全額退費。</li>
                             </ul>
 
@@ -673,7 +681,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         演出當天
                                     </td>
                                     <td>
-                                        01/08
+                                        01/10
                                     </td>
                                     <td class="highlight-td">
                                         無法退費
@@ -707,7 +715,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <td>01/02</td>
                                 </tr>
                                 <tr class="normal-border light-bg">
-                                    <td>前七日</td>
+                                    <td>前十日</td>
                                     <td>01/01</td>
                                     <td rowspan="2">
                                         會扣除金流手續費10%
