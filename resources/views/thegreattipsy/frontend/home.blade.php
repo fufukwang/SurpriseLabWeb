@@ -504,7 +504,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，將於 02/20 - 03/31 前來體驗<br/>
+                現在購票，將於 04/01 - 05/16 前來體驗<br/>
                 每日場次表請參考下方時段<br/><br/>
             </p>
 
@@ -569,7 +569,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 02/20 - 03/31 之票卷<br/>
+                        * 現正預售 04/01 - 05/16 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -590,19 +590,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">02/20 - 03/31 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">04/01 - 05/16 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
-                        <td>12/23（三）中午 12:00</td>
-                        <td>301 - 1000 位預約者</td>
+                        <td>02/03（三）中午 12:00</td>
+                        <td>前800位預約者</td>
                     </tr>
                     <tr>
-                        <td>12/30（三）中午 12:00</td>
-                        <td>1001 - 1800 位預約者</td>
+                        <td>02/17（三）中午 12:00</td>
+                        <td>801-1600位預約者</td>
                     </tr>
                     <tr>
-                        <td>01/06（三）中午 12:00</td>
-                        <td>1801 - 2600 位預約者</td>
+                        <td>03/03（三）中午 12:00</td>
+                        <td>1601-2400位預約者</td>
+                    </tr>
+                    <tr>
+                        <td>03/17（三）中午 12:00</td>
+                        <td>其餘預約者</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">＊依照購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                 </table>
                 <br/><br/>
