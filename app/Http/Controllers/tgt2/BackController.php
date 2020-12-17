@@ -67,11 +67,11 @@ class BackController extends Controller
                     'xls'     => $xls,
                     'coupons' => $coupons,
                 ];
-                //if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
+                if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
                     config(['mail.host' => 'smtp.gmail.com']);
                     config(['mail.username' => env('MAIL_TGT_USER')]);
                     config(['mail.password' => env('MAIL_TGT_PASS')]);
-                //}
+                }
                 Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
                     $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
@@ -161,11 +161,11 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
-            //if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
+            if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_TGT_USER')]);
                 config(['mail.password' => env('MAIL_TGT_PASS')]);
-            //}
+            }
 
 
 
