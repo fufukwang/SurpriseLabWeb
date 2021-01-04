@@ -1774,6 +1774,40 @@ header.logo {
   }
 }
 
+// Library Section
+#Library {
+  @include baseCounter('padding-top', 124);
+  @include baseCounter('padding-bottom', 146);
+
+  p {
+    @include baseCounter('padding-top', 75);
+    @include baseCounter('padding-bottom', 64);
+  }
+
+  .library-img {
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 1023px) {
+      width: 100%;
+      min-width: 100%;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 340%;
+        height: 100%;
+      }
+    }
+  }
+
+  .feature-btn {
+    @include baseCounter('padding-top', 64);
+  }
+}
+
 // Contact Section
 #Contact {
   @include baseCounter('padding-top', 124);
