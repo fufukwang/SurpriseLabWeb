@@ -686,45 +686,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Section5 Library -->
 
     <!-- Section6 Contact -->
-    <section class="anchor-section fullpage" id="Contact" data-aos="fade">
+    <section class="section anchor-section" id="Contact">
         <h2>Contact</h2>
 
-        <div class="container">
-            <!------------->
-            <h3>聯絡飯店</h3>
-            <!------------->
-            <div class="sub-title-wrapper">
-                <h4>
-                    <span>CONTACT</span>
-                </h4>
-            </div>
-
-            <p class="contact-pre-info">
-                有任何問題，可以先至<a href="rules.html">飯店規則</a>頁面查看<br/>
-                若有其他問題，歡迎來信詢問
-            </p>
-
-            <div class="contact-sec-wrapper">
-                <div class="contact-sec d-xl-flex">
-                    <div class="contact-sec-title highlight">
-                        聯絡⽅式
-                    </div>
-                    <p>
-                        <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
-                    </p>
+        <section class="fullpage" id="contactInfo" data-aos="fade">
+            <div class="container">
+                <!------------->
+                <h3>聯絡飯店</h3>
+                <!------------->
+                <div class="sub-title-wrapper">
+                    <h4>
+                        <span>CONTACT</span>
+                    </h4>
                 </div>
-                <div class="contact-sec d-xl-flex">
-                    <div class="contact-sec-title highlight">
-                        地址
+
+                <p class="contact-pre-info">
+                    有任何問題，可以先至<a href="rules.html">飯店規則</a>頁面查看<br/>
+                    若有其他問題，歡迎來信詢問
+                </p>
+
+                <div class="contact-sec-wrapper">
+                    <div class="contact-sec d-xl-flex">
+                        <div class="contact-sec-title highlight">
+                            聯絡⽅式
+                        </div>
+                        <p>
+                            <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
+                        </p>
                     </div>
-                    <p>
-                        台北市中⼼、咖啡⾊、紅色捷運沿線、易達性⾼<br/>
-                        確切地點，將於完成劃位後告知
-                    </p>
+                    <div class="contact-sec d-xl-flex">
+                        <div class="contact-sec-title highlight">
+                            地址
+                        </div>
+                        <p>
+                            台北市中⼼、咖啡⾊、紅色捷運沿線、易達性⾼<br/>
+                            確切地點，將於完成劃位後告知
+                        </p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        </div>
+        <section class="fullpage" id="Partners" data-aos="fade">
+            <div class="container">
+                <!------------->
+                <h3>合作夥伴</h3>
+                <!------------->
+                <div class="sub-title-wrapper">
+                    <h4>
+                        <span>OUR PARTNERS</span>
+                    </h4>
+                </div>
+                <div class="partners-img">
+                    <img class="img-fluid d-sm-block d-none" src="img/other/partners.png" alt="partners" draggable="false">
+                    <img class="img-fluid d-sm-none d-block" src="img/other/partners_mobile.png" alt="partners" draggable="false">
+                </div>
+            </div>
+        </section>
     </section>
     <!-- End Section6 Contact -->
 

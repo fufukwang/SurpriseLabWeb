@@ -3893,75 +3893,75 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (min-width: 1200px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-top: calc((608px + 30px) * 0.06708);
   }
 }
 
 @media (min-width: 1440px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-top: calc((768px + 30px) * 0.06708);
   }
 }
 
 @media (min-width: 1920px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-top: calc((1088px + 30px) * 0.06708);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-top: calc((520px + 30px) * 0.06708);
   }
 }
 
 @media (max-width: 480px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-top: calc(100% * 0.06708);
   }
 }
 
 @media (min-width: 1200px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-bottom: calc((608px + 30px) * 0.07513);
   }
 }
 
 @media (min-width: 1440px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-bottom: calc((768px + 30px) * 0.07513);
   }
 }
 
 @media (min-width: 1920px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-bottom: calc((1088px + 30px) * 0.07513);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-bottom: calc((520px + 30px) * 0.07513);
   }
 }
 
 @media (max-width: 480px) {
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-bottom: calc(100% * 0.07513);
   }
 }
 
-#Contact .contact-pre-info a {
+#Contact #contactInfo .contact-pre-info a {
   color: #EFC27B;
   text-decoration: underline;
 }
 
-#Contact .contact-pre-info a:hover {
+#Contact #contactInfo .contact-pre-info a:hover {
   color: #FFFFFF;
 }
 
-#Contact .contact-sec {
+#Contact #contactInfo .contact-sec {
   position: relative;
   width: 537px;
   max-width: 100%;
@@ -3969,66 +3969,66 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (min-width: 1200px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     padding-top: calc((608px + 30px) * 0.0322);
   }
 }
 
 @media (min-width: 1440px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     padding-top: calc((768px + 30px) * 0.0322);
   }
 }
 
 @media (min-width: 1920px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     padding-top: calc((1088px + 30px) * 0.0322);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     padding-top: calc((520px + 30px) * 0.0322);
   }
 }
 
 @media (max-width: 480px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     padding-top: calc(100% * 0.0322);
   }
 }
 
 @media (min-width: 1200px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     margin-top: calc((608px + 30px) * 0.0322);
   }
 }
 
 @media (min-width: 1440px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     margin-top: calc((768px + 30px) * 0.0322);
   }
 }
 
 @media (min-width: 1920px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     margin-top: calc((1088px + 30px) * 0.0322);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     margin-top: calc((520px + 30px) * 0.0322);
   }
 }
 
 @media (max-width: 480px) {
-  #Contact .contact-sec:not(:first-child) {
+  #Contact #contactInfo .contact-sec:not(:first-child) {
     margin-top: calc(100% * 0.0322);
   }
 }
 
-#Contact .contact-sec:not(:first-child)::before {
+#Contact #contactInfo .contact-sec:not(:first-child)::before {
   position: absolute;
   content: '';
   width: 451px;
@@ -4039,7 +4039,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   right: 0;
 }
 
-#Contact .contact-sec .contact-sec-title {
+#Contact #contactInfo .contact-sec .contact-sec-title {
   font-weight: bold;
   font-family: "Noto Serif TC", serif;
   font-size: 16px;
@@ -4050,7 +4050,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   width: 76px;
 }
 
-#Contact .contact-sec p {
+#Contact #contactInfo .contact-sec p {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 1.6px;
@@ -4058,41 +4058,41 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (max-width: 1200px) {
-  #Contact .contact-sec:not(:first-child)::before {
+  #Contact #contactInfo .contact-sec:not(:first-child)::before {
     width: 100%;
   }
-  #Contact .contact-sec .contact-sec-title {
+  #Contact #contactInfo .contact-sec .contact-sec-title {
     text-align: left;
   }
 }
 
 @media (max-width: 480px) {
-  #Contact {
+  #Contact #contactInfo {
     padding-top: 25px;
     padding-bottom: 100px;
   }
-  #Contact .contact-pre-info {
+  #Contact #contactInfo .contact-pre-info {
     padding-top: 35px;
     padding-bottom: 60px;
   }
-  #Contact .contact-sec::before {
+  #Contact #contactInfo .contact-sec::before {
     display: none;
   }
-  #Contact .contact-sec.middle {
+  #Contact #contactInfo .contact-sec.middle {
     margin-top: 0;
     padding-top: 0;
   }
-  #Contact .contact-sec + .contact-sec {
+  #Contact #contactInfo .contact-sec + .contact-sec {
     padding-top: 30px;
     margin-top: 36px;
     border-top: solid 1px #E5AD5C;
   }
-  #Contact .contact-sec .contact-sec-title {
+  #Contact #contactInfo .contact-sec .contact-sec-title {
     font-size: 14px;
     line-height: 2.14;
     letter-spacing: 1.7px;
   }
-  #Contact .contact-sec p {
+  #Contact #contactInfo .contact-sec p {
     font-size: 14px;
     line-height: 2.29;
     letter-spacing: 1.4px;
@@ -4100,13 +4100,73 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (max-width: 320px) {
-  #Contact .contact-sec:not(:last-child) p {
+  #Contact #contactInfo .contact-sec:not(:last-child) p {
     text-indent: -47px;
     padding-left: 47px;
   }
-  #Contact .contact-sec:not(:last-child) p.contact-footer {
+  #Contact #contactInfo .contact-sec:not(:last-child) p.contact-footer {
     text-indent: initial;
     padding-left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #Contact #Partners {
+    padding-top: calc((608px + 30px) * 0.11091);
+  }
+}
+
+@media (min-width: 1440px) {
+  #Contact #Partners {
+    padding-top: calc((768px + 30px) * 0.11091);
+  }
+}
+
+@media (min-width: 1920px) {
+  #Contact #Partners {
+    padding-top: calc((1088px + 30px) * 0.11091);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Contact #Partners {
+    padding-top: calc((520px + 30px) * 0.11091);
+  }
+}
+
+@media (max-width: 480px) {
+  #Contact #Partners {
+    padding-top: calc(100% * 0.11091);
+  }
+}
+
+@media (min-width: 1200px) {
+  #Contact #Partners .partners-img {
+    padding-top: calc((608px + 30px) * 0.06708);
+  }
+}
+
+@media (min-width: 1440px) {
+  #Contact #Partners .partners-img {
+    padding-top: calc((768px + 30px) * 0.06708);
+  }
+}
+
+@media (min-width: 1920px) {
+  #Contact #Partners .partners-img {
+    padding-top: calc((1088px + 30px) * 0.06708);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Contact #Partners .partners-img {
+    padding-top: calc((520px + 30px) * 0.06708);
+  }
+}
+
+@media (max-width: 480px) {
+  #Contact #Partners .partners-img {
+    padding-top: calc(100% * 0.06708);
   }
 }
 
