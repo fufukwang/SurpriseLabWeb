@@ -1944,6 +1944,12 @@ header.logo {
 
     .partners-img {
       @include baseCounter('padding-top', 75);
+      @include baseCounter('max-width', 812);
+      margin: 0 auto;
+
+      @media (max-width: 480px) {
+        max-width: 100%;
+      }
     }
   }
 }

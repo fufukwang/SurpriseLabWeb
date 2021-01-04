@@ -4140,6 +4140,10 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
+#Contact #Partners .partners-img {
+  margin: 0 auto;
+}
+
 @media (min-width: 1200px) {
   #Contact #Partners .partners-img {
     padding-top: calc((608px + 30px) * 0.06708);
@@ -4167,6 +4171,42 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 @media (max-width: 480px) {
   #Contact #Partners .partners-img {
     padding-top: calc(100% * 0.06708);
+  }
+}
+
+@media (min-width: 1200px) {
+  #Contact #Partners .partners-img {
+    max-width: calc((608px + 30px) * 0.7263);
+  }
+}
+
+@media (min-width: 1440px) {
+  #Contact #Partners .partners-img {
+    max-width: calc((768px + 30px) * 0.7263);
+  }
+}
+
+@media (min-width: 1920px) {
+  #Contact #Partners .partners-img {
+    max-width: calc((1088px + 30px) * 0.7263);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Contact #Partners .partners-img {
+    max-width: calc((520px + 30px) * 0.7263);
+  }
+}
+
+@media (max-width: 480px) {
+  #Contact #Partners .partners-img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #Contact #Partners .partners-img {
+    max-width: 100%;
   }
 }
 
