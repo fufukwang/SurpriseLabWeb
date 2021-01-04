@@ -689,7 +689,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="section anchor-section" id="Contact">
         <h2>Contact</h2>
 
-        <section class="fullpage" id="contactInfo" data-aos="fade">
+        <section id="contactInfo" data-aos="fade">
             <div class="container">
                 <!------------->
                 <h3>聯絡飯店</h3>
@@ -727,7 +727,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <section class="fullpage" id="Partners" data-aos="fade">
+        <section id="Partners" data-aos="fade">
             <div class="container">
                 <!------------->
                 <h3>合作夥伴</h3>
