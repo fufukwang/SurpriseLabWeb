@@ -70,6 +70,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="smoothScroll rules" href="#Rules">Rules</a>
         </li>
         <li>
+            <a class="smoothScroll library" href="#Library">Library</a>
+        </li>
+        <li>
             <a class="smoothScroll contact" href="#Contact">Contact</a>
         </li>
     </ul>
@@ -653,7 +656,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
     <!-- End Section4 Rules -->
 
-    <!-- Section5 Contact -->
+    <!-- Section5 Library -->
+    <section class="anchor-section" id="Library" data-aos="fade">
+        <div class="container">
+            <h3>時光典藏館</h3>
+            <div class="sub-title-wrapper">
+                <h4>
+                    <span>LIBRARY</span>
+                </h4>
+            </div>
+            <p>
+                從現在回望的每個年代<br/>
+                都由你我的日常所構成<br/><br/>
+                遙遠的記憶免不了模糊<br/>
+                但，還好那些文字與影像會記得<br/>
+                讓重要的時刻不被遺忘<br/><br/>
+                這是屬於我們的——1980年代
+            </p>
+        </div>
+        <div class="library-img">
+            <img src="img/illustration/illustration_library.png" alt="library" draggable="false">
+        </div>
+        <div class="container">
+            <div class="feature-btn text-center">
+                <a class="btn-outline" href="https://40.cw.com.tw/story/1981/" target="_blank">進入時光典藏館</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Section5 Library -->
+
+    <!-- Section6 Contact -->
     <section class="anchor-section fullpage" id="Contact" data-aos="fade">
         <h2>Contact</h2>
 
@@ -694,7 +726,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </div>
     </section>
-    <!-- End Section5 Contact -->
+    <!-- End Section6 Contact -->
 
 </main>
 
