@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+h5 {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 2.4px;
+}
+
+.sub-title {
+  font-weight: 900;
+  line-height: 2.1;
+  padding-top: 42px;
+}
+
+.sub-title span {
+  font-family: inherit;
+  font-weight: inherit;
+}
+/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,22 @@
+// Variable
+@import "variable";
+
+// general
+
+h5 {
+    font-family: $font-serif;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 2.4px;
+}
+
+.sub-title {
+    font-weight: 900;
+    line-height: 2.1;
+    padding-top: 42px;
+
+    span {
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
