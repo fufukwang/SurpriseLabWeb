@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
-h3.progress-title {
+h3.progress-title,
+h3.page-title {
   letter-spacing: 4.32px;
   margin-bottom: 12px;
 }
@@ -33,6 +34,7 @@ h4 span::before, h4 span::after {
 }
 
 h5 {
+  text-align: center;
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
   line-height: 1.25;
@@ -40,15 +42,21 @@ h5 {
   margin: 0;
 }
 
-.sub-title {
+.sub-title,
+.page-sub-title {
   font-weight: 900;
   line-height: 2.1;
   padding-top: 42px;
 }
 
-.sub-title span {
+.sub-title span,
+.page-sub-title span {
   font-family: inherit;
   font-weight: inherit;
+}
+
+.page-sub-title {
+  margin-top: 84px;
 }
 
 form .form-container {
@@ -159,5 +167,13 @@ form .form-container .multi-btn button.btn-outline.submit {
 
 .radio__button .custom-control.custom-checkbox .custom-control-label::before {
   border: solid 1px #EFC27B;
+}
+
+.page-info {
+  margin: 48px 0 210px;
+}
+
+.page-info p + p {
+  margin-top: 24px;
 }
 /*# sourceMappingURL=master.css.map */

@@ -3,7 +3,8 @@
 
 // Serif Title
 
-h3.progress-title {
+h3.progress-title,
+h3.page-title {
     letter-spacing: 4.32px;
     margin-bottom: 12px;
 }
@@ -34,6 +35,7 @@ h4 {
 }
 
 h5 {
+    text-align: center;
     font-family: $font-serif;
     font-weight: 900;
     line-height: 1.25;
@@ -41,7 +43,8 @@ h5 {
     margin: 0;
 }
 
-.sub-title {
+.sub-title,
+.page-sub-title {
     font-weight: 900;
     line-height: 2.1;
     padding-top: 42px;
@@ -52,8 +55,11 @@ h5 {
     }
 }
 
-// Form
+.page-sub-title {
+    margin-top: 84px;
+}
 
+// Form
 form {
     .form-container {
         padding: 0;
@@ -157,18 +163,29 @@ form {
 // Override Custom control
 .radio__button {
     .custom-control {
-      &.custom-checkbox {
-        .custom-control-input {
-          &:checked ~ .custom-control-label::before {
-            background-image: url('../img/icon/icon-check-dark.svg');
-          }
-        }
+        &.custom-checkbox {
+            .custom-control-input {
+                &:checked ~ .custom-control-label::before {
+                    background-image: url('../img/icon/icon-check-dark.svg');
+                }
+            }
 
-        .custom-control-label {  
-          &::before {
-            border: solid 1px $color-yellow;
-          }
+            .custom-control-label {  
+                &::before {
+                    border: solid 1px $color-yellow;
+                }
+            }
         }
-      }
     }
-  }
+}
+
+// Success Page
+.page-info {
+    margin: 48px 0 210px;
+
+    p {
+        & + p {
+            margin-top: 24px;
+        }
+    }
+}

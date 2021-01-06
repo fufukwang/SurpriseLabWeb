@@ -144,20 +144,21 @@
 
         <div class="submit-page success" id="masterSuccess" style="display:none;">
             <div class="container">
-                <h3 class="page-title">
-                    微醺大飯店：<span>1980s</span>
-                </h3>
-                <h5>賓客邀請函</h5>
+                <h3 class="page-title">微醺大飯店：1980s</h3>
+                <h5>賓客邀請函</h5>
                 <p class="page-sub-title">
                     您的賓客資料已成功送出<br/>
                     請進入信箱，尋找寄送給你的第一封信
                 </p>
-                <p class="page-info">
-                    請注意，該封信件特別重要，請務必開啟
-                    也請互相提醒同行友人務必開啟信件
-                    <br/>
-                    －期待您的蒞臨－<br/><br/>
-                </p>
+                <div class="page-info">
+                    <p>
+                        請注意，該封信件特別重要，請務必開啟<br/>
+                        也請互相提醒同行友人務必開啟信件
+                    </p>
+                    <p>
+                        －期待您的蒞臨－
+                    </p>
+                </div>
                 <div class="feature-btn" style="text-align: center;">
                     <a class="btn-outline" href="index.html">完成</a>
                 </div>
