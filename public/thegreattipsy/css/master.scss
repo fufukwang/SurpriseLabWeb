@@ -76,6 +76,10 @@ h5 {
 
 .page-sub-title {
     padding-top: 84px;
+
+    @media (max-width: 480px) {
+        padding-top: 42px;
+    }
 }
 
 // Form
@@ -233,7 +237,6 @@ form {
         &.custom-checkbox {
             .custom-control-input {
                 &:checked ~ .custom-control-label::before {
-                    top: 5px;
                     background-image: url('../img/icon/icon-check-dark.svg');
                 }
             }
@@ -243,6 +246,7 @@ form {
                 line-height: 1.714;
 
                 &::before {
+                    top: 5px;
                     border: solid 1px $color-yellow;
                 }
             }
@@ -251,16 +255,38 @@ form {
 }
 
 // Success Page
-.page-info {
-    margin: 48px 0 210px;
+.submit-page {
+    padding-bottom: 48px;
 
-    p {
-        font-size: 16px;
-        letter-spacing: 1.6px;
-        line-height: 1.6875;
-
-        & + p {
-            margin-top: 24px;
+    .page-info {
+        margin: 48px 0 210px;
+    
+        @media (max-width: 480px) {
+            margin: 42px 0 160px;
         }
+    
+        p {
+            font-size: 16px;
+            letter-spacing: 1.6px;
+            line-height: 1.6875;
+    
+            @media (max-width: 480px) {
+                font-size: 14px;
+                letter-spacing: 1.4px;
+                line-height: 1.714;
+            }
+    
+            & + p {
+                margin-top: 24px;
+    
+                @media (max-width: 480px) {
+                    margin-top: 18px;
+                }
+            }
+        }
+    }
+
+    .feature-btn {
+        text-align: center;
     }
 }

@@ -126,7 +126,7 @@
                             <div class="d-flex align-items-center">
                                 <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
                                     <input type="checkbox" id="agree" name="agree" class="custom-control-input" value="1" required>
-                                    <span class="custom-control-label">我同意收到來自<span class="color-yellow">《微醺大飯店：1980s》</span><br class="d-sm-none d-inline"/>的信件</span>
+                                    <span class="custom-control-label">我同意收到來自<br class="d-sm-none d-inline"/><span class="color-yellow">《微醺大飯店：1980s》</span>的信件</span>
                                 </label>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                         －期待您的蒞臨－
                     </p>
                 </div>
-                <div class="feature-btn" style="text-align: center;">
+                <div class="feature-btn">
                     <a class="btn-outline" href="index.html">完成</a>
                 </div>
             </div>

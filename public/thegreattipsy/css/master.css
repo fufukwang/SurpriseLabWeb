@@ -87,6 +87,12 @@ h5 {
 }
 
 @media (max-width: 480px) {
+  .page-sub-title {
+    padding-top: 42px;
+  }
+}
+
+@media (max-width: 480px) {
   form {
     margin: 0;
   }
@@ -258,7 +264,6 @@ form .form-container .multi-btn button.btn-outline.submit {
 }
 
 .radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  top: 5px;
   background-image: url("../img/icon/icon-check-dark.svg");
 }
 
@@ -268,20 +273,49 @@ form .form-container .multi-btn button.btn-outline.submit {
 }
 
 .radio__button .custom-control.custom-checkbox .custom-control-label::before {
+  top: 5px;
   border: solid 1px #EFC27B;
 }
 
-.page-info {
+.submit-page {
+  padding-bottom: 48px;
+}
+
+.submit-page .page-info {
   margin: 48px 0 210px;
 }
 
-.page-info p {
+@media (max-width: 480px) {
+  .submit-page .page-info {
+    margin: 42px 0 160px;
+  }
+}
+
+.submit-page .page-info p {
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 1.6875;
 }
 
-.page-info p + p {
+@media (max-width: 480px) {
+  .submit-page .page-info p {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.714;
+  }
+}
+
+.submit-page .page-info p + p {
   margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .submit-page .page-info p + p {
+    margin-top: 18px;
+  }
+}
+
+.submit-page .feature-btn {
+  text-align: center;
 }
 /*# sourceMappingURL=master.css.map */
