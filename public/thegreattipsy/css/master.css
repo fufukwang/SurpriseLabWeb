@@ -116,8 +116,8 @@ form .form-container .feature-btn {
 }
 
 form .form-container .multi-btn button.btn-outline.submit {
-  min-width: 180px;
-  width: 180px;
+  min-width: 210px;
+  width: 210px;
 }
 
 .radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {

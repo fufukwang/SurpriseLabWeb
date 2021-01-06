@@ -133,7 +133,7 @@
                         </div>
 
                         <div class="feature-btn d-flex justify-content-center multi-btn">
-                            <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit" disabled="disabled">
+                            <button type="submit" name="submit" class="btn-outline submit" id="btn-master-submit" disabled="disabled">
                                 送出
                             </button>
                         </div>
