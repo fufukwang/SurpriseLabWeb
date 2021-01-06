@@ -98,7 +98,7 @@
                             </p>
                         </div>                        
                         <p>
-                            請於下方提供您的基本資訊，勾選同意後按下送出<br/>
+                            請於下方提供您的基本資訊，勾選同意後按下送出<br class="d-sm-inline d-none"/>
                             之後，您將收到一封非常重要的信，請務必收信。
                         </p>
                         <div class="sub-title-wrapper">

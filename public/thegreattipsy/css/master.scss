@@ -7,6 +7,12 @@ h3.progress-title,
 h3.page-title {
     letter-spacing: 4.32px;
     margin-bottom: 12px;
+
+    @media (max-width: 480px) {
+        letter-spacing: 2.88px;
+        margin-bottom: 8px;
+        padding-left: 4.32px;
+    }
 }
 
 h4 {
@@ -41,6 +47,12 @@ h5 {
     line-height: 1.25;
     letter-spacing: 2.4px;
     margin: 0;
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        line-height: 1.44;
+    }
 }
 
 .sub-title,
@@ -50,6 +62,11 @@ h5 {
     line-height: 2.1;
     color: $color-light-yellow;
     padding-top: 42px;
+
+    @media (max-width: 480px) {
+        line-height: 2;
+        padding-top: 24px;
+    }
 
     span {
         font-family: inherit;
@@ -63,31 +80,50 @@ h5 {
 
 // Form
 form {
+    @media (max-width: 480px) {
+        margin: 0 0 36px;
+    }
+
     .form-container {
         padding: 0;
 
         // Description
-
         p {
             text-align: center;
             line-height: 1.6875;
             color: $color-light-yellow;
+
+            @media (max-width: 480px) {
+                line-height: 1.714;
+            }
         }
 
         .master-desc {
             margin: 42px 0 48px;
+
+            @media (max-width: 480px) {
+                margin: 36px 0;
+            }
 
             p {
                 color: $color-yellow;
 
                 & + p {
                     margin-top: 24px;
+
+                    @media (max-width: 480px) {
+                        margin-top: 18px;
+                    }
                 }
             }
         }
 
         .sub-title-wrapper {
             margin: 48px 0 30px;
+
+            @media (max-width: 480px) {
+                margin: 24px 0 21px;
+            }
         }
 
         // Label and Input
@@ -108,12 +144,25 @@ form {
                     align-items: center;
                     margin-bottom: 10px;
 
+                    @media (max-width: 480px) {
+                        font-size: 14px;
+                        letter-spacing: 1.4px;
+                        line-height: 1.42;
+                        margin-bottom: 8px;
+                    }
+
                     .error-msg {
                         font-size: 12px;
                         letter-spacing: 1.2px;
                         line-height: 1.5;
                         margin-left: 12px;
                         color: $color-error;
+
+                        @media (max-width: 480px) {
+                            font-size: 10px;
+                            letter-spacing: 1px;
+                            margin-left: 9px;
+                        }
                     }
                 }
     
@@ -128,6 +177,13 @@ form {
                     color: $color-yellow;
                     -webkit-transition: 0.3s;
                     transition: 0.3s;
+
+                    @media (max-width: 480px) {
+                        padding: 11px 20px;
+                        font-size: 14px;
+                        letter-spacing: 1.4px;
+                        line-height: 1.42;
+                    }
     
                     &::placeholder {
                         color: rgba($color-yellow, 0.5);
@@ -137,7 +193,7 @@ form {
                         outline: 0;
                         border-color: $color-yellow;
                         box-shadow: none;
-                        -webkit-box-shadow: 0 0 0 100px #281F1C inset;
+                        -webkit-box-shadow: 0 0 0 100px $color-dark-brown inset;
                         outline: 0;
                     }
                 }
@@ -158,6 +214,11 @@ form {
         .multi-btn button.btn-outline.submit {
             min-width: 210px;
             width: 210px;
+
+            @media (max-width: 480px) {
+                min-width: 240px;
+                width: 240px;
+            }
         }
     }
 }
@@ -173,6 +234,9 @@ form {
             }
 
             .custom-control-label {  
+                text-align: left;
+                line-height: 1.714;
+
                 &::before {
                     border: solid 1px $color-yellow;
                 }

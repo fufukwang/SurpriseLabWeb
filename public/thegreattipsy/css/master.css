@@ -8,6 +8,15 @@ h3.page-title {
   margin-bottom: 12px;
 }
 
+@media (max-width: 480px) {
+  h3.progress-title,
+  h3.page-title {
+    letter-spacing: 2.88px;
+    margin-bottom: 8px;
+    padding-left: 4.32px;
+  }
+}
+
 h4 {
   font-weight: 400;
   color: #EFC27B;
@@ -42,6 +51,14 @@ h5 {
   margin: 0;
 }
 
+@media (max-width: 480px) {
+  h5 {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    line-height: 1.44;
+  }
+}
+
 .sub-title,
 .page-sub-title {
   font-family: "Noto Serif TC", serif;
@@ -49,6 +66,14 @@ h5 {
   line-height: 2.1;
   color: #FFE0BA;
   padding-top: 42px;
+}
+
+@media (max-width: 480px) {
+  .sub-title,
+  .page-sub-title {
+    line-height: 2;
+    padding-top: 24px;
+  }
 }
 
 .sub-title span,
@@ -61,6 +86,12 @@ h5 {
   padding-top: 84px;
 }
 
+@media (max-width: 480px) {
+  form {
+    margin: 0 0 36px;
+  }
+}
+
 form .form-container {
   padding: 0;
 }
@@ -71,8 +102,20 @@ form .form-container p {
   color: #FFE0BA;
 }
 
+@media (max-width: 480px) {
+  form .form-container p {
+    line-height: 1.714;
+  }
+}
+
 form .form-container .master-desc {
   margin: 42px 0 48px;
+}
+
+@media (max-width: 480px) {
+  form .form-container .master-desc {
+    margin: 36px 0;
+  }
 }
 
 form .form-container .master-desc p {
@@ -83,8 +126,20 @@ form .form-container .master-desc p + p {
   margin-top: 24px;
 }
 
+@media (max-width: 480px) {
+  form .form-container .master-desc p + p {
+    margin-top: 18px;
+  }
+}
+
 form .form-container .sub-title-wrapper {
   margin: 48px 0 30px;
+}
+
+@media (max-width: 480px) {
+  form .form-container .sub-title-wrapper {
+    margin: 24px 0 21px;
+  }
 }
 
 form .form-container .form-group {
@@ -105,12 +160,29 @@ form .form-container .form-group.input-with-label label {
   margin-bottom: 10px;
 }
 
+@media (max-width: 480px) {
+  form .form-container .form-group.input-with-label label {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.42;
+    margin-bottom: 8px;
+  }
+}
+
 form .form-container .form-group.input-with-label label .error-msg {
   font-size: 12px;
   letter-spacing: 1.2px;
   line-height: 1.5;
   margin-left: 12px;
   color: #ff7ea4;
+}
+
+@media (max-width: 480px) {
+  form .form-container .form-group.input-with-label label .error-msg {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-left: 9px;
+  }
 }
 
 form .form-container .form-group.input-with-label input {
@@ -124,6 +196,15 @@ form .form-container .form-group.input-with-label input {
   color: #EFC27B;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media (max-width: 480px) {
+  form .form-container .form-group.input-with-label input {
+    padding: 11px 20px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.42;
+  }
 }
 
 form .form-container .form-group.input-with-label input::-webkit-input-placeholder {
@@ -163,8 +244,20 @@ form .form-container .multi-btn button.btn-outline.submit {
   width: 210px;
 }
 
+@media (max-width: 480px) {
+  form .form-container .multi-btn button.btn-outline.submit {
+    min-width: 240px;
+    width: 240px;
+  }
+}
+
 .radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-image: url("../img/icon/icon-check-dark.svg");
+}
+
+.radio__button .custom-control.custom-checkbox .custom-control-label {
+  text-align: left;
+  line-height: 1.714;
 }
 
 .radio__button .custom-control.custom-checkbox .custom-control-label::before {
