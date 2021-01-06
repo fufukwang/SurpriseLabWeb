@@ -70,6 +70,14 @@ form .form-container .form-group.input-with-label label {
   margin-bottom: 10px;
 }
 
+form .form-container .form-group.input-with-label label .error-msg {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+  margin-left: 12px;
+  color: #C977AE;
+}
+
 form .form-container .form-group.input-with-label input {
   width: 100%;
   border-radius: 6px;

@@ -74,6 +74,14 @@ form {
                     -ms-flex-align: center;
                     align-items: center;
                     margin-bottom: 10px;
+
+                    .error-msg {
+                        font-size: 12px;
+                        letter-spacing: 1.2px;
+                        line-height: 1.5;
+                        margin-left: 12px;
+                        color: $color-pink;
+                    }
                 }
     
                 input {
@@ -123,17 +131,14 @@ form {
 
 // Override Custom control
 .radio__button {
-  
     .custom-control {
-  
       &.custom-checkbox {
-  
         .custom-control-input {
           &:checked ~ .custom-control-label::before {
             background-image: url('../img/icon/icon-check-dark.svg');
           }
         }
-  
+
         .custom-control-label {  
           &::before {
             border: solid 1px $color-yellow;
