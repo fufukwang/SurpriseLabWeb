@@ -69,14 +69,12 @@
             </button>
         </header>
 
-        <div class="container" id="bookingPage">
+        <div class="container" id="masterPage">
             <!-- form -->
-            <form id="booking">
+            <form id="master">
                 <!--progress title-->
-                <h3 class="progress-title">
-                    微醺大飯店：<span>1980s</span>
-                </h3>
-                <h5>賓客邀請函</h5>
+                <h3 class="progress-title">微醺大飯店：1980s</h3>
+                <h5>賓客邀請函</h5>
 
                 <!-- fieldsets -->
                 <fieldset class="step step-1" title="微醺大飯店：1980s　賓客邀請函">
@@ -85,24 +83,24 @@
                         並將於 <span class="color-yellow">2021/01/05 18:30</span> 前來
                     </p>
                     <div class="form-container">
-                        <p class="color-yellow">
-                            耳聞您即將前來微醺大飯店的開幕酒會
-                            飯店全體人員都相當期待
-                        </p>
-                        <p class="color-yellow">
-                            開幕酒會當日有知名歌星、企業家
-                            及諸多知名企業代表到場
-                        </p>
-                        <p class="color-yellow">
-                            為使酒會順利進行
-                            並避免閒雜人等之進入，身份控管尤其重要
-                        </p>
-                        <p>&nbsp;</p>
+                        <div class="master-desc">
+                            <p class="color-yellow">
+                                耳聞您即將前來微醺大飯店的開幕酒會<br/>
+                                飯店全體人員都相當期待
+                            </p>
+                            <p class="color-yellow">
+                                開幕酒會當日有知名歌星、企業家<br/>
+                                及諸多知名企業代表到場
+                            </p>
+                            <p class="color-yellow">
+                                為使酒會順利進行<br/>
+                                並避免閒雜人等之進入，身份控管尤其重要
+                            </p>
+                        </div>                        
                         <p>
                             請於下方提供您的基本資訊，勾選同意後按下送出<br/>
                             之後，您將收到一封非常重要的信，請務必收信。
                         </p>
-                        <p>&nbsp;</p>
                         <div class="sub-title-wrapper">
                             <h4>
                                 <span>INFORMATION</span>
@@ -144,7 +142,7 @@
             </form>
         </div>
 
-        <div class="submit-page success" id="bookingSuccess" style="display:none;">
+        <div class="submit-page success" id="masterSuccess" style="display:none;">
             <div class="container">
                 <h3 class="page-title">
                     微醺大飯店：<span>1980s</span>

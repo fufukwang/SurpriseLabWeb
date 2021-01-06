@@ -1,13 +1,19 @@
 // Variable
 @import "variable";
 
-// general
+// Serif Title
+
+h3.progress-title {
+    letter-spacing: 4.32px;
+    margin-bottom: 12px;
+}
 
 h5 {
     font-family: $font-serif;
     font-weight: 900;
     line-height: 1.25;
     letter-spacing: 2.4px;
+    margin: 0;
 }
 
 .sub-title {
@@ -18,5 +24,27 @@ h5 {
     span {
         font-family: inherit;
         font-weight: inherit;
+    }
+}
+
+// Paragraph
+form {
+    .form-container {
+        p {
+            line-height: 1.6875;
+            color: $color-light-yellow;
+        }
+
+        .master-desc {
+            margin: 42px 0 48px;
+
+            p + p {
+                margin-top: 24px;
+            }
+        }
+
+        .sub-title-wrapper {
+            margin: 48px 0 30px;
+        }
     }
 }

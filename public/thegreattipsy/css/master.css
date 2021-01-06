@@ -2,11 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+h3.progress-title {
+  letter-spacing: 4.32px;
+  margin-bottom: 12px;
+}
+
 h5 {
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
   line-height: 1.25;
   letter-spacing: 2.4px;
+  margin: 0;
 }
 
 .sub-title {
@@ -18,5 +24,22 @@ h5 {
 .sub-title span {
   font-family: inherit;
   font-weight: inherit;
+}
+
+form .form-container p {
+  line-height: 1.6875;
+  color: #FFE0BA;
+}
+
+form .form-container .master-desc {
+  margin: 42px 0 48px;
+}
+
+form .form-container .master-desc p + p {
+  margin-top: 24px;
+}
+
+form .form-container .sub-title-wrapper {
+  margin: 48px 0 30px;
 }
 /*# sourceMappingURL=master.css.map */
