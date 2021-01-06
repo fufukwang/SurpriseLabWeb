@@ -70,6 +70,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="rules" href="rules.html">Rules</a>
         </li>
         <li>
+            <a class="library" href="index.html#Library">Library</a>
+        </li>
+        <li>
             <a class="contact" href="index.html#Contact">Contact</a>
         </li>
     </ul>
