@@ -88,7 +88,7 @@ h5 {
 
 @media (max-width: 480px) {
   form {
-    margin: 0 0 36px;
+    margin: 0;
   }
 }
 
@@ -239,6 +239,12 @@ form .form-container .feature-btn {
   padding-top: 28px;
 }
 
+@media (max-width: 480px) {
+  form .form-container .feature-btn {
+    padding-top: 4px;
+  }
+}
+
 form .form-container .multi-btn button.btn-outline.submit {
   min-width: 210px;
   width: 210px;
@@ -252,6 +258,7 @@ form .form-container .multi-btn button.btn-outline.submit {
 }
 
 .radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  top: 5px;
   background-image: url("../img/icon/icon-check-dark.svg");
 }
 

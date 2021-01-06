@@ -98,8 +98,7 @@
                             </p>
                         </div>                        
                         <p>
-                            請於下方提供您的基本資訊，勾選同意後按下送出<br class="d-sm-inline d-none"/>
-                            之後，您將收到一封非常重要的信，請務必收信。
+                            請於下方提供您的基本資訊，勾選同意後按下送出<br class="d-sm-inline d-none"/>之後，您將收到一封非常重要的信，請務必收信。
                         </p>
                         <div class="sub-title-wrapper">
                             <h4>
@@ -127,7 +126,7 @@
                             <div class="d-flex align-items-center">
                                 <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
                                     <input type="checkbox" id="agree" name="agree" class="custom-control-input" value="1" required>
-                                    <span class="custom-control-label">我同意收到來自<span class="color-yellow">《微醺大飯店：1980s》</span>的信件</span>
+                                    <span class="custom-control-label">我同意收到來自<span class="color-yellow">《微醺大飯店：1980s》</span><br class="d-sm-none d-inline"/>的信件</span>
                                 </label>
                             </div>
                         </div>

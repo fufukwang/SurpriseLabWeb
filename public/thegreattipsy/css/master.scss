@@ -81,7 +81,7 @@ h5 {
 // Form
 form {
     @media (max-width: 480px) {
-        margin: 0 0 36px;
+        margin: 0;
     }
 
     .form-container {
@@ -209,6 +209,10 @@ form {
         // Button
         .feature-btn {
             padding-top: 28px;
+
+            @media (max-width: 480px) {
+                padding-top: 4px;
+            }
         }
 
         .multi-btn button.btn-outline.submit {
@@ -229,6 +233,7 @@ form {
         &.custom-checkbox {
             .custom-control-input {
                 &:checked ~ .custom-control-label::before {
+                    top: 5px;
                     background-image: url('../img/icon/icon-check-dark.svg');
                 }
             }
