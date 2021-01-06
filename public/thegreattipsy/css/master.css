@@ -26,7 +26,12 @@ h5 {
   font-weight: inherit;
 }
 
+form .form-container {
+  padding: 0;
+}
+
 form .form-container p {
+  text-align: center;
   line-height: 1.6875;
   color: #FFE0BA;
 }
@@ -35,11 +40,46 @@ form .form-container .master-desc {
   margin: 42px 0 48px;
 }
 
+form .form-container .master-desc p {
+  color: #EFC27B;
+}
+
 form .form-container .master-desc p + p {
   margin-top: 24px;
 }
 
 form .form-container .sub-title-wrapper {
   margin: 48px 0 30px;
+}
+
+form .form-container .form-group {
+  margin-bottom: 20px;
+}
+
+form .form-container .form-group label {
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+form .form-container .form-group input {
+  width: 100%;
+  border-radius: 6px;
+  border: solid 1px #E5AD5C;
+  background-color: transparent;
+  padding: 12px 17px;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  color: #EFC27B;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=master.css.map */

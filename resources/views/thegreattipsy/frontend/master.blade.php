@@ -84,15 +84,15 @@
                     </p>
                     <div class="form-container">
                         <div class="master-desc">
-                            <p class="color-yellow">
+                            <p>
                                 耳聞您即將前來微醺大飯店的開幕酒會<br/>
                                 飯店全體人員都相當期待
                             </p>
-                            <p class="color-yellow">
+                            <p>
                                 開幕酒會當日有知名歌星、企業家<br/>
                                 及諸多知名企業代表到場
                             </p>
-                            <p class="color-yellow">
+                            <p>
                                 為使酒會順利進行<br/>
                                 並避免閒雜人等之進入，身份控管尤其重要
                             </p>
