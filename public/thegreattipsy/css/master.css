@@ -44,8 +44,10 @@ h5 {
 
 .sub-title,
 .page-sub-title {
+  font-family: "Noto Serif TC", serif;
   font-weight: 900;
   line-height: 2.1;
+  color: #FFE0BA;
   padding-top: 42px;
 }
 
@@ -56,7 +58,7 @@ h5 {
 }
 
 .page-sub-title {
-  margin-top: 84px;
+  padding-top: 84px;
 }
 
 form .form-container {
@@ -171,6 +173,12 @@ form .form-container .multi-btn button.btn-outline.submit {
 
 .page-info {
   margin: 48px 0 210px;
+}
+
+.page-info p {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.6875;
 }
 
 .page-info p + p {
