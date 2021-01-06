@@ -56,7 +56,7 @@ form .form-container .form-group {
   margin-bottom: 20px;
 }
 
-form .form-container .form-group .input-with-label label {
+form .form-container .form-group.input-with-label label {
   font-size: 16px;
   line-height: 1;
   letter-spacing: 1.6px;
@@ -70,7 +70,7 @@ form .form-container .form-group .input-with-label label {
   margin-bottom: 10px;
 }
 
-form .form-container .form-group .input-with-label input {
+form .form-container .form-group.input-with-label input {
   width: 100%;
   border-radius: 6px;
   border: solid 1px #E5AD5C;
@@ -83,28 +83,28 @@ form .form-container .form-group .input-with-label input {
   transition: 0.3s;
 }
 
-form .form-container .form-group .input-with-label input::-webkit-input-placeholder {
+form .form-container .form-group.input-with-label input::-webkit-input-placeholder {
   color: #FFE0BA;
 }
 
-form .form-container .form-group .input-with-label input:-ms-input-placeholder {
+form .form-container .form-group.input-with-label input:-ms-input-placeholder {
   color: #FFE0BA;
 }
 
-form .form-container .form-group .input-with-label input::-ms-input-placeholder {
+form .form-container .form-group.input-with-label input::-ms-input-placeholder {
   color: #FFE0BA;
 }
 
-form .form-container .form-group .input-with-label input::placeholder {
+form .form-container .form-group.input-with-label input::placeholder {
   color: #FFE0BA;
 }
 
-form .form-container .form-group .input-with-label input:focus {
+form .form-container .form-group.input-with-label input:focus {
   outline: 0;
   border-color: #EFC27B;
 }
 
-form .form-container .form-group .radio__button .color-yellow {
+form .form-container .form-group.radio__button .color-yellow {
   color: #E5AD5C;
 }
 
@@ -113,6 +113,7 @@ form .form-container .feature-btn {
 }
 
 form .form-container .multi-btn button.btn-outline.submit {
+  min-width: 180px;
   width: 180px;
 }
 /*# sourceMappingURL=master.css.map */

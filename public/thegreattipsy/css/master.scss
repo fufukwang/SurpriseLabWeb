@@ -61,7 +61,7 @@ form {
         .form-group {
             margin-bottom: 20px;
 
-            .input-with-label {
+            &.input-with-label {
                 label {
                     font-size: 16px;
                     line-height: 1;
@@ -99,7 +99,7 @@ form {
                 }
             }
 
-            .radio__button {
+            &.radio__button {
                 .color-yellow {
                     color: $color-dark-yellow;
                 }
@@ -112,6 +112,7 @@ form {
         }
 
         .multi-btn button.btn-outline.submit {
+            min-width: 180px;
             width: 180px;
         }
     }
