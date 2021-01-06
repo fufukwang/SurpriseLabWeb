@@ -89,12 +89,15 @@ form {
                     transition: 0.3s;
     
                     &::placeholder {
-                        color: $color-light-yellow;
+                        color: rgba($color-yellow, 0.5);
                     }
                 
                     &:focus {
                         outline: 0;
                         border-color: $color-yellow;
+                        box-shadow: none;
+                        -webkit-box-shadow: 0 0 0 100px #281F1C inset;
+                        outline: 0;
                     }
                 }
             }
@@ -117,3 +120,25 @@ form {
         }
     }
 }
+
+// Override Custom control
+.radio__button {
+  
+    .custom-control {
+  
+      &.custom-checkbox {
+  
+        .custom-control-input {
+          &:checked ~ .custom-control-label::before {
+            background-image: url('../img/icon/icon-check-dark.svg');
+          }
+        }
+  
+        .custom-control-label {  
+          &::before {
+            border: solid 1px $color-yellow;
+          }
+        }
+      }
+    }
+  }

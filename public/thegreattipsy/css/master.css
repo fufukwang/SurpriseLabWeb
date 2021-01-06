@@ -84,24 +84,27 @@ form .form-container .form-group.input-with-label input {
 }
 
 form .form-container .form-group.input-with-label input::-webkit-input-placeholder {
-  color: #FFE0BA;
+  color: rgba(239, 194, 123, 0.5);
 }
 
 form .form-container .form-group.input-with-label input:-ms-input-placeholder {
-  color: #FFE0BA;
+  color: rgba(239, 194, 123, 0.5);
 }
 
 form .form-container .form-group.input-with-label input::-ms-input-placeholder {
-  color: #FFE0BA;
+  color: rgba(239, 194, 123, 0.5);
 }
 
 form .form-container .form-group.input-with-label input::placeholder {
-  color: #FFE0BA;
+  color: rgba(239, 194, 123, 0.5);
 }
 
 form .form-container .form-group.input-with-label input:focus {
   outline: 0;
   border-color: #EFC27B;
+  box-shadow: none;
+  -webkit-box-shadow: 0 0 0 100px #281F1C inset;
+  outline: 0;
 }
 
 form .form-container .form-group.radio__button .color-yellow {
@@ -115,5 +118,13 @@ form .form-container .feature-btn {
 form .form-container .multi-btn button.btn-outline.submit {
   min-width: 180px;
   width: 180px;
+}
+
+.radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-image: url("../img/icon/icon-check-dark.svg");
+}
+
+.radio__button .custom-control.custom-checkbox .custom-control-label::before {
+  border: solid 1px #EFC27B;
 }
 /*# sourceMappingURL=master.css.map */
