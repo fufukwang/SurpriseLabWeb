@@ -76,18 +76,9 @@
                     微醺大飯店：<span>1980s</span>
                 </h3>
                 <h5>賓客邀請函</h5>
-                <!-- progressbar -->
-                <div class="bar-wrapper hide-steps">
-                    <ul id="progressbar">
-                        <li class="active"></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
 
                 <!-- fieldsets -->
-                <fieldset class="step step-1" title="微醺大飯店：1980s　賓客登記">
+                <fieldset class="step step-1" title="微醺大飯店：1980s　賓客邀請函">
                     <p class="sub-title text-lining">
                         親愛的賓客您好，您為 <span class="color-yellow">驚喜製造</span> 所邀請之賓客<br/>
                         並將於 <span class="color-yellow">2021/01/05 18:30</span> 前來
@@ -110,22 +101,44 @@
                             請於下方提供您的基本資訊，勾選同意後按下送出<br/>
                             之後，您將收到一封非常重要的信，請務必收信。
                         </p>
-                        <p class="prefix-step">
-                            <span class="prefix">Step 1</span>選擇欲劃位的人數<br/>
-                            <span class="prefix">Step 2</span>選擇日期、時段<br/>
-                            <span class="prefix">Step 3</span>填寫賓客資料<br/>
-                            <span class="prefix">Step 4</span>確認訂單，<span class="color-pink">輸入劃位序號</span><br/>
-                            <span class="prefix">Step 5</span>完成預約
-                        </p>
                         <p>&nbsp;</p>
                         <div class="sub-title-wrapper">
                             <h4>
                                 <span>INFORMATION</span>
                             </h4>
                         </div>
-                        
                     </div>
+                    <div class="form-container">
+                        <div class="form-group input-with-label">
+                            <label for="name">* 賓客姓名</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="請填寫本名">
+                        </div>
 
+                        <div class="form-group input-with-label">
+                            <label for="phone">* 賓客電話<span class="error-msg"></span></label>
+                            <input type="text" name="phone" class="form-control phone" id="phone" placeholder="請填寫有效手機號碼">
+                        </div>
+
+                        <div class="form-group input-with-label">
+                            <label for="email">* 賓客信箱<span class="error-msg"></span></label>
+                            <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="請填寫有效電子郵件">
+                        </div>
+
+                        <div class="form-group radio__button">
+                            <div class="d-flex align-items-center">
+                                <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
+                                    <input type="checkbox" id="agree" name="agree" class="custom-control-input" value="1" required>
+                                    <span class="custom-control-label">我同意收到來自<span class="color-yellow">《微醺大飯店：1980s》</span>的信件</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="feature-btn d-flex justify-content-between multi-btn">
+                            <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
+                                送出
+                            </button>
+                        </div>
+                    </div>
                 </fieldset>
             </form>
         </div>
@@ -133,16 +146,18 @@
         <div class="submit-page success" id="bookingSuccess" style="display:none;">
             <div class="container">
                 <h3 class="page-title">
-                    你已完成賓客預約！
+                    微醺大飯店：<span>1980s</span>
                 </h3>
+                <h5>賓客邀請函</h5>
                 <p class="page-sub-title">
-                    請至你的信箱確認預約完成信件
+                    您的賓客資料已成功送出<br/>
+                    請進入信箱，尋找寄送給你的第一封信
                 </p>
                 <p class="page-info">
-                    接近體驗日期時<br/>
-                    將會寄送提醒信件與行前訊息給你<br/>
+                    請注意，該封信件特別重要，請務必開啟
+                    也請互相提醒同行友人務必開啟信件
                     <br/>
-                    屆時請注意電子信箱，它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
+                    －期待您的蒞臨－<br/><br/>
                 </p>
                 <div class="feature-btn" style="text-align: center;">
                     <a class="btn-outline" href="index.html">完成</a>
