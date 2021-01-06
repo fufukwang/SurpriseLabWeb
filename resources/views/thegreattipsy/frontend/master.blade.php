@@ -114,12 +114,12 @@
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="phone">* 賓客電話<span class="error-msg"></span></label>
+                            <label for="phone">* 賓客電話<span class="error-msg">請填寫正確的格式</span></label>
                             <input type="text" name="phone" class="form-control phone" id="phone" placeholder="請填寫有效手機號碼">
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="email">* 賓客信箱<span class="error-msg"></span></label>
+                            <label for="email">* 賓客信箱<span class="error-msg">請填寫正確的格式</span></label>
                             <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="請填寫有效電子郵件">
                         </div>
 
@@ -185,6 +185,14 @@
     <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
     <!-- Custom Js -->
     <script src="js/form.js?v=0.15"></script>
+
+    <!-- Testing Button -->
+    <script>
+        $('#btn-master-submit').on('click', function(){
+            $('#masterPage').hide();
+            $('#masterSuccess').fadeIn();
+        });
+    </script>
 
     </body>
 </html>
