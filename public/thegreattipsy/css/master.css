@@ -7,6 +7,31 @@ h3.progress-title {
   margin-bottom: 12px;
 }
 
+h4 {
+  font-weight: 400;
+  color: #EFC27B;
+}
+
+h4::before, h4::after {
+  background-color: #EFC27B;
+}
+
+@media (max-width: 480px) {
+  h4::before, h4::after {
+    background-color: rgba(239, 194, 123, 0.5);
+  }
+}
+
+h4 span::before, h4 span::after {
+  border: 1px solid #EFC27B;
+}
+
+@media (max-width: 480px) {
+  h4 span::before, h4 span::after {
+    border: 1px solid rgba(239, 194, 123, 0.5);
+  }
+}
+
 h5 {
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
