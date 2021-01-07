@@ -195,11 +195,11 @@ form .form-container .form-group.input-with-label input {
   width: 100%;
   border-radius: 6px;
   border: solid 1px #E5AD5C;
-  background-color: transparent;
+  background-color: transparent !important;
   padding: 12px 17px;
   font-size: 16px;
   letter-spacing: 1.6px;
-  color: #EFC27B;
+  color: #EFC27B !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -229,7 +229,7 @@ form .form-container .form-group.input-with-label input::placeholder {
   color: rgba(239, 194, 123, 0.5);
 }
 
-form .form-container .form-group.input-with-label input:focus {
+form .form-container .form-group.input-with-label input:focus, form .form-container .form-group.input-with-label input:active {
   outline: 0;
   border-color: #EFC27B;
   box-shadow: none;
