@@ -148,6 +148,10 @@ form .form-container .sub-title-wrapper {
   }
 }
 
+form .form-container .sub-title-wrapper span {
+  text-transform: uppercase;
+}
+
 form .form-container .form-group {
   margin-bottom: 20px;
 }

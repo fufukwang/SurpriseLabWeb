@@ -102,7 +102,7 @@
                         </p>
                         <div class="sub-title-wrapper">
                             <h4>
-                                <span>INFORMATION</span>
+                                <span>information</span>
                             </h4>
                         </div>
                     </div>
