@@ -64,6 +64,7 @@ class AdminController extends Controller
         $admin->thegreattipsy = $request->has('thegreattipsy') ? $input['thegreattipsy'] : 0;
         $admin->oldview = $request->has('oldview') ? $input['oldview'] : 0;
         $admin->clubtomorrow = $request->has('clubtomorrow') ? $input['clubtomorrow'] : 0;
+        $admin->tgt2 = $request->has('tgt2') ? $input['tgt2'] : 0;
         $admin->password = md5($input['password']);
         $admin->save();
 
