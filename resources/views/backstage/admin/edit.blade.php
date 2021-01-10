@@ -54,6 +54,12 @@
                                         <input type="checkbox" @if($admin->clubtomorrow)checked @endif name="clubtomorrow" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>微醺大飯店2</label>
+                                        <input type="checkbox" @if($admin->tgt2)checked @endif name="tgt2" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">

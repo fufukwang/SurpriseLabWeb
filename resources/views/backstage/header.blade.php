@@ -147,7 +147,7 @@
                         </ul>
                     </li>
                     @endif
-                    @if( Session::get('key')->thegreattipsy )
+                    @if( Session::get('key')->thegreattipsy || Session::get('key')->tgt2 )
                     <li class="has-submenu @if(Request::segment(1) === 'thegreattipsyS2')active @endif">
                         <a href="#"><i class="md md-invert-colors-on"></i>微醺大飯店S2</a>
                         <ul class="submenu" style="left:0;right:auto">
