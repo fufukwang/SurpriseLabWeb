@@ -124,9 +124,11 @@
                                                     </select>
                                                 </div>
                                             </div>
+                                            @if( Session::get('key')->tgt2 == 0 )
                                             <div align="right">
                                                 <button type="submit" class="btn btn-primary btn-custom waves-effect w-md waves-light m-b-5">送出</button>
                                             </div>
+                                            @endif
                                         </form>
                                     </div>
 
