@@ -60,9 +60,11 @@
                                             <div class="form-group col-sm-1">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
                                             </div>
+                                            @if( Session::get('key')->tgt2 == 0 )
                                             <div class="form-group col-sm-1">
                                                 <a target="_blank" href="/thegreattipsyS2/backmenouse/xls" class="btn btn-danger">匯出未兌換名單</a>
                                             </div>
+                                            @endif
 
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
@@ -126,6 +128,7 @@
                         <div class="card-box">
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
+                                    @if( Session::get('key')->tgt2 == 0 )
                                     <div class="btn-toolbar">
                                         <div class="btn-group focus-btn-group" style="width: 100%"><form action="/thegreattipsyS2/uploadxlsx" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
@@ -156,6 +159,7 @@
                                             </div>
                                         </form></div>
                                     </div>
+                                    @endif
                                     <div>
                                         <p>
                                             範例檔案 : <a href="/example/tgt2範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>

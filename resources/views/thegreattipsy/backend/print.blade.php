@@ -185,8 +185,10 @@
                                                     @endif
                                                 </td>
                                                 <td class="actions">
+                                                    @if( Session::get('key')->tgt2 == 0 )
                                                     @if($row->pay_status=='已付款')
                                                     <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
+                                                    @endif
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/thegreattipsyS2/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
@@ -199,11 +201,13 @@
 
 
                                         </tbody>
+                                        @if( Session::get('key')->tgt2 == 0 )
                                         <tfoot>
                                             <tr>
                                                 <td colspan="9"><button type="submit" class="btn btn-info">B2C 發票開立</button> <br/><span> 開立稅額 5% B2C 發票可於[發票資訊] 中預覽金額是否正確</span></td>
                                             </tr>
                                         </tfoot>
+                                        @endif
                                     </table>
 
                                     <div align="center">{{ $order->appends(Request::capture()->except('page'))->links() }}</div>
