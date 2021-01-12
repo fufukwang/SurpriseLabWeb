@@ -79,8 +79,8 @@
                 <!-- fieldsets -->
                 <fieldset class="step step-1" title="微醺大飯店：1980s　賓客邀請函">
                     <p class="sub-title text-lining">
-                        親愛的賓客您好，您為 <span class="color-yellow">驚喜製造</span> 所邀請之賓客<br/>
-                        並將於 <span class="color-yellow">2021/01/05 18:30</span> 前來
+                        親愛的賓客您好，您為 <span class="color-yellow">{{ $order->name }}</span> 所邀請之賓客<br/>
+                        並將於 <span class="color-yellow">{{ $order->day }} {{ substr($order->rang_start,0,5) }}</span> 前來
                     </p>
                     <div class="form-container">
                         <div class="master-desc">
@@ -135,6 +135,7 @@
                             <button type="submit" name="submit" class="btn-outline submit" id="btn-master-submit" disabled="disabled">
                                 送出
                             </button>
+                            <input type="hidden" name="id" id="id" value="{{ $order->id }}">
                         </div>
                     </div>
                 </fieldset>
