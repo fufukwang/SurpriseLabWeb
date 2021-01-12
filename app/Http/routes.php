@@ -512,7 +512,7 @@ Route::group(['middleware' => ['web']], function () {
             return redirect("/thegreattipsy/index.html");
         });
         Route::get('master','tgt2\MasterController@getTeamMaster'/*function(){ return view('thegreattipsy.frontend.master'); }*/);
-        
+        Route::post('Team/SlaveStore', 'tgt2\MasterController@postTeamSlave');
 
         Route::get('GetAjaxData','tgt2\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt2\FrontController@ReOrderData');

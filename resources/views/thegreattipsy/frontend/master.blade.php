@@ -113,12 +113,12 @@
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="phone">* 賓客電話<span class="error-msg">請填寫正確的格式</span></label>
-                            <input type="text" name="phone" class="form-control phone" id="phone" placeholder="請填寫有效手機號碼">
+                            <label for="phone">* 賓客電話<span class="error-msg phoneErr" style="display: none;">請填寫正確的格式</span></label>
+                            <input type="text" name="phone" class="form-control phone" id="phone" minlength="10" maxlength="10" placeholder="請填寫有效手機號碼">
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="email">* 賓客信箱<span class="error-msg">請填寫正確的格式</span></label>
+                            <label for="email">* 賓客信箱<span class="error-msg emailErr" style="display: none;">請填寫正確的格式</span></label>
                             <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="請填寫有效電子郵件">
                         </div>
 
@@ -135,7 +135,8 @@
                             <button type="submit" name="submit" class="btn-outline submit" id="btn-master-submit" disabled="disabled">
                                 送出
                             </button>
-                            <input type="hidden" name="id" id="id" value="{{ $order->id }}">
+                            <input type="hidden" name="id" id="id" value="{{ md5($order->id) }}">
+                            <input type="hidden" name="sn" id="sn" value="{{ $order->sn }}">
                         </div>
                     </div>
                 </fieldset>
@@ -190,8 +191,48 @@
     <!-- Testing Button -->
     <script>
         $('#btn-master-submit').on('click', function(){
-            $('#masterPage').hide();
-            $('#masterSuccess').fadeIn();
+            // 檢查資料
+            var postData = true;
+            // 檢查電話
+            if($('#phone').val().length != 10){
+                $('.phoneErr').show();
+                postData = false;
+            } else {
+                $('.phoneErr').hide();
+            }
+            // 檢查信箱
+            if(! /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($('#email').val())){
+                $('.emailErr').show();
+                postData = false;
+            } else {
+                $('.emailErr').hide();
+            }
+            if(postData){
+                $.blockUI();
+                var obj = {
+                    'id': $('#id').val(),
+                    'sn': $('#sn').val(),
+                    'name': $('#name').val(),
+                    'tel': $('#phone').val(),
+                    'email': $('#email').val(),
+                };
+                $.post('/thegreattipsy/Team/SlaveStore',obj,function(data){
+                    if(data.success==true){
+                        $('#masterPage').hide();
+                        $('#masterSuccess').fadeIn();
+                    } else {
+                        alert('服務繁忙中請稍後在試!');
+                        window.location.reload(true);
+                        console.log('失敗')
+                    }
+                    $.unblockUI();
+                },'json').fail(function() {
+                    alert('服務繁忙中請稍後在試!');
+                    window.location.reload(true);
+                    console.log('錯誤')
+                    $.unblockUI();
+                });
+            }
         });
     </script>
 
