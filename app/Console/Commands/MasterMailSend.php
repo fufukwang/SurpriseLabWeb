@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Console\Command;
 use Mail;
 use Illuminate\Support\Facades\Storage;
+use App\model\club\pro;
 use App\model\club\order;
 use SLS;
 
@@ -43,7 +44,11 @@ class MasterMailSend extends Command
     public function handle()
     {
         try {
-            
+            // 找出時間內的場次
+
+            // 場次抓出訂單
+
+            // 送出信件
 
         } catch (Exception $exception) {
             throw $exception;
