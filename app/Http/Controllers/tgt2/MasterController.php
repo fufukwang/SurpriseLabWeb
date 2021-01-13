@@ -56,13 +56,20 @@ class MasterController extends Controller
             $md5id = $request->id;
             $sn    = $request->sn;
             $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
-            $order = $order->select('name','day','rang_start','tgt2order.id','sn')->where('sn',$sn)->where('pay_status','已付款')
+            $order = $order->select('name','day','rang_start','tgt2order.id','sn','pople')->where('sn',$sn)->where('pay_status','已付款')
                 ->whereRaw("MD5(tgt2order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")->first();
             if($order){
+
+
                 $email = $request->email;
                 if(TeamMail::where('order_id',$order->id)->where('email',$email)->count()>0){
                     return response()->json(["success"=>false]);
                 } else {
+                    // MAX人數加4
+                    if(TeamMail::where('order_id',$order->id)->count() > $order->pople + 4){
+                        return response()->json(["success"=>false]);
+                    }
+                    
                     $data = [
                         'order_id' => $order->id,
                         'name'     => $request->name,
@@ -71,7 +78,14 @@ class MasterController extends Controller
                     ];
                     TeamMail::insert($data);
                     // 檢查確認日期補寄信件
-                    
+                    $now = time();
+                    $lim = strtotime($order->day.' '.$order->rang_start);
+                    $day = round( ($lim - $now) / 86400 );
+                    // 寄送 A 信件
+                    if($day>=21){
+
+                    }
+
                     return response()->json(["success"=>true]);
                 }
             } else {

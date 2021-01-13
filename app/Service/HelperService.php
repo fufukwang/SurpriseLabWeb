@@ -59,4 +59,45 @@ class HelperService {
             return $SN;
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 21 天
+    public function Send21Email(){
+    	try{
+    		if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                config(['mail.host' => 'smtp.gmail.com']);
+                config(['mail.username' => env('MAIL_TGT_USER')]);
+                config(['mail.password' => env('MAIL_TGT_PASS')]);
+            }
+            try {
+                Mail::send('thegreattipsy.email.preview21',$mailer,function($m) use ($mailer){
+                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+
+                    $m->to($mailer['email'], $mailer['name']);
+                    $m->subject('21');
+                    $m->attach($pathToFile, ['as' => $display, 'mime' => 'audio/mp3']);
+                });
+
+            } catch (Exception $e){
+                Log::error($e);
+            }
+    	} catch (Exception $e){
+            Log::error($e);
+        }
+    }
+
+
 }
