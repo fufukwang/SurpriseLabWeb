@@ -73,20 +73,24 @@ class HelperService {
 
 
     // 21 天
-    public function Send21Email(){
+    public function Send21Email($toData = []){
     	try{
-    		if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+    		if(strpos($toData['email'],'@yahoo') || strpos($toData['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_TGT_USER')]);
                 config(['mail.password' => env('MAIL_TGT_PASS')]);
+            } else {
+            	config(['mail.host' => env('MAIL_HOST')]);
+                config(['mail.username' => env('MAIL_USERNAME')]);
+                config(['mail.password' => env('MAIL_PASSWORD')]);
             }
             try {
-                Mail::send('thegreattipsy.email.preview21',$mailer,function($m) use ($mailer){
+                Mail::send('thegreattipsy.email.preview21',$toData,function($m) use ($toData){
                     $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
 
-                    $m->to($mailer['email'], $mailer['name']);
+                    $m->to($toData['email'], $toData['name']);
                     $m->subject('21');
                     $m->attach($pathToFile, ['as' => $display, 'mime' => 'audio/mp3']);
                 });

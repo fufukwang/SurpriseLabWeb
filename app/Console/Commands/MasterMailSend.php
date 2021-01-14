@@ -8,6 +8,7 @@ use Mail;
 use Illuminate\Support\Facades\Storage;
 use App\model\club\pro;
 use App\model\club\order;
+use App\model\club\TeamMail;
 use SLS;
 
 class MasterMailSend extends Command
@@ -55,10 +56,44 @@ class MasterMailSend extends Command
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/1440)-floor(UNIX_TIMESTAMP()/1440)={$day21}")->get();
             foreach($pr21day as $pro){
                 // 找出正常的訂單
-                //$order21 = order::
+                $order21 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                foreach ($order21 as $ord) {
+                    $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                    $needSend = true;
+                    $teamNum = 0;
+                    // 主揪 信件變數組合
+                    $toData = [
+                        'id'    => $ord->id,
+                        'name'  => $ord->name,
+                        'email' => $ord->email,
+                        'type'  => 21
+                    ];
+                    while($needSend){
+                        // 信件寄送
+                        // SLS::Send21Email($toData);
+                        // 判斷是否有其他信箱需要寄送
+                        if($teamMail && count($teamMail)>$teamNum){
+                            $toData = [
+                                'id'    => $ord->id,
+                                'name'  => $teamMail[$teamNum]->name,
+                                'email' => $teamMail[$teamNum]->email,
+                                'type'  => 21
+                            ];
+                            $teamNum++;
+                        } else {
+                            $needSend = false;
+                        }
+                    }
+                }
             }
 
-            // 送出信件
+            // 14
+
+            // 10
+
+            // 5
+
+            // 1
 
         } catch (Exception $exception) {
             throw $exception;
