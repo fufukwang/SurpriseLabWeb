@@ -1,15 +1,13 @@
 <?php
 namespace App\Service;
-//use Facebook;
 use Mail;
-//use App\TnlModel\WData;
+use Exception;
+
 class HelperService {
 	// create_at to timeago
 	public function toW3CTime(){
 		return \Carbon\Carbon::now()->toW3cString();
 	}
-
-
 
 	// 送出 SMS
 	public function sent_single_sms($phone_number,$message){
@@ -73,7 +71,7 @@ class HelperService {
 
 
     // 21 天
-    public function Send21Email($toData = []){
+    public function SendPreviewEmail($toData = []){
     	try{
     		if(strpos($toData['email'],'@yahoo') || strpos($toData['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
@@ -85,16 +83,35 @@ class HelperService {
                 config(['mail.password' => env('MAIL_PASSWORD')]);
             }
             try {
-                Mail::send('thegreattipsy.email.preview21',$toData,function($m) use ($toData){
+                Mail::send('thegreattipsy.email.preview'.$toData['type'],$toData,function($m) use ($toData){
                     $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
                     $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
 
                     $m->to($toData['email'], $toData['name']);
-                    $m->subject('21');
-                    $m->attach($pathToFile, ['as' => $display, 'mime' => 'audio/mp3']);
+                    switch ($toData['type']) {
+                    	case 'D21':
+                    		$m->subject('21');
+                    		$m->attach($pathToFile, ['as' => $display, 'mime' => 'audio/mp3']);
+                    		break;
+                    	case 'D14':
+                    		$m->subject('14');
+                    		break;
+                    	case 'D10':
+                    		$m->subject('10');
+                    		break;
+                    	case 'D05':
+                    		$m->subject('05');
+                    		break;
+                    	case 'D01':
+                    		$m->subject('01');
+                    		$m->attach($pathToFile, ['as' => $display, 'mime' => 'audio/mp3']);
+                    		break;
+                    }
+                    
                 });
-
+                // 送件紀錄
+                
             } catch (Exception $e){
                 Log::error($e);
             }

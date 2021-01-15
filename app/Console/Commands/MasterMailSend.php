@@ -66,18 +66,18 @@ class MasterMailSend extends Command
                         'id'    => $ord->id,
                         'name'  => $ord->name,
                         'email' => $ord->email,
-                        'type'  => 21
+                        'type'  => 'D21'
                     ];
                     while($needSend){
                         // 信件寄送
-                        // SLS::Send21Email($toData);
+                        // SLS::SendPreviewEmail($toData);
                         // 判斷是否有其他信箱需要寄送
                         if($teamMail && count($teamMail)>$teamNum){
                             $toData = [
                                 'id'    => $ord->id,
                                 'name'  => $teamMail[$teamNum]->name,
                                 'email' => $teamMail[$teamNum]->email,
-                                'type'  => 21
+                                'type'  => 'D21'
                             ];
                             $teamNum++;
                         } else {
