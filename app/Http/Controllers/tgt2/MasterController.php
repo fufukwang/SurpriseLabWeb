@@ -80,12 +80,36 @@ class MasterController extends Controller
                     // 檢查確認日期補寄信件
                     $now = time();
                     $lim = strtotime($order->day.' '.$order->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
+                    $day = round( ($lim - $now) / 1440 );
                     // 寄送 A 信件
-                    if($day>=21){
-
+                    $toData = [
+                        'id'    => $order->id,
+                        'name'  => $request->name,
+                        'email' => $email
+                    ];
+                    // 信件補送
+                    /*
+                    if($day <= 30240){ // 24 * 60 * 21
+                        $toData['type'] = "D21";
+                        SLS::SendPreviewEmail($toData);
                     }
-
+                    if($day <= 20160){ // 24 * 60 * 14
+                        $toData['type'] = "D14";
+                        SLS::SendPreviewEmail($toData);
+                    }
+                    if($day <= 14400){ // 24 * 60 * 10
+                        $toData['type'] = "D10";
+                        SLS::SendPreviewEmail($toData);
+                    }
+                    if($day <= 7200){ // 24 * 60 * 5
+                        $toData['type'] = "D05";
+                        SLS::SendPreviewEmail($toData);
+                    }
+                    if($day <= 1440){ // 24 * 60 
+                        $toData['type'] = "D01";
+                        SLS::SendPreviewEmail($toData);
+                    }
+                    */
                     return response()->json(["success"=>true]);
                 }
             } else {

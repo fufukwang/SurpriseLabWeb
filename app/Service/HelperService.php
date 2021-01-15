@@ -2,6 +2,7 @@
 namespace App\Service;
 use Mail;
 use Exception;
+use App\model\club\SendMail;
 
 class HelperService {
 	// create_at to timeago
@@ -111,7 +112,7 @@ class HelperService {
                     
                 });
                 // 送件紀錄
-                
+
             } catch (Exception $e){
                 Log::error($e);
             }

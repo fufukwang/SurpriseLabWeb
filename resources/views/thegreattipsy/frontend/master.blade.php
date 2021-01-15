@@ -221,7 +221,7 @@
                         $('#masterPage').hide();
                         $('#masterSuccess').fadeIn();
                     } else {
-                        alert('服務繁忙中請稍後在試!');
+                        alert('可使用通知數量已滿!');
                         window.location.reload(true);
                         console.log('失敗')
                     }
