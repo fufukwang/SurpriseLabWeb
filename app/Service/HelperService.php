@@ -71,7 +71,7 @@ class HelperService {
 
 
 
-    // 21 天
+    // 行前提醒信件寄送
     public function SendPreviewEmail($toData = []){
     	try{
     		if(strpos($toData['email'],'@yahoo') || strpos($toData['email'],'@hotmail')) {
@@ -112,7 +112,12 @@ class HelperService {
                     
                 });
                 // 送件紀錄
-
+                /*
+                SendMail::insert([
+                	'email'    => $toData['email'],
+                	'order_id' => $toData['id'],
+                ]);
+                */
             } catch (Exception $e){
                 Log::error($e);
             }
