@@ -116,6 +116,7 @@ class HelperService {
                 SendMail::insert([
                 	'email'    => $toData['email'],
                 	'order_id' => $toData['id'],
+                    'type'     => $toData['type'],
                 ]);
                 */
             } catch (Exception $e){
