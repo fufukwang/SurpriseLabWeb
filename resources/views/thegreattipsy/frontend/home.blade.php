@@ -719,8 +719,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             地址
                         </div>
                         <p>
-                            台北市中⼼、咖啡⾊、紅色捷運沿線、易達性⾼<br/>
-                            確切地點，將於完成劃位後告知
+                            富邦藝旅 Folio Hotel（台北市大安區信義路四段30巷23號）<br/>
+                            台北市中心、咖啡色、紅色捷運沿線、易達性高
                         </p>
                     </div>
                 </div>
