@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\model\tgt2\order;
 use App\model\tgt2\TeamMail;
-
+use App\model\tgt2\SendMail;
 use DB;
 use Response;
 use Carbon\Carbon;
@@ -85,10 +85,11 @@ class MasterController extends Controller
                     $toData = [
                         'id'    => $order->id,
                         'name'  => $request->name,
-                        'email' => $email
+                        'email' => $email,
+                        'type'  => "DX" // 邀請信件
                     ];
                     // 信件補送
-                    /*
+                    SLS::SendPreviewEmail($toData);
                     if($day <= 30240){ // 24 * 60 * 21
                         $toData['type'] = "D21";
                         SLS::SendPreviewEmail($toData);
@@ -109,12 +110,57 @@ class MasterController extends Controller
                         $toData['type'] = "D01";
                         SLS::SendPreviewEmail($toData);
                     }
-                    */
                     return response()->json(["success"=>true]);
                 }
             } else {
                 return response()->json(["success"=>false]);
             }
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return response()->json(["success"=>false]);
+        }
+    }
+
+
+
+
+
+
+    // 後台控制
+    public function getMasterAndSend(Request $request){
+        try{
+            // 驗證登入
+            if(!$request->session()->has('key')){
+                return redirect('login')->send();
+            } else {
+                $this->user = $request->session()->get('key');
+            }
+            if($this->user->thegreattipsy == 0 && $this->user->tgt2 == 0){
+                return redirect('/welcome')->send()->with('message','權限不足!');
+            }
+            $order_id = $request->order_id;
+            // 取得訂單資料
+            $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
+            $order = $order->select('name','day','rang_start','tgt2order.id','tel','email')->where('tgt2order.id',$order_id)->where('pay_status','已付款')->first();
+            // 取得人員資料
+            $slave = TeamMail::where('order_id',$order_id)->get();
+            // 取得寄信資料
+            $send = SendMail::where('order_id',$order_id)->get();
+            // 塞成一個物件送往前台
+            return response()->json([
+                'success' => true,
+                'master' => $order,
+                'slave' => $slave,
+                'send' => $send
+            ]);
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return response()->json(["success"=>false]);
+        }
+    }
+    public function postReSendMail(Request $request){
+        try{
+
         } catch (Exception $exception) {
             Log::error($exception);
             return response()->json(["success"=>false]);

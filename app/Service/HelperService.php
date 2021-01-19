@@ -2,7 +2,7 @@
 namespace App\Service;
 use Mail;
 use Exception;
-use App\model\club\SendMail;
+use App\model\tgt2\SendMail;
 
 class HelperService {
 	// create_at to timeago
@@ -93,7 +93,7 @@ class HelperService {
                     switch ($toData['type']) {
                     	case 'D21':
                     		$m->subject('21');
-                    		$m->attach($pathToFile, ['as' => $display, 'mime' => 'audio/mp3']);
+                    		$m->attach(storage_path('mp3/D21.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
                     		break;
                     	case 'D14':
                     		$m->subject('14');
@@ -106,19 +106,20 @@ class HelperService {
                     		break;
                     	case 'D01':
                     		$m->subject('01');
-                    		$m->attach($pathToFile, ['as' => $display, 'mime' => 'audio/mp3']);
+                    		$m->attach(storage_path('mp3/D01.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
                     		break;
+                        case 'DX':
+                            $m->subject('X');
+                            break;
                     }
                     
                 });
                 // 送件紀錄
-                /*
                 SendMail::insert([
                 	'email'    => $toData['email'],
                 	'order_id' => $toData['id'],
                     'type'     => $toData['type'],
                 ]);
-                */
             } catch (Exception $e){
                 Log::error($e);
             }

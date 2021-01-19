@@ -181,7 +181,10 @@
                                                 <td class="actions">
                                                     @if($row->pay_status=='已付款')
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
-                                                    <a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a>
+                                                    <a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a><br />
+
+
+                                                    <!-- <a class="btn btn-primary btn-xs MasterBtn" href="javascript:;" data-id="{{ $row->id }}"><i class="fa fa-envelope"></i>test</a> -->
                                                     @endif
                                                 </td>
                                                 <td class="actions">
@@ -494,6 +497,85 @@
 
 
 
+
+
+
+                            <div id="master_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title">揪團表</h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-box">
+                            <h4 class="m-t-0 header-title"><b>成員列表</b></h4>
+                            <p class="text-muted font-13 m-b-25" id="MasterTitle">
+                                日期
+                            </p>
+
+                            <table class="table table-bordered table-hover m-0">
+
+                                <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th>email</th>
+                                        <th>電話</th>
+                                        <!--th>功能</th-->
+                                    </tr>
+                                </thead>
+                                <tbody id="MasterBody"></tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="card-box">
+                            <h4 class="m-t-0 header-title"><b>寄信紀錄</b></h4>
+                            <p class="text-muted font-13 m-b-25">
+                                信件紀錄(不包含劃位完成信件)
+                            </p>
+
+                            <table class="table table-bordered table-hover m-0">
+                                <thead>
+                                    <tr>
+                                        <th>email</th>
+                                        <th>類型</th>
+                                        <th>時間</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="SendBody"></tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">關閉</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal -->
+
                 <!-- Footer -->
                 <footer class="footer text-right">
                     <div class="container">
@@ -763,6 +845,28 @@ $(function(){
             $.Notification.notify('error','bottom left','請輸入作廢的原因', '發票作廢失敗');
         }
     });
+    // master
+    $('.MasterBtn').bind('click',function(){
+        var id = $(this).data('id');
+        $.post('/thegreattipsyS2/getMasterData',{'order_id': id},function(data){
+            if(data.success){
+                $('#MasterTitle').html('場次:'+data.master.day+' '+data.master.rang_start+'(第一筆為主揪)');
+                $('#MasterBody').html('<tr><td>'+data.master.name+'</td><td>'+data.master.email+'</td><td>'+data.master.tel+'</td></tr>');
+                for(row in data.slave){
+                    $('#MasterBody').append('<tr><td>'+row.name+'</td><td>'+row.email+'</td><td>'+row.tel+'</td><td></td></tr>');
+                }
+                $('#SendBody').html('');
+                for(row in data.send){
+                    $('#SendBody').append('<tr><td>'+row.email+'</td><td>'+row.type+'</td><td>'+row.created_at+'</td></tr>');
+                }
+                $('#master_modal').modal('show');
+            } else {
+                $.Notification.notify('error','bottom left','無法開啟內容', '內容錯誤');
+            }
+        },'json');
+    });
+
+
 });
 function shb2c(){
     if($('input[name="Category"]:checked').val() == 'B2C'){

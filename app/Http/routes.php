@@ -253,6 +253,14 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('order/inv/single/open','tgt2\InvController@singleInvOpne');
         Route::post('order/inv/mult/open','tgt2\InvController@muInvOpen');
         Route::post('order/inv/cancal','tgt2\InvController@InvClose');
+
+        // 主揪相關
+        Route::post('getMasterData', 'tgt2\MasterController@getMasterAndSend');
+        Route::post('postReSendMail', 'tgt2\MasterController@postReSendMail');
+        Route::get('getMasterList','tgt2\MasterController@postReSendMail');
+        Route::get('getMaster/{id}/edit','tgt2\MasterController@postReSendMail');
+        Route::post('postMaster/{id}/store','tgt2\MasterController@postReSendMail');
+        Route::post('postMaster/{id}/delete','tgt2\MasterController@postReSendMail');
     });
 
 
