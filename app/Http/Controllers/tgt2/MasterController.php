@@ -196,7 +196,7 @@ class MasterController extends Controller
             $data = [
                 'name'     => $request->name,
                 'tel'      => $request->tel,
-                'email'    => $email,
+                'email'    => $request->email,
             ];
             TeamMail::where('id',$id)->update($data);
             return response()->json(["success"=>true]);
