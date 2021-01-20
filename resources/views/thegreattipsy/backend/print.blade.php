@@ -361,9 +361,9 @@
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
                                             <tr>
-                                                <td>微醺大飯店：1980s</td>
-                                                <td id="inv_people"></td>
-                                                <td>張</td>
+                                                <td>微醺大飯店：1980s(<span  id="inv_people"></span>人)</td>
+                                                <td>1</td>
+                                                <td>組</td>
                                                 <td id="inv_price"></td>
                                                 <td id="inv_amt"></td>
                                             </tr>
@@ -783,9 +783,9 @@ $(function(){
                 'CarrierType' : $('input[name="CarrierType"]:checked').val(),
                 'CarrierNum' : $('#CarrierNum').val(),
                 'LoveCode' : $('#LoveCode').val(),
-                'ItemName' : '微醺大飯店：1980s',
+                'ItemName' : '微醺大飯店：1980s('+$('#inv_people').text()+'人票)',
                 'ItemCount' : $('#inv_people').text(),
-                'ItemUnit' : '張',
+                'ItemUnit' : '組',
                 'ItemPrice' : $('#inv_price').text(),
                 'ItemAmt' : $('#inv_amt').text(),
                 'Comment' : $('#LoveCode').val(),
@@ -913,11 +913,13 @@ function calAmt(){
     $('#Amt').val(totleamt - now_tax);
     if($('input[name="Category"]:checked').val() == 'B2C'){
         //$('#inv_price').text(totleamt / people);
-        $('#inv_price').text(Math.round(totleamt / people *100)/100);
+        //$('#inv_price').text(Math.round(totleamt / people *100)/100);
+        $('#inv_price').text(totleamt);
         $('#inv_amt').text(totleamt);
     } else {
-        var itemPrice = Math.round((totleamt - now_tax) / people);
-        $('#inv_price').text(itemPrice);
+        //var itemPrice = Math.round((totleamt - now_tax) / people);
+        //$('#inv_price').text(itemPrice);
+        $('#inv_price').text(totleamt - now_tax);
         $('#inv_amt').text(totleamt - now_tax);
     }
 }

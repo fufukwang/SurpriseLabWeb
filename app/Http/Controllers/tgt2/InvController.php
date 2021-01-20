@@ -188,16 +188,16 @@ class InvController extends Controller
                     'CarrierNum' => rawurlencode(''),
                     'LoveCode' => '',
                     'PrintFlag' => 'Y',
-                    'ItemName' => '微醺大飯店票券', //多項商品時，以「|」分開
-                    'ItemCount' => $row->pople, //多項商品時，以「|」分開
-                    'ItemUnit' => '張', //多項商品時，以「|」分開
+                    'ItemName' => '微醺大飯店票券('.$row->pople.'人票)', //多項商品時，以「|」分開
+                    'ItemCount' => 1, //多項商品時，以「|」分開
+                    'ItemUnit' => '組', //多項商品時，以「|」分開
                     'ItemPrice' => $totleamt / $row->pople, //多項商品時，以「|」分開
                     'ItemAmt' => $totleamt, //多項商品時，以「|」分開
                     'Comment' => $last_four,
                     'Status' => '1' //1=立即開立，0=待開立，3=延遲開立
                 ];
                 $result = $this->inv_sent($post_data_array);
-                Log::error($result);
+                // Log::error($result);
                 $results = json_decode($result['web_info'],true);
                 $r = json_decode($results['Result'],true);
                 inv::insert([
@@ -239,9 +239,9 @@ class InvController extends Controller
                 'CarrierNum' => rawurlencode($request->CarrierNum),
                 'LoveCode' => $request->LoveCode,
                 'PrintFlag' => 'Y',
-                'ItemName' => '微醺大飯店票券', //多項商品時，以「|」分開
-                'ItemCount' => $request->ItemCount, //多項商品時，以「|」分開
-                'ItemUnit' => '張', //多項商品時，以「|」分開
+                'ItemName' => '微醺大飯店票券('.$request->ItemCount.'人票)', //多項商品時，以「|」分開
+                'ItemCount' => 1, //多項商品時，以「|」分開
+                'ItemUnit' => '組', //多項商品時，以「|」分開
                 'ItemPrice' => $request->ItemPrice, //多項商品時，以「|」分開
                 'ItemAmt' => $request->ItemAmt, //多項商品時，以「|」分開
                 'Comment' => $request->Comment,
