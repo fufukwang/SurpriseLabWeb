@@ -14,6 +14,7 @@ use Response;
 use Carbon\Carbon;
 use Mail;
 use Log;
+use SLS;
 use Redirect;
 use Exception;
 
@@ -36,8 +37,6 @@ class MasterController extends Controller
                     ->whereRaw("MD5(tgt2order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")
                     ->first();
                 if($order){
-
-
                     return view('thegreattipsy.frontend.master',compact('order'));
                 } else {
                     return "<script>alert('不在範圍!');window.location='/thegreattipsy/index.html';</script>";
@@ -80,7 +79,7 @@ class MasterController extends Controller
                     // 檢查確認日期補寄信件
                     $now = time();
                     $lim = strtotime($order->day.' '.$order->rang_start);
-                    $day = round( ($lim - $now) / 1440 );
+                    $hour = round( ($lim - $now) / 60 );
                     // 寄送 A 信件
                     $toData = [
                         'id'    => $order->id,
@@ -90,23 +89,23 @@ class MasterController extends Controller
                     ];
                     // 信件補送
                     SLS::SendPreviewEmail($toData);
-                    if($day <= 30240){ // 24 * 60 * 21
+                    if($hour <= 30240){ // 24 * 60 * 21
                         $toData['type'] = "D21";
                         SLS::SendPreviewEmail($toData);
                     }
-                    if($day <= 20160){ // 24 * 60 * 14
+                    if($hour <= 20160){ // 24 * 60 * 14
                         $toData['type'] = "D14";
                         SLS::SendPreviewEmail($toData);
                     }
-                    if($day <= 14400){ // 24 * 60 * 10
+                    if($hour <= 14400){ // 24 * 60 * 10
                         $toData['type'] = "D10";
                         SLS::SendPreviewEmail($toData);
                     }
-                    if($day <= 7200){ // 24 * 60 * 5
+                    if($hour <= 7200){ // 24 * 60 * 5
                         $toData['type'] = "D05";
                         SLS::SendPreviewEmail($toData);
                     }
-                    if($day <= 1440){ // 24 * 60 
+                    if($hour <= 1440){ // 24 * 60 
                         $toData['type'] = "D01";
                         SLS::SendPreviewEmail($toData);
                     }
@@ -129,15 +128,7 @@ class MasterController extends Controller
     // 後台控制
     public function getMasterAndSend(Request $request){
         try{
-            // 驗證登入
-            if(!$request->session()->has('key')){
-                return redirect('login')->send();
-            } else {
-                $this->user = $request->session()->get('key');
-            }
-            if($this->user->thegreattipsy == 0 && $this->user->tgt2 == 0){
-                return redirect('/welcome')->send()->with('message','權限不足!');
-            }
+            $this->checkPower($request);
             $order_id = $request->order_id;
             // 取得訂單資料
             $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
@@ -158,12 +149,85 @@ class MasterController extends Controller
             return response()->json(["success"=>false]);
         }
     }
+    // 重送
     public function postReSendMail(Request $request){
         try{
-
+            $this->checkPower($request);
+            $toData = [
+                'id'    => $request->id,
+                'name'  => $request->name,
+                'email' => $request->email,
+                'type'  => $request->type,
+            ];
+            // 信件補送
+            SLS::SendPreviewEmail($toData);
+            return response()->json(["success"=>true]);
         } catch (Exception $exception) {
             Log::error($exception);
             return response()->json(["success"=>false]);
+        }
+    }
+    // 團員們
+    public function getMasterList(Request $request){
+        try{
+            $this->checkPower($request);
+
+            $master = TeamMail::orderBy('updated_at','desc');
+            if($request->has('search')){
+                $search = $request->search;
+                $master = $master->whereRaw("(
+                    tel LIKE '%{$search}%' AND
+                    name LIKE '%{$search}%' AND
+                    email LIKE '%{$search}%'
+                )");
+            }
+
+            $master = $master->paginate(20);
+            return view('thegreattipsy.backend.master',compact('master','request'));
+        } catch (Exception $exception) {
+            Log::error($exception);
+            abort(404);
+        }
+    }
+    // 修改內容
+    public function postMasterStore(Request $request,$id){
+        try{
+            $this->checkPower($request);
+            $data = [
+                'name'     => $request->name,
+                'tel'      => $request->tel,
+                'email'    => $email,
+            ];
+            TeamMail::where('id',$id)->update($data);
+            return response()->json(["success"=>true]);
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return response()->json(["success"=>false]);
+        }
+    }
+    // 刪除人員
+    public function postMasterDelete(Request $request,$id){
+        try{
+            $this->checkPower($request);
+            TeamMail::where('id',$id)->delete();
+            return response()->json(["success"=>true]);
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return response()->json(["success"=>false]);
+        }
+    }
+
+
+
+    private function checkPower(Request $request){
+        // 驗證登入
+        if(!$request->session()->has('key')){
+            return redirect('login')->send();
+        } else {
+            $this->user = $request->session()->get('key');
+        }
+        if($this->user->thegreattipsy == 0 && $this->user->tgt2 == 0){
+            return redirect('/welcome')->send()->with('message','權限不足!');
         }
     }
 }

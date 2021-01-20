@@ -55,7 +55,7 @@ class MasterMailSend extends Command
             $day01 = 1440; // 24 * 60 * 1
             // 找出時間內的場次
             $pr21day = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/1440)-floor(UNIX_TIMESTAMP()/1440)={$day21}")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60)-floor(UNIX_TIMESTAMP()/60)={$day21}")->get();
             foreach($pr21day as $pro){
                 // 找出正常的訂單
                 $order21 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
@@ -91,7 +91,7 @@ class MasterMailSend extends Command
 
             // 14
             $pr14day = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/1440)-floor(UNIX_TIMESTAMP()/1440)={$day14}")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60)-floor(UNIX_TIMESTAMP()/60)={$day14}")->get();
             foreach($pr14day as $pro){
                 // 找出正常的訂單
                 $order14 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
@@ -126,7 +126,7 @@ class MasterMailSend extends Command
             }
             // 10
             $pr10day = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/1440)-floor(UNIX_TIMESTAMP()/1440)={$day10}")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60)-floor(UNIX_TIMESTAMP()/60)={$day10}")->get();
             foreach($pr10day as $pro){
                 // 找出正常的訂單
                 $order10 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
@@ -161,7 +161,7 @@ class MasterMailSend extends Command
             }
             // 5
             $pr05day = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/1440)-floor(UNIX_TIMESTAMP()/1440)={$day05}")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60)-floor(UNIX_TIMESTAMP()/60)={$day05}")->get();
             foreach($pr05day as $pro){
                 // 找出正常的訂單
                 $order05 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
@@ -196,7 +196,7 @@ class MasterMailSend extends Command
             }
             // 1
             $pr01day = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/1440)-floor(UNIX_TIMESTAMP()/1440)={$day01}")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60)-floor(UNIX_TIMESTAMP()/60)={$day01}")->get();
             foreach($pr01day as $pro){
                 // 找出正常的訂單
                 $order01 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
