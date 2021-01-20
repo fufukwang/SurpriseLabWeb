@@ -173,7 +173,7 @@
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
                                                 <th>@forelse(App\model\tgt2\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt2\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
-<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{$totle_money-round($totle_money*5/100)}}<br>稅額：{{round($totle_money*5/100)}}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
+<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
 </th>
                                                 <td>{{ $row->manage }}</td>
 
@@ -181,10 +181,10 @@
                                                 <td class="actions">
                                                     @if($row->pay_status=='已付款')
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
-                                                    <a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a><br />
+                                                    <!--a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a><br /-->
 
 
-                                                    <!-- <a class="btn btn-primary btn-xs MasterBtn" href="javascript:;" data-id="{{ $row->id }}"><i class="fa fa-envelope"></i>test</a> -->
+                                                    <a class="btn btn-primary btn-xs MasterBtn" href="javascript:;" data-id="{{ $row->id }}"><i class="fa fa-users"></i>團員</a>
                                                     @endif
                                                 </td>
                                                 <td class="actions">
@@ -852,11 +852,11 @@ $(function(){
             if(data.success){
                 $('#MasterTitle').html('場次:'+data.master.day+' '+data.master.rang_start+'(第一筆為主揪)');
                 $('#MasterBody').html('<tr><td>'+data.master.name+'</td><td>'+data.master.email+'</td><td>'+data.master.tel+'</td></tr>');
-                for(row in data.slave){
-                    $('#MasterBody').append('<tr><td>'+row.name+'</td><td>'+row.email+'</td><td>'+row.tel+'</td><td></td></tr>');
+                for(row of data.slave){
+                    $('#MasterBody').append('<tr><td><a href="/thegreattipsyS2/getMasterList?search='+row.name+'" target="_blank">'+row.name+'</a></td><td><a href="/thegreattipsyS2/getMasterList?search='+row.email+'" target="_blank">'+row.email+'</a></td><td><a href="/thegreattipsyS2/getMasterList?search='+row.tel+'" target="_blank">'+row.tel+'</a></td></tr>');
                 }
                 $('#SendBody').html('');
-                for(row in data.send){
+                for(row of data.send){
                     $('#SendBody').append('<tr><td>'+row.email+'</td><td>'+row.type+'</td><td>'+row.created_at+'</td></tr>');
                 }
                 $('#master_modal').modal('show');
@@ -907,7 +907,8 @@ function calAmt(){
     var taxrate = $('#TaxRate').val();
     var people = $('#inv_people').text();
     var totleamt = $('#TotalAmt').val();
-    var now_tax = Math.round(totleamt*taxrate/100);
+    var now_tax = totleamt - Math.round(totleamt / (1 + (taxrate/100)));
+    // var now_tax = Math.round(totleamt*taxrate/100);
     $('#TaxAmt').val(now_tax);
     $('#Amt').val(totleamt - now_tax);
     if($('input[name="Category"]:checked').val() == 'B2C'){

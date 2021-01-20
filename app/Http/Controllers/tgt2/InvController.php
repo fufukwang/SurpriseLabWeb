@@ -166,7 +166,7 @@ class InvController extends Controller
                           
                     }
                 }
-                $taxamt = $totleamt * 5 / 100;
+                $taxamt = $totleamt - round($totleamt / (1 + (5 / 100)));
                 $post_data_array = [
                     'RespondType' => 'JSON',
                     'Version' => '1.4',

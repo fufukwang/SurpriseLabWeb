@@ -74,14 +74,14 @@
                                                 <td class="actions">
                                                     <a href="javascript:;" class="btn btn-info btn-xs edit_info" data-id="{{ $row->id }}">修改</a>
 
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="DX">當天</a>
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D21">21</a>
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D14">14</a>
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D10">10</a>
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D05">05</a>
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D01">01</a>
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="加入列表的通知信件">當天</a>
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D21" data-toggle="tooltip" data-placement="top" data-original-title="寄送21天前的通知信">21</a>
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送25天前的通知信">14</a>
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送10天前的通知信">10</a>
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D05" data-toggle="tooltip" data-placement="top" data-original-title="寄送5天前的通知信">05</a>
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D01" data-toggle="tooltip" data-placement="top" data-original-title="寄送1天前的通知信">01</a>
 
-                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-id="{{ $row->id }}"><i class="fa fa-remove"></i></a>
+                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-id="{{ $row->id }}" data-toggle="tooltip" data-placement="top" data-original-title="刪除此筆資料"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
 @empty
