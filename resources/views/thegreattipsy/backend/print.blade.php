@@ -516,6 +516,13 @@
                             <p class="text-muted font-13 m-b-25" id="MasterTitle">
                                 日期
                             </p>
+                            <p class="text-muted font-13 m-b-25">
+<!-- Target -->
+<textarea id="copyMe" class="form-control"></textarea>
+
+<!-- Trigger -->
+<button class="btn btnClip" data-clipboard-target="#copyMe">複製文字</button>
+                            </p>
 
                             <table class="table table-bordered table-hover m-0">
 
@@ -633,6 +640,7 @@
         <!-- Notification js -->
         <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
         <script src="/backstage/plugins/notifications/notify-metro.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
         <script>
 
 
@@ -859,15 +867,17 @@ $(function(){
                 for(row of data.send){
                     $('#SendBody').append('<tr><td>'+row.email+'</td><td>'+row.type+'</td><td>'+row.created_at+'</td></tr>');
                 }
+                $("#copyMe").val("https://www.surpriselab.com.tw/thegreattipsy/master?id="+data.master.md5id+"&sn="+data.master.sn);
                 $('#master_modal').modal('show');
             } else {
                 $.Notification.notify('error','bottom left','無法開啟內容', '內容錯誤');
             }
         },'json');
     });
-
-
+    new ClipboardJS('.btnClip');
 });
+
+
 function shb2c(){
     if($('input[name="Category"]:checked').val() == 'B2C'){
         $('.b2b').hide();

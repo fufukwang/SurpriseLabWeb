@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
         //Commands\Inspire::class,
         //Commands\SmsSent::class,
         Commands\ClubSentMail::class,
+        Commands\MasterMailSend::class,
     ];
 
     /**
@@ -26,8 +27,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        //$schedule->command('sms:sent')->dailyAt('8:00');
-        //$schedule->command('inspire')->hourly();
+        // 簡訊已停用
+        // $schedule->command('sms:sent')->dailyAt('8:00');
+        // 每小時檢查並發送鳩團信件(等待開啟中)
+        // $schedule->command('team:sentmail')->hourly();
         // 中午12點寄送信件及簡訊
         // $schedule->command('club:sentmail')->dailyAt('12:00');  // 191121 取消寄送
 

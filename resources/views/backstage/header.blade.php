@@ -156,6 +156,7 @@
                             <li><a href="/thegreattipsyS2/backmes">Backme</a></li>
                             <li><a href="/thegreattipsyS2/coupons">Coupon</a></li>
                             <li><a href="/thegreattipsyS2/print">Order</a></li>
+                            <li><a href="/thegreattipsyS2/getMasterList">Master</a></li>
 
                         </ul>
                     </li>

@@ -132,7 +132,12 @@ class MasterController extends Controller
             $order_id = $request->order_id;
             // 取得訂單資料
             $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
-            $order = $order->select('name','day','rang_start','tgt2order.id','tel','email')->where('tgt2order.id',$order_id)->where('pay_status','已付款')->first();
+            $order = $order->select('name','day','rang_start','tgt2order.id','tel','email','sn')->where('tgt2order.id',$order_id)->where('pay_status','已付款')->first();
+            if($order){
+                $order->md5id = md5($order->id);
+            } else {
+                return response()->json(["success"=>false]);
+            }
             // 取得人員資料
             $slave = TeamMail::where('order_id',$order_id)->get();
             // 取得寄信資料
