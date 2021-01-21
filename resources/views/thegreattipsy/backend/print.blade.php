@@ -867,7 +867,14 @@ $(function(){
                 for(row of data.send){
                     $('#SendBody').append('<tr><td>'+row.email+'</td><td>'+row.type+'</td><td>'+row.created_at+'</td></tr>');
                 }
-                $("#copyMe").val("https://www.surpriselab.com.tw/thegreattipsy/master?id="+data.master.md5id+"&sn="+data.master.sn);
+                @if(env('APP_ENV') == 'production')
+                var Host = 'www.surpriselab.com.tw';
+                var Protocol = 'https';
+                @else
+                var Host = 'dev.surpriselab.com.tw';
+                var Protocol = 'http';
+                @endif
+                $("#copyMe").val(Protocol+"://"+Host+"/thegreattipsy/master?id="+data.master.md5id+"&sn="+data.master.sn);
                 $('#master_modal').modal('show');
             } else {
                 $.Notification.notify('error','bottom left','無法開啟內容', '內容錯誤');
