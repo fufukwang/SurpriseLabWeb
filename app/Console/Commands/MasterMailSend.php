@@ -10,7 +10,6 @@ use App\model\club\pro;
 use App\model\club\order;
 use App\model\club\TeamMail;
 use log;
-use Exception;
 use SLS;
 
 class MasterMailSend extends Command
