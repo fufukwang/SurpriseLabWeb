@@ -6,11 +6,13 @@ use Exception;
 use Illuminate\Console\Command;
 use Mail;
 use Illuminate\Support\Facades\Storage;
-use App\model\club\pro;
-use App\model\club\order;
-use App\model\club\TeamMail;
+use App\model\tgt2\pro;
+use App\model\tgt2\order;
+use App\model\tgt2\TeamMail;
 use log;
 use SLS;
+
+// use DB;
 
 class MasterMailSend extends Command
 {
@@ -52,6 +54,14 @@ class MasterMailSend extends Command
             $day10 = 14400; // 24 * 60 * 10
             $day05 = 7200; // 24 * 60 * 5
             $day01 = 1440; // 24 * 60 * 1
+            /*
+            $pros = pro::select(DB::raw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60)-floor(UNIX_TIMESTAMP()/60) AS A,rang_start"))
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60)-floor(UNIX_TIMESTAMP()/60)>=0")->get();
+                $this->line(count($pros));
+            foreach($pros as $pro){
+                $this->line($pro->A.'|'.$pro->rang_start);
+            }
+            */
             // 找出時間內的場次
             $pr21day = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60)-floor(UNIX_TIMESTAMP()/60)={$day21}")->get();
