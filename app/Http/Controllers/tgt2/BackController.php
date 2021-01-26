@@ -73,9 +73,9 @@ class BackController extends Controller
                     config(['mail.password' => env('MAIL_TGT_PASS')]);
                 }
                 Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
-                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
                     $m->to($data['xls']->email, $data['xls']->name);
                     $m->subject('【微醺大飯店：1980s】劃位序號信件');
@@ -170,9 +170,9 @@ class BackController extends Controller
 
 
             Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
-                $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
                 $m->to($data['xls']->email, $data['xls']->name);
                 $m->subject('【微醺大飯店：1980s】劃位序號信件');
@@ -484,9 +484,9 @@ class BackController extends Controller
                     config(['mail.password' => env('MAIL_TGT_PASS')]);
                 }
                 Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
-                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
                     $m->to($mailer['email'], $mailer['name']);
                     $m->subject('【微醺大飯店：1980s】訂位確認信件');
@@ -666,9 +666,9 @@ class BackController extends Controller
         }
 
         Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
-            $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-            $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-            $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+            $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+            $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+            $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
             $m->to($mailer['email'], $mailer['name']);
             $m->subject('【微醺大飯店：1980s】訂位確認信件');

@@ -85,9 +85,9 @@ class HelperService {
             }
             try {
                 Mail::send('thegreattipsy.email.preview'.$toData['type'],$toData,function($m) use ($toData){
-                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
                     $m->to($toData['email'], $toData['name']);
                     switch ($toData['type']) {

@@ -261,9 +261,9 @@ class FrontController extends Controller
                 }
                 try {
                     Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
-                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
-                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店');
+                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
                         $m->to($mailer['email'], $mailer['name']);
                         $m->subject('【微醺大飯店：1980s】訂位確認信件');
