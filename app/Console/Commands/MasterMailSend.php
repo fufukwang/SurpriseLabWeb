@@ -21,7 +21,7 @@ class MasterMailSend extends Command
      *
      * @var string
      */
-    protected $signature = 'team:sentmail';
+    protected $signature = 'team:sentmail {hour}';
 
     /**
      * The console command description.
@@ -48,6 +48,9 @@ class MasterMailSend extends Command
     public function handle()
     {
         try {
+            $hour = $this->argument('hour');
+            $this->line($hour);
+            return true;
             // 定義時間
             $day21 = 504;// 30240; // 24  * 21
             $day14 = 336;// 20160; // 24  * 14
@@ -242,5 +245,16 @@ class MasterMailSend extends Command
             Log::error($exception);
         }
     }
-
+    // 11 點執行
+    private function checkHour11(){
+        // 當天簡訊
+    }
+    // 17 點執行
+    private function checkHour17(){
+        // 前 21.14.10 天信件
+    }
+    // 18 點執行
+    private function checkHour18(){
+        // 前10天簡訊
+    }
 }

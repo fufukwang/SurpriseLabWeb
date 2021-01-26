@@ -33,6 +33,9 @@ class Kernel extends ConsoleKernel
         // $schedule->command('team:sentmail')->hourly();
         // 中午12點寄送信件及簡訊
         // $schedule->command('club:sentmail')->dailyAt('12:00');  // 191121 取消寄送
-
+        // 要求各項時間
+        // $schedule->command('')->dailyAt('13:00'); // 前21.14.10天 寄送信件
+        // $schedule->command('')->dailyAt('13:00'); // 前10天寄送簡訊
+        // $schedule->command('')->dailyAt('11:00'); // 前一天寄送簡訊
     }
 }
