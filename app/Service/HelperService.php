@@ -12,23 +12,25 @@ class HelperService {
 
 	// 送出 SMS
 	public function sent_single_sms($phone_number,$message){
-		//$message = "[ 嘿！你有一則來自《明日俱樂部》的訊息 ]\n\n一切即將開始 - 進入以下連結，你將與《明日俱樂部》正式連接：https://bit.ly/316nSWM \n\n記住，連結將在期限內自動銷毀，請把握時間。";
-		//$message = "[你有一則來自《明日俱樂部》的新訊息]\n\n你的進入申請已送出。\n請立刻點擊以下連結，與《明日俱樂部》正式連接。\n連結將在期限內自動銷毀，請把握時間：http://bit.ly/316nSWM";
-		//$message = "[嘿！你有一則來自《明日俱樂部》的新訊息。]\n\n通往另一個世界的大門，將在以下連結內開啟。\n連結將在期限內自動銷毀，請把握時間：https://pse.is/JH4R4";
-	    $client = new \GuzzleHttp\Client();
-	    $response = $client->request('POST','https://api.smartdove.net/index.php?r=smsApi/SendOneSms', [
-	      'headers' => [
-	        'Content-Type' => 'application/x-www-form-urlencoded'
-	      ],
-	      'form_params' => [
-	        'token'        => env('SMS_API_TOKEN'),
-	        'phone_number' => $phone_number,
-	        'content'      => $message,
-	        //'campaign_id'  =>
-	        //'response_url' =>
-	      ]
-	    ]);
-	    return json_decode($response->getBody(),true);
+		try{
+            $client = new \GuzzleHttp\Client();
+            $response = $client->request('POST','https://api.smartdove.net/index.php?r=smsApi/SendOneSms', [
+              'headers' => [
+                'Content-Type' => 'application/x-www-form-urlencoded'
+              ],
+              'form_params' => [
+                'token'        => env('SMS_API_TOKEN'),
+                'phone_number' => $phone_number,
+                'content'      => $message,
+                //'campaign_id'  =>
+                //'response_url' =>
+              ]
+            ]);
+            // return json_decode($response->getBody(),true);
+        } catch (Exception $e){
+            Log::error($e);
+        }
+	    
 	}
 
 	// 送出 EMAIL
@@ -92,24 +94,23 @@ class HelperService {
                     $m->to($toData['email'], $toData['name']);
                     switch ($toData['type']) {
                     	case 'D21':
-                    		$m->subject('21');
-                    		$m->attach(storage_path('mp3/D21.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
+                    		$m->subject('【微醺大飯店：1980s】 還記得你即將前來開幕酒會嗎？');
                     		break;
                     	case 'D14':
-                    		$m->subject('14');
+                    		$m->subject('【微醺大飯店：1980s】 準備好以適合的樣貌前往過去了嗎？');
+                            $m->attach(storage_path('mp3/D21.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
                     		break;
                     	case 'D10':
-                    		$m->subject('10');
+                    		$m->subject('【微醺大飯店：1980s】 十三項您需要知道的行前注意事項 / 0000 00:00');
                     		break;
                     	case 'D05':
-                    		$m->subject('05');
+                    		$m->subject('【微醺大飯店：1980s】 ');
                     		break;
-                    	case 'D01':
-                    		$m->subject('01');
-                    		$m->attach(storage_path('mp3/D01.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
+                    	case 'D00':
+                    		$m->subject('【微醺大飯店：1980s】 ');
                     		break;
                         case 'DX':
-                            $m->subject('X');
+                            $m->subject('【微醺大飯店：1980s】 開幕酒會邀請函');
                             break;
                     }
                     

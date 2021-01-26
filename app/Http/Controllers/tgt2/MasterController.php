@@ -65,7 +65,7 @@ class MasterController extends Controller
                     return response()->json(["success"=>false]);
                 } else {
                     // MAX人數加4
-                    if(TeamMail::where('order_id',$order->id)->count() > $order->pople + 4){
+                    if(TeamMail::where('order_id',$order->id)->count() > $order->pople + 3){
                         return response()->json(["success"=>false]);
                     }
                     
@@ -109,6 +109,7 @@ class MasterController extends Controller
                         $toData['type'] = "D01";
                         SLS::SendPreviewEmail($toData);
                     }
+                    SLS::sent_single_sms($request->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
                     return response()->json(["success"=>true]);
                 }
             } else {
