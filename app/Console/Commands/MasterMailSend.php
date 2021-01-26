@@ -49,6 +49,12 @@ class MasterMailSend extends Command
     {
         try {
             $hour = $this->argument('hour');
+            switch ((int)$hour) {
+                case 11: $this->checkHour11(); break;
+                case 17: $this->checkHour17(); break;
+                case 18: $this->checkHour18(); break;
+            }
+            /*
             $this->line($hour);
             return true;
             // 定義時間
@@ -57,6 +63,7 @@ class MasterMailSend extends Command
             $day10 = 240;// 14400; // 24  * 10
             $day05 = 120;// 7200; // 24  * 5
             $day01 = 24;// 1440; // 24  * 1
+            */
             /*
             $pros = pro::select(DB::raw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60/60)-floor(UNIX_TIMESTAMP()/60/60) AS A,rang_start"))
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60/60)-floor(UNIX_TIMESTAMP()/60/60)>=0")->get();
@@ -65,6 +72,7 @@ class MasterMailSend extends Command
                 $this->line($pro->A.'|'.$pro->rang_start);
             }
             */
+            /*
             // 找出時間內的場次
             $pr21day = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/60/60)-floor(UNIX_TIMESTAMP()/60/60)={$day21}")->get();
@@ -241,6 +249,7 @@ class MasterMailSend extends Command
                     }
                 }
             }
+            */
         } catch (Exception $exception) {
             Log::error($exception);
         }
@@ -248,13 +257,91 @@ class MasterMailSend extends Command
     // 11 點執行
     private function checkHour11(){
         // 當天簡訊
+        try {
+            $message = "敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s";
+            $proday = pro::select('id')->where('open',1)
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=0")->get();
+            foreach($proday as $pro){
+                $ordernow = order::select('id','tel')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                foreach ($ordernow as $ord) {
+                    SLS::sent_single_sms($ord->tel,$message);
+                    $teamMail = TeamMail::select('tel')->where('order_id',$ord->id)->get();
+                    foreach ($teamMail as $tm) {
+                        SLS::sent_single_sms($tm->tel,$message);
+                    }
+                }
+            }
+        } catch (Exception $exception) {
+            Log::error($exception);
+        }
     }
     // 17 點執行
     private function checkHour17(){
-        // 前 21.14.10 天信件
+        // 前 21.14.10 天信件 (10 天信需要場次資訊)
+        try {
+            // 21 天
+            $pr21day = pro::select('id')->where('open',1)
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=21")->get();
+            foreach($pr21day as $pro){
+                // 找出正常的訂單
+                $order21 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                foreach ($order21 as $ord) {
+                    $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                    $needSend = true;
+                    $teamNum = 0;
+                    // 主揪 信件變數組合
+                    $toData = [
+                        'id'    => $ord->id,
+                        'name'  => $ord->name,
+                        'email' => $ord->email,
+                        'type'  => 'D21'
+                    ];
+                    while($needSend){
+                        // 信件寄送
+                        SLS::SendPreviewEmail($toData);
+                        // 判斷是否有其他信箱需要寄送
+                        if($teamMail && count($teamMail)>$teamNum){
+                            $toData = [
+                                'id'    => $ord->id,
+                                'name'  => $teamMail[$teamNum]->name,
+                                'email' => $teamMail[$teamNum]->email,
+                                'type'  => 'D01'
+                            ];
+                            $teamNum++;
+                        } else {
+                            $needSend = false;
+                        }
+                    }
+                }
+            }
+            // 14 天
+
+            //10 天
+
+        } catch (Exception $exception) {
+            Log::error($exception);
+        }
     }
     // 18 點執行
     private function checkHour18(){
         // 前10天簡訊
+        try {
+            try {
+            $message = "敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s";
+            $proday = pro::select('id')->where('open',1)
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=10")->get();
+            foreach($proday as $pro){
+                $ordernow = order::select('id','tel')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                foreach ($ordernow as $ord) {
+                    SLS::sent_single_sms($ord->tel,$message);
+                    $teamMail = TeamMail::select('tel')->where('order_id',$ord->id)->get();
+                    foreach ($teamMail as $tm) {
+                        SLS::sent_single_sms($tm->tel,$message);
+                    }
+                }
+            }
+        } catch (Exception $exception) {
+            Log::error($exception);
+        }
     }
 }
