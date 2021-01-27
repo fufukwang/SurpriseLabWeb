@@ -79,7 +79,7 @@ class MasterController extends Controller
                     // 檢查確認日期補寄信件
                     $now = time();
                     $lim = strtotime($order->day.' '.$order->rang_start);
-                    $hour = round( ($lim - $now) / 60 );
+                    $day = round( ($lim - $now) / 86400 );
                     // 寄送 A 信件
                     $toData = [
                         'id'    => $order->id,
@@ -90,24 +90,24 @@ class MasterController extends Controller
                     // 信件補送
                     SLS::SendPreviewEmail($toData);
                     /*
-                    if($hour <= 30240){ // 24 * 60 * 21
+                    if($day <= 21){
                         $toData['type'] = "D21";
                         SLS::SendPreviewEmail($toData);
                     }
-                    if($hour <= 20160){ // 24 * 60 * 14
+                    if($day <= 14){
                         $toData['type'] = "D14";
                         SLS::SendPreviewEmail($toData);
                     }
-                    if($hour <= 14400){ // 24 * 60 * 10
+                    if($day <= 10){
                         $toData['type'] = "D10";
                         SLS::SendPreviewEmail($toData);
                     }
-                    if($hour <= 7200){ // 24 * 60 * 5
+                    if($day <= 5){
                         $toData['type'] = "D05";
                         SLS::SendPreviewEmail($toData);
                     }
-                    if($hour <= 1440){ // 24 * 60 
-                        $toData['type'] = "D01";
+                    if($day == 0){
+                        $toData['type'] = "D00";
                         SLS::SendPreviewEmail($toData);
                     }
                     */
@@ -157,7 +157,7 @@ class MasterController extends Controller
             return response()->json(["success"=>false]);
         }
     }
-    // 重送
+    // 重送 MAIL
     public function postReSendMail(Request $request){
         try{
             $this->checkPower($request);
@@ -169,6 +169,28 @@ class MasterController extends Controller
             ];
             // 信件補送
             SLS::SendPreviewEmail($toData);
+            return response()->json(["success"=>true]);
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return response()->json(["success"=>false]);
+        }
+    }
+    // 重送 SMS
+    public function postReSendSMS(Request $request){
+        try{
+            $this->checkPower($request);
+            $tel = $request->tel;
+            switch ($request->type) {
+                case 'DX':
+                    SLS::sent_single_sms($tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
+                    break;
+                case 'D10':
+                    SLS::sent_single_sms($tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
+                    break;
+                case 'D00':
+                    SLS::sent_single_sms($tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
+                    break;
+            }
             return response()->json(["success"=>true]);
         } catch (Exception $exception) {
             Log::error($exception);

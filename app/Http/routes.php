@@ -257,6 +257,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         // 主揪相關
         Route::post('getMasterData', 'tgt2\MasterController@getMasterAndSend');
         Route::post('postReSendMail', 'tgt2\MasterController@postReSendMail');
+        Route::post('postReSendSMS', 'tgt2\MasterController@postReSendSMS');
         Route::get('getMasterList','tgt2\MasterController@getMasterList');
         // Route::get('getMaster/{id}/edit','tgt2\MasterController@postReSendMail');
         Route::post('postMaster/{id}/store','tgt2\MasterController@postMasterStore');

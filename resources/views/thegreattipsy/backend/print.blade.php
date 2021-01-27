@@ -523,6 +523,18 @@
 <!-- Trigger -->
 <button class="btn btnClip" data-clipboard-target="#copyMe">複製文字</button>
                             </p>
+                            <p class="text-muted font-13 m-b-25">
+                                主揪(訂位者)補寄功能
+                                <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會邀請函">邀請函</a>
+                                <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D21" data-toggle="tooltip" data-placement="top" data-original-title="寄送21天前的通知信">21</a>
+                                <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送14天前的通知信">14</a>
+                                <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送10天前的通知信">10</a>
+                                <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D05" data-toggle="tooltip" data-placement="top" data-original-title="寄送5天前的通知信">05</a>
+
+                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會簡訊邀請函">邀請函</a>
+                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="寄送10天前的通知簡訊">10</a>
+                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
+                            </p>
 
                             <table class="table table-bordered table-hover m-0">
 
@@ -877,6 +889,10 @@ $(function(){
                 var Protocol = 'http';
                 @endif
                 $("#copyMe").val(Protocol+"://"+Host+"/thegreattipsy/master?id="+data.master.md5id+"&sn="+data.master.sn);
+                $('.send_mail,.send_sms').data('id',id);
+                $('.send_mail,.send_sms').data('name',data.master.name);
+                $('.send_mail').data('email',data.master.email);
+                $('.send_sms').data('tel',data.master.tel);
                 $('#master_modal').modal('show');
             } else {
                 $.Notification.notify('error','bottom left','無法開啟內容', '內容錯誤');
@@ -884,6 +900,34 @@ $(function(){
         },'json');
     });
     new ClipboardJS('.btnClip');
+    $('.send_mail').bind('click',function(){
+        var id  = $(this).data('id');
+        var type  = $(this).data('type');
+        var name  = $(this).data('name');
+        var email  = $(this).data('email');
+        $.post('/thegreattipsyS2/postReSendMail',{
+            name: name,
+            id: id,
+            email: email,
+            type: type,
+        },function(data){
+            $.Notification.notify('success','bottom left','已更新', '已重新送出');
+        },'json');
+    });
+    $('.send_sms').bind('click',function(){
+        var id  = $(this).data('id');
+        var type  = $(this).data('type');
+        var name  = $(this).data('name');
+        var tel  = $(this).data('tel');
+        $.post('/thegreattipsyS2/postReSendSMS',{
+            name: name,
+            id: id,
+            tel: tel,
+            type: type,
+        },function(data){
+            $.Notification.notify('success','bottom left','已更新', '已重新送出');
+        },'json');
+    });
 });
 
 
