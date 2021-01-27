@@ -18,6 +18,7 @@ use Carbon\Carbon;
 use Mail;
 use Log;
 use Redirect;
+use SLS;
 
 class FrontController extends Controller
 {
@@ -270,6 +271,7 @@ class FrontController extends Controller
                     });
                     $order->is_send = 1;
                     $order->save();
+                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                 } catch (Exception $e){
                     Log::error($e);
                 }
