@@ -477,6 +477,7 @@ class BackController extends Controller
                     'email' => $data['email'],
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn
                 ];
                 if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
                     config(['mail.host' => 'smtp.gmail.com']);
@@ -658,6 +659,7 @@ class BackController extends Controller
             'email' => $request->email,
             'name'  => $request->name,
             'gday'  => $rangStart.'/'.$rangEnd,
+            'master'=> "?id=".md5($request->oid)."&sn=".$request->sn
         ];
         if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
             config(['mail.host' => 'smtp.gmail.com']);

@@ -74,12 +74,16 @@
                                                 <td class="actions">
                                                     <a href="javascript:;" class="btn btn-info btn-xs edit_info" data-id="{{ $row->id }}">修改</a>
 
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="加入列表的通知信件">當天</a>
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會邀請函">邀請函</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D21" data-toggle="tooltip" data-placement="top" data-original-title="寄送21天前的通知信">21</a>
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送25天前的通知信">14</a>
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送14天前的通知信">14</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送10天前的通知信">10</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D05" data-toggle="tooltip" data-placement="top" data-original-title="寄送5天前的通知信">05</a>
-                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D01" data-toggle="tooltip" data-placement="top" data-original-title="寄送1天前的通知信">01</a>
+
+
+                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會簡訊邀請函">邀請函</a>
+                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="寄送10天前的通知簡訊">10</a>
+                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
 
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id="{{ $row->id }}" data-toggle="tooltip" data-placement="top" data-original-title="刪除此筆資料"><i class="fa fa-remove"></i></a>
                                                 </td>
@@ -208,7 +212,20 @@ $(function(){
             $.Notification.notify('success','bottom left','已更新', '已重新送出');
         },'json');
     });
-
+    $('.send_sms').bind('click',function(){
+        var id  = $(this).data('id');
+        var type  = $(this).data('type');
+        var name  = $(this).data('name');
+        var tel  = $(this).data('tel');
+        $.post('/thegreattipsyS2/postReSendSMS',{
+            name: name,
+            id: id,
+            tel: tel,
+            type: type,
+        },function(data){
+            $.Notification.notify('success','bottom left','已更新', '已重新送出');
+        },'json');
+    });
 });
 
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif

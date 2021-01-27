@@ -180,7 +180,7 @@
 
                                                 <td class="actions">
                                                     @if($row->pay_status=='已付款')
-                                                    <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
+                                                    <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}" data-sn="{{ $row->sn }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
                                                     <!--a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a><br /-->
 
 
@@ -681,11 +681,13 @@ $(function(){
         var id    = $(this).data('id');
         var pople = $(this).data('pople');
         var oid   = $(this).data('oid');
+        var sn    = $(this).data('sn');
         $.post('/thegreattipsyS2/order/'+id+'/resent',{
             name  : name,
             email : email,
             pople : pople,
-            oid   : oid
+            oid   : oid,
+            sn    : sn
         },function(data){
             $.Notification.notify('success','bottom left','已重發', '信件已重新發送');
         },'json');

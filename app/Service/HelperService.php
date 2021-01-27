@@ -98,15 +98,12 @@ class HelperService {
                     		break;
                     	case 'D14':
                     		$m->subject('【微醺大飯店：1980s】 準備好以適合的樣貌前往過去了嗎？');
-                            $m->attach(storage_path('mp3/D21.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
+                            // $m->attach(storage_path('mp3/D21.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
                     		break;
                     	case 'D10':
                     		$m->subject('【微醺大飯店：1980s】 十三項您需要知道的行前注意事項 / 0000 00:00');
                     		break;
                     	case 'D05':
-                    		$m->subject('【微醺大飯店：1980s】 ');
-                    		break;
-                    	case 'D00':
                     		$m->subject('【微醺大飯店：1980s】 ');
                     		break;
                         case 'DX':

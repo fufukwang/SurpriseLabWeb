@@ -1,15 +1,13 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
     <head>
-		<meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>【微醺大飯店：1980s】訂位確認信件</title>
-<style type="text/css">p{margin:10px 0;padding:0}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{display:block;margin:0;padding:0}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}#outlook a{padding:0}img{-ms-interpolation-mode:bicubic}table{mso-table-lspace:0;mso-table-rspace:0}.ReadMsgBody{width:100%}.ExternalClass{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td{line-height:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}#bodyTable,#templateFooter,body{background-color:#281f1c}#bodyCell{border-top:0}#templateContainer{border:0}h1{color:#fff!important;display:block;font-family:Helvetica;font-size:40px;font-style:normal;font-weight:700;line-height:100%;letter-spacing:-1px;margin:0;text-align:center}h2{color:#000!important;display:block;font-family:Helvetica;font-size:36px;font-style:normal;font-weight:700;line-height:125%;letter-spacing:-.75px;margin:0;text-align:center}h3{color:#606060!important;display:block;font-family:Helvetica;font-size:18px;font-style:normal;font-weight:700;line-height:125%;letter-spacing:-.5px;margin:0;text-align:left}h4{color:grey!important;display:block;font-family:Helvetica;font-size:16px;font-style:normal;font-weight:700;line-height:125%;letter-spacing:normal;margin:0;text-align:left}#templatePreheader{background-color:#281f1c;border-top:0;border-bottom:0}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left}.preheaderContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}#templateHeader{background-color:#281f1c;border-top:0;border-bottom:0}.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}.headerContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}#templateBody{background-color:#281f1c;border-top:0;border-bottom:0}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}.bodyContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}#templateColumns{background-color:#281f1c;border-top:0;border-bottom:0}.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:14px;line-height:150%;text-align:center}.leftColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:14px;line-height:150%;text-align:center}.rightColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}#templateFooter{border-top:0;border-bottom:0}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}}@media only screen and (max-width:480px){body{width:100%!important;min-width:100%!important}}@media only screen and (max-width:480px){#bodyCell{padding-top:10px!important}}@media only screen and (max-width:480px){.templateContainer{max-width:600px!important;width:100%!important}}@media only screen and (max-width:480px){.columnsContainer{display:block!important;max-width:600px!important;padding-bottom:18px!important;padding-left:0!important;width:100%!important}}@media only screen and (max-width:480px){.mcnRetinaImage{max-width:100%!important}}@media only screen and (max-width:480px){.mcnImage{height:auto!important;width:100%!important}}@media only screen and (max-width:480px){.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}}@media only screen and (max-width:480px){.mcnBoxedTextContentContainer{min-width:100%!important}}@media only screen and (max-width:480px){.mcnImageGroupContent{padding:9px!important}}@media only screen and (max-width:480px){.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}}@media only screen and (max-width:480px){.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}}@media only screen and (max-width:480px){.mcnImageCardBottomImageContent{padding-bottom:9px!important}}@media only screen and (max-width:480px){.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}}@media only screen and (max-width:480px){.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}}@media only screen and (max-width:480px){.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}}@media only screen and (max-width:480px){.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}}@media only screen and (max-width:480px){.mcpreview-image-uploader{display:none!important;width:100%!important}}@media only screen and (max-width:480px){h1{font-size:24px!important;line-height:125%!important}}@media only screen and (max-width:480px){h2{font-size:20px!important;line-height:125%!important}}@media only screen and (max-width:480px){h3{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){h4{font-size:16px!important;line-height:125%!important}}@media only screen and (max-width:480px){.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){#templatePreheader{display:block!important}}@media only screen and (max-width:480px){.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}@media only screen and (max-width:480px){.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}</style></head>
+        <title>【微醺大飯店：1980s】訂位確認信件</title>
+<style type="text/css">
+p{margin:10px 0;padding:0}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{display:block;margin:0;padding:0}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}#outlook a{padding:0}img{-ms-interpolation-mode:bicubic}table{mso-table-lspace:0;mso-table-rspace:0}.ReadMsgBody{width:100%}.ExternalClass{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td{line-height:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}#bodyTable,#templateFooter,body{background-color:#281f1c}#bodyCell{border-top:0}#templateContainer{border:0}h1{color:#fff!important;display:block;font-family:Helvetica;font-size:40px;font-style:normal;font-weight:700;line-height:100%;letter-spacing:-1px;margin:0;text-align:center}h2{color:#000!important;display:block;font-family:Helvetica;font-size:36px;font-style:normal;font-weight:700;line-height:125%;letter-spacing:-.75px;margin:0;text-align:center}h3{color:#606060!important;display:block;font-family:Helvetica;font-size:18px;font-style:normal;font-weight:700;line-height:125%;letter-spacing:-.5px;margin:0;text-align:left}h4{color:grey!important;display:block;font-family:Helvetica;font-size:16px;font-style:normal;font-weight:700;line-height:125%;letter-spacing:normal;margin:0;text-align:left}#templatePreheader{background-color:#281f1c;border-top:0;border-bottom:0}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left}.preheaderContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}#templateHeader{background-color:#281f1c;border-top:0;border-bottom:0}.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}.headerContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}#templateBody{background-color:#281f1c;border-top:0;border-bottom:0}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}.bodyContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}#templateColumns{background-color:#281f1c;border-top:0;border-bottom:0}.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:14px;line-height:150%;text-align:center}.leftColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:14px;line-height:150%;text-align:center}.rightColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}#templateFooter{border-top:0;border-bottom:0}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}}@media only screen and (max-width:480px){body{width:100%!important;min-width:100%!important}}@media only screen and (max-width:480px){#bodyCell{padding-top:10px!important}}@media only screen and (max-width:480px){.templateContainer{max-width:600px!important;width:100%!important}}@media only screen and (max-width:480px){.columnsContainer{display:block!important;max-width:600px!important;padding-bottom:18px!important;padding-left:0!important;width:100%!important}}@media only screen and (max-width:480px){.mcnRetinaImage{max-width:100%!important}}@media only screen and (max-width:480px){.mcnImage{height:auto!important;width:100%!important}}@media only screen and (max-width:480px){.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}}@media only screen and (max-width:480px){.mcnBoxedTextContentContainer{min-width:100%!important}}@media only screen and (max-width:480px){.mcnImageGroupContent{padding:9px!important}}@media only screen and (max-width:480px){.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}}@media only screen and (max-width:480px){.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}}@media only screen and (max-width:480px){.mcnImageCardBottomImageContent{padding-bottom:9px!important}}@media only screen and (max-width:480px){.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}}@media only screen and (max-width:480px){.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}}@media only screen and (max-width:480px){.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}}@media only screen and (max-width:480px){.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}}@media only screen and (max-width:480px){.mcpreview-image-uploader{display:none!important;width:100%!important}}@media only screen and (max-width:480px){h1{font-size:24px!important;line-height:125%!important}}@media only screen and (max-width:480px){h2{font-size:20px!important;line-height:125%!important}}@media only screen and (max-width:480px){h3{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){h4{font-size:16px!important;line-height:125%!important}}@media only screen and (max-width:480px){.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){#templatePreheader{display:block!important}}@media only screen and (max-width:480px){.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}@media only screen and (max-width:480px){.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{font-size:18px!important;line-height:125%!important}}@media only screen and (max-width:480px){.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}</style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
-        <!--*|IF:MC_PREVIEW_TEXT|*-->
-        <!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">期待您的前來，也請務必完成信中交辦的任務 ── 微醺旅程將因此展開。</span><!--<![endif]-->
-        <!--*|END:IF|*-->
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
                 <tr>
@@ -21,7 +19,7 @@
                                     <!-- BEGIN PREHEADER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
                                         <tr>
-                                        	<td align="center" valign="top">
+                                            <td align="center" valign="top">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
                                                     <tr>
                                                         <td valign="top" class="preheaderContainer" style="padding-top:10px; padding-bottom:10px;"></td>
@@ -50,7 +48,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/5c1bed85-369b-42dc-9752-a8c808034ecf.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/0e2bd271-77e8-4cec-9c4d-f4410947afd6.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -80,40 +78,29 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #FFE0BA;font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">
                         
-                            <p style="color: #FFE0BA;font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">預約日期：{{ $day }}<br>
+                            <p style="color: #FFE0BA;font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">預約日期：
+{{ $day }}<br><br>
+​​場次：{{ $time }}<br>
+（ 演出時間壹佰貳拾分鐘 ）<br>
 <br>
-預約人數：{{ $pople }} 位<br>
-<br>
-場次：{{ $time }}<br>
-演出時間壹佰貳拾分鐘<br>
-<br>
-<strong>—— 注意：請提前 00 分鐘報到&nbsp;—— </strong><br>
-遲到者將無法入場，<u>亦無法退費</u>。</p>
+​​預約人數：{{ $pople }}位</p>
 
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
@@ -121,53 +108,39 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #E5AD5C;font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">
                         
-                            <p style="color: #E5AD5C;font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="color:#e5ad5c">地點：富邦藝旅 Folio Hotel<br>
-台北市大安區信義路四段30巷23號</span></p>
+                            <p style="color: #E5AD5C;font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">地點：106 台北市大安區<br>
+信義路四段30巷23號<br>
+<br>
+<strong>—— 注意：請提前15分鐘報到&nbsp;—— </strong><br>
+遲到者將無法入場，<u>亦無法退費</u>。<br>
+&nbsp;</p>
 
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
-    <tbody class="mcnImageBlockOuter">
-            <tr>
-                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
-                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
-                        <tbody><tr>
-                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
-                                
-                                    
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/83e8b11c-b77d-4b8d-8e0e-7a4eb0d258dc.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
-                                    
-                                
-                            </td>
-                        </tr>
-                    </tbody></table>
-                </td>
-            </tr>
     </tbody>
 </table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
@@ -177,7 +150,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 18px; padding: 18px;">
-                                <a class="mcnButton " title="開啟《賓客身份登錄頁》" href="https://surpriselab.com.tw/thegreattipsy/master{{ $master }}" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">開啟《賓客身份登錄頁》</a>
+                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97&dates={{ $gday }}&location=106%20台北市大安區信義路四段30巷23號&details=嘿，別忘了來，<br>依你舒適的裝扮，<br>記得提早15分鐘抵達。<br><br>期待，你的來訪。<br><br>Yours+Truly,<br>微醺管家+Mr.Tipsy&sf=true" target="_blank" style="font-weight: bold;letter-spacing: 3px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">加入行事曆</a>
                             </td>
                         </tr>
                     </tbody>
@@ -194,7 +167,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/5337dec7-a22e-402f-969f-9ba03e34bca2.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/adf04ea4-88c5-416b-805e-bcd7dafc712d.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -202,56 +175,6 @@
                     </tbody></table>
                 </td>
             </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 9px;background-color: #E5AD5C;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 18px; padding: 18px;">
-                                <a class="mcnButton " title="開啟《開幕酒會邀請函》" href="https://surpriselab.typeform.com/to/f3AXYSBI" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">開啟《開幕酒會邀請函》</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
-    <tbody class="mcnImageBlockOuter">
-            <tr>
-                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
-                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
-                        <tbody><tr>
-                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
-                                
-                                    
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/fb6b5f72-c5bd-4f16-ac46-c4502098ff37.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
-                                    
-                                
-                            </td>
-                        </tr>
-                    </tbody></table>
-                </td>
-            </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 9px;background-color: #E5AD5C;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 18px; padding: 18px;">
-                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97&dates={{ $gday }}&location=106%20台北市大安區信義路四段30巷23號&details=嘿，別忘了來，<br>依你舒適的裝扮，<br>記得提早抵達。<br><br>期待，你的來訪。<br><br>Yours+Truly,<br>微醺管家+Mr.Tipsy&sf=true" target="_blank" style="font-weight: bold;letter-spacing: 3px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">加入行事曆</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
     </tbody>
 </table></td>
                                                     </tr>
@@ -467,33 +390,38 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
+                        
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            <span style="font-size:10px"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="color:#808080"><em>Copyright © 2021 surpriselab, All rights reserved.</em><br>
+                        
+                            <span style="font-size:10px"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="color:#808080"><em>Copyright © 2018 surpriselab, All rights reserved.</em><br>
 <br>
 <strong>Our mailing address is:</strong><br>
 <a href="mailto:thegreattipsy@surpriselab.com.tw" target="_blank">thegreattipsy@surpriselab.com.tw</a><br>
-</span></span></span>
+<br>
+Want to change how you receive these emails?<br>
+You can </span><a href="*|UPDATE_PROFILE|*"><span style="color:#808080">update your preferences</span></a><span style="color:#808080"> or </span><a href="*|UNSUB|*"><span style="color:#808080">unsubscribe from this list</span></a><span style="color:#808080">.<br>
+<br></span></span></span>
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
@@ -514,3 +442,5 @@
         </center>
     </body>
 </html>
+
+
