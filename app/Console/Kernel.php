@@ -34,8 +34,8 @@ class Kernel extends ConsoleKernel
         // 中午12點寄送信件及簡訊
         // $schedule->command('club:sentmail')->dailyAt('12:00');  // 191121 取消寄送
         // 要求各項時間
-        // $schedule->command('team:sentmail 17')->dailyAt('13:00'); // 前21.14.10天 寄送信件
-        // $schedule->command('team:sentmail 18')->dailyAt('13:00'); // 前10天寄送簡訊
-        // $schedule->command('team:sentmail 11')->dailyAt('11:00'); // 前一天寄送簡訊
+        $schedule->command('team:sentmail 17')->dailyAt('17:00'); // 前21.14.10天 寄送信件
+        $schedule->command('team:sentmail 18')->dailyAt('18:00'); // 前10天寄送簡訊
+        $schedule->command('team:sentmail 11')->dailyAt('11:00'); // 前一天寄送簡訊
     }
 }

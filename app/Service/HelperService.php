@@ -1,6 +1,7 @@
 <?php
 namespace App\Service;
 use Mail;
+use Log;
 use Exception;
 use App\model\tgt2\SendMail;
 
@@ -101,7 +102,9 @@ class HelperService {
                             // $m->attach(storage_path('mp3/D21.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
                     		break;
                     	case 'D10':
-                    		$m->subject('【微醺大飯店：1980s】 十三項您需要知道的行前注意事項 / 0000 00:00');
+                            $day = str_replace('-', '', $toData['day']);
+                            $day = substr($day, 4,10);
+                    		$m->subject('【微醺大飯店：1980s】 十三項您需要知道的行前注意事項 / '.$day);
                     		break;
                     	case 'D05':
                     		$m->subject('【微醺大飯店：1980s】 ');
@@ -118,11 +121,14 @@ class HelperService {
                 	'order_id' => $toData['id'],
                     'type'     => $toData['type'],
                 ]);
+                return true;
             } catch (Exception $e){
                 Log::error($e);
+                return false;
             }
     	} catch (Exception $e){
             Log::error($e);
+            return false;
         }
     }
 

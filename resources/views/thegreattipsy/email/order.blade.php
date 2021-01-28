@@ -100,7 +100,15 @@
 場次：{{ $time }}<br>
 演出時間壹佰貳拾分鐘<br>
 <br>
-<strong>—— 注意：請提前 00 分鐘報到&nbsp;—— </strong><br>
+<?php
+	$min = 0;
+	if($time == '18:30' || $time == '13:00' || $time == '19:00'){
+		$min = 20;
+	} elseif($time=='20:30' || $time == '15:00' || $time == '21:00'){
+		$min = 10;
+	}
+?>
+<strong>—— 注意：請提前 {{ $min }} 分鐘報到&nbsp;—— </strong><br>
 遲到者將無法入場，<u>亦無法退費</u>。</p>
 
                         </td>

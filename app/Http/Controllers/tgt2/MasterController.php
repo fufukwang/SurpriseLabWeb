@@ -89,7 +89,6 @@ class MasterController extends Controller
                     ];
                     // 信件補送
                     SLS::SendPreviewEmail($toData);
-                    /*
                     if($day <= 21){
                         $toData['type'] = "D21";
                         SLS::SendPreviewEmail($toData);
@@ -99,18 +98,18 @@ class MasterController extends Controller
                         SLS::SendPreviewEmail($toData);
                     }
                     if($day <= 10){
+                        $toData['day'] = $order->day.' '.$order->rang_start;
                         $toData['type'] = "D10";
                         SLS::SendPreviewEmail($toData);
+                        SLS::sent_single_sms($request->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
                     }
                     if($day <= 5){
                         $toData['type'] = "D05";
                         SLS::SendPreviewEmail($toData);
                     }
                     if($day == 0){
-                        $toData['type'] = "D00";
-                        SLS::SendPreviewEmail($toData);
+                        SLS::sent_single_sms($request->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
                     }
-                    */
                     SLS::sent_single_sms($request->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
                     return response()->json(["success"=>true]);
                 }
@@ -167,9 +166,17 @@ class MasterController extends Controller
                 'email' => $request->email,
                 'type'  => $request->type,
             ];
+            if($toData['type'] == 'D10'){
+                $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
+                $order = $order->select('day','rang_start')->where('tgt2order.id',$toData['id'])->where('pay_status','已付款')->first();
+                $toData['day'] = $order->day.' '.$order->rang_start;
+            }
             // 信件補送
-            SLS::SendPreviewEmail($toData);
-            return response()->json(["success"=>true]);
+            if(SLS::SendPreviewEmail($toData)){
+                return response()->json(["success"=>true]);
+            } else {
+                return response()->json(["success"=>false]);
+            }
         } catch (Exception $exception) {
             Log::error($exception);
             return response()->json(["success"=>false]);
