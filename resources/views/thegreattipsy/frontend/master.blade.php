@@ -73,8 +73,8 @@
             <!-- form -->
             <form id="master">
                 <!--progress title-->
-                <h3 class="progress-title">微醺大飯店：1980s</h3>
-                <h5>賓客邀請函</h5>
+                <h3 class="progress-title">《微醺大飯店：1980s》</h3>
+                <h5>開幕酒會 賓客身份登錄</h5>
 
                 <!-- fieldsets -->
                 <fieldset class="step step-1" title="微醺大飯店：1980s　賓客邀請函">
@@ -98,7 +98,8 @@
                             </p>
                         </div>                        
                         <p>
-                            請於下方提供您的基本資訊，勾選同意後按下送出<br class="d-sm-inline d-none"/>之後，您將收到一封非常重要的信，請務必收信。
+                            請於下方提供您的基本資訊，勾選同意後按下送出<br class="d-sm-inline d-none"/>之後，您將收到《微醺大飯店》開幕酒會邀請函，<br/>
+                            本封信非常重要，請務必開啟。
                         </p>
                         <div class="sub-title-wrapper">
                             <h4>
@@ -145,19 +146,24 @@
 
         <div class="submit-page success" id="masterSuccess" style="display:none;">
             <div class="container">
-                <h3 class="page-title">微醺大飯店：1980s</h3>
-                <h5>賓客邀請函</h5>
+                <h3 class="page-title">《微醺大飯店：1980s》</h3>
+                <h5>開幕酒會 賓客身份登錄</h5>
                 <p class="page-sub-title">
-                    您的賓客資料已成功送出<br/>
-                    請進入信箱，尋找寄送給你的第一封信
+                    您的賓客資料已成功登錄<br/>
+                    請進入信箱，尋找寄送給你的第一封信<br/>
+                    ── 《微醺大飯店》開幕酒會邀請函
                 </p>
                 <div class="page-info">
                     <p>
-                        請注意，該封信件特別重要，請務必開啟<br/>
-                        也請互相提醒同行友人務必開啟信件
+                        請注意，該封信件特別重要<br/>
+                        請互相提醒同行友人務必開啟信件
                     </p>
                     <p>
                         －期待您的蒞臨－
+                    </p>
+                    <p>
+                        順安,<br/>
+                        微醺大飯店：1980s
                     </p>
                 </div>
                 <div class="feature-btn">
