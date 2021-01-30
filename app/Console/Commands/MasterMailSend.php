@@ -376,6 +376,7 @@ class MasterMailSend extends Command
                                 'id'    => $ord->id,
                                 'name'  => $teamMail[$teamNum]->name,
                                 'email' => $teamMail[$teamNum]->email,
+                                'day'   => $pro->day.' '.$pro->rang_start,
                                 'type'  => 'D10'
                             ];
                             $teamNum++;
