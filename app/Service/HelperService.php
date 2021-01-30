@@ -95,22 +95,22 @@ class HelperService {
                     $m->to($toData['email'], $toData['name']);
                     switch ($toData['type']) {
                     	case 'D21':
-                    		$m->subject('【微醺大飯店：1980s】 還記得你即將前來開幕酒會嗎？');
+                    		$m->subject('還記得你即將前來開幕酒會嗎？');
                     		break;
                     	case 'D14':
-                    		$m->subject('【微醺大飯店：1980s】 準備好以適合的樣貌前往過去了嗎？');
+                    		$m->subject('準備好以適合的樣貌前往過去了嗎？');
                             // $m->attach(storage_path('mp3/D21.mp3'), ['as' => 'voice.mp3', 'mime' => 'audio/mp3']);
                     		break;
                     	case 'D10':
                             $day = str_replace('-', '', $toData['day']);
                             $day = substr($day, 4,10);
-                    		$m->subject('【微醺大飯店：1980s】 十三項您需要知道的行前注意事項 / '.$day);
+                    		$m->subject('十三項您需要知道的行前注意事項 / '.$day);
                     		break;
                     	case 'D05':
-                    		$m->subject('【微醺大飯店：1980s】 ');
+                    		$m->subject('');
                     		break;
                         case 'DX':
-                            $m->subject('【微醺大飯店：1980s】 開幕酒會邀請函');
+                            $m->subject('開幕酒會邀請函');
                             break;
                     }
                     

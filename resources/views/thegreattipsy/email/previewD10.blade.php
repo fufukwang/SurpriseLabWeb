@@ -4,12 +4,12 @@
 <?php
 	$ViewDay = str_replace('-', '/', $day);
 	$ViewDay = substr($ViewDay, 5,11);
-	$time = substr($day, 11);
+	$time = substr($day, 11,5);
 	$dt = '';
 	if($time == '18:30' || $time == '13:00' || $time == '19:00'){
-		$dt = date("H:i", strtotime("20 minutes", strtotime($day)));
+		$dt = date("H:i", strtotime("-20 minutes", strtotime($day)));
 	} elseif($time=='20:30' || $time == '15:00' || $time == '21:00'){
-		$dt = date("H:i", strtotime("10 minutes", strtotime($day)));
+		$dt = date("H:i", strtotime("-10 minutes", strtotime($day)));
 	}
 
 ?>
