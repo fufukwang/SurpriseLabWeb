@@ -490,7 +490,7 @@ class BackController extends Controller
                     $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
                     $m->to($mailer['email'], $mailer['name']);
-                    $m->subject('【微醺大飯店：1980s】訂位確認信件');
+                    $m->subject('訂位確認信 ── 內有重要任務');
                 });
                 $order->is_send = 1;
                 $order->save();
@@ -673,7 +673,7 @@ class BackController extends Controller
             $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
             $m->to($mailer['email'], $mailer['name']);
-            $m->subject('【微醺大飯店：1980s】訂位確認信件');
+            $m->subject('訂位確認信 ── 內有重要任務');
         });
         order::where('id',$request->oid)->update(['is_send'=>1]);
         return Response::json(['message'=> '已更新'], 200);
