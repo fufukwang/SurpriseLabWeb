@@ -39,7 +39,7 @@ class MasterController extends Controller
                 if($order){
                     return view('thegreattipsy.frontend.master',compact('order'));
                 } else {
-                    return "<script>alert('不在範圍!');window.location='/thegreattipsy/index.html';</script>";
+                    return "<script>alert('活動不在範圍!');window.location='/thegreattipsy/index.html';</script>";
                 }
             } else {
                 return "<script>alert('沒編號!');window.location='/thegreattipsy/index.html';</script>";
@@ -62,7 +62,7 @@ class MasterController extends Controller
 
                 $email = $request->email;
                 if(TeamMail::where('order_id',$order->id)->where('email',$email)->count()>0){
-                    return response()->json(["success"=>false]);
+                    return response()->json(["success"=>false,"message"=>"此信箱已完成登錄!"]);
                 } else {
                     // MAX人數加4
                     if(TeamMail::where('order_id',$order->id)->count() > $order->pople + 3){

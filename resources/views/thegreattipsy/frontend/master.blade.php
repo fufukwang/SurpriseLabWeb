@@ -227,7 +227,9 @@
                         $('#masterPage').hide();
                         $('#masterSuccess').fadeIn();
                     } else {
-                        alert('可使用通知數量已滿!');
+                        var message = '可使用通知數量已滿!';
+                        if(typeof data.message != 'undefined') message = data.message;
+                        alert(message);
                         window.location.reload(true);
                         console.log('失敗')
                     }
