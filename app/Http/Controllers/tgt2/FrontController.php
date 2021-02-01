@@ -285,7 +285,7 @@ class FrontController extends Controller
                         'type'  => "DX" // 邀請信件
                     ];
                     // 信件補送
-                    SLS::SendPreviewEmail($toData);
+                    //SLS::SendPreviewEmail($toData);
                     if($day <= 21){
                         $toData['type'] = "D21";
                         SLS::SendPreviewEmail($toData);
@@ -309,7 +309,7 @@ class FrontController extends Controller
                     if($day == 0){
                         SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
                     }
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
+                    // SLS::sent_single_sms($order->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
                 } catch (Exception $e){
                     Log::error($e);
                 }
