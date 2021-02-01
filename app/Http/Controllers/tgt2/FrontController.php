@@ -295,7 +295,7 @@ class FrontController extends Controller
                         SLS::SendPreviewEmail($toData);
                     }
                     if($day <= 10){
-                        $toData['day'] = $order->day.' '.$order->rang_start;
+                        $toData['day'] = $act->day.' '.$act->rang_start;
                         $toData['type'] = "D10";
                         SLS::SendPreviewEmail($toData);
                         SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");

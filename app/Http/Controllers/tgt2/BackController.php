@@ -22,6 +22,7 @@ use Validator;
 use Carbon\Carbon;
 use DB;
 use Log;
+use SLS;
 use Excel;
 
 class BackController extends Controller
