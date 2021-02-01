@@ -43,7 +43,7 @@
 			<td>確認</td>
 			<td>桌號</td>
 			<td>時間</td>
-			<td>姓名</td>
+			<td>姓名(主揪)</td>
 			<td>付款</td>
 			<td>電話</td>
 			<td>人數<!-- 主餐 --></td>
@@ -54,18 +54,34 @@
 		</tr>
 @forelse ($order as $row)
 		<tr>
-			<td></td>
-			<td></td>
-			<td>{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
-{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
+			<td rowspan="2"></td>
+			<td rowspan="2"></td>
+			<td>{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
 			<td>{{ $row->name }}</td>
 			<td>@if($row->pay_type=='現場付款') 現場 @elseif($row->pay_type=='信用卡') 信用卡 @elseif($row->pay_type='後臺編輯') 後台 @endif {{ $row->OM }} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
 			<td>{{ $row->pople }} 人 <!-- {{ implode('/',json_decode($row->meat,true)) }} --> </td>
 			<td>{{ $row->vegetarian }} 人</td>
-			<td>{!! nl2br($row->notes) !!}</td>
-			<td>@forelse(App\model\tgt2\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt2\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
-			<td>{!! nl2br($row->manage) !!}</td>
+			<td rowspan="2">{!! nl2br($row->notes) !!}</td>
+			<td rowspan="2">@forelse(App\model\tgt2\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt2\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
+			<td rowspan="2">{!! nl2br($row->manage) !!}</td>
+		</tr>
+		<tr>
+			<td>團員</td>
+			<td colspan="5">
+				<table>
+					@forelse(App\model\tgt2\TeamMail::where('order_id',$row->id)->get() as $tm)
+					<tr>
+						<td>{{ $tm->name }}</td>
+						<td>{{ $tm->tel }}</td>
+					</tr>
+					@empty
+					<tr>
+						<td colspan="2">尚無團員</td>
+					</tr>
+					@endforelse
+				</table>
+			</td>
 		</tr>
 @empty
 <tr><td colspan="9" align="center">此搜尋條件尚無資料</td></tr>
