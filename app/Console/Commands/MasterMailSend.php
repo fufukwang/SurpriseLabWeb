@@ -257,6 +257,9 @@ class MasterMailSend extends Command
     // 11 點執行
     private function checkHour11(){
         // 當天簡訊
+        if(time()<1612713600){ //  2/8 00:00
+            return false;
+        }
         try {
             $message = "敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s";
             $proday = pro::select('id')->where('open',1)

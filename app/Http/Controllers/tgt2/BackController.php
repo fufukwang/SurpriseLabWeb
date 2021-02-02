@@ -396,6 +396,71 @@ class BackController extends Controller
         if($request->has('pro_id') && $request->pro_id>0){
             $data['pro_id'] = $request->pro_id;
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
+            // 觸發補寄
+            try {
+                $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id')->select('tgt2order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites')->find($id);
+                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_start))));
+                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_end))));
+                $mailer = [
+                    'day'   => Carbon::parse($order->day)->format('Y / m / d'),
+                    'time'  => substr($order->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
+                    'pople' => $order->pople,
+                    'email' => $order->email,
+                    'name'  => $order->tel,
+                    'gday'  => $rangStart.'/'.$rangEnd,
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn
+                ];
+                if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                    config(['mail.host' => 'smtp.gmail.com']);
+                    config(['mail.username' => env('MAIL_TGT_USER')]);
+                    config(['mail.password' => env('MAIL_TGT_PASS')]);
+                }
+                Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
+                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                    $m->to($mailer['email'], $mailer['name']);
+                    $m->subject('訂位確認信 ── 內有重要任務');
+                });
+                SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
+                // 信件補送
+                $now = time();
+                $lim = strtotime($order->day.' '.$order->rang_start);
+                $day = round( ($lim - $now) / 86400 );
+                // 寄送 A 信件
+                $toData = [
+                    'id'    => $order->id,
+                    'name'  => $order->name,
+                    'email' => $order->email,
+                    'type'  => "DX" // 邀請信件
+                ];
+                // 信件補送
+                if($day <= 21){
+                    $toData['type'] = "D21";
+                    SLS::SendPreviewEmail($toData);
+                }
+                if($day <= 14){
+                    $toData['type'] = "D14";
+                    SLS::SendPreviewEmail($toData);
+                }
+                if($day <= 10){
+                    $toData['day'] = $order->day.' '.$order->rang_start;
+                    $toData['type'] = "D10";
+                    SLS::SendPreviewEmail($toData);
+                    SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
+                }
+                /*
+                if($day <= 5){
+                    $toData['type'] = "D05";
+                    SLS::SendPreviewEmail($toData);
+                }
+                */
+                if($day == 0){
+                    SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
+                }
+            } catch (Exception $e){
+                Log::error($e);
+            }
         }
         if(is_numeric($id) && $id>0){
             order::where('id',$id)->update($data);
@@ -495,6 +560,42 @@ class BackController extends Controller
                 });
                 $order->is_send = 1;
                 $order->save();
+                SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
+                // 信件補送
+                $now = time();
+                $lim = strtotime($act->day.' '.$act->rang_start);
+                $day = round( ($lim - $now) / 86400 );
+                // 寄送 A 信件
+                $toData = [
+                    'id'    => $order->id,
+                    'name'  => $order->name,
+                    'email' => $order->email,
+                    'type'  => "DX" // 邀請信件
+                ];
+                // 信件補送
+                if($day <= 21){
+                    $toData['type'] = "D21";
+                    SLS::SendPreviewEmail($toData);
+                }
+                if($day <= 14){
+                    $toData['type'] = "D14";
+                    SLS::SendPreviewEmail($toData);
+                }
+                if($day <= 10){
+                    $toData['day'] = $act->day.' '.$act->rang_start;
+                    $toData['type'] = "D10";
+                    SLS::SendPreviewEmail($toData);
+                    SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
+                }
+                /*
+                if($day <= 5){
+                    $toData['type'] = "D05";
+                    SLS::SendPreviewEmail($toData);
+                }
+                */
+                if($day == 0){
+                    SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
+                }
             }
 
             return redirect('/thegreattipsyS2/pros?')->with('message','新增完成!');
