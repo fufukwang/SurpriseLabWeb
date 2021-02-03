@@ -112,6 +112,9 @@ class HelperService {
                         case 'DX':
                             $m->subject('開幕酒會邀請函');
                             break;
+                        case 'Name':
+                            $m->subject('姓名修改通知');
+                            break;
                     }
                     
                 });

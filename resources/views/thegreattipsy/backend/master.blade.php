@@ -73,7 +73,9 @@
                                                 <td><div class="single-line tel_{{ $row->id }}">{{ $row->tel }}</div></td>
                                                 <td class="actions">
                                                     <a href="javascript:;" class="btn btn-info btn-xs edit_info" data-id="{{ $row->id }}">修改</a>
-
+                                                    @if($row->name == '??' || $row->name == '???')
+                                                    <a href="javascript:;" class="btn btn-inverse btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="Name" data-toggle="tooltip" data-placement="top" data-original-title="姓名錯誤修改通知">通知</a>
+                                                    @endif
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會邀請函">邀請函</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D21" data-toggle="tooltip" data-placement="top" data-original-title="寄送21天前的通知信">21</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送14天前的通知信">14</a>
