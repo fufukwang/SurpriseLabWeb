@@ -124,8 +124,50 @@ class MasterController extends Controller
         }
     }
 
+    // 修正姓名錯誤
+    public function getNameFix(Request $request){
+        try{
+            if($request->has('d') && $request->has('e')){
+                $order_id = $request->d;
+                $email    = $request->e;
+                $tm = TeamMail::whereRaw("MD5(order_id)='".$order_id."' AND MD5(email)='".$email."' AND name LIKE '??%'" )->first();
+                if($tm){
+                    $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
+                    $order = $order->select('name','day','rang_start','tgt2order.id','sn')->where('pay_status','已付款')
+                        ->whereRaw("MD5(tgt2order.id)='".$order_id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")
+                        ->first();
+                    if($order){
 
-
+                        return view('thegreattipsy.frontend.nameFix',compact('order','tm'));
+                    } else {
+                        return "<script>alert('沒有需要修改的資料!');window.location='/thegreattipsy/index.html';</script>";
+                    }
+                } else {
+                    return "<script>alert('沒有需要修改的資料!');window.location='/thegreattipsy/index.html';</script>";
+                }
+            } else {
+                return "<script>alert('參數錯誤!');window.location='/thegreattipsy/index.html';</script>";
+            }
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return "<script>alert('名冊中已有您的姓名!');window.location='/thegreattipsy/index.html';</script>";
+        }
+    }
+    public function postNameFix(Request $request){
+        try{
+            $md5id = $request->id;
+            $tm = TeamMail::whereRaw("MD5(id)='".$md5id."' AND name LIKE '??%'" )->first();
+            if($tm){
+                TeamMail::where('id',$tm->id)->update(['name'=>$request->name]);
+                return response()->json(["success"=>true]);
+            } else {
+                return response()->json(["success"=>false,'message'=>'您的姓名不符合修改條件!']);
+            }
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return response()->json(["success"=>false,'message'=>'您的姓名不符合修改條件!']);
+        }
+    }
 
 
 
@@ -172,6 +214,13 @@ class MasterController extends Controller
                 $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
                 $order = $order->select('day','rang_start')->where('tgt2order.id',$toData['id'])->where('pay_status','已付款')->first();
                 $toData['day'] = $order->day.' '.$order->rang_start;
+            }
+            if($toData['type'] == 'Name'){
+                if(env('APP_ENV') == 'production'){
+                    $toData['link'] = 'https://www.surpriselab.com.tw/thegreattipsy/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
+                } else {
+                    $toData['link'] = 'http://dev.surpriselab.com.tw/thegreattipsy/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
+                }
             }
             // 信件補送
             if(SLS::SendPreviewEmail($toData)){

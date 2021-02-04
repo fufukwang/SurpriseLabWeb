@@ -51,7 +51,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;color:#E3C7A6;font-size: 24px;">
                                 因系統的錯誤，沒記錄到您的姓名。<br/><br />
                                 請點選按鈕或複製以下連結<br /><br />
-                                https://www.surpriselab.com.tw/thegreattipsy/nameFix?id=
+                                {{ $link }}
                             </td>
                         </tr>
                     </tbody></table>
@@ -83,7 +83,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 18px; padding: 18px;">
-                                <a class="mcnButton " title="姓名修改通知" href="https://www.surpriselab.com.tw/thegreattipsy/nameFix?id=" target="_blank" style="font-weight: bold;letter-spacing: 4px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">姓名修改通知</a>
+                                <a class="mcnButton " title="姓名修改通知" href="{{ $link }}" target="_blank" style="font-weight: bold;letter-spacing: 4px;line-height: 100%;text-align: center;text-decoration: none;color: #000000;">姓名修改通知</a>
                             </td>
                         </tr>
                     </tbody>

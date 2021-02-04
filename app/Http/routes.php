@@ -522,6 +522,9 @@ Route::group(['middleware' => ['web']], function () {
         });
         Route::get('master','tgt2\MasterController@getTeamMaster'/*function(){ return view('thegreattipsy.frontend.master'); }*/);
         Route::post('Team/SlaveStore', 'tgt2\MasterController@postTeamSlave');
+        // 姓名修改
+        Route::get('nameFix','tgt2\MasterController@getNameFix');
+        Route::post('Team/NameFix', 'tgt2\MasterController@postNameFix');
 
         Route::get('GetAjaxData','tgt2\FrontController@GetAjaxData');
         Route::post('ReOrderData','tgt2\FrontController@ReOrderData');
