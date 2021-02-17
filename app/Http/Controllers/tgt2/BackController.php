@@ -443,7 +443,7 @@ class BackController extends Controller
                     $toData['type'] = "D14";
                     SLS::SendPreviewEmail($toData);
                 }
-                if($day <= 10){
+                if($day <= 11){
                     $toData['day'] = $order->day.' '.$order->rang_start;
                     $toData['type'] = "D10";
                     SLS::SendPreviewEmail($toData);
@@ -581,7 +581,7 @@ class BackController extends Controller
                     $toData['type'] = "D14";
                     SLS::SendPreviewEmail($toData);
                 }
-                if($day <= 10){
+                if($day <= 11){
                     $toData['day'] = $act->day.' '.$act->rang_start;
                     $toData['type'] = "D10";
                     SLS::SendPreviewEmail($toData);

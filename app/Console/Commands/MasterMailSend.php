@@ -352,9 +352,9 @@ class MasterMailSend extends Command
                     }
                 }
             }
-            //10 天
+            //10 天 // 0217 改 11天
             $pr10day = pro::select('id','day','rang_start')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=10")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=11")->get();
             foreach($pr10day as $pro){
                 // 找出正常的訂單
                 $order14 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
