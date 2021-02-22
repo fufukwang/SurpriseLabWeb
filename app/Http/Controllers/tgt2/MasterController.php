@@ -260,7 +260,16 @@ class MasterController extends Controller
         try{
             $this->checkPower($request);
 
-            $master = TeamMail::orderBy('updated_at','desc');
+            $master = TeamMail::leftJoin('tgt2order', 'tgt2_team_mail.order_id', '=', 'tgt2order.id')->orderBy('tgt2_team_mail.updated_at','desc');
+            $master = $master->select(
+                'tgt2_team_mail.id',
+                'order_id',
+                'tgt2_team_mail.name',
+                'tgt2_team_mail.tel',
+                'tgt2_team_mail.email',
+                'tgt2order.name as master_name',
+                'tgt2order.email as master_email'
+            ); 
             if($request->has('search')){
                 $search = $request->search;
                 $master = $master->whereRaw("(

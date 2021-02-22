@@ -59,6 +59,8 @@
                                     <div class="sticky-table-header fixed-solution" style="width: auto;"><table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
+                                                <th>主揪姓名</th>
+                                                <th>主揪信箱</th>
                                                 <th>姓名</th>
                                                 <th>email</th>
                                                 <th>電話</th>
@@ -68,6 +70,8 @@
                                         <tbody>
 @forelse ($master as $row)
                                             <tr id="tr_{{ $row->id }}">
+                                                <td><a href="/thegreattipsyS2/order/{{ $row->order_id }}/edit?" target="_blank">{{ $row->master_name }}</a></td>
+                                                <td>{{ $row->master_email }}</td>
                                                 <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div></td>
                                                 <td><div class="single-line email_{{ $row->id }}">{{ $row->email }}</div></td>
                                                 <td><div class="single-line tel_{{ $row->id }}">{{ $row->tel }}</div></td>
