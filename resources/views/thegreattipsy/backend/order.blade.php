@@ -45,7 +45,7 @@
                                                 <label class="control-label col-sm-4">日期</label>
                                                 <div class="col-sm-8">
                                                     <select name="pro_id" class="form-control" disabled="true">
-@foreach($pro as $row)<option value="{{ $row->id }}">{{ $row->day }} {{ substr($row->rang_start,0,5)  }} ~ {{ substr($row->rang_end,0,5)  }} (剩餘座位數 {{ $row->sites }})</option>@endforeach
+@foreach($pro as $row)<option value="{{ $row->id }}" data-sites="{{ $row->sites }}">{{ $row->day }} {{ substr($row->rang_start,0,5)  }} ~ {{ substr($row->rang_end,0,5)  }} (剩餘座位數 {{ $row->sites }})</option>@endforeach
                                                     </select>
                                                     <span style="color:red">*不會再次驗證座位是否足夠請警慎使用</span>
                                                 </div>
@@ -85,7 +85,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $order->pople or ''  }}">
+                                                    <input type="text" class="form-control" name="people" readonly value="{{ $order->pople or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -234,6 +234,16 @@ $('.change_day').bind('click',function(){
     $('.hpro_id').hide();
     $('.spro_id').show();
     $('select[name=pro_id]').prop('disabled',false);
+});
+$('form').bind('submit',function(){
+    if(!$('select[name=pro_id]').prop('disabled')){
+        var sites = $('select[name=pro_id] option:selected').data('sites');
+        var people = $('input[name=people]').val();
+        if(people > sites){
+            alert('座位數不足無法修改');
+            return false;
+        }
+    }
 });
         });
 
