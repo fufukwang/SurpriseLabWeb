@@ -199,6 +199,25 @@ class InvController extends Controller
                 $result = $this->inv_sent($post_data_array);
                 // Log::error($result);
                 $results = json_decode($result['web_info'],true);
+                if($results['Status'] != 'LIB10003'){
+                    if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
+                } else {
+                    $r['InvoiceNumber'] = '';
+                }
+                $inv = inv::where('order_id',$row->id)->first();
+                if($inv){
+                    $inv->is_cancal = 0;
+                    $inv->save();
+                } else {
+                    inv::insert([
+                        'order_id'  => $row->id,
+                        'number'    => $r['InvoiceNumber'],
+                        'is_cancal' => 0,
+                        'sent_obj'  => json_encode($post_data_array),
+                        'results'   => $result['web_info']
+                    ]);    
+                }
+                /*
                 $r = json_decode($results['Result'],true);
                 inv::insert([
                     'order_id'  => $row->id,
@@ -207,6 +226,8 @@ class InvController extends Controller
                     'sent_obj'  => json_encode($post_data_array),
                     'results'   => $result['web_info']
                 ]);
+
+                */
             }
             return redirect('/thegreattipsyS2/print?')->with('message','發票開立完成!');
         } catch (Exception $exception) {
