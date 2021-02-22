@@ -106,8 +106,14 @@
 @endforelse
                                         </tbody>
                                     </table>
-                                    <div>
+                                    <div class="form-group col-sm-1">
                                         <button class="btn btn-primary muSent" type="button">大量寄送</button>
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <input type="number" class="form-control" max="{{ $mes->lastPage() }}" value="{{ $mes->currentPage() }}" min="1" id="page_input">
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <button class="btn btn-info" id="goPage" type="button">立即前往</button>
                                     </div>
                                 </form>
 
@@ -311,6 +317,10 @@ $(function(){
     });
     $('.muSent').bind('click',function(){
         $('#SentMailForm').submit();
+    });
+    $('#goPage').bind('click',function(){
+        var page = $('#page_input').val();
+        window.location = "?page="+page;
     });
 
 });
