@@ -240,7 +240,7 @@ $('form').bind('submit',function(){
         var sites = $('select[name=pro_id] option:selected').data('sites');
         var people = $('input[name=people]').val();
         if(people > sites){
-            alert('座位數不足無法修改');
+            alert('座位數不足無法修改場次');
             return false;
         }
     }
