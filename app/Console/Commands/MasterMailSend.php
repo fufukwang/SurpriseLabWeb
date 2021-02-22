@@ -265,12 +265,14 @@ class MasterMailSend extends Command
             $proday = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=0")->get();
             foreach($proday as $pro){
-                $ordernow = order::select('id','tel')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                $ordernow = order::select('id','tel','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($ordernow as $ord) {
-                    SLS::sent_single_sms($ord->tel,$message);
-                    $teamMail = TeamMail::select('tel')->where('order_id',$ord->id)->get();
-                    foreach ($teamMail as $tm) {
-                        SLS::sent_single_sms($tm->tel,$message);
+                    if($ord->email != ''){
+                        SLS::sent_single_sms($ord->tel,$message);
+                        $teamMail = TeamMail::select('tel')->where('order_id',$ord->id)->get();
+                        foreach ($teamMail as $tm) {
+                            SLS::sent_single_sms($tm->tel,$message);
+                        }
                     }
                 }
             }
@@ -289,30 +291,32 @@ class MasterMailSend extends Command
                 // 找出正常的訂單
                 $order21 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($order21 as $ord) {
-                    $teamMail = TeamMail::where('order_id',$ord->id)->get();
-                    $needSend = true;
-                    $teamNum = 0;
-                    // 主揪 信件變數組合
-                    $toData = [
-                        'id'    => $ord->id,
-                        'name'  => $ord->name,
-                        'email' => $ord->email,
-                        'type'  => 'D21'
-                    ];
-                    while($needSend){
-                        // 信件寄送
-                        SLS::SendPreviewEmail($toData);
-                        // 判斷是否有其他信箱需要寄送
-                        if($teamMail && count($teamMail)>$teamNum){
-                            $toData = [
-                                'id'    => $ord->id,
-                                'name'  => $teamMail[$teamNum]->name,
-                                'email' => $teamMail[$teamNum]->email,
-                                'type'  => 'D21'
-                            ];
-                            $teamNum++;
-                        } else {
-                            $needSend = false;
+                    if($ord->email != ''){
+                        $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                        $needSend = true;
+                        $teamNum = 0;
+                        // 主揪 信件變數組合
+                        $toData = [
+                            'id'    => $ord->id,
+                            'name'  => $ord->name,
+                            'email' => $ord->email,
+                            'type'  => 'D21'
+                        ];
+                        while($needSend){
+                            // 信件寄送
+                            SLS::SendPreviewEmail($toData);
+                            // 判斷是否有其他信箱需要寄送
+                            if($teamMail && count($teamMail)>$teamNum){
+                                $toData = [
+                                    'id'    => $ord->id,
+                                    'name'  => $teamMail[$teamNum]->name,
+                                    'email' => $teamMail[$teamNum]->email,
+                                    'type'  => 'D21'
+                                ];
+                                $teamNum++;
+                            } else {
+                                $needSend = false;
+                            }
                         }
                     }
                 }
@@ -324,30 +328,32 @@ class MasterMailSend extends Command
                 // 找出正常的訂單
                 $order14 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($order14 as $ord) {
-                    $teamMail = TeamMail::where('order_id',$ord->id)->get();
-                    $needSend = true;
-                    $teamNum = 0;
-                    // 主揪 信件變數組合
-                    $toData = [
-                        'id'    => $ord->id,
-                        'name'  => $ord->name,
-                        'email' => $ord->email,
-                        'type'  => 'D14'
-                    ];
-                    while($needSend){
-                        // 信件寄送
-                        SLS::SendPreviewEmail($toData);
-                        // 判斷是否有其他信箱需要寄送
-                        if($teamMail && count($teamMail)>$teamNum){
-                            $toData = [
-                                'id'    => $ord->id,
-                                'name'  => $teamMail[$teamNum]->name,
-                                'email' => $teamMail[$teamNum]->email,
-                                'type'  => 'D14'
-                            ];
-                            $teamNum++;
-                        } else {
-                            $needSend = false;
+                    if($ord->email != ''){
+                        $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                        $needSend = true;
+                        $teamNum = 0;
+                        // 主揪 信件變數組合
+                        $toData = [
+                            'id'    => $ord->id,
+                            'name'  => $ord->name,
+                            'email' => $ord->email,
+                            'type'  => 'D14'
+                        ];
+                        while($needSend){
+                            // 信件寄送
+                            SLS::SendPreviewEmail($toData);
+                            // 判斷是否有其他信箱需要寄送
+                            if($teamMail && count($teamMail)>$teamNum){
+                                $toData = [
+                                    'id'    => $ord->id,
+                                    'name'  => $teamMail[$teamNum]->name,
+                                    'email' => $teamMail[$teamNum]->email,
+                                    'type'  => 'D14'
+                                ];
+                                $teamNum++;
+                            } else {
+                                $needSend = false;
+                            }
                         }
                     }
                 }
@@ -359,32 +365,34 @@ class MasterMailSend extends Command
                 // 找出正常的訂單
                 $order14 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($order14 as $ord) {
-                    $teamMail = TeamMail::where('order_id',$ord->id)->get();
-                    $needSend = true;
-                    $teamNum = 0;
-                    // 主揪 信件變數組合
-                    $toData = [
-                        'id'    => $ord->id,
-                        'name'  => $ord->name,
-                        'email' => $ord->email,
-                        'day'   => $pro->day.' '.$pro->rang_start,
-                        'type'  => 'D10'
-                    ];
-                    while($needSend){
-                        // 信件寄送
-                        SLS::SendPreviewEmail($toData);
-                        // 判斷是否有其他信箱需要寄送
-                        if($teamMail && count($teamMail)>$teamNum){
-                            $toData = [
-                                'id'    => $ord->id,
-                                'name'  => $teamMail[$teamNum]->name,
-                                'email' => $teamMail[$teamNum]->email,
-                                'day'   => $pro->day.' '.$pro->rang_start,
-                                'type'  => 'D10'
-                            ];
-                            $teamNum++;
-                        } else {
-                            $needSend = false;
+                    if($ord->email != ''){
+                        $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                        $needSend = true;
+                        $teamNum = 0;
+                        // 主揪 信件變數組合
+                        $toData = [
+                            'id'    => $ord->id,
+                            'name'  => $ord->name,
+                            'email' => $ord->email,
+                            'day'   => $pro->day.' '.$pro->rang_start,
+                            'type'  => 'D10'
+                        ];
+                        while($needSend){
+                            // 信件寄送
+                            SLS::SendPreviewEmail($toData);
+                            // 判斷是否有其他信箱需要寄送
+                            if($teamMail && count($teamMail)>$teamNum){
+                                $toData = [
+                                    'id'    => $ord->id,
+                                    'name'  => $teamMail[$teamNum]->name,
+                                    'email' => $teamMail[$teamNum]->email,
+                                    'day'   => $pro->day.' '.$pro->rang_start,
+                                    'type'  => 'D10'
+                                ];
+                                $teamNum++;
+                            } else {
+                                $needSend = false;
+                            }
                         }
                     }
                 }
@@ -401,12 +409,14 @@ class MasterMailSend extends Command
             $proday = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=10")->get();
             foreach($proday as $pro){
-                $ordernow = order::select('id','tel')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                $ordernow = order::select('id','tel','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($ordernow as $ord) {
-                    SLS::sent_single_sms($ord->tel,$message);
-                    $teamMail = TeamMail::select('tel')->where('order_id',$ord->id)->get();
-                    foreach ($teamMail as $tm) {
-                        SLS::sent_single_sms($tm->tel,$message);
+                    if($ord->email != ''){
+                        SLS::sent_single_sms($ord->tel,$message);
+                        $teamMail = TeamMail::select('tel')->where('order_id',$ord->id)->get();
+                        foreach ($teamMail as $tm) {
+                            SLS::sent_single_sms($tm->tel,$message);
+                        }
                     }
                 }
             }
