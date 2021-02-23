@@ -209,9 +209,13 @@ class InvController extends Controller
                     $inv->is_cancal = 0;
                     $inv->save();
                 } else {
+                    $invnumber = ''
+                    if(isset($r['InvoiceNumber'])){
+                        $invnumber = $r['InvoiceNumber'];
+                    }
                     inv::insert([
                         'order_id'  => $row->id,
-                        'number'    => $r['InvoiceNumber'],
+                        'number'    => $invnumber,
                         'is_cancal' => 0,
                         'sent_obj'  => json_encode($post_data_array),
                         'results'   => $result['web_info']
