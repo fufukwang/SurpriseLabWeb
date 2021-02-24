@@ -399,7 +399,7 @@ class MasterMailSend extends Command
             Log::error($exception);
         }
     }
-    // 18 點執行
+    // 18 點執行 // 0224 改為 12點寄送
     private function checkHour12(){
         // 前10天簡訊
         try {
