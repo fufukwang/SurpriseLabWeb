@@ -88,8 +88,8 @@
 
 
                                                     <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會簡訊邀請函">邀請函</a>
-                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知簡訊">11</a>
-                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
+                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知簡訊">11</a>
+                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="D00" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
 
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id="{{ $row->id }}" data-toggle="tooltip" data-placement="top" data-original-title="刪除此筆資料"><i class="fa fa-remove"></i></a>
                                                 </td>

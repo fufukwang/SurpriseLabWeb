@@ -532,8 +532,8 @@
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D05" data-toggle="tooltip" data-placement="top" data-original-title="寄送5天前的通知信">05</a>
 
                                 <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會簡訊邀請函">邀請函</a>
-                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知簡訊">11</a>
-                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
+                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知簡訊">11</a>
+                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="D00" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
                             </p>
 
                             <table class="table table-bordered table-hover m-0">

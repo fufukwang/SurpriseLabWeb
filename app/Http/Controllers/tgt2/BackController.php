@@ -423,7 +423,7 @@ class BackController extends Controller
                         $m->to($mailer['email'], $mailer['name']);
                         $m->subject('訂位確認信 ── 內有重要任務');
                     });
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
+                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                     // 信件補送
                     $now = time();
                     $lim = strtotime($order->day.' '.$order->rang_start);
@@ -448,7 +448,7 @@ class BackController extends Controller
                         $toData['day'] = $order->day.' '.$order->rang_start;
                         $toData['type'] = "D10";
                         SLS::SendPreviewEmail($toData);
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
+                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
                     }
                     /*
                     if($day <= 5){
@@ -563,7 +563,7 @@ class BackController extends Controller
                     });
                     $order->is_send = 1;
                     $order->save();
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
+                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                     // 信件補送
                     $now = time();
                     $lim = strtotime($act->day.' '.$act->rang_start);
@@ -588,7 +588,7 @@ class BackController extends Controller
                         $toData['day'] = $act->day.' '.$act->rang_start;
                         $toData['type'] = "D10";
                         SLS::SendPreviewEmail($toData);
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
+                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
                     }
                     /*
                     if($day <= 5){
