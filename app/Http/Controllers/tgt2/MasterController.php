@@ -273,9 +273,9 @@ class MasterController extends Controller
             if($request->has('search')){
                 $search = $request->search;
                 $master = $master->whereRaw("(
-                    tel LIKE '%{$search}%' OR
-                    name LIKE '%{$search}%' OR
-                    email LIKE '%{$search}%'
+                    tgt2_team_mail.tel LIKE '%{$search}%' OR
+                    tgt2_team_mail.name LIKE '%{$search}%' OR
+                    tgt2_team_mail.email LIKE '%{$search}%'
                 )");
             }
 
