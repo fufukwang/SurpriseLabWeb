@@ -451,7 +451,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="ticket-type">
                 
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/1493/11226?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1559/11685?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="單人自在票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="單人自在票">
@@ -467,7 +467,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/1493/11227?locale=zh-TW" class="ticket-frame" target="_blank">
+                    <a href="https://surpriselab.backme.tw/checkout/1559/11686?locale=zh-TW" class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="雙人共享票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="雙人共享票">
                         <p class="ticket-state timeLimit">
@@ -477,7 +477,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/1493/11228?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1559/11687?locale=zh-TW
                     " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="六人共享票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="六人共享票">
@@ -507,7 +507,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，將於 04/01 - 05/16 前來體驗<br/>
+                現在購票，將於 05/28 - 06/30 前來體驗<br/>
                 每日場次表請參考下方時段<br/><br/>
             </p>
 
@@ -572,7 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 04/01 - 05/16 之票券<br/>
+                        * 現正預售 05/28 - 06/30 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -593,22 +593,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">04/01 - 05/16 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">05/28 - 06/30 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
-                        <td>02/03（三）中午 12:00</td>
+                        <td>03/31（三）中午 12:00</td>
                         <td>前 800 位預約者</td>
                     </tr>
                     <tr>
-                        <td>02/17（三）中午 12:00</td>
+                        <td>04/14（三）中午 12:00</td>
                         <td>801-1600 位預約者</td>
                     </tr>
                     <tr>
-                        <td>03/03（三）中午 12:00</td>
-                        <td>1601-2400 位預約者</td>
-                    </tr>
-                    <tr>
-                        <td>03/17（三）中午 12:00</td>
+                        <td>04/28（三）中午 12:00</td>
                         <td>其餘預約者</td>
                     </tr>
                     <tr>
@@ -793,7 +789,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/plugins/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.3.0"></script>
+<script src="js/main.js?v=0.4.0"></script>
 
 </body>
 </html>

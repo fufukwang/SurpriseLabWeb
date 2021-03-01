@@ -164,26 +164,27 @@ $(document).ready(function () {
     var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1397json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1444json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/1493json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/1559json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
     $.when(
       $.getJSON(progress_api_SaleStep1),
       $.getJSON(progress_api_SaleStep2),
-      $.getJSON(progress_api_SaleStep3)/*,
-      $.getJSON(progress_api_SaleStep4),
+      $.getJSON(progress_api_SaleStep3),
+      $.getJSON(progress_api_SaleStep4)/*,
       $.getJSON(progress_api_SaleStep5),
       $.getJSON(progress_api_SaleStep6),
       $.getJSON(progress_api_SaleStep7)*/
-    ).done(function(data1, data2, data3/*, data4, data5, data6, data7*/) {
+    ).done(function(data1, data2, data3, data4/*, data5, data6, data7*/) {
 
         data1 = data1[0];
-        data2 = data2[0];/*
-        data3 = data3[0];
+        data2 = data2[0];
+        data3 = data3[0];/*
         data4 = data4[0];
         data5 = data5[0];
         data6 = data6[0];*/
-        var data = data3[0];
+        var data = data4[0];
 
         // 階段總人數
         var SaleStep1_amount = data1['pledged_unit_count'];
@@ -202,7 +203,7 @@ $(document).ready(function () {
         var item2_amount = data['rewards'][1].pledged_count * 2;
         var item3_amount = data['rewards'][2].pledged_count * 6;
         */
-        var goal = 3200; // 目標張數 /* SaleStep1_amount + 1500 */
+        var goal = 2100; // 目標張數 /* SaleStep1_amount + 1500 */
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
         var amount = data["pledged_unit_count"];
