@@ -717,7 +717,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <p>
                             富邦藝旅 Folio Hotel<br/>
                             （台北市大安區信義路四段30巷23號）<br/>
-                            台北市中心、咖啡色、紅色捷運沿線、易達性高
+                            台北市中心、咖啡色、紅色捷運沿線、易達性高<br/><br/>
+                            購買微醺大飯店體驗票券，即享<a href="https://bit.ly/foliodaan" target="_blank">富邦藝旅住宿優惠</a>
                         </p>
                     </div>
                 </div>
