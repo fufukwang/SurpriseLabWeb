@@ -286,7 +286,6 @@ class InvController extends Controller
                 $inv->is_cancal = 0;
                 $inv->save();
             } else {
-                dd($result);
                 $invnumber = '';
                 if(isset($r['InvoiceNumber'])){
                     $invnumber = $r['InvoiceNumber'];
