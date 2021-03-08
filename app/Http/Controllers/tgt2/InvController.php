@@ -172,7 +172,7 @@ class InvController extends Controller
                     'Version' => '1.4',
                     'TimeStamp' => time(), //請以 time() 格式
                     'TransNum' => '',
-                    'MerchantOrderNo' => "TS2".$row->sn,
+                    'MerchantOrderNo' => $row->sn,
                     'BuyerName' => $row->name,
                     'BuyerUBN' => '',
                     'BuyerPhone' => $phone,
@@ -209,7 +209,7 @@ class InvController extends Controller
                     $inv->is_cancal = 0;
                     $inv->save();
                 } else {
-                    $invnumber = ''
+                    $invnumber = '';
                     if(isset($r['InvoiceNumber'])){
                         $invnumber = $r['InvoiceNumber'];
                     }
