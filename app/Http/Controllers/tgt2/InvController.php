@@ -213,13 +213,15 @@ class InvController extends Controller
                     if(isset($r['InvoiceNumber'])){
                         $invnumber = $r['InvoiceNumber'];
                     }
-                    inv::insert([
-                        'order_id'  => $row->id,
-                        'number'    => $invnumber,
-                        'is_cancal' => 0,
-                        'sent_obj'  => json_encode($post_data_array),
-                        'results'   => $result['web_info']
-                    ]);    
+                    if($invnumber!=''){
+                        inv::insert([
+                            'order_id'  => $row->id,
+                            'number'    => $invnumber,
+                            'is_cancal' => 0,
+                            'sent_obj'  => json_encode($post_data_array),
+                            'results'   => $result['web_info']
+                        ]);
+                    }
                 }
                 /*
                 $r = json_decode($results['Result'],true);
@@ -284,13 +286,21 @@ class InvController extends Controller
                 $inv->is_cancal = 0;
                 $inv->save();
             } else {
-                inv::insert([
-                    'order_id'  => $request->id,
-                    'number'    => $r['InvoiceNumber'],
-                    'is_cancal' => 0,
-                    'sent_obj'  => json_encode($post_data_array),
-                    'results'   => $result['web_info']
-                ]);    
+                $invnumber = '';
+                if(isset($r['InvoiceNumber'])){
+                    $invnumber = $r['InvoiceNumber'];
+                }
+                if($invnumber!=''){
+                    inv::insert([
+                        'order_id'  => $request->id,
+                        'number'    => $invnumber,
+                        'is_cancal' => 0,
+                        'sent_obj'  => json_encode($post_data_array),
+                        'results'   => $result['web_info']
+                    ]);
+                } else {
+                    return Response::json(['Status' => false], 200);
+                }
             }
             return Response::json($results, 200);
         } catch (Exception $exception) {
