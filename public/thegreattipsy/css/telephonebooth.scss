@@ -62,9 +62,13 @@ button {
     flex-direction: column;
     align-items: center;
 
+    @media screen and (max-width: 991.98px) {
+            top: 3vh;
+    }
+
     @media screen and (width: 1024px) and (orientation: portrait),
         screen and (width: 768px) and (orientation: portrait) {
-            top: 10vh;
+            top: 3.5vh;
     }
 
     .subtitle {
@@ -93,12 +97,12 @@ button {
 
         @media screen and (max-width: 991.98px), screen and (orientation: portrait) {
             width: 48%;
-            margin-bottom: 12px;
+            margin-bottom: 4px;
         }
 
         @media screen and (width: 1024px) and (orientation: portrait),
             screen and (width: 768px) and (orientation: portrait) {
-                margin-bottom: 24px;
+                margin-bottom: 12px;
         }
 
         img {
@@ -165,7 +169,7 @@ button {
         @media screen and (max-width: 991.98px), screen and (orientation: portrait) {
             width: 100vw;
             height: 37vw;
-            transform: translateY(16vw);
+            transform: translateY(-3vw);
         }
 
         .board-btn {
@@ -267,7 +271,7 @@ button {
             background-repeat: no-repeat;
             background-size: 100% auto;
             background-position: center top;
-            transition: 0.3s;
+            transition: 0.5s;
             position: relative;
             height: 0;
             width: 42vh;
@@ -278,7 +282,7 @@ button {
                 background-size: 100% auto;
                 width: 100vw;
                 padding-bottom: 108vw;
-                margin: 40vw auto 0;
+                margin: 6vw auto 0;
             }
 
             .phone-element {
@@ -311,6 +315,7 @@ button {
                         font-weight: bold;
                         line-height: 1.47;
                         letter-spacing: 3.4px;
+                        transition: 0.3s;
 
                         @media screen and (max-width: 991.98px), screen and (orientation: portrait) {
                             font-size: 16px;
@@ -423,9 +428,9 @@ button {
                         }
     
                         .time-wrap {
-                            font-size: 24px;
+                            font-size: 20px;
                             line-height: 1.46;
-                            letter-spacing: 4.8px;
+                            letter-spacing: 4px;
     
                             @media screen and (max-width: 991.98px), screen and (orientation: portrait) {
                                 font-size: 20px;
@@ -580,6 +585,10 @@ button {
 }
 
 /* bootstrap modal */
+.fade {
+    transition: opacity .5s linear;
+}
+
 .phone-modal {
 
     .modal-dialog {

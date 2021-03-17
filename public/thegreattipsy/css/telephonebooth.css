@@ -64,9 +64,14 @@ button:focus {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 991.98px) {
+  .title-wrap {
+    top: 3vh;
+  }
+}
 @media screen and (width: 1024px) and (orientation: portrait), screen and (width: 768px) and (orientation: portrait) {
   .title-wrap {
-    top: 10vh;
+    top: 3.5vh;
   }
 }
 .title-wrap .subtitle {
@@ -97,12 +102,12 @@ button:focus {
 @media screen and (max-width: 991.98px), screen and (orientation: portrait) {
   .title-wrap .logo-img-wrap {
     width: 48%;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
   }
 }
 @media screen and (width: 1024px) and (orientation: portrait), screen and (width: 768px) and (orientation: portrait) {
   .title-wrap .logo-img-wrap {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 }
 .title-wrap .logo-img-wrap img {
@@ -164,7 +169,7 @@ button:focus {
   .phone-outside-wrap .board-wrap {
     width: 100vw;
     height: 37vw;
-    transform: translateY(16vw);
+    transform: translateY(-3vw);
   }
 }
 .phone-outside-wrap .board-wrap .board-btn {
@@ -255,7 +260,7 @@ button:focus {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center top;
-  transition: 0.3s;
+  transition: 0.5s;
   position: relative;
   height: 0;
   width: 42vh;
@@ -267,7 +272,7 @@ button:focus {
     background-size: 100% auto;
     width: 100vw;
     padding-bottom: 108vw;
-    margin: 40vw auto 0;
+    margin: 6vw auto 0;
   }
 }
 .processing-wrap .phone-outer-wrap .phone-inner-wrap .phone-element {
@@ -297,6 +302,7 @@ button:focus {
   font-weight: bold;
   line-height: 1.47;
   letter-spacing: 3.4px;
+  transition: 0.3s;
 }
 @media screen and (max-width: 991.98px), screen and (orientation: portrait) {
   .processing-wrap .phone-outer-wrap .phone-inner-wrap .phone-element.sound-wrap .time-wrap {
@@ -383,9 +389,9 @@ button:focus {
   }
 }
 .processing-wrap .phone-outer-wrap .phone-inner-wrap.zoom .phone-element.sound-wrap .time-wrap {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.46;
-  letter-spacing: 4.8px;
+  letter-spacing: 4px;
 }
 @media screen and (max-width: 991.98px), screen and (orientation: portrait) {
   .processing-wrap .phone-outer-wrap .phone-inner-wrap.zoom .phone-element.sound-wrap .time-wrap {
@@ -516,6 +522,10 @@ button:focus {
 }
 
 /* bootstrap modal */
+.fade {
+  transition: opacity 0.5s linear;
+}
+
 .phone-modal .modal-dialog {
   max-width: 535px;
 }
