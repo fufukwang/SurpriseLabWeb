@@ -40,7 +40,7 @@ $(function() {
     // audio
     let $phone_audio_countdown_wrap = $('#js-audio-countdown');
     let audio_player = new Audio();
-    let total_sec;
+    let total_sec = 0;
 
     // button
     let $login_enter_btn = $('#js-login-enter-btn');
@@ -219,6 +219,13 @@ $(function() {
     /* message - back btn */
     $message_back_btn.on('click', function(){
         $('#js-message-wrap').fadeOut();
+        changeView($switch_page_wrap, 'prev');
+        changeView($switch_page_wrap, 'prev');
+        changeView($switch_login_wrap, 'prev');
+        changeView($switch_login_wrap, 'prev');
+        $switch_login_wrap.find('.switch-item-wrap').first().addClass('active');
+        $identification_input.val(""); // clear input
+        $password_input.val(""); // clear input
     });
 
     /* past sound - get out btn */
