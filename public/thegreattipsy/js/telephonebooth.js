@@ -78,11 +78,36 @@ $(function() {
         }
     }
 
+    /* reset view */
+    function resetView($target) {
+        let $switch_items = $target.find('.switch-item-wrap');
+        $switch_items.removeClass('active');
+        $switch_items.first().addClass('active');
+    }
+
     /* change subtitle */
     function changeSubtitle() {
         let $current_subtitle = $subtitle_wrap.find('.subtitle').filter('.show');
         $current_subtitle.removeClass('show');
         $current_subtitle.siblings().addClass('show');
+    }
+
+    /* switch audio control button */
+    function switchAudioControlBtn(control_item) {
+        switch(control_item) {
+            case 'play':
+                $phone_control_btn.find('.pause').addClass('active');
+                $phone_control_btn.find('.play').removeClass('active');
+                $phone_audio_countdown_wrap.siblings('.static').removeClass('show');
+                $phone_audio_countdown_wrap.siblings('.dynamic').addClass('show');
+                break;
+            case 'pause':
+                $phone_control_btn.find('.play').addClass('active');
+                $phone_control_btn.find('.pause').removeClass('active');
+                $phone_audio_countdown_wrap.siblings('.dynamic').removeClass('show');
+                $phone_audio_countdown_wrap.siblings('.static').addClass('show');
+                break;
+        }
     }
 
     /* set audio */
@@ -96,6 +121,19 @@ $(function() {
         $phone_download_btn.attr('download', current_user_file);
     }
 
+    /* reset audio */
+    function resetAudioData() {
+        // unload audio
+        audio_player.src = '';
+        audio_player.load();
+
+        // set download file
+        $phone_download_btn.attr('href', '');
+        $phone_download_btn.attr('download', '');
+
+        switchAudioControlBtn('pause');
+        $phone_audio_countdown_wrap.text('00:00:00'); // reset countdown
+    }
 
     /* update countdown timer */
     function updateTime(currentTime) {
@@ -122,7 +160,7 @@ $(function() {
             if ( value == data2[i].id ) {
                 current_user_pw = data2[i].password;
                 // 音檔未刪除
-                if ( data2[i].fileName != "" ) {
+                if ( data2[i].fileName != '' ) {
                     flag = 'new-user';
                     current_user_file = data2[i].fileName;
                     setAudioData(current_user_file);
@@ -139,6 +177,8 @@ $(function() {
     function verifyPasswordValue(value) {
         return (value == current_user_pw) ? true : false;
     }
+
+    
 
     /* login - enter */
     $login_enter_btn.on('click', function(){
@@ -205,7 +245,7 @@ $(function() {
     /* phone modal - delete btn */
     $modal_delete_btn.on('click', function(){
         audio_player.pause(); // pause audio
-        $phone_audio_countdown_wrap.text('00:00:00'); // reset countdown
+        resetAudioData();
         $phone_inner_wrap.removeClass('zoom');
         changeView($switch_page_wrap, 'next');
         changeSubtitle();
@@ -219,18 +259,15 @@ $(function() {
     /* message - back btn */
     $message_back_btn.on('click', function(){
         $('#js-message-wrap').fadeOut();
-        changeView($switch_page_wrap, 'prev');
-        changeView($switch_page_wrap, 'prev');
-        changeView($switch_login_wrap, 'prev');
-        changeView($switch_login_wrap, 'prev');
-        $switch_login_wrap.find('.switch-item-wrap').first().addClass('active');
-        $identification_input.val(""); // clear input
-        $password_input.val(""); // clear input
+        resetView($switch_page_wrap);
+        resetView($switch_login_wrap);
+        $identification_input.val(''); // clear input
+        $password_input.val(''); // clear input
     });
 
     /* past sound - get out btn */
     $modal_get_out_btn.on('click', function(){
-        $identification_input.val(""); // clear input
+        $identification_input.val(''); // clear input
         changeView($switch_login_wrap, 'prev');
     });
 
@@ -251,19 +288,11 @@ $(function() {
 
     /* when audio player pause */
     audio_player.onpause = function() {
-        $phone_control_btn.find('.play').addClass('active');
-        $phone_control_btn.find('.pause').removeClass('active');
-
-        $phone_audio_countdown_wrap.siblings('.dynamic').removeClass('show');
-        $phone_audio_countdown_wrap.siblings('.static').addClass('show');
+        switchAudioControlBtn('pause');
     };
 
     /* when audio player play */
     audio_player.onplay = function() {
-        $phone_control_btn.find('.pause').addClass('active');
-        $phone_control_btn.find('.play').removeClass('active');
-
-        $phone_audio_countdown_wrap.siblings('.static').removeClass('show');
-        $phone_audio_countdown_wrap.siblings('.dynamic').addClass('show');
+        switchAudioControlBtn('play');
     };
 });
