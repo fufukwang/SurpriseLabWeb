@@ -15,6 +15,7 @@
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="facebook-domain-verification" content="mmtxvobzbh451wck03upjlbgtj1i2n" />
     <title>微醺大飯店：1980s</title>
 
     <!-- Style -->

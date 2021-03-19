@@ -13,6 +13,7 @@
     <meta property="og:url" content="http://www.surpriselab.com.tw/"/>
     <meta property="og:image" content="http://www.surpriselab.com.tw/surprise/images/fbimg4.jpg"/>
     <link rel="icon" href="surprise/images/favi.png" >
+    <meta name="facebook-domain-verification" content="mmtxvobzbh451wck03upjlbgtj1i2n" />
     <style>
     </style>
 </head>

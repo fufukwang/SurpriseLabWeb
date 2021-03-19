@@ -118,7 +118,24 @@ class BackController extends Controller
         return view('thegreattipsy.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $cellData = backme::select('name','email','tel','num','detail')->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE o_id=0 AND tgt2coupon.b_id=tgt2backme.id)>0")->get()->toArray();
+        $backmes = backme::select('name','email','tel','eb1','p1','p2','p6','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE o_id=0 AND tgt2coupon.b_id=tgt2backme.id)>0")->get()->toArray();
+        $cellData = [['姓名','信箱','電話','可劃位人數','訂購內容','註記']];
+        foreach ($backmes as $val) {
+            $num = 0;
+            if($val['eb1']>0) $num += $val['eb1'] * 1;
+            if($val['p1']>0) $num += $val['p1'] * 1;
+            if($val['p2']>0) $num += $val['p2'] * 2;
+            if($val['p6']>0) $num += $val['p6'] * 6;
+            $temp = [
+                'name'   => $val['name'],
+                'email'  => $val['email'],
+                'tel'    => $val['tel'],
+                'num'    => $num,
+                'detail' => $val['detail'],
+                'manage' => $val['manage'],
+            ];
+            array_push($cellData, $temp);
+        }
         Excel::create('匯出未兌換名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $sheet->rows($cellData);
