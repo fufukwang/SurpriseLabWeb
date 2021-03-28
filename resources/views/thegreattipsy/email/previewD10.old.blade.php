@@ -1,10 +1,10 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
     <head>
-		<meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		 <title>十三項您需要知道的行前注意事項</title>
+        <title>十三項您需要知道的行前注意事項</title>
 <?php
     $ViewDay = str_replace('-', '/', $day);
     $ViewDay = substr($ViewDay, 5,11);
@@ -31,7 +31,7 @@
                                     <!-- BEGIN PREHEADER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
                                         <tr>
-                                        	<td align="center" valign="top">
+                                            <td align="center" valign="top">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
                                                     <tr>
                                                         <td valign="top" class="preheaderContainer" style="padding-top:10px; padding-bottom:10px;"></td>
@@ -90,14 +90,14 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
@@ -111,11 +111,14 @@
 來訪之前，有些事情與規則，您需要先知道 -</span></span><br>
 <br>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>1. 當天請於「<span style="color:#FFFFFF"><span style="background-color:#932c2c">{{ $dt }}</span></span>」準時抵達以下地址：</strong></span></span><br>
-<br>
-<span style="font-family:lucida sans unicode,lucida grande,sans-serif; font-size:12px">台北市大安區信義路四段30巷23號（Folio Hotel 富邦藝旅）</span><br>
+&nbsp;
+<div dir="rtl"><span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif">台北市大安區信義路四段30巷23號</span></span></div>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif">捷運大安站 4 號出口，步行三分鐘</span></span><br>
 <br>
-<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif">&nbsp;</span></span><br>
+<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><u>請沿著 Folio Hotel 富邦藝旅左側走至側門，</u></span></span><br>
+<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><u>微醺大飯店報到處就在此。</u></span></span><br>
+<br>
+<br>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>2. 酒會將準時開始，遲到將無法入場。</strong></span></span><br>
 <br>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif">本體驗採不同場次分批、陸續入場，為不影響其他賓客的權益與整體流程，<strong><u>遲到將無法入場，也不予以退費</u></strong>。錯過的體驗、表演、小點、酒飲，將無法回溯及外帶。為了您的權益，請務必準時到場。</span></span><br>
@@ -216,14 +219,14 @@
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
@@ -459,14 +462,14 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
@@ -478,14 +481,14 @@
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
