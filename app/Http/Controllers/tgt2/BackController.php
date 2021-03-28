@@ -433,7 +433,12 @@ class BackController extends Controller
                         config(['mail.username' => env('MAIL_TGT_USER')]);
                         config(['mail.password' => env('MAIL_TGT_PASS')]);
                     }
-                    Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
+                    if($mailer['pople']==1){
+                        $mailTheme = 'orderOne';
+                    } else {
+                        $mailTheme = 'order';
+                    }
+                    Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
                         $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
                         $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
                         $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
@@ -570,7 +575,12 @@ class BackController extends Controller
                         config(['mail.username' => env('MAIL_TGT_USER')]);
                         config(['mail.password' => env('MAIL_TGT_PASS')]);
                     }
-                    Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
+                    if($mailer['pople']==1){
+                        $mailTheme = 'orderOne';
+                    } else {
+                        $mailTheme = 'order';
+                    }
+                    Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
                         $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
                         $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
                         $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
@@ -789,8 +799,12 @@ class BackController extends Controller
             config(['mail.username' => env('MAIL_TGT_USER')]);
             config(['mail.password' => env('MAIL_TGT_PASS')]);
         }
-
-        Mail::send('thegreattipsy.email.order',$mailer,function($m) use ($mailer){
+        if($mailer['pople']==1){
+            $mailTheme = 'orderOne';
+        } else {
+            $mailTheme = 'order';
+        }
+        Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
             $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
             $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
             $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
