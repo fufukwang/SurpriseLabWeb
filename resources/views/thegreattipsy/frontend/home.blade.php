@@ -676,7 +676,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="container">
             <div class="feature-btn text-center">
-                <a class="btn-outline" href="https://40.cw.com.tw/story/1981/" target="_blank">進入時光典藏館</a>
+                <a class="btn-outline" href="https://bit.ly/2PuWPUi" target="_blank">進入時光典藏館</a>
             </div>
         </div>
     </section>
