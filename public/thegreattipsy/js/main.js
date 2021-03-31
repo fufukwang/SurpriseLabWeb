@@ -203,7 +203,7 @@ $(document).ready(function () {
         var item2_amount = data['rewards'][1].pledged_count * 2;
         var item3_amount = data['rewards'][2].pledged_count * 6;
         */
-        var goal = 2100; // 目標張數 /* SaleStep1_amount + 1500 */
+        var goal = 2250; // 目標張數 /* SaleStep1_amount + 1500 */
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
         var amount = data["pledged_unit_count"];
