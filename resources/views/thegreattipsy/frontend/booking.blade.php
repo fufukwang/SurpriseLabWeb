@@ -200,9 +200,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <br/><br/>
                     <ul class="prefix-dash custom-text">
-                        <li data-name="早鳥限定票">
+                        <!-- <li data-name="早鳥限定票">
                             早鳥限定票　幾張早鳥票就有幾組序號
-                        </li>
+                        </li> -->
                         <li data-name="單人自在票">
                             單人自在票　幾張單人票就有幾組序號
                         </li>
@@ -577,7 +577,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </tr>
                         <tr>
                             <td>飲食選項</td>
-                            <td>葷食 <span id="filled_pv"></span> 人，奶蛋素 <span class="filled" data-filled="vegetarian_food"></span> 人</td>
+                            <td>葷食 <span id="filled_pv"></span> 人，蛋奶素 <span class="filled" data-filled="vegetarian_food"></span> 人</td>
                         </tr>
                         <tr class="notice">
                             <td>其他備註</td>
