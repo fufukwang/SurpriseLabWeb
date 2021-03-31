@@ -280,7 +280,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
                     <div class="form-group select-format">
-                        <label class="form-label" for="vegetarian_food">* 蛋奶素</label>
+                        <label class="form-label" for="vegetarian_food">* 蛋奶素（如果都吃葷，請選0人）</label>
                         <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
                             <option></option>
                             <option value="0">0</option>
