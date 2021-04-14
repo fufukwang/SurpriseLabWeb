@@ -113,7 +113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             問與答
         </li>
         <li class="nav-link" data="1">
-            預售規則
+            預售劃位
         </li>
         <li class="nav-link" data="2">
             更改、退費事項
@@ -521,7 +521,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <div id="presale-rules">
                         <!------------->
-                        <h3>預售規則</h3>
+                        <h3>預售劃位</h3>
                         <!------------->
                         <div class="sub-title-wrapper">
                             <h4>
@@ -543,7 +543,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </h5>
                             <p class="text-left">
                                 《微醺大飯店：1980s》預售票現正預售中<br/>
-                                可劃位日期：05/28 - 06/30
+                                可劃位日期：07/01 - 08/15
                             </p>
 
                             <h5 class="sub-title highlight">
@@ -595,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </p>
                             <ul>
                                 <li>可劃位： 04/01 - 05/16 之間的演出場次</li>
-                                <li>序號失效日期： 03/26（五）18:00整。</li>
+                                <li>序號失效日期： 03/26（五）18:00 整。</li>
                             </ul>
 
                             <p class="category-title">
@@ -603,7 +603,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </p>
                             <ul>
                                 <li>可劃位： 05/28 - 06/30 之間的演出場次</li>
-                                <li>序號失效日期： 05/14（五）18:00整 。</li>
+                                <li>序號失效日期： 05/14（五）18:00 整。</li>
+                            </ul>
+
+                            <p class="category-title">
+                                第五批賓客
+                            </p>
+                            <ul>
+                                <li>可劃位： 07/01 - 08/15 之間的演出場次</li>
+                                <li>序號失效日期： 07/09（五）18:00 整。</li>
                             </ul>
 
                             <p class="text-left">

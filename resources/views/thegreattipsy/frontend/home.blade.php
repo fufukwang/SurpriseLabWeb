@@ -508,7 +508,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，將於 05/28 - 06/30 前來體驗<br/>
+                現在購票，將於 07/01 - 08/15 前來體驗<br/>
                 每日場次表請參考下方時段<br/><br/>
             </p>
 
@@ -573,7 +573,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 05/28 - 06/30 之票券<br/>
+                        * 現正預售 07/01 - 08/15 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -594,18 +594,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">05/28 - 06/30 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">07/01-08/15 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
-                        <td>03/31（三）中午 12:00</td>
+                        <td>05/26（三）中午 12:00</td>
                         <td>前 800 位預約者</td>
                     </tr>
                     <tr>
-                        <td>04/14（三）中午 12:00</td>
+                        <td>06/02（三）中午 12:00</td>
                         <td>801-1600 位預約者</td>
                     </tr>
                     <tr>
-                        <td>04/28（三）中午 12:00</td>
+                        <td>06/16（三）中午 12:00</td>
+                        <td>1601-2400 位預約者</td>
+                    </tr>
+                    <tr>
+                        <td>06/23（三）中午 12:00</td>
                         <td>其餘預約者</td>
                     </tr>
                     <tr>
