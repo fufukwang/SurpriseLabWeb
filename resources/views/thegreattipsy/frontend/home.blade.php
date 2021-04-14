@@ -651,7 +651,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="rules-page-contains">
-                問與答 / 預售規則 / 更改、退費事項
+                問與答 / 預售劃位 / 更改、退費事項
             </p>
         </div>
     </section>

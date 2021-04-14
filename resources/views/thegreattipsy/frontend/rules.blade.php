@@ -202,7 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div id="qa4" class="collapse" aria-labelledby="qa4-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            微醺大飯店採網路購票、線上劃位的方式進行，無販售現場票券。購票請至<a class="default-light btn-link" href="index.html#Ticket">我要赴約</a>購買，相關規則請參考<span class="to-presale-rules">預售規則</span>，內有詳細流程與說明。
+                                            微醺大飯店採網路購票、線上劃位的方式進行，無販售現場票券。購票請至<a class="default-light btn-link" href="index.html#Ticket">我要赴約</a>購買，相關規則請參考<span class="to-presale-rules">預售劃位</span>，內有詳細流程與說明。
                                         </div>
                                     </div>
                                 </div>
@@ -499,7 +499,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div id="qa21" class="collapse" aria-labelledby="qa21-header"
                                          data-parent="#qa-according">
                                         <div class="card-body number-list">
-                                            序號使用相關規定，請見<span class="to-presale-rules">預售規則</span>，不同階段之序號，僅能於指定演出區間使用，若因為超過日期未使用而失效，視為放棄權利，無法退費與要求劃位其他演出區間，請務必留意相關資訊。
+                                            序號使用相關規定，請見<span class="to-presale-rules">預售劃位</span>，不同階段之序號，僅能於指定演出區間使用，若因為超過日期未使用而失效，視為放棄權利，無法退費與要求劃位其他演出區間，請務必留意相關資訊。
                                         </div>
                                     </div>
                                 </div>
