@@ -129,7 +129,6 @@
                     $tmp_b_id = $coup->b_id;
                     $totle_money += $single_money;
                 }
-                if($coup->type == 'eb1' || $coup->type == 'p1'){ $coupon_pople += 1; } elseif ($coup->type == 'p4') { $coupon_pople += 4; } elseif ($coup->type == 'p6') { $coupon_pople += 6; }
             }
             if(isset($coup->b_id)){
                 // 這裡取得貝殼過來的後四碼
