@@ -146,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <span class="prefix">Step 1</span>選擇欲劃位的人數<br/>
                         <span class="prefix">Step 2</span>選擇日期、時段<br/>
                         <span class="prefix">Step 3</span>填寫賓客資料<br/>
-                        <span class="prefix">Step 4</span>確認預約資訊<br/>
+                        <span class="prefix">Step 4</span>確認訂單，<span class="color-pink">輸入劃位序號</span><br/>
                         <span class="prefix">Step 5</span>完成預約
                     </p>
                     <p>&nbsp;</p>
@@ -157,8 +157,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <p>&nbsp;</p>
                     <ul class="prefix-dash">
-                        <li>若⽇期無法選擇，代表該場次已滿，或是當日不開放。</li>
-                        <li>請確實填寫正確的電子信箱與電話，將以此與你們聯繫溝通。</li>
+                        <li>
+                            若⽇期無法選擇，代表該場次已滿，或是當日不開放。
+                        </li>
+                        <li>
+                            請確實填寫正確的電子信箱與電話，將以此與你聯繫溝通。
+                        </li>
                     </ul>
                     <p>&nbsp;</p>
                     <p>
@@ -185,10 +189,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </fieldset>
             <fieldset class="step step-2" title="選擇人數">
                 <div class="form-container">
-                <p class="field-intro">
+                    <p class="field-intro">
                         請點選你欲劃位的<span class="color-pink">人數</span>
                     </p>
 
+                    <div class="sub-title-wrapper">
+                        <h4>
+                            <span>票券序號說明</span>
+                        </h4>
+                    </div>
+                    <br/><br/>
+                    <ul class="prefix-dash custom-text">
+                        <!-- <li data-name="早鳥限定票">
+                            早鳥限定票　幾張早鳥票就有幾組序號
+                        </li> -->
+                        <li data-name="單人自在票">
+                            單人自在票　幾張單人票就有幾組序號
+                        </li>
+                        <li data-name="雙人共享票">
+                            雙人共享票　一組序號劃位兩人，限同日期同場次，不可分開劃位
+                        </li>
+                        <li data-name="六人沈醉票">
+                            六人沈醉票　一組序號劃位六人，限同日期同場次，不可分開劃位
+                        </li>
+                    </ul>
+                    <br/><br/>
                     <div class="form-group select-format">
                         <label class="form-label" for="booking_people">人數</label>
                         <select id="booking_people" name="booking_people" data-placeholder="選擇人數" required>
@@ -203,8 +228,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <option value="8">8</option>
                             <option value="9">9</option>
                             <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
                         </select>
                     </div>
+
+                    <!-- <div class="form-check">
+                        <input type="radio" name="ticket-type" id="ticket-1" value="0">
+                        <label class="form-check-label" for="ticket-1">
+                            暢行無阻票 <span>The Great Tipsy Ticket</span>
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="ticket-type" id="ticket-2" value="1">
+                        <label class="form-check-label" for="ticket-2">
+                            時間有點限制票 <span>Matinee&Weekdays Ticket</span>
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="ticket-type" id="ticket-3" value="2">
+                        <label class="form-check-label" for="ticket-3">
+                            四人沈醉票 Group Ticket
+                        </label>
+                    </div> -->
 
                     <div class="feature-btn d-flex justify-content-between multi-btn">
                         <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
@@ -282,18 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="form-group select-format">
                         <label class="form-label" for="vegetarian_food">* 蛋奶素（如果都吃葷，請選0人）</label>
                         <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
-                            <option></option>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
+
                         </select>
                     </div>
 
@@ -498,10 +559,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <td>電子信箱</td>
                             <td class="filled" data-filled="email"></td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td>票券</td>
                             <td class="filled" data-filled="booking_ticket"></td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td>人數</td>
                             <td class="filled" data-filled="booking_people"></td>
@@ -514,26 +575,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <td>時段</td>
                             <td class="filled" data-filled="booking_time"></td>
                         </tr>
-                        <!-- <tr>
-                            <td>葷素</td>
-                            <td class="filled" data-filled="food-type"></td>
-                        </tr> -->
+                        <tr>
+                            <td>飲食選項</td>
+                            <td>葷食 <span id="filled_pv"></span> 人，蛋奶素 <span class="filled" data-filled="vegetarian_food"></span> 人</td>
+                        </tr>
                         <tr class="notice">
                             <td>其他備註</td>
                             <td class="filled" data-filled="notice"></td>
                         </tr>
-                        <!--tr class="coupon-note">
+                        <tr class="coupon-note">
                             <td>劃位序號</td>
                             <td>
-                                填入劃位序號，按下確認，完成折抵<br/>
-                                折抵後，可在欄位輸入下組序號
+                                若有多組序號，請一次填入一組劃位序號，按下確認後折抵
                             </td>
-                        </tr-->
+                        </tr>
                         <tr class="coupon-code">
                             <td></td>
                             <td>
                                 <div class="d-flex justify-content-between">
-                                    <input class="flex-fill" type="text" name="coupon" placeholder="折扣碼"/>
+                                    <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
                                     <button type="button" class="verification-code btn-outline">確認</button>
                                 </div>
                                 <div class="submit-coupon-wrapper"></div>
@@ -553,15 +613,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="modal-header">
                                     <h5 class="modal-title">信用卡付款</h5>
                                 </div>
-                                <div class="modal-body">
-                                    <div class="tpfield" id="card-number" style="height: 30px;"></div>
-                                    <div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
-                                    <div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
-                                    <p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
-                                    <div style="text-align:center;">
-                                        <a href="https://www.tappaysdk.com/tch" target="_blank">
-                                            <img src="https://docs.tappaysdk.com/images/logo.png" width="100">
-                                        </a>
+                            <div class="modal-body">
+                                <div class="tpfield" id="card-number" style="height: 30px;"></div>
+                                <div class="tpfield" id="card-expiration-date" style="height: 30px;"></div>
+                                <div class="tpfield" id="card-ccv" style="height: 30px;"></div>   
+                                <p>如頁面無法輸入信用卡號結帳，請檢視瀏覽器的版本是否為最新，或改用 Google Chrome 或 Safari 結帳，謝謝。</p>
+                                <div style="text-align:center;">
+                                    <a href="https://www.tappaysdk.com/tch" target="_blank">
+                                        <img src="https://docs.tappaysdk.com/images/logo.png" width="100">
+                                    </a>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -576,8 +636,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </form>
     </div>
 
-    <div class="submit-page success" id="bookingSuccess">
-    <!-- <div class="submit-page success" id="bookingSuccess" style="display:none;"> -->
+    <!-- <div class="submit-page success" id="bookingSuccess"> -->
+    <div class="submit-page success" id="bookingSuccess" style="display:none;">
         <div class="container">
             <h3 class="page-title">
                 你已完成賓客預約！
@@ -586,7 +646,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 請至你的信箱確認預約完成信件
             </p>
             <p class="page-info">
-                它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
+                接近體驗日期時<br/>
+                將會寄送提醒信件與行前訊息給你<br/>
+                <br/>
+                屆時請注意電子信箱，它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
             </p>
             <div class="feature-btn" style="text-align: center;">
                 <a class="btn-outline" href="index.html">關於微醺大飯店：1980s</a>
@@ -594,20 +657,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <div class="submit-page error" id="bookingError">
-    <!-- <div class="submit-page error" id="bookingError" style="display:none;"> -->
+    <!-- <div class="submit-page error" id="bookingError"> -->
+    <div class="submit-page error" id="bookingError" style="display:none;">
         <div class="container">
             <h3 class="page-title">
                 whoops！預約未成功
             </h3>
             <p class="page-info">
                 可能發生以下狀況：<br/>
-                1. 付款未成功<br/>
-                2. 網路中斷，請確認通訊良好的狀況下再次劃位<br/>
-                3. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次<br/><br/>
+                1. 網路中斷，請確認通訊良好的狀況下再次劃位<br/>
+                2. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次<br/>
+                <br/>
+                若非以上兩種狀況，歡迎來信詢問：<br/>
+                <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/><br/>
             </p>
             <div class="feature-btn" style="text-align: center;">
-                <a class="btn-outline" href="booking_pay.html">重新預約</a>
+                <a class="btn-outline" href="booking.html">重新預約</a>
             </div>
         </div>
     </div>
@@ -630,9 +695,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- blockUI script-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 <!-- tappaysdk -->
-<script src="https://js.tappaysdk.com/tpdirect/v5.1.0"></script>
+<script src="https://js.tappaysdk.com/tpdirect/v5.5.1"></script>
+@if(env('APP_ENV') == 'production')
+<script>TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'production');</script>
+@else
+<script>TPDirect.setupSDK('12126', 'app_XjlfXqQFdxLlY1JJGIJ6beAdppcgzciaeo356asbZ5ASVzD2Pryt0dErylTj', 'sandbox');</script>
+@endif
 <!-- Custom Js -->
-<script src="js/form_pay.js?v=0.3"></script>
+<script src="js/form_pay.js?v=0.1"></script>
 
 </body>
 </html>
