@@ -480,8 +480,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="type-item type-group">
                     <a href="https://surpriselab.backme.tw/checkout/1592/12083?locale=zh-TW
                     " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="六人共享票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="六人共享票">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png?v=0.1" alt="六人共享票">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png?v=0.1" alt="六人共享票">
                         <p class="ticket-state sixShare">
                             限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                 class="highlight rest-ticket">XXX</span> 張
@@ -795,7 +795,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/plugins/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.5.0"></script>
+<script src="js/main.js?v=0.5.1"></script>
 
 </body>
 </html>
