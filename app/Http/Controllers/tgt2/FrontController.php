@@ -189,14 +189,15 @@ class FrontController extends Controller
                 $sentSuccess = true;
             } else {
                 // 送到金流
-                /*
-                $pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
-                $partner_key  = 'partner_5jNwC8sfACq49UWf9fT2MRo00lv1M28kYkGtGfdJ5QRFOpa3rTCNViiF';
-                $merchant_id  = 'fufukwang_CTBC';
-                */
-                $pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
-                $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
-                $merchant_id  = 'surpriselab_00001';
+                if(env('APP_ENV') == 'production'){
+                    $pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
+                    $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
+                    $merchant_id  = 'surpriselab_00001';
+                } else {
+                    $pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
+                    $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
+                    $merchant_id  = 'surpriselab_TAISHIN';
+                }
                 
                 $amount = $money - $cut1 - $cut2;
                 if($data['is_overseas'] == 1){

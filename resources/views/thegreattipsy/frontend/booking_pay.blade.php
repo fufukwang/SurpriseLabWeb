@@ -672,7 +672,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/><br/>
             </p>
             <div class="feature-btn" style="text-align: center;">
-                <a class="btn-outline" href="booking.html">重新預約</a>
+                <a class="btn-outline" href="booking_pay.html">重新預約</a>
             </div>
         </div>
     </div>
@@ -699,7 +699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 @if(env('APP_ENV') == 'production')
 <script>TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'production');</script>
 @else
-<script>TPDirect.setupSDK('12126', 'app_XjlfXqQFdxLlY1JJGIJ6beAdppcgzciaeo356asbZ5ASVzD2Pryt0dErylTj', 'sandbox');</script>
+<script>TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'sandbox');</script>
 @endif
 <!-- Custom Js -->
 <script src="js/form_pay.js?v=0.1"></script>
