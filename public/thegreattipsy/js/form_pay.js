@@ -765,7 +765,7 @@ function SendOrderData(Pay,prime){
         'prime' : prime,
         'Pay'   : Pay,
         'coupon': usedCoupons,
-        'is_overseas':1,
+        'is_overseas':2,
         'vegetarian': $('#vegetarian_food').val(),
     };
     $.post('/thegreattipsy/ReOrderData',obj,function(data){
