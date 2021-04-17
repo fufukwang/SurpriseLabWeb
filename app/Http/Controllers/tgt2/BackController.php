@@ -118,13 +118,14 @@ class BackController extends Controller
         return view('thegreattipsy.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $backmes = backme::select('name','email','tel','eb1','p1','p2','p6','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE o_id=0 AND tgt2coupon.b_id=tgt2backme.id)>0")->get()->toArray();
+        $backmes = backme::select('name','email','tel','eb1','p1','p2','p4','p6','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE o_id=0 AND tgt2coupon.b_id=tgt2backme.id)>0")->get()->toArray();
         $cellData = [['姓名','信箱','電話','可劃位人數','訂購內容','註記']];
         foreach ($backmes as $val) {
             $num = 0;
             if($val['eb1']>0) $num += $val['eb1'] * 1;
             if($val['p1']>0) $num += $val['p1'] * 1;
             if($val['p2']>0) $num += $val['p2'] * 2;
+            if($val['p4']>0) $num += $val['p4'] * 4;
             if($val['p6']>0) $num += $val['p6'] * 6;
             $temp = [
                 'name'   => $val['name'],
@@ -859,6 +860,7 @@ class BackController extends Controller
                         if($row['eb1'] == '') $row['eb1'] = 0;
                         if($row['p1'] == '') $row['p1'] = 0;
                         if($row['p2'] == '') $row['p2'] = 0;
+                        if($row['p4'] == '') $row['p4'] = 0;
                         if($row['p6'] == '') $row['p6'] = 0;
                         $r = [
                             'sn'         => $row['sn'],
@@ -872,6 +874,7 @@ class BackController extends Controller
                             'eb1'         => $row['eb1'],
                             'p1'         => $row['p1'],
                             'p2'         => $row['p2'],
+                            'p4'         => $row['p4'],
                             'p6'         => $row['p6'],
                             'quarter'    => $quarter,  // 產出季度
                         ];
@@ -894,7 +897,7 @@ class BackController extends Controller
     }
 
     private function Db2Coupon(){
-        $xls = backme::select('eb1','p1','p2','p6','id')->where('gen_coup',0)->get();
+        $xls = backme::select('eb1','p1','p2','p4','p6','id')->where('gen_coup',0)->get();
         foreach($xls as $row){
             $data = [
                 'b_id' => $row->id
@@ -914,6 +917,12 @@ class BackController extends Controller
             } elseif($row->p2 >= 1){
                 for($i=0;$i<$row->p2;$i++){
                     $data['type'] = 'p2';
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    coupon::insert($data);
+                }
+            } elseif($row->p4 >= 1){
+                for($i=0;$i<$row->p4;$i++){
+                    $data['type'] = 'p4';
                     $data['code'] = $this->GenerateGiftCodeSN();
                     coupon::insert($data);
                 }

@@ -77,6 +77,7 @@ class FrontController extends Controller
                                 case 'eb1': $type = '驚喜早鳥限定票'; break;
                                 case 'p1': $type = '單人自在票'; break;
                                 case 'p2': $type = '雙人共享票'; break;
+                                case 'p4': $type = '富邦專屬四人票'; break;
                                 case 'p6': $type = '六人沈醉票'; break;
                             }
                             $ticketType = $request->ticketType;
@@ -135,6 +136,8 @@ class FrontController extends Controller
                                 $cut1 += $act->cash;
                             } elseif ($me->type == 'p2') {
                                 $cut1 += $act->cash * 2;
+                            } elseif ($me->type == 'p4') {
+                                $cut1 += $act->cash * 4;
                             } elseif ($me->type == 'p6') {
                                 $cut1 += $act->cash * 6;
                             }
@@ -143,6 +146,8 @@ class FrontController extends Controller
                                 $cut1 += $act->money;
                             } elseif ($me->type == 'p2') {
                                 $cut1 += $act->money * 2;
+                            } elseif ($me->type == 'p4') {
+                                $cut1 += $act->money * 4;
                             } elseif ($me->type == 'p6') {
                                 $cut1 += $act->money * 6;
                             }
