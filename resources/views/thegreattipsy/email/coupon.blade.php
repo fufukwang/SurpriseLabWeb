@@ -97,6 +97,9 @@ p{margin:10px 0;padding:0}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{displ
 @elseif($xls->p2>0)
 雙人共享票&nbsp;<br>
 {{ $xls->p2 }}張<br>
+@elseif($xls->p4>0)
+富邦專屬四人票&nbsp;<br>
+{{ $xls->p4 }}張<br>
 @elseif($xls->p6>0)
 六人沈醉票&nbsp;<br>
 {{ $xls->p6 }}張<br>
