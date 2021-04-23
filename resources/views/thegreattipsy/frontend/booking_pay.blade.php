@@ -146,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <span class="prefix">Step 1</span>選擇欲劃位的人數<br/>
                         <span class="prefix">Step 2</span>選擇日期、時段<br/>
                         <span class="prefix">Step 3</span>填寫賓客資料<br/>
-                        <span class="prefix">Step 4</span>確認訂單，<span class="color-pink">輸入劃位序號</span><br/>
+                        <span class="prefix">Step 4</span>確認預約資訊<br/>
                         <span class="prefix">Step 5</span>完成預約
                     </p>
                     <p>&nbsp;</p>
@@ -161,7 +161,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             若⽇期無法選擇，代表該場次已滿，或是當日不開放。
                         </li>
                         <li>
-                            請確實填寫正確的電子信箱與電話，將以此與你聯繫溝通。
+                            請確實填寫正確的電子信箱與電話，將以此與你們聯繫溝通。
                         </li>
                     </ul>
                     <p>&nbsp;</p>
@@ -193,27 +193,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         請點選你欲劃位的<span class="color-pink">人數</span>
                     </p>
 
-                    <div class="sub-title-wrapper">
-                        <h4>
-                            <span>票券序號說明</span>
-                        </h4>
-                    </div>
-                    <br/><br/>
-                    <ul class="prefix-dash custom-text">
-                        <!-- <li data-name="早鳥限定票">
-                            早鳥限定票　幾張早鳥票就有幾組序號
-                        </li> -->
-                        <li data-name="單人自在票">
-                            單人自在票　幾張單人票就有幾組序號
-                        </li>
-                        <li data-name="雙人共享票">
-                            雙人共享票　一組序號劃位兩人，限同日期同場次，不可分開劃位
-                        </li>
-                        <li data-name="六人沈醉票">
-                            六人沈醉票　一組序號劃位六人，限同日期同場次，不可分開劃位
-                        </li>
-                    </ul>
-                    <br/><br/>
                     <div class="form-group select-format">
                         <label class="form-label" for="booking_people">人數</label>
                         <select id="booking_people" name="booking_people" data-placeholder="選擇人數" required>
@@ -583,17 +562,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <td>其他備註</td>
                             <td class="filled" data-filled="notice"></td>
                         </tr>
-                        <tr class="coupon-note">
+                        <!--tr class="coupon-note">
                             <td>劃位序號</td>
                             <td>
                                 若有多組序號，請一次填入一組劃位序號，按下確認後折抵
                             </td>
-                        </tr>
+                        </tr-->
                         <tr class="coupon-code">
                             <td></td>
                             <td>
                                 <div class="d-flex justify-content-between">
-                                    <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
+                                    <input class="flex-fill" type="text" name="coupon" placeholder="折扣碼"/>
                                     <button type="button" class="verification-code btn-outline">確認</button>
                                 </div>
                                 <div class="submit-coupon-wrapper"></div>
@@ -646,10 +625,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 請至你的信箱確認預約完成信件
             </p>
             <p class="page-info">
-                接近體驗日期時<br/>
-                將會寄送提醒信件與行前訊息給你<br/>
-                <br/>
-                屆時請注意電子信箱，它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
+                它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
             </p>
             <div class="feature-btn" style="text-align: center;">
                 <a class="btn-outline" href="index.html">關於微醺大飯店：1980s</a>
@@ -665,11 +641,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </h3>
             <p class="page-info">
                 可能發生以下狀況：<br/>
-                1. 網路中斷，請確認通訊良好的狀況下再次劃位<br/>
-                2. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次<br/>
-                <br/>
+                1. 付款未成功<br/>
+                2. 網路中斷，請確認通訊良好的狀況下再次劃位<br/>
+                3. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次<br/><br/>
+                <!--br/>
                 若非以上兩種狀況，歡迎來信詢問：<br/>
-                <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/><br/>
+                <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/><br/-->
             </p>
             <div class="feature-btn" style="text-align: center;">
                 <a class="btn-outline" href="booking_pay.html">重新預約</a>
