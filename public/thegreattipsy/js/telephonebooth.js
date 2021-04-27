@@ -3,6 +3,7 @@ let data2 = [
     {"id": "EF915URJFK", "password": "1111", "fileName": ""} // 音檔刪除
 ];
 
+
 let current_user_pw = "";
 let current_user_file = "";
 
@@ -45,7 +46,7 @@ $(function() {
     // button
     let $login_enter_btn = $('#js-login-enter-btn');
     let $login_identification_btn = $('#js-login-identification-btn');
-    let $login_password_btn = $('#js-login-password-btn');
+    // let $login_password_btn = $('#js-login-password-btn');
     
     let $phone_control_btn = $('#js-phone-control-btn');
     let $phone_download_btn = $('#js-phone-download-btn');
@@ -57,7 +58,7 @@ $(function() {
 
     // input
     let $identification_input = $('#js-identification');
-    let $password_input = $('#js-password');
+    // let $password_input = $('#js-password');
 
 
     /* change view */
@@ -174,9 +175,9 @@ $(function() {
     }
 
     /* data value verification - password */
-    function verifyPasswordValue(value) {
-        return (value == current_user_pw) ? true : false;
-    }
+    // function verifyPasswordValue(value) {
+    //     return (value == current_user_pw) ? true : false;
+    // }
 
     
 
@@ -196,7 +197,10 @@ $(function() {
             let id_result = verifyIdValue(id_value);
             switch (id_result) {
                 case 'new-user':
-                    changeView($switch_login_wrap, 'next');
+                    // changeView($switch_login_wrap, 'next');
+                    $phone_inner_wrap.addClass('zoom');
+                    changeView($switch_page_wrap, 'next');
+                    changeSubtitle();
                     break;
                 case 'past-user':
                     $('#disappearPastBackdrop').modal('show');
@@ -211,25 +215,25 @@ $(function() {
     });
 
     /* login - password */
-    $login_password_btn.on('click', function(){
-        let password_value = $password_input.val();
-        let format_flag = verifyDataFormat(password_value, password_rule);
+    // $login_password_btn.on('click', function(){
+    //     let password_value = $password_input.val();
+    //     let format_flag = verifyDataFormat(password_value, password_rule);
         
-        // check format
-        if (format_flag) {
-            // check value
-            let value_flag = verifyPasswordValue(password_value);
-            if ( value_flag ) {
-                $phone_inner_wrap.addClass('zoom');
-                changeView($switch_page_wrap, 'next');
-                changeSubtitle();
-            } else {
-                $('#passwordBackdrop').modal('show');
-            }
-        } else {
-            $('#passwordBackdrop').modal('show');
-        }
-    });
+    //     // check format
+    //     if (format_flag) {
+    //         // check value
+    //         let value_flag = verifyPasswordValue(password_value);
+    //         if ( value_flag ) {
+    //             $phone_inner_wrap.addClass('zoom');
+    //             changeView($switch_page_wrap, 'next');
+    //             changeSubtitle();
+    //         } else {
+    //             $('#passwordBackdrop').modal('show');
+    //         }
+    //     } else {
+    //         $('#passwordBackdrop').modal('show');
+    //     }
+    // });
 
     /* phone - play or pause */
     $phone_control_btn.on('click', function(){

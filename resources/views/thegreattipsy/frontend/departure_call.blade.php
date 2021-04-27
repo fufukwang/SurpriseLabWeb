@@ -75,7 +75,7 @@
                                 <div class="switch-item-wrap">
                                     <div class="board-wrap login-identification-wrap">
                                         <div class="board-input-wrap">
-                                            <input id="js-identification" name="identification" type="text" placeholder="請輸入序號">
+                                            <input id="js-identification" name="identification" type="text" placeholder="請輸入序號" maxlength="10">
                                             <!-- 進入 P1-3 -->
                                             <button id="js-login-identification-btn" class="arrow-btn">
                                                 <img src="./img/icon/ic_arrow.png" alt="arrow" 
@@ -89,11 +89,10 @@
                                 </div>
         
                                 <!-- P1-3 輸入密碼 -->
-                                <div class="switch-item-wrap">
+                                <!--<div class="switch-item-wrap">
                                     <div class="board-wrap login-password-wrap">
                                         <div class="board-input-wrap">
-                                            <input id="js-password" name="password" type="text" placeholder="請輸入密碼">
-                                            <!-- 登入成功，進入 P2 -->
+                                            <input id="js-password" name="password" type="text" placeholder="請輸入密碼" maxlength="4">
                                             <button id="js-login-password-btn" class="arrow-btn">
                                                 <img src="./img/icon/ic_arrow.png" alt="arrow" 
                                                     srcset="
@@ -103,7 +102,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </section>
                         </div>
                     </div>
@@ -292,7 +291,7 @@
         </div>
     
         <!-- P1-3.5 密碼錯誤彈跳視窗 -->
-        <div class="phone-modal modal fade" id="passwordBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="passwordBackdropLabel" aria-hidden="true">
+        <!-- <div class="phone-modal modal fade" id="passwordBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="passwordBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -302,12 +301,11 @@
                         <p>輸入密碼錯誤</p>
                     </div>
                     <div class="modal-footer">
-                        <!-- 關閉彈窗 -->
                         <button type="button" data-bs-dismiss="modal">重新輸入密碼</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     
         <!-- P2.5 刪除 彈跳視窗 -->
         <div class="phone-modal modal fade" id="deleteBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteBackdropLabel" aria-hidden="true">
