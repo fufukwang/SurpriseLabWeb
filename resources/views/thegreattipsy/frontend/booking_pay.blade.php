@@ -523,7 +523,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </fieldset>
-            <fieldset class="step step-5" title="確認賓客資料與劃位序號填寫">
+            <fieldset class="step step-5" title="確認賓客資料">
                 <div class="form-container">
                     <table class="filled-data">
                         <tr>
@@ -572,7 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <td></td>
                             <td>
                                 <div class="d-flex justify-content-between">
-                                    <input class="flex-fill" type="text" name="coupon" placeholder="折扣碼"/>
+                                    <input class="flex-fill" type="text" name="coupon" placeholder="請輸入折扣碼"/>
                                     <button type="button" class="verification-code btn-outline">確認</button>
                                 </div>
                                 <div class="submit-coupon-wrapper"></div>
@@ -582,7 +582,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="feature-btn d-flex justify-content-between multi-btn">
                         <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
                         <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
-                            完成劃位 NT$<span class="amountToGo"></span>
+                            前往付款 NT$<span class="amountToGo"></span>
                         </button>
                     </div>
 
