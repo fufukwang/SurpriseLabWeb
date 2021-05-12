@@ -261,7 +261,6 @@ class MasterMailSend extends Command
             $message = "敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s";
             $proday = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=0 AND day NOT BETWEEN '2021-05-12' AND '2121-06-06'")->get();
-                $this->line(print_r($proday,true));
             foreach($proday as $pro){
                 $ordernow = order::select('id','tel','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($ordernow as $ord) {
