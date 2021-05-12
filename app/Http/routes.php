@@ -522,7 +522,9 @@ Route::group(['middleware' => ['web']], function () {
             */
             return redirect("/thegreattipsy/index.html");
         });
-        Route::get('departure_call',function(){ return view('thegreattipsy.frontend.departure_call'); });
+        if(env('APP_ENV') != 'production'){
+            Route::get('departure_call',function(){ return view('thegreattipsy.frontend.departure_call'); });
+        }
         Route::get('master','tgt2\MasterController@getTeamMaster'/*function(){ return view('thegreattipsy.frontend.master'); }*/);
         Route::post('Team/SlaveStore', 'tgt2\MasterController@postTeamSlave');
         // 姓名修改
