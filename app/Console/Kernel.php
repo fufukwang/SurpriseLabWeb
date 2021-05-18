@@ -17,6 +17,7 @@ class Kernel extends ConsoleKernel
         //Commands\SmsSent::class,
         Commands\ClubSentMail::class,
         Commands\MasterMailSend::class,
+        Commands\Covid19CouponRestore::class,
     ];
 
     /**
