@@ -2268,6 +2268,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .experience .exp-item {
+  width: 33.33%;
   position: relative;
 }
 
@@ -2366,6 +2367,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     width: 100%;
   }
   #Ticket .experience .exp-item {
+    width: 100%;
     padding-top: 36px;
   }
   #Ticket .experience .exp-item:first-child {

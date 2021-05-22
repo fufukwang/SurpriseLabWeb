@@ -1166,6 +1166,7 @@ header.logo {
     margin: 0 auto;
 
     .exp-item {
+      width: 33.33%;
       position: relative;
     }
 
@@ -1212,6 +1213,7 @@ header.logo {
       width: 100%;
 
       .exp-item {
+        width: 100%;
         padding-top: 36px;
 
         &:first-child {

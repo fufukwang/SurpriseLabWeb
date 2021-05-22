@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.3"/>
+    <link rel="stylesheet" href="css/style.css?v=0.4"/>
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -406,7 +406,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </h4>
             </div>
 
-            <div class="experience d-sm-flex justify-content-between">
+            <div class="experience d-sm-flex justify-content-center">
                 <div class="exp-item">
                     <div class="exp-number">
                         120
@@ -415,7 +415,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         兩小時沈浸式體驗
                     </p>
                 </div>
-                <div class="exp-item middle">
+                <div class="exp-item">
                     <div class="exp-number">
                         3
                     </div>
