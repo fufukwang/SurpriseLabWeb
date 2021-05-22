@@ -412,23 +412,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         120
                     </div>
                     <p class="exp-text">
-                        兩小時沈浸式微醺體驗
+                        兩小時沈浸式體驗
                     </p>
                 </div>
                 <div class="exp-item middle">
                     <div class="exp-number">
-                        3+3
+                        3
                     </div>
                     <p class="exp-text">
-                        三杯調酒 + 三道小點
+                        三杯調酒
                     </p>
                 </div>
                 <div class="exp-item ">
                     <div class="exp-number">
-                        7+7
+                        7
                     </div>
                     <p class="exp-text">
-                        七個角色 ＋ 七個秘密
+                        七個角色
                     </p>
                 </div>
             </div>
@@ -452,7 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="ticket-type">
                 
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/1592/12081?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1681/12916?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="單人自在票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="單人自在票">
@@ -468,7 +468,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/1592/12082?locale=zh-TW" class="ticket-frame" target="_blank">
+                    <a href="https://surpriselab.backme.tw/checkout/1681/12915?locale=zh-TW" class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png" alt="雙人共享票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png" alt="雙人共享票">
                         <p class="ticket-state timeLimit">
@@ -478,20 +478,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/1592/12083?locale=zh-TW
+                    <a href="https://surpriselab.typeform.com/to/VoSglICd
                     " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png?v=0.1" alt="六人共享票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png?v=0.1" alt="六人共享票">
-                        <p class="ticket-state sixShare">
+                        <!--p class="ticket-state sixShare">
                             限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                 class="highlight rest-ticket">XXX</span> 張
-                        </p>
+                        </p> -->
                     </a>
                 </div>
             </div>
             <p class="ticket-area-note">
-                訂房採先預購、後劃位之機制<br/>
-                詳細劃位時間軸，請見本頁最下方
+                採先預約、後劃位機制<br/>
+                疫情之後，與你相見
             </p>
         </div>
 
@@ -508,8 +508,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，將於 07/01 - 08/15 前來體驗<br/>
-                每日場次表請參考下方時段<br/><br/>
+                現在購票，預計於 08/16 - 09/26 前來體驗<br/>
+                實際演出時間將依疫情狀況進行彈性調整<br/><br/>
             </p>
 
             <div class="time-session">
@@ -573,7 +573,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 07/01 - 08/15 之票券<br/>
+                        * 現正預售 08/16 - 09/26 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -594,22 +594,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">07/01-08/15 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">08/16-09/26 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
-                        <td>05/26（三）中午 12:00</td>
+                        <td>07/21（三）中午 12:00</td>
                         <td>前 800 位預約者</td>
                     </tr>
                     <tr>
-                        <td>06/02（三）中午 12:00</td>
+                        <td>07/28（三）中午 12:00</td>
                         <td>801-1600 位預約者</td>
                     </tr>
                     <tr>
-                        <td>06/16（三）中午 12:00</td>
+                        <td>08/04（三）中午 12:00</td>
                         <td>1601-2400 位預約者</td>
                     </tr>
                     <tr>
-                        <td>06/23（三）中午 12:00</td>
+                        <td>08/18（三）中午 12:00</td>
                         <td>其餘預約者</td>
                     </tr>
                     <tr>
