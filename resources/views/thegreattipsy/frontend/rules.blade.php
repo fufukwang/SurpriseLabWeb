@@ -543,7 +543,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </h5>
                             <p class="text-left">
                                 《微醺大飯店：1980s》預售票現正預售中<br/>
-                                可劃位日期：07/01 - 08/15
+                                可劃位日期：08/16 - 09/26
                             </p>
 
                             <h5 class="sub-title highlight">
@@ -612,6 +612,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <ul>
                                 <li>可劃位： 07/01 - 08/15 之間的演出場次</li>
                                 <li>序號失效日期： 07/09（五）18:00 整。</li>
+                            </ul>
+
+                            <p class="category-title">
+                                第六批賓客
+                            </p>
+                            <ul>
+                                <li>可劃位： 08/16 - 09/26 之間的演出場次</li>
+                                <li>序號失效日期： 09/10（五）18:00整 。</li>
                             </ul>
 
                             <p class="text-left">
