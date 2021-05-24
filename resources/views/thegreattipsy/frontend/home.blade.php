@@ -795,7 +795,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/plugins/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.5.1"></script>
+<script src="js/main.js?v=0.6.0"></script>
 
 </body>
 </html>
