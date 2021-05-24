@@ -480,8 +480,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="type-item type-group">
                     <a href="https://surpriselab.typeform.com/to/VoSglICd
                     " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png?v=0.1" alt="六人共享票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png?v=0.1" alt="六人共享票">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png?v=0.2" alt="猶豫中">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png?v=0.2" alt="猶豫中">
                         <!--p class="ticket-state sixShare">
                             限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                 class="highlight rest-ticket">XXX</span> 張
