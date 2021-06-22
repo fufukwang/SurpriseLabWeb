@@ -260,7 +260,7 @@ class MasterMailSend extends Command
         try {
             $message = "敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s";
             $proday = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=0 AND day NOT BETWEEN '2021-05-12' AND '2021-06-30'")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=0 AND day NOT BETWEEN '2021-05-12' AND '2021-07-31'")->get();
             foreach($proday as $pro){
                 $ordernow = order::select('id','tel','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($ordernow as $ord) {
@@ -276,7 +276,7 @@ class MasterMailSend extends Command
 
             //10 天 // 0217 改 11天 // 0224 改成11點寄送
             $pr10day = pro::select('id','day','rang_start')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=11 AND day NOT BETWEEN '2021-05-12' AND '2021-06-30'")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=11 AND day NOT BETWEEN '2021-05-12' AND '2021-07-31'")->get();
             foreach($pr10day as $pro){
                 // 找出正常的訂單
                 $order14 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
@@ -323,7 +323,7 @@ class MasterMailSend extends Command
         try {
             // 21 天
             $pr21day = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=21 AND day NOT BETWEEN '2021-05-12' AND '2021-06-30'")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=21 AND day NOT BETWEEN '2021-05-12' AND '2021-07-31'")->get();
             foreach($pr21day as $pro){
                 // 找出正常的訂單
                 $order21 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
@@ -360,7 +360,7 @@ class MasterMailSend extends Command
             }
             // 14 天
             $pr14day = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=14 AND day NOT BETWEEN '2021-05-12' AND '2021-06-30'")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=14 AND day NOT BETWEEN '2021-05-12' AND '2021-07-31'")->get();
             foreach($pr14day as $pro){
                 // 找出正常的訂單
                 $order14 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
@@ -405,7 +405,7 @@ class MasterMailSend extends Command
         try {
             $message = "敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s";
             $proday = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=11 AND day NOT BETWEEN '2021-05-12' AND '2021-06-30'")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=11 AND day NOT BETWEEN '2021-05-12' AND '2021-07-31'")->get();
             foreach($proday as $pro){
                 $ordernow = order::select('id','tel','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($ordernow as $ord) {
