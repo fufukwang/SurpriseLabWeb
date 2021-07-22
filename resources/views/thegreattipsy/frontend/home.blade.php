@@ -507,7 +507,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，預計於 08/16 - 09/26 前來體驗<br/>
+                現在購票，預計於 11/01 - 12/31 前來體驗<br/>
                 實際演出時間將依疫情狀況進行彈性調整<br/><br/>
             </p>
 
@@ -572,7 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 08/16 - 09/26 之票券<br/>
+                        * 現正預售 11/01 - 12/31 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -593,22 +593,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">08/16-09/26 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">11/01-12/31 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
-                        <td>07/21（三）中午 12:00</td>
+                        <td>09/01（三）中午 12:00</td>
                         <td>前 800 位預約者</td>
                     </tr>
                     <tr>
-                        <td>07/28（三）中午 12:00</td>
+                        <td>09/22（三）中午 12:00</td>
                         <td>801-1600 位預約者</td>
                     </tr>
                     <tr>
-                        <td>08/04（三）中午 12:00</td>
+                        <td>10/13（三）中午 12:00</td>
                         <td>1601-2400 位預約者</td>
                     </tr>
                     <tr>
-                        <td>08/18（三）中午 12:00</td>
+                        <td>10/20（三）中午 12:00</td>
                         <td>其餘預約者</td>
                     </tr>
                     <tr>
@@ -794,7 +794,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/plugins/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.7.0"></script>
+<script src="js/main.js?v=0.8.0"></script>
 
 </body>
 </html>
