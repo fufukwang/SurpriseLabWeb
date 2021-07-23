@@ -230,8 +230,8 @@ $(document).ready(function () {
         if (timeLimit_rest <= 0) {
             //timeLimit_rest = 0;
             ticket_matinee.addClass('sold');
-            ticket_matinee.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_2_soldout.png');
-            ticket_matinee.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_2_soldout_mobile.png');
+            ticket_matinee.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_2_soldout.png?v=0.1');
+            ticket_matinee.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_2_soldout_mobile.png?v=0.1');
             ticket_matinee.find('.ticket-state').html('已售完');
         }
 
@@ -252,8 +252,8 @@ $(document).ready(function () {
         
         if (groupTicket_rest <= 0) {
             ticket_group.addClass('sold');
-            ticket_group.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_3_soldout.png?v=0.1');
-            ticket_group.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_3_soldout_mobile.png?v=0.1');
+            ticket_group.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_3_soldout.png?v=0.2');
+            ticket_group.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_3_soldout_mobile.png?v=0.2');
             ticket_group.find('.ticket-state').html('已售完');
         }
 
