@@ -257,6 +257,7 @@ $(function(){
                 code : code,
             },function(data){
                 $('.canelCoupon[data-id="'+id+'"]').remove();
+                $('.sendbox[value="'+id+'"]').prop('checked',false);
                 $.Notification.notify('success','bottom left','已更新', '已移除')
             },'json');
         }

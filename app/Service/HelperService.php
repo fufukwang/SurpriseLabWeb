@@ -77,7 +77,7 @@ class HelperService {
     // 行前提醒信件寄送
     public function SendPreviewEmail($toData = []){
     	try{
-    		if(strpos($toData['email'],'@yahoo') || strpos($toData['email'],'@hotmail')) {
+    		if(strpos($toData['email'],'@yahoo')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_TGT_USER')]);
                 config(['mail.password' => env('MAIL_TGT_PASS')]);

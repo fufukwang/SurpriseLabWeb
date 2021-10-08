@@ -262,7 +262,7 @@ class FrontController extends Controller
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn
                 ];
-                if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
+                if(strpos($mailer['email'],'@yahoo')) {
                     config(['mail.host' => 'smtp.gmail.com']);
                     config(['mail.username' => env('MAIL_TGT_USER')]);
                     config(['mail.password' => env('MAIL_TGT_PASS')]);
@@ -321,7 +321,7 @@ class FrontController extends Controller
                         SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
                     }
                     // SLS::sent_single_sms($order->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
-                } catch (Exception $e){
+                } catch (\Exception $e){
                     Log::error($e);
                 }
             }
@@ -331,7 +331,7 @@ class FrontController extends Controller
                 'success'   => $sentSuccess,
                 'SN'        => $count
             ), 200);
-        } catch (Exception $exception) {
+        } catch (\Exception $exception) {
             Log::error($exception);
             return response()->json(["success"=>false]);
         }

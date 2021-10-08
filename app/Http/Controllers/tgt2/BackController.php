@@ -68,7 +68,7 @@ class BackController extends Controller
                     'xls'     => $xls,
                     'coupons' => $coupons,
                 ];
-                if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
+                if(strpos($data['xls']->email,'@yahoo')) {
                     config(['mail.host' => 'smtp.gmail.com']);
                     config(['mail.username' => env('MAIL_TGT_USER')]);
                     config(['mail.password' => env('MAIL_TGT_PASS')]);
@@ -169,6 +169,9 @@ class BackController extends Controller
         coupon::where('b_id',$id)->where('code',$code)->update([
             'o_id' => 0
         ]);
+        backme::where('id',$id)->update([
+            'is_sent' => 0
+        ]);
         return Response::json(['message'=> '已更新'], 200);
     }
     public function SentCouponCode(Request $request,$id){
@@ -180,7 +183,7 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
-            if(strpos($data['xls']->email,'@yahoo') || strpos($data['xls']->email,'@hotmail')) {
+            if(strpos($data['xls']->email,'@yahoo')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_TGT_USER')]);
                 config(['mail.password' => env('MAIL_TGT_PASS')]);
