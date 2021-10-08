@@ -168,6 +168,7 @@ $(document).ready(function () {
     var progress_api_SaleStep5 = 'https://surpriselab.backme.tw/api/projects/1592json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep6 = 'https://surpriselab.backme.tw/api/projects/1681json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep7 = 'https://surpriselab.backme.tw/api/projects/1821json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep8 = 'https://surpriselab.backme.tw/api/projects/1987json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
@@ -178,8 +179,9 @@ $(document).ready(function () {
       $.getJSON(progress_api_SaleStep4),
       $.getJSON(progress_api_SaleStep5),
       $.getJSON(progress_api_SaleStep6),
-      $.getJSON(progress_api_SaleStep7)
-    ).done(function(data1, data2, data3, data4, data5, data6, data7) {
+      $.getJSON(progress_api_SaleStep7),
+      $.getJSON(progress_api_SaleStep8)
+    ).done(function(data1, data2, data3, data4, data5, data6, data7, data8) {
 
         data1 = data1[0];
         data2 = data2[0];
@@ -187,7 +189,7 @@ $(document).ready(function () {
         data4 = data4[0];
         data5 = data5[0];
         data6 = data6[0];
-        var data = data7[0];
+        var data = data8[0];
 
         // 階段總人數
         var SaleStep1_amount = data1['pledged_unit_count'];
@@ -243,9 +245,9 @@ $(document).ready(function () {
 
         // 六人共享票 票銷售完之後改顯示sold out圖
         var ticket_group = $('.type-group');
-        var groupTicket_sale = data['rewards'][0].pledged_count; // 已銷售張數
-        var groupTicket_limit = data['rewards'][0].quantity_limit; // 限量張數
-        var groupTicket_wait = data['rewards'][0].wait_pledged_count; // 等待付款中張數
+        var groupTicket_sale = data['rewards'][4].pledged_count; // 已銷售張數
+        var groupTicket_limit = data['rewards'][4].quantity_limit; // 限量張數
+        var groupTicket_wait = data['rewards'][4].wait_pledged_count; // 等待付款中張數
         var groupTicket_rest = groupTicket_limit - groupTicket_sale - groupTicket_wait; // 剩餘可銷售張數
         
         //groupTicket_rest = 0;  // 歸零

@@ -187,11 +187,6 @@ class BackController extends Controller
                 'xls'     => $xls,
                 'coupons' => $coupons,
             ];
-            if(strpos($data['xls']->email,'@yahoo')) {
-                config(['mail.host' => 'smtp.gmail.com']);
-                config(['mail.username' => env('MAIL_TGT_USER')]);
-                config(['mail.password' => env('MAIL_TGT_PASS')]);
-            }
 
 
 
