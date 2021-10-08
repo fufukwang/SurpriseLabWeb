@@ -73,15 +73,19 @@ class BackController extends Controller
                     config(['mail.username' => env('MAIL_TGT_USER')]);
                     config(['mail.password' => env('MAIL_TGT_PASS')]);
                 }
-                Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
-                    $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                    $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                    $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                try {
+                    Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
+                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
-                    $m->to($data['xls']->email, $data['xls']->name);
-                    $m->subject('【微醺大飯店：1980s】劃位序號信件');
-                });
-                backme::where('id',$id)->update(['is_sent'=>1]);
+                        $m->to($data['xls']->email, $data['xls']->name);
+                        $m->subject('【微醺大飯店：1980s】劃位序號信件');
+                    });
+                    backme::where('id',$id)->update(['is_sent'=>1]);
+                } catch (\Exception $e){
+                    Log::error($e);
+                }
             }
             $par = '?';
             if($request->has('search')) $par .= "&search=".$request->search;
