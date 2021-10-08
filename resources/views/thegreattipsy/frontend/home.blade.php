@@ -452,7 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="ticket-type">
                 
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/1821/13759?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/1987/15392?locale=zh-TW
                 " class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="單人自在票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="單人自在票">
@@ -468,7 +468,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/1821/13760?locale=zh-TW" class="ticket-frame" target="_blank">
+                    <a href="https://surpriselab.backme.tw/checkout/1987/15389?locale=zh-TW" class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png?v=0.1" alt="雙人共享票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png?v=0.1" alt="雙人共享票">
                         <p class="ticket-state timeLimit">
@@ -478,7 +478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/1821/13817?locale=zh-TW" class="ticket-frame" target="_blank">
+                    <a href="https://surpriselab.backme.tw/checkout/1987/15386?locale=zh-TW" class="ticket-frame" target="_blank">
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png?v=0.3" alt="猶豫中">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png?v=0.2" alt="猶豫中">
                         <p class="ticket-state sixShare">
