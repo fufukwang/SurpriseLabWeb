@@ -45,8 +45,8 @@ class Covid19CouponRestore extends Command
     {
         try {
             // 取得日期區間資料
-            $proday = pro::select('id','day')->where('open',1)
-                ->whereRaw("day BETWEEN '2021-06-01' AND '2021-07-31'")->get();
+            $proday = pro::select('id','day')->where('open',0)
+                ->whereRaw("day BETWEEN '2021-07-01' AND '2021-07-31'")->get();
             $i = 0; $j = 0;
             foreach($proday as $pro){
                 $ordernow = order::select('id','sn')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
