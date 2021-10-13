@@ -307,7 +307,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <div class="card-body">
                                             120 分鐘。場次時間如下：<br/>
                                             平日：18:30-20:30｜20:30-22:30<br/>
-                                            週末：13:00-15:00｜15:00-17:00｜18:30-20:30｜20:30-22:30<br/>
+                                            週末：13:00-15:00｜15:00-17:00｜19:00-21:00｜21:00-23:00<br/>
                                         </div>
                                     </div>
                                 </div>
@@ -543,7 +543,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </h5>
                             <p class="text-left">
                                 《微醺大飯店：1980s》預售票現正預售中<br/>
-                                可劃位日期：11/01 - 12/31
+                                可劃位日期：12/01 - 01/30
                             </p>
 
                             <h5 class="sub-title highlight">
@@ -628,6 +628,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <ul>
                                 <li>可劃位： 11/01 - 12/31 之間的演出場次</li>
                                 <li>序號失效日期： 11/12（五）18:00整 。</li>
+                            </ul>
+
+                            <p class="category-title">
+                                第八批賓客
+                            </p>
+                            <ul>
+                                <li>可劃位： 12/01 - 01/30 之間的演出場次</li>
+                                <li>序號失效日期： 01/14（五）18:00整 。</li>
                             </ul>
 
                             <p class="text-left">
