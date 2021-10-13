@@ -169,17 +169,9 @@
         <div class="container">
             <h2>Lobby</h2>
             <p>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                 《微醺大飯店：1980s 》即將重新開張，<br/>
                 一場開幕酒會正等著你的來訪。<br/><br/>
                 準備好赴約了嗎？
-=======
-                「你好，我是微醺管家 Mr Tipsy. 歡迎來到
-                <br/>
-                《微醺大飯店 The Great Tipsy》
-                <br/>
-                請問有什麼我能協助你的呢？」
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
             </p>
             <div class="row feature-wrapper justify-content-between no-gutters">
                 <div class="col-auto d-flex justify-content-center flex-column">
@@ -205,37 +197,21 @@
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Rules">
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                             <img draggable="false" src="img/icon-rules.svg" alt="飯店規則">
                         </a>
                     </div>
                     <div class="feature-btn">
                         <a class="btn-outline btn-outline-small smoothScroll" href="#Rules">飯店規則</a>
-=======
-                            <img draggable="false" src="img/icon-rules.svg" alt="房客規則">
-                        </a>
-                    </div>
-                    <div class="feature-btn">
-                        <a class="btn-outline btn-outline-small smoothScroll" href="#Rules">房客規則</a>
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                     </div>
                 </div>
                 <div class="col-auto d-flex justify-content-center flex-column">
                     <div class="feature-img">
                         <a class="smoothScroll" href="#Contact">
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                             <img draggable="false" src="img/icon-contact.svg" alt="聯絡飯店">
                         </a>
                     </div>
                     <div class="feature-btn">
                         <a class="btn-outline btn-outline-small smoothScroll" href="#Contact">聯絡飯店</a>
-=======
-                            <img draggable="false" src="img/icon-contact.svg" alt="聯絡管家">
-                        </a>
-                    </div>
-                    <div class="feature-btn">
-                        <a class="btn-outline btn-outline-small smoothScroll" href="#Contact">聯絡管家</a>
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                     </div>
                 </div>
             </div>
@@ -284,20 +260,11 @@
                     </h4>
                 </div>
                 <p>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                     選擇赴約的人<br/>
                     將收到我的邀請<br/>
                     <span class="highlight">參加一場私人開幕酒會<br/><br/></span>
                     請穿上衣櫃裡最好的衣裳<br/>
                     <span class="highlight">你絕對無法想像<br/>我有多麽期待見到你</span>
-=======
-                    微醺，介在清醒與酒醉之間
-                    <br/>
-                    唯有微醺，才能看見故事的全貌
-                    <br/>
-                    <br/>
-                    <span class="highlight">喝個幾杯，在所難免</span>
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                 </p>
             </div>
         </section>
@@ -307,7 +274,6 @@
                 <h3>選擇</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                         <span>GUEST</span>
                     </h4>
                 </div>
@@ -317,27 +283,7 @@
                     <span class="highlight">留意那些四處張望的臉孔<br/>和突然冒出的身影<br/><br/></span>
                     當他們向你走來<br/>
                     <span class="highlight">你的回應，將決定你所看見的故事</span>
-=======
-                        <span>YOUR CHOICES</span>
-                    </h4>
-                </div>
-                <p>
-在微醺大飯店中<br/>
-所有事件都由選擇所構成<br/><br/>
 
-時間不可逆，你無法回頭更改<br/>
-請謹慎選擇<br/><br/>
-<!--
-                    「在這，有許多扇⾨」
-                    <br/>
-                    「你現在看到的這扇⾨，可能會通往泳池」
-                    <br/>
-                    「其他⾨則可能是酒吧、廚房、電話亭」
-                    <br/>
-                    「當然，也可能會通往我們也不知道的地⽅」
-                    <br/-->
-                    <span class="highlight">你的選擇，將決定你看到的故事</span>
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                 </p>
             </div>
             <div class="space-img">
@@ -350,7 +296,6 @@
                 <h3>房客</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                         <span>TIME</span>
                     </h4>
                 </div>
@@ -362,29 +307,7 @@
                     傾吐無人知曉的祕密<br/><br/>
                     <span class="highlight">小心反覆出現的日期<br/></span>
                     嘿嘿嘿嘿嘿嘿嘿
-=======
-                        <span>OUR GUESTS</span>
-                    </h4>
-                </div>
-                <p>
-在這，有許多扇門<br />
-每扇門後，都住著一位房客<br /><br />
 
-有些人離不開、有些人不想離開<br />
-有些人一直在等著一個人帶著她離開<br /><br />
-<!--
-                    「他是醒不過來的 lobby boy，待了好一陣子」
-                    <br/>
-                    「他幾年前來的時候，喝醉了，
-                    <br/>
-                    錯過了回去現實的機會」
-                    <br/>
-                    「他會對新進房客不停灌酒，
-                    <br/>
-                    希望能把人留在這世界中陪伴他」
-                    <br/-->
-                    <span class="highlight">你將一一拜訪久居在此的房客<br />聽著他們訴說一段，與你我有關的故事</span>
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                 </p>
             </div>
             <div class="character-img">
@@ -397,7 +320,6 @@
                 <h3>微醺</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                         <span>TIPSY</span>
                     </h4>
                 </div>
@@ -409,33 +331,7 @@
                     也不必抗拒<br/><br/>
                     你所期待的那些事，在微醺之後<br/>
                     全都有可能發生
-=======
-                        <span>cocktail</span>
-                    </h4>
-                </div>
-                <p>
-這裡有著長年流傳的三份酒譜<br />
-它們總能神奇地讓人微醺<br /><br />
 
-第一杯能讓你尋得入口<br />
-第二杯能讓你想起過去<br />
-第三杯能讓你回到當下<br /><br />
-
-你也會嘗試三種房客為你準備的小點<br />
-份量不多，但都是房客們的心意<br /><br />
-<!--
-                    「微醺大飯店中，有著長年流傳下來的
-                    <br/>
-                    酒譜、食譜」
-                    <br/>
-                    「在這，有精心設計的三杯調酒讓你保持微醺」
-                    <br/>
-                    「同時，你也會嘗試三種特色小點，份量不多，
-                    <br/>
-                    但絕對值得一試」
-                    <br/-->
-                    <span class="highlight">準備好接受我們的款待了嗎？</span>
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                 </p>
             </div>
         </section>
@@ -449,7 +345,6 @@
                     </h4>
                 </div>
                 <p>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                     在酒會開始的一百二十分鐘後<br/>
                     我將親自送客<br/><br/>
                     請記好你來時的日期<br/>
@@ -457,29 +352,6 @@
                     <span class="highlight">「來過的人，都會想起一段過去」<br/>「你，會想起哪一天呢？」<br/><br/></span>
                     願你我在這趟旅程之後<br/>
                     都能因微醺，而更清醒
-=======
-為了保護你不會迷失在微醺之中<br />
-每位訪客的入住時間為九十分鐘<br /><br />
-<span class="highlight">
-「來過的人，都會想起一個人」<br />
-「你，會想起誰呢？」<br /><br />
-</span>
-願你我在這趟旅程之後<br />
-都能因微醺，而更清醒
-
-
-
-                    <!--
-                    「為了保護你不會迷失在微醺狀態中，
-                    <br/>
-                    每個人的入住時間為九十分鐘」
-                    <br/>
-                    <br/>
-                    「記住，微醺，是一面鏡子」
-                    <br/>
-                    「願你在走出這裡之後，能因此更清醒」
-                -->
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                 </p>
             </div>
             <div class="check-img">
@@ -491,25 +363,15 @@
             <div class="container">
                 <div class="ticket-cta">
                     <p class="highlight">
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                         誠摯地邀請你，成為我們的賓客
-=======
-                        《微醺大飯店》
-                        <br/>
-                        誠摯地邀請你，成為我們的房客
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
+
                     </p>
                     <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
                     <p class="highlight">
                         <br/>你絕對無法相信，我有多期待見到你<br/><br/>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                         Yours Truly,<br/>
                         《微醺大飯店：1980s 》
-=======
 
-Yours Truly,<br/>
-微醺管家 Mr. Tipsy
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                     </p>
                 </div>
             </div>
@@ -644,13 +506,8 @@ Yours Truly,<br/>
                 <div class="type-item type-group">
                     <a href="https://surpriselab.backme.tw/checkout/1397/10433?locale=zh-TW
                     " class="ticket-frame" target="_blank">
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                         <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="六人沈醉票">
                         <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="六人沈醉票">
-=======
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png" alt="沈醉票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png" alt="沈醉票">
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                         <p class="ticket-state d-none d-sm-block">
                             已售完<!--
                             四人以上未滿八人者<br/>
@@ -691,58 +548,13 @@ Yours Truly,<br/>
 
             <div class="time-session">
                 <div class="time-session-inner">
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                     <p>平日　18:30-20:30｜20:30-22:30</p>
                     <hr/>
                     <p>週末　13:00-15:00｜15:00-17:00</p>
                     <p>　　　19:00-21:00｜21:00-23:00</p>
                     <br/>
                     <p>＊週一週二公休</p>
-=======
-                    <p>
-                        晚場
-                    </p>
-                    <!--p>
-                        <span class="ticket-blue">週一：19:00｜20:30｜22:00</span>
-                    </p>
-                    <p>
-                        <span class="ticket-blue">週二：19:00｜20:30｜22:00</span>
-                    </p-->
-                    <p>
-                        <span class="ticket-blue">週三：19:00｜20:30｜22:00</span>
-                    </p>
-                    <p>
-                        <span class="ticket-blue">週四：19:00｜20:30｜22:00</span>
-                    </p>
-                    <p>
-                        <span class="ticket-blue">週五：19:00｜20:30｜22:00</span>
-                    </p>
-                    <p>
-                        週六：19:00｜20:30｜22:00
-                    </p>
-                    <p>
-                        週⽇：19:00｜20:30｜22:00
-                    </p>
-                    <hr/>
-                    <p>
-                        午場
-                    </p>
-                    <!--p>
-                        <span class="ticket-blue">週五：15:30</span>
-                    </p-->
-                    <p>
-                        週六：13:00｜14:30｜16:00
-                    </p>
-                    <p>
-                        週⽇：13:00｜14:30｜16:00
-                    </p>
-                    <p>&nbsp;</p>
-                    <p class="ticket-color-diff-note">
-                        <span class="ticket-yellow">暢⾏無阻票</span>、<span class="ticket-pink">四⼈沈醉票</span>，可選擇所有時段<br/>
-                        <span class="ticket-blue">時間有點限制票</span>，僅能選藍色時段
-                    </p>
 
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                     <div class="feature-btn text-center d-block d-sm-none">
                         <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
                     </div>
@@ -796,14 +608,9 @@ Yours Truly,<br/>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                         * 現正預售 01/13 - 02/07 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
-=======
 
-* 微醺最終場07/17-08/25，預售票券完售<!--微醺最終場，預售07/17-08/25票券<br>
-* 可劃位日期將依實際預售情況加開或縮短-->
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                     </p>
                 </div>
             </div>
@@ -819,66 +626,21 @@ Yours Truly,<br/>
                     <span>schedule</span>
                 </h4>
             </div>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
-=======
-            <p>
-                訂房採先預購、後劃位機制，詳細時程如下
-            </p>
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
 
             <div class="schedule">
                 <table>
                     <tr>
                         <td>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                             12/09（三）中午12:00
                         </td>
                         <td>
                             依照購票順序寄送劃位序號，收到即可劃位
-=======
-                            06/19
-                        </td>
-                        <td>
-                            開賣微醺大飯店最終場 07/17—08/25場次票券，目標2500人
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            07/03
-                        </td>
-                        <td>
-                            寄送劃位信—07/03前購票者（收到信後，即可劃位）
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            07/10
-                        </td>
-                        <td>
-                            寄送劃位信－07/03–07/09購票者
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            07/17
-                        </td>
-                        <td>
-                            寄送劃位信－07/10 後其餘購票者
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                         </td>
                     </tr>
 
                 </table>
-<<<<<<< HEAD:resources/views/thegreattipsy2/frontend/home.blade.php
                 <p class="schedule-sub-title">
                     更詳細的劃位須知，將於劃位日前兩天透過電子郵件告知。為提供最好的品質，上述日期會依照實際狀況彈性調整
-=======
-                <!--PC Start-->
-                <p class="schedule-sub-title d-none d-sm-block">
-                    為提供最好的沉浸式體驗，上述日期會依實際狀況彈性調整
->>>>>>> cd7429c681b314fbfc080326f4049a262c8903c5:resources/views/thegreattipsy2019/frontend/home.blade.php
                 </p>
                 <!--PC End-->
                 <!--Mobile Start-->
