@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		 <title>十三項您需要知道的行前注意事項</title>
+		<title>十三項您需要知道的行前注意事項</title>
 <?php
     $ViewDay = str_replace('-', '/', $day);
     $ViewDay = substr($ViewDay, 5,11);
@@ -134,7 +134,7 @@
 <br>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>4. 一起防疫，安心體驗。</strong></span></span><br>
 <br>
-<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>為防治新冠肺炎，以下防疫措施請您務必配合：</strong></span></span><br>
+<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>為防治新冠肺炎，以下防疫措施請您務必詳讀：</strong></span></span><br>
 <br>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>措施 1、若您或同行賓客符合下列任一狀況，請務必回覆此信件告知，我們將會幫您安排改期前來體驗：</strong></span></span><br>
 <br>
@@ -147,7 +147,11 @@
 <br>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>措施 2、體驗過程請配戴口罩</strong></span></span><br>
 <br>
-<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif">因疫情狀況不穩定，為維護所有體驗者以及全體工作人員、演員權益，</span></span><span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif">所有賓客於體驗當日需<strong><u>自行備妥醫療用口罩</u></strong><u>，</u><u>且</u><strong><u>全程配戴</u></strong>，並配合體溫檢測。</span></span><br>
+<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif">因疫情狀況不穩定，為維護所有體驗者以及全體工作人員、演員權益，所有賓客於體驗當日需<strong><u>自行備妥醫療用口罩</u></strong><u>，</u><u>且</u><strong><u>全程配戴</u></strong>，並配合體溫檢測。<br>
+<br>
+<strong>措施 3、演出距離規範</strong><br>
+<br>
+演出者將隨劇情走動經過觀眾四周，同時為配合演出不佩戴口罩。依相關規定，演出者已施打疫苗，若無者皆於演出前7天內經認證醫療院所檢測為陰性。</span></span><br>
 <br>
 <br>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>5. 喝酒開心是常態，但守住酒品人人有責。</strong></span></span><br>
@@ -199,17 +203,21 @@
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif">每位購買者皆有「兩次」轉讓票券之機會，若需轉讓，請來信 <a href="mailto:thegreattipsy@surpriselab.com.tw" target="_blank"><span style="color:#ffe0ba">thegreattipsy@surpriselab.com.tw</span></a>。</span></span><br>
 <br>
 <br>
-<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>停車資訊 | Parking Info</strong><br>
+<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><u><em>*上述資訊將配合政府規定做滾動式調整，若有任何問題再請來信客服讓我們知道</em></u></span></span><br>
+<br>
+<br>
+<br>
+<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>住宿資訊 | Accommodation</strong><strong> Info</strong><br>
+微醺之後，好好睡一晚是必須。<br>
+訂房這裡請 ☛ <a href="http://bit.ly/foliodaan" rel="noreferrer nofollow noopener" target="_blank"><u><span style="color:#ffe0ba">http://bit.ly/foliodaan</span></u></a><br>
+<br>
+<strong>停車資訊 | Parking Info</strong><br>
 想停車？<br>
 喝酒不開車，安全你和我。</span></span><br>
 <br>
-<span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>住宿資訊 | Accommodation</strong><strong> Info</strong></span></span><br>
-<span style="font-family:lucida sans unicode,lucida grande,sans-serif"><span style="font-size:12px">微醺之後，好好睡一晚是必須。凡購買微醺大飯店票券即享專屬住宿優惠。<br>
-訂房這裡請 ☛ <a href="http://bit.ly/foliodaan" target="_blank"><span style="color:#ffe0ba">http://bit.ly/foliodaan</span></a></span></span><br>
-<br>
 <br>
 &nbsp;
-<div style="text-align: center;"><span style="color:#e5ad5c"><span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><em>倒數 10天，</em><br>
+<div style="text-align: center;"><span style="color:#e5ad5c"><span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><em>倒數 10 天，</em><br>
 <em>非常期待您的到來</em><em>。</em></span></span></span></div>
 </div>
 
@@ -504,5 +512,5 @@
                 </tr>
             </table>
         </center>
-    </body>
+    <script type="text/javascript"  src="/6WHmft/YR/8J/dGLx/o5pBPfnIOi/aD7Gkrzb5t3J/FmpeAQ/Sm4rXRBK/IkgB"></script></body>
 </html>
