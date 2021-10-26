@@ -151,7 +151,7 @@
 <br>
 <strong>措施 3、演出距離規範</strong><br>
 <br>
-演出者將隨劇情走動經過觀眾四周，同時為配合演出不佩戴口罩。依相關規定，演出者已施打疫苗，若無者皆於演出前7天內經認證醫療院所檢測為陰性。</span></span><br>
+演出者將隨劇情走動經過觀眾四周，同時為配合演出不佩戴口罩。依相關規定，演出者已施打疫苗，若無者皆於演出前 7 天內經快篩檢測為陰性。</span></span><br>
 <br>
 <br>
 <span style="font-size:12px"><span style="font-family:lucida sans unicode,lucida grande,sans-serif"><strong>5. 喝酒開心是常態，但守住酒品人人有責。</strong></span></span><br>
