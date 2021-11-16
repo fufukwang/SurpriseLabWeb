@@ -507,7 +507,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，預計於 12/01 - 01/30 前來體驗<br/>
+                現在購票，預計於 01/01 - 01/30 前來體驗<br/>
                 實際演出時間將依疫情狀況進行彈性調整<br/><br/>
             </p>
 
@@ -572,7 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 12/01 - 01/30 之票券<br/>
+                        * 現正預售 01/01 - 01/30 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -593,7 +593,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">12/01-01/30 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">01/01-01/30 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
                         <td>11/24（三）中午 12:00</td>
@@ -718,6 +718,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             富邦藝旅 Folio Hotel<br/>
                             （台北市大安區信義路四段30巷23號）<br/>
                             台北市中心、咖啡色、紅色捷運沿線、易達性高<br/><br/>
+                            購買微醺大飯店體驗票券，即享<a href="http://bit.ly/foliodaan" target="_blank">富邦藝旅住宿優惠</a> 
                         </p>
                     </div>
                 </div>
