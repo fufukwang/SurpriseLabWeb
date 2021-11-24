@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.4"/>
+    <link rel="stylesheet" href="css/style.css?v=0.5"/>
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -280,7 +280,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </h4>
                 </div>
                 <p>
-                    傾吐賓客們的祕密
                     故事的開始總是相遇<br/><br/>
                     <span class="highlight">你將在此來回穿梭<br/>遇見各有秘密的他與她</span><br/><br/>
                     當不為人知的過往慢慢揭開<br/>
@@ -423,7 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         三杯調酒
                     </p>
                 </div>
-                <div class="exp-item ">
+                <div class="exp-item">
                     <div class="exp-number">
                         7
                     </div>
@@ -433,10 +432,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
 
-            <div>
-                <iframe src="https://www.youtube.com/embed/wfINaTBRP98" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="exp-video-wrapper">
+                <div class="rwd-embed-video">
+                    <iframe src="https://www.youtube.com/embed/wfINaTBRP98?showinfo=0&autoplay=1&repeat=1&loop=1&rel=0&controls=0&playlist=wfINaTBRP98" frameborder="0" allow="encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                </div>
             </div>
-
         </div>
         <div class="container ticket-type-area" data-aos="fade">
 

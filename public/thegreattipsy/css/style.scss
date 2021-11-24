@@ -349,6 +349,20 @@ p {
   }
 }
 
+// Responsive Video Style
+.rwd-embed-video {
+  padding-top: 56.25%;
+  position: relative;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 // Canvas
 #canvas {
   position: absolute;
@@ -1162,7 +1176,7 @@ header.logo {
     width: 811px;
     max-width: 100%;
     @include baseCounter('padding-top', 80);
-    @include baseCounter('padding-bottom', 232);
+    @include baseCounter('padding-bottom', 160);
     margin: 0 auto;
 
     .exp-item {
@@ -1244,6 +1258,14 @@ header.logo {
         .exp-text {
           left: inherit;
         }
+      }
+    }
+
+    .exp-video-wrapper {
+      @include baseCounter('padding-bottom', 145);
+
+      @media (max-width: 480px) {
+        padding-bottom: 84px;
       }
     }
   }
