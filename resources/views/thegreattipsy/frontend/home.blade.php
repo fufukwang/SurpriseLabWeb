@@ -262,52 +262,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </h4>
                 </div>
                 <p>
-                    你將收到我的邀請<br/>
-                    參加一場私人開幕酒會<br/><br/>
-                    請穿上舊衣櫃裡珍藏的衣裳<br/>
-                    <span class="highlight">你即將前往的場所<br/>需要一點記憶裡的時光</span>
+                    你將收到飯店的邀請<br/>
+                    參加一場開幕酒會<br/><br/>
+                    <span class="highlight">請穿上合乎時宜的服裝</span><br/><br/>
+                    以適合面對過去的樣貌<br/>
+                    準時前來赴約<br/>
                 </p>
             </div>
         </section>
 
         <section class="fullpage" id="space" data-aos="fade">
             <div class="container">
-                <h3>邂逅</h3>
+                <h3>賓客</h3>
                 <div class="sub-title-wrapper">
                     <h4>
                         <span>GUEST</span>
                     </h4>
                 </div>
                 <p>
-                    故事的開始總是相遇<br/>
-                    於是我貼心地為你準備了一場邂逅<br/><br/>
-                    <span class="highlight">注意那些不合時宜的臉孔<br/>和為你停留的身影<br/><br/></span>
-                    他們將來到你眼前<br/>
                     傾吐賓客們的祕密
+                    故事的開始總是相遇<br/><br/>
+                    <span class="highlight">你將在此來回穿梭<br/>遇見各有秘密的他與她</span><br/><br/>
+                    當不為人知的過往慢慢揭開<br/>
+                    請記得仔細聆聽
                 </p>
             </div>
             <div class="space-img">
                 <img src="img/illustration/illustration_about 2.png" alt="space" draggable="false">
-            </div>
-        </section>
-
-        <section class="fullpage" id="character" data-aos="fade">
-            <div class="container">
-                <h3>客房</h3>
-                <div class="sub-title-wrapper">
-                    <h4>
-                        <span>SECRET</span>
-                    </h4>
-                </div>
-                <p>
-                    我親自替許多客房重新裝潢<br/>
-                    仔細收拾好過去<br/>
-                    想迎接尚未到來的你<br/><br/>
-                    <span class="highlight">當時間與思念重疊<br/>房門將為你一一開啟</span>
-                </p>
-            </div>
-            <div class="character-img">
-                <img src="img/illustration/illustration_about 3.png" alt="character" draggable="false">
             </div>
         </section>
 
@@ -320,11 +301,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </h4>
                 </div>
                 <p>
-                    請喝下我為你準備的三杯調酒<br/>
-                    試著讓自己保持微醺<br/><br/>
-                    如果過去因此變得清晰<br/>
-                    請不要抗拒<br/><br/>
-                    <span class="highlight">你的那些來不及與回不去<br/>在這裡<br/>全都有可能改變</span>
+                    微醺是個必要<br/><br/>
+                    喝下三杯調酒<br/>
+                    過去也將逐漸清晰<br/><br/>
+                    <span class="highlight">在微醺之後<br/>你將做出最真實的選擇</span>
                 </p>
             </div>
             <div class="food-img d-sm-none d-block">
@@ -332,22 +312,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <section id="checkOut" data-aos="fade">
+        <section class="fullpage" id="character" data-aos="fade">
             <div class="container">
-                <h3>送客</h3>
+                <h3>時間</h3>
                 <div class="sub-title-wrapper">
                     <h4>
-                        <span>CHECK OUT</span>
+                        <span>TIME</span>
                     </h4>
                 </div>
                 <p>
-                    在酒會開始的一百二十分鐘後<br/>
-                    我將親自送客<br/><br/>
-                    請記好你來時的日期<br/>
-                    別讓自己迷失在微醺之中<br/><br/>
-                    <span class="highlight">「來過的人，都會想起一段過去」<br/>「你，會想起哪一天呢？」<br/><br/></span>
-                    願你我在這趟旅程之後<br/>
-                    都能因微醺，而更清醒
+                    只要記起遺忘的那些<br/>
+                    時間便會因此失效<br/><br/>
+                    <span class="highlight">所有的錯過也將再次相遇</span><br/><br/>
+                    其實抵達過去<br/>
+                    比想像中還要容易
+                </p>
+            </div>
+            <div class="character-img">
+                <img src="img/illustration/illustration_about 3.png" alt="character" draggable="false">
+            </div>
+        </section>
+
+        <section id="checkOut" data-aos="fade">
+            <div class="container">
+                <h3>遺憾</h3>
+                <div class="sub-title-wrapper">
+                    <h4>
+                        <span>REGRET</span>
+                    </h4>
+                </div>
+                <p>
+                    時間不可逆地走著<br/>
+                    就無可避免地產生遺憾<br/><br/>
+                    <span class="highlight">來過的人，都會想起一段過去<br/>而你，又會想起哪一天呢？</span><br/><br/>
+                    請記好來時的日期<br/>
+                    別讓自己迷失於微醺之中
                 </p>
             </div>
             <div class="check-img">
@@ -359,11 +358,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container">
                 <div class="ticket-cta">
                     <p class="highlight">
-                        誠摯地邀請你，成為我的賓客
+                        誠摯地邀請你，成為我們的賓客
                     </p>
                     <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
                     <p class="highlight">
-                        <br/>你絕對無法相信，我有多期待見到你
+                        <br/>飯店全體人員都萬分期待與你見面
                     </p>
                 </div>
             </div>
@@ -374,12 +373,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Section3 Ticket -->
     <section class="anchor-section" id="Ticket">
-        <div class="container" data-aos="fade">
-            <h2>Ticket</h2>
 
-            <!------------->
+        <h2>Ticket</h2>
+
+        {{--<!--div class="container" data-aos="fade">
+            
             <h3>我要赴約</h3>
-            <!------------->
+
             <div class="sub-title-wrapper">
                 <h4>
                     <span>ticket</span>
@@ -394,7 +394,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     探索全新的故事
                 </p>
             </div>
-        </div>
+        </div-->--}}
         <div class="container sec-experience" data-aos="fade">
 
             <!------------->
@@ -431,6 +431,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         七個角色
                     </p>
                 </div>
+            </div>
+
+            <div>
+                <iframe src="https://www.youtube.com/embed/wfINaTBRP98" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
         </div>
