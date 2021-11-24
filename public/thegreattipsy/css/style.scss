@@ -1260,13 +1260,13 @@ header.logo {
         }
       }
     }
+  }
 
-    .exp-video-wrapper {
-      @include baseCounter('padding-bottom', 145);
+  .exp-video-wrapper {
+    @include baseCounter('padding-bottom', 145);
 
-      @media (max-width: 480px) {
-        padding-bottom: 84px;
-      }
+    @media (max-width: 480px) {
+      padding-bottom: 84px;
     }
   }
 
