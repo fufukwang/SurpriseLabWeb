@@ -434,7 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="exp-video-wrapper">
                 <div class="rwd-embed-video">
-                    <iframe src="https://www.youtube.com/embed/wfINaTBRP98?showinfo=0&rel=0&controls=0&playlist=wfINaTBRP98" frameborder="0" allow="encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                    <iframe src="https://www.youtube.com/embed/wfINaTBRP98?showinfo=0&rel=0&controls=1&playlist=wfINaTBRP98" frameborder="0" allow="encrypted-media" allowfullscreen="allowfullscreen"></iframe>
                 </div>
             </div>
         </div>
