@@ -448,9 +448,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span>ticket type</span>
                 </h4>
             </div>
-            {{--<!-- <p class="ticket-area-preinfo">
-                早鳥預售票，限量 1200 張
-            </p> -->--}}
+            <p class="ticket-area-preinfo">
+                微醺大飯店之票券為五倍券適用範圍<br/>
+                結帳時請選擇數位綁定之信用卡進行付款
+            </p>
             <br/><br/>
 
             <div class="ticket-type">
@@ -493,8 +494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <p class="ticket-area-note">
-                採先預約、後劃位機制<br/>
-                疫情之後，與你相見
+                採先預約、後劃位機制
             </p>
         </div>
 
