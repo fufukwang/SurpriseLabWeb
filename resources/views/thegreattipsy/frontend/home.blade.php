@@ -71,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="smoothScroll rules" href="#Rules">Rules</a>
         </li>
         <li>
-            <a class="smoothScroll library" href="#Library">Library</a>
+            <a class="smoothScroll special" href="#Special">Special</a>
         </li>
         <li>
             <a class="smoothScroll contact" href="#Contact">Contact</a>
@@ -631,6 +631,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Section4 Rules -->
     <section class="anchor-section" id="Rules" data-aos="fade">
+        <h2>Rules</h2>
+
         <div class="container">
             <!------------->
             <h3>飯店規則</h3>
@@ -656,32 +658,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
     <!-- End Section4 Rules -->
 
-    <!-- Section5 Library -->
-    <section class="anchor-section" id="Library" data-aos="fade">
-        <div class="container">
-            <h3>時光典藏館</h3>
-            <div class="sub-title-wrapper">
-                <h4>
-                    <span>LIBRARY</span>
-                </h4>
+    <!-- Section5 Special -->
+    <section class="anchor-section" id="Special">
+        
+        <h2>Special</h2>
+
+        <section id="old-fashion" data-aos="fade">
+            <div class="container">
+                <h3>醺醺復古運動</h3>
+                <div class="sub-title-wrapper">
+                    <h4>
+                        <span>Old Fashion</span>
+                    </h4>
+                </div>
+                <p>
+                    一場從八零年代延續至今的潮流<br/>
+                    由開幕酒會的賓客揭開序幕<br/><br/>
+                    那些不可複製的懷舊美好<br/>
+                    將透過盛裝打扮的你，再度重現<br/><br/>
+                    七家好店已為你準備周全<br/>
+                    請記得於前往過去的邀請函中尋找
+                </p>
             </div>
-            <p>
-                從現在回望的每個年代<br/>
-                都由你我的日常所構成<br/><br/>
-                遙遠的記憶免不了模糊<br/>
-                但，還好那些文字與影像會記得<br/>
-                讓重要的時刻不被遺忘<br/><br/>
-                這是屬於我們的——1980年代
-            </p>
-        </div>
-        <div class="library-img">
-            <img src="img/illustration/illustration_library.png" alt="library" draggable="false">
-        </div>
-        <div class="container">
-            <div class="feature-btn text-center">
-                <a class="btn-outline" href="https://bit.ly/2PuWPUi" target="_blank">進入時光典藏館</a>
+            <div class="fashion-img">
+                <div class="fashion-pc">
+                    <img src="img/fashion/fashion-pc.jpg" alt="Old Fashion" draggable="false">
+                </div>
+                <div class="fashion-mobile">
+                    <div class="fashion-mobile-row">
+                        <img src="img/fashion/fashion-mobile-01.png" alt="Old Fashion" draggable="false">
+                    </div>
+                    <div class="fashion-mobile-row">
+                        <img src="img/fashion/fashion-mobile-02.png" alt="Old Fashion" draggable="false">
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="library" data-aos="fade">
+            <div class="container">
+                <h3>時光典藏館</h3>
+                <div class="sub-title-wrapper">
+                    <h4>
+                        <span>LIBRARY</span>
+                    </h4>
+                </div>
+                <p>
+                    從現在回望的每個年代<br/>
+                    都由你我的日常所構成<br/><br/>
+                    遙遠的記憶免不了模糊<br/>
+                    但，還好那些文字與影像會記得<br/>
+                    讓重要的時刻不被遺忘<br/><br/>
+                    這是屬於我們的——1980年代
+                </p>
+            </div>
+            <div class="library-img">
+                <img src="img/illustration/illustration_library.png" alt="library" draggable="false">
+            </div>
+            <div class="container">
+                <div class="feature-btn text-center">
+                    <a class="btn-outline" href="https://bit.ly/2PuWPUi" target="_blank">進入時光典藏館</a>
+                </div>
+            </div>
+        </section>
+        
     </section>
     <!-- End Section5 Library -->
 
