@@ -3712,131 +3712,268 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (min-width: 1200px) {
-  #Library {
+  #old-fashion {
     padding-top: calc((608px + 30px) * 0.11091);
   }
 }
 
 @media (min-width: 1440px) {
-  #Library {
+  #old-fashion {
     padding-top: calc((768px + 30px) * 0.11091);
   }
 }
 
 @media (min-width: 1920px) {
-  #Library {
+  #old-fashion {
     padding-top: calc((1088px + 30px) * 0.11091);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Library {
+  #old-fashion {
     padding-top: calc((520px + 30px) * 0.11091);
   }
 }
 
 @media (max-width: 480px) {
-  #Library {
+  #old-fashion {
     padding-top: calc(100% * 0.11091);
   }
 }
 
 @media (min-width: 1200px) {
-  #Library {
+  #old-fashion {
     padding-bottom: calc((608px + 30px) * 0.13059);
   }
 }
 
 @media (min-width: 1440px) {
-  #Library {
+  #old-fashion {
     padding-bottom: calc((768px + 30px) * 0.13059);
   }
 }
 
 @media (min-width: 1920px) {
-  #Library {
+  #old-fashion {
     padding-bottom: calc((1088px + 30px) * 0.13059);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Library {
+  #old-fashion {
     padding-bottom: calc((520px + 30px) * 0.13059);
   }
 }
 
 @media (max-width: 480px) {
-  #Library {
+  #old-fashion {
     padding-bottom: calc(100% * 0.13059);
   }
 }
 
 @media (min-width: 1200px) {
-  #Library p {
+  #old-fashion p {
     padding-top: calc((608px + 30px) * 0.06708);
   }
 }
 
 @media (min-width: 1440px) {
-  #Library p {
+  #old-fashion p {
     padding-top: calc((768px + 30px) * 0.06708);
   }
 }
 
 @media (min-width: 1920px) {
-  #Library p {
+  #old-fashion p {
     padding-top: calc((1088px + 30px) * 0.06708);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Library p {
+  #old-fashion p {
     padding-top: calc((520px + 30px) * 0.06708);
   }
 }
 
 @media (max-width: 480px) {
-  #Library p {
+  #old-fashion p {
     padding-top: calc(100% * 0.06708);
   }
 }
 
 @media (min-width: 1200px) {
-  #Library p {
+  #old-fashion p {
     padding-bottom: calc((608px + 30px) * 0.05725);
   }
 }
 
 @media (min-width: 1440px) {
-  #Library p {
+  #old-fashion p {
     padding-bottom: calc((768px + 30px) * 0.05725);
   }
 }
 
 @media (min-width: 1920px) {
-  #Library p {
+  #old-fashion p {
     padding-bottom: calc((1088px + 30px) * 0.05725);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Library p {
+  #old-fashion p {
     padding-bottom: calc((520px + 30px) * 0.05725);
   }
 }
 
 @media (max-width: 480px) {
-  #Library p {
+  #old-fashion p {
     padding-bottom: calc(100% * 0.05725);
   }
 }
 
-#Library .library-img img {
+#old-fashion .fashion-img img {
+  width: 100%;
+}
+
+#old-fashion .fashion-img .fashion-mobile {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  #old-fashion .fashion-img .fashion-pc {
+    display: none;
+  }
+  #old-fashion .fashion-img .fashion-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  #library {
+    padding-top: calc((608px + 30px) * 0.11091);
+  }
+}
+
+@media (min-width: 1440px) {
+  #library {
+    padding-top: calc((768px + 30px) * 0.11091);
+  }
+}
+
+@media (min-width: 1920px) {
+  #library {
+    padding-top: calc((1088px + 30px) * 0.11091);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #library {
+    padding-top: calc((520px + 30px) * 0.11091);
+  }
+}
+
+@media (max-width: 480px) {
+  #library {
+    padding-top: calc(100% * 0.11091);
+  }
+}
+
+@media (min-width: 1200px) {
+  #library {
+    padding-bottom: calc((608px + 30px) * 0.13059);
+  }
+}
+
+@media (min-width: 1440px) {
+  #library {
+    padding-bottom: calc((768px + 30px) * 0.13059);
+  }
+}
+
+@media (min-width: 1920px) {
+  #library {
+    padding-bottom: calc((1088px + 30px) * 0.13059);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #library {
+    padding-bottom: calc((520px + 30px) * 0.13059);
+  }
+}
+
+@media (max-width: 480px) {
+  #library {
+    padding-bottom: calc(100% * 0.13059);
+  }
+}
+
+@media (min-width: 1200px) {
+  #library p {
+    padding-top: calc((608px + 30px) * 0.06708);
+  }
+}
+
+@media (min-width: 1440px) {
+  #library p {
+    padding-top: calc((768px + 30px) * 0.06708);
+  }
+}
+
+@media (min-width: 1920px) {
+  #library p {
+    padding-top: calc((1088px + 30px) * 0.06708);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #library p {
+    padding-top: calc((520px + 30px) * 0.06708);
+  }
+}
+
+@media (max-width: 480px) {
+  #library p {
+    padding-top: calc(100% * 0.06708);
+  }
+}
+
+@media (min-width: 1200px) {
+  #library p {
+    padding-bottom: calc((608px + 30px) * 0.05725);
+  }
+}
+
+@media (min-width: 1440px) {
+  #library p {
+    padding-bottom: calc((768px + 30px) * 0.05725);
+  }
+}
+
+@media (min-width: 1920px) {
+  #library p {
+    padding-bottom: calc((1088px + 30px) * 0.05725);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #library p {
+    padding-bottom: calc((520px + 30px) * 0.05725);
+  }
+}
+
+@media (max-width: 480px) {
+  #library p {
+    padding-bottom: calc(100% * 0.05725);
+  }
+}
+
+#library .library-img img {
   width: 100%;
 }
 
 @media (max-width: 1023px) {
-  #Library .library-img {
+  #library .library-img {
     width: 100%;
     min-width: 100%;
     overflow-x: hidden;
@@ -3847,38 +3984,38 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #Library .library-img img {
+  #library .library-img img {
     width: 340%;
     height: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  #Library .feature-btn {
+  #library .feature-btn {
     padding-top: calc((608px + 30px) * 0.05725);
   }
 }
 
 @media (min-width: 1440px) {
-  #Library .feature-btn {
+  #library .feature-btn {
     padding-top: calc((768px + 30px) * 0.05725);
   }
 }
 
 @media (min-width: 1920px) {
-  #Library .feature-btn {
+  #library .feature-btn {
     padding-top: calc((1088px + 30px) * 0.05725);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Library .feature-btn {
+  #library .feature-btn {
     padding-top: calc((520px + 30px) * 0.05725);
   }
 }
 
 @media (max-width: 480px) {
-  #Library .feature-btn {
+  #library .feature-btn {
     padding-top: calc(100% * 0.05725);
   }
 }

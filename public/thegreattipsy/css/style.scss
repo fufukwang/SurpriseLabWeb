@@ -1798,8 +1798,38 @@ header.logo {
   }
 }
 
-// Library Section
-#Library {
+// Special Section
+#old-fashion {
+  @include baseCounter('padding-top', 124);
+  @include baseCounter('padding-bottom', 146);
+
+  p {
+    @include baseCounter('padding-top', 75);
+    @include baseCounter('padding-bottom', 64);
+  }
+
+  .fashion-img {
+    img {
+      width: 100%;
+    }
+
+    .fashion-mobile {
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .fashion-pc {
+        display: none;
+      }
+
+      .fashion-mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+#library {
   @include baseCounter('padding-top', 124);
   @include baseCounter('padding-bottom', 146);
 
