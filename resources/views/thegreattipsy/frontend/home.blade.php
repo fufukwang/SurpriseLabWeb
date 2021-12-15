@@ -686,10 +686,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="fashion-mobile">
                     <div class="fashion-mobile-row">
-                        <img src="img/fashion/fashion-mobile-01.png" alt="Old Fashion" draggable="false">
+                        <img src="img/fashion/fashion-mobile-01.jpg" alt="Old Fashion" draggable="false">
                     </div>
                     <div class="fashion-mobile-row">
-                        <img src="img/fashion/fashion-mobile-02.png" alt="Old Fashion" draggable="false">
+                        <img src="img/fashion/fashion-mobile-02.jpg" alt="Old Fashion" draggable="false">
                     </div>
                 </div>
             </div>
