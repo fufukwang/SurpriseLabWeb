@@ -507,9 +507,12 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('rules.html',function(){ return view('thegreattipsy.frontend.rules'); });
         // 劃位
         Route::get('booking.html',function(){ return view('thegreattipsy.frontend.booking'); });
+        /*
         if(env('APP_ENV') != 'production'){
             Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
         }
+        */
+        Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
         Route::get('booking_credit_card.html',function(){ 
             //return redirect("/thegreattipsy/index.html");
             /*
@@ -520,7 +523,7 @@ Route::group(['middleware' => ['web']], function () {
                 return view('thegreattipsy.frontend.booking_credit_card');     
             }
             */
-            
+
             return redirect("/thegreattipsy/index.html");
         });
         if(env('APP_ENV') != 'production'){
