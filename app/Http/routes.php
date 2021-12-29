@@ -520,8 +520,8 @@ Route::group(['middleware' => ['web']], function () {
                 return view('thegreattipsy.frontend.booking_credit_card');     
             }
             */
-            return view('thegreattipsy.frontend.booking_credit_card');
-            // return redirect("/thegreattipsy/index.html");
+            
+            return redirect("/thegreattipsy/index.html");
         });
         if(env('APP_ENV') != 'production'){
             Route::get('departure_call',function(){ return view('thegreattipsy.frontend.departure_call'); });
