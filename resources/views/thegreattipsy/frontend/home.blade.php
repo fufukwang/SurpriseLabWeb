@@ -301,7 +301,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <p>
                     微醺是個必要<br/><br/>
-                    喝下三杯調酒<br/>
+                    喝下三杯調飲<br/>
                     過去也將逐漸清晰<br/><br/>
                     <span class="highlight">在微醺之後<br/>你將做出最真實的選擇</span>
                 </p>
@@ -419,7 +419,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         3
                     </div>
                     <p class="exp-text">
-                        三杯調酒
+                        三杯調飲
                     </p>
                 </div>
                 <div class="exp-item">

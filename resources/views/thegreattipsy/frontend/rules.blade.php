@@ -149,7 +149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div id="qa1" class="collapse" aria-labelledby="qa1-header"
                                          data-parent="#qa-according">
                                         <div class="card-body">
-                                            《微醺大飯店：1980s》為驚喜製造 Surprise Lab. 第六號沉浸式體驗作品。延續《微醺大飯店》以飯店作為演出場域、酒作為媒介，專業演員與之互動。
+                                            《微醺大飯店：1980s》為驚喜製造 Surprise Lab. 第六號沉浸式體驗作品。延續《微醺大飯店》以飯店作為演出場域、調飲、餐點作為媒介，專業演員與之互動。
                                         </div>
                                     </div>
                                 </div>
@@ -312,7 +312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                {{--<!--div class="card">
                                     <div class="card-header" id="qa11-header">
                                         <h6 data-toggle="collapse" data-target="#qa11" aria-expanded="false"
                                             aria-controls="qa11" class="collapsed d-flex align-items-center">
@@ -326,9 +326,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             「微醺」為進入體驗的唯一鑰匙，過程中將提供數杯調酒，請評估自身狀況，選擇舒適的方式進入微醺狀態。微醺大飯店無法將調酒更換為無酒精飲品，微醺，方使人更清醒。
                                         </div>
                                     </div>
-                                </div>
+                                </div-->--}}
 
-                                <div class="card">
+                                {{--<!--div class="card">
                                     <div class="card-header" id="qa12-header">
                                         <h6 data-toggle="collapse" data-target="#qa12" aria-expanded="false"
                                             aria-controls="qa12" class="collapsed d-flex align-items-center">
@@ -343,9 +343,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             平常血液習慣酒精通過的，建議可以來之前小小 pre-drink ，但請不要醉，會報警。
                                         </div>
                                     </div>
-                                </div>
+                                </div-->--}}
 
-                                <div class="card">
+                                {{--<!--div class="card">
                                     <div class="card-header" id="qa13-header">
                                         <h6 data-toggle="collapse" data-target="#qa13" aria-expanded="false"
                                             aria-controls="qa13" class="collapsed d-flex align-items-center">
@@ -359,7 +359,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             酒量不好不用硬乾，自在喝舒服喝即可，如果不勝酒力倒在旁邊，痾⋯⋯找不到人照顧你的狀況下，會報警。
                                         </div>
                                     </div>
-                                </div>
+                                </div-->--}}
 
                                 <div class="card">
                                     <div class="card-header" id="qa14-header">
@@ -450,7 +450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                {{--<!--div class="card">
                                     <div class="card-header" id="qa19-header">
                                         <h6 data-toggle="collapse" data-target="#qa19" aria-expanded="false"
                                             aria-controls="qa19" class="collapsed d-flex align-items-center">
@@ -465,7 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             微醺，讓你更清醒，喝醉不會。
                                         </div>
                                     </div>
-                                </div>
+                                </div-->--}}
 
                                 <!--Section separator-->
                                 <div class="qa-title-separator">
