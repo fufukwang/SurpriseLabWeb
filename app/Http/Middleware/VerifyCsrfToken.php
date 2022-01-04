@@ -19,5 +19,8 @@ class VerifyCsrfToken extends BaseVerifier
         '/tableforone/ECPaySuccess',
         '/tableforone/EcPayGiftCardBackCallBack',
         '/tableforone/EcPayGiftCardBack',
+        // 微醺
+        '/thegreattipsy/Neweb.ReturnResult',
+        '/thegreattipsy/Neweb.BackReturn',
     ];
 }

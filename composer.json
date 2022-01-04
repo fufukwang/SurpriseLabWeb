@@ -10,7 +10,8 @@
         "fufukwang/mailchimp_apiv3": "dev-master",
         "maatwebsite/excel": "~2.1.0",
         "flamelin/ecpay": "dev-master",
-        "guzzlehttp/guzzle": "~6.0"
+        "guzzlehttp/guzzle": "~6.0",
+        "treerful/laravel-newebpay": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

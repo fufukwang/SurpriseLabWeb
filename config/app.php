@@ -161,6 +161,8 @@ return [
         flamelin\ECPay\EcpayServiceProvider::class,
         // self service
         App\Providers\HelperServiceProvider::class,
+
+
     ],
 
     /*
@@ -210,6 +212,7 @@ return [
         'Excel' => 'Maatwebsite\Excel\Facades\Excel',
         'Ecpay' => flamelin\ECPay\Facade\Ecpay::class,
         'SLS'       => App\Service\HelperServiceFacade::class,
+        'NewebPay' => Treerful\NewebPay\NewebPay::class,
     ],
 
 ];

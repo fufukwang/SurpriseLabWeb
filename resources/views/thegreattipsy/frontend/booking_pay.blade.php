@@ -114,7 +114,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="container" id="bookingPage">
         <!-- form -->
-        <form id="booking">
+        <form id="booking" method="post">
+            {!! csrf_field() !!}
             <!--progress title-->
             <h3 class="progress-title">
                 微醺大飯店：<span>1980s</span><br/>賓客登記

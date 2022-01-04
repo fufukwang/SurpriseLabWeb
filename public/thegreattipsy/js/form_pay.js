@@ -289,10 +289,11 @@ function gotoErrorField(field) {
 // ===================================
 
 // 暫時不送出表單，待前後台串接後可移除
+/*
 $(".submit").click(function(){
     return false;
 });
-
+*/
 // ===================================
 // Form Steps Start
 // ===================================
@@ -725,8 +726,11 @@ jQuery(function($){
         if($('[name="booking_people"]').val() - cutPelple == 0){
             SendOrderData('online','');
         } else {
+            // 改成送到 藍新
+            $('form#booking').attr('action','/thegreattipsy/Neweb.OrderPay');
+            $('form#booking').submit();
             // 開啟刷卡介面
-            $('#lightbox2pay').fadeToggle(700);   
+            // $('#lightbox2pay').fadeToggle(700);   
         }
     });
 });

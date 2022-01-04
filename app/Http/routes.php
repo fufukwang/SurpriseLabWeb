@@ -513,6 +513,11 @@ Route::group(['middleware' => ['web']], function () {
         }
         */
         Route::get('booking_pay.html',function(){ return view('thegreattipsy.frontend.booking_pay'); });
+        // 藍新金流路由
+        Route::post('Neweb.OrderPay', 'tgt2\NewPayController@postOrderByNeweb'); // 存訂單
+        Route::post('Neweb.ReturnResult', 'tgt2\NewPayController@postReturnByNeweb'); // 回傳內容
+        Route::post('Neweb.BackReturn', 'tgt2\NewPayController@postBackReturn'); // 背景回傳
+
         Route::get('booking_credit_card.html',function(){ 
             //return redirect("/thegreattipsy/index.html");
             /*
