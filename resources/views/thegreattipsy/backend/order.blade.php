@@ -76,12 +76,6 @@
                                                     <input type="text" class="form-control" readonly value="{{ $order->sn or '請留白系統會自動生成' }}">
                                                 </div>
                                             </div>
-                                            <!--div class="form-group">
-                                                <label class="control-label col-sm-4">主餐</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ implode('/',json_decode($order->meat,true)) }}">
-                                                </div>
-                                            </div-->
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
