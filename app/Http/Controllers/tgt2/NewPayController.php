@@ -220,7 +220,7 @@ class NewPayController extends Controller
             $sn = $retrunData['data']['Result']['MerchantOrderNo'];
             // 存入資料庫
             order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update($pay_data);
-            $order = Orders::where('sn',$sn)->orderBy('created_at','DESC')->first();
+            $order = order::where('sn',$sn)->orderBy('created_at','DESC')->first();
             // 確認訂單寫入狀態
             if($order && $retrunData['Status'] == 'SUCCESS'){
                 if($order->result == ''){
