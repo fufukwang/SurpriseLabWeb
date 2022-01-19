@@ -138,7 +138,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">回傳交易時間</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $res['data']['PayTime'] or ''  }}">
+                                                    <input type="text" class="form-control" readonly value="{{ $res['data']['Result']['PayTime'] or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -150,7 +150,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">綠界交易序號</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $res['data']['TradeNo'] or ''  }}">
+                                                    <input type="text" class="form-control" readonly value="{{ $res['data']['Result']['TradeNo'] or ''  }}">
                                                 </div>
                                             </div>
 @endif  
