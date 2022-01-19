@@ -107,7 +107,7 @@ class HelperService {
                     		$m->subject('十三項您需要知道的行前注意事項 / '.$day);
                     		break;
                     	case 'D05':
-                    		$m->subject('');
+                    		$m->subject('微醺大飯店的神秘空間');
                     		break;
                         case 'DX':
                             $m->subject('開幕酒會邀請函');

@@ -311,12 +311,10 @@ class FrontController extends Controller
                         SLS::SendPreviewEmail($toData);
                         SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
                     }
-                    /*
                     if($day <= 5){
                         $toData['type'] = "D05";
                         SLS::SendPreviewEmail($toData);
                     }
-                    */
                     if($day == 0){
                         SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
                     }

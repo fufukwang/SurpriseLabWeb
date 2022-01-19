@@ -395,6 +395,43 @@ class MasterMailSend extends Command
                     }
                 }
             }
+            // 5 天
+            $pr05day = pro::select('id')->where('open',1)
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=5")->get();
+            foreach($pr05day as $pro){
+                // 找出正常的訂單
+                $order05 = order::select('id','name','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                foreach ($order05 as $ord) {
+                    if($ord->email != ''){
+                        $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                        $needSend = true;
+                        $teamNum = 0;
+                        // 主揪 信件變數組合
+                        $toData = [
+                            'id'    => $ord->id,
+                            'name'  => $ord->name,
+                            'email' => $ord->email,
+                            'type'  => 'D05'
+                        ];
+                        while($needSend){
+                            // 信件寄送
+                            SLS::SendPreviewEmail($toData);
+                            // 判斷是否有其他信箱需要寄送
+                            if($teamMail && count($teamMail)>$teamNum){
+                                $toData = [
+                                    'id'    => $ord->id,
+                                    'name'  => $teamMail[$teamNum]->name,
+                                    'email' => $teamMail[$teamNum]->email,
+                                    'type'  => 'D05'
+                                ];
+                                $teamNum++;
+                            } else {
+                                $needSend = false;
+                            }
+                        }
+                    }
+                }
+            }
         } catch (Exception $exception) {
             Log::error($exception);
         }
