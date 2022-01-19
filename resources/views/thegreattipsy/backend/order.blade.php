@@ -138,19 +138,19 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">回傳交易時間</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $res['TradeDate'] or ''  }}">
+                                                    <input type="text" class="form-control" readonly value="{{ $res['data']['PayTime'] or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">交易結果</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $res['RtnMsg'] or ''  }}">
+                                                    <input type="text" class="form-control" readonly value="{{ $res['data']['Message'] or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">綠界交易序號</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="{{ $res['TradeNo'] or ''  }}">
+                                                    <input type="text" class="form-control" readonly value="{{ $res['data']['TradeNo'] or ''  }}">
                                                 </div>
                                             </div>
 @endif  
