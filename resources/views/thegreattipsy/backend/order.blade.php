@@ -148,7 +148,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">綠界交易序號</label>
+                                                <label class="control-label col-sm-4">藍新交易序號</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" readonly value="{{ $res['data']['Result']['TradeNo'] or ''  }}">
                                                 </div>
