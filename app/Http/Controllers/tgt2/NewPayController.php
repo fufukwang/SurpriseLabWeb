@@ -237,7 +237,7 @@ class NewPayController extends Controller
 
 
             // 寄送信件
-            if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
+            if($order->pay_status == '已付款' && $order->is_send === 0){
                 $act = pro::where('id',$order->pro_id)->first();
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
