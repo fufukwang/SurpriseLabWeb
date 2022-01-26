@@ -94,7 +94,8 @@ class NewPayController extends Controller
                 'is_overseas'=> 2,
                 'vegetarian' => $request->vegetarian_food,
             ];
-
+            // 10% 服務費
+            $data['money'] *= 1.1;
             $order = order::create($data);
             
             $sentSuccess = false;
@@ -105,7 +106,7 @@ class NewPayController extends Controller
                 return $newebpay->payment(
                     $count, // 訂單編號
                     $data['money'], // 交易金額
-                    "微醺", // 交易描述
+                    "微醺大飯店：1980s", // 交易描述
                     $data['email'] // 付款人信箱
                 )->submit();
                 /*
