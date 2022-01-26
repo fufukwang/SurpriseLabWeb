@@ -166,7 +166,7 @@ function filledDataChecker() {
             if(proObject[i].id == $('#booking_time').val()){
                 proSingle = proObject[i].money;
             }
-            var summary = formatPrice($('[name="booking_people"]').val() * proSingle); // 數字變成貨幣格式
+            var summary = formatPrice(($('[name="booking_people"]').val() * proSingle) * 1.1); // 數字變成貨幣格式
 
             // 更新完成劃位金額
             amountToGo.text(summary);
@@ -575,7 +575,7 @@ $('.verification-code').on('click', function () {
             //cutPelple++;
             passTimes++; // 通過人數
             // 改寫金額
-            var summary = formatPrice(($('[name="booking_people"]').val()-cutPelple) * proSingle); // 數字變成貨幣格式
+            var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle * 1.1)); // 數字變成貨幣格式
             amountToGo.text(summary);
         } else {
             alert('優惠碼 '+couponVal+" 無法使用!\n" + data.message);
