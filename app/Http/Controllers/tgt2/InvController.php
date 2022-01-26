@@ -159,8 +159,8 @@ class InvController extends Controller
                     if($row->pay_type == '信用卡'){
                         if($row->result !=''){
                             $card_info = json_decode($row->result);
-                            if(isset($card_info->status) && $card_info->status==0){
-                                $last_four = $card_info->card_info->last_four;
+                            if(isset($card_info->Status) && $card_info->Status=="SUCCESS"){
+                                $last_four = $card_info->data->Result->Card4No;
                             }
                         }
                           
