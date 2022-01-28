@@ -84,7 +84,7 @@ $(".action-button").on('click', function(){
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
                     minDate: minD,
-                    maxDate:"+2w",
+                    maxDate:"+3w",
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: enableAllTheseDays
                 });
@@ -96,7 +96,7 @@ $(".action-button").on('click', function(){
         function enableAllTheseDays(date) {
             var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
 
-            if($.inArray(sdate, enableDays) !== -1) {
+            if($.inArray(sdate, enableDays) !== -1 && $.inArray(sdate, ['2022-02-08','2022-02-09','2022-02-10','2022-02-15','2022-02-16','2022-02-17']) !== -1) {
                 return [true];
             }
             return [false];
