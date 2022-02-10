@@ -116,6 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- form -->
         <form id="booking" method="post">
             {!! csrf_field() !!}
+            <input type="hidden" name="discount" id="discount" value="">
             <!--progress title-->
             <h3 class="progress-title">
                 微醺大飯店：<span>1980s</span><br/>賓客登記
@@ -680,7 +681,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'sandbox');</script>
 @endif
 <!-- Custom Js -->
-<script src="js/form_pay.js?v=0.6"></script>
+<script src="js/form_pay.js?v=0.7"></script>
 
 </body>
 </html>
