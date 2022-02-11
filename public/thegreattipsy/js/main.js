@@ -214,9 +214,9 @@ $(document).ready(function () {
 
         // 雙人共享票
         var ticket_matinee = $('.type-great-tipsy');
-        var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
-        var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
-        var timeLimit_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
+        var timeLimit_sale = data['rewards'][2].pledged_count; // 已銷售張數
+        var timeLimit_limit = data['rewards'][2].quantity_limit; // 限量張數
+        var timeLimit_wait = data['rewards'][2].wait_pledged_count; // 等待付款中張數
         var timeLimit_rest = timeLimit_limit - timeLimit_sale - timeLimit_wait; // 剩餘可銷售張數
         
         //timeLimit_rest = 0;  // 歸零
@@ -237,9 +237,9 @@ $(document).ready(function () {
 
         // 六人共享票 票銷售完之後改顯示sold out圖
         var ticket_group = $('.type-group');
-        var groupTicket_sale = data['rewards'][2].pledged_count; // 已銷售張數
-        var groupTicket_limit = data['rewards'][2].quantity_limit; // 限量張數
-        var groupTicket_wait = data['rewards'][2].wait_pledged_count; // 等待付款中張數
+        var groupTicket_sale = data['rewards'][3].pledged_count; // 已銷售張數
+        var groupTicket_limit = data['rewards'][3].quantity_limit; // 限量張數
+        var groupTicket_wait = data['rewards'][3].wait_pledged_count; // 等待付款中張數
         var groupTicket_rest = groupTicket_limit - groupTicket_sale - groupTicket_wait; // 剩餘可銷售張數
         
         //groupTicket_rest = 0;  // 歸零
@@ -258,7 +258,7 @@ $(document).ready(function () {
         sixShare.fadeTo(300, 1);
 
         var sale_info = $('.sale-progress-info');
-        sale_info.find('.total-sale').html(amount); // 更新總售出張數
+        sale_info.find('.total-sale').html(amount + before); // 更新總售出張數
         sale_info.find('.total-rest').html(rest_tickets); // 更新剩餘張數
         sale_info.find('.progress-percent').html(sale_progress); // 更新完成進度百分比
 
