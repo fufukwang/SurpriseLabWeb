@@ -204,7 +204,7 @@ $(document).ready(function () {
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
         var amount = data["pledged_unit_count"];
-        var sale_progress = amount / goal * 100; // 募款進度
+        var sale_progress = (before + amount) / goal * 100; // 募款進度
         var rest_tickets = goal - before - amount; // 剩餘可銷售票數
 
         // 售票進度最小整數
