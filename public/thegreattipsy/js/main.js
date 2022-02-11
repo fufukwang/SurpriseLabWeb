@@ -170,16 +170,17 @@ $(document).ready(function () {
     var progress_api_SaleStep7 = 'https://surpriselab.backme.tw/api/projects/1821json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep8 = 'https://surpriselab.backme.tw/api/projects/1987json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep9 = 'https://surpriselab.backme.tw/api/projects/2143json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep10 = 'https://surpriselab.backme.tw/api/projects/2245json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
     $.when(
-      $.getJSON(progress_api_SaleStep8),
-      $.getJSON(progress_api_SaleStep9)
-    ).done(function(data1, data9) {
+      $.getJSON(progress_api_SaleStep9),
+      $.getJSON(progress_api_SaleStep10)
+    ).done(function(data1, data10) {
 
         // data1 = data1[0];
-        var data = data9[0];
+        var data = data10[0];
 
         // 階段總人數
         // var SaleStep1_amount = data1['pledged_unit_count'];
@@ -198,12 +199,13 @@ $(document).ready(function () {
         var item2_amount = data['rewards'][1].pledged_count * 2;
         var item3_amount = data['rewards'][2].pledged_count * 6;
         */
-        var goal = 2750; // 目標張數 /* SaleStep1_amount + 1500 */
+        var before = 15500;
+        var goal = before + 1800;//2750; // 目標張數 /* SaleStep1_amount + 1500 */
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
         var amount = data["pledged_unit_count"];
         var sale_progress = amount / goal * 100; // 募款進度
-        var rest_tickets = goal - amount; // 剩餘可銷售票數
+        var rest_tickets = goal - before - amount; // 剩餘可銷售票數
 
         // 售票進度最小整數
         sale_progress = Math.floor(sale_progress);
@@ -212,9 +214,9 @@ $(document).ready(function () {
 
         // 雙人共享票
         var ticket_matinee = $('.type-great-tipsy');
-        var timeLimit_sale = data['rewards'][2].pledged_count; // 已銷售張數
-        var timeLimit_limit = data['rewards'][2].quantity_limit; // 限量張數
-        var timeLimit_wait = data['rewards'][2].wait_pledged_count; // 等待付款中張數
+        var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
+        var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
+        var timeLimit_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
         var timeLimit_rest = timeLimit_limit - timeLimit_sale - timeLimit_wait; // 剩餘可銷售張數
         
         //timeLimit_rest = 0;  // 歸零
@@ -235,9 +237,9 @@ $(document).ready(function () {
 
         // 六人共享票 票銷售完之後改顯示sold out圖
         var ticket_group = $('.type-group');
-        var groupTicket_sale = data['rewards'][3].pledged_count; // 已銷售張數
-        var groupTicket_limit = data['rewards'][3].quantity_limit; // 限量張數
-        var groupTicket_wait = data['rewards'][3].wait_pledged_count; // 等待付款中張數
+        var groupTicket_sale = data['rewards'][2].pledged_count; // 已銷售張數
+        var groupTicket_limit = data['rewards'][2].quantity_limit; // 限量張數
+        var groupTicket_wait = data['rewards'][2].wait_pledged_count; // 等待付款中張數
         var groupTicket_rest = groupTicket_limit - groupTicket_sale - groupTicket_wait; // 剩餘可銷售張數
         
         //groupTicket_rest = 0;  // 歸零
