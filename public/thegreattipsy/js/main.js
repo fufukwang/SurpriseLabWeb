@@ -199,7 +199,7 @@ $(document).ready(function () {
         var item2_amount = data['rewards'][1].pledged_count * 2;
         var item3_amount = data['rewards'][2].pledged_count * 6;
         */
-        var before = 15500;
+        var before = 15500; // 之前的總票數
         var goal = before + 1800;//2750; // 目標張數 /* SaleStep1_amount + 1500 */
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
@@ -258,7 +258,7 @@ $(document).ready(function () {
         sixShare.fadeTo(300, 1);
 
         var sale_info = $('.sale-progress-info');
-        sale_info.find('.total-sale').html(amount + before); // 更新總售出張數
+        sale_info.find('.total-sale').html((parseInt(amount) + parseInt(before))); // 更新總售出張數
         sale_info.find('.total-rest').html(rest_tickets); // 更新剩餘張數
         sale_info.find('.progress-percent').html(sale_progress); // 更新完成進度百分比
 
