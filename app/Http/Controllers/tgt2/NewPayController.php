@@ -52,6 +52,7 @@ class NewPayController extends Controller
             $cut1 = 0; $cut2 = 0;
             // 確認庫碰碼
             $coupon = 0;
+            /*
             if($request->has('coupon')){
                 foreach ($request->coupon as $key => $value) {
                     $coupon_count = coupon::where('code',$value)->where('o_id',0)->count();
@@ -71,6 +72,13 @@ class NewPayController extends Controller
                     }
                 }
             }
+            */
+            // 折扣碼
+            $manage = '';
+            if($request->has('discount') && $request->discount == 'TIPSYAGAIN'){
+                $manage = $request->discount.'折扣 100';
+                $cut2 = 100;
+            }
 
             $pay_status = '未完成';
             if(intval($money - $cut1 - $cut2)  == 0){
@@ -86,16 +94,15 @@ class NewPayController extends Controller
                 'meat'       => json_encode([]),
                 'coupon'     => $coupon,
                 'sn'         => $count,
-                'money'      => $money - $cut1 - $cut2,
+                'money'      => ($money * 1.1) - $cut1 - $cut2,
                 'pay_type'   => $pay_type,
                 'pay_status' => $pay_status,
                 'result'     => '',
-                'manage'     => '',
+                'manage'     => $manage,
                 'is_overseas'=> 2,
                 'vegetarian' => $request->vegetarian_food,
             ];
             // 10% 服務費
-            $data['money'] *= 1.1;
             $order = order::create($data);
             
             $sentSuccess = false;

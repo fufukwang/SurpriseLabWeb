@@ -21,6 +21,8 @@ var proSingle  = 0; // 單價
 var cutPelple  = 0; // 折抵人數
 var paidAmount = 0; // 已折抵金額
 var restAmount = 0; // 剩餘折抵金額
+var discountCode = '';
+var discountAmount = 0;
 
 // ===================================
 // Form Default Start
@@ -166,7 +168,7 @@ function filledDataChecker() {
             if(proObject[i].id == $('#booking_time').val()){
                 proSingle = proObject[i].money;
             }
-            var summary = formatPrice(($('[name="booking_people"]').val() * proSingle) * 1.1); // 數字變成貨幣格式
+            var summary = formatPrice(($('[name="booking_people"]').val() * proSingle) * 1.1 - discountAmount); // 數字變成貨幣格式
 
             // 更新完成劃位金額
             amountToGo.text(summary);
@@ -545,13 +547,27 @@ $('.verification-code').on('click', function () {
     }
     // 清除空白並驗證
     couponVal = couponVal.trim();
-    console.log(couponVal.length)
+    // console.log(couponVal.length);
+    couponVal = couponVal.toUpperCase();
+    if(discountCode == '' && couponVal === 'TIPSYAGAIN'){
+        // tipsyagain
+        discountCode = couponVal;
+        discountAmount = 100;
+        var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle * 1.1) - discountAmount); // 數字變成貨幣格式
+        amountToGo.text(summary);
+        $('#discount').val(discountCode);
+        $('.submit-coupon-wrapper').append('<p class="submit-coupon">折扣碼' + discountCode + ' 折抵 ' + discountAmount +'</p>');
+        coupon.val('');
+        return false;
+    } else {
+        alert('折扣碼錯誤或多次輸入!');
+        return false;
+    }
     if(couponVal.length != 8){
         alert('一次請輸入一組序號，／與／之間是不同序號');
         return false;
     }
     // ajax 取得票券
-    couponVal = couponVal.toUpperCase();
     $.get('/thegreattipsy/GetAjaxData',{
         'act':'CheckCoupon',
         'code':couponVal,
@@ -575,7 +591,7 @@ $('.verification-code').on('click', function () {
             //cutPelple++;
             passTimes++; // 通過人數
             // 改寫金額
-            var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle * 1.1)); // 數字變成貨幣格式
+            var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle * 1.1) - discountAmount); // 數字變成貨幣格式
             amountToGo.text(summary);
         } else {
             alert('優惠碼 '+couponVal+" 無法使用!\n" + data.message);
