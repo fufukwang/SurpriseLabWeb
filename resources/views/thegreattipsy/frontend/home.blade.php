@@ -511,7 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，預計於 02/08 - 02/28 前來體驗<br/>
+                現在購票，預計於 03/02 - 03/20 前來體驗<br/>
                 實際演出時間將依疫情狀況進行彈性調整<br/><br/>
             </p>
 
@@ -576,7 +576,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 02/08 - 02/28 之票券<br/>
+                        * 現正預售 03/02 - 03/20 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -597,23 +597,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">02/08-02/28 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">03/02-03/20 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
-                        <td>01/19（三）中午 12:00</td>
-                        <td>前 800 位預約者</td>
+                        <td>02/23（三）中午 12:00</td>
+                        <td>於 02/20 (含) 前購票者</td>
                     </tr>
                     <tr>
-                        <td>01/26（三）中午 12:00</td>
-                        <td>801-1600 位預約者</td>
+                        <td>03/02（三）中午 12:00</td>
+                        <td>於 02/21-02/27 間購票者</td>
                     </tr>
                     <tr>
-                        <td>02/09（三）中午 12:00</td>
-                        <td>1601-2400位預約者</td>
-                    </tr>
-                    <tr>
-                        <td>02/16（三）中午 12:00</td>
-                        <td>其餘預約者</td>
+                        <td>03/09（三）中午 12:00</td>
+                        <td>於 02/28-03/06 間購票者</td>
                     </tr>
                     <tr>
                         <td colspan="2">＊依照購票順序寄送劃位序號，收到當下即可劃位</td>
@@ -667,7 +663,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <h2>Special</h2>
 
-        <section id="old-fashion" data-aos="fade">
+        {{--<!--section id="old-fashion" data-aos="fade">
             <div class="container">
                 <h3>醺醺復古運動</h3>
                 <div class="sub-title-wrapper">
@@ -697,7 +693,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
-        </section>
+        </section-->--}}
 
         <section id="library" data-aos="fade">
             <div class="container">
