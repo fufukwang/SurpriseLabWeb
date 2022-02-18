@@ -109,11 +109,15 @@ class NewPayController extends Controller
             if($data['money'] == 0){
                 return view('thegreattipsy.frontend.booking_success');
             } else {
+                $comments = "微醺大飯店：1980s";
+                if($cut2>0){
+                    $comments .= "(折扣  tipsyagain - 100)";
+                }
                 // 送到金流
                 return $newebpay->payment(
                     $count, // 訂單編號
                     $data['money'], // 交易金額
-                    "微醺大飯店：1980s", // 交易描述
+                    $comments, // 交易描述
                     $data['email'] // 付款人信箱
                 )->submit();
                 /*
