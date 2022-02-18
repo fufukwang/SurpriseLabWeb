@@ -754,7 +754,7 @@ class BackController extends Controller
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
                 foreach($cellData as $row){
-                    $row['meat'] = implode(',',json_decode($row['meat'],true));
+                    // $row['meat'] = implode(',',json_decode($row['meat'],true));
                     array_push($data,$row);
                 }
                 $sheet->rows($data);
