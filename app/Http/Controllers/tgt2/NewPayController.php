@@ -75,9 +75,19 @@ class NewPayController extends Controller
             */
             // 折扣碼
             $manage = '';
-            if($request->has('discount') && $request->discount == 'TIPSYAGAIN'){
-                $manage = $request->discount.'折扣 100';
-                $cut2 = 100;
+            if($request->has('discount')){
+                $discountCode = $request->discount;
+                if($discountCode == 'TIPSYAGAIN'){
+                    $manage = $request->discount.'折扣 100';
+                    $cut2 = 100;
+                } elseif($discountCode == 'SHOPEETIPSY' || $discountCode == 'GARENATIPSY' || $discountCode == 'LINEBANKTIPSY' || $discountCode == 'YOXITIPSY' || $discountCode == 'COMPALTIPSY' || $discountCode == 'NANSHANTIPSY' || $discountCode == 'MIXERBOXTIPSY' || $discountCode == 'YAHOOTIPSY' || $discountCode == 'MICROSOFTTIPSY' || $discountCode == 'GOOGLETIPSY' || $discountCode == 'CTBCTIPSY' || $discountCode == 'ESLITETIPSY'){
+                    $manage = $request->discount.'折扣 220';
+                    $cut2 = 220;
+                } elseif($discountCode == 'TIPSYAGAIN01' || $discountCode == 'TIPSYAGAIN02' || $discountCode == 'TIPSYAGAIN03'){
+                    $manage = $request->discount.'折扣 200';
+                    $cut2 = 200;
+                }
+                
             }
 
             $pay_status = '未完成';
@@ -111,7 +121,7 @@ class NewPayController extends Controller
             } else {
                 $comments = "微醺大飯店：1980s";
                 if($cut2>0){
-                    $comments .= "(折扣  tipsyagain - 100)";
+                    $comments .= "(折扣  {$discountCode} - {$cut2})";
                 }
                 // 送到金流
                 return $newebpay->payment(
