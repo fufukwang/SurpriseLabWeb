@@ -681,7 +681,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'sandbox');</script>
 @endif
 <!-- Custom Js -->
-<script src="js/form_pay.js?v=0.7"></script>
+<script src="js/form_pay.js?v=0.8"></script>
 
 </body>
 </html>
