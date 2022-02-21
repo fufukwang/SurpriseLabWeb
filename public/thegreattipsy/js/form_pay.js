@@ -549,7 +549,7 @@ $('.verification-code').on('click', function () {
     couponVal = couponVal.trim();
     // console.log(couponVal.length);
     couponVal = couponVal.toUpperCase();
-    if(discountCode == '' && couponVal === 'TIPSYAGAIN'){
+    if(discountCode == ''){
         // tipsyagain
         discountCode = couponVal;
         if(couponVal == 'TIPSYAGAIN'){
