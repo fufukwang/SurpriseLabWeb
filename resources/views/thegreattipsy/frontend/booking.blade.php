@@ -463,7 +463,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="form-group textarea-with-label">
                         <label for="notice">其他備註</label>
-                        <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註 / 發票是否打統編 / 多刷賓客許願想走不同路線（將視現場情況安排）"></textarea>
+                        <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註／發票是否打統編"></textarea>
                     </div>
 
                     <div class="form-group radio__button">
