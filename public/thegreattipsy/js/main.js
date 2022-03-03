@@ -177,7 +177,7 @@ $(document).ready(function () {
 
     $.when(
       $.getJSON(progress_api_SaleStep9),
-      $.getJSON(progress_api_SaleStep10)
+      $.getJSON(progress_api_SaleStep11)
     ).done(function(data1, data11) {
 
         // data1 = data1[0];
