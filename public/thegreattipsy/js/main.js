@@ -171,16 +171,17 @@ $(document).ready(function () {
     var progress_api_SaleStep8 = 'https://surpriselab.backme.tw/api/projects/1987json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep9 = 'https://surpriselab.backme.tw/api/projects/2143json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep10 = 'https://surpriselab.backme.tw/api/projects/2245json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep11 = 'https://surpriselab.backme.tw/api/projects/2265json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
     $.when(
       $.getJSON(progress_api_SaleStep9),
       $.getJSON(progress_api_SaleStep10)
-    ).done(function(data1, data10) {
+    ).done(function(data1, data11) {
 
         // data1 = data1[0];
-        var data = data10[0];
+        var data = data11[0];
 
         // 階段總人數
         // var SaleStep1_amount = data1['pledged_unit_count'];
@@ -237,9 +238,9 @@ $(document).ready(function () {
 
         // 六人共享票 票銷售完之後改顯示sold out圖
         var ticket_group = $('.type-group');
-        var groupTicket_sale = data['rewards'][3].pledged_count; // 已銷售張數
-        var groupTicket_limit = data['rewards'][3].quantity_limit; // 限量張數
-        var groupTicket_wait = data['rewards'][3].wait_pledged_count; // 等待付款中張數
+        var groupTicket_sale = data['rewards'][1].pledged_count; // 已銷售張數
+        var groupTicket_limit = data['rewards'][1].quantity_limit; // 限量張數
+        var groupTicket_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
         var groupTicket_rest = groupTicket_limit - groupTicket_sale - groupTicket_wait; // 剩餘可銷售張數
         
         //groupTicket_rest = 0;  // 歸零
