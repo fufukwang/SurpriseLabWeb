@@ -77,7 +77,7 @@ class NewPayController extends Controller
             $manage = '';
             if($request->has('discount')){
                 $discountCode = $request->discount;
-                if($discountCode == 'TIPSYAGAIN'){
+                if($discountCode == 'TIPSYAGAIN' || $discountCode == 'TWATIPSY'){
                     $manage = $request->discount.'折扣 100';
                     $cut2 = 100;
                 } elseif($discountCode == 'SHOPEETIPSY' || $discountCode == 'GARENATIPSY' || $discountCode == 'LINEBANKTIPSY' || $discountCode == 'YOXITIPSY' || $discountCode == 'COMPALTIPSY' || $discountCode == 'NANSHANTIPSY' || $discountCode == 'MIXERBOXTIPSY' || $discountCode == 'YAHOOTIPSY' || $discountCode == 'MICROSOFTTIPSY' || $discountCode == 'GOOGLETIPSY' || $discountCode == 'CTBCTIPSY' || $discountCode == 'ESLITETIPSY'){

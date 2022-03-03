@@ -552,7 +552,7 @@ $('.verification-code').on('click', function () {
     if(discountCode == ''){
         // tipsyagain
         discountCode = couponVal;
-        if(couponVal == 'TIPSYAGAIN'){
+        if(couponVal == 'TIPSYAGAIN' || couponVal == 'TWATIPSY'){
             discountAmount = 100;
         } else if(couponVal == 'SHOPEETIPSY' || couponVal == 'GARENATIPSY' || couponVal == 'LINEBANKTIPSY' || couponVal == 'YOXITIPSY' || couponVal == 'COMPALTIPSY' || couponVal == 'NANSHANTIPSY' || couponVal == 'MIXERBOXTIPSY' || couponVal == 'YAHOOTIPSY' || couponVal == 'MICROSOFTTIPSY' || couponVal == 'GOOGLETIPSY' || couponVal == 'CTBCTIPSY' || couponVal == 'ESLITETIPSY'){
             discountAmount = 220;
