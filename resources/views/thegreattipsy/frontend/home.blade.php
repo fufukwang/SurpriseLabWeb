@@ -511,7 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，預計於 03/22 - 04/03 前來體驗<br/>
+                現在購票，預計於 03/22 - 04/17 前來體驗<br/>
                 實際演出時間將依疫情狀況進行彈性調整<br/><br/>
             </p>
 
@@ -576,7 +576,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 03/22 - 04/03 之票券<br/>
+                        * 現正預售 03/22 - 04/17 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -597,19 +597,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">03/22-04/03 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">03/22-04/17 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
-                        <td>02/23（三）中午 12:00</td>
-                        <td>於 02/20 (含) 前購票者</td>
+                        <td>03/16（三）中午 12:00</td>
+                        <td>於 03/13 (含) 前購票者</td>
                     </tr>
                     <tr>
-                        <td>03/02（三）中午 12:00</td>
-                        <td>於 02/21-02/27 間購票者</td>
+                        <td>03/23（三）中午 12:00</td>
+                        <td>於 03/14-03/20 間購票者</td>
                     </tr>
                     <tr>
-                        <td>03/09（三）中午 12:00</td>
-                        <td>於 02/28-03/06 間購票者</td>
+                        <td>03/30（三）中午 12:00</td>
+                        <td>於 03/21-03/27 間購票者</td>
+                    </tr>
+                    <tr>
+                        <td>04/06（三）中午 12:00</td>
+                        <td>於 03/28-04/03 間購票者</td>
                     </tr>
                     <tr>
                         <td colspan="2">＊依照購票順序寄送劃位序號，收到當下即可劃位</td>
