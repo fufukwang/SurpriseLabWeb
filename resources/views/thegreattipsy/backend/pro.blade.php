@@ -35,6 +35,17 @@
                                         <form  data-parsley-validate novalidate method="post" action="/thegreattipsyS2/pro/{{ $pro->id or 0}}/update" class="form-horizontal">
 {!! csrf_field() !!}
 
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">場次類別</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control" name="special">
+                                                        <option value="0"@if(isset($pro->special) && $pro->special<=0) selected @endif>一般場次</option>
+                                                        <option value="1"@if(isset($pro->special) && $pro->special>0) selected @endif>特殊場次</option>
+                                                    </select>
+                                                    <small id="tipbox" class="text-warning">特殊場次票價不同不會使用以下定價。設定請於上方特殊場設定連結。</small>
+                                                </div>
+
+                                            </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">範圍</label>
@@ -253,6 +264,16 @@ $('#rangebox').on('click','.btn-danger',function(){
 $('#rangebox').append(addHtml(getRand(0,99999)));
 $('.timepicker').timepicker({ showMeridian : false});
 @endif
+
+$('select[name="special"]').bind('change',function(){
+    let sp = parseInt($(this).val());
+    if(sp == 1){
+        $('#tipbox').show();
+    } else {
+        $('#tipbox').hide();
+    }
+});
+$('select[name="special"]').trigger('change');
         });
 
 function addHtml(rand){

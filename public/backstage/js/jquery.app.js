@@ -42,3 +42,7 @@ $.ajaxSetup({
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
+Boolean.parse = function(val) { 
+    const falsy = /^(?:f(?:alse)?|no?|0+)$/i;
+    return !falsy.test(val) && !!val;
+};

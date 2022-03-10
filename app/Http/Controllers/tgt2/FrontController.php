@@ -43,10 +43,16 @@ class FrontController extends Controller
                 switch ($request->act) {
                     case 'getBypople': // 票種 & 人數 取得 day
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today());
+                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',0);
                         if($ticketType == 1){
                             $pro = $pro->whereRaw("floor(ABS(DATEDIFF( '17530101', `tgt2pro`.`day`)) % 7 / 5)=0");
                         }
+                        $pro = $pro->get();
+                        return $pro->toJson();
+                    break;
+                    case 'getSpecialBypople': // 票種 & 人數 取得 day
+                        $ticketType = $request->ticketType;
+                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',1);
                         $pro = $pro->get();
                         return $pro->toJson();
                     break;

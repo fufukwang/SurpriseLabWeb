@@ -224,6 +224,7 @@ class BackController extends Controller
         if($request->has('day')) $pros = $pros->where('day','>=',$request->day);
         if($request->has('day_end')) $pros = $pros->where('day','<=',$request->day_end);
         if($request->has('dayparts')) $pros = $pros->where('day_parts',$request->dayparts);
+        if($request->has('special')) $pros = $pros->where('special',$request->special);
         if($request->has('open')){
             if($request->open==1 || $request->open==0){
                 $pros = $pros->where('open',$request->open);
@@ -266,6 +267,7 @@ class BackController extends Controller
             'money'      => $request->money,
             'open'       => $request->open,
             'cash'       => $request->cash,
+            'special'    => $request->special,
         ];
         if(is_numeric($id) && $id>0){
             $data['day']       = $request->day;

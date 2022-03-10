@@ -262,6 +262,11 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         // Route::get('getMaster/{id}/edit','tgt2\MasterController@postReSendMail');
         Route::post('postMaster/{id}/store','tgt2\MasterController@postMasterStore');
         Route::delete('postMaster/{id}/delete','tgt2\MasterController@postMasterDelete');
+
+        // 特殊場次設定
+        Route::get('special/setting', 'tgt2\SpecialController@getSpecialSetting');
+        Route::get('discount/setting', 'tgt2\SpecialController@getDiscountSetting');
+        Route::post('setting/store', 'tgt2\SpecialController@postSettingStore');
     });
 
 
@@ -532,6 +537,9 @@ Route::group(['middleware' => ['web']], function () {
             return redirect("/thegreattipsy/index.html");
         });
         if(env('APP_ENV') != 'production'){
+            Route::get('booking_special.html', 'tgt2\SpecialController@getHome'); // 特別場
+            Route::post('Special.OrderPay', 'tgt2\SpecialController@postOrderByNeweb'); // 存訂單
+
             Route::get('departure_call',function(){ return view('thegreattipsy.frontend.departure_call'); });
         }
         Route::get('master','tgt2\MasterController@getTeamMaster'/*function(){ return view('thegreattipsy.frontend.master'); }*/);

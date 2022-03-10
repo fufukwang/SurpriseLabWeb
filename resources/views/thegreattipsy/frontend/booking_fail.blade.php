@@ -130,7 +130,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/><br/-->
             </p>
             <div class="feature-btn" style="text-align: center;">
-                <a class="btn-outline" href="booking_pay.html">重新預約</a>
+                <a class="btn-outline" @if(isset($sp) && $sp) href="booking_special.html" @else href="booking_pay.html" @endif>重新預約</a>
             </div>
         </div>
     </div>
