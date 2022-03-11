@@ -11,6 +11,7 @@ use App\model\tgt2\coupon;
 use App\model\tgt2\order;
 use App\model\tgt2\pro;
 use Treerful\Pay2goInvoice\Invoice;
+use App\model\setting;
 
 use DB;
 use Response;
@@ -77,6 +78,16 @@ class NewPayController extends Controller
             $manage = '';
             if($request->has('discount')){
                 $discountCode = $request->discount;
+                $discount_list = json_decode(setting::where('slug','tgt2_pay_discount')->first()->json,true);
+                foreach($discount_list as $row){
+                    if(strtoupper($row['code']) == $discountCode){
+                        $manage = $discountCode.'折扣 '.$row['money'];
+                        $cut2 = $row['money'];
+                        break;
+                    }
+                }
+                /*
+                $discountCode = $request->discount;
                 if($discountCode == 'TIPSYAGAIN' || $discountCode == 'TWATIPSY'){
                     $manage = $request->discount.'折扣 100';
                     $cut2 = 100;
@@ -87,7 +98,7 @@ class NewPayController extends Controller
                     $manage = $request->discount.'折扣 200';
                     $cut2 = 200;
                 }
-                
+                */
             }
 
             $pay_status = '未完成';
@@ -111,6 +122,8 @@ class NewPayController extends Controller
                 'manage'     => $manage,
                 'is_overseas'=> 2,
                 'vegetarian' => $request->vegetarian_food,
+                'dis_code'   => $discountCode,
+                'dis_money'  => $cut2,
             ];
             // 10% 服務費
             $order = order::create($data);
@@ -189,6 +202,7 @@ class NewPayController extends Controller
     }
     // 藍新回傳顯示訂單正確失敗頁面
     public function postReturnByNeweb(Request $request){
+        $special = 0;
         try {
             // 接收回傳資料
             $retrunData = $request->all();
@@ -196,6 +210,7 @@ class NewPayController extends Controller
             $retrunData['data'] = $newebpay->decodeCallback($retrunData['TradeInfo']);
             $sn = $retrunData['data']['Result']['MerchantOrderNo'];
             $order = order::where('sn',$sn)->orderBy('created_at','DESC')->first();
+            if($order->is_overseas == 9) $special = 1;
             // 確認是否成功
             if($retrunData['Status'] == 'SUCCESS'){
                 // 找出訂單並寫入訊息
@@ -212,20 +227,14 @@ class NewPayController extends Controller
                 ];
                 $sn = $retrunData['data']['Result']['MerchantOrderNo'];
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update($pay_data);
-                return view('thegreattipsy.frontend.booking_fail');
+                return view('thegreattipsy.frontend.booking_fail',['sp'=>$special]);
             }
-
-
-
-
-
-
 
 
 
         } catch (\Exception $exception) {
             Log::error($exception);
-            return view('thegreattipsy.frontend.booking_fail');
+            return view('thegreattipsy.frontend.booking_fail',['sp'=>$special]);
         }
     }
     // 藍新背景回傳寄送信件 & 二次確認

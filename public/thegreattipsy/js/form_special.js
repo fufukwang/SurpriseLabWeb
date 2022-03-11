@@ -164,6 +164,8 @@ function filledDataChecker() {
     });
     $('#filled_pv').text(parseInt($('[name="booking_people"]').val()) - parseInt($('[name="vegetarian_food"]').val()));
     // 寫入價格
+    amountToGo.text(formatPrice($('#booking_people option:selected').data('money')));
+    /*
     if(cutPelple == 0){
         for(var i=0;i<proObject.length;i++){
             if(proObject[i].id == $('#booking_time').val()){
@@ -175,6 +177,7 @@ function filledDataChecker() {
             amountToGo.text(summary);
         }
     }
+    */
 }
 
 // 取得陣列型態的葷素食選項
@@ -461,6 +464,34 @@ $('.verification-code').on('click', function () {
     // console.log(couponVal.length);
     couponVal = couponVal.toUpperCase();
     if(discountCode == ''){
+        $.get('/thegreattipsy/GetAjaxData',{
+            'act':'CheckDiscount',
+            'code':couponVal,
+            'day':$('#booking_date').val(),
+            'pople':submitDatas['booking_people'] - cutPelple,
+            'day_parts':$('#booking_time_slot').val(),
+            'useType': 'sp',
+            'coupon':usedCoupons
+        },function(data){
+            if(data.success == 'Y'){
+                discountCode = couponVal;
+                discountAmount = data.money;
+                $('.submit-coupon-wrapper').append('<p class="submit-coupon">折扣碼' + discountCode + ' 折抵 ' + discountAmount +'</p>');
+
+                // 改寫金額
+                amountToGo.text(formatPrice(parseInt($('#booking_people option:selected').data('money')) - discountAmount));
+                $('#discount').val(discountCode);
+            } else {
+                alert('折扣碼 '+couponVal+" 無法使用!\n" + data.message);
+            }
+        },'json');
+
+
+
+
+
+
+/*
         // tipsyagain
         discountCode = couponVal;
         if(couponVal == 'TIPSYAGAIN' || couponVal == 'TWATIPSY'){
@@ -470,16 +501,16 @@ $('.verification-code').on('click', function () {
         } else if(couponVal == 'TIPSYAGAIN01' || couponVal == 'TIPSYAGAIN02' || couponVal == 'TIPSYAGAIN03'){
             discountAmount = 200;
         }
+        
 
-        // discountAmount = 100;
-        var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle * 1.1) - discountAmount); // 數字變成貨幣格式
-        amountToGo.text(summary);
+        amountToGo.text(formatPrice(parseInt($('#booking_people option:selected').data('money')) - discountAmount));
         $('#discount').val(discountCode);
-        $('.submit-coupon-wrapper').append('<p class="submit-coupon">折扣碼' + discountCode + ' 折抵 ' + discountAmount +'</p>');
+        */
         coupon.val('');
         return false;
     } else {
         alert('折扣碼錯誤或多次輸入!');
+        coupon.val('');
         return false;
     }
     if(couponVal.length != 8){
@@ -545,7 +576,7 @@ jQuery(function($){
             SendOrderData('online','');
         } else {
             // 改成送到 藍新
-            $('form#booking').attr('action','/thegreattipsy/Neweb.OrderPay');
+            $('form#booking').attr('action','/thegreattipsy/Special.OrderPay');
             $('form#booking').submit();
             // 開啟刷卡介面
             // $('#lightbox2pay').fadeToggle(700);   

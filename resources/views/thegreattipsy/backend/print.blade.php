@@ -70,13 +70,20 @@
                                                 <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label>
                                                 <label><input type="checkbox" name="is_overseas" value="2"@if($request->is_overseas==2) checked @endif>國內信用卡</label>
                                             </div>
-                                            <div class="form-group col-sm-2">
+                                            <div class="form-group col-sm-1">
                                                 <select name="order" class="form-control">
                                                     <option value="">排序(預設為修改時間反序)</option>
                                                     <option value="rang_start|asc"@if(isset($request->order) && $request->order=='rang_start|asc') selected @endif>開始時間正序</option>
                                                     <option value="rang_start|desc"@if(isset($request->order) && $request->order=='rang_start|desc') selected @endif>開始時間反序</option>
                                                     <option value="created_at|desc"@if(isset($request->order) && $request->order=='created_at|desc') selected @endif>訂單時間反序</option>
                                                 </select>
+                                            </div>
+                                            <div class="form-group col-sm-1">
+                                                <select name="special" class="form-control">
+                                                        <option value="">場別</option>
+                                                        <option value="1"@if(isset($request->special) && $request->special==1) selected @endif>特別場次</option>
+                                                        <option value="0"@if(isset($request->special) && (string)$request->special==="0") selected @endif>一般場次</option>
+                                                    </select>
                                             </div>
                                             <div class="form-group col-sm-1">
                                                 <input type="text" name="search" placeholder="搜尋姓名、電話、信箱" class="form-control" value="{{ $request->search or ''}}">
@@ -155,7 +162,9 @@
                                                 <td>@if($row->pay_status=='已付款' && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
                                                 <td>{{ $row->sn }}<br />{{ $row->day }}<br />{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
-{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
+{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}
+                                                    <br >@if($row->is_overseas == 9) <span class="badge badge-pill badge-info">特別場次</span> @endif
+                                                </td>
                                                 <td>{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 素食:{{ $row->vegetarian }}人</td>
                                                 <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
 @if($row->is_overseas == 1) <br />海外刷卡 @endif<br />

@@ -15,6 +15,7 @@ use App\model\tgt2\coupon;
 use App\model\tgt2\order;
 use App\model\tgt2\pro;
 use App\model\tgt2\backme;
+use App\model\tgt2\inv;
 
 
 use App\Http\Controllers\Controller;
@@ -650,6 +651,16 @@ class BackController extends Controller
         
         if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
 
+
+        if($request->has('special')){
+            if($request->special == 1){
+                $order->where('is_overseas',9); 
+            }
+            if($request->special == 0){
+                $order->where('is_overseas','<',5); 
+            }
+        }
+
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(tgt2order.pay_status='已付款' OR (tgt2order.pay_type='現場付款' AND tgt2order.pay_status<>'取消訂位'))");
@@ -718,7 +729,7 @@ class BackController extends Controller
 
     public function XlsDataOuput(Request $request){
         $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas');
+        $order = $order->select('rang_start','rang_end','name','tel','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','dis_code');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -755,8 +766,27 @@ class BackController extends Controller
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
+                array_push($data,["場次開始","場次結束","姓名","電話","餐飲註解","管理註記","刷卡單價","刷卡金額","訂單時間","付款狀態","信箱","訂單編號","訂單流水號","場次","日期","付款方式","人數","場次流水號","折扣碼","發票號碼","刷卡或貝殼金額","優惠券"]);
                 foreach($cellData as $row){
+                    $coupons = coupon::where('o_id',$row['sn'])->get();
+                    $inv_open = false;
+                    $number = inv::select('number','is_cancal')->where('order_id',$row['id'])->first();
+                    if($number){
+                        $inv_open = true;
+                    }
                     // $row['meat'] = implode(',',json_decode($row['meat'],true));
+                    array_push($row,$inv_open ? $number->number : '');
+                    if(count($coupons)>0){
+                        array_push($row,backme::select('money')->find($coup->b_id)->money);
+                        $coupon_code = '';
+                        foreach($coupons as $c){
+                            $coupon_code .= "{$c->code}\n";
+                        }
+                        array_push($row,$coupon_code);
+                    } else {
+                        array_push($row,$row['OM']);
+                        array_push($row,'無使用優惠券');
+                    }
                     array_push($data,$row);
                 }
                 $sheet->rows($data);

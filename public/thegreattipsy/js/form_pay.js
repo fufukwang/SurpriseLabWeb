@@ -550,6 +550,30 @@ $('.verification-code').on('click', function () {
     // console.log(couponVal.length);
     couponVal = couponVal.toUpperCase();
     if(discountCode == ''){
+        $.get('/thegreattipsy/GetAjaxData',{
+            'act':'CheckDiscount',
+            'code':couponVal,
+            'day':$('#booking_date').val(),
+            'pople':submitDatas['booking_people'] - cutPelple,
+            'day_parts':$('#booking_time_slot').val(),
+            'useType': 'pay',
+            'coupon':usedCoupons
+        },function(data){
+            if(data.success == 'Y'){
+                discountCode = couponVal;
+                discountAmount = data.money;
+                $('.submit-coupon-wrapper').append('<p class="submit-coupon">折扣碼' + discountCode + ' 折抵 ' + discountAmount +'</p>');
+
+                // 改寫金額
+                var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle * 1.1) - discountAmount); // 數字變成貨幣格式
+                amountToGo.text(summary);
+                $('#discount').val(discountCode);
+            } else {
+                alert('折扣碼 '+couponVal+" 無法使用!\n" + data.message);
+            }
+        },'json');
+
+        /*
         // tipsyagain
         discountCode = couponVal;
         if(couponVal == 'TIPSYAGAIN' || couponVal == 'TWATIPSY'){
@@ -565,6 +589,7 @@ $('.verification-code').on('click', function () {
         amountToGo.text(summary);
         $('#discount').val(discountCode);
         $('.submit-coupon-wrapper').append('<p class="submit-coupon">折扣碼' + discountCode + ' 折抵 ' + discountAmount +'</p>');
+        */
         coupon.val('');
         return false;
     } else {

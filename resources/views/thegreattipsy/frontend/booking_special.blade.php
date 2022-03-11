@@ -141,11 +141,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </p>
                 <div class="form-container">
                     <p class="color-yellow">
-                        預約前，請花些時間詳讀規則。
+    120 分鐘，全新故事｜30 個場次，期間限定｜21 位演員，輪番上演
+<ul style="text-align:left;">
+    <li>單人自在票：$2,300 / 人</li>
+    <li>雙人共享票：$2,200 / 人，2 人需同一場次前來</li>
+    <li>六人沈醉票：$2,100 / 人，6 人需同一場次前來（限量 {{ $data['t6']['number'] }} 組）</li>
+</ul>
+
+ 
+
                     </p>
+                    <div class="sub-title-wrapper">
+                        <h4>
+                            <span>購票流程</span>
+                        </h4>
+                    </div>
                     <p>&nbsp;</p>
                     <p class="prefix-step">
-                        <span class="prefix">Step 1</span>選擇欲劃位的人數<br/>
+                        <span class="prefix">Step 1</span>選擇票券種類<br/>
                         <span class="prefix">Step 2</span>選擇日期、時段<br/>
                         <span class="prefix">Step 3</span>填寫賓客資料<br/>
                         <span class="prefix">Step 4</span>確認預約資訊<br/>
@@ -163,7 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             若⽇期無法選擇，代表該場次已滿，或是當日不開放。
                         </li>
                         <li>
-                            請確實填寫正確的電子信箱與電話，將以此與你們聯繫溝通。
+                            請確實填寫正確的電子信箱與電話，微醺大飯店將以此與你聯繫溝通。
                         </li>
                     </ul>
                     <p>&nbsp;</p>
@@ -199,9 +212,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <label class="form-label" for="booking_people">票券</label>
                         <select id="booking_people" name="booking_people" data-placeholder="選擇票券" required>
                             <option></option>
-                            <option value="1">單人自在票</option>
-                            <option value="2">雙人共享票</option>
-                            <option value="6">六人沈醉票</option>
+                            <option value="1" data-money="{{ $data['money'][0]['money'] }}">單人自在票</option>
+                            <option value="2" data-money="{{ $data['money'][1]['money'] }}">雙人共享票</option>
+                            <option value="6" data-money="{{ $data['money'][2]['money'] }}" @if($data['count']>=$data['t6']['number']) disabled>六人沈醉票(已售完) @else >六人沈醉票 @endif</option>
                         </select>
                     </div>
 

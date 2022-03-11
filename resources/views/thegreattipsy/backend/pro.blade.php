@@ -40,9 +40,9 @@
                                                 <div class="col-sm-8">
                                                     <select class="form-control" name="special">
                                                         <option value="0"@if(isset($pro->special) && $pro->special<=0) selected @endif>一般場次</option>
-                                                        <option value="1"@if(isset($pro->special) && $pro->special>0) selected @endif>特殊場次</option>
+                                                        <option value="1"@if(isset($pro->special) && $pro->special>0) selected @endif>特別場次</option>
                                                     </select>
-                                                    <small id="tipbox" class="text-warning">特殊場次票價不同不會使用以下定價。設定請於上方特殊場設定連結。</small>
+                                                    <small id="tipbox" class="text-warning">特別場次票價不同不會使用以下定價。設定請於上方特別場設定連結。</small>
                                                 </div>
 
                                             </div>

@@ -29,7 +29,13 @@ class SpecialController extends Controller
     }
     public function getHome(Request $request){
         // 抓取並驗證 t6 是否已滿
+        // 成立 & pedding 300 秒內的訂單
+        $count = order::where('is_overseas',9)->where('pople',6)
+            ->whereRaw("pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE())")->count();
+
+
         $data = [
+            'count' => $count,
             't6'    => json_decode(setting::where('slug','tgt2_sp_t6')->first()->json,true),
             'money' => json_decode(setting::where('slug','tgt2_sp_money')->first()->json,true),
         ];
@@ -58,7 +64,14 @@ class SpecialController extends Controller
             }
 
             $pay_type = '信用卡';
-            $money = $act->money * $people;
+            $sp_money = json_decode(setting::where('slug','tgt2_sp_money')->first()->json,true);
+            if($people == 1){
+                $money = $sp_money[0]['money'];
+            } elseif($people == 2){
+                $money = $sp_money[1]['money'];
+            } else {
+                $money = $sp_money[2]['money'];
+            }
             $cut1 = 0; $cut2 = 0;
             // 確認庫碰碼
             $coupon = 0;
@@ -85,8 +98,26 @@ class SpecialController extends Controller
             */
             // 折扣碼
             $manage = '';
+            $discountCode = '';
             if($request->has('discount')){
                 $discountCode = $request->discount;
+                $discount_list = json_decode(setting::where('slug','tgt2_sp_discount')->first()->json,true);
+                foreach($discount_list as $row){
+                    if(strtoupper($row['code']) == $discountCode){
+                        $manage = $discountCode.'折扣 '.$row['money'];
+                        $cut2 = $row['money'];
+                        break;
+                    }
+                }
+
+
+
+
+
+
+
+
+                /*
                 if($discountCode == 'TIPSYAGAIN' || $discountCode == 'TWATIPSY'){
                     $manage = $request->discount.'折扣 100';
                     $cut2 = 100;
@@ -97,7 +128,7 @@ class SpecialController extends Controller
                     $manage = $request->discount.'折扣 200';
                     $cut2 = 200;
                 }
-                
+                */
             }
 
             $pay_status = '未完成';
@@ -114,15 +145,17 @@ class SpecialController extends Controller
                 'meat'       => json_encode([]),
                 'coupon'     => $coupon,
                 'sn'         => $count,
-                'money'      => ($money * 1.1) - $cut1 - $cut2,
+                'money'      => $money - $cut1 - $cut2,// ($money * 1.1) - $cut1 - $cut2,// 10% 服務費
                 'pay_type'   => $pay_type,
                 'pay_status' => $pay_status,
                 'result'     => '',
                 'manage'     => $manage,
                 'is_overseas'=> 9,
                 'vegetarian' => $request->vegetarian_food,
+                'dis_code'   => $discountCode,
+                'dis_money'  => $cut2,
             ];
-            // 10% 服務費
+            
             $order = order::create($data);
             
             $sentSuccess = false;

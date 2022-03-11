@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use App\model\tgt2\coupon;
 use App\model\tgt2\order;
 use App\model\tgt2\pro;
-
+use App\model\setting;
 
 use DB;
 use Response;
@@ -90,6 +90,33 @@ class FrontController extends Controller
                             return Response::json(['success'=> 'Y','ticket'=>$type], 200);    
                         } else {
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
+                        }
+                    break;
+
+                    case 'CheckDiscount':
+                        $slug = $request->useType;
+                        $discount_obj = false;
+                        $discount_code = strtoupper($request->code);
+                        $discount_list = json_decode(setting::where('slug','tgt2_'.$slug.'_discount')->first()->json,true);
+                        foreach($discount_list as $row){
+                            if(strtoupper($row['code']) == $discount_code){
+                                $discount_obj = $row;
+                                break;
+                            }
+                        }
+
+                        if($discount_obj){
+                            // 數量確認
+                            if($discount_obj['number'] > 0){
+                                $used_count = order::where('dis_code',$discount_code)
+                                    ->whereRaw("pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE())")->count();
+                                if($discount_obj['number'] >= $used_count){
+                                    return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
+                                }
+                            }
+                            return Response::json(['success'=> 'Y','money'=>$discount_obj['money']], 200);
+                        } else {
+                            return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
                         }
                     break;
                 }
@@ -191,6 +218,8 @@ class FrontController extends Controller
                 'manage'     => $request->manage,
                 'is_overseas'=> $request->has('is_overseas') ? $request->is_overseas : 0,
                 'vegetarian' => $request->vegetarian,
+                'dis_code'   => '',
+                'dis_money'  => $cut2,
             ];
 
             $order = order::create($data);
