@@ -157,6 +157,7 @@
                             <li><a href="/thegreattipsyS2/coupons">Coupon</a></li>
                             <li><a href="/thegreattipsyS2/print">Order</a></li>
                             <li><a href="/thegreattipsyS2/getMasterList">Master</a></li>
+                            <li><a href="/thegreattipsyS2/special/setting">Special</a></li>
 
                         </ul>
                     </li>

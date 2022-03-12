@@ -16,7 +16,7 @@ use App\model\tgt2\order;
 use App\model\tgt2\pro;
 use App\model\tgt2\backme;
 use App\model\tgt2\inv;
-
+use App\model\setting;
 
 use App\Http\Controllers\Controller;
 use Validator;
@@ -529,14 +529,31 @@ class BackController extends Controller
             } else {
                 $count = Carbon::now()->format('Ymd').'0001';
             }
-            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end')->first();
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
             $meat = [];
             /*
             for($i=0;$i<$people;$i++){
                 array_push($meat,$request->input('Meal.'.$i));
             }
             */
-            $money = $act->cash * $people * 1.1;
+            $is_overseas = 0;
+            if($act->special) {
+                $is_overseas = 9;
+                if($people!=1 && $people!=2 && $people!=6){
+                    return redirect('/thegreattipsyS2/pros?')->with('message','新增失敗!特別場次請選擇 1、2、6符合票券人數');
+                }
+                $sp_money = json_decode(setting::where('slug','tgt2_sp_money')->first()->json,true);
+                if($people == 1){
+                    $money = $sp_money[0]['money'];
+                } elseif($people == 2){
+                    $money = $sp_money[1]['money'];
+                } else {
+                    $money = $sp_money[2]['money'];
+                }
+            } else {
+                $money = $act->cash * $people * 1.1;
+            }
+            
             $data = [
                 'pro_id'     => $pro_id,
                 'pople'      => $people,
@@ -554,6 +571,7 @@ class BackController extends Controller
                 'manage'     => $request->manage,
                 'discount'   => '',
                 'vegetarian' => $request->vegetarian,
+                'is_overseas'=> $is_overseas,
             ];
             $order = order::create($data);
 
@@ -699,6 +717,15 @@ class BackController extends Controller
 
         if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
 
+        if($request->has('special')){
+            if($request->special == 1){
+                $order->where('is_overseas',9); 
+            }
+            if($request->special == 0){
+                $order->where('is_overseas','<',5); 
+            }
+        }
+
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(tgt2order.pay_status='已付款' OR (tgt2order.pay_type='現場付款' AND tgt2order.pay_status<>'取消訂位'))");
@@ -738,6 +765,15 @@ class BackController extends Controller
 
         if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
 
+        if($request->has('special')){
+            if($request->special == 1){
+                $order->where('is_overseas',9); 
+            }
+            if($request->special == 0){
+                $order->where('is_overseas','<',5); 
+            }
+        }
+        
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(tgt2order.pay_status='已付款' OR (tgt2order.pay_type='現場付款' AND tgt2order.pay_status<>'取消訂位'))");
