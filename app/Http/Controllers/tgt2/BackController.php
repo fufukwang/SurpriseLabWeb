@@ -813,11 +813,13 @@ class BackController extends Controller
                     // $row['meat'] = implode(',',json_decode($row['meat'],true));
                     array_push($row,$inv_open ? $number->number : '');
                     if(count($coupons)>0){
-                        array_push($row,backme::select('money')->find($coup->b_id)->money);
                         $coupon_code = '';
+                        $coupon_money = '';
                         foreach($coupons as $c){
                             $coupon_code .= "{$c->code}\n";
+                            $coupon_money .= backme::select('money')->find($coup->b_id)->money."\n";
                         }
+                        array_push($row,$coupon_money);
                         array_push($row,$coupon_code);
                     } else {
                         array_push($row,$row['OM']);
