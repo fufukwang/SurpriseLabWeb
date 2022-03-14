@@ -539,12 +539,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
 
                             <h5 class="sub-title highlight">
-                                預售說明
+                                直購劃位
                             </h5>
                             <p class="text-left">
-                                《微醺大飯店：1980s》預售票現正預售中<br/>
-                                可劃位日期：03/22 - 04/17
+                                可劃位日期：04/22 - 05/02
                             </p>
+                            <ul>
+                                <li>點選直購連結完成劃位後，即會收到訂位確認信（將寄送至訂位時填寫之信箱，請確保信箱能夠正確收信）。</li>
+                                <li>直購票卷購買前請詳閱更改、退費事項。</li>
+                                <li>直購票券購買即完成劃位，並不會收到劃位序號。</li>
+                            </ul>
 
                             <h5 class="sub-title highlight">
                                 劃位序號
@@ -702,6 +706,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li>若需更改日期、時段，請於體驗日十天前來信告知，附上「劃位序號」與「訂位信箱」。<br/>如：欲更改 01/11 的訂位，最晚請於 01/01（含）前來信。</li>
                                 <li>可更改之日期，以屆時尚有的日期與時段為準。劃位前請先確認相關親友的行程，減少更改座位的可能性。</li>
                                 <li>一個序號僅有一次更改機會，請務必謹慎使用。</li>
+                                <li>若購票日即為演出十天內，退費金額為 50% 費用且無法改期，建議將票卷轉讓，演出當天則無法退費，購買前請務必留意。</li>
                             </ul>
 
                             <h5 class="sub-title highlight cancel-order">

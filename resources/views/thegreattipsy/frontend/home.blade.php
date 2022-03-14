@@ -411,23 +411,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         120
                     </div>
                     <p class="exp-text">
-                        兩小時沈浸式體驗
+                        兩小時全新故事
                     </p>
                 </div>
                 <div class="exp-item">
                     <div class="exp-number">
-                        3
+                        30
                     </div>
                     <p class="exp-text">
-                        三杯調飲
+                        期間限定場次
                     </p>
                 </div>
                 <div class="exp-item">
                     <div class="exp-number">
-                        7
+                        21
                     </div>
                     <p class="exp-text">
-                        七個角色
+                        多位演員輪番上演
                     </p>
                 </div>
             </div>
@@ -494,7 +494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <p class="ticket-area-note">
-                採先預約、後劃位機制
+                直接選位，不需等待
             </p>
         </div>
 
@@ -511,8 +511,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，預計於 03/22 - 04/17 前來體驗<br/>
-                實際演出時間將依疫情狀況進行彈性調整<br/><br/>
+                現在購票，預計於 04/22 - 05/02 前來體驗<br/>
+                實際演出場次請參考購票頁面<br/><br/>
             </p>
 
             <div class="time-session">
@@ -522,7 +522,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p>週末　13:00-15:00｜15:00-17:00</p>
                     <p>　　　19:00-21:00｜21:00-23:00</p>
                     <br/>
-                    <p>＊週一週二公休</p>
+                    <p>＊週一公休</p>
                     <div class="feature-btn text-center d-block d-sm-none">
                         <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
                     </div>
@@ -576,19 +576,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 03/22 - 04/17 之票券<br/>
+                        * 現正預售 04/22 - 05/02 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
             </div>
 
         </div>
-        <div class="container" data-aos="fade">
+        {{--<!--div class="container" data-aos="fade"-->
 
             <!------------->
-            <h3>時程表</h3>
+            <!--h3>時程表</h3-->
             <!------------->
-            <div class="sub-title-wrapper">
+            <!--div class="sub-title-wrapper">
                 <h4>
                     <span>schedule</span>
                 </h4>
@@ -629,7 +629,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="btn-outline smoothScroll" href="#Ticket">我要赴約</a>
             </div>
 
-        </div>
+        </div-->--}}
     </section>
     <!-- End Section3 Ticket -->
 
