@@ -159,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p>&nbsp;</p>
                     <p class="prefix-step">
                         <span class="prefix">Step 1</span>選擇票券種類<br/>
-                        <span class="prefix">Step 2</span>選擇日期、時段<br/>
+                        <span class="prefix">Step 2</span>選擇日期時段<br/>
                         <span class="prefix">Step 3</span>填寫賓客資料<br/>
                         <span class="prefix">Step 4</span>確認預約資訊<br/>
                         <span class="prefix">Step 5</span>完成預約
@@ -179,11 +179,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             請確實填寫正確的電子信箱與電話，微醺大飯店將以此與你聯繫溝通。
                         </li>
                     </ul>
-                    <p>&nbsp;</p>
+                    <!-- <p>&nbsp;</p>
                     <p>
                         有任何訂位問題，歡迎來信<br/>
                         <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
-                    </p>
+                    </p> -->
                     <p>&nbsp;</p>
                     <div class="form-group radio__button">
                         <div class="d-flex align-items-center flex-wrap">
