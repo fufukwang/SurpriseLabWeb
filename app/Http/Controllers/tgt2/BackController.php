@@ -817,7 +817,7 @@ class BackController extends Controller
                         $coupon_money = '';
                         foreach($coupons as $c){
                             $coupon_code .= "{$c->code}\n";
-                            $coupon_money .= backme::select('money')->find($coup->b_id)->money."\n";
+                            $coupon_money .= backme::select('money')->find($c->b_id)->money."\n";
                         }
                         array_push($row,$coupon_money);
                         array_push($row,$coupon_code);
