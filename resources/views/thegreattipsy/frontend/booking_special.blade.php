@@ -141,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </p>
                 <div class="form-container">
                     <p class="color-yellow">
-    120 分鐘，全新故事｜30 個場次，期間限定｜21 位演員，輪番上演
+    120 分鐘，全新故事｜30 場次，期間限定｜21 演員，輪番上演
 <ul style="text-align:left;">
     <li>單人自在票：$2,300 / 人</li>
     <li>雙人共享票：$2,200 / 人，2 人需同一場次前來</li>
