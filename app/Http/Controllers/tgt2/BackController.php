@@ -107,8 +107,9 @@ class BackController extends Controller
             )");
         }
         if($request->has('copuon')){
+            $text = trim($request->copuon);
             $coupons = coupon::orderBy('updated_at','desc')->select('b_id')->whereRaw("(
-                code LIKE '%{$request->copuon}%'
+                code LIKE '%{$text}%'
             )")->get();
             $mes = $mes->whereIn('id',$coupons->toArray());
 
