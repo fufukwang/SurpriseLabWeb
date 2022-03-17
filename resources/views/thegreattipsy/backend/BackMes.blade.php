@@ -39,7 +39,7 @@
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" placeholder="搜尋" name="search" id="datepicker-autoclose" value="{{ $request->search or ''}}">
+                                                        <input type="text" class="form-control" placeholder="搜尋(姓名、電話、信箱)" name="search" id="datepicker-autoclose" value="{{ $request->search or ''}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -56,6 +56,13 @@
                                                         <option value="{{ $r->quarter }}"@if($request->season==$r->quarter) selected @endif>第 {{ $r->quarter }} 季</option>
                                                     @endforeach
                                                 </select>
+                                            </div>
+                                            <div class="form-group col-sm-2">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="優惠碼" name="copuon" value="{{ $request->copuon or ''}}">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="form-group col-sm-1">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
@@ -117,7 +124,7 @@
                                     </div>
                                 </form>
 
-                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season,'is_sent'=>$request->is_sent])->links() }}</div>
+                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season,'is_sent'=>$request->is_sent,'copuon'=>$request->copuon])->links() }}</div>
                                 </div></div>
 
                             </div>
