@@ -536,9 +536,12 @@ Route::group(['middleware' => ['web']], function () {
 
             return redirect("/thegreattipsy/index.html");
         });
+        // 特別場
+        Route::get('booking_special.html', 'tgt2\SpecialController@getHome'); // 特別場
+        Route::post('Special.OrderPay', 'tgt2\SpecialController@postOrderByNeweb'); // 存訂單
+        
         if(env('APP_ENV') != 'production'){
-            Route::get('booking_special.html', 'tgt2\SpecialController@getHome'); // 特別場
-            Route::post('Special.OrderPay', 'tgt2\SpecialController@postOrderByNeweb'); // 存訂單
+            
 
             Route::get('departure_call',function(){ return view('thegreattipsy.frontend.departure_call'); });
         }
