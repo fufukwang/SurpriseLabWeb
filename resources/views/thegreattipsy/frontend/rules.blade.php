@@ -539,10 +539,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
 
                             <h5 class="sub-title highlight">
-                                直購劃位
+                                預售說明
                             </h5>
                             <p class="text-left">
-                                可劃位日期：04/22 - 05/02<br/><br/>
+                                可劃位日期：03/22 - 04/17<br/><br/>
                             </p>
                             <ul>
                                 <li>點選直購連結完成劃位後，即會收到訂位確認信（將寄送至訂位時填寫之信箱，請確保信箱能夠正確收信）。</li>
