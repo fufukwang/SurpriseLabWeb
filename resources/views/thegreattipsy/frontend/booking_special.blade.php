@@ -133,19 +133,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <!-- fieldsets -->
             <fieldset class="step step-1" title="微醺大飯店：1980s　賓客登記">
-                <p class="sub-title text-lining">
+                <!-- <p class="sub-title text-lining">
                     告訴我們何時可以見到你
                 </p>
                 <p class="en-sub-title">
                     pick your date and time
-                </p>
+                </p> -->
                 <div class="form-container">
                     <p class="color-yellow">
-    120 分鐘，全新故事｜30 場次，期間限定｜21 演員，輪番上演<br>
-<ul style="text-align:left;margin-top: 16px;">
-    <li>單人自在票：$2,300 / 人</li>
-    <li>雙人共享票：$2,200 / 人，2 人需同一場次前來</li>
-    <li>六人沈醉票：$2,100 / 人，6 人需同一場次前來（限量 {{ $data['t6']['number'] }} 組）</li>
+    <div style="padding-bottom: 15px;text-align:left;">120 分鐘，全新故事｜30 場次，期間限定｜21 演員，輪番上演</div>
+<ul class="prefix-dash">
+    <li>
+        單人自在票：$2,300 / 人
+    </li>
+    <li>
+        雙人共享票：$2,200 / 人，2 人需同一場次前來
+    </li>
+    <li>
+        六人沈醉票：$2,100 / 人，6 人需同一場次前來（限量 {{ $data['t6']['number'] }} 組）
+    </li>   
 </ul>
 
  
@@ -167,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p>&nbsp;</p>
                     <div class="sub-title-wrapper">
                         <h4>
-                            <span>NOTICE</span>
+                            <span>注意事項</span>
                         </h4>
                     </div>
                     <p>&nbsp;</p>
