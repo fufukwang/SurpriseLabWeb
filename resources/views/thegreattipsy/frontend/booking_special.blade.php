@@ -141,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </p> -->
                 <div class="form-container">
                     <p class="color-yellow">
-    <div style="padding-bottom: 15px;text-align:left;">120 分鐘，全新故事｜30 場次，期間限定｜21 演員，輪番上演</div>
+    <div style="padding-bottom: 15px;text-align:left;letter-spacing: 1.6px;">120 分鐘，全新故事｜30 場次，期間限定｜21 演員，輪番上演</div>
 <ul class="prefix-dash">
     <li>
         單人自在票：$2,300 / 人
