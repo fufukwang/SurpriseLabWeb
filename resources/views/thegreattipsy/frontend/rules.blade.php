@@ -542,6 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 預售說明
                             </h5>
                             <p class="text-left">
+                                《微醺大飯店：1980s》預售票現正預售中<br/>
                                 可劃位日期：03/22 - 04/17<br/><br/>
                             </p>
                             <ul>
