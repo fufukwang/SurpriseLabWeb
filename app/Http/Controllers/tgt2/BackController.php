@@ -103,9 +103,19 @@ class BackController extends Controller
             $mes = $mes->whereRaw("(
                 name LIKE '%{$search}%' OR 
                 tel LIKE '%{$search}%' OR 
-                email LIKE '%{$search}%' OR 
-                (SELECT COUNT(id) FROM(tgt2coupon) WHERE code LIKE '%{$search}%' AND tgt2coupon.b_id=tgt2backme.id)
+                email LIKE '%{$search}%'
             )");
+        }
+        if($request->has('copuon')){
+            $text = trim($request->copuon);
+            $coupons = coupon::orderBy('updated_at','desc')->select('b_id')->whereRaw("(
+                code LIKE '%{$text}%'
+            )")->get();
+            $mes = $mes->whereIn('id',$coupons->toArray());
+
+
+
+// (SELECT COUNT(id) FROM(tgt2coupon) WHERE code LIKE '%{$$request->search}%' AND tgt2coupon.b_id=tgt2backme.id)
         }
         if($request->has('isdone')){
             $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE o_id=0 AND tgt2coupon.b_id=tgt2backme.id)>0");
