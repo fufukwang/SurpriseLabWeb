@@ -576,7 +576,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 03/22 - 04/17 之票券<br/>
+                        * 現正預售 04/12 - 04/30 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -838,7 +838,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/plugins/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.12"></script>
+<script src="js/main.js?v=0.13"></script>
 
 </body>
 </html>
