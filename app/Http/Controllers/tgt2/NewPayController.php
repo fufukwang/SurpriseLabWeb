@@ -76,6 +76,7 @@ class NewPayController extends Controller
             */
             // 折扣碼
             $manage = '';
+            $discountCode = '';
             if($request->has('discount')){
                 $discountCode = $request->discount;
                 $discount_list = json_decode(setting::where('slug','tgt2_pay_discount')->first()->json,true);
