@@ -172,16 +172,17 @@ $(document).ready(function () {
     var progress_api_SaleStep9 = 'https://surpriselab.backme.tw/api/projects/2143json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep10 = 'https://surpriselab.backme.tw/api/projects/2245json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep11 = 'https://surpriselab.backme.tw/api/projects/2265json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep12 = 'https://surpriselab.backme.tw/api/projects/2296json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
 
     $.when(
       $.getJSON(progress_api_SaleStep9),
-      $.getJSON(progress_api_SaleStep11)
-    ).done(function(data1, data11) {
+      $.getJSON(progress_api_SaleStep12)
+    ).done(function(data1, data12) {
 
         // data1 = data1[0];
-        var data = data11[0];
+        var data = data12[0];
 
         // 階段總人數
         // var SaleStep1_amount = data1['pledged_unit_count'];
@@ -200,8 +201,8 @@ $(document).ready(function () {
         var item2_amount = data['rewards'][1].pledged_count * 2;
         var item3_amount = data['rewards'][2].pledged_count * 6;
         */
-        var before = 17100; // 之前的總票數
-        var goal = before + 2200;//2750; // 目標張數 /* SaleStep1_amount + 1500 */
+        var before = 18700; // 之前的總票數
+        var goal = before + 800;//2750; // 目標張數 /* SaleStep1_amount + 1500 */
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
         var amount = data["pledged_unit_count"];
@@ -215,9 +216,9 @@ $(document).ready(function () {
 
         // 雙人共享票
         var ticket_matinee = $('.type-great-tipsy');
-        var timeLimit_sale = data['rewards'][2].pledged_count; // 已銷售張數
-        var timeLimit_limit = data['rewards'][2].quantity_limit; // 限量張數
-        var timeLimit_wait = data['rewards'][2].wait_pledged_count; // 等待付款中張數
+        var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
+        var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
+        var timeLimit_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
         var timeLimit_rest = timeLimit_limit - timeLimit_sale - timeLimit_wait; // 剩餘可銷售張數
         
         //timeLimit_rest = 0;  // 歸零
@@ -225,8 +226,8 @@ $(document).ready(function () {
         if (timeLimit_rest <= 0) {
             //timeLimit_rest = 0;
             ticket_matinee.addClass('sold');
-            ticket_matinee.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_2_soldout.png?v=0.1');
-            ticket_matinee.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_2_soldout_mobile.png?v=0.1');
+            ticket_matinee.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_2_soldout.png?v=0.5');
+            ticket_matinee.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_2_soldout_mobile.png?v=0.5');
             ticket_matinee.find('.ticket-state').html('已售完');
         }
 
@@ -238,17 +239,17 @@ $(document).ready(function () {
 
         // 六人共享票 票銷售完之後改顯示sold out圖
         var ticket_group = $('.type-group');
-        var groupTicket_sale = data['rewards'][1].pledged_count; // 已銷售張數
-        var groupTicket_limit = data['rewards'][1].quantity_limit; // 限量張數
-        var groupTicket_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
+        var groupTicket_sale = data['rewards'][2].pledged_count; // 已銷售張數
+        var groupTicket_limit = data['rewards'][2].quantity_limit; // 限量張數
+        var groupTicket_wait = data['rewards'][2].wait_pledged_count; // 等待付款中張數
         var groupTicket_rest = groupTicket_limit - groupTicket_sale - groupTicket_wait; // 剩餘可銷售張數
         
         //groupTicket_rest = 0;  // 歸零
         
         if (groupTicket_rest <= 0) {
             ticket_group.addClass('sold');
-            ticket_group.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_3_soldout.png?v=0.2');
-            ticket_group.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_3_soldout_mobile.png?v=0.2');
+            ticket_group.find('.img-fluid.d-sm-block').attr('src', 'img/tickets/ticket_face_3_soldout.png?v=0.5');
+            ticket_group.find('.img-fluid.d-sm-none').attr('src', 'img/tickets/ticket_face_3_soldout_mobile.png?v=0.5');
             ticket_group.find('.ticket-state').html('已售完');
         }
 

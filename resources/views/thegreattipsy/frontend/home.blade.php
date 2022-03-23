@@ -457,10 +457,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="ticket-type">
                 
                 <div class="type-item type-matinee">
-                    <a href="https://surpriselab.backme.tw/checkout/2265/17934?locale=zh-TW
+                    <a href="https://surpriselab.backme.tw/checkout/2296/18276?locale=zh-TW
                 " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png" alt="單人自在票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png" alt="單人自在票">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png?v=0.5" alt="單人自在票">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png?v=0.5" alt="單人自在票">
                         <p class="ticket-state d-none d-sm-block">
                             <!--已售完
                             四人以上未滿八人者<br/>
@@ -473,9 +473,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="type-item type-great-tipsy">
-                    <a href="https://surpriselab.backme.tw/checkout/2265/17935?locale=zh-TW" class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png?v=0.1" alt="雙人共享票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png?v=0.1" alt="雙人共享票">
+                    <a href="https://surpriselab.backme.tw/checkout/2296/18275?locale=zh-TW" class="ticket-frame" target="_blank">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png?v=0.5" alt="雙人共享票">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png?v=0.5" alt="雙人共享票">
                         <p class="ticket-state timeLimit">
                             限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                 class="highlight rest-ticket">XXX</span> 張
@@ -483,9 +483,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
                 <div class="type-item type-group">
-                    <a href="https://surpriselab.backme.tw/checkout/2265/17936?locale=zh-TW" class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png?v=0.3" alt="六人沈醉票">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png?v=0.2" alt="六人沈醉票">
+                    <a href="https://surpriselab.backme.tw/checkout/2296/18274?locale=zh-TW" class="ticket-frame" target="_blank">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png?v=0.5" alt="六人沈醉票">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png?v=0.5" alt="六人沈醉票">
                         <p class="ticket-state sixShare">
                             限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                 class="highlight rest-ticket">XXX</span> 張
@@ -834,7 +834,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/plugins/parallax.min.js"></script>
 
 <!-- Custom Js -->
-<script src="js/main.js?v=0.13"></script>
+<script src="js/main.js?v=0.14"></script>
 
 </body>
 </html>
