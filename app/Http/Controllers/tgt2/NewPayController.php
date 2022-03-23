@@ -116,7 +116,7 @@ class NewPayController extends Controller
                 'meat'       => json_encode([]),
                 'coupon'     => $coupon,
                 'sn'         => $count,
-                'money'      => ($money * 1.1) - $cut1 - $cut2,
+                'money'      => $money - $cut1 - $cut2,
                 'pay_type'   => $pay_type,
                 'pay_status' => $pay_status,
                 'result'     => '',
