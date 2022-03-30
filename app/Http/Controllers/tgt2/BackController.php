@@ -701,7 +701,14 @@ class BackController extends Controller
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
         if($request->has('code') && $request->code!=''){
-            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
+            $text = trim($request->code);
+            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
+                code LIKE '%{$text}%'
+            )")->get();
+            $order = $order->whereIn('sn',$coupons->toArray());
+
+
+            // $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -748,7 +755,12 @@ class BackController extends Controller
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
         if($request->has('code') && $request->code!=''){
-            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
+            $text = trim($request->code);
+            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
+                code LIKE '%{$text}%'
+            )")->get();
+            $order = $order->whereIn('sn',$coupons->toArray());
+            // $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -796,7 +808,12 @@ class BackController extends Controller
             $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
         }
         if($request->has('code') && $request->code!=''){
-            $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
+            $text = trim($request->code);
+            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
+                code LIKE '%{$text}%'
+            )")->get();
+            $order = $order->whereIn('sn',$coupons->toArray());
+            // $order = $order->whereRaw("(SELECT COUNT(id) FROM(tgt2coupon) WHERE code='{$request->code}' AND tgt2coupon.o_id=tgt2order.sn)>0");
         }
 
         if($request->has('order') && $request->order!=''){
