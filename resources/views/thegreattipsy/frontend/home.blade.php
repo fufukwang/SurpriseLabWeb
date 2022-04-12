@@ -511,7 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="time-slots-preinfo">
-                現在購票，預計於 04/19 - 05/01 前來體驗<br/>
+                現在購票，預計於 04/21 - 05/01 前來體驗<br/>
                 實際演出場次請參考購票頁面<br/><br/>
             </p>
 
@@ -576,7 +576,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 04/19 - 05/01 之票券<br/>
+                        * 現正預售 04/21 - 05/01 之票券<br/>
                         * 可劃位區間將依實際預售情況加開或縮短
                     </p>
                 </div>
@@ -597,7 +597,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="schedule">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td colspan="2">04/19-05/01 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
+                        <td colspan="2">04/21-05/01 票券預售中<br/>將依購票順序寄送劃位序號，收到當下即可劃位</td>
                     </tr>
                     <tr>
                         <td>03/30（三）中午 12:00</td>
@@ -605,11 +605,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </tr>
                     <tr>
                         <td>04/06（三）中午 12:00</td>
-                        <td>於 04/04-04/10 間購票者</td>
+                        <td>於 03/28-04/03 間購票者</td>
                     </tr>
                     <tr>
                         <td>04/13（三）中午 12:00</td>
-                        <td>於 04/11後購票者</td>
+                        <td>於 04/04-04/10 間購票者</td>
+                    </tr>
+                    <tr>
+                        <td>04/20（三）中午 12:00</td>
+                        <td>於 04/18 後購票者</td>
                     </tr>
                     <tr>
                         <td colspan="2">＊依照購票順序寄送劃位序號，收到當下即可劃位</td>
