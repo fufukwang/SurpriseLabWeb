@@ -438,23 +438,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
+        
         <div class="container ticket-type-area" data-aos="fade">
 
             <!------------->
-            <h3>選擇票券</h3>
+            <h3>賓客登記</h3>
             <!------------->
             <div class="sub-title-wrapper">
                 <h4>
-                    <span>ticket type</span>
+                    <span>GUEST REGISTRATION</span>
                 </h4>
             </div>
             <p class="ticket-area-preinfo">
-                微醺大飯店之票券為五倍券適用範圍<br/>
-                結帳時請選擇數位綁定之信用卡進行付款
+                微醺大飯店暫時休息，全體飯店人員放假去<br/>
+                若你仍期待前往過去，歡迎讓我們知道
             </p>
             <br/><br/>
 
-            <div class="ticket-type">
+            {{--<div class="ticket-type">
                 
                 <div class="type-item type-matinee">
                     <a href="https://surpriselab.backme.tw/checkout/2296/18276?locale=zh-TW
@@ -492,9 +493,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </a>
                 </div>
+            </div>--}}
+            {{--<!--p class="ticket-area-note">
+                採先預約、後劃位機制
+            </p-->--}}
+        </div>
+
+        <div class="container ticket-type-area" data-aos="fade">
+
+            <!------------->
+            <h3>搶先登記中</h3>
+            <!------------->
+            <div class="sub-title-wrapper">
+                <h4>
+                    <span>TICKET FOR YOU</span>
+                </h4>
+            </div>
+            <p class="ticket-area-preinfo">
+                不想再次錯過？<br/>
+                留下你的信箱
+            </p>
+            <br/><br/>
+
+            <div class="ticket-type">
+                
+                <div class="type-item type-reserve">
+                    <a href="https://surpriselab.typeform.com/to/ZNC1PmVu
+                " class="ticket-frame" target="_blank">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_4" alt="正在猶豫中">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_4" alt="正在猶豫中">
+                    </a>
+                </div>
             </div>
             <p class="ticket-area-note">
-                採先預約、後劃位機制
+                當入口再次開啟時<br/>
+                微醺大飯店將第一時間與你聯繫
             </p>
         </div>
 
