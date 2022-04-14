@@ -3524,6 +3524,36 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (min-width: 1200px) {
+  .ticket-type-reserve {
+    padding-bottom: calc((608px + 30px) * 0.15921);
+  }
+}
+
+@media (min-width: 1440px) {
+  .ticket-type-reserve {
+    padding-bottom: calc((768px + 30px) * 0.15921);
+  }
+}
+
+@media (min-width: 1920px) {
+  .ticket-type-reserve {
+    padding-bottom: calc((1088px + 30px) * 0.15921);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .ticket-type-reserve {
+    padding-bottom: calc((520px + 30px) * 0.15921);
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket-type-reserve {
+    padding-bottom: calc(100% * 0.15921);
+  }
+}
+
+@media (min-width: 1200px) {
   #Rules {
     padding-top: calc((608px + 30px) * 0.11091);
   }

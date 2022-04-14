@@ -1746,6 +1746,10 @@ header.logo {
   }
 }
 
+.ticket-type-reserve {
+  @include baseCounter('padding-bottom', 178);
+}
+
 // Rules Section
 #Rules {
   @include baseCounter('padding-top', 124);

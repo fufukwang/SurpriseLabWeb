@@ -499,7 +499,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </p-->--}}
         </div>
 
-        <div class="container ticket-type-area" data-aos="fade">
+        <div class="container ticket-type-area ticket-type-reserve" data-aos="fade">
 
             <!------------->
             <h3>搶先登記中</h3>
@@ -520,8 +520,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="type-item type-reserve">
                     <a href="https://surpriselab.typeform.com/to/ZNC1PmVu
                 " class="ticket-frame" target="_blank">
-                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_4" alt="正在猶豫中">
-                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_4" alt="正在猶豫中">
+                        <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_4.png" alt="正在猶豫中">
+                        <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_4.png" alt="正在猶豫中">
                     </a>
                 </div>
             </div>
