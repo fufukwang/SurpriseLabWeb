@@ -1748,6 +1748,15 @@ header.logo {
 
 .ticket-type-reserve {
   @include baseCounter('padding-bottom', 178);
+
+  .ticket-type {
+    padding: 0;
+    justify-content: center;
+
+    .type-reserve {
+      width: 33.33%
+    }
+  }
 }
 
 // Rules Section
