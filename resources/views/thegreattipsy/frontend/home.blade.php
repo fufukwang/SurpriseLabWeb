@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.8"/>
+    <link rel="stylesheet" href="css/style.css?v=0.9"/>
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -494,27 +494,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
             </div>--}}
-            {{--<!--p class="ticket-area-note">
-                採先預約、後劃位機制
-            </p-->--}}
-        </div>
-
-        <div class="container ticket-type-area ticket-type-reserve" data-aos="fade">
-
-            <!------------->
-            <h3>搶先登記中</h3>
-            <!------------->
-            <div class="sub-title-wrapper">
-                <h4>
-                    <span>TICKET FOR YOU</span>
-                </h4>
-            </div>
-            <p class="ticket-area-preinfo">
-                不想再次錯過？<br/>
-                留下你的信箱
-            </p>
-            <br/><br/>
-
             <div class="ticket-type">
                 
                 <div class="type-item type-reserve">
@@ -646,7 +625,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </tr>
                     <tr>
                         <td>04/20（三）中午 12:00</td>
-                        <td>於 04/18 後購票者</td>
+                        <td>於 04/11 後購票者</td>
                     </tr>
                     <tr>
                         <td colspan="2">＊依照購票順序寄送劃位序號，收到當下即可劃位</td>

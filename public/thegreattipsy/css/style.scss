@@ -1746,26 +1746,6 @@ header.logo {
   }
 }
 
-.ticket-type-reserve {
-  @include baseCounter('padding-top', 178);
-
-  .ticket-type {
-    justify-content: center;
-
-    @media (min-width: 1200px) {
-      padding: 0 !important;
-    }
-
-    .type-reserve {
-      width: 33.33%;
-
-      @media (max-width: 480px) {
-        width: 100%;
-      }
-    }
-  }
-}
-
 // Rules Section
 #Rules {
   @include baseCounter('padding-top', 124);
