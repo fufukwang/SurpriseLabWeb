@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/owl/owl.theme.default.min.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.9"/>
+    <link rel="stylesheet" href="css/style.css?v=1.0"/>
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -494,7 +494,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
             </div>--}}
-            <div class="ticket-type">
+
+            <div class="ticket-type ticket-type-reserve">
                 
                 <div class="type-item type-reserve">
                     <a href="https://surpriselab.typeform.com/to/ZNC1PmVu

@@ -2560,6 +2560,23 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
+#Ticket .ticket-type.ticket-type-reserve {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Ticket .ticket-type.ticket-type-reserve .type-reserve {
+  width: 33.33%;
+  padding: 0 !important;
+}
+
+@media (max-width: 480px) {
+  #Ticket .ticket-type.ticket-type-reserve .type-reserve {
+    width: 100%;
+  }
+}
+
 #Ticket .ticket-type .type-item {
   position: relative;
   text-align: center;

@@ -1307,6 +1307,20 @@ header.logo {
       }
     }
 
+    // 賓客登記中
+    &.ticket-type-reserve {
+      justify-content: center;
+
+      .type-reserve {
+        width: 33.33%;
+        padding: 0 !important;
+
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+      }
+    }
+
     .type-item {
       position: relative;
       text-align: center;
