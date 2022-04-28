@@ -321,16 +321,36 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('order/inv/mult/open','clubT\InvController@muInvOpen');
         Route::post('order/inv/cancal','clubT\InvController@InvClose');
     });
+
+    Route::group(['prefix' => 'surprise'], function(){
+        Route::get('wishs','SurpriseLabHome\BackController@wishs');
+        Route::get('wish/{id}/modify','SurpriseLabHome\BackController@wish');
+        Route::post('wish/{id}/store','SurpriseLabHome\BackController@storeWish');
+    });
 });
 
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/',function(){ return view('landingPage.home'); });
-    /*surprise*/
-    //Route::resource('/','SurpriseController');
-    Route::get('/about','SurpriseController@about');
-    Route::get('/complete','SurpriseController@complete');
-    Route::get('/fail','SurpriseController@fail');
+    if(env('APP_ENV') != 'production'){
+        Route::get('/',function(){  return redirect("/tw"); });
+        Route::group(['prefix' => 'tw'], function(){
+            Route::get('/',function(){ return view('SurpriseLabHome.home'); });
+            Route::get('/index.html',function(){ return view('SurpriseLabHome.home'); });
+            Route::get('/project.html',function(){ return view('SurpriseLabHome.project'); });
+            Route::get('/team.html',function(){ return view('SurpriseLabHome.team'); });
+            Route::get('/terms.html',function(){ return view('SurpriseLabHome.terms'); });
+            Route::get('/ticket.html','SurpriseLabHome\FrontController@getTicket');
+            Route::get('/project/{name?}','SurpriseLabHome\FrontController@projects');
+        });
+        Route::post('/storeWish','SurpriseLabHome\FrontController@storeWish');
+    } else {
+        Route::get('/',function(){ return view('landingPage.home'); });
+        /*surprise*/
+        //Route::resource('/','SurpriseController');
+        Route::get('/about','SurpriseController@about');
+        Route::get('/complete','SurpriseController@complete');
+        Route::get('/fail','SurpriseController@fail');
+    }
     
     Route::get('dininginthedark/{everything?}', function ($everything = null) {
         return redirect(config('setting.dark2.path'))->send();

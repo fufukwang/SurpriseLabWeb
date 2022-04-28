@@ -1,0 +1,241 @@
+// Variable
+@import 'variable';
+
+// Override Bootstrap
+@import 'mixin';
+
+
+// Hide H1 tag
+h1 {
+    display: none;
+}
+
+// Project
+.project-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // Project - Filter Tags
+    .project-tag-wrap {
+        margin: 84px 0;
+        display: flex;
+
+        @media screen and (max-width: 1199.98px) {
+            margin: 30px 0;
+            flex-direction: column;
+        }
+
+        .project-tag-upper-wrap {
+            text-align: center;
+        }
+
+        .project-tag-lower-wrap {
+            text-align: center;
+
+            .surpri-tag {
+                margin-left: 20px;
+
+                @media screen and (max-width: 1199.98px) {
+                    margin-left: 12px;
+                    margin-top: 12px;
+                }
+            }
+
+            .surpri-tag:first-of-type {
+                @media screen and (max-width: 1199.98px) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    // Project - Dashboard
+    .project-dashboard {
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 85px;
+            grid-row-gap: 72px;
+
+            @media screen and (max-width: 1199.98px) {
+                grid-template-columns: 1fr;
+                grid-row-gap: 37px;
+            }
+        }
+
+        // Project - Dashboard -- Card
+        .project-card {
+            position: relative;
+            z-index: 0;
+            display: none;
+
+            &.category-show {
+                display: block;
+            }
+
+            // Project - Dashboard -- Card --- On Sell
+            &.on-sell {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: -20px;
+                    z-index: 200;
+                    width: 140px;
+                    height: 140px;
+                    display: block;
+                    background-image: url('../../assets/images/project/img_ticket_on-sell.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    @media screen and (max-width: 1199.98px) {
+                        width: 120px;
+                        height: 120px;
+                        right: -10px;
+                    }
+                }
+            }
+
+            // Project - Dashboard -- Card --- Image
+            .project-image-wrap {
+                width: 100%;
+                height: 0;
+                padding-bottom: 57.14%;
+                border-radius: 6px;
+                overflow: hidden;
+                
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    transition: .3s;
+                }
+            }
+
+            // Project - Dashboard -- Card --- Text
+            .project-text {
+                padding: 16px;
+
+                .project-sub-title {
+                    display: block;
+                    font-size: 14px;
+                    font-style: italic;
+                    line-height: 1.2;
+                    letter-spacing: 1.4px;
+                    color: $color-n200;
+                    margin-bottom: 10px;
+                    transition: .3s;
+                }
+
+                .project-title {
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.48;
+                    letter-spacing: 4px;
+                    color: $color-n100;
+
+                    @media screen and (max-width: 1199.98px) {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        letter-spacing: 3.2px;
+                    }
+
+                    br {
+                        display: none;
+
+                        @media screen and (min-width: 1200px) and (max-width: 1440px) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            // Project - Dashboard -- Card --- Status
+            .project-status {
+                padding: 0 16px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                opacity: 0;
+                transition: .3s;
+
+                @media screen and (max-width: 1199.98px) {
+                    font-size: 12px;
+                    line-height: 1.5;
+                    letter-spacing: 1.2px;
+                    opacity: 1;
+                }
+
+                .project-year,
+                .project-category {
+                    font-size: 14px;
+                    line-height: 1.43;
+                    letter-spacing: 1.4px;
+                    color: $color-secondary-lightorange;
+                }
+                
+                .project-year {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    &::after {
+                        content: '';
+                        background-color: $color-secondary-lightorange;
+                        display: inline-block;
+                        width: 24px;
+                        height: 1px;
+                        margin: 0 8px;
+                        transition: .3s;
+                    }
+                }
+            }
+
+            // Project - Dashboard -- Card --- hover
+            &:hover {
+
+                // Project - Dashboard -- Card --- hover ---- Image
+                .project-image-wrap {
+
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+
+                // Project - Dashboard -- Card --- hover ---- Text
+                .project-text {
+                    .project-sub-title {
+                        color: $color-n100;
+                    }
+                }
+
+                // Project - Dashboard -- Card --- hover ---- Status
+                .project-status {
+                    opacity: 1;
+
+                    .project-year {
+                        &::after {
+                            width: 48px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Project - Pagination
+    .surpri-pagination-wrap {
+        margin-top: 72px;
+
+        @media screen and (max-width: 1199.98px) {
+            margin-top: 42px;
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+}

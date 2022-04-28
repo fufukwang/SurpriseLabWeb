@@ -162,6 +162,13 @@
                         </ul>
                     </li>
                     @endif
+                    <li class="has-submenu @if(Request::segment(1) === 'surprise')active @endif">
+                        <a href="#"><i class="md md-home"></i>驚喜官網</a>
+                        <ul class="submenu" style="left:0;right:auto">
+                            <li><a href="/surprise/wishs">Wish</a></li>
+
+                        </ul>
+                    </li>
                 @endif
                 </ul>
                 <!-- End navigation menu -->

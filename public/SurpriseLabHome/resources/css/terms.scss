@@ -1,0 +1,34 @@
+// Variable
+@import 'variable';
+
+// Override Bootstrap
+@import 'mixin';
+
+
+h1 {
+    display: none;
+}
+
+.privacy-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .privacy-content-wrap {
+        margin-top: 84px;
+
+        @media screen and (max-width: 1199.98px) {
+            margin-top: 30px;
+        }
+
+        p {
+            color: $color-n500;
+            line-height: 1.875;
+        }
+
+        p + p {
+            margin-top: 36px;
+        }
+    }
+}
