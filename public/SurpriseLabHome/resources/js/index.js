@@ -176,7 +176,7 @@ $(function() {
                         $wishing_textarea.addClass('disabled');
                         $wishing_textarea.attr('placeholder',"今年的你已經許過願望囉！\n如果驚喜尚未出現，歡迎直接起身製造驚喜吧。");
                         $wishing_textarea.val('');
-                        
+                        $wishing_textarea.prop('disabled',true);
                         $('#SuccessModal').modal('show');
                     } else {
                         console.log('錯誤?');
@@ -199,6 +199,7 @@ $(function() {
     if(lock_textarea){
         $wishing_textarea.addClass('disabled');
         $wishing_textarea.attr('placeholder',"今年的你已經許過願望囉！\n如果驚喜尚未出現，歡迎直接起身製造驚喜吧。");
+        $wishing_textarea.prop('disabled',true);
         $wishing_btn.remove();
     }
 
