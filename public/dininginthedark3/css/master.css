@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+h3.progress-title,
+h3.page-title {
+  letter-spacing: 4.32px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 480px) {
+  h3.progress-title,
+  h3.page-title {
+    letter-spacing: 2.88px;
+    margin-bottom: 8px;
+    padding-left: 4.32px;
+  }
+}
+
+h4 {
+  font-weight: 400;
+  color: #EFC27B;
+}
+
+h4::before, h4::after {
+  background-color: #EFC27B;
+}
+
+@media (max-width: 480px) {
+  h4::before, h4::after {
+    background-color: rgba(239, 194, 123, 0.5);
+  }
+}
+
+h4 span::before, h4 span::after {
+  border: 1px solid #EFC27B;
+}
+
+@media (max-width: 480px) {
+  h4 span::before, h4 span::after {
+    border: 1px solid rgba(239, 194, 123, 0.5);
+  }
+}
+
+h5 {
+  text-align: center;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 2.4px;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  h5 {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    line-height: 1.44;
+  }
+}
+
+.sub-title,
+.page-sub-title {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  line-height: 2.1;
+  color: #FFE0BA;
+  padding-top: 42px;
+}
+
+@media (max-width: 480px) {
+  .sub-title,
+  .page-sub-title {
+    line-height: 2;
+    padding-top: 24px;
+  }
+}
+
+.sub-title span,
+.page-sub-title span {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.page-sub-title {
+  padding-top: 84px;
+}
+
+@media (max-width: 480px) {
+  .page-sub-title {
+    padding-top: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    margin: 0;
+  }
+}
+
+form .form-container {
+  padding: 0;
+}
+
+form .form-container p {
+  text-align: center;
+  line-height: 1.6875;
+  color: #FFE0BA;
+}
+
+@media (max-width: 480px) {
+  form .form-container p {
+    line-height: 1.714;
+  }
+}
+
+form .form-container .master-desc {
+  margin: 42px 0 48px;
+}
+
+@media (max-width: 480px) {
+  form .form-container .master-desc {
+    margin: 36px 0;
+  }
+}
+
+form .form-container .master-desc p {
+  color: #EFC27B;
+}
+
+form .form-container .master-desc p + p {
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  form .form-container .master-desc p + p {
+    margin-top: 18px;
+  }
+}
+
+form .form-container .sub-title-wrapper {
+  margin: 48px 0 30px;
+}
+
+@media (max-width: 480px) {
+  form .form-container .sub-title-wrapper {
+    margin: 24px 0 21px;
+  }
+}
+
+form .form-container .sub-title-wrapper span {
+  text-transform: uppercase;
+}
+
+form .form-container .form-group {
+  margin-bottom: 20px;
+}
+
+form .form-container .form-group.input-with-label label {
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  form .form-container .form-group.input-with-label label {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.42;
+    margin-bottom: 8px;
+  }
+}
+
+form .form-container .form-group.input-with-label label .error-msg {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+  margin-left: 12px;
+  color: #ff7ea4;
+}
+
+@media (max-width: 480px) {
+  form .form-container .form-group.input-with-label label .error-msg {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-left: 9px;
+  }
+}
+
+form .form-container .form-group.input-with-label input {
+  width: 100%;
+  border-radius: 6px;
+  border: solid 1px #E5AD5C;
+  background-color: transparent !important;
+  padding: 12px 17px;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  color: #EFC27B !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 480px) {
+  form .form-container .form-group.input-with-label input {
+    padding: 11px 20px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.42;
+  }
+}
+
+form .form-container .form-group.input-with-label input::-webkit-input-placeholder {
+  color: rgba(239, 194, 123, 0.5);
+}
+
+form .form-container .form-group.input-with-label input:-ms-input-placeholder {
+  color: rgba(239, 194, 123, 0.5);
+}
+
+form .form-container .form-group.input-with-label input::-ms-input-placeholder {
+  color: rgba(239, 194, 123, 0.5);
+}
+
+form .form-container .form-group.input-with-label input::placeholder {
+  color: rgba(239, 194, 123, 0.5);
+}
+
+form .form-container .form-group.input-with-label input:focus, form .form-container .form-group.input-with-label input:active {
+  outline: 0;
+  border-color: #EFC27B;
+  box-shadow: none;
+  -webkit-box-shadow: 0 0 0 100px #281F1C inset;
+  outline: 0;
+}
+
+form .form-container .form-group.radio__button .color-yellow {
+  color: #E5AD5C;
+}
+
+form .form-container .feature-btn {
+  padding-top: 28px;
+}
+
+@media (max-width: 480px) {
+  form .form-container .feature-btn {
+    padding-top: 4px;
+  }
+}
+
+form .form-container .multi-btn button.btn-outline.submit {
+  min-width: 210px;
+  width: 210px;
+}
+
+@media (max-width: 480px) {
+  form .form-container .multi-btn button.btn-outline.submit {
+    min-width: 240px;
+    width: 240px;
+  }
+}
+
+.radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-image: url("../img/icon/icon-check-dark.svg");
+}
+
+.radio__button .custom-control.custom-checkbox .custom-control-label {
+  text-align: left;
+  line-height: 1.714;
+}
+
+.radio__button .custom-control.custom-checkbox .custom-control-label::before {
+  top: 5px;
+  border: solid 1px #EFC27B;
+}
+
+.submit-page {
+  padding-bottom: 48px;
+}
+
+.submit-page .page-info {
+  margin: 48px 0 210px;
+}
+
+@media (max-width: 480px) {
+  .submit-page .page-info {
+    margin: 42px 0 160px;
+  }
+}
+
+.submit-page .page-info p {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.6875;
+}
+
+@media (max-width: 480px) {
+  .submit-page .page-info p {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.714;
+  }
+}
+
+.submit-page .page-info p + p {
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .submit-page .page-info p + p {
+    margin-top: 18px;
+  }
+}
+
+.submit-page .feature-btn {
+  text-align: center;
+}
+/*# sourceMappingURL=master.css.map */

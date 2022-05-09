@@ -166,6 +166,69 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         //Route::get('cup','Dark2\BackController@Db2Coupon');
         //Route::get('');
     });
+    // 無光晚餐 S3
+    Route::group(['prefix' => 'dark3'], function(){
+        Route::get('backmes','dark3\BackController@BackMes');
+        Route::post('backmes','dark3\BackController@BackMes');
+        Route::get('backme/{id}','dark3\BackController@BackMe');
+        Route::delete('backme/{id}/delete','dark3\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','dark3\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','dark3\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','dark3\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','dark3\BackController@infoUpdate');
+        Route::post('backmes/CanelCoupon','dark3\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','dark3\BackController@NotUseXls');
+        Route::post('uploadxlsx','dark3\BackController@UploadXlsx2Db');
+
+        // coupon
+        Route::get('coupons','dark3\BackController@Coupons');
+        Route::get('coupon/{id}','dark3\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','dark3\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','dark3\BackController@Pros');
+        Route::get('pro/{id}/edit','dark3\BackController@ProEdit');
+        Route::post('pro/{id}/update','dark3\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','dark3\BackController@ProDelete');
+        Route::post('pros','dark3\BackController@Pros');
+        Route::post('pros/output/only','dark3\BackController@ProOutputSite');
+
+        // 訂單
+        Route::get('orders/{id}','dark3\OrderController@Orders');
+        Route::get('order/{id}/edit','dark3\OrderController@OrderEdit');
+        Route::post('order/{id}/update','dark3\OrderController@OrderUpdate');
+        Route::delete('order/{id}/delete','dark3\OrderController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','dark3\OrderController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','dark3\OrderController@AppointmentUpdate');
+
+        // 報表列印
+        Route::get('print','dark3\OrderController@Print');
+        Route::get('table','dark3\OrderController@Table');
+        Route::get('xls/data/output','dark3\OrderController@XlsDataOuput');
+        Route::get('xls/emaildata/output','dark3\OrderController@XlsEmailDataOuput');
+        Route::post('order/{id}/resent','dark3\OrderController@beSentOrderMail');
+
+        // 發票相關
+        Route::post('order/inv/single/open','dark3\InvController@singleInvOpne');
+        Route::post('order/inv/mult/open','dark3\InvController@muInvOpen');
+        Route::post('order/inv/cancal','dark3\InvController@InvClose');
+
+        // 主揪相關
+        Route::post('getMasterData', 'dark3\MasterController@getMasterAndSend');
+        Route::post('postReSendMail', 'dark3\MasterController@postReSendMail');
+        Route::post('postReSendSMS', 'dark3\MasterController@postReSendSMS');
+        Route::get('getMasterList','dark3\MasterController@getMasterList');
+        Route::post('postMaster/{id}/store','dark3\MasterController@postMasterStore');
+        Route::delete('postMaster/{id}/delete','dark3\MasterController@postMasterDelete');
+
+        // 特殊場次設定
+        Route::get('special/setting', 'dark3\SpecialController@getSpecialSetting');
+        Route::get('discount/setting', 'dark3\SpecialController@getDiscountSetting');
+        Route::post('setting/store', 'dark3\SpecialController@postSettingStore');
+    });
+
+
+
     // 微醺大飯店 S1
     Route::group(['prefix' => 'thegreattipsy'], function(){
         Route::get('backmes','tgt\BackController@BackMes');
@@ -524,7 +587,33 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('ReOrderData','Dark2\HomeController@ReOrderData');
         Route::post('contactstore','Dark2\HomeController@contactstore');
     });
+if(env('APP_ENV') != 'production'){
+    // dark s3
+    Route::group(['prefix' => 'dininginthedark3'], function(){
+        Route::get('index.html',function(){ return view('dininginthedark3.frontend.home'); });
+        Route::get('/',function(){ return view('dininginthedark3.frontend.home'); });
+        Route::get('rules.html',function(){ return view('dininginthedark3.frontend.rules'); });
+        // 劃位
+        Route::get('booking.html',function(){ return view('dininginthedark3.frontend.booking'); });
+        Route::get('booking_pay.html',function(){ return view('dininginthedark3.frontend.booking_pay'); });
+        // 藍新金流路由
+        Route::post('Neweb.OrderPay', 'dark3\NewPayController@postOrderByNeweb'); // 存訂單
+        Route::post('Neweb.ReturnResult', 'dark3\NewPayController@postReturnByNeweb'); // 回傳內容
+        Route::post('Neweb.BackReturn', 'dark3\NewPayController@postBackReturn'); // 背景回傳
+        // 特別場
+        Route::get('booking_special.html', 'dark3\SpecialController@getHome'); // 特別場
+        Route::post('Special.OrderPay', 'dark3\SpecialController@postOrderByNeweb'); // 存訂單
+        
+        Route::get('master','dark3\MasterController@getTeamMaster'/*function(){ return view('thegreattipsy.frontend.master'); }*/);
+        Route::post('Team/SlaveStore', 'dark3\MasterController@postTeamSlave');
+        // 姓名修改
+        Route::get('nameFix','dark3\MasterController@getNameFix');
+        Route::post('Team/NameFix', 'dark3\MasterController@postNameFix');
 
+        Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
+        Route::post('ReOrderData','dark3\FrontController@ReOrderData');
+    });
+}
     // thegreattipsy S2
     Route::group(['prefix' => 'thegreattipsy'], function(){
         Route::get('index.html',function(){ return view('thegreattipsy.frontend.home'); });
