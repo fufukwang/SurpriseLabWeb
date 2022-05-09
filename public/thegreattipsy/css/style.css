@@ -3341,9 +3341,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     font-size: 12px;
     letter-spacing: 1.2px;
   }
-  #Ticket .sale-progress .sale-progress-info .info-text {
-    display: none;
-  }
 }
 
 @media (max-width: 320px) {
