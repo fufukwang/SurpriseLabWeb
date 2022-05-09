@@ -580,19 +580,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             已完成 <span class="highlight">50</span> %
                         </p>
                     </div-->
-                    <div class="d-inline-block d-sm-flex normal-lineHeight">
+                    <div class="d-inline-block d-sm-flex">
                         <!-- <p>
                             已售出 <span class="highlight total-sale">1600</span> 張<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 張</span>
                         </p> -->
-                        <p>
-                            共計 <span class="highlight">20000</span> 位賓客，造訪微醺大飯店
+                        <p class="d-none d-sm-block">
+                            共計 <span class="highlight">20000</span> 位賓客，<br class="d-inline d-sm-none"/>造訪微醺大飯店
                         </p>
                         <p class="ml-auto text-right highlight-dark progress-percent-area">
                             已完成 <span class="highlight progress-percent">80</span> %
                         </p>
                     </div>
-                    <p class="info-text highlight-dark">
-                        * 演出時間橫跨 2021/01/15 至 2022/05/02<br/>
+                    <!-- Desktop -->
+                    <p class="info-text highlight-dark d-none d-sm-block">
+                        * 演出時間長達 10 個月橫跨 2021/01/15 至 2022/05/02<br/>
+                        * 演出場次達 556 場
+                    </p>
+                    <!-- Mobile -->
+                    <p class="info-text highlight-dark d-block d-sm-none">
+                        * 演出時間長達 10 個月<br/>
+                        &nbsp;&nbsp;橫跨 2021/01/15 至 2022/05/02<br/><br/>
                         * 演出場次達 556 場
                     </p>
                 </div>
