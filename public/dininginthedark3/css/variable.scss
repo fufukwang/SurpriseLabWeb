@@ -1,0 +1,78 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap');
+
+$font-montserrat: 'Montserrat', sans-serif;
+$font-greatVibes: 'Great Vibes', cursive, sans-serif;
+$font-patuaOne: 'Patua One', cursive, sans-serif;
+$font-sans: 'PingFang TC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
+$font-serif: 'Noto Serif TC', serif;
+
+// Primary Colors
+$color-red: #DD1933;
+$color-pink: #C977AE;
+$color-orange: #F77116;
+$color-mango: #E8AB31;
+$color-green: #59A993;
+$color-blue: #2761A6;
+
+// Text Colors
+$color-lighter-yellow: #FFFFFF;
+$color-light-yellow: #FFE0BA;
+$color-yellow: #EFC27B;
+$color-dark-yellow: #E5AD5C;
+$color-error: #ff7ea4;
+
+// Background Colors
+$color-dark-brown: #281F1C;
+$color-dark-red: #932C2C;
+
+// Ticket Colors
+$color-ticket-blue: #00808D;
+$color-ticket-green: #00C39A;
+$color-ticket-red: #DE3B52;
+
+// Ending color
+$color-ending-yellow: #89814D;
+$color-ending-blue: #01FFFF;
+
+// Start================================================================
+// Space counter base on width percentage
+// How to use
+// @include baseCounter(style name, space when is 1920);
+// Example @include baseCounter('padding-top', 75);
+
+@mixin baseCounter($e, $width-1920) {
+  // Padding-left & Padding-right = 15 + 15 = 30
+  $bs4-padding: 30px;
+  $percent : $width-1920 / 1118;
+
+  @media (min-width: 1200px) {
+    #{$e}: calc((608px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (min-width: 1440px) {
+    #{$e}: calc((768px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (min-width: 1920px) {
+    #{$e}: calc((1088px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (max-width: 1199.98px) {
+    #{$e}: calc((520px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (max-width: 480px) {
+    @if ($e != 'max-width') {
+      #{$e}: calc(100% * #{$percent});
+    } @else {
+      #{$e}: 100%;
+    }
+
+  }
+}
+
+// End================================================================
