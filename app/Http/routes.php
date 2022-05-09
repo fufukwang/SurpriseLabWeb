@@ -587,7 +587,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('ReOrderData','Dark2\HomeController@ReOrderData');
         Route::post('contactstore','Dark2\HomeController@contactstore');
     });
-
+if(env('APP_ENV') != 'production'){
     // dark s3
     Route::group(['prefix' => 'dininginthedark3'], function(){
         Route::get('index.html',function(){ return view('dininginthedark3.frontend.home'); });
@@ -613,7 +613,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
     });
-
+}
     // thegreattipsy S2
     Route::group(['prefix' => 'thegreattipsy'], function(){
         Route::get('index.html',function(){ return view('thegreattipsy.frontend.home'); });
