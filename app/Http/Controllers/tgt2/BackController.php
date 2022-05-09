@@ -853,18 +853,20 @@ class BackController extends Controller
                     }
                     $pay_money = '';
                     $coupons = coupon::where('o_id',$row['sn'])->get();
-                    foreach($coupons as $c){
-                        if(count($coupons)>0){
+                    
+                    if(count($coupons)>0){
+                        foreach($coupons as $c){
                             if($coupon!=''){
                                 $coupon .= "\r\n";
                                 $pay_money.= "\r\n";
                             }
                             $coupon .= "{$c->code}";
                             $pay_money .= backme::select('money')->find($c->b_id)->money;
-                        } else {
-                            $pay_money = $row['OM'];
                         }
+                    } else {
+                        $pay_money = $row['OM'];
                     }
+                    
                     if($pay_status !== '已付款') $pay_money = 0;
 
 
