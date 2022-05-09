@@ -584,7 +584,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <!-- <p>
                             已售出 <span class="highlight total-sale">1600</span> 張<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 張</span>
                         </p> -->
-                        <p class="d-none d-sm-block">
+                        <p>
                             共計 <span class="highlight">20000</span> 位賓客，<br class="d-inline d-sm-none"/>造訪微醺大飯店
                         </p>
                         <p class="ml-auto text-right highlight-dark progress-percent-area">
