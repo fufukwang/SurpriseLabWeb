@@ -538,7 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <img class="img-fluid d-block d-sm-none" src="img/other/flow_mobile.png" alt="預售流程">
                             </div>
 
-                            <h5 class="sub-title highlight">
+                            {{--<!--h5 class="sub-title highlight">
                                 預售說明
                             </h5>
                             <p class="text-left">
@@ -549,7 +549,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li>點選直購連結完成劃位後，即會收到訂位確認信（將寄送至訂位時填寫之信箱，請確保信箱能夠正確收信）。</li>
                                 <li>直購票卷購買前請詳閱更改、退費事項。</li>
                                 <li>直購票券購買即完成劃位，並不會收到劃位序號。</li>
-                            </ul>
+                            </ul-->--}}
 
                             <h5 class="sub-title highlight">
                                 劃位序號
@@ -575,7 +575,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li>同日期時段可同時填入多組劃位序號，不受票種限制。如購買三張單人票與一張六人票，可同時輸入四次序號完成扣抵。</li>
                             </ul>
 
-                            <h5 class="sub-title highlight">
+                            {{--<!--h5 class="sub-title highlight">
                                 預售劃位期限與序號規則
                             </h5>
 
@@ -679,7 +679,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 * 序號一經使用即失效，無法重新劃位，請務必謹慎選擇。<br/>
                                 * 上述劃位與失效日期團隊保留調整與修改之權利，有所調整會另行公佈。<br/>
                                 * 本票券屬於「藝文表演票券」。
-                            </p>
+                            </p-->--}}
                         </div>
 
                         <div class="feature-btn">

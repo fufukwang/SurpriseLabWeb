@@ -511,7 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </p>
         </div>
 
-        <div class="container" data-aos="fade">
+        <div class="container" data-aos="fade" style="display: none;">
             <div class="time-slots">
                 <!------------->
                 <h3>體驗場次</h3>
@@ -541,8 +541,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
-
         </div>
+
         <div class="container sec-ticket-status" data-aos="fade">
 
             <!------------->
@@ -581,22 +581,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div-->
                     <div class="d-inline-block d-sm-flex normal-lineHeight">
-                        <p>
+                        <!-- <p>
                             已售出 <span class="highlight total-sale">1600</span> 張<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 張</span>
+                        </p> -->
+                        <p>
+                            共計 <span class="highlight">20000</span> 位賓客，造訪微醺大飯店
                         </p>
                         <p class="ml-auto text-right highlight-dark progress-percent-area">
                             已完成 <span class="highlight progress-percent">80</span> %
                         </p>
                     </div>
                     <p class="info-text highlight-dark">
-                        * 現正預售 04/21 - 05/01 之票券<br/>
-                        * 可劃位區間將依實際預售情況加開或縮短
+                        * 演出時間橫跨 2021/01/15 至 2022/05/02<br/>
+                        * 演出場次達 556 場
                     </p>
                 </div>
             </div>
 
         </div>
-        <div class="container" data-aos="fade">
+        <div class="container" data-aos="fade" style="display: none;">
 
             <!------------->
             <h3>時程表</h3>
