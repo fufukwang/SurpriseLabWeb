@@ -407,7 +407,7 @@ class BackController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id')->select('tgt2order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites')->find($id);
+                $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id')->select('tgt2order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','tgt2order.money','cash')->find($id);
             } else {
                 abort(404);
             }
@@ -501,6 +501,10 @@ class BackController extends Controller
             }
         }
         if(is_numeric($id) && $id>0){
+            if($request->pay_type == '後台編輯'){
+                $data['edit_type'] = $request->edit_type;
+                $data['money'] =  $request->money;
+            }
             order::where('id',$id)->update($data);
             $order = order::find($id);
         } 
@@ -574,7 +578,7 @@ class BackController extends Controller
                 'meat'       => json_encode($meat),
                 'coupon'     => 0,
                 'sn'         => $count,
-                'money'      => $money,
+                'money'      => $request->money,
                 'pay_type'   => $request->pay_type,
                 'pay_status' => $request->pay_status,
                 'result'     => '',
@@ -582,6 +586,7 @@ class BackController extends Controller
                 'discount'   => '',
                 'vegetarian' => $request->vegetarian,
                 'is_overseas'=> $is_overseas,
+                'edit_type'  => $request->edit_type,
             ];
             $order = order::create($data);
 
@@ -669,7 +674,7 @@ class BackController extends Controller
 
     public function Print(Request $request){
         $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','vegetarian');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type');
 
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
@@ -778,7 +783,7 @@ class BackController extends Controller
 
     public function XlsDataOuput(Request $request){
         $order = order::leftJoin('tgt2pro', 'tgt2pro.id', '=', 'tgt2order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','dis_code');
+        $order = $order->select('rang_start','rang_end','name','tel','notes','tgt2order.manage','tgt2pro.money AS PM','tgt2order.money AS OM','tgt2order.created_at AS created_at','tgt2order.pay_status','email','tgt2order.sn','tgt2order.id','day_parts','day','email','pay_type','pople','pro_id','dis_code','is_overseas','edit_type');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -829,6 +834,82 @@ class BackController extends Controller
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額"]);
+                foreach($cellData as $row){
+                    $coupon = "";
+                    if($row['pay_type'] == '信用卡'){
+                        if($row['is_overseas']>0){
+                            $pay_type = '藍新金流';
+                            $coupon = '刷卡付費';
+                        } else {
+                            $pay_type = '貝殼集器';
+                        }
+                    } elseif($row['pay_type'] == '後台編輯'){
+                        $pay_type = $row['edit_type'];
+                    }
+                    $pay_status = $row['pay_status'];
+                    if($pay_type == '公關位' && $row['pay_status'] == '已付款'){
+                        $pay_status = '公關位';
+                    }
+                    $pay_money = '';
+                    $coupons = coupon::where('o_id',$row['sn'])->get();
+                    foreach($coupons as $c){
+                        if(count($coupons)>0){
+                            if($coupon!=''){
+                                $coupon .= "\r\n";
+                                $pay_money.= "\r\n";
+                            }
+                            $coupon .= "{$c->code}";
+                            $pay_money .= backme::select('money')->find($c->b_id)->money;
+                        } else {
+                            $pay_money = $row['OM'];
+                        }
+                    }
+                    if($pay_status !== '已付款') $pay_money = 0;
+
+
+                    $sheetRow = [
+                        $row['day'],
+                        substr($row['rang_start'],0,5).'~'.substr($row['rang_end'],0,5),
+                        $row['name'],
+                        $row['tel'],
+                        $row['email'],
+                        $row['notes'],
+                        $row['manage'],
+                        $coupon,
+                        $pay_type,
+                        $pay_status,
+                        $pay_money,
+                    ];
+
+                    /*
+                    $inv_open = false;
+                    $number = inv::select('number','is_cancal')->where('order_id',$row['id'])->first();
+                    if($number){
+                        $inv_open = true;
+                    }
+                    // $row['meat'] = implode(',',json_decode($row['meat'],true));
+                    array_push($row,$inv_open ? $number->number : '');
+                    */
+
+                    array_push($data,$sheetRow);
+                }
+
+                $zero = $sheet->rows($data);
+                for($i=0;$i<count($data);$i++){
+                    $zero->getStyle('F'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('G'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('H'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('K'.$i)->getAlignment()->setWrapText(true);
+                    // $sheet->fromArray($data, null, 'A1', false, false)
+                }
+    // ->getStyle('H10')
+    // ->getAlignment()
+    // ->setWrapText(true);
+
+/*
+
+                $data = [];
                 array_push($data,["場次開始","場次結束","姓名","電話","餐飲註解","管理註記","刷卡單價","刷卡金額","訂單時間","付款狀態","信箱","訂單編號","訂單流水號","場次","日期","付款方式","人數","場次流水號","折扣碼","發票號碼","刷卡或貝殼金額","優惠券"]);
                 foreach($cellData as $row){
                     $coupons = coupon::where('o_id',$row['sn'])->get();
@@ -843,8 +924,13 @@ class BackController extends Controller
                         $coupon_code = '';
                         $coupon_money = '';
                         foreach($coupons as $c){
-                            $coupon_code .= "{$c->code}\n";
-                            $coupon_money .= backme::select('money')->find($c->b_id)->money."\n";
+                            if($coupon_money!=''){
+                                $coupon_code .= "\t\n";
+                                $coupon_money.= "\t\n";
+                            }
+                            $coupon_code .= "{$c->code}";
+                            $coupon_money .= backme::select('money')->find($c->b_id)->money;
+
                         }
                         array_push($row,$coupon_money);
                         array_push($row,$coupon_code);
@@ -855,6 +941,7 @@ class BackController extends Controller
                     array_push($data,$row);
                 }
                 $sheet->rows($data);
+                */
             });
         })->export('xls');
     }

@@ -61,7 +61,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
-                                                    <select name="people" id="pople" class="form-control">
+                                                    <select name="people" id="pople" class="form-control" data-cash="{{ $pro->cash }}">
                                                         @for($i=0;$i<37;$i++)
                                                         <option value="{{ $i }}">{{ $i }}</option>
                                                         @endfor
@@ -106,72 +106,30 @@
                                                 </div>
                                             </div>
 
-                                            <!--div class="form-group">
-                                                <label class="control-label col-sm-4">主餐</label>
-                                                <div class="col-sm-8">
-<style type="text/css">
-.btn-group{border-right: 3px solid #aaa;padding-right:5px;}
-.btn-group:last-child{border:none;}
-</style>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[0]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[0]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[1]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[1]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[2]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[2]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[3]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[3]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons"> 
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[4]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[4]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default active form-check-label">
-        <input name="Meal[5]" class="form-check-input" type="radio" checked autocomplete="off" value="葷"> 葷
-    </label>
-    <label class="btn btn-default form-check-label">
-        <input name="Meal[5]" class="form-check-input" type="radio" autocomplete="off" value="素"> 素
-    </label>
-</div>
-
-
-
-
-                                                </div>
-                                            </div-->
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">管理</label>
                                                 <div class="col-sm-8">
                                                     <textarea class="form-control" name="manage" style="min-height:120px;"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">XLS顯示</label>
+                                                <div class="col-sm-8">
+                                                    <select name="edit_type" class="form-control">
+                                                        <option value="後台編輯">後台編輯</option>
+                                                        <option value="藍新快速">藍新快速</option>
+                                                        <option value="自行匯款">自行匯款</option>
+                                                        <option value="公關位">公關位</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">金額</label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" class="form-control" name="money" id="money" required>
+                                                    <small id="tipbox" class="text-warning"></small>
                                                 </div>
                                             </div>
 
@@ -252,25 +210,16 @@
 
         <script>
         $(function(){
-$('#money').bind('change',function(){
-    $('#item').val($('#money option:selected').text());
-});
-/*
 $('#pople').bind('change',function(){
-    changeToPople($(this).val());
-})
-changeToPople(1);
-*/
+    let people = $(this).val();
+    let cash = $(this).data('cash');
+    let money = Math.round(parseInt(cash) * parseInt(people) * 1.1);
+    $('#tipbox').text(cash + " X " + people + " X 10%服務費 = " + money);
+    $('#money').val(money);
+});
         });
 
-/*
-function changeToPople(pople){
-    $('.btn-group').hide()
-    for(i=0;i<parseInt(pople);i++){
-        $('.btn-group').eq(i).show();
-    }
-}
-/*
+
 
         </script>
 

@@ -101,10 +101,10 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">付款方式</label>
                                                 <div class="col-sm-8">
-                                                    <select name="pay_type" class="form-control">
+                                                    <select name="pay_type" id="pay_type" class="form-control">
                                                         <option value="後台編輯"@if(isset($order->pay_type) && $order->pay_type=='後台編輯') selected @endif>後台編輯</option>
                                                         <option value="信用卡"@if(isset($order->pay_type) && $order->pay_type=='信用卡') selected @endif>信用卡</option>
-                                                        <option value="現場付款"@if(isset($order->pay_type) && $order->pay_type=='現場付款') selected @endif>現場付款</option>
+                                                        <!-- <option value="現場付款"@if(isset($order->pay_type) && $order->pay_type=='現場付款') selected @endif>現場付款</option> -->
                                                     </select>
                                                 </div>
                                             </div>
@@ -128,6 +128,27 @@
 
 
 
+                                            <div class="form-group back_control">
+                                                <label class="control-label col-sm-4">XLS顯示</label>
+                                                <div class="col-sm-8">
+                                                    <select name="edit_type" class="form-control">
+                                                        <option value="後台編輯"@if(isset($order->edit_type) && $order->edit_type=='後台編輯') selected @endif>後台編輯</option>
+                                                        <option value="藍新快速"@if(isset($order->edit_type) && $order->edit_type=='藍新快速') selected @endif>藍新快速</option>
+                                                        <option value="自行匯款"@if(isset($order->edit_type) && $order->edit_type=='自行匯款') selected @endif>自行匯款</option>
+                                                        <option value="公關位"@if(isset($order->edit_type) && $order->edit_type=='公關位') selected @endif>公關位</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group back_control">
+                                                <label class="control-label col-sm-4">金額</label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" class="form-control" name="money" id="money" value="{{ $order->money or 0 }}" required>
+                                                    <small class="text-warning">{{ $order->cash }} X {{ $order->pople }} X 10%服務費 = {{ $order->cash * $order->pople * 1.1 }}</small>
+                                                </div>
+                                            </div>
+
+
+                                            
                                             
                                             <div align="right">
                                                 <button type="button" class="btn btn-info btn-custom waves-effect w-md waves-light m-b-5 change_day">我要改期</button>
@@ -239,6 +260,26 @@ $('form').bind('submit',function(){
         }
     }
 });
+
+
+
+$('#pay_type').bind('change',function(){
+    const type = $(this).val();
+    if(type == '後台編輯'){
+        $('.back_control').show();
+    } else {
+        $('.back_control').hide();
+    }
+});
+$('#pay_type').trigger('change');
+
+
+
+
+
+
+
+
         });
 
 

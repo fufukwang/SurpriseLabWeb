@@ -64,10 +64,9 @@
                                                 <select name="pay_type" class="form-control">
                                                     <option value="">付款類型</option>
                                                     <option value="信用卡"@if(isset($request->pay_type) && $request->pay_type=='信用卡') selected @endif>信用卡</option>
-                                                    <option value="現場付款"@if(isset($request->pay_type) && $request->pay_type=='現場付款') selected @endif>現場付款</option>
                                                     <option value="後台編輯"@if(isset($request->pay_type) && $request->pay_type=='後台編輯') selected @endif>後台編輯</option>
                                                 </select>
-                                                <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label>
+                                                <!-- <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label> -->
                                                 <label><input type="checkbox" name="is_overseas" value="2"@if($request->is_overseas==2) checked @endif>國內信用卡</label>
                                             </div>
                                             <div class="form-group col-sm-1">
@@ -176,6 +175,17 @@
         (已報廢)
     @endif
 @endif
+<br />
+@if($row->pay_type == '信用卡')
+    @if($row->is_overseas>0) <span class="badge badge-pill badge-info">藍新金流 @else <span class="badge badge-pill badge-info">貝殼集器 @endif
+@elseif($row->pay_type == '後台編輯')
+    @if($row->edit_type == '') <span class="badge badge-pill badge-warning">尚未設定 @else <span class="badge badge-pill badge-info">{{ $row->edit_type }} @endif
+@endif </span>
+
+
+
+
+
                                                 </td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
                                                 <th>@forelse(App\model\tgt2\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt2\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
