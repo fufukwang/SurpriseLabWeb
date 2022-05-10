@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Log;
 use DB;
 use App\model\wish;
+use Carbon\Carbon;
 
 class BackController extends Controller
 {
@@ -37,6 +38,7 @@ class BackController extends Controller
             wish::where('id',$id)->update([
                 'type' => $request->type ?? '未處理',
                 'manage' => $request->manage ?? '',
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);
             return redirect('/surprise/wishs')->send()->with('message','已完成!');
         } catch(\Exception $exception){

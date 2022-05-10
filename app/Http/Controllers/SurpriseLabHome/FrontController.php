@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Log;
 use DB;
 use App\model\wish;
+use Carbon\Carbon;
 
 class FrontController extends Controller
 {
@@ -43,7 +44,9 @@ class FrontController extends Controller
                 'wish' => $wish,
                 'manage' => '',
                 'ip' => $ip,
-                'agent' => $agent
+                'agent' => $agent,
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]);
             return response()->json(['success'=>1]);
         } catch(\Exception $exception){
