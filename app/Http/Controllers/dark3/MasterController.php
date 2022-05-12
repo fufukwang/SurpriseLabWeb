@@ -321,7 +321,7 @@ class MasterController extends Controller
         } else {
             $this->user = $request->session()->get('key');
         }
-        if($this->user->thegreattipsy == 0 && $this->user->tgt2 == 0){
+        if($this->user->dark3 == 0){
             return redirect('/welcome')->send()->with('message','權限不足!');
         }
     }

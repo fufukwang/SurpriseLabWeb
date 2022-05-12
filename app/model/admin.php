@@ -10,7 +10,7 @@ class admin extends Model
     protected $fillable = [
         'slug', 'account', 'password','thegreattipsy','giftadd','admin','oldview',
         'clubtomorrow',
-        'tgt2',
+        'tgt2','dark3',
     ];
 }
 

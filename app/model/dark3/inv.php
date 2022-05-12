@@ -1,12 +1,12 @@
 <?php
 
-namespace App\model\tgt2;
+namespace App\model\dark3;
 
 use Illuminate\Database\Eloquent\Model;
 
 class inv extends Model
 {
-    protected $table = 'tgt2inv';
+    protected $table = 'dark3inv';
     
     protected $fillable = ['order_id','number','is_cancal','sent_obj','results'];
     protected $guarded = [];
