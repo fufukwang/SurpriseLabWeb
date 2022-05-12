@@ -437,7 +437,7 @@ class OrderController extends Controller
 
     public function XlsDataOuput(Request $request){
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','email','pay_type','pople','pro_id','dis_code','is_overseas','edit_type');
+        $order = $order->select('rang_start','rang_end','name','tel','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','email','pay_type','pople','pro_id','dis_code','is_overseas','edit_type','result');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -488,7 +488,7 @@ class OrderController extends Controller
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     if($row['pay_type'] == '信用卡'){
@@ -506,6 +506,7 @@ class OrderController extends Controller
                         $pay_status = '公關位';
                     }
                     $pay_money = '';
+                    $pay_last = '';
                     $coupons = coupon::where('o_id',$row['sn'])->get();
                     
                     if(count($coupons)>0){
@@ -513,12 +514,20 @@ class OrderController extends Controller
                             if($coupon!=''){
                                 $coupon .= "\r\n";
                                 $pay_money.= "\r\n";
+                                $pay_last.= "\r\n";
                             }
                             $coupon .= "{$c->code}";
                             $pay_money .= backme::select('money')->find($c->b_id)->money;
+                            $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
                         }
                     } else {
                         $pay_money = $row['OM'];
+                        if($pay_type == '藍新金流' && $pay_status == '已付款'){
+                            $json = json_decode($row['result'],true);
+                            if($json['Status'] == "SUCCESS"){
+                                $pay_last = $json['data']['Result']['Card4No'];
+                            }
+                        }
                     }
                     
                     if($pay_status !== '已付款') $pay_money = 0;
@@ -530,12 +539,14 @@ class OrderController extends Controller
                         $row['name'],
                         $row['tel'],
                         $row['email'],
+                        $row['pople'],
                         $row['notes'],
                         $row['manage'],
                         $coupon,
                         $pay_type,
                         $pay_status,
                         $pay_money,
+                        $pay_last,
                     ];
 
                     /*
@@ -553,10 +564,11 @@ class OrderController extends Controller
 
                 $zero = $sheet->rows($data);
                 for($i=0;$i<count($data);$i++){
-                    $zero->getStyle('F'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('G'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('H'.$i)->getAlignment()->setWrapText(true);
-                    $zero->getStyle('K'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('I'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('L'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('M'.$i)->getAlignment()->setWrapText(true);
                     // $sheet->fromArray($data, null, 'A1', false, false)
                 }
             });

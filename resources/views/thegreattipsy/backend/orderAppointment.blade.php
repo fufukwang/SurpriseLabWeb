@@ -214,7 +214,7 @@ $('#pople').bind('change',function(){
     let people = $(this).val();
     let cash = $(this).data('cash');
     let money = Math.round(parseInt(cash) * 1 * 1.1);
-    $('#tipbox').text("單人金額:"cash + " X 1 X 10%服務費 = " + money);
+    $('#tipbox').text("單人金額:"+cash + " X 1 X 10%服務費 = " + money);
     $('#money').val(money);
 });
         });
