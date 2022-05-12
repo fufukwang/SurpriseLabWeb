@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s訂單列表'])
+@include('backstage.header',['title' => '無光晚餐S3訂單列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">微醺大飯店：1980s訂單列表 </h4>
+                        <h4 class="page-title">無光晚餐S3訂單列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -378,7 +378,7 @@
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
                                             <tr>
-                                                <td>微醺大飯店：1980s(<span  id="inv_people"></span>人)</td>
+                                                <td>無光晚餐S3(<span  id="inv_people"></span>人)</td>
                                                 <td>1</td>
                                                 <td>組</td>
                                                 <td id="inv_price"></td>
@@ -822,7 +822,7 @@ $(function(){
                 'CarrierType' : $('input[name="CarrierType"]:checked').val(),
                 'CarrierNum' : $('#CarrierNum').val(),
                 'LoveCode' : $('#LoveCode').val(),
-                'ItemName' : '微醺大飯店：1980s('+$('#inv_people').text()+'人票)',
+                'ItemName' : '無光晚餐S3('+$('#inv_people').text()+'人票)',
                 'ItemCount' : $('#inv_people').text(),
                 'ItemUnit' : '組',
                 'ItemPrice' : $('#inv_price').text(),

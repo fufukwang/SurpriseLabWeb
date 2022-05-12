@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s營業日列表'])
+@include('backstage.header',['title' => '無光晚餐S3營業日列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,7 +9,7 @@
         <!-- Page-Title -->
         <div class="row">
             <div class="col-sm-12">
-                <h4 class="page-title">微醺大飯店：1980s營業日 
+                <h4 class="page-title">無光晚餐S3營業日 
                     @if( Session::has('key') && Session::get('key')->tgt2 == 0 )
                     <a href="/thegreattipsyS2/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>
                     @endif

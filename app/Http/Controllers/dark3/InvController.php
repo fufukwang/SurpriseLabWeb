@@ -235,10 +235,10 @@ class InvController extends Controller
 
                 */
             }
-            return redirect('/thegreattipsyS2/print?')->with('message','發票開立完成!');
+            return redirect('/dark3/print?')->with('message','發票開立完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsyS2/print?')->with('message','發票開立失敗!');
+            return redirect('/dark3/print?')->with('message','發票開立失敗!');
         }
     }
     // 單一發票開立

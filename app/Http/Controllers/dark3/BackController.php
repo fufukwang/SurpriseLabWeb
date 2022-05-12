@@ -93,7 +93,7 @@ class BackController extends Controller
             if($request->has('isdone')) $par .= "&isdone=".$request->isdone;
             if($request->has('is_sent')) $par .= "&is_sent=".$request->is_sent;
             if($request->has('season')) $par .= "&season=".$request->season;
-            return redirect('/thegreattipsyS2/backmes'.$par)->with('message','已寄送完成!');
+            return redirect('/dark3/backmes'.$par)->with('message','已寄送完成!');
         }
 
 
@@ -130,7 +130,7 @@ class BackController extends Controller
         $mes = $mes->paginate($this->perpage);
         $quart = backme::select('quarter')->groupBy('quarter')->get();
         //dd(DB::getQueryLog());
-        return view('thegreattipsy.backend.BackMes',compact('mes','request','quart'));
+        return view('dininginthedark3.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
         $backmes = backme::select('name','email','tel','eb1','p1','p2','p4','p6','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE o_id=0 AND dark3coupon.b_id=dark3backme.id)>0")->get()->toArray();
@@ -257,7 +257,7 @@ class BackController extends Controller
         } else { $pros = $pros->orderBy('updated_at','desc'); }
         
         $pros = $pros->paginate($this->perpage);
-        return view('thegreattipsy.backend.pros',compact('pros','request'));
+        return view('dininginthedark3.backend.pros',compact('pros','request'));
     }
     public function ProEdit(Request $request,$id){
         $pro = collect();
@@ -268,7 +268,7 @@ class BackController extends Controller
                 abort(404);
             }
         }
-        return view('thegreattipsy.backend.pro',compact('pro'));
+        return view('dininginthedark3.backend.pro',compact('pro'));
     }
     public function ProUpdate(Request $request,$id){
 
@@ -309,7 +309,7 @@ class BackController extends Controller
             }
             pro::insert($arr);
         }
-        return redirect('/thegreattipsyS2/pros')->with('message','編輯完成!');
+        return redirect('/dark3/pros')->with('message','編輯完成!');
     }
     public function ProDelete(Request $request,$id){
         order::where('pro_id',$id)->delete();
@@ -362,7 +362,7 @@ class BackController extends Controller
                 $sheet->rows($data);
             });
         })->export('xls');
-        return redirect('/thegreattipsyS2/pros');
+        return redirect('/dark3/pros');
     }
 
 
@@ -381,7 +381,7 @@ class BackController extends Controller
         }
 
         $coupons = $coupons->paginate($this->perpage);
-        return view('thegreattipsy.backend.coupons',compact('coupons','request'));
+        return view('dininginthedark3.backend.coupons',compact('coupons','request'));
     }
     public function CouponDelete(Request $request,$id){
         coupon::where('id', $id)->delete();
@@ -405,7 +405,7 @@ class BackController extends Controller
             ];
             $validator = Validator::make($request->all(), $rules);
             if ($validator->fails()) {
-                return redirect('/thegreattipsyS2/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
+                return redirect('/dark3/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
             } else {
                 if ($request->hasFile('xlsx')) {
                     if ($request->file('xlsx')->isValid())
@@ -463,10 +463,10 @@ class BackController extends Controller
                 //backme::insert($data);
                 $this->Db2Coupon();
             });
-            return redirect('/thegreattipsyS2/backmes')->with('message','新增完成!!共新增'.$i.'筆資料');
+            return redirect('/dark3/backmes')->with('message','新增完成!!共新增'.$i.'筆資料');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsyS2/backmes')->with('message','新增失敗!');
+            return redirect('/dark3/backmes')->with('message','新增失敗!');
         }
     }
 

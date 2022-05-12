@@ -55,7 +55,7 @@ class OrderController extends Controller
     public function Orders(Request $request,$id){
         $order = order::orderBy('updated_at','desc')->where('pro_id',$id);
         $order = $order->get();
-        return view('thegreattipsy.backend.orders',compact('order'));
+        return view('dininginthedark3.backend.orders',compact('order'));
     }
     public function OrderEdit(Request $request,$id){
         $order = collect();
@@ -68,7 +68,7 @@ class OrderController extends Controller
         }
         $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$order->pople)
             ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
-        return view('thegreattipsy.backend.order',compact('order','pro'));
+        return view('dininginthedark3.backend.order',compact('order','pro'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -163,9 +163,9 @@ class OrderController extends Controller
             $order = order::find($id);
         } 
         if($request->has('qxx') && $request->qxx != ''){
-            return redirect('/thegreattipsyS2/print?'.$request->qxx)->with('message','編輯完成!');
+            return redirect('/dark3/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
-            return redirect('/thegreattipsyS2/orders/'.$order->pro_id)->with('message','編輯完成!');
+            return redirect('/dark3/orders/'.$order->pro_id)->with('message','編輯完成!');
         }
     }
     public function OrderDelete(Request $request,$id){
@@ -181,10 +181,10 @@ class OrderController extends Controller
     public function Appointment(Request $request,$pro_id){
         try {
             $pro = pro::find($pro_id);
-            return view('thegreattipsy.backend.orderAppointment',compact('pro_id','pro'));
+            return view('dininginthedark3.backend.orderAppointment',compact('pro_id','pro'));
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsyS2/pros?')->with('message','此編號無座位表!');
+            return redirect('/dark3/pros?')->with('message','此編號無座位表!');
         }
     }
     public function AppointmentUpdate(Request $request,$pro_id){
@@ -208,7 +208,7 @@ class OrderController extends Controller
             if($act->special) {
                 $is_overseas = 9;
                 if($people!=1 && $people!=2 && $people!=6){
-                    return redirect('/thegreattipsyS2/pros?')->with('message','新增失敗!特別場次請選擇 1、2、6符合票券人數');
+                    return redirect('/dark3/pros?')->with('message','新增失敗!特別場次請選擇 1、2、6符合票券人數');
                 }
                 $sp_money = json_decode(setting::where('slug','dark3_sp_money')->first()->json,true);
                 if($people == 1){
@@ -318,10 +318,10 @@ class OrderController extends Controller
                 }
             }
 
-            return redirect('/thegreattipsyS2/pros?')->with('message','新增完成!');
+            return redirect('/dark3/pros?')->with('message','新增完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsyS2/pros?')->with('message','新增失敗!');
+            return redirect('/dark3/pros?')->with('message','新增失敗!');
         }
     }
 
@@ -379,7 +379,7 @@ class OrderController extends Controller
         } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
         $order = $order->paginate($this->perpage);
 
-        return view('thegreattipsy.backend.print',compact('order','request'));
+        return view('dininginthedark3.backend.print',compact('order','request'));
     }
 
     public function Table(Request $request){
@@ -432,7 +432,7 @@ class OrderController extends Controller
         $order = $order->get();
         
 
-        return view('thegreattipsy.backend.table',compact('order','request'));
+        return view('dininginthedark3.backend.table',compact('order','request'));
     }
 
     public function XlsDataOuput(Request $request){

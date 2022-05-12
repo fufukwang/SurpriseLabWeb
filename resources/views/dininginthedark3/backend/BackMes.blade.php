@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s貝殼匯入列表'])
+@include('backstage.header',['title' => '無光晚餐S3貝殼匯入列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -23,7 +23,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">微醺大飯店：1980s貝殼匯入列表 </h4>
+                        <h4 class="page-title">無光晚餐S3貝殼匯入列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -134,7 +134,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">微醺大飯店：1980s貝殼資料匯入 </h4>
+                        <h4 class="page-title">無光晚餐S3貝殼資料匯入 </h4>
                     </div>
                 </div>
                     <div class="col-sm-12">

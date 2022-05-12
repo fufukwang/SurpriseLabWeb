@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s預約席次設定'])
+@include('backstage.header',['title' => '無光晚餐S3預約席次設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>微醺大飯店：1980s預約席次設定</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>無光晚餐S3預約席次設定</b></h4>
                                 </div>
                             </div>
 
@@ -214,7 +214,7 @@ $('#pople').bind('change',function(){
     let people = $(this).val();
     let cash = $(this).data('cash');
     let money = Math.round(parseInt(cash) * parseInt(people) * 1.1);
-    $('#tipbox').text(cash + " X " + people + " X 10%服務費 = " + money);
+    $('#tipbox').text("單人金額:"+cash + " X 1 X 10%服務費 = " + Math.round(parseInt(cash) * 1.1));
     $('#money').val(money);
 });
         });

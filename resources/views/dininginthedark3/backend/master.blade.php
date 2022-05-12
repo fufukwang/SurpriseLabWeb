@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s揪團列表'])
+@include('backstage.header',['title' => '無光晚餐S3揪團列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -23,7 +23,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">微醺大飯店：1980s揪團列表 </h4>
+                        <h4 class="page-title">無光晚餐S3揪團列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->

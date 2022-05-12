@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s 特殊場設定'])
+@include('backstage.header',['title' => '無光晚餐S3 特殊場設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>微醺大飯店：1980s 特殊場設定</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>無光晚餐S3 特殊場設定</b></h4>
                                 </div>
                             </div>
 
