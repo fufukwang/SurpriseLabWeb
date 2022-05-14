@@ -34,7 +34,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/thegreattipsyS2/backmes">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/dark3/backmes">
 
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -67,9 +67,9 @@
                                             <div class="form-group col-sm-1">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
                                             </div>
-                                            @if( Session::get('key')->tgt2 == 0 )
+                                            @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
                                             <div class="form-group col-sm-1">
-                                                <a target="_blank" href="/thegreattipsyS2/backmenouse/xls" class="btn btn-danger">匯出未兌換名單</a>
+                                                <a target="_blank" href="/dark3/backmenouse/xls" class="btn btn-danger">匯出未兌換名單</a>
                                             </div>
                                             @endif
 
@@ -141,9 +141,9 @@
                         <div class="card-box">
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
-                                    @if( Session::get('key')->tgt2 == 0 )
+                                    @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/thegreattipsyS2/uploadxlsx" method="post" enctype="multipart/form-data">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/dark3/uploadxlsx" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-1">
                                                 <div class="col-sm-12">
@@ -175,7 +175,7 @@
                                     @endif
                                     <div>
                                         <p>
-                                            範例檔案 : <a href="/example/tgt2範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
+                                            範例檔案 : <a href="/example/dark3範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
                                         </p>
                                         <p>
                                             說明:<br />
@@ -259,7 +259,7 @@ $(function(){
         var id   = $(this).data('id');
         var code = $(this).data('code');
         if(confirm("確定要移除此優惠碼的使用紀錄?!(此動作無法復原)")) {
-            $.post('/thegreattipsyS2/backmes/CanelCoupon',{
+            $.post('/dark3/backmes/CanelCoupon',{
                 b_id : id,
                 code : code,
             },function(data){
@@ -273,7 +273,7 @@ $(function(){
     $('.editable').bind('blur',function(){
         var val = $(this).html();
         var id  = $(this).data('id');
-        $.post('/thegreattipsyS2/backmes/'+id+'/sendManageUpdate',{
+        $.post('/dark3/backmes/'+id+'/sendManageUpdate',{
             manage : val
         },function(data){
             $.Notification.notify('success','bottom left','已更新', '備註已更新')
@@ -294,7 +294,7 @@ $(function(){
             var name  = $('.name_'+id).html();
             var tel   = $('.tel_'+id).html();
             var email = $('.email_'+id).html();
-            $.post('/thegreattipsyS2/backmes/'+id+'/infoUpdate',{
+            $.post('/dark3/backmes/'+id+'/infoUpdate',{
                 name  : name,
                 tel   : tel,
                 email : email
@@ -306,7 +306,7 @@ $(function(){
     $('.sendbox').bind('click',function(){
         var send = $(this).prop('checked');
         var id   = $(this).val();
-        $.post('/thegreattipsyS2/backmes/'+id+'/sendUpdate',{
+        $.post('/dark3/backmes/'+id+'/sendUpdate',{
             send : (send ? 1 : 0)
         },function(data){
             $.Notification.notify('success','bottom left','已更新', '發送狀態已更新')
@@ -314,7 +314,7 @@ $(function(){
     });
     $('.sent_mail').bind('click',function(){
         var id   = $(this).data('id');
-        $.post('/thegreattipsyS2/backmes/'+id+'/sentcoupon',{},function(data){
+        $.post('/dark3/backmes/'+id+'/sentcoupon',{},function(data){
             if(data.message == 'success'){
                 $('.sendbox[value="'+id+'"]').prop('checked',true);
                 $.Notification.notify('success','bottom left','已更新', '發送狀態已更新');

@@ -142,7 +142,7 @@ $('.t6_setting_button').bind('click',function(){
             slug: 'tgt2_sp_t6',
             number: t6_number
         }
-        $.post('/thegreattipsyS2/setting/store',myObj,function(data){
+        $.post('/dark3/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '六人沉醉票最大數量已更新');
             } else {
@@ -167,7 +167,7 @@ $('.sp_money_button').bind('click',function(){
             t2_money: t2_money,
             t6_money: t6_money,
         }
-        $.post('/thegreattipsyS2/setting/store',myObj,function(data){
+        $.post('/dark3/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '票價金額已更新');
             } else {

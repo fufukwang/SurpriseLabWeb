@@ -162,7 +162,6 @@
                         </ul>
                     </li>
                     @endif
-                    {{--
                     @if( Session::get('key')->dark3 )
                     <li class="has-submenu @if(Request::segment(1) === 'dark3')active @endif">
                         <a href="#"><i class="md md-invert-colors-on"></i>無光晚餐S3</a>
@@ -178,7 +177,6 @@
                         </ul>
                     </li>
                     @endif
-                    --}}
                     <li class="has-submenu @if(Request::segment(1) === 'surprise')active @endif">
                         <a href="#"><i class="md md-home"></i>驚喜官網</a>
                         <ul class="submenu" style="left:0;right:auto">

@@ -38,7 +38,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/thegreattipsyS2/getMasterList" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/dark3/getMasterList" id="SearchForm">
 
 
                                             <div class="form-group col-sm-8">
@@ -70,7 +70,7 @@
                                         <tbody>
 @forelse ($master as $row)
                                             <tr id="tr_{{ $row->id }}">
-                                                <td><a href="/thegreattipsyS2/order/{{ $row->order_id }}/edit?" target="_blank">{{ $row->master_name }}</a></td>
+                                                <td><a href="/dark3/order/{{ $row->order_id }}/edit?" target="_blank">{{ $row->master_name }}</a></td>
                                                 <td>{{ $row->master_email }}</td>
                                                 <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div></td>
                                                 <td><div class="single-line email_{{ $row->id }}">{{ $row->email }}</div></td>
@@ -171,7 +171,7 @@ $(function(){
         var txt = '';
         if(confirm(txt + "確定要刪除此成員")) {
              $.ajax({
-                url: '/thegreattipsyS2/postMaster/'+id+'/delete',
+                url: '/dark3/postMaster/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
@@ -195,7 +195,7 @@ $(function(){
             var name  = $('.name_'+id).text();
             var tel   = $('.tel_'+id).text();
             var email = $('.email_'+id).text();
-            $.post('/thegreattipsyS2/postMaster/'+id+'/store',{
+            $.post('/dark3/postMaster/'+id+'/store',{
                 name  : name,
                 tel   : tel,
                 email : email
@@ -209,7 +209,7 @@ $(function(){
         var type  = $(this).data('type');
         var name  = $(this).data('name');
         var email  = $(this).data('email');
-        $.post('/thegreattipsyS2/postReSendMail',{
+        $.post('/dark3/postReSendMail',{
             name: name,
             id: id,
             email: email,
@@ -223,7 +223,7 @@ $(function(){
         var type  = $(this).data('type');
         var name  = $(this).data('name');
         var tel  = $(this).data('tel');
-        $.post('/thegreattipsyS2/postReSendSMS',{
+        $.post('/dark3/postReSendSMS',{
             name: name,
             id: id,
             tel: tel,

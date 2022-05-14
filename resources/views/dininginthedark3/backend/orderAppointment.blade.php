@@ -19,7 +19,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsyS2/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/dark3/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
 {!! csrf_field() !!}
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">日期</label>

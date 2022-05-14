@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/thegreattipsyS2/coupons" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/dark3/coupons" id="SearchForm">
 
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -160,7 +160,7 @@ $(function(){
         }
         if(confirm(txt + "確定要刪除此優惠券")) {
              $.ajax({
-                url: '/thegreattipsyS2/coupon/'+id+'/delete',
+                url: '/dark3/coupon/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){

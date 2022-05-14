@@ -10,8 +10,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <h4 class="page-title">無光晚餐S3營業日 
-                    @if( Session::has('key') && Session::get('key')->tgt2 == 0 )
-                    <a href="/thegreattipsyS2/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>
+                    @if( Session::has('key') && Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
+                    <a href="/dark3/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>
                     @endif
                 </h4>
             </div>
@@ -29,7 +29,7 @@
                         <div class="table-wrapper">
                             <div class="btn-toolbar">
                                 <div class="btn-group focus-btn-group">
-                                    <form action="/thegreattipsyS2/pros" autocomplete="off">
+                                    <form action="/dark3/pros" autocomplete="off">
 
                                         <div class="form-group col-sm-2">
                                             <div class="col-sm-12">
@@ -126,10 +126,10 @@
                                                     <td>{{ App\model\tgt2\pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
                                                     <td>@if($row->special) <span class="badge badge-pill badge-info">特別場次</span> @else {{ $row->money }} / {{ $row->cash }} @endif</td>
                                                     <td class="actions">
-                                                        <a class="btn btn-purple btn-xs" href="/thegreattipsyS2/order/{{ $row->id }}/appointment">預約席</a>
-                                                        <a class="btn btn-info btn-xs" href="/thegreattipsyS2/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
-                                                        @if(  Session::has('key') && Session::get('key')->tgt2 == 0 )
-                                                        <a class="btn btn-primary btn-xs" href="/thegreattipsyS2/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
+                                                        <a class="btn btn-purple btn-xs" href="/dark3/order/{{ $row->id }}/appointment">預約席</a>
+                                                        <a class="btn btn-info btn-xs" href="/dark3/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
+                                                        @if(  Session::has('key') && Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
+                                                        <a class="btn btn-primary btn-xs" href="/dark3/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                         @endif
                                                         <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                     </td>
@@ -168,7 +168,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/thegreattipsyS2/pros/output/only" method="post">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/dark3/pros/output/only" method="post">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-1">
                                                 <div class="col-sm-12">
@@ -250,7 +250,7 @@
                 var id = $(this).data('id');
                 if (confirm("確定要刪除此營業日?如有訂單將一併刪除")) {
                     $.ajax({
-                        url: '/thegreattipsyS2/pro/' + id + '/delete',
+                        url: '/dark3/pro/' + id + '/delete',
                         method: 'delete',
                         dataType: 'json'
                     }).done(function(data) {
@@ -278,7 +278,7 @@ $('.oclink').bind('click',function(){
     var obj = $(this);
     var val = 0;
     if(text == "關閉中") val = 1;
-    $.post('/thegreattipsyS2/pros',{
+    $.post('/dark3/pros',{
         "act" : "oneUpdate",
         "id"  : id,
         "muopVal" : val
