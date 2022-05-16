@@ -4,11 +4,11 @@
     <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
-    <meta name="description" content="We don's meet people by accident. We meet for a reason.">
+    <meta name="description" content="We don't meet people by accident. We meet for a reason.">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="無光晚餐第三季"/>
     <meta property="og:site_name" content="無光晚餐第三季"/>
-    <meta property="og:description" content="We don's meet people by accident. We meet for a reason."/>
+    <meta property="og:description" content="We don't meet people by accident. We meet for a reason."/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/dininginthedark3"/>
     <meta property="og:image" content="https://www.surpriselab.com.tw/dininginthedark3/img/opengraph.png?v=0.1"/>
     <meta property="og:image:type" content="image/png"/>
@@ -20,11 +20,11 @@
 
     <!-- Style -->
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/plugins/bootstrap.css"/>
-    <link rel="stylesheet" href="css/plugins/aos.min.css"/>
+    <link rel="stylesheet" href="css/plugins/bootstrap-4.1.0/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins/aos/aos.min.css"/>
 
-    <!-- Loading -->
-    <link rel="stylesheet" type="text/css" href="css/plugins/loading.css"/>
+    <!-- Loading Animation CSS -->
+    <link rel="stylesheet" type="text/css" href="css/plugins/imagesloaded/loading.css"/>
     <script>document.documentElement.className = 'js';</script>
 
     <!-- Custom CSS -->
@@ -448,23 +448,20 @@
 
     </main>
 
-<!-- Bootstrap -->
-<script src="js/plugins/jquery-3.3.1.min.js"></script>
-<script src="js/plugins/popper.min.js"></script>
-<script src="js/plugins/bootstrap.min.js"></script>
-<script src="js/plugins/jquery.scrollify.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="js/plugins/popper.min.js"></script>
+    <script src="js/plugins/bootstrap-4.1.0/bootstrap.min.js"></script>
+    <script src="js/plugins/jquery.scrollify.js"></script>
 
-<!-- Ripple Animation Js -->
-<!-- <script src="js/plugins/pixi.min.js"></script>
-<script src="js/plugins/TweenMax.min.js"></script>
-<script src="js/plugins/custom-ripple.js"></script>
-<script src="js/plugins/imagesloaded.pkgd.min.js"></script> -->
+    <!-- Loading Animation JS -->
+    <script src="js/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
-<!-- Aos -->
-<script src="js/plugins/aos.min.js"></script>
+    <!-- Aos -->
+    <script src="js/plugins/aos/aos.min.js"></script>
 
-<!-- Custom Js -->
-<script src="js/main.js?v=0.1"></script>
+    <!-- Custom Js -->
+    <script src="js/main.js?v=0.1"></script>
 
 </body>
 </html>

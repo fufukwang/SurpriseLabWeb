@@ -19,16 +19,15 @@
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/plugins/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins/bootstrap-4.1.0/bootstrap.css"/>
 
-    <!-- Ripple Animation Style -->
-    <link rel="stylesheet" type="text/css" href="css/plugins/loading.css"/>
-    <link rel="stylesheet" type="text/css" href="css/plugins/component.css"/>
+    <!-- Loading Animation CSS -->
+    <link rel="stylesheet" type="text/css" href="css/plugins/imagesloaded/loading.css"/>
     <script>document.documentElement.className = 'js';</script>
 
     <!-- OwlCarousel2 -->
-    <link rel="stylesheet" href="css/owl/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/owl2/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl2/owl.theme.default.min.css"/>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
@@ -857,41 +856,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 </main>
 
-<!-- Screen Rotate Hint -->
-<div class="hint-wrapper">
-    <div class="hint-inner">
-        <div class="logo">
-            <img src="img/web_title_small.png" alt="The Great Tipsy">
-        </div>
-        <div class="hint-img rotate-turn-h">
-            <img class="rotate-turn-h" src="img/other/rotate_turn-h.gif" alt="screen-rotate">
-        </div>
-        <div class="hint-img rotate-turn-s">
-            <img class="rotate-turn-s" src="img/other/rotate_turn-s.gif" alt="screen-rotate">
-        </div>
-        <div class="hint-text rotate-turn-h">
-            請使用橫式觀看，以獲得最佳體驗
-        </div>
-        <div class="hint-text rotate-turn-s">
-            請使用直式觀看，以獲得最佳體驗
-        </div>
-    </div>
-</div>
-<!-- End Screen Hint -->
-
 <!-- Bootstrap -->
 <script src="js/plugins/jquery-3.3.1.min.js"></script>
 <script src="js/plugins/popper.min.js"></script>
-<script src="js/plugins/bootstrap.min.js"></script>
+<script src="js/plugins/bootstrap-4.1.0/bootstrap.min.js"></script>
 
-<!-- Ripple Animation Js -->
-<script src="js/plugins/pixi.min.js"></script>
-<script src="js/plugins/TweenMax.min.js"></script>
-<script src="js/plugins/custom-ripple.js"></script>
-<script src="js/plugins/imagesloaded.pkgd.min.js"></script>
+<!-- Loading Animation JS -->
+<script src="js/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
 <!-- OwlCarousel2 -->
-<script src="js/plugins/owl.carousel.min.js"></script>
+<script src="js/plugins/owl2/owl.carousel.min.js"></script>
 <script src="js/rules.js?v=0.1"></script>
 
 </body>

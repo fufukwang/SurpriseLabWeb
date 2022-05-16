@@ -20,18 +20,17 @@
 
     <!-- Style -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/plugins/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins/bootstrap-4.1.0/bootstrap.css"/>
 
-    <!-- Ripple Animation Style -->
-    <link rel="stylesheet" type="text/css" href="css/plugins/loading.css"/>
-    <link rel="stylesheet" type="text/css" href="css/plugins/component.css"/>
+    <!-- Loading Animation CSS -->
+    <link rel="stylesheet" type="text/css" href="css/plugins/imagesloaded/loading.css"/>
     <script>document.documentElement.className = 'js';</script>
 
     <!-- Fontawesome -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome/fontawesome.min.css"/>
 
     <!-- Select2 style -->
-    <link rel="stylesheet" href="css/plugins/select2.css"/>
+    <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
@@ -136,16 +135,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/plugins/jquery-3.3.1.min.js"></script>
 <script src="js/plugins/jquery-ui.js"></script>
 <script src="js/plugins/popper.min.js"></script>
-<script src="js/plugins/bootstrap.min.js"></script>
+<script src="js/plugins/bootstrap-4.1.0/bootstrap.min.js"></script>
 
-<!-- Ripple Animation Js -->
-<script src="js/plugins/pixi.min.js"></script>
-<script src="js/plugins/TweenMax.min.js"></script>
-<script src="js/plugins/custom-ripple.js"></script>
-<script src="js/plugins/imagesloaded.pkgd.min.js"></script>
+<!-- Loading Animation JS -->
+<script src="js/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
 <!-- Select2 script-->
-<script src="js/select2.js?v=1"></script>
+<script src="js/plugins/select2/select2.js?v=0.1"></script>
 <!-- blockUI script-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 <!-- tappaysdk -->
