@@ -116,15 +116,15 @@ $(document).ready(function () {
             progress_counter++;
         }, 10);
 
-        if (sale_progress >= 80) {
-            // 進度超過80％時，區塊上移
-            $('.sec-ticket-status').addClass('up').appendTo('.sec-experience');
+        // if (sale_progress >= 80) {
+        //     // 進度超過80％時，區塊上移
+        //     $('.sec-ticket-status').addClass('up').appendTo('.sec-experience');
 
-            if (sale_progress >= 100) {
-                // 進度超過100％時，不顯示剩餘張數
-                $('.over-2000').hide();
-            }
-        }
+        //     if (sale_progress >= 100) {
+        //         // 進度超過100％時，不顯示剩餘張數
+        //         $('.over-2000').hide();
+        //     }
+        // }
 
         sale_info.fadeTo(300, 1);
         var timer = setInterval(function () {
