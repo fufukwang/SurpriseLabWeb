@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s訂單設定'])
+@include('backstage.header',['title' => '無光晚餐S3訂單設定'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">微醺大飯店：1980s訂單設定 </h4>
+                        <h4 class="page-title">無光晚餐S3訂單設定 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/thegreattipsyS2/pros">
+                                        <div class="btn-group focus-btn-group"><form action="/dark3/pros">
 
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -60,7 +60,7 @@
                                                 <td>{{ $row->email }}</td>
                                                 <td>{{ $row->pay_type }} / {{ $row->pay_status }}</td>
                                                 <td class="actions">
-                                                    <a class="btn btn-primary btn-xs" href="/thegreattipsyS2/order/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-primary btn-xs" href="/dark3/order/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
@@ -145,7 +145,7 @@ $(function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此訂單")) {
              $.ajax({
-                url: '/thegreattipsyS2/order/'+id+'/delete',
+                url: '/dark3/order/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){

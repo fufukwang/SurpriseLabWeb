@@ -1,12 +1,12 @@
 <?php
 
-namespace App\model\tgt2;
+namespace App\model\dark3;
 
 use Illuminate\Database\Eloquent\Model;
 
 class coupon extends Model
 {
-    protected $table = 'tgt2coupon';
+    protected $table = 'dark3coupon';
     
     protected $fillable = ['code','b_id','o_id','type'];
     protected $guarded = [];

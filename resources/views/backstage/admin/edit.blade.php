@@ -15,7 +15,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card-box">
+                    <div class="card-box" style="min-height: 500px;">
                         <h4 class="m-t-0 header-title"><b>編輯管理員</b></h4>
                         <form  data-parsley-validate novalidate method="post" action="/admin/{{ $admin->id }}">
                             {!! csrf_field() !!}<input name="_method" type="hidden" value="PUT"><!--修改的偽方法-->
@@ -58,6 +58,12 @@
                                     <div class="form-group">
                                         <label>微醺大飯店2</label>
                                         <input type="checkbox" @if($admin->tgt2)checked @endif name="tgt2" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>無光晚餐3</label>
+                                        <input type="checkbox" @if($admin->dark3)checked @endif name="dark3" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
                             </div>

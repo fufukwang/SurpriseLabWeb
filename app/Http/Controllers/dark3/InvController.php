@@ -43,7 +43,7 @@ class InvController extends Controller
         } else {
             $this->user = $request->session()->get('key');
         }
-        if($this->user->thegreattipsy == 0){
+        if($this->user->dark3 == 0){
             return redirect('/welcome')->send()->with('message','權限不足!');
         }
         DB::enableQueryLog();
@@ -235,10 +235,10 @@ class InvController extends Controller
 
                 */
             }
-            return redirect('/thegreattipsyS2/print?')->with('message','發票開立完成!');
+            return redirect('/dark3/print?')->with('message','發票開立完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsyS2/print?')->with('message','發票開立失敗!');
+            return redirect('/dark3/print?')->with('message','發票開立失敗!');
         }
     }
     // 單一發票開立

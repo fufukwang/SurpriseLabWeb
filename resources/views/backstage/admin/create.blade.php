@@ -16,7 +16,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="card-box">
+                <div class="card-box" style="min-height: 500px;">
                     <h4 class="m-t-0 header-title"><b>新增</b></h4>
                     <form action="/admin" method="post"  data-parsley-validate novalidate>
                         {!! csrf_field() !!}
@@ -59,6 +59,12 @@
                                     <div class="form-group">
                                         <label>微醺大飯店2</label>
                                         <input type="checkbox" name="tgt2" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>無光晚餐3</label>
+                                        <input type="checkbox" name="dark3" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
                         </div>

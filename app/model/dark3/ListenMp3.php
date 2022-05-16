@@ -1,12 +1,12 @@
 <?php
 
-namespace App\model\tgt2;
+namespace App\model\dark3;
 
 use Illuminate\Database\Eloquent\Model;
 
 class ListenMp3 extends Model
 {
-    protected $table = 'tgt2_listen_mp3';
+    protected $table = 'dark3_listen_mp3';
     
     protected $fillable = [
     	'file',

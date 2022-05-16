@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s營業日編輯'])
+@include('backstage.header',['title' => '無光晚餐S3營業日編輯'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -21,7 +21,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>微醺大飯店：1980s建立營業日</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>無光晚餐S3建立營業日</b></h4>
                                     <p class="text-muted font-13 m-b-30">
                                         建立營業日期範圍與價格.
                                     </p>
@@ -32,7 +32,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsyS2/pro/{{ $pro->id or 0}}/update" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/dark3/pro/{{ $pro->id or 0}}/update" class="form-horizontal">
 {!! csrf_field() !!}
 
                                             <div class="form-group">
@@ -135,7 +135,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            @if( Session::get('key')->tgt2 == 0 )
+                                            @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
                                             <div align="right">
                                                 <button type="submit" class="btn btn-primary btn-custom waves-effect w-md waves-light m-b-5">送出</button>
                                             </div>

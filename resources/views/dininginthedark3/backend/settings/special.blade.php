@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s 特殊場設定'])
+@include('backstage.header',['title' => '無光晚餐S3 特殊場設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>微醺大飯店：1980s 特殊場設定</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>無光晚餐S3 特殊場設定</b></h4>
                                 </div>
                             </div>
 
@@ -142,7 +142,7 @@ $('.t6_setting_button').bind('click',function(){
             slug: 'tgt2_sp_t6',
             number: t6_number
         }
-        $.post('/thegreattipsyS2/setting/store',myObj,function(data){
+        $.post('/dark3/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '六人沉醉票最大數量已更新');
             } else {
@@ -167,7 +167,7 @@ $('.sp_money_button').bind('click',function(){
             t2_money: t2_money,
             t6_money: t6_money,
         }
-        $.post('/thegreattipsyS2/setting/store',myObj,function(data){
+        $.post('/dark3/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '票價金額已更新');
             } else {

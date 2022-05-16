@@ -43,7 +43,7 @@ class OrderController extends Controller
         } else {
             $this->user = $request->session()->get('key');
         }
-        if($this->user->thegreattipsy == 0 && $this->user->tgt2 == 0){
+        if($this->user->dark3 == 0){
             return redirect('/welcome')->send()->with('message','權限不足!');
         }
         DB::enableQueryLog();
@@ -55,7 +55,7 @@ class OrderController extends Controller
     public function Orders(Request $request,$id){
         $order = order::orderBy('updated_at','desc')->where('pro_id',$id);
         $order = $order->get();
-        return view('thegreattipsy.backend.orders',compact('order'));
+        return view('dininginthedark3.backend.orders',compact('order'));
     }
     public function OrderEdit(Request $request,$id){
         $order = collect();
@@ -68,7 +68,7 @@ class OrderController extends Controller
         }
         $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$order->pople)
             ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
-        return view('thegreattipsy.backend.order',compact('order','pro'));
+        return view('dininginthedark3.backend.order',compact('order','pro'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -163,9 +163,9 @@ class OrderController extends Controller
             $order = order::find($id);
         } 
         if($request->has('qxx') && $request->qxx != ''){
-            return redirect('/thegreattipsyS2/print?'.$request->qxx)->with('message','編輯完成!');
+            return redirect('/dark3/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
-            return redirect('/thegreattipsyS2/orders/'.$order->pro_id)->with('message','編輯完成!');
+            return redirect('/dark3/orders/'.$order->pro_id)->with('message','編輯完成!');
         }
     }
     public function OrderDelete(Request $request,$id){
@@ -181,10 +181,10 @@ class OrderController extends Controller
     public function Appointment(Request $request,$pro_id){
         try {
             $pro = pro::find($pro_id);
-            return view('thegreattipsy.backend.orderAppointment',compact('pro_id','pro'));
+            return view('dininginthedark3.backend.orderAppointment',compact('pro_id','pro'));
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsyS2/pros?')->with('message','此編號無座位表!');
+            return redirect('/dark3/pros?')->with('message','此編號無座位表!');
         }
     }
     public function AppointmentUpdate(Request $request,$pro_id){
@@ -208,7 +208,7 @@ class OrderController extends Controller
             if($act->special) {
                 $is_overseas = 9;
                 if($people!=1 && $people!=2 && $people!=6){
-                    return redirect('/thegreattipsyS2/pros?')->with('message','新增失敗!特別場次請選擇 1、2、6符合票券人數');
+                    return redirect('/dark3/pros?')->with('message','新增失敗!特別場次請選擇 1、2、6符合票券人數');
                 }
                 $sp_money = json_decode(setting::where('slug','dark3_sp_money')->first()->json,true);
                 if($people == 1){
@@ -318,10 +318,10 @@ class OrderController extends Controller
                 }
             }
 
-            return redirect('/thegreattipsyS2/pros?')->with('message','新增完成!');
+            return redirect('/dark3/pros?')->with('message','新增完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/thegreattipsyS2/pros?')->with('message','新增失敗!');
+            return redirect('/dark3/pros?')->with('message','新增失敗!');
         }
     }
 
@@ -379,7 +379,7 @@ class OrderController extends Controller
         } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
         $order = $order->paginate($this->perpage);
 
-        return view('thegreattipsy.backend.print',compact('order','request'));
+        return view('dininginthedark3.backend.print',compact('order','request'));
     }
 
     public function Table(Request $request){
@@ -432,12 +432,12 @@ class OrderController extends Controller
         $order = $order->get();
         
 
-        return view('thegreattipsy.backend.table',compact('order','request'));
+        return view('dininginthedark3.backend.table',compact('order','request'));
     }
 
     public function XlsDataOuput(Request $request){
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','email','pay_type','pople','pro_id','dis_code','is_overseas','edit_type');
+        $order = $order->select('rang_start','rang_end','name','tel','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','email','pay_type','pople','pro_id','dis_code','is_overseas','edit_type','result');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -488,7 +488,7 @@ class OrderController extends Controller
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     if($row['pay_type'] == '信用卡'){
@@ -506,6 +506,7 @@ class OrderController extends Controller
                         $pay_status = '公關位';
                     }
                     $pay_money = '';
+                    $pay_last = '';
                     $coupons = coupon::where('o_id',$row['sn'])->get();
                     
                     if(count($coupons)>0){
@@ -513,12 +514,20 @@ class OrderController extends Controller
                             if($coupon!=''){
                                 $coupon .= "\r\n";
                                 $pay_money.= "\r\n";
+                                $pay_last.= "\r\n";
                             }
                             $coupon .= "{$c->code}";
                             $pay_money .= backme::select('money')->find($c->b_id)->money;
+                            $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
                         }
                     } else {
                         $pay_money = $row['OM'];
+                        if($pay_type == '藍新金流' && $pay_status == '已付款'){
+                            $json = json_decode($row['result'],true);
+                            if($json['Status'] == "SUCCESS"){
+                                $pay_last = $json['data']['Result']['Card4No'];
+                            }
+                        }
                     }
                     
                     if($pay_status !== '已付款') $pay_money = 0;
@@ -530,12 +539,14 @@ class OrderController extends Controller
                         $row['name'],
                         $row['tel'],
                         $row['email'],
+                        $row['pople'],
                         $row['notes'],
                         $row['manage'],
                         $coupon,
                         $pay_type,
                         $pay_status,
                         $pay_money,
+                        $pay_last,
                     ];
 
                     /*
@@ -553,10 +564,11 @@ class OrderController extends Controller
 
                 $zero = $sheet->rows($data);
                 for($i=0;$i<count($data);$i++){
-                    $zero->getStyle('F'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('G'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('H'.$i)->getAlignment()->setWrapText(true);
-                    $zero->getStyle('K'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('I'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('L'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('M'.$i)->getAlignment()->setWrapText(true);
                     // $sheet->fromArray($data, null, 'A1', false, false)
                 }
             });

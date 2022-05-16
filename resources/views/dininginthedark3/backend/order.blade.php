@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s訂單列表'])
+@include('backstage.header',['title' => '無光晚餐S3訂單列表'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>微醺大飯店：1980s訂單列表</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>無光晚餐S3訂單列表</b></h4>
                                 </div>
                             </div>
 
@@ -19,7 +19,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/thegreattipsyS2/order/{{ $order->id or 0}}/update" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/dark3/order/{{ $order->id or 0}}/update" class="form-horizontal">
                                             <input type="hidden" name="qxx" value="{{ Request::getQueryString() }}">
 {!! csrf_field() !!}
                                             <div class="form-group hpro_id">
@@ -143,7 +143,7 @@
                                                 <label class="control-label col-sm-4">金額</label>
                                                 <div class="col-sm-8">
                                                     <input type="number" class="form-control" name="money" id="money" value="{{ $order->money or 0 }}" required>
-                                                    <small class="text-warning">{{ $order->cash }} X {{ $order->pople }} X 10%服務費 = {{ $order->cash * $order->pople * 1.1 }}</small>
+                                                    <small class="text-warning">單人金額:{{ $order->cash }} X 1 X 10%服務費 = {{ $order->cash *  1.1 }}</small>
                                                 </div>
                                             </div>
 

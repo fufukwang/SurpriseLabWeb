@@ -37,16 +37,16 @@ class MasterController extends Controller
                     ->whereRaw("MD5(dark3order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")
                     ->first();
                 if($order){
-                    return view('thegreattipsy.frontend.master',compact('order'));
+                    return view('dininginthedark3.frontend.master',compact('order'));
                 } else {
-                    return "<script>alert('活動不在範圍!');window.location='/thegreattipsy/index.html';</script>";
+                    return "<script>alert('活動不在範圍!');window.location='/dininginthedark3/index.html';</script>";
                 }
             } else {
-                return "<script>alert('沒編號!');window.location='/thegreattipsy/index.html';</script>";
+                return "<script>alert('沒編號!');window.location='/dininginthedark3/index.html';</script>";
             }
         } catch (Exception $exception) {
             Log::error($exception);
-            return "<script>alert('有錯誤!');window.location='/thegreattipsy/index.html';</script>";
+            return "<script>alert('有錯誤!');window.location='/dininginthedark3/index.html';</script>";
         }
     }
     // 存入 team 的資料並寄送信件
@@ -136,19 +136,19 @@ class MasterController extends Controller
                         ->first();
                     if($order){
 
-                        return view('thegreattipsy.frontend.nameFix',compact('order','tm'));
+                        return view('dininginthedark3.frontend.nameFix',compact('order','tm'));
                     } else {
-                        return "<script>alert('沒有需要修改的資料!');window.location='/thegreattipsy/index.html';</script>";
+                        return "<script>alert('沒有需要修改的資料!');window.location='/dininginthedark3/index.html';</script>";
                     }
                 } else {
-                    return "<script>alert('沒有需要修改的資料!');window.location='/thegreattipsy/index.html';</script>";
+                    return "<script>alert('沒有需要修改的資料!');window.location='/dininginthedark3/index.html';</script>";
                 }
             } else {
-                return "<script>alert('參數錯誤!');window.location='/thegreattipsy/index.html';</script>";
+                return "<script>alert('參數錯誤!');window.location='/dininginthedark3/index.html';</script>";
             }
         } catch (Exception $exception) {
             Log::error($exception);
-            return "<script>alert('名冊中已有您的姓名!');window.location='/thegreattipsy/index.html';</script>";
+            return "<script>alert('名冊中已有您的姓名!');window.location='/dininginthedark3/index.html';</script>";
         }
     }
     public function postNameFix(Request $request){
@@ -215,9 +215,9 @@ class MasterController extends Controller
             }
             if($toData['type'] == 'Name'){
                 if(env('APP_ENV') == 'production'){
-                    $toData['link'] = 'https://www.surpriselab.com.tw/thegreattipsy/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
+                    $toData['link'] = 'https://www.surpriselab.com.tw/dininginthedark3/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
                 } else {
-                    $toData['link'] = 'http://dev.surpriselab.com.tw/thegreattipsy/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
+                    $toData['link'] = 'http://dev.surpriselab.com.tw/dininginthedark3/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
                 }
             }
             // 信件補送
@@ -278,7 +278,7 @@ class MasterController extends Controller
             }
 
             $master = $master->paginate(20);
-            return view('thegreattipsy.backend.master',compact('master','request'));
+            return view('dininginthedark3.backend.master',compact('master','request'));
         } catch (Exception $exception) {
             Log::error($exception);
             abort(404);
@@ -321,7 +321,7 @@ class MasterController extends Controller
         } else {
             $this->user = $request->session()->get('key');
         }
-        if($this->user->thegreattipsy == 0 && $this->user->tgt2 == 0){
+        if($this->user->dark3 == 0){
             return redirect('/welcome')->send()->with('message','權限不足!');
         }
     }

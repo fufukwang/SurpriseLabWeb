@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s 折扣設定'])
+@include('backstage.header',['title' => '無光晚餐S3 折扣設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -214,7 +214,7 @@ $('.pay-discuount-store').bind('click',function(){
             slug: 'tgt2_pay_discount',
             obj: JSON.stringify(obj)
         }
-        $.post('/thegreattipsyS2/setting/store',myObj,function(data){
+        $.post('/dark3/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '一般場直購折扣設定已更新');
             } else {
@@ -278,7 +278,7 @@ $('.sp-discuount-store').bind('click',function(){
             slug: 'tgt2_sp_discount',
             obj: JSON.stringify(obj)
         }
-        $.post('/thegreattipsyS2/setting/store',myObj,function(data){
+        $.post('/dark3/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '一般場直購折扣設定已更新');
             } else {

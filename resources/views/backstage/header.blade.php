@@ -162,6 +162,21 @@
                         </ul>
                     </li>
                     @endif
+                    @if( Session::get('key')->dark3 )
+                    <li class="has-submenu @if(Request::segment(1) === 'dark3')active @endif">
+                        <a href="#"><i class="md md-invert-colors-on"></i>無光晚餐S3</a>
+                        <ul class="submenu" style="left:0;right:auto">
+
+                            <li><a href="/dark3/pros">Activaty</a></li>
+                            <li><a href="/dark3/backmes">Backme</a></li>
+                            <li><a href="/dark3/coupons">Coupon</a></li>
+                            <li><a href="/dark3/print">Order</a></li>
+                            <li><a href="/dark3/getMasterList">Master</a></li>
+                            <li><a href="/dark3/special/setting">Special</a></li>
+
+                        </ul>
+                    </li>
+                    @endif
                     <li class="has-submenu @if(Request::segment(1) === 'surprise')active @endif">
                         <a href="#"><i class="md md-home"></i>驚喜官網</a>
                         <ul class="submenu" style="left:0;right:auto">

@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '微醺大飯店：1980s兌換碼列表'])
+@include('backstage.header',['title' => '無光晚餐S3兌換碼列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">微醺大飯店：1980s兌換碼列表 </h4>
+                        <h4 class="page-title">無光晚餐S3兌換碼列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/thegreattipsyS2/coupons" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/dark3/coupons" id="SearchForm">
 
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -160,7 +160,7 @@ $(function(){
         }
         if(confirm(txt + "確定要刪除此優惠券")) {
              $.ajax({
-                url: '/thegreattipsyS2/coupon/'+id+'/delete',
+                url: '/dark3/coupon/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
