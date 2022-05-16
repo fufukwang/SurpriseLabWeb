@@ -8,7 +8,7 @@
 // }, 1000);
 
 $(document).ready(function () {
-
+    
     // 售票進度 API
     var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1397json?token=15171aa66ababafd4464a1c194b66102';
     var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1444json?token=15171aa66ababafd4464a1c194b66102';
@@ -174,6 +174,7 @@ $(document).ready(function () {
     });
 
     // mobile hamburger button effect
+    var nav = $('.anchor-wrapper');
     var hamburger = $('.hamburger');
     var iconBar = $('.icon-bar');
     var currentMenu = $('.current-menu');
