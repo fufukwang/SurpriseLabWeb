@@ -51,19 +51,19 @@ a:visited {
 }
 
 a {
-  color: $color-dark-yellow;
+  color: $color-k10;
   transition: color 0.3s;
 
   &.default-light {
-    color: $color-light-yellow;
+    color: $color-k10;
 
     &:hover {
-      color: $color-dark-yellow;
+      color: $color-k10;
     }
   }
 
   &:hover {
-    color: $color-light-yellow;
+    color: $color-k10;
   }
 }
 
@@ -110,7 +110,7 @@ h4 {
   letter-spacing: 0.8px;
   text-transform: uppercase;
   text-align: center;
-  color: $color-light-yellow;
+  color: $color-k10;
 
   @media (max-width: 1199.98px) {
     font-size: 10px;
@@ -207,7 +207,7 @@ p {
   color: $color-yellow;
   letter-spacing: 1.8px;
   padding: 10px 30px;
-  border: 1px solid $color-dark-yellow;
+  border: 1px solid $color-k10;
   border-radius: 30px;
   transition: 0.3s;
 
@@ -250,7 +250,7 @@ p {
 
 // Highlight: You can use if you want highlight something in paragraph.
 .highlight {
-  color: $color-light-yellow;
+  color: $color-k10;
   letter-spacing: 1.2px;
   font-weight: 500;
 }
@@ -263,18 +263,6 @@ p {
 
 .highlight-dark {
   color: $color-yellow;
-}
-
-.ticket-yellow {
-  color: $color-ticket-green;
-}
-
-.ticket-blue {
-  color: $color-ticket-blue;
-}
-
-.ticket-pink {
-  color: $color-ticket-red;
 }
 
 #td_day {
@@ -382,7 +370,7 @@ p {
       content: '';
       width: 5px;
       height: 2px;
-      background-color: $color-dark-yellow;
+      background-color: $color-k10;
       position: absolute;
       top: 50%;
       right: -85px;
@@ -396,11 +384,11 @@ p {
 
     &.active {
       a {
-        color: $color-light-yellow;
+        color: $color-k10;
       }
 
       &::after {
-        background-color: $color-light-yellow;
+        background-color: $color-k10;
         width: 48px;
 
         @media (max-width: 1024px) {
@@ -411,7 +399,7 @@ p {
 
     &:hover {
       &::after {
-        background-color: $color-light-yellow;
+        background-color: $color-k10;
         width: 60px;
 
         @media (max-width: 1024px) {
@@ -451,7 +439,7 @@ p {
 
     &:hover {
       i {
-        color: $color-lighter-yellow;
+        color: $color-k10;
       }
     }
   }
@@ -584,7 +572,7 @@ header.logo {
 
     .current-section,
     .current-menu {
-      color: $color-light-yellow;
+      color: $color-k10;
       font-size: 14px;
       text-transform: uppercase;
       line-height: 1;
@@ -604,7 +592,7 @@ header.logo {
       width: 20px;
       height: 1px;
       display: block;
-      background-color: $color-light-yellow;
+      background-color: $color-k10;
       transition: 0.3s;
 
       & + .icon-bar {
@@ -753,7 +741,7 @@ header.logo {
           font-size: 36px;
           letter-spacing: 3.6px;
           padding: 0 10px;
-          color: $color-light-yellow;
+          color: $color-k10;
         }
       }
   
@@ -801,7 +789,7 @@ header.logo {
       .progress {
         height: 11.5px;
         border-radius: 12px;
-        background-color: $color-dark-yellow;
+        background-color: $color-k10;
   
         .progress-bar {
           background-color: $color-yellow;
@@ -1115,7 +1103,7 @@ header.logo {
       }
   
       hr {
-        border-color: $color-dark-yellow;
+        border-color: $color-k10;
       }
   
       @media (max-width: 1199.98px) {
@@ -1150,7 +1138,7 @@ header.logo {
   
         tr {
           td {
-            color: $color-light-yellow;        
+            color: $color-k10;        
           
             &:first-child {
               @include baseCounter('padding-right', 82);
@@ -1245,7 +1233,7 @@ header.logo {
       text-decoration: underline;
 
       &:hover {
-        color: $color-lighter-yellow;
+        color: $color-k10;
       }
     }
   
@@ -1265,7 +1253,7 @@ header.logo {
           width: 451px;
           max-width: 100%;
           height: 1px;
-          background: $color-dark-yellow;
+          background: $color-k10;
           top: 0;
           right: 0;
         }
@@ -1320,7 +1308,7 @@ header.logo {
         & + .contact-sec {
           padding-top: 30px;
           margin-top: 36px;
-          border-top: solid 1px $color-dark-yellow;
+          border-top: solid 1px $color-k10;
         }
   
         .contact-sec-title {

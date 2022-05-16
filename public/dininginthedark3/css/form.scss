@@ -52,7 +52,7 @@ button.btn-outline {
 
     &:hover {
       color: #ccc38d;
-      border-color: $color-dark-yellow;
+      border-color: $color-k10;
       background-color: transparent;
     }
   }
@@ -140,12 +140,12 @@ header.logo {
     position: relative;
     line-height: 1;
     text-align: center;
-    color: $color-lighter-yellow;
+    color: $color-k10;
     padding: 0 28px;
 
     &.active {
       &::before {
-        color: $color-lighter-yellow;
+        color: $color-k10;
       }
     }
 
@@ -157,7 +157,6 @@ header.logo {
       letter-spacing: 0.7px;
       text-align: center;
       color: $color-yellow;
-      font-family: $font-montserrat;
     }
   }
 
@@ -217,15 +216,13 @@ header.logo {
   span {
     font-size: inherit;
     font-weight: inherit;
-    font-family: inherit;
     letter-spacing: 1.8px;
   }
 }
 
 .sub-title {
   line-height: 1;
-  color: $color-light-yellow;
-  font-family: $font-serif;
+  color: $color-k10;
   @include baseCounter('padding-top', 45);
 
   @media (max-width: 575.98px) {
@@ -238,7 +235,7 @@ header.logo {
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: 0.7px;
-  color: $color-light-yellow;
+  color: $color-k10;
 
   @media (max-width: 575.98px) {
     font-size: 10px;
@@ -253,7 +250,7 @@ a {
   color: $color-yellow;
 
   &:hover {
-    color: $color-light-yellow;
+    color: $color-k10;
   }
 }
 
@@ -392,7 +389,7 @@ form {
           width: 12px;
           height: 12px;
           border-radius: 0;
-          border: solid 1px $color-light-yellow;
+          border: solid 1px $color-k10;
           top: .1rem;
           background: transparent;
         }
@@ -415,14 +412,14 @@ form {
 
     &:checked ~ label {
       color: #39351c;
-      border-color: $color-light-yellow;
-      background-color: $color-light-yellow;
+      border-color: $color-k10;
+      background-color: $color-k10;
     }
   }
 
   label {
     padding: 12px;
-    border: solid 1px $color-dark-yellow;
+    border: solid 1px $color-k10;
     border-radius: 6px;
     font-size: 16px;
     line-height: 1;
@@ -431,12 +428,12 @@ form {
     margin-bottom: 20px;
     cursor: pointer;
     transition: 0.3s;
-    color: $color-light-yellow;
+    color: $color-k10;
 
     &:hover {
       color: #39351c;
-      border-color: $color-light-yellow;
-      background-color: $color-light-yellow;
+      border-color: $color-k10;
+      background-color: $color-k10;
     }
   }
 
@@ -455,8 +452,8 @@ form {
 
   input {
     &:checked ~ .checker {
-      background-color: $color-light-yellow;
-      border-color: $color-light-yellow;
+      background-color: $color-k10;
+      border-color: $color-k10;
     }
   }
 
@@ -512,7 +509,7 @@ form {
       line-height: 2.25;
       letter-spacing: 1.6px;
       padding: 5px 17px;
-      border: solid 1px $color-dark-yellow;
+      border: solid 1px $color-k10;
       border-radius: 6px;
       color: $color-yellow;
       text-align: left;
@@ -520,7 +517,7 @@ form {
     }
 
     .select2-selection__placeholder {
-      color: $color-light-yellow;
+      color: $color-k10;
     }
 
     .select2-selection__arrow {
@@ -642,14 +639,14 @@ form {
     padding: 10px 17px;
     border-radius: 6px;
     background: transparent;
-    border: solid 1px $color-dark-yellow;
+    border: solid 1px $color-k10;
     color: $color-yellow;
     cursor: pointer;
     z-index: 10;
     transition: 0.3s;
 
     &::placeholder {
-      color: $color-light-yellow;
+      color: $color-k10;
     }
 
     &:focus {
@@ -760,24 +757,24 @@ form {
         &.ui-datepicker-today {
           &::before {
             opacity: 1;
-            border-color: $color-dark-yellow;
+            border-color: $color-k10;
           }
         }
 
         &.ui-datepicker-unselectable {
           a, span {
-            color: $color-dark-yellow;
+            color: $color-k10;
           }
         }
 
         &.ui-datepicker-current-day {
           a {
-            color: $color-dark-yellow;
+            color: $color-k10;
           }
 
           &::before {
-            border-color: $color-light-yellow;
-            background-color: $color-light-yellow;
+            border-color: $color-k10;
+            background-color: $color-k10;
             opacity: 1;
           }
         }
@@ -785,12 +782,12 @@ form {
         &:not(.ui-datepicker-unselectable) {
           &:hover {
             a {
-              color: $color-dark-yellow;
+              color: $color-k10;
             }
 
             &::before {
-              border-color: $color-light-yellow;
-              background-color: $color-light-yellow;
+              border-color: $color-k10;
+              background-color: $color-k10;
               opacity: 1;
             }
           }
@@ -818,7 +815,7 @@ form {
           line-height: 1.5;
           margin-left: 2px;
           transition: 0.3s;
-          color: $color-light-yellow;
+          color: $color-k10;
         }
       }
     }
@@ -913,7 +910,7 @@ form {
     width: calc(100% / 3);
     padding: 16px 0;
     border-style: solid;
-    border-color: $color-dark-yellow;
+    border-color: $color-k10;
     border-width: 0 0 1px 1px;
 
     &:last-child {
@@ -975,8 +972,7 @@ fieldset {
       font-size: 16px;
       line-height: 1.88;
       letter-spacing: 1.6px;
-      color: $color-light-yellow;
-      font-family: $font-serif;
+      color: $color-k10;
       @include baseCounter('padding-bottom', 60);
     }
 
@@ -1003,7 +999,7 @@ fieldset {
       textarea {
         width: 100%;
         border-radius: 6px;
-        border: solid 1px $color-dark-yellow;
+        border: solid 1px $color-k10;
         background-color: transparent;
         padding: 12px 17px;
         font-size: 16px;
@@ -1012,7 +1008,7 @@ fieldset {
         transition: 0.3s;
 
         &::placeholder {
-          color: $color-light-yellow;
+          color: $color-k10;
         }
 
         &:-webkit-autofill {
@@ -1074,7 +1070,7 @@ fieldset {
 
       td {
         text-align: left;
-        color: $color-light-yellow;
+        color: $color-k10;
         font-size: 16px;
         line-height: 2.25;
         letter-spacing: 1.6px;
@@ -1098,7 +1094,7 @@ fieldset {
     input {
       margin-right: 20px;
       border-radius: 6px;
-      border: solid 1px $color-dark-yellow;
+      border: solid 1px $color-k10;
       background-color: transparent;
       padding: 12px 17px;
       font-size: 16px;
@@ -1108,7 +1104,7 @@ fieldset {
       line-height: normal;
 
       &::placeholder {
-        color: $color-light-yellow;
+        color: $color-k10;
       }
 
       &:focus {
@@ -1336,8 +1332,7 @@ fieldset {
 
     .modal-title {
       font-size: 18px;
-      color: $color-lighter-yellow;
-      font-family: $font-serif;
+      color: $color-k10;
       line-height: 1;
       letter-spacing: 1.8px;
       font-weight: bold;
@@ -1371,7 +1366,7 @@ fieldset {
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: $color-light-yellow;
+      background: $color-k10;
       border-radius: 3px;
 
       &:hover {
@@ -1393,8 +1388,8 @@ fieldset {
     font-size: 18px;
     line-height: 1;
     letter-spacing: 1.8px;
-    background-color: $color-dark-yellow;
-    color: $color-light-yellow;
+    background-color: $color-k10;
+    color: $color-k10;
     opacity: 1;
     text-shadow: none;
     font-weight: normal;

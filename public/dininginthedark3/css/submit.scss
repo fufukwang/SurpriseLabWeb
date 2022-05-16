@@ -29,7 +29,7 @@ a {
   color: $color-yellow;
 
   &:hover {
-    color: $color-light-yellow;
+    color: $color-k10;
   }
 }
 
@@ -51,8 +51,7 @@ main {
   .page-sub-title {
     @include baseCounter('padding-top', 45);
     line-height: 1;
-    color: $color-lighter-yellow;
-    font-family: $font-serif;
+    color: $color-k10;
     font-weight: bold;
   }
 

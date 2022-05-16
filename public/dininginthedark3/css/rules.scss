@@ -52,7 +52,7 @@ header.logo {
 
   .nav-link {
     cursor: pointer;
-    color: $color-light-yellow;
+    color: $color-k10;
     padding: 8.5px 0;
     margin: 0 11.5px -1px;
     border-radius: 0;
@@ -143,8 +143,8 @@ header.logo {
       font-weight: 900;
       line-height: 1.25;
       letter-spacing: 2.4px;
-      color: $color-light-yellow;
-      border-top: solid 1px $color-dark-yellow;
+      color: $color-k10;
+      border-top: solid 1px $color-k10;
       @include baseCounter('margin-top', 24);
       @include baseCounter('padding-top', 60);
     }
@@ -168,7 +168,7 @@ header.logo {
     transition: color 0.3s;
 
     &:hover {
-      color: $color-light-yellow;
+      color: $color-k10;
     }
   }
 
@@ -176,7 +176,7 @@ header.logo {
     width: 500px;
     max-width: 100%;
     margin: 0 auto;
-    border-bottom: solid 1px $color-dark-yellow;
+    border-bottom: solid 1px $color-k10;
     @include baseCounter('padding-bottom', 24);
 
     .card {
@@ -201,7 +201,7 @@ header.logo {
 
     .to-change-and-refund,
     .to-presale-rules {
-      color: $color-light-yellow;
+      color: $color-k10;
 
       &:hover {
         color: $color-yellow;
@@ -214,7 +214,7 @@ header.logo {
       padding-right: 19px;
       line-height: 2;
       letter-spacing: 1.8px;
-      color: $color-light-yellow;
+      color: $color-k10;
       @include baseCounter('padding-top', 10);
       @include baseCounter('padding-bottom', 10);
       @include baseCounter('margin-left', 5);
@@ -227,7 +227,7 @@ header.logo {
         height: 100%;
         left: 0;
         top: 0;
-        background: $color-dark-yellow;
+        background: $color-k10;
       }
 
       &.number-list p {
@@ -243,7 +243,7 @@ header.logo {
     .card-header {
       padding: 0;
       border-style: solid;
-      border-color: $color-dark-yellow;
+      border-color: $color-k10;
       border-width: 1px 0 0 0;
       border-radius: 0;
 
@@ -274,7 +274,7 @@ header.logo {
         &.is-open {
           .icon-arrow {
             transform: rotate(0deg);
-            color: $color-lighter-yellow;
+            color: $color-k10;
           }
         }
       }
@@ -389,7 +389,7 @@ header.logo {
       border-bottom: solid 2px $color-yellow;
 
       tr {
-        border-color: $color-yellow $color-yellow $color-dark-yellow $color-yellow;
+        border-color: $color-yellow $color-yellow $color-k10 $color-yellow;
         border-style: solid;
         border-width: 0 2px 2px 2px;
 
@@ -413,8 +413,8 @@ header.logo {
       }
 
       th {
-        background: $color-light-yellow;
-        border-right: solid 1px $color-dark-yellow;
+        background: $color-k10;
+        border-right: solid 1px $color-k10;
         @include baseCounter('padding-top', 15);
         @include baseCounter('padding-bottom', 15);
         text-align: center;
@@ -450,15 +450,15 @@ header.logo {
         letter-spacing: 1.8px;
         line-height: 2;
         background-color: $color-dark-brown;
-        border-right: solid 1px $color-dark-yellow;
+        border-right: solid 1px $color-k10;
 
         &:last-child {
           border-right: 0;
         }
 
         &.highlight-td {
-          background: $color-dark-yellow;
-          color: $color-lighter-yellow;
+          background: $color-k10;
+          color: $color-k10;
           font-weight: 500;
         }
 

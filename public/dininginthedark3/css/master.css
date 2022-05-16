@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+@import url("https://use.typekit.net/cax2ztr.css");
 h3.progress-title,
 h3.page-title {
   letter-spacing: 4.32px;
@@ -19,32 +17,31 @@ h3.page-title {
 
 h4 {
   font-weight: 400;
-  color: #EFC27B;
+  color: #E6A046;
 }
 
 h4::before, h4::after {
-  background-color: #EFC27B;
+  background-color: #E6A046;
 }
 
 @media (max-width: 1199.98px) {
   h4::before, h4::after {
-    background-color: rgba(239, 194, 123, 0.5);
+    background-color: rgba(230, 160, 70, 0.5);
   }
 }
 
 h4 span::before, h4 span::after {
-  border: 1px solid #EFC27B;
+  border: 1px solid #E6A046;
 }
 
 @media (max-width: 1199.98px) {
   h4 span::before, h4 span::after {
-    border: 1px solid rgba(239, 194, 123, 0.5);
+    border: 1px solid rgba(230, 160, 70, 0.5);
   }
 }
 
 h5 {
   text-align: center;
-  font-family: "Noto Serif TC", serif;
   font-weight: 900;
   line-height: 1.25;
   letter-spacing: 2.4px;
@@ -61,10 +58,9 @@ h5 {
 
 .sub-title,
 .page-sub-title {
-  font-family: "Noto Serif TC", serif;
   font-weight: 900;
   line-height: 2.1;
-  color: #FFE0BA;
+  color: #EFEFEF;
   padding-top: 42px;
 }
 
@@ -78,7 +74,6 @@ h5 {
 
 .sub-title span,
 .page-sub-title span {
-  font-family: inherit;
   font-weight: inherit;
 }
 
@@ -105,7 +100,7 @@ form .form-container {
 form .form-container p {
   text-align: center;
   line-height: 1.6875;
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 @media (max-width: 1199.98px) {
@@ -125,7 +120,7 @@ form .form-container .master-desc {
 }
 
 form .form-container .master-desc p {
-  color: #EFC27B;
+  color: #E6A046;
 }
 
 form .form-container .master-desc p + p {
@@ -198,12 +193,12 @@ form .form-container .form-group.input-with-label label .error-msg {
 form .form-container .form-group.input-with-label input {
   width: 100%;
   border-radius: 6px;
-  border: solid 1px #E5AD5C;
+  border: solid 1px #EFEFEF;
   background-color: transparent !important;
   padding: 12px 17px;
   font-size: 16px;
   letter-spacing: 1.6px;
-  color: #EFC27B !important;
+  color: #E6A046 !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -218,31 +213,31 @@ form .form-container .form-group.input-with-label input {
 }
 
 form .form-container .form-group.input-with-label input::-webkit-input-placeholder {
-  color: rgba(239, 194, 123, 0.5);
+  color: rgba(230, 160, 70, 0.5);
 }
 
 form .form-container .form-group.input-with-label input:-ms-input-placeholder {
-  color: rgba(239, 194, 123, 0.5);
+  color: rgba(230, 160, 70, 0.5);
 }
 
 form .form-container .form-group.input-with-label input::-ms-input-placeholder {
-  color: rgba(239, 194, 123, 0.5);
+  color: rgba(230, 160, 70, 0.5);
 }
 
 form .form-container .form-group.input-with-label input::placeholder {
-  color: rgba(239, 194, 123, 0.5);
+  color: rgba(230, 160, 70, 0.5);
 }
 
 form .form-container .form-group.input-with-label input:focus, form .form-container .form-group.input-with-label input:active {
   outline: 0;
-  border-color: #EFC27B;
+  border-color: #E6A046;
   box-shadow: none;
   -webkit-box-shadow: 0 0 0 100px #281F1C inset;
   outline: 0;
 }
 
 form .form-container .form-group.radio__button .color-yellow {
-  color: #E5AD5C;
+  color: #EFEFEF;
 }
 
 form .form-container .feature-btn {
@@ -278,7 +273,7 @@ form .form-container .multi-btn button.btn-outline.submit {
 
 .radio__button .custom-control.custom-checkbox .custom-control-label::before {
   top: 5px;
-  border: solid 1px #EFC27B;
+  border: solid 1px #E6A046;
 }
 
 .submit-page {

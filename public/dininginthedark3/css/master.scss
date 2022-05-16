@@ -42,7 +42,6 @@ h4 {
 
 h5 {
     text-align: center;
-    font-family: $font-serif;
     font-weight: 900;
     line-height: 1.25;
     letter-spacing: 2.4px;
@@ -57,10 +56,9 @@ h5 {
 
 .sub-title,
 .page-sub-title {
-    font-family: $font-serif;
     font-weight: 900;
     line-height: 2.1;
-    color: $color-light-yellow;
+    color: $color-k10;
     padding-top: 42px;
 
     @media (max-width: 1199.98px) {
@@ -69,7 +67,6 @@ h5 {
     }
 
     span {
-        font-family: inherit;
         font-weight: inherit;
     }
 }
@@ -95,7 +92,7 @@ form {
         p {
             text-align: center;
             line-height: 1.6875;
-            color: $color-light-yellow;
+            color: $color-k10;
 
             @media (max-width: 1199.98px) {
                 line-height: 1.714;
@@ -177,7 +174,7 @@ form {
                 input {
                     width: 100%;
                     border-radius: 6px;
-                    border: solid 1px $color-dark-yellow;
+                    border: solid 1px $color-k10;
                     background-color: transparent !important;
                     padding: 12px 17px;
                     font-size: 16px;
@@ -210,7 +207,7 @@ form {
 
             &.radio__button {
                 .color-yellow {
-                    color: $color-dark-yellow;
+                    color: $color-k10;
                 }
             }
         }
