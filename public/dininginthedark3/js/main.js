@@ -1,4 +1,13 @@
-$(function() {
+/* Loading animation */
+document.body.classList.add('render');
+setTimeout(function(){
+    // Image Loading
+    imagesLoaded(document.body, function(){
+        document.body.classList.remove('loading');
+    })
+}, 1000);
+
+$(document).ready(function () {
 
     // 售票進度 API
     var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1397json?token=15171aa66ababafd4464a1c194b66102';
@@ -224,13 +233,4 @@ $(function() {
             nav.removeClass('menu-open');
         }
     });
-
-    /* Loading animation */
-    document.body.classList.add('render');
-    setTimeout(function(){
-        // Image Loading
-        imagesLoaded(document.body, function(){
-            document.body.classList.remove('loading');
-        })
-    }, 1000);
 });
