@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function() {
 
     // 售票進度 API
     var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1397json?token=15171aa66ababafd4464a1c194b66102';
