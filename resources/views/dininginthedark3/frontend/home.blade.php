@@ -87,7 +87,7 @@
         <div class="logo-wrapper">
             <header class="logo">
                 <a class="smoothScroll" href="#About">
-                    <img src="img/web_title_small.png" alt="無光晚餐">
+                    <img src="img/web_title_small.png" alt="無光晚餐第三季">
                 </a>
                 <button class="hamburger">
                     <span class="current-section">About</span>
@@ -105,7 +105,7 @@
 
             <h2>About</h2>
 
-            <div class="fullpage" id="tipsy" data-aos="fade">
+            <div class="fullpage sec-intro" data-aos="fade">
                 <div class="container">
                     <h3>關於</h3>
                     <div class="sub-title-wrapper">
@@ -223,7 +223,7 @@
             </div>
             
             <!-- 選擇票券 -->
-            <div class="container ticket-type-area" data-aos="fade">
+            <div class="container sec-ticket-type" data-aos="fade">
 
                 <h3>選擇票券</h3>
                 <div class="sub-title-wrapper">
@@ -293,7 +293,7 @@
             </div>
 
             <!-- 體驗場次 -->
-            <div class="container" data-aos="fade">
+            <div class="container sec-ticket-slots" data-aos="fade">
                 <div class="time-slots">
 
                     <h3>體驗場次</h3>
@@ -326,7 +326,7 @@
             </div>
 
             <!-- 時程表 -->
-            <div class="container" data-aos="fade">
+            <div class="container sec-ticket-schedule" data-aos="fade">
 
                 <h3>時程表</h3>
                 <div class="sub-title-wrapper">
@@ -406,7 +406,7 @@
             
             <h2>Contact</h2>
 
-            <section id="contactInfo" data-aos="fade">
+            <section class="fullpage" id="contactInfo" data-aos="fade">
                 <div class="container">
 
                     <h3>聯絡飯店</h3>

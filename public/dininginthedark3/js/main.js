@@ -148,11 +148,11 @@ $(document).ready(function () {
                 time_rest.find('.seconds').html(seconds);
             } else {
                 // 第一階段售票時間結束時，售票狀況區塊上移，不顯示剩餘張數，不顯示倒數器，不顯示完成進度百分比
-                $('.sec-ticket-status').addClass('up').appendTo('.sec-experience');
-                $('.over-2000').hide();
-                $('.time-counter').remove();
-                $('.progress-percent-area').remove();
-                clearInterval(timer);
+                // $('.sec-ticket-status').addClass('up').appendTo('.sec-experience');
+                // $('.over-2000').hide();
+                // $('.time-counter').remove();
+                // $('.progress-percent-area').remove();
+                // clearInterval(timer);
             }
         }, 1000);
     });
@@ -170,6 +170,7 @@ $(document).ready(function () {
     var hamburger = $('.hamburger');
     var iconBar = $('.icon-bar');
     var currentMenu = $('.current-menu');
+    var mobileCurrent = $('.current-section');
 
     hamburger.on('click', function () {
         var $el = $(this);
