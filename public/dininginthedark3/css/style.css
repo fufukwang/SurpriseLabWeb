@@ -33,8 +33,8 @@
 }
 
 html {
-  background-color: #281F1C;
-  background-image: url("../img/wallpaper.jpg");
+  background-color: #2D2D2D;
+  background-image: url("../img/wallpaper.png");
   background-position: center center;
   background-repeat: repeat;
   background-size: 15%;
@@ -48,8 +48,8 @@ html {
 
 body {
   position: relative;
-  background-color: #281F1C;
-  background-image: url("../img/wallpaper.jpg");
+  background-color: #2D2D2D;
+  background-image: url("../img/wallpaper.png");
   background-position: center center;
   background-repeat: repeat;
   background-size: 15%;
@@ -192,7 +192,7 @@ p {
 .blockMsg h1 {
   font-size: 40px;
   letter-spacing: 1px;
-  color: #281F1C;
+  color: #2D2D2D;
 }
 
 .fullpage {
@@ -349,7 +349,7 @@ p {
 .btn-outline:hover {
   background-color: #EFEFEF;
   border: 1px solid #EFEFEF;
-  color: #281F1C;
+  color: #2D2D2D;
 }
 
 .btn-outline.btn-outline-small {
@@ -439,7 +439,7 @@ p {
     right: 0;
     -webkit-transform: none;
             transform: none;
-    background-image: url("../img/wallpaper.jpg");
+    background-image: url("../img/wallpaper.png");
     background-repeat: repeat;
     background-size: auto;
     -webkit-transition: opacity 0.8s;
@@ -628,8 +628,8 @@ header.logo {
   top: 0;
   z-index: 9999;
   padding: 0 20px;
-  background-color: rgba(40, 31, 28, 0.8);
-  background-image: url("../img/wallpaper.jpg");
+  background-color: rgba(45, 45, 45, 0.8);
+  background-image: url("../img/wallpaper.png");
   background-position: top center;
   background-repeat: repeat;
   background-size: 15%;
@@ -641,16 +641,16 @@ header.logo.anchor-show {
 }
 
 header.logo.scroll-background-color {
-  background-color: rgba(40, 31, 28, 0.8);
+  background-color: rgba(45, 45, 45, 0.8);
 }
 
 @media (max-width: 1199.98px) {
   header.logo {
-    background-color: #281F1C;
+    background-color: #2D2D2D;
     background-size: auto;
   }
   header.logo.scroll-background-color {
-    background-color: #281F1C;
+    background-color: #2D2D2D;
   }
 }
 
@@ -1395,7 +1395,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #281F1C;
+  background: #2D2D2D;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
