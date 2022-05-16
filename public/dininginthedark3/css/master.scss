@@ -8,7 +8,7 @@ h3.page-title {
     letter-spacing: 4.32px;
     margin-bottom: 12px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
         letter-spacing: 2.88px;
         margin-bottom: 8px;
         padding-left: 4.32px;
@@ -23,7 +23,7 @@ h4 {
     &::after {
         background-color: $color-yellow;
 
-        @media (max-width: 480px) {  
+        @media (max-width: 1199.98px) {  
             background-color: rgba($color-yellow, 0.5);
         }
     }
@@ -33,7 +33,7 @@ h4 {
         &::after {
             border: 1px solid $color-yellow;
 
-            @media (max-width: 480px) {
+            @media (max-width: 1199.98px) {
                 border: 1px solid rgba($color-yellow, 0.5);
             }
         }
@@ -48,7 +48,7 @@ h5 {
     letter-spacing: 2.4px;
     margin: 0;
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
         font-size: 18px;
         letter-spacing: 1.8px;
         line-height: 1.44;
@@ -63,7 +63,7 @@ h5 {
     color: $color-light-yellow;
     padding-top: 42px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
         line-height: 2;
         padding-top: 24px;
     }
@@ -77,14 +77,14 @@ h5 {
 .page-sub-title {
     padding-top: 84px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
         padding-top: 42px;
     }
 }
 
 // Form
 form {
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
         margin: 0;
     }
 
@@ -97,7 +97,7 @@ form {
             line-height: 1.6875;
             color: $color-light-yellow;
 
-            @media (max-width: 480px) {
+            @media (max-width: 1199.98px) {
                 line-height: 1.714;
             }
         }
@@ -105,7 +105,7 @@ form {
         .master-desc {
             margin: 42px 0 48px;
 
-            @media (max-width: 480px) {
+            @media (max-width: 1199.98px) {
                 margin: 36px 0;
             }
 
@@ -115,7 +115,7 @@ form {
                 & + p {
                     margin-top: 24px;
 
-                    @media (max-width: 480px) {
+                    @media (max-width: 1199.98px) {
                         margin-top: 18px;
                     }
                 }
@@ -125,7 +125,7 @@ form {
         .sub-title-wrapper {
             margin: 48px 0 30px;
 
-            @media (max-width: 480px) {
+            @media (max-width: 1199.98px) {
                 margin: 24px 0 21px;
             }
 
@@ -152,7 +152,7 @@ form {
                     align-items: center;
                     margin-bottom: 10px;
 
-                    @media (max-width: 480px) {
+                    @media (max-width: 1199.98px) {
                         font-size: 14px;
                         letter-spacing: 1.4px;
                         line-height: 1.42;
@@ -166,7 +166,7 @@ form {
                         margin-left: 12px;
                         color: $color-error;
 
-                        @media (max-width: 480px) {
+                        @media (max-width: 1199.98px) {
                             font-size: 10px;
                             letter-spacing: 1px;
                             margin-left: 9px;
@@ -186,7 +186,7 @@ form {
                     -webkit-transition: 0.3s;
                     transition: 0.3s;
 
-                    @media (max-width: 480px) {
+                    @media (max-width: 1199.98px) {
                         padding: 11px 20px;
                         font-size: 14px;
                         letter-spacing: 1.4px;
@@ -219,7 +219,7 @@ form {
         .feature-btn {
             padding-top: 28px;
 
-            @media (max-width: 480px) {
+            @media (max-width: 1199.98px) {
                 padding-top: 4px;
             }
         }
@@ -228,7 +228,7 @@ form {
             min-width: 210px;
             width: 210px;
 
-            @media (max-width: 480px) {
+            @media (max-width: 1199.98px) {
                 min-width: 240px;
                 width: 240px;
             }
@@ -266,7 +266,7 @@ form {
     .page-info {
         margin: 48px 0 210px;
     
-        @media (max-width: 480px) {
+        @media (max-width: 1199.98px) {
             margin: 42px 0 160px;
         }
     
@@ -275,7 +275,7 @@ form {
             letter-spacing: 1.6px;
             line-height: 1.6875;
     
-            @media (max-width: 480px) {
+            @media (max-width: 1199.98px) {
                 font-size: 14px;
                 letter-spacing: 1.4px;
                 line-height: 1.714;
@@ -284,7 +284,7 @@ form {
             & + p {
                 margin-top: 24px;
     
-                @media (max-width: 480px) {
+                @media (max-width: 1199.98px) {
                     margin-top: 18px;
                 }
             }

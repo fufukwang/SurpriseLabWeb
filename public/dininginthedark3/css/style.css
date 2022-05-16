@@ -48,7 +48,7 @@ html {
   background-size: 15%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1199.98px) {
   html {
     background-size: auto;
   }
@@ -64,7 +64,7 @@ body {
   color: #EFC27B;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1199.98px) {
   body {
     background-size: auto;
   }
@@ -133,7 +133,7 @@ h3 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   h3 {
     font-size: 24px;
     letter-spacing: 2.9px;
@@ -177,7 +177,7 @@ h3 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .sub-title-wrapper {
     max-width: 100%;
   }
@@ -228,7 +228,7 @@ h4::after {
           transform: translate(100%, -50%);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   h4 {
     font-size: 10px;
     font-weight: 600;
@@ -267,7 +267,7 @@ h4 span::after {
   right: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   h4 span {
     padding: 0 19.3px;
   }
@@ -303,7 +303,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   p {
     font-size: 14px;
     line-height: 2.29;
@@ -339,7 +339,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .fullpage {
     min-height: calc(100vh - 60px);
   }
@@ -359,7 +359,7 @@ p {
   transition: 0.3s;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .btn-outline {
     min-width: 240px;
   }
@@ -400,7 +400,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .btn-outline.btn-outline-small {
     width: 132px;
     padding: 8px 0;
@@ -438,7 +438,7 @@ p {
   text-align: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #td_day {
     text-align: left;
   }
@@ -483,7 +483,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .anchor-wrapper {
     pointer-events: none;
     opacity: 0;
@@ -642,7 +642,7 @@ p {
   color: #FFFFFF;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .social-wrapper {
     position: absolute;
     bottom: 0;
@@ -720,37 +720,37 @@ p {
   }
 }
 
-@media (max-width: 480px) and (min-width: 1200px) {
+@media (max-width: 1199.98px) and (min-width: 1200px) {
   .site-wrapper .gold-text {
     bottom: calc((608px + 30px) * 0.35778);
   }
 }
 
-@media (max-width: 480px) and (min-width: 1440px) {
+@media (max-width: 1199.98px) and (min-width: 1440px) {
   .site-wrapper .gold-text {
     bottom: calc((768px + 30px) * 0.35778);
   }
 }
 
-@media (max-width: 480px) and (min-width: 1920px) {
+@media (max-width: 1199.98px) and (min-width: 1920px) {
   .site-wrapper .gold-text {
     bottom: calc((1088px + 30px) * 0.35778);
   }
 }
 
-@media (max-width: 480px) and (max-width: 1199.98px) {
+@media (max-width: 1199.98px) and (max-width: 1199.98px) {
   .site-wrapper .gold-text {
     bottom: calc((520px + 30px) * 0.35778);
   }
 }
 
-@media (max-width: 480px) and (max-width: 480px) {
+@media (max-width: 1199.98px) and (max-width: 480px) {
   .site-wrapper .gold-text {
     bottom: calc(100% * 0.35778);
   }
 }
 
-@media (max-width: 480px) and (min-height: 668px) {
+@media (max-width: 1199.98px) and (min-height: 668px) {
   .site-wrapper .gold-text {
     bottom: 29.5%;
   }
@@ -791,7 +791,7 @@ p {
   }
 }
 
-@media (max-width: 480px) and (min-height: 668px) {
+@media (max-width: 1199.98px) and (min-height: 668px) {
   .site-wrapper .cta-button {
     bottom: 18.4%;
   }
@@ -812,7 +812,7 @@ p {
   background-position: center 95%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .site-wrapper .btn-outline {
     width: 240px !important;
   }
@@ -827,7 +827,7 @@ p {
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .site-wrapper .parallax#scene {
     display: none;
   }
@@ -872,7 +872,7 @@ p {
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .site-wrapper .parallax .parallax-item {
     width: 100%;
   }
@@ -911,7 +911,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .logo-wrapper {
     height: 60px;
   }
@@ -941,7 +941,7 @@ header.logo.scroll-background-color {
   background-color: rgba(40, 31, 28, 0.8);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   header.logo {
     background-color: #281F1C;
     background-size: auto;
@@ -984,7 +984,7 @@ header.logo a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   header.logo {
     height: 60px;
     text-align: left;
@@ -1060,7 +1060,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
           transform: rotate(-45deg) translate(2px, -2px);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   header.logo .hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1079,7 +1079,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   padding-top: 120px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Lobby {
     background: none;
     position: relative;
@@ -1171,7 +1171,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Lobby .feature-wrapper {
     padding: 0 64px;
   }
@@ -1180,7 +1180,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) and (min-height: 668px) {
+@media (max-width: 1199.98px) and (min-height: 668px) {
   #Lobby .feature-wrapper {
     margin-top: 33.9%;
   }
@@ -1228,7 +1228,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Lobby .feature-wrapper .feature-img {
     width: 60px;
     height: 60px;
@@ -1437,7 +1437,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #About #tipsy::before {
     width: 100%;
     left: 0;
@@ -1555,7 +1555,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #About #tipsy::after {
     display: none;
   }
@@ -1810,7 +1810,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #About #food::before {
     display: none;
   }
@@ -1917,7 +1917,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #About #food::after {
     display: none;
   }
@@ -2206,7 +2206,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   text-align: right;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .ticket p {
     padding-top: 36px;
     padding-bottom: 84px;
@@ -2375,7 +2375,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .experience {
     width: 100%;
   }
@@ -2438,7 +2438,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .exp-video-wrapper {
     padding-bottom: 84px;
   }
@@ -2571,7 +2571,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   padding: 0 !important;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .ticket-type.ticket-type-reserve .type-reserve {
     width: 100%;
   }
@@ -2824,7 +2824,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .ticket-type {
     display: block;
     padding-bottom: 60px;
@@ -2902,7 +2902,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .time-slots {
     padding-top: 84px;
   }
@@ -3043,7 +3043,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .time-session {
     padding-bottom: 0;
     width: 100%;
@@ -3147,7 +3147,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .time-counter .time-rest {
     padding-top: 5px;
     padding-bottom: 18px;
@@ -3324,7 +3324,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .sale-progress {
     padding: 52px 36px 0;
     text-align: center;
@@ -3504,7 +3504,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Ticket .schedule table {
     width: 221px;
     margin: 0 auto;
@@ -3708,7 +3708,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Rules .rules-action-info {
     padding-top: 35px;
     padding-bottom: 50px;
@@ -3722,7 +3722,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Rules {
     min-height: initial;
   }
@@ -3856,7 +3856,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #old-fashion .fashion-img .fashion-pc {
     display: none;
   }
@@ -4271,7 +4271,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Contact #contactInfo {
     padding-top: 25px;
     padding-bottom: 100px;
@@ -4409,7 +4409,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   #Contact #Partners .partners-img {
     max-width: 100%;
   }

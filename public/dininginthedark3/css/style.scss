@@ -18,7 +18,7 @@ html {
   background-repeat: repeat;
   background-size: 15%;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1199.98px) {
     background-size: auto;
   }
 }
@@ -32,7 +32,7 @@ body {
   background-size: 15%;
   color: $color-yellow;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1199.98px) {
     background-size: auto;
   }
 
@@ -96,7 +96,7 @@ h3 {
     font-size: 30px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     font-size: 24px;
     letter-spacing: 2.9px;
     padding-left: 2.9px;
@@ -109,7 +109,7 @@ h3 {
   text-align: center;
   overflow: hidden;
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     max-width: 100%;
   }
 }
@@ -151,7 +151,7 @@ h4 {
     transform: translate(100%, -50%);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     font-size: 10px;
     font-weight: 600;
     line-height: 13px;
@@ -189,7 +189,7 @@ h4 {
       right: 0;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       padding: 0 19.3px;
 
       &::before,
@@ -224,7 +224,7 @@ p {
     font-size: 16px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     font-size: 14px;
     line-height: 2.29;
     letter-spacing: 1.4px;
@@ -256,7 +256,7 @@ p {
     min-height: calc(100vh - 90px);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     min-height: calc(100vh - 60px);
   }
 }
@@ -274,7 +274,7 @@ p {
   border-radius: 30px;
   transition: 0.3s;
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     min-width: 240px;
   }
 
@@ -304,7 +304,7 @@ p {
       width: 108px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       width: 132px;
       padding: 8px 0;
     }
@@ -344,7 +344,7 @@ p {
   line-height: 1.5;
   text-align: center;
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     text-align: left;
   }
 }
@@ -387,7 +387,7 @@ p {
     right: 60px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     pointer-events: none;
     opacity: 0;
     width: 100%;
@@ -545,7 +545,7 @@ p {
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -587,11 +587,11 @@ p {
     @include baseCounter('bottom', 355);
     z-index: 999;
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       @include baseCounter('bottom', 400);
     }
 
-    @media (max-width: 480px) and (min-height: 668px) {
+    @media (max-width: 1199.98px) and (min-height: 668px) {
       bottom: 29.5%;
     }
   }
@@ -601,7 +601,7 @@ p {
     @include baseCounter('bottom', 200);
     z-index: 999;
 
-    @media (max-width: 480px) and (min-height: 668px) {
+    @media (max-width: 1199.98px) and (min-height: 668px) {
       bottom: 18.4%;
     }
   }
@@ -619,7 +619,7 @@ p {
       background-position: center 95%;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       width: 240px !important;
     }
   }
@@ -632,7 +632,7 @@ p {
       display: none;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       &#scene {
         display: none;
       }
@@ -668,7 +668,7 @@ p {
         display: none;
       }
 
-      @media (max-width: 480px) {
+      @media (max-width: 1199.98px) {
         width: 100%;
 
         &.parallax-item-pc {
@@ -702,7 +702,7 @@ p {
     height: 90px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     height: 60px;
   }
 }
@@ -730,7 +730,7 @@ header.logo {
     background-color: rgba($color-dark-brown, 0.8);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     background-color: $color-dark-brown;
     background-size: auto;
 
@@ -769,7 +769,7 @@ header.logo {
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     height: 60px;
     text-align: left;
     display: flex;
@@ -836,7 +836,7 @@ header.logo {
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       display: flex;
       align-items: center;
     }
@@ -851,7 +851,7 @@ header.logo {
   min-height: 100vh;
   padding-top: 120px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     background: none;
     position: relative;
     padding-top: 30px;
@@ -890,7 +890,7 @@ header.logo {
   .feature-wrapper {
     @include baseCounter('margin-top', 92);
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       padding: 0 64px;
 
       > div {
@@ -903,7 +903,7 @@ header.logo {
       }
     }
 
-    @media (max-width: 480px) and (min-height: 668px) {
+    @media (max-width: 1199.98px) and (min-height: 668px) {
       margin-top: 33.9%;
     }
 
@@ -940,7 +940,7 @@ header.logo {
         margin: 0 auto 24px;
       }
 
-      @media (max-width: 480px) {
+      @media (max-width: 1199.98px) {
         width: 60px;
         height: 60px;
         margin: 0 auto 17px;
@@ -985,7 +985,7 @@ header.logo {
       background-size: contain;
       background-repeat: no-repeat;
 
-      @media (max-width: 480px) {
+      @media (max-width: 1199.98px) {
         width: 100%;
         left: 0;
       }
@@ -1010,7 +1010,7 @@ header.logo {
       background-size: contain;
       background-repeat: no-repeat;
 
-      @media (max-width: 480px) {
+      @media (max-width: 1199.98px) {
         display: none;
       }
     }
@@ -1086,7 +1086,7 @@ header.logo {
       background-size: contain;
       background-repeat: no-repeat;
 
-      @media (max-width: 480px) {
+      @media (max-width: 1199.98px) {
         display: none;
       }
     }
@@ -1103,7 +1103,7 @@ header.logo {
       background-size: contain;
       background-repeat: no-repeat;
 
-      @media (max-width: 480px) {
+      @media (max-width: 1199.98px) {
         display: none;
       }
     }
@@ -1163,7 +1163,7 @@ header.logo {
       text-align: right;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       p {
         padding-top: 36px;
         padding-bottom: 84px;
@@ -1223,7 +1223,7 @@ header.logo {
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       width: 100%;
 
       .exp-item {
@@ -1265,7 +1265,7 @@ header.logo {
   .exp-video-wrapper {
     @include baseCounter('padding-bottom', 145);
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       padding-bottom: 84px;
     }
   }
@@ -1315,7 +1315,7 @@ header.logo {
         width: 33.33%;
         padding: 0 !important;
 
-        @media (max-width: 480px) {
+        @media (max-width: 1199.98px) {
           width: 100%;
         }
       }
@@ -1430,7 +1430,7 @@ header.logo {
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       display: block;
       padding-bottom: 60px;
 
@@ -1485,7 +1485,7 @@ header.logo {
   .time-slots {
     @include baseCounter('padding-top', 145);
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       padding-top: 84px;
     }
   }
@@ -1535,7 +1535,7 @@ header.logo {
       margin: 0 auto;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       padding-bottom: 0;
       width: 100%;
 
@@ -1585,7 +1585,7 @@ header.logo {
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       .time-rest {
         padding-top: 5px;
         padding-bottom: 18px;
@@ -1652,7 +1652,7 @@ header.logo {
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       padding: 52px 36px 0;
       text-align: center;
 
@@ -1718,7 +1718,7 @@ header.logo {
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       table {
         width: 221px;
         margin: 0 auto;
@@ -1789,7 +1789,7 @@ header.logo {
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     .rules-action-info {
       padding-top: 35px;
       padding-bottom: 50px;
@@ -1807,7 +1807,7 @@ header.logo {
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1199.98px) {
     min-height: initial;
   }
 }
@@ -1831,7 +1831,7 @@ header.logo {
       display: none;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       .fashion-pc {
         display: none;
       }
@@ -1951,7 +1951,7 @@ header.logo {
       }
     }
   
-    @media (max-width: 480px) {
+    @media (max-width: 1199.98px) {
       padding-top: 25px;
       padding-bottom: 100px;
   
@@ -2015,7 +2015,7 @@ header.logo {
       @include baseCounter('max-width', 812);
       margin: 0 auto;
 
-      @media (max-width: 480px) {
+      @media (max-width: 1199.98px) {
         max-width: 100%;
       }
     }

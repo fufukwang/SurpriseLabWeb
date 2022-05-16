@@ -8,7 +8,7 @@ h3.page-title {
   margin-bottom: 12px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   h3.progress-title,
   h3.page-title {
     letter-spacing: 2.88px;
@@ -26,7 +26,7 @@ h4::before, h4::after {
   background-color: #EFC27B;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   h4::before, h4::after {
     background-color: rgba(239, 194, 123, 0.5);
   }
@@ -36,7 +36,7 @@ h4 span::before, h4 span::after {
   border: 1px solid #EFC27B;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   h4 span::before, h4 span::after {
     border: 1px solid rgba(239, 194, 123, 0.5);
   }
@@ -51,7 +51,7 @@ h5 {
   margin: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   h5 {
     font-size: 18px;
     letter-spacing: 1.8px;
@@ -68,7 +68,7 @@ h5 {
   padding-top: 42px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .sub-title,
   .page-sub-title {
     line-height: 2;
@@ -86,13 +86,13 @@ h5 {
   padding-top: 84px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .page-sub-title {
     padding-top: 42px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form {
     margin: 0;
   }
@@ -108,7 +108,7 @@ form .form-container p {
   color: #FFE0BA;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container p {
     line-height: 1.714;
   }
@@ -118,7 +118,7 @@ form .form-container .master-desc {
   margin: 42px 0 48px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container .master-desc {
     margin: 36px 0;
   }
@@ -132,7 +132,7 @@ form .form-container .master-desc p + p {
   margin-top: 24px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container .master-desc p + p {
     margin-top: 18px;
   }
@@ -142,7 +142,7 @@ form .form-container .sub-title-wrapper {
   margin: 48px 0 30px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container .sub-title-wrapper {
     margin: 24px 0 21px;
   }
@@ -170,7 +170,7 @@ form .form-container .form-group.input-with-label label {
   margin-bottom: 10px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container .form-group.input-with-label label {
     font-size: 14px;
     letter-spacing: 1.4px;
@@ -187,7 +187,7 @@ form .form-container .form-group.input-with-label label .error-msg {
   color: #ff7ea4;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container .form-group.input-with-label label .error-msg {
     font-size: 10px;
     letter-spacing: 1px;
@@ -208,7 +208,7 @@ form .form-container .form-group.input-with-label input {
   transition: 0.3s;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container .form-group.input-with-label input {
     padding: 11px 20px;
     font-size: 14px;
@@ -249,7 +249,7 @@ form .form-container .feature-btn {
   padding-top: 28px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container .feature-btn {
     padding-top: 4px;
   }
@@ -260,7 +260,7 @@ form .form-container .multi-btn button.btn-outline.submit {
   width: 210px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   form .form-container .multi-btn button.btn-outline.submit {
     min-width: 240px;
     width: 240px;
@@ -289,7 +289,7 @@ form .form-container .multi-btn button.btn-outline.submit {
   margin: 48px 0 210px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .submit-page .page-info {
     margin: 42px 0 160px;
   }
@@ -301,7 +301,7 @@ form .form-container .multi-btn button.btn-outline.submit {
   line-height: 1.6875;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .submit-page .page-info p {
     font-size: 14px;
     letter-spacing: 1.4px;
@@ -313,7 +313,7 @@ form .form-container .multi-btn button.btn-outline.submit {
   margin-top: 24px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .submit-page .page-info p + p {
     margin-top: 18px;
   }

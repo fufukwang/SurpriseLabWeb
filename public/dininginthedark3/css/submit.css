@@ -7,7 +7,7 @@
   display: inherit;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   header.logo {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -239,7 +239,7 @@ main {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px) {
   .submit-page {
     position: inherit;
     top: 0;

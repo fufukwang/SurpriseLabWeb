@@ -18,12 +18,6 @@
 
 @media (max-width: 1199.98px) {
   .container {
-    max-width: calc(520px + 30px);
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;

@@ -29,10 +29,6 @@
 }
 
 @media (max-width: 1199.98px) {
-  @include reContainer(520px, 30);
-}
-
-@media (max-width: 480px) {
   @include reContainer(100%, 0);
 }
 

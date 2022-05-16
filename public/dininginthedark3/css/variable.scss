@@ -62,16 +62,11 @@ $color-ending-blue: #01FFFF;
   }
 
   @media (max-width: 1199.98px) {
-    #{$e}: calc((520px + #{$bs4-padding}) * #{$percent});
-  }
-
-  @media (max-width: 480px) {
     @if ($e != 'max-width') {
       #{$e}: calc(100% * #{$percent});
     } @else {
       #{$e}: 100%;
     }
-
   }
 }
 
