@@ -30,7 +30,7 @@ body {
   background-position: center center;
   background-repeat: repeat;
   background-size: 15%;
-  color: $color-yellow;
+  color: $color-k10;
 
   @media screen and (max-width: 1199.98px) {
     background-size: auto;
@@ -90,7 +90,7 @@ h3 {
   padding-left: 10.8px;
   text-align: center;
   margin-bottom: 14px;
-  color: $color-yellow;
+  color: $color-k10;
 
   @media (max-width: 1440px) {
     font-size: 30px;
@@ -151,7 +151,7 @@ p {
 // Override BlockUI Style
 .blockMsg {
   border: none !important;
-  background-color: $color-yellow !important;
+  background-color: $color-k10 !important;
 
   h1 {
     font-size: 40px;
@@ -204,7 +204,7 @@ p {
   min-width: 210px;
   text-align: center;
   font-size: 18px;
-  color: $color-yellow;
+  color: $color-k10;
   letter-spacing: 1.8px;
   padding: 10px 30px;
   border: 1px solid $color-k10;
@@ -216,8 +216,8 @@ p {
   }
 
   &:hover {
-    background-color: $color-yellow;
-    border: 1px solid $color-yellow;
+    background-color: $color-k10;
+    border: 1px solid $color-k10;
     color: $color-dark-brown;
   }
 
@@ -250,7 +250,7 @@ p {
 
 // Highlight: You can use if you want highlight something in paragraph.
 .highlight {
-  color: $color-k10;
+  color: $color-yellow;
   letter-spacing: 1.2px;
   font-weight: 500;
 }
@@ -262,7 +262,7 @@ p {
 }
 
 .highlight-dark {
-  color: $color-yellow;
+  color: $color-gold;
 }
 
 #td_day {
@@ -629,7 +629,7 @@ header.logo {
         font-size: 100px;
         line-height: 1.25;
         letter-spacing: 7.2px;
-        color: $color-mango;
+        color: $color-k0;
       }
   
       .exp-text {
@@ -714,7 +714,7 @@ header.logo {
   // 售票狀況
   .sec-ticket-status {
     .time-counter {
-      color: $color-yellow;
+      color: $color-k10;
   
       & ~ .sale-progress {
         @include baseCounter('padding-top', 10);
@@ -780,7 +780,7 @@ header.logo {
         background-color: $color-k10;
   
         .progress-bar {
-          background-color: $color-yellow;
+          background-color: $color-k10;
           border-radius: 12px;
         }
       }
@@ -913,7 +913,7 @@ header.logo {
           top: 0;
           width: 0;
           height: 100%;
-          border-right: dashed 2px $color-yellow;
+          border-right: dashed 2px $color-k10;
           transform: scaleX(0.5);
         }
   
@@ -957,7 +957,7 @@ header.logo {
         transform: translateY(100%);
         width: 100%;
         min-width: 220px;
-        color: $color-yellow;
+        color: $color-k10;
   
         .highlight {
           font-size: 24px;
@@ -1025,7 +1025,7 @@ header.logo {
             width: 100%;
             height: 0;
             border-style: dashed;
-            border-color: $color-yellow;
+            border-color: $color-k10;
             border-width: 0 0 2px;
             transform: scale(1, 0.5);
             top: inherit;
@@ -1137,7 +1137,7 @@ header.logo {
       }
   
       .schedule-sub-title {
-        color: $color-yellow;
+        color: $color-k10;
         @include baseCounter('padding-top', 66);
         @include baseCounter('padding-bottom', 86);
         text-align: center;
@@ -1187,7 +1187,7 @@ header.logo {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 1.8px;
-    color: $color-yellow;
+    color: $color-k10;
   }
 
   @media (max-width: 1440px) {
@@ -1217,7 +1217,7 @@ header.logo {
 #Contact {
   .sec-contact {
     a {
-      color: $color-yellow;
+      color: $color-k10;
       text-decoration: underline;
 
       &:hover {

@@ -53,7 +53,7 @@ body {
   background-position: center center;
   background-repeat: repeat;
   background-size: 15%;
-  color: #EFC27B;
+  color: #EFEFEF;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -76,21 +76,21 @@ a:visited {
 }
 
 a {
-  color: #E5AD5C;
+  color: #EFEFEF;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 a.default-light {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 a.default-light:hover {
-  color: #E5AD5C;
+  color: #EFEFEF;
 }
 
 a:hover {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 h1 {
@@ -116,7 +116,7 @@ h3 {
   padding-left: 10.8px;
   text-align: center;
   margin-bottom: 14px;
-  color: #EFC27B;
+  color: #EFEFEF;
 }
 
 @media (max-width: 1440px) {
@@ -140,7 +140,7 @@ h4 {
   letter-spacing: 0.8px;
   text-transform: uppercase;
   text-align: center;
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 @media (max-width: 1199.98px) {
@@ -186,7 +186,7 @@ p {
 
 .blockMsg {
   border: none !important;
-  background-color: #EFC27B !important;
+  background-color: #EFEFEF !important;
 }
 
 .blockMsg h1 {
@@ -331,10 +331,10 @@ p {
   min-width: 210px;
   text-align: center;
   font-size: 18px;
-  color: #EFC27B;
+  color: #EFEFEF;
   letter-spacing: 1.8px;
   padding: 10px 30px;
-  border: 1px solid #E5AD5C;
+  border: 1px solid #EFEFEF;
   border-radius: 30px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -347,8 +347,8 @@ p {
 }
 
 .btn-outline:hover {
-  background-color: #EFC27B;
-  border: 1px solid #EFC27B;
+  background-color: #EFEFEF;
+  border: 1px solid #EFEFEF;
   color: #281F1C;
 }
 
@@ -389,7 +389,7 @@ p {
 }
 
 .highlight {
-  color: #FFE0BA;
+  color: #E6A046;
   letter-spacing: 1.2px;
   font-weight: 500;
 }
@@ -399,7 +399,7 @@ p {
 }
 
 .highlight-dark {
-  color: #EFC27B;
+  color: #B28247;
 }
 
 #td_day {
@@ -444,17 +444,6 @@ p {
     background-size: auto;
     -webkit-transition: opacity 0.8s;
     transition: opacity 0.8s;
-  }
-  .anchor-wrapper .mobile-menu-hand {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-image: url("../img/illustration/mrtipsy_hand_mobile.png");
-    background-position: center bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   .anchor-wrapper ul {
     margin-top: 65px;
@@ -509,7 +498,7 @@ p {
   content: '';
   width: 5px;
   height: 2px;
-  background-color: #E5AD5C;
+  background-color: #EFEFEF;
   position: absolute;
   top: 50%;
   right: -85px;
@@ -526,11 +515,11 @@ p {
 }
 
 .anchor-wrapper li.active a {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 .anchor-wrapper li.active::after {
-  background-color: #FFE0BA;
+  background-color: #EFEFEF;
   width: 48px;
 }
 
@@ -541,7 +530,7 @@ p {
 }
 
 .anchor-wrapper li:hover::after {
-  background-color: #FFE0BA;
+  background-color: #EFEFEF;
   width: 60px;
 }
 
@@ -584,7 +573,7 @@ p {
 }
 
 .social-wrapper .social-link:hover i {
-  color: #FFFFFF;
+  color: #EFEFEF;
 }
 
 @media (max-width: 1199.98px) {
@@ -733,7 +722,7 @@ header.logo .hamburger:focus {
 
 header.logo .hamburger .current-section,
 header.logo .hamburger .current-menu {
-  color: #FFE0BA;
+  color: #EFEFEF;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 1;
@@ -753,7 +742,7 @@ header.logo .hamburger .icon-bar {
   width: 20px;
   height: 1px;
   display: block;
-  background-color: #FFE0BA;
+  background-color: #EFEFEF;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -828,7 +817,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 100px;
   line-height: 1.25;
   letter-spacing: 7.2px;
-  color: #E8AB31;
+  color: #ffffff;
 }
 
 #About .sec-experience .experience .exp-text {
@@ -939,7 +928,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .sec-ticket-status .time-counter {
-  color: #EFC27B;
+  color: #EFEFEF;
 }
 
 @media (min-width: 1200px) {
@@ -976,7 +965,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 36px;
   letter-spacing: 3.6px;
   padding: 0 10px;
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 @media (max-width: 1200px) {
@@ -1044,11 +1033,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 #Ticket .sec-ticket-status .sale-progress .progress {
   height: 11.5px;
   border-radius: 12px;
-  background-color: #E5AD5C;
+  background-color: #EFEFEF;
 }
 
 #Ticket .sec-ticket-status .sale-progress .progress .progress-bar {
-  background-color: #EFC27B;
+  background-color: #EFEFEF;
   border-radius: 12px;
 }
 
@@ -1377,7 +1366,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   top: 0;
   width: 0;
   height: 100%;
-  border-right: dashed 2px #EFC27B;
+  border-right: dashed 2px #EFEFEF;
   -webkit-transform: scaleX(0.5);
           transform: scaleX(0.5);
 }
@@ -1420,7 +1409,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
           transform: translateY(100%);
   width: 100%;
   min-width: 220px;
-  color: #EFC27B;
+  color: #EFEFEF;
 }
 
 @media (min-width: 1200px) {
@@ -1505,7 +1494,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     width: 100%;
     height: 0;
     border-style: dashed;
-    border-color: #EFC27B;
+    border-color: #EFEFEF;
     border-width: 0 0 2px;
     -webkit-transform: scale(1, 0.5);
             transform: scale(1, 0.5);
@@ -1566,7 +1555,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .sec-ticket-slots .time-session hr {
-  border-color: #E5AD5C;
+  border-color: #EFEFEF;
 }
 
 @media (max-width: 1199.98px) {
@@ -1598,7 +1587,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .sec-ticket-schedule .schedule table tr td {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 #Ticket .sec-ticket-schedule .schedule table tr td:first-child {
@@ -1630,7 +1619,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .sec-ticket-schedule .schedule .schedule-sub-title {
-  color: #EFC27B;
+  color: #EFEFEF;
   text-align: center;
 }
 
@@ -1741,7 +1730,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 1.8px;
-  color: #EFC27B;
+  color: #EFEFEF;
 }
 
 @media (max-width: 1440px) {
@@ -1765,12 +1754,12 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Contact .sec-contact a {
-  color: #EFC27B;
+  color: #EFEFEF;
   text-decoration: underline;
 }
 
 #Contact .sec-contact a:hover {
-  color: #FFFFFF;
+  color: #EFEFEF;
 }
 
 #Contact .sec-contact .contact-sec {
@@ -1834,7 +1823,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   width: 451px;
   max-width: 100%;
   height: 1px;
-  background: #E5AD5C;
+  background: #EFEFEF;
   top: 0;
   right: 0;
 }
@@ -1880,7 +1869,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   #Contact .sec-contact .contact-sec + .contact-sec {
     padding-top: 30px;
     margin-top: 36px;
-    border-top: solid 1px #E5AD5C;
+    border-top: solid 1px #EFEFEF;
   }
   #Contact .sec-contact .contact-sec .contact-sec-title {
     font-size: 14px;

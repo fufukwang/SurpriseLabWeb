@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+@import url("https://use.typekit.net/cax2ztr.css");
 /*
 // Override
 html,
@@ -16,11 +14,11 @@ body {
 }
 
 .color-pink {
-  color: #DE3B52;
+  color: #ff7ea4;
 }
 
 .color-yellow {
-  color: #EFC27B;
+  color: #E6A046;
 }
 
 .multi-btn button.btn-outline {
@@ -56,7 +54,7 @@ button.btn-outline:disabled, button.btn-outline[disabled] {
 
 button.btn-outline:disabled:hover, button.btn-outline[disabled]:hover {
   color: #ccc38d;
-  border-color: #E5AD5C;
+  border-color: #EFEFEF;
   background-color: transparent;
 }
 
@@ -148,12 +146,6 @@ button.btn-outline:focus {
 
 @media (max-width: 1199.98px) {
   #progressbar {
-    max-width: calc((520px + 30px) * 0.7263);
-  }
-}
-
-@media (max-width: 480px) {
-  #progressbar {
     max-width: 100%;
   }
 }
@@ -162,7 +154,7 @@ button.btn-outline:focus {
   content: '';
   width: 7px;
   height: 7px;
-  border: 1px solid #EFC27B;
+  border: 1px solid #E6A046;
   position: absolute;
   top: 4.5px;
   -webkit-transform: rotate(45deg);
@@ -184,12 +176,12 @@ button.btn-outline:focus {
   position: relative;
   line-height: 1;
   text-align: center;
-  color: #FFFFFF;
+  color: #EFEFEF;
   padding: 0 28px;
 }
 
 #progressbar li.active::before {
-  color: #FFFFFF;
+  color: #EFEFEF;
 }
 
 #progressbar li::before {
@@ -199,8 +191,7 @@ button.btn-outline:focus {
   line-height: 1;
   letter-spacing: 0.7px;
   text-align: center;
-  color: #EFC27B;
-  font-family: "Montserrat", sans-serif;
+  color: #E6A046;
 }
 
 @media (max-width: 575.98px) {
@@ -249,12 +240,6 @@ button.btn-outline:focus {
 
 @media (max-width: 1199.98px) {
   .bar-wrapper {
-    max-width: calc((520px + 30px) * 0.7263);
-  }
-}
-
-@media (max-width: 480px) {
-  .bar-wrapper {
     max-width: 100%;
   }
 }
@@ -278,12 +263,6 @@ button.btn-outline:focus {
 }
 
 @media (max-width: 1199.98px) {
-  .bar-wrapper {
-    margin-top: calc((520px + 30px) * 0.04204);
-  }
-}
-
-@media (max-width: 480px) {
   .bar-wrapper {
     margin-top: calc(100% * 0.04204);
   }
@@ -309,12 +288,6 @@ button.btn-outline:focus {
 
 @media (max-width: 1199.98px) {
   .bar-wrapper {
-    margin-bottom: calc((520px + 30px) * 0.07513);
-  }
-}
-
-@media (max-width: 480px) {
-  .bar-wrapper {
     margin-bottom: calc(100% * 0.07513);
   }
 }
@@ -323,7 +296,7 @@ button.btn-outline:focus {
   content: '';
   width: 100%;
   height: 1px;
-  background-color: #EFC27B;
+  background-color: #E6A046;
   position: absolute;
   top: 50%;
   right: 50%;
@@ -352,14 +325,12 @@ button.btn-outline:focus {
 .progress-title span {
   font-size: inherit;
   font-weight: inherit;
-  font-family: inherit;
   letter-spacing: 1.8px;
 }
 
 .sub-title {
   line-height: 1;
-  color: #FFE0BA;
-  font-family: "Noto Serif TC", serif;
+  color: #EFEFEF;
 }
 
 @media (min-width: 1200px) {
@@ -382,12 +353,6 @@ button.btn-outline:focus {
 
 @media (max-width: 1199.98px) {
   .sub-title {
-    padding-top: calc((520px + 30px) * 0.04025);
-  }
-}
-
-@media (max-width: 480px) {
-  .sub-title {
     padding-top: calc(100% * 0.04025);
   }
 }
@@ -403,7 +368,7 @@ button.btn-outline:focus {
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: 0.7px;
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 @media (max-width: 575.98px) {
@@ -417,11 +382,11 @@ button.btn-outline:focus {
 }
 
 a {
-  color: #EFC27B;
+  color: #E6A046;
 }
 
 a:hover {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 form {
@@ -465,12 +430,6 @@ form .form-container {
 
 @media (max-width: 1199.98px) {
   form .form-container {
-    padding-top: calc((520px + 30px) * 0.02683);
-  }
-}
-
-@media (max-width: 480px) {
-  form .form-container {
     padding-top: calc(100% * 0.02683);
   }
 }
@@ -499,12 +458,6 @@ form .form-container .field-intro {
 }
 
 @media (max-width: 1199.98px) {
-  form .form-container .field-intro {
-    padding-bottom: calc((520px + 30px) * 0.0322);
-  }
-}
-
-@media (max-width: 480px) {
   form .form-container .field-intro {
     padding-bottom: calc(100% * 0.0322);
   }
@@ -542,12 +495,6 @@ form fieldset {
 }
 
 @media (max-width: 1199.98px) {
-  form fieldset {
-    padding-bottom: calc((520px + 30px) * 0.05367);
-  }
-}
-
-@media (max-width: 480px) {
   form fieldset {
     padding-bottom: calc(100% * 0.05367);
   }
@@ -648,7 +595,7 @@ form .btn-outline {
   width: 12px;
   height: 12px;
   border-radius: 0;
-  border: solid 1px #FFE0BA;
+  border: solid 1px #EFEFEF;
   top: .1rem;
   background: transparent;
 }
@@ -670,13 +617,13 @@ form .btn-outline {
 
 .form-check input:checked ~ label {
   color: #39351c;
-  border-color: #FFE0BA;
-  background-color: #FFE0BA;
+  border-color: #EFEFEF;
+  background-color: #EFEFEF;
 }
 
 .form-check label {
   padding: 12px;
-  border: solid 1px #E5AD5C;
+  border: solid 1px #EFEFEF;
   border-radius: 6px;
   font-size: 16px;
   line-height: 1;
@@ -686,13 +633,13 @@ form .btn-outline {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 .form-check label:hover {
   color: #39351c;
-  border-color: #FFE0BA;
-  background-color: #FFE0BA;
+  border-color: #EFEFEF;
+  background-color: #EFEFEF;
 }
 
 @media (max-width: 575.98px) {
@@ -708,13 +655,13 @@ form .btn-outline {
 }
 
 .food-type input:checked ~ .checker {
-  background-color: #FFE0BA;
-  border-color: #FFE0BA;
+  background-color: #EFEFEF;
+  border-color: #EFEFEF;
 }
 
 .food-type .checker {
   position: absolute;
-  border: solid 1px #EFC27B;
+  border: solid 1px #E6A046;
   border-radius: 100%;
   height: 18px;
   width: 18px;
@@ -761,16 +708,16 @@ form .btn-outline {
   line-height: 2.25;
   letter-spacing: 1.6px;
   padding: 5px 17px;
-  border: solid 1px #E5AD5C;
+  border: solid 1px #EFEFEF;
   border-radius: 6px;
-  color: #EFC27B;
+  color: #E6A046;
   text-align: left;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -791,7 +738,7 @@ form .btn-outline {
 }
 
 .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__rendered {
-  border-color: #EFC27B;
+  border-color: #E6A046;
 }
 
 .select2-container--default.select2-container--open .select2-selection__arrow {
@@ -801,7 +748,7 @@ form .btn-outline {
 
 .select2-container--default.select2-container--open .select2-dropdown {
   border-radius: 6px;
-  border: solid 1px #EFC27B;
+  border: solid 1px #E6A046;
   background: #281F1C;
   overflow: hidden;
 }
@@ -824,7 +771,7 @@ form .btn-outline {
 }
 
 .select2-container--default .select2-results__options .select2-results__option.select2-results__option--highlighted {
-  background: #EFC27B;
+  background: #E6A046;
   color: #39351c;
 }
 
@@ -875,8 +822,8 @@ form .btn-outline {
   padding: 10px 17px;
   border-radius: 6px;
   background: transparent;
-  border: solid 1px #E5AD5C;
-  color: #EFC27B;
+  border: solid 1px #EFEFEF;
+  color: #E6A046;
   cursor: pointer;
   z-index: 10;
   -webkit-transition: 0.3s;
@@ -884,24 +831,24 @@ form .btn-outline {
 }
 
 .with-icon input::-webkit-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 .with-icon input:-ms-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 .with-icon input::-ms-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 .with-icon input::placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 .with-icon input:focus {
   outline: 0;
-  border-color: #EFC27B;
+  border-color: #E6A046;
 }
 
 .with-icon .field-icon {
@@ -943,7 +890,7 @@ form .btn-outline {
   left: inherit !important;
   width: 378px;
   max-width: 100%;
-  border: solid 1px #EFC27B;
+  border: solid 1px #E6A046;
   border-radius: 6px;
   background-color: #281F1C;
   padding: 8px;
@@ -1005,7 +952,7 @@ form .btn-outline {
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar th span {
-  color: #EFC27B;
+  color: #E6A046;
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 1.5;
@@ -1013,30 +960,30 @@ form .btn-outline {
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-today::before {
   opacity: 1;
-  border-color: #E5AD5C;
+  border-color: #EFEFEF;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable a, .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable span {
-  color: #E5AD5C;
+  color: #EFEFEF;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day a {
-  color: #E5AD5C;
+  color: #EFEFEF;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
-  border-color: #FFE0BA;
-  background-color: #FFE0BA;
+  border-color: #EFEFEF;
+  background-color: #EFEFEF;
   opacity: 1;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
-  color: #E5AD5C;
+  color: #EFEFEF;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {
-  border-color: #FFE0BA;
-  background-color: #FFE0BA;
+  border-color: #EFEFEF;
+  background-color: #EFEFEF;
   opacity: 1;
 }
 
@@ -1065,7 +1012,7 @@ form .btn-outline {
   margin-left: 2px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 @media (max-width: 575.98px) {
@@ -1138,7 +1085,7 @@ form .btn-outline {
   width: calc(100% / 3);
   padding: 16px 0;
   border-style: solid;
-  border-color: #E5AD5C;
+  border-color: #EFEFEF;
   border-width: 0 0 1px 1px;
 }
 
@@ -1179,12 +1126,6 @@ fieldset.step-1 .form-container {
 
 @media (max-width: 1199.98px) {
   fieldset.step-1 .feature-btn {
-    padding-top: calc((520px + 30px) * 0.04293);
-  }
-}
-
-@media (max-width: 480px) {
-  fieldset.step-1 .feature-btn {
     padding-top: calc(100% * 0.04293);
   }
 }
@@ -1208,12 +1149,6 @@ fieldset.step-1 .form-container {
 }
 
 @media (max-width: 1199.98px) {
-  fieldset.step-2 .feature-btn {
-    padding-top: calc((520px + 30px) * 0.20394);
-  }
-}
-
-@media (max-width: 480px) {
   fieldset.step-2 .feature-btn {
     padding-top: calc(100% * 0.20394);
   }
@@ -1239,12 +1174,6 @@ fieldset.step-1 .form-container {
 
 @media (max-width: 1199.98px) {
   fieldset.step-3 .feature-btn {
-    padding-top: calc((520px + 30px) * 0.07513);
-  }
-}
-
-@media (max-width: 480px) {
-  fieldset.step-3 .feature-btn {
     padding-top: calc(100% * 0.07513);
   }
 }
@@ -1269,8 +1198,7 @@ fieldset.step-4 .field-intro {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 1.6px;
-  color: #FFE0BA;
-  font-family: "Noto Serif TC", serif;
+  color: #EFEFEF;
 }
 
 @media (min-width: 1200px) {
@@ -1292,12 +1220,6 @@ fieldset.step-4 .field-intro {
 }
 
 @media (max-width: 1199.98px) {
-  fieldset.step-4 .field-intro {
-    padding-bottom: calc((520px + 30px) * 0.05367);
-  }
-}
-
-@media (max-width: 480px) {
   fieldset.step-4 .field-intro {
     padding-bottom: calc(100% * 0.05367);
   }
@@ -1330,48 +1252,48 @@ fieldset.step-4 .form-group input,
 fieldset.step-4 .form-group textarea {
   width: 100%;
   border-radius: 6px;
-  border: solid 1px #E5AD5C;
+  border: solid 1px #EFEFEF;
   background-color: transparent;
   padding: 12px 17px;
   font-size: 16px;
   letter-spacing: 1.6px;
-  color: #EFC27B;
+  color: #E6A046;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 fieldset.step-4 .form-group input::-webkit-input-placeholder,
 fieldset.step-4 .form-group textarea::-webkit-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 fieldset.step-4 .form-group input:-ms-input-placeholder,
 fieldset.step-4 .form-group textarea:-ms-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 fieldset.step-4 .form-group input::-ms-input-placeholder,
 fieldset.step-4 .form-group textarea::-ms-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 fieldset.step-4 .form-group input::placeholder,
 fieldset.step-4 .form-group textarea::placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 fieldset.step-4 .form-group input:-webkit-autofill,
 fieldset.step-4 .form-group textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 100px #281F1C inset;
   background-color: transparent;
-  color: #EFC27B;
-  -webkit-text-fill-color: #EFC27B;
+  color: #E6A046;
+  -webkit-text-fill-color: #E6A046;
 }
 
 fieldset.step-4 .form-group input:focus, fieldset.step-4 .form-group input:-webkit-autofill:focus,
 fieldset.step-4 .form-group textarea:focus,
 fieldset.step-4 .form-group textarea:-webkit-autofill:focus {
-  border-color: #EFC27B;
+  border-color: #E6A046;
   box-shadow: none;
   -webkit-box-shadow: 0 0 0 100px #281F1C inset;
   outline: 0;
@@ -1401,12 +1323,6 @@ fieldset.step-4 .form-group textarea {
 
 @media (max-width: 1199.98px) {
   fieldset.step-4 .feature-btn {
-    padding-top: calc((520px + 30px) * 0.07513);
-  }
-}
-
-@media (max-width: 480px) {
-  fieldset.step-4 .feature-btn {
     padding-top: calc(100% * 0.07513);
   }
 }
@@ -1430,12 +1346,6 @@ fieldset.step-4 .form-group textarea {
 }
 
 @media (max-width: 1199.98px) {
-  fieldset.step-5 .feature-btn {
-    padding-top: calc((520px + 30px) * 0.10197);
-  }
-}
-
-@media (max-width: 480px) {
   fieldset.step-5 .feature-btn {
     padding-top: calc(100% * 0.10197);
   }
@@ -1467,7 +1377,7 @@ fieldset.step-5 .filled-data .notice td:last-child {
 
 fieldset.step-5 .filled-data td {
   text-align: left;
-  color: #FFE0BA;
+  color: #EFEFEF;
   font-size: 16px;
   line-height: 2.25;
   letter-spacing: 1.6px;
@@ -1478,7 +1388,7 @@ fieldset.step-5 .filled-data td:first-child {
   text-align: right;
   padding-right: 48px;
   min-width: 120px;
-  color: #EFC27B;
+  color: #E6A046;
 }
 
 fieldset .coupon-code td {
@@ -1488,35 +1398,35 @@ fieldset .coupon-code td {
 fieldset .coupon-code input {
   margin-right: 20px;
   border-radius: 6px;
-  border: solid 1px #E5AD5C;
+  border: solid 1px #EFEFEF;
   background-color: transparent;
   padding: 12px 17px;
   font-size: 16px;
   letter-spacing: 1.6px;
-  color: #EFC27B;
+  color: #E6A046;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   line-height: normal;
 }
 
 fieldset .coupon-code input::-webkit-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 fieldset .coupon-code input:-ms-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 fieldset .coupon-code input::-ms-input-placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 fieldset .coupon-code input::placeholder {
-  color: #FFE0BA;
+  color: #EFEFEF;
 }
 
 fieldset .coupon-code input:focus {
-  border-color: #EFC27B;
+  border-color: #E6A046;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: 0;
@@ -1532,7 +1442,7 @@ fieldset .coupon-code .submit-coupon {
   font-size: 16px;
   line-height: 2.25;
   letter-spacing: 1.6px;
-  color: #EFC27B;
+  color: #E6A046;
 }
 
 fieldset .coupon-code .submit-coupon:first-child {
@@ -1562,7 +1472,7 @@ fieldset .prefix-dash li::before {
 
 fieldset .prefix-step .prefix {
   padding-right: 48px;
-  color: #EFC27B;
+  color: #E6A046;
 }
 
 fieldset .prefix-step .prefix:first-child {
@@ -1697,7 +1607,7 @@ fieldset .prefix-step .prefix:first-child {
 }
 
 #personalCapital .modal-header {
-  background-color: #EFC27B;
+  background-color: #E6A046;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1707,8 +1617,7 @@ fieldset .prefix-step .prefix:first-child {
 
 #personalCapital .modal-header .modal-title {
   font-size: 18px;
-  color: #FFFFFF;
-  font-family: "Noto Serif TC", serif;
+  color: #EFEFEF;
   line-height: 1;
   letter-spacing: 1.8px;
   font-weight: bold;
@@ -1742,7 +1651,7 @@ fieldset .prefix-step .prefix:first-child {
 }
 
 #personalCapital .modal-body::-webkit-scrollbar-thumb {
-  background: #FFE0BA;
+  background: #EFEFEF;
   border-radius: 3px;
 }
 
@@ -1765,8 +1674,8 @@ fieldset .prefix-step .prefix:first-child {
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.8px;
-  background-color: #E5AD5C;
-  color: #FFE0BA;
+  background-color: #EFEFEF;
+  color: #EFEFEF;
   opacity: 1;
   text-shadow: none;
   font-weight: normal;
