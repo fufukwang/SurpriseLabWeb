@@ -8,7 +8,7 @@
 // general
 * {
   -webkit-font-smoothing: antialiased;
-  font-family: $font-sans;
+  font-family: $font-serif;
 }
 
 html {
@@ -70,7 +70,6 @@ a {
 h1 {
   font-size: 50px;
   font-weight: 600;
-  font-family: $font-serif;
   display: none;
   color: transparent;
   display: none;
@@ -79,7 +78,6 @@ h1 {
 h2 {
   font-size: 48px;
   font-weight: 500;
-  font-family: $font-serif;
   color: transparent;
   display: none;
 }
@@ -87,7 +85,6 @@ h2 {
 h3 {
   font-size: 36px;
   font-weight: 900;
-  font-family: $font-serif;
   line-height: 1;
   letter-spacing: 10.8px;
   padding-left: 10.8px;
@@ -109,7 +106,6 @@ h3 {
 h4 {
   font-size: 16px;
   font-weight: 500;
-  font-family: $font-montserrat;
   line-height: 30px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -159,7 +155,6 @@ p {
 
   h1 {
     font-size: 40px;
-    font-family: $font-patuaOne;
     letter-spacing: 1px;
     color: $color-dark-brown;
   }
@@ -195,12 +190,10 @@ p {
 }
 
 .section-header {
-  .section-title {
-    @include baseCounter('padding-bottom', 75);
-  }
+  @include baseCounter('padding-bottom', 64);
 
   .section-desc {
-    @include baseCounter('padding-bottom', 64);
+    @include baseCounter('padding-top', 45);
     line-height: 2;
   }
 }
@@ -381,7 +374,6 @@ p {
     }
 
     a {
-      font-family: $font-montserrat;
       text-transform: uppercase;
       letter-spacing: 0.8px;
     }
@@ -594,7 +586,6 @@ header.logo {
     .current-menu {
       color: $color-light-yellow;
       font-size: 14px;
-      font-family: $font-montserrat;
       text-transform: uppercase;
       line-height: 1;
       letter-spacing: 0.8px;
@@ -651,8 +642,6 @@ header.logo {
       text-align: center;
       width: 811px;
       max-width: 100%;
-      @include baseCounter('padding-top', 80);
-      @include baseCounter('padding-bottom', 160);
       margin: 0 auto;
   
       .exp-item {
@@ -661,7 +650,6 @@ header.logo {
       }
   
       .exp-number {
-        font-family: $font-greatVibes;
         font-size: 100px;
         line-height: 1.25;
         letter-spacing: 7.2px;
@@ -750,7 +738,6 @@ header.logo {
   // 售票狀況
   .sec-ticket-status {
     .time-counter {
-      @include baseCounter('padding-top', 33);
       color: $color-yellow;
   
       & ~ .sale-progress {
@@ -766,7 +753,6 @@ header.logo {
           font-size: 36px;
           letter-spacing: 3.6px;
           padding: 0 10px;
-          font-family: $font-greatVibes;
           color: $color-light-yellow;
         }
       }
@@ -831,7 +817,6 @@ header.logo {
           font-size: 24px;
           font-weight: bold;
           letter-spacing: 2.4px;
-          font-family: $font-serif;
         }
   
         .info-text {
@@ -1001,7 +986,6 @@ header.logo {
         .highlight {
           font-size: 24px;
           font-weight: bold;
-          font-family: $font-serif;
           letter-spacing: 2.9px;
         }
   
@@ -1128,7 +1112,6 @@ header.logo {
         font-size: 20px;
         font-weight: bold;
         letter-spacing: 2.4px;
-        font-family: $font-serif;
       }
   
       hr {
@@ -1156,7 +1139,6 @@ header.logo {
   // 時程表
   .sec-ticket-schedule {
     .schedule {
-      @include baseCounter('padding-top', 75);
       width: 633px;
       max-width: 100%;
       margin: 0 auto;
@@ -1291,7 +1273,6 @@ header.logo {
   
       .contact-sec-title {
         font-weight: bold;
-        font-family: $font-serif;
         font-size: 16px;
         line-height: 1.88;
         letter-spacing: 1.9px;

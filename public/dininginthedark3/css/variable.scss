@@ -1,14 +1,8 @@
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap');
+@import url("https://use.typekit.net/cax2ztr.css");
 
-$font-montserrat: 'Montserrat', sans-serif;
-$font-greatVibes: 'Great Vibes', cursive, sans-serif;
-$font-patuaOne: 'Patua One', cursive, sans-serif;
-$font-sans: 'PingFang TC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
-$font-serif: 'Noto Serif TC', serif;
+$font-serif: 'minion-pro', 'Noto Serif TC', serif;
 
 // Primary Colors
 $color-red: #DD1933;
