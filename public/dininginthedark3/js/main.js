@@ -1,11 +1,11 @@
 /* Loading animation */
-document.body.classList.add('render');
-setTimeout(function(){
-    // Image Loading
-    imagesLoaded(document.body, function(){
-        document.body.classList.remove('loading');
-    })
-}, 1000);
+// document.body.classList.add('render');
+// setTimeout(function(){
+//     // Image Loading
+//     imagesLoaded(document.body, function(){
+//         document.body.classList.remove('loading');
+//     })
+// }, 1000);
 
 $(document).ready(function () {
 
@@ -24,7 +24,7 @@ $(document).ready(function () {
     var progress_api_SaleStep12 = 'https://surpriselab.backme.tw/api/projects/2296json?token=15171aa66ababafd4464a1c194b66102';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
-
+    
     $.when(
       $.getJSON(progress_api_SaleStep9),
       $.getJSON(progress_api_SaleStep12)
@@ -233,4 +233,16 @@ $(document).ready(function () {
             nav.removeClass('menu-open');
         }
     });
+
+    /* Loading animation */
+    console.log('1');
+    document.body.classList.add('render');
+    setTimeout(function(){
+        // Image Loading
+        console.log('2');
+        imagesLoaded(document.body, function(){
+            document.body.classList.remove('loading');
+        })
+    }, 1000);
+    console.log('3');
 });
