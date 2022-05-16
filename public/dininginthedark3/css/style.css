@@ -138,85 +138,15 @@ h3 {
   }
 }
 
-.sub-title-wrapper {
-  margin: 0 auto;
-  text-align: center;
-  overflow: hidden;
-}
-
-@media (min-width: 1200px) {
-  .sub-title-wrapper {
-    max-width: calc((608px + 30px) * 0.7263);
-  }
-}
-
-@media (min-width: 1440px) {
-  .sub-title-wrapper {
-    max-width: calc((768px + 30px) * 0.7263);
-  }
-}
-
-@media (min-width: 1920px) {
-  .sub-title-wrapper {
-    max-width: calc((1088px + 30px) * 0.7263);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .sub-title-wrapper {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .sub-title-wrapper {
-    max-width: 100%;
-  }
-}
-
 h4 {
-  position: relative;
   font-size: 16px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
   line-height: 30px;
   letter-spacing: 0.8px;
+  text-transform: uppercase;
   text-align: center;
   color: #FFE0BA;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  z-index: 0;
-}
-
-h4::before, h4::after {
-  content: '';
-  width: 500px;
-  height: 1px;
-  background-color: #FFE0BA;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-}
-
-h4::before {
-  left: 0;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
-}
-
-h4::after {
-  right: 0;
-  -webkit-transform: translate(100%, -50%);
-          transform: translate(100%, -50%);
 }
 
 @media (max-width: 1199.98px) {
@@ -225,48 +155,6 @@ h4::after {
     font-weight: 600;
     line-height: 13px;
     letter-spacing: 0.5px;
-  }
-  h4::before, h4::after {
-    background-color: rgba(255, 224, 186, 0.5);
-  }
-}
-
-h4 span {
-  font-family: inherit;
-  font-weight: inherit;
-  text-transform: inherit;
-  padding: 0 31.4px;
-  position: relative;
-}
-
-h4 span::before, h4 span::after {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border: 1px solid #FFE0BA;
-  position: absolute;
-  top: 11px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-h4 span::before {
-  left: 0;
-}
-
-h4 span::after {
-  right: 0;
-}
-
-@media (max-width: 1199.98px) {
-  h4 span {
-    padding: 0 19.3px;
-  }
-  h4 span::before, h4 span::after {
-    width: 4px;
-    height: 4px;
-    border: 1px solid rgba(255, 224, 186, 0.5);
-    top: 4.5px;
   }
 }
 
@@ -335,6 +223,113 @@ p {
   .fullpage {
     min-height: 667px;
     height: calc(100vh - 60px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding-top: calc((608px + 30px) * 0.1297);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section {
+    padding-top: calc((768px + 30px) * 0.1297);
+  }
+}
+
+@media (min-width: 1920px) {
+  .section {
+    padding-top: calc((1088px + 30px) * 0.1297);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .section {
+    padding-top: calc(100% * 0.1297);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding-bottom: calc((608px + 30px) * 0.1297);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section {
+    padding-bottom: calc((768px + 30px) * 0.1297);
+  }
+}
+
+@media (min-width: 1920px) {
+  .section {
+    padding-bottom: calc((1088px + 30px) * 0.1297);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .section {
+    padding-bottom: calc(100% * 0.1297);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .section {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-header .section-title {
+    padding-bottom: calc((608px + 30px) * 0.06708);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-header .section-title {
+    padding-bottom: calc((768px + 30px) * 0.06708);
+  }
+}
+
+@media (min-width: 1920px) {
+  .section-header .section-title {
+    padding-bottom: calc((1088px + 30px) * 0.06708);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .section-header .section-title {
+    padding-bottom: calc(100% * 0.06708);
+  }
+}
+
+.section-header .section-desc {
+  line-height: 2;
+}
+
+@media (min-width: 1200px) {
+  .section-header .section-desc {
+    padding-bottom: calc((608px + 30px) * 0.05725);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-header .section-desc {
+    padding-bottom: calc((768px + 30px) * 0.05725);
+  }
+}
+
+@media (min-width: 1920px) {
+  .section-header .section-desc {
+    padding-bottom: calc((1088px + 30px) * 0.05725);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .section-header .section-desc {
+    padding-bottom: calc(100% * 0.05725);
   }
 }
 
@@ -810,30 +805,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (min-width: 1200px) {
-  #About p {
-    padding-top: calc((608px + 30px) * 0.06708);
-  }
-}
-
-@media (min-width: 1440px) {
-  #About p {
-    padding-top: calc((768px + 30px) * 0.06708);
-  }
-}
-
-@media (min-width: 1920px) {
-  #About p {
-    padding-top: calc((1088px + 30px) * 0.06708);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #About p {
-    padding-top: calc(100% * 0.06708);
-  }
-}
-
 #About .sec-intro {
   position: relative;
 }
@@ -1030,82 +1001,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
   #About .sec-experience .experience .middle .exp-text {
     left: inherit;
-  }
-}
-
-@media (min-width: 1200px) {
-  #Ticket {
-    padding-top: calc((608px + 30px) * 0.11091);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Ticket {
-    padding-top: calc((768px + 30px) * 0.11091);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Ticket {
-    padding-top: calc((1088px + 30px) * 0.11091);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket {
-    padding-top: calc(100% * 0.11091);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Ticket {
-    padding-bottom: calc((608px + 30px) * 0.18515);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Ticket {
-    padding-bottom: calc((768px + 30px) * 0.18515);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Ticket {
-    padding-bottom: calc((1088px + 30px) * 0.18515);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket {
-    padding-bottom: calc(100% * 0.18515);
-  }
-}
-
-#Ticket .ticket-area-preinfo {
-  color: #FFE0BA;
-}
-
-@media (min-width: 1200px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc((608px + 30px) * 0.04025);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc((768px + 30px) * 0.04025);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc((1088px + 30px) * 0.04025);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket .ticket-area-preinfo {
-    padding-top: calc(100% * 0.04025);
   }
 }
 
@@ -1731,117 +1626,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (min-width: 1200px) {
-  #Ticket .sec-ticket-slots .time-slots {
-    padding-top: calc((608px + 30px) * 0.1297);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Ticket .sec-ticket-slots .time-slots {
-    padding-top: calc((768px + 30px) * 0.1297);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Ticket .sec-ticket-slots .time-slots {
-    padding-top: calc((1088px + 30px) * 0.1297);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket .sec-ticket-slots .time-slots {
-    padding-top: calc(100% * 0.1297);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket .sec-ticket-slots .time-slots {
-    padding-top: 84px;
-  }
-}
-
-#Ticket .sec-ticket-slots .time-slots-preinfo {
-  line-height: 2;
-}
-
-@media (min-width: 1200px) {
-  #Ticket .sec-ticket-slots .time-slots-preinfo {
-    padding-top: calc((608px + 30px) * 0.04025);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Ticket .sec-ticket-slots .time-slots-preinfo {
-    padding-top: calc((768px + 30px) * 0.04025);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Ticket .sec-ticket-slots .time-slots-preinfo {
-    padding-top: calc((1088px + 30px) * 0.04025);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket .sec-ticket-slots .time-slots-preinfo {
-    padding-top: calc(100% * 0.04025);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Ticket .sec-ticket-slots .time-slots-preinfo {
-    padding-bottom: calc((608px + 30px) * 0.04025);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Ticket .sec-ticket-slots .time-slots-preinfo {
-    padding-bottom: calc((768px + 30px) * 0.04025);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Ticket .sec-ticket-slots .time-slots-preinfo {
-    padding-bottom: calc((1088px + 30px) * 0.04025);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket .sec-ticket-slots .time-slots-preinfo {
-    padding-bottom: calc(100% * 0.04025);
-  }
-}
-
 #Ticket .sec-ticket-slots .time-session {
   width: 1115px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-}
-
-@media (min-width: 1200px) {
-  #Ticket .sec-ticket-slots .time-session {
-    padding-bottom: calc((608px + 30px) * 0.1297);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Ticket .sec-ticket-slots .time-session {
-    padding-bottom: calc((768px + 30px) * 0.1297);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Ticket .sec-ticket-slots .time-session {
-    padding-bottom: calc((1088px + 30px) * 0.1297);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket .sec-ticket-slots .time-session {
-    padding-bottom: calc(100% * 0.1297);
-  }
 }
 
 @media (max-width: 1199.98px) {
@@ -2042,54 +1831,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (min-width: 1200px) {
-  #Rules {
-    padding-top: calc((608px + 30px) * 0.11091);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules {
-    padding-top: calc((768px + 30px) * 0.11091);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules {
-    padding-top: calc((1088px + 30px) * 0.11091);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules {
-    padding-top: calc(100% * 0.11091);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Rules {
-    padding-bottom: calc((608px + 30px) * 0.28444);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules {
-    padding-bottom: calc((768px + 30px) * 0.28444);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules {
-    padding-bottom: calc((1088px + 30px) * 0.28444);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules {
-    padding-bottom: calc(100% * 0.28444);
-  }
-}
-
 #Rules .feature-btn {
   text-align: center;
 }
@@ -2118,54 +1859,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (min-width: 1200px) {
-  #Rules .rules-action-info {
-    padding-top: calc((608px + 30px) * 0.06708);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules .rules-action-info {
-    padding-top: calc((768px + 30px) * 0.06708);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules .rules-action-info {
-    padding-top: calc((1088px + 30px) * 0.06708);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules .rules-action-info {
-    padding-top: calc(100% * 0.06708);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Rules .rules-action-info {
-    padding-bottom: calc((608px + 30px) * 0.05725);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules .rules-action-info {
-    padding-bottom: calc((768px + 30px) * 0.05725);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules .rules-action-info {
-    padding-bottom: calc((1088px + 30px) * 0.05725);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules .rules-action-info {
-    padding-bottom: calc(100% * 0.05725);
-  }
-}
-
 #Rules .rules-page-contains {
   font-size: 18px;
   line-height: 2;
@@ -2184,10 +1877,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   #Rules {
     min-height: initial;
   }
-  #Rules .rules-action-info {
-    padding-top: 35px;
-    padding-bottom: 50px;
-  }
   #Rules .feature-btn .btn-outline {
     width: 240px;
   }
@@ -2197,112 +1886,16 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-@media (min-width: 1200px) {
-  #Contact {
-    padding-top: calc((608px + 30px) * 0.11091);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Contact {
-    padding-top: calc((768px + 30px) * 0.11091);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Contact {
-    padding-top: calc((1088px + 30px) * 0.11091);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Contact {
-    padding-top: calc(100% * 0.11091);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Contact {
-    padding-bottom: calc((608px + 30px) * 0.13059);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Contact {
-    padding-bottom: calc((768px + 30px) * 0.13059);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Contact {
-    padding-bottom: calc((1088px + 30px) * 0.13059);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Contact {
-    padding-bottom: calc(100% * 0.13059);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Contact #contactInfo .contact-pre-info {
-    padding-top: calc((608px + 30px) * 0.06708);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Contact #contactInfo .contact-pre-info {
-    padding-top: calc((768px + 30px) * 0.06708);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Contact #contactInfo .contact-pre-info {
-    padding-top: calc((1088px + 30px) * 0.06708);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Contact #contactInfo .contact-pre-info {
-    padding-top: calc(100% * 0.06708);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Contact #contactInfo .contact-pre-info {
-    padding-bottom: calc((608px + 30px) * 0.07513);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Contact #contactInfo .contact-pre-info {
-    padding-bottom: calc((768px + 30px) * 0.07513);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Contact #contactInfo .contact-pre-info {
-    padding-bottom: calc((1088px + 30px) * 0.07513);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Contact #contactInfo .contact-pre-info {
-    padding-bottom: calc(100% * 0.07513);
-  }
-}
-
-#Contact #contactInfo .contact-pre-info a {
+#Contact .sec-contact a {
   color: #EFC27B;
   text-decoration: underline;
 }
 
-#Contact #contactInfo .contact-pre-info a:hover {
+#Contact .sec-contact a:hover {
   color: #FFFFFF;
 }
 
-#Contact #contactInfo .contact-sec {
+#Contact .sec-contact .contact-sec {
   position: relative;
   width: 537px;
   max-width: 100%;
@@ -2310,54 +1903,54 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (min-width: 1200px) {
-  #Contact #contactInfo .contact-sec:not(:first-child) {
+  #Contact .sec-contact .contact-sec:not(:first-child) {
     padding-top: calc((608px + 30px) * 0.0322);
   }
 }
 
 @media (min-width: 1440px) {
-  #Contact #contactInfo .contact-sec:not(:first-child) {
+  #Contact .sec-contact .contact-sec:not(:first-child) {
     padding-top: calc((768px + 30px) * 0.0322);
   }
 }
 
 @media (min-width: 1920px) {
-  #Contact #contactInfo .contact-sec:not(:first-child) {
+  #Contact .sec-contact .contact-sec:not(:first-child) {
     padding-top: calc((1088px + 30px) * 0.0322);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Contact #contactInfo .contact-sec:not(:first-child) {
+  #Contact .sec-contact .contact-sec:not(:first-child) {
     padding-top: calc(100% * 0.0322);
   }
 }
 
 @media (min-width: 1200px) {
-  #Contact #contactInfo .contact-sec:not(:first-child) {
+  #Contact .sec-contact .contact-sec:not(:first-child) {
     margin-top: calc((608px + 30px) * 0.0322);
   }
 }
 
 @media (min-width: 1440px) {
-  #Contact #contactInfo .contact-sec:not(:first-child) {
+  #Contact .sec-contact .contact-sec:not(:first-child) {
     margin-top: calc((768px + 30px) * 0.0322);
   }
 }
 
 @media (min-width: 1920px) {
-  #Contact #contactInfo .contact-sec:not(:first-child) {
+  #Contact .sec-contact .contact-sec:not(:first-child) {
     margin-top: calc((1088px + 30px) * 0.0322);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Contact #contactInfo .contact-sec:not(:first-child) {
+  #Contact .sec-contact .contact-sec:not(:first-child) {
     margin-top: calc(100% * 0.0322);
   }
 }
 
-#Contact #contactInfo .contact-sec:not(:first-child)::before {
+#Contact .sec-contact .contact-sec:not(:first-child)::before {
   position: absolute;
   content: '';
   width: 451px;
@@ -2368,7 +1961,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   right: 0;
 }
 
-#Contact #contactInfo .contact-sec .contact-sec-title {
+#Contact .sec-contact .contact-sec .contact-sec-title {
   font-weight: bold;
   font-family: "Noto Serif TC", serif;
   font-size: 16px;
@@ -2379,7 +1972,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   width: 76px;
 }
 
-#Contact #contactInfo .contact-sec p {
+#Contact .sec-contact .contact-sec p {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 1.6px;
@@ -2387,41 +1980,37 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (max-width: 1200px) {
-  #Contact #contactInfo .contact-sec:not(:first-child)::before {
+  #Contact .sec-contact .contact-sec:not(:first-child)::before {
     width: 100%;
   }
-  #Contact #contactInfo .contact-sec .contact-sec-title {
+  #Contact .sec-contact .contact-sec .contact-sec-title {
     text-align: left;
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Contact #contactInfo {
+  #Contact .sec-contact {
     padding-top: 25px;
     padding-bottom: 100px;
   }
-  #Contact #contactInfo .contact-pre-info {
-    padding-top: 35px;
-    padding-bottom: 60px;
-  }
-  #Contact #contactInfo .contact-sec::before {
+  #Contact .sec-contact .contact-sec::before {
     display: none;
   }
-  #Contact #contactInfo .contact-sec.middle {
+  #Contact .sec-contact .contact-sec.middle {
     margin-top: 0;
     padding-top: 0;
   }
-  #Contact #contactInfo .contact-sec + .contact-sec {
+  #Contact .sec-contact .contact-sec + .contact-sec {
     padding-top: 30px;
     margin-top: 36px;
     border-top: solid 1px #E5AD5C;
   }
-  #Contact #contactInfo .contact-sec .contact-sec-title {
+  #Contact .sec-contact .contact-sec .contact-sec-title {
     font-size: 14px;
     line-height: 2.14;
     letter-spacing: 1.7px;
   }
-  #Contact #contactInfo .contact-sec p {
+  #Contact .sec-contact .contact-sec p {
     font-size: 14px;
     line-height: 2.29;
     letter-spacing: 1.4px;
@@ -2429,11 +2018,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (max-width: 320px) {
-  #Contact #contactInfo .contact-sec:not(:last-child) p {
+  #Contact .sec-contact .contact-sec:not(:last-child) p {
     text-indent: -47px;
     padding-left: 47px;
   }
-  #Contact #contactInfo .contact-sec:not(:last-child) p.contact-footer {
+  #Contact .sec-contact .contact-sec:not(:last-child) p.contact-footer {
     text-indent: initial;
     padding-left: 0;
   }

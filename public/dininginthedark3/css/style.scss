@@ -106,103 +106,21 @@ h3 {
   }
 }
 
-.sub-title-wrapper {
-  @include baseCounter('max-width', 812);
-  margin: 0 auto;
-  text-align: center;
-  overflow: hidden;
-
-  @media (max-width: 1199.98px) {
-    max-width: 100%;
-  }
-}
-
 h4 {
-  position: relative;
   font-size: 16px;
   font-weight: 500;
   font-family: $font-montserrat;
-  text-transform: uppercase;
   line-height: 30px;
   letter-spacing: 0.8px;
+  text-transform: uppercase;
   text-align: center;
   color: $color-light-yellow;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  z-index: 0;
-
-  &::before,
-  &::after {
-    content: '';
-    width: 500px;
-    height: 1px;
-    background-color: $color-light-yellow;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-  }
-
-  &::before {
-    left: 0;
-    transform: translate(-100%, -50%);
-  }
-
-  &::after {
-    right: 0;
-    transform: translate(100%, -50%);
-  }
 
   @media (max-width: 1199.98px) {
     font-size: 10px;
     font-weight: 600;
     line-height: 13px;
     letter-spacing: 0.5px;
-
-    &::before,
-    &::after {
-      background-color: rgba($color-light-yellow, 0.5);
-    }
-  }
-
-  span {
-    font-family: inherit;
-    font-weight: inherit;
-    text-transform: inherit;
-    padding: 0 31.4px;
-    position: relative;
-
-    &::before,
-    &::after {
-      content: '';
-      width: 7px;
-      height: 7px;
-      border: 1px solid $color-light-yellow;
-      position: absolute;
-      top: 11px;
-      transform: rotate(45deg);
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
-      right: 0;
-    }
-
-    @media (max-width: 1199.98px) {
-      padding: 0 19.3px;
-
-      &::before,
-      &::after {
-        width: 4px;
-        height: 4px;
-        border: 1px solid rgba($color-light-yellow, 0.5);
-        top: 4.5px;
-      }
-    }
   }
 }
 
@@ -263,6 +181,27 @@ p {
   @media (max-width: 1199.98px) {
     min-height: 667px;
     height: calc(100vh - 60px);
+  }
+}
+
+.section {
+  @include baseCounter('padding-top', 145);
+  @include baseCounter('padding-bottom', 145);
+
+  @media (max-width: 1199.98px) {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+.section-header {
+  .section-title {
+    @include baseCounter('padding-bottom', 75);
+  }
+
+  .section-desc {
+    @include baseCounter('padding-bottom', 64);
+    line-height: 2;
   }
 }
 
@@ -700,10 +639,6 @@ header.logo {
 
 // About Section
 #About {
-  p {
-    @include baseCounter('padding-top', 75);
-  }
-
   // Intro 
   .sec-intro {
     @include baseCounter('padding-top', 124);
@@ -807,35 +742,6 @@ header.logo {
 
 // Ticket Section
 #Ticket {
-  @include baseCounter('padding-top', 124);
-  @include baseCounter('padding-bottom', 207);
-
-  // .ticket {
-  //   text-align: center;
-
-  //   p {
-  //     display: inline-block;
-  //     @include baseCounter('padding-top', 75);
-  //     @include baseCounter('padding-bottom', 169);
-  //   }
-
-  //   .inline-right {
-  //     display: block;
-  //     text-align: right;
-  //   }
-
-  //   @media (max-width: 1199.98px) {
-  //     p {
-  //       padding-top: 36px;
-  //       padding-bottom: 84px;
-  //     }
-  //   }
-  // }
-
-  .ticket-area-preinfo {
-    @include baseCounter('padding-top', 45);
-    color: $color-light-yellow;
-  }
 
   .ticket-area-note {
     line-height: 2;
@@ -1190,23 +1096,8 @@ header.logo {
   }
 
   // 體驗場次
-  .sec-ticket-slots {
-    .time-slots {
-      @include baseCounter('padding-top', 145);
-  
-      @media (max-width: 1199.98px) {
-        padding-top: 84px;
-      }
-    }
-  
-    .time-slots-preinfo {
-      line-height: 2;
-      @include baseCounter('padding-top', 45);
-      @include baseCounter('padding-bottom', 45);
-    }
-  
+  .sec-ticket-slots {    
     .time-session {
-      @include baseCounter('padding-bottom', 145);
       width: 1115px;
       max-width: 100%;
       margin: 0 auto;
@@ -1329,17 +1220,9 @@ header.logo {
 
 // Rules Section
 #Rules {
-  @include baseCounter('padding-top', 124);
-  @include baseCounter('padding-bottom', 318);
-
   .feature-btn {
     text-align: center;
     @include baseCounter('padding-bottom', 18);
-  }
-
-  .rules-action-info {
-    @include baseCounter('padding-top', 75);
-    @include baseCounter('padding-bottom', 64);
   }
 
   .rules-page-contains {
@@ -1359,11 +1242,6 @@ header.logo {
   @media (max-width: 1199.98px) {
     min-height: initial;
 
-    .rules-action-info {
-      padding-top: 35px;
-      padding-bottom: 50px;
-    }
-
     .feature-btn {
       .btn-outline {
         width: 240px;
@@ -1379,21 +1257,13 @@ header.logo {
 
 // Contact Section
 #Contact {
-  @include baseCounter('padding-top', 124);
-  @include baseCounter('padding-bottom', 146);
+  .sec-contact {
+    a {
+      color: $color-yellow;
+      text-decoration: underline;
 
-  #contactInfo {
-    .contact-pre-info {
-      @include baseCounter('padding-top', 75);
-      @include baseCounter('padding-bottom', 84);
-  
-      a {
-        color: $color-yellow;
-        text-decoration: underline;
-  
-        &:hover {
-          color: $color-lighter-yellow;
-        }
+      &:hover {
+        color: $color-lighter-yellow;
       }
     }
   
@@ -1455,11 +1325,6 @@ header.logo {
     @media (max-width: 1199.98px) {
       padding-top: 25px;
       padding-bottom: 100px;
-  
-      .contact-pre-info {
-        padding-top: 35px;
-        padding-bottom: 60px;
-      }
   
       .contact-sec {
         &::before {
