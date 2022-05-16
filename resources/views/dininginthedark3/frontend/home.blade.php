@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js">
 <head>
     <!-- Metadata -->
     <meta charset="UTF-8">
@@ -25,7 +25,6 @@
 
     <!-- Loading Animation CSS -->
     <link rel="stylesheet" type="text/css" href="css/plugins/imagesloaded/loading.css"/>
-    <script>document.documentElement.className = 'js';</script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
@@ -37,8 +36,9 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WCD7VGK');</script>
     <!-- End Google Tag Manager -->
-    </head>
-    <body class="loading">
+</head>
+
+<body class="loading">
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCD7VGK"
@@ -461,6 +461,7 @@
     <script src="js/plugins/aos/aos.min.js"></script>
 
     <!-- Custom Js -->
+    <script src="js/index.js?v=0.1"></script>
     <script src="js/main.js?v=0.1"></script>
 
 </body>

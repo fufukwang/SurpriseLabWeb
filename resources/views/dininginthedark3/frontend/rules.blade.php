@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js">
 <head>
     <!-- Metadata -->
     <meta charset="UTF-8">
@@ -23,7 +23,6 @@
 
     <!-- Loading Animation CSS -->
     <link rel="stylesheet" type="text/css" href="css/plugins/imagesloaded/loading.css"/>
-    <script>document.documentElement.className = 'js';</script>
 
     <!-- OwlCarousel2 -->
     <link rel="stylesheet" href="css/owl2/owl.carousel.min.css"/>

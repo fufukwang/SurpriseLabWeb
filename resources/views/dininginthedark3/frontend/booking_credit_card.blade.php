@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="js">
 <head>
     <!-- Metadata -->
     <meta charset="UTF-8">
@@ -24,7 +24,6 @@
 
     <!-- Loading Animation CSS -->
     <link rel="stylesheet" type="text/css" href="css/plugins/imagesloaded/loading.css"/>
-    <script>document.documentElement.className = 'js';</script>
 
     <!-- Fontawesome -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome/fontawesome.min.css"/>
