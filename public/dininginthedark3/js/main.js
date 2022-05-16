@@ -1,12 +1,3 @@
-/* Loading animation */
-// document.body.classList.add('render');
-// setTimeout(function(){
-//     // Image Loading
-//     imagesLoaded(document.body, function(){
-//         document.body.classList.remove('loading');
-//     })
-// }, 1000);
-
 $(document).ready(function () {
     
     // 售票進度 API
@@ -174,11 +165,11 @@ $(document).ready(function () {
     });
 
     // mobile hamburger button effect
+    var body = $('body');
     var nav = $('.anchor-wrapper');
     var hamburger = $('.hamburger');
     var iconBar = $('.icon-bar');
     var currentMenu = $('.current-menu');
-    var body = $('body');
 
     hamburger.on('click', function () {
         var $el = $(this);
@@ -236,14 +227,11 @@ $(document).ready(function () {
     });
 
     /* Loading animation */
-    console.log('1');
     document.body.classList.add('render');
     setTimeout(function(){
         // Image Loading
-        console.log('2');
         imagesLoaded(document.body, function(){
             document.body.classList.remove('loading');
         })
     }, 1000);
-    console.log('3');
 });
