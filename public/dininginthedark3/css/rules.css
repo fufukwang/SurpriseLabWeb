@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
 @import url("https://use.typekit.net/cax2ztr.css");
 body {
-  background-color: #281F1C !important;
+  background-color: #2D2D2D !important;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
   background-size: 15%;
@@ -14,7 +14,7 @@ body {
 }
 
 header.logo {
-  background-color: #281F1C;
+  background-color: #2D2D2D;
 }
 
 .btn-link {
@@ -32,11 +32,11 @@ header.logo {
 #rules-tab-switcher {
   position: sticky;
   position: -webkit-sticky;
-  border-color: #281F1C;
+  border-color: #2D2D2D;
   text-align: center;
   z-index: 9999;
   top: 120px;
-  background-color: #281F1C;
+  background-color: #2D2D2D;
   background-image: url("../img/wallpaper.jpg");
   background-repeat: repeat;
   background-size: 15%;
@@ -57,7 +57,7 @@ header.logo {
   margin: 0 11.5px -1px;
   border-radius: 0;
   border-width: 0 0 1px 0;
-  border-color: #281F1C;
+  border-color: #2D2D2D;
   letter-spacing: 2.2px;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
@@ -1143,7 +1143,7 @@ header.logo {
   text-align: center;
   letter-spacing: 1.8px;
   line-height: 2;
-  background-color: #281F1C;
+  background-color: #2D2D2D;
   border-right: solid 1px #EFEFEF;
 }
 

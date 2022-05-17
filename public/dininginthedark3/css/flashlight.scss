@@ -1,0 +1,315 @@
+// Loading
+.loaded { 
+    opacity: 1;
+
+    &:after { 
+        display: none; 
+    }
+}
+
+@keyframes fade { 
+    0% { 
+        transform: scale(1); 
+        opacity: 0.5; 
+    } 50% { 
+      transform: scale(0.8); 
+      opacity: 0.25; 
+    } 100% { 
+        transform: scale(1); 
+        opacity: 0.5; 
+    } 
+}
+
+.lighting-wrap {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/about/cut1-intro/background.png);
+    background-size: cover;
+    z-index: 0;
+    display: block !important;
+    padding: 0px;
+
+    .lighting-inner {
+        position: relative;
+        background: rgba(0, 0, 0, 0.6);
+        height: 100%;
+        width: 100%;
+        padding: 1px;
+
+        .mask-box { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            height: 100vh; 
+            width: 100%; 
+            z-index: 1001; 
+            overflow: auto;
+
+            // 無光介紹
+            .main-slogan {
+                max-width: 715px;
+                margin: 200px auto 0;
+                padding-top: 40vh;
+                padding-bottom: 10vh;                
+                position: relative;
+                z-index: 1000;
+                text-align: center;
+    
+                .slogan-img {
+                    width: 560px; 
+                    position: absolute;
+                    top: 30px;
+                    left: 50%;
+                    margin: 0 0 0 -280px;
+
+                    @media (max-width: 776px) { 
+                        opacity: 1; 
+                        margin-left: 0; 
+                        left: 0; 
+                        width: 100%; 
+                        padding: 20px; 
+                    }
+
+                    img { 
+                        width: 100%; 
+
+                        &:first-child { 
+                            @media (max-width: 776px) { 
+                                display: none;
+                            }
+                        } 
+
+                        &:last-child { 
+                            display: none; 
+
+                            @media (max-width: 776px) { 
+                                display: block; 
+                            }
+                        }
+                    }
+                }
+
+                .shadow {
+                    width: 100%; 
+                    left: auto; 
+                    margin-top: -80px; 
+                    
+                    @media (max-width: 776px) { 
+                        margin-top: -15px; 
+                        display: none; 
+                    }
+
+                    & > img { 
+                        opacity: 0.5; 
+                        transform: scale(1.25) translateX(-2.75%); 
+                        transform-origin: center center; 
+                    }
+                }
+            }
+        }  
+    }
+}
+
+// 體驗內容
+.sec-experience { 
+    margin-top: 350px; 
+    color: #cbcbcb; 
+    opacity: 1; 
+    transition: 1s all; 
+    text-align: center; 
+    padding: 20px;
+
+    @media (max-width: 776px) { 
+        margin-top: 150px; 
+        opacity: 1;
+    }
+
+    h1 { 
+        font-size: 18px; 
+        letter-spacing: 2.5px; 
+        line-height: 1.55em; 
+        margin-bottom: 60px; 
+    }
+
+    p { 
+        font-size: 16px; 
+        line-height: 1.55em; 
+        letter-spacing: 1px; 
+    }
+
+    .title { 
+        font-size: 26px;
+        margin-bottom: 0;
+        letter-spacing: 5px;
+
+        @media (max-width: 776px) {
+            white-space: nowrap; 
+        }
+    }
+    
+    .sub-title {
+        font-size: 16px;
+        color: #a47c52; 
+        letter-spacing: 2.5px; 
+        border-top: solid 1px #777; 
+        margin-bottom: 60px; 
+        margin-top: 3px; 
+        padding: 10px; 
+        display: table; 
+        margin-left: auto; 
+        margin-right: auto;
+
+        @media (max-width: 776px) {
+            display: inline-block; 
+            white-space: nowrap; 
+            margin-bottom: 45px; 
+        }
+    }
+
+    .about-box { 
+        max-width: 890px; 
+        margin: 60px auto;
+    
+        @media (max-width: 776px) { 
+            margin: 25px auto;
+            margin-top: 0;
+        }
+    
+        p { 
+            padding-top: 15px; 
+            font-size: 19px; 
+            letter-spacing: 2.5px; 
+        
+            @media (max-width: 776px) { 
+                margin-top: -25px; 
+            }
+        }
+    
+        img { 
+            width: 100%;
+    
+            &:last-child { 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                z-index: -1; 
+            }
+        }
+    
+        .col-md-4 {
+            @media (max-width: 776px) { 
+                margin-bottom: 60px; 
+            }
+    
+            & > div { 
+                padding: 0 45px;
+    
+                & > div { 
+                    position: relative;
+    
+                    @media (max-width: 776px) { 
+                        max-width: 150px; 
+                        margin: auto;
+                    }
+                }
+            }
+    
+            &:first-child {
+                img:last-child { 
+                    margin-left: -45px; 
+                }
+            }
+    
+            &:nth-child(2) > div > div:before, 
+            &:nth-child(2) > div > div:after { 
+                content: ''; 
+                position: absolute; 
+                height: 35px; 
+                width: 35px; 
+                top: 50%; 
+                left: 0; 
+                margin-left: -65.5px; 
+                margin-top: -17.5px; 
+                background-image: url(../img/about/about-plus.svg); 
+                background-size: cover;
+    
+                @media (max-width: 776px) { 
+                    height: 20px; 
+                    width: 20px; 
+                    left: 50%; 
+                    margin-left: -10px; 
+                    top: 0;  
+                }            
+            }
+    
+            &:nth-child(2) > div > div:after { 
+                left: auto; 
+                right: 0; 
+                margin-right: -65.5px;
+            
+                @media (max-width: 776px) { 
+                    left: 50%; 
+                    margin-left: -10px; 
+                    bottom: 0; 
+                    margin-top: 0; 
+                    margin-bottom: -105px; 
+                    top: auto; 
+                    right: auto; 
+                }
+            }
+    
+            &:last-child { 
+                @media (max-width: 776px) { 
+                    margin-bottom: 0px; 
+                }
+            } 
+        }
+    }
+}
+
+.light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 800px;
+    width: 800px;
+    background-image: url(../img/about/light.png);
+    background-size: 100%;
+    background-position: center;
+    z-index: 10;
+    margin-top: -400px;
+    margin-left: -400px;
+    opacity: 0.75;
+
+    @media (max-width: 776px) { 
+        opacity: 0.35; 
+    }
+}
+
+.mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    left: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 500;
+}
+
+.golden-font { 
+    font-size: 18px; 
+    color: #a47c52; 
+    display: block; 
+}
+
+.visible-xs { 
+    line-height: 0;
+    margin: 0 !important; 
+}
+
+.show-1, .show-2, .show-3, .show-4 { 
+    opacity: 1; 
+}
