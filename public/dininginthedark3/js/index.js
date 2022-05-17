@@ -80,21 +80,21 @@ $(document).ready(function () {
         });
 
         // anchor fadeIn effect
-        var scrollTop = win.scrollTop();
+        // var scrollTop = win.scrollTop();
 
-        if (scrollTop >= scrollHeight) {
-            if (!nav.hasClass('anchor-show')) {
-                nav.addClass('anchor-show');
-                nav.fadeIn(800);
-                social.fadeIn(800);
-                header.addClass('anchor-show');
-            }
-        } else {
-            nav.removeClass('anchor-show');
-            nav.fadeOut(300);
-            social.fadeOut(300);
-            header.removeClass('anchor-show');
-        }
+        // if (scrollTop >= scrollHeight) {
+        //     if (!nav.hasClass('anchor-show')) {
+        //         nav.addClass('anchor-show');
+        //         nav.fadeIn(800);
+        //         social.fadeIn(800);
+        //         header.addClass('anchor-show');
+        //     }
+        // } else {
+        //     nav.removeClass('anchor-show');
+        //     nav.fadeOut(300);
+        //     social.fadeOut(300);
+        //     header.removeClass('anchor-show');
+        // }
     });
 
     // Smooth scroll: You can use class ".smoothScroll" in "a" tag. If you want to add smooth scroll effect.
