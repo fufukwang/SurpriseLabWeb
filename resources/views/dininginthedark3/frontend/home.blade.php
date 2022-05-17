@@ -463,6 +463,14 @@
 
     <!-- Loading Animation JS -->
     <script src="js/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script>
+        document.body.classList.add('render');
+        setTimeout(function(){
+            imagesLoaded(document.body, function(){
+                document.body.classList.remove('loading');
+            })
+        }, 1000);
+    </script>
 
     <!-- Aos -->
     <script src="js/plugins/aos/aos.min.js"></script>
