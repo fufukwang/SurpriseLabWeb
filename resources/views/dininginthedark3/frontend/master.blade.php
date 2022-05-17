@@ -55,7 +55,7 @@
         <!-- Header LOGO -->
         <header class="logo">
             <a href="index.html">
-                <img src="img/web_title_small.png" alt="The Great Tipsy">
+                <img src="img/logo_nav.png" alt="The Great Tipsy">
             </a>
             <button class="hamburger">
                 <span class="current-section">Lobby</span>

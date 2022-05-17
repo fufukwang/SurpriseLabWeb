@@ -87,7 +87,7 @@
         <div class="logo-wrapper">
             <header class="logo">
                 <a class="smoothScroll" href="#About">
-                    <img src="img/web_title_small.png" alt="無光晚餐第三季">
+                    <img src="img/logo_nav.png" alt="無光晚餐第三季">
                 </a>
                 <button class="hamburger">
                     <span class="current-section">About</span>
