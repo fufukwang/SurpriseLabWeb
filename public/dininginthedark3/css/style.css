@@ -400,7 +400,6 @@ p {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 10000;
-  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -525,7 +524,6 @@ p {
   right: 44px;
   bottom: 56px;
   z-index: 999;
-  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -601,23 +599,14 @@ p {
 }
 
 header.logo {
+  width: 100%;
   height: inherit;
   text-align: center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 9999;
   padding: 0 20px;
   background-color: rgba(45, 45, 45, 0.8);
-  background-image: url("../img/wallpaper.png");
-  background-position: top center;
-  background-repeat: repeat;
-  background-size: 15%;
-}
-
-header.logo.anchor-show {
-  position: fixed;
-  width: 100%;
 }
 
 header.logo.scroll-background-color {
