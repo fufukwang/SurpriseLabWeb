@@ -185,7 +185,7 @@
                         <h2>Ticket</h2>
 
                         <!-- 售票狀況 -->
-                        <div class="section sec-ticket-status" data-aos="fade">
+                        <div class="section sec-ticket-status">
                             <div class="container">
 
                                 <div class="section-header">
@@ -239,7 +239,7 @@
                         </div>
 
                         <!-- 選擇票券 -->
-                        <div class="section sec-ticket-type" data-aos="fade">
+                        <div class="section sec-ticket-type">
                             <div class="container">
 
                                 <div class="section-header">
@@ -299,7 +299,7 @@
                         </div>
 
                         <!-- 預售劃位流程 -->
-                        <div class="section sec-ticket-process" data-aos="fade">
+                        <div class="section sec-ticket-process">
                             <div class="container">
 
                                 <div class="section-header">
@@ -313,7 +313,7 @@
                         </div>
 
                         <!-- 體驗場次 -->
-                        <div class="section sec-ticket-slots" data-aos="fade">
+                        <div class="section sec-ticket-slots">
                             <div class="container">
 
                                 <div class="section-header">
@@ -345,7 +345,7 @@
                         </div>
 
                         <!-- 時程表 -->
-                        <div class="section sec-ticket-schedule" data-aos="fade">
+                        <div class="section sec-ticket-schedule">
                             <div class="container">
 
                                 <div class="section-header">
@@ -397,7 +397,7 @@
 
                         <h2>Rules</h2>
 
-                        <div class="section sec-rules" data-aos="fade">
+                        <div class="section sec-rules">
                             <div class="container">
 
                                 <div class="section-header">
@@ -426,7 +426,7 @@
 
                         <h2>Contact</h2>
 
-                        <div class="fullpage section sec-contact" data-aos="fade">
+                        <div class="fullpage section sec-contact">
                             <div class="container">
 
                                 <div class="section-header">
