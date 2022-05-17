@@ -13,29 +13,12 @@
 
 html {
   background-color: $color-dark-brown;
-  background-image: url('../img/wallpaper.png');
-  background-position: center center;
-  background-repeat: repeat;
-  background-size: 100%;
-  background-attachment: fixed;
-
-  @media screen and (max-width: 1199.98px) {
-    background-size: auto;
-  }
 }
 
 body {
   position: relative;
   background-color: $color-dark-brown;
-  background-image: url('../img/wallpaper.png');
-  background-position: center center;
-  background-repeat: repeat;
-  background-size: 15%;
   color: $color-k10;
-
-  @media screen and (max-width: 1199.98px) {
-    background-size: auto;
-  }
 
   &.menu-open {
     height: 100vh;

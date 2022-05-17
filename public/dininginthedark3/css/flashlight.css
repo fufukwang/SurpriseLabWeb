@@ -125,6 +125,8 @@
   width: 100%;
   left: auto;
   margin-top: -80px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 @media (max-width: 776px) {

@@ -95,7 +95,8 @@
                 .shadow {
                     width: 100%; 
                     left: auto; 
-                    margin-top: -80px; 
+                    margin-top: -80px;
+                    box-shadow: none !important;
                     
                     @media (max-width: 776px) { 
                         margin-top: -15px; 
