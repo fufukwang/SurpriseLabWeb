@@ -16,7 +16,7 @@ header.logo {
 }
 
 .btn-link:hover, .btn-link:focus {
-  color: #E6A046 !important;
+  color: #8C5FB4 !important;
 }
 
 .anchor-wrapper {
@@ -39,7 +39,7 @@ header.logo {
 #rules-tab-switcher .nav-link.active,
 #rules-tab-switcher .nav-link:hover {
   background-color: transparent;
-  border-color: #E6A046;
+  border-color: #8C5FB4;
   border-radius: 0;
   border-width: 0 0 1px 0;
 }
@@ -447,7 +447,7 @@ header.logo {
 
 #Rules .to-change-and-refund,
 #Rules .to-presale-rules {
-  color: #E6A046;
+  color: #8C5FB4;
   text-decoration: underline;
   cursor: pointer;
   -webkit-transition: color 0.3s;
@@ -531,7 +531,7 @@ header.logo {
 
 #Rules #qa-according .to-change-and-refund:hover,
 #Rules #qa-according .to-presale-rules:hover {
-  color: #E6A046;
+  color: #8C5FB4;
 }
 
 #Rules #qa-according .card-body {
@@ -752,7 +752,7 @@ header.logo {
   transition: 0.3s;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  color: #E6A046;
+  color: #8C5FB4;
 }
 
 @media (max-width: 1200px) {
@@ -925,7 +925,7 @@ header.logo {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
-  border-bottom: solid 2px #E6A046;
+  border-bottom: solid 2px #8C5FB4;
 }
 
 @media (min-width: 1200px) {
@@ -953,14 +953,14 @@ header.logo {
 }
 
 #Rules #changeAndrefund #table-note tr {
-  border-color: #E6A046 #E6A046 #EFEFEF #E6A046;
+  border-color: #8C5FB4 #8C5FB4 #EFEFEF #8C5FB4;
   border-style: solid;
   border-width: 0 2px 2px 2px;
 }
 
 #Rules #changeAndrefund #table-note tr:first-child {
   border-width: 2px;
-  border-color: #E6A046;
+  border-color: #8C5FB4;
 }
 
 #Rules #changeAndrefund #table-note tr:last-child {
