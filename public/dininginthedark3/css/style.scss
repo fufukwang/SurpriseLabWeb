@@ -70,11 +70,11 @@ h3 {
   font-size: 36px;
   font-weight: 900;
   line-height: 1;
-  letter-spacing: 10.8px;
-  padding-left: 10.8px;
+  letter-spacing: 7.2px;
+  padding-left: 7.2px;
   text-align: center;
   margin-bottom: 14px;
-  color: $color-k10;
+  color: $color-k50;
 
   @media (max-width: 1440px) {
     font-size: 30px;
@@ -89,12 +89,12 @@ h3 {
 
 h4 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   text-align: center;
-  color: $color-k10;
+  color: $color-purple;
 
   @media (max-width: 1199.98px) {
     font-size: 10px;
@@ -188,10 +188,10 @@ p {
   min-width: 210px;
   text-align: center;
   font-size: 18px;
-  color: $color-k10;
+  color: $color-gold;
   letter-spacing: 1.8px;
   padding: 10px 30px;
-  border: 1px solid $color-k10;
+  border: 1px solid $color-gold;
   border-radius: 30px;
   transition: 0.3s;
 
@@ -200,9 +200,9 @@ p {
   }
 
   &:hover {
-    background-color: $color-k10;
-    border: 1px solid $color-k10;
-    color: $color-dark-brown;
+    background-color: $color-gold;
+    border: 1px solid $color-gold;
+    color: $color-k10;
   }
 
   &.btn-outline-small {
@@ -239,14 +239,22 @@ p {
   font-weight: 500;
 }
 
+.highlight-dark {
+  color: $color-gold;
+}
+
+.color-k0 {
+  color: $color-k0;
+}
+
+.color-golden { 
+  color: $color-gold; 
+}
+
 .normal-lineHeight {
   &, & p {
     line-height: 1;
   }
-}
-
-.highlight-dark {
-  color: $color-gold;
 }
 
 #td_day {
@@ -278,8 +286,7 @@ p {
     top: 60px;
     right: 0;
     transform: none;
-    background-image: url('../img/wallpaper.png');
-    background-repeat: repeat;
+    background-image: url('../img/home/bg-wallpaper.jpg');
     background-size: auto;
     transition: opacity 0.8s;
 
@@ -335,13 +342,14 @@ p {
     a {
       text-transform: uppercase;
       letter-spacing: 0.8px;
+      color: $color-k50;
     }
 
     &::after {
       content: '';
       width: 5px;
       height: 2px;
-      background-color: $color-k10;
+      background-color: $color-k50;
       position: absolute;
       top: 50%;
       right: -85px;
@@ -355,11 +363,11 @@ p {
 
     &.active {
       a {
-        color: $color-k10;
+        color: $color-gold;
       }
 
       &::after {
-        background-color: $color-k10;
+        background-color: $color-gold;
         width: 48px;
 
         @media (max-width: 1024px) {
@@ -369,6 +377,10 @@ p {
     }
 
     &:hover {
+      a {
+        color: $color-k10;
+      }
+
       &::after {
         background-color: $color-k10;
         width: 60px;
@@ -386,7 +398,7 @@ p {
   position: fixed;
   right: 44px;
   bottom: 56px;
-  z-index: 999;
+  z-index: 10000;
 
   @media (max-width: 1024px) {
     right: 20px;
@@ -405,6 +417,7 @@ p {
     i {
       font-size: 30px;
       transition: 0.3s;
+      color: $color-k50;
     }
 
     &:hover {
@@ -459,15 +472,20 @@ header.logo {
   top: 0;
   z-index: 9999;
   padding: 0 20px;
-  background-color: rgba($color-dark-brown, 0.8);
+  background-image: url(../img/home/bg-wallpaper.jpg);
+  background-color: $color-dark-brown;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s;
 
   &.scroll-background-color {
-    background-color: rgba($color-dark-brown, 0.8);
+    background-image: none;
+    background-color: transparent;
   }
 
   @media (max-width: 1199.98px) {
     background-color: $color-dark-brown;
-    background-size: auto;
 
     &.scroll-background-color {
       background-color: $color-dark-brown;
@@ -475,7 +493,7 @@ header.logo {
   }
 
   a {
-    height: 29px;
+    height: 40px;
     line-height: 120px;
     transition: 0.3s;
 
@@ -753,14 +771,13 @@ header.logo {
         background-color: $color-k10;
   
         .progress-bar {
-          background-color: $color-k10;
+          background-color: $color-purple;
           border-radius: 12px;
         }
       }
   
       .sale-progress-info {
         @include baseCounter('padding-top', 23.5);
-        @include baseCounter('padding-bottom', 178);
   
         .highlight {
           font-size: 24px;
@@ -817,17 +834,8 @@ header.logo {
   // 選擇票券
   .sec-ticket-type {
 
-    @media (max-width: 1440px) {
-      max-width: 900px;
-    }
-
-    @media (max-width: 1199.98px) {
-      max-width: 797px;
-    }
-
     .ticket-type {
       display: flex;
-      @include baseCounter('padding-top', 45);
       @include baseCounter('padding-bottom', 80);
       width: 1115px;
       max-width: 100%;

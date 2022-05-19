@@ -42,7 +42,6 @@
 </head>
 
 <body class="loading">
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCD7VGK"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -51,7 +50,10 @@
     <!-- Anchor menu -->
     <nav class="anchor-wrapper">
         <ul>
-            <li class="active">
+            <li class="d-none active">
+                <a class="smoothScroll intro" href="#Intro">Intro</a>
+            </li>
+            <li>
                 <a class="smoothScroll about" href="#About">About</a>
             </li>
             <li>
@@ -84,13 +86,11 @@
 
     <main class="sections fixed-scroll-anchor">
 
-        <h1>無光晚餐第三季</h1>
-
         <!-- Header LOGO -->
         <div class="logo-wrapper">
             <header class="logo">
                 <a class="smoothScroll" href="#About">
-                    <img src="img/logo_nav.png" alt="無光晚餐第三季">
+                    <img src="img/general/logo_h.svg" alt="無光晚餐第三季">
                 </a>
                 <button class="hamburger">
                     <span class="current-section">About</span>
@@ -107,71 +107,83 @@
             <div class="lighting-inner">
                 <div class="mask-box">
 
+                    <!-- Section0 Intro -->
+                    <section class="anchor-section" id="Intro">
+
+                        <h1>無光晚餐第三季</h1>
+                        
+                        <!-- Intro -->
+                        <div class="fullpage section sec-intro">
+                            <div class="intro-wrap">
+
+                                <!-- 底圖 -->
+                                <div class="slogan-img show-1 shadow">
+                                    <img src="img/home/about/intro-slogan-shadow.png" alt="無光晚餐第三季">
+                                    <img src="img/home/about/intro-slogan-shadow.png" alt="無光晚餐第三季">
+                                </div>
+
+                                <!-- 文字 -->
+                                <div class="slogan-img show-1">
+                                    <img src="img/home/about/intro-slogan.png" alt="無光晚餐第三季">
+                                    <img src="img/home/about/intro-slogan.png" alt="無光晚餐第三季">
+                                </div>
+                            </div>
+
+                            <a class="smoothScroll btn-scroll-down" href="#Experience">
+                                <img class="img-fluid" src="img/icon/icon-arrow.svg" alt="scroll-down">
+                            </a>
+                        </div>
+                    </section>
+
                     <!-- Section1 About -->
                     <section class="anchor-section" id="About">
 
                         <h2>About</h2>
                         
-                        <!-- Intro -->
-                        <div class="main-slogan">
-
-                            <!-- 底圖 -->
-                            <div class="slogan-img show-1 shadow">
-                                <img src="img/about/slogan-fin-bg.png" alt="無光晚餐第三季">
-                                <img src="img/about/slogan-fin-bg.png" alt="無光晚餐第三季">
-                            </div>
-
-                            <!-- 文字 -->
-                            <div class="slogan-img show-1">
-                                <img src="img/about/slogan-fin.png" alt="無光晚餐第三季">
-                                <img src="img/about/slogan-fin.png" alt="無光晚餐第三季">
-                            </div>
-                        </div>
-
                         <!-- Exp -->
-                        <div class="section sec-experience">
-                            <div class="season-two-about">
-                                <h1 class="title">
-                                    體驗內容
-                                </h1>
-                                <h3 class="sub-title">
-                                    Experience
-                                </h3>
-                                <div class="about-box">
-                                    <div class="row">
-                                        <div class="col-md-4">
+                        <div class="section sec-experience" id="Experience">
+
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>體驗內容</h3>
+                                    <h4>Experience</h4>
+                                </div>
+                            </div>
+
+                            <div class="about-box">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div>
                                             <div>
-                                                <div>
-                                                    <img src="img/about/about-1.png" alt="">
-                                                    <img src="img/about/about-1-shadow.png" alt="">
-                                                </div>
-                                                <p class="golden-font">
-                                                    九十分鐘
-                                                </p>
+                                                <img src="img/home/about/about-1.png" alt="九十分鐘">
+                                                <img src="img/home/about/about-1-shadow.png" alt="九十分鐘">
                                             </div>
+                                            <p class="color-golden">
+                                                九十分鐘
+                                            </p>
                                         </div>
-                                        <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div>
                                             <div>
-                                                <div>
-                                                    <img src="img/about/about-2.png" alt="">
-                                                    <img src="img/about/about-2-shadow.png" alt="">
-                                                </div>
-                                                <p class="golden-font">
-                                                    五道料理<br >
-                                                    <span style="font-size: 16px;letter-spacing: 1px;color: white;">（葷／蛋奶素）</span>
-                                                </p>
+                                                <img src="img/home/about/about-2.png" alt="五道料理">
+                                                <img src="img/home/about/about-2-shadow.png" alt="五道料理">
                                             </div>
+                                            <p class="color-golden">
+                                                五道料理<br/>
+                                                <span class="color-k0">（葷／蛋奶素）</span>
+                                            </p>
                                         </div>
-                                        <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div>
                                             <div>
-                                                <div>
-                                                    <img src="img/about/about-3.png" alt="">
-                                                    <img src="img/about/about-3-shadow.png" alt="">
-                                                </div>
-                                                <p class="golden-font">
-                                                    無限驚喜
-                                                </p>
+                                                <img src="img/home/about/about-3.png" alt="無限驚喜">
+                                                <img src="img/home/about/about-3-shadow.png" alt="無限驚喜">
                                             </div>
+                                            <p class="color-golden">
+                                                無限驚喜
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -213,14 +225,6 @@
                                     </div>
 
                                     <div class="sale-progress-info">
-                                        <!--div class="d-inline-block d-sm-flex normal-lineHeight">
-                                            <p>
-                                                已售出 <span class="highlight">14610</span> 票
-                                            </p>
-                                            <p class="ml-auto text-right highlight-dark progress-percent-area">
-                                                已完成 <span class="highlight">50</span> %
-                                            </p>
-                                        </div-->
                                         <div class="d-inline-block d-sm-flex normal-lineHeight">
                                             <p>
                                                 已售出 <span class="highlight total-sale">1600</span> 張<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 張</span>
@@ -257,23 +261,19 @@
                                     <div class="type-item type-matinee">
                                         <a href="https://surpriselab.backme.tw/checkout/2296/18276?locale=zh-TW
                                     " class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_1.png?v=0.5" alt="單人自在票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_1_mobile.png?v=0.5" alt="單人自在票">
-                                            <p class="ticket-state d-none d-sm-block">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.1" alt="單人自在票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.1" alt="單人自在票">
+                                            <p class="ticket-state">
                                                 <!--已售完
                                                 四人以上未滿八人者<br/>
                                                 可依數量加購原價暢行無阻票-->
                                             </p>
-                                            <p class="ticket-state d-block d-sm-none">
-                                                <!--已售完四人以上未滿八人者 可依數量加購原價暢行無阻票-->
-                                            </p>
-
                                         </a>
                                     </div>
                                     <div class="type-item type-great-tipsy">
                                         <a href="https://surpriselab.backme.tw/checkout/2296/18275?locale=zh-TW" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_2.png?v=0.5" alt="雙人共享票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_2_mobile.png?v=0.5" alt="雙人共享票">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-2.png?v=0.1" alt="雙人共享票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-2-mobile.png?v=0.1" alt="雙人共享票">
                                             <p class="ticket-state timeLimit">
                                                 限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                                     class="highlight rest-ticket">XXX</span> 張
@@ -282,8 +282,8 @@
                                     </div>
                                     <div class="type-item type-group">
                                         <a href="https://surpriselab.backme.tw/checkout/2296/18274?locale=zh-TW" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket_face_3.png?v=0.5" alt="六人沈醉票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket_face_3_mobile.png?v=0.5" alt="六人沈醉票">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-3.png?v=0.1" alt="六人沈醉票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-3-mobile.png?v=0.1" alt="六人沈醉票">
                                             <p class="ticket-state sixShare">
                                                 限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                                     class="highlight rest-ticket">XXX</span> 張

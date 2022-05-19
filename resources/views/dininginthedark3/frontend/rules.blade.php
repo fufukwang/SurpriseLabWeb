@@ -50,31 +50,21 @@
 
     <!-- Anchor menu -->
     <nav class="anchor-wrapper">
-        <div class="mobile-menu-hand">
-            <!-- Mr Tipsy's hand in mobile -->
-        </div>
         <ul>
             <li>
-                <a class="lobby" href="index.html#Lobby">Lobby</a>
+                <a class="smoothScroll about" href="index.html#Intro">About</a>
             </li>
             <li>
-                <a class="about" href="index.html#About">About</a>
-            </li>
-            <li>
-                <a class="ticket" href="index.html#Ticket">Ticket</a>
+                <a class="smoothScroll ticket" href="index.html#Ticket">Ticket</a>
             </li>
             <li class="active">
-                <a class="rules" href="rules.html">Rules</a>
+                <a class="smoothScroll rules" href="rules.html">Rules</a>
             </li>
             <li>
-                <a class="library" href="index.html#Library">Library</a>
-            </li>
-            <li>
-                <a class="contact" href="index.html#Contact">Contact</a>
+                <a class="smoothScroll contact" href="index.html#Contact">Contact</a>
             </li>
         </ul>
     </nav>
-    <!-- End anchor menu -->
 
     <!-- Social Links -->
     <aside class="social-wrapper">
@@ -91,23 +81,28 @@
             </li>
         </ul>
     </aside>
-    <!-- End Social Links -->
 
     <main class="sections">
+
+        <h1>無光晚餐第三季劃位規則</h1>
+
         <!-- Header LOGO -->
-        <header class="logo">
-            <a href="index.html">
-                <img src="img/logo_nav.png" alt="The Great Tipsy">
-            </a>
-            <button class="hamburger">
-                <span class="current-section">Lobby</span>
-                <span class="current-menu">Menu</span>
-                <span class="menu">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </span>
-            </button>
-        </header>
+        <div class="logo-wrapper">
+            <header class="logo">
+                <a class="smoothScroll" href="index.html">
+                    <img src="img/general/logo_h.svg" alt="無光晚餐第三季">
+                </a>
+                <button class="hamburger">
+                    <span class="current-section">Rules</span>
+                    <span class="current-menu">Menu</span>
+                    <span class="menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </span>
+                </button>
+            </header>
+        </div>
+
         <ul class="nav nav-tabs justify-content-center" id="rules-tab-switcher">
             <li class="nav-link" data="0">
                 問與答
