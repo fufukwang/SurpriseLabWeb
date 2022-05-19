@@ -2,15 +2,9 @@
 @import url("https://use.typekit.net/cax2ztr.css");
 body {
   background-color: #2D2D2D !important;
-  background-image: url("../img/wallpaper.jpg");
+  background-image: url(../img/home/bg-wallpaper.jpg);
   background-repeat: repeat;
-  background-size: 15%;
-}
-
-@media screen and (max-width: 1199.98px) {
-  body {
-    background-size: auto;
-  }
+  background-size: 100%;
 }
 
 header.logo {
@@ -37,7 +31,7 @@ header.logo {
   z-index: 9999;
   top: 120px;
   background-color: #2D2D2D;
-  background-image: url("../img/wallpaper.jpg");
+  background-image: url(../img/home/bg-wallpaper.jpg);
   background-repeat: repeat;
   background-size: 15%;
 }
