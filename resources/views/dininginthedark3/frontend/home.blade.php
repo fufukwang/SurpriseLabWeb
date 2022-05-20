@@ -10,7 +10,7 @@
     <meta property="og:site_name" content="無光晚餐第三季"/>
     <meta property="og:description" content="We don't meet people by accident. We meet for a reason."/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/dininginthedark3"/>
-    <meta property="og:image" content="https://www.surpriselab.com.tw/dininginthedark3/img/opengraph.png?v=0.1"/>
+    <meta property="og:image" content="https://www.surpriselab.com.tw/dininginthedark3/img/general/opengraph.png?v=0.1"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
@@ -19,7 +19,7 @@
     <title>無光晚餐第三季</title>
 
     <!-- Style -->
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/general/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/plugins/bootstrap-4.1.0/bootstrap.css"/>
     <link rel="stylesheet" href="css/plugins/aos/aos.min.css"/>
 
