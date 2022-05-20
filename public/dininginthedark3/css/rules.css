@@ -86,28 +86,8 @@ header.logo {
   }
 }
 
-@media (min-width: 1200px) {
-  #Rules {
-    padding-top: calc((608px + 30px) * 0);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules {
-    padding-top: calc((768px + 30px) * 0);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules {
-    padding-top: calc((1088px + 30px) * 0);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules {
-    padding-top: calc(100% * 0);
-  }
+#Rules {
+  padding-top: 120px;
 }
 
 @media (min-width: 1200px) {
@@ -747,6 +727,7 @@ header.logo {
 #Rules #qa-according .card-header .icon-arrow {
   position: absolute;
   text-indent: initial;
+  font-size: 24px;
   right: 11px;
   -webkit-transition: 0.3s;
   transition: 0.3s;

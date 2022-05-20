@@ -4,21 +4,22 @@
     <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
-    <meta name="description" content="歡迎來到《微醺大飯店》——那些你曾經希望能有所不同的事，在這都有可能發生。">
+    <meta name="description" content="We don't meet people by accident. We meet for a reason.">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="微醺大飯店：1980s"/>
-    <meta property="og:site_name" content="微醺大飯店：1980s"/>
-    <meta property="og:description" content="歡迎來到《微醺大飯店》——那些你曾經希望能有所不同的事，在這都有可能發生。"/>
+    <meta property="og:title" content="無光晚餐第三季"/>
+    <meta property="og:site_name" content="無光晚餐第三季"/>
+    <meta property="og:description" content="We don't meet people by accident. We meet for a reason."/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/dininginthedark3"/>
-    <meta property="og:image" content="https://www.surpriselab.com.tw/dininginthedark3/img/opengraph.png"/>
+    <meta property="og:image" content="https://www.surpriselab.com.tw/dininginthedark3/img/general/opengraph.png?v=0.1"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>微醺大飯店：1980s</title>
+    <meta name="facebook-domain-verification" content="mmtxvobzbh451wck03upjlbgtj1i2n" />
+    <title>無光晚餐第三季</title>
 
     <!-- Style -->
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/general/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/plugins/bootstrap-4.1.0/bootstrap.css"/>
 
     <!-- Loading Animation CSS -->
@@ -48,11 +49,30 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Header LOGO -->
+    <header class="logo">
+        <div class="logo-wrapper">
+            <div class="logo-inner">
+                <a class="smoothScroll" href="#Intro">
+                    <img class="img-fluid" src="img/general/logo_h.svg" alt="無光晚餐第三季">
+                </a>
+            </div>
+            <button class="hamburger">
+                <span class="current-section">About</span>
+                <span class="current-menu">Menu</span>
+                <span class="menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
     <!-- Anchor menu -->
     <nav class="anchor-wrapper">
         <ul>
             <li>
-                <a class="smoothScroll about" href="index.html#Intro">About</a>
+                <a class="smoothScroll about" href="index.html#About">About</a>
             </li>
             <li>
                 <a class="smoothScroll ticket" href="index.html#Ticket">Ticket</a>
@@ -66,42 +86,9 @@
         </ul>
     </nav>
 
-    <!-- Social Links -->
-    <aside class="social-wrapper">
-        <ul>
-            <li class="social-link">
-                <a href="https://www.facebook.com/surpriselabtw" target="_blank">
-                    <i class="icon-fb"></i>
-                </a>
-            </li>
-            <li class="social-link">
-                <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
-                    <i class="icon-ig"></i>
-                </a>
-            </li>
-        </ul>
-    </aside>
-
     <main class="sections">
 
-        <h1>無光晚餐第三季劃位規則</h1>
-
-        <!-- Header LOGO -->
-        <div class="logo-wrapper">
-            <header class="logo">
-                <a class="smoothScroll" href="index.html">
-                    <img src="img/general/logo_h.svg" alt="無光晚餐第三季">
-                </a>
-                <button class="hamburger">
-                    <span class="current-section">Rules</span>
-                    <span class="current-menu">Menu</span>
-                    <span class="menu">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </span>
-                </button>
-            </header>
-        </div>
+        <h1>無光晚餐第三季</h1>
 
         <ul class="nav nav-tabs justify-content-center" id="rules-tab-switcher">
             <li class="nav-link" data="0">
@@ -530,7 +517,7 @@
                                 </h5>
                                 <div>
                                     <img class="img-fluid d-none d-sm-block" src="img/other/flow.png" alt="預售流程">
-                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow_mobile.png" alt="預售流程">
+                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-mobile.png" alt="預售流程">
                                 </div>
 
                                 <h5 class="sub-title highlight">
@@ -851,6 +838,22 @@
             </div>
         </section>
     </main>
+
+    <!-- Social Links -->
+    <aside class="social-wrapper">
+        <ul>
+            <li class="social-link">
+                <a href="https://www.facebook.com/surpriselabtw" target="_blank">
+                    <i class="icon-fb"></i>
+                </a>
+            </li>
+            <li class="social-link">
+                <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
+                    <i class="icon-ig"></i>
+                </a>
+            </li>
+        </ul>
+    </aside>
 
     <!-- Bootstrap -->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>

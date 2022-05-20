@@ -47,6 +47,25 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Header LOGO -->
+    <header class="logo">
+        <div class="logo-wrapper">
+            <div class="logo-inner">
+                <a class="smoothScroll" href="#Intro">
+                    <img class="img-fluid" src="img/general/logo_h.svg" alt="無光晚餐第三季">
+                </a>
+            </div>
+            <button class="hamburger">
+                <span class="current-section">About</span>
+                <span class="current-menu">Menu</span>
+                <span class="menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
     <!-- Anchor menu -->
     <nav class="anchor-wrapper">
         <ul>
@@ -68,40 +87,7 @@
         </ul>
     </nav>
 
-    <!-- Social Links -->
-    <aside class="social-wrapper">
-        <ul>
-            <li class="social-link">
-                <a href="https://www.facebook.com/surpriselabtw" target="_blank">
-                    <i class="icon-fb"></i>
-                </a>
-            </li>
-            <li class="social-link">
-                <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
-                    <i class="icon-ig"></i>
-                </a>
-            </li>
-        </ul>
-    </aside>
-
     <main class="sections fixed-scroll-anchor">
-
-        <!-- Header LOGO -->
-        <div class="logo-wrapper">
-            <header class="logo">
-                <a class="smoothScroll" href="#About">
-                    <img src="img/general/logo_h.svg" alt="無光晚餐第三季">
-                </a>
-                <button class="hamburger">
-                    <span class="current-section">About</span>
-                    <span class="current-menu">Menu</span>
-                    <span class="menu">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </span>
-                </button>
-            </header>
-        </div>
 
         <div class="lighting-wrap">
             <div class="lighting-inner">
@@ -121,7 +107,7 @@
                                     <img src="img/home/about/intro-slogan-shadow.png" alt="無光晚餐第三季">
                                     <img src="img/home/about/intro-slogan-shadow.png" alt="無光晚餐第三季">
                                 </div>
-
+    
                                 <!-- 文字 -->
                                 <div class="slogan-img show-1">
                                     <img src="img/home/about/intro-slogan.png" alt="無光晚餐第三季">
@@ -151,39 +137,41 @@
                             </div>
 
                             <div class="about-box">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
                                             <div>
-                                                <img src="img/home/about/about-1.png" alt="九十分鐘">
-                                                <img src="img/home/about/about-1-shadow.png" alt="九十分鐘">
+                                                <div>
+                                                    <img src="img/home/about/about-1.png" alt="九十分鐘">
+                                                    <img src="img/home/about/about-1-shadow.png" alt="九十分鐘">
+                                                </div>
+                                                <p class="color-gold">
+                                                    九十分鐘
+                                                </p>
                                             </div>
-                                            <p class="color-golden">
-                                                九十分鐘
-                                            </p>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div>
+                                        <div class="col-md-4 col-12">
                                             <div>
-                                                <img src="img/home/about/about-2.png" alt="五道料理">
-                                                <img src="img/home/about/about-2-shadow.png" alt="五道料理">
+                                                <div>
+                                                    <img src="img/home/about/about-2.png" alt="五道料理">
+                                                    <img src="img/home/about/about-2-shadow.png" alt="五道料理">
+                                                </div>
+                                                <p class="color-gold">
+                                                    五道料理<br/>
+                                                    <span class="color-k0">（葷／蛋奶素）</span>
+                                                </p>
                                             </div>
-                                            <p class="color-golden">
-                                                五道料理<br/>
-                                                <span class="color-k0">（葷／蛋奶素）</span>
-                                            </p>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div>
+                                        <div class="col-md-4 col-12">
                                             <div>
-                                                <img src="img/home/about/about-3.png" alt="無限驚喜">
-                                                <img src="img/home/about/about-3-shadow.png" alt="無限驚喜">
+                                                <div>
+                                                    <img src="img/home/about/about-3.png" alt="無限驚喜">
+                                                    <img src="img/home/about/about-3-shadow.png" alt="無限驚喜">
+                                                </div>
+                                                <p class="color-gold">
+                                                    無限驚喜
+                                                </p>
                                             </div>
-                                            <p class="color-golden">
-                                                無限驚喜
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -307,8 +295,58 @@
                                         <h3>預售劃位流程</h3>
                                         <h4>Pre-Sale Schedule</h4>
                                     </div>
+                                    <p class="section-desc">
+                                        無光晚餐採取先預購、後劃位的方式訂位<br/>
+                                        依照購買票券、購買日期順序寄送劃位信
+                                    </p>
                                 </div>
                                 
+                                <div class="presale-process">
+                                    <div class="step-wrap">
+                                        <div class="presale-step">
+                                            <div class="step-title">
+                                                <div class="step-icon">
+                                                    <img class="img-fluid" src="img/home/process/process-1.png" alt="先預購">
+                                                </div>
+                                                <h6 class="color-gold">先預購</h6>
+                                            </div>
+                                            <div class="step-desc">
+                                                <p>
+                                                    約好想一起來的那個人，<br/>
+                                                    並於無光晚餐官網購買票券
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="presale-step">
+                                            <div class="step-title">
+                                                <div class="step-icon">
+                                                    <img class="img-fluid" src="img/home/process/process-2.png" alt="後劃位">
+                                                </div>
+                                                <h6 class="color-gold">後劃位</h6>
+                                            </div>
+                                            <div class="step-desc">
+                                                <p>
+                                                    你將於指定時間收到劃位序號，<br/>
+                                                    並可透過線上劃位系統，訂好用餐時間
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="presale-step">
+                                            <div class="step-title">
+                                                <div class="step-icon">
+                                                    <img class="img-fluid" src="img/home/process/process-3.png" alt="來體驗">
+                                                </div>
+                                                <h6 class="color-gold">來體驗</h6>
+                                            </div>
+                                            <div class="step-desc">
+                                                <p>
+                                                    於訂位時間，和你的伴侶、朋友、家人至無光晚餐，<br/>
+                                                    享受黑暗中的探索時光
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -476,6 +514,22 @@
             </div>
         </div>
     </main>
+
+    <!-- Social Links -->
+    <aside class="social-wrapper">
+        <ul>
+            <li class="social-link">
+                <a href="https://www.facebook.com/surpriselabtw" target="_blank">
+                    <i class="icon-fb"></i>
+                </a>
+            </li>
+            <li class="social-link">
+                <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
+                    <i class="icon-ig"></i>
+                </a>
+            </li>
+        </ul>
+    </aside>
 
     <!-- Bootstrap -->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>

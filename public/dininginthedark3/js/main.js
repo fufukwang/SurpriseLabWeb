@@ -165,6 +165,7 @@ $(document).ready(function () {
     });
 
     // mobile hamburger button effect
+    var win = $(window);
     var body = $('body');
     var nav = $('.anchor-wrapper');
     var hamburger = $('.hamburger');
@@ -218,7 +219,7 @@ $(document).ready(function () {
 
     // remove mobile menu effect in PC
     $(window).resize(function () {
-        if ($(window).width() >= 1024) {
+        if ($(window).width() >= 1199.98) {
             hamburger.removeClass('menu-open');
             iconBar.removeClass('active');
             currentMenu.hide();

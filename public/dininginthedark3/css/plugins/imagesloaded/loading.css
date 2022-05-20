@@ -5,7 +5,7 @@
 }
 
 html {
-	background: #281f1c;
+	background: #2D2D2D;
 }
 
 body::before {
@@ -16,7 +16,7 @@ body::before {
 	left: 0;
 	width: 100vw;
 	height: 100%;
-	background: #281f1c;
+	background: #2D2D2D;
 	opacity: 0;
 	transition: opacity 0.8s;
 	pointer-events: none;
@@ -49,7 +49,7 @@ body::before {
 	pointer-events: none;
 	border-radius: 50%;
 	opacity: 0.4;
-	background: #EFC27B;
+	background: #B28247;
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
 }
 

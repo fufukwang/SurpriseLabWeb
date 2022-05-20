@@ -82,7 +82,7 @@ header.logo {
 }
 
 #Rules {
-  @include baseCounter('padding-top', 0);
+  padding-top: 120px;
   @include baseCounter('padding-bottom', 0);
 
   .feature-btn {
@@ -278,6 +278,7 @@ header.logo {
       .icon-arrow {
         position: absolute;
         text-indent: initial;
+        font-size: 24px;
         right: 11px;
         transition: 0.3s;
         transform: rotate(180deg);

@@ -5,9 +5,9 @@
 .loaded { 
     opacity: 1;
 
-    &:after { 
-        display: none; 
-    }
+    // &:after { 
+    //     display: none; 
+    // }
 }
 
 @keyframes fade { 
@@ -37,6 +37,11 @@
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
+
+        @media (max-width: 1199.98px) {
+            background-size: auto;
+            background-repeat: repeat-y;
+        }
     }
 
     .lighting-inner {
@@ -52,8 +57,15 @@
             .sec-intro {
                 position: relative;
 
+                @media (max-width: 1199.98px) { 
+                    margin-top: 60px;
+                    padding-top: 84px;
+                    text-align: center;
+                }
+
                 // 無光介紹
                 .intro-wrap {
+                    width: 100%;
                     max-width: 715px;
                     position: relative;
                     z-index: 1000;
@@ -61,6 +73,11 @@
                     padding-top: 40vh;
                     padding-bottom: 10vh;                
                     text-align: center;
+
+                    @media (max-width: 1199.98px) { 
+                        position: static;
+                        padding: 0 20px;
+                    }
         
                     .slogan-img {
                         width: 560px; 
@@ -69,12 +86,11 @@
                         left: 50%;
                         margin: 0 0 0 -280px;
 
-                        @media (max-width: 1199.98px) { 
+                        @media (max-width: 1199.98px) {
+                            width: 100%; 
+                            position: static;
                             opacity: 1; 
                             margin-left: 0; 
-                            left: 0; 
-                            width: 100%; 
-                            padding: 20px; 
                         }
 
                         img { 
@@ -126,8 +142,19 @@
                     opacity: 0.5;
                     transition: opacity 0.3s;
 
+                    @media (max-width: 1199.98px) { 
+                        display: inline-block;
+                        position: static;
+                        transform: unset;
+                        margin-top: 72px;
+                    }
+
                     &:hover {
                         opacity: 0.8;
+                    }
+
+                    img {
+                        width: 100%;
                     }
                 }
             }
@@ -143,7 +170,6 @@
     padding: 20px;
 
     @media (max-width: 1199.98px) { 
-        margin-top: 150px; 
         opacity: 1;
     }
 
@@ -158,8 +184,6 @@
     
         p { 
             padding-top: 15px; 
-            font-size: 19px; 
-            letter-spacing: 2.5px; 
         
             @media (max-width: 1199.98px) { 
                 margin-top: -25px; 
@@ -179,7 +203,7 @@
     
         .col-md-4 {
             @media (max-width: 1199.98px) { 
-                margin-bottom: 60px; 
+                margin-bottom: 30px; 
             }
     
             & > div { 
@@ -224,7 +248,9 @@
     margin-left: -400px;
     opacity: 0.75;
 
-    @media (max-width: 1199.98px) { 
+    @media (max-width: 1199.98px) {
+        display: none;
+        position: static;
         opacity: 0.35; 
     }
 }
