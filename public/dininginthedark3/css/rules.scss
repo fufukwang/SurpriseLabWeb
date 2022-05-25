@@ -36,7 +36,7 @@ header.logo {
   background-color: $color-dark-brown;
   background-image: url(../img/home/bg-wallpaper.jpg);
   background-repeat: repeat;
-  background-size: 15%;
+  background-size: 100%;
 
   .nav-link.active,
   .nav-link:hover {
@@ -405,18 +405,18 @@ header.logo {
 
         &.light-bg,
         &.light-bg td {
-          background: #272523 !important;
+          background-color: $color-k90 !important;
         }
       }
 
       th {
-        background: $color-k10;
-        border-right: solid 1px $color-k10;
+        background-color: $color-purple;
+        border-right: solid 1px $color-k90;
         @include baseCounter('padding-top', 15);
         @include baseCounter('padding-bottom', 15);
         text-align: center;
         letter-spacing: 1.8px;
-        color: #39351c;
+        color: $color-k100;
         font-weight: normal;
 
         &:last-child {
@@ -449,12 +449,8 @@ header.logo {
         background-color: $color-dark-brown;
         border-right: solid 1px $color-k10;
 
-        &:last-child {
-          border-right: 0;
-        }
-
         &.highlight-td {
-          background: $color-k10;
+          background-color: $color-k80;
           color: $color-k10;
           font-weight: 500;
         }
