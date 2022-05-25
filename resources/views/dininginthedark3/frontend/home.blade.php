@@ -48,7 +48,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header LOGO -->
-    <header class="logo">
+    <header class="logo scroll-background-color">
         <div class="logo-wrapper">
             <div class="logo-inner">
                 <a class="smoothScroll" href="#Intro">
