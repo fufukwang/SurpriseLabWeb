@@ -1,17 +1,17 @@
 jQuery(function($){
-    var sections = $('.anchor-section');
-    var nav = $('.anchor-wrapper');
-    var header = $('.logo');
-    var navHeight = header.outerHeight();
-    var social = $('.social-wrapper');
-    var win = $(window);
-    var scrollHeight = win.height() - 200;
-    var smoothScroll = $('.smoothScroll');
-    var mobileCurrent = $('.current-section');
+    let sections = $('.anchor-section');
+    let nav = $('.anchor-wrapper');
+    let header = $('.logo');
+    let navHeight = header.outerHeight();
+    let social = $('.social-wrapper');
+    let win = $(window);
+    let scrollHeight = win.height() - 200;
+    let smoothScroll = $('.smoothScroll');
+    let mobileCurrent = $('.current-section');
 
     function setIntervalX(callback, delay, repetitions) {
-        var x = 0;
-        var intervalID = window.setInterval(function () {
+        let x = 0;
+        let intervalID = window.setInterval(function () {
 
             callback();
 
@@ -22,7 +22,7 @@ jQuery(function($){
     }
 
     // Rules slider
-    var owl = $('.rules.owl-carousel').owlCarousel({
+    let owl = $('.rules.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
         items: 1,
@@ -40,7 +40,7 @@ jQuery(function($){
     });
 
     // Rules fadeIn
-    var rulesTab = $('#rules-tab-switcher');
+    let rulesTab = $('#rules-tab-switcher');
 
     rulesTab.on('click', 'li', function () {
         window.clickTab = $(this);
@@ -69,7 +69,7 @@ jQuery(function($){
     });
 
     // Fix QA toggle icon issue
-    var qa = $('#qa-according').collapse();
+    let qa = $('.rule-according').collapse();
     qa.on('show.bs.collapse', function (e) {
         qa.find('h6').removeClass('is-open');
         $(e.target).prev().find('h6').addClass('is-open');
@@ -81,19 +81,19 @@ jQuery(function($){
         }, 300);
     });
 
-    var qa_content = $('#qa-according .card-body');
+    let qa_content = $('.rule-according .card-body');
     qa_content.on('click', function () {
-        var qa_toggler = $(this).parent().prev().find('h6');
+        let qa_toggler = $(this).parent().prev().find('h6');
         if (qa_toggler.hasClass('is-open')) {
             qa_toggler.click();
         }
     });
 
     // mobile hamburger button effect
-    var hamburger = $('.hamburger');
-    var iconBar = $('.icon-bar');
-    var currentMenu = $('.current-menu');
-    var body = $('body');
+    let hamburger = $('.hamburger');
+    let iconBar = $('.icon-bar');
+    let currentMenu = $('.current-menu');
+    let body = $('body');
 
     mobileCurrent.html('Rules');
 

@@ -108,17 +108,16 @@
                 <div class="rules owl-carousel owl-theme">
                     <div class="item">
                         <div id="qa">
-                            <!------------->
-                            <h3>問與答</h3>
-                            <!------------->
-                            <div class="sub-title-wrapper">
-                                <h4>
-                                    <span>Q&A</span>
-                                </h4>
+                            
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>問與答</h3>
+                                    <h4>Q&A</h4>
+                                </div>
                             </div>
 
                             <div class="tab-content-inner">
-                                <div id="qa-according">
+                                <div class="rule-according" id="qa-according">
                                     <div class="card">
                                         <div class="card-header" id="qa1-header">
                                             <h6 data-toggle="collapse" data-target="#qa1" aria-expanded="false"
@@ -147,7 +146,7 @@
                                         <div id="qa2" class="collapse" aria-labelledby="qa2-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                            沒有關連，為一新的故事與體驗，角色設定與時代背景皆不同，沒有看過2019年《微醺大飯店》也沒問題，不會有接續之問題。
+                                            沒有關聯，為一新的故事與體驗，角色設定與時代背景皆不同，沒有看過2019年《微醺大飯店》也沒問題，不會有接續之問題。
                                             </div>
                                         </div>
                                     </div>
@@ -163,7 +162,7 @@
                                         <div id="qa3" class="collapse" aria-labelledby="qa3-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                                製作團隊一樣是【驚喜製造】與【進港浪製作】，演員為重新徵選，最適合角色的方式選角，或有重複，但並非《微醺大飯店》同卡司演員。
+                                                製作團隊一樣是【驚喜製造 Surprise Lab.】與【進港浪製作】，演員為重新徵選，最適合角色的方式選角，或有重複，但並非《微醺大飯店》同卡司演員。
                                             </div>
                                         </div>
                                     </div>
@@ -502,18 +501,17 @@
 
                     <div class="item">
                         <div id="presale-rules">
-                            <!------------->
-                            <h3>預售劃位</h3>
-                            <!------------->
-                            <div class="sub-title-wrapper">
-                                <h4>
-                                    <span>presale rules</span>
-                                </h4>
+                            
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>預售劃位</h3>
+                                    <h4>Presale Rules</h4>
+                                </div>
                             </div>
 
                             <div class="tab-content-inner">
                                 <h5 class="sub-title highlight">
-                                    預售流程
+                                    先購票後劃位
                                 </h5>
                                 <div>
                                     <img class="img-fluid d-none d-sm-block" src="img/other/flow.png" alt="預售流程">
@@ -521,11 +519,11 @@
                                 </div>
 
                                 <h5 class="sub-title highlight">
-                                    預售說明
+                                    最新可購票場次
                                 </h5>
                                 <p class="text-left">
-                                    《微醺大飯店：1980s》預售票現正預售中<br/>
-                                    可劃位日期：04/21 - 05/01<br/><br/>
+                                    《微醺大飯店：1980s》02/08-03/20 期間演出<br/>
+                                    * 在這段時間以前的票券，已經全數販售完畢<br/><br/>
                                 </p>
                                 <ul>
                                     <li>點選直購連結完成劃位後，即會收到訂位確認信（將寄送至訂位時填寫之信箱，請確保信箱能夠正確收信）。</li>
@@ -534,132 +532,95 @@
                                 </ul>
 
                                 <h5 class="sub-title highlight">
-                                    劃位序號
+                                    劃位流程
                                 </h5>
                                 <ul>
-                                    <li>劃位序號依據不同的購票梯次，能劃位的日期不同，詳情請參考下方預售劃位期限與序號規則。</li>
-                                    <li>劃位序號將於劃位之指定日期當天收到，可自行選擇日期與時段，序號僅可使用一次，請務必謹慎選擇。</li>
-                                    <li>單人票券：一個序號一個名額。若購買三張單人票，會收到三組序號，可分開日期使用。</li>
-                                    <li>雙人票：雙人套票，僅有一組序號，無法分開使用，須參加同日期同場次演出。</li>
-                                    <li>六人票：團體套票，僅有一組序號，無法分開使用，須參加同日期同場次演出。</li>
-                                    <li>劃位序號過期視為放棄權益，將無法退費與劃位其他演出時段，請務必留意。</li>
-                                </ul>
-                                <p class="text-left">
-                                    ＊早鳥票適用單人票規則
-                                </p>
-
-                                <h5 class="sub-title highlight">
-                                    線上劃位
-                                </h5>
-                                <ul>
-                                    <li>劃位序號將會寄送至購票時填寫的訂位信箱，請確保信箱能正確收信。</li>
-                                    <li>信件內含有專屬劃位序號與訂位頁面連結，選定日期與時段，輸入劃位序號扣抵，即完成劃位。</li>
-                                    <li>同日期時段可同時填入多組劃位序號，不受票種限制。如購買三張單人票與一張六人票，可同時輸入四次序號完成扣抵。</li>
+                                    <li>付款後，將由電子郵件收到劃位序號。憑劃位序號在指定時間內選定場次，即可劃位完成。</li>
+                                    <li>劃位序號只能使用一次，超過指定時間不使用將視同放棄權益，無法用再度劃位、退費、改期、轉讓</li>
+                                    <li>請注意信箱是否於購票完畢後收到購買確認郵件，若填寫錯誤或無法收信，將無法收取劃位序號。</li>
                                 </ul>
 
                                 <h5 class="sub-title highlight">
-                                    預售劃位期限與序號規則
+                                    多人劃位
                                 </h5>
-
-                                <p class="category-title">
-                                    第一批賓客
+                                <p class="text-left">
+                                    【單人自在票】<br/>
+                                    一個名額對應一組序號，多張票可分別劃位不同場次演出。<br/><br/>
+                                    【雙人共享票】<br/>
+                                    僅有一組序號，無法分開使用，須劃位同一天同場次演出。<br/><br/>
+                                    【六人沈醉票】<br/>
+                                    僅有一組序號，無法分開使用，須劃位同一天同場次演出。<br/><br/>
+                                    ※ 多人同行建議事先溝通，一起選定至少三組可以的日期時段，以免某時段已經約滿，無法即時完成劃位。
                                 </p>
-                                <ul>
-                                    <li>可劃位：01/15 - 02/07 之間的演出場次</li>
-                                    <li>序號失效日期：12/25（五）18:00 整。</li>
-                                </ul>
 
-                                <p class="category-title">
-                                    第二批賓客
+                                <h5 class="sub-title highlight">
+                                    歷年賓客劃位批次
+                                </h5>
+                                <p class="text-left">
+                                    購票後，劃位時間將依照購票梯次分批安排。
                                 </p>
-                                <ul>
-                                    <li>可劃位：02/20 - 03/31 之間的演出場次</li>
-                                    <li>序號失效日期：01/29（五）18:00 整。</li>
-                                </ul>
 
-                                <p class="category-title">
-                                    第三批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 04/01 - 05/16 之間的演出場次</li>
-                                    <li>序號失效日期： 03/26（五）18:00 整。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第四批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 05/28 - 06/30 之間的演出場次</li>
-                                    <li>序號失效日期： 05/14（五）18:00 整。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第五批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 07/01 - 08/15 之間的演出場次</li>
-                                    <li>序號失效日期： 07/09（五）18:00 整。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第六批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 08/16 - 09/26 之間的演出場次</li>
-                                    <li>序號失效日期： 09/10（五）18:00整 。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第七批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 11/01 - 12/31 之間的演出場次</li>
-                                    <li>序號失效日期： 11/12（五）18:00整 。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第八批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 12/01 - 01/30 之間的演出場次</li>
-                                    <li>序號失效日期： 01/14（五）18:00整 。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第九批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 02/08 - 02/28 之間的演出場次</li>
-                                    <li>序號失效日期： 03/04（五）18:00整 。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第十批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 03/02 - 03/20 之間的演出場次</li>
-                                    <li>序號失效日期： 03/18（五）18:00整 。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第十一批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 03/22 - 04/17 之間的演出場次</li>
-                                    <li>序號失效日期： 04/15（五）18:00整 。</li>
-                                </ul>
-
-                                <p class="category-title">
-                                    第十二批賓客
-                                </p>
-                                <ul>
-                                    <li>可劃位： 04/21 - 05/01 之間的演出場次</li>
-                                    <li>序號失效日期： 04/22（五）18:00整 。</li>
-                                </ul>
+                                <div class="tab-content-inner">
+                                    <div class="rule-according" id="#stage-according">
+                                        <div class="card">
+                                            <div class="card-header" id="stage1-header">
+                                                <h6 data-toggle="collapse" data-target="#stage1" aria-expanded="false"
+                                                    aria-controls="stage1" class="collapsed d-flex align-items-center">
+                                                    ・第一批賓客
+                                                    <i class="icon icon-arrow"></i>
+                                                </h6>
+                                            </div>
+    
+                                            <div id="stage1" class="collapse" aria-labelledby="stage1-header">
+                                                <div class="card-body">
+                                                    <ul>
+                                                        <li>可劃位：01/15 - 02/07 之間的演出場次</li>
+                                                        <li>序號失效日期：12/25（五）18:00 整。</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="stage2-header">
+                                                <h6 data-toggle="collapse" data-target="#stage2" aria-expanded="false"
+                                                    aria-controls="stage2" class="collapsed d-flex align-items-center">
+                                                    ・第二批賓客
+                                                    <i class="icon icon-arrow"></i>
+                                                </h6>
+                                            </div>
+    
+                                            <div id="stage2" class="collapse" aria-labelledby="stage2-header">
+                                                <div class="card-body">
+                                                    <ul>
+                                                        <li>可劃位：02/20 - 03/31 之間的演出場次</li>
+                                                        <li>序號失效日期：01/29（五）18:00 整。</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="stage3-header">
+                                                <h6 data-toggle="collapse" data-target="#stage3" aria-expanded="false"
+                                                    aria-controls="stage3" class="collapsed d-flex align-items-center">
+                                                    ・第三批賓客
+                                                    <i class="icon icon-arrow"></i>
+                                                </h6>
+                                            </div>
+    
+                                            <div id="stage3" class="collapse" aria-labelledby="stage3-header">
+                                                <div class="card-body">
+                                                    <ul>
+                                                        <li>可劃位： 04/01 - 05/16 之間的演出場次</li>
+                                                        <li>序號失效日期： 03/26（五）18:00 整。</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <p class="text-left">
-                                    * 序號一經使用即失效，無法重新劃位，請務必謹慎選擇。<br/>
-                                    * 上述劃位與失效日期團隊保留調整與修改之權利，有所調整會另行公佈。<br/>
+                                    * 上述劃位批次與序號失效日期，由驚喜製造 Surprise Lab. 保留調整與修改之權利。<br/>
                                     * 本票券屬於「藝文表演票券」。
                                 </p>
                             </div>
@@ -672,160 +633,166 @@
 
                     <div class="item">
                         <div id="changeAndrefund">
-                            <!------------->
-                            <h3>更改、退費事項</h3>
-                            <!------------->
-                            <div class="sub-title-wrapper">
-                                <h4>
-                                    <span>change, refund</span>
-                                </h4>
+                            
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>改期、轉讓、退費</h3>
+                                    <h4>Change, Refund</h4>
+                                </div>
                             </div>
 
                             <div class="tab-content-inner">
                                 <p class="pre-note">
-                                    預售票券若需更改體驗日期、取消退費，<br/>
-                                    請提供相應的資料，來信微醺大飯店專屬信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
+                                    預售票券若需更改體驗日期、轉讓親友、申請退費，<br/>
+                                    請提供相關資料，來信微醺大飯店專屬信箱 <a class="default-light" href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a>
                                     <br/><br/>
                                     為確保你的權益，請根據需求，詳閱以下規則：
                                 </p>
 
                                 <h5 class="sub-title highlight">
-                                    更改日期、時段
+                                    無法退費項目
                                 </h5>
-                                <ul>
-                                    <li>演出前 10 天（包含演出當日）不提供日期更改，建議將訂位轉讓給親友。</li>
-                                    <li>若需更改日期、時段，請於體驗日十天前來信告知，附上「劃位序號」與「訂位信箱」。<br/>如：欲更改 01/11 的訂位，最晚請於 01/01（含）前來信。</li>
-                                    <li>可更改之日期，以屆時尚有的日期與時段為準。劃位前請先確認相關親友的行程，減少更改座位的可能性。</li>
-                                    <li>一個序號僅有一次更改機會，請務必謹慎使用。</li>
-                                    <li>若購票日即為演出十天內，退費金額為 50% 費用且無法改期，建議將票卷轉讓，演出當天則無法退費，購買前請務必留意。</li>
-                                </ul>
-
-                                <h5 class="sub-title highlight cancel-order">
-                                    取消訂位與退費
-                                </h5>
-                                <ul>
-                                    <li>演出當日不接受改期，若取消亦無法退費，接受將票券轉讓給親友。<br/>來信取消申請日期以正常工作下班時間 18:00 為區分。<br/>如：於 01/15 18:00 前來信，屬於 01/15 之申請；若於當日 18:00 之後來信，則屬於 01/16 之申請。</li>
-                                    <li>演出準時開始，遲到無法入場與退費，為了你的權益，請務必準時抵達。</li>
-                                    <li>演出九天內（不包含演出當日）來信申請，僅退 50% 費用。建議將訂位轉讓給親友。</li>
-                                    <li>演出十天前（不包含演出當日）來信申請，將扣除金流手續費 10% 後退費。<br/>如：01/11 的訂位，最晚請於 01/01（含）前來信。</li>
-                                    <li>購買預售票，寄送劃位序號的前一日申請退費，將不扣除手續費全額退費。</li>
-                                </ul>
+                                <div class="refund-item">
+                                    <div class="circle-item">
+                                        劃位序號<br/>過期不使用者
+                                    </div>
+                                    <div class="circle-item">
+                                        演出當日<br/>申請退費者
+                                    </div>
+                                    <div class="circle-item">
+                                        演出遲到 / 未到<br/>以致無法入場者
+                                    </div>
+                                </div>
 
                                 <h5 class="sub-title highlight">
                                     不可抗力因素之更改訂位及退費辦法
                                 </h5>
                                 <p>
-                                    若因天災、國際病毒等不可抗拒之因素，由政府、該縣市主管機關發布停止上班、停演之訊息，微醺大飯店也將暫停演出，並協助改期或全額退費的服務。
+                                    若出現疫情、天災等不可抗力之因素，並由主管機關發布停止上班、停止演出之訊息，《微醺大飯店：1980s》也將公布暫停演出，協助賓客改期或退費。
                                 </p>
 
                                 <h5 class="sub-title highlight change-seat">
-                                    更改訂位、取消與退費規則統整表
+                                    預售票券異動規則
                                 </h5>
 
                                 <table id="table-note">
                                     <tbody>
                                     <tr>
-                                        <th class="day-period">
-                                            天數
-                                        </th>
+                                        <th class="day-period"></th>
                                         <th class="date-exp">
                                             日期舉例
                                         </th>
                                         <th class="refund-way">
-                                            退費機制
+                                            更改<br/>日期
                                         </th>
                                         <th class="change-order">
-                                            更改日期
+                                            訂位<br/>轉讓
+                                        </th>
+                                        <th class="change-price">
+                                            退還<br/>費用
                                         </th>
                                     </tr>
 
                                     <tr>
-                                        <td class="highlight-td">
-                                            演出當天
-                                        </td>
-                                        <td>
-                                            01/11
-                                        </td>
-                                        <td class="highlight-td">
-                                            無法退費
-                                        </td>
-                                        <td rowspan="4">
-                                            不提供改期<br/>
-                                            建議將訂位轉讓給親友
-                                        </td>
-                                    </tr>
-                                    <tr class="normal-border">
-                                        <td>
-                                            前一日
-                                        </td>
-                                        <td>
-                                            01/10
-                                        </td>
-                                        <td rowspan="3">
-                                            僅退 50% 費用
-                                        </td>
-                                    </tr>
-                                    <tr class="normal-border">
-                                        <td>
-                                            <img class="img-fluid" src="img/icon/dot.png" alt="dot">
-                                        </td>
-                                        <td>
-                                            <img class="img-fluid" src="img/icon/dot.png" alt="dot">
-                                        </td>
+                                        <td>演出當日</td>
+                                        <td>01/11</td>
+                                        <td>X</td>
+                                        <td>O</td>
+                                        <td>X</td>
                                     </tr>
                                     <tr>
-                                        <td>前九日</td>
+                                        <td>演出前一日</td>
+                                        <td>01/10</td>
+                                        <td>X</td>
+                                        <td>O</td>
+                                        <td rowspan="2">50%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>演出前九日</td>
                                         <td>01/02</td>
+                                        <td>X</td>
+                                        <td>O</td>
                                     </tr>
-                                    <tr class="normal-border light-bg">
-                                        <td>前十日</td>
+                                    <tr>
+                                        <td>演出前十日</td>
                                         <td>01/01</td>
-                                        <td rowspan="2">
-                                            會扣除金流手續費10%
-                                        </td>
-                                        <td rowspan="2">
-                                            可來信更改日期
-                                        </td>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>90%</td>
                                     </tr>
-                                    <tr class="light-bg">
-                                        <td>
-                                            <img class="img-fluid" src="img/icon/dot.png" alt="dot">
-                                        </td>
-                                        <td>
-                                            <img class="img-fluid" src="img/icon/dot.png" alt="dot">
-                                        </td>
+                                    <tr>
+                                        <td>序號信前一日</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>O</td>
+                                        <td>100%</td>
                                     </tr>
                                     </tbody>
                                 </table>
-                                <div class="table-note-text">＊上述規則僅適用於預售票券，若購買其他票券，以購買時的規則為準。</div>
+                                <div class="table-note-text">
+                                    ※ 來信時間請於當日下班時間 18:00 前，超過以隔日計。<br/>
+                                    ※ 演出前十日申請退費退還全額之 90%，係因 10% 金流手續費。
+                                </div>
 
                                 <h5 class="sub-title highlight transfer-ticket">
-                                    轉讓、改期、退費流程說明
+                                    預售票券異動申請
                                 </h5>
-
-                                <p class="category-title text-center">票券轉讓</p>
-                                <p>
-                                    來信請提供訂位者訂位相關資訊，與被轉讓者姓名、信箱、手機號碼。
-                                </p>
-
-                                <p class="category-title"><br/>改期流程</p>
+                                <div class="presale-change">
+                                    <div class="change-header">
+                                        <div class="change-column-title">你需要附上：</div>
+                                        <div class="change-column-title">然後再附上：</div>
+                                    </div>
+                                    <div class="change-row">
+                                        <div class="change-row-title">
+                                            <div class="row-title-inner">改期</div>
+                                        </div>
+                                        <div class="change-row-content">
+                                            <div class="change-row-content-inner">
+                                                購票者的<br/>姓名、信箱、手機
+                                            </div>
+                                        </div>
+                                        <div class="change-row-content">
+                                            <div class="change-row-content-inner">
+                                                劃位序號
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="change-row">
+                                        <div class="change-row-title">
+                                            <div class="row-title-inner">轉讓</div>
+                                        </div>
+                                        <div class="change-row-content">
+                                            <div class="change-row-content-inner">
+                                                購票者的<br/>姓名、信箱、手機
+                                            </div>
+                                        </div>
+                                        <div class="change-row-content">
+                                            <div class="change-row-content-inner">
+                                                被轉讓者的<br/>姓名、信箱、手機
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="change-row">
+                                        <div class="change-row-title">
+                                            <div class="row-title-inner">退費</div>
+                                        </div>
+                                        <div class="change-row-content">
+                                            <div class="change-row-content-inner">
+                                                購票者的<br/>姓名、信箱、手機
+                                            </div>
+                                        </div>
+                                        <div class="change-row-content">
+                                            <div class="change-row-content-inner">
+                                                訂單編號
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <ul>
-                                    <li>提供訂位姓名、訂位信箱、劃位序號等資訊。</li>
-                                    <li>等待回信，將為你取消原先訂位與恢復序號資格，三日內可重新劃位。</li>
+                                    <li>請依上述說明附上相關資訊，來信微醺大飯店客服信箱。</li>
+                                    <li>改期者需重新進行劃位流程，將取消訂位後恢復原先序號。</li>
+                                    <li>退費入帳需七至十個工作天，實際日期依購票時使用的信用卡銀行規定為準。</li>
                                 </ul>
-
-                                <p class="category-title"><br/>退費流程</p>
-                                <ul>
-                                    <li>提供預售票之訂單編號與訂位姓名、訂位信箱。</li>
-                                    <li>確認退費後，請等待七至十個工作天後向金融機構確認，實際退費日期須視使用的發卡銀行規定為準。</li>
-                                </ul>
-
-                                <h5 class="sub-title highlight transaction-system">
-                                    線上金流系統
-                                </h5>
-                                <p>
-                                    《微醺大飯店：1980s》之線上付款透過貝殼集器、藍新金流第三方平台支付
-                                </p>
 
                             </div>
 

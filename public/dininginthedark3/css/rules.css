@@ -439,7 +439,7 @@ header.logo {
   color: #EFEFEF;
 }
 
-#Rules #qa-according {
+#Rules .rule-according {
   width: 500px;
   max-width: 100%;
   margin: 0 auto;
@@ -447,74 +447,74 @@ header.logo {
 }
 
 @media (min-width: 1200px) {
-  #Rules #qa-according {
+  #Rules .rule-according {
     padding-bottom: calc((608px + 30px) * 0.02147);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #qa-according {
+  #Rules .rule-according {
     padding-bottom: calc((768px + 30px) * 0.02147);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #qa-according {
+  #Rules .rule-according {
     padding-bottom: calc((1088px + 30px) * 0.02147);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #qa-according {
+  #Rules .rule-according {
     padding-bottom: calc(100% * 0.02147);
   }
 }
 
-#Rules #qa-according .card {
+#Rules .rule-according .card {
   background-color: transparent;
   border: 0;
 }
 
 @media (min-width: 1200px) {
-  #Rules #qa-according .card:not(:first-child) .card-header {
+  #Rules .rule-according .card:not(:first-child) .card-header {
     margin-top: calc((608px + 30px) * 0.02147);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #qa-according .card:not(:first-child) .card-header {
+  #Rules .rule-according .card:not(:first-child) .card-header {
     margin-top: calc((768px + 30px) * 0.02147);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #qa-according .card:not(:first-child) .card-header {
+  #Rules .rule-according .card:not(:first-child) .card-header {
     margin-top: calc((1088px + 30px) * 0.02147);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #qa-according .card:not(:first-child) .card-header {
+  #Rules .rule-according .card:not(:first-child) .card-header {
     margin-top: calc(100% * 0.02147);
   }
 }
 
-#Rules #qa-according .card ~ .card:nth-child(n+12) .card-header h6 {
+#Rules .rule-according .card ~ .card:nth-child(n+12) .card-header h6 {
   padding-left: 29px;
   text-indent: -29px;
 }
 
-#Rules #qa-according .to-change-and-refund,
-#Rules #qa-according .to-presale-rules {
+#Rules .rule-according .to-change-and-refund,
+#Rules .rule-according .to-presale-rules {
   color: #EFEFEF;
 }
 
-#Rules #qa-according .to-change-and-refund:hover,
-#Rules #qa-according .to-presale-rules:hover {
+#Rules .rule-according .to-change-and-refund:hover,
+#Rules .rule-according .to-presale-rules:hover {
   color: #8C5FB4;
 }
 
-#Rules #qa-according .card-body {
+#Rules .rule-according .card-body {
   position: relative;
   padding-left: 19px;
   padding-right: 19px;
@@ -524,102 +524,102 @@ header.logo {
 }
 
 @media (min-width: 1200px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     padding-top: calc((608px + 30px) * 0.00894);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     padding-top: calc((768px + 30px) * 0.00894);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     padding-top: calc((1088px + 30px) * 0.00894);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     padding-top: calc(100% * 0.00894);
   }
 }
 
 @media (min-width: 1200px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     padding-bottom: calc((608px + 30px) * 0.00894);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     padding-bottom: calc((768px + 30px) * 0.00894);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     padding-bottom: calc((1088px + 30px) * 0.00894);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     padding-bottom: calc(100% * 0.00894);
   }
 }
 
 @media (min-width: 1200px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-left: calc((608px + 30px) * 0.00447);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-left: calc((768px + 30px) * 0.00447);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-left: calc((1088px + 30px) * 0.00447);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-left: calc(100% * 0.00447);
   }
 }
 
 @media (min-width: 1200px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-top: calc((608px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-top: calc((768px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-top: calc((1088px + 30px) * 0.01342);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-top: calc(100% * 0.01342);
   }
 }
 
-#Rules #qa-according .card-body::before {
+#Rules .rule-according .card-body::before {
   position: absolute;
   content: '';
   width: 1px;
@@ -629,7 +629,7 @@ header.logo {
   background: #EFEFEF;
 }
 
-#Rules #qa-according .card-body.number-list p {
+#Rules .rule-according .card-body.number-list p {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 1.8px;
@@ -638,7 +638,7 @@ header.logo {
   text-align: left;
 }
 
-#Rules #qa-according .card-header {
+#Rules .rule-according .card-header {
   padding: 0;
   border-style: solid;
   border-color: #EFEFEF;
@@ -646,7 +646,7 @@ header.logo {
   border-radius: 0;
 }
 
-#Rules #qa-according .card-header h6 {
+#Rules .rule-according .card-header h6 {
   position: relative;
   padding-left: 21px;
   text-indent: -21px;
@@ -660,30 +660,30 @@ header.logo {
 }
 
 @media (min-width: 1200px) {
-  #Rules #qa-according .card-header h6 {
+  #Rules .rule-according .card-header h6 {
     padding-top: calc((608px + 30px) * 0.02147);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #qa-according .card-header h6 {
+  #Rules .rule-according .card-header h6 {
     padding-top: calc((768px + 30px) * 0.02147);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #qa-according .card-header h6 {
+  #Rules .rule-according .card-header h6 {
     padding-top: calc((1088px + 30px) * 0.02147);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #qa-according .card-header h6 {
+  #Rules .rule-according .card-header h6 {
     padding-top: calc(100% * 0.02147);
   }
 }
 
-#Rules #qa-according .card-header h6::after {
+#Rules .rule-according .card-header h6::after {
   position: absolute;
   content: '';
   left: 0;
@@ -695,36 +695,36 @@ header.logo {
 }
 
 @media (min-width: 1200px) {
-  #Rules #qa-according .card-header h6::after {
+  #Rules .rule-according .card-header h6::after {
     height: calc((608px + 30px) * 0.02147);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #qa-according .card-header h6::after {
+  #Rules .rule-according .card-header h6::after {
     height: calc((768px + 30px) * 0.02147);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #qa-according .card-header h6::after {
+  #Rules .rule-according .card-header h6::after {
     height: calc((1088px + 30px) * 0.02147);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #qa-according .card-header h6::after {
+  #Rules .rule-according .card-header h6::after {
     height: calc(100% * 0.02147);
   }
 }
 
-#Rules #qa-according .card-header h6.is-open .icon-arrow {
+#Rules .rule-according .card-header h6.is-open .icon-arrow {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   color: #EFEFEF;
 }
 
-#Rules #qa-according .card-header .icon-arrow {
+#Rules .rule-according .card-header .icon-arrow {
   position: absolute;
   text-indent: initial;
   font-size: 24px;
@@ -737,14 +737,14 @@ header.logo {
 }
 
 @media (max-width: 1200px) {
-  #Rules #qa-according .card-header h6 {
+  #Rules .rule-according .card-header h6 {
     font-size: 16px;
     letter-spacing: 1.6px;
   }
 }
 
 #Rules #presale-rules {
-  width: 533px;
+  width: 500px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -785,6 +785,36 @@ header.logo {
   }
 }
 
+@media (min-width: 1200px) {
+  #Rules #presale-rules .rule-according {
+    margin-bottom: calc((608px + 30px) * 0.06708);
+  }
+}
+
+@media (min-width: 1440px) {
+  #Rules #presale-rules .rule-according {
+    margin-bottom: calc((768px + 30px) * 0.06708);
+  }
+}
+
+@media (min-width: 1920px) {
+  #Rules #presale-rules .rule-according {
+    margin-bottom: calc((1088px + 30px) * 0.06708);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #presale-rules .rule-according {
+    margin-bottom: calc(100% * 0.06708);
+  }
+}
+
+#Rules #changeAndrefund {
+  width: 535px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 #Rules #changeAndrefund ul {
   width: 535px;
   max-width: 100%;
@@ -792,9 +822,6 @@ header.logo {
 }
 
 #Rules #changeAndrefund p {
-  width: 535px;
-  max-width: 100%;
-  margin: 0 auto;
   line-height: 2;
   text-align: left;
 }
@@ -1018,99 +1045,23 @@ header.logo {
   border-right: 0;
 }
 
-@media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note th.day-period {
-    width: calc((608px + 30px) * 0.07245);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note th.day-period {
-    width: calc((768px + 30px) * 0.07245);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note th.day-period {
-    width: calc((1088px + 30px) * 0.07245);
-  }
+#Rules #changeAndrefund #table-note th.day-period, #Rules #changeAndrefund #table-note th.date-exp {
+  width: 33.33%;
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note th.day-period {
-    width: calc(100% * 0.07245);
+  #Rules #changeAndrefund #table-note th.day-period, #Rules #changeAndrefund #table-note th.date-exp {
+    width: 30%;
   }
 }
 
-@media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note th.date-exp {
-    width: calc((608px + 30px) * 0.10376);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note th.date-exp {
-    width: calc((768px + 30px) * 0.10376);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note th.date-exp {
-    width: calc((1088px + 30px) * 0.10376);
-  }
+#Rules #changeAndrefund #table-note th.refund-way, #Rules #changeAndrefund #table-note th.change-order, #Rules #changeAndrefund #table-note th.change-price {
+  width: 11.11%;
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note th.date-exp {
-    width: calc(100% * 0.10376);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note th.refund-way {
-    width: calc((608px + 30px) * 0.20751);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note th.refund-way {
-    width: calc((768px + 30px) * 0.20751);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note th.refund-way {
-    width: calc((1088px + 30px) * 0.20751);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note th.refund-way {
-    width: calc(100% * 0.20751);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note th.change-order {
-    width: calc((608px + 30px) * 0.21556);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note th.change-order {
-    width: calc((768px + 30px) * 0.21556);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note th.change-order {
-    width: calc((1088px + 30px) * 0.21556);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note th.change-order {
-    width: calc(100% * 0.21556);
+  #Rules #changeAndrefund #table-note th.refund-way, #Rules #changeAndrefund #table-note th.change-order, #Rules #changeAndrefund #table-note th.change-price {
+    width: auto;
   }
 }
 
@@ -1167,6 +1118,15 @@ header.logo {
 @media (max-width: 1199.98px) {
   #Rules #changeAndrefund #table-note td {
     padding-bottom: calc(100% * 0.01342);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #changeAndrefund #table-note td {
+    padding: 13px 0;
+    letter-spacing: 1.4px;
+    line-height: 2;
+    font-size: 14px;
   }
 }
 
@@ -1289,6 +1249,128 @@ header.logo {
   }
 }
 
+#Rules #changeAndrefund .refund-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#Rules #changeAndrefund .refund-item .circle-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  line-height: 1.5;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #B28247;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#Rules #changeAndrefund .presale-change {
+  margin-bottom: 60px;
+}
+
+#Rules #changeAndrefund .presale-change .change-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 85px;
+  margin-bottom: 20px;
+}
+
+#Rules #changeAndrefund .presale-change .change-header .change-column-title {
+  width: 50%;
+  text-align: center;
+}
+
+#Rules #changeAndrefund .presale-change .change-header .change-column-title + .change-column-title {
+  margin-left: 30px;
+}
+
+#Rules #changeAndrefund .presale-change .change-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3E3A39;
+  margin-bottom: 20px;
+}
+
+#Rules #changeAndrefund .presale-change .change-row .change-row-title {
+  min-width: 55px;
+}
+
+#Rules #changeAndrefund .presale-change .change-row .change-row-title .row-title-inner {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #231815;
+  background-color: #8C5FB4;
+}
+
+#Rules #changeAndrefund .presale-change .change-row .change-row-content {
+  width: calc((100% - 55px)/2);
+  padding: 10px 15px;
+  border: 1px solid #727171;
+  margin-left: 30px;
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #changeAndrefund .presale-change .change-row .change-row-content {
+    padding: 10px;
+  }
+}
+
+#Rules #changeAndrefund .presale-change .change-row .change-row-content:last-child {
+  position: relative;
+}
+
+#Rules #changeAndrefund .presale-change .change-row .change-row-content:last-child::before {
+  content: '+';
+  font-size: 24px;
+  line-height: 1;
+  color: #B28247;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: -23px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+}
+
+#Rules #changeAndrefund .presale-change .change-row .change-row-content .change-row-content-inner {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  line-height: 1.5;
+  text-align: center;
+}
+
 @media (max-width: 1200px) {
   #Rules .container {
     max-width: 700px;
@@ -1350,30 +1432,30 @@ header.logo {
   #Rules #qa .feature-btn {
     padding-top: 42px;
   }
-  #Rules #qa-according .card-header h6 {
+  #Rules .rule-according .card-header h6 {
     padding: 12px 40px 0 18px;
     text-indent: -18px;
     line-height: 2;
     font-size: 14px;
     letter-spacing: 1.4px;
   }
-  #Rules #qa-according .card-header h6::after {
+  #Rules .rule-according .card-header h6::after {
     height: 12px;
   }
-  #Rules #qa-according .card ~ .card:nth-child(n+12) .card-header h6 {
+  #Rules .rule-according .card ~ .card:nth-child(n+12) .card-header h6 {
     padding-left: 28px;
     text-indent: -28px;
   }
-  #Rules #qa-according .card:not(:first-child) .card-header {
+  #Rules .rule-according .card:not(:first-child) .card-header {
     margin-top: 12px;
   }
-  #Rules #qa-according .card-body {
+  #Rules .rule-according .card-body {
     margin-top: 15px;
     font-size: 14px;
     line-height: 2;
     letter-spacing: 1.4px;
   }
-  #Rules #qa-according .card-body.number-list p {
+  #Rules .rule-according .card-body.number-list p {
     font-size: 14px;
     line-height: 2;
     letter-spacing: 1.4px;
@@ -1387,41 +1469,10 @@ header.logo {
     width: 100%;
     margin-left: -17px;
   }
-  #Rules #changeAndrefund #table-note td {
-    padding: 13px 0;
-    letter-spacing: 1.4px;
-    line-height: 2;
-    font-size: 14px;
-  }
-  #Rules #changeAndrefund #table-note th.day-period {
-    width: inherit;
-    min-width: 60px;
-  }
-  #Rules #changeAndrefund #table-note th.date-exp {
-    width: inherit;
-    min-width: 55px;
-  }
-  #Rules #changeAndrefund #table-note th.refund-way {
-    width: inherit;
-    min-width: 124px;
-  }
-  #Rules #changeAndrefund #table-note th.change-order {
-    width: inherit;
-    min-width: 93px;
-  }
 }
 
 @media (max-width: 320px) {
-  #Rules #changeAndrefund #table-note th.day-period {
-    min-width: 52px;
-  }
-  #Rules #changeAndrefund #table-note th.refund-way {
-    min-width: 83px;
-  }
-  #Rules #changeAndrefund #table-note th.change-order {
-    min-width: 88px;
-  }
-  #Rules #qa-according .card-header h6 {
+  #Rules .rule-according .card-header h6 {
     line-height: 1.5;
   }
 }
