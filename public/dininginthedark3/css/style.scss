@@ -26,6 +26,11 @@ body {
   }
 }
 
+main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 a,
 a:hover,
 a:focus,

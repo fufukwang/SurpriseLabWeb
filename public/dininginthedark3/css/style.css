@@ -47,6 +47,11 @@ body.menu-open {
   overflow-y: hidden;
 }
 
+main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 a,
 a:hover,
 a:focus,
