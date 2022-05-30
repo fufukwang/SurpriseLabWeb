@@ -42,7 +42,7 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body class="loading">
+<body class="loading modal-open">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCD7VGK"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
