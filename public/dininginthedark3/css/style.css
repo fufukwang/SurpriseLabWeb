@@ -47,7 +47,7 @@ body.menu-open {
   overflow-y: hidden;
 }
 
-main {
+main.index-main {
   width: 100vw;
   overflow-x: hidden;
 }

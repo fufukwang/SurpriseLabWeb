@@ -87,7 +87,7 @@
         </ul>
     </nav>
 
-    <main class="sections fixed-scroll-anchor">
+    <main class="sections fixed-scroll-anchor index-main">
 
         <div class="lighting-wrap">
             <div class="lighting-inner">
