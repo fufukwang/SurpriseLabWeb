@@ -1276,7 +1276,7 @@ header.logo {
   line-height: 1.5;
   width: 120px;
   height: 120px;
-  border: 1px solid #B28247;
+  border: 1px solid #8C5FB4;
   border-radius: 50%;
   text-align: center;
 }
@@ -1354,7 +1354,7 @@ header.logo {
   content: '+';
   font-size: 24px;
   line-height: 1;
-  color: #B28247;
+  color: #8C5FB4;
   position: absolute;
   text-align: center;
   top: 50%;

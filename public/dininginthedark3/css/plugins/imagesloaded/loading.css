@@ -49,7 +49,7 @@ body::before {
 	pointer-events: none;
 	border-radius: 50%;
 	opacity: 0.4;
-	background: #B28247;
+	background: #8C5FB4;
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
 }
 
