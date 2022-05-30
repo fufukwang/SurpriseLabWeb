@@ -31,6 +31,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
+    <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -515,6 +516,29 @@
         </div>
     </main>
 
+    <!-- Enter modal -->
+    <div id="js-enter-modal" class="enter-modal-wrap">
+        <div class="enter-modal-content">
+            <div id="js-enter-btn" class="enter-btn">Enter</div>
+
+            <!-- board -->
+            <div id="js-drag-area" class="drag-wrap">
+                <div id="js-arrow-left" class="arrow-wrap style-left">
+                    <img src="img/home/landing/btn-left.svg" alt="btn-left">
+                </div>
+                <div id="js-arrow-right" class="arrow-wrap style-right">
+                    <img src="img/home/landing/btn-right.svg" alt="btn-right">
+                </div>
+                <div class="logo-wrap">
+                    <img src="img/general/logo_v.svg" alt="logo">
+                </div>
+                <div class="board-wrap">
+                    <div id="js-rotate-target" class="image-wrap" data-rotate-level="3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Social Links -->
     <aside class="social-wrapper">
         <ul>
@@ -558,6 +582,7 @@
     <!-- Custom Js -->
     <script src="js/index.js?v=0.1"></script>
     <script src="js/main.js?v=0.1"></script>
+    <script src="js/board-modal.js?v=0.1"></script>
 
 </body>
 </html>

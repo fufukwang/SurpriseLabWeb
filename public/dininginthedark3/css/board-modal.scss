@@ -1,0 +1,165 @@
+// Variable
+@import "variable";
+
+body {
+    &.modal-open {
+        overflow: hidden;
+    }
+}
+
+// modal
+.enter-modal-wrap {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90000;
+    background-image: url('/img/home/landing/bg-landing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .enter-modal-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        // modal - closed button
+        .enter-btn {
+            position: absolute;
+            z-index: 600;
+            left: 50%;
+            bottom: 25%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            box-sizing: border-box;
+            padding: 10px 30px;
+            min-width: 210px;
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 1.8px;
+            color: $color-purple;
+            border: 1px solid $color-purple;
+            border-radius: 30px;
+            transition: 0.3s;
+
+            @media screen and (max-width: 1199.98px) {
+                width: 240px;
+                min-width: 240px;
+                bottom: 20%;
+            }
+
+            &:hover {
+                background-color: $color-purple;
+                border: 1px solid $color-purple;
+                color: $color-k10;
+            }
+        }
+    }
+}
+
+// drag section
+.drag-wrap {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    cursor: move;
+
+    // control rotate - arrow
+    .arrow-wrap {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        z-index: 500;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    
+        @media screen and (max-width: 1199.98px) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    
+        &:hover {
+            opacity: 1;
+        }
+    
+        &.style-left {
+            left: 20px;
+        }
+    
+        &.style-right {
+            right: 20px;
+        }
+    }
+
+    // logo
+    .logo-wrap {
+        position: absolute;
+        z-index: 500;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 27%);
+        width: 15vw;
+
+        @media screen and (max-width: 1199.98px) {
+            transform: translate(-50%, 13%);
+            width: 15vh;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+                -moz-user-select: none;
+                     user-select: none;
+        }
+    }
+
+    // board
+    .board-wrap {
+        width: 215vw;
+        height: 215vw;
+        position: absolute;
+        z-index: 300;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 6%);
+    
+        @media screen and (max-width: 1199.98px) {
+            width: 208vh;
+            height: 208vh;
+            transform: translate(-50%, 2%);
+        }
+    
+        // rotate target
+        .image-wrap {
+            width: 100%;
+            height: 100%;
+            background-image: url('/img/home/landing/board.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform-origin: 50% 50%;
+            transform: rotate(0deg);
+            transition: 1.5s;
+
+            @media screen and (max-width: 1199.98px) {
+                transition: 0.8s cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+    }
+}
