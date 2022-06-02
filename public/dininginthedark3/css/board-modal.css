@@ -175,8 +175,8 @@ body.modal-open {
           transform-origin: 50% 50%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 @media screen and (max-width: 1199.98px) {

@@ -533,7 +533,7 @@
                     <img src="img/general/logo_v.svg" alt="logo">
                 </div>
                 <div class="board-wrap">
-                    <div id="js-rotate-target" class="image-wrap" data-rotate-level="3"></div>
+                    <div id="js-rotate-target" class="image-wrap" data-rotate-level="6"></div>
                 </div>
             </div>
         </div>
