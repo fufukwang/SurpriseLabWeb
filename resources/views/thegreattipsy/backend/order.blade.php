@@ -140,7 +140,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group back_control">
-                                                <label class="control-label col-sm-4">金額</label>
+                                                <label class="control-label col-sm-4">總金額</label>
                                                 <div class="col-sm-8">
                                                     <input type="number" class="form-control" name="money" id="money" value="{{ $order->money or 0 }}" required>
                                                     <small class="text-warning">單人金額:{{ $order->cash }} X 1 X 10%服務費 = {{ $order->cash *  1.1 }}</small>
