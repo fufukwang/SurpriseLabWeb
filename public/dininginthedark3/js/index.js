@@ -14,6 +14,11 @@ $(document).ready(function () {
     let smoothScroll = $('.smoothScroll');
     let mobileCurrent = $('.current-section');
 
+    // modal
+    let $open_modal_btn = $('#js-open-btn');
+    let $ticket_modal = $('#js-ticket-modal');
+    let $close_modal_btn = $('#js-close-btn');
+
     // Full Page Scroll
     // https://github.com/lukehaas/scrollify
     $.scrollify({
@@ -138,5 +143,19 @@ $(document).ready(function () {
         easing: 'ease-in-sine',
         delay: 100,
         once: true
+    });
+
+    // Ticket Modal
+    // modal close button
+    $open_modal_btn.on('click', function(event) {
+        $ticket_modal.fadeIn(250, function () {
+            $('body').addClass('modal-open');
+        });
+    });
+
+    $close_modal_btn.on('click', function(event) {
+        $ticket_modal.fadeOut(250, function () {
+            $('body').removeClass('modal-open');
+        });
     });
 });

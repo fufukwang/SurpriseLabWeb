@@ -11,14 +11,6 @@ header.logo {
   background-color: #2D2D2D;
 }
 
-.btn-link {
-  text-decoration: underline;
-}
-
-.btn-link:hover, .btn-link:focus {
-  color: #8C5FB4 !important;
-}
-
 .anchor-wrapper {
   display: initial;
 }
@@ -202,36 +194,32 @@ header.logo {
   padding-top: 0;
 }
 
-#Rules ul {
-  list-style-type: decimal;
-}
-
-#Rules ul li {
+#Rules ul li, #Rules ol li {
   line-height: 2;
   letter-spacing: 1.8px;
 }
 
 @media (min-width: 1200px) {
-  #Rules ul li:not(:first-child) {
-    padding-top: calc((608px + 30px) * 0.01878);
+  #Rules ul li:not(:first-child), #Rules ol li:not(:first-child) {
+    padding-top: calc((608px + 30px) * 0.00716);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules ul li:not(:first-child) {
-    padding-top: calc((768px + 30px) * 0.01878);
+  #Rules ul li:not(:first-child), #Rules ol li:not(:first-child) {
+    padding-top: calc((768px + 30px) * 0.00716);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules ul li:not(:first-child) {
-    padding-top: calc((1088px + 30px) * 0.01878);
+  #Rules ul li:not(:first-child), #Rules ol li:not(:first-child) {
+    padding-top: calc((1088px + 30px) * 0.00716);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules ul li:not(:first-child) {
-    padding-top: calc(100% * 0.01878);
+  #Rules ul li:not(:first-child), #Rules ol li:not(:first-child) {
+    padding-top: calc(100% * 0.00716);
   }
 }
 
@@ -264,61 +252,13 @@ header.logo {
   overflow-x: hidden;
 }
 
-@media (min-width: 1200px) {
-  #Rules .rules.owl-carousel .tab-content-inner {
-    padding-top: calc((608px + 30px) * 0.06708);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules .rules.owl-carousel .tab-content-inner {
-    padding-top: calc((768px + 30px) * 0.06708);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules .rules.owl-carousel .tab-content-inner {
-    padding-top: calc((1088px + 30px) * 0.06708);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules .rules.owl-carousel .tab-content-inner {
-    padding-top: calc(100% * 0.06708);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Rules .rules.owl-carousel #qa .tab-content-inner {
-    padding-top: calc((608px + 30px) * 0.07245);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Rules .rules.owl-carousel #qa .tab-content-inner {
-    padding-top: calc((768px + 30px) * 0.07245);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Rules .rules.owl-carousel #qa .tab-content-inner {
-    padding-top: calc((1088px + 30px) * 0.07245);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Rules .rules.owl-carousel #qa .tab-content-inner {
-    padding-top: calc(100% * 0.07245);
-  }
-}
-
 #Rules #qa .qa-title-separator {
   font-size: 24px;
   font-weight: 900;
   line-height: 1.25;
   letter-spacing: 2.4px;
-  color: #EFEFEF;
-  border-top: solid 1px #EFEFEF;
+  color: #9FA0A0;
+  border-top: solid 1px #727171;
 }
 
 @media (min-width: 1200px) {
@@ -373,31 +313,31 @@ header.logo {
   margin: 0 auto;
   text-align: left;
   line-height: 2;
-  width: 500px;
+  width: 535px;
   max-width: 100%;
 }
 
 @media (min-width: 1200px) {
   #Rules #qa .qa-note {
-    padding-top: calc((608px + 30px) * 0.02147);
+    padding-top: calc((608px + 30px) * 0.04293);
   }
 }
 
 @media (min-width: 1440px) {
   #Rules #qa .qa-note {
-    padding-top: calc((768px + 30px) * 0.02147);
+    padding-top: calc((768px + 30px) * 0.04293);
   }
 }
 
 @media (min-width: 1920px) {
   #Rules #qa .qa-note {
-    padding-top: calc((1088px + 30px) * 0.02147);
+    padding-top: calc((1088px + 30px) * 0.04293);
   }
 }
 
 @media (max-width: 1199.98px) {
   #Rules #qa .qa-note {
-    padding-top: calc(100% * 0.02147);
+    padding-top: calc(100% * 0.04293);
   }
 }
 
@@ -427,23 +367,17 @@ header.logo {
 
 #Rules .to-change-and-refund,
 #Rules .to-presale-rules {
-  color: #8C5FB4;
   text-decoration: underline;
   cursor: pointer;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
-#Rules .to-change-and-refund:hover,
-#Rules .to-presale-rules:hover {
-  color: #EFEFEF;
-}
-
 #Rules .rule-according {
-  width: 500px;
+  width: 535px;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: solid 1px #EFEFEF;
+  border-bottom: solid 1px #727171;
 }
 
 @media (min-width: 1200px) {
@@ -502,16 +436,6 @@ header.logo {
 #Rules .rule-according .card ~ .card:nth-child(n+12) .card-header h6 {
   padding-left: 29px;
   text-indent: -29px;
-}
-
-#Rules .rule-according .to-change-and-refund,
-#Rules .rule-according .to-presale-rules {
-  color: #EFEFEF;
-}
-
-#Rules .rule-according .to-change-and-refund:hover,
-#Rules .rule-according .to-presale-rules:hover {
-  color: #8C5FB4;
 }
 
 #Rules .rule-according .card-body {
@@ -640,9 +564,7 @@ header.logo {
 
 #Rules .rule-according .card-header {
   padding: 0;
-  border-style: solid;
-  border-color: #EFEFEF;
-  border-width: 1px 0 0 0;
+  border-top: 1px solid #727171;
   border-radius: 0;
 }
 
@@ -744,7 +666,7 @@ header.logo {
 }
 
 #Rules #presale-rules {
-  width: 500px;
+  width: 535px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -810,12 +732,6 @@ header.logo {
 }
 
 #Rules #changeAndrefund {
-  width: 535px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-#Rules #changeAndrefund ul {
   width: 535px;
   max-width: 100%;
   margin: 0 auto;
@@ -927,7 +843,7 @@ header.logo {
   }
 }
 
-#Rules #changeAndrefund #table-note {
+#Rules #changeAndrefund .rule-table {
   max-width: 670px;
   width: 100%;
   margin-left: auto;
@@ -937,54 +853,87 @@ header.logo {
 }
 
 @media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note {
+  #Rules #changeAndrefund .rule-table {
     margin-top: calc((608px + 30px) * 0.02773);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note {
+  #Rules #changeAndrefund .rule-table {
     margin-top: calc((768px + 30px) * 0.02773);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note {
+  #Rules #changeAndrefund .rule-table {
     margin-top: calc((1088px + 30px) * 0.02773);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note {
+  #Rules #changeAndrefund .rule-table {
     margin-top: calc(100% * 0.02773);
   }
 }
 
-#Rules #changeAndrefund #table-note tr {
+#Rules #changeAndrefund .rule-table ul {
+  text-align: left;
+  margin: 0;
+}
+
+#Rules #changeAndrefund .rule-table.two-people th.rule-col-1, #Rules #changeAndrefund .rule-table.two-people th.rule-col-2 {
+  width: 33.33%;
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #changeAndrefund .rule-table.two-people th.rule-col-1, #Rules #changeAndrefund .rule-table.two-people th.rule-col-2 {
+    width: 30%;
+  }
+}
+
+#Rules #changeAndrefund .rule-table.two-people th.rule-col-3, #Rules #changeAndrefund .rule-table.two-people th.rule-col-4, #Rules #changeAndrefund .rule-table.two-people th.rule-col-5 {
+  width: 11.11%;
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #changeAndrefund .rule-table.two-people th.rule-col-3, #Rules #changeAndrefund .rule-table.two-people th.rule-col-4, #Rules #changeAndrefund .rule-table.two-people th.rule-col-5 {
+    width: auto;
+  }
+}
+
+#Rules #changeAndrefund .rule-table.twice th.rule-col-1 {
+  width: 20%;
+}
+
+#Rules #changeAndrefund .rule-table.twice th.rule-col-2, #Rules #changeAndrefund .rule-table.twice th.rule-col-3 {
+  width: 40%;
+}
+
+#Rules #changeAndrefund .rule-table tr {
   border-color: #8C5FB4 #8C5FB4 #EFEFEF #8C5FB4;
   border-style: solid;
   border-width: 0 2px 2px 2px;
 }
 
-#Rules #changeAndrefund #table-note tr:first-child {
+#Rules #changeAndrefund .rule-table tr:first-child {
   border-width: 2px;
   border-color: #8C5FB4;
 }
 
-#Rules #changeAndrefund #table-note tr:last-child {
+#Rules #changeAndrefund .rule-table tr:last-child {
   border-width: 0 2px;
 }
 
-#Rules #changeAndrefund #table-note tr.normal-border {
+#Rules #changeAndrefund .rule-table tr.normal-border {
   border-width: 0 2px 1px 2px;
 }
 
-#Rules #changeAndrefund #table-note tr.light-bg,
-#Rules #changeAndrefund #table-note tr.light-bg td {
+#Rules #changeAndrefund .rule-table tr.light-bg,
+#Rules #changeAndrefund .rule-table tr.light-bg td {
   background-color: #3E3A39 !important;
 }
 
-#Rules #changeAndrefund #table-note th {
+#Rules #changeAndrefund .rule-table th {
   background-color: #8C5FB4;
   border-right: solid 1px #3E3A39;
   text-align: center;
@@ -994,78 +943,58 @@ header.logo {
 }
 
 @media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note th {
+  #Rules #changeAndrefund .rule-table th {
     padding-top: calc((608px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note th {
+  #Rules #changeAndrefund .rule-table th {
     padding-top: calc((768px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note th {
+  #Rules #changeAndrefund .rule-table th {
     padding-top: calc((1088px + 30px) * 0.01342);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note th {
+  #Rules #changeAndrefund .rule-table th {
     padding-top: calc(100% * 0.01342);
   }
 }
 
 @media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note th {
+  #Rules #changeAndrefund .rule-table th {
     padding-bottom: calc((608px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note th {
+  #Rules #changeAndrefund .rule-table th {
     padding-bottom: calc((768px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note th {
+  #Rules #changeAndrefund .rule-table th {
     padding-bottom: calc((1088px + 30px) * 0.01342);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note th {
+  #Rules #changeAndrefund .rule-table th {
     padding-bottom: calc(100% * 0.01342);
   }
 }
 
-#Rules #changeAndrefund #table-note th:last-child {
+#Rules #changeAndrefund .rule-table th:last-child {
   border-right: 0;
 }
 
-#Rules #changeAndrefund #table-note th.day-period, #Rules #changeAndrefund #table-note th.date-exp {
-  width: 33.33%;
-}
-
-@media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note th.day-period, #Rules #changeAndrefund #table-note th.date-exp {
-    width: 30%;
-  }
-}
-
-#Rules #changeAndrefund #table-note th.refund-way, #Rules #changeAndrefund #table-note th.change-order, #Rules #changeAndrefund #table-note th.change-price {
-  width: 11.11%;
-}
-
-@media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note th.refund-way, #Rules #changeAndrefund #table-note th.change-order, #Rules #changeAndrefund #table-note th.change-price {
-    width: auto;
-  }
-}
-
-#Rules #changeAndrefund #table-note td {
+#Rules #changeAndrefund .rule-table td {
   text-align: center;
   letter-spacing: 1.8px;
   line-height: 2;
@@ -1074,55 +1003,55 @@ header.logo {
 }
 
 @media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding-top: calc((608px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding-top: calc((768px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding-top: calc((1088px + 30px) * 0.01342);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding-top: calc(100% * 0.01342);
   }
 }
 
 @media (min-width: 1200px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding-bottom: calc((608px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1440px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding-bottom: calc((768px + 30px) * 0.01342);
   }
 }
 
 @media (min-width: 1920px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding-bottom: calc((1088px + 30px) * 0.01342);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding-bottom: calc(100% * 0.01342);
   }
 }
 
 @media (max-width: 1199.98px) {
-  #Rules #changeAndrefund #table-note td {
+  #Rules #changeAndrefund .rule-table td {
     padding: 13px 0;
     letter-spacing: 1.4px;
     line-height: 2;
@@ -1130,16 +1059,10 @@ header.logo {
   }
 }
 
-#Rules #changeAndrefund #table-note td.highlight-td {
+#Rules #changeAndrefund .rule-table td.highlight-td {
   background-color: #595757;
   color: #EFEFEF;
   font-weight: 500;
-}
-
-#Rules #changeAndrefund #table-note td img {
-  height: 18px;
-  width: auto !important;
-  margin: 0 auto;
 }
 
 #Rules #changeAndrefund .table-note-text {
@@ -1377,9 +1300,6 @@ header.logo {
   }
   #Rules .sub-title + ul li {
     letter-spacing: 1.6px;
-  }
-  #Rules #changeAndrefund #table-note {
-    max-width: 600px;
   }
 }
 

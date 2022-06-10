@@ -1,12 +1,6 @@
 // Variable
 @import "variable";
 
-body {
-    &.modal-open {
-        overflow: hidden;
-    }
-}
-
 // modal
 .enter-modal-wrap {
     width: 100vw;

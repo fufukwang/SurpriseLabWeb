@@ -13,15 +13,6 @@ header.logo {
   background-color: $color-dark-brown;
 }
 
-.btn-link {
-  text-decoration: underline;
-
-  &:hover,
-  &:focus {
-    color: $color-purple !important;
-  }
-}
-
 .anchor-wrapper {
   display: initial;
 }
@@ -104,15 +95,13 @@ header.logo {
     }
   }
 
-  ul {
-    list-style-type: decimal;
-
+  ul, ol {
     li {
       line-height: 2;
       letter-spacing: 1.8px;
 
       &:not(:first-child) {
-        @include baseCounter('padding-top', 21);
+        @include baseCounter('padding-top', 8);
       }
     }
   }
@@ -123,13 +112,6 @@ header.logo {
     .tab-content-inner {
       overflow: auto;
       overflow-x: hidden;
-      @include baseCounter('padding-top', 75);
-    }
-
-    #qa {
-      .tab-content-inner {
-        @include baseCounter('padding-top', 81);
-      }
     }
   }
 
@@ -139,8 +121,8 @@ header.logo {
       font-weight: 900;
       line-height: 1.25;
       letter-spacing: 2.4px;
-      color: $color-k10;
-      border-top: solid 1px $color-k10;
+      color: $color-k50;
+      border-top: solid 1px $color-k70;
       @include baseCounter('margin-top', 24);
       @include baseCounter('padding-top', 60);
     }
@@ -149,30 +131,25 @@ header.logo {
       margin: 0 auto;
       text-align: left;
       line-height: 2;
-      width: 500px;
+      width: 535px;
       max-width: 100%;
-      @include baseCounter('padding-top', 24);
+      @include baseCounter('padding-top', 48);
       @include baseCounter('padding-bottom', 106);
     }
   }
 
   .to-change-and-refund,
   .to-presale-rules {
-    color: $color-purple;
     text-decoration: underline;
     cursor: pointer;
     transition: color 0.3s;
-
-    &:hover {
-      color: $color-k10;
-    }
   }
 
   .rule-according {
-    width: 500px;
+    width: 535px;
     max-width: 100%;
     margin: 0 auto;
-    border-bottom: solid 1px $color-k10;
+    border-bottom: solid 1px $color-k70;
     @include baseCounter('padding-bottom', 24);
 
     .card {
@@ -192,15 +169,6 @@ header.logo {
             text-indent: -29px;
           }
         }
-      }
-    }
-
-    .to-change-and-refund,
-    .to-presale-rules {
-      color: $color-k10;
-
-      &:hover {
-        color: $color-purple;
       }
     }
 
@@ -238,9 +206,7 @@ header.logo {
 
     .card-header {
       padding: 0;
-      border-style: solid;
-      border-color: $color-k10;
-      border-width: 1px 0 0 0;
+      border-top: 1px solid $color-k70;
       border-radius: 0;
 
       h6 {
@@ -297,7 +263,7 @@ header.logo {
   }
 
   #presale-rules {
-    width: 500px;
+    width: 535px;
     max-width: 100%;
     margin: 0 auto;
 
@@ -326,12 +292,6 @@ header.logo {
     width: 535px;
     max-width: 100%;
     margin: 0 auto;
-
-    ul {
-      width: 535px;
-      max-width: 100%;
-      margin: 0 auto;
-    }
 
     p {
       line-height: 2;
@@ -381,7 +341,7 @@ header.logo {
       @include baseCounter('padding-top', 81);
     }
 
-    #table-note {
+    .rule-table {
       @include baseCounter('margin-top', 31);
       max-width: 670px;
       width: 100%;
@@ -389,6 +349,47 @@ header.logo {
       margin-right: auto;
       border-collapse: collapse;
       border-bottom: solid 2px $color-purple;
+
+      ul {
+        text-align: left;
+        margin: 0;
+      }
+
+      &.two-people {
+        th {
+          &.rule-col-1,
+          &.rule-col-2 {
+            width: 33.33%;
+  
+            @media (max-width: 1199.98px) {
+              width: 30%;
+            }
+          }
+  
+          &.rule-col-3,
+          &.rule-col-4,
+          &.rule-col-5 {
+            width: 11.11%;
+  
+            @media (max-width: 1199.98px) {
+              width: auto;
+            }
+          }
+        }
+      }
+
+      &.twice {
+        th {
+          &.rule-col-1 {
+            width: 20%;
+          }
+  
+          &.rule-col-2,
+          &.rule-col-3 {
+            width: 40%;
+          }
+        }
+      }
 
       tr {
         border-color: $color-purple $color-purple $color-k10 $color-purple;
@@ -427,25 +428,6 @@ header.logo {
         &:last-child {
           border-right: 0;
         }
-
-        &.day-period,
-        &.date-exp {
-          width: 33.33%;
-
-          @media (max-width: 1199.98px) {
-            width: 30%;
-          }
-        }
-
-        &.refund-way,
-        &.change-order,
-        &.change-price {
-          width: 11.11%;
-
-          @media (max-width: 1199.98px) {
-            width: auto;
-          }
-        }
       }
 
       td {
@@ -468,12 +450,6 @@ header.logo {
           background-color: $color-k80;
           color: $color-k10;
           font-weight: 500;
-        }
-
-        img {
-          height: 18px;
-          width: auto !important;
-          margin: 0 auto;
         }
       }
     }
@@ -608,10 +584,6 @@ header.logo {
 
     .sub-title + ul li {
       letter-spacing: 1.6px;
-    }
-
-    #changeAndrefund #table-note {
-      max-width: 600px;
     }
   }
 
