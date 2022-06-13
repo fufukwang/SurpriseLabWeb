@@ -25,7 +25,8 @@ header.logo {
   background-color: #231815;
   background-image: url(../img/home/bg-wallpaper.jpg);
   background-repeat: repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position-y: -120px;
 }
 
 #rules-tab-switcher .nav-link.active,
@@ -52,25 +53,28 @@ header.logo {
 @media (max-width: 1280px) {
   #rules-tab-switcher {
     top: 114px;
+    background-position-y: -114px;
   }
 }
 
 @media (max-width: 1024px) {
   #rules-tab-switcher {
     top: 90px;
+    background-position-y: -90px;
   }
 }
 
 @media (max-width: 1199.98px) {
   #rules-tab-switcher {
     top: 60px;
-    background-size: auto;
+    background-position-y: -60px;
   }
 }
 
 @media (max-width: 320px) {
   #rules-tab-switcher {
     top: 23px;
+    background-position-y: -23px;
   }
   #rules-tab-switcher .nav-link {
     letter-spacing: 1.2px;
