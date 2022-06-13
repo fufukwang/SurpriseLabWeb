@@ -374,8 +374,8 @@
                                     雙人套票說明
                                 </h5>
                                 <div>
-                                    <img class="img-fluid d-none d-sm-block" src="img/other/flow.png" alt="雙人套票說明">
-                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-mobile.png" alt="雙人套票說明">
+                                    <img class="img-fluid d-none d-sm-block" src="img/other/flow-tickets-for-two.png" alt="雙人套票說明">
+                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-tickets-for-two-mobile.png" alt="雙人套票說明">
                                 </div>
                                 <br/>
                                 <ol>
@@ -383,11 +383,12 @@
                                     <li>將於劃位之指定日期當天收到信件（信件內容含有專屬劃位序號與訂位頁面連結），自行選定日期與時段，輸入劃位序號扣抵，即完成劃位。</li>
                                     <li>完成劃位後，將會收到訂位確認信。（將寄送至訂位填寫時之信箱，請確保信箱能正確收信）</li>
                                 </ol>
+                                <br/>
                                 <p class="text-left">
                                     小提醒：
                                 </p>
                                 <ul>
-                                    <li>票卷購買前請詳閱更改、退費事項。</li>
+                                    <li>票券購買前請詳閱更改、退費事項。</li>
                                     <li>為確保訂位成功，若無收到訂位確認信，請務必來信客服查詢。</li>
                                     <li>序號僅可使用一次，請謹慎使用。</li>
                                 </ul>
@@ -396,8 +397,8 @@
                                     雙菜單套票說明
                                 </h5>
                                 <div>
-                                    <img class="img-fluid d-none d-sm-block" src="img/other/flow.png" alt="雙菜單套票說明">
-                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-mobile.png" alt="雙菜單套票說明">
+                                    <img class="img-fluid d-none d-sm-block" src="img/other/flow-tickets-for-four.png" alt="雙菜單套票說明">
+                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-tickets-for-four-mobile.png" alt="雙菜單套票說明">
                                 </div>
                                 <br/>
                                 <ol>
@@ -405,6 +406,7 @@
                                     <li>劃位之指定日期當天收到信件（信件內容含有專屬劃位序號與訂位頁面連結），自行選定日期與時段，輸入劃位序號扣抵，即完成劃位。 </li>
                                     <li>完成劃位後，將會收到訂位確認信。（將寄送至訂位填寫時之信箱，請確保信箱能正確收信）</li>
                                 </ol>
+                                <br/>
                                 <p class="text-left">
                                     小提醒：
                                 </p>
@@ -540,7 +542,7 @@
                                     <tr>
                                         <td>寄送序號<br/>日期</td>
                                         <td>2022.8.10</td>
-                                        <td>2023.03<br/>(實際劃位日期，將於3月提前通知)</td>
+                                        <td>2023.03<br/>實際劃位日期<br/>將於3月提前通知</td>
                                     </tr>
                                     <tr>
                                         <td>可選體驗<br/>日期</td>
@@ -664,7 +666,7 @@
                                             <div class="card-header" id="stage1-header">
                                                 <h6 data-toggle="collapse" data-target="#stage1" aria-expanded="false"
                                                     aria-controls="stage1" class="collapsed d-flex align-items-center">
-                                                    ・第一批賓客
+                                                    ・第一批劃位
                                                     <i class="icon icon-arrow"></i>
                                                 </h6>
                                             </div>

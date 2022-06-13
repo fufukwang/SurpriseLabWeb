@@ -261,8 +261,8 @@
                                     </div>
                                     <div class="type-item type-great-tipsy">
                                         <a href="https://surpriselab.backme.tw/checkout/2296/18275?locale=zh-TW" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-2.png?v=0.1" alt="雙菜單套票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-2-mobile.png?v=0.1" alt="雙菜單套票">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.1" alt="雙菜單套票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.1" alt="雙菜單套票">
                                             <p class="ticket-state timeLimit">
                                                 限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                                     class="highlight rest-ticket">XXX</span> 張
@@ -355,7 +355,7 @@
                                     </div>
                                     <p class="section-desc">
                                         現在購票，預計於 09/05-10/30 前來體驗<br/>
-                                        實際可選擇時段請參考票票頁面
+                                        實際可選擇時段請參考票券頁面
                                     </p>
                                 </div>
 
@@ -428,9 +428,7 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <p class="schedule-sub-title">
-                                        更詳細的劃位須知，將於劃位日前兩天透過電子郵件告知。為提供最好的品質，上述日期會依照實際狀況彈性調整
-                                    </p>
+                                    <br/><br/>
                                 </div>
 
                                 <div class="feature-btn text-center">
@@ -450,7 +448,7 @@
 
                                 <div class="section-header">
                                     <div class="section-title">
-                                        <h3>飯店規則</h3>
+                                        <h3>無光規則</h3>
                                         <h4>Guest Rules</h4>
                                     </div>
                                     <p class="section-desc">
@@ -479,7 +477,7 @@
 
                                 <div class="section-header">
                                     <div class="section-title">
-                                        <h3>聯絡飯店</h3>
+                                        <h3>聯絡我們</h3>
                                         <h4>Contact</h4>
                                     </div>
                                     <p class="section-desc">
@@ -519,56 +517,10 @@
         <div class="ticket-modal-content">
             <div id="js-close-btn" class="close-btn">×</div>
 
-            <table class="ticket-table">
-                <tbody>
-                <tr>
-                    <th class="rule-col-1"></th>
-                    <th class="rule-col-2">
-                        雙人套票
-                    </th>
-                    <th class="rule-col-3">
-                        雙菜單套票
-                    </th>
-                </tr>
-                <tr>
-                    <td>票券內含</td>
-                    <td>1 組雙人票，1 次用餐體驗</td>
-                    <td>2 組雙人票，2 次用餐體驗</td>
-                </tr>
-                <tr>
-                    <td>菜單體驗</td>
-                    <td>六號菜單</td>
-                    <td>六號菜單＋七號菜單</td>
-                </tr>
-                <tr>
-                    <td>用餐日期</td>
-                    <td>
-                        2022.09 - 2022.10<br/>
-                        可選擇近期 1-2 個月之用餐時段
-                    </td>
-                    <td>
-                        六號菜單：2022.09 - 2023.03<br/>
-                        七號菜單：2023.04 - 2023.06<br/>
-                        可任選單一菜單上線期間之用餐時段
-                    </td>
-                </tr>
-                <tr>
-                    <td>劃位時間</td>
-                    <td>依購票順序劃位，請參考購票後通知信件</td>
-                    <td>
-                        在菜單上線前，享有首批劃位權益<br/>
-                        六號菜單：2022.08<br/>
-                        七號菜單：2023.03<br/>
-                        *實際日期尚待菜單規劃調整，劃位前將提早通知
-                    </td>
-                </tr>
-                <tr>
-                    <td>退費轉讓</td>
-                    <td>詳見 <a href="rules.html" class="default-light to-change-and-refund">更改、退費事宜</a></td>
-                    <td>詳見 <a href="rules.html" class="default-light to-change-and-refund">更改、退費事宜</a></td>
-                </tr>
-                </tbody>
-            </table>
+            <div class="ticket-table">
+                <img class="img-fluid d-none d-sm-block" src="img/other/ticket-compare.png" alt="票券差異比較表">
+                <img class="img-fluid d-block d-sm-none" src="img/other/ticket-compare-mobile.png" alt="票券差異比較表">
+            </div>
         </div>
     </div>
 
