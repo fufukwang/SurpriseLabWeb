@@ -3,7 +3,7 @@
 @import url("https://use.typekit.net/cax2ztr.css");
 @media (min-width: 1200px) {
   .container {
-    max-width: calc(608px + 30px);
+    max-width: calc(720px + 30px);
   }
 }
 
@@ -215,7 +215,7 @@ p {
 
 @media (min-width: 1200px) {
   .section {
-    padding-top: calc((608px + 30px) * 0.1297);
+    padding-top: calc((720px + 30px) * 0.1297);
   }
 }
 
@@ -239,7 +239,7 @@ p {
 
 @media (min-width: 1200px) {
   .section {
-    padding-bottom: calc((608px + 30px) * 0.1297);
+    padding-bottom: calc((720px + 30px) * 0.1297);
   }
 }
 
@@ -270,7 +270,7 @@ p {
 
 @media (min-width: 1200px) {
   .section-header {
-    padding-bottom: calc((608px + 30px) * 0.05725);
+    padding-bottom: calc((720px + 30px) * 0.05725);
   }
 }
 
@@ -298,7 +298,7 @@ p {
 
 @media (min-width: 1200px) {
   .section-header .section-desc {
-    padding-top: calc((608px + 30px) * 0.04025);
+    padding-top: calc((720px + 30px) * 0.04025);
   }
 }
 
@@ -781,7 +781,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #About .sec-intro {
-    padding-top: calc((608px + 30px) * 0.11091);
+    padding-top: calc((720px + 30px) * 0.11091);
   }
 }
 
@@ -833,7 +833,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #About .sec-experience .experience .exp-text {
-    bottom: calc((608px + 30px) * -0.0161);
+    bottom: calc((720px + 30px) * -0.0161);
   }
 }
 
@@ -857,7 +857,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #About .sec-experience .experience .middle .exp-number {
-    padding-left: calc((608px + 30px) * 0.03131);
+    padding-left: calc((720px + 30px) * 0.03131);
   }
 }
 
@@ -935,7 +935,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-status .time-counter ~ .sale-progress {
-    padding-top: calc((608px + 30px) * 0.00894);
+    padding-top: calc((720px + 30px) * 0.00894);
   }
 }
 
@@ -1010,7 +1010,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-status .sale-progress {
-    padding-top: calc((608px + 30px) * 0.08945);
+    padding-top: calc((720px + 30px) * 0.08945);
   }
 }
 
@@ -1045,7 +1045,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-status .sale-progress .sale-progress-info {
-    padding-top: calc((608px + 30px) * 0.02102);
+    padding-top: calc((720px + 30px) * 0.02102);
   }
 }
 
@@ -1080,7 +1080,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text {
-    padding-top: calc((608px + 30px) * 0.02236);
+    padding-top: calc((720px + 30px) * 0.02236);
   }
 }
 
@@ -1145,7 +1145,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-type .ticket-type {
-    padding-bottom: calc((608px + 30px) * 0.07156);
+    padding-bottom: calc((720px + 30px) * 0.07156);
   }
 }
 
@@ -1200,7 +1200,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-type .ticket-type .type-item {
-    padding-top: calc((608px + 30px) * 0.0483);
+    padding-top: calc((720px + 30px) * 0.0483);
   }
 }
 
@@ -1224,7 +1224,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-type .ticket-type .type-item {
-    padding-bottom: calc((608px + 30px) * 0.07156);
+    padding-bottom: calc((720px + 30px) * 0.07156);
   }
 }
 
@@ -1248,7 +1248,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-type .ticket-type .type-item {
-    padding-left: calc((608px + 30px) * 0.03757);
+    padding-left: calc((720px + 30px) * 0.03757);
   }
 }
 
@@ -1272,7 +1272,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-type .ticket-type .type-item {
-    padding-right: calc((608px + 30px) * 0.03757);
+    padding-right: calc((720px + 30px) * 0.03757);
   }
 }
 
@@ -1357,7 +1357,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-type .ticket-type .ticket-state {
-    bottom: calc((608px + 30px) * -0.0322);
+    bottom: calc((720px + 30px) * -0.0322);
   }
 }
 
@@ -1681,7 +1681,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-schedule .schedule .schedule-table table tr td:first-child {
-    padding-right: calc((608px + 30px) * 0.07335);
+    padding-right: calc((720px + 30px) * 0.07335);
   }
 }
 
@@ -1710,7 +1710,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-schedule .schedule .schedule-sub-title {
-    padding-top: calc((608px + 30px) * 0.05903);
+    padding-top: calc((720px + 30px) * 0.05903);
   }
 }
 
@@ -1734,7 +1734,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-schedule .schedule .schedule-sub-title {
-    padding-bottom: calc((608px + 30px) * 0.07692);
+    padding-bottom: calc((720px + 30px) * 0.07692);
   }
 }
 
@@ -1789,7 +1789,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Rules .feature-btn {
-    padding-bottom: calc((608px + 30px) * 0.0161);
+    padding-bottom: calc((720px + 30px) * 0.0161);
   }
 }
 
@@ -1859,7 +1859,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Contact .sec-contact .contact-sec:not(:first-child) {
-    padding-top: calc((608px + 30px) * 0.0322);
+    padding-top: calc((720px + 30px) * 0.0322);
   }
 }
 
@@ -1883,7 +1883,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Contact .sec-contact .contact-sec:not(:first-child) {
-    margin-top: calc((608px + 30px) * 0.0322);
+    margin-top: calc((720px + 30px) * 0.0322);
   }
 }
 

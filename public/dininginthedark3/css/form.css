@@ -128,7 +128,7 @@ button.btn-outline:focus {
 
 @media (min-width: 1200px) {
   #progressbar {
-    max-width: calc((608px + 30px) * 0.7263);
+    max-width: calc((720px + 30px) * 0.7263);
   }
 }
 
@@ -222,7 +222,7 @@ button.btn-outline:focus {
 
 @media (min-width: 1200px) {
   .bar-wrapper {
-    max-width: calc((608px + 30px) * 0.7263);
+    max-width: calc((720px + 30px) * 0.7263);
   }
 }
 
@@ -246,7 +246,7 @@ button.btn-outline:focus {
 
 @media (min-width: 1200px) {
   .bar-wrapper {
-    margin-top: calc((608px + 30px) * 0.04204);
+    margin-top: calc((720px + 30px) * 0.04204);
   }
 }
 
@@ -270,7 +270,7 @@ button.btn-outline:focus {
 
 @media (min-width: 1200px) {
   .bar-wrapper {
-    margin-bottom: calc((608px + 30px) * 0.07513);
+    margin-bottom: calc((720px + 30px) * 0.07513);
   }
 }
 
@@ -335,7 +335,7 @@ button.btn-outline:focus {
 
 @media (min-width: 1200px) {
   .sub-title {
-    padding-top: calc((608px + 30px) * 0.04025);
+    padding-top: calc((720px + 30px) * 0.04025);
   }
 }
 
@@ -412,7 +412,7 @@ form .form-container {
 
 @media (min-width: 1200px) {
   form .form-container {
-    padding-top: calc((608px + 30px) * 0.02683);
+    padding-top: calc((720px + 30px) * 0.02683);
   }
 }
 
@@ -441,7 +441,7 @@ form .form-container .field-intro {
 
 @media (min-width: 1200px) {
   form .form-container .field-intro {
-    padding-bottom: calc((608px + 30px) * 0.0322);
+    padding-bottom: calc((720px + 30px) * 0.0322);
   }
 }
 
@@ -478,7 +478,7 @@ form fieldset {
 
 @media (min-width: 1200px) {
   form fieldset {
-    padding-bottom: calc((608px + 30px) * 0.05367);
+    padding-bottom: calc((720px + 30px) * 0.05367);
   }
 }
 
@@ -1108,7 +1108,7 @@ fieldset.step-1 .form-container {
 
 @media (min-width: 1200px) {
   fieldset.step-1 .feature-btn {
-    padding-top: calc((608px + 30px) * 0.04293);
+    padding-top: calc((720px + 30px) * 0.04293);
   }
 }
 
@@ -1132,7 +1132,7 @@ fieldset.step-1 .form-container {
 
 @media (min-width: 1200px) {
   fieldset.step-2 .feature-btn {
-    padding-top: calc((608px + 30px) * 0.20394);
+    padding-top: calc((720px + 30px) * 0.20394);
   }
 }
 
@@ -1156,7 +1156,7 @@ fieldset.step-1 .form-container {
 
 @media (min-width: 1200px) {
   fieldset.step-3 .feature-btn {
-    padding-top: calc((608px + 30px) * 0.07513);
+    padding-top: calc((720px + 30px) * 0.07513);
   }
 }
 
@@ -1203,7 +1203,7 @@ fieldset.step-4 .field-intro {
 
 @media (min-width: 1200px) {
   fieldset.step-4 .field-intro {
-    padding-bottom: calc((608px + 30px) * 0.05367);
+    padding-bottom: calc((720px + 30px) * 0.05367);
   }
 }
 
@@ -1305,7 +1305,7 @@ fieldset.step-4 .form-group textarea {
 
 @media (min-width: 1200px) {
   fieldset.step-4 .feature-btn {
-    padding-top: calc((608px + 30px) * 0.07513);
+    padding-top: calc((720px + 30px) * 0.07513);
   }
 }
 
@@ -1329,7 +1329,7 @@ fieldset.step-4 .form-group textarea {
 
 @media (min-width: 1200px) {
   fieldset.step-5 .feature-btn {
-    padding-top: calc((608px + 30px) * 0.10197);
+    padding-top: calc((720px + 30px) * 0.10197);
   }
 }
 
