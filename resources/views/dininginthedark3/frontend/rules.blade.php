@@ -6,8 +6,8 @@
     <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
     <meta name="description" content="We don't meet people by accident. We meet for a reason.">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="無光晚餐第三季"/>
-    <meta property="og:site_name" content="無光晚餐第三季"/>
+    <meta property="og:title" content="無光晚餐 Dining In The Dark"/>
+    <meta property="og:site_name" content="無光晚餐 Dining In The Dark"/>
     <meta property="og:description" content="We don't meet people by accident. We meet for a reason."/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/dininginthedark3"/>
     <meta property="og:image" content="https://www.surpriselab.com.tw/dininginthedark3/img/general/opengraph.png?v=0.1"/>
@@ -16,7 +16,7 @@
     <meta property="og:image:height" content="315"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="facebook-domain-verification" content="mmtxvobzbh451wck03upjlbgtj1i2n" />
-    <title>無光晚餐第三季</title>
+    <title>無光晚餐 Dining In The Dark</title>
 
     <!-- Style -->
     <link rel="icon" href="img/general/favicon.png" type="image/x-icon">
@@ -54,7 +54,7 @@
         <div class="logo-wrapper">
             <div class="logo-inner">
                 <a class="smoothScroll" href="#Intro">
-                    <img class="img-fluid" src="img/general/logo_h.svg" alt="無光晚餐第三季">
+                    <img class="img-fluid" src="img/general/logo_h.svg" alt="無光晚餐 Dining In The Dark">
                 </a>
             </div>
             <button class="hamburger">
@@ -88,7 +88,7 @@
 
     <main class="sections">
 
-        <h1>無光晚餐第三季</h1>
+        <h1>無光晚餐 Dining In The Dark</h1>
 
         <ul class="nav nav-tabs justify-content-center" id="rules-tab-switcher">
             <li class="nav-link" data="0">
