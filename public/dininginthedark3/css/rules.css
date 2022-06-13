@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
 @import url("https://use.typekit.net/cax2ztr.css");
 body {
-  background-color: #2D2D2D !important;
+  background-color: #231815 !important;
   background-image: url(../img/home/bg-wallpaper.jpg);
   background-repeat: repeat;
   background-size: 100%;
 }
 
 header.logo {
-  background-color: #2D2D2D;
+  background-color: #231815;
 }
 
 .anchor-wrapper {
@@ -18,11 +18,11 @@ header.logo {
 #rules-tab-switcher {
   position: sticky;
   position: -webkit-sticky;
-  border-color: #2D2D2D;
+  border-color: #3E3A39;
   text-align: center;
   z-index: 9999;
   top: 120px;
-  background-color: #2D2D2D;
+  background-color: #231815;
   background-image: url(../img/home/bg-wallpaper.jpg);
   background-repeat: repeat;
   background-size: 100%;
@@ -43,7 +43,7 @@ header.logo {
   margin: 0 11.5px -1px;
   border-radius: 0;
   border-width: 0 0 1px 0;
-  border-color: #2D2D2D;
+  border-color: #3E3A39;
   letter-spacing: 2.2px;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
@@ -998,7 +998,7 @@ header.logo {
   text-align: center;
   letter-spacing: 1.8px;
   line-height: 2;
-  background-color: #2D2D2D;
+  background-color: #231815;
   border-right: solid 1px #EFEFEF;
 }
 
