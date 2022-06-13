@@ -9,7 +9,7 @@
 
 @media (min-width: 1440px) {
   .container {
-    max-width: calc(768px + 30px);
+    max-width: calc(900px + 30px);
   }
 }
 
@@ -65,21 +65,23 @@ a:visited {
 }
 
 a {
-  color: #B28247;
+  color: #8C5FB4;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 a.default-light {
-  color: #B28247;
+  color: #8C5FB4;
 }
 
 a.default-light:hover {
-  color: #E6A046;
+  color: #8C5FB4;
+  text-decoration: underline;
 }
 
 a:hover {
-  color: #E6A046;
+  color: #8C5FB4;
+  text-decoration: underline;
 }
 
 h1 {
@@ -219,7 +221,7 @@ p {
 
 @media (min-width: 1440px) {
   .section {
-    padding-top: calc((768px + 30px) * 0.1297);
+    padding-top: calc((900px + 30px) * 0.1297);
   }
 }
 
@@ -243,7 +245,7 @@ p {
 
 @media (min-width: 1440px) {
   .section {
-    padding-bottom: calc((768px + 30px) * 0.1297);
+    padding-bottom: calc((900px + 30px) * 0.1297);
   }
 }
 
@@ -274,7 +276,7 @@ p {
 
 @media (min-width: 1440px) {
   .section-header {
-    padding-bottom: calc((768px + 30px) * 0.05725);
+    padding-bottom: calc((900px + 30px) * 0.05725);
   }
 }
 
@@ -302,7 +304,7 @@ p {
 
 @media (min-width: 1440px) {
   .section-header .section-desc {
-    padding-top: calc((768px + 30px) * 0.04025);
+    padding-top: calc((900px + 30px) * 0.04025);
   }
 }
 
@@ -319,15 +321,16 @@ p {
 }
 
 .btn-link {
-  color: #B28247;
-  text-decoration: underline;
+  color: #8C5FB4;
+  text-decoration: none;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .btn-link:hover, .btn-link:focus {
-  color: #E6A046 !important;
+  color: #8C5FB4 !important;
+  text-decoration: underline;
 }
 
 .btn-outline {
@@ -354,6 +357,7 @@ p {
   background-color: #8C5FB4;
   border: 1px solid #8C5FB4;
   color: #EFEFEF;
+  text-decoration: none;
 }
 
 .btn-outline.btn-outline-small {
@@ -783,7 +787,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #About .sec-intro {
-    padding-top: calc((768px + 30px) * 0.11091);
+    padding-top: calc((900px + 30px) * 0.11091);
   }
 }
 
@@ -835,7 +839,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #About .sec-experience .experience .exp-text {
-    bottom: calc((768px + 30px) * -0.0161);
+    bottom: calc((900px + 30px) * -0.0161);
   }
 }
 
@@ -859,7 +863,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #About .sec-experience .experience .middle .exp-number {
-    padding-left: calc((768px + 30px) * 0.03131);
+    padding-left: calc((900px + 30px) * 0.03131);
   }
 }
 
@@ -937,7 +941,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-status .time-counter ~ .sale-progress {
-    padding-top: calc((768px + 30px) * 0.00894);
+    padding-top: calc((900px + 30px) * 0.00894);
   }
 }
 
@@ -1012,7 +1016,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-status .sale-progress {
-    padding-top: calc((768px + 30px) * 0.08945);
+    padding-top: calc((900px + 30px) * 0.08945);
   }
 }
 
@@ -1047,7 +1051,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-status .sale-progress .sale-progress-info {
-    padding-top: calc((768px + 30px) * 0.02102);
+    padding-top: calc((900px + 30px) * 0.02102);
   }
 }
 
@@ -1082,7 +1086,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text {
-    padding-top: calc((768px + 30px) * 0.02236);
+    padding-top: calc((900px + 30px) * 0.02236);
   }
 }
 
@@ -1147,7 +1151,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-type .ticket-type {
-    padding-bottom: calc((768px + 30px) * 0.07156);
+    padding-bottom: calc((900px + 30px) * 0.07156);
   }
 }
 
@@ -1202,7 +1206,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-type .ticket-type .type-item {
-    padding-top: calc((768px + 30px) * 0.0483);
+    padding-top: calc((900px + 30px) * 0.0483);
   }
 }
 
@@ -1226,7 +1230,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-type .ticket-type .type-item {
-    padding-bottom: calc((768px + 30px) * 0.07156);
+    padding-bottom: calc((900px + 30px) * 0.07156);
   }
 }
 
@@ -1250,7 +1254,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-type .ticket-type .type-item {
-    padding-left: calc((768px + 30px) * 0.03757);
+    padding-left: calc((900px + 30px) * 0.03757);
   }
 }
 
@@ -1274,7 +1278,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-type .ticket-type .type-item {
-    padding-right: calc((768px + 30px) * 0.03757);
+    padding-right: calc((900px + 30px) * 0.03757);
   }
 }
 
@@ -1359,7 +1363,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-type .ticket-type .ticket-state {
-    bottom: calc((768px + 30px) * -0.0322);
+    bottom: calc((900px + 30px) * -0.0322);
   }
 }
 
@@ -1683,7 +1687,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-schedule .schedule .schedule-table table tr td:first-child {
-    padding-right: calc((768px + 30px) * 0.07335);
+    padding-right: calc((900px + 30px) * 0.07335);
   }
 }
 
@@ -1712,7 +1716,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-schedule .schedule .schedule-sub-title {
-    padding-top: calc((768px + 30px) * 0.05903);
+    padding-top: calc((900px + 30px) * 0.05903);
   }
 }
 
@@ -1736,7 +1740,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Ticket .sec-ticket-schedule .schedule .schedule-sub-title {
-    padding-bottom: calc((768px + 30px) * 0.07692);
+    padding-bottom: calc((900px + 30px) * 0.07692);
   }
 }
 
@@ -1791,7 +1795,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Rules .feature-btn {
-    padding-bottom: calc((768px + 30px) * 0.0161);
+    padding-bottom: calc((900px + 30px) * 0.0161);
   }
 }
 
@@ -1861,7 +1865,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Contact .sec-contact .contact-sec:not(:first-child) {
-    padding-top: calc((768px + 30px) * 0.0322);
+    padding-top: calc((900px + 30px) * 0.0322);
   }
 }
 
@@ -1885,7 +1889,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1440px) {
   #Contact .sec-contact .contact-sec:not(:first-child) {
-    margin-top: calc((768px + 30px) * 0.0322);
+    margin-top: calc((900px + 30px) * 0.0322);
   }
 }
 
@@ -2019,177 +2023,18 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   transition: color 0.3s;
 }
 
+@media (max-width: 1199.98px) {
+  .ticket-modal-wrap .ticket-modal-content .close-btn {
+    top: -48px;
+    right: 20px;
+  }
+}
+
 .ticket-modal-wrap .ticket-modal-content .close-btn:hover {
   color: #ffffff;
 }
 
 .ticket-modal-wrap .ticket-modal-content .ticket-table {
   width: 100%;
-  border-collapse: collapse;
-  border-bottom: solid 2px #8C5FB4;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table tr {
-  border-color: #8C5FB4 #8C5FB4 #EFEFEF #8C5FB4;
-  border-style: solid;
-  border-width: 0 2px 2px 2px;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table tr:first-child {
-  border-width: 2px;
-  border-color: #8C5FB4;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table tr:last-child {
-  border-width: 0 2px;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table tr.normal-border {
-  border-width: 0 2px 1px 2px;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table tr.light-bg,
-.ticket-modal-wrap .ticket-modal-content .ticket-table tr.light-bg td {
-  background-color: #3E3A39 !important;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table th {
-  background-color: #8C5FB4;
-  border-right: solid 1px #3E3A39;
-  text-align: center;
-  letter-spacing: 1.8px;
-  color: #231815;
-  font-weight: normal;
-}
-
-@media (min-width: 1200px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table th {
-    padding-top: calc((608px + 30px) * 0.01342);
-  }
-}
-
-@media (min-width: 1440px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table th {
-    padding-top: calc((768px + 30px) * 0.01342);
-  }
-}
-
-@media (min-width: 1920px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table th {
-    padding-top: calc((1088px + 30px) * 0.01342);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table th {
-    padding-top: calc(100% * 0.01342);
-  }
-}
-
-@media (min-width: 1200px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table th {
-    padding-bottom: calc((608px + 30px) * 0.01342);
-  }
-}
-
-@media (min-width: 1440px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table th {
-    padding-bottom: calc((768px + 30px) * 0.01342);
-  }
-}
-
-@media (min-width: 1920px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table th {
-    padding-bottom: calc((1088px + 30px) * 0.01342);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table th {
-    padding-bottom: calc(100% * 0.01342);
-  }
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table th:last-child {
-  border-right: 0;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table th.rule-col-1 {
-  width: 10%;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table th.rule-col-2, .ticket-modal-wrap .ticket-modal-content .ticket-table th.rule-col-3 {
-  width: 45%;
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table td {
-  text-align: center;
-  letter-spacing: 1.8px;
-  line-height: 2;
-  background-color: #2D2D2D;
-  border-right: solid 1px #EFEFEF;
-}
-
-@media (min-width: 1200px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding-top: calc((608px + 30px) * 0.01342);
-  }
-}
-
-@media (min-width: 1440px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding-top: calc((768px + 30px) * 0.01342);
-  }
-}
-
-@media (min-width: 1920px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding-top: calc((1088px + 30px) * 0.01342);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding-top: calc(100% * 0.01342);
-  }
-}
-
-@media (min-width: 1200px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding-bottom: calc((608px + 30px) * 0.01342);
-  }
-}
-
-@media (min-width: 1440px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding-bottom: calc((768px + 30px) * 0.01342);
-  }
-}
-
-@media (min-width: 1920px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding-bottom: calc((1088px + 30px) * 0.01342);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding-bottom: calc(100% * 0.01342);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .ticket-modal-wrap .ticket-modal-content .ticket-table td {
-    padding: 13px 0;
-    letter-spacing: 1.4px;
-    line-height: 2;
-    font-size: 14px;
-  }
-}
-
-.ticket-modal-wrap .ticket-modal-content .ticket-table td.highlight-td {
-  background-color: #595757;
-  color: #EFEFEF;
-  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */

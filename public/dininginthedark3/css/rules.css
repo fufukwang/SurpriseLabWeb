@@ -90,7 +90,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules {
-    padding-bottom: calc((768px + 30px) * 0);
+    padding-bottom: calc((900px + 30px) * 0);
   }
 }
 
@@ -118,7 +118,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .feature-btn {
-    padding-bottom: calc((768px + 30px) * 0.11628);
+    padding-bottom: calc((900px + 30px) * 0.11628);
   }
 }
 
@@ -150,7 +150,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .sub-title {
-    padding-top: calc((768px + 30px) * 0.1136);
+    padding-top: calc((900px + 30px) * 0.1136);
   }
 }
 
@@ -174,7 +174,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .sub-title {
-    padding-bottom: calc((768px + 30px) * 0.03131);
+    padding-bottom: calc((900px + 30px) * 0.03131);
   }
 }
 
@@ -207,7 +207,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules ul li:not(:first-child), #Rules ol li:not(:first-child) {
-    padding-top: calc((768px + 30px) * 0.00716);
+    padding-top: calc((900px + 30px) * 0.00716);
   }
 }
 
@@ -231,7 +231,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rules.owl-carousel {
-    padding-top: calc((768px + 30px) * 0.07245);
+    padding-top: calc((900px + 30px) * 0.07245);
   }
 }
 
@@ -269,7 +269,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #qa .qa-title-separator {
-    margin-top: calc((768px + 30px) * 0.02147);
+    margin-top: calc((900px + 30px) * 0.02147);
   }
 }
 
@@ -293,7 +293,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #qa .qa-title-separator {
-    padding-top: calc((768px + 30px) * 0.05367);
+    padding-top: calc((900px + 30px) * 0.05367);
   }
 }
 
@@ -325,7 +325,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #qa .qa-note {
-    padding-top: calc((768px + 30px) * 0.04293);
+    padding-top: calc((900px + 30px) * 0.04293);
   }
 }
 
@@ -349,7 +349,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #qa .qa-note {
-    padding-bottom: calc((768px + 30px) * 0.09481);
+    padding-bottom: calc((900px + 30px) * 0.09481);
   }
 }
 
@@ -388,7 +388,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rule-according {
-    padding-bottom: calc((768px + 30px) * 0.02147);
+    padding-bottom: calc((900px + 30px) * 0.02147);
   }
 }
 
@@ -417,7 +417,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rule-according .card:not(:first-child) .card-header {
-    margin-top: calc((768px + 30px) * 0.02147);
+    margin-top: calc((900px + 30px) * 0.02147);
   }
 }
 
@@ -455,7 +455,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rule-according .card-body {
-    padding-top: calc((768px + 30px) * 0.00894);
+    padding-top: calc((900px + 30px) * 0.00894);
   }
 }
 
@@ -479,7 +479,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rule-according .card-body {
-    padding-bottom: calc((768px + 30px) * 0.00894);
+    padding-bottom: calc((900px + 30px) * 0.00894);
   }
 }
 
@@ -503,7 +503,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rule-according .card-body {
-    margin-left: calc((768px + 30px) * 0.00447);
+    margin-left: calc((900px + 30px) * 0.00447);
   }
 }
 
@@ -527,7 +527,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rule-according .card-body {
-    margin-top: calc((768px + 30px) * 0.01342);
+    margin-top: calc((900px + 30px) * 0.01342);
   }
 }
 
@@ -589,7 +589,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rule-according .card-header h6 {
-    padding-top: calc((768px + 30px) * 0.02147);
+    padding-top: calc((900px + 30px) * 0.02147);
   }
 }
 
@@ -624,7 +624,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules .rule-according .card-header h6::after {
-    height: calc((768px + 30px) * 0.02147);
+    height: calc((900px + 30px) * 0.02147);
   }
 }
 
@@ -691,7 +691,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #presale-rules .feature-btn {
-    padding-top: calc((768px + 30px) * 0.09481);
+    padding-top: calc((900px + 30px) * 0.09481);
   }
 }
 
@@ -715,7 +715,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #presale-rules .rule-according {
-    margin-bottom: calc((768px + 30px) * 0.06708);
+    margin-bottom: calc((900px + 30px) * 0.06708);
   }
 }
 
@@ -765,7 +765,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .feature-btn {
-    padding-top: calc((768px + 30px) * 0.09481);
+    padding-top: calc((900px + 30px) * 0.09481);
   }
 }
 
@@ -803,7 +803,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .cancel-order {
-    padding-top: calc((768px + 30px) * 0.10286);
+    padding-top: calc((900px + 30px) * 0.10286);
   }
 }
 
@@ -827,7 +827,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .change-seat {
-    padding-top: calc((768px + 30px) * 0.07245);
+    padding-top: calc((900px + 30px) * 0.07245);
   }
 }
 
@@ -860,7 +860,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .rule-table {
-    margin-top: calc((768px + 30px) * 0.02773);
+    margin-top: calc((900px + 30px) * 0.02773);
   }
 }
 
@@ -950,7 +950,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .rule-table th {
-    padding-top: calc((768px + 30px) * 0.01342);
+    padding-top: calc((900px + 30px) * 0.01342);
   }
 }
 
@@ -974,7 +974,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .rule-table th {
-    padding-bottom: calc((768px + 30px) * 0.01342);
+    padding-bottom: calc((900px + 30px) * 0.01342);
   }
 }
 
@@ -1010,7 +1010,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .rule-table td {
-    padding-top: calc((768px + 30px) * 0.01342);
+    padding-top: calc((900px + 30px) * 0.01342);
   }
 }
 
@@ -1034,7 +1034,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .rule-table td {
-    padding-bottom: calc((768px + 30px) * 0.01342);
+    padding-bottom: calc((900px + 30px) * 0.01342);
   }
 }
 
@@ -1084,7 +1084,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .transfer-ticket {
-    padding-top: calc((768px + 30px) * 0.09481);
+    padding-top: calc((900px + 30px) * 0.09481);
   }
 }
 
@@ -1108,7 +1108,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .refund-process {
-    padding-top: calc((768px + 30px) * 0.0814);
+    padding-top: calc((900px + 30px) * 0.0814);
   }
 }
 
@@ -1132,7 +1132,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .majeure-factor {
-    padding-top: calc((768px + 30px) * 0.1136);
+    padding-top: calc((900px + 30px) * 0.1136);
   }
 }
 
@@ -1156,7 +1156,7 @@ header.logo {
 
 @media (min-width: 1440px) {
   #Rules #changeAndrefund .transaction-system {
-    padding-top: calc((768px + 30px) * 0.1136);
+    padding-top: calc((900px + 30px) * 0.1136);
   }
 }
 
@@ -1338,7 +1338,7 @@ header.logo {
     letter-spacing: 1.4px;
   }
   #Rules ul li:not(:first-child) {
-    padding-top: 20px;
+    padding-top: 4px;
   }
   #Rules #qa .qa-title-separator {
     font-size: 18px;

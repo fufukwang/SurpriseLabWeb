@@ -40,11 +40,11 @@ $color-dark-brown: #2D2D2D;
   $percent : $width-1920 / 1118;
 
   @media (min-width: 1200px) {
-    #{$e}: calc((608px + #{$bs4-padding}) * #{$percent});
+    #{$e}: calc((720px + #{$bs4-padding}) * #{$percent});
   }
 
   @media (min-width: 1440px) {
-    #{$e}: calc((768px + #{$bs4-padding}) * #{$percent});
+    #{$e}: calc((900px + #{$bs4-padding}) * #{$percent});
   }
 
   @media (min-width: 1920px) {

@@ -48,7 +48,7 @@ main {
 
 @media (min-width: 1440px) {
   .submit-page {
-    padding-top: calc((768px + 30px) * 0.0653);
+    padding-top: calc((900px + 30px) * 0.0653);
   }
 }
 
@@ -82,7 +82,7 @@ main {
 
 @media (min-width: 1440px) {
   .submit-page .page-sub-title {
-    padding-top: calc((768px + 30px) * 0.04025);
+    padding-top: calc((900px + 30px) * 0.04025);
   }
 }
 
@@ -112,7 +112,7 @@ main {
 
 @media (min-width: 1440px) {
   .submit-page .page-info {
-    padding-top: calc((768px + 30px) * 0.09123);
+    padding-top: calc((900px + 30px) * 0.09123);
   }
 }
 
@@ -136,7 +136,7 @@ main {
 
 @media (min-width: 1440px) {
   .submit-page .page-info {
-    padding-bottom: calc((768px + 30px) * 0.09123);
+    padding-bottom: calc((900px + 30px) * 0.09123);
   }
 }
 
@@ -160,7 +160,7 @@ main {
 
 @media (min-width: 1440px) {
   .submit-page.error .page-info {
-    padding-top: calc((768px + 30px) * 0.07782);
+    padding-top: calc((900px + 30px) * 0.07782);
   }
 }
 
@@ -184,7 +184,7 @@ main {
 
 @media (min-width: 1440px) {
   .submit-page.error .page-info {
-    padding-bottom: calc((768px + 30px) * 0.07335);
+    padding-bottom: calc((900px + 30px) * 0.07335);
   }
 }
 

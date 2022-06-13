@@ -44,19 +44,21 @@ a:visited {
 }
 
 a {
-  color: $color-gold;
+  color: $color-purple;
   transition: color 0.3s;
 
   &.default-light {
-    color: $color-gold;
+    color: $color-purple;
 
     &:hover {
-      color: $color-yellow;
+      color: $color-purple;
+      text-decoration: underline;
     }
   }
 
   &:hover {
-    color: $color-yellow;
+    color: $color-purple;
+    text-decoration: underline;
   }
 }
 
@@ -196,14 +198,15 @@ p {
 
 // Text Link
 .btn-link {
-  color: $color-gold;
-  text-decoration: underline;
+  color: $color-purple;
+  text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
 
   &:hover,
   &:focus {
-    color: $color-yellow !important;
+    color: $color-purple !important;
+    text-decoration: underline;
   }
 }
 
@@ -228,6 +231,7 @@ p {
     background-color: $color-purple;
     border: 1px solid $color-purple;
     color: $color-k10;
+    text-decoration: none;
   }
 
   &.btn-outline-small {
@@ -1463,6 +1467,11 @@ header.logo {
       cursor: pointer;
       transition: color 0.3s;
 
+      @media (max-width: 1199.98px) {
+        top: -48px;
+        right: 20px;
+      }
+
       &:hover {
         color: $color-k0;
       }
@@ -1470,87 +1479,6 @@ header.logo {
 
     .ticket-table {
       width: 100%;
-      border-collapse: collapse;
-      border-bottom: solid 2px $color-purple;
-
-      tr {
-        border-color: $color-purple $color-purple $color-k10 $color-purple;
-        border-style: solid;
-        border-width: 0 2px 2px 2px;
-
-        &:first-child {
-          border-width: 2px;
-          border-color: $color-purple;
-        }
-
-        &:last-child {
-          border-width: 0 2px;
-        }
-
-        &.normal-border {
-          border-width: 0 2px 1px 2px;
-        }
-
-        &.light-bg,
-        &.light-bg td {
-          background-color: $color-k90 !important;
-        }
-      }
-
-      th {
-        background-color: $color-purple;
-        border-right: solid 1px $color-k90;
-        @include baseCounter('padding-top', 15);
-        @include baseCounter('padding-bottom', 15);
-        text-align: center;
-        letter-spacing: 1.8px;
-        color: $color-k100;
-        font-weight: normal;
-
-        &:last-child {
-          border-right: 0;
-        }
-
-        &.rule-col-1 {
-          width: 10%;
-
-          @media (max-width: 1199.98px) {
-            
-          }
-        }
-
-        &.rule-col-2,
-        &.rule-col-3 {
-          width: 45%;
-
-          @media (max-width: 1199.98px) {
-            
-          }
-        }
-      }
-
-      td {
-        @include baseCounter('padding-top', 15);
-        @include baseCounter('padding-bottom', 15);
-        text-align: center;
-        letter-spacing: 1.8px;
-        line-height: 2;
-        background-color: $color-dark-brown;
-        border-right: solid 1px $color-k10;
-
-        @media (max-width: 1199.98px) {
-          padding: 13px 0;
-          letter-spacing: 1.4px;
-          line-height: 2;
-          font-size: 14px;
-        }
-
-        &.highlight-td {
-          background-color: $color-k80;
-          color: $color-k10;
-          font-weight: 500;
-        }
-      }
     }
   }
 }
