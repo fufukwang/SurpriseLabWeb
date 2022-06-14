@@ -95,7 +95,7 @@
                 問與答
             </li>
             <li class="nav-link" data="1">
-                預售劃位
+                票務規則
             </li>
             <li class="nav-link" data="2">
                 更改、退費事項

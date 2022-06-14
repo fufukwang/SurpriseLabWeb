@@ -146,7 +146,7 @@
                                                     <img src="img/home/about/about-1.png" alt="九十分鐘">
                                                     <img src="img/home/about/about-1-shadow.png" alt="九十分鐘">
                                                 </div>
-                                                <p class="color-gold">
+                                                <p class="color-k50">
                                                     九十分鐘
                                                 </p>
                                             </div>
@@ -157,7 +157,7 @@
                                                     <img src="img/home/about/about-2.png" alt="五道料理">
                                                     <img src="img/home/about/about-2-shadow.png" alt="五道料理">
                                                 </div>
-                                                <p class="color-gold">
+                                                <p class="color-k50">
                                                     五道料理<br/>
                                                     <span class="color-k0">(葷/蛋奶素)</span>
                                                 </p>
@@ -169,7 +169,7 @@
                                                     <img src="img/home/about/about-3.png" alt="無限驚喜">
                                                     <img src="img/home/about/about-3-shadow.png" alt="無限驚喜">
                                                 </div>
-                                                <p class="color-gold">
+                                                <p class="color-k50">
                                                     無限驚喜
                                                 </p>
                                             </div>
@@ -197,7 +197,7 @@
                                 </div>
 
                                 <div class="time-counter">
-                                    <p class="highlight-dark">
+                                    <p class="color-k50">
                                         剩餘時間
                                     </p>
                                     <div class="d-flex time-rest d-flex align-items-center justify-content-center">
@@ -302,7 +302,7 @@
                                                 <div class="step-icon">
                                                     <img class="img-fluid" src="img/home/process/process-1.png" alt="先預購">
                                                 </div>
-                                                <h6 class="color-gold">先預購</h6>
+                                                <h6 class="color-purple">先預購</h6>
                                             </div>
                                             <div class="step-desc">
                                                 <p>
@@ -316,7 +316,7 @@
                                                 <div class="step-icon">
                                                     <img class="img-fluid" src="img/home/process/process-2.png" alt="後劃位">
                                                 </div>
-                                                <h6 class="color-gold">後劃位</h6>
+                                                <h6 class="color-purple">後劃位</h6>
                                             </div>
                                             <div class="step-desc">
                                                 <p>
@@ -330,7 +330,7 @@
                                                 <div class="step-icon">
                                                     <img class="img-fluid" src="img/home/process/process-3.png" alt="來體驗">
                                                 </div>
-                                                <h6 class="color-gold">來體驗</h6>
+                                                <h6 class="color-purple">來體驗</h6>
                                             </div>
                                             <div class="step-desc">
                                                 <p>
@@ -395,7 +395,7 @@
                                         <table>
                                             <tr>
                                                 <td colspan="2">
-                                                    <h6 class="color-gold">雙菜單套票 劃位時間</h6>
+                                                    <h6 class="color-purple">雙菜單套票 劃位時間</h6>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -408,7 +408,7 @@
                                         <table>
                                             <tr>
                                                 <td colspan="2">
-                                                    <h6 class="color-gold">雙人套票 劃位時間</h6>
+                                                    <h6 class="color-purple">雙人套票 劃位時間</h6>
                                                 </td>
                                             </tr>
                                             <tr>
