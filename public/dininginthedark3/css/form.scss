@@ -112,7 +112,7 @@ header.logo {
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
-  background: $color-dark-brown;
+  background: $color-background;
 
   &::before,
   &::after {
@@ -553,7 +553,7 @@ form {
     .select2-dropdown {
       border-radius: 6px;
       border: solid 1px $color-yellow;
-      background: $color-dark-brown;
+      background: $color-background;
       overflow: hidden;
     }
 
@@ -697,7 +697,7 @@ form {
     max-width: 100%;
     border: solid 1px $color-yellow;
     border-radius: 6px;
-    background-color: $color-dark-brown;
+    background-color: $color-background;
     padding: 8px;
 
     .ui-datepicker-header {
@@ -725,7 +725,7 @@ form {
         background: url('../img/icon/icon-arrow.svg') no-repeat;
         background-size: cover;
         border-radius: 50%;
-        background-color: $color-dark-brown;
+        background-color: $color-background;
       }
     }
 
@@ -1012,7 +1012,7 @@ fieldset {
         }
 
         &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0 100px $color-dark-brown inset;
+          -webkit-box-shadow: 0 0 0 100px $color-background inset;
           background-color: transparent;
           color: $color-yellow;
           -webkit-text-fill-color: $color-yellow;
@@ -1022,7 +1022,7 @@ fieldset {
         &:-webkit-autofill:focus {
           border-color: $color-yellow;
           box-shadow: none;
-          -webkit-box-shadow: 0 0 0 100px $color-dark-brown inset;
+          -webkit-box-shadow: 0 0 0 100px $color-background inset;
           outline: 0;
         }
       }

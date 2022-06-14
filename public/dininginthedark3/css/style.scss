@@ -12,12 +12,12 @@
 }
 
 html {
-  background-color: $color-k100;
+  background-color: $color-background;
 }
 
 body {
   position: relative;
-  background-color: $color-k100;
+  background-color: $color-background;
   color: $color-k10;
 
   &.menu-open {
@@ -31,7 +31,7 @@ body {
 }
 
 main.index-main {
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -154,7 +154,7 @@ p {
   h1 {
     font-size: 40px;
     letter-spacing: 1px;
-    color: $color-k100;
+    color: $color-background;
   }
 }
 
@@ -276,7 +276,11 @@ p {
   color: $color-k0;
 }
 
-.color-gold { 
+.color-k50 {
+  color: $color-k50;
+}
+
+.color-purple { 
   color: $color-purple; 
 }
 
@@ -483,7 +487,7 @@ header.logo {
   left: 0;
   z-index: 10000;
   background-image: url(../img/home/bg-wallpaper.jpg);
-  background-color: $color-k100;
+  background-color: $color-background;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -491,7 +495,7 @@ header.logo {
   text-align: center;
 
   @media (max-width: 1199.98px) {
-    background-color: $color-k100;
+    background-color: $color-background;
   }
 
   &.scroll-background-color {
@@ -499,7 +503,7 @@ header.logo {
     background-color: transparent;
 
     @media (max-width: 1199.98px) {
-      background-color: $color-k100;
+      background-color: $color-background;
     }
   }
 
@@ -819,10 +823,6 @@ header.logo {
             font-size: 12px;
             letter-spacing: 1.2px;
           }
-  
-          .info-text {
-            display: none;
-          }
         }
       }
   
@@ -929,7 +929,7 @@ header.logo {
           top: 0;
           width: 100%;
           height: 100%;
-          background: $color-k100;
+          background: $color-background;
           opacity: 0;
           transition: opacity 0.3s;
         }
@@ -1076,18 +1076,18 @@ header.logo {
 
             &::after {
               content: '';
-              width: 42px;
-              height: 1px;
-              background-color: rgba($color-purple, 0.8);
+              width: 30px;
+              height: 10px;
+              background-color: $color-k70;
               position: absolute;
               top: 50%;
               left: -21px;
               transform: translateY(-50%);
 
               @media (max-width: 1199.98px) {
-                width: 1px;
-                height: 60px;
-                top: calc((-124px + 60px)/2 - 60px);
+                width: 10px;
+                height: 30px;
+                top: calc((-124px + 30px)/2 - 30px);
                 left: 50%;
                 transform: translate(-50%, 0);
               }
@@ -1097,16 +1097,18 @@ header.logo {
               content: '';
               width: 0;
               height: 0;
-              border: 4px solid;
-              border-color: transparent transparent transparent rgba($color-purple, 0.8);
+              border-width: 15px 25px;
+              border-style: solid;
+              border-color: transparent transparent transparent $color-k70;
               position: absolute;
               top: 50%;
-              left: 21px;
+              left: 8px;
               transform: translateY(-50%);
 
               @media (max-width: 1199.98px) {
-                border-color: rgba($color-purple, 0.8) transparent transparent transparent;
-                top: calc((-124px + 60px)/2);
+                border-width: 25px 15px;
+                border-color: $color-k70 transparent transparent transparent;
+                top: calc((-124px + 30px)/2 - 2px);
                 left: 50%;
                 transform: translate(-50%, 0);
               }
@@ -1441,7 +1443,7 @@ header.logo {
   top: 0;
   left: 0;
   z-index: 80000;
-  background-color: rgba($color-k100, 0.8);
+  background-color: rgba($color-background, 0.8);
   display: none;
 
   .ticket-modal-content {

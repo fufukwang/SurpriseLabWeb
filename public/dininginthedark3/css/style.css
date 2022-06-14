@@ -33,12 +33,12 @@
 }
 
 html {
-  background-color: #231815;
+  background-color: #101010;
 }
 
 body {
   position: relative;
-  background-color: #231815;
+  background-color: #101010;
   color: #EFEFEF;
 }
 
@@ -52,7 +52,7 @@ body.modal-open {
 }
 
 main.index-main {
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -186,7 +186,7 @@ p {
 .blockMsg h1 {
   font-size: 40px;
   letter-spacing: 1px;
-  color: #231815;
+  color: #101010;
 }
 
 .fullpage {
@@ -410,7 +410,11 @@ p {
   color: #ffffff;
 }
 
-.color-gold {
+.color-k50 {
+  color: #9FA0A0;
+}
+
+.color-purple {
   color: #8C5FB4;
 }
 
@@ -627,7 +631,7 @@ header.logo {
   left: 0;
   z-index: 10000;
   background-image: url(../img/home/bg-wallpaper.jpg);
-  background-color: #231815;
+  background-color: #101010;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -638,7 +642,7 @@ header.logo {
 
 @media (max-width: 1199.98px) {
   header.logo {
-    background-color: #231815;
+    background-color: #101010;
   }
 }
 
@@ -649,7 +653,7 @@ header.logo.scroll-background-color {
 
 @media (max-width: 1199.98px) {
   header.logo.scroll-background-color {
-    background-color: #231815;
+    background-color: #101010;
   }
 }
 
@@ -1123,9 +1127,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     font-size: 12px;
     letter-spacing: 1.2px;
   }
-  #Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text {
-    display: none;
-  }
 }
 
 @media (max-width: 320px) {
@@ -1338,7 +1339,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #231815;
+  background: #101010;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -1516,9 +1517,9 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 #Ticket .sec-ticket-process .presale-process .step-wrap .presale-step + .presale-step::after {
   content: '';
-  width: 42px;
-  height: 1px;
-  background-color: rgba(140, 95, 180, 0.8);
+  width: 30px;
+  height: 10px;
+  background-color: #727171;
   position: absolute;
   top: 50%;
   left: -21px;
@@ -1528,9 +1529,9 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (max-width: 1199.98px) {
   #Ticket .sec-ticket-process .presale-process .step-wrap .presale-step + .presale-step::after {
-    width: 1px;
-    height: 60px;
-    top: calc((-124px + 60px)/2 - 60px);
+    width: 10px;
+    height: 30px;
+    top: calc((-124px + 30px)/2 - 30px);
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
@@ -1541,19 +1542,21 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   content: '';
   width: 0;
   height: 0;
-  border: 4px solid;
-  border-color: transparent transparent transparent rgba(140, 95, 180, 0.8);
+  border-width: 15px 25px;
+  border-style: solid;
+  border-color: transparent transparent transparent #727171;
   position: absolute;
   top: 50%;
-  left: 21px;
+  left: 8px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 @media (max-width: 1199.98px) {
   #Ticket .sec-ticket-process .presale-process .step-wrap .presale-step + .presale-step::before {
-    border-color: rgba(140, 95, 180, 0.8) transparent transparent transparent;
-    top: calc((-124px + 60px)/2);
+    border-width: 25px 15px;
+    border-color: #727171 transparent transparent transparent;
+    top: calc((-124px + 30px)/2 - 2px);
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
@@ -1990,7 +1993,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   top: 0;
   left: 0;
   z-index: 80000;
-  background-color: rgba(35, 24, 21, 0.8);
+  background-color: rgba(16, 16, 16, 0.8);
   display: none;
 }
 

@@ -232,7 +232,7 @@ form .form-container .form-group.input-with-label input:focus, form .form-contai
   outline: 0;
   border-color: #E6A046;
   box-shadow: none;
-  -webkit-box-shadow: 0 0 0 100px #2D2D2D inset;
+  -webkit-box-shadow: 0 0 0 100px #101010 inset;
   outline: 0;
 }
 

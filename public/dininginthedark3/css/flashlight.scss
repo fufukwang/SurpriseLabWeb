@@ -24,6 +24,7 @@
 }
 
 .lighting-wrap {
+    overflow: hidden;
 
     &::before {
         content: '';
@@ -183,10 +184,16 @@
         }
     
         p { 
+            font-weight: bold;
             padding-top: 15px; 
         
             @media (max-width: 1199.98px) { 
                 margin-top: -25px; 
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: 400;
             }
         }
     

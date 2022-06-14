@@ -40,6 +40,10 @@
   }
 }
 
+.lighting-wrap {
+  overflow: hidden;
+}
+
 .lighting-wrap::before {
   content: '';
   width: 100%;
@@ -223,6 +227,7 @@
 }
 
 .sec-experience .about-box p {
+  font-weight: bold;
   padding-top: 15px;
 }
 
@@ -230,6 +235,11 @@
   .sec-experience .about-box p {
     margin-top: -25px;
   }
+}
+
+.sec-experience .about-box p span {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .sec-experience .about-box img {
