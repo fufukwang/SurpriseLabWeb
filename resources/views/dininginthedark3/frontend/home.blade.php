@@ -218,7 +218,7 @@
                                             <p>
                                                 已售出 <span class="highlight total-sale">1600</span> 張<span class="over-2000">，還剩 <span class="highlight total-rest">400</span> 張</span>
                                             </p>
-                                            <p class="ml-auto text-right highlight-dark progress-percent-area">
+                                            <p class="ml-auto text-right color-k0 progress-percent-area">
                                                 已完成 <span class="highlight progress-percent">80</span> %
                                             </p>
                                         </div>
@@ -274,8 +274,8 @@
                                     以上價格包含 10% 服務費<br/>
                                     現場提供 pairing 加購<br/><br/>
                                     <span class="btn-link" id="js-open-btn">點此查看票券差異比較</span><br/><br/>
-                                    每場次最高可容納人數 12 人，<br/>
-                                    若訂位人數超過 12 人可來信客服信箱，由客服人員協助劃位
+                                    單一場次最高可容納人數 12 人，<br/>
+                                    若人數超過 12 人可來信客服信箱，由我們協助劃位
                                 </p>
                             </div>
                         </div>
@@ -449,7 +449,7 @@
                                 <div class="section-header">
                                     <div class="section-title">
                                         <h3>無光規則</h3>
-                                        <h4>Guest Rules</h4>
+                                        <h4>Rules</h4>
                                     </div>
                                     <p class="section-desc">
                                         若有其他問題，請按下方按鈕

@@ -366,6 +366,8 @@ header.logo {
       ul {
         text-align: left;
         margin: 0;
+        padding-left: 25px;
+        padding-right: 5px;
       }
 
       &.two-people {
@@ -394,12 +396,12 @@ header.logo {
       &.twice {
         th {
           &.rule-col-1 {
-            width: 20%;
+            width: 25%;
           }
   
           &.rule-col-2,
           &.rule-col-3 {
-            width: 40%;
+            width: 37.5%;
           }
         }
       }

@@ -971,7 +971,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 36px;
   letter-spacing: 3.6px;
   padding: 0 10px;
-  color: #EFEFEF;
+  color: #8C5FB4;
 }
 
 @media (max-width: 1200px) {

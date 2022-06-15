@@ -320,7 +320,7 @@
                                                     <li>雙人套票：包含一組雙人票券，於指定日期收到序號劃位，並選擇用餐日期。</li>
                                                     <li>雙菜單套票：包含兩組雙人票券，可前來無光晚餐用餐兩次，體驗不同菜單。將優先於所有票種劃位並可選擇最大範圍的區間，限量販售。</li>
                                                 </ol>
-                                                購票請至<a class="default-light btn-link" href="index.html#Ticket">我要預約</a>購買，相關規則請參考<span class="default-light btn-link to-presale-rules">預售劃位</span>。
+                                                購票請至<a class="default-light btn-link" href="index.html#Ticket">我要預約</a>購買，相關規則請參考<span class="default-light btn-link to-presale-rules">票務規則</span>。
                                             </div>
                                         </div>
                                     </div>
@@ -563,7 +563,7 @@
                                         <td>退費 25%<br/>(退款2,200元)</td>
                                     </tr>
                                     <tr>
-                                        <td>寄送序號後<br/>(已使用）</td>
+                                        <td>寄送序號後<br/>(已使用)</td>
                                         <td>
                                             <ul>
                                                 <li>體驗九天內 (不包含體驗當日) 來信申請，僅退 50% 費用，建議將訂位轉讓給親友</li>
