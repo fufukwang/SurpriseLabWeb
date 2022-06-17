@@ -146,7 +146,7 @@
                                                     <img src="img/home/about/about-1.png" alt="九十分鐘">
                                                     <img src="img/home/about/about-1-shadow.png" alt="九十分鐘">
                                                 </div>
-                                                <p class="color-k50">
+                                                <p class="color-lightgray">
                                                     九十分鐘
                                                 </p>
                                             </div>
@@ -157,7 +157,7 @@
                                                     <img src="img/home/about/about-2.png" alt="五道料理">
                                                     <img src="img/home/about/about-2-shadow.png" alt="五道料理">
                                                 </div>
-                                                <p class="color-k50">
+                                                <p class="color-lightgray">
                                                     五道料理<br/>
                                                     <span class="color-k0">(葷/蛋奶素)</span>
                                                 </p>
@@ -169,7 +169,7 @@
                                                     <img src="img/home/about/about-3.png" alt="無限驚喜">
                                                     <img src="img/home/about/about-3-shadow.png" alt="無限驚喜">
                                                 </div>
-                                                <p class="color-k50">
+                                                <p class="color-lightgray">
                                                     無限驚喜
                                                 </p>
                                             </div>
@@ -197,9 +197,7 @@
                                 </div>
 
                                 <div class="time-counter">
-                                    <p class="color-k50">
-                                        剩餘時間
-                                    </p>
+                                    <p>剩餘時間</p>
                                     <div class="d-flex time-rest d-flex align-items-center justify-content-center">
                                         <span class="days">00</span>天
                                         <span class="hours">00</span>時

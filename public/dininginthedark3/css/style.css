@@ -39,7 +39,7 @@ html {
 body {
   position: relative;
   background-color: #101010;
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 body.menu-open {
@@ -322,6 +322,7 @@ p {
 
 .btn-link {
   color: #8C5FB4;
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: 0.3s;
@@ -338,6 +339,7 @@ p {
   min-width: 210px;
   text-align: center;
   font-size: 18px;
+  font-weight: bold;
   color: #8C5FB4;
   letter-spacing: 1.8px;
   padding: 10px 30px;
@@ -399,7 +401,7 @@ p {
 .highlight {
   color: #8C5FB4;
   letter-spacing: 1.2px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .highlight-dark {
@@ -414,8 +416,13 @@ p {
   color: #9FA0A0;
 }
 
+.color-lightgray {
+  color: #CCCCCC;
+}
+
 .color-purple {
   color: #8C5FB4;
+  font-weight: bold;
 }
 
 .normal-lineHeight, .normal-lineHeight p {
@@ -931,10 +938,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 #Ticket .ticket-area-note {
   line-height: 2;
-}
-
-#Ticket .sec-ticket-status .time-counter {
-  color: #EFEFEF;
 }
 
 @media (min-width: 1200px) {
@@ -1832,12 +1835,12 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Contact .sec-contact a {
-  color: #EFEFEF;
+  color: #CCCCCC;
   text-decoration: underline;
 }
 
 #Contact .sec-contact a:hover {
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 #Contact .sec-contact .contact-sec {

@@ -342,15 +342,15 @@
                                     </div>
                                 </div>
 
-                                <p class="qa-note">
-                                    其他事項：<br/>
-                                    ① 為了各位消費者的權益與安全，餐廳內部設有夜視監視器全程錄影，必要時將會調閱影像紀錄。<br/>
-                                    ② 為顧及安全與⽤餐品質，不建議懷孕超過 28 週之孕婦與年紀低於 15 歲之孩童前來⽤餐。<br/>
-                                    ③ 為顧及體驗品質食物設計，不建議對乳製品過敏或嚴重乳糖不耐症體質者前來用餐。<br/>
-                                    ④ 無光晚餐不提供開瓶服務，現場提供可加點的酒⽔單。<br/>
-                                    ⑤ 在座位分配上若有特殊需求可於訂位時備註，但以現場服務⼈員為安排為準。<br/>
-                                    ⑥ 若有活動包場需求、任何特殊訂位服務、天⾺⾏空的奇想、為愛準備的驚喜，請來信詢問 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>
-                                </p>
+                                <div class="qa-note">
+                                    <p>其他事項：</p>
+                                    <p>① 為了各位消費者的權益與安全，餐廳內部設有夜視監視器全程錄影，必要時將會調閱影像紀錄。</p>
+                                    <p>② 為顧及安全與⽤餐品質，不建議懷孕超過 28 週之孕婦與年紀低於 15 歲之孩童前來⽤餐。</p>
+                                    <p>③ 為顧及體驗品質食物設計，不建議對乳製品過敏或嚴重乳糖不耐症體質者前來用餐。</p>
+                                    <p>④ 無光晚餐不提供開瓶服務，現場提供可加點的酒⽔單。</p>
+                                    <p>⑤ 在座位分配上若有特殊需求可於訂位時備註，但以現場服務⼈員為安排為準。</p>
+                                    <p>⑥ 若有活動包場需求、任何特殊訂位服務、天⾺⾏空的奇想、為愛準備的驚喜，請來信詢問 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></p>
+                                </div>
                             </div>
 
                             <div class="feature-btn">
@@ -396,11 +396,12 @@
                                 <h5 class="sub-title highlight">
                                     雙菜單套票說明
                                 </h5>
+                                <br/><br/>
                                 <div>
                                     <img class="img-fluid d-none d-sm-block" src="img/other/flow-tickets-for-four.png" alt="雙菜單套票說明">
                                     <img class="img-fluid d-block d-sm-none" src="img/other/flow-tickets-for-four-mobile.png" alt="雙菜單套票說明">
                                 </div>
-                                <br/>
+                                <br/><br/>
                                 <ol>
                                     <li>雙菜單享有兩組序號，將會於個別指定劃位日寄送（兩組序號劃位日期不同，一次只會收到一組序號）。</li>
                                     <li>劃位之指定日期當天收到信件（信件內容含有專屬劃位序號與訂位頁面連結），自行選定日期與時段，輸入劃位序號扣抵，即完成劃位。 </li>

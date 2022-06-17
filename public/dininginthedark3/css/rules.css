@@ -323,11 +323,9 @@ header.logo {
 }
 
 #Rules #qa .qa-note {
-  margin: 0 auto;
-  text-align: left;
-  line-height: 2;
   width: 535px;
   max-width: 100%;
+  margin: 0 auto;
 }
 
 @media (min-width: 1200px) {
@@ -375,6 +373,20 @@ header.logo {
 @media (max-width: 1199.98px) {
   #Rules #qa .qa-note {
     padding-bottom: calc(100% * 0.09481);
+  }
+}
+
+#Rules #qa .qa-note p {
+  line-height: 2;
+  text-align: left;
+  text-indent: -26px;
+  padding-left: 26px;
+}
+
+@media (max-width: 1199.98px) {
+  #Rules #qa .qa-note p {
+    text-indent: -20px;
+    padding-left: 20px;
   }
 }
 
@@ -457,7 +469,6 @@ header.logo {
   padding-right: 19px;
   line-height: 2;
   letter-spacing: 1.8px;
-  color: #EFEFEF;
 }
 
 @media (min-width: 1200px) {
@@ -671,7 +682,7 @@ header.logo {
   color: #8C5FB4;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   #Rules .rule-according .card-header h6 {
     font-size: 16px;
     letter-spacing: 1.6px;
@@ -953,8 +964,8 @@ header.logo {
   border-right: solid 1px #3E3A39;
   text-align: center;
   letter-spacing: 1.8px;
-  color: #231815;
-  font-weight: normal;
+  color: #000000;
+  font-weight: bold;
 }
 
 @media (min-width: 1200px) {
@@ -1267,7 +1278,8 @@ header.logo {
 #Rules #changeAndrefund .presale-change .change-row .change-row-title .row-title-inner {
   display: inline-block;
   padding: 5px 10px;
-  color: #101010;
+  color: #000000;
+  font-weight: bold;
   background-color: #8C5FB4;
 }
 
@@ -1368,8 +1380,8 @@ header.logo {
     padding-top: 42px;
   }
   #Rules .rule-according .card-header h6 {
-    padding: 12px 40px 0 18px;
-    text-indent: -18px;
+    padding: 12px 40px 0 16px;
+    text-indent: -16px;
     line-height: 2;
     font-size: 14px;
     letter-spacing: 1.4px;

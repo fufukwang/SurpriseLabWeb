@@ -141,13 +141,23 @@ header.logo {
     }
 
     .qa-note {
-      margin: 0 auto;
-      text-align: left;
-      line-height: 2;
       width: 535px;
       max-width: 100%;
+      margin: 0 auto;
       @include baseCounter('padding-top', 48);
       @include baseCounter('padding-bottom', 106);
+
+      p {
+        line-height: 2;
+        text-align: left;
+        text-indent: -26px;
+        padding-left: 26px;
+
+        @media (max-width: 1199.98px) {
+          text-indent: -20px;
+        padding-left: 20px;
+        }
+      }
     }
   }
 
@@ -191,7 +201,6 @@ header.logo {
       padding-right: 19px;
       line-height: 2;
       letter-spacing: 1.8px;
-      color: $color-k10;
       @include baseCounter('padding-top', 10);
       @include baseCounter('padding-bottom', 10);
       @include baseCounter('margin-left', 5);
@@ -265,7 +274,7 @@ header.logo {
       }
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199.98px) {
       .card-header {
         h6 {
           font-size: 16px;
@@ -437,8 +446,8 @@ header.logo {
         @include baseCounter('padding-bottom', 15);
         text-align: center;
         letter-spacing: 1.8px;
-        color: $color-k100;
-        font-weight: normal;
+        color: $color-text-black;
+        font-weight: bold;
 
         &:last-child {
           border-right: 0;
@@ -549,7 +558,8 @@ header.logo {
           .row-title-inner {
             display: inline-block;
             padding: 5px 10px;
-            color: $color-background;
+            color: $color-text-black;
+            font-weight: bold;
             background-color: $color-purple;
           }
         }
@@ -668,8 +678,8 @@ header.logo {
     .rule-according {
       .card-header {
         h6 {
-          padding: 12px 40px 0 18px;
-          text-indent: -18px;
+          padding: 12px 40px 0 16px;
+          text-indent: -16px;
           line-height: 2;
           font-size: 14px;
           letter-spacing: 1.4px;

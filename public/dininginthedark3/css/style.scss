@@ -18,7 +18,7 @@ html {
 body {
   position: relative;
   background-color: $color-background;
-  color: $color-k10;
+  color: $color-text-lightgray;
 
   &.menu-open {
     height: 100vh;
@@ -199,6 +199,7 @@ p {
 // Text Link
 .btn-link {
   color: $color-purple;
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
@@ -216,6 +217,7 @@ p {
   min-width: 210px;
   text-align: center;
   font-size: 18px;
+  font-weight: bold;
   color: $color-purple;
   letter-spacing: 1.8px;
   padding: 10px 30px;
@@ -265,7 +267,7 @@ p {
 .highlight {
   color: $color-purple;
   letter-spacing: 1.2px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .highlight-dark {
@@ -280,8 +282,13 @@ p {
   color: $color-k50;
 }
 
+.color-lightgray {
+  color: $color-text-lightgray;
+}
+
 .color-purple { 
-  color: $color-purple; 
+  color: $color-purple;
+  font-weight: bold;
 }
 
 .normal-lineHeight {
@@ -711,7 +718,6 @@ header.logo {
   // 售票狀況
   .sec-ticket-status {
     .time-counter {
-      color: $color-k10;
   
       & ~ .sale-progress {
         @include baseCounter('padding-top', 10);
@@ -1307,11 +1313,11 @@ header.logo {
 #Contact {
   .sec-contact {
     a {
-      color: $color-k10;
+      color: $color-text-lightgray;
       text-decoration: underline;
 
       &:hover {
-        color: $color-k10;
+        color: $color-text-lightgray;
       }
     }
   
