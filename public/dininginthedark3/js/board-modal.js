@@ -1,3 +1,7 @@
+let navigation_type = performance.getEntriesByType("navigation")[0].type;
+let is_rule = /rules/.test(document.referrer);
+let is_show = new URL(window.location.href).searchParams.get("effect") == 'show';
+
 $(function() {
     // modal
     let $enter_modal = $('#js-enter-modal');
@@ -175,5 +179,21 @@ $(function() {
         // rotate clockwise
         rotateClockwise(15);
     });
+
+
+    /* init */
+    switch (navigation_type) {
+        case 'reload':
+            if ( is_show ) {
+                window.location.href = 'index.html';
+            }
+            break;
+        case 'navigate':
+            if ( is_rule && !is_show ) {
+                $('body').removeClass('modal-open');
+                $enter_modal.fadeOut();
+            }
+            break;
+    }
 
 });

@@ -503,7 +503,6 @@
                 
                 <!-- light -->
                 <div class="light light-lg hidden-xs"></div>
-                <div class="light light-xs visible-xs"></div>
 
                 <!-- mask-->
                 <div class="mask"></div>

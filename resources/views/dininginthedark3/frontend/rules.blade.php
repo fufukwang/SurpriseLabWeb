@@ -72,13 +72,13 @@
     <nav class="anchor-wrapper">
         <ul>
             <li>
-                <a class="smoothScroll about" href="index.html#About">About</a>
+                <a class="smoothScroll about" href="index.html#Intro">About</a>
             </li>
             <li>
                 <a class="smoothScroll ticket" href="index.html#Ticket">Ticket</a>
             </li>
             <li class="active">
-                <a class="smoothScroll rules" href="rules.html">Rules</a>
+                <a class="smoothScroll rules" href="javascript://">Rules</a>
             </li>
             <li>
                 <a class="smoothScroll contact" href="index.html#Contact">Contact</a>
