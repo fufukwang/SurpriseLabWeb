@@ -1169,11 +1169,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (min-width: 1199.98px) {
-  #Ticket .sec-ticket-type .ticket-type:hover .type-item:not(.sold):hover .ticket-frame::before {
-    opacity: 0;
+  #Ticket .sec-ticket-type .ticket-type:hover .type-item:not(.sold):hover .ticket-frame {
+    opacity: 1;
   }
-  #Ticket .sec-ticket-type .ticket-type:hover .type-item:not(.sold) .ticket-frame::before {
-    opacity: 0.3;
+  #Ticket .sec-ticket-type .ticket-type:hover .type-item:not(.sold) .ticket-frame {
+    opacity: 0.5;
   }
 }
 
@@ -1330,17 +1330,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 #Ticket .sec-ticket-type .ticket-type .ticket-frame {
   position: relative;
   display: block;
-}
-
-#Ticket .sec-ticket-type .ticket-type .ticket-frame::before {
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #101010;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }

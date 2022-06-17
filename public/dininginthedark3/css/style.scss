@@ -847,16 +847,12 @@ header.logo {
           .type-item:not(.sold) {
             &:hover {
               .ticket-frame {
-                &::before {
-                  opacity: 0;
-                }
+                opacity: 1;
               }
             }
   
             .ticket-frame {
-              &::before {
-                opacity: 0.3;
-              }
+              opacity: 0.5;
             }
           }
         }
@@ -921,18 +917,8 @@ header.logo {
       .ticket-frame {
         position: relative;
         display: block;
-  
-        &::before {
-          position: absolute;
-          content: '';
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background: $color-background;
-          opacity: 0;
-          transition: opacity 0.3s;
-        }
+        opacity: 1;
+        transition: opacity 0.3s;
       }
   
       .ticket-state {
