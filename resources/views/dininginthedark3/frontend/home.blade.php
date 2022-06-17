@@ -34,19 +34,19 @@
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WCD7VGK');</script>
-    <!-- End Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKG6X5Z');</script>
+<!-- End Google Tag Manager -->
 </head>
 
 <body class="loading modal-open">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCD7VGK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKG6X5Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <!-- Header LOGO -->
     <header class="logo scroll-background-color">
@@ -246,7 +246,7 @@
                                 <div class="ticket-type">
                                     
                                     <div class="type-item type-matinee">
-                                        <a href="https://surpriselab.backme.tw/checkout/2296/18276?locale=zh-TW
+                                        <a href="https://surpriselab.backme.tw/checkout/2534/19986?locale=zh-TW
                                     " class="ticket-frame" target="_blank">
                                             <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.1" alt="雙人套票">
                                             <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.1" alt="雙人套票">
@@ -258,7 +258,7 @@
                                         </a>
                                     </div>
                                     <div class="type-item type-great-tipsy">
-                                        <a href="https://surpriselab.backme.tw/checkout/2296/18275?locale=zh-TW" class="ticket-frame" target="_blank">
+                                        <a href="https://surpriselab.backme.tw/checkout/2534/19985?locale=zh-TW" class="ticket-frame" target="_blank">
                                             <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.1" alt="雙菜單套票">
                                             <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.1" alt="雙菜單套票">
                                             <p class="ticket-state timeLimit">

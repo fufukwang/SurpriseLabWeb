@@ -1,28 +1,17 @@
 $(document).ready(function () {
     
     // 售票進度 API
-    var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/1397json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep2 = 'https://surpriselab.backme.tw/api/projects/1444json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep3 = 'https://surpriselab.backme.tw/api/projects/1493json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep4 = 'https://surpriselab.backme.tw/api/projects/1559json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep5 = 'https://surpriselab.backme.tw/api/projects/1592json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep6 = 'https://surpriselab.backme.tw/api/projects/1681json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep7 = 'https://surpriselab.backme.tw/api/projects/1821json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep8 = 'https://surpriselab.backme.tw/api/projects/1987json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep9 = 'https://surpriselab.backme.tw/api/projects/2143json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep10 = 'https://surpriselab.backme.tw/api/projects/2245json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep11 = 'https://surpriselab.backme.tw/api/projects/2265json?token=15171aa66ababafd4464a1c194b66102';
-    var progress_api_SaleStep12 = 'https://surpriselab.backme.tw/api/projects/2296json?token=15171aa66ababafd4464a1c194b66102';
+    var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/2534json?token=15171aa66ababafd4464a1c194b66102';
+
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
     
     $.when(
-      $.getJSON(progress_api_SaleStep9),
-      $.getJSON(progress_api_SaleStep12)
-    ).done(function(data1, data12) {
-
+      $.getJSON(progress_api_SaleStep1)
+    ).done(function(data) {
         // data1 = data1[0];
-        var data = data12[0];
+        // var data = data1[0];
+console.log(data);
 
         // 階段總人數
         // var SaleStep1_amount = data1['pledged_unit_count'];
@@ -41,8 +30,8 @@ $(document).ready(function () {
         var item2_amount = data['rewards'][1].pledged_count * 2;
         var item3_amount = data['rewards'][2].pledged_count * 6;
         */
-        var before = 18700; // 之前的總票數
-        var goal = before + 830;//2750; // 目標張數 /* SaleStep1_amount + 1500 */
+        var before = 0; // 之前的總票數
+        var goal = before + 3500;//2750; // 目標張數 /* SaleStep1_amount + 1500 */
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
         var amount = data["pledged_unit_count"];
@@ -54,11 +43,11 @@ $(document).ready(function () {
         // 測試用
         //sale_progress = 50;
 
-        // 雙人共享票
+        // 雙菜單套票
         var ticket_matinee = $('.type-great-tipsy');
-        var timeLimit_sale = data['rewards'][3].pledged_count; // 已銷售張數
-        var timeLimit_limit = data['rewards'][3].quantity_limit; // 限量張數
-        var timeLimit_wait = data['rewards'][3].wait_pledged_count; // 等待付款中張數
+        var timeLimit_sale = data['rewards'][1].pledged_count; // 已銷售張數
+        var timeLimit_limit = data['rewards'][1].quantity_limit; // 限量張數
+        var timeLimit_wait = data['rewards'][1].wait_pledged_count; // 等待付款中張數
         var timeLimit_rest = timeLimit_limit - timeLimit_sale - timeLimit_wait; // 剩餘可銷售張數
         
         //timeLimit_rest = 0;  // 歸零
@@ -75,7 +64,7 @@ $(document).ready(function () {
         timeLimit.find('.total-ticket').html(timeLimit_limit); // 更新時間有點限制票限量張數
         timeLimit.find('.rest-ticket').html(timeLimit_rest); // 更新時間有點限制票剩餘可銷售張數
         timeLimit.fadeTo(300, 1);
-
+/*
 
         // 六人共享票 票銷售完之後改顯示sold out圖
         var ticket_group = $('.type-group');
@@ -98,7 +87,7 @@ $(document).ready(function () {
         sixShare.find('.total-ticket').html(groupTicket_limit); // 更新時間有點限制票限量張數
         sixShare.find('.rest-ticket').html(groupTicket_rest); // 更新時間有點限制票剩餘可銷售張數
         sixShare.fadeTo(300, 1);
-
+*/
         var sale_info = $('.sale-progress-info');
         sale_info.find('.total-sale').html((parseInt(amount) + parseInt(before))); // 更新總售出張數
         sale_info.find('.total-rest').html(rest_tickets); // 更新剩餘張數
