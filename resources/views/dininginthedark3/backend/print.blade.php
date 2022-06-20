@@ -122,7 +122,7 @@
                                         <tbody>
 @forelse ($order as $row)
     <?php 
-        $coupons = App\model\tgt2\coupon::where('o_id',$row->sn)->get();
+        $coupons = App\model\dark3\coupon::where('o_id',$row->sn)->get();
         $coupon_pople = 0;
         $tmp_b_id = 0;
         $totle_money = 0;
@@ -130,7 +130,7 @@
         $last_four = '';
         if($coupons){
             foreach($coupons as $coup){
-                $single_money = App\model\tgt2\backme::select('money')->find($coup->b_id)->money;
+                $single_money = App\model\dark3\backme::select('money')->find($coup->b_id)->money;
                 if($tmp_b_id != $coup->b_id){
                     $tmp_b_id = $coup->b_id;
                     $totle_money += $single_money;
@@ -138,7 +138,7 @@
             }
             if(isset($coup->b_id)){
                 // 這裡取得貝殼過來的後四碼
-                $last_four = App\model\tgt2\backme::select('last_four')->find($coup->b_id)->last_four;
+                $last_four = App\model\dark3\backme::select('last_four')->find($coup->b_id)->last_four;
             }
         } else {
             $totle_money = $row->OM;
@@ -152,7 +152,7 @@
                   
             }
         }
-        $number = App\model\tgt2\inv::select('number','is_cancal')->where('order_id',$row->id)->first();
+        $number = App\model\dark3\inv::select('number','is_cancal')->where('order_id',$row->id)->first();
         if($number){
             $inv_open = true;
         }
@@ -188,7 +188,7 @@
 
                                                 </td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
-                                                <th>@forelse(App\model\tgt2\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt2\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
+                                                <th>@forelse(App\model\dark3\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\dark3\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
 <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
 </th>

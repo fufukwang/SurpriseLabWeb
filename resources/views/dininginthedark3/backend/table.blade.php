@@ -53,24 +53,57 @@
 			<td>註記</td>
 		</tr>
 @forelse ($order as $row)
+	<?php
+	if($row->pay_type == '信用卡'){
+      if($row->is_overseas>0){
+          $pay_type = '藍新金流';
+          $coupon = '刷卡付費';
+      } else {
+          $pay_type = '貝殼集器';
+      }
+  	} elseif($row->pay_type == '後台編輯'){
+      $pay_type = $row->edit_type;
+  	}
+   $pay_status = $row->pay_status;
+   if($pay_type == '公關位' && $row->pay_status == '已付款'){
+      $pay_status = '公關位';
+   }
+   $pay_money = '';
+   $coupons = App\model\dark3\coupon::where('o_id',$row->sn)->get();
+                    
+   if(count($coupons)>0){
+      foreach($coupons as $c){
+         if($coupon!=''){
+            $coupon .= "<br >";
+            $pay_money.= "<br />";
+         }
+         $coupon .= "{$c->code}";
+         $pay_money .= App\model\dark3\backme::select('money')->find($c->b_id)->money;
+      }
+   } else {
+      $pay_money = $row->OM;
+   }
+                    
+   if($pay_status !== '已付款') $pay_money = 0;
+   ?>
 		<tr>
 			<td rowspan="2"></td>
 			<td rowspan="2"></td>
 			<td>{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
 			<td>{{ $row->name }}</td>
-			<td>@if($row->pay_type=='現場付款') 現場 @elseif($row->pay_type=='信用卡') 信用卡 @elseif($row->pay_type='後臺編輯') 後台 @endif {{ $row->OM }} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
+			<td>{{ $row->pay_type}} {!! $pay_money !!} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
 			<td>{{ $row->pople }} 人 </td>
 			<td>{{ $row->vegetarian }} 人</td>
 			<td rowspan="2">{!! nl2br($row->notes) !!}</td>
-			<td rowspan="2">@forelse(App\model\tgt2\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\tgt2\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 無使用優惠券 @endforelse</td>
+			<td rowspan="2">{!! $coupon !!}</td>
 			<td rowspan="2">{!! nl2br($row->manage) !!}</td>
 		</tr>
 		<tr>
 			<td>團員</td>
 			<td colspan="5">
 				<table>
-					@forelse(App\model\tgt2\TeamMail::where('order_id',$row->id)->get() as $tm)
+					@forelse(App\model\dark3\TeamMail::where('order_id',$row->id)->get() as $tm)
 					<tr>
 						<td>{{ $tm->name }}</td>
 						<td>{{ $tm->tel }}</td>

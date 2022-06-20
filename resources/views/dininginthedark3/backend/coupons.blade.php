@@ -71,7 +71,7 @@
 @elseif( $row->type == 'p6' ) 六人沈醉票 
 @endif</td>
                                                 <td>@if($row->o_id > 0) 
-                                                    {{ App\model\tgt2\order::where('sn',$row->o_id)->first()->created_at }}
+                                                    {{ App\model\dark3\order::where('sn',$row->o_id)->first()->created_at }}
                                                 @else 尚未兌換
                                                 @endif</td>
                                                 <th>{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
