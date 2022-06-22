@@ -16,6 +16,8 @@
     display:inline;
     white-space:nowrap;
 }
+                
+.pagination{margin: 0;}
         </style>
         <div class="wrapper">
             <div class="container">
@@ -116,6 +118,9 @@
                                     <div class="form-group col-sm-1">
                                         <button class="btn btn-primary muSent" type="button">大量寄送</button>
                                     </div>
+                                    <div class="form-group col-sm-4">
+                                        {{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season,'is_sent'=>$request->is_sent,'copuon'=>$request->copuon])->links() }}
+                                    </div>
                                     <div class="form-group col-sm-1">
                                         <input type="number" class="form-control" max="{{ $mes->lastPage() }}" value="{{ $mes->currentPage() }}" min="1" id="page_input">
                                     </div>
@@ -124,7 +129,7 @@
                                     </div>
                                 </form>
 
-                                    <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season,'is_sent'=>$request->is_sent,'copuon'=>$request->copuon])->links() }}</div>
+                                    <!-- <div class="text-align-center">{{ $mes->appends(['search' => $request->search,'isdone'=>$request->isdone,'season'=>$request->season,'is_sent'=>$request->is_sent,'copuon'=>$request->copuon])->links() }}</div> -->
                                 </div></div>
 
                             </div>
@@ -188,11 +193,15 @@
                                             tel 電話<br />
                                             sponsor_id 贊助者ID<br />
                                             last_four 刷卡後四碼<br />
-                                            eb1 早鳥票<br />
+                                            p2 雙人套票<br />
+                                            p4 雙菜單套票<br />
+                                            giftcard 禮物卡<br />
+                                            time 付款時間<br />
+                                            <!-- eb1 早鳥票<br />
                                             p1 單人票<br />
                                             p2 雙人票<br />
                                             p6 六人票<br />
-                                            p4 四人票<br />
+                                            p4 四人票<br /> -->
                                             <!--l1 時間有點限制票數量<br />
                                             a1 無限暢飲票數量<br />
                                             a4 四人沉醉票數量<br /-->

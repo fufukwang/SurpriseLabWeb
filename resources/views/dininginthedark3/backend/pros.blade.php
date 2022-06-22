@@ -63,6 +63,8 @@
                                                     <option value="">排序(預設為修改時間反序)</option>
                                                     <option value="day|asc"@if(isset($request->order) && $request->order=='day|asc') selected @endif>日期正序</option>
                                                     <option value="day|desc"@if(isset($request->order) && $request->order=='day|desc') selected @endif>日期反序</option>
+                                                    <option value="now|asc"@if(isset($request->order) && $request->order=='now|desc') selected @endif>剩餘空位正序</option>
+                                                    <option value="now|desc"@if(isset($request->order) && $request->order=='now|desc') selected @endif>剩餘空位反序</option>
                                                 </select>
                                         </div>
                                         <div class="form-group col-sm-1">
@@ -98,6 +100,12 @@
                             </div>
                             <div class="table-responsive" data-pattern="priority-columns">
                                 <div class="sticky-table-header fixed-solution" style="width: auto;">
+@if(isset($request->day) && isset($request->day_end) && $request->day!='' && $request->day_end!='')
+    <p>
+        0000/00/00 - 0000/00/00 已開放席次之剩餘空位數：（所選日期區間內）開放位置總數 - （所選日期區間內）目前訂位總數<br>
+        0000/00/00 - 0000/00/00 全部席次剩餘空位數：（所選日期區間內）營業時段總數*12 - （所選日期區間內）目前訂位總數
+    </p>
+@endif
                                     <form method="post" id="openForm">
                                         <input type="hidden" name="muopVal" id="muopVal">
                                         <input type="hidden" name="act" value="muUpdate">
@@ -109,7 +117,7 @@
                                                     <th>開放訂位</th>
                                                     <th>營業日期</th>
                                                     <th>營業時段</th>
-                                                    <th>目前訂位 / 開放位置</th>
+                                                    <th class="text-center">剩餘空位 / 目前訂位 / 開放位置</th>
                                                     <th>金額 / 現場價</th>
                                                     <th>功能</th>
                                                 </tr>
@@ -126,7 +134,11 @@
                                                     <td>{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
-                                                    <td>{{ App\model\dark3\pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
+                                                    <td class="text-center">
+                                                        {{ $row->sites - $row->now }} / 
+                                                        {{ $row->now }} / 
+                                                        {{ $row->sites }}
+                                                    </td>
                                                     <td>@if($row->special) <span class="badge badge-pill badge-info">特別場次</span> @else {{ $row->money }} / {{ $row->cash }} @endif</td>
                                                     <td class="actions">
                                                         <a class="btn btn-purple btn-xs" href="/dark3/order/{{ $row->id }}/appointment">預約席</a>
@@ -163,7 +175,7 @@
 
             <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">下載未滿席資料 </h4>
+                        <h4 class="page-title">下載場次資料 </h4>
                     </div>
                 </div>
                     <div class="col-sm-12">
@@ -318,10 +330,10 @@ $('input[name="dayrange"]').daterangepicker({
         locale: {
           format: 'YYYY-MM-DD'
         },
-        startDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
-        endDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
-        minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
-        maxDate:'{{ Carbon\Carbon::today()->addMonths(5)->format('Y-m-d') }}',
+        // startDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
+        // endDate: '{{ Carbon\Carbon::today()->format('Y-m-d H:i:s') }}',
+        // minDate:'{{ Carbon\Carbon::today()->format('Y-m-d') }}',
+        // maxDate:'{{ Carbon\Carbon::today()->addMonths(5)->format('Y-m-d') }}',
     }, 
     function(start, end, label) {
         $('input[name=daystart]').val(start.format('YYYY-MM-DD') );

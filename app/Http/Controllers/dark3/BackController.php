@@ -231,7 +231,7 @@ class BackController extends Controller
                 return Response::json(['success'=> true], 200);
             }
         }
-        $pros = pro::where('id','>',0);
+        $pros = pro::select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS now,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open"));
         if($request->has('day')) $pros = $pros->where('day','>=',$request->day);
         if($request->has('day_end')) $pros = $pros->where('day','<=',$request->day_end);
         if($request->has('dayparts')) $pros = $pros->where('day_parts',$request->dayparts);
@@ -319,8 +319,8 @@ class BackController extends Controller
     }
 
     public function ProOutputSite(Request $request){
-        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>0")
-            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"));
+        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>0")
+            ->select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS now,sites,id,rang_start,rang_end,day"));
         if($request->daystart == ''){
             $pro = $pro->where('day',Carbon::today()->format('Y-m-d'));
         } else {
@@ -338,7 +338,9 @@ class BackController extends Controller
                     'day'  => '日期',
                     'mon'  => '星期',
                     'part' => '時段',
-                    'site' => '座位數'
+                    'open' => '開放空位',
+                    'now'  => '目前訂位',
+                    'only' => '剩餘座位',
                 ]];
                 foreach($cellData as $row){
                     $day = Carbon::parse($row['day']);
@@ -355,7 +357,9 @@ class BackController extends Controller
                         'day'  => $day->format('m/d'),
                         'mon'  => $mon,
                         'part' => substr($row['rang_start'],0,5).'~'.substr($row['rang_end'],0,5),
-                        'site' => $row['sites']
+                        'open' => $row['sites'],
+                        'now'  => $row['now'],
+                        'only' => $row['sites'] - $row['now'],
                     ];
                     array_push($data,$tmp);
                 }
