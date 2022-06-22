@@ -118,12 +118,15 @@
                                                 @forelse ($pros as $row)
                                                 <tr id="tr_{{ $row->id }}">
                                                     <td><input type="checkbox" name="id[]" value="{{ $row->id }}"></td>
-                                                    <td><a href="javascript:;" class="oclink" data-id="{{ $row->id }}">@if($row->open>0) 開放中 @else 關閉中 @endif</a></td>
+                                                    <td>
+                                                        <input type="checkbox" data-plugin="switchery" data-size="small" data-color="#00b19d" data-id="{{ $row->id }}" @if($row->open>0) checked @endif class="soclink" />
+                                                        <!-- <a href="javascript:;" class="oclink" data-id="{{ $row->id }}">@if($row->open>0) 開放中 @else 關閉中 @endif</a> -->
+                                                    </td>
                                                     <td>{{ $row->day }}</td>
                                                     <td>{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
-                                                    <td>{{ App\model\dark3\pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(tgt2order) WHERE tgt2order.pro_id=tgt2pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
+                                                    <td>{{ App\model\dark3\pro::select(DB::raw("IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_type='現場付款' AND pay_status<>'取消訂位') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0) AS Count"))->find($row->id)->Count }} / {{ $row->sites }}</td>
                                                     <td>@if($row->special) <span class="badge badge-pill badge-info">特別場次</span> @else {{ $row->money }} / {{ $row->cash }} @endif</td>
                                                     <td class="actions">
                                                         <a class="btn btn-purple btn-xs" href="/dark3/order/{{ $row->id }}/appointment">預約席</a>
@@ -236,12 +239,15 @@
     <!-- Notification js -->
     <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
     <script src="/backstage/plugins/notifications/notify-metro.js"></script>
-
+<link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
+<script src="/backstage/plugins/switchery/switchery.min.js"></script>
     <script src="/backstage/js/jquery.core.js"></script>
     <script src="/backstage/js/jquery.app.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+
     <script>
         $('#datatable').dataTable();
         //$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
@@ -272,6 +278,7 @@ $('.ocBtn').bind('click',function(){
     $('#muopVal').val($(this).data('oc'));
     $('#openForm').submit();
 });
+/*
 $('.oclink').bind('click',function(){
     var id = $(this).data('id');
     var text = $(this).text().trim();
@@ -286,6 +293,21 @@ $('.oclink').bind('click',function(){
         if(data.success){
             $.Notification.notify('success','bottom left','已更新', '狀態已更新');
             obj.text(val ? "開放中" : "關閉中")
+        }
+    },'json');
+});
+*/
+$('.soclink').bind('change',function(){
+    var id = $(this).data('id');
+    var val = 0;
+    if($(this).prop('checked')) val = 1;
+    $.post('/dark3/pros',{
+        "act" : "oneUpdate",
+        "id"  : id,
+        "muopVal" : val
+    },function(data){
+        if(data.success){
+            $.Notification.notify('success','bottom left','已更新', '狀態已更新');
         }
     },'json');
 });

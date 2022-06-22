@@ -211,7 +211,7 @@ $('.pay-discuount-store').bind('click',function(){
 
     if(message == ''){
         let myObj = {
-            slug: 'tgt2_pay_discount',
+            slug: 'dark3_pay_discount',
             obj: JSON.stringify(obj)
         }
         $.post('/dark3/setting/store',myObj,function(data){
@@ -275,7 +275,7 @@ $('.sp-discuount-store').bind('click',function(){
 
     if(message == ''){
         let myObj = {
-            slug: 'tgt2_sp_discount',
+            slug: 'dark3_sp_discount',
             obj: JSON.stringify(obj)
         }
         $.post('/dark3/setting/store',myObj,function(data){

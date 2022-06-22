@@ -139,7 +139,7 @@ $('.t6_setting_button').bind('click',function(){
     let t6_number = $('#t6_max_number').val();
     if(t6_number!='' && !isNaN(t6_number)){
         let myObj = {
-            slug: 'tgt2_sp_t6',
+            slug: 'dark3_sp_t6',
             number: t6_number
         }
         $.post('/dark3/setting/store',myObj,function(data){
@@ -162,7 +162,7 @@ $('.sp_money_button').bind('click',function(){
     let t6_money = $('#t6_money').val().replace('$','').replace(',','');
     if(t1_money!='' && !isNaN(t1_money) && t2_money!='' && !isNaN(t2_money) && t6_money!='' && !isNaN(t6_money)){
         let myObj = {
-            slug: 'tgt2_sp_money',
+            slug: 'dark3_sp_money',
             t1_money: t1_money,
             t2_money: t2_money,
             t6_money: t6_money,

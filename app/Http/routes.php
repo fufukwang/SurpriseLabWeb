@@ -330,6 +330,8 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('special/setting', 'tgt2\SpecialController@getSpecialSetting');
         Route::get('discount/setting', 'tgt2\SpecialController@getDiscountSetting');
         Route::post('setting/store', 'tgt2\SpecialController@postSettingStore');
+
+
     });
 
 
