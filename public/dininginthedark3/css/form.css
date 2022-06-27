@@ -1,24 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
 @import url("https://use.typekit.net/cax2ztr.css");
-/*
-// Override
-html,
-body,
-header.logo {
-  background-image: none;
-}
-*/
 html,
 body {
   overflow-x: hidden;
 }
 
-.color-pink {
-  color: #ff7ea4;
+body::after {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(../img/home/bg-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.color-yellow {
-  color: #E6A046;
+main {
+  padding-top: 120px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1280px) {
+  main {
+    padding-top: 114px;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  main {
+    padding-top: 60px;
+  }
+}
+
+.color-pink {
+  color: #ff7ea4;
 }
 
 .multi-btn button.btn-outline {
@@ -37,9 +61,10 @@ body {
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 1199.98px) {
   .multi-btn button.btn-outline {
     width: 144px;
+    min-width: unset;
   }
 }
 
@@ -53,8 +78,8 @@ button.btn-outline:disabled, button.btn-outline[disabled] {
 }
 
 button.btn-outline:disabled:hover, button.btn-outline[disabled]:hover {
-  color: #ccc38d;
-  border-color: #EFEFEF;
+  color: #9FA0A0;
+  border-color: #9FA0A0;
   background-color: transparent;
 }
 
@@ -120,10 +145,8 @@ button.btn-outline:focus {
       -ms-flex-align: center;
           align-items: center;
   z-index: 0;
-  overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
-  background: #101010;
 }
 
 @media (min-width: 1200px) {
@@ -152,21 +175,18 @@ button.btn-outline:focus {
 
 #progressbar::before, #progressbar::after {
   content: '';
-  width: 7px;
-  height: 7px;
-  border: 1px solid #E6A046;
+  width: 25%;
+  height: 1px;
+  background-color: #8C5FB4;
   position: absolute;
-  top: 4.5px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
 }
 
 #progressbar::before {
-  left: 1px;
+  left: -25%;
 }
 
 #progressbar::after {
-  right: 1px;
+  right: -25%;
 }
 
 #progressbar li {
@@ -176,12 +196,13 @@ button.btn-outline:focus {
   position: relative;
   line-height: 1;
   text-align: center;
-  color: #EFEFEF;
+  color: #CCCCCC;
   padding: 0 28px;
 }
 
 #progressbar li.active::before {
-  color: #EFEFEF;
+  color: #8C5FB4;
+  text-decoration: underline;
 }
 
 #progressbar li::before {
@@ -191,7 +212,7 @@ button.btn-outline:focus {
   line-height: 1;
   letter-spacing: 0.7px;
   text-align: center;
-  color: #E6A046;
+  color: #9FA0A0;
 }
 
 @media (max-width: 575.98px) {
@@ -292,19 +313,6 @@ button.btn-outline:focus {
   }
 }
 
-.bar-wrapper::before {
-  content: '';
-  width: 100%;
-  height: 1px;
-  background-color: #E6A046;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  -webkit-transform: translate(50%, -70%);
-          transform: translate(50%, -70%);
-  z-index: -1;
-}
-
 .bar-wrapper.hide-steps {
   display: none;
 }
@@ -322,15 +330,9 @@ button.btn-outline:focus {
   line-height: 1.5;
 }
 
-.progress-title span {
-  font-size: inherit;
-  font-weight: inherit;
-  letter-spacing: 1.8px;
-}
-
 .sub-title {
   line-height: 1;
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 @media (min-width: 1200px) {
@@ -368,7 +370,7 @@ button.btn-outline:focus {
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: 0.7px;
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 @media (max-width: 575.98px) {
@@ -382,11 +384,13 @@ button.btn-outline:focus {
 }
 
 a {
-  color: #E6A046;
+  color: #8C5FB4;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #EFEFEF;
+  color: #8C5FB4;
+  text-decoration: underline;
 }
 
 form {
@@ -595,7 +599,7 @@ form .btn-outline {
   width: 12px;
   height: 12px;
   border-radius: 0;
-  border: solid 1px #EFEFEF;
+  border: solid 1px #CCCCCC;
   top: .1rem;
   background: transparent;
 }
@@ -617,13 +621,13 @@ form .btn-outline {
 
 .form-check input:checked ~ label {
   color: #39351c;
-  border-color: #EFEFEF;
-  background-color: #EFEFEF;
+  border-color: #CCCCCC;
+  background-color: #CCCCCC;
 }
 
 .form-check label {
   padding: 12px;
-  border: solid 1px #EFEFEF;
+  border: solid 1px #CCCCCC;
   border-radius: 6px;
   font-size: 16px;
   line-height: 1;
@@ -633,13 +637,13 @@ form .btn-outline {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 .form-check label:hover {
   color: #39351c;
-  border-color: #EFEFEF;
-  background-color: #EFEFEF;
+  border-color: #CCCCCC;
+  background-color: #CCCCCC;
 }
 
 @media (max-width: 575.98px) {
@@ -655,13 +659,13 @@ form .btn-outline {
 }
 
 .food-type input:checked ~ .checker {
-  background-color: #EFEFEF;
-  border-color: #EFEFEF;
+  background-color: #CCCCCC;
+  border-color: #CCCCCC;
 }
 
 .food-type .checker {
   position: absolute;
-  border: solid 1px #E6A046;
+  border: solid 1px #8C5FB4;
   border-radius: 100%;
   height: 18px;
   width: 18px;
@@ -708,16 +712,16 @@ form .btn-outline {
   line-height: 2.25;
   letter-spacing: 1.6px;
   padding: 5px 17px;
-  border: solid 1px #EFEFEF;
+  border: solid 1px #CCCCCC;
   border-radius: 6px;
-  color: #E6A046;
+  color: #8C5FB4;
   text-align: left;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -738,7 +742,7 @@ form .btn-outline {
 }
 
 .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__rendered {
-  border-color: #E6A046;
+  border-color: #8C5FB4;
 }
 
 .select2-container--default.select2-container--open .select2-selection__arrow {
@@ -748,7 +752,7 @@ form .btn-outline {
 
 .select2-container--default.select2-container--open .select2-dropdown {
   border-radius: 6px;
-  border: solid 1px #E6A046;
+  border: solid 1px #8C5FB4;
   background: #101010;
   overflow: hidden;
 }
@@ -771,7 +775,7 @@ form .btn-outline {
 }
 
 .select2-container--default .select2-results__options .select2-results__option.select2-results__option--highlighted {
-  background: #E6A046;
+  background: #8C5FB4;
   color: #39351c;
 }
 
@@ -822,8 +826,8 @@ form .btn-outline {
   padding: 10px 17px;
   border-radius: 6px;
   background: transparent;
-  border: solid 1px #EFEFEF;
-  color: #E6A046;
+  border: solid 1px #9FA0A0;
+  color: #8C5FB4;
   cursor: pointer;
   z-index: 10;
   -webkit-transition: 0.3s;
@@ -831,24 +835,24 @@ form .btn-outline {
 }
 
 .with-icon input::-webkit-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 .with-icon input:-ms-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 .with-icon input::-ms-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 .with-icon input::placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 .with-icon input:focus {
   outline: 0;
-  border-color: #E6A046;
+  border-color: #8C5FB4;
 }
 
 .with-icon .field-icon {
@@ -890,7 +894,7 @@ form .btn-outline {
   left: inherit !important;
   width: 378px;
   max-width: 100%;
-  border: solid 1px #E6A046;
+  border: solid 1px #8C5FB4;
   border-radius: 6px;
   background-color: #101010;
   padding: 8px;
@@ -952,7 +956,7 @@ form .btn-outline {
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar th span {
-  color: #E6A046;
+  color: #8C5FB4;
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 1.5;
@@ -960,30 +964,30 @@ form .btn-outline {
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-today::before {
   opacity: 1;
-  border-color: #EFEFEF;
+  border-color: #CCCCCC;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable a, .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable span {
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day a {
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
-  border-color: #EFEFEF;
-  background-color: #EFEFEF;
+  border-color: #CCCCCC;
+  background-color: #CCCCCC;
   opacity: 1;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {
-  border-color: #EFEFEF;
-  background-color: #EFEFEF;
+  border-color: #CCCCCC;
+  background-color: #CCCCCC;
   opacity: 1;
 }
 
@@ -1012,7 +1016,7 @@ form .btn-outline {
   margin-left: 2px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 @media (max-width: 575.98px) {
@@ -1085,7 +1089,7 @@ form .btn-outline {
   width: calc(100% / 3);
   padding: 16px 0;
   border-style: solid;
-  border-color: #EFEFEF;
+  border-color: #CCCCCC;
   border-width: 0 0 1px 1px;
 }
 
@@ -1154,6 +1158,49 @@ fieldset.step-1 .form-container {
   }
 }
 
+fieldset.step-2 .filled-data {
+  width: 100%;
+}
+
+fieldset.step-2 .filled-data .notice td {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+fieldset.step-2 .filled-data .notice td:last-child {
+  white-space: pre-wrap;
+}
+
+fieldset.step-2 .filled-data td {
+  text-align: left;
+  color: #CCCCCC;
+  font-size: 16px;
+  line-height: 2.25;
+  letter-spacing: 1.6px;
+  vertical-align: top;
+}
+
+@media (max-width: 1199.98px) {
+  fieldset.step-2 .filled-data td {
+    display: inline-table;
+  }
+}
+
+fieldset.step-2 .filled-data td:first-child {
+  text-align: right;
+  padding-right: 48px;
+  min-width: 120px;
+  color: #8C5FB4;
+  font-weight: bold;
+}
+
+@media (max-width: 1199.98px) {
+  fieldset.step-2 .filled-data td:first-child {
+    text-align: left;
+    min-width: 100%;
+  }
+}
+
 @media (min-width: 1200px) {
   fieldset.step-3 .feature-btn {
     padding-top: calc((720px + 30px) * 0.07513);
@@ -1198,7 +1245,7 @@ fieldset.step-4 .field-intro {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 1.6px;
-  color: #EFEFEF;
+  color: #CCCCCC;
 }
 
 @media (min-width: 1200px) {
@@ -1252,48 +1299,48 @@ fieldset.step-4 .form-group input,
 fieldset.step-4 .form-group textarea {
   width: 100%;
   border-radius: 6px;
-  border: solid 1px #EFEFEF;
+  border: solid 1px #9FA0A0;
   background-color: transparent;
   padding: 12px 17px;
   font-size: 16px;
   letter-spacing: 1.6px;
-  color: #E6A046;
+  color: #8C5FB4;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 fieldset.step-4 .form-group input::-webkit-input-placeholder,
 fieldset.step-4 .form-group textarea::-webkit-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 fieldset.step-4 .form-group input:-ms-input-placeholder,
 fieldset.step-4 .form-group textarea:-ms-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 fieldset.step-4 .form-group input::-ms-input-placeholder,
 fieldset.step-4 .form-group textarea::-ms-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 fieldset.step-4 .form-group input::placeholder,
 fieldset.step-4 .form-group textarea::placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 fieldset.step-4 .form-group input:-webkit-autofill,
 fieldset.step-4 .form-group textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 100px #101010 inset;
   background-color: transparent;
-  color: #E6A046;
-  -webkit-text-fill-color: #E6A046;
+  color: #8C5FB4;
+  -webkit-text-fill-color: #8C5FB4;
 }
 
 fieldset.step-4 .form-group input:focus, fieldset.step-4 .form-group input:-webkit-autofill:focus,
 fieldset.step-4 .form-group textarea:focus,
 fieldset.step-4 .form-group textarea:-webkit-autofill:focus {
-  border-color: #E6A046;
+  border-color: #8C5FB4;
   box-shadow: none;
   -webkit-box-shadow: 0 0 0 100px #101010 inset;
   outline: 0;
@@ -1377,7 +1424,7 @@ fieldset.step-5 .filled-data .notice td:last-child {
 
 fieldset.step-5 .filled-data td {
   text-align: left;
-  color: #EFEFEF;
+  color: #CCCCCC;
   font-size: 16px;
   line-height: 2.25;
   letter-spacing: 1.6px;
@@ -1388,7 +1435,8 @@ fieldset.step-5 .filled-data td:first-child {
   text-align: right;
   padding-right: 48px;
   min-width: 120px;
-  color: #E6A046;
+  color: #8C5FB4;
+  font-weight: bold;
 }
 
 fieldset .coupon-code td {
@@ -1398,42 +1446,43 @@ fieldset .coupon-code td {
 fieldset .coupon-code input {
   margin-right: 20px;
   border-radius: 6px;
-  border: solid 1px #EFEFEF;
+  border: solid 1px #9FA0A0;
   background-color: transparent;
   padding: 12px 17px;
   font-size: 16px;
   letter-spacing: 1.6px;
-  color: #E6A046;
+  color: #8C5FB4;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   line-height: normal;
 }
 
 fieldset .coupon-code input::-webkit-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 fieldset .coupon-code input:-ms-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 fieldset .coupon-code input::-ms-input-placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 fieldset .coupon-code input::placeholder {
-  color: #EFEFEF;
+  color: #595757;
 }
 
 fieldset .coupon-code input:focus {
-  border-color: #E6A046;
+  border-color: #8C5FB4;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: 0;
 }
 
 fieldset .coupon-code .verification-code {
-  width: 120px;
+  width: 33.33%;
+  min-width: auto;
   padding: 0;
   border-radius: 6px;
 }
@@ -1442,7 +1491,7 @@ fieldset .coupon-code .submit-coupon {
   font-size: 16px;
   line-height: 2.25;
   letter-spacing: 1.6px;
-  color: #E6A046;
+  color: #8C5FB4;
 }
 
 fieldset .coupon-code .submit-coupon:first-child {
@@ -1451,6 +1500,13 @@ fieldset .coupon-code .submit-coupon:first-child {
 
 fieldset .submit {
   width: 240px;
+}
+
+fieldset .submit-coupon-error-message {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  line-height: 1.5;
+  margin-top: 10px;
 }
 
 fieldset .prefix-dash {
@@ -1463,16 +1519,17 @@ fieldset .prefix-dash {
 fieldset .prefix-dash li {
   padding-bottom: 15px;
   letter-spacing: 1.6px;
+  text-indent: -14px;
 }
 
 fieldset .prefix-dash li::before {
   content: '-';
-  margin-left: -15px;
+  margin-right: 7px;
 }
 
 fieldset .prefix-step .prefix {
   padding-right: 48px;
-  color: #E6A046;
+  color: #8C5FB4;
 }
 
 fieldset .prefix-step .prefix:first-child {
@@ -1554,22 +1611,16 @@ fieldset .prefix-step .prefix:first-child {
     width: 192px;
   }
   fieldset .coupon-code input {
+    width: auto;
     font-size: 14px;
     letter-spacing: 1.4px;
     padding: 10px 20px;
     margin-right: -1px;
     border-radius: 6px 0 0 6px;
-    width: 190px;
-    -webkit-box-flex: initial !important;
-        -ms-flex: initial !important;
-            flex: initial !important;
   }
   fieldset .coupon-code .verification-code {
-    width: auto;
+    min-width: 100px;
     border-radius: 0 6px 6px 0;
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 1 auto !important;
-            flex: 1 1 auto !important;
     font-size: 14px;
     letter-spacing: 1.2px;
   }
@@ -1607,7 +1658,7 @@ fieldset .prefix-step .prefix:first-child {
 }
 
 #personalCapital .modal-header {
-  background-color: #E6A046;
+  background-color: #8C5FB4;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1617,14 +1668,14 @@ fieldset .prefix-step .prefix:first-child {
 
 #personalCapital .modal-header .modal-title {
   font-size: 18px;
-  color: #EFEFEF;
+  color: #000000;
   line-height: 1;
   letter-spacing: 1.8px;
   font-weight: bold;
 }
 
 #personalCapital .modal-body-container {
-  background-color: #fcfaeb;
+  background-color: #000000;
 }
 
 #personalCapital .modal-body {
@@ -1651,7 +1702,7 @@ fieldset .prefix-step .prefix:first-child {
 }
 
 #personalCapital .modal-body::-webkit-scrollbar-thumb {
-  background: #EFEFEF;
+  background: #CCCCCC;
   border-radius: 3px;
 }
 
@@ -1662,7 +1713,7 @@ fieldset .prefix-step .prefix:first-child {
 #personalCapital .modal-body p {
   line-height: 1.75;
   letter-spacing: 1.6px;
-  color: #39351c;
+  color: #CCCCCC;
 }
 
 #personalCapital .modal-footer {
@@ -1674,11 +1725,11 @@ fieldset .prefix-step .prefix:first-child {
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.8px;
-  background-color: #EFEFEF;
+  background-color: #8C5FB4;
   color: #EFEFEF;
   opacity: 1;
   text-shadow: none;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 #personalCapital .modal-footer:hover {

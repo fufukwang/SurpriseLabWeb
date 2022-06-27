@@ -1,5 +1,5 @@
 let navigation_type = performance.getEntriesByType("navigation")[0].type;
-let is_rule = /rules/.test(document.referrer);
+let is_inner_page = /rules|booking/.test(document.referrer);
 let is_show = new URL(window.location.href).searchParams.get("effect") == 'show';
 
 $(function() {
@@ -189,7 +189,7 @@ $(function() {
             }
             break;
         case 'navigate':
-            if ( is_rule && !is_show ) {
+            if ( is_inner_page && !is_show ) {
                 $('body').removeClass('modal-open');
                 $enter_modal.fadeOut();
             }
