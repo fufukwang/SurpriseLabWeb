@@ -263,7 +263,7 @@ function verificationChecker() {
 
     if (!regex.test(tmpVal)) {
 
-        $(verification_field).prev().find('.error-msg').html('請填寫正確的格式');
+        $(verification_field).prev().find('.error-msg').html('信箱格式錯誤，請重新填寫');
         gotoErrorField($(verification_field));
         isValid = false;
         return false;
