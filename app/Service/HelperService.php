@@ -64,7 +64,43 @@ class HelperService {
 
 
 
+    // dark3 信件寄送
+    public function SendEmailByTemplateName($data){
+        try{
+            if(strpos($data['email'],'@yahoo')) {
+                config(['mail.host' => 'smtp.gmail.com']);
+                config(['mail.username' => env('MAIL_DARK_USER')]);
+                config(['mail.password' => env('MAIL_DARK_PASS')]);
+            } else {
+                config(['mail.host' => env('MAIL_HOST')]);
+                config(['mail.username' => env('MAIL_USERNAME')]);
+                config(['mail.password' => env('MAIL_PASSWORD')]);
+            }
+            Mail::send('dininginthedark3.email.'.$data['template'],$data,function($m) use ($data){
+                $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐');
+                $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐');
+                $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐');
 
+                $m->to($data['email'], $data['name']);
+                switch ($data['type']) {
+                    case 'D21':
+                        $m->subject('還記得你即將前來開幕酒會嗎？');
+                        break;
+                    case 'D14':
+                        $m->subject('準備好以適合的樣貌前往過去了嗎？');
+                        break;
+
+                }
+                    
+            });
+            return true;
+        } catch (Exception $e){
+            Log::error($e);
+            return false;
+        }
+    }
+
+    // dark3 行前信寄送
 
 
 
