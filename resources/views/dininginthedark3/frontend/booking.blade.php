@@ -133,14 +133,14 @@
                         <p>&nbsp;</p>
                         <div class="sub-title-wrapper">
                             <h4>
-                                <span>NOTICE</span>
+                                <span>- NOTICE -</span>
                             </h4>
                         </div>
                         <p>&nbsp;</p>
                         <ul class="prefix-dash">
                             <li>看到 [您已完成預約] 頁面才算劃位。</li>
                             <li>若日期無法選擇，代表該場次已滿，或是當日不開放。</li>
-                            <li>請確實填寫正確的電子信箱與電話，將以此與您聯繫溝通。</li>
+                            <li>請確實填寫正確的電子信箱與電話，將以此與您聯繫。</li>
                         </ul>
                         <p>&nbsp;</p>
                         <p>
@@ -168,13 +168,13 @@
 
                 <fieldset class="step step-2" title="輸入序號">
                     <div class="form-container">
-                        <p class="field-intro">
-                            -NOTICE-
+                        <p class="field-intro color-purple">
+                            - NOTICE -
                         </p>
                         <ul class="prefix-dash">
-                            <li>同一次劃位僅能選擇同一時段，若你有多組序號，想選擇不同時段前來，請分兩次劃位</li>
-                            <li>雙人套票與雙菜單套票可選擇之用餐區間不同，若你同時有兩個票種的序號，請分兩次劃位</li>
-                            <li>單一場次最高可容納 12 人，為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li>
+                            <li>同一次劃位僅能選擇同一時段，<br/>若你有多組序號，想選擇不同時段前來，請分兩次劃位</li>
+                            <li>雙人套票與雙菜單套票可選擇之用餐區間不同，<br/>若你同時有兩個票種的序號，請分兩次劃位</li>
+                            <li>單一場次最高可容納 12 人，為維護體驗品質，<br/>體驗時將兩人一組入座，且無法併桌</li>
                         </ul>
                         <br/><br/>
                         <table class="filled-data">
@@ -299,7 +299,7 @@
                 <fieldset class="step step-4" title="資料填寫">
                     <div class="form-container">
                         <div class="field-intro">
-                            請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息。（建議避開 yahoo 與 hotmail 信箱，以免漏信）
+                            請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息（建議避開 yahoo 與 hotmail 信箱，以免漏信）
                         </div>
 
                         <div class="form-group input-with-label">
@@ -429,8 +429,9 @@
                 <p class="page-sub-title">
                     請至你的信箱確認預約完成信件
                 </p>
+                <br/><br/>
                 <p class="page-info">
-                    接近體驗日期時<br/>
+                    接近用餐日期時<br/>
                     將會寄送信件與行前訊息給你<br/>
                     <br/>
                     屆時請留意電子信箱，它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
