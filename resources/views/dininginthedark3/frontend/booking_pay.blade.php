@@ -233,7 +233,7 @@
                 <fieldset class="step step-4" title="資料填寫">
                     <div class="form-container">
                         <div class="field-intro">
-                            請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息。（建議避開 yahoo 與 hotmail 信箱，以免漏信）
+                            請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息（建議避開 yahoo 與 hotmail 信箱，以免漏信）
                         </div>
 
                         <div class="form-group input-with-label">
