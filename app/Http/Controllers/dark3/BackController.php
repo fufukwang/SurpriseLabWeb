@@ -133,15 +133,12 @@ class BackController extends Controller
         return view('dininginthedark3.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $backmes = backme::select('name','email','tel','eb1','p1','p2','p4','p6','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE o_id=0 AND dark3coupon.b_id=dark3backme.id)>0")->get()->toArray();
+        $backmes = backme::select('name','email','tel','p2','p4','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE o_id=0 AND dark3coupon.b_id=dark3backme.id)>0")->get()->toArray();
         $cellData = [['姓名','信箱','電話','可劃位人數','訂購內容','註記']];
         foreach ($backmes as $val) {
             $num = 0;
-            if($val['eb1']>0) $num += $val['eb1'] * 1;
-            if($val['p1']>0) $num += $val['p1'] * 1;
             if($val['p2']>0) $num += $val['p2'] * 2;
             if($val['p4']>0) $num += $val['p4'] * 4;
-            if($val['p6']>0) $num += $val['p6'] * 6;
             $temp = [
                 'name'   => $val['name'],
                 'email'  => $val['email'],
@@ -396,7 +393,7 @@ class BackController extends Controller
      */
     public function Coupons(Request $request){
 
-        $coupons = coupon::orderBy('updated_at','desc');
+        $coupons = coupon::orderBy('updated_at','desc')->whereIn('type',['p2','p4']);
         //if($request->has('day')) $coupons = $coupons->where('created_at','like',$request->day.'%');
         if($request->has('search')){
             $search = $request->search;
@@ -413,8 +410,22 @@ class BackController extends Controller
         return Response::json(['message'=> '已刪除'], 200);
 
     }
+    /**
+     *  gift
+     **/
+    public function Gift(Request $request){
+        try{
+            $coupons = coupon::orderBy('updated_at','desc')->where('type','gift');
 
 
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return redirect('/dark3/backmes')->with('message','新增失敗!');
+        }
+    }
+    public function GiftCreate(Request $request){
+        
+    }
 
 
 
@@ -456,11 +467,8 @@ class BackController extends Controller
                         //echo $row['sn'].'<br />';
                         if($row['sn'] == '') $row['sn'] = 0;
                         if($row['sponsor_id'] == '') $row['sponsor_id'] = 0;
-                        if($row['eb1'] == '') $row['eb1'] = 0;
-                        if($row['p1'] == '') $row['p1'] = 0;
                         if($row['p2'] == '') $row['p2'] = 0;
                         if($row['p4'] == '') $row['p4'] = 0;
-                        if($row['p6'] == '') $row['p6'] = 0;
                         $r = [
                             'sn'         => $row['sn'],
                             'detail'     => $row['detail'],
@@ -470,11 +478,8 @@ class BackController extends Controller
                             'email'      => $row['email'],
                             'tel'        => $row['tel'],
                             'sponsor_id' => $row['sponsor_id'],
-                            'eb1'         => $row['eb1'],
-                            'p1'         => $row['p1'],
                             'p2'         => $row['p2'],
                             'p4'         => $row['p4'],
-                            'p6'         => $row['p6'],
                             'quarter'    => $quarter,  // 產出季度
                         ];
                         if(backme::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){
