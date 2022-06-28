@@ -1532,16 +1532,9 @@ fieldset .prefix-step .prefix {
   color: #8C5FB4;
 }
 
-fieldset .prefix-step .prefix:first-child {
-  padding-right: 51px;
-}
-
 @media (max-width: 575.98px) {
   fieldset .prefix-step .prefix {
     padding-right: 24px;
-  }
-  fieldset .prefix-step .prefix:first-child {
-    padding-right: 27px;
   }
 }
 

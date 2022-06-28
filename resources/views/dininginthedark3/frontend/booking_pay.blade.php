@@ -128,14 +128,14 @@
                         <p class="prefix-step">
                             <span class="prefix">Step 1</span>選擇人數<br/>
                             <span class="prefix">Step 2</span>選擇日期、時段<br/>
-                            <span class="prefix">Step 3</span>填寫賓客資料<br/>
+                            <span class="prefix">Step 3</span>填寫預約資料<br/>
                             <span class="prefix">Step 4</span>確認訂單<br/>
                             <span class="prefix">Step 5</span>完成預約
                         </p>
                         <p>&nbsp;</p>
                         <div class="sub-title-wrapper">
                             <h4>
-                                <span>NOTICE</span>
+                                <span>- NOTICE -</span>
                             </h4>
                         </div>
                         <p>&nbsp;</p>
@@ -146,7 +146,7 @@
                         </ul>
                         <p>&nbsp;</p>
                         <p>
-                            有任何訂位問題，歡迎來信<br/>
+                            若有任何問題，歡迎來信<br/>
                             <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>
                         </p>
                         <p>&nbsp;</p>

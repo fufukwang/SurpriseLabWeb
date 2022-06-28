@@ -1213,16 +1213,7 @@ fieldset {
       padding-right: 48px;
       color: $color-purple;
 
-      &:first-child {
-        padding-right: 51px;
-      }
-
       @media (max-width: 575.98px) {
-
-        &:first-child {
-          padding-right: 27px;
-        }
-
         padding-right: 24px;
       }
     }
