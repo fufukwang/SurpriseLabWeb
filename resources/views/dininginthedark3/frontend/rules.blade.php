@@ -195,7 +195,7 @@
                                             data-parent="#qa-according">
                                             <div class="card-body">
                                                 ① 無光環境中聽覺相對敏銳，請顧客輕聲細語，降低⾳量，⼀同維護⽤餐品質。<br/>
-                                                ② 為了顧客的安全，在⿊暗之中請遵守服務⼈員引導，不得擅⾃⾛動。若有不聽勸之⾏為發⽣，現場服務⼈員有權利終⽌您的體驗並請求離場，且不另⾏退費。
+                                                ② 為了顧客的安全，在⿊暗之中請遵守服務⼈員引導，不得擅⾃⾛動。若有不聽勸之⾏為發⽣，現場服務⼈員有權力終⽌您的體驗並請求離場，且不另⾏退費。
                                             </div>
                                         </div>
                                     </div>
@@ -293,7 +293,7 @@
                                             data-parent="#qa-according">
                                             <div class="card-body">
                                                 雙人套票：適合想近期前來用餐的你，找好想一同前來的那個人，在黑暗中感受驚喜。<br/>
-                                                雙菜單套票：想體驗兩種完全不同的菜單，早於所有人提前劃位，並可預約更長區間的用餐日期。
+                                                雙菜單套票：想體驗兩種完全不同的菜單，可隨時預約一年之內的用餐日期。
                                             </div>
                                         </div>
                                     </div>
@@ -318,9 +318,9 @@
                                                 共有兩種票券，享有權益不同，分別為：<br/><br/>
                                                 <ol>
                                                     <li>雙人套票：包含一組雙人票券，於指定日期收到序號劃位，並選擇用餐日期。</li>
-                                                    <li>雙菜單套票：包含兩組雙人票券，可前來無光晚餐用餐兩次，體驗不同菜單。將優先於所有票種劃位並可選擇最大範圍的區間，限量販售。</li>
+                                                    <li>雙菜單套票：包含兩組雙人票券，可前來無光晚餐用餐兩次，體驗不同菜單。可隨時預約一年之內的用餐日期，限量販售。</li>
                                                 </ol>
-                                                購票請至<a class="default-light btn-link" href="index.html#Ticket">我要預約</a>購買，相關規則請參考<span class="default-light btn-link to-presale-rules">票務規則</span>。
+                                                購票請至<a class="default-light btn-link" href="index.html#Ticket">我要預約</a>購買，相關規則請參考<span class="default-light btn-link to-presale-rules">預售劃位</span>。
                                             </div>
                                         </div>
                                     </div>
@@ -403,7 +403,7 @@
                                 </div>
                                 <br/><br/>
                                 <ol>
-                                    <li>雙菜單享有兩組序號，將會於個別指定劃位日寄送（兩組序號劃位日期不同，一次只會收到一組序號）。</li>
+                                    <li>雙菜單享有兩組序號，將會於指定劃位日寄送（一次會收到兩組序號）。</li>
                                     <li>劃位之指定日期當天收到信件（信件內容含有專屬劃位序號與訂位頁面連結），自行選定日期與時段，輸入劃位序號扣抵，即完成劃位。 </li>
                                     <li>完成劃位後，將會收到訂位確認信。（將寄送至訂位填寫時之信箱，請確保信箱能正確收信）</li>
                                 </ol>
@@ -412,8 +412,9 @@
                                     小提醒：
                                 </p>
                                 <ul>
+                                    <li>兩組序號可於 12 個月內，自由選擇時間使用，請留意失效日，序號失效後無法退款。</li>
                                     <li>為確保訂位成功，若無收到訂位確認信，請務必來信客服查詢。</li>
-                                    <li>購買前想詳閱套票退費規則。</li>
+                                    <li>購買前請詳閱套票退費規則。</li>
                                 </ul>
                             </div>
 
@@ -436,7 +437,7 @@
                             <div class="tab-content-inner">
                                 <p class="pre-note">
                                     票券若需更改體驗日期、取消退費，<br/>
-                                    請提供相應的資料，來信《無光晚餐》客服信箱 <a class="default-light" href="dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>
+                                    請提供相應的資料，來信《無光晚餐》客服信箱 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a>
                                     <br/><br/>
                                     為確保你的權益，請根據需求，詳閱以下規則：
                                 </p>
@@ -528,16 +529,16 @@
                                 <h5 class="sub-title highlight change-seat">
                                     雙菜單套票退費異動規則
                                 </h5>
-                                <p>套票享有優先劃位權，不同於一般票券，退換票請參照套票規則辦理。<br/>以下金額皆指總票價（$8,800元，含兩組雙人票）</p>
+                                <p>套票享有優先劃位權，不同於一般票券，退換票請參照套票規則辦理。<br/>一組序號為$4,400元（雙菜單票券含兩組雙人票，共8,800元）</p>
                                 <table class="rule-table twice">
                                     <tbody>
                                     <tr>
                                         <th class="rule-col-1"></th>
                                         <th class="rule-col-2">
-                                            六號菜單序號
+                                            第一組序號
                                         </th>
                                         <th class="rule-col-3">
-                                            七號菜單序號
+                                            第二組序號
                                         </th>
                                     </tr>
                                     <tr>
@@ -555,8 +556,7 @@
                                     </tr>
                                     <tr>
                                         <td>寄送序號前</td>
-                                        <td>可全額退費</td>
-                                        <td>退費 50%<br/>(退款4,400元)</td>
+                                        <td colspan="2">可全額退費（退款 8,800 元）</td>
                                     </tr>
                                     <tr>
                                         <td>寄送序號後<br/>(未使用)</td>
@@ -569,20 +569,19 @@
                                             <ul>
                                                 <li>體驗九天內 (不包含體驗當日) 來信申請，僅退 50% 費用，建議將訂位轉讓給親友</li>
                                                 <li>體驗十天前 (不包含演出日)來信申請，將扣除金流售續費 10% 後退費</li>
-                                                <li>可轉讓、改期一次</li>
+                                                <li>可轉讓、改期一次（改期需於演出前十日來信）</li>
                                             </ul>
                                         </td>
                                         <td>
                                             <ul>
                                                 <li>不可退費</li>
-                                                <li>可轉讓、改期一次</li>
+                                                <li>可轉讓、改期一次（改期需於演出前十日來信）</li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>序號失效</td>
-                                        <td>不可退費</td>
-                                        <td>不可退費</td>
+                                        <td colspan="2">不可退費</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -648,9 +647,9 @@
                                     </div>
                                 </div>
                                 <ol>
-                                    <li>請依照上述說明附上相關資訊，來信無光晚餐客服信箱。</li>
+                                    <li>請依照上述說明附上相關資訊，來信 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a> 。</li>
                                     <li>改期者需要重新進行劃位流程。</li>
-                                    <li>退費入帳約需七至十個工作天，實際日期依請購票時使用信用卡銀行規定為主。（特殊情況採 ATM 退費，入帳時間請依照客服人員回信為主）</li>
+                                    <li>退費入帳約需七至十個工作天，實際日期請依購票時使用信用卡銀行規定為主。（特殊情況採 ATM 退費，入帳時間請依照客服人員回信為主）</li>
                                 </ol>
 
                                 <h5 class="sub-title highlight">
@@ -686,8 +685,8 @@
                                 <br/><br/>
                                 <h6 class="highlight">雙菜單套票</h6>
                                 <ul>
-                                    <li>第一組序號失效日期：2022/09/09 18:00 </li>
-                                    <li>第二組序號失效日期：寄出序號後將一併通知</li>
+                                    <li>可劃位區間：2022/09/19 - 2023/09/30</li>
+                                    <li>序號失效日期：2023/08/31 18:00</li>
                                 </ul>
                                 <p class="text-left">
                                     * 上述劃位批次與失效日期，由驚喜製造 Surprise Lab. 保留調整與修改之權利

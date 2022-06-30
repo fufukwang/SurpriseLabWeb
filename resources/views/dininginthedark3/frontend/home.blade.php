@@ -108,7 +108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <img src="img/home/about/intro-slogan-shadow.png" alt="無光晚餐 Dining In The Dark">
                                     <img src="img/home/about/intro-slogan-shadow.png" alt="無光晚餐 Dining In The Dark">
                                 </div>
-    
+
                                 <!-- 文字 -->
                                 <div class="slogan-img show-1">
                                     <img src="img/home/about/intro-slogan.png" alt="無光晚餐 Dining In The Dark">
@@ -220,10 +220,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 已完成 <span class="highlight progress-percent">80</span> %
                                             </p>
                                         </div>
-                                        <p class="info-text">
-                                            * 現正販售 09/05 - 10/30 之票券<br/>
-                                            * 可劃位區間將依照實際狀況加開或縮短
-                                        </p>
+                                        <div class="info-text">
+                                            <p>* 現正販售</p>
+                                            <ul>
+                                                <li>
+                                                    <p>雙人票券可劃位區間為：2022/09/19-2022/11/13</p>
+                                                </li>
+                                                <li>
+                                                    <p>雙菜單票可劃位時間為：2022/09/19 - 2023/09/30</p>
+                                                </li>
+                                            </ul>
+                                            <p>* 可劃位區間將依照實際狀況加開或縮短</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="ticket-type">
                                     
                                     <div class="type-item type-matinee">
-                                        <a href="https://surpriselab.backme.tw/checkout/2534/19986?locale=zh-TW
+                                        <a href="https://surpriselab.backme.tw/checkout/2296/18276?locale=zh-TW
                                     " class="ticket-frame" target="_blank">
                                             <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.1" alt="雙人套票">
                                             <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.1" alt="雙人套票">
@@ -258,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </a>
                                     </div>
                                     <div class="type-item type-great-tipsy">
-                                        <a href="https://surpriselab.backme.tw/checkout/2534/19985?locale=zh-TW" class="ticket-frame" target="_blank">
+                                        <a href="https://surpriselab.backme.tw/checkout/2296/18275?locale=zh-TW" class="ticket-frame" target="_blank">
                                             <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.1" alt="雙菜單套票">
                                             <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.1" alt="雙菜單套票">
                                             <p class="ticket-state timeLimit">
@@ -289,7 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <p class="section-desc">
                                         無光晚餐採取先預購、後劃位的方式訂位<br/>
-                                        依照購買票券、購買日期順序寄送劃位信
+                                        依照購買日期順序寄送劃位信
                                     </p>
                                 </div>
                                 
@@ -352,7 +360,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <h4>Time Slots</h4>
                                     </div>
                                     <p class="section-desc">
-                                        現在購票，預計於 09/05-10/30 前來體驗<br/>
+                                        現在購票，預計於 09/19-11/13 前來體驗<br/>
                                         實際可選擇時段請參考票券頁面
                                     </p>
                                 </div>
@@ -384,7 +392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <h4>Schedule</h4>
                                     </div>
                                     <p class="section-desc">
-                                        09/05-10/30 票券預售中
+                                        09/19-11/13 票券預售中
                                     </p>
                                 </div>
                                 
@@ -393,29 +401,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <table>
                                             <tr>
                                                 <td colspan="2">
-                                                    <h6 class="color-purple">雙菜單套票 劃位時間</h6>
+                                                    <h6 class="color-purple">劃位時間</h6>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2">2022/08/10 (三) 中午 12:00</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">2023/03（實際劃位日期，將提前通知）</td>
-                                            </tr>
-                                        </table>
-                                        <table>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <h6 class="color-purple">雙人套票 劃位時間</h6>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>08/17 (三) 中午 12:00</td>
+                                                <td>08/10 (三) 中午 12:00</td>
                                                 <td>前 800 位者</td>
                                             </tr>
                                             <tr>
-                                                <td>08/24 (三) 中午 12:00</td>
+                                                <td>08/17 (三) 中午 12:00</td>
                                                 <td>801-1600 位預約者</td>
+                                            </tr>
+                                            <tr>
+                                                <td>08/24 (三) 中午 12:00</td>
+                                                <td>1601-2400 位預約者</td>
                                             </tr>
                                             <tr>
                                                 <td>08/31 (三) 中午 12:00</td>
