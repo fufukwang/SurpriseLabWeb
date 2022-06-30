@@ -529,7 +529,7 @@
                                 <h5 class="sub-title highlight change-seat">
                                     雙菜單套票退費異動規則
                                 </h5>
-                                <p>套票享有優先劃位權，不同於一般票券，退換票請參照套票規則辦理。<br/>一組序號為$4,400元（雙菜單票券含兩組雙人票，共8,800元）</p>
+                                <p>套票享有一整年劃位時段，不同於一般票券，退換票請參照套票規則辦理。<br/>一組序號為$4,400元（雙菜單票券含兩組雙人票，共8,800元）</p>
                                 <table class="rule-table twice">
                                     <tbody>
                                     <tr>
@@ -540,19 +540,6 @@
                                         <th class="rule-col-3">
                                             第二組序號
                                         </th>
-                                    </tr>
-                                    <tr>
-                                        <td>寄送序號<br/>日期</td>
-                                        <td>2022.8.10</td>
-                                        <td>2023.03<br/>實際劃位日期<br/>將於3月提前通知</td>
-                                    </tr>
-                                    <tr>
-                                        <td>可選體驗<br/>日期</td>
-                                        <td>2022.09 - 2023.03</td>
-                                        <td>2023.04 - 2023.06</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3">退費規則</td>
                                     </tr>
                                     <tr>
                                         <td>寄送序號前</td>
@@ -585,12 +572,6 @@
                                     </tr>
                                     </tbody>
                                 </table>
-                                <br/>
-                                <p>
-                                    舉例，常見問題：<br/>
-                                    Q：如果六號菜單，都無滿意日期，可以兩組序號都選七號菜單嗎？<br/>
-                                    A：無法，套票序號無法跨區段使用。
-                                </p>
 
                                 <h5 class="sub-title highlight transfer-ticket">
                                     票券異動申請
@@ -674,8 +655,8 @@
                                             <div id="stage1" class="collapse" aria-labelledby="stage1-header">
                                                 <div class="card-body">
                                                     <ul>
-                                                        <li>可劃位區間：2022/09/05 - 2022/10/30</li>
-                                                        <li>失效日期：2022/09/30 18:00</li>
+                                                        <li>可劃位區間：2022/09/19 - 2022/11/13</li>
+                                                        <li>失效日期：2022/09/23 18:00</li>
                                                     </ul>
                                                 </div>
                                             </div>
