@@ -799,8 +799,25 @@ header.logo {
   
         .info-text {
           @include baseCounter('padding-top', 25);
-          text-align: left;
-          line-height: 2;
+          color: $color-purple;
+
+          p {
+            text-align: left;
+            line-height: 2;
+          }
+
+          ul {
+            margin: 0;
+            padding-left: 15px;
+
+            @media (max-width: 1199.98px) {
+              padding-left: 10px;
+            }
+
+            li {
+              list-style: none;
+            }
+          }
         }
       }
   

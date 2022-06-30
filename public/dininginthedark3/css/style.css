@@ -1081,8 +1081,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text {
-  text-align: left;
-  line-height: 2;
+  color: #8C5FB4;
 }
 
 @media (min-width: 1200px) {
@@ -1107,6 +1106,26 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   #Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text {
     padding-top: calc(100% * 0.02236);
   }
+}
+
+#Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text p {
+  text-align: left;
+  line-height: 2;
+}
+
+#Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text ul {
+  margin: 0;
+  padding-left: 15px;
+}
+
+@media (max-width: 1199.98px) {
+  #Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text ul {
+    padding-left: 10px;
+  }
+}
+
+#Ticket .sec-ticket-status .sale-progress .sale-progress-info .info-text ul li {
+  list-style: none;
 }
 
 @media (max-width: 1200px) {
