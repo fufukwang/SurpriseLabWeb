@@ -195,7 +195,6 @@
                                             last_four 刷卡後四碼<br />
                                             p2 雙人套票<br />
                                             p4 雙菜單套票<br />
-                                            giftcard 禮物卡<br />
                                             time 付款時間<br />
                                             <!-- eb1 早鳥票<br />
                                             p1 單人票<br />

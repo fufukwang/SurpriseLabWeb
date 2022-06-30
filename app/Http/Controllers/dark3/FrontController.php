@@ -80,9 +80,9 @@ class FrontController extends Controller
                             $me = coupon::where('code',$request->code)->select('type')->first();
                             $type = '';
                             switch ($me->type) {
-                                case 'p2': $type = '雙人共享票'; break;
-                                case 'p4': $type = '富邦專屬四人票'; break;
-                                case 'p6': $type = '六人沈醉票'; break;
+                                case 'p2': $type = '雙人套票'; break;
+                                case 'p4': $type = '雙菜單套票'; break;
+                                case 'gift': $type = '禮物卡'; break;
                             }
                             $ticketType = $request->ticketType;
                             return Response::json([
@@ -120,6 +120,36 @@ class FrontController extends Controller
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
                         }
                     break;
+                }
+            }
+        } else {
+            abort(404);
+        }
+    }
+
+    public function PostAjaxData(Request $request){
+        if($request->ajax()){
+            if($request->has('act') && $request->act=='CheckDarkCoupon'){
+                $coupon = coupon::where('code',$request->code)->where('o_id',0);
+                if($request->has('coupon') && count($request->coupon)>0){
+                    $coupon = $coupon->whereNotIn('code',$request->coupon);
+                }
+                $coupon = $coupon->count();
+                if($coupon>0){
+                    $me = coupon::where('code',$request->code)->select('type')->first();
+                    $type = '';
+                    switch ($me->type) {
+                        case 'p2': $type = '雙人套票'; break;
+                        case 'p4': $type = '雙菜單套票'; break;
+                        case 'gift': $type = '禮物卡'; break;
+                    }
+                    $ticketType = $request->ticketType;
+                    return Response::json([
+                        'success' => 'Y',
+                        'ticket'  => $type
+                    ], 200);    
+                } else {
+                    return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                 }
             }
         } else {

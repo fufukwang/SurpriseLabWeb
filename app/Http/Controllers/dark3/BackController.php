@@ -138,7 +138,7 @@ class BackController extends Controller
         foreach ($backmes as $val) {
             $num = 0;
             if($val['p2']>0) $num += $val['p2'] * 2;
-            if($val['p4']>0) $num += $val['p4'] * 4;
+            if($val['p4']>0) $num += $val['p4'] * 2;
             $temp = [
                 'name'   => $val['name'],
                 'email'  => $val['email'],
@@ -501,18 +501,12 @@ class BackController extends Controller
     }
 
     private function Db2Coupon(){
-        $xls = backme::select('p2','p4','giftcard','id')->where('gen_coup',0)->get();
+        $xls = backme::select('p2','p4','id')->where('gen_coup',0)->get();
         foreach($xls as $row){
             $data = [
                 'b_id' => $row->id
             ];
-            if($row->giftcard >= 1){
-                for($i=0;$i<$row->giftcard;$i++){
-                    $data['type'] = 'giftcard';
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    coupon::insert($data);
-                }
-            } elseif($row->p2 >= 1){
+            if($row->p2 >= 1){
                 for($i=0;$i<$row->p2;$i++){
                     $data['type'] = 'p2';
                     $data['code'] = $this->GenerateGiftCodeSN();

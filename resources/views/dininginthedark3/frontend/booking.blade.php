@@ -188,8 +188,8 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
-                                        <button type="button" class="verification-code btn-outline">確認</button>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <button type="button" class="verification-code btn-outline" data-sort=0>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
                                     <div class="submit-coupon-error-message color-pink">找不到此序號，請確認序號是否正確</div>
@@ -200,8 +200,8 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
-                                        <button type="button" class="verification-code btn-outline">確認</button>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <button type="button" class="verification-code btn-outline" data-sort=1>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
                                     <div class="submit-coupon-error-message color-pink">找不到此序號，請確認序號是否正確</div>
@@ -212,8 +212,8 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
-                                        <button type="button" class="verification-code btn-outline">確認</button>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <button type="button" class="verification-code btn-outline" data-sort=2>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
                                     <div class="submit-coupon-error-message color-pink">找不到此序號，請確認序號是否正確</div>
@@ -224,8 +224,8 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
-                                        <button type="button" class="verification-code btn-outline">確認</button>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <button type="button" class="verification-code btn-outline" data-sort=3>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
                                     <div class="submit-coupon-error-message color-pink">找不到此序號，請確認序號是否正確</div>
@@ -236,8 +236,8 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
-                                        <button type="button" class="verification-code btn-outline">確認</button>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <button type="button" class="verification-code btn-outline" data-sort=4>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
                                     <div class="submit-coupon-error-message color-pink">找不到此序號，請確認序號是否正確</div>
@@ -248,8 +248,8 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" placeholder="輸入一組劃位序號"/>
-                                        <button type="button" class="verification-code btn-outline">確認</button>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <button type="button" class="verification-code btn-outline" data-sort=5>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
                                     <div class="submit-coupon-error-message color-pink">找不到此序號，請確認序號是否正確</div>
@@ -262,6 +262,7 @@
                             <button type="button" name="next" class="btn-outline next action-button">下一步</button>
                         </div>
                     </div>
+                    <input type="hidden" name="booking_people" id="booking_people" value="0">
                 </fieldset>
                 <fieldset class="step step-3" title="日期、時段選擇">
                     <div class="form-container">
