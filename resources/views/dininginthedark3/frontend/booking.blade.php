@@ -310,7 +310,7 @@
 
                         <div class="form-group input-with-label">
                             <label for="phone">* 電話<span class="error-msg"></span></label>
-                            <input type="text" name="phone" class="form-control phone" id="phone" placeholder="ex. 0912345678">
+                            <input type="text" name="phone" class="form-control phone" id="phone" maxlength="10" placeholder="ex. 0912345678">
                         </div>
 
                         <div class="form-group input-with-label">

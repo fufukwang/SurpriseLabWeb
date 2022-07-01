@@ -7,6 +7,7 @@ var activeIndex;
 var isAllowToNextStep; // 是否可以進入下一步
 var passTimes = 1; // 票券代碼輸入次數
 var amountToGo = $('.amountToGo'); // 完成劃位金額
+var maxDateVal = "+3m";
 /*
 var ticketInfos = [
     { type: 0, name: '暢行無阻票', price: 2000},
@@ -85,7 +86,7 @@ $(".action-button").on('click', function(){
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
                     minDate: minD,
-                    maxDate:"+5m",
+                    maxDate: maxDateVal,
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: enableAllTheseDays
                 });
@@ -165,7 +166,8 @@ function filledDataChecker() {
     if(cutPelple == 0){
         for(var i=0;i<proObject.length;i++){
             if(proObject[i].id == $('#booking_time').val()){
-                proSingle = proObject[i].money;
+                // proSingle = proObject[i].money;
+                proSingle = 2200;
             }
             var summary = formatPrice($('[name="booking_people"]').val() * proSingle); // 數字變成貨幣格式
 
@@ -261,18 +263,28 @@ function verificationChecker() {
     var isValid = true;
     var tmpVal = verification_field.val();
     var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var pattern = /^[0-9]{10}$/;
+    var phone_field = $('.phone');
 
     if (!regex.test(tmpVal)) {
 
         $(verification_field).prev().find('.error-msg').html('信箱格式錯誤，請重新填寫');
         gotoErrorField($(verification_field));
         isValid = false;
-        return false;
 
     } else {
 
         $(verification_field).prev().find('.error-msg').html('');
     }
+
+    
+    if (!pattern.test(phone_field.val())) {
+        $(phone_field).prev().find('.error-msg').html('電話格式錯誤，請重新填寫');
+        gotoErrorField($(phone_field));
+        isValid = false;
+    } else {
+        $(phone_field).prev().find('.error-msg').html('');
+    }    
 
     return isValid;
 }
@@ -326,7 +338,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
         //update_isVegetarian(submitDatas['booking_people']);
         //update_amountToGo(submitDatas['booking_people']);
 
-        usedCoupons = []; // 清空已使用的票券代碼
+        // usedCoupons = []; // 清空已使用的票券代碼
 
         if (!$(this).val()) {
             accessHide = false;
@@ -464,7 +476,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
             }
         }
         // 優惠券初始化
-        usedCoupons = [];
+        // usedCoupons = [];
         cutPelple = 0;
         passTimes = 1;
         $('.submit-coupon-wrapper').html('');
@@ -575,6 +587,17 @@ $('.verification-code').on('click', function () {
             }
             $('#booking_people').val(parseInt($('#booking_people').val()) + 2);
             $('#booking_people').trigger('change');
+
+
+            // 票種限制可選擇時間範圍
+            if(data.ticket == "雙人套票"){
+                maxDateVal = new Date(2022, 10, 13);
+            }
+            if(data.ticket == "雙菜單套票"){
+                maxDateVal = new Date(2023, 8, 30);
+            }
+            
+
             // var ticketName = '';
             // $('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + data.ticket +'</p>');
             // 折扣人數
@@ -595,7 +618,7 @@ $('.verification-code').on('click', function () {
         }
     },'json');
     coupon.trigger('change');
-    console.log(couponVal);
+    // console.log(couponVal);
     return false;
 
     
@@ -740,6 +763,7 @@ jQuery(function($){
         $('#lightbox2pay').fadeToggle(700);
     });
     $('#btn-online-submit').bind('click',function(){
+        /*
         // 判斷是否到達可過關的地方
         if($('[name="booking_people"]').val() - cutPelple == 0){
             SendOrderData('online','');
@@ -749,6 +773,8 @@ jQuery(function($){
             // 開啟刷卡介面
             //$('#lightbox2pay').fadeToggle(700);   
         }
+        */
+        SendOrderData('online','');
     });
     $('.coupon-code,.submit-coupon-error-message,.submit-coupon-wrapper').hide();
     $('.coupon-code').eq(0).show();

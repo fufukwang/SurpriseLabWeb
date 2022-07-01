@@ -188,6 +188,7 @@ class FrontController extends Controller
             $cut1 = 0; $cut2 = 0;
             // 確認庫碰碼
             $coupon = 0;
+            $cutPeople = 0;
             if($request->has('coupon')){
                 foreach ($request->coupon as $key => $value) {
                     $coupon_count = coupon::where('code',$value)->where('o_id',0)->count();
@@ -195,10 +196,9 @@ class FrontController extends Controller
                         $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
                         $coupon++;
                         coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
+                        /*
                         if($request->Pay == 'onsite'){
-                            if($me->type == 'eb1' || $me->type == 'p1'){
-                                $cut1 += $act->cash;
-                            } elseif ($me->type == 'p2') {
+                            if ($me->type == 'p2') {
                                 $cut1 += $act->cash * 2;
                             } elseif ($me->type == 'p4') {
                                 $cut1 += $act->cash * 4;
@@ -206,9 +206,7 @@ class FrontController extends Controller
                                 $cut1 += $act->cash * 6;
                             }
                         } else {
-                            if($me->type == 'eb1' || $me->type == 'p1'){
-                                $cut1 += $act->money;
-                            } elseif ($me->type == 'p2') {
+                            if ($me->type == 'p2') {
                                 $cut1 += $act->money * 2;
                             } elseif ($me->type == 'p4') {
                                 $cut1 += $act->money * 4;
@@ -216,6 +214,8 @@ class FrontController extends Controller
                                 $cut1 += $act->money * 6;
                             }
                         }
+                        */
+                        $cutPeople += 2;
                     }
                 }
             }
@@ -229,8 +229,9 @@ class FrontController extends Controller
             }
             */
             $pay_status = '未完成';
-            if(intval($money - $cut1 - $cut2)  == 0){
+            if($people - $cutPeople == 0){
                 $pay_status = '已付款';
+                $money = 0;
             }
             $data = [
                 'pro_id'     => $request->pro_id,
