@@ -173,9 +173,9 @@ class SpecialController extends Controller
                     $comments, // 交易描述
                     $data['email'] // 付款人信箱
                 )
-                ->setReturnURL(env('APP_URL').'dininginthedark3/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
-                ->setNotifyURL(env('APP_URL').'dininginthedark3/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
-                ->setClientBackURL(env('APP_URL').'dininginthedark3/booking_pay.html') // 付款取消後返回的網址
+                ->setReturnURL(env('APP_URL').'/dininginthedark3/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
+                ->setNotifyURL(env('APP_URL').'/dininginthedark3/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
+                ->setClientBackURL(env('APP_URL').'/dininginthedark3/booking_pay.html') // 付款取消後返回的網址
                 ->submit();
                 
             }
