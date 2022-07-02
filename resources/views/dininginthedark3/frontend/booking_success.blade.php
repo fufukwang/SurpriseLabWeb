@@ -112,21 +112,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
     <!-- <div class="submit-page success" id="bookingSuccess"> -->
     <div class="submit-page success" id="bookingSuccess">
-        <div class="container">
-            <h3 class="page-title">
-                你已完成賓客預約！
-            </h3>
-            <p class="page-sub-title">
-                請至你的信箱確認預約完成信件
-            </p>
-            <p class="page-info">
-                它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
-            </p>
-            <div class="feature-btn" style="text-align: center;">
-                <a class="btn-outline" href="index.html">關於微醺大飯店：1980s</a>
+            <div class="container">
+                <h3 class="page-title">
+                    你已完成用餐預約！
+                </h3>
+                <p class="page-sub-title">
+                    請至你的信箱確認預約完成信件
+                </p>
+                <br/><br/>
+                <p class="page-info">
+                    接近用餐日期時<br/>
+                    將會寄送信件與行前訊息給你<br/>
+                    <br/>
+                    屆時請留意電子信箱，它有時候會跑到垃圾郵件，可以翻找一下<br/><br/>
+                </p>
+                <div class="feature-btn" style="text-align: center;">
+                    <a class="btn-outline" href="index.html?effect=show#Intro">關於無光晚餐</a>
+                </div>
             </div>
         </div>
-    </div>
+
+
 
 </main>
 

@@ -343,9 +343,10 @@ $('.step-2 input, .step-2 select').on('change', function () {
         if (!$(this).val()) {
             accessHide = false;
         }
-        if($(this).val()>0){
-            $('.step-2 button[name="next"]').prop('disabled',false);
-        }
+        
+    }
+    if($('.coupon-code').eq(0).find('button').prop('disabled')){
+        $('.step-2 button[name="next"]').prop('disabled',false);
     }
 
 });

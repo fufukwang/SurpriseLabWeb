@@ -327,8 +327,14 @@ class FrontController extends Controller
                     'email' => $data['email'],
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'template' => 'order',
                 ];
+                SLS::SendEmailByTemplateName($mailer);
+                $order->is_send = 1;
+                $order->save();
+
+                /*
                 if(strpos($mailer['email'],'@yahoo')) {
                     config(['mail.host' => 'smtp.gmail.com']);
                     config(['mail.username' => env('MAIL_TGT_USER')]);
@@ -389,6 +395,7 @@ class FrontController extends Controller
                 } catch (\Exception $e){
                     Log::error($e);
                 }
+                */
             }
             
 

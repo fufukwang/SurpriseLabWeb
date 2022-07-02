@@ -172,7 +172,7 @@
                             <li><a href="/dark3/coupons">Coupon</a></li>
                             <li><a href="/dark3/print">Order</a></li>
                             <li><a href="/dark3/getMasterList">Master</a></li>
-                            <li><a href="/dark3/special/setting">Special</a></li>
+                            <!-- <li><a href="/dark3/special/setting">Special</a></li> -->
 
                         </ul>
                     </li>

@@ -263,18 +263,27 @@ function verificationChecker() {
     var isValid = true;
     var tmpVal = verification_field.val();
     var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var pattern = /^[0-9]{10}$/;
+    var phone_field = $('.phone');
 
     if (!regex.test(tmpVal)) {
 
         $(verification_field).prev().find('.error-msg').html('請填寫正確的格式');
         gotoErrorField($(verification_field));
         isValid = false;
-        return false;
 
     } else {
 
         $(verification_field).prev().find('.error-msg').html('');
     }
+
+    if (!pattern.test(phone_field.val())) {
+        $(phone_field).prev().find('.error-msg').html('電話格式錯誤，請重新填寫');
+        gotoErrorField($(phone_field));
+        isValid = false;
+    } else {
+        $(phone_field).prev().find('.error-msg').html('');
+    }  
 
     return isValid;
 }
@@ -569,8 +578,11 @@ $('.verification-code').on('click', function () {
                 var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle) - discountAmount); // 數字變成貨幣格式
                 amountToGo.text(summary);
                 $('#discount').val(discountCode);
+                $('.verification-code').prop('disabled',true);
+                $('input[name=coupon]').prop('readonly',true);
             } else {
-                alert('折扣碼 '+couponVal+" 無法使用!\n" + data.message);
+                $('.submit-coupon-error-message').show();
+                // alert('折扣碼 '+couponVal+" 無法使用!\n" + data.message);
             }
         },'json');
 
@@ -601,6 +613,7 @@ $('.verification-code').on('click', function () {
         alert('一次請輸入一組序號，／與／之間是不同序號');
         return false;
     }
+    /*
     // ajax 取得票券
     $.get('/dininginthedark3/GetAjaxData',{
         'act':'CheckCoupon',
@@ -631,6 +644,7 @@ $('.verification-code').on('click', function () {
             alert('優惠碼 '+couponVal+" 無法使用!\n" + data.message);
         }
     },'json');
+    */
 /*
     // 票券是否在表單送出前重複使用
     var isAllow = $.inArray(couponVal, usedCoupons);
@@ -783,6 +797,7 @@ jQuery(function($){
             // $('#lightbox2pay').fadeToggle(700);   
         }
     });
+    $('.submit-coupon-error-message').hide();
 });
 
 // ===================================

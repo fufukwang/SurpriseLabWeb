@@ -66,9 +66,13 @@ class BackController extends Controller
                 $xls     = backme::find($id);
                 $coupons = coupon::where('b_id',$id)->get();
                 $data = [
-                    'xls'     => $xls,
-                    'coupons' => $coupons,
+                    'xls'      => $xls,
+                    'coupons'  => $coupons,
+                    'template' => 'coupon',
                 ];
+                SLS::SendEmailByTemplateName($data);
+                backme::where('id',$id)->update(['is_sent'=>1]);
+                /*
                 if(strpos($data['xls']->email,'@yahoo')) {
                     config(['mail.host' => 'smtp.gmail.com']);
                     config(['mail.username' => env('MAIL_TGT_USER')]);
@@ -87,6 +91,7 @@ class BackController extends Controller
                 } catch (\Exception $e){
                     Log::error($e);
                 }
+                */
             }
             $par = '?';
             if($request->has('search')) $par .= "&search=".$request->search;
@@ -192,12 +197,13 @@ class BackController extends Controller
             $xls     = backme::find($id);
             $coupons = coupon::where('b_id',$id)->get();
             $data = [
-                'xls'     => $xls,
-                'coupons' => $coupons,
+                'xls'      => $xls,
+                'coupons'  => $coupons,
+                'template' => 'coupon',
             ];
+            SLS::SendEmailByTemplateName($data);
 
-
-
+            /*
             Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
                 $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
                 $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
@@ -206,6 +212,7 @@ class BackController extends Controller
                 $m->to($data['xls']->email, $data['xls']->name);
                 $m->subject('【微醺大飯店：1980s】劃位序號信件');
             });
+            */
             backme::where('id',$id)->update(['is_sent'=>1]);
             return Response::json(['message'=> 'success'], 200);
         }

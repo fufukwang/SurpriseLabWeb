@@ -95,9 +95,12 @@ class OrderController extends Controller
                     'email' => $order->email,
                     'name'  => $order->tel,
                     'gday'  => $rangStart.'/'.$rangEnd,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'template' => 'order',
                 ];
                 if($mailer['email'] != ''){
+                    SLS::SendEmailByTemplateName($mailer);
+                    /*
                     if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
                         config(['mail.host' => 'smtp.gmail.com']);
                         config(['mail.username' => env('MAIL_TGT_USER')]);
@@ -115,6 +118,8 @@ class OrderController extends Controller
                         $m->to($mailer['email'], $mailer['name']);
                         $m->subject('訂位確認信 ── 內有重要任務');
                     });
+                    */
+                    /*
                     SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                     // 信件補送
                     $now = time();
@@ -149,6 +154,7 @@ class OrderController extends Controller
                     if($day == 0){
                         SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
                     }
+                    */
                 }
             } catch (Exception $e){
                 Log::error($e);
@@ -258,9 +264,12 @@ class OrderController extends Controller
                     'email' => $data['email'],
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'template' => 'order',
                 ];
                 if($mailer['email'] != ''){
+                    SLS::SendEmailByTemplateName($mailer);
+                    /*
                     if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
                         config(['mail.host' => 'smtp.gmail.com']);
                         config(['mail.username' => env('MAIL_TGT_USER')]);
@@ -279,8 +288,10 @@ class OrderController extends Controller
                         $m->to($mailer['email'], $mailer['name']);
                         $m->subject('訂位確認信 ── 內有重要任務');
                     });
+                    */
                     $order->is_send = 1;
                     $order->save();
+                    /*
                     SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                     // 信件補送
                     $now = time();
@@ -315,6 +326,7 @@ class OrderController extends Controller
                     if($day == 0){
                         SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
                     }
+                    */
                 }
             }
 
@@ -604,8 +616,11 @@ class OrderController extends Controller
             'email' => $request->email,
             'name'  => $request->name,
             'gday'  => $rangStart.'/'.$rangEnd,
-            'master'=> "?id=".md5($request->oid)."&sn=".$request->sn
+            'master'=> "?id=".md5($request->oid)."&sn=".$request->sn,
+            'template' => 'order',
         ];
+        SLS::SendEmailByTemplateName($mailer);
+        /*
         if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
             config(['mail.host' => 'smtp.gmail.com']);
             config(['mail.username' => env('MAIL_TGT_USER')]);
@@ -624,6 +639,7 @@ class OrderController extends Controller
             $m->to($mailer['email'], $mailer['name']);
             $m->subject('訂位確認信 ── 內有重要任務');
         });
+        */
         order::where('id',$request->oid)->update(['is_send'=>1]);
         return Response::json(['message'=> '已更新'], 200);
     }

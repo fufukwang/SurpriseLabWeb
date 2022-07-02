@@ -114,24 +114,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- <div class="submit-page error" id="bookingError"> -->
     <div class="submit-page error" id="bookingError">
-        <div class="container">
-            <h3 class="page-title">
-                whoops！預約未成功
-            </h3>
-            <p class="page-info">
-                可能發生以下狀況：<br/>
-                1. 付款未成功<br/>
-                2. 網路中斷，請確認通訊良好的狀況下再次劃位<br/>
-                3. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次<br/><br/>
-                <!--br/>
-                若非以上兩種狀況，歡迎來信詢問：<br/>
-                <a href="mailto:thegreattipsy@surpriselab.com.tw">thegreattipsy@surpriselab.com.tw</a><br/><br/-->
-            </p>
-            <div class="feature-btn" style="text-align: center;">
-                <a class="btn-outline" @if(isset($sp) && $sp) href="booking_special.html" @else href="booking_pay.html" @endif>重新預約</a>
+            <div class="container">
+                <h3 class="page-title">
+                    whoops！預約未成功
+                </h3>
+                <p class="page-info">
+                    可能發生以下狀況：<br/>
+                    1. 網路中斷，請確認通訊良好的狀況下再次劃位<br/>
+                    2. 同時刻有人與你選擇同樣的日期與時段，他比你早完成預約，因而你的預約受到排擠，請再試一次<br/>
+                    <br/>
+                    若非以上兩種狀況，歡迎來信詢問：<br/>
+                    <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a><br/><br/>
+                </p>
+                <div class="feature-btn" style="text-align: center;">
+                    <a class="btn-outline" href="booking.html">重新預約</a>
+                </div>
             </div>
         </div>
-    </div>
 </main>
 
 <!-- Bootstrap -->

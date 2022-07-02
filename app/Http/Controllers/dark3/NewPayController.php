@@ -45,7 +45,7 @@ class NewPayController extends Controller
             $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
-                return view('thegreattipsy.frontend.booking_fail');
+                return view('dininginthedark3.frontend.booking_fail');
             }
 
             $pay_type = '信用卡';
@@ -131,9 +131,9 @@ class NewPayController extends Controller
             
             $sentSuccess = false;
             if($data['money'] == 0){
-                return view('thegreattipsy.frontend.booking_success');
+                return view('dininginthedark3.frontend.booking_success');
             } else {
-                $comments = "微醺大飯店：1980s";
+                $comments = "無光晚餐";
                 if($cut2>0){
                     $comments .= "(折扣  {$discountCode} - {$cut2})";
                 }
@@ -143,7 +143,11 @@ class NewPayController extends Controller
                     $data['money'], // 交易金額
                     $comments, // 交易描述
                     $data['email'] // 付款人信箱
-                )->submit();
+                )
+                ->setReturnURL(env('APP_URL').'dininginthedark3/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
+                ->setNotifyURL(env('APP_URL').'dininginthedark3/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
+                ->setClientBackURL(env('APP_URL').'dininginthedark3/booking_pay.html') // 付款取消後返回的網址
+                ->submit();
                 /*
                 if(env('APP_ENV') == 'production'){
                     $pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
@@ -198,7 +202,7 @@ class NewPayController extends Controller
 
         } catch (\Exception $exception) {
             Log::error($exception);
-            return view('thegreattipsy.frontend.booking_fail');
+            return view('dininginthedark3.frontend.booking_fail');
         }
     }
     // 藍新回傳顯示訂單正確失敗頁面
@@ -221,21 +225,21 @@ class NewPayController extends Controller
                 ];
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update($pay_data);
 
-                return view('thegreattipsy.frontend.booking_success');
+                return view('dininginthedark3.frontend.booking_success');
             } else {
                 $pay_data = [
                     'result'    => json_encode($retrunData),
                 ];
                 $sn = $retrunData['data']['Result']['MerchantOrderNo'];
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update($pay_data);
-                return view('thegreattipsy.frontend.booking_fail',['sp'=>$special]);
+                return view('dininginthedark3.frontend.booking_fail',['sp'=>$special]);
             }
 
 
 
         } catch (\Exception $exception) {
             Log::error($exception);
-            return view('thegreattipsy.frontend.booking_fail',['sp'=>$special]);
+            return view('dininginthedark3.frontend.booking_fail',['sp'=>$special]);
         }
     }
     // 藍新背景回傳寄送信件 & 二次確認
@@ -285,29 +289,17 @@ class NewPayController extends Controller
                     'email' => $order->email,
                     'name'  => $order->name,
                     'gday'  => $rangStart.'/'.$rangEnd,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'template' => 'order',
                 ];
-                if(strpos($mailer['email'],'@yahoo')) {
-                    config(['mail.host' => 'smtp.gmail.com']);
-                    config(['mail.username' => env('MAIL_TGT_USER')]);
-                    config(['mail.password' => env('MAIL_TGT_PASS')]);
-                }
-                try {
-                    if($mailer['pople']==1){
-                        $mailTheme = 'orderOne';
-                    } else {
-                        $mailTheme = 'order';
-                    }
-                    Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
-                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
+                SLS::SendEmailByTemplateName($mailer);
 
-                        $m->to($mailer['email'], $mailer['name']);
-                        $m->subject('訂位確認信 ── 內有重要任務');
-                    });
+
+                try {
+
                     $order->is_send = 1;
                     $order->save();
+                    /*
                     SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                     // 信件補送
                     $now = time();
@@ -344,6 +336,7 @@ class NewPayController extends Controller
                         SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
                     }
                     // SLS::sent_single_sms($order->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
+                    */
                 } catch (\Exception $e){
                     Log::error($e);
                 }

@@ -22,5 +22,8 @@ class VerifyCsrfToken extends BaseVerifier
         // 微醺
         '/thegreattipsy/Neweb.ReturnResult',
         '/thegreattipsy/Neweb.BackReturn',
+        // 無光 S3
+        '/dininginthedark3/Neweb.ReturnResult',
+        '/dininginthedark3/Neweb.BackReturn',
     ];
 }
