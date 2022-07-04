@@ -488,6 +488,7 @@ class BackController extends Controller
                             'p2'         => $row['p2'],
                             'p4'         => $row['p4'],
                             'quarter'    => $quarter,  // 產出季度
+                            'buy_at'     => $row['time']->format('Y-m-d H:i:s')
                         ];
                         if(backme::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){
                             backme::insert($r);

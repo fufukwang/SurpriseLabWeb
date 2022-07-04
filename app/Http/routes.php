@@ -615,6 +615,7 @@ if(env('APP_ENV') != 'production'){
         Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
         Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
+
     });
 }
     // thegreattipsy S2
