@@ -64,11 +64,8 @@
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->code }}</td>
                                                 <td>
-@if( $row->type == 'eb1' ) 驚喜早鳥限定票 
-@elseif( $row->type == 'p1' ) 單人自在票
-@elseif( $row->type == 'p2' ) 雙人共享票 
-@elseif( $row->type == 'p4' ) 富邦專屬四人票
-@elseif( $row->type == 'p6' ) 六人沈醉票 
+@if( $row->type == 'p2' ) 雙人套票 
+@elseif( $row->type == 'p4' ) 雙菜單套票
 @endif</td>
                                                 <td>@if($row->o_id > 0) 
                                                     {{ App\model\dark3\order::where('sn',$row->o_id)->first()->created_at }}

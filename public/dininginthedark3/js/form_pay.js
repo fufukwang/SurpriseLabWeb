@@ -7,6 +7,7 @@ var activeIndex;
 var isAllowToNextStep; // 是否可以進入下一步
 var passTimes = 1; // 票券代碼輸入次數
 var amountToGo = $('.amountToGo'); // 完成劃位金額
+var maxDateVal = "+3m";
 /*
 var ticketInfos = [
     { type: 0, name: '暢行無阻票', price: 2000},
@@ -71,7 +72,7 @@ $(".action-button").on('click', function(){
         var enableDays = [];
         if(!isNaN(submitDatas['booking_people'])){
             $.blockUI();
-            $.get('/thegreattipsy/GetAjaxData',{
+            $.get('/dininginthedark3/GetAjaxData',{
                 'act':'getBypople',
                 'pople':submitDatas['booking_people'],
                 'ticketType':$('input[name="ticket-type"]:checked').val(),
@@ -85,8 +86,8 @@ $(".action-button").on('click', function(){
                 }
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
-                    minDate: "+1d",// minD,
-                    maxDate: "+3m",// new Date(2022, 1, 28),
+                    minDate: minD,// minD,
+                    maxDate: maxDateVal,// new Date(2022, 1, 28),
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: enableAllTheseDays
                 });
@@ -262,18 +263,27 @@ function verificationChecker() {
     var isValid = true;
     var tmpVal = verification_field.val();
     var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var pattern = /^[0-9]{10}$/;
+    var phone_field = $('.phone');
 
     if (!regex.test(tmpVal)) {
 
         $(verification_field).prev().find('.error-msg').html('請填寫正確的格式');
         gotoErrorField($(verification_field));
         isValid = false;
-        return false;
 
     } else {
 
         $(verification_field).prev().find('.error-msg').html('');
     }
+
+    if (!pattern.test(phone_field.val())) {
+        $(phone_field).prev().find('.error-msg').html('電話格式錯誤，請重新填寫');
+        gotoErrorField($(phone_field));
+        isValid = false;
+    } else {
+        $(phone_field).prev().find('.error-msg').html('');
+    }  
 
     return isValid;
 }
@@ -371,7 +381,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
         var enableDays = [];
         if(!isNaN(submitDatas['booking_people'])){
             $.blockUI();
-            $.get('/thegreattipsy/GetAjaxData',{
+            $.get('/dininginthedark3/GetAjaxData',{
                 'act':'getBypople',
                 'pople':submitDatas['booking_people'],
                 'ticketType':$('input[name="ticket-type"]:checked').val(),
@@ -408,7 +418,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
         if (nextFieldID === 'booking_time_slot') { // 時段
             nextField.html('');
             if($('#booking_date').val()!=''){
-                $.get('/thegreattipsy/GetAjaxData',{
+                $.get('/dininginthedark3/GetAjaxData',{
                     'act':'getByday',
                     'ticketType':$('input[name="ticket-type"]:checked').val(),
                     'day':$('#booking_date').val(),
@@ -437,7 +447,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
         } else if (nextFieldID === 'booking_time') { // 時間
             nextField.html('').trigger('change');
             if($('#booking_date').val()!='' && $('#booking_time_slot').val() != ''){
-                $.get('/thegreattipsy/GetAjaxData',{
+                $.get('/dininginthedark3/GetAjaxData',{
                     'act':'getBydartpart',
                     'ticketType':$('input[name="ticket-type"]:checked').val(),
                     'day':$('#booking_date').val(),
@@ -550,7 +560,7 @@ $('.verification-code').on('click', function () {
     // console.log(couponVal.length);
     couponVal = couponVal.toUpperCase();
     if(discountCode == ''){
-        $.get('/thegreattipsy/GetAjaxData',{
+        $.get('/dininginthedark3/GetAjaxData',{
             'act':'CheckDiscount',
             'code':couponVal,
             'day':$('#booking_date').val(),
@@ -568,8 +578,11 @@ $('.verification-code').on('click', function () {
                 var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle) - discountAmount); // 數字變成貨幣格式
                 amountToGo.text(summary);
                 $('#discount').val(discountCode);
+                $('.verification-code').prop('disabled',true);
+                $('input[name=coupon]').prop('readonly',true);
             } else {
-                alert('折扣碼 '+couponVal+" 無法使用!\n" + data.message);
+                $('.submit-coupon-error-message').show();
+                // alert('折扣碼 '+couponVal+" 無法使用!\n" + data.message);
             }
         },'json');
 
@@ -600,8 +613,9 @@ $('.verification-code').on('click', function () {
         alert('一次請輸入一組序號，／與／之間是不同序號');
         return false;
     }
+    /*
     // ajax 取得票券
-    $.get('/thegreattipsy/GetAjaxData',{
+    $.get('/dininginthedark3/GetAjaxData',{
         'act':'CheckCoupon',
         'code':couponVal,
         'ticketType':$('input[name="ticket-type"]:checked').val(),
@@ -630,6 +644,7 @@ $('.verification-code').on('click', function () {
             alert('優惠碼 '+couponVal+" 無法使用!\n" + data.message);
         }
     },'json');
+    */
 /*
     // 票券是否在表單送出前重複使用
     var isAllow = $.inArray(couponVal, usedCoupons);
@@ -776,12 +791,13 @@ jQuery(function($){
             SendOrderData('online','');
         } else {
             // 改成送到 藍新
-            $('form#booking').attr('action','/thegreattipsy/Neweb.OrderPay');
+            $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
             $('form#booking').submit();
             // 開啟刷卡介面
             // $('#lightbox2pay').fadeToggle(700);   
         }
     });
+    $('.submit-coupon-error-message').hide();
 });
 
 // ===================================
@@ -821,12 +837,12 @@ function SendOrderData(Pay,prime){
         'is_overseas':2,
         'vegetarian': $('#vegetarian_food').val(),
     };
-    $.post('/thegreattipsy/ReOrderData',obj,function(data){
+    $.post('/dininginthedark3/ReOrderData',obj,function(data){
         $('<link>').appendTo('head')
             .attr({
                 type: 'text/css', 
                 rel: 'stylesheet',
-                href: '/thegreattipsy/css/submit.css?v=1'
+                href: '/dininginthedark3/css/submit.css?v=1'
             });
         $('#bookingPage').hide();
         if(data.success==true){

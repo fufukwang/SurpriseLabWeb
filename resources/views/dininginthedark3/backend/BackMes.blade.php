@@ -83,9 +83,9 @@
                                         <table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                <th><input type="checkbox" id="checkAll"></th>
-                                                <th>流水號</th>
-                                                <th>姓名</th>
+                                                <th><input type="checkbox" id="checkAll"><br />流水號</th>
+                                                <th>貝殼的序號(季)<br /> / 購買時間</th>
+                                                <th>姓名 / 贊助者ID</th>
                                                 <th>訂購內容</th>
                                                 <th>電話 / 信箱</th>
                                                 <th>酷碰</th>
@@ -97,9 +97,9 @@
                                         <tbody>
 @forelse ($mes as $row)
                                             <tr id="tr_{{ $row->id }}">
-                                                <td><input type="checkbox" name="id[]" value="{{ $row->id }}"></td>
-                                                <td>{{ $row->id }}</td>
-                                                <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div></td>
+                                                <td><input type="checkbox" name="id[]" value="{{ $row->id }}"><br />{{ $row->id }}</td>
+                                                <td>{{ $row->sn }}({{ $row->quarter }})<br />{{ $row->buy_at }}</td>
+                                                <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div>{{ $row->sponsor_id }}</td>
                                                 <td>{{ $row->detail }}</td>
                                                 <td><div class="single-line tel_{{ $row->id }}">{{ $row->tel }}</div><div class="single-line email_{{ $row->id }}">{{ $row->email }}</div></td>
                                                 <td>@forelse(App\model\dark3\coupon::where('b_id',$row->id)->get() as $coup){{ $coup->code }}@if($coup->o_id>0) <a href="javascript:;" class="canelCoupon" data-id="{{ $row->id }}" data-code="{{ $coup->code }}"><i class="fa fa-times"></i></a> @endif<br >@empty 無優惠券 @endforelse</td>
@@ -195,7 +195,6 @@
                                             last_four 刷卡後四碼<br />
                                             p2 雙人套票<br />
                                             p4 雙菜單套票<br />
-                                            giftcard 禮物卡<br />
                                             time 付款時間<br />
                                             <!-- eb1 早鳥票<br />
                                             p1 單人票<br />

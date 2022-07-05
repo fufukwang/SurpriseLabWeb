@@ -66,9 +66,13 @@ class BackController extends Controller
                 $xls     = backme::find($id);
                 $coupons = coupon::where('b_id',$id)->get();
                 $data = [
-                    'xls'     => $xls,
-                    'coupons' => $coupons,
+                    'xls'      => $xls,
+                    'coupons'  => $coupons,
+                    'template' => 'coupon',
                 ];
+                SLS::SendEmailByTemplateName($data);
+                backme::where('id',$id)->update(['is_sent'=>1]);
+                /*
                 if(strpos($data['xls']->email,'@yahoo')) {
                     config(['mail.host' => 'smtp.gmail.com']);
                     config(['mail.username' => env('MAIL_TGT_USER')]);
@@ -87,6 +91,7 @@ class BackController extends Controller
                 } catch (\Exception $e){
                     Log::error($e);
                 }
+                */
             }
             $par = '?';
             if($request->has('search')) $par .= "&search=".$request->search;
@@ -138,7 +143,7 @@ class BackController extends Controller
         foreach ($backmes as $val) {
             $num = 0;
             if($val['p2']>0) $num += $val['p2'] * 2;
-            if($val['p4']>0) $num += $val['p4'] * 4;
+            if($val['p4']>0) $num += $val['p4'] * 2;
             $temp = [
                 'name'   => $val['name'],
                 'email'  => $val['email'],
@@ -192,12 +197,13 @@ class BackController extends Controller
             $xls     = backme::find($id);
             $coupons = coupon::where('b_id',$id)->get();
             $data = [
-                'xls'     => $xls,
-                'coupons' => $coupons,
+                'xls'      => $xls,
+                'coupons'  => $coupons,
+                'template' => 'coupon',
             ];
+            SLS::SendEmailByTemplateName($data);
 
-
-
+            /*
             Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
                 $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
                 $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
@@ -206,6 +212,7 @@ class BackController extends Controller
                 $m->to($data['xls']->email, $data['xls']->name);
                 $m->subject('【微醺大飯店：1980s】劃位序號信件');
             });
+            */
             backme::where('id',$id)->update(['is_sent'=>1]);
             return Response::json(['message'=> 'success'], 200);
         }
@@ -481,6 +488,7 @@ class BackController extends Controller
                             'p2'         => $row['p2'],
                             'p4'         => $row['p4'],
                             'quarter'    => $quarter,  // 產出季度
+                            'buy_at'     => $row['time']->format('Y-m-d H:i:s')
                         ];
                         if(backme::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){
                             backme::insert($r);
@@ -501,18 +509,12 @@ class BackController extends Controller
     }
 
     private function Db2Coupon(){
-        $xls = backme::select('p2','p4','giftcard','id')->where('gen_coup',0)->get();
+        $xls = backme::select('p2','p4','id')->where('gen_coup',0)->get();
         foreach($xls as $row){
             $data = [
                 'b_id' => $row->id
             ];
-            if($row->giftcard >= 1){
-                for($i=0;$i<$row->giftcard;$i++){
-                    $data['type'] = 'giftcard';
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    coupon::insert($data);
-                }
-            } elseif($row->p2 >= 1){
+            if($row->p2 >= 1){
                 for($i=0;$i<$row->p2;$i++){
                     $data['type'] = 'p2';
                     $data['code'] = $this->GenerateGiftCodeSN();

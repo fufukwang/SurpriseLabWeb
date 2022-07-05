@@ -613,7 +613,9 @@ if(env('APP_ENV') != 'production'){
         Route::post('Team/NameFix', 'dark3\MasterController@postNameFix');
 
         Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
+        Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
+
     });
 }
     // thegreattipsy S2

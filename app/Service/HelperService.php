@@ -67,7 +67,7 @@ class HelperService {
     // dark3 信件寄送
     public function SendEmailByTemplateName($data){
         try{
-            if(strpos($data['email'],'@yahoo')) {
+            if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_DARK_USER')]);
                 config(['mail.password' => env('MAIL_DARK_PASS')]);
@@ -82,12 +82,12 @@ class HelperService {
                 $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐');
 
                 $m->to($data['email'], $data['name']);
-                switch ($data['type']) {
-                    case 'D21':
-                        $m->subject('還記得你即將前來開幕酒會嗎？');
+                switch ($data['template']) {
+                    case 'coupon':
+                        $m->subject('【無光晚餐】劃位序號信件');
                         break;
-                    case 'D14':
-                        $m->subject('準備好以適合的樣貌前往過去了嗎？');
+                    case 'order':
+                        $m->subject('【無光晚餐】訂位確認信件');
                         break;
 
                 }

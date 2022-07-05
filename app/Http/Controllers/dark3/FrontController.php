@@ -80,9 +80,9 @@ class FrontController extends Controller
                             $me = coupon::where('code',$request->code)->select('type')->first();
                             $type = '';
                             switch ($me->type) {
-                                case 'p2': $type = '雙人共享票'; break;
-                                case 'p4': $type = '富邦專屬四人票'; break;
-                                case 'p6': $type = '六人沈醉票'; break;
+                                case 'p2': $type = '雙人套票'; break;
+                                case 'p4': $type = '雙菜單套票'; break;
+                                case 'gift': $type = '禮物卡'; break;
                             }
                             $ticketType = $request->ticketType;
                             return Response::json([
@@ -127,6 +127,36 @@ class FrontController extends Controller
         }
     }
 
+    public function PostAjaxData(Request $request){
+        if($request->ajax()){
+            if($request->has('act') && $request->act=='CheckDarkCoupon'){
+                $coupon = coupon::where('code',$request->code)->where('o_id',0);
+                if($request->has('coupon') && count($request->coupon)>0){
+                    $coupon = $coupon->whereNotIn('code',$request->coupon);
+                }
+                $coupon = $coupon->count();
+                if($coupon>0){
+                    $me = coupon::where('code',$request->code)->select('type')->first();
+                    $type = '';
+                    switch ($me->type) {
+                        case 'p2': $type = '雙人套票'; break;
+                        case 'p4': $type = '雙菜單套票'; break;
+                        case 'gift': $type = '禮物卡'; break;
+                    }
+                    $ticketType = $request->ticketType;
+                    return Response::json([
+                        'success' => 'Y',
+                        'ticket'  => $type
+                    ], 200);    
+                } else {
+                    return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
+                }
+            }
+        } else {
+            abort(404);
+        }
+    }
+
     public function ReOrderData(Request $request){
         try {
             $now = Carbon::now()->toDateString();
@@ -158,6 +188,7 @@ class FrontController extends Controller
             $cut1 = 0; $cut2 = 0;
             // 確認庫碰碼
             $coupon = 0;
+            $cutPeople = 0;
             if($request->has('coupon')){
                 foreach ($request->coupon as $key => $value) {
                     $coupon_count = coupon::where('code',$value)->where('o_id',0)->count();
@@ -165,10 +196,9 @@ class FrontController extends Controller
                         $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
                         $coupon++;
                         coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
+                        /*
                         if($request->Pay == 'onsite'){
-                            if($me->type == 'eb1' || $me->type == 'p1'){
-                                $cut1 += $act->cash;
-                            } elseif ($me->type == 'p2') {
+                            if ($me->type == 'p2') {
                                 $cut1 += $act->cash * 2;
                             } elseif ($me->type == 'p4') {
                                 $cut1 += $act->cash * 4;
@@ -176,9 +206,7 @@ class FrontController extends Controller
                                 $cut1 += $act->cash * 6;
                             }
                         } else {
-                            if($me->type == 'eb1' || $me->type == 'p1'){
-                                $cut1 += $act->money;
-                            } elseif ($me->type == 'p2') {
+                            if ($me->type == 'p2') {
                                 $cut1 += $act->money * 2;
                             } elseif ($me->type == 'p4') {
                                 $cut1 += $act->money * 4;
@@ -186,6 +214,8 @@ class FrontController extends Controller
                                 $cut1 += $act->money * 6;
                             }
                         }
+                        */
+                        $cutPeople += 2;
                     }
                 }
             }
@@ -199,8 +229,9 @@ class FrontController extends Controller
             }
             */
             $pay_status = '未完成';
-            if(intval($money - $cut1 - $cut2)  == 0){
+            if($people - $cutPeople == 0){
                 $pay_status = '已付款';
+                $money = 0;
             }
             $data = [
                 'pro_id'     => $request->pro_id,
@@ -296,8 +327,14 @@ class FrontController extends Controller
                     'email' => $data['email'],
                     'name'  => $data['name'],
                     'gday'  => $rangStart.'/'.$rangEnd,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'template' => 'order',
                 ];
+                SLS::SendEmailByTemplateName($mailer);
+                $order->is_send = 1;
+                $order->save();
+
+                /*
                 if(strpos($mailer['email'],'@yahoo')) {
                     config(['mail.host' => 'smtp.gmail.com']);
                     config(['mail.username' => env('MAIL_TGT_USER')]);
@@ -358,6 +395,7 @@ class FrontController extends Controller
                 } catch (\Exception $e){
                     Log::error($e);
                 }
+                */
             }
             
 
