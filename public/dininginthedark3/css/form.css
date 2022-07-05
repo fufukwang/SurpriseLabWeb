@@ -986,8 +986,12 @@ form .btn-outline {
   opacity: 1;
 }
 
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {
+  cursor: pointer;
+}
+
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
-  color: #CCCCCC;
+  color: #4D4D4D;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {

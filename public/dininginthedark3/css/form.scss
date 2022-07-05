@@ -789,8 +789,10 @@ form {
 
         &:not(.ui-datepicker-unselectable) {
           &:hover {
+            cursor: pointer;
+
             a {
-              color: $color-text-lightgray;
+              color: $color-text-darkgray;
             }
 
             &::before {
