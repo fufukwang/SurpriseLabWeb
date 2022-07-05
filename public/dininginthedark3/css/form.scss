@@ -708,7 +708,7 @@ form {
       align-items: center;
       justify-content: space-between;
       margin-bottom: 8px;
-      background: #39351c;
+      background-color: rgba($color-text-darkgray, 0.8);
       border-radius: 4px;
       padding: 7px 16px;
     }
@@ -717,6 +717,11 @@ form {
       font-size: 16px;
       line-height: 2.25;
       letter-spacing: 1.6px;
+
+      .ui-datepicker-month,
+      .ui-datepicker-year {
+        color: $color-text-lightgray;
+      }
     }
 
     .ui-corner-all {
@@ -766,7 +771,7 @@ form {
 
         &.ui-datepicker-unselectable {
           a, span {
-            color: $color-text-lightgray;
+            color: $color-text-darkgray;
           }
         }
 

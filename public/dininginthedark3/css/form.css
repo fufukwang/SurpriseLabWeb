@@ -911,7 +911,7 @@ form .btn-outline {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 8px;
-  background: #39351c;
+  background-color: rgba(77, 77, 77, 0.8);
   border-radius: 4px;
   padding: 7px 16px;
 }
@@ -920,6 +920,11 @@ form .btn-outline {
   font-size: 16px;
   line-height: 2.25;
   letter-spacing: 1.6px;
+}
+
+.calender-wrapper #ui-datepicker-div .ui-datepicker-title .ui-datepicker-month,
+.calender-wrapper #ui-datepicker-div .ui-datepicker-title .ui-datepicker-year {
+  color: #CCCCCC;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-corner-all .ui-icon {
@@ -968,7 +973,7 @@ form .btn-outline {
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable a, .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable span {
-  color: #CCCCCC;
+  color: #4D4D4D;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day a {
