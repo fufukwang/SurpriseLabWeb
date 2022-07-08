@@ -799,7 +799,7 @@ header.logo {
   
         .info-text {
           @include baseCounter('padding-top', 25);
-          color: $color-purple;
+          color: $color-text-lightgray;
 
           p {
             text-align: left;

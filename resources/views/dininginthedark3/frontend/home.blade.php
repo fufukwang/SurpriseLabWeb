@@ -224,10 +224,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <p>* 現正販售</p>
                                             <ul>
                                                 <li>
-                                                    <p>雙人票券可劃位區間為：2022/09/19-2022/11/13</p>
+                                                    <p>雙人套票可劃位區間為：2022/09/19-2022/11/13</p>
                                                 </li>
                                                 <li>
-                                                    <p>雙菜單票可劃位時間為：2022/09/19 - 2023/09/30</p>
+                                                    <p>雙菜單套票可劃位區間為：2022/09/19 - 2023/09/30</p>
                                                 </li>
                                             </ul>
                                             <p>* 可劃位區間將依照實際狀況加開或縮短</p>
@@ -349,17 +349,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-                        <!-- 體驗場次 -->
+                        <!-- 營業時間 -->
                         <div class="section sec-ticket-slots">
                             <div class="container">
 
                                 <div class="section-header">
                                     <div class="section-title">
-                                        <h3>體驗場次</h3>
+                                        <h3>營業時間</h3>
                                         <h4>Time Slots</h4>
                                     </div>
                                     <p class="section-desc">
-                                        現在購票，預計於 09/19-11/13 前來體驗<br/>
                                         實際可選擇時段請參考票券頁面
                                     </p>
                                 </div>
