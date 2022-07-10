@@ -609,9 +609,6 @@ if(env('APP_ENV') != 'production'){
         
         Route::get('master','dark3\MasterController@getTeamMaster'/*function(){ return view('thegreattipsy.frontend.master'); }*/);
         Route::post('Team/SlaveStore', 'dark3\MasterController@postTeamSlave');
-        // 姓名修改
-        Route::get('nameFix','dark3\MasterController@getNameFix');
-        Route::post('Team/NameFix', 'dark3\MasterController@postNameFix');
 
         Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
         Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
