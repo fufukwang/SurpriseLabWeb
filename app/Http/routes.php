@@ -589,12 +589,13 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('ReOrderData','Dark2\HomeController@ReOrderData');
         Route::post('contactstore','Dark2\HomeController@contactstore');
     });
-if(env('APP_ENV') != 'production'){
+
     // dark s3
     Route::group(['prefix' => 'dininginthedark3'], function(){
         Route::get('index.html',function(){ return view('dininginthedark3.frontend.home'); });
         Route::get('/',function(){ return view('dininginthedark3.frontend.home'); });
         Route::get('rules.html',function(){ return view('dininginthedark3.frontend.rules'); });
+if(env('APP_ENV') != 'production'){
         // 劃位
         Route::get('booking.html',function(){ return view('dininginthedark3.frontend.booking'); });
         Route::get('booking_pay.html',function(){ return view('dininginthedark3.frontend.booking_pay'); });
@@ -615,9 +616,8 @@ if(env('APP_ENV') != 'production'){
         Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
         Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
-
-    });
 }
+    });
     // thegreattipsy S2
     Route::group(['prefix' => 'thegreattipsy'], function(){
         Route::get('index.html',function(){ return view('thegreattipsy.frontend.home'); });
