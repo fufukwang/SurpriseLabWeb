@@ -266,14 +266,15 @@
                 </fieldset>
                 <fieldset class="step step-3" title="日期、時段選擇">
                     <div class="form-container">
-                        <div class="field-intro">
-                            <p>菜單體驗區段</p>
-                            <ul>
-                                <li>六號菜單：2022.10 - 2023.04</li>
-                                <li>七號菜單：2023.05 - 2023.10</li>
-                            </ul>
-                        </div>
-                        <div class="form-group with-icon">
+                        <p class="field-intro">
+                            菜單體驗區段
+                        </p>
+                        <ul class="prefix-dash">
+                            <li>六號菜單：2022.10 - 2023.04</li>
+                            <li>七號菜單：2023.05 - 2023.10</li>
+                        </ul>
+                        <br/><br/>
+                        <div class="form-group with-icon show-field">
                             <label class="form-label" for="booking_date">日期</label>
                             <div class="field-icon-wrapper">
                                 <input type="text" name="booking_date" id="booking_date" readonly placeholder="選擇日期"/>
