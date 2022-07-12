@@ -224,10 +224,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <p>* 現正販售</p>
                                             <ul>
                                                 <li>
-                                                    <p>雙人套票可劃位區間為：2022/09/19-2022/11/13</p>
+                                                    <p>雙人套票可劃位區間為：2022/10/12 - 2022/12/11</p>
                                                 </li>
                                                 <li>
-                                                    <p>雙菜單套票可劃位區間為：2022/09/19 - 2023/09/30</p>
+                                                    <p>雙菜單套票可劃位區間為：2022/10/12 - 2023/10/31</p>
                                                 </li>
                                             </ul>
                                             <p>* 可劃位區間將依照實際狀況加開或縮短</p>
@@ -389,9 +389,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <h3>時程表</h3>
                                         <h4>Schedule</h4>
                                     </div>
-                                    <p class="section-desc">
-                                        09/19-11/13 票券預售中
-                                    </p>
                                 </div>
                                 
                                 <div class="schedule">

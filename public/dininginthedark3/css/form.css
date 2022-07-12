@@ -977,7 +977,7 @@ form .btn-outline {
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day a {
-  color: #CCCCCC;
+  color: #4D4D4D;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
