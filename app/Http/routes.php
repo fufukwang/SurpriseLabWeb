@@ -566,7 +566,9 @@ Route::group(['middleware' => ['web']], function () {
     });
 
 
-
+    Route::get('dininginthedark2/{everything?}', function ($everything = null) {
+        return redirect(config('setting.dark2.path'))->send();
+    });
     // dark2
     Route::group(['prefix' => config('setting.dark2.path')], function(){
         Route::get('about.html',function(){ return view('Dark2.frontendone.about'); });
