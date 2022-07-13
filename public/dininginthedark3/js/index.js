@@ -127,13 +127,13 @@ $(document).ready(function () {
     // modal close button
     $open_modal_btn.on('click', function(event) {
         $ticket_modal.fadeIn(250, function () {
-            $('body').addClass('modal-open');
+            $('body').addClass('menu-open');
         });
     });
 
     $close_modal_btn.on('click', function(event) {
         $ticket_modal.fadeOut(250, function () {
-            $('body').removeClass('modal-open');
+            $('body').removeClass('menu-open');
         });
     });
 });
