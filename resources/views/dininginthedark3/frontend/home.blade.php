@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.1"/>
+    <link rel="stylesheet" href="css/style.css?v=0.11"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
