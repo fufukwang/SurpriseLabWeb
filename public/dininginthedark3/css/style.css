@@ -1779,6 +1779,9 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (max-width: 1199.98px) {
+  #Ticket .sec-ticket-schedule .schedule h6 {
+    text-align: center;
+  }
   #Ticket .sec-ticket-schedule .schedule table {
     width: 350px;
     margin: 0 auto;
@@ -1786,15 +1789,14 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     line-height: 2.14;
     letter-spacing: 1.4px;
   }
-  #Ticket .sec-ticket-schedule .schedule table td {
-    display: block;
-  }
   #Ticket .sec-ticket-schedule .schedule table tr {
     margin-bottom: 12px;
-    display: block;
   }
   #Ticket .sec-ticket-schedule .schedule table tr td:first-child {
-    padding-right: 0;
+    padding-right: 0 !important;
+  }
+  #Ticket .sec-ticket-schedule .schedule table tr td:last-child {
+    text-align: center;
   }
 }
 

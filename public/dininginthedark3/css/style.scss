@@ -1264,6 +1264,10 @@ header.logo {
       }
   
       @media (max-width: 1199.98px) {
+        h6 {
+          text-align: center;
+        }
+
         table {
           width: 350px;
           margin: 0 auto;
@@ -1271,16 +1275,15 @@ header.logo {
           line-height: 2.14;
           letter-spacing: 1.4px;
   
-          td {
-            display: block;
-          }
-  
           tr {
             margin-bottom: 12px;
-            display: block;
   
             td:first-child {
-              padding-right: 0;
+              padding-right: 0 !important;
+            }
+
+            td:last-child {
+              text-align: center;
             }
           }
         }

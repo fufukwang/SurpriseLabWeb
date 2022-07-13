@@ -416,7 +416,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <td>其餘預約者</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2">＊依照購票順序寄送劃位序號，收到當下即可劃位</td>
+                                                <td colspan="2">
+                                                    <br class="d-inline d-sm-none"/>
+                                                    <p>＊依照購票順序寄送劃位序號，<br class="d-inline d-sm-none"/>收到當下即可劃位</p>
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>
