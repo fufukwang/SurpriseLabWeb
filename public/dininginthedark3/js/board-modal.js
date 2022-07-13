@@ -1,4 +1,12 @@
-let navigation_type = performance.getEntriesByType("navigation")[0].type;
+//let navigation_type = performance.getEntriesByType("navigation")[0].type;
+
+let navigation_type = ''; // default to safari below 15 
+try {
+    navigation_type = performance.getEntriesByType("navigation")[0].type;
+} catch {
+
+}
+
 let is_inner_page = /rules|booking/.test(document.referrer);
 let is_show = new URL(window.location.href).searchParams.get("effect") == 'show';
 
