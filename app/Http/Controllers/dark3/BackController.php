@@ -235,7 +235,7 @@ class BackController extends Controller
                 return Response::json(['success'=> true], 200);
             }
         }
-        $pros = pro::select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS now,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open"));
+        $pros = pro::select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS now,(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open"));
         if($request->has('day') && $request->has('day_end')){
             $all_count = pro::select(DB::raw("SUM((IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))) AS sale,count(id) as num,SUM(sites) as site"));
         } else {
@@ -270,8 +270,8 @@ class BackController extends Controller
         if($request->has('open_limit') && $request->has('open_number')){
             $open_number = $request->open_number;
             if($request->open_limit==1 && is_numeric($open_number)){
-                $pros = $pros->where('sites','<',$open_number);
-                $all_count = $all_count->where('sites','<',$open_number);
+                $pros = $pros->where('sites','<=',$open_number);
+                $all_count = $all_count->where('sites','<=',$open_number);
             }
         }
         if($request->has('order')){
