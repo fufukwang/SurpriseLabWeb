@@ -4,11 +4,11 @@
     <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="keywords" content="驚喜製造, 無光晚餐, 一人餐桌, 台北喝酒, 活動, 沉浸式體驗, 週末要幹麻, 好玩, 喝酒">
-    <meta name="description" content="We don't meet people by accident. We meet for a reason.">
+    <meta name="description" content="在黑暗中，熟悉都變陌生，習慣都成嘗試。用僅剩的感官，盡情探索與感受，重新認識餐桌上的一切與對面的那個人。《無光晚餐》每日為你準時熄燈、端上黑暗。">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="無光晚餐 Dining In The Dark"/>
-    <meta property="og:site_name" content="無光晚餐 Dining In The Dark"/>
-    <meta property="og:description" content="We don't meet people by accident. We meet for a reason."/>
+    <meta property="og:title" content="無光晚餐 Dining In The Dark - 驚喜製造 Surprise Lab."/>
+    <meta property="og:site_name" content="無光晚餐 Dining In The Dark - 驚喜製造 Surprise Lab."/>
+    <meta property="og:description" content="在黑暗中，熟悉都變陌生，習慣都成嘗試。用僅剩的感官，盡情探索與感受，重新認識餐桌上的一切與對面的那個人。《無光晚餐》每日為你準時熄燈、端上黑暗。"/>
     <meta property="og:url" content="https://www.surpriselab.com.tw/dininginthedark3"/>
     <meta property="og:image" content="https://www.surpriselab.com.tw/dininginthedark3/img/general/opengraph.png?v=0.1"/>
     <meta property="og:image:type" content="image/png"/>
@@ -16,7 +16,7 @@
     <meta property="og:image:height" content="315"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="facebook-domain-verification" content="mmtxvobzbh451wck03upjlbgtj1i2n" />
-    <title>無光晚餐 Dining In The Dark</title>
+    <title>無光晚餐 Dining In The Dark - 驚喜製造 Surprise Lab.</title>
 
     <!-- Style -->
     <link rel="icon" href="img/general/favicon.png" type="image/x-icon">
