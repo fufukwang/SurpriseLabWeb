@@ -63,8 +63,8 @@
                                                     <option value="">排序(預設為修改時間反序)</option>
                                                     <option value="day|asc"@if(isset($request->order) && $request->order=='day|asc') selected @endif>日期正序</option>
                                                     <option value="day|desc"@if(isset($request->order) && $request->order=='day|desc') selected @endif>日期反序</option>
-                                                    <option value="space|desc"@if(isset($request->order) && $request->order=='space|desc') selected @endif>剩餘空位正序</option>
-                                                    <option value="space|asc"@if(isset($request->order) && $request->order=='space|asc') selected @endif>剩餘空位反序</option>
+                                                    <option value="space|asc"@if(isset($request->order) && $request->order=='space|asc') selected @endif>剩餘空位正序</option>
+                                                    <option value="space|desc"@if(isset($request->order) && $request->order=='space|desc') selected @endif>剩餘空位反序</option>
                                                 </select>
                                         </div>
                                         <div class="form-group col-sm-1">

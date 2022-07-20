@@ -77,14 +77,17 @@ class HelperService {
                 config(['mail.password' => env('MAIL_PASSWORD')]);
             }
             Mail::send('dininginthedark3.email.'.$data['template'],$data,function($m) use ($data){
-                $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐');
-                $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐');
-                $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐');
+                $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐 Dining In The Dark');
+                $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐 Dining In The Dark');
+                $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐 Dining In The Dark');
 
                 $m->to($data['email'], $data['name']);
                 switch ($data['template']) {
-                    case 'coupon':
-                        $m->subject('【無光晚餐】劃位序號信件');
+                    case 'couponp2':
+                        $m->subject('【無光晚餐】劃位序號信件-雙人套票');
+                        break;
+                    case 'couponp4':
+                        $m->subject('【無光晚餐】劃位序號信件-雙菜單套票');
                         break;
                     case 'order':
                         $m->subject('【無光晚餐】訂位確認信件');

@@ -65,10 +65,15 @@ class BackController extends Controller
                 $id = $row;
                 $xls     = backme::find($id);
                 $coupons = coupon::where('b_id',$id)->get();
+                $pp = '';
+                if($xls->p2>0){ $pp = 'p2';}
+                if($xls->p4>0){ $pp = 'p4';}
                 $data = [
+                    'email'    => $xls->email,
+                    'name'     => $xls->name,
                     'xls'      => $xls,
                     'coupons'  => $coupons,
-                    'template' => 'coupon',
+                    'template' => 'coupon'.$pp,
                 ];
                 SLS::SendEmailByTemplateName($data);
                 backme::where('id',$id)->update(['is_sent'=>1]);
@@ -196,10 +201,15 @@ class BackController extends Controller
             $id = $id;
             $xls     = backme::find($id);
             $coupons = coupon::where('b_id',$id)->get();
+            $pp = '';
+            if($xls->p2>0){ $pp = 'p2';}
+            if($xls->p4>0){ $pp = 'p4';}
             $data = [
+                'email'    => $xls->email,
+                'name'     => $xls->name,
                 'xls'      => $xls,
                 'coupons'  => $coupons,
-                'template' => 'coupon',
+                'template' => 'coupon'.$pp,
             ];
             SLS::SendEmailByTemplateName($data);
 
