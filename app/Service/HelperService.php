@@ -103,6 +103,54 @@ class HelperService {
         }
     }
 
+    // dark3 sms
+    public function SendSmsByTemplateName($smsData){
+        try{
+            switch ($smsData['template']) {
+                case 'order':
+                    $requestUrl = 'https://api-ssl.bitly.com/v4/shorten';
+
+                    $header = [
+                        'Authorization' => 'Bearer ' . env('BITLY_TOKEN'),
+                        'Content-Type'  => 'application/json',
+                    ];
+
+                    $data = array_filter([
+                        'long_url' => 'https://calendar.google.com/calendar/event?action=TEMPLATE&text=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97&dates='.$smsData['gday'].'&location=106台北市大安區仁愛路四段345巷4弄3號&details=嘿，別忘了來，<br>依你舒適的裝扮，<br>記得提早抵達。<br><br>期待，你的來訪。&sf=true',
+                    ]);
+
+                    try {
+                        $request = new \GuzzleHttp\Psr7\Request('POST', $requestUrl, $header, json_encode($data));
+                        $client = new \GuzzleHttp\Client();
+                        $response = $client->send($request);
+                    } catch (\GuzzleHttp\Exception\RequestException $e) {
+                        Log::error($e->getMessage());
+                    }
+
+                    $statusCode = $response->getStatusCode();
+                    $content = $response->getBody()->getContents();
+
+                    $data = json_decode($content, true);
+                    $url = '';
+                    if (isset($data['link'])) {
+                        $url = $data['link'];
+                    }
+
+                    if (isset($data['data']['link'])) {
+                        $url = $data['data']['link'];
+                    }
+                    $this->sent_single_sms($smsData['phone'],'點擊連結加入Google Calendar '.$url);
+                    break;
+
+
+
+            }
+            return true;
+        } catch (Exception $e) {
+            Log::error($e);
+            return false;
+        }
+    }
     // dark3 行前信寄送
 
 

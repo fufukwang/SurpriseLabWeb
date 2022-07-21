@@ -326,11 +326,13 @@ class FrontController extends Controller
                     'pople' => $request->Pople,
                     'email' => $data['email'],
                     'name'  => $data['name'],
+                    'phone' => $data['tel'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
                     'template' => 'order',
                 ];
                 SLS::SendEmailByTemplateName($mailer);
+                SLS::SendSmsByTemplateName($mailer);
                 $order->is_send = 1;
                 $order->save();
 

@@ -93,13 +93,15 @@ class OrderController extends Controller
                     'time'  => substr($order->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
                     'pople' => $order->pople,
                     'email' => $order->email,
-                    'name'  => $order->tel,
+                    'name'  => $order->name,
                     'gday'  => $rangStart.'/'.$rangEnd,
+                    'phone' => $order->tel,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
                     'template' => 'order',
                 ];
                 if($mailer['email'] != ''){
                     SLS::SendEmailByTemplateName($mailer);
+                    SLS::SendSmsByTemplateName($mailer);
                     /*
                     if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
                         config(['mail.host' => 'smtp.gmail.com']);
@@ -263,12 +265,14 @@ class OrderController extends Controller
                     'pople' => $people,
                     'email' => $data['email'],
                     'name'  => $data['name'],
+                    'phone' => $data['tel'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
                     'template' => 'order',
                 ];
                 if($mailer['email'] != ''){
                     SLS::SendEmailByTemplateName($mailer);
+                    SLS::SendSmsByTemplateName($mailer);
                     /*
                     if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
                         config(['mail.host' => 'smtp.gmail.com']);
@@ -615,11 +619,13 @@ class OrderController extends Controller
             'pople' => $request->pople,
             'email' => $request->email,
             'name'  => $request->name,
+            'phone' => $request->phone,
             'gday'  => $rangStart.'/'.$rangEnd,
             'master'=> "?id=".md5($request->oid)."&sn=".$request->sn,
             'template' => 'order',
         ];
         SLS::SendEmailByTemplateName($mailer);
+        SLS::SendSmsByTemplateName($mailer);
         /*
         if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
             config(['mail.host' => 'smtp.gmail.com']);
