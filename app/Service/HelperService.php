@@ -139,9 +139,14 @@ class HelperService {
                     if (isset($data['data']['link'])) {
                         $url = $data['data']['link'];
                     }
-                    $this->sent_single_sms($smsData['phone'],'點擊連結加入Google Calendar '.$url);
+                    $this->sent_single_sms($smsData['phone'],"【無光晚餐】訂位確認信已寄出\n若未收到，請至垃圾信匣或促銷內容尋找。\n\n加入行事曆：".$url);
                     break;
-
+                case 'D7':
+                    $this->sent_single_sms($smsData['phone'],"【無光晚餐】\n\n行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找。\n\n期待在黑暗中相見\n\n無光晚餐團隊");
+                    break;
+                case 'DX':
+                    $this->sent_single_sms($smsData['phone'],"【無光晚餐】\n\n您好，來訊提醒您今日有預約無光晚餐。\n\n期待在黑暗中相見\n\n無光晚餐團隊");
+                    break;
 
 
             }

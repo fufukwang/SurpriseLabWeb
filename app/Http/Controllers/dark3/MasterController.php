@@ -235,18 +235,30 @@ class MasterController extends Controller
     public function postReSendSMS(Request $request){
         try{
             $this->checkPower($request);
+            $toData = [
+                'phone'    => $request->tel,
+                'template' => $request->type,
+            ];
+            if($request->type == 'order'){
+                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','rang_end','rang_start')->find($request->id);
+                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_start))));
+                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_end))));
+                $toData['gday'] = $rangStart.'/'.$rangEnd;
+            }
+            SLS::SendSmsByTemplateName($toData);
+            /*
             $tel = $request->tel;
             switch ($request->type) {
                 case 'DX':
                     SLS::sent_single_sms($tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
                     break;
-                case 'D10':
+                case 'D7':
                     SLS::sent_single_sms($tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
                     break;
-                case 'D00':
+                case 'o':
                     SLS::sent_single_sms($tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
                     break;
-            }
+            }*/
             return response()->json(["success"=>true]);
         } catch (Exception $exception) {
             Log::error($exception);
