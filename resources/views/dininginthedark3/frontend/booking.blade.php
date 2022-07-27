@@ -396,7 +396,7 @@
                         <div class="feature-btn d-flex justify-content-between multi-btn">
                             <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
                             <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
-                                完成劃位 NT$
+                                完成劃位
                                 <!--span class="amountToGo"></span-->
                             </button>
                         </div>
