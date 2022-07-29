@@ -335,6 +335,18 @@ class FrontController extends Controller
                 SLS::SendSmsByTemplateName($mailer);
                 $order->is_send = 1;
                 $order->save();
+                // 信件補送
+                $now = time();
+                $lim = strtotime($order->day.' '.$order->rang_start);
+                $day = round( ($lim - $now) / 86400 );
+                if($day <= 7){
+                    $mailer['template'] = 'D7';
+                    SLS::SendSmsByTemplateName($mailer);
+                }
+                if($day == 0){
+                    $mailer['template'] = 'DX';
+                    SLS::SendSmsByTemplateName($mailer);
+                }
 
                 /*
                 if(strpos($mailer['email'],'@yahoo')) {

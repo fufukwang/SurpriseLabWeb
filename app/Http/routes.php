@@ -597,7 +597,6 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('index.html',function(){ return view('dininginthedark3.frontend.home'); });
         Route::get('/',function(){ return view('dininginthedark3.frontend.home'); });
         Route::get('rules.html',function(){ return view('dininginthedark3.frontend.rules'); });
-if(env('APP_ENV') != 'production'){
         // 劃位
         Route::get('booking.html',function(){ return view('dininginthedark3.frontend.booking'); });
         Route::get('booking_pay.html',function(){ return view('dininginthedark3.frontend.booking_pay'); });
@@ -605,17 +604,17 @@ if(env('APP_ENV') != 'production'){
         Route::post('Neweb.OrderPay', 'dark3\NewPayController@postOrderByNeweb'); // 存訂單
         Route::post('Neweb.ReturnResult', 'dark3\NewPayController@postReturnByNeweb'); // 回傳內容
         Route::post('Neweb.BackReturn', 'dark3\NewPayController@postBackReturn'); // 背景回傳
+/*
         // 特別場
         Route::get('booking_special.html', 'dark3\SpecialController@getHome'); // 特別場
         Route::post('Special.OrderPay', 'dark3\SpecialController@postOrderByNeweb'); // 存訂單
         
-        Route::get('master','dark3\MasterController@getTeamMaster'/*function(){ return view('thegreattipsy.frontend.master'); }*/);
+        Route::get('master','dark3\MasterController@getTeamMaster');
         Route::post('Team/SlaveStore', 'dark3\MasterController@postTeamSlave');
-
+*/
         Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
         Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
-}
     });
     // thegreattipsy S2
     Route::group(['prefix' => 'thegreattipsy'], function(){
