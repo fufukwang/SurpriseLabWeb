@@ -299,6 +299,18 @@ class NewPayController extends Controller
 
                     $order->is_send = 1;
                     $order->save();
+                    // 信件補送
+                    $now = time();
+                    $lim = strtotime($order->day.' '.$order->rang_start);
+                    $day = round( ($lim - $now) / 86400 );
+                    if($day <= 7){
+                        $mailer['template'] = 'D7';
+                        SLS::SendSmsByTemplateName($mailer);
+                    }
+                    if($day == 0){
+                        $mailer['template'] = 'DX';
+                        SLS::SendSmsByTemplateName($mailer);
+                    }
                     /*
                     SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                     // 信件補送

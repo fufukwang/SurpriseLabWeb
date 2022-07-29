@@ -146,7 +146,7 @@ function filledDataChecker() {
        } else if (checker_name === 'booking_time'){
 
            // 取得被選取的選項文字
-           filled_val = $('[name=' + checker_name + ']').find(':selected').text();
+           filled_val = $('[name=' + checker_name + ']').find(':selected').text().substr(0,13);
 
        } else {
 

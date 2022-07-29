@@ -102,61 +102,18 @@ class OrderController extends Controller
                 if($mailer['email'] != ''){
                     SLS::SendEmailByTemplateName($mailer);
                     SLS::SendSmsByTemplateName($mailer);
-                    /*
-                    if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
-                        config(['mail.host' => 'smtp.gmail.com']);
-                        config(['mail.username' => env('MAIL_TGT_USER')]);
-                        config(['mail.password' => env('MAIL_TGT_PASS')]);
-                    }
-                    if($mailer['pople']==1){
-                        $mailTheme = 'orderOne';
-                    } else {
-                        $mailTheme = 'order';
-                    }
-                    Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
-                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->to($mailer['email'], $mailer['name']);
-                        $m->subject('訂位確認信 ── 內有重要任務');
-                    });
-                    */
-                    /*
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                     // 信件補送
                     $now = time();
                     $lim = strtotime($order->day.' '.$order->rang_start);
                     $day = round( ($lim - $now) / 86400 );
-                    // 寄送 A 信件
-                    $toData = [
-                        'id'    => $order->id,
-                        'name'  => $order->name,
-                        'email' => $order->email,
-                        'type'  => "DX" // 邀請信件
-                    ];
-                    // 信件補送
-                    if($day <= 21){
-                        $toData['type'] = "D21";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 14){
-                        $toData['type'] = "D14";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 11){
-                        $toData['day'] = $order->day.' '.$order->rang_start;
-                        $toData['type'] = "D10";
-                        SLS::SendPreviewEmail($toData);
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
-                    }
-                    if($day <= 5){
-                        $toData['type'] = "D05";
-                        SLS::SendPreviewEmail($toData);
+                    if($day <= 7){
+                        $mailer['template'] = 'D7';
+                        SLS::SendSmsByTemplateName($mailer);
                     }
                     if($day == 0){
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
+                        $mailer['template'] = 'DX';
+                        SLS::SendSmsByTemplateName($mailer);
                     }
-                    */
                 }
             } catch (Exception $e){
                 Log::error($e);
@@ -273,64 +230,20 @@ class OrderController extends Controller
                 if($mailer['email'] != ''){
                     SLS::SendEmailByTemplateName($mailer);
                     SLS::SendSmsByTemplateName($mailer);
-                    /*
-                    if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
-                        config(['mail.host' => 'smtp.gmail.com']);
-                        config(['mail.username' => env('MAIL_TGT_USER')]);
-                        config(['mail.password' => env('MAIL_TGT_PASS')]);
-                    }
-                    if($mailer['pople']==1){
-                        $mailTheme = 'orderOne';
-                    } else {
-                        $mailTheme = 'order';
-                    }
-                    Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
-                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-
-                        $m->to($mailer['email'], $mailer['name']);
-                        $m->subject('訂位確認信 ── 內有重要任務');
-                    });
-                    */
                     $order->is_send = 1;
                     $order->save();
-                    /*
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
                     // 信件補送
                     $now = time();
-                    $lim = strtotime($act->day.' '.$act->rang_start);
+                    $lim = strtotime($order->day.' '.$order->rang_start);
                     $day = round( ($lim - $now) / 86400 );
-                    // 寄送 A 信件
-                    $toData = [
-                        'id'    => $order->id,
-                        'name'  => $order->name,
-                        'email' => $order->email,
-                        'type'  => "DX" // 邀請信件
-                    ];
-                    // 信件補送
-                    if($day <= 21){
-                        $toData['type'] = "D21";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 14){
-                        $toData['type'] = "D14";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 11){
-                        $toData['day'] = $act->day.' '.$act->rang_start;
-                        $toData['type'] = "D10";
-                        SLS::SendPreviewEmail($toData);
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
-                    }
-                    if($day <= 5){
-                        $toData['type'] = "D05";
-                        SLS::SendPreviewEmail($toData);
+                    if($day <= 7){
+                        $mailer['template'] = 'D7';
+                        SLS::SendSmsByTemplateName($mailer);
                     }
                     if($day == 0){
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
+                        $mailer['template'] = 'DX';
+                        SLS::SendSmsByTemplateName($mailer);
                     }
-                    */
                 }
             }
 
@@ -564,17 +477,6 @@ class OrderController extends Controller
                         $pay_money,
                         $pay_last,
                     ];
-
-                    /*
-                    $inv_open = false;
-                    $number = inv::select('number','is_cancal')->where('order_id',$row['id'])->first();
-                    if($number){
-                        $inv_open = true;
-                    }
-                    // $row['meat'] = implode(',',json_decode($row['meat'],true));
-                    array_push($row,$inv_open ? $number->number : '');
-                    */
-
                     array_push($data,$sheetRow);
                 }
 
@@ -609,10 +511,6 @@ class OrderController extends Controller
 
         $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
         $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-        /*
-        $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-        $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
-        */
         $mailer = [
             'day'   => Carbon::parse($act->day)->format('Y / m / d'),
             'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
@@ -626,26 +524,6 @@ class OrderController extends Controller
         ];
         SLS::SendEmailByTemplateName($mailer);
         SLS::SendSmsByTemplateName($mailer);
-        /*
-        if(strpos($mailer['email'],'@yahoo') || strpos($mailer['email'],'@hotmail')) {
-            config(['mail.host' => 'smtp.gmail.com']);
-            config(['mail.username' => env('MAIL_TGT_USER')]);
-            config(['mail.password' => env('MAIL_TGT_PASS')]);
-        }
-        if($mailer['pople']==1){
-            $mailTheme = 'orderOne';
-        } else {
-            $mailTheme = 'order';
-        }
-        Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
-            $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-            $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-            $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-
-            $m->to($mailer['email'], $mailer['name']);
-            $m->subject('訂位確認信 ── 內有重要任務');
-        });
-        */
         order::where('id',$request->oid)->update(['is_send'=>1]);
         return Response::json(['message'=> '已更新'], 200);
     }
