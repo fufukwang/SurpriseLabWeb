@@ -238,7 +238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <!-- 選擇票券 -->
-                        <div class="section sec-ticket-type">
+                        <div class="section sec-ticket-type" id="Ticket-type">
                             <div class="container">
 
                                 <div class="section-header">
@@ -372,7 +372,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <br/>
                                         <p>＊週一週二公休</p>
                                         <div class="feature-btn text-center d-block d-sm-none">
-                                            <a class="btn-outline smoothScroll" href="#Ticket">我要預約</a>
+                                            <a class="btn-outline smoothScroll" href="#Ticket-type">我要預約</a>
                                         </div>
                                     </div>
                                 </div>
@@ -427,7 +427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
 
                                 <div class="feature-btn text-center">
-                                    <a class="btn-outline smoothScroll" href="#Ticket">我要預約</a>
+                                    <a class="btn-outline smoothScroll" href="#Ticket-type">我要預約</a>
                                 </div>
                             </div>
                         </div>

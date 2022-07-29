@@ -320,7 +320,7 @@
                                                     <li>雙人套票：包含一組雙人票券，於指定日期收到序號劃位，並選擇用餐日期。</li>
                                                     <li>雙菜單套票：包含兩組雙人票券，可前來無光晚餐用餐兩次，體驗不同菜單。可隨時預約一年之內的用餐日期，限量販售。</li>
                                                 </ol>
-                                                購票請至<a class="default-light btn-link" href="index.html#Ticket">我要預約</a>購買，相關規則請參考<span class="default-light btn-link to-presale-rules">預售劃位</span>。
+                                                購票請至<a class="default-light btn-link" href="index.html#Ticket-type">我要預約</a>購買，相關規則請參考<span class="default-light btn-link to-presale-rules">預售劃位</span>。
                                             </div>
                                         </div>
                                     </div>
@@ -354,7 +354,7 @@
                             </div>
 
                             <div class="feature-btn">
-                                <a class="btn-outline" href="index.html#Ticket">我要預約</a>
+                                <a class="btn-outline" href="index.html#Ticket-type">我要預約</a>
                             </div>
                         </div>
                     </div>
@@ -419,7 +419,7 @@
                             </div>
 
                             <div class="feature-btn">
-                                <a class="btn-outline" href="index.html#Ticket">我要預約</a>
+                                <a class="btn-outline" href="index.html#Ticket-type">我要預約</a>
                             </div>
                         </div>
                     </div>
@@ -683,7 +683,7 @@
                             </div>
 
                             <div class="feature-btn">
-                                <a class="btn-outline" href="index.html#Ticket">我要預約</a>
+                                <a class="btn-outline" href="index.html#Ticket-type">我要預約</a>
                             </div>
                         </div>
                     </div>
