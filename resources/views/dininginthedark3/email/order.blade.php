@@ -139,7 +139,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif; font-size: 18px; padding: 20px;">
-                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97&dates={{ $gday }}&location=106台北市大安區仁愛路四段345巷4弄3號&details=嘿，別忘了來，<br>依你舒適的裝扮，<br>記得提早抵達。<br><br>期待，你的來訪。&sf=true" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #D5D5D5;">加入行事曆</a>
+                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=無光晚餐%20Dining%20In%20The%20Dark&dates={{ $gday }}&location=106台北市大安區仁愛路四段345巷4弄3號&details=&sf=true" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #D5D5D5;">加入行事曆</a>
                             </td>
                         </tr>
                     </tbody>
