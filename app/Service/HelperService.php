@@ -116,7 +116,7 @@ class HelperService {
                     ];
 
                     $data = array_filter([
-                        'long_url' => 'https://calendar.google.com/calendar/event?action=TEMPLATE&text=%E5%BE%AE%E9%86%BA%E5%A4%A7%E9%A3%AF%E5%BA%97&dates='.$smsData['gday'].'&location=106台北市大安區仁愛路四段345巷4弄3號&details=嘿，別忘了來，<br>依你舒適的裝扮，<br>記得提早抵達。<br><br>期待，你的來訪。&sf=true',
+                        'long_url' => 'https://calendar.google.com/calendar/event?action=TEMPLATE&text=無光晚餐%20Dining%20In%20The%20Dark&dates='.$smsData['gday'].'&location=106台北市大安區仁愛路四段345巷4弄3號&details=&sf=true',
                     ]);
 
                     try {
