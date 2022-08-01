@@ -66,6 +66,12 @@
                                         <input type="checkbox" @if($admin->dark3)checked @endif name="dark3" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>落日轉運站</label>
+                                        <input type="checkbox" @if($admin->terminal)checked @endif name="terminal" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">

@@ -11,6 +11,7 @@ class admin extends Model
         'slug', 'account', 'password','thegreattipsy','giftadd','admin','oldview',
         'clubtomorrow',
         'tgt2','dark3',
+        'terminal'
     ];
 }
 

@@ -67,6 +67,12 @@
                                         <input type="checkbox" name="dark3" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>落日轉運站</label>
+                                        <input type="checkbox" name="terminal" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">

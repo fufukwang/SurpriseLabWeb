@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+@import url("https://use.typekit.net/cax2ztr.css");
+.enter-modal-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90000;
+  background-color: #101010;
+}
+
+.enter-modal-wrap .enter-modal-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.enter-modal-wrap .enter-modal-content .enter-btn {
+  position: absolute;
+  z-index: 600;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 30px;
+  min-width: 210px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  color: #EFEFEF;
+  border: 1px solid #8C5FB4;
+  background-color: #8C5FB4;
+  border-radius: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .enter-modal-wrap .enter-modal-content .enter-btn {
+    width: 180px;
+    min-width: 180px;
+    top: 106vw;
+  }
+}
+
+.enter-modal-wrap .enter-modal-content .enter-btn:hover {
+  background-color: #8C5FB4;
+  border: 1px solid #8C5FB4;
+  color: #EFEFEF;
+}
+
+.drag-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  cursor: move;
+}
+
+.drag-wrap .arrow-wrap {
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 500;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .drag-wrap .arrow-wrap {
+    display: none;
+  }
+}
+
+.drag-wrap .arrow-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.drag-wrap .arrow-wrap:hover {
+  opacity: 1;
+}
+
+.drag-wrap .arrow-wrap.style-left {
+  left: 20px;
+}
+
+.drag-wrap .arrow-wrap.style-right {
+  right: 20px;
+}
+
+.drag-wrap .logo-wrap {
+  position: absolute;
+  z-index: 500;
+  left: 50%;
+  top: 15vw;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 14.5vw;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .drag-wrap .logo-wrap {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    top: 50vw;
+    width: 33vw;
+  }
+}
+
+.drag-wrap .logo-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+.drag-wrap .board-wrap {
+  width: 200vw;
+  height: 200vw;
+  position: absolute;
+  z-index: 300;
+  left: 50%;
+  top: -100vw;
+  -webkit-transform: translate(-50%, -15%);
+          transform: translate(-50%, -15%);
+}
+
+@media screen and (max-width: 1199.98px) {
+  .drag-wrap .board-wrap {
+    width: 412vw;
+    height: 412vw;
+    -webkit-transform: translate(-50%, -31%);
+            transform: translate(-50%, -31%);
+  }
+}
+
+.drag-wrap .board-wrap .image-wrap {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/home/landing/board.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .drag-wrap .board-wrap .image-wrap {
+    -webkit-transition: 0.8s cubic-bezier(0, 0, 0.2, 1);
+    transition: 0.8s cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+/*# sourceMappingURL=board-modal.css.map */

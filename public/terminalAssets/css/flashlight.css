@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap");
+@import url("https://use.typekit.net/cax2ztr.css");
+.loaded {
+  opacity: 1;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes fade {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+.lighting-wrap {
+  overflow: hidden;
+}
+
+.lighting-wrap::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-image: url(../img/home/bg-wallpaper.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1199.98px) {
+  .lighting-wrap::before {
+    background-size: auto;
+    background-repeat: repeat-y;
+  }
+}
+
+.lighting-wrap .lighting-inner {
+  position: relative;
+}
+
+.lighting-wrap .lighting-inner .mask-box {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro {
+  position: relative;
+}
+
+@media (max-width: 1199.98px) {
+  .lighting-wrap .lighting-inner .mask-box .sec-intro {
+    margin-top: 60px;
+    padding-top: 84px;
+    text-align: center;
+  }
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap {
+  width: 100%;
+  max-width: 715px;
+  position: relative;
+  z-index: 1000;
+  margin: 0 auto;
+  padding-top: 40vh;
+  padding-bottom: 10vh;
+  text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+  .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap {
+    position: static;
+    padding: 0 20px;
+  }
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img {
+  width: 560px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin: 0 0 0 -280px;
+}
+
+@media (max-width: 1199.98px) {
+  .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img {
+    width: 100%;
+    position: static;
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img img {
+  width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+  .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img img:first-child {
+    display: none;
+  }
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img img:last-child {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img img:last-child {
+    display: block;
+  }
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .shadow {
+  width: 100%;
+  left: auto;
+  margin-top: -80px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+@media (max-width: 1199.98px) {
+  .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .shadow {
+    margin-top: -15px;
+    display: none;
+  }
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .shadow > img {
+  opacity: 0.5;
+  -webkit-transform: scale(1.25) translateX(-2.75%);
+          transform: scale(1.25) translateX(-2.75%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .btn-scroll-down {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  bottom: 128px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+@media (max-width: 1199.98px) {
+  .lighting-wrap .lighting-inner .mask-box .sec-intro .btn-scroll-down {
+    display: inline-block;
+    position: static;
+    -webkit-transform: unset;
+            transform: unset;
+    margin-top: 72px;
+  }
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .btn-scroll-down:hover {
+  opacity: 0.8;
+}
+
+.lighting-wrap .lighting-inner .mask-box .sec-intro .btn-scroll-down img {
+  width: 100%;
+}
+
+.sec-experience {
+  opacity: 1;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 1199.98px) {
+  .sec-experience {
+    opacity: 1;
+  }
+}
+
+.sec-experience .about-box {
+  max-width: 890px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1199.98px) {
+  .sec-experience .about-box {
+    margin: 25px auto;
+    margin-top: 0;
+  }
+}
+
+.sec-experience .about-box p {
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+@media (max-width: 1199.98px) {
+  .sec-experience .about-box p {
+    margin-top: -25px;
+  }
+}
+
+.sec-experience .about-box p span {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sec-experience .about-box img {
+  width: 100%;
+}
+
+.sec-experience .about-box img:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 1199.98px) {
+  .sec-experience .about-box .col-md-4 {
+    margin-bottom: 30px;
+  }
+}
+
+.sec-experience .about-box .col-md-4 > div {
+  padding: 0 45px;
+}
+
+.sec-experience .about-box .col-md-4 > div > div {
+  position: relative;
+}
+
+@media (max-width: 1199.98px) {
+  .sec-experience .about-box .col-md-4 > div > div {
+    max-width: 150px;
+    margin: auto;
+  }
+}
+
+.sec-experience .about-box .col-md-4:first-child img:last-child {
+  margin-left: -45px;
+}
+
+@media (max-width: 1199.98px) {
+  .sec-experience .about-box .col-md-4:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 800px;
+  width: 800px;
+  background-image: url(../img/home/light.png);
+  background-size: 100%;
+  background-position: center;
+  z-index: 10;
+  margin-top: -400px;
+  margin-left: -400px;
+  opacity: 0.75;
+}
+
+@media (max-width: 1199.98px) {
+  .light {
+    display: none;
+    position: static;
+    opacity: 0.35;
+  }
+}
+
+.mask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  left: 100%;
+  background: rgba(35, 24, 21, 0.4);
+  z-index: 500;
+}
+
+.visible-xs {
+  line-height: 0;
+  margin: 0 !important;
+}
+
+.show-1, .show-2, .show-3, .show-4 {
+  opacity: 1;
+}
+/*# sourceMappingURL=flashlight.css.map */

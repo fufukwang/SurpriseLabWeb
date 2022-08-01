@@ -39,6 +39,7 @@
                             <th>明日俱樂部</th>
                             <th>微醺大飯店2</th>
                             <th>無光晚餐3</th>
+                            <th>落日轉運站</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -55,7 +56,7 @@
                                 <td>@if($row->clubtomorrow) yes @else no @endif</td>
                                 <td>@if($row->tgt2) yes @else no @endif</td>
                                 <td>@if($row->dark3) yes @else no @endif</td>
-
+                                <td>@if($row->terminal) yes @else no @endif</td>
                             <td class="actions">
                                 <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
                                 <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>

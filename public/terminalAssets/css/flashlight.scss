@@ -1,0 +1,282 @@
+// Variable
+@import 'variable';
+
+// Loading
+.loaded { 
+    opacity: 1;
+
+    // &:after { 
+    //     display: none; 
+    // }
+}
+
+@keyframes fade { 
+    0% { 
+        transform: scale(1); 
+        opacity: 0.5; 
+    } 50% { 
+      transform: scale(0.8); 
+      opacity: 0.25; 
+    } 100% { 
+        transform: scale(1); 
+        opacity: 0.5; 
+    } 
+}
+
+.lighting-wrap {
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-image: url(../img/home/bg-wallpaper.jpg);
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+
+        @media (max-width: 1199.98px) {
+            background-size: auto;
+            background-repeat: repeat-y;
+        }
+    }
+
+    .lighting-inner {
+        position: relative;
+
+        .mask-box {
+            width: 100%;
+            position: relative;
+            top: 0; 
+            left: 0; 
+            z-index: 1001; 
+
+            .sec-intro {
+                position: relative;
+
+                @media (max-width: 1199.98px) { 
+                    margin-top: 60px;
+                    padding-top: 84px;
+                    text-align: center;
+                }
+
+                // 無光介紹
+                .intro-wrap {
+                    width: 100%;
+                    max-width: 715px;
+                    position: relative;
+                    z-index: 1000;
+                    margin: 0 auto;
+                    padding-top: 40vh;
+                    padding-bottom: 10vh;                
+                    text-align: center;
+
+                    @media (max-width: 1199.98px) { 
+                        position: static;
+                        padding: 0 20px;
+                    }
+        
+                    .slogan-img {
+                        width: 560px; 
+                        position: absolute;
+                        top: 30px;
+                        left: 50%;
+                        margin: 0 0 0 -280px;
+
+                        @media (max-width: 1199.98px) {
+                            width: 100%; 
+                            position: static;
+                            opacity: 1; 
+                            margin-left: 0; 
+                        }
+
+                        img { 
+                            width: 100%; 
+
+                            &:first-child { 
+                                @media (max-width: 1199.98px) { 
+                                    display: none;
+                                }
+                            } 
+
+                            &:last-child { 
+                                display: none; 
+
+                                @media (max-width: 1199.98px) { 
+                                    display: block; 
+                                }
+                            }
+                        }
+                    }
+
+                    .shadow {
+                        width: 100%; 
+                        left: auto; 
+                        margin-top: -80px;
+                        box-shadow: none !important;
+                        
+                        @media (max-width: 1199.98px) { 
+                            margin-top: -15px; 
+                            display: none; 
+                        }
+
+                        & > img { 
+                            opacity: 0.5; 
+                            transform: scale(1.25) translateX(-2.75%); 
+                            transform-origin: center center; 
+                        }
+                    }
+                }
+
+                .btn-scroll-down {
+                    width: 48px;
+                    height: 48px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 128px;
+                    transform: translateX(-50%);
+                    filter: grayscale(1);
+                    opacity: 0.5;
+                    transition: opacity 0.3s;
+
+                    @media (max-width: 1199.98px) { 
+                        display: inline-block;
+                        position: static;
+                        transform: unset;
+                        margin-top: 72px;
+                    }
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }  
+    }
+}
+
+// 體驗內容
+.sec-experience { 
+    opacity: 1; 
+    transition: 1s all; 
+    text-align: center; 
+    padding: 20px;
+
+    @media (max-width: 1199.98px) { 
+        opacity: 1;
+    }
+
+    .about-box { 
+        max-width: 890px; 
+        margin: 0 auto;
+    
+        @media (max-width: 1199.98px) { 
+            margin: 25px auto;
+            margin-top: 0;
+        }
+    
+        p { 
+            font-weight: bold;
+            padding-top: 15px; 
+        
+            @media (max-width: 1199.98px) { 
+                margin-top: -25px; 
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+    
+        img { 
+            width: 100%;
+    
+            &:last-child { 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                z-index: -1; 
+            }
+        }
+    
+        .col-md-4 {
+            @media (max-width: 1199.98px) { 
+                margin-bottom: 30px; 
+            }
+    
+            & > div { 
+                padding: 0 45px;
+    
+                & > div { 
+                    position: relative;
+    
+                    @media (max-width: 1199.98px) { 
+                        max-width: 150px; 
+                        margin: auto;
+                    }
+                }
+            }
+    
+            &:first-child {
+                img:last-child { 
+                    margin-left: -45px; 
+                }
+            }
+    
+            &:last-child { 
+                @media (max-width: 1199.98px) { 
+                    margin-bottom: 0px; 
+                }
+            } 
+        }
+    }
+}
+
+.light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 800px;
+    width: 800px;
+    background-image: url(../img/home/light.png);
+    background-size: 100%;
+    background-position: center;
+    z-index: 10;
+    margin-top: -400px;
+    margin-left: -400px;
+    opacity: 0.75;
+
+    @media (max-width: 1199.98px) {
+        display: none;
+        position: static;
+        opacity: 0.35; 
+    }
+}
+
+.mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    left: 100%;
+    background: rgba($color-k100, 0.4);
+    z-index: 500;
+}
+
+.visible-xs { 
+    line-height: 0;
+    margin: 0 !important; 
+}
+
+.show-1, .show-2, .show-3, .show-4 { 
+    opacity: 1; 
+}

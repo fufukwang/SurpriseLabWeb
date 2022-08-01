@@ -1,0 +1,1503 @@
+// Icon Fonts
+@import url('iconfont.css');
+// Variable
+@import 'variable';
+// Mixin
+@import 'mixin';
+
+// general
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-serif;
+}
+
+html {
+  background-color: $color-background;
+}
+
+body {
+  position: relative;
+  background-color: $color-background;
+  color: $color-text-lightgray;
+
+  &.menu-open {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  &.modal-open {
+    overflow: hidden;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+  }
+}
+
+main.index-main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+a {
+  color: $color-purple;
+  transition: color 0.3s;
+
+  &.default-light {
+    color: $color-purple;
+
+    &:hover {
+      color: $color-purple;
+      text-decoration: underline;
+    }
+  }
+
+  &:hover {
+    color: $color-purple;
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+  display: none;
+  color: transparent;
+  display: none;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: transparent;
+  display: none;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 7.2px;
+  padding-left: 7.2px;
+  text-align: center;
+  margin-bottom: 14px;
+  color: $color-k50;
+
+  @media (max-width: 1440px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 1199.98px) {
+    font-size: 24px;
+    letter-spacing: 2.9px;
+    padding-left: 2.9px;
+  }
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-purple;
+
+  @media (max-width: 1199.98px) {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.5px;
+  }
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 4.8px;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 3.6px;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 1.8px;
+  text-align: center;
+  margin: 0;
+
+  @media (max-width: 1440px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1199.98px) {
+    font-size: 14px;
+    line-height: 2.29;
+    letter-spacing: 1.4px;
+  }
+}
+
+// Override BlockUI Style
+.blockMsg {
+  border: none !important;
+  background-color: $color-k10 !important;
+
+  h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+    color: $color-background;
+  }
+}
+
+// Full Page Style
+.fullpage {
+  min-height: 720px;
+  height: calc(100vh - 120px);
+
+  @media (max-width: 1280px) {
+    height: calc(100vh - 114px);
+  }
+
+  @media (max-width: 1024px) {
+    height: calc(100vh - 90px);
+  }
+
+  @media (max-width: 1199.98px) {
+    min-height: auto;
+    height: auto;
+  }
+}
+
+.section {
+  @include baseCounter('padding-top', 145);
+  @include baseCounter('padding-bottom', 145);
+
+  @media (max-width: 1199.98px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.section-header {
+  @include baseCounter('padding-bottom', 64);
+
+  .section-desc {
+    @include baseCounter('padding-top', 45);
+    line-height: 2;
+  }
+}
+
+// Text Link
+.btn-link {
+  color: $color-purple;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $color-purple !important;
+    text-decoration: underline;
+  }
+}
+
+// Outline Button Style
+.btn-outline {
+  display: inline-block;
+  min-width: 210px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: $color-purple;
+  letter-spacing: 1.8px;
+  padding: 10px 30px;
+  border: 1px solid $color-purple;
+  border-radius: 30px;
+  transition: 0.3s;
+
+  @media (max-width: 1199.98px) {
+    min-width: 240px;
+  }
+
+  &:hover {
+    background-color: $color-purple;
+    border: 1px solid $color-purple;
+    color: $color-k10;
+    text-decoration: none;
+  }
+
+  &.btn-outline-small {
+    min-width: auto;
+
+    @media (min-width: 1200px) {
+      width: 120px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 150px;
+      font-size: 16px;
+    }
+
+    @media (min-width: 1920px) {
+      width: 210px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 108px;
+    }
+
+    @media (max-width: 1199.98px) {
+      width: 132px;
+      padding: 8px 0;
+    }
+  }
+}
+
+// Highlight: You can use if you want highlight something in paragraph.
+.highlight {
+  color: $color-purple;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+
+.highlight-dark {
+  color: $color-purple;
+}
+
+.color-k0 {
+  color: $color-k0;
+}
+
+.color-k50 {
+  color: $color-k50;
+}
+
+.color-lightgray {
+  color: $color-text-lightgray;
+}
+
+.color-purple { 
+  color: $color-purple;
+  font-weight: bold;
+}
+
+.normal-lineHeight {
+  &, & p {
+    line-height: 1;
+  }
+}
+
+#td_day {
+  line-height: 1.5;
+  text-align: center;
+
+  @media (max-width: 1199.98px) {
+    text-align: left;
+  }
+}
+
+// anchor menu
+.anchor-wrapper {
+  position: fixed;
+  top: 50%;
+  right: 140px;
+  transform: translateY(-50%);
+  z-index: 10000;
+
+  @media (max-width: 1024px) {
+    right: 60px;
+  }
+
+  @media (max-width: 1199.98px) {
+    pointer-events: none;
+    opacity: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    top: 60px;
+    right: 0;
+    transform: none;
+    background-image: url('../img/home/bg-wallpaper.jpg');
+    background-size: auto;
+    transition: opacity 0.8s;
+
+    ul {
+      margin-top: 65px;
+
+      li {
+        text-align: center;
+
+        & + li {
+          margin-top: 43px;
+        }
+
+        a {
+          font-size: 24px;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    ul {
+      margin-top: 45px;
+
+      li {
+        & + li {
+          margin-top: 33px;
+        }
+      }
+    }
+  }
+
+  &.menu-open {
+    pointer-events: inherit;
+    opacity: 1;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    text-align: right;
+    position: relative;
+    line-height: 19px;
+
+    & + li {
+      margin-top: 29px;
+    }
+
+    a {
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: $color-k50;
+    }
+
+    &::after {
+      content: '';
+      width: 5px;
+      height: 2px;
+      background-color: $color-k50;
+      position: absolute;
+      top: 50%;
+      right: -85px;
+      transform: translateY(-50%);
+      transition: all 0.3s;
+
+      @media (max-width: 1024px) {
+        right: -40px;
+      }
+    }
+
+    &.active {
+      a {
+        color: $color-purple;
+      }
+
+      &::after {
+        background-color: $color-purple;
+        width: 48px;
+
+        @media (max-width: 1024px) {
+          width: 24px;
+        }
+      }
+    }
+
+    &:hover {
+      a {
+        color: $color-k10;
+      }
+
+      &::after {
+        background-color: $color-k10;
+        width: 60px;
+
+        @media (max-width: 1024px) {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+// social links
+.social-wrapper {
+  position: fixed;
+  right: 44px;
+  bottom: 56px;
+  z-index: 10000;
+
+  @media (max-width: 1024px) {
+    right: 20px;
+  }
+
+  @media (max-width: 1199.98px) {
+    position: relative;
+    width: 100%;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
+
+    ul {
+      margin: 0;
+      padding: 0 0 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+    list-style: none;
+    transition: 0.3s;
+
+    & + .social-link {
+      margin-top: 49px;
+
+      @media (max-width: 1199.98px) {
+        margin-top: 0;
+      }
+    }
+
+    i {
+      font-size: 30px;
+      transition: 0.3s;
+      color: $color-k50;
+    }
+
+    &:hover {
+      i {
+        color: $color-k10;
+      }
+    }
+  }
+}
+
+header.logo {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-image: url(../img/home/bg-wallpaper.jpg);
+  background-color: $color-background;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s;
+  text-align: center;
+
+  @media (max-width: 1199.98px) {
+    background-color: $color-background;
+  }
+
+  &.scroll-background-color {
+    background-image: none;
+    background-color: transparent;
+
+    @media (max-width: 1199.98px) {
+      background-color: $color-background;
+    }
+  }
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+    @media (max-width: 1280px) {
+      padding: 37px 20px;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 25px 20px;
+    }
+
+    @media (max-width: 1199.98px) {
+      padding: 15px 20px;
+      justify-content: space-between;
+    }
+
+    .logo-inner {
+      height: 40px;
+      transition: 0.3s;
+
+      @media (max-width: 1199.98px) {
+        height: 30px;
+      }
+
+      img {
+        height: 100%;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    .current-section,
+    .current-menu {
+      color: $color-k10;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 0.8px;
+      padding-right: 12px;
+    }
+
+    .current-menu {
+      display: none;
+    }
+
+    .menu {
+      max-width: 20px;
+    }
+
+    .icon-bar {
+      width: 20px;
+      height: 1px;
+      display: block;
+      background-color: $color-k10;
+      transition: 0.3s;
+
+      & + .icon-bar {
+        margin-top: 5px;
+      }
+
+      &.active {
+        width: 21px;
+        transform: rotate(45deg) translate(2px, 2px);
+
+        & + .icon-bar {
+          transform: rotate(-45deg) translate(2px, -2px);
+        }
+      }
+    }
+
+    @media (max-width: 1199.98px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+// About Section
+#About {
+  // Intro 
+  .sec-intro {
+    @include baseCounter('padding-top', 124);
+    position: relative;
+  }
+
+  // Experience
+  .sec-experience {
+    .experience {
+      text-align: center;
+      width: 811px;
+      max-width: 100%;
+      margin: 0 auto;
+  
+      .exp-item {
+        width: 33.33%;
+        position: relative;
+      }
+  
+      .exp-number {
+        font-size: 100px;
+        line-height: 1.25;
+        letter-spacing: 7.2px;
+        color: $color-k0;
+      }
+  
+      .exp-text {
+        @include baseCounter('bottom', -18);
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 100%);
+        width: 220px;
+      }
+  
+      .middle {
+        .exp-number {
+          @include baseCounter('padding-left', 35);
+        }
+  
+        .exp-text {
+          left: calc(50% + 14px);
+        }
+      }
+  
+      @media (max-width: 1200px) {
+        .exp-number {
+          font-size: 50px;
+        }
+  
+        .middle {
+          .exp-text {
+            left: calc(50% + 4px);
+          }
+        }
+      }
+  
+      @media (max-width: 1199.98px) {
+        width: 100%;
+  
+        .exp-item {
+          width: 100%;
+          padding-top: 36px;
+  
+          &:first-child {
+            padding-top: 0;
+          }
+        }
+  
+        .exp-number {
+          font-size: 48px;
+          line-height: 1.23;
+          letter-spacing: 2.4px;
+        }
+  
+        .exp-text {
+          line-height: 0.93;
+          position: inherit;
+          left: inherit;
+          bottom: inherit;
+          transform: none;
+          width: 100%;
+        }
+  
+        .middle {
+          .exp-number {
+            padding-left: 0;
+          }
+  
+          .exp-text {
+            left: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Ticket Section
+#Ticket {
+
+  .ticket-area-note {
+    line-height: 2;
+  }
+
+  // 售票狀況
+  .sec-ticket-status {
+    .time-counter {
+  
+      & ~ .sale-progress {
+        @include baseCounter('padding-top', 10);
+      }
+  
+      .time-rest {
+        font-size: 24px;
+        line-height: 2.5;
+        letter-spacing: 2.4px;
+  
+        span {
+          font-size: 36px;
+          letter-spacing: 3.6px;
+          padding: 0 10px;
+          color: $color-purple;
+        }
+      }
+  
+      @media (max-width: 1200px) {
+        .time-rest {
+          font-size: 20px;
+          line-height: 2;
+  
+          span {
+            font-size: 30px;
+            letter-spacing: 3px;
+          }
+        }
+      }
+  
+      @media (max-width: 1199.98px) {
+        .time-rest {
+          padding-top: 5px;
+          padding-bottom: 18px;
+          font-size: 18px;
+          letter-spacing: 1.8px;
+  
+          span {
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: 2.4px;
+          }
+        }
+      }
+  
+      @media (max-width: 320px) {
+        .time-rest span {
+          font-size: 22px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  
+    .sale-progress {
+      @include baseCounter('padding-top', 100);
+      width: 812px;
+      max-width: 100%;
+      margin: 0 auto;
+  
+      .progress {
+        height: 11.5px;
+        border-radius: 12px;
+        background-color: $color-k10;
+  
+        .progress-bar {
+          background-color: $color-purple;
+          border-radius: 12px;
+        }
+      }
+  
+      .sale-progress-info {
+        @include baseCounter('padding-top', 23.5);
+  
+        .highlight {
+          font-size: 24px;
+          font-weight: bold;
+          letter-spacing: 2.4px;
+        }
+  
+        .info-text {
+          @include baseCounter('padding-top', 25);
+          color: $color-text-lightgray;
+
+          p {
+            text-align: left;
+            line-height: 2;
+          }
+
+          ul {
+            margin: 0;
+            padding-left: 15px;
+
+            @media (max-width: 1199.98px) {
+              padding-left: 10px;
+            }
+
+            li {
+              list-style: none;
+            }
+          }
+        }
+      }
+  
+      @media (max-width: 1200px) {
+        .sale-progress-info {
+          .highlight {
+            font-size: 20px;
+            letter-spacing: 1.8px;
+          }
+        }
+      }
+  
+      @media (max-width: 1199.98px) {
+        padding: 52px 36px 0;
+        text-align: center;
+  
+        .sale-progress-info {
+  
+          .highlight {
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: 1.8px;
+          }
+  
+          p {
+            font-size: 12px;
+            letter-spacing: 1.2px;
+          }
+        }
+      }
+  
+      @media (max-width: 320px) {
+        padding: 0;
+      }
+    }
+  }
+
+  // 選擇票券
+  .sec-ticket-type {
+
+    .ticket-type {
+      display: flex;
+      @include baseCounter('padding-bottom', 80);
+      width: 700px;
+      max-width: 100%;
+      margin: 0 auto;
+  
+      @media (min-width: 1199.98px) {
+        &:hover {
+          .type-item:not(.sold) {
+            &:hover {
+              .ticket-frame {
+                opacity: 1;
+              }
+            }
+  
+            .ticket-frame {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+  
+      // 賓客登記中
+      &.ticket-type-reserve {
+        justify-content: center;
+  
+        .type-reserve {
+          width: 33.33%;
+          padding: 0 !important;
+  
+          @media (max-width: 1199.98px) {
+            width: 100%;
+          }
+        }
+      }
+  
+      .type-item {
+        position: relative;
+        text-align: center;
+        @include baseCounter('padding-top', 54);
+        @include baseCounter('padding-bottom', 80);
+        @include baseCounter('padding-left', 42);
+        @include baseCounter('padding-right', 42);
+  
+        &:first-child {
+          padding-left: 0;
+        }
+  
+        &::after {
+          position: absolute;
+          content: '';
+          right: 0;
+          top: 0;
+          width: 0;
+          height: 100%;
+          border-right: dashed 2px $color-k10;
+          transform: scaleX(0.5);
+        }
+  
+        &:last-child {
+          padding-right: 0;
+  
+          &::after {
+            display: none;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+  
+      .sold {
+        .ticket-frame {
+          cursor: not-allowed;
+        }
+      }
+  
+      .ticket-frame {
+        position: relative;
+        display: block;
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+  
+      .ticket-state {
+        position: absolute;
+        @include baseCounter('bottom', -36);
+        left: 0;
+        line-height: 1.67;
+        transform: translateY(100%);
+        width: 100%;
+        min-width: 220px;
+        color: $color-k10;
+  
+        .highlight {
+          font-size: 24px;
+          font-weight: bold;
+          letter-spacing: 2.9px;
+        }
+  
+        // &.timeLimit {
+        //   opacity: 0;
+        // }
+      }
+  
+      @media (min-width: 1441px) and (max-width: 1919px) {
+        .ticket-state {
+          font-size: 16px;
+          letter-spacing: 1px;
+  
+          .highlight {
+            font-size: 20px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+  
+      @media (max-width: 1440px) {
+        .ticket-state {
+          letter-spacing: 1.4px;
+          
+          .highlight {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+          }
+        }
+      }
+  
+      @media (max-width: 1200px) {
+        .ticket-state {
+          .highlight {
+            font-size: 18px;
+            letter-spacing: 2.9px;
+          }
+        }
+      }
+  
+      @media (max-width: 1199.98px) {
+        display: block;
+        padding-bottom: 30px;
+  
+        .ticket-state {
+          padding-top: 20px;
+          position: inherit;
+          transform: none;
+        }
+  
+        .type-item {
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 0;
+          padding-bottom: 19.5px;
+          margin-bottom: 19.5px;
+  
+          &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 0;
+            border-style: dashed;
+            border-color: $color-k10;
+            border-width: 0 0 2px;
+            transform: scale(1, 0.5);
+            top: inherit;
+            bottom: 0;
+          }
+  
+          &:first-child {
+            padding-right: 0;
+          }
+  
+          &.type-matinee {
+            padding-left: 0;
+            padding-right: 0;
+          }
+  
+          &:last-child {
+            padding-left: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+  
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 預售劃位流程
+  .sec-ticket-process {
+    .presale-process {
+      margin: 0 auto;
+      text-align: center;
+
+      .step-wrap {
+        display: flex;
+        flex-direction: row;
+
+        @media (max-width: 1199.98px) {
+          flex-direction: column;
+        }
+
+        .presale-step {
+          position: relative;
+          width: 33.33%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+
+          @media (max-width: 1199.98px) {
+            width: 100%;
+          }
+  
+          & + .presale-step {
+
+            @media (max-width: 1199.98px) {
+              margin-top: 124px;
+            }
+
+            &::after {
+              content: '';
+              width: 30px;
+              height: 10px;
+              background-color: $color-k70;
+              position: absolute;
+              top: 50%;
+              left: -21px;
+              transform: translateY(-50%);
+
+              @media (max-width: 1199.98px) {
+                width: 10px;
+                height: 30px;
+                top: calc((-124px + 30px)/2 - 30px);
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+            }
+
+            &::before {
+              content: '';
+              width: 0;
+              height: 0;
+              border-width: 15px 25px;
+              border-style: solid;
+              border-color: transparent transparent transparent $color-k70;
+              position: absolute;
+              top: 50%;
+              left: 8px;
+              transform: translateY(-50%);
+
+              @media (max-width: 1199.98px) {
+                border-width: 25px 15px;
+                border-color: $color-k70 transparent transparent transparent;
+                top: calc((-124px + 30px)/2 - 2px);
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+            }
+          }
+  
+          .step-title {
+            width: 155px;
+            min-width: 155px;
+          }
+  
+          .step-desc {
+            padding: 0 42px 27px;
+  
+            p {
+              position: relative;
+              font-size: 16px;
+
+              @media (max-width: 1199.98px) {
+                font-size: 14px;
+              }
+
+              &::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-image: linear-gradient(to right, transparent, $color-k50, transparent);
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 體驗場次
+  .sec-ticket-slots {    
+    .time-session {
+      width: 1115px;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      @media (max-width: 1199.98px) {
+        width: 400px;
+        margin: 0 auto;
+      }
+  
+      .time-session-inner {
+        display: inline-block;
+      }
+  
+      p {
+        line-height: 2;
+        text-align: left;
+        text-indent: -60px;
+        padding-left: 60px;
+  
+        &.ticket-color-diff-note {
+          text-indent: initial;
+          padding-left: 0;
+        }
+      }
+  
+      .highlight {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2.4px;
+      }
+  
+      hr {
+        border-color: $color-k10;
+      }
+  
+      @media (max-width: 1199.98px) {
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 0;
+  
+        p {
+          text-indent: -47px;
+          padding-left: 47px;
+        }
+  
+        .feature-btn {
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+
+  // 時程表
+  .sec-ticket-schedule {
+    .schedule {
+      width: 633px;
+      max-width: 100%;
+      text-align: center;
+      margin: 0 auto;
+  
+      .schedule-table {
+        display: inline-block;
+
+        h6 {
+          font-weight: bold;
+        }
+
+        table {
+          text-align: left;
+          line-height: 3.33;
+          letter-spacing: 1.8px;
+
+          & + table {
+            margin-top: 36px;
+          }
+    
+          tr {
+            td {
+              color: $color-k10;        
+            
+              &:first-child {
+                @include baseCounter('padding-right', 82);
+                vertical-align: top;
+              }
+            }
+          }
+        }
+      }
+  
+      .schedule-sub-title {
+        color: $color-k10;
+        @include baseCounter('padding-top', 66);
+        @include baseCounter('padding-bottom', 86);
+        text-align: center;
+      }
+  
+      @media (max-width: 1440px) {
+        table {
+          line-height: 2.67;
+          letter-spacing: 1.6px;
+        }
+      }
+  
+      @media (max-width: 1199.98px) {
+        h6 {
+          text-align: center;
+        }
+
+        table {
+          width: 350px;
+          margin: 0 auto;
+          font-size: 14px;
+          line-height: 2.14;
+          letter-spacing: 1.4px;
+  
+          tr {
+            margin-bottom: 12px;
+  
+            td:first-child {
+              padding-right: 0 !important;
+            }
+
+            td:last-child {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Rules Section
+#Rules {
+  .feature-btn {
+    text-align: center;
+    @include baseCounter('padding-bottom', 18);
+  }
+
+  .rules-page-contains {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 1.8px;
+    color: $color-k10;
+  }
+
+  @media (max-width: 1440px) {
+    .rules-page-contains {
+      font-size: 16px;
+      letter-spacing: 1.4px;
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    min-height: initial;
+
+    .feature-btn {
+      .btn-outline {
+        width: 240px;
+      }
+    }
+
+    .rules-page-contains {
+      font-size: 14px;
+      line-height: 2.14;
+    }
+  }
+}
+
+// Contact Section
+#Contact {
+  .sec-contact {
+    a {
+      color: $color-text-lightgray;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-text-lightgray;
+      }
+    }
+  
+    .contact-sec {
+      display: flex;
+      position: relative;
+      justify-content: center;
+  
+      &:not(:first-child) {
+        @include baseCounter('padding-top', 36);
+        @include baseCounter('margin-top', 36);
+  
+        &::before {
+          position: absolute;
+          content: '';
+          width: 451px;
+          max-width: 100%;
+          height: 1px;
+          background: $color-k10;
+          top: 0;
+          right: 0;
+        }
+      }
+  
+      .contact-sec-title {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 1.9px;
+        margin-right: 10px;
+        text-align: right;
+        width: 76px;
+      }
+  
+      p {
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 1.6px;
+        text-align: left;
+      }
+    }
+  
+    @media (max-width: 1200px) {
+      .contact-sec {
+        &:not(:first-child) {
+          &::before {
+            width: 100%;
+          }
+        }
+  
+        .contact-sec-title {
+          text-align: left;
+        }
+      }
+    }
+  
+    @media (max-width: 1199.98px) {
+      padding-top: 25px;
+      padding-bottom: 100px;
+  
+      .contact-sec {
+        &::before {
+          display: none;
+        }
+  
+        &.middle {
+          margin-top: 0;
+          padding-top: 0;
+        }
+  
+        & + .contact-sec {
+          padding-top: 30px;
+          margin-top: 36px;
+          border-top: solid 1px $color-k10;
+        }
+  
+        .contact-sec-title {
+          font-size: 14px;
+          line-height: 2.14;
+          letter-spacing: 1.7px;
+        }
+  
+        p {
+          font-size: 14px;
+          line-height: 2.29;
+          letter-spacing: 1.4px;
+        }
+      }
+    }
+  
+    @media (max-width: 320px) {
+      .contact-sec {
+        &:not(:last-child) {
+          p {
+            text-indent: -47px;
+            padding-left: 47px;
+  
+            &.contact-footer {
+              text-indent: initial;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Ticket Modal
+.ticket-modal-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80000;
+  background-color: rgba($color-background, 0.8);
+  display: none;
+
+  .ticket-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 960px;
+
+    @media (max-width: 1199.98px) {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: -53px;
+      right: -42px;
+      font-size: 48px;
+      line-height: 1;
+      color: $color-k50;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      @media (max-width: 1199.98px) {
+        top: -48px;
+        right: 20px;
+      }
+
+      &:hover {
+        color: $color-k0;
+      }
+    }
+
+    .ticket-table {
+      width: 100%;
+    }
+  }
+}

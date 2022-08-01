@@ -1,0 +1,68 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap');
+@import url("https://use.typekit.net/cax2ztr.css");
+
+$font-serif: 'minion-pro', 'Noto Serif TC', serif;
+
+// Primary Colors
+$color-k0: #ffffff;
+$color-k10: #EFEFEF;
+$color-k20: #DCDDDD;
+$color-k30: #C9CACA;
+$color-k40: #B5B5B6;
+$color-k50: #9FA0A0;
+$color-k60: #898989;
+$color-k70: #727171;
+$color-k80: #595757;
+$color-k90: #3E3A39;
+$color-k100: #231815;
+
+// Secondary Colors
+$color-gold: #B28247;
+$color-yellow: #E6A046;
+$color-purple: #8C5FB4;
+
+// Text Colors
+$color-text-lightgray: #CCCCCC;
+$color-text-darkgray: #4D4D4D;
+$color-text-black: #000000;
+
+// Special Colors
+$color-error: #ff7ea4;
+
+// Background Colors
+$color-background: #101010;
+
+// Start================================================================
+// Space counter base on width percentage
+// How to use
+// @include baseCounter(style name, space when is 1920);
+// Example @include baseCounter('padding-top', 75);
+
+@mixin baseCounter($e, $width-1920) {
+  // Padding-left & Padding-right = 15 + 15 = 30
+  $bs4-padding: 30px;
+  $percent : $width-1920 / 1118;
+
+  @media (min-width: 1200px) {
+    #{$e}: calc((720px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (min-width: 1440px) {
+    #{$e}: calc((900px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (min-width: 1920px) {
+    #{$e}: calc((1088px + #{$bs4-padding}) * #{$percent});
+  }
+
+  @media (max-width: 1199.98px) {
+    @if ($e != 'max-width') {
+      #{$e}: calc(100% * #{$percent});
+    } @else {
+      #{$e}: 100%;
+    }
+  }
+}
+
+// End================================================================
