@@ -177,21 +177,6 @@
                         </ul>
                     </li>
                     @endif
-                    @if( Session::get('key')->terminal )
-                    <li class="has-submenu @if(Request::segment(1) === 'terminal')active @endif">
-                        <a href="#"><i class="md md-local-airport"></i>落日轉運站</a>
-                        <ul class="submenu" style="left:0;right:auto">
-
-                            <li><a href="/terminal/pros">Activaty</a></li>
-                            <!-- <li><a href="/terminal/backmes">Backme</a></li> -->
-                            <li><a href="/terminal/coupons">Coupon</a></li>
-                            <li><a href="/terminal/print">Order</a></li>
-                            <li><a href="/terminal/getMasterList">Master</a></li>
-                            <!-- <li><a href="/terminal/special/setting">Special</a></li> -->
-
-                        </ul>
-                    </li>
-                    @endif
                     <li class="has-submenu @if(Request::segment(1) === 'surprise')active @endif">
                         <a href="#"><i class="md md-home"></i>驚喜官網</a>
                         <ul class="submenu" style="left:0;right:auto">
@@ -199,6 +184,21 @@
 
                         </ul>
                     </li>
+                    @if( Session::get('key')->terminal )
+                    <li class="has-submenu @if(Request::segment(1) === 'terminal')active @endif">
+                        <a href="#"><i class="md md-local-airport"></i>落日轉運站</a>
+                        <ul class="submenu" style="left:0;right:auto">
+
+                            <li><a href="/terminal/pros">Activaty</a></li>
+                            <!-- <li><a href="/terminal/backmes">Backme</a></li> -->
+                            <li><a href="/terminal/discount/setting">Coupon</a></li>
+                            <li><a href="/terminal/print">Order</a></li>
+                            <li><a href="/terminal/getMasterList">Master</a></li>
+                            <!-- <li><a href="/terminal/special/setting">Special</a></li> -->
+
+                        </ul>
+                    </li>
+                    @endif
                 @endif
                 </ul>
                 <!-- End navigation menu -->

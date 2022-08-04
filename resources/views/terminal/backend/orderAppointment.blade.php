@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '無光晚餐S3預約席次設定'])
+@include('backstage.header',['title' => '落日轉運站預約席次設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>無光晚餐S3預約席次設定</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>落日轉運站預約席次設定</b></h4>
                                 </div>
                             </div>
 
@@ -19,26 +19,59 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/dark3/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
+                                        <form data-parsley-validate method="post" action="/terminal/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
 {!! csrf_field() !!}
+
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">日期</label>
+                                                <label class="control-label col-sm-4">票種</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="day" value="{{ $pro->day }}" readonly>
+                                                    <select class="form-control" name="ticket_type" @if(isset($pro->id)) disabled @endif>
+                                                        <option value="train"@if(isset($pro->ticket_type) && $pro->ticket_type=='train') selected @endif>微醺列車 The Great Tipsy : The Next Stop</option>
+                                                        <option value="flight"@if(isset($pro->ticket_type) && $pro->ticket_type=='flight') selected @endif>FLIGHT 無光飛航</option>
+                                                        <option value="boat"@if(isset($pro->ticket_type) && $pro->ticket_type=='boat') selected @endif>Boat for ONE 單人船票</option>
+                                                        <option value="A"@if(isset($pro->ticket_type) && $pro->ticket_type=='A') selected @endif>套票 A</option>
+                                                        <option value="B"@if(isset($pro->ticket_type) && $pro->ticket_type=='B') selected @endif>套票 B</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">時段</label>
+
+
+                                            <div class="form-group train">
+                                                <label class="control-label col-sm-4">微醺列車 The Great Tipsy : The Next Stop</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="daypart" value="{{ $pro->day_parts }}" readonly>
+                                                    <select class="form-control" name="train" @if(isset($pro->id)) disabled @endif>
+                                                        @foreach($train as $row)
+                                                        <option value="{{ $row->id }}"@if(isset($pro->id) && $pro->id==$row->id) selected @endif>{{ $row->day }} {{ $row->day_parts }} {{ substr($row->rang_start,0,5) }} ~ {{ substr($row->rang_end,0,5) }} (剩餘 {{$row->sites}})</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">區間</label>
+                                            <div class="form-group flight">
+                                                <label class="control-label col-sm-4">FLIGHT 無光飛航</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="range" value="{{ substr($pro->rang_start,0,5) }} ~ {{ substr($pro->rang_end,0,5) }}" readonly>
+                                                    <select class="form-control" name="flight" @if(isset($pro->id)) disabled @endif>
+                                                        @foreach($flight as $row)
+                                                        <option value="{{ $row->id }}"@if(isset($pro->id) && $pro->id==$row->id) selected @endif>{{ $row->day }} {{ $row->day_parts }} {{ substr($row->rang_start,0,5) }} ~ {{ substr($row->rang_end,0,5) }} (剩餘 {{$row->sites}})</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
+                                            <div class="form-group boat">
+                                                <label class="control-label col-sm-4">Boat for ONE 單人船票</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control" name="boat" @if(isset($pro->id)) disabled @endif>
+                                                        @foreach($boat as $row)
+                                                        <option value="{{ $row->id }}"@if(isset($pro->id) && $pro->id==$row->id) selected @endif>{{ $row->day }} {{ $row->day_parts }} {{ substr($row->rang_start,0,5) }} ~ {{ substr($row->rang_end,0,5) }} (剩餘 {{$row->sites}})</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">姓名</label>
@@ -55,14 +88,14 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">EMail</label>
                                                 <div class="col-sm-8">
-                                                    <input type="email" class="form-control" name="email" required email>
+                                                    <input type="email" class="form-control" name="email">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
-                                                    <select name="people" id="pople" class="form-control" data-cash="{{ $pro->cash }}">
-                                                        @for($i=0;$i<37;$i++)
+                                                    <select name="people" id="pople" class="form-control" data-cash="{{ $pro->cash ?? 0 }}">
+                                                        @for($i=1;$i<37;$i++)
                                                         <option value="{{ $i }}">{{ $i }}</option>
                                                         @endfor
                                                     </select>
@@ -214,9 +247,19 @@ $('#pople').bind('change',function(){
     let people = $(this).val();
     let cash = $(this).data('cash');
     let money = Math.round(parseInt(cash) * parseInt(people) * 1.1);
-    $('#tipbox').text("單人金額:"+cash + " X 1 X 10%服務費 = " + Math.round(parseInt(cash) * 1.1));
+    $('#tipbox').text("單人金額:"+cash + " X 1 X 10%服務費 = " + Math.round(parseInt(cash) * 1.1) + '如新增套票須自行計算');
     $('#money').val(money);
 });
+$('select[name=ticket_type]').bind('change',function(){
+    var val = $(this).val()
+    $('.boat,.train,.flight').hide();
+    if(val == 'boat'){ $('.boat').show(); }
+    if(val == 'train'){ $('.train').show(); }
+    if(val == 'flight'){ $('.flight').show(); }
+    if(val == 'A'){ $('.train,.flight').show(); }
+    if(val == 'B'){ $('.boat,.train,.flight').show(); }
+});
+$('select[name=ticket_type]').trigger('change');
         });
 
 

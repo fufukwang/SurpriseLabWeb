@@ -9,6 +9,7 @@ use Response;
 use Auth;
 use Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Collection;
 use Mail;
 use Exception;
 use App\model\terminal\coupon;
@@ -26,7 +27,7 @@ use Log;
 use SLS;
 use Excel;
 
-class OrderController extends Controller
+class OrderController extends WebController
 {
     public $perpage = 20;
     /**
@@ -61,14 +62,18 @@ class OrderController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id')->select('terminalorder.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','terminalorder.money','cash')->find($id);
+                $order = order::select('id','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','edit_type','money','plan')->find($id);
             } else {
                 abort(404);
             }
         }
-        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$order->pople)
-            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
-        return view('terminal.backend.order',compact('order','pro'));
+        $train = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")->where('ticket_type','train')
+                ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day,day_parts"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+        $flight = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")->where('ticket_type','flight')
+                ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day,day_parts"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+        $boat = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")->where('ticket_type','boat')
+                ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day,day_parts"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+        return view('terminal.backend.order',compact('order','train','flight','boat'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -80,12 +85,40 @@ class OrderController extends Controller
             'email'      => $request->email,
             'vegetarian' => $request->vegetarian,
         ];
-        if($request->has('pro_id') && $request->pro_id>0){
-            $data['pro_id'] = $request->pro_id;
+        if(
+            ($request->has('boat') && $request->boat>0) ||
+            ($request->has('train') && $request->train>0) ||
+            ($request->has('flight') && $request->flight>0)
+        ){
+            // $data['pro_id'] = $request->pro_id;
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
             // 觸發補寄
             try {
-                $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id')->select('terminalorder.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites')->find($id);
+                $order = order::select('plan')->find($id);
+                $proOrder = DB::table('terminal_pro_order')->where('order_id',$id)->get();
+                switch($order->plan){
+                    case 'boat':
+                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->boat]);
+                        break;
+                    case 'train':
+                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->train]);
+                        break;
+                    case 'flight':
+                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->flight]);
+                        break;
+                    case 'A':
+                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->train]);
+                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[1]->id)->update(['order_id'=>$id,'pro_id'=>$request->flight]);
+                        break;
+                    case 'B':
+                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->train]);
+                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[1]->id)->update(['order_id'=>$id,'pro_id'=>$request->flight]);
+                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[2]->id)->update(['order_id'=>$id,'pro_id'=>$request->boat]);
+                        break;
+                }
+
+                /*
+                $order = order::select('terminalorder.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites')->find($id);
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_end))));
                 $mailer = [
@@ -115,6 +148,7 @@ class OrderController extends Controller
                         SLS::SendSmsByTemplateName($mailer);
                     }
                 }
+                */
             } catch (Exception $e){
                 Log::error($e);
             }
@@ -146,7 +180,13 @@ class OrderController extends Controller
     public function Appointment(Request $request,$pro_id){
         try {
             $pro = pro::find($pro_id);
-            return view('terminal.backend.orderAppointment',compact('pro_id','pro'));
+            $train = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")->where('ticket_type','train')
+                ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day,day_parts"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+            $flight = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")->where('ticket_type','flight')
+                ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day,day_parts"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+            $boat = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")->where('ticket_type','boat')
+                ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day,day_parts"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+            return view('terminal.backend.orderAppointment',compact('pro_id','pro','train','flight','boat'));
         } catch (Exception $exception) {
             Log::error($exception);
             return redirect('/terminal/pros?')->with('message','此編號無座位表!');
@@ -160,15 +200,22 @@ class OrderController extends Controller
             if($count>0){
                 $count += 1;
             } else {
-                $count = Carbon::now()->format('Ymd').'0001';
+                $count = '1'.Carbon::now()->format('Ymd').'0001';
             }
-            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
+            if(is_numeric($pro_id) && $pro_id>0){
+                $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','special','ticket_type')->first();
+                $boat = $train = $flight = $pro_id;
+            } else {
+                $act = (object)[
+                    'special' => 0,
+                    'cash' => 10000,
+                    'ticket_type' => $request->ticket_type,
+                ];
+                $boat   = $request->has('boat') ? $request->boat : 0;
+                $train  = $request->has('train') ? $request->train : 0;
+                $flight = $request->has('flight') ? $request->flight : 0;
+            }
             $meat = [];
-            /*
-            for($i=0;$i<$people;$i++){
-                array_push($meat,$request->input('Meal.'.$i));
-            }
-            */
             $is_overseas = 0;
             if($act->special) {
                 $is_overseas = 9;
@@ -188,7 +235,7 @@ class OrderController extends Controller
             }
             
             $data = [
-                'pro_id'     => $pro_id,
+                // 'pro_id'     => $pro_id,
                 'pople'      => $people,
                 'name'       => $request->name,
                 'tel'        => $request->tel,
@@ -206,16 +253,36 @@ class OrderController extends Controller
                 'vegetarian' => $request->vegetarian,
                 'is_overseas'=> $is_overseas,
                 'edit_type'  => $request->edit_type,
+                'plan'       => $act->ticket_type,
             ];
             $order = order::create($data);
+            switch($data['plan']){
+                case 'boat':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$boat]);
+                    break;
+                case 'train':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$train]);
+                    break;
+                case 'flight':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$flight]);
+                    break;
+                case 'A':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$train]);
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$flight]);
+                    break;
+                case 'B':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$train]);
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$flight]);
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$boat]);
+                    break;
+            }
+            
 
+
+/*
             if($request->pay_status == '已付款'){
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                /*
-                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
-                */
                 $mailer = [
                     'day'   => Carbon::parse($act->day)->format('Y / m / d'),
                     'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
@@ -246,7 +313,7 @@ class OrderController extends Controller
                     }
                 }
             }
-
+*/
             return redirect('/terminal/pros?')->with('message','新增完成!');
         } catch (Exception $exception) {
             Log::error($exception);
@@ -257,7 +324,7 @@ class OrderController extends Controller
 
     public function Print(Request $request){
         $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','terminalorder.manage','terminalpro.money AS PM','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','terminalorder.manage','terminalpro.money AS PM','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan');
 
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\model\dark3;
+namespace App\model\terminal;
 
 use Illuminate\Database\Eloquent\Model;
 
 class TeamMail extends Model
 {
-    protected $table = 'dark3_team_mail';
+    protected $table = 'terminal_team_mail';
     
     protected $fillable = ['name','tel','email','order_id'];
     protected $guarded = [];

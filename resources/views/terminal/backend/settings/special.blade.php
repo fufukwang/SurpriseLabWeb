@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '無光晚餐S3 特殊場設定'])
+@include('backstage.header',['title' => '落日轉運站 特殊場設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>無光晚餐S3 特殊場設定</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>落日轉運站 特殊場設定</b></h4>
                                 </div>
                             </div>
 
@@ -139,10 +139,10 @@ $('.t6_setting_button').bind('click',function(){
     let t6_number = $('#t6_max_number').val();
     if(t6_number!='' && !isNaN(t6_number)){
         let myObj = {
-            slug: 'dark3_sp_t6',
+            slug: 'terminal_sp_t6',
             number: t6_number
         }
-        $.post('/dark3/setting/store',myObj,function(data){
+        $.post('/terminal/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '六人沉醉票最大數量已更新');
             } else {
@@ -162,12 +162,12 @@ $('.sp_money_button').bind('click',function(){
     let t6_money = $('#t6_money').val().replace('$','').replace(',','');
     if(t1_money!='' && !isNaN(t1_money) && t2_money!='' && !isNaN(t2_money) && t6_money!='' && !isNaN(t6_money)){
         let myObj = {
-            slug: 'dark3_sp_money',
+            slug: 'terminal_sp_money',
             t1_money: t1_money,
             t2_money: t2_money,
             t6_money: t6_money,
         }
-        $.post('/dark3/setting/store',myObj,function(data){
+        $.post('/terminal/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '票價金額已更新');
             } else {

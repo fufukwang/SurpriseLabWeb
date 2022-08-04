@@ -70,7 +70,7 @@
       $pay_status = '公關位';
    }
    $pay_money = '';
-   $coupons = App\model\dark3\coupon::where('o_id',$row->sn)->get();
+   $coupons = App\model\terminal\coupon::where('o_id',$row->sn)->get();
                     
    if(count($coupons)>0){
       foreach($coupons as $c){
@@ -79,7 +79,7 @@
             $pay_money.= "<br />";
          }
          $coupon .= "{$c->code}";
-         $pay_money .= App\model\dark3\backme::select('money')->find($c->b_id)->money;
+         $pay_money .= App\model\terminal\backme::select('money')->find($c->b_id)->money;
       }
    } else {
       $pay_money = $row->OM;
@@ -104,7 +104,7 @@
 			<td>團員</td>
 			<td colspan="5">
 				<table>
-					@forelse(App\model\dark3\TeamMail::where('order_id',$row->id)->get() as $tm)
+					@forelse(App\model\terminal\TeamMail::where('order_id',$row->id)->get() as $tm)
 					<tr>
 						<td>{{ $tm->name }}</td>
 						<td>{{ $tm->tel }}</td>

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\model\dark3;
+namespace App\model\terminal;
 
 use Illuminate\Database\Eloquent\Model;
 
 class coupon extends Model
 {
-    protected $table = 'dark3coupon';
+    protected $table = 'terminalcoupon';
     
     protected $fillable = ['code','b_id','o_id','type'];
     protected $guarded = [];

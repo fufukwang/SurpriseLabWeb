@@ -21,7 +21,7 @@ use Log;
 use Redirect;
 use SLS;
 
-class SpecialController extends Controller
+class SpecialController extends WebController
 {
 	public function __construct(Request $request)
     {
@@ -57,7 +57,7 @@ class SpecialController extends Controller
 
             $people = $request->booking_people;
 
-            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
+            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
                 return view('terminal.frontend.booking_fail',['sp'=>1]);

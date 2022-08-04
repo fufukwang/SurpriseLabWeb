@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '無光晚餐S3兌換碼列表'])
+@include('backstage.header',['title' => '落日轉運站兌換碼列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">無光晚餐S3兌換碼列表 </h4>
+                        <h4 class="page-title">落日轉運站兌換碼列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/dark3/coupons" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/terminal/coupons" id="SearchForm">
 
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -68,7 +68,7 @@
 @elseif( $row->type == 'p4' ) 雙菜單套票
 @endif</td>
                                                 <td>@if($row->o_id > 0) 
-                                                    {{ App\model\dark3\order::where('sn',$row->o_id)->first()->created_at }}
+                                                    {{ App\model\terminal\order::where('sn',$row->o_id)->first()->created_at }}
                                                 @else 尚未兌換
                                                 @endif</td>
                                                 <th>{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
@@ -157,7 +157,7 @@ $(function(){
         }
         if(confirm(txt + "確定要刪除此優惠券")) {
              $.ajax({
-                url: '/dark3/coupon/'+id+'/delete',
+                url: '/terminal/coupon/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){

@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '無光晚餐S3揪團列表'])
+@include('backstage.header',['title' => '落日轉運站揪團列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -23,7 +23,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">無光晚餐S3揪團列表 </h4>
+                        <h4 class="page-title">落日轉運站揪團列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -38,7 +38,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/dark3/getMasterList" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/terminal/getMasterList" id="SearchForm">
 
 
                                             <div class="form-group col-sm-8">
@@ -70,7 +70,7 @@
                                         <tbody>
 @forelse ($master as $row)
                                             <tr id="tr_{{ $row->id }}">
-                                                <td><a href="/dark3/order/{{ $row->order_id }}/edit?" target="_blank">{{ $row->master_name }}</a></td>
+                                                <td><a href="/terminal/order/{{ $row->order_id }}/edit?" target="_blank">{{ $row->master_name }}</a></td>
                                                 <td>{{ $row->master_email }}</td>
                                                 <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div></td>
                                                 <td><div class="single-line email_{{ $row->id }}">{{ $row->email }}</div></td>
@@ -171,7 +171,7 @@ $(function(){
         var txt = '';
         if(confirm(txt + "確定要刪除此成員")) {
              $.ajax({
-                url: '/dark3/postMaster/'+id+'/delete',
+                url: '/terminal/postMaster/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
@@ -195,7 +195,7 @@ $(function(){
             var name  = $('.name_'+id).text();
             var tel   = $('.tel_'+id).text();
             var email = $('.email_'+id).text();
-            $.post('/dark3/postMaster/'+id+'/store',{
+            $.post('/terminal/postMaster/'+id+'/store',{
                 name  : name,
                 tel   : tel,
                 email : email
@@ -209,7 +209,7 @@ $(function(){
         var type  = $(this).data('type');
         var name  = $(this).data('name');
         var email  = $(this).data('email');
-        $.post('/dark3/postReSendMail',{
+        $.post('/terminal/postReSendMail',{
             name: name,
             id: id,
             email: email,
@@ -223,7 +223,7 @@ $(function(){
         var type  = $(this).data('type');
         var name  = $(this).data('name');
         var tel  = $(this).data('tel');
-        $.post('/dark3/postReSendSMS',{
+        $.post('/terminal/postReSendSMS',{
             name: name,
             id: id,
             tel: tel,

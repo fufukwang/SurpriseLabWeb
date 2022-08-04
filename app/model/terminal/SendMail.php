@@ -1,12 +1,12 @@
 <?php
 
-namespace App\model\dark3;
+namespace App\model\terminal;
 
 use Illuminate\Database\Eloquent\Model;
 
 class SendMail extends Model
 {
-    protected $table = 'dark3_team_send_mail';
+    protected $table = 'terminal_team_send_mail';
     
     protected $fillable = ['email','order_id','type'];
     protected $guarded = [];

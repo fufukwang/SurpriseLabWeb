@@ -18,7 +18,7 @@ use SLS;
 use Redirect;
 use Exception;
 
-class MasterController extends Controller
+class MasterController extends WebController
 {
 	public function __construct(Request $request)
     {

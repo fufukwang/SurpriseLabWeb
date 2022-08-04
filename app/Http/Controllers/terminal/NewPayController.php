@@ -21,7 +21,7 @@ use Log;
 use Redirect;
 use SLS;
 
-class NewPayController extends Controller
+class NewPayController extends WebController
 {
 	public function __construct(Request $request)
     {
@@ -42,7 +42,7 @@ class NewPayController extends Controller
 
             $people = $request->booking_people;
 
-            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
+            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
                 return view('terminal.frontend.booking_fail');
@@ -146,58 +146,8 @@ class NewPayController extends Controller
                 )
                 ->setReturnURL(env('APP_URL').'/terminal/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
                 ->setNotifyURL(env('APP_URL').'/terminal/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
-                ->setClientBackURL(env('APP_URL').'/terminal/booking_pay.html') // 付款取消後返回的網址
+                ->setClientBackURL(env('APP_URL').'/terminal/booking_now') // 付款取消後返回的網址
                 ->submit();
-                /*
-                if(env('APP_ENV') == 'production'){
-                    $pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
-                    $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
-                    $merchant_id  = 'surpriselab_00001';
-                } else {
-                    $pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
-                    $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
-                    $merchant_id  = 'surpriselab_TAISHIN';
-                }
-                
-                $amount = $money - $cut1 - $cut2;
-                if($data['is_overseas'] == 1){
-                    $amount *= 1.1;
-                }
-                $postData = [
-                    "prime"       => $request->prime,
-                    "partner_key" => $partner_key,
-                    "merchant_id" => $merchant_id,
-                    "details"     => "微醺",
-                    "amount"      => $amount,
-                    "order_number"=> $count,
-                    "cardholder"  => [
-                        "phone_number" => $request->tel,
-                        "name"         => $request->name,
-                        "email"        => $request->email,
-                        "zip_code"     => "",
-                        "address"      => "",
-                        "national_id"  => "",
-                    ],
-                    "remember"    => false
-                ];
-
-                $r = curl_init();
-                curl_setopt($r, CURLOPT_URL, $pay_by_prime);
-                curl_setopt($r, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'x-api-key:'.$partner_key));
-                curl_setopt($r, CURLOPT_POST, 1);
-                curl_setopt($r, CURLOPT_POSTFIELDS, json_encode($postData));
-                curl_setopt($r, CURLOPT_RETURNTRANSFER, 1);
-                curl_setopt($r, CURLOPT_CONNECTTIMEOUT, 35);
-                $tappayData = curl_exec($r);
-                curl_close($r);
-                $order->result = $tappayData;
-                $tappayObj = json_decode($tappayData);
-                if($tappayObj->status == 0){
-                    $order->pay_status = '已付款';
-                    $sentSuccess = true;
-                }
-                $order->save();
-                */
             }
 
         } catch (\Exception $exception) {
@@ -278,10 +228,6 @@ class NewPayController extends Controller
                 $act = pro::where('id',$order->pro_id)->first();
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                /*
-                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
-                */
                 $mailer = [
                     'day'   => Carbon::parse($act->day)->format('Y / m / d'),
                     'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
@@ -311,44 +257,6 @@ class NewPayController extends Controller
                         $mailer['template'] = 'DX';
                         SLS::SendSmsByTemplateName($mailer);
                     }
-                    /*
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($act->day.' '.$act->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    // 寄送 A 信件
-                    $toData = [
-                        'id'    => $order->id,
-                        'name'  => $order->name,
-                        'email' => $order->email,
-                        'type'  => "DX" // 邀請信件
-                    ];
-                    // 信件補送
-                    //SLS::SendPreviewEmail($toData);
-                    if($day <= 21){
-                        $toData['type'] = "D21";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 14){
-                        $toData['type'] = "D14";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 11){
-                        $toData['day'] = $act->day.' '.$act->rang_start;
-                        $toData['type'] = "D10";
-                        SLS::SendPreviewEmail($toData);
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
-                    }
-                    if($day <= 5){
-                        $toData['type'] = "D05";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day == 0){
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
-                    }
-                    // SLS::sent_single_sms($order->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
-                    */
                 } catch (\Exception $e){
                     Log::error($e);
                 }

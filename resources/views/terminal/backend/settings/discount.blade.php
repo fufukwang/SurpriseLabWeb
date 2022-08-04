@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '無光晚餐S3 折扣設定'])
+@include('backstage.header',['title' => '落日轉運站 折扣設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
 
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <h4 class="m-t-0 header-title"><b>一般場直購折扣設定</b></h4>
 
 
@@ -30,7 +30,7 @@
                                         </thead>
                                         <tbody>
                                             @foreach($data['pay'] as $key => $row)
-                                            <tr id="tr_{{ $key+1 }}">
+                                            <tr id="tr_p_{{ $key+1 }}">
                                                 <td>{{ $key+1 }}</td>
                                                 <td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20" value="{{ $row['code'] or '' }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000" value="{{ $row['money'] or '' }}"></td>
@@ -56,7 +56,7 @@
 
 
 
-
+{{--
                                 <div class="col-lg-6">
                                     <h4 class="m-t-0 header-title"><b>特殊場次直購折扣設定</b></h4>
 
@@ -76,7 +76,7 @@
                                         </thead>
                                         <tbody>
                                             @foreach($data['sp'] as $key => $row)
-                                            <tr id="tr_{{ $key+1 }}">
+                                            <tr id="tr_s_{{ $key+1 }}">
                                                 <td>{{ $key+1 }}</td>
                                                 <td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20" value="{{ $row['code'] or '' }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000" value="{{ $row['money'] or '' }}"></td>
@@ -99,7 +99,7 @@
                                     </div>
                                 </div>
 
-
+--}}
 
 
 
@@ -178,7 +178,7 @@ let spe_num = {{ count($data['sp']) }};
 // 新增一筆
 $('.pay-add-new').bind('click',function(){
     pay_num++;
-    $('#pay-table tbody').append('<tr id="tr_'+pay_num+'"><td>'+pay_num+'</td>'+
+    $('#pay-table tbody').append('<tr id="tr_p_'+pay_num+'"><td>'+pay_num+'</td>'+
         '<td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20"></td>'+
         '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000"></td>'+
         '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)"></td>'+
@@ -188,7 +188,7 @@ $('.pay-add-new').bind('click',function(){
 // 刪除一筆
 $('#pay-table tbody').on('click','tr td .remove-pay-discount',function(){
     let id = $(this).data('id');
-    $('#tr_'+id).remove();
+    $('#tr_p_'+id).remove();
 });
 // 送出儲存
 $('.pay-discuount-store').bind('click',function(){
@@ -211,10 +211,10 @@ $('.pay-discuount-store').bind('click',function(){
 
     if(message == ''){
         let myObj = {
-            slug: 'dark3_pay_discount',
+            slug: 'terminal_pay_discount',
             obj: JSON.stringify(obj)
         }
-        $.post('/dark3/setting/store',myObj,function(data){
+        $.post('/terminal/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '一般場直購折扣設定已更新');
             } else {
@@ -242,7 +242,7 @@ $('.pay-discuount-store').bind('click',function(){
 // 新增一筆
 $('.sp-add-new').bind('click',function(){
     spe_num++;
-    $('#sp-table tbody').append('<tr id="tr_'+spe_num+'"><td>'+spe_num+'</td>'+
+    $('#sp-table tbody').append('<tr id="tr_s_'+spe_num+'"><td>'+spe_num+'</td>'+
         '<td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20"></td>'+
         '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000"></td>'+
         '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)"></td>'+
@@ -252,7 +252,7 @@ $('.sp-add-new').bind('click',function(){
 // 刪除一筆
 $('#sp-table tbody').on('click','tr td .remove-sp-discount',function(){
     let id = $(this).data('id');
-    $('#tr_'+id).remove();
+    $('#tr_s_'+id).remove();
 });
 // 送出儲存
 $('.sp-discuount-store').bind('click',function(){
@@ -275,10 +275,10 @@ $('.sp-discuount-store').bind('click',function(){
 
     if(message == ''){
         let myObj = {
-            slug: 'dark3_sp_discount',
+            slug: 'terminal_sp_discount',
             obj: JSON.stringify(obj)
         }
-        $.post('/dark3/setting/store',myObj,function(data){
+        $.post('/terminal/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '一般場直購折扣設定已更新');
             } else {

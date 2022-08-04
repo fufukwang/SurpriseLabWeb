@@ -26,7 +26,7 @@ use Log;
 use SLS;
 use Excel;
 
-class BackController extends Controller
+class BackController extends WebController
 {
     public $perpage = 20;
     /**
@@ -54,12 +54,6 @@ class BackController extends Controller
      * XLS data.
      */
     public function BackMes(Request $request){
-        /*
-        if($request->isMethod('post') && $request->has('id')){
-            foreach($request->id as $row){
-                d2xls::where('id',$row)->update(['is_sent'=>1]);
-            }
-        }*/
         if($request->isMethod('post') && $request->has('id')){
             foreach($request->id as $row){
                 $id = $row;
@@ -77,26 +71,6 @@ class BackController extends Controller
                 ];
                 SLS::SendEmailByTemplateName($data);
                 backme::where('id',$id)->update(['is_sent'=>1]);
-                /*
-                if(strpos($data['xls']->email,'@yahoo')) {
-                    config(['mail.host' => 'smtp.gmail.com']);
-                    config(['mail.username' => env('MAIL_TGT_USER')]);
-                    config(['mail.password' => env('MAIL_TGT_PASS')]);
-                }
-                try {
-                    Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
-                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-
-                        $m->to($data['xls']->email, $data['xls']->name);
-                        $m->subject('【微醺大飯店：1980s】劃位序號信件');
-                    });
-                    backme::where('id',$id)->update(['is_sent'=>1]);
-                } catch (\Exception $e){
-                    Log::error($e);
-                }
-                */
             }
             $par = '?';
             if($request->has('search')) $par .= "&search=".$request->search;
@@ -122,10 +96,6 @@ class BackController extends Controller
                 code LIKE '%{$text}%'
             )")->get();
             $mes = $mes->whereIn('id',$coupons->toArray());
-
-
-
-// (SELECT COUNT(id) FROM(tgt2coupon) WHERE code LIKE '%{$$request->search}%' AND tgt2coupon.b_id=tgt2backme.id)
         }
         if($request->has('isdone')){
             $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(terminalcoupon) WHERE o_id=0 AND terminalcoupon.b_id=terminalbackme.id)>0");
@@ -213,16 +183,7 @@ class BackController extends Controller
             ];
             SLS::SendEmailByTemplateName($data);
 
-            /*
-            Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
-                $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
 
-                $m->to($data['xls']->email, $data['xls']->name);
-                $m->subject('【微醺大飯店：1980s】劃位序號信件');
-            });
-            */
             backme::where('id',$id)->update(['is_sent'=>1]);
             return Response::json(['message'=> 'success'], 200);
         }
@@ -245,9 +206,9 @@ class BackController extends Controller
                 return Response::json(['success'=> true], 200);
             }
         }
-        $pros = pro::select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS now,(sites-IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open"));
+        $pros = pro::select(DB::raw("({$this->oquery}) AS now,(sites-{$this->oquery}) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open,ticket_type"));
         if($request->has('day') && $request->has('day_end')){
-            $all_count = pro::select(DB::raw("SUM((IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))) AS sale,count(id) as num,SUM(sites) as site"));
+            $all_count = pro::select(DB::raw("SUM({$this->oquery}) AS sale,count(id) as num,SUM(sites) as site"));
         } else {
             $all_count = pro::select('id')->where('id',0);
         }
@@ -263,6 +224,10 @@ class BackController extends Controller
         if($request->has('dayparts')){
             $pros = $pros->where('day_parts',$request->dayparts);
             $all_count = $all_count->where('day_parts',$request->dayparts);
+        }
+        if($request->has('ticket_type')){
+            $pros = $pros->where('ticket_type',$request->ticket_type);
+            $all_count = $all_count->where('ticket_type',$request->ticket_type);
         }
         if($request->has('special')){
             $pros = $pros->where('special',$request->special);
@@ -314,6 +279,7 @@ class BackController extends Controller
             'open'       => $request->open,
             'cash'       => $request->cash,
             'special'    => $request->special,
+            'ticket_type'=> $request->ticket_type,
         ];
         if(is_numeric($id) && $id>0){
             $data['day']       = $request->day;
@@ -354,8 +320,8 @@ class BackController extends Controller
     }
 
     public function ProOutputSite(Request $request){
-        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>0")
-            ->select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(terminalorder) WHERE terminalorder.pro_id=terminalpro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS now,sites,id,rang_start,rang_end,day"));
+        $pro = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")
+            ->select(DB::raw("({$this->oquery}) AS now,sites,id,rang_start,rang_end,day"));
         if($request->daystart == ''){
             $pro = $pro->where('day',Carbon::today()->format('Y-m-d'));
         } else {
@@ -450,7 +416,6 @@ class BackController extends Controller
 
     public function UploadXlsx2Db(Request $request){
         $filePath = '';
-//dd($request->file('xlsx')->getMimeType());
         try{
             $rules = [
                 'xlsx'    => 'required|mimetypes:application/octet-stream,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip',

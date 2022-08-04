@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '無光晚餐S3營業日列表'])
+@include('backstage.header',['title' => '落日轉運站營業日列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,9 +9,9 @@
         <!-- Page-Title -->
         <div class="row">
             <div class="col-sm-12">
-                <h4 class="page-title">無光晚餐S3營業日 
-                    @if( Session::has('key') && Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
-                    <a href="/dark3/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>
+                <h4 class="page-title">落日轉運站營業日 
+                    @if( Session::has('key') && Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
+                    <a href="/terminal/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>
                     @endif
                 </h4>
             </div>
@@ -29,7 +29,7 @@
                         <div class="table-wrapper">
                             <div class="btn-toolbar">
                                 <div class="btn-group focus-btn-group">
-                                    <form action="/dark3/pros" autocomplete="off">
+                                    <form action="/terminal/pros" autocomplete="off">
 
                                         <div class="form-group col-sm-2">
                                             <div class="col-sm-12">
@@ -56,6 +56,14 @@
                                                     <option value="晚場"@if(isset($request->dayparts) && $request->dayparts=='晚場') selected @endif>晚場</option>
                                                     <!--option value="下午茶"@if(isset($request->dayparts) && $request->dayparts=='下午茶') selected @endif>下午茶</option>
                                                     <option value="特別活動"@if(isset($request->dayparts) && $request->dayparts=='特別活動') selected @endif>特別活動</option-->
+                                                </select>
+                                        </div>
+                                        <div class="form-group col-sm-1">
+                                            <select name="ticket_type" class="form-control">
+                                                    <option value="">票種</option>
+                                                    <option value="train"@if(isset($request->ticket_type) && $request->ticket_type=='train') selected @endif>微醺列車 The Great Tipsy : The Next Stop</option>
+                                                    <option value="flight"@if(isset($request->ticket_type) && $request->ticket_type=='flight') selected @endif>FLIGHT 無光飛航</option>
+                                                    <option value="boat"@if(isset($request->ticket_type) && $request->ticket_type=='boat') selected @endif>Boat for ONE 單人船票</option>
                                                 </select>
                                         </div>
                                         <div class="form-group col-sm-1">
@@ -115,6 +123,7 @@
                                                 <tr>
                                                     <th><input type="checkbox" id="checkAll"></th>
                                                     <th>開放訂位</th>
+                                                    <th>票種</th>
                                                     <th>營業日期</th>
                                                     <th>營業時段</th>
                                                     <th class="text-center">剩餘空位 / 目前訂位 / 開放位置</th>
@@ -130,6 +139,11 @@
                                                         <input type="checkbox" data-plugin="switchery" data-size="small" data-color="#00b19d" data-id="{{ $row->id }}" @if($row->open>0) checked @endif class="soclink" />
                                                         <!-- <a href="javascript:;" class="oclink" data-id="{{ $row->id }}">@if($row->open>0) 開放中 @else 關閉中 @endif</a> -->
                                                     </td>
+                                                    <td>
+                                                        @if($row->ticket_type == 'train') 微醺列車 The Great Tipsy : The Next Stop @endif
+                                                        @if($row->ticket_type == 'flight') FLIGHT 無光飛航 @endif
+                                                        @if($row->ticket_type == 'boat') Boat for ONE 單人船票 @endif
+                                                    </td>
                                                     <td>{{ $row->day }}</td>
                                                     <td>{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
@@ -141,10 +155,10 @@
                                                     </td>
                                                     <td>@if($row->special) <span class="badge badge-pill badge-info">特別場次</span> @else {{ $row->money }} / {{ $row->cash }} @endif</td>
                                                     <td class="actions">
-                                                        <a class="btn btn-purple btn-xs" href="/dark3/order/{{ $row->id }}/appointment">預約席</a>
-                                                        <a class="btn btn-info btn-xs" href="/dark3/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
-                                                        @if(  Session::has('key') && Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
-                                                        <a class="btn btn-primary btn-xs" href="/dark3/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
+                                                        <a class="btn btn-purple btn-xs" href="/terminal/order/{{ $row->id }}/appointment">預約席</a>
+                                                        <a class="btn btn-info btn-xs" href="/terminal/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
+                                                        @if(  Session::has('key') && Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
+                                                        <a class="btn btn-primary btn-xs" href="/terminal/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                         @endif
                                                         <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                     </td>
@@ -183,7 +197,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/dark3/pros/output/only" method="post">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/terminal/pros/output/only" method="post">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-1">
                                                 <div class="col-sm-12">
@@ -268,7 +282,7 @@
                 var id = $(this).data('id');
                 if (confirm("確定要刪除此營業日?如有訂單將一併刪除")) {
                     $.ajax({
-                        url: '/dark3/pro/' + id + '/delete',
+                        url: '/terminal/pro/' + id + '/delete',
                         method: 'delete',
                         dataType: 'json'
                     }).done(function(data) {
@@ -297,7 +311,7 @@ $('.oclink').bind('click',function(){
     var obj = $(this);
     var val = 0;
     if(text == "關閉中") val = 1;
-    $.post('/dark3/pros',{
+    $.post('/terminal/pros',{
         "act" : "oneUpdate",
         "id"  : id,
         "muopVal" : val
@@ -313,7 +327,7 @@ $('.soclink').bind('change',function(){
     var id = $(this).data('id');
     var val = 0;
     if($(this).prop('checked')) val = 1;
-    $.post('/dark3/pros',{
+    $.post('/terminal/pros',{
         "act" : "oneUpdate",
         "id"  : id,
         "muopVal" : val

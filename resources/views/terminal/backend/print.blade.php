@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '無光晚餐S3訂單列表'])
+@include('backstage.header',['title' => '落日轉運站訂單列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">無光晚餐S3訂單列表 </h4>
+                        <h4 class="page-title">落日轉運站訂單列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/dark3/print" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/terminal/print" id="SearchForm">
 
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -103,13 +103,13 @@
 
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
-                                        <form action="/dark3/order/inv/mult/open" method="post">{!! csrf_field() !!}
+                                        <form action="/terminal/order/inv/mult/open" method="post">{!! csrf_field() !!}
                                     <div class="sticky-table-header fixed-solution"><table id="datatable-buttons" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
                                                 <th><input type="checkbox" id="checkAll"></th>
-                                                <th>序號 / 場次</th>
-                                                <th>資訊</th>
+                                                <th>票種 / 場次</th>
+                                                <th>序號 / 資訊</th>
                                                 <!--th>主餐</th-->
                                                 <th>付款狀態 / 發票號碼</th>
                                                 <th>餐飲備註</th>
@@ -122,7 +122,7 @@
                                         <tbody>
 @forelse ($order as $row)
     <?php 
-        $coupons = App\model\dark3\coupon::where('o_id',$row->sn)->get();
+        $coupons = App\model\terminal\coupon::where('o_id',$row->sn)->get();
         $coupon_pople = 0;
         $tmp_b_id = 0;
         $totle_money = 0;
@@ -130,7 +130,7 @@
         $last_four = '';
         if($coupons){
             foreach($coupons as $coup){
-                $single_money = App\model\dark3\backme::select('money')->find($coup->b_id)->money;
+                $single_money = App\model\terminal\backme::select('money')->find($coup->b_id)->money;
                 if($tmp_b_id != $coup->b_id){
                     $tmp_b_id = $coup->b_id;
                     $totle_money += $single_money;
@@ -138,7 +138,7 @@
             }
             if(isset($coup->b_id)){
                 // 這裡取得貝殼過來的後四碼
-                $last_four = App\model\dark3\backme::select('last_four')->find($coup->b_id)->last_four;
+                $last_four = App\model\terminal\backme::select('last_four')->find($coup->b_id)->last_four;
             }
         } else {
             $totle_money = $row->OM;
@@ -152,19 +152,28 @@
                   
             }
         }
-        $number = App\model\dark3\inv::select('number','is_cancal')->where('order_id',$row->id)->first();
+        $number = App\model\terminal\inv::select('number','is_cancal')->where('order_id',$row->id)->first();
         if($number){
             $inv_open = true;
         }
     ?>
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>@if($row->pay_status=='已付款' && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
-                                                <td>{{ $row->sn }}<br />{{ $row->day }}<br />{{ $row->day_parts }}<br />
-{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
-{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}
-                                                    <br >@if($row->is_overseas == 9) <span class="badge badge-pill badge-info">特別場次</span> @endif
+                                                <td> 
+                    @if($row->plan == 'train') 微醺列車 The Great Tipsy : The Next Stop @endif
+                    @if($row->plan == 'flight') FLIGHT 無光飛航 @endif
+                    @if($row->plan == 'boat') Boat for ONE 單人船票 @endif
+                    @if($row->plan == 'A') 套票A：Train+Flight @endif
+                    @if($row->plan == 'B') 套票B：Train+Flight+Boat @endif
+                    <br />
+                    @foreach(DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('order_id',$row->id)->get() as $r)
+                        {{ $r->day }} {{ $r->day_parts }} <br />
+{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($r->rang_start,0,5))))) }} ~ 
+{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($r->rang_end,0,5))))) }} ({{ $r->ticket_type}})<br >                     
+                    @endforeach
+                                                    @if($row->is_overseas == 9) <span class="badge badge-pill badge-info">特別場次</span> @endif
                                                 </td>
-                                                <td>{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 素食:{{ $row->vegetarian }}人</td>
+                                                <td>{{ $row->sn }}<br />{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 素食:{{ $row->vegetarian }}人</td>
                                                 <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
 @if($row->is_overseas == 1) <br />海外刷卡 @endif<br />
 <span id="inv_{{ $row->id }}">{{ $inv_open ? $number->number : '' }}</span> 
@@ -188,11 +197,11 @@
 
                                                 </td>
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
-                                                <th>@forelse(App\model\dark3\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\dark3\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
+                                                <th>@forelse(App\model\terminal\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\terminal\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
 <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
 </th>
-                                                <td>{{ $row->manage }}</td>
+                                                <td>{!! nl2br($row->manage) !!}</td>
 
 
                                                 <td class="actions">
@@ -205,12 +214,12 @@
                                                     @endif
                                                 </td>
                                                 <td class="actions">
-                                                    @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
+                                                    @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                                     @if($row->pay_status=='已付款')
                                                     <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
-                                                    <a class="btn btn-primary btn-xs" href="/dark3/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                     <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
@@ -221,7 +230,7 @@
 
 
                                         </tbody>
-                                        @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1)
+                                        @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1)
                                         <tfoot>
                                             <tr>
                                                 <td colspan="9"><button type="submit" class="btn btn-info">B2C 發票開立</button> <br/><span> 開立稅額 5% B2C 發票可於[發票資訊] 中預覽金額是否正確</span></td>
@@ -246,7 +255,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <a href="/dark3/xls/emaildata/output" class="btn btn-warning">下載成功付款的 EMail 名單</a>
+                                    <a href="/terminal/xls/emaildata/output" class="btn btn-warning">下載成功付款的 EMail 名單</a>
                                     <span style="font-size: 12px;color:red;"><br>需要較多的伺服器資源.請在離峰時刻使用</span>
                                 </div>
                             </div>
@@ -378,7 +387,7 @@
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
                                             <tr>
-                                                <td>無光晚餐S3(<span  id="inv_people"></span>人)</td>
+                                                <td>落日轉運站(<span  id="inv_people"></span>人)</td>
                                                 <td>1</td>
                                                 <td>組</td>
                                                 <td id="inv_price"></td>
@@ -697,7 +706,7 @@ $(function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此訂單")) {
              $.ajax({
-                url: '/dark3/order/'+id+'/delete',
+                url: '/terminal/order/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
@@ -714,7 +723,7 @@ $(function(){
         var oid   = $(this).data('oid');
         var sn    = $(this).data('sn');
         var phone = $(this).data('phone');
-        $.post('/dark3/order/'+id+'/resent',{
+        $.post('/terminal/order/'+id+'/resent',{
             name  : name,
             email : email,
             pople : pople,
@@ -730,7 +739,7 @@ $(function(){
         var email = $(this).data('email');
         var id    = $(this).data('id');
         var pople = $(this).data('pople');
-        $.post('/dark3/order/'+id+'/resent',{
+        $.post('/terminal/order/'+id+'/resent',{
             name  : name,
             email : email,
             pople : pople,
@@ -811,7 +820,7 @@ $(function(){
     $('#sent_inv_open').bind('click',function(){
         if(parseInt($('#Amt').val()) + parseInt($('#TaxAmt').val()) == parseInt($('#TotalAmt').val())){
             var id = $('#inv_use_id').val();
-            $.post('/dark3/order/inv/single/open',{
+            $.post('/terminal/order/inv/single/open',{
                 'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
                 'BuyerName' : $('#BuyerName').val(),
                 'BuyerUBN' : $('#BuyerUBN').val(),
@@ -826,7 +835,7 @@ $(function(){
                 'CarrierType' : $('input[name="CarrierType"]:checked').val(),
                 'CarrierNum' : $('#CarrierNum').val(),
                 'LoveCode' : $('#LoveCode').val(),
-                'ItemName' : '無光晚餐S3('+$('#inv_people').text()+'人票)',
+                'ItemName' : '落日轉運站('+$('#inv_people').text()+'人票)',
                 'ItemCount' : $('#inv_people').text(),
                 'ItemUnit' : '組',
                 'ItemPrice' : $('#inv_price').text(),
@@ -869,7 +878,7 @@ $(function(){
     $('#sent_inv_cancal').bind('click',function(){
         var id = $('#inv_cancal_id').val();
         if($('#inv_cancal_note').val()!=''){
-            $.post('/dark3/order/inv/cancal',{
+            $.post('/terminal/order/inv/cancal',{
                 'InvoiceNumber' : $('#inv_number').val(),
                 'InvalidReason' : $('#inv_cancal_note').val(),
                 'id' : id
@@ -891,12 +900,12 @@ $(function(){
     // master
     $('.MasterBtn').bind('click',function(){
         var id = $(this).data('id');
-        $.post('/dark3/getMasterData',{'order_id': id},function(data){
+        $.post('/terminal/getMasterData',{'order_id': id},function(data){
             if(data.success){
                 $('#MasterTitle').html('場次:'+data.master.day+' '+data.master.rang_start+'(第一筆為主揪)');
                 $('#MasterBody').html('<tr><td>'+data.master.name+'</td><td>'+data.master.email+'</td><td>'+data.master.tel+'</td></tr>');
                 for(row of data.slave){
-                    $('#MasterBody').append('<tr><td><a href="/dark3/getMasterList?search='+row.name+'" target="_blank">'+row.name+'</a></td><td><a href="/dark3/getMasterList?search='+row.email+'" target="_blank">'+row.email+'</a></td><td><a href="/dark3/getMasterList?search='+row.tel+'" target="_blank">'+row.tel+'</a></td></tr>');
+                    $('#MasterBody').append('<tr><td><a href="/terminal/getMasterList?search='+row.name+'" target="_blank">'+row.name+'</a></td><td><a href="/terminal/getMasterList?search='+row.email+'" target="_blank">'+row.email+'</a></td><td><a href="/terminal/getMasterList?search='+row.tel+'" target="_blank">'+row.tel+'</a></td></tr>');
                 }
                 $('#SendBody').html('');
                 for(row of data.send){
@@ -926,7 +935,7 @@ $(function(){
         var type  = $(this).data('type');
         var name  = $(this).data('name');
         var email  = $(this).data('email');
-        $.post('/dark3/postReSendMail',{
+        $.post('/terminal/postReSendMail',{
             name: name,
             id: id,
             email: email,
@@ -940,7 +949,7 @@ $(function(){
         var type  = $(this).data('type');
         var name  = $(this).data('name');
         var tel  = $(this).data('tel');
-        $.post('/dark3/postReSendSMS',{
+        $.post('/terminal/postReSendSMS',{
             name: name,
             id: id,
             tel: tel,
@@ -1010,17 +1019,17 @@ function calAmt(){
 
 function submitXLSForm(){
     $('#SearchForm').attr('target','_blank')
-    $('#SearchForm').attr('action','/dark3/xls/data/output')
+    $('#SearchForm').attr('action','/terminal/xls/data/output')
     $('#SearchForm').submit();
     $('#SearchForm').attr('target','_top');
-    $('#SearchForm').attr('action','/dark3/print');
+    $('#SearchForm').attr('action','/terminal/print');
 }
 function submitSearchForm(){
     $('#SearchForm').attr('target','_blank')
-    $('#SearchForm').attr('action','/dark3/table')
+    $('#SearchForm').attr('action','/terminal/table')
     $('#SearchForm').submit();
     $('#SearchForm').attr('target','_top');
-    $('#SearchForm').attr('action','/dark3/print');
+    $('#SearchForm').attr('action','/terminal/print');
 }
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
 		</script>

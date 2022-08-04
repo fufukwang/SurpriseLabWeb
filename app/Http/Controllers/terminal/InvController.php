@@ -26,7 +26,7 @@ use Log;
 use Excel;
 
 
-class InvController extends Controller
+class InvController extends WebController
 {
     public $perpage = 20;
     /**
@@ -266,7 +266,7 @@ class InvController extends Controller
                 'CarrierNum' => rawurlencode($request->CarrierNum),
                 'LoveCode' => $request->LoveCode,
                 'PrintFlag' => 'Y',
-                'ItemName' => '微醺大飯店票券('.$request->ItemCount.'人票)', //多項商品時，以「|」分開
+                'ItemName' => '落日轉運站票券('.$request->ItemCount.'人票)', //多項商品時，以「|」分開
                 'ItemCount' => 1, //多項商品時，以「|」分開
                 'ItemUnit' => '組', //多項商品時，以「|」分開
                 'ItemPrice' => $request->ItemPrice, //多項商品時，以「|」分開
