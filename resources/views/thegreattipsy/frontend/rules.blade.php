@@ -405,7 +405,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div id="qa16" class="collapse" aria-labelledby="qa16-header"
                                          data-parent="#qa-according">
                                         <div class="card-body number-list">
-                                            建議輕便前來，攜帶貴重物品即可，黃湯下肚，不見的東西會很多，帶越少越好，真心建議拜託拜託。
+                                            建議輕便前來，攜帶貴重物品即可，黃湯下肚，不見的東西會很多，帶越少越好，真心建議拜託拜託。<br/>
+                                            現場有提供寄物但並不負保管責任，如有物品遺失僅提供協尋但並不負保管/遺失責任。
                                         </div>
                                     </div>
                                 </div>
