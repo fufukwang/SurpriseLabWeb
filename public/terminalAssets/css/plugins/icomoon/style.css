@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../../fonts/icomoon/icomoon.eot?11vqy3');
+  src:  url('../../../fonts/icomoon/icomoon.eot?11vqy3#iefix') format('embedded-opentype'),
+    url('../../../fonts/icomoon/icomoon.ttf?11vqy3') format('truetype'),
+    url('../../../fonts/icomoon/icomoon.woff?11vqy3') format('woff'),
+    url('../../../fonts/icomoon/icomoon.svg?11vqy3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\e900";
+}
+.icon-arrow-down:before {
+  content: "\e90c";
+}
+.icon-arrow-left:before {
+  content: "\e90d";
+}
+.icon-boat:before {
+  content: "\e901";
+}
+.icon-calendar:before {
+  content: "\e902";
+}
+.icon-drink:before {
+  content: "\e903";
+}
+.icon-feel:before {
+  content: "\e904";
+}
+.icon-flight:before {
+  content: "\e905";
+}
+.icon-food:before {
+  content: "\e906";
+}
+.icon-step-done:before {
+  content: "\e907";
+}
+.icon-ticket:before {
+  content: "\e908";
+}
+.icon-time:before {
+  content: "\e909";
+}
+.icon-train:before {
+  content: "\e90a";
+}
+.icon-user:before {
+  content: "\e90b";
+}

@@ -1,0 +1,54 @@
+// Variable
+@import 'variable';
+
+// Override Bootstrap
+@import 'reset';
+
+.section-heading-wrap {
+    .heading-content {
+        color: $color-n100;
+        margin-top: 30px;
+    }
+}
+
+.ticket-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 42px;
+
+    @media screen and (max-width: 1199.98px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cta-wrap {
+    text-align: center;
+    margin-top: 42px;
+
+    @media screen and (max-width: 1199.98px) {
+        margin-top: 60px;
+    }
+
+    .notice-wrap {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: $letter-spacing-100;
+        line-height: 1.5;
+        color: $color-n100;
+        margin-top: 48px;
+
+        @media screen and (max-width: 1199.98px) {
+            margin-top: 30px;
+        }
+
+        a {
+            @media screen and (max-width: 1199.98px) {
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+    }
+}

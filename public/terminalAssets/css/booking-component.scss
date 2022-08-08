@@ -1,0 +1,1958 @@
+// Variable
+@import 'variable';
+
+// Override Bootstrap
+@import 'reset';
+
+
+//--------------
+// General
+//--------------
+html, body {
+    background-color: $color-b400;
+    font-family: $font-sans;
+}
+
+// section
+.section-wrap {
+    padding: 120px 0 90px;
+
+    @media screen and (max-width: 1199.98px) {
+        padding: 90px 0;
+    }
+}
+
+// Heading
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: $letter-spacing-200;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 24px;
+        letter-spacing: $letter-spacing-100;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: $letter-spacing-100;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 20px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: $letter-spacing-50;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: $letter-spacing-100;
+    }
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: $letter-spacing-100;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 18px;
+        line-height: 2;
+    }
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: $letter-spacing-100;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 18px;
+        line-height: 2;
+    }
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: $letter-spacing-100;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 16px;
+    }
+}
+
+
+// paragraph
+.body-01 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: $letter-spacing-100;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 16px;
+        line-height: 2.25;
+    }
+
+    // smaller
+    &.style-smaller {
+        font-size: 14px;
+
+        @media screen and (max-width: 1199.98px) {
+            font-size: 12px;
+            line-height: 2;
+        }
+    }
+}
+
+.body-02 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: $letter-spacing-100;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 16px;
+        line-height: 2.25;
+    }
+
+    // smaller
+    &.style-smaller {
+        font-size: 12px;
+
+        @media screen and (max-width: 1199.98px) {
+            line-height: 2;
+        }
+    }
+}
+
+.body-03 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6875;
+    letter-spacing: $letter-spacing-100;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+.body-04 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6875;
+    letter-spacing: $letter-spacing-100;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+// Link
+.link-text {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 1.5px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: $letter-spacing-100;
+    color: $color-o200;
+    word-break: break-all;
+    transition: .3s;
+
+    @media screen and (max-width: 1199.98px) {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    &:hover, &:active {
+        color: $color-o300;
+    }
+
+    // smaller
+    &.style-smaller {
+        font-size: 16px;
+        line-height: 1.5;
+
+        @media screen and (max-width: 1199.98px) {
+            color: $color-o300;
+            font-size: 14px;
+            line-height: 1.43;
+        }
+    }
+}
+
+//-------------------
+// Font Color
+//-------------------
+.color-n100 {
+    color: $color-n100;
+}
+
+.color-o200 {
+    color: $color-o200;
+}
+
+.color-o400 {
+    color: $color-o400;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+//-------------------
+// Section Heading
+//-------------------
+.section-heading-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    // Section Heading - Section Title
+    .heading-title {
+        color: $color-o200;
+    }
+
+    .heading-subtitle {
+        font-family: $font-saira;
+        color: $color-o300;
+    }
+
+    // Section Heading - Content Title
+    .heading-content {
+        color: $color-o300;
+    }
+
+    // Section Heading - Block Title
+    .sub-heading-title {
+        color: $color-o200;
+    }
+
+    .sub-heading-subtitle {
+        margin-top: 4px;
+        color: $color-o300;
+        line-height: 1.43;
+    }
+}
+
+
+//--------------
+// Button
+//--------------
+.booking-btn {
+    display: inline-block;
+    transition: .3s;
+    
+    // Button - Shape
+
+    // Button - Shape -- Round
+    &.shape-round {
+        padding: 14px 42px;
+        text-align: center;
+        border-radius: 31px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.45;
+        letter-spacing: $letter-spacing-100;
+
+        @media screen and (max-width: 1199.98px) {
+            padding: 10px 36px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+
+    // Button - Shape -- square
+    &.shape-square {
+        min-width: 122px;
+        padding: 12px;
+        text-align: center;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: $letter-spacing-100;
+
+        @media screen and (max-width: 1199.98px) {
+            min-width: 60px;
+            padding: 15px 10px 11px;
+            font-size: 14px;
+            line-height: 1.43;
+        }
+    }
+
+
+    // Button - Color
+
+    // Button - Color -- Primary
+    &.color-primary {
+        background-color: $color-o200;
+        color: $color-o600;
+
+        &:not(.status-disabled):hover,
+        &:not(.status-disabled):active {
+            background-color: $color-o300;
+        }
+
+        // Button - Status -- disabled
+        &.status-disabled {
+            cursor: not-allowed;
+            background-color: $color-o400;
+            opacity: .5;
+        }
+    }
+
+    // Button - Color -- Secondary
+    &.color-secondary {
+        border: 2px solid $color-o300;
+        color: $color-o300;
+
+        &:not(.status-disabled):hover,
+        &:not(.status-disabled):active {
+            background-color: $color-o300;
+            color: $color-o600;
+        }
+
+        // Button - Status -- disabled
+        &.status-disabled {
+            cursor: not-allowed;
+            background-color: transparent;
+            border: 2px solid $color-o500;
+            color: $color-o500;
+        }
+    }
+
+    // Button - Color -- Input use
+    &.color-input-use {
+        background-color: $color-o200;
+        color: $color-n400;
+
+        &:not(.status-disabled):hover,
+        &:not(.status-disabled):active {
+            background-color: $color-o300;
+        }
+
+        // Button - Status -- disabled
+        &.status-disabled {
+            cursor: not-allowed;
+            background-color: $color-o400;
+            color: $color-o600;
+            opacity: .5;
+        }
+    }
+
+
+    // Button - Status
+
+    // Button - Status -- disabled
+    &.status-disabled {
+        cursor: not-allowed;
+        background-color: $color-o400;
+    }
+}
+
+
+
+//--------------
+// Navigation
+//--------------
+.nav-wrap {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: $color-b400;
+    
+    // Navigation - PC
+    .pc-nav-wrap {
+        width: 100%;
+        height: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba($color-b300, .5);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 1199.98px) {
+            display: none;
+        }
+
+        // hover effect
+        &:hover {
+            .logo-wrap {
+                img {
+                    &.style-hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        // LOGO
+        .logo-wrap {
+            width: 122px;
+            height: 36px;
+            position: relative;
+
+            img {
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &.style-normal {
+                    z-index: 10;
+                }
+    
+                &.style-hover {
+                    z-index: 20;
+                    opacity: 0;
+                    transition: .3s;
+                }
+            }
+        }
+
+        // Line
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            width: 0px;
+            height: 1px;
+            background-color: $color-r200;
+            transition: .3s;
+        }
+
+        &::before {
+            left: 50%;
+        }
+
+        &::after {
+            right: 50%;
+        }
+
+        // Line - hover
+        &:hover {
+            &::before,
+            &::after {
+                width: 50%;
+            }
+        }
+    }
+    
+    // Navigation - Mobile
+    .mobile-nav-wrap {
+        width: 100%;
+        height: 100%;
+        padding: 14.5px;
+        box-sizing: border-box;
+        border-bottom: 1px solid $color-r200;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1199.98px) {
+            display: flex;
+        }
+
+        // LOGO
+        .logo-wrap {
+            width: 102px;
+            height: 30px;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+    
+}
+
+
+//--------------
+// Progress
+//--------------
+.booking-progress-list {
+    --item-border: 8px;
+
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1199.98px) {
+        --item-border: 6px;
+        flex-direction: row;
+    }
+
+    .progress-item + .progress-item {
+        margin: 52px 0 0;
+
+        @media screen and (max-width: 1199.98px) {
+            margin: 0 0 0 24px;
+        }
+    }
+    .progress-item {
+        position: relative;
+
+        
+        .item-wrap {
+            position: relative;
+            z-index: 10;
+            width: 36px;
+            height: 36px;
+            border-radius: 100px;
+            background-color: $color-o300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: content-box;
+            border: var(--item-border) solid $color-b400;
+            
+            @media screen and (max-width: 1199.98px) {
+                width: 30px;
+                height: 30px;
+            }
+
+            // Progress - text
+            span {
+                font-family: $font-shrikhand;
+                font-size: 16px;
+                line-height: 1.44;
+                letter-spacing: $letter-spacing-50;
+                transform: translate(0.5px, 1px);
+
+                @media screen and (max-width: 1199.98px) {
+                    font-size: 14px;
+                    line-height: 1.43;
+                }
+            }
+        }
+
+        // Progress - Line
+        &::before {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            z-index: 0;
+            display: block;
+            width: 1px;
+            height: 60px;
+
+            @media screen and (max-width: 1199.98px) {
+                top: 50%;
+                left: -60px;
+                width: 60px;
+                height: 1px;
+            }
+        }
+
+        // Progress - status -- disabled
+        &.status-disabled {
+
+            .item-wrap {
+                background-color: #804E6E;
+                border: var(--item-border) solid $color-b400;
+                box-shadow: 0 0 0 1px $color-b400;
+                
+                // Progress - text
+                span {
+                    color: $color-b400;
+                }
+            }
+
+            // Progress - Line
+            &::before {
+                content: '';
+                border-left: 1px dashed #804E6E;
+
+                @media screen and (max-width: 1199.98px) {
+                    border-bottom: 1px dashed #804E6E;
+                }
+            }
+        }
+
+        // Progress - status -- active
+        &.status-active {
+
+            .item-wrap {
+                box-shadow: 0 0 0 1px $color-o300;
+
+                // Progress - text
+                span {
+                    color: $color-b400;
+                }
+            }
+
+            // Progress - Line
+            &::before {
+                content: '';
+                border-left: 1px solid $color-o300;
+
+                @media screen and (max-width: 1199.98px) {
+                    border-bottom: 1px solid $color-o300;
+                }
+            }
+        }
+
+        // Progress - status -- finish
+        &.status-finish {
+
+            .item-wrap {
+                
+                // Progress - text
+                span {
+                    color: transparent;
+                    -webkit-user-select: none;
+                            user-select: none;
+                }
+
+                &::after {
+                    content: '\e907';
+                    font-family: 'icomoon' !important;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-49%, -49%);
+                    color: $color-b400;
+                    font-size: 30px;
+                    line-height: 1.44;
+
+                    @media screen and (max-width: 1199.98px) {
+                        font-size: 24px;
+                        line-height: 1.43;
+                    }
+                }
+            }
+
+            // Progress - Line
+            &::before {
+                content: '';
+                border-left: 1px solid $color-o300;
+
+                @media screen and (max-width: 1199.98px) {
+                    border-bottom: 1px solid $color-o300;
+                }
+            }
+        }
+
+        &:nth-child(1) {
+
+            // Progress - Line
+            &::before {
+                content: unset;
+            }
+        }
+    }
+}
+
+
+
+//------------------
+// Bold Border Box
+//------------------
+.bold-border-box {
+    overflow: hidden;
+    border: 4px solid $color-o300;
+    border-radius: 8px;
+
+    @media screen and (max-width: 1199.98px) {
+        border: 2px solid $color-o300;
+    }
+}
+
+
+//-----------
+// Notice
+//-----------
+
+// Notice - text
+.notice-text-wrap {
+    
+    .notice-text + .notice-text {
+        margin-top: 12px;
+    }
+    .notice-text {
+        text-align: center;
+        line-height: 1.43;
+        color: $color-o100;
+    }
+}
+
+// Notice - item
+.notice-item-wrap {
+
+    // Notice - item -- caption
+    .item-caption {
+        color: $color-o100;
+        line-height: 1.43;
+    }
+
+    // Notice - item -- list
+    .item-list {
+        list-style-position: inside;
+        margin-top: 12px;
+        padding-left: 10px;
+
+        .list-item + .list-item {
+            margin-top: 10px;
+        }
+        .list-item {
+            color: $color-o100;
+            line-height: 1.43;
+        }
+    }
+}
+
+// Notice - Layout
+.notice-wrap {
+    
+    // Notice - text
+    .notice-text-wrap {
+        padding: 20px;
+        
+        &:not(:only-child) {
+            border-bottom: 3px solid $color-o300;
+
+            @media screen and (max-width: 1199.98px) {
+                border-bottom: 2px solid $color-o300;
+            }
+        }
+    }
+
+    // Notice - item
+    .notice-item-wrap + .notice-item-wrap {
+        border-top: 1px solid $color-o300;
+    }
+    .notice-item-wrap {
+        padding: 20px;
+    }
+}
+
+
+//---------------------
+// Table
+//---------------------
+
+// Table - Ticket Group
+.ticket-group-table {
+    width: 100%;
+    table-layout: fixed;
+
+    // Ticket Group - Table -- row
+    tr {
+        background-color: $color-b400;
+
+        // Ticket Group - Table -- row --- bg
+        &.tr-bg-light {
+            background-color: $color-o400;
+        }
+
+        &.tr-bg-dark {
+            background-color: $color-o500;
+        }
+
+        // Ticket Group - Table -- row --- border
+        
+        // first row
+        &:first-child {
+            th, td {
+                border-top: none;
+                border-bottom: 3px solid $color-o300;
+
+                @media screen and (max-width: 1199.98px) {
+                    border-bottom: 2px solid $color-o300;
+                    padding: 4px;
+                }
+            }
+        }
+        // last row
+        &:last-child {
+            th, td {
+                border-bottom: none;
+            }
+        }
+
+        // Ticket Group - Table -- cell
+        th, td {
+            padding: 14px;
+
+            // Ticket Group - Table -- cell --- border
+            border-left: 1px solid rgba($color-o300, .5);
+            border-right: 1px solid rgba($color-o300, .5);
+            border-top: 3px solid $color-o300;
+            border-bottom: 3px solid $color-o300;
+
+            @media screen and (max-width: 1199.98px) {
+                padding: 8px;
+                border-top: 2px solid $color-o300;
+                border-bottom: 2px solid $color-o300;
+            }
+
+            // Ticket Group - Table -- column --- border
+            
+            // first column
+            &:first-child {
+                border-left: none;
+                border-right: 3px solid $color-o300;
+
+                @media screen and (max-width: 1199.98px) {
+                    border-right: 2px solid $color-o300;
+                    width: 30%;
+                }
+            }
+            // last column
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        th {
+            color: $color-o100;
+            
+            // Ticket Group - Table -- 2 column of left top
+            &.column-2-th {
+                background-image: url('/images/other/table-slash.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                position: relative;
+        
+                .top-right {
+                    position: absolute;
+                    top: 14px;
+                    right: 14px;
+
+                    @media screen and (max-width: 1199.98px) {
+                        top: 8px;
+                        right: 8px;
+                    }
+                }
+        
+                .bottom-left {
+                    position: absolute;
+                    bottom: 14px;
+                    left: 14px;
+
+                    @media screen and (max-width: 1199.98px) {
+                        bottom: 8px;
+                        left: 8px;
+                    }
+                }
+            }
+
+            // Ticket Group - Table -- icon
+            .icon-th {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    font-size: 36px;
+                }
+            }
+
+            // Ticket Group - Table -- name
+            .item-name {
+                line-height: 1.43;
+
+                @media screen and (max-width: 1199.98px) {
+                    line-height: 1.5;
+                    letter-spacing: $letter-spacing-50;
+                }
+                
+                .name-ch {
+
+                }
+
+                .name-en {
+                    font-family: $font-saira;
+                    font-weight: 600;
+                }
+                
+                .item-text {
+                    
+                    @media screen and (max-width: 1199.98px) {
+                        // font-size 10px
+                        display: inline-block;
+                        transform: scale(0.8);
+                    }
+                }
+            }
+
+            // Ticket Group - Table -- Price
+            .item-price {
+                font-family: $font-shrikhand;
+                line-height: 1.5;
+
+                @media screen and (max-width: 1199.98px) {
+                    line-height: 1.44;
+                }
+            }
+            .item-origin-price {
+                margin-top: 4px;
+                line-height: 1.5;
+
+                @media screen and (max-width: 1199.98px) {
+                    margin-top: 0;
+                    letter-spacing: $letter-spacing-50;
+                    
+                    // font-size 10px
+                    display: inline-block;
+                    transform: scale(0.8);
+                    transform-origin: 0 0;
+                }
+            }
+        }
+
+        td {
+            text-align: center;
+
+            i {
+                color: $color-o100;
+                font-size: 32px;
+            }
+        }
+    }   
+}
+
+// Table - Booking data
+.booking-data-table {
+    width: 100%;
+    
+    tr {
+
+        th, td {
+            padding-top: 24px;
+            vertical-align: top;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        th {
+            color: $color-o300;
+            padding-right: 20px;
+            text-align: right;
+            word-break: keep-all;
+            width: 1%;
+            white-space: nowrap;
+        }
+
+        td {
+            color: $color-o100;
+        }
+
+        &:nth-child(1) {
+            th, td {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+
+//-----------------
+// Ticket Group
+//-----------------
+.ticket-group-wrap {
+
+    // Table - Ticket Group
+    .ticket-group-table {
+
+    }
+
+    // Notice
+    .notice-wrap {
+        border-top: 3px solid $color-o300;
+
+        @media screen and (max-width: 1199.98px) {
+            border-top: 2px solid $color-o300;
+        }
+    }
+}
+
+
+//-----------------
+// Form Element
+//-----------------
+
+// Form - label
+label {
+    color: $color-o100;
+    line-height: 1.5;
+}
+
+// Form - text
+input[type="text"],
+textarea,
+.mimicry-input {
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px;
+    color: $color-o100;
+    background-color: $color-b400;
+    border: 2px solid $color-o400;
+    border-radius: 6px;
+    line-height: 1.5;
+    transition: .3s;
+
+    &::placeholder {
+        color: $color-o200;
+    }
+
+    &:hover {
+        border: 2px solid $color-o300;
+    }
+
+    &:focus {
+        outline: none;
+        caret-color: currentColor;
+    }
+}
+
+// Form - checkbox
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+
+    @media screen and (max-width: 1199.98px) {
+        width: 12px;
+        height: 12px;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $color-b400;
+        border: 2px solid $color-o300;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: $color-b400;
+        transition: .3s;
+
+        @media screen and (max-width: 1199.98px) {
+            width: 4px;
+            height: 4px;
+        }
+    }
+
+    &:hover {
+        @media screen and (any-hover: hover) {
+            &::after {
+                background-color: $color-o400;
+            }
+        }
+    }
+
+    &:checked {
+
+        &::after {
+            background-color: $color-o300;
+        }
+    }
+}
+
+// Form - icon
+.dropdown-wrap .dropdown-toggle,
+.datepicker-wrap {
+    
+    &::after {
+        font-family: 'icomoon' !important;
+        color: $color-o300;
+        font-size: 22px;
+        position: absolute;
+        right: 9px;
+        top: 11px;
+        line-height: 1;
+        transition: .3s;
+    }
+}
+
+// Form - dropdown
+.dropdown-wrap {
+
+    // Form - dropdown -- input
+    .dropdown-toggle {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        // icon
+        &::after {
+            content: '\e90c';
+            border: none;
+        }
+
+        // open
+        &[aria-expanded="true"] {
+            
+            // icon
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        // no select option
+        &.no-value {
+            color: $color-o200;
+        }
+    }
+
+    // Form - dropdown -- menu
+    .dropdown-menu {
+        width: 100%;
+        max-height: 240px;
+        overflow-y: auto;
+        background-color: $color-b400;
+        border: 2px solid $color-o200;
+        border-radius: 6px;
+        padding: 0;
+        transform: translate(0px, 60px) !important;
+
+        @media screen and (max-width: 1199.98px) {
+            max-height: 224px;
+            transform: translate(0px, 54px) !important;
+        }
+
+        .dropdown-item {
+            cursor: pointer;
+            color: $color-o200;
+            line-height: 1.43;
+            padding: 11px 16px;
+
+            &:hover {
+                background-color: $color-o200;
+                color: $color-b400;
+            }
+        }
+    }
+}
+
+// Form - datepicker
+
+// Form - datepicker -- input
+.datepicker-wrap {
+    position: relative;
+
+    &:focus-within,
+    &:hover {
+        &::after {
+            color: $color-o500;
+        }
+    }
+
+    // icon
+    &::after {
+        content: '\e902';
+    }
+
+    input {
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+// Form - datepicker -- menu
+.ui-datepicker.ui-widget.ui-widget-content {
+    width: auto;
+    padding: 0;
+    background-color: $color-b400;
+    border: 2px solid $color-o200;
+    border-radius: 6px;
+    color: $color-o200;
+
+    @media screen and (max-width: 1199.98px) {
+        width: calc(100% - 40px);
+        max-width: 348px;
+    }
+
+    // datepicker - menu -- header
+    .ui-datepicker-header {
+        padding: 16px 0 17px;
+        background-color: unset;
+        border: none;
+        color: $color-o200;
+
+        // datepicker - menu -- header --- title
+        .ui-datepicker-title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: $letter-spacing-100;
+        }
+
+        // datepicker - menu -- header --- button
+        .ui-datepicker-prev,
+        .ui-datepicker-next {
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: unset;
+                border: none;
+            }
+            
+            // origin icon
+            .ui-icon {
+                display: none;
+            }
+
+            // new icon
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'icomoon' !important;
+                font-size: 18px;
+                color: $color-o300;
+            }
+        }
+
+        .ui-datepicker-prev {
+            top: 6px;
+            left: 6px;
+
+            // new icon
+            &::before {
+                content: '\e90d';
+            }
+        }
+
+        .ui-datepicker-next {
+            top: 6px;
+            right: 6px;
+
+            // new icon
+            &::before {
+                content: '\e900';
+            }
+        }
+    }
+
+    // datepicker - menu -- calendar
+    .ui-datepicker-calendar {
+        margin: 0;
+
+        // week
+        thead {
+            border-bottom: 1px solid $color-o300;
+
+            tr {
+                
+                th {
+                    padding: 0 15px 12px;
+                    width: calc(100% / 7);
+
+                    @media screen and (max-width: 1199.98px) {
+                        padding: 0 0 12px;
+                    }
+
+                    &:first-child {
+                        padding-left: 24px;
+
+                        @media screen and (max-width: 1199.98px) {
+                            padding-left: 6px;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-right: 24px;
+
+                        @media screen and (max-width: 1199.98px) {
+                            padding-right: 6px;
+                        }
+                    }
+
+                    span {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        letter-spacing: $letter-spacing-100;
+                    }
+                }
+            }
+        }
+
+        // date
+        tbody {
+
+            tr {
+
+                // normal
+                td {
+                    width: calc(100% / 7);
+                    background-color: unset;
+                    border: none;
+
+                    // today
+                    &.ui-datepicker-today {
+                        a {
+                            background-color: rgba($color-o100, .3);
+                            color: $color-o100;
+                        }
+                    }
+
+                    // current select
+                    &.ui-datepicker-current-day,
+                    &:hover {
+                        a {
+                            background-color: $color-o100;
+                            color: $color-o400;
+                        }
+                    }
+
+                    // disabled
+                    &.ui-datepicker-unselectable {
+                        opacity: 1;
+
+                        span {
+                            color: $color-o400;
+                        }
+                    }
+
+                    a, span {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 100px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: auto;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        letter-spacing: $letter-spacing-100;
+                        background-color: transparent;
+                        border: none;
+                        color: $color-o100;
+                    }
+                    
+                    
+                }
+
+                // first row
+                &:first-child {
+                    td {
+                        padding-top: 5px;
+                    }
+                }
+
+                /// last row
+                &:last-child {
+                    td {
+                        padding-bottom: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//-----------------
+// Form Group
+//-----------------
+.form-group {
+
+    // Form - Layout
+
+    // Form - Layout -- normal style
+    &.normal-layout {
+        // Form - label
+        label {
+            margin: 0 0 12px 16px;
+
+            @media screen and (max-width: 1199.98px) {
+                margin: 0 0 10px 16px;
+            }
+        }
+
+        // Form - single line
+        input[type="text"] {
+            display: block;
+            width: 100%;
+        }
+
+        // Form - mutiple line
+        textarea {
+            display: block;
+            width: 100%;
+            height: 78px;
+            min-height: 78px;
+            max-height: 300px;
+
+            @media screen and (max-width: 1199.98px) {
+                height: 70px;
+            }
+        }
+
+        // Form - Error message
+        .form-error {
+            display: none;
+        }
+    }
+
+    // Form - Layout -- verify style
+    &.verify-layout {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-column-gap: 16px;
+
+        @media screen and (max-width: 1199.98px) {
+            grid-column-gap: 12px;
+        }
+
+        // Form - status list
+        .verify-status-list {
+            grid-area: 2 / 1 / span 1 / span 2;
+            list-style-type: none;
+            padding: 12px 0 0 16px;
+
+            .status-list-item {
+                display: none;
+                line-height: 1.5;
+
+                &.active {
+                    display: block;
+                }
+
+                // status - not use
+                &.not-use {
+                    color: $color-o300;
+                }
+
+                // status - not found
+                &.not-found {
+                    color: $color-r400;
+                }
+
+                // status - use discount
+                &.use-discount {
+                    color: $color-o300;
+                }
+            }
+        }
+    }
+
+    // Form - Layout -- checkbox style
+    &.checkbox-layout {
+        display: flex;
+        align-items: center;
+        
+        // Form - label
+        label {
+            display: inline-flex;
+            align-items: center;
+            color: $color-o200;
+            line-height: 1.5;
+            margin-left: 8px;
+            transform: translateY(-1px);
+
+            @media screen and (max-width: 1199.98px) {
+                margin-left: 7px;
+            }
+        }
+        
+        // Form - checkbox
+        input[type="checkbox"] {
+            flex-shrink: 0;
+        }
+
+        // Form - link
+        .link-text {
+            margin-left: 4px;
+        }
+    }
+
+    // Form - Style
+
+    // Form - Style -- Error
+    &.error-style {
+
+        // Form - text
+        input[type="text"] {
+            border: 2px solid $color-r400;
+            color: $color-r400;
+            background-color: rgba(112, 46, 47, 0.6);
+        }
+
+        // Form - Error message
+        .form-error {
+            display: inline-block;
+            color: $color-r400;
+            line-height: 1.5;
+            margin: 0 0 12px 12px;
+        }
+    }
+
+    // Form - Style -- Disabled
+    &.disabled-style {
+        // Form - label
+        label {
+            color: $color-o500;
+        }
+        
+        // Form - text
+        input[type="text"],
+        .mimicry-input {
+            cursor: not-allowed;
+            border: 2px solid $color-o500;
+            color: $color-o500;
+
+            &::placeholder {
+                color: $color-o500;
+            }
+        }
+
+        // Form - icon
+        .dropdown-wrap .dropdown-toggle,
+        .datepicker-wrap {
+            
+            &::after {
+                cursor: not-allowed;
+                color: $color-o500;
+            }
+        }
+    }
+}
+
+
+//--------------
+// Ticket Card
+//--------------
+.ticket-card {
+    // Ticket Card Variable
+    --border-width: 2px;
+    --border-radius-top: 60px;
+    --border-radius-bottom: 30px;
+    --ticket-punch-size: 30px;
+
+    max-width: 398px;
+    width: calc((100% - 42px * 2) / 3);
+    min-width: 345px;
+    margin: 0 21px;
+    overflow: hidden;
+
+    @media screen and (max-width: 1399.98px) {
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 1199.98px) {
+        --ticket-punch-size: 24px;
+        max-width: 348px;
+        width: 100%;
+        min-width: auto;
+        margin: unset;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    & + .ticket-card {
+
+        @media screen and (max-width: 1199.98px) {
+            margin-left: 0;
+            margin-top: 16px;
+        }
+    }
+
+    .ticket-card-inner {
+        border-width: var(--border-width);
+        border-color: $color-o400;
+        border-style: solid;
+        border-radius: var(--border-radius-top) var(--border-radius-top) var(--border-radius-bottom) var(--border-radius-bottom);
+
+        // Ticket Card Header
+        .ticket-card-header {
+            text-align: center;
+
+            .ticket-title {
+                color: $color-o400;
+                padding: 21px 16px 12px;
+                position: relative;
+                z-index: 1;
+
+                @media screen and (max-width: 1199.98px) {
+                    padding-top: 18px;
+                }
+    
+                &::before,
+                &::after {
+                    content: '';
+                    width: var(--ticket-punch-size);
+                    height: var(--ticket-punch-size);
+                    border-radius: 50%;
+                    border-width: var(--border-width);
+                    border-color: $color-o400;
+                    border-style: solid;
+                    background-color: $color-b400;
+                    position: absolute;
+                    bottom: 0;
+                    transform: translateY(50%);
+                    z-index: 1;
+                    box-sizing: content-box;
+                }
+        
+                &::before {
+                    left: calc(-1 * var(--ticket-punch-size) / 2 - var(--border-width));
+                }
+        
+                &::after {
+                    right: calc(-1 * var(--ticket-punch-size) / 2 - var(--border-width));
+                }
+
+                .card-title {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: $font-saira;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    color: $color-n100;
+                    margin-bottom: 0;
+
+                    i {
+                        font-size: 48px;
+                        width: 48px;
+                        margin-right: 6px;
+
+                        @media screen and (max-width: 1199.98px) {
+                            font-size: 36px;
+                            width: 36px;
+                            margin-right: 4px;
+                        }
+                    }
+                }
+
+                .card-subtitle {
+                    font-family: $font-saira;
+                    line-height: 1.6;
+                    color: $color-o300;
+                }
+            }
+
+            .ticket-desc {
+                color: $color-o200;
+                padding: 16px;
+                position: relative;
+                z-index: 0;
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-image: linear-gradient(to right, $color-o400 0%, $color-o400 40%, transparent 40%);
+                    background-size: 20px 1px;
+                    background-repeat: repeat-x;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+            }
+        }
+
+        // Ticket Card Body
+        .ticket-card-body {
+            background-color: $color-o100;
+
+            .feature-wrap {
+                border-top: 1px solid $color-o200;
+
+                .feature-item {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom: 1px solid $color-o200;
+                    padding: 6px 24px 6px 12px;
+
+                    @media screen and (max-width: 1199.98px) {
+                        padding: 0 16px 0 4px;
+                    }
+
+                    .item-title {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        line-height: 1.5;
+                        color: $color-n500;
+
+                        &.has-emoji {
+                            img {
+                                width: 24px;
+                                height: 24px;
+                                margin-left: 6px;
+                            }
+                        }
+
+                        i {
+                            font-size: 48px;
+                        }
+
+                        span {
+                            margin: 0 $letter-spacing-100;
+                        }
+                    }
+
+                    .item-unit {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        line-height: 1.5;
+                        color: $color-n300;
+
+                        &::before {
+                            content: '/';
+                            margin-right: $letter-spacing-100;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Ticket Card Footer
+        .ticket-card-footer {
+            background-color: $color-o400;
+            border-radius: 0 0 calc(var(--border-radius-bottom) - var(--border-width)) calc(var(--border-radius-bottom) - var(--border-width));
+            overflow: hidden;
+
+            .ticket-accordion {
+
+                .accordion-item {
+                    border: none;
+                    border-radius: 0;
+                    background-color: $color-o400;
+
+                    .accordion-header {
+                        color: $color-n100;
+
+                        button {
+                            text-align: center;
+                            width: 100%;
+                            padding: 16px 36px;
+                            border: none;
+                            font-weight: inherit;
+                            letter-spacing: inherit;
+                            color: inherit;
+                            background-color: $color-o400;
+                            transition: 0.3s background-color;
+                            position: relative;
+                            z-index: 0;
+
+                            @media screen and (max-width: 1199.98px) {
+                                padding: 12px 16px;
+                            }
+
+                            .accrodion-arrow {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 30px;
+                                height: 30px;
+                                background-color: $color-n100;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 16px;
+                                right: 15px;
+                                z-index: 0;
+                                transition: 0.3s transform;
+
+                                @media screen and (max-width: 1199.98px) {
+                                    width: 22px;
+                                    height: 22px;
+                                    top: 12px;
+                                    right: 12px;
+                                }
+
+                                i {
+                                    font-size: 20px;
+                                    width: 20px;
+                                    color: $color-o300;
+
+                                    @media screen and (max-width: 1199.98px) {
+                                        font-size: 16px;
+                                        width: 16px;
+                                    }
+                                }
+                            }
+
+                            // Close
+                            &[aria-expanded="true"] {
+                                .accrodion-arrow {
+                                    transform: rotate(0deg);
+                                }
+                            }
+
+                            // Open
+                            &[aria-expanded="false"] {
+                                &:hover {
+                                    background-color: $color-o300;
+                                }
+
+                                .accrodion-arrow {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+
+                    .accordion-body {
+                        text-align: center;
+                        line-height: 1.78125;
+                        color: $color-n100;
+                        background-color: $color-o400;
+                        padding: 0 24px 20px;
+
+                        @media screen and (max-width: 1399.98px) {
+                            font-size: 15px;
+                        }
+
+                        @media screen and (max-width: 1199.98px) {
+                            padding: 0 16px 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//--------------
+// Modal
+//--------------
+
+// Modal - policy
+.modal-policy {
+
+    .modal-dialog {
+        max-width: 812px;
+
+        @media screen and (max-width: 1199.98px) {
+            margin-left: 21px;
+            margin-right: 21px;
+        }
+
+        .modal-content {
+            height: 660px;
+            max-height: calc(100vh - 240px);
+            background-color: $color-b400;
+            border: 2px solid $color-o200;
+            border-radius: 6px;
+
+            @media screen and (max-width: 1199.98px) {
+                height: calc(100vh - 192px);
+            }
+
+            .modal-header {
+                padding: 17px;
+                border-bottom: 1px solid rgba($color-o200, .5);
+                justify-content: center;
+
+                .modal-title {
+                    line-height: 1.5;
+                    color: $color-o100;
+                }
+            }
+
+            .modal-body {
+                padding: 48.5px 122px;
+                overflow-y: auto;
+
+                @media screen and (max-width: 1199.98px) {
+                    padding: 24.5px 30px;
+                }
+
+                .body-inner {
+                    color: $color-o100;
+                    word-break: break-all;
+
+                    h6 {
+                        margin-bottom: 12px;
+                    }
+
+                    p {
+                        line-height: 1.78;
+                    }
+
+                    p + h6 {
+                        margin-top: 42px;
+                    }
+
+                    p + p {
+                        margin-top: 12px;
+                    }
+                }
+            }
+
+            .modal-footer {
+                border-top: 1px solid rgba($color-o200, .5);
+                padding: 0;
+
+                .full-btn {
+                    margin: 0;
+                    padding: 0;
+                    background-color: unset;
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                    padding: 16.7px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: $color-o100;
+                }
+            }
+        }
+    }
+}
