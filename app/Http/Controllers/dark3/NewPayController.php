@@ -301,7 +301,7 @@ class NewPayController extends Controller
                     $order->save();
                     // 信件補送
                     $now = time();
-                    $lim = strtotime($order->day.' '.$order->rang_start);
+                    $lim = strtotime($act->day.' '.$act->rang_start);
                     $day = round( ($lim - $now) / 86400 );
                     if($day <= 7){
                         $mailer['template'] = 'D7';
