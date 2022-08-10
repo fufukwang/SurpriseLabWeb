@@ -156,7 +156,7 @@ class FrontController extends WebController
             abort(404);
         }
     }
-
+/*
     public function ReOrderData(Request $request){
         try {
             $now = Carbon::now()->toDateString();
@@ -196,38 +196,13 @@ class FrontController extends WebController
                         $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
                         $coupon++;
                         coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
-                        /*
-                        if($request->Pay == 'onsite'){
-                            if ($me->type == 'p2') {
-                                $cut1 += $act->cash * 2;
-                            } elseif ($me->type == 'p4') {
-                                $cut1 += $act->cash * 4;
-                            } elseif ($me->type == 'p6') {
-                                $cut1 += $act->cash * 6;
-                            }
-                        } else {
-                            if ($me->type == 'p2') {
-                                $cut1 += $act->money * 2;
-                            } elseif ($me->type == 'p4') {
-                                $cut1 += $act->money * 4;
-                            } elseif ($me->type == 'p6') {
-                                $cut1 += $act->money * 6;
-                            }
-                        }
-                        */
+
                         $cutPeople += 2;
                     }
                 }
             }
 
 
-            //$count = str_pad($count,3,"0",STR_PAD_LEFT);
-            /*
-            $meat = [];
-            for($i=0;$i<$people;$i++){
-                array_push($meat,$request->input('Meal.'.$i));
-            }
-            */
             $pay_status = '未完成';
             if($people - $cutPeople == 0){
                 $pay_status = '已付款';
@@ -316,10 +291,6 @@ class FrontController extends WebController
             if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                /*
-                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
-                */
                 $mailer = [
                     'day'   => Carbon::parse($act->day)->format('Y / m / d'),
                     'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
@@ -348,68 +319,6 @@ class FrontController extends WebController
                     SLS::SendSmsByTemplateName($mailer);
                 }
 
-                /*
-                if(strpos($mailer['email'],'@yahoo')) {
-                    config(['mail.host' => 'smtp.gmail.com']);
-                    config(['mail.username' => env('MAIL_TGT_USER')]);
-                    config(['mail.password' => env('MAIL_TGT_PASS')]);
-                }
-                try {
-                    if($mailer['pople']==1){
-                        $mailTheme = 'orderOne';
-                    } else {
-                        $mailTheme = 'order';
-                    }
-                    Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
-                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-
-                        $m->to($mailer['email'], $mailer['name']);
-                        $m->subject('訂位確認信 ── 內有重要任務');
-                    });
-                    $order->is_send = 1;
-                    $order->save();
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($act->day.' '.$act->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    // 寄送 A 信件
-                    $toData = [
-                        'id'    => $order->id,
-                        'name'  => $order->name,
-                        'email' => $order->email,
-                        'type'  => "DX" // 邀請信件
-                    ];
-                    // 信件補送
-                    //SLS::SendPreviewEmail($toData);
-                    if($day <= 21){
-                        $toData['type'] = "D21";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 14){
-                        $toData['type'] = "D14";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 11){
-                        $toData['day'] = $act->day.' '.$act->rang_start;
-                        $toData['type'] = "D10";
-                        SLS::SendPreviewEmail($toData);
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
-                    }
-                    if($day <= 5){
-                        $toData['type'] = "D05";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day == 0){
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
-                    }
-                    // SLS::sent_single_sms($order->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
-                } catch (\Exception $e){
-                    Log::error($e);
-                }
-                */
             }
             
 
@@ -422,5 +331,5 @@ class FrontController extends WebController
             return response()->json(["success"=>false]);
         }
     }
-
+*/
 }

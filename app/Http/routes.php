@@ -687,13 +687,13 @@ if(env('APP_ENV') != 'production'){
         Route::get('booking_now',function(){ return view('terminal.frontend.booking_now'); });
         Route::get('booking',function(){ return view('terminal.frontend.booking'); });
         // 藍新金流路由
-        Route::post('Neweb.OrderPay', 'dark3\NewPayController@postOrderByNeweb'); // 存訂單
-        Route::post('Neweb.ReturnResult', 'dark3\NewPayController@postReturnByNeweb'); // 回傳內容
-        Route::post('Neweb.BackReturn', 'dark3\NewPayController@postBackReturn'); // 背景回傳
+        Route::post('Neweb.OrderPay', 'terminal\NewPayController@postOrderByNeweb'); // 存訂單
+        Route::post('Neweb.ReturnResult', 'terminal\NewPayController@postReturnByNeweb'); // 回傳內容
+        Route::post('Neweb.BackReturn', 'terminal\NewPayController@postBackReturn'); // 背景回傳
 
-        Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
-        Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
-        Route::post('ReOrderData','dark3\FrontController@ReOrderData');
+        Route::get('GetAjaxData','terminal\FrontController@GetAjaxData');
+        Route::post('PostAjaxData','terminal\FrontController@PostAjaxData');
+        // Route::post('ReOrderData','terminal\FrontController@ReOrderData');
     });
 }
     // thegreattipsy S2

@@ -37,7 +37,7 @@ class NewPayController extends WebController
             if($count>0){
                 $count += 1;
             } else {
-                $count = Carbon::now()->format('Ymd').'0001';
+                $count = '1'.Carbon::now()->format('Ymd').'0001';
             }
 
             $people = $request->booking_people;
@@ -53,27 +53,6 @@ class NewPayController extends WebController
             $cut1 = 0; $cut2 = 0;
             // 確認庫碰碼
             $coupon = 0;
-            /*
-            if($request->has('coupon')){
-                foreach ($request->coupon as $key => $value) {
-                    $coupon_count = coupon::where('code',$value)->where('o_id',0)->count();
-                    if($coupon_count>0){
-                        $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
-                        $coupon++;
-                        coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
-                        if($me->type == 'eb1' || $me->type == 'p1'){
-                            $cut1 += $act->money;
-                        } elseif ($me->type == 'p2') {
-                            $cut1 += $act->money * 2;
-                        } elseif ($me->type == 'p4') {
-                            $cut1 += $act->money * 4;
-                        } elseif ($me->type == 'p6') {
-                            $cut1 += $act->money * 6;
-                        }
-                    }
-                }
-            }
-            */
             // 折扣碼
             $manage = '';
             $discountCode = '';
@@ -87,19 +66,6 @@ class NewPayController extends WebController
                         break;
                     }
                 }
-                /*
-                $discountCode = $request->discount;
-                if($discountCode == 'TIPSYAGAIN' || $discountCode == 'TWATIPSY'){
-                    $manage = $request->discount.'折扣 100';
-                    $cut2 = 100;
-                } elseif($discountCode == 'SHOPEETIPSY' || $discountCode == 'GARENATIPSY' || $discountCode == 'LINEBANKTIPSY' || $discountCode == 'YOXITIPSY' || $discountCode == 'COMPALTIPSY' || $discountCode == 'NANSHANTIPSY' || $discountCode == 'MIXERBOXTIPSY' || $discountCode == 'YAHOOTIPSY' || $discountCode == 'MICROSOFTTIPSY' || $discountCode == 'GOOGLETIPSY' || $discountCode == 'CTBCTIPSY' || $discountCode == 'ESLITETIPSY'){
-                    $manage = $request->discount.'折扣 220';
-                    $cut2 = 220;
-                } elseif($discountCode == 'TIPSYAGAIN01' || $discountCode == 'TIPSYAGAIN02' || $discountCode == 'TIPSYAGAIN03'){
-                    $manage = $request->discount.'折扣 200';
-                    $cut2 = 200;
-                }
-                */
             }
 
             $pay_status = '未完成';
@@ -245,6 +211,7 @@ class NewPayController extends WebController
 
                     $order->is_send = 1;
                     $order->save();
+                    /*
                     // 信件補送
                     $now = time();
                     $lim = strtotime($order->day.' '.$order->rang_start);
@@ -257,6 +224,7 @@ class NewPayController extends WebController
                         $mailer['template'] = 'DX';
                         SLS::SendSmsByTemplateName($mailer);
                     }
+                    */
                 } catch (\Exception $e){
                     Log::error($e);
                 }
@@ -265,7 +233,7 @@ class NewPayController extends WebController
 
         } catch (\Exception $exception) {
             Log::error($exception);
-            return response()->json(["success"=>false]);
+            return view('terminal.frontend.booking_fail',['sp'=>0]);
         }
     }
 }

@@ -303,28 +303,22 @@
                                             <input type="text" id="js-datepicker-train" class="datepicker body-04" placeholder="選擇日期" readonly required>
                                         </div>
                                     </div>
-                                    <div class="form-group normal-layout">
+                                    <div class="form-group normal-layout dropdown-time dropdown-datepart-train">
                                         <label class="body-04" for="dropdownMenuButtonPeriod-train">時段</label>
                                         <div class="js-dropdown dropdown-wrap dropdown">
                                             <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonPeriod-train" data-bs-toggle="dropdown" aria-expanded="false">
                                                 選擇時段
                                             </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-train">
-                                                <li class="dropdown-item body-04">午場</li>
-                                                <li class="dropdown-item body-04">晚場</li>
-                                            </ul>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-train"></ul>
                                         </div>
                                     </div>
-                                    <div class="form-group normal-layout">
+                                    <div class="form-group normal-layout dropdown-time dropdown-time-train">
                                         <label class="body-04" for="dropdownMenuButtonTime-train">時間</label>
                                         <div class="js-dropdown dropdown-wrap dropdown">
                                             <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonTime-train" data-bs-toggle="dropdown" aria-expanded="false">
                                                 選擇時間
                                             </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-train">
-                                                <li class="dropdown-item body-04">18:00 - 20:00 剩餘 12 位</li>
-                                                <li class="dropdown-item body-04">20:00 - 22:00 剩餘 2 位</li>
-                                            </ul>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-train"></ul>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -339,28 +333,22 @@
                                             <input type="text" id="js-datepicker-flight" class="datepicker body-04" placeholder="選擇日期" readonly required>
                                         </div>
                                     </div>
-                                    <div class="form-group normal-layout">
+                                    <div class="form-group normal-layout dropdown-time dropdown-datepart-flight">
                                         <label class="body-04" for="dropdownMenuButtonPeriod-flight">時段</label>
                                         <div class="js-dropdown dropdown-wrap dropdown">
                                             <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonPeriod-flight" data-bs-toggle="dropdown" aria-expanded="false">
                                                 選擇時段
                                             </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-flight">
-                                                <li class="dropdown-item body-04">午場</li>
-                                                <li class="dropdown-item body-04">晚場</li>
-                                            </ul>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-flight"></ul>
                                         </div>
                                     </div>
-                                    <div class="form-group normal-layout">
+                                    <div class="form-group normal-layout dropdown-time dropdown-time-flight">
                                         <label class="body-04" for="dropdownMenuButtonTime-flight">時間</label>
                                         <div class="js-dropdown dropdown-wrap dropdown">
                                             <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonTime-flight" data-bs-toggle="dropdown" aria-expanded="false">
                                                 選擇時間
                                             </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-flight">
-                                                <li class="dropdown-item body-04">18:00 - 20:00 剩餘 12 位</li>
-                                                <li class="dropdown-item body-04">20:00 - 22:00 剩餘 2 位</li>
-                                            </ul>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-flight"></ul>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -375,28 +363,22 @@
                                             <input type="text" id="js-datepicker-boat" class="datepicker body-04" placeholder="選擇日期" readonly required>
                                         </div>
                                     </div>
-                                    <div class="form-group normal-layout">
+                                    <div class="form-group normal-layout dropdown-time dropdown-datepart-boat">
                                         <label class="body-04" for="dropdownMenuButtonPeriod-boat">時段</label>
                                         <div class="js-dropdown dropdown-wrap dropdown">
                                             <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonPeriod-boat" data-bs-toggle="dropdown" aria-expanded="false">
                                                 選擇時段
                                             </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-boat">
-                                                <li class="dropdown-item body-04">午場</li>
-                                                <li class="dropdown-item body-04">晚場</li>
-                                            </ul>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-boat"></ul>
                                         </div>
                                     </div>
-                                    <div class="form-group normal-layout">
+                                    <div class="form-group normal-layout dropdown-time dropdown-time-boat">
                                         <label class="body-04" for="dropdownMenuButtonTime-boat">時間</label>
                                         <div class="js-dropdown dropdown-wrap dropdown">
                                             <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonTime-boat" data-bs-toggle="dropdown" aria-expanded="false">
                                                 選擇時間
                                             </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-boat">
-                                                <li class="dropdown-item body-04">18:00 - 20:00 剩餘 12 位</li>
-                                                <li class="dropdown-item body-04">20:00 - 22:00 剩餘 2 位</li>
-                                            </ul>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-boat"></ul>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -513,7 +495,7 @@
                                         <p class="notice-text body-01 style-smaller">請確認每個作品的演出區間，前後安排是否重疊。</p>
                                         <p class="notice-text body-01 style-smaller">如您在選擇時間時安排有誤，還請自行承擔負責。</p>
                                     </div>
-                                    <div class="notice-item-wrap">
+                                    <div class="notice-item-wrap notice-item-area notice-item-train">
                                         <div class="item-caption body-01 style-smaller">
                                             微醺列車 THE GREAT TIPSY：BON VOYAGE
                                         </div>
@@ -522,7 +504,7 @@
                                             <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
                                         </ul>
                                     </div>
-                                    <div class="notice-item-wrap">
+                                    <div class="notice-item-wrap notice-item-area notice-item-flight">
                                         <div class="item-caption body-01 style-smaller">
                                             FLIGHT 無光飛航
                                         </div>
@@ -531,7 +513,7 @@
                                             <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
                                         </ul>
                                     </div>
-                                    <div class="notice-item-wrap">
+                                    <div class="notice-item-wrap notice-item-area notice-item-boat">
                                         <div class="item-caption body-01 style-smaller">
                                             Boat for ONE 單程船票
                                         </div>
@@ -549,22 +531,19 @@
                                 <table class="booking-data-table body-03">
                                     <tr>
                                         <th>姓名</th>
-                                        <td>林美花</td>
+                                        <td id="filled-name">林美花</td>
                                     </tr>
                                     <tr>
                                         <th>電話</th>
-                                        <td>095555555555</td>
+                                        <td id="filled-telephone">095555555555</td>
                                     </tr>
                                     <tr>
                                         <th>電子信箱</th>
-                                        <td>abc@abc.com</td>
+                                        <td id="filled-email">abc@abc.com</td>
                                     </tr>
                                     <tr>
                                         <th>其他備註</th>
-                                        <td>
-                                            備註第一行<br>
-                                            第二行
-                                        </td>
+                                        <td style="white-space: break-spaces;" id="filled-remark"></td>
                                     </tr>
                                     <tr>
                                         <th>折扣序號</th>

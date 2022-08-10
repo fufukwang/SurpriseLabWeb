@@ -24,6 +24,9 @@ $(function() {
 
     let $ticket_value = '';
     let $people_value = 0;
+    let $pro_train = 0;
+    let $pro_flight = 0;
+    let $pro_boat = 0;
 /*
     let flag_ticket = false;
     let flag_count = false;
@@ -147,27 +150,25 @@ $(function() {
                     boat_date_enble = true;
                 break;
             }
-            $('.form-wrap-step-2 fieldset').hide();
+            $('.form-wrap-step-2 fieldset').hide(); // 整個日期選項
+            $('.dropdown-time').hide(); // dropdown 選項
+            $('.notice-item-area').hide(); // 最後的時間顯示
             // 讀取可選場次
             if(train_date_enble){
                 let booking_date = $("#js-datepicker-train");
-                createDatepicker(booking_date);
-                $('.from-block-train').show();
+                $('.from-block-train,.notice-item-train').show();
+                createDatepicker(booking_date,'train');
             }
             if(flight_date_enble){
                 let booking_date = $("#js-datepicker-flight");
-                createDatepicker(booking_date);
-                $('.from-block-flight').show();
+                $('.from-block-flight,.notice-item-flight').show();
+                createDatepicker(booking_date,'flight');
             }
             if(boat_date_enble){
                 let booking_date = $("#js-datepicker-boat");
-                createDatepicker(booking_date);
-                $('.from-block-boat').show();
+                $('.from-block-boat,.notice-item-boat').show();
+                createDatepicker(booking_date,'boat');
             }
-
-
-
-
             $step1_scenes.hide();
             $step2_scenes.show();
             $("html,body").animate({scrollTop: 0}, 300);
@@ -175,7 +176,7 @@ $(function() {
             $(this).addClass('status-disabled');
         }
     });
-    function createDatepicker(item){
+    function createDatepicker(item,type){
         let booking_date = item;
         let enableDays = [];
         if(!isNaN($people_value)){
@@ -202,16 +203,112 @@ $(function() {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;
                         setTimeout(function () {inst.dpDiv.css({top: $top});}, 0);
                     },
+                    onSelect: function(date, inst){
+                        $.get('/terminal/GetAjaxData',{
+                            'act':'getByday',
+                            'ticketType':$ticket_value,
+                            'day':date,
+                            'pople':$people_value,
+                        },function(obj){
+                            if(obj.length>0){
+                                let html = '';
+                                for(i=0;i<obj.length;i++){ html += '<li class="dropdown-item body-04">'+obj[i].day_parts+'</li>'; }
+                                $('ul[aria-labelledby=dropdownMenuButtonPeriod-'+type+']').html(html);
+                                $('.dropdownMenuButtonPeriod-'+type).text('選擇時段');
+                                $('.dropdown-datepart-'+type).show();
+                                $('.dropdown-time-'+type).hide();
+                                if(type == 'train'){ $pro_train = 0; }
+                                if(type == 'flight'){ $pro_flight = 0; }
+                                if(type == 'boat'){ $pro_boat = 0; }
+                                controlStep3Button();
+                            } else {
+                                alert("此日期座位不足喔!!\n請再重新選擇日期!");
+                                return false;
+                            }
+                        },'json');
+                    }
                 });
                 $.unblockUI();
             },'json');
         }
     }
 
-
     // step 2
-
-
+    $('#dropdownMenuButtonPeriod-train').parent().on('click','ul li',function(){
+        let val = $(this).text();
+        $('#dropdownMenuButtonPeriod-train').text(val);
+        $pro_train = 0;
+        getActivateId('train');
+    });
+    $('#dropdownMenuButtonPeriod-flight').parent().on('click','ul li',function(){
+        let val = $(this).text();
+        $('#dropdownMenuButtonPeriod-flight').text(val);
+        $pro_flight = 0;
+        getActivateId('flight');
+    });
+    $('#dropdownMenuButtonPeriod-boat').parent().on('click','ul li',function(){
+        let val = $(this).text();
+        $('#dropdownMenuButtonPeriod-boat').text(val);
+        $pro_boat = 0;
+        getActivateId('boat');
+    });
+    function getActivateId(type){
+        $.get('/terminal/GetAjaxData',{
+            'act':'getBydartpart',
+            'ticketType': $ticket_value,
+            'day': $('#js-datepicker-'+type).val(),
+            'day_parts': $('#dropdownMenuButtonPeriod-'+type).text(),
+            'pople': $people_value,
+        },function(obj){
+            if(obj.length>0){
+                let html = '';
+                for(i=0;i<obj.length;i++){ 
+                    var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位'
+                    html += '<li class="dropdown-item body-04" data-id="'+obj[i].id+'">'+range+'</li>'; 
+                }
+                $('ul[aria-labelledby=dropdownMenuButtonTime-'+type+']').html(html);
+                $('#dropdownMenuButtonTime-'+type).text('選擇時間');
+                $('.dropdown-time-'+type).show();
+                controlStep3Button();
+            }
+        },'json');
+    }
+    $('#dropdownMenuButtonTime-train').parent().on('click','ul li',function(){
+        let val = $(this).text();
+        $('#dropdownMenuButtonTime-train').text(val);
+        $pro_train = $(this).data('id');
+        $('.notice-item-train').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-train").val());
+        $('.notice-item-train').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
+        controlStep3Button();
+    });
+    $('#dropdownMenuButtonTime-flight').parent().on('click','ul li',function(){
+        let val = $(this).text();
+        $('#dropdownMenuButtonTime-flight').text(val);
+        $pro_flight = $(this).data('id');
+        $('.notice-item-flight').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-flight").val());
+        $('.notice-item-flight').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
+        controlStep3Button();
+    });
+    $('#dropdownMenuButtonTime-boat').parent().on('click','ul li',function(){
+        let val = $(this).text();
+        $('#dropdownMenuButtonTime-boat').text(val);
+        $pro_boat = $(this).data('id');
+        $('.notice-item-boat').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-boat").val());
+        $('.notice-item-boat').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
+        controlStep3Button();
+    });
+    // control next button disabled
+    function controlStep3Button() {
+        if (
+            (($('.from-block-train').is(":visible") && $pro_train>0) || $('.from-block-train').is(":hidden")) &&
+            (($('.from-block-flight').is(":visible") && $pro_flight>0) || $('.from-block-flight').is(":hidden")) &&
+            (($('.from-block-boat').is(":visible") && $pro_boat>0) || $('.from-block-boat').is(":hidden"))
+        ) {
+            $btn_next2.removeClass('status-disabled');
+        } else {
+            $btn_next2.addClass('status-disabled');
+        }
+    }
     // back to step 1
     $btn_prev2.on('click', function(){
         $step2_scenes.hide();
@@ -223,18 +320,120 @@ $(function() {
         if ( !$(this).hasClass('status-disabled') ) { 
             $step2_scenes.hide();
             $step3_scenes.show();
+            $("html,body").animate({scrollTop: 0}, 300);
         } else {
             $(this).addClass('status-disabled');
         }
     });
-    // step 3
 
+
+    // step 3
+    // Only number
+    $('#telephone').bind('keyup paste', function(){
+        this.value = this.value.replace(/[^0-9\+\-\ ]/g, '');
+    });
+    let $input_name = $('#name');
+    let $input_tel = $('#telephone');
+    let $input_email = $('#email');
+    let $checkbox_agree_rules = $('#agree-rules');
+    let $checkbox_agree_privacy = $('#agree-privacy');
+
+    let flag_name = false;
+    let flag_tel = false;
+    let flag_email = false;
+    let flag_agree_rules = false;
+    let flag_agree_privacy = false;
+
+    let format_flag_tel = false;
+    let format_flag_email = false;
+
+    let tel_rule = /^09\d{8}$/;
+    let email_rule = /^(\w|\.|\-)+@(\w|\.|\-)+\.(\w|\.|\-)+$/;
+
+
+    // control next button disabled
+    function controlButton() {
+        if ( flag_name && flag_tel && flag_email && flag_agree_rules && flag_agree_privacy ) {
+            $btn_next3.removeClass('status-disabled');
+        } else {
+            $btn_next3.addClass('status-disabled');
+        }
+    }
+
+    // verify input
+    function verifyInput() {
+        flag_name = $input_name.val().length == 0 ? false : true;
+        flag_tel = $input_tel.val().length == 0 ? false : true;
+        flag_email = $input_email.val().length == 0 ? false : true;
+        controlButton();
+    }
+
+    // verify checkbox
+    function verifyCheckbox() {
+        flag_agree_rules = $checkbox_agree_rules.prop('checked');
+        flag_agree_privacy = $checkbox_agree_privacy.prop('checked');
+        controlButton();
+    }
+
+
+    // verify input
+    $('input[type="text"]').on('input', function(){
+        verifyInput();
+    });
+
+    // verify checkbox
+    $('input[type="checkbox"]').parents('.form-group').on('click', function(){
+        verifyCheckbox();
+    });
+
+    // go step 4 button
+    $btn_next3.on('click', function(){
+        
+        if ( !$(this).hasClass('status-disabled') ) {
+            
+            // verify format
+            format_flag_tel = tel_rule.test($input_tel.val());
+            format_flag_email = email_rule.test($input_email.val());
+
+            if ( format_flag_tel ) {
+                $input_tel.parents('.form-group').removeClass('error-style');
+            } else {
+                $input_tel.parents('.form-group').addClass('error-style');
+            }
+
+            if ( format_flag_email ) {
+                $input_email.parents('.form-group').removeClass('error-style');
+            } else {
+                $input_email.parents('.form-group').addClass('error-style');
+            }
+
+            // enabled
+            if ( format_flag_tel && format_flag_email ) {
+                $(this).removeClass('status-disabled');
+                $('#filled-name').text($input_name.val());
+                $('#filled-telephone').text($input_tel.val());
+                $('#filled-email').text($input_email.val());
+                $('#filled-remark').text($('#remark').val());
+                $step3_scenes.hide();
+                $step4_scenes.show();
+                $("html,body").animate({scrollTop: 0}, 300);
+            } else {
+                $(this).addClass('status-disabled');
+            }
+        }
+    });
+
+    /* init */
+    verifyInput();
+    verifyCheckbox();
 
     // back to step 2
     $btn_prev3.on('click', function(){
         $step3_scenes.hide();
         $step2_scenes.show();
     });
+
+
     // step 4
 
 
