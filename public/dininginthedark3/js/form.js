@@ -592,10 +592,10 @@ $('.verification-code').on('click', function () {
 
             // 票種限制可選擇時間範圍
             if(data.ticket == "雙人套票"){
-                maxDateVal = new Date(2022, 10, 13);
+                maxDateVal = new Date(2022, 11, 11);
             }
             if(data.ticket == "雙菜單套票"){
-                maxDateVal = new Date(2023, 8, 30);
+                maxDateVal = new Date(2023, 9, 31);
             }
             
 
