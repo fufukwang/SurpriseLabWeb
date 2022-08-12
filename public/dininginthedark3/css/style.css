@@ -1876,30 +1876,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media (min-width: 1200px) {
   #Contact .sec-contact .contact-sec:not(:first-child) {
-    padding-top: calc((720px + 30px) * 0.0322);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Contact .sec-contact .contact-sec:not(:first-child) {
-    padding-top: calc((900px + 30px) * 0.0322);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Contact .sec-contact .contact-sec:not(:first-child) {
-    padding-top: calc((1088px + 30px) * 0.0322);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Contact .sec-contact .contact-sec:not(:first-child) {
-    padding-top: calc(100% * 0.0322);
-  }
-}
-
-@media (min-width: 1200px) {
-  #Contact .sec-contact .contact-sec:not(:first-child) {
     margin-top: calc((720px + 30px) * 0.0322);
   }
 }
@@ -1920,17 +1896,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   #Contact .sec-contact .contact-sec:not(:first-child) {
     margin-top: calc(100% * 0.0322);
   }
-}
-
-#Contact .sec-contact .contact-sec:not(:first-child)::before {
-  position: absolute;
-  content: '';
-  width: 451px;
-  max-width: 100%;
-  height: 1px;
-  background: #EFEFEF;
-  top: 0;
-  right: 0;
 }
 
 #Contact .sec-contact .contact-sec .contact-sec-title {
