@@ -490,14 +490,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a>
                                         </p>
                                     </div>
-                                    <div class="contact-sec">
+                                    <!-- <div class="contact-sec">
                                         <div class="contact-sec-title highlight">
                                             地址
                                         </div>
                                         <p>
                                             台北市大安區，捷運忠孝敦化站
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
