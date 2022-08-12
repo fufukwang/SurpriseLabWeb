@@ -66,6 +66,7 @@ class AdminController extends Controller
         $admin->clubtomorrow = $request->has('clubtomorrow') ? $input['clubtomorrow'] : 0;
         $admin->tgt2 = $request->has('tgt2') ? $input['tgt2'] : 0;
         $admin->dark3 = $request->has('dark3') ? $input['dark3'] : 0;
+        $admin->terminal = $request->has('terminal') ? $input['terminal'] : 0;
         $admin->password = md5($input['password']);
         $admin->save();
 
@@ -115,6 +116,7 @@ class AdminController extends Controller
         $admin->clubtomorrow = $request->has('clubtomorrow') ? $input['clubtomorrow'] : 0;
         $admin->tgt2 = $request->has('tgt2') ? $input['tgt2'] : 0;
         $admin->dark3 = $request->has('dark3') ? $input['dark3'] : 0;
+        $admin->terminal = $request->has('terminal') ? $input['terminal'] : 0;
         $admin->password = md5($input['password']); //將$input裡面的資料中的title指定到table中的title欄位
         $admin->save();
         return redirect('/admin');

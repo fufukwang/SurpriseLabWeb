@@ -11,7 +11,7 @@ $(document).ready(function () {
     ).done(function(data) {
         // data1 = data1[0];
         // var data = data1[0];
-console.log(data);
+
 
         // 階段總人數
         // var SaleStep1_amount = data1['pledged_unit_count'];

@@ -227,6 +227,67 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('setting/store', 'dark3\SpecialController@postSettingStore');
     });
 
+    // 落日轉運站 S3
+    Route::group(['prefix' => 'terminal'], function(){
+        Route::get('backmes','terminal\BackController@BackMes');
+        Route::post('backmes','terminal\BackController@BackMes');
+        Route::get('backme/{id}','terminal\BackController@BackMe');
+        Route::delete('backme/{id}/delete','terminal\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','terminal\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','terminal\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','terminal\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','terminal\BackController@infoUpdate');
+        Route::post('backmes/CanelCoupon','terminal\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','terminal\BackController@NotUseXls');
+        Route::post('uploadxlsx','terminal\BackController@UploadXlsx2Db');
+
+        // coupon
+        Route::get('coupons','terminal\BackController@Coupons');
+        Route::get('coupon/{id}','terminal\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','terminal\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','terminal\BackController@Pros');
+        Route::get('pro/{id}/edit','terminal\BackController@ProEdit');
+        Route::post('pro/{id}/update','terminal\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','terminal\BackController@ProDelete');
+        Route::post('pros','terminal\BackController@Pros');
+        Route::post('pros/output/only','terminal\BackController@ProOutputSite');
+
+        // 訂單
+        Route::get('orders/{id}','terminal\OrderController@Orders');
+        Route::get('order/{id}/edit','terminal\OrderController@OrderEdit');
+        Route::post('order/{id}/update','terminal\OrderController@OrderUpdate');
+        Route::delete('order/{id}/delete','terminal\OrderController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','terminal\OrderController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','terminal\OrderController@AppointmentUpdate');
+
+        // 報表列印
+        Route::get('print','terminal\OrderController@Print');
+        Route::get('table','terminal\OrderController@Table');
+        Route::get('xls/data/output','terminal\OrderController@XlsDataOuput');
+        Route::get('xls/emaildata/output','terminal\OrderController@XlsEmailDataOuput');
+        Route::post('order/{id}/resent','terminal\OrderController@beSentOrderMail');
+
+        // 發票相關
+        Route::post('order/inv/single/open','terminal\InvController@singleInvOpne');
+        Route::post('order/inv/mult/open','terminal\InvController@muInvOpen');
+        Route::post('order/inv/cancal','terminal\InvController@InvClose');
+
+        // 主揪相關
+        Route::post('getMasterData', 'terminal\MasterController@getMasterAndSend');
+        Route::post('postReSendMail', 'terminal\MasterController@postReSendMail');
+        Route::post('postReSendSMS', 'terminal\MasterController@postReSendSMS');
+        Route::get('getMasterList','terminal\MasterController@getMasterList');
+        Route::post('postMaster/{id}/store','terminal\MasterController@postMasterStore');
+        Route::delete('postMaster/{id}/delete','terminal\MasterController@postMasterDelete');
+
+        // 特殊場次設定
+        Route::get('special/setting', 'terminal\SpecialController@getSpecialSetting');
+        Route::get('discount/setting', 'terminal\SpecialController@getDiscountSetting');
+        Route::post('setting/store', 'terminal\SpecialController@postSettingStore');
+    });
+
 
 
     // 微醺大飯店 S1
@@ -616,6 +677,25 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
     });
+if(env('APP_ENV') != 'production'){
+    // terminal 落日轉運站
+    Route::group(['prefix' => 'terminal'], function(){
+        Route::get('/',function(){ return view('terminal.frontend.home'); });
+        Route::get('/index.html',function(){ return view('terminal.frontend.home'); });
+        Route::get('rules',function(){ return view('terminal.frontend.rules'); });
+        // 劃位
+        Route::get('booking_now',function(){ return view('terminal.frontend.booking_now'); });
+        Route::get('booking',function(){ return view('terminal.frontend.booking'); });
+        // 藍新金流路由
+        Route::post('Neweb.OrderPay', 'terminal\NewPayController@postOrderByNeweb'); // 存訂單
+        Route::post('Neweb.ReturnResult', 'terminal\NewPayController@postReturnByNeweb'); // 回傳內容
+        Route::post('Neweb.BackReturn', 'terminal\NewPayController@postBackReturn'); // 背景回傳
+
+        Route::get('GetAjaxData','terminal\FrontController@GetAjaxData');
+        Route::post('PostAjaxData','terminal\FrontController@PostAjaxData');
+        // Route::post('ReOrderData','terminal\FrontController@ReOrderData');
+    });
+}
     // thegreattipsy S2
     Route::group(['prefix' => 'thegreattipsy'], function(){
         Route::get('index.html',function(){ return view('thegreattipsy.frontend.home'); });

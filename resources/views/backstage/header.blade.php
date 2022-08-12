@@ -147,7 +147,7 @@
                         </ul>
                     </li>
                     @endif
-                    @if( Session::get('key')->thegreattipsy || Session::get('key')->tgt2 )
+                    @if( Session::get('key')->tgt2 )
                     <li class="has-submenu @if(Request::segment(1) === 'thegreattipsyS2')active @endif">
                         <a href="#"><i class="md md-invert-colors-on"></i>微醺大飯店S2</a>
                         <ul class="submenu" style="left:0;right:auto">
@@ -184,6 +184,21 @@
 
                         </ul>
                     </li>
+                    @if( Session::get('key')->terminal )
+                    <li class="has-submenu @if(Request::segment(1) === 'terminal')active @endif">
+                        <a href="#"><i class="md md-local-airport"></i>落日轉運站</a>
+                        <ul class="submenu" style="left:0;right:auto">
+
+                            <li><a href="/terminal/pros">Activaty</a></li>
+                            <!-- <li><a href="/terminal/backmes">Backme</a></li> -->
+                            <li><a href="/terminal/discount/setting">Coupon</a></li>
+                            <li><a href="/terminal/print">Order</a></li>
+                            <li><a href="/terminal/getMasterList">Master</a></li>
+                            <!-- <li><a href="/terminal/special/setting">Special</a></li> -->
+
+                        </ul>
+                    </li>
+                    @endif
                 @endif
                 </ul>
                 <!-- End navigation menu -->

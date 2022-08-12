@@ -1,0 +1,57 @@
+//------------------
+// Fonts
+//------------------
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+$font-sans: 'Noto Sans TC', sans-serif;
+$font-saira: 'Saira Condensed', 'Noto Sans TC', sans-serif;
+$font-shrikhand: 'Shrikhand', cursive;
+
+//------------------
+// Color
+//------------------
+
+// Neutrals (N)
+$color-n100: #ffffff;
+$color-n200: #e1e1e1;
+$color-n300: #707070;
+$color-n400: #2c2c30;
+$color-n500: #231e23;
+
+// Orange (O)
+$color-o100: #efcabf;
+$color-o200: #ff9c9c;
+$color-o300: #dd7777;
+$color-o400: #ad4039;
+$color-o500: #872626;
+$color-o600: #221514;
+
+// Blue (B)
+$color-b100: #6a65d5;
+$color-b200: #544fc6;
+$color-b300: #70729e;
+$color-b400: #232666;
+
+// Red (R)
+$color-r100: #ff9db2;
+$color-r200: #ff5b7e;
+$color-r300: #b61033;
+$color-r400: #ff291f;
+$color-r500: #7e3c70;
+
+// Loading Colors
+:root {
+    --loading-bg: #232666;
+    --loading-ball: #dd7777;
+}
+
+//------------------
+// Style
+//------------------
+
+// Letter Spacing
+$letter-spacing-50: 0.05em;
+$letter-spacing-100: 0.1em;
+$letter-spacing-200: 0.2em;

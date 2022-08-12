@@ -1,0 +1,71 @@
+// Variable
+@import 'variable';
+
+// Override Bootstrap
+@import 'reset';
+
+// Section
+.section-wrap {
+    padding: 156px 0 110px;
+
+    @media screen and (max-width: 1199.98px) {
+        padding: 120px 0;
+    }
+}
+
+// A Template
+.a-content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img-wrap {
+        width: 441px;
+        margin-bottom: 30px;
+        display: none;
+
+        @media screen and (max-width: 1199.98px) {
+            width: 100%;
+            max-width: 299px;
+            margin-bottom: 36px;
+        }
+    }
+
+    .text-wrap {
+        text-align: center;
+        margin-top: 42px;
+
+        @media screen and (max-width: 1199.98px) {
+            margin-top: 36px;
+        }
+
+        h6 {
+            margin-bottom: 20px;
+
+            @media screen and (max-width: 1199.98px) {
+                margin-bottom: 24px;
+            }
+        }
+
+        p + p {
+            margin-top: 12px;
+
+            @media screen and (max-width: 1199.98px) {
+                margin-top: 18px;
+            }
+        }
+
+        a {
+            font-size: inherit;
+
+            @media screen and (max-width: 1199.98px) {
+                display: inline-block;
+            }
+        }
+    }
+
+    .cta-wrap {
+        margin-top: 42px;
+    }
+}

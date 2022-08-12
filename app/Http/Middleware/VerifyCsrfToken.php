@@ -25,5 +25,8 @@ class VerifyCsrfToken extends BaseVerifier
         // 無光 S3
         '/dininginthedark3/Neweb.ReturnResult',
         '/dininginthedark3/Neweb.BackReturn',
+        // 落日轉運站
+        '/terminal/Neweb.ReturnResult',
+        '/terminal/Neweb.BackReturn',
     ];
 }

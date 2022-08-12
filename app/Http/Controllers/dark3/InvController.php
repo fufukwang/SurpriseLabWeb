@@ -188,7 +188,7 @@ class InvController extends Controller
                     'CarrierNum' => rawurlencode(''),
                     'LoveCode' => '',
                     'PrintFlag' => 'Y',
-                    'ItemName' => '微醺大飯店票券('.$row->pople.'人票)', //多項商品時，以「|」分開
+                    'ItemName' => '無光晚餐S3票券('.$row->pople.'人票)', //多項商品時，以「|」分開
                     'ItemCount' => 1, //多項商品時，以「|」分開
                     'ItemUnit' => '組', //多項商品時，以「|」分開
                     'ItemPrice' => $totleamt / $row->pople, //多項商品時，以「|」分開
