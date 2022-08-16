@@ -94,6 +94,16 @@ class OrderController extends WebController
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
             // 觸發補寄
             try {
+                if($request->has('train-store') && $request->has('train-id') && $request->has('train') && $request['train-store'] ==1){
+                    DB::table('terminal_pro_order')->where('id',$request['train-id'])->update(['pro_id'=>$request->train]);
+                }
+                if($request->has('flight-store') && $request->has('flight-id') && $request->has('flight') && $request['flight-store'] ==1){
+                    DB::table('terminal_pro_order')->where('id',$request['flight-id'])->update(['pro_id'=>$request->flight]);
+                }
+                if($request->has('boat-store') && $request->has('boat-id') && $request->has('boat') && $request['boat-store'] ==1){
+                    DB::table('terminal_pro_order')->where('id',$request['boat-id'])->update(['pro_id'=>$request->boat]);
+                }
+                /*
                 $order = order::select('plan')->find($id);
                 $proOrder = DB::table('terminal_pro_order')->where('order_id',$id)->get();
                 switch($order->plan){
@@ -116,6 +126,7 @@ class OrderController extends WebController
                         DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[2]->id)->update(['order_id'=>$id,'pro_id'=>$request->boat]);
                         break;
                 }
+                */
 
                 /*
                 $order = order::select('terminalorder.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites')->find($id);
@@ -171,6 +182,7 @@ class OrderController extends WebController
         $order = order::select('sn')->find($id);
         if($order){
             coupon::where('o_id',$order->sn)->update(['o_id'=>-1]);
+            DB::table('terminal_pro_order')->where('order_id',$id)->delete();
         }
         order::where('id',$id)->delete();
         return Response::json(['message'=> '訂單已刪除'], 200);
@@ -323,161 +335,19 @@ class OrderController extends WebController
 
 
     public function Print(Request $request){
-        $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','terminalorder.manage','terminalpro.money AS PM','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan');
-
-        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('srday')  && $request->srday!=1){
-            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
-            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
-        }
-        
-        if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
-
-
-        if($request->has('special')){
-            if($request->special == 1){
-                $order->where('is_overseas',9); 
-            }
-            if($request->special == 0){
-                $order->where('is_overseas','<',5); 
-            }
-        }
-
-        if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
-        if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(terminalorder.pay_status='已付款' OR (terminalorder.pay_type='現場付款' AND terminalorder.pay_status<>'取消訂位'))");
-        } elseif($request->pay_status!=''){
-            $order->where('terminalorder.pay_status',$request->pay_status);  
-        } 
-        if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
-        if($request->has('search') && $request->search!=''){
-            $search = $request->search;
-            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
-        }
-        if($request->has('code') && $request->code!=''){
-            $text = trim($request->code);
-            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
-                code LIKE '%{$text}%'
-            )")->get();
-            $order = $order->whereIn('sn',$coupons->toArray());
-
-
-            // $order = $order->whereRaw("(SELECT COUNT(id) FROM(terminalcoupon) WHERE code='{$request->code}' AND terminalcoupon.o_id=terminalorder.sn)>0");
-        }
-
-        if($request->has('order') && $request->order!=''){
-            $ord = explode('|',$request->order);
-            if(count($ord)>0){
-                if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
-                $order = $order->OrderBy($ord[0],$ord[1]);
-            }
-        } else { $order = $order->orderBy('terminalorder.updated_at','desc'); }
+        $order = $this->getOrderSearch($request);
         $order = $order->paginate($this->perpage);
-
         return view('terminal.backend.print',compact('order','request'));
     }
 
     public function Table(Request $request){
-        $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','terminalorder.manage','terminalpro.money AS PM','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type');
-        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('srday')  && $request->srday!=1){
-            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
-            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
-        }
-
-        if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
-
-        if($request->has('special')){
-            if($request->special == 1){
-                $order->where('is_overseas',9); 
-            }
-            if($request->special == 0){
-                $order->where('is_overseas','<',5); 
-            }
-        }
-
-        if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
-        if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(terminalorder.pay_status='已付款' OR (terminalorder.pay_type='現場付款' AND terminalorder.pay_status<>'取消訂位'))");
-        } elseif($request->pay_status!=''){
-            $order->where('terminalorder.pay_status',$request->pay_status);  
-        } 
-        if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
-        if($request->has('search') && $request->search!=''){
-            $search = $request->search;
-            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
-        }
-        if($request->has('code') && $request->code!=''){
-            $text = trim($request->code);
-            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
-                code LIKE '%{$text}%'
-            )")->get();
-            $order = $order->whereIn('sn',$coupons->toArray());
-            // $order = $order->whereRaw("(SELECT COUNT(id) FROM(terminalcoupon) WHERE code='{$request->code}' AND terminalcoupon.o_id=terminalorder.sn)>0");
-        }
-
-        if($request->has('order') && $request->order!=''){
-            $ord = explode('|',$request->order);
-            if(count($ord)>0){
-                if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
-                $order = $order->OrderBy($ord[0],$ord[1]);
-            }
-        } else { $order = $order->orderBy('terminalorder.updated_at','desc'); }
+        $order = $this->getOrderSearch($request);
         $order = $order->get();
-        
-
         return view('terminal.backend.table',compact('order','request'));
     }
 
     public function XlsDataOuput(Request $request){
-        $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','notes','terminalorder.manage','terminalpro.money AS PM','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','day_parts','day','email','pay_type','pople','pro_id','dis_code','is_overseas','edit_type','result');
-        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('srday')  && $request->srday!=1){
-            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
-            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);
-        }
-
-        if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
-
-        if($request->has('special')){
-            if($request->special == 1){
-                $order->where('is_overseas',9); 
-            }
-            if($request->special == 0){
-                $order->where('is_overseas','<',5); 
-            }
-        }
-        
-        if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
-        if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(terminalorder.pay_status='已付款' OR (terminalorder.pay_type='現場付款' AND terminalorder.pay_status<>'取消訂位'))");
-        } elseif($request->pay_status!=''){
-            $order->where('terminalorder.pay_status',$request->pay_status);  
-        } 
-        if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
-        if($request->has('search') && $request->search!=''){
-            $search = $request->search;
-            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
-        }
-        if($request->has('code') && $request->code!=''){
-            $text = trim($request->code);
-            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
-                code LIKE '%{$text}%'
-            )")->get();
-            $order = $order->whereIn('sn',$coupons->toArray());
-            // $order = $order->whereRaw("(SELECT COUNT(id) FROM(terminalcoupon) WHERE code='{$request->code}' AND terminalcoupon.o_id=terminalorder.sn)>0");
-        }
-
-        if($request->has('order') && $request->order!=''){
-            $ord = explode('|',$request->order);
-            if(count($ord)>0){
-                if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
-                $order = $order->OrderBy($ord[0],$ord[1]);
-            }
-        } else { $order = $order->orderBy('terminalorder.updated_at','desc'); }
+        $order = $this->getOrderSearch($request);
         $order = $order->get();
 
         $cellData = $order->toArray();
@@ -527,11 +397,24 @@ class OrderController extends WebController
                     }
                     
                     if($pay_status !== '已付款') $pay_money = 0;
-
+                    $plan = '';
+                    switch($row['plan']){
+                        case 'train': $plan = "微醺列車 The Great Tipsy : The Next Stop"; break;
+                        case 'flight': $plan = "FLIGHT 無光飛航"; break;
+                        case 'boat': $plan = "Boat for ONE 單人船票"; break;
+                        case 'A': $plan = "套票A：Train+Flight"; break;
+                        case 'B': $plan = "套票B：Train+Flight+Boat"; break;
+                    }
+                    $day = $plan;
+                    $range = $plan;
+                    foreach(DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('order_id',$row['id'])->get() as $r){
+                        $day .= "\r\n{$r->day} {$r->day_parts} ";
+                        $range .= "\r\n" . substr($r->rang_start,0,5) . " ~ " . substr($r->rang_end,0,5) . "({$r->ticket_type})";
+                    }
 
                     $sheetRow = [
-                        $row['day'],
-                        substr($row['rang_start'],0,5).'~'.substr($row['rang_end'],0,5),
+                        $day,
+                        $range,
                         $row['name'],
                         $row['tel'],
                         $row['email'],
@@ -549,6 +432,8 @@ class OrderController extends WebController
 
                 $zero = $sheet->rows($data);
                 for($i=0;$i<count($data);$i++){
+                    $zero->getStyle('A'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('B'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('G'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('H'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('I'.$i)->getAlignment()->setWrapText(true);
@@ -595,6 +480,91 @@ class OrderController extends WebController
         return Response::json(['message'=> '已更新'], 200);
     }
 
+
+
+    private function getOrderSearch(Request $request){
+        try {
+            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result');
+
+            //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
+            if($request->has('srday')  && $request->srday!=1){
+                /*
+                if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+                if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
+                */
+                $order->whereIn('id', function($query) use ($request)
+                {
+                    $query->select('order_id')
+                      ->leftJoin('terminal_pro_order', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
+                      ->groupBy('order_id')
+                      ->from('terminalpro');
+                    if($request->has('daystart') && $request->daystart!='') $query->where('day','>=',$request->daystart);
+                    if($request->has('dayend') && $request->dayend!='') $query->where('day','>=',$request->dayend);
+                });
+            }
+            if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
+            if($request->has('special')){
+                if($request->special == 1){
+                    $order->where('is_overseas',9); 
+                }
+                if($request->special == 0){
+                    $order->where('is_overseas','<',5); 
+                }
+            }
+
+            if($request->has('dayparts') && $request->dayparts!=''){
+                $order->whereIn('id', function($query) use ($request)
+                {
+                    $query->select('order_id')
+                      ->leftJoin('terminal_pro_order', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
+                      ->groupBy('order_id')
+                      ->from('terminalpro');
+                    $query->where('dayparts',$request->dayparts);
+                });
+            }
+            if($request->has('ticket_type') && $request->ticket_type!=''){
+                $order->whereIn('id', function($query) use ($request)
+                {
+                    $query->select('order_id')
+                      ->leftJoin('terminal_pro_order', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
+                      ->groupBy('order_id')
+                      ->from('terminalpro');
+                    $query->where('ticket_type',$request->ticket_type);
+                });
+            }
+            if($request->has('pay_status') && $request->pay_status=='已預約'){
+                $order->whereRaw("(terminalorder.pay_status='已付款' OR terminalorder.pay_status='已付款(部分退款)')");
+            } elseif($request->pay_status!=''){
+                $order->where('terminalorder.pay_status',$request->pay_status);  
+            } 
+            if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
+            if($request->has('plan') && $request->plan!='') $order->where('plan',$request->plan);
+            if($request->has('search') && $request->search!=''){
+                $search = $request->search;
+                $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
+            }
+            if($request->has('code') && $request->code!=''){
+                $text = trim($request->code);
+                $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
+                    code LIKE '%{$text}%'
+                )")->get();
+                $order = $order->whereIn('sn',$coupons->toArray());
+            }
+            if($request->has('discount') && $request->discount!='') $order->where('dis_code',strtoupper($request->discount));
+
+            if($request->has('order') && $request->order!=''){
+                $ord = explode('|',$request->order);
+                if(count($ord)>0){
+                    if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
+                    $order = $order->OrderBy($ord[0],$ord[1]);
+                }
+            } else { $order = $order->orderBy('terminalorder.updated_at','desc'); }
+
+            return $order;
+        } catch (Exception $e){
+            Log::error($e);
+        }
+    }
 }
 
 

@@ -72,7 +72,7 @@
    $pay_money = '';
    $coupons = App\model\terminal\coupon::where('o_id',$row->sn)->get();
                     
-   if(count($coupons)>0){
+   if($coupons && count($coupons)>0){
       foreach($coupons as $c){
          if($coupon!=''){
             $coupon .= "<br >";
@@ -90,7 +90,22 @@
 		<tr>
 			<td rowspan="2"></td>
 			<td rowspan="2"></td>
-			<td>{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
+			<td>
+				@if($row->plan == 'train') 微醺列車 The Great Tipsy : The Next Stop @endif
+                    @if($row->plan == 'flight') FLIGHT 無光飛航 @endif
+                    @if($row->plan == 'boat') Boat for ONE 單人船票 @endif
+                    @if($row->plan == 'A') 套票A：Train+Flight @endif
+                    @if($row->plan == 'B') 套票B：Train+Flight+Boat @endif
+                    <br />
+                    @foreach(DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('order_id',$row->id)->get() as $r)
+                        {{ $r->day }} {{ $r->day_parts }} <br />
+{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($r->rang_start,0,5))))) }} ~ 
+{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($r->rang_end,0,5))))) }} ({{ $r->ticket_type}})<br >                     
+                    @endforeach
+
+
+
+</td>
 			<td>{{ $row->name }}</td>
 			<td>{{ $pay_type}} {!! $pay_money !!} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>

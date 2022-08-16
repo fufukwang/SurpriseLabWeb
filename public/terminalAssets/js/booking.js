@@ -13,7 +13,7 @@ $(function() {
     let $btn_prev3 = $('#js-prev-btn3');
     let $btn_next3 = $('#js-next-btn3');
     let $btn_prev4 = $('#js-prev-btn4');
-    let $btn_next5 = $('#js-next-btn4');
+    let $btn_next4 = $('#js-next-btn4');
     let $s2_tr = $('#selected-ticket-tr');
     let $dropdown = $('.js-dropdown');
     let $dropdown_items = $dropdown.find('.dropdown-item');
@@ -27,6 +27,9 @@ $(function() {
     let $pro_train = 0;
     let $pro_flight = 0;
     let $pro_boat = 0;
+
+    let discountCode = '';
+    let discountAmount = 0;
 /*
     let flag_ticket = false;
     let flag_count = false;
@@ -47,7 +50,7 @@ $(function() {
     $dropdown_ticket.bind('hide.bs.dropdown', function () {
         let val = $(this).text();
         let max = 0;
-        switch(val){
+        switch(val.trim()){
             case '微醺列車': max = 6; $ticket_value = 'train'; break;
             case 'FLIGHT': max = 30; $ticket_value = 'flight'; break;
             case 'Boat for ONE': max = 1; $ticket_value = 'boat'; break;
@@ -433,13 +436,64 @@ $(function() {
         $step2_scenes.show();
     });
 
-
     // step 4
+    $('.verification-code').on('click', function () {
+        var coupon = $('input[name="coupon"]');
+        var couponVal = coupon.val(); // 取得用戶輸入的票券代碼
+        // 清除空白並驗證
+        couponVal = couponVal.trim();
+        couponVal = couponVal.toUpperCase();
+        if(discountCode == ''){
+            $.get('/dininginthedark3/GetAjaxData',{
+                'act':'CheckDiscount',
+                'code':couponVal,
+                'pople':$people_value,
+                'useType': 'pay',
+            },function(data){
+                if(data.success == 'Y'){
+                    discountCode = couponVal;
+                    discountAmount = data.money;
+                    $('.use-discount').html('折扣碼' + discountCode + ' 折抵 ' + discountAmount );
+                    $('.use-discount').addClass('active');
+                    $('.verify-layout').removeClass('error-style');
+                    $('.not-found').removeClass('active');
 
+                    // $('#discount').val(discountCode);
+                    $('.verification-code').addClass('status-disabled');
+                    $('input[name=coupon]').prop('readonly',true);
+                } else {
+                    $('.verify-layout').addClass('error-style');
+                     
+                    $('.not-found').html('找不到此筆折扣序號' );
+                    $('.not-found').addClass('active');
+                }
+            },'json');
+            coupon.val('');
+            return false;
+        } else {
+            // alert('折扣碼錯誤或多次輸入!');
+            $('.not-found').html('折扣碼限用一組' );
+            $('.not-found').addClass('active');
+            return false;
+        }
+        
+        return false;
+    });
 
     // back to step 3
     $btn_prev4.on('click', function(){
         $step4_scenes.hide();
         $step3_scenes.show();
     });
+    // 去結帳
+    $btn_next4.on('click', function(){
+        $('input[name=train]').val($pro_train);
+        $('input[name=flight]').val($pro_flight);
+        $('input[name=boat]').val($pro_boat);
+        $('input[name=booking_people]').val($people_value);
+        $('input[name=ticket_type]').val($ticket_value);
+        $('input[name=discount]').val(discountCode);
+        $('#final-form').submit();
+    });
 });
+

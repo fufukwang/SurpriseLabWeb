@@ -1214,6 +1214,11 @@ input[type="checkbox"]:checked::after {
   color: #232666;
 }
 
+.dropdown-item.disabled{
+  cursor: not-allowed!important;
+  color: #adb5bd!important;
+}
+
 .datepicker-wrap {
   position: relative;
 }

@@ -39,18 +39,42 @@ class NewPayController extends WebController
             } else {
                 $count = '1'.Carbon::now()->format('Ymd').'0001';
             }
-
             $people = $request->booking_people;
 
-            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
-            if($people>$act->Count){
-                Log::error('人數滿了');
-                return view('terminal.frontend.booking_fail');
+            $pay_type = '信用卡';
+            $money = 0;
+            $cut1 = 0; $cut2 = 0;
+            $train_check = false;$flight_check = false;$boat_check = false;
+            switch($request->ticket_type){
+                case 'train': $money = $people * 1250; $train_check = true; break;
+                case 'flight': $money = $people * 500; $flight_check = true; break;
+                case 'boat': $money = $people * 800; $boat_check = true; break;
+                case 'A': $money = $people * 1650; $train_check = true; $flight_check = true; break;
+                case 'B': $money = $people * 2400; $train_check = true; $flight_check = true; $boat_check = true; break;
             }
 
-            $pay_type = '信用卡';
-            $money = $act->money * $people;
-            $cut1 = 0; $cut2 = 0;
+            // 確認人數
+            if($train_check){
+                $act = pro::where('id',$request->train)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"))->first();
+                if($people>$act->Count){
+                    Log::error('train 人數滿了');
+                    return view('terminal.frontend.booking_fail');
+                }
+            }
+            if($flight_check){
+                $act = pro::where('id',$request->flight)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"))->first();
+                if($people>$act->Count){
+                    Log::error('flight 人數滿了');
+                    return view('terminal.frontend.booking_fail');
+                }
+            }
+            if($boat_check){
+                $act = pro::where('id',$request->boat)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"))->first();
+                if($people>$act->Count){
+                    Log::error('boat 人數滿了');
+                    return view('terminal.frontend.booking_fail');
+                }
+            }
             // 確認庫碰碼
             $coupon = 0;
             // 折扣碼
@@ -73,12 +97,12 @@ class NewPayController extends WebController
                 $pay_status = '已付款';
             }
             $data = [
-                'pro_id'     => $request->booking_time,
+                // 'pro_id'     => $request->booking_time,
                 'pople'      => $people,
                 'name'       => $request->name,
-                'tel'        => $request->phone,
+                'tel'        => $request->telephone,
                 'email'      => $request->email,
-                'notes'      => $request->notice,
+                'notes'      => $request->remark,
                 'meat'       => json_encode([]),
                 'coupon'     => $coupon,
                 'sn'         => $count,
@@ -88,18 +112,38 @@ class NewPayController extends WebController
                 'result'     => '',
                 'manage'     => $manage,
                 'is_overseas'=> 2,
-                'vegetarian' => $request->vegetarian_food,
+                'vegetarian' => 0,
                 'dis_code'   => $discountCode,
                 'dis_money'  => $cut2,
+                'plan'       => $request->ticket_type,
             ];
             // 10% 服務費
             $order = order::create($data);
-            
+            switch($data['plan']){
+                case 'boat':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$request->boat]);
+                    break;
+                case 'train':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$request->train]);
+                    break;
+                case 'flight':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$request->flight]);
+                    break;
+                case 'A':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$request->train]);
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$request->flight]);
+                    break;
+                case 'B':
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$request->train]);
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$request->flight]);
+                    DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$request->boat]);
+                    break;
+            }
             $sentSuccess = false;
             if($data['money'] == 0){
                 return view('terminal.frontend.booking_success');
             } else {
-                $comments = "無光晚餐";
+                $comments = "落日轉運站";
                 if($cut2>0){
                     $comments .= "(折扣  {$discountCode} - {$cut2})";
                 }

@@ -36,24 +36,34 @@
                                                     <span style="color:red">*方案不提供修改(價格不同)</span>
                                                 </div>
                                             </div>
-                                            @foreach(DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('order_id',$order->id)->get() as $row)
-                                            <div class="form-group hideByChange">
+                                            @foreach(DB::table('terminal_pro_order')->select('terminal_pro_order.id','ticket_type','day','day_parts','rang_start','rang_end')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('order_id',$order->id)->get() as $row)
+                                            <div class="form-group hide-form-{{ $row->ticket_type }}">
                                                 <label class="control-label col-sm-4">
                                                     @if($row->ticket_type == 'boat') Boat for ONE 單人船票 @endif
                                                     @if($row->ticket_type == 'train') 微醺列車 The Great Tipsy : The Next Stop @endif
                                                     @if($row->ticket_type == 'flight') FLIGHT 無光飛航 @endif
                                                 </label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="yo" readonly value="{{ $row->day or ''  }} {{ $row->day_parts or ''  }} {{ substr($row->rang_start,0,5)  }} ~ {{ substr($row->rang_end,0,5)  }}">
+                                                    <div class="input-group mb-3">
+                                                      <input type="text" class="form-control" value="{{ $row->day or ''  }} {{ $row->day_parts or ''  }} {{ substr($row->rang_start,0,5)  }} ~ {{ substr($row->rang_end,0,5)  }}" readonly>
+                                                      <div class="input-group-btn">
+                                                        <button class="btn btn-info change-pro-bnt" data-type="{{ $row->ticket_type }}" type="button">更改場次</button>
+                                                      </div>
+                                                    </div>
+
+
+                                                    <!-- <input type="text" class="form-control" name="yo" readonly value="{{ $row->day or ''  }} {{ $row->day_parts or ''  }} {{ substr($row->rang_start,0,5)  }} ~ {{ substr($row->rang_end,0,5)  }}"> -->
                                                 </div>
                                             </div>
+                                            <input type="hidden" name="{{$row->ticket_type}}-id" value="{{ $row->id }}">
+                                            <input type="hidden" name="{{$row->ticket_type}}-store" value="">
                                             @endforeach
 
 
                                             <div class="form-group train">
                                                 <label class="control-label col-sm-4">微醺列車 The Great Tipsy : The Next Stop</label>
                                                 <div class="col-sm-8">
-                                                    <select class="form-control" name="train" disabled>
+                                                    <select class="form-control" name="train">
                                                         @foreach($train as $row)
                                                         <option value="{{ $row->id }}"@if(isset($pro->id) && $pro->id==$row->id) selected @endif>{{ $row->day }} {{ $row->day_parts }} {{ substr($row->rang_start,0,5) }} ~ {{ substr($row->rang_end,0,5) }} (剩餘 {{$row->sites}})</option>
                                                         @endforeach
@@ -63,7 +73,7 @@
                                             <div class="form-group flight">
                                                 <label class="control-label col-sm-4">FLIGHT 無光飛航</label>
                                                 <div class="col-sm-8">
-                                                    <select class="form-control" name="flight" disabled>
+                                                    <select class="form-control" name="flight">
                                                         @foreach($flight as $row)
                                                         <option value="{{ $row->id }}"@if(isset($pro->id) && $pro->id==$row->id) selected @endif>{{ $row->day }} {{ $row->day_parts }} {{ substr($row->rang_start,0,5) }} ~ {{ substr($row->rang_end,0,5) }} (剩餘 {{$row->sites}})</option>
                                                         @endforeach
@@ -73,7 +83,7 @@
                                             <div class="form-group boat">
                                                 <label class="control-label col-sm-4">Boat for ONE 單人船票</label>
                                                 <div class="col-sm-8">
-                                                    <select class="form-control" name="boat" disabled>
+                                                    <select class="form-control" name="boat">
                                                         @foreach($boat as $row)
                                                         <option value="{{ $row->id }}"@if(isset($pro->id) && $pro->id==$row->id) selected @endif>{{ $row->day }} {{ $row->day_parts }} {{ substr($row->rang_start,0,5) }} ~ {{ substr($row->rang_end,0,5) }} (剩餘 {{$row->sites}})</option>
                                                         @endforeach
@@ -148,6 +158,7 @@
                                                     <select name="pay_status" class="form-control">
                                                         <option value="未完成"@if(isset($order->pay_status) && $order->pay_status=='未完成') selected @endif>未完成</option>
                                                         <option value="已付款"@if(isset($order->pay_status) && $order->pay_status=='已付款') selected @endif>已付款</option>
+                                                        <option value="已付款(部分退款)"@if(isset($order->pay_status) && $order->pay_status=='已付款(部分退款)') selected @endif>已付款(部分退款)</option>
                                                         <option value="取消訂位"@if(isset($order->pay_status) && $order->pay_status=='取消訂位') selected @endif>取消訂位</option>
                                                     </select>
                                                 </div>
@@ -185,7 +196,7 @@
                                             
                                             
                                             <div align="right">
-                                                <button type="button" class="btn btn-info btn-custom waves-effect w-md waves-light m-b-5 change_day">我要改期</button>
+                                                <!-- <button type="button" class="btn btn-info btn-custom waves-effect w-md waves-light m-b-5 change_day">我要改期</button> -->
                                                 <button type="submit" class="btn btn-primary btn-custom waves-effect w-md waves-light m-b-5">送出</button>
                                             </div>
                                         
@@ -279,12 +290,20 @@
 
         <script>
         $(function(){
+            /*
 $('.change_day').bind('click',function(){
     $('select[name=plan]').trigger('change');
     $('.hideByChange').hide();
     $('select[name=boat]').prop('disabled',false);
     $('select[name=train]').prop('disabled',false);
     $('select[name=flight]').prop('disabled',false);
+});
+*/
+$('.change-pro-bnt').bind('click',function(){
+    var type = $(this).data('type');
+    $('.hide-form-'+type).hide();
+    $('input[name='+type+'-store]').val('1');
+    $('.'+type).show();
 });
 $('form').bind('submit',function(){
     if(!$('select[name=pro_id]').prop('disabled')){

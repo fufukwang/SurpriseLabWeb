@@ -44,13 +44,13 @@
     <nav class="nav-wrap">
         <div class="pc-nav-wrap">
             <div class="logo-wrap">
-                <img src="images/general/brand.png" class="style-normal" alt="落日轉運站">
-                <img src="images/general/brand_hover.png" class="style-hover" alt="落日轉運站">
+                <img src="/terminalAssets/images/general/brand.png" class="style-normal" alt="落日轉運站">
+                <img src="/terminalAssets/images/general/brand_hover.png" class="style-hover" alt="落日轉運站">
             </div>
         </div>
         <div class="mobile-nav-wrap">
             <div class="logo-wrap">
-                <img src="images/general/brand.png" alt="落日轉運站">
+                <img src="/terminalAssets/images/general/brand.png" alt="落日轉運站">
             </div>
         </div>
     </nav>
@@ -62,7 +62,7 @@
                     <div class="col-12">
                         <div class="a-content-wrap">
                             <div class="img-wrap">
-                                <img class="img-fluid" src="images/other/img_success.png" alt="success">
+                                <img class="img-fluid" src="/terminalAssets/images/other/img_success.png" alt="success">
                             </div>
                             <div class="section-heading-wrap">
                                 <h1 class="heading-title">購票完成</h1>

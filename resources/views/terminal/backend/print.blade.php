@@ -25,16 +25,12 @@
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
                                         <div class="btn-group focus-btn-group"><form action="/terminal/print" id="SearchForm">
-
+                                            <div class="row">
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
 <input name="dayrange" type="text" class="form-control" placeholder="yyyy-mm-dd">
 <input type="hidden" name="daystart" value="{{ $request->daystart or Carbon\Carbon::today()->format('Y-m-d H:i:s')}}">
 <input type="hidden" name="dayend" value="{{ $request->dayend or Carbon\Carbon::today()->format('Y-m-d H:i:s')}}">
-                                                    <!--div class="input-group">
-                                                        <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="day" id="datepicker-autoclose" value="{{ $request->day or ''}}">
-                                                        <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
-                                                    </div--><!-- input-group -->
                                                 </div>
                                                 <div class="col-sm-12">不搜尋日期
 <label><input type="radio" name="srday" value="1"@if($request->srday==1) checked @endif>是</label>
@@ -47,6 +43,7 @@
                                                     <option value="">狀態</option>
                                                     <option value="已預約"@if(isset($request->pay_status) && $request->pay_status=='已預約') selected @endif>已預約</option>
                                                     <option value="已付款"@if(isset($request->pay_status) && $request->pay_status=='已付款') selected @endif>已付款</option>
+                                                    <option value="已付款(部分退款)"@if(isset($request->pay_status) && $request->pay_status=='已付款(部分退款)') selected @endif>已付款(部分退款)</option>
                                                     <option value="未完成"@if(isset($request->pay_status) && $request->pay_status=='未完成') selected @endif>未完成</option>
                                                     <option value="取消訂位"@if(isset($request->pay_status) && $request->pay_status=='取消訂位') selected @endif>取消訂位</option>
                                                 </select>
@@ -61,6 +58,24 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
+                                                <select name="ticket_type" class="form-control">
+                                                    <option value="">票種</option>
+                                                    <option value="train"@if(isset($request->ticket_type) && $request->ticket_type=='train') selected @endif>微醺列車 The Great Tipsy : The Next Stop</option>
+                                                    <option value="flight"@if(isset($request->ticket_type) && $request->ticket_type=='flight') selected @endif>FLIGHT 無光飛航</option>
+                                                    <option value="boat"@if(isset($request->ticket_type) && $request->ticket_type=='boat') selected @endif>Boat for ONE 單人船票</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-1">
+                                                <select name="plan" class="form-control">
+                                                    <option value="">訂單票種</option>
+                                                    <option value="train"@if(isset($request->plan) && $request->plan=='train') selected @endif>微醺列車 The Great Tipsy : The Next Stop</option>
+                                                    <option value="flight"@if(isset($request->plan) && $request->plan=='flight') selected @endif>FLIGHT 無光飛航</option>
+                                                    <option value="boat"@if(isset($request->plan) && $request->plan=='boat') selected @endif>Boat for ONE 單人船票</option>
+                                                    <option value="A"@if(isset($request->plan) && $request->plan=='A') selected @endif>方案A</option>
+                                                    <option value="B"@if(isset($request->plan) && $request->plan=='B') selected @endif>方案B</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-1">
                                                 <select name="pay_type" class="form-control">
                                                     <option value="">付款類型</option>
                                                     <option value="信用卡"@if(isset($request->pay_type) && $request->pay_type=='信用卡') selected @endif>信用卡</option>
@@ -72,8 +87,6 @@
                                             <div class="form-group col-sm-1">
                                                 <select name="order" class="form-control">
                                                     <option value="">排序(預設為修改時間反序)</option>
-                                                    <option value="rang_start|asc"@if(isset($request->order) && $request->order=='rang_start|asc') selected @endif>開始時間正序</option>
-                                                    <option value="rang_start|desc"@if(isset($request->order) && $request->order=='rang_start|desc') selected @endif>開始時間反序</option>
                                                     <option value="created_at|desc"@if(isset($request->order) && $request->order=='created_at|desc') selected @endif>訂單時間反序</option>
                                                 </select>
                                             </div>
@@ -90,17 +103,17 @@
                                             <div class="form-group col-sm-1">
                                                 <input type="text" name="code" placeholder="優惠碼(需較長時間)" class="form-control" value="{{ $request->code or ''}}">
                                             </div>
+                                            <div class="form-group col-sm-1">
+                                                <input type="text" name="discount" placeholder="折扣碼" class="form-control" value="{{ $request->discount or ''}}">
+                                            </div>
+                                        </div><div class="row">
  
-                                            <div class="form-group col-sm-1">
-                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+                                            <div class="form-group col-sm-12">
+                                                <button type="submit" class="btn btn-info" style="margin:3px;"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+                                                <button type="button" class="btn btn-primary" style="margin:3px;" id="grTable"><span class="glyphicon glyphicon-search"></span> 產生列印表格</button>
+                                                <button type="button" class="btn btn-warning" style="margin:3px;" id="exportXls">匯出XLS</button>
                                             </div>
-                                            <div class="form-group col-sm-1">
-                                                <button type="button" class="btn btn-primary" id="grTable"><span class="glyphicon glyphicon-search"></span> 產生列印表格</button>
                                             </div>
-                                            <div class="form-group col-sm-1">
-                                                <button type="button" class="btn btn-warning" id="exportXls">匯出XLS</button>
-                                            </div>
-
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
                                         <form action="/terminal/order/inv/mult/open" method="post">{!! csrf_field() !!}
@@ -128,7 +141,7 @@
         $totle_money = 0;
         $inv_open = false;
         $last_four = '';
-        if($coupons){
+        if($coupons && count($coupons)>0){
             foreach($coupons as $coup){
                 $single_money = App\model\terminal\backme::select('money')->find($coup->b_id)->money;
                 if($tmp_b_id != $coup->b_id){
@@ -206,7 +219,7 @@
 
                                                 <td class="actions">
                                                     @if($row->pay_status=='已付款')
-                                                    <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}" data-sn="{{ $row->sn }}" data-oid="{{ $row->id }}" data-phone="{{ $row->tel }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
+                                                    <!-- <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}" data-sn="{{ $row->sn }}" data-oid="{{ $row->id }}" data-phone="{{ $row->tel }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br /> -->
                                                     <!--a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a><br /-->
 
 
@@ -559,9 +572,9 @@
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知信">11</a>
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D05" data-toggle="tooltip" data-placement="top" data-original-title="寄送5天前的通知信">05</a> -->
 
-                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="order" data-toggle="tooltip" data-placement="top" data-original-title="訂位確認簡訊(訂位確認信也會觸發簡訊)">訂位確認</a>
+                                <!-- <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="order" data-toggle="tooltip" data-placement="top" data-original-title="訂位確認簡訊(訂位確認信也會觸發簡訊)">訂位確認</a>
                                 <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前的通知簡訊">7</a>
-                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
+                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a> -->
                             </p>
 
                             <table class="table table-bordered table-hover m-0">

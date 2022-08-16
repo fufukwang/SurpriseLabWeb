@@ -187,11 +187,11 @@
                                             選擇票種
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTicket">
-                                            <li class="dropdown-item body-04">微醺列車</li>
-                                            <li class="dropdown-item body-04">FLIGHT</li>
-                                            <li class="dropdown-item body-04">Boat for ONE</li>
-                                            <li class="dropdown-item body-04">套票A：車票+飛機票</li>
-                                            <li class="dropdown-item body-04">套票B：車票+飛機票+船票</li>
+                                            <li class="dropdown-item body-04 @if($train->Count<=0) disabled @endif">微醺列車 @if($train->Count<=0) disabled @endif</li>
+                                            <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($train->Count<=0) disabled @endif</li>
+                                            <li class="dropdown-item body-04 @if($boat->Count<=0) disabled @endif">Boat for ONE @if($train->Count<=0) disabled @endif</li>
+                                            <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0) disabled @endif">套票A：車票+飛機票 @if($train->Count<=0 || $flight->Count<=0) disabled @endif</li>
+                                            <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif">套票B：車票+飛機票+船票 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -421,7 +421,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <form class="form-wrap-step-3">
+                            <form class="form-wrap-step-3" id="final-form" action="/terminal/Neweb.OrderPay" method="post">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="train">
+                                <input type="hidden" name="flight">
+                                <input type="hidden" name="boat">
+                                <input type="hidden" name="booking_people">
+                                <input type="hidden" name="ticket_type">
+                                <input type="hidden" name="discount">
+
+
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="name">* 姓名</label>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
@@ -546,61 +555,15 @@
                                         <td style="white-space: break-spaces;" id="filled-remark"></td>
                                     </tr>
                                     <tr>
-                                        <th>折扣序號</th>
+                                        <th>折扣碼</th>
                                         <td>
                                             <!-- 尚未輸入 -->
                                             <div class="form-group verify-layout">
-                                                <input type="text" id="discount" class="body-04" name="discount" placeholder="請輸入一組折扣序號">
-                                                <a href="javascript://" class="booking-btn shape-square color-input-use status-disabled">確認</a>
+                                                <input type="text" id="coupon" class="body-04" name="coupon" placeholder="請輸入折扣碼">
+                                                <a href="javascript://" class="booking-btn shape-square color-input-use verification-code">確認</a>
                                                 <ul class="verify-status-list body-02 style-smaller">
-                                                    <li class="status-list-item not-use active">尚未使用折扣序號</li>
                                                     <li class="status-list-item not-found">找不到此筆折扣序號</li>
                                                     <li class="status-list-item use-discount">已使用折扣序號 XXXXXX</li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>折扣序號</th>
-                                        <td>
-                                            <!-- 已輸入 -->
-                                            <div class="form-group verify-layout">
-                                                <input type="text" id="discount" class="body-04" name="discount" placeholder="請輸入一組折扣序號" value="GREH01234568">
-                                                <a href="javascript://" class="booking-btn shape-square color-input-use">確認</a>
-                                                <ul class="verify-status-list body-02 style-smaller">
-                                                    <li class="status-list-item not-use active">尚未使用折扣序號</li>
-                                                    <li class="status-list-item not-found">找不到此筆折扣序號</li>
-                                                    <li class="status-list-item use-discount">已使用折扣序號 XXXXXX</li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>折扣序號</th>
-                                        <td>
-                                            <!-- 驗證後: 輸入錯誤 -->
-                                            <div class="form-group verify-layout error-style">
-                                                <input type="text" id="discount" class="body-04" name="discount" placeholder="請輸入一組折扣序號" value="GREH01234568">
-                                                <a href="javascript://" class="booking-btn shape-square color-input-use status-disabled">確認</a>
-                                                <ul class="verify-status-list body-02 style-smaller">
-                                                    <li class="status-list-item not-use">尚未使用折扣序號</li>
-                                                    <li class="status-list-item not-found active">找不到此筆折扣序號</li>
-                                                    <li class="status-list-item use-discount">已使用折扣序號 XXXXXX</li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>折扣序號</th>
-                                        <td>
-                                            <!-- 驗證後: 輸入正確 -->
-                                            <div class="form-group verify-layout">
-                                                <input type="text" id="discount" class="body-04" name="discount" placeholder="請輸入一組折扣序號">
-                                                <a href="javascript://" class="booking-btn shape-square color-input-use status-disabled">確認</a>
-                                                <ul class="verify-status-list body-02 style-smaller">
-                                                    <li class="status-list-item not-use">尚未使用折扣序號</li>
-                                                    <li class="status-list-item not-found">找不到此筆折扣序號</li>
-                                                    <li class="status-list-item use-discount active">已使用折扣序號 XXXXXX</li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -609,7 +572,7 @@
                             </form>
                             <div class="cta-wrap">
                                 <a href="javascript://" id="js-prev-btn4" class="booking-btn shape-round color-secondary">上一步</a>
-                                <a href="javascript://" id="js-next-btn4" class="booking-btn shape-round color-secondary status-disabled">前往購買</a>
+                                <a href="javascript://" id="js-next-btn4" class="booking-btn shape-round color-secondary">前往購買</a>
                             </div>
                         </div>
                     </div>

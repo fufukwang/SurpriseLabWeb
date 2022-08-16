@@ -13,6 +13,7 @@
                     @if( Session::has('key') && Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                     <a href="/terminal/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>
                     @endif
+                    <a href="/terminal/order/0/appointment" class="btn btn-purple waves-effect waves-light">新增預約席(套票) <i class="fa fa-plus"></i></a>
                 </h4>
             </div>
         </div>

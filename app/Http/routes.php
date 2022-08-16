@@ -685,14 +685,15 @@ if(env('APP_ENV') != 'production'){
         Route::get('rules',function(){ return view('terminal.frontend.rules'); });
         // 劃位
         Route::get('booking_now',function(){ return view('terminal.frontend.booking_now'); });
-        Route::get('booking',function(){ return view('terminal.frontend.booking'); });
+        // Route::get('booking',function(){ return view('terminal.frontend.booking'); });
+        Route::get('booking', 'terminal\FrontController@getOrderPage');
         // 藍新金流路由
         Route::post('Neweb.OrderPay', 'terminal\NewPayController@postOrderByNeweb'); // 存訂單
         Route::post('Neweb.ReturnResult', 'terminal\NewPayController@postReturnByNeweb'); // 回傳內容
         Route::post('Neweb.BackReturn', 'terminal\NewPayController@postBackReturn'); // 背景回傳
 
         Route::get('GetAjaxData','terminal\FrontController@GetAjaxData');
-        Route::post('PostAjaxData','terminal\FrontController@PostAjaxData');
+        // Route::post('PostAjaxData','terminal\FrontController@PostAjaxData');
         // Route::post('ReOrderData','terminal\FrontController@ReOrderData');
     });
 }

@@ -27,7 +27,17 @@ class FrontController extends WebController
         DB::enableQueryLog();
     }
     
-
+    public function getOrderPage(Request $request){
+        try{
+            $train = pro::where('open',1)->where('ticket_type','train')->select(DB::raw("SUM(sites-{$this->oquery}) AS Count"))->first();
+            $flight = pro::where('open',1)->where('ticket_type','flight')->select(DB::raw("SUM(sites-{$this->oquery}) AS Count"))->first();
+            $boat = pro::where('open',1)->where('ticket_type','boat')->select(DB::raw("SUM(sites-{$this->oquery}) AS Count"))->first();
+            return view('terminal.frontend.booking',compact('train','flight','boat'));
+        } catch (Exception $exception) {
+            Log::error($exception);
+            abort(404);
+        }
+    }
 
     public function GetAjaxData(Request $request){
         if($request->ajax()){
@@ -43,33 +53,30 @@ class FrontController extends WebController
                 switch ($request->act) {
                     case 'getBypople': // 票種 & 人數 取得 day
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',0);
-                        if($ticketType == 1){
-                            $pro = $pro->whereRaw("floor(ABS(DATEDIFF( '17530101', `terminalpro`.`day`)) % 7 / 5)=0");
-                        }
+                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',0)->where('ticket_type',$ticketType);
                         $pro = $pro->get();
                         return $pro->toJson();
                     break;
                     case 'getSpecialBypople': // 票種 & 人數 取得 day
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',1);
+                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',1)->where('ticket_type',$ticketType);
                         $pro = $pro->get();
                         return $pro->toJson();
                     break;
                     case 'getByday': // 日期 取得 時段
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select('day_parts','day')->groupBy('day_parts')->where('day',$day)->get();
+                        $pro = $pro->select('day_parts','day')->groupBy('day_parts')->where('day',$day)->where('ticket_type',$ticketType)->get();
                         return $pro->toJson();
                     break;
                     case 'getBydartpart': // 日期 時段 取得 range
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->get();
+                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->where('ticket_type',$ticketType)->get();
                         return $pro->toJson();
                     break;
-
+/*
                     case 'CheckCoupon':
                         $coupon = coupon::where('code',$request->code)->where('o_id',0);
                         if($request->has('coupon') && count($request->coupon)>0){
@@ -93,7 +100,7 @@ class FrontController extends WebController
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                         }
                     break;
-
+*/
                     case 'CheckDiscount':
                         $slug = $request->useType;
                         $discount_obj = false;
@@ -126,7 +133,7 @@ class FrontController extends WebController
             abort(404);
         }
     }
-
+/*
     public function PostAjaxData(Request $request){
         if($request->ajax()){
             if($request->has('act') && $request->act=='CheckDarkCoupon'){
@@ -156,6 +163,7 @@ class FrontController extends WebController
             abort(404);
         }
     }
+    */
 /*
     public function ReOrderData(Request $request){
         try {
