@@ -224,7 +224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <p>* 現正販售</p>
                                             <ul>
                                                 <li>
-                                                    <p>雙人套票可劃位區間為：2022/10/12 - 2022/12/11</p>
+                                                    <p>雙人套票可劃位區間為：2022/10/12 - 2022/11/11</p>
                                                 </li>
                                                 <li>
                                                     <p>雙菜單套票可劃位區間為：2022/10/12 - 2023/10/31</p>
@@ -492,7 +492,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="contact-sec">
                                         <div class="contact-sec-title highlight">
-                                            　　地址
+                                            地址
                                         </div>
                                         <p>
                                             台北市大安區，捷運忠孝敦化站
