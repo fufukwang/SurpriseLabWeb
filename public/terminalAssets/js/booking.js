@@ -187,7 +187,7 @@ $(function() {
             $.get('/terminal/GetAjaxData',{
                 'act':'getBypople',
                 'pople':$people_value,
-                'ticketType':$ticket_value,
+                'ticketType': type,
             },function(data){
                 for(i=0;i<data.length;i++){ enableDays.push(data[i].day); }
                 var minD = 0;
@@ -209,7 +209,7 @@ $(function() {
                     onSelect: function(date, inst){
                         $.get('/terminal/GetAjaxData',{
                             'act':'getByday',
-                            'ticketType':$ticket_value,
+                            'ticketType': type,
                             'day':date,
                             'pople':$people_value,
                         },function(obj){
@@ -258,7 +258,7 @@ $(function() {
     function getActivateId(type){
         $.get('/terminal/GetAjaxData',{
             'act':'getBydartpart',
-            'ticketType': $ticket_value,
+            'ticketType': type,
             'day': $('#js-datepicker-'+type).val(),
             'day_parts': $('#dropdownMenuButtonPeriod-'+type).text(),
             'pople': $people_value,

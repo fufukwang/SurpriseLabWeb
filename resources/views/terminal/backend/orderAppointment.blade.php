@@ -246,20 +246,21 @@
 $('#pople').bind('change',function(){
     let people = $(this).val();
     let cash = $(this).data('cash');
-    let money = Math.round(parseInt(cash) * parseInt(people) * 1.1);
-    $('#tipbox').text("單人金額:"+cash + " X 1 X 10%服務費 = " + Math.round(parseInt(cash) * 1.1) + '如新增套票須自行計算');
+    let money = Math.round(parseInt(cash) * parseInt(people) );
+    $('#tipbox').text("單人金額:"+cash + " X 1 = " + Math.round(parseInt(cash)) + '如新增套票須自行計算');
     $('#money').val(money);
 });
 $('select[name=ticket_type]').bind('change',function(){
     var val = $(this).val()
     $('.boat,.train,.flight').hide();
-    if(val == 'boat'){ $('.boat').show(); }
-    if(val == 'train'){ $('.train').show(); }
-    if(val == 'flight'){ $('.flight').show(); }
-    if(val == 'A'){ $('.train,.flight').show(); }
-    if(val == 'B'){ $('.boat,.train,.flight').show(); }
+    if(val == 'boat'){ $('.boat').show(); $('#pople').data('cash',800); }
+    if(val == 'train'){ $('.train').show(); $('#pople').data('cash',1250); }
+    if(val == 'flight'){ $('.flight').show(); $('#pople').data('cash',500); }
+    if(val == 'A'){ $('.train,.flight').show(); $('#pople').data('cash',1650); }
+    if(val == 'B'){ $('.boat,.train,.flight').show(); $('#pople').data('cash',2400); }
 });
 $('select[name=ticket_type]').trigger('change');
+$('#pople').trigger('change');
         });
 
 

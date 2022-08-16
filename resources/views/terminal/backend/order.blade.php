@@ -188,7 +188,13 @@
                                                 <label class="control-label col-sm-4">金額</label>
                                                 <div class="col-sm-8">
                                                     <input type="number" class="form-control" name="money" id="money" value="{{ $order->money or 0 }}" required>
-                                                    <small class="text-warning">單人金額:{{ $order->cash }} X 1 X 10%服務費 = {{ $order->cash *  1.1 }}</small>
+                                                    <small class="text-warning">單人金額:
+                                                    @if($order->plan == 'train') 1250 X 1  = 1250 @endif
+                                                    @if($order->plan == 'flight') 500 X 1  = 500 @endif
+                                                    @if($order->plan == 'boat') 800 X 1  = 800 @endif
+                                                    @if($order->plan == 'A') 1650 X 1  = 1650 @endif
+                                                    @if($order->plan == 'B') 2400 X 1  = 2400 @endif
+                                                    </small>
                                                 </div>
                                             </div>
 
