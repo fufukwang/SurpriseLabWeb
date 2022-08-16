@@ -85,17 +85,18 @@ class OrderController extends Controller
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
             // 觸發補寄
             try {
-                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites')->find($id);
-                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_start))));
-                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_end))));
+                $order = order::find($id);
+                $pro = pro::find($request->pro_id);
+                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($pro->day.' '.$pro->rang_start))));
+                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($pro->day.' '.$pro->rang_end))));
                 $mailer = [
-                    'day'   => Carbon::parse($order->day)->format('Y / m / d'),
-                    'time'  => substr($order->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
+                    'day'   => Carbon::parse($pro->day)->format('Y / m / d'),
+                    'time'  => substr($pro->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
                     'pople' => $order->pople,
-                    'email' => $order->email,
+                    'email' => $request->email,
                     'name'  => $order->name,
                     'gday'  => $rangStart.'/'.$rangEnd,
-                    'phone' => $order->tel,
+                    'phone' => $request->tel,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
                     'template' => 'order',
                 ];
@@ -104,7 +105,7 @@ class OrderController extends Controller
                     SLS::SendSmsByTemplateName($mailer);
                     // 信件補送
                     $now = time();
-                    $lim = strtotime($order->day.' '.$order->rang_start);
+                    $lim = strtotime($pro->day.' '.$pro->rang_start);
                     $day = round( ($lim - $now) / 86400 );
                     if($day <= 7){
                         $mailer['template'] = 'D7';

@@ -122,7 +122,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/c07b6308-8278-fc0a-8d3c-a35e3b1ac498.jpg" width="564" style="max-width:2252px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/c0f8e7fc-6bea-028a-0e9d-a16c1e921f17.jpg" width="564" style="max-width:2252px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
