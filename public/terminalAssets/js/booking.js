@@ -444,7 +444,7 @@ $(function() {
         couponVal = couponVal.trim();
         couponVal = couponVal.toUpperCase();
         if(discountCode == ''){
-            $.get('/dininginthedark3/GetAjaxData',{
+            $.get('/terminal/GetAjaxData',{
                 'act':'CheckDiscount',
                 'code':couponVal,
                 'pople':$people_value,
