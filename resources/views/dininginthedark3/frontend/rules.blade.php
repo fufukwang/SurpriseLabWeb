@@ -656,7 +656,7 @@
                                             <div id="stage1" class="collapse" aria-labelledby="stage1-header">
                                                 <div class="card-body">
                                                     <ul>
-                                                        <li>可劃位區間：2022/10/12 - 2023/12/11</li>
+                                                        <li>可劃位區間：2022/10/12 - 2022/11/11</li>
                                                         <li>失效日期：2022/09/23 18:00</li>
                                                     </ul>
                                                 </div>
