@@ -113,14 +113,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </div>
                                                 </div>
                                             </th>
-                                            <th>
+                                            <!-- <th>
                                                 <div class="icon-th">
                                                     <i class="icon-boat"></i>
                                                     <div class="item-name body-01 style-smaller">
                                                         <span class="name-en">Boat for ONE</span>
                                                     </div>
                                                 </div>
-                                            </th>
+                                            </th> -->
                                         </tr>
                                         <tr>
                                             <th>
@@ -132,7 +132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </th>
                                             <td><i class="icon-step-done"></i></td>
                                             <td></td>
-                                            <td></td>
+                                            <!-- <td></td> -->
                                         </tr>
                                         <tr>
                                             <th>
@@ -144,9 +144,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </th>
                                             <td></td>
                                             <td><i class="icon-step-done"></i></td>
-                                            <td></td>
+                                            <!-- <td></td> -->
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <th>
                                                 <div class="item-name body-01 style-smaller">
                                                     <span class="name-en">Boat for ONE</span>
@@ -157,7 +157,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <td></td>
                                             <td></td>
                                             <td><i class="icon-step-done"></i></td>
-                                        </tr>
+                                        </tr> -->
                                         <tr class="tr-bg-light">
                                             <th>
                                                 <div class="item-name body-01 style-smaller">
@@ -169,9 +169,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </th>
                                             <td><i class="icon-step-done"></i></td>
                                             <td><i class="icon-step-done"></i></td>
-                                            <td></td>
+                                            <!-- <td></td> -->
                                         </tr>
-                                        <tr class="tr-bg-dark">
+                                        <!-- <tr class="tr-bg-dark">
                                             <th>
                                                 <div class="item-name body-01 style-smaller">
                                                     <span class="name-ch">套票B</span>
@@ -183,7 +183,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <td><i class="icon-step-done"></i></td>
                                             <td><i class="icon-step-done"></i></td>
                                             <td><i class="icon-step-done"></i></td>
-                                        </tr>
+                                        </tr> -->
                                     </table>
                                 </div>
                             </div>
@@ -197,9 +197,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTicket">
                                             <li class="dropdown-item body-04 @if($train->Count<=0) disabled @endif">微醺列車 @if($train->Count<=0) disabled @endif</li>
                                             <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($train->Count<=0) disabled @endif</li>
-                                            <li class="dropdown-item body-04 @if($boat->Count<=0) disabled @endif">Boat for ONE @if($train->Count<=0) disabled @endif</li>
+                                            <!-- <li class="dropdown-item body-04 @if($boat->Count<=0) disabled @endif">Boat for ONE @if($train->Count<=0) disabled @endif</li> -->
                                             <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0) disabled @endif">套票A：車票+飛機票 @if($train->Count<=0 || $flight->Count<=0) disabled @endif</li>
-                                            <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif">套票B：車票+飛機票+船票 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif</li>
+                                            <!-- <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif">套票B：車票+飛機票+船票 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif</li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -268,14 +268,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </div>
                                                 </div>
                                             </th>
-                                            <th>
+                                            <!-- <th>
                                                 <div class="icon-th">
                                                     <i class="icon-boat"></i>
                                                     <div class="item-name body-01 style-smaller">
                                                         <span class="name-en">Boat for ONE</span>
                                                     </div>
                                                 </div>
-                                            </th>
+                                            </th> -->
                                         </tr>
                                         <tr class="tr-bg-dark" id="selected-ticket-tr">
                                             <th>
@@ -288,7 +288,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </th>
                                             <td><i class="icon-step-done"></i></td>
                                             <td><i class="icon-step-done"></i></td>
-                                            <td><i class="icon-step-done"></i></td>
+                                            <!-- <td><i class="icon-step-done"></i></td> -->
                                         </tr>
                                     </table>
                                     <div class="notice-wrap">
