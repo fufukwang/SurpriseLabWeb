@@ -359,13 +359,13 @@ class BackController extends Controller
         if($request->daystart == ''){
             $pro = $pro->where('day',Carbon::today()->format('Y-m-d'));
         } else {
-            $daystart = Carbon::createFromFormat('Y-m-d', $request->daystart);
-            $dayend   = Carbon::createFromFormat('Y-m-d', $request->dayend);
-            $pro = $pro->where('day','>=',$daystart);
-            $pro = $pro->where('day','<=',$dayend);    
+            // $daystart = Carbon::createFromFormat('Y-m-d', $request->daystart);
+            // $dayend   = Carbon::createFromFormat('Y-m-d', $request->dayend);
+            $pro = $pro->where('day','>=',$request->daystart);
+            $pro = $pro->where('day','<=',$request->dayend);    
         }
         $pro = $pro->orderBy('day','asc')->orderBy('rang_start','asc')->get();
-
+        
         $cellData = $pro->toArray();
         Excel::create('座位狀況',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){

@@ -38,9 +38,18 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-now.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7V2BQQ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body class="loading">
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7V2BQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <nav class="nav-wrap">
         <div class="pc-nav-wrap">
             <div class="logo-wrap">
@@ -87,7 +96,7 @@
                                                 <div class="feature-item">
                                                     <div class="item-title body-01">
                                                         <i class="icon-time"></i>
-                                                        體驗長度<span class="color-o400">45-60</span>分鐘
+                                                        體驗長度<span class="color-o400">60</span>分鐘
                                                     </div>
                                                     <div class="item-unit body-02">每場次</div>
                                                 </div>
@@ -223,7 +232,7 @@
                                     </div>
                                 </div>
 
-                                <div class="ticket-card">
+                                <!-- <div class="ticket-card">
                                     <div class="ticket-card-inner">
                                         <div class="ticket-card-header">
                                             <div class="ticket-title">
@@ -302,7 +311,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="cta-wrap">
