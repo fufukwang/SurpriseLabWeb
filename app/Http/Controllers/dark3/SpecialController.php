@@ -208,6 +208,7 @@ class SpecialController extends Controller
             $data = [
                 't6'    => json_decode(setting::where('slug','dark3_sp_t6')->first()->json,true),
                 'money' => json_decode(setting::where('slug','dark3_sp_money')->first()->json,true),
+                'setting' => json_decode(setting::where('slug','dark3_setting')->first()->json,true),
             ];
 
 
@@ -256,6 +257,12 @@ class SpecialController extends Controller
                         [ 'number' => 1,'money' => $request->t1_money ],
                         [ 'number' => 2,'money' => $request->t2_money ],
                         [ 'number' => 6,'money' => $request->t6_money ],
+                    ])]);
+                    if($is_store) $return['success'] = true;
+                } elseif($request->slug == 'dark3_setting'){
+                    $is_store = setting::where('slug','dark3_setting')->update(['json'=>json_encode([
+                        "max" => $request->max,
+                        "pay_max_date" => $request->pay_max_date
                     ])]);
                     if($is_store) $return['success'] = true;
                 } elseif($request->slug == 'dark3_sp_discount'){

@@ -25,6 +25,8 @@ var restAmount = 0; // 剩餘折抵金額
 var discountCode = '';
 var discountAmount = 0;
 
+
+$.getJSON('/dininginthedark3/GetAjaxData?method=getMaxDate').done(function(max){ maxDateVal = max.pay_max_date;});
 // ===================================
 // Form Default Start
 // ===================================

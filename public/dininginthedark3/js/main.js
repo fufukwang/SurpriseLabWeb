@@ -2,17 +2,17 @@ $(document).ready(function () {
     
     // 售票進度 API
     var progress_api_SaleStep1 = 'https://surpriselab.backme.tw/api/projects/2534json?token=15171aa66ababafd4464a1c194b66102';
-
+    var get_max_people = '/dininginthedark3/GetAjaxData?method=getMaxPeople';
 
     //$.getJSON(progress_api_SaleStep5, function (data) {
     
     $.when(
-      $.getJSON(progress_api_SaleStep1)
-    ).done(function(data) {
+      $.getJSON(progress_api_SaleStep1),
+      $.getJSON(get_max_people)
+    ).done(function(data1,max1) {
         // data1 = data1[0];
-        // var data = data1[0];
-
-
+        var data = data1[0];
+        var max = max1[0];
         // 階段總人數
         // var SaleStep1_amount = data1['pledged_unit_count'];
         /*
@@ -31,10 +31,10 @@ $(document).ready(function () {
         var item3_amount = data['rewards'][2].pledged_count * 6;
         */
         var before = 0; // 之前的總票數
-        var goal = before + 3500;//2750; // 目標張數 /* SaleStep1_amount + 1500 */
+        var goal = before + parseInt(max.max);//2750; // 目標張數 /* SaleStep1_amount + 1500 */
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
-        var amount = data["pledged_unit_count"];
+        var amount = data["pledged_unit_count"] + parseInt(max.pay);
         var sale_progress = (before + amount) / goal * 100; // 募款進度
         var rest_tickets = goal - before - amount; // 剩餘可銷售票數
 

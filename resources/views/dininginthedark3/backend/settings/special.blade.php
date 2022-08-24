@@ -56,13 +56,29 @@
                                                 <button type="button" class="btn btn-info btn-custom waves-effect w-md waves-light m-b-5 sp_money_button">修改票價金額</button>
                                             </div>
                                         </form>
+                                    </div>
+                                    <div class="p-20">
+                                        <h4 class="m-t-0 header-title"><b>無光晚餐S3 修改設定值</b></h4>
+                                        <form data-parsley-validate novalidate class="form-horizontal">
+                                            <div class="form-group hpro_id">
+                                                <label class="control-label col-sm-4">票券目標數量</label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" class="form-control" id="max" value="{{ $data['setting']['max'] or ''  }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group hpro_id">
+                                                <label class="control-label col-sm-4">直購日期設定</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="pay_max_date" value="{{ $data['setting']['pay_max_date'] or ''  }}">
+                                                    <small>輸入日期(2033-10-10)或相對日期(+10d +1m)</small>
+                                                </div>
+                                            </div>
 
-
-
-
-
-
-
+                                            
+                                            <div align="right">
+                                                <button type="button" class="btn btn-info btn-custom waves-effect w-md waves-light m-b-5 setting_button">修改設定值金額</button>
+                                            </div>
+                                        </form>
                                     </div>
 
 
@@ -155,6 +171,29 @@ $('.t6_setting_button').bind('click',function(){
     }
     
 });
+// 設定修改
+$('.setting_button').bind('click',function(){
+    let max = $('#max').val();
+    let pay_max_date = $('#pay_max_date').val();
+    if(max!='' && !isNaN(max)){
+        let myObj = {
+            slug: 'dark3_setting',
+            max: max,
+            pay_max_date: pay_max_date
+        }
+        $.post('/dark3/setting/store',myObj,function(data){
+            if(Boolean.parse(data.success)){
+                $.Notification.notify('success','bottom left','已更新', '設定值已修改已更新');
+            } else {
+                $.Notification.notify('error','bottom left','錯誤', '儲存失敗請檢查資料是否有誤');
+            }
+        },'json');
+    } else {
+        $.Notification.notify('error','bottom left','錯誤', '最大值請輸入數字');
+        return false;
+    }
+    
+});
 // 特別場次票券金額修改
 $('.sp_money_button').bind('click',function(){
     let t1_money = $('#t1_money').val().replace('$','').replace(',','');
@@ -178,11 +217,6 @@ $('.sp_money_button').bind('click',function(){
         $.Notification.notify('error','bottom left','錯誤', '票價金額輸入有誤');
         return false;
     }
-
-
-
-
-
 });
 $('input[type="currency"]').blur();
         });

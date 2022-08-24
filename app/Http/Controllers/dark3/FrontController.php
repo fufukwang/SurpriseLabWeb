@@ -121,6 +121,18 @@ class FrontController extends Controller
                         }
                     break;
                 }
+            } elseif($request->has('method')){
+                // 總售出票數
+                if($request->method == 'getMaxPeople'){
+                    $json = json_decode(setting::where('slug','dark3_setting')->first()->json,true);
+                    $json['pay'] = order::where('pay_status','已付款')->where('is_overseas',2)->sum('pople');
+                    return Response::json($json,200);
+                }
+                // 刷卡票數
+                if($request->method == 'getMaxDate'){
+                    $json = json_decode(setting::where('slug','dark3_setting')->first()->json,true);
+                    return Response::json($json,200);
+                }
             }
         } else {
             abort(404);
