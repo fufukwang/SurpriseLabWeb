@@ -54,8 +54,7 @@ class OrderController extends WebController
      * orders.
      */
     public function Orders(Request $request,$id){
-        $order = order::orderBy('updated_at','desc')->where('pro_id',$id);
-        $order = $order->get();
+        $order = DB::table('terminal_pro_order')->leftJoin('terminalorder', 'terminalorder.id', '=', 'terminal_pro_order.order_id')->where('terminal_pro_order.pro_id',$id)->get();
         return view('terminal.backend.orders',compact('order'));
     }
     public function OrderEdit(Request $request,$id){
@@ -354,7 +353,7 @@ class OrderController extends WebController
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","訂單時間"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     if($row['pay_type'] == '信用卡'){
@@ -426,12 +425,13 @@ class OrderController extends WebController
                         $pay_status,
                         $pay_money,
                         $pay_last,
+                        $row['created_at'],
                     ];
                     array_push($data,$sheetRow);
                 }
 
                 $zero = $sheet->rows($data);
-                for($i=0;$i<count($data);$i++){
+                for($i=0;$i<=count($data);$i++){
                     $zero->getStyle('A'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('B'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('G'.$i)->getAlignment()->setWrapText(true);
