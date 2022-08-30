@@ -47,6 +47,7 @@
                                                     <option value="">狀態</option>
                                                     <option value="已預約"@if(isset($request->pay_status) && $request->pay_status=='已預約') selected @endif>已預約</option>
                                                     <option value="已付款"@if(isset($request->pay_status) && $request->pay_status=='已付款') selected @endif>已付款</option>
+                                                    <option value="已付款(部分退款)"@if(isset($order->pay_status) && $order->pay_status=='已付款(部分退款)') selected @endif>已付款(部分退款)</option>
                                                     <option value="未完成"@if(isset($request->pay_status) && $request->pay_status=='未完成') selected @endif>未完成</option>
                                                     <option value="取消訂位"@if(isset($request->pay_status) && $request->pay_status=='取消訂位') selected @endif>取消訂位</option>
                                                 </select>
@@ -158,7 +159,7 @@
         }
     ?>
                                             <tr id="tr_{{ $row->id }}">
-                                                <td>@if($row->pay_status=='已付款' && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
+                                                <td>@if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
                                                 <td>{{ $row->sn }}<br />{{ $row->day }}<br />{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}
@@ -192,11 +193,11 @@
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
 <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
 </th>
-                                                <td>{{ $row->manage }}</td>
+                                                <td>{!! nl2br($row->manage) !!}</td>
 
 
                                                 <td class="actions">
-                                                    @if($row->pay_status=='已付款')
+                                                    @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')
                                                     <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}" data-sn="{{ $row->sn }}" data-oid="{{ $row->id }}" data-phone="{{ $row->tel }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
                                                     <!--a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a><br /-->
 
@@ -206,7 +207,7 @@
                                                 </td>
                                                 <td class="actions">
                                                     @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
-                                                    @if($row->pay_status=='已付款')
+                                                    @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')
                                                     <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif

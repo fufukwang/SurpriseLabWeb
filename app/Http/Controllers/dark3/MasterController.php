@@ -33,7 +33,7 @@ class MasterController extends Controller
                 $sn    = $request->sn;
                 // 時間還沒超過的正常訂單
                 $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-                $order = $order->select('name','day','rang_start','dark3order.id','sn')->where('sn',$sn)->where('pay_status','已付款')
+                $order = $order->select('name','day','rang_start','dark3order.id','sn')->where('sn',$sn)->whereIn('pay_status',['已付款','已付款(部分退款)'])
                     ->whereRaw("MD5(dark3order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")
                     ->first();
                 if($order){
@@ -55,7 +55,7 @@ class MasterController extends Controller
             $md5id = $request->id;
             $sn    = $request->sn;
             $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-            $order = $order->select('name','day','rang_start','dark3order.id','sn','pople')->where('sn',$sn)->where('pay_status','已付款')
+            $order = $order->select('name','day','rang_start','dark3order.id','sn','pople')->where('sn',$sn)->whereIn('pay_status',['已付款','已付款(部分退款)'])
                 ->whereRaw("MD5(dark3order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")->first();
             if($order){
 
@@ -131,7 +131,7 @@ class MasterController extends Controller
                 $tm = TeamMail::whereRaw("MD5(order_id)='".$order_id."' AND MD5(email)='".$email."' AND name LIKE '??%'" )->first();
                 if($tm){
                     $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-                    $order = $order->select('name','day','rang_start','dark3order.id','sn')->where('pay_status','已付款')
+                    $order = $order->select('name','day','rang_start','dark3order.id','sn')->whereIn('pay_status',['已付款','已付款(部分退款)'])
                         ->whereRaw("MD5(dark3order.id)='".$order_id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")
                         ->first();
                     if($order){
@@ -176,7 +176,7 @@ class MasterController extends Controller
             $order_id = $request->order_id;
             // 取得訂單資料
             $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-            $order = $order->select('name','day','rang_start','dark3order.id','tel','email','sn')->where('dark3order.id',$order_id)->where('pay_status','已付款')->first();
+            $order = $order->select('name','day','rang_start','dark3order.id','tel','email','sn')->where('dark3order.id',$order_id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->first();
             if($order){
                 $order->md5id = md5($order->id);
             } else {
@@ -210,7 +210,7 @@ class MasterController extends Controller
             ];
             if($toData['type'] == 'D10'){
                 $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-                $order = $order->select('day','rang_start')->where('dark3order.id',$toData['id'])->where('pay_status','已付款')->first();
+                $order = $order->select('day','rang_start')->where('dark3order.id',$toData['id'])->whereIn('pay_status',['已付款','已付款(部分退款)'])->first();
                 $toData['day'] = $order->day.' '.$order->rang_start;
             }
             if($toData['type'] == 'Name'){

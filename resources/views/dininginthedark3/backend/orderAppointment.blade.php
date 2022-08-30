@@ -100,6 +100,7 @@
                                                     <select name="pay_status" class="form-control">
                                                         <option value="未完成">未完成</option>
                                                         <option value="已付款">已付款</option>
+                                                        <option value="已付款(部分退款)">已付款(部分退款)</option>
                                                         <option value="取消訂位">取消訂位</option>
                                                     </select>
                                                     <p>選擇已付款才會寄送EMail</p>

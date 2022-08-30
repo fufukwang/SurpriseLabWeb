@@ -66,8 +66,8 @@ class OrderController extends Controller
                 abort(404);
             }
         }
-        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$order->pople)
-            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$order->pople)
+            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
         return view('dininginthedark3.backend.order',compact('order','pro'));
     }
     public function OrderUpdate(Request $request,$id){
@@ -163,7 +163,7 @@ class OrderController extends Controller
             } else {
                 $count = Carbon::now()->format('Ymd').'0001';
             }
-            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
             $meat = [];
             /*
             for($i=0;$i<$people;$i++){
@@ -280,7 +280,7 @@ class OrderController extends Controller
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(dark3order.pay_status='已付款' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
+            $order->whereRaw("(dark3order.pay_status='已付款' OR pay_status='已付款(部分退款)' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
             $order->where('dark3order.pay_status',$request->pay_status);  
         } 
@@ -334,7 +334,7 @@ class OrderController extends Controller
 
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(dark3order.pay_status='已付款' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
+            $order->whereRaw("(dark3order.pay_status='已付款' OR pay_status='已付款(部分退款)' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
             $order->where('dark3order.pay_status',$request->pay_status);  
         } 
@@ -387,7 +387,7 @@ class OrderController extends Controller
         
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(dark3order.pay_status='已付款' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
+            $order->whereRaw("(dark3order.pay_status='已付款' OR pay_status='已付款(部分退款)' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
             $order->where('dark3order.pay_status',$request->pay_status);  
         } 
@@ -432,7 +432,7 @@ class OrderController extends Controller
                         $pay_type = $row['edit_type'];
                     }
                     $pay_status = $row['pay_status'];
-                    if($pay_type == '公關位' && $row['pay_status'] == '已付款'){
+                    if($pay_type == '公關位' && ($row['pay_status'] == '已付款' || $row['pay_status'] == '已付款(部分退款)')){
                         $pay_status = '公關位';
                     }
                     $pay_money = '';
@@ -452,7 +452,7 @@ class OrderController extends Controller
                         }
                     } else {
                         $pay_money = $row['OM'];
-                        if($pay_type == '藍新金流' && $pay_status == '已付款'){
+                        if($pay_type == '藍新金流' && ($pay_status == '已付款' || $pay_status == '已付款(部分退款)')){
                             $json = json_decode($row['result'],true);
                             if($json['Status'] == "SUCCESS"){
                                 $pay_last = $json['data']['Result']['Card4No'];
@@ -460,7 +460,7 @@ class OrderController extends Controller
                         }
                     }
                     
-                    if($pay_status !== '已付款') $pay_money = 0;
+                    if($pay_status !== '已付款' || $pay_status !== '已付款(部分退款)') $pay_money = 0;
 
 
                     $sheetRow = [
@@ -496,7 +496,7 @@ class OrderController extends Controller
     public function XlsEmailDataOuput(Request $request){
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
         $order = $order->select('name','email')->groupBy('email');
-        $order->whereRaw("(dark3order.pay_status='已付款' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
+        $order->whereRaw("(dark3order.pay_status='已付款' OR dark3order.pay_status='已付款(部分退款)' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
         $order = $order->orderBy('dark3order.updated_at','desc')->get();
         $cellData = $order->toArray();
         Excel::create('Email 名單',function ($excel) use ($cellData){

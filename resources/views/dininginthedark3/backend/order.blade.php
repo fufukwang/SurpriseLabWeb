@@ -114,6 +114,7 @@
                                                     <select name="pay_status" class="form-control">
                                                         <option value="未完成"@if(isset($order->pay_status) && $order->pay_status=='未完成') selected @endif>未完成</option>
                                                         <option value="已付款"@if(isset($order->pay_status) && $order->pay_status=='已付款') selected @endif>已付款</option>
+                                                        <option value="已付款(部分退款)"@if(isset($order->pay_status) && $order->pay_status=='已付款(部分退款)') selected @endif>已付款(部分退款)</option>
                                                         <option value="取消訂位"@if(isset($order->pay_status) && $order->pay_status=='取消訂位') selected @endif>取消訂位</option>
                                                     </select>
                                                 </div>
