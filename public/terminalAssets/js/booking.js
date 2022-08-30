@@ -51,10 +51,10 @@ $(function() {
         let val = $(this).text();
         let max = 0;
         switch(val.trim()){
-            case '微醺列車': max = 6; $ticket_value = 'train'; break;
+            case '微醺列車': max = 24; $ticket_value = 'train'; break;
             case 'FLIGHT': max = 30; $ticket_value = 'flight'; break;
             case 'Boat for ONE': max = 1; $ticket_value = 'boat'; break;
-            case '套票A：車票+飛機票': max = 6; $ticket_value = 'A'; break;
+            case '套票A：車票+飛機票': max = 24; $ticket_value = 'A'; break;
             case '套票B：車票+飛機票+船票': max = 1; $ticket_value = 'B'; break;
         }
         if(max>0){
