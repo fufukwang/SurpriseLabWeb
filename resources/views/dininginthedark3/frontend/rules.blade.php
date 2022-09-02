@@ -293,8 +293,8 @@
                                         <div id="qa11" class="collapse" aria-labelledby="qa11-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                                雙人套票：適合想近期前來用餐的你，找好想一同前來的那個人，在黑暗中感受驚喜。<br/>
-                                                雙菜單套票：想體驗兩種完全不同的菜單，可隨時預約一年之內的用餐日期。
+                                                雙人即享票：適合想近期前來用餐的你，找好想一同前來的那個人，在黑暗中感受驚喜。<br/>
+                                                年度套票：想體驗兩種完全不同的菜單，可隨時預約一年之內的用餐日期。
                                             </div>
                                         </div>
                                     </div>
@@ -318,8 +318,8 @@
                                                 無光晚餐採網路購票、線上劃位方式進行，無販售現場票券。<br/><br/>
                                                 共有兩種票券，享有權益不同，分別為：<br/><br/>
                                                 <ol>
-                                                    <li>雙人套票：包含一組雙人票券，於指定日期收到序號劃位，並選擇用餐日期。</li>
-                                                    <li>雙菜單套票：包含兩組雙人票券，可前來無光晚餐用餐兩次，體驗不同菜單。可隨時預約一年之內的用餐日期，限量販售。</li>
+                                                    <li>雙人即享票：包含一組雙人票券，直購票形式，購票當下即可選擇用餐日期。</li>
+                                                    <li>年度套票：包含兩組雙人票卷，預售票形式，依照購票順序收到劃位序號後，即可劃位。可前來無光晚餐用餐兩次，體驗不同菜單，可隨時預約一年之內的用餐日期。</li>
                                                 </ol>
                                                 購票請至<a class="default-light btn-link" href="index.html#Ticket-type">我要預約</a>購買，相關規則請參考<span class="default-light btn-link to-presale-rules">預售劃位</span>。
                                             </div>
@@ -372,17 +372,16 @@
 
                             <div class="tab-content-inner">
                                 <h5 class="sub-title highlight">
-                                    雙人套票說明
+                                    雙人即享票說明
                                 </h5>
                                 <div>
-                                    <img class="img-fluid d-none d-sm-block" src="img/other/flow-tickets-for-two.png" alt="雙人套票說明">
-                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-tickets-for-two-mobile.png" alt="雙人套票說明">
+                                    <img class="img-fluid d-none d-sm-block" src="img/other/flow-tickets-for-two.png" alt="雙人即享票說明">
+                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-tickets-for-two-mobile.png" alt="雙人即享票說明">
                                 </div>
                                 <br/>
                                 <ol>
-                                    <li>劃位序號依據不同的劃位梯次，能劃位的日期不同，詳情請參考下方預售劃位日期期限與序號規則。</li>
-                                    <li>將於劃位之指定日期當天收到信件（信件內容含有專屬劃位序號與訂位頁面連結），自行選定日期與時段，輸入劃位序號扣抵，即完成劃位。</li>
-                                    <li>完成劃位後，將會收到訂位確認信。（將寄送至訂位填寫時之信箱，請確保信箱能正確收信）</li>
+                                    <li>直購形式票券，購票即劃位，可選區段依照劃位網站為主。</li>
+                                    <li>完成劃位後，將會收到訂位確認信。（將寄送至訂位填寫時之信箱，請確信箱能正確收信。）</li>
                                 </ol>
                                 <br/>
                                 <p class="text-left">
@@ -390,8 +389,7 @@
                                 </p>
                                 <ul>
                                     <li>票券購買前請詳閱更改、退費事項</li>
-                                    <li>為確保訂位成功，若無收到訂位確認信，請務必來信客服查詢</li>
-                                    <li>序號僅可使用一次，請謹慎使用</li>
+                                    <li>為確保訂位成功，若無失收到訂位確認信，請務必來信客服查詢</li>
                                 </ul>
 
                                 <h5 class="sub-title highlight">
@@ -466,7 +464,7 @@
                                 </p>
 
                                 <h5 class="sub-title highlight change-seat">
-                                    雙人套票退費異動規則
+                                    雙人即享票退費異動規則
                                 </h5>
                                 <table class="rule-table two-people">
                                     <tbody>
@@ -528,7 +526,7 @@
                                 </div>
 
                                 <h5 class="sub-title highlight change-seat">
-                                    雙菜單套票退費異動規則
+                                    年度套票退費異動規則
                                 </h5>
                                 <p>套票享有一整年劃位時段，不同於一般票券，退換票請參照套票規則辦理。<br/>一組序號為$4,400元（雙菜單票券含兩組雙人票，共8,800元）</p>
                                 <table class="rule-table twice">
@@ -641,7 +639,7 @@
                                     各批次預售劃位期限與序號規則。
                                 </p>
                                 <br/><br/>
-                                <h6 class="highlight">雙人套票</h6>
+                                <h6 class="highlight">雙人即享票</h6>
                                 <div class="tab-content-inner">
                                     <div class="rule-according" id="#stage-according">
                                         <div class="card">
@@ -656,8 +654,8 @@
                                             <div id="stage1" class="collapse" aria-labelledby="stage1-header">
                                                 <div class="card-body">
                                                     <ul>
-                                                        <li>可劃位區間：2022/10/12 - 2022/11/11</li>
-                                                        <li>失效日期：2022/09/23 18:00</li>
+                                                        <li>依照劃位網站主</li>
+                                                        <li>失效日期：直購形式票卷，購買即劃位，依照退換票規則辦理退費，無失效日期</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -665,7 +663,7 @@
                                     </div>
                                 </div>
                                 <br/><br/>
-                                <h6 class="highlight">雙菜單套票</h6>
+                                <h6 class="highlight">年度套票套票</h6>
                                 <ul>
                                     <li>可劃位區間：2022/10/12 - 2023/10/31</li>
                                     <li>序號失效日期：2023/08/31 18:00</li>
