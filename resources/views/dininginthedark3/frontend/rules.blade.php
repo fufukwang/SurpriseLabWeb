@@ -348,9 +348,9 @@
                                     <p>① 為了各位消費者的權益與安全，餐廳內部設有夜視監視器全程錄影，必要時將會調閱影像紀錄。</p>
                                     <p>② 為顧及安全與⽤餐品質，不建議懷孕超過 28 週之孕婦與年紀低於 15 歲之孩童前來⽤餐。</p>
                                     <p>③ 為顧及體驗品質食物設計，不建議對乳製品過敏或嚴重乳糖不耐症體質者前來用餐。</p>
-                                    <p>④ 無光晚餐不提供開瓶服務，現場提供可加點的酒⽔單。</p>
+                                    <p>④ 無光晚餐不提供開瓶服務，現場提供可加點的酒水單。</p>
                                     <p>⑤ 在座位分配上若有特殊需求可於訂位時備註，但以現場服務⼈員之安排為準。</p>
-                                    <p>⑥ 若有活動包場需求、任何特殊訂位服務、天⾺⾏空的奇想、為愛準備的驚喜，請來信詢問 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></p>
+                                    <p>⑥ 若有活動包場需求、任何特殊訂位服務、天馬⾏空的奇想、為愛準備的驚喜，請來信詢問 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></p>
                                 </div>
                             </div>
 
@@ -393,16 +393,16 @@
                                 </ul>
 
                                 <h5 class="sub-title highlight">
-                                    雙菜單套票說明
+                                    年度套票說明
                                 </h5>
                                 <br/><br/>
                                 <div>
-                                    <img class="img-fluid d-none d-sm-block" src="img/other/flow-tickets-for-four.png" alt="雙菜單套票說明">
-                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-tickets-for-four-mobile.png" alt="雙菜單套票說明">
+                                    <img class="img-fluid d-none d-sm-block" src="img/other/flow-tickets-for-four.png" alt="年度套票說明">
+                                    <img class="img-fluid d-block d-sm-none" src="img/other/flow-tickets-for-four-mobile.png" alt="年度套票說明">
                                 </div>
                                 <br/><br/>
                                 <ol>
-                                    <li>雙菜單享有兩組序號，將會於指定劃位日寄送（一次會收到兩組序號）。</li>
+                                    <li>年度享有兩組序號，將會於指定劃位日寄送（一次會收到兩組序號）。</li>
                                     <li>劃位之指定日期當天收到信件（信件內容含有專屬劃位序號與訂位頁面連結），自行選定日期與時段，輸入劃位序號扣抵，即完成劃位。 </li>
                                     <li>完成劃位後，將會收到訂位確認信。（將寄送至訂位填寫時之信箱，請確保信箱能正確收信）</li>
                                 </ol>
@@ -528,7 +528,7 @@
                                 <h5 class="sub-title highlight change-seat">
                                     年度套票退費異動規則
                                 </h5>
-                                <p>套票享有一整年劃位時段，不同於一般票券，退換票請參照套票規則辦理。<br/>一組序號為$4,400元（雙菜單票券含兩組雙人票，共8,800元）</p>
+                                <p>套票享有一整年劃位時段，不同於一般票券，退換票請參照套票規則辦理。<br/>一組序號為$4,400元（年度套票含兩組雙人票，共8,800元）</p>
                                 <table class="rule-table twice">
                                     <tbody>
                                     <tr>
@@ -654,7 +654,7 @@
                                             <div id="stage1" class="collapse" aria-labelledby="stage1-header">
                                                 <div class="card-body">
                                                     <ul>
-                                                        <li>依照劃位網站主</li>
+                                                        <li>依照劃位網站為主</li>
                                                         <li>失效日期：直購形式票券，購買即劃位，依照退換票規則辦理退費，無失效日期</li>
                                                     </ul>
                                                 </div>
