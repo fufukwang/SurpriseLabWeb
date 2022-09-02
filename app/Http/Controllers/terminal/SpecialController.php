@@ -31,7 +31,7 @@ class SpecialController extends WebController
         // 抓取並驗證 t6 是否已滿
         // 成立 & pedding 300 秒內的訂單
         $count = order::where('is_overseas',9)->where('pople',6)
-            ->whereRaw("(pay_status='已付款' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))")->count();
+            ->whereRaw("(pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))")->count();
 
 
         $data = [

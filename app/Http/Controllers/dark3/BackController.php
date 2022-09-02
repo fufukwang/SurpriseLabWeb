@@ -148,7 +148,7 @@ class BackController extends Controller
         foreach ($backmes as $val) {
             $num = 0;
             if($val['p2']>0) $num += $val['p2'] * 2;
-            if($val['p4']>0) $num += $val['p4'] * 2;
+            if($val['p4']>0) $num += $val['p4'] * 4;
             $temp = [
                 'name'   => $val['name'],
                 'email'  => $val['email'],

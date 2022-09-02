@@ -367,7 +367,7 @@ class OrderController extends WebController
                         $pay_type = $row['edit_type'];
                     }
                     $pay_status = $row['pay_status'];
-                    if($pay_type == '公關位' && $row['pay_status'] == '已付款'){
+                    if($pay_type == '公關位' && ($row['pay_status'] == '已付款' || $row['pay_status'] == '已付款(部分退款)')){
                         $pay_status = '公關位';
                     }
                     $pay_money = '';
@@ -387,7 +387,7 @@ class OrderController extends WebController
                         }
                     } else {
                         $pay_money = $row['OM'];
-                        if($pay_type == '藍新金流' && $pay_status == '已付款'){
+                        if($pay_type == '藍新金流' && ($pay_status == '已付款' || $pay_status == '已付款(部分退款)')){
                             $json = json_decode($row['result'],true);
                             if($json['Status'] == "SUCCESS"){
                                 $pay_last = $json['data']['Result']['Card4No'];
@@ -395,7 +395,7 @@ class OrderController extends WebController
                         }
                     }
                     
-                    if($pay_status !== '已付款') $pay_money = 0;
+                    if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
                     $plan = '';
                     switch($row['plan']){
                         case 'train': $plan = "微醺列車 The Great Tipsy : The Next Stop"; break;
@@ -447,7 +447,7 @@ class OrderController extends WebController
     public function XlsEmailDataOuput(Request $request){
         $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id');
         $order = $order->select('name','email')->groupBy('email');
-        $order->whereRaw("(terminalorder.pay_status='已付款' OR (terminalorder.pay_type='現場付款' AND terminalorder.pay_status<>'取消訂位'))");
+        $order->whereRaw("(terminalorder.pay_status='已付款' OR terminalorder.pay_status='已付款(部分退款)' OR (terminalorder.pay_type='現場付款' AND terminalorder.pay_status<>'取消訂位'))");
         $order = $order->orderBy('terminalorder.updated_at','desc')->get();
         $cellData = $order->toArray();
         Excel::create('Email 名單',function ($excel) use ($cellData){

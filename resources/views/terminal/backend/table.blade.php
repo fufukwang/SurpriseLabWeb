@@ -66,7 +66,7 @@
       $pay_type = $row->edit_type;
   	}
    $pay_status = $row->pay_status;
-   if($pay_type == '公關位' && $row->pay_status == '已付款'){
+   if($pay_type == '公關位' && ($row->pay_status == '已付款' || $row->pay_status == '已付款(部分退款)')){
       $pay_status = '公關位';
    }
    $pay_money = '';
@@ -85,7 +85,7 @@
       $pay_money = $row->OM;
    }
                     
-   if($pay_status !== '已付款') $pay_money = 0;
+   if($pay_status !== '已付款' || $pay_status !== '已付款(部分退款)') $pay_money = 0;
    ?>
 		<tr>
 			<td rowspan="2"></td>
@@ -107,7 +107,7 @@
 
 </td>
 			<td>{{ $row->name }}</td>
-			<td>{{ $pay_type}} {!! $pay_money !!} （ @if($row->pay_status=='已付款') Y @else N @endif ）</td>
+			<td>{{ $pay_type}} {!! $pay_money !!} （ @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') Y @else N @endif ）</td>
 			<td>{{ $row->tel }}</td>
 			<td>{{ $row->pople }} 人 </td>
 			<td>{{ $row->vegetarian }} 人</td>

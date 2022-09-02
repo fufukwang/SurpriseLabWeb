@@ -171,7 +171,7 @@
         }
     ?>
                                             <tr id="tr_{{ $row->id }}">
-                                                <td>@if($row->pay_status=='已付款' && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
+                                                <td>@if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
                                                 <td> 
                     @if($row->plan == 'train') 微醺列車 The Great Tipsy : The Next Stop @endif
                     @if($row->plan == 'flight') FLIGHT 無光飛航 @endif
@@ -187,7 +187,7 @@
                                                     @if($row->is_overseas == 9) <span class="badge badge-pill badge-info">特別場次</span> @endif
                                                 </td>
                                                 <td>{{ $row->sn }}<br />{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 素食:{{ $row->vegetarian }}人</td>
-                                                <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
+                                                <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='已付款(部分退款)')info @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
 @if($row->is_overseas == 1) <br />海外刷卡 @endif<br />
 <span id="inv_{{ $row->id }}">{{ $inv_open ? $number->number : '' }}</span> 
 @if($inv_open)
@@ -218,7 +218,7 @@
 
 
                                                 <td class="actions">
-                                                    @if($row->pay_status=='已付款')
+                                                    @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')
                                                     <!-- <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}" data-sn="{{ $row->sn }}" data-oid="{{ $row->id }}" data-phone="{{ $row->tel }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br /> -->
                                                     <!--a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a><br /-->
 
@@ -228,7 +228,7 @@
                                                 </td>
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
-                                                    @if($row->pay_status=='已付款')
+                                                    @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')
                                                     <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
