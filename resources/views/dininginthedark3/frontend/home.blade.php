@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.14"/>
+    <link rel="stylesheet" href="css/style.css?v=0.15"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -264,8 +264,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="type-item type-great-tipsy">
                                         <a href="https://surpriselab.backme.tw/checkout/2534/19985?locale=zh-TW" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.1" alt="雙菜單套票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.1" alt="雙菜單套票">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.1" alt="年度套票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.1" alt="年度套票">
                                             {{--<!--p class="ticket-state timeLimit">
                                                 限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                                     class="highlight rest-ticket">XXX</span> 張
@@ -407,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             </tr>
                                             <tr>
                                                 <td>10/12（三）中午 12:00</td>
-                                                <td>於 09/26- 10/09 間購票者</td>
+                                                <td>於 09/26-10/09 間購票者</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2">
