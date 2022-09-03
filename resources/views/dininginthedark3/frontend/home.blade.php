@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.14"/>
+    <link rel="stylesheet" href="css/style.css?v=0.15"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
 
-                                <div class="time-counter">
+                                {{--<!--div class="time-counter">
                                     <p>剩餘時間</p>
                                     <div class="d-flex time-rest d-flex align-items-center justify-content-center">
                                         <span class="days">00</span>天
@@ -204,7 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <span class="minutes">00</span>分
                                         <span class="seconds">00</span>秒
                                     </div>
-                                </div>
+                                </div-->--}}
 
                                 <div class="sale-progress">
                                     <div class="progress">
@@ -224,10 +224,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <p>* 現正販售</p>
                                             <ul>
                                                 <li>
-                                                    <p>雙人套票可劃位區間為：2022/10/12 - 2022/11/20</p>
+                                                    <p>雙人即享票：可劃位區間請依劃位網站為主</p>
                                                 </li>
                                                 <li>
-                                                    <p>雙菜單套票可劃位區間為：2022/10/12 - 2023/10/31</p>
+                                                    <p>年度套票：即日起至-2023/10/31</p>
                                                 </li>
                                             </ul>
                                             <p>* 可劃位區間將依照實際狀況加開或縮短</p>
@@ -258,19 +258,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.1" alt="雙人套票">
                                             <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.1" alt="雙人套票">
                                             <p class="ticket-state">
-                                                <!--已售完
-                                                四人以上未滿八人者<br/>
-                                                可依數量加購原價暢行無阻票-->
+                                                直購票形式，付款後立刻選擇兩個月區段
                                             </p>
                                         </a>
                                     </div>
                                     <div class="type-item type-great-tipsy">
                                         <a href="https://surpriselab.backme.tw/checkout/2534/19985?locale=zh-TW" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.1" alt="雙菜單套票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.1" alt="雙菜單套票">
-                                            <p class="ticket-state timeLimit">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.1" alt="年度套票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.1" alt="年度套票">
+                                            {{--<!--p class="ticket-state timeLimit">
                                                 限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                                     class="highlight rest-ticket">XXX</span> 張
+                                            </p-->--}}
+                                            <p class="ticket-state">
+                                                預售票形式，依照購買順序收到序號後，可選擇近一年區段
                                             </p>
                                         </a>
                                     </div>
@@ -296,7 +297,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <p class="section-desc">
                                         無光晚餐採取先預購、後劃位的方式訂位<br/>
-                                        依照購買日期順序寄送劃位信
+                                        依照購買日期順序寄送劃位信<br/>
+                                        提醒：直購劃位流程，購票即完成劃位，不會收到序號
                                     </p>
                                 </div>
                                 
@@ -396,32 +398,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <table>
                                             <tr>
                                                 <td colspan="2">
-                                                    <h6 class="color-purple">劃位時間</h6>
+                                                    <h6 class="color-purple">年度套票 劃位時間</h6>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>08/10（三）中午 12:00 </td>
-                                                <td>於 08/08 (含) 前購票者</td>
+                                                <td>09/28（三）中午 12:00</td>
+                                                <td>於 09/12-09/25 間購者</td>
                                             </tr>
                                             <tr>
-                                                <td>08/17（三）中午 12:00</td>
-                                                <td>於 08/09-08/14 間購票者</td>
-                                            </tr>
-                                            <tr>
-                                                <td>08/24（三）中午 12:00</td>
-                                                <td>於 08/15-08/21 間購票者</td>
-                                            </tr>
-                                            <tr>
-                                                <td>08/31（三）中午 12:00</td>
-                                                <td>於 08/22-08/28 間購票者</td>
-                                            </tr>
-                                            <tr>
-                                                <td>09/07（三）中午 12:00</td>
-                                                <td>於 08/29-09/04 間購票者</td>
-                                            </tr>
-                                            <tr>
-                                                <td>09/14（三）中午 12:00</td>
-                                                <td>於 09/05-09/11 間購票者</td>
+                                                <td>10/12（三）中午 12:00</td>
+                                                <td>於 09/26-10/09 間購票者</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2">

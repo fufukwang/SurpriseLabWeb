@@ -777,7 +777,7 @@ header.logo {
     }
   
     .sale-progress {
-      @include baseCounter('padding-top', 100);
+      // @include baseCounter('padding-top', 100);
       width: 812px;
       max-width: 100%;
       margin: 0 auto;

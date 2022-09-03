@@ -1015,30 +1015,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   margin: 0 auto;
 }
 
-@media (min-width: 1200px) {
-  #Ticket .sec-ticket-status .sale-progress {
-    padding-top: calc((720px + 30px) * 0.08945);
-  }
-}
-
-@media (min-width: 1440px) {
-  #Ticket .sec-ticket-status .sale-progress {
-    padding-top: calc((900px + 30px) * 0.08945);
-  }
-}
-
-@media (min-width: 1920px) {
-  #Ticket .sec-ticket-status .sale-progress {
-    padding-top: calc((1088px + 30px) * 0.08945);
-  }
-}
-
-@media (max-width: 1199.98px) {
-  #Ticket .sec-ticket-status .sale-progress {
-    padding-top: calc(100% * 0.08945);
-  }
-}
-
 #Ticket .sec-ticket-status .sale-progress .progress {
   height: 11.5px;
   border-radius: 12px;
