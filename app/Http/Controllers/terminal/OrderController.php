@@ -85,9 +85,9 @@ class OrderController extends WebController
             'vegetarian' => $request->vegetarian,
         ];
         if(
-            ($request->has('boat') && $request->boat>0) ||
-            ($request->has('train') && $request->train>0) ||
-            ($request->has('flight') && $request->flight>0)
+            ($request->has('boat-store') && $request['boat-store'] ==1 && $request->has('boat') && $request->boat>0) ||
+            ($request->has('train-store') && $request['train-store'] ==1 && $request->has('train') && $request->train>0) ||
+            ($request->has('flight-store') && $request['flight-store'] ==1 && $request->has('flight') && $request->flight>0)
         ){
             // $data['pro_id'] = $request->pro_id;
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
@@ -163,19 +163,28 @@ class OrderController extends WebController
                 Log::error($e);
             }
         }
+        $order = order::find($id);
         if(is_numeric($id) && $id>0){
             if($request->pay_type == '後台編輯'){
                 $data['edit_type'] = $request->edit_type;
                 $data['money'] =  $request->money;
             }
+            if($request->pay_status == '已付款(部分退款)'){
+                $data['money'] =  $request->money;
+            }
+            if(isset($data['money']) && $order->money != $data['money']){
+                $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整金額{$order->money}->{$data['money']}";
+            }
             order::where('id',$id)->update($data);
-            $order = order::find($id);
         } 
+        return redirect('/terminal/print?'.$request->qxx)->with('message','編輯完成!');
+        /*
         if($request->has('qxx') && $request->qxx != ''){
             return redirect('/terminal/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
             return redirect('/terminal/orders/'.$order->pro_id)->with('message','編輯完成!');
         }
+        */
     }
     public function OrderDelete(Request $request,$id){
         $order = order::select('sn')->find($id);

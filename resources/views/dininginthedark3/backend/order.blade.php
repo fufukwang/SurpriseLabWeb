@@ -140,7 +140,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group back_control">
+                                            <div class="form-group back_control part_control">
                                                 <label class="control-label col-sm-4">金額</label>
                                                 <div class="col-sm-8">
                                                     <input type="number" class="form-control" name="money" id="money" value="{{ $order->money or 0 }}" required>
@@ -270,14 +270,23 @@ $('#pay_type').bind('change',function(){
         $('.back_control').show();
     } else {
         $('.back_control').hide();
+        if($('#pay_type').val() == '已付款(部分退款)') $('.part_control').show();
     }
 });
 $('#pay_type').trigger('change');
 
 
 
-
-
+$('select[name=pay_status]').bind('change',function(){
+    const status = $(this).val();
+    if(status == '已付款(部分退款)'){
+        $('.part_control').show();
+    } else {
+        $('.part_control').hide();
+        if($('#pay_type').val() == '後台編輯') $('.back_control').show();
+    }
+});
+$('select[name=pay_status]').trigger('change');
 
 
 

@@ -122,6 +122,21 @@ class FrontController extends WebController
                                     return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
                                 }
                             }
+                            if(isset($discount_obj['satisfy']) && $discount_obj['satisfy'] > 0){
+                                $need = 0;
+                                switch($request->ticketType){
+                                    case 'train': $need = $pople * 1250; break;
+                                    case 'flight': $need = $pople * 500; break;
+                                    case 'boat': $need = $pople * 800; break;
+                                    case 'A': $need = $pople * 1650; break;
+                                    case 'B': $need = $pople * 2400; break;
+                                }
+                                if($need >= $discount_obj['satisfy']){
+                                    // do nothing
+                                } else {
+                                    return Response::json(['success'=> 'N','message'=>'金額未達此折扣碼限制'], 200);
+                                }
+                            }
                             return Response::json(['success'=> 'Y','money'=>$discount_obj['money']], 200);
                         } else {
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);

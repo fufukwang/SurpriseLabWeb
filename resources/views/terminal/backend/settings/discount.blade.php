@@ -25,6 +25,7 @@
                                                 <th>折扣碼(不分大小寫)</th>
                                                 <th>折抵金額</th>
                                                 <th>限制數量(0無限制)</th>
+                                                <th>可折扣金額(0無限制)</th>
                                                 <th>功能</th>
                                             </tr>
                                         </thead>
@@ -35,6 +36,7 @@
                                                 <td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20" value="{{ $row['code'] or '' }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000" value="{{ $row['money'] or '' }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="{{ $row['number'] or '' }}"></td>
+                                                <td><input type="number" class="form-control" placeholder="可折扣金額(0無限制)" value="{{ $row['satisfy'] or 0 }}"></td>
                                                 <td><button class="btn btn-danger btn-xs remove-pay-discount" data-id="{{ $key+1 }}"><i class="fa fa-remove"></i></button></td>
                                             </tr>
                                             @endforeach
@@ -182,6 +184,7 @@ $('.pay-add-new').bind('click',function(){
         '<td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20"></td>'+
         '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000"></td>'+
         '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)"></td>'+
+        '<td><input type="number" class="form-control" placeholder="可折扣金額(0無限制)"></td>'+
         '<td><button class="btn btn-danger btn-xs remove-pay-discount" data-id="'+pay_num+'"><i class="fa fa-remove"></i></button></td>'+
     '</tr>');
 });
@@ -199,11 +202,13 @@ $('.pay-discuount-store').bind('click',function(){
         let input_code  = $(this).find('input').eq(0).val();
         let input_money = $(this).find('input').eq(1).val();
         let input_num   = $(this).find('input').eq(2).val();
+        let input_max   = $(this).find('input').eq(3).val();
         // 驗證資料正確
         if(input_code == '' || checkCode(input_code)) message += '流水號 '+id+' 折扣碼有誤<br>';
         if(input_money == '' || isNaN(input_money)) message += '流水號 '+id+' 折抵金額有誤<br>';
         if(input_num == '' || isNaN(input_num)) message += '流水號 '+id+' 限制數量有誤<br>';
-        obj.push({code: input_code,money: input_money,number: input_num});
+        if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 金額數字有誤<br>';
+        obj.push({code: input_code,money: input_money,number: input_num,satisfy: input_max});
     });
 
 

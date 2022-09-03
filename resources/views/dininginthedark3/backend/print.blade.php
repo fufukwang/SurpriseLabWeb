@@ -129,7 +129,8 @@
         $totle_money = 0;
         $inv_open = false;
         $last_four = '';
-        if($coupons){
+        $modify_money = '';
+        if(count($coupons)>0){
             foreach($coupons as $coup){
                 $single_money = App\model\dark3\backme::select('money')->find($coup->b_id)->money;
                 if($tmp_b_id != $coup->b_id){
@@ -140,6 +141,11 @@
             if(isset($coup->b_id)){
                 // 這裡取得貝殼過來的後四碼
                 $last_four = App\model\dark3\backme::select('last_four')->find($coup->b_id)->last_four;
+            }
+            if($row->OM>0){
+                $totle_money = $row->OM;
+                $last_four = '';
+                $modify_money = "<br />修改金額:{$totle_money}";
             }
         } else {
             $totle_money = $row->OM;
@@ -191,7 +197,7 @@
                                                 <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
                                                 <th>@forelse(App\model\dark3\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\dark3\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
-<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
+<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
 </th>
                                                 <td>{!! nl2br($row->manage) !!}</td>
 

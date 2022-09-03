@@ -448,6 +448,7 @@ $(function() {
                 'act':'CheckDiscount',
                 'code':couponVal,
                 'pople':$people_value,
+                'ticketType':$ticket_value,
                 'useType': 'pay',
             },function(data){
                 if(data.success == 'Y'){
