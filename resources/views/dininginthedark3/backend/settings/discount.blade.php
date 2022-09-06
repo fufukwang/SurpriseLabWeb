@@ -25,7 +25,7 @@
                                                 <th>折扣碼(不分大小寫)</th>
                                                 <th>折抵金額</th>
                                                 <th>限制數量(0無限制)</th>
-                                                <th>可折扣金額(0無限制)</th>
+                                                <th>可使用折扣金額(0無限制)</th>
                                                 <th>功能</th>
                                             </tr>
                                         </thead>
@@ -36,7 +36,7 @@
                                                 <td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20" value="{{ $row['code'] or '' }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000" value="{{ $row['money'] or '' }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="{{ $row['number'] or 0 }}"></td>
-                                                <td><input type="number" class="form-control" placeholder="可折扣金額(0無限制)" value="{{ $row['satisfy'] or 0 }}"></td>
+                                                <td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)" value="{{ $row['satisfy'] or 0 }}"></td>
                                                 <td><button class="btn btn-danger btn-xs remove-pay-discount" data-id="{{ $key+1 }}"><i class="fa fa-remove"></i></button></td>
                                             </tr>
                                             @endforeach
@@ -73,7 +73,7 @@
                                                 <th>折扣碼(不分大小寫)</th>
                                                 <th>折抵金額</th>
                                                 <th>限制數量(0無限制)</th>
-                                                <th>可折扣金額(0無限制)</th>
+                                                <th>可使用折扣金額(0無限制)</th>
                                                 <th>功能</th>
                                             </tr>
                                         </thead>
@@ -84,7 +84,7 @@
                                                 <td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20" value="{{ $row['code'] or '' }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000" value="{{ $row['money'] or '' }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="{{ $row['number'] or 0 }}"></td>
-                                                <td><input type="number" class="form-control" placeholder="可折扣金額(0無限制)" value="{{ $row['satisfy'] or 0 }}"></td>
+                                                <td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)" value="{{ $row['satisfy'] or 0 }}"></td>
                                                 <td><button class="btn btn-danger btn-xs remove-sp-discount" data-id="{{ $key+1 }}"><i class="fa fa-remove"></i></button></td>
                                             </tr>
                                             @endforeach
@@ -186,7 +186,7 @@ $('.pay-add-new').bind('click',function(){
         '<td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20"></td>'+
         '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000"></td>'+
         '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)"></td>'+
-        '<td><input type="number" class="form-control" placeholder="可折扣金額(0無限制)"></td>'+
+        '<td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)"></td>'+
         '<td><button class="btn btn-danger btn-xs remove-pay-discount" data-id="'+pay_num+'"><i class="fa fa-remove"></i></button></td>'+
     '</tr>');
 });
@@ -253,7 +253,7 @@ $('.sp-add-new').bind('click',function(){
         '<td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20"></td>'+
         '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000"></td>'+
         '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)"></td>'+
-        '<td><input type="number" class="form-control" placeholder="可折扣金額(0無限制)"></td>'+
+        '<td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)"></td>'+
         '<td><button class="btn btn-danger btn-xs remove-sp-discount" data-id="'+spe_num+'"><i class="fa fa-remove"></i></button></td>'+
     '</tr>');
 });

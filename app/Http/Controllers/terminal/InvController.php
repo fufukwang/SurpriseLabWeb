@@ -144,7 +144,7 @@ class InvController extends WebController
                 $totleamt = 0;
                 $inv_open = false;
                 $last_four = '';
-                if($coupons){
+                if(count($coupons)>0){
                     foreach($coupons as $coup){
                         $single_money = backme::select('money')->find($coup->b_id)->money;
                         if($tmp_b_id != $coup->b_id){
@@ -154,6 +154,7 @@ class InvController extends WebController
                         if($coup->type == 'p1'){ $coupon_pople += 1; } elseif ($coup->type == 'p4') { $coupon_pople += 4; } elseif ($coup->type == 'p10') { $coupon_pople += 10; }
                     }
                     $last_four = backme::select('last_four')->find($coup->b_id)->last_four;
+                    if($row->OM>0){ $totleamt = $row->OM; }
                 } else {
                     $totleamt = $row->OM;
                     if($row->pay_type == '信用卡'){
