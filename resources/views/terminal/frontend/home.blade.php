@@ -108,13 +108,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </p>
 
                                 <!-- B Test -->
-                                <p class="color-y200">
+                                <!-- <p class="color-y200">
                                     乘著飛機，翱翔天際<br/>
                                     搭上列車，看遍山海<br/><br/>
                                     在一切終將結束的落日之際<br/>
                                     你想透過什麼方式，前往終點？<br/><br/>
                                     落日轉運站，期待你的搭乘
-                                </p>
+                                </p> -->
                             </div>
                         </div>
                     </div>
