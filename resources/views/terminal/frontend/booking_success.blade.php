@@ -73,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div class="cta-wrap">
                                 <div class="btn-wrap">
-                                    <a href="index.html" class="booking-btn shape-round color-primary">關於落日轉運站</a>
+                                    <a href="/terminal" class="booking-btn shape-round color-primary">關於落日轉運站</a>
                                 </div>
                             </div>
                         </div>

@@ -117,7 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <p>身為體驗者的你，可以自由選擇要哪些作品。當然，兩項都體驗一定是最讚的！</p>
                                                             <p>現場也有一戶外場域《 落日月台 》，並開放給所有人。此處散發著落日的燈光氛圍，並販售簡易酒飲與小點，供大家小酌聊天。</p>
                                                             <p>若你於體驗前提早抵達，歡迎在此等待；體驗後也能在此與同場次者分享感覺、拼湊故事；未購買體驗票券能進入《 落日月台 》嗎？當然，此處開放給所有人，只要你想來，我們就歡迎。</p>
-                                                            <p>欲購了解作品與價位，請至 <a href="booking_now" class="link-text style-qa">Ticket</a> 了解更多；欲了解落日月台，請至 <a href="index.html#projects" class="link-text style-qa">Projects</a>了解更多。</p>
+                                                            <p>欲購了解作品與價位，請至 <a href="booking_now" class="link-text style-qa">Ticket</a> 了解更多；欲了解落日月台，請至 <a href="/terminal#projects" class="link-text style-qa">Projects</a>了解更多。</p>
                                                         </div>
                                                     </div>
                                                 </div>

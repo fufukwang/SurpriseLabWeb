@@ -698,7 +698,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div class="cta-wrap">
                                 <div class="btn-wrap">
-                                    <a href="rules" class="activity-btn">查看規則</a>
+                                    <a href="/terminal/rules" class="activity-btn">查看規則</a>
                                 </div>
                                 <div class="cta-note">                                
                                     <p class="color-y200">問與答／更改、退費事項</p>

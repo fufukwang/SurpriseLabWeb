@@ -453,7 +453,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <input type="checkbox" id="agree-rules" name="agree-rules" required>
                                         <label class="body-04" for="agree-rules">
                                             <span class="body-04">我已詳讀並遵守</span>
-                                            <a href="rules.html" target="_blank" class="link-text style-smaller">落日轉運站劃位與體驗規則</a>
+                                            <a href="/terminal/rules" target="_blank" class="link-text style-smaller">落日轉運站劃位與體驗規則</a>
                                         </label>
                                     </div>
                                     <div class="form-group checkbox-layout">
@@ -654,7 +654,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div class="cta-wrap">
                                 <div class="btn-wrap">
-                                    <a href="index.html" class="booking-btn shape-round color-primary">關於落日轉運站</a>
+                                    <a href="/terminal" class="booking-btn shape-round color-primary">關於落日轉運站</a>
                                 </div>
                             </div>
                         </div>
