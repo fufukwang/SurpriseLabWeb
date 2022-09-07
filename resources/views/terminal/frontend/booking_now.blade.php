@@ -36,6 +36,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-now.css">
 <!-- Google Tag Manager -->
@@ -50,19 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7V2BQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <nav class="nav-wrap">
-        <div class="pc-nav-wrap">
-            <div class="logo-wrap">
-                <img src="/terminalAssets/images/general/brand.png" class="style-normal" alt="落日轉運站">
-                <img src="/terminalAssets/images/general/brand_hover.png" class="style-hover" alt="落日轉運站">
-            </div>
-        </div>
-        <div class="mobile-nav-wrap">
-            <div class="logo-wrap">
-                <img src="/terminalAssets/images/general/brand.png" alt="落日轉運站">
-            </div>
-        </div>
-    </nav>
+    @include('terminal.frontend._nav')
     
     <main>
         <section class="section-wrap" id="booking_now">
@@ -88,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </h2>
                                                 <h5 class="card-subtitle">THE GREAT TIPSY：BON VOYAGE</h5>
                                             </div>
-                                            <div class="ticket-desc body-01">沈浸式 ╳ 互動式 ╳ 即時演出</div>
+                                            <div class="ticket-desc body-01">故事沉浸 ╳ 互動式 ╳ 即時演出</div>
                                         </div>
     
                                         <div class="ticket-card-body">
@@ -117,7 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="feature-item">
                                                     <div class="item-title body-01">
                                                         <i class="icon-drink"></i>
-                                                        調飲<span class="color-o400">2</span>杯
+                                                        調飲<span class="color-o400">1</span>杯
                                                     </div>
                                                     <div class="item-unit body-02">每人　</div>
                                                 </div>
@@ -125,9 +114,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div class="item-title has-emoji body-01">
                                                         <i class="icon-feel"></i>
                                                         感受
-                                                        <img src="/terminalAssets/images/emoji/woozy-face.png" alt="woozy-face">
-                                                        <img src="/terminalAssets/images/emoji/pleading-face.png" alt="pleading-face">
-                                                        <img src="/terminalAssets/images/emoji/smiling-face-with-hearts.png" alt="smiling-face-with-hearts">
+                                                        <img src="/terminalAssets/images/emoji/red/woozy-face.png" alt="woozy-face">
+                                                        <img src="/terminalAssets/images/emoji/red/pleading-face.png" alt="pleading-face">
+                                                        <img src="/terminalAssets/images/emoji/red/smiling-face-with-hearts.png" alt="smiling-face-with-hearts">
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,20 +126,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="accordion ticket-accordion" id="accordionExample-1">
                                                 <div class="accordion-item">
                                                     <h6 class="accordion-header" id="heading-1">
-                                                        <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
-                                                            故事沈浸
+
+                                                        <!-- GTM 追蹤碼 -->
+                                                        <!-- id: #ticket-story-train -->
+                                                        <!-- class: .icon-arrow-down-1 -->
+                                                        <button class="collapsed" id="ticket-story-train" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                                                            你能順利到站嗎？
                                                             <div class="accrodion-arrow">
-                                                                <i class="icon-arrow-down"></i>
+                                                                <i class="icon-arrow-down icon-arrow-1"></i>
                                                             </div>
                                                         </button>
+
                                                     </h6>
                                                     <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#accordionExample-1">
                                                         <div class="accordion-body body-04">
-                                                            你將搭上電影場景般的列車，<br/>
-                                                            自由穿梭各節車廂，近距離觀賞演員。<br/>
-                                                            微醺之中，你將走入一段關於<br/>
-                                                            遺憾的故事，請勇敢探索<br/>
-                                                            ─ 願你安全到站
+                                                            你將穿梭在電影場景般的車廂，遇見<br/>
+                                                            身懷心事、抱有遺憾的乘客們。跟隨<br/>
+                                                            他們，你將逐步走進列車上秘密之地<br/>
+                                                            ──　微醺間，願你安全到站　──
                                                         </div>
                                                     </div>
                                                 </div>
@@ -169,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </h2>
                                                 <h5 class="card-subtitle">無光飛航</h5>
                                             </div>
-                                            <div class="ticket-desc body-01">沈浸式 ╳ 無光體驗 ╳ 聲音劇場</div>
+                                            <div class="ticket-desc body-01">英國製作 ╳ 無光環境 ╳ 聲音劇場</div>
                                         </div>
     
                                         <div class="ticket-card-body">
@@ -199,9 +192,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div class="item-title has-emoji body-01">
                                                         <i class="icon-feel"></i>
                                                         感受
-                                                        <img class="img-fluid" src="/terminalAssets/images/emoji/face-with-peeking-eye.png" alt="face-with-peeking-eye">
-                                                        <img class="img-fluid" src="/terminalAssets/images/emoji/face-screaming-in-fear.png" alt="face-screaming-in-fear">
-                                                        <img class="img-fluid" src="/terminalAssets/images/emoji/shushing-face.png" alt="shushing-face">
+                                                        <img class="img-fluid" src="/terminalAssets/images/emoji/red/face-with-peeking-eye.png" alt="face-with-peeking-eye">
+                                                        <img class="img-fluid" src="/terminalAssets/images/emoji/red/face-screaming-in-fear.png" alt="face-screaming-in-fear">
+                                                        <img class="img-fluid" src="/terminalAssets/images/emoji/red/shushing-face.png" alt="shushing-face">
                                                     </div>
                                                 </div>
                                             </div>
@@ -211,19 +204,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="accordion ticket-accordion" id="accordionExample-2">
                                                 <div class="accordion-item">
                                                     <h6 class="accordion-header" id="heading-2">
-                                                        <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-                                                            無光聲音劇場
+
+                                                        <!-- GTM 追蹤碼 -->
+                                                        <!-- id: #ticket-story-flight -->
+                                                        <!-- class: .icon-arrow-down-2 -->
+                                                        <button class="collapsed" id="ticket-story-flight" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                                                            你能順利降落嗎？
                                                             <div class="accrodion-arrow">
-                                                                <i class="icon-arrow-down"></i>
+                                                                <i class="icon-arrow-down icon-arrow-down-2"></i>
                                                             </div>
                                                         </button>
+
                                                     </h6>
                                                     <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionExample-2">
                                                         <div class="accordion-body body-04">
-                                                            在全黑的機艙中，你將於專屬座位上<br/>
-                                                            透過耳機中的聲音、地板氣動儀器的<br/>
-                                                            震動，體驗一場30分鐘的飛行<br/>
-                                                            ─ 願你順利降落
+                                                            在無光的機艙中，你將透過耳機中機<br/>
+                                                            長及空服員的對話、突兀的聲響及地<br/>
+                                                            板的震動，體驗一場無處可逃的飛行<br/>
+                                                            ──　黑暗中，願你順利降落　──
                                                         </div>
                                                     </div>
                                                 </div>
@@ -279,9 +277,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div class="item-title has-emoji body-01">
                                                         <i class="icon-feel"></i>
                                                         感受
-                                                        <img src="/terminalAssets/images/emoji/relieved-face.png" alt="relieved-face">
-                                                        <img src="/terminalAssets/images/emoji/smiling-face-with-halo.png" alt="smiling-face-with-halo">
-                                                        <img src="/terminalAssets/images/emoji/face-savoring-food.png" alt="face-savoring-food">
+                                                        <img src="/terminalAssets/images/emoji/red/relieved-face.png" alt="relieved-face">
+                                                        <img src="/terminalAssets/images/emoji/red/smiling-face-with-halo.png" alt="smiling-face-with-halo">
+                                                        <img src="/terminalAssets/images/emoji/red/face-savoring-food.png" alt="face-savoring-food">
                                                     </div>
                                                 </div>
                                             </div>

@@ -370,128 +370,6 @@ h6 {
 }
 
 
-
-//--------------
-// Navigation
-//--------------
-.nav-wrap {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: $color-b400;
-    
-    // Navigation - PC
-    .pc-nav-wrap {
-        width: 100%;
-        height: 100%;
-        padding: 24px;
-        box-sizing: border-box;
-        border-bottom: 1px solid rgba($color-b300, .5);
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @media screen and (max-width: 1199.98px) {
-            display: none;
-        }
-
-        // hover effect
-        &:hover {
-            .logo-wrap {
-                img {
-                    &.style-hover {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-
-        // LOGO
-        .logo-wrap {
-            width: 122px;
-            height: 36px;
-            position: relative;
-
-            img {
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                &.style-normal {
-                    z-index: 10;
-                }
-    
-                &.style-hover {
-                    z-index: 20;
-                    opacity: 0;
-                    transition: .3s;
-                }
-            }
-        }
-
-        // Line
-        &::before,
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: -1px;
-            width: 0px;
-            height: 1px;
-            background-color: $color-r200;
-            transition: .3s;
-        }
-
-        &::before {
-            left: 50%;
-        }
-
-        &::after {
-            right: 50%;
-        }
-
-        // Line - hover
-        &:hover {
-            &::before,
-            &::after {
-                width: 50%;
-            }
-        }
-    }
-    
-    // Navigation - Mobile
-    .mobile-nav-wrap {
-        width: 100%;
-        height: 100%;
-        padding: 14.5px;
-        box-sizing: border-box;
-        border-bottom: 1px solid $color-r200;
-        display: none;
-        align-items: center;
-        justify-content: space-between;
-
-        @media screen and (max-width: 1199.98px) {
-            display: flex;
-        }
-
-        // LOGO
-        .logo-wrap {
-            width: 102px;
-            height: 30px;
-
-            img {
-                height: 100%;
-            }
-        }
-    }
-    
-}
-
-
 //--------------
 // Progress
 //--------------
@@ -834,7 +712,7 @@ h6 {
             
             // Ticket Group - Table -- 2 column of left top
             &.column-2-th {
-                background-image: url('/images/other/table-slash.png');
+                background-image: url('../images/other/table-slash.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 position: relative;
