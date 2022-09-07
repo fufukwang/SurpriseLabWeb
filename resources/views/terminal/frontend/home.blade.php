@@ -36,7 +36,7 @@
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/owlcarousel2-2.3.4/owl.carousel.min.css">
-    <link rel="stylesheet" href="/terminalAssets//terminalAssets/css/plugins/owlcarousel2-2.3.4/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/terminalAssets/css/plugins/owlcarousel2-2.3.4/owl.theme.default.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
