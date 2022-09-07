@@ -35,7 +35,7 @@
     <!-- nav menu - pc -->
     <nav class="pc-nav-menu-wrap js-hidden-target">
         <ul class="menu-wrap js-anchor-menu">
-            <li class="menu-item active"><a href="booking_now.html">TICKET</a></li>
+            <li class="menu-item active"><a href="/terminal/booking_now">TICKET</a></li>
             <li class="menu-item" data-id="about"><a href="/terminal#about">ABOUT</a></li>
             <li class="menu-item" data-id="projects"><a href="/terminal#projects">PROJECTS</a></li>
             <li class="menu-item" data-id="tour"><a href="/terminal#tour">TOUR</a></li>
