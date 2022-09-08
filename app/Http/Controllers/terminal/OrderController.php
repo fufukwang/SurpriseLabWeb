@@ -467,24 +467,16 @@ class OrderController extends WebController
     }
 
     public function beSentOrderMail(Request $request,$id){
-        $act = pro::select('day','rang_start','rang_end')->find($id);
-
-
-        $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
-        $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
         $mailer = [
-            'day'   => Carbon::parse($act->day)->format('Y / m / d'),
-            'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
             'pople' => $request->pople,
             'email' => $request->email,
             'name'  => $request->name,
             'phone' => $request->phone,
-            'gday'  => $rangStart.'/'.$rangEnd,
+            'id'    => $request->oid,
             'master'=> "?id=".md5($request->oid)."&sn=".$request->sn,
-            'template' => 'order',
+            'template' => $request->plan,
         ];
-        SLS::SendEmailByTemplateName($mailer);
-        SLS::SendSmsByTemplateName($mailer);
+        $this->SendOrderEmailByTemplateName($mailer);
         order::where('id',$request->oid)->update(['is_send'=>1]);
         return Response::json(['message'=> '已更新'], 200);
     }
