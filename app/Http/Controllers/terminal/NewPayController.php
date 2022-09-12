@@ -184,7 +184,6 @@ class NewPayController extends WebController
                     'pay_status' => '已付款'
                 ];
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update($pay_data);
-
                 return view('terminal.frontend.booking_success');
             } else {
                 $pay_data = [
@@ -240,6 +239,7 @@ class NewPayController extends WebController
                     'email' => $order->email,
                     'name'  => $order->name,
                     'phone' => $order->tel,
+                    'id'    => $order->id,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
                     'template' => $order->plan,
                 ];

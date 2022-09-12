@@ -30,16 +30,6 @@ class WebController extends Controller
 
                 $m->to($data['email'], $data['name']);
                 $m->subject('【落日轉運站】訂位確認信件');
-
-                /*
-                switch ($data['template']) {
-                    case 'order':
-                        $m->subject('【落日轉運站】訂位確認信件');
-                        break;
-
-                }
-                */
-                    
             });
             SLS::sent_single_sms($data['phone'],"《落日轉運站》訂位確認信已寄出，請務必、務必查看。若未收到，請至垃圾信匣或促銷內容尋找唷！\n\n祝你旅途愉快！\n落日轉運站乘務人員");
             return true;
