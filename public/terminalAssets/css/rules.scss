@@ -1,0 +1,108 @@
+// Variable
+@import 'variable';
+
+// Override Bootstrap
+@import 'reset';
+
+
+
+// section (rules page)
+.section-rule-wrap {
+    padding: 119px 0 200px;
+
+    @media screen and (max-width: 1199.98px) {
+        padding: 96px 0 180px;
+    }
+}
+
+// content
+.content-wrap {
+    width: 644px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1199.98px) {
+        width: 100%;
+    }
+}
+
+// block
+.block-wrap + .block-wrap {
+    margin-top: 120px;
+
+    @media screen and (max-width: 1199.98px) {
+        margin-top: 72px;
+    }
+}
+.block-wrap {
+
+    &.layout-contact {
+        text-align: center;
+    }
+    
+    .section-heading-wrap {
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 1199.98px) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// sub block
+.sub-block-wrap + .sub-block-wrap {
+    margin-top: 60px;
+
+    @media screen and (max-width: 1199.98px) {
+        margin-top: 48px;
+    }
+}
+
+// table
+.layout-refund {
+    margin-bottom: 18px;
+}
+
+.layout-change {
+    margin-bottom: 24px;
+
+    @media screen and (max-width: 1199.98px) {
+        margin-bottom: 20px;
+    }
+}
+
+// text
+.text-wrap {
+    text-align: center;
+}
+
+
+// accordion
+.rule-accordion-wrap {
+    
+    div + p,
+    p + p {
+        margin-top: 24px;
+    
+        @media screen and (max-width: 1199.98px) {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+// Tab
+.rule-tab-wrap {
+    margin-top: 30px;
+
+    @media screen and (max-width: 1199.98px) {
+        margin-top: 16px;
+    }
+
+    .tab-content {
+        padding-top: 42px;
+
+        @media screen and (max-width: 1199.98px) {
+            padding-top: 36px;
+        }
+    }
+}

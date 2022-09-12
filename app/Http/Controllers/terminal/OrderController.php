@@ -84,10 +84,11 @@ class OrderController extends WebController
             'email'      => $request->email,
             'vegetarian' => $request->vegetarian,
         ];
+        $order = order::find($id);
         if(
-            ($request->has('boat') && $request->boat>0) ||
-            ($request->has('train') && $request->train>0) ||
-            ($request->has('flight') && $request->flight>0)
+            ($request->has('boat-store') && $request['boat-store'] ==1 && $request->has('boat') && $request->boat>0) ||
+            ($request->has('train-store') && $request['train-store'] ==1 && $request->has('train') && $request->train>0) ||
+            ($request->has('flight-store') && $request['flight-store'] ==1 && $request->has('flight') && $request->flight>0)
         ){
             // $data['pro_id'] = $request->pro_id;
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
@@ -102,63 +103,16 @@ class OrderController extends WebController
                 if($request->has('boat-store') && $request->has('boat-id') && $request->has('boat') && $request['boat-store'] ==1){
                     DB::table('terminal_pro_order')->where('id',$request['boat-id'])->update(['pro_id'=>$request->boat]);
                 }
-                /*
-                $order = order::select('plan')->find($id);
-                $proOrder = DB::table('terminal_pro_order')->where('order_id',$id)->get();
-                switch($order->plan){
-                    case 'boat':
-                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->boat]);
-                        break;
-                    case 'train':
-                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->train]);
-                        break;
-                    case 'flight':
-                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->flight]);
-                        break;
-                    case 'A':
-                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->train]);
-                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[1]->id)->update(['order_id'=>$id,'pro_id'=>$request->flight]);
-                        break;
-                    case 'B':
-                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[0]->id)->update(['order_id'=>$id,'pro_id'=>$request->train]);
-                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[1]->id)->update(['order_id'=>$id,'pro_id'=>$request->flight]);
-                        DB::table('terminal_pro_order')->where('order_id',$id)->where('id',$proOrder[2]->id)->update(['order_id'=>$id,'pro_id'=>$request->boat]);
-                        break;
-                }
-                */
-
-                /*
-                $order = order::select('terminalorder.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites')->find($id);
-                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_start))));
-                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_end))));
                 $mailer = [
-                    'day'   => Carbon::parse($order->day)->format('Y / m / d'),
-                    'time'  => substr($order->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
                     'pople' => $order->pople,
                     'email' => $order->email,
                     'name'  => $order->name,
-                    'gday'  => $rangStart.'/'.$rangEnd,
                     'phone' => $order->tel,
+                    'id'    => $order->id,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'template' => 'order',
+                    'template' => $order->plan,
                 ];
-                if($mailer['email'] != ''){
-                    SLS::SendEmailByTemplateName($mailer);
-                    SLS::SendSmsByTemplateName($mailer);
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($order->day.' '.$order->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    if($day <= 7){
-                        $mailer['template'] = 'D7';
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                    if($day == 0){
-                        $mailer['template'] = 'DX';
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                }
-                */
+                $this->SendOrderEmailByTemplateName($mailer);
             } catch (Exception $e){
                 Log::error($e);
             }
@@ -168,14 +122,22 @@ class OrderController extends WebController
                 $data['edit_type'] = $request->edit_type;
                 $data['money'] =  $request->money;
             }
+            if($request->pay_status == '已付款(部分退款)'){
+                $data['money'] =  $request->money;
+            }
+            if(isset($data['money']) && $order->money != $data['money']){
+                $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整金額{$order->money}->{$data['money']}";
+            }
             order::where('id',$id)->update($data);
-            $order = order::find($id);
         } 
+        return redirect('/terminal/print?'.$request->qxx)->with('message','編輯完成!');
+        /*
         if($request->has('qxx') && $request->qxx != ''){
             return redirect('/terminal/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
             return redirect('/terminal/orders/'.$order->pro_id)->with('message','編輯完成!');
         }
+        */
     }
     public function OrderDelete(Request $request,$id){
         $order = order::select('sn')->find($id);
@@ -264,7 +226,7 @@ class OrderController extends WebController
                 'vegetarian' => $request->vegetarian,
                 'is_overseas'=> $is_overseas,
                 'edit_type'  => $request->edit_type,
-                'plan'       => $act->ticket_type,
+                'plan'       => $request->ticket_type,
             ];
             $order = order::create($data);
             switch($data['plan']){
@@ -287,44 +249,20 @@ class OrderController extends WebController
                     DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$boat]);
                     break;
             }
+            if($request->pay_status == '已付款'){
+                $mailer = [
+                    'pople' => $order->pople,
+                    'email' => $order->email,
+                    'name'  => $order->name,
+                    'phone' => $order->tel,
+                    'id'    => $order->id,
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'template' => $order->plan,
+                ];
+                if($mailer['email'] != ''){ $this->SendOrderEmailByTemplateName($mailer); }
+            }
             
 
-
-/*
-            if($request->pay_status == '已付款'){
-                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
-                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                $mailer = [
-                    'day'   => Carbon::parse($act->day)->format('Y / m / d'),
-                    'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
-                    'pople' => $people,
-                    'email' => $data['email'],
-                    'name'  => $data['name'],
-                    'phone' => $data['tel'],
-                    'gday'  => $rangStart.'/'.$rangEnd,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'template' => 'order',
-                ];
-                if($mailer['email'] != ''){
-                    SLS::SendEmailByTemplateName($mailer);
-                    SLS::SendSmsByTemplateName($mailer);
-                    $order->is_send = 1;
-                    $order->save();
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($order->day.' '.$order->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    if($day <= 7){
-                        $mailer['template'] = 'D7';
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                    if($day == 0){
-                        $mailer['template'] = 'DX';
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                }
-            }
-*/
             return redirect('/terminal/pros?')->with('message','新增完成!');
         } catch (Exception $exception) {
             Log::error($exception);
@@ -458,24 +396,16 @@ class OrderController extends WebController
     }
 
     public function beSentOrderMail(Request $request,$id){
-        $act = pro::select('day','rang_start','rang_end')->find($id);
-
-
-        $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
-        $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
         $mailer = [
-            'day'   => Carbon::parse($act->day)->format('Y / m / d'),
-            'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
             'pople' => $request->pople,
             'email' => $request->email,
             'name'  => $request->name,
             'phone' => $request->phone,
-            'gday'  => $rangStart.'/'.$rangEnd,
+            'id'    => $request->oid,
             'master'=> "?id=".md5($request->oid)."&sn=".$request->sn,
-            'template' => 'order',
+            'template' => $request->plan,
         ];
-        SLS::SendEmailByTemplateName($mailer);
-        SLS::SendSmsByTemplateName($mailer);
+        $this->SendOrderEmailByTemplateName($mailer);
         order::where('id',$request->oid)->update(['is_send'=>1]);
         return Response::json(['message'=> '已更新'], 200);
     }

@@ -115,6 +115,13 @@ class FrontController extends Controller
                                     return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
                                 }
                             }
+                            if(isset($discount_obj['satisfy']) && $discount_obj['satisfy'] > 0){
+                                if($request->need >= $discount_obj['satisfy']){
+                                    // do nothing
+                                } else {
+                                    return Response::json(['success'=> 'N','message'=>'金額未達此折扣碼限制'], 200);
+                                }
+                            }
                             return Response::json(['success'=> 'Y','money'=>$discount_obj['money']], 200);
                         } else {
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);

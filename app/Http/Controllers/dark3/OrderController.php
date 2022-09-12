@@ -80,12 +80,12 @@ class OrderController extends Controller
             'email'      => $request->email,
             'vegetarian' => $request->vegetarian,
         ];
+        $order = order::find($id);
         if($request->has('pro_id') && $request->pro_id>0){
             $data['pro_id'] = $request->pro_id;
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
             // 觸發補寄
             try {
-                $order = order::find($id);
                 $pro = pro::find($request->pro_id);
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($pro->day.' '.$pro->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($pro->day.' '.$pro->rang_end))));
@@ -125,8 +125,14 @@ class OrderController extends Controller
                 $data['edit_type'] = $request->edit_type;
                 $data['money'] =  $request->money;
             }
+            if($request->pay_status == '已付款(部分退款)'){
+                $data['money'] =  $request->money;
+            }
+            if(isset($data['money']) && $order->money != $data['money']){
+                $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整金額{$order->money}->{$data['money']}";
+            }
             order::where('id',$id)->update($data);
-            $order = order::find($id);
+            
         } 
         if($request->has('qxx') && $request->qxx != ''){
             return redirect('/dark3/print?'.$request->qxx)->with('message','編輯完成!');
@@ -438,17 +444,23 @@ class OrderController extends Controller
                     $pay_money = '';
                     $pay_last = '';
                     $coupons = coupon::where('o_id',$row['sn'])->get();
-                    
+                    $modify_money = '';
                     if(count($coupons)>0){
+                        $couponNumber = 0;
                         foreach($coupons as $c){
                             if($coupon!=''){
                                 $coupon .= "\r\n";
-                                $pay_money.= "\r\n";
+                                // $pay_money.= "\r\n";
                                 $pay_last.= "\r\n";
                             }
                             $coupon .= "{$c->code}";
-                            $pay_money .= backme::select('money')->find($c->b_id)->money;
+                            // $pay_money .= backme::select('money')->find($c->b_id)->money;
                             $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
+                            $couponNumber++;
+                        }
+                        $pay_money .= ($couponNumber*4400);
+                        if($row['OM']>0){
+                            $pay_money .= "\r\n［{$row['OM']}］";
                         }
                     } else {
                         $pay_money = $row['OM'];
@@ -460,7 +472,7 @@ class OrderController extends Controller
                         }
                     }
                     
-                    if($pay_status !== '已付款' || $pay_status !== '已付款(部分退款)') $pay_money = 0;
+                    if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
 
 
                     $sheetRow = [

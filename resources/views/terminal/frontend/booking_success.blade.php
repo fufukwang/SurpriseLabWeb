@@ -36,6 +36,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-result.css">
 <!-- Google Tag Manager -->
@@ -50,19 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7V2BQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <nav class="nav-wrap">
-        <div class="pc-nav-wrap">
-            <div class="logo-wrap">
-                <img src="/terminalAssets/images/general/brand.png" class="style-normal" alt="落日轉運站">
-                <img src="/terminalAssets/images/general/brand_hover.png" class="style-hover" alt="落日轉運站">
-            </div>
-        </div>
-        <div class="mobile-nav-wrap">
-            <div class="logo-wrap">
-                <img src="/terminalAssets/images/general/brand.png" alt="落日轉運站">
-            </div>
-        </div>
-    </nav>
+    @include('terminal.frontend._nav')
     
     <main>
         <section class="section-wrap" id="booking_success">
@@ -84,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div class="cta-wrap">
                                 <div class="btn-wrap">
-                                    <a href="index.html" class="booking-btn shape-round color-primary">關於落日轉運站</a>
+                                    <a href="/terminal" class="booking-btn shape-round color-primary">關於落日轉運站</a>
                                 </div>
                             </div>
                         </div>

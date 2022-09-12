@@ -436,125 +436,6 @@ h6 {
   background-color: #ad4039;
 }
 
-.nav-wrap {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: #232666;
-}
-
-.nav-wrap .pc-nav-wrap {
-  width: 100%;
-  height: 100%;
-  padding: 24px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-bottom: 1px solid rgba(112, 114, 158, 0.5);
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 1199.98px) {
-  .nav-wrap .pc-nav-wrap {
-    display: none;
-  }
-}
-
-.nav-wrap .pc-nav-wrap:hover .logo-wrap img.style-hover {
-  opacity: 1;
-}
-
-.nav-wrap .pc-nav-wrap .logo-wrap {
-  width: 122px;
-  height: 36px;
-  position: relative;
-}
-
-.nav-wrap .pc-nav-wrap .logo-wrap img {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.nav-wrap .pc-nav-wrap .logo-wrap img.style-normal {
-  z-index: 10;
-}
-
-.nav-wrap .pc-nav-wrap .logo-wrap img.style-hover {
-  z-index: 20;
-  opacity: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.nav-wrap .pc-nav-wrap::before, .nav-wrap .pc-nav-wrap::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: -1px;
-  width: 0px;
-  height: 1px;
-  background-color: #ff5b7e;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.nav-wrap .pc-nav-wrap::before {
-  left: 50%;
-}
-
-.nav-wrap .pc-nav-wrap::after {
-  right: 50%;
-}
-
-.nav-wrap .pc-nav-wrap:hover::before, .nav-wrap .pc-nav-wrap:hover::after {
-  width: 50%;
-}
-
-.nav-wrap .mobile-nav-wrap {
-  width: 100%;
-  height: 100%;
-  padding: 14.5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-bottom: 1px solid #ff5b7e;
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media screen and (max-width: 1199.98px) {
-  .nav-wrap .mobile-nav-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.nav-wrap .mobile-nav-wrap .logo-wrap {
-  width: 102px;
-  height: 30px;
-}
-
-.nav-wrap .mobile-nav-wrap .logo-wrap img {
-  height: 100%;
-}
-
 .booking-progress-list {
   --item-border: 8px;
   list-style-type: none;
@@ -873,7 +754,7 @@ h6 {
 }
 
 .ticket-group-table tr th.column-2-th {
-  background-image: url("/terminalAssets/images/other/table-slash.png");
+  background-image: url("../images/other/table-slash.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
@@ -1212,11 +1093,6 @@ input[type="checkbox"]:checked::after {
 .dropdown-wrap .dropdown-menu .dropdown-item:hover {
   background-color: #ff9c9c;
   color: #232666;
-}
-
-.dropdown-item.disabled{
-  cursor: not-allowed!important;
-  color: #adb5bd!important;
 }
 
 .datepicker-wrap {

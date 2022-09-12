@@ -569,6 +569,7 @@ $('.verification-code').on('click', function () {
             'pople':submitDatas['booking_people'] - cutPelple,
             'day_parts':$('#booking_time_slot').val(),
             'useType': 'pay',
+            'need': proSingle * parseInt($('[name="booking_people"]').val()),
             'coupon':usedCoupons
         },function(data){
             if(data.success == 'Y'){
@@ -582,6 +583,7 @@ $('.verification-code').on('click', function () {
                 $('#discount').val(discountCode);
                 $('.verification-code').prop('disabled',true);
                 $('input[name=coupon]').prop('readonly',true);
+                $('.submit-coupon-error-message').hide();
             } else {
                 $('.submit-coupon-error-message').show();
                 // alert('折扣碼 '+couponVal+" 無法使用!\n" + data.message);
@@ -716,6 +718,7 @@ jQuery(function($){
     });
     // tappay
     // TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'production');
+    /*
     TPDirect.card.setup({
         fields: {
             number: {
@@ -787,6 +790,7 @@ jQuery(function($){
     $('#CanalPay').bind('click',function(){
         $('#lightbox2pay').fadeToggle(700);
     });
+    */
     $('#btn-online-submit').bind('click',function(){
         // 判斷是否到達可過關的地方
         if($('[name="booking_people"]').val() - cutPelple == 0){

@@ -184,7 +184,6 @@ class NewPayController extends WebController
                     'pay_status' => '已付款'
                 ];
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update($pay_data);
-
                 return view('terminal.frontend.booking_success');
             } else {
                 $pay_data = [
@@ -235,20 +234,16 @@ class NewPayController extends WebController
             // 寄送信件
             if($order->pay_status == '已付款' && $order->is_send === 0 && $order->discount == null){
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update(['discount'=>'back']);
-                $act = pro::where('id',$order->pro_id)->first();
-                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
-                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
                 $mailer = [
-                    'day'   => Carbon::parse($act->day)->format('Y / m / d'),
-                    'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
                     'pople' => $order->pople,
                     'email' => $order->email,
                     'name'  => $order->name,
-                    'gday'  => $rangStart.'/'.$rangEnd,
+                    'phone' => $order->tel,
+                    'id'    => $order->id,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'template' => 'order',
+                    'template' => $order->plan,
                 ];
-                SLS::SendEmailByTemplateName($mailer);
+                $this->SendOrderEmailByTemplateName($mailer);
 
 
                 try {

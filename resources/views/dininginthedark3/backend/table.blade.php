@@ -69,30 +69,33 @@
    if($pay_type == '公關位' && ($row->pay_status == '已付款' || $row->pay_status == '已付款(部分退款)')){
       $pay_status = '公關位';
    }
-   $pay_money = '';
+   $pay_money = 0;
    $coupons = App\model\dark3\coupon::where('o_id',$row->sn)->get();
-                    
+   $modify_money = '';
    if(count($coupons)>0){
       foreach($coupons as $c){
          if($coupon!=''){
             $coupon .= "<br >";
-            $pay_money.= "<br />";
          }
          $coupon .= "{$c->code}";
-         $pay_money .= App\model\dark3\backme::select('money')->find($c->b_id)->money;
+         $pay_money+=4400;
+         // $pay_money .= App\model\dark3\backme::select('money')->find($c->b_id)->money;
+      }
+      if($row->OM>0){
+         $modify_money = "修改金額:{$row->OM}";
       }
    } else {
       $pay_money = $row->OM;
    }
                     
-   if($pay_status !== '已付款' || $pay_status !== '已付款(部分退款)') $pay_money = 0;
+   if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
    ?>
 		<tr>
 			<td rowspan="2"></td>
 			<td rowspan="2"></td>
 			<td>{{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}</td>
 			<td>{{ $row->name }}</td>
-			<td>{{ $pay_type}} {!! $pay_money !!} （ @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')) Y @else N @endif ）</td>
+			<td>{{ $pay_type}} {{ $pay_money }} （ @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')) Y @else N @endif ）{{ $modify_money }}</td>
 			<td>{{ $row->tel }}</td>
 			<td>{{ $row->pople }} 人 </td>
 			<td>{{ $row->vegetarian }} 人</td>

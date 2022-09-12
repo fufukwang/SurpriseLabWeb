@@ -504,7 +504,7 @@
 
     <!-- blockUI script-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
-    
+    {{--
     <!-- tappaysdk -->
     <script src="https://js.tappaysdk.com/tpdirect/v5.5.1"></script>
     @if(env('APP_ENV') == 'production')
@@ -512,9 +512,9 @@
     @else
     <script>TPDirect.setupSDK('12098', 'app_kglJZrJS8ltbzL22jO8jZ4LJAoJtx1Siqz8UcqRDJOmu3TnnfSUBLVhKRxWm', 'sandbox');</script>
     @endif
-    
+    --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.1"></script>
+    <script src="js/form_pay.js?v=0.2"></script>
 
 </body>
 </html>
