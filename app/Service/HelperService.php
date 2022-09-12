@@ -92,7 +92,9 @@ class HelperService {
                     case 'order':
                         $m->subject('【無光晚餐】訂位確認信件');
                         break;
-
+                    case 'D14':
+                        $m->subject('【無光晚餐來信】');
+                        break;
                 }
                     
             });

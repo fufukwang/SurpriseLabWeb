@@ -61,6 +61,23 @@ class Dark3Task extends Command
     private function checkHour17(){
         // 前 7 天 & 當天
         try {
+            // 14 天
+            $pr14day = pro::select('id')->where('open',1)
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=14")->get();
+            foreach($pr14day as $pro){
+                // 找出正常的訂單
+                $order14 = order::select('id','name','email','tel')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                foreach ($order14 as $ord) {
+                    if($ord->tel != '' && $ord->email != ''){
+                        $toData = [
+                            'name'     => $ord->name,
+                            'email'    => $ord->email,
+                            'template' => 'D14',
+                        ];
+                        SLS::SendEmailByTemplateName($toData);
+                    }
+                }
+            }
             // 7 天
             $pr07day = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=7")->get();

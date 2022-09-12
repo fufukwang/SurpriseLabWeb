@@ -107,6 +107,10 @@ class OrderController extends Controller
                     $now = time();
                     $lim = strtotime($pro->day.' '.$pro->rang_start);
                     $day = round( ($lim - $now) / 86400 );
+                    if($day <= 14){
+                        $mailer['template'] = 'D14';
+                        SLS::SendEmailByTemplateName($mailer);
+                    }
                     if($day <= 7){
                         $mailer['template'] = 'D7';
                         SLS::SendSmsByTemplateName($mailer);
@@ -243,6 +247,10 @@ class OrderController extends Controller
                     $now = time();
                     $lim = strtotime($act->day.' '.$act->rang_start);
                     $day = round( ($lim - $now) / 86400 );
+                    if($day <= 14){
+                        $mailer['template'] = 'D14';
+                        SLS::SendEmailByTemplateName($mailer);
+                    }
                     if($day <= 7){
                         $mailer['template'] = 'D7';
                         SLS::SendSmsByTemplateName($mailer);

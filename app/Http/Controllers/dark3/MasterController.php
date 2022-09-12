@@ -206,22 +206,10 @@ class MasterController extends Controller
                 'id'    => $request->id,
                 'name'  => $request->name,
                 'email' => $request->email,
-                'type'  => $request->type,
+                'template'  => $request->type,
             ];
-            if($toData['type'] == 'D10'){
-                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-                $order = $order->select('day','rang_start')->where('dark3order.id',$toData['id'])->whereIn('pay_status',['已付款','已付款(部分退款)'])->first();
-                $toData['day'] = $order->day.' '.$order->rang_start;
-            }
-            if($toData['type'] == 'Name'){
-                if(env('APP_ENV') == 'production'){
-                    $toData['link'] = 'https://www.surpriselab.com.tw/dininginthedark3/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
-                } else {
-                    $toData['link'] = 'http://dev.surpriselab.com.tw/dininginthedark3/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
-                }
-            }
             // 信件補送
-            if(SLS::SendPreviewEmail($toData)){
+            if(SLS::SendEmailByTemplateName($toData)){
                 return response()->json(["success"=>true]);
             } else {
                 return response()->json(["success"=>false]);
