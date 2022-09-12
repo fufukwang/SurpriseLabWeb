@@ -254,9 +254,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="ticket-type">
                                     
                                     <div class="type-item type-matinee">
-                                        <a href="https://surpriselab.backme.tw/checkout/2534/19986?locale=zh-TW" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.1" alt="雙人套票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.1" alt="雙人套票">
+                                        <a href="booking_pay.html" class="ticket-frame" target="_blank">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.1" alt="雙人即享票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.1" alt="雙人即享票">
                                             <p class="ticket-state">
                                                 直購票形式，付款後立刻選擇兩個月區段
                                             </p>
@@ -292,11 +292,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="section-header">
                                     <div class="section-title">
-                                        <h3>預售劃位流程</h3>
+                                        <h3>年度套票劃位流程</h3>
                                         <h4>Pre-Sale Schedule</h4>
                                     </div>
                                     <p class="section-desc">
-                                        無光晚餐採取先預購、後劃位的方式訂位<br/>
                                         依照購買日期順序寄送劃位信<br/>
                                         提醒：直購劃位流程，購票即完成劃位，不會收到序號
                                     </p>
