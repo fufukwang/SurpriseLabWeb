@@ -504,25 +504,11 @@
                                         <td>X</td>
                                         <td>O</td>
                                     </tr>
-                                    <tr>
-                                        <td>用餐前十日</td>
-                                        <td>01/01</td>
-                                        <td>O</td>
-                                        <td>O</td>
-                                        <td>90%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>序號信前一日</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>O</td>
-                                        <td>100%</td>
-                                    </tr>
                                     </tbody>
                                 </table>
                                 <div class="table-note-text">
                                     ※ 來信時間請於當日下班時間 18:00 前，超過以隔日計<br/>
-                                    ※ 用餐前十日申請退費退還金額 90%，係因 10% 金流手續費
+                                    ※ 訂位完成後申請退費退還金額 90%，係因 10% 金流手續費
                                 </div>
 
                                 <h5 class="sub-title highlight change-seat">
