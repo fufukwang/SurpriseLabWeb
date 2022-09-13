@@ -254,7 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="ticket-type">
                                     
                                     <div class="type-item type-matinee">
-                                        <a href="booking_pay.html" class="ticket-frame" target="_blank">
+                                        <a href="https://surpriselab.backme.tw/checkout/2534/19986?locale=zh-TW" class="ticket-frame" target="_blank">
                                             <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.1" alt="雙人即享票">
                                             <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.1" alt="雙人即享票">
                                             <p class="ticket-state">
