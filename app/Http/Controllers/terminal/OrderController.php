@@ -291,7 +291,7 @@ class OrderController extends WebController
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","訂單時間"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     if($row['pay_type'] == '信用卡'){
@@ -311,7 +311,8 @@ class OrderController extends WebController
                     $pay_money = '';
                     $pay_last = '';
                     $coupons = coupon::where('o_id',$row['sn'])->get();
-                    
+                    $return_Tr_time = '';
+                    $blue_sn = '';
                     if(count($coupons)>0){
                         foreach($coupons as $c){
                             if($coupon!=''){
@@ -330,6 +331,8 @@ class OrderController extends WebController
                             if($json['Status'] == "SUCCESS"){
                                 $pay_last = $json['data']['Result']['Card4No'];
                             }
+                            $return_Tr_time = $json['data']['Result']['PayTime'];
+                            $blue_sn = $json['data']['Result']['TradeNo'];
                         }
                     }
                     
@@ -364,6 +367,8 @@ class OrderController extends WebController
                         $pay_money,
                         $pay_last,
                         $row['created_at'],
+                        $return_Tr_time,
+                        " ".$blue_sn,
                     ];
                     array_push($data,$sheetRow);
                 }
@@ -449,7 +454,7 @@ class OrderController extends WebController
                       ->leftJoin('terminal_pro_order', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
                       ->groupBy('order_id')
                       ->from('terminalpro');
-                    $query->where('dayparts',$request->dayparts);
+                    $query->where('day_parts',$request->dayparts);
                 });
             }
             if($request->has('ticket_type') && $request->ticket_type!=''){

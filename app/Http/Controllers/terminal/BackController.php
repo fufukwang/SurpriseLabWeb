@@ -256,7 +256,7 @@ class BackController extends WebController
             }
         } else { $pros = $pros->orderBy('updated_at','desc'); }
         $pros = $pros->paginate($this->perpage);
-        $count = $all_count->get();
+        $count = $all_count->whereIn('ticket_type',['flight','train'])->orderBy('ticket_type')->groupBy('ticket_type')->get();
         return view('terminal.backend.pros',compact('pros','request','count'));
     }
     public function ProEdit(Request $request,$id){

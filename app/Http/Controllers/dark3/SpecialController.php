@@ -31,7 +31,7 @@ class SpecialController extends Controller
         // 抓取並驗證 t6 是否已滿
         // 成立 & pedding 300 秒內的訂單
         $count = order::where('is_overseas',9)->where('pople',6)
-            ->whereRaw("(pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))")->count();
+            ->whereRaw("(pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE()))")->count();
 
 
         $data = [
@@ -57,7 +57,7 @@ class SpecialController extends Controller
 
             $people = $request->booking_people;
 
-            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
+            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
                 return view('dininginthedark3.frontend.booking_fail',['sp'=>1]);
@@ -173,6 +173,7 @@ class SpecialController extends Controller
                     $comments, // 交易描述
                     $data['email'] // 付款人信箱
                 )
+                ->setTradeLimit(600)
                 ->setReturnURL(env('APP_URL').'/dininginthedark3/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
                 ->setNotifyURL(env('APP_URL').'/dininginthedark3/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
                 ->setClientBackURL(env('APP_URL').'/dininginthedark3/booking_pay.html') // 付款取消後返回的網址

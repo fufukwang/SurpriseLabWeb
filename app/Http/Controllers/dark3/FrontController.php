@@ -34,7 +34,7 @@ class FrontController extends Controller
             if($request->has('act')){
                 $pople = $request->pople;
                 if(is_numeric($pople) && $pople>0){
-                    $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$pople);
+                    $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE()))),0))>=".$pople);
                 } else {
                     return Response::json(['success'=> 'N'], 200);
                 }
@@ -66,7 +66,7 @@ class FrontController extends Controller
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->get();
+                        $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->get();
                         return $pro->toJson();
                     break;
 
@@ -110,7 +110,7 @@ class FrontController extends Controller
                             // 數量確認
                             if($discount_obj['number'] > 0){
                                 $used_count = order::where('dis_code',$discount_code)
-                                    ->whereRaw("pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE())")->count();
+                                    ->whereRaw("pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE())")->count();
                                 if($discount_obj['number'] <= $used_count){
                                     return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
                                 }
@@ -188,7 +188,7 @@ class FrontController extends Controller
             }
             $people = $request->Pople;
 
-            $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
+            $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
                 return Response::json(array(
