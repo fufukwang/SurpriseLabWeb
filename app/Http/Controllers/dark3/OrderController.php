@@ -502,7 +502,7 @@ class OrderController extends Controller
                         $pay_money,
                         $pay_last,
                         $return_Tr_time,
-                        $blue_sn,
+                        " ".$blue_sn,
                     ];
                     array_push($data,$sheetRow);
                 }
