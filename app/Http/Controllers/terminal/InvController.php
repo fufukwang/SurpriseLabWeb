@@ -134,7 +134,7 @@ class InvController extends WebController
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id')->get();
+            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','plan')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
                 $phone = $row->tel;
@@ -189,7 +189,7 @@ class InvController extends WebController
                     'CarrierNum' => rawurlencode(''),
                     'LoveCode' => '',
                     'PrintFlag' => 'Y',
-                    'ItemName' => '微醺大飯店票券('.$row->pople.'人票)', //多項商品時，以「|」分開
+                    'ItemName' => '落日轉運站票券('.$row->pople.'人票)', //多項商品時，以「|」分開
                     'ItemCount' => 1, //多項商品時，以「|」分開
                     'ItemUnit' => '組', //多項商品時，以「|」分開
                     'ItemPrice' => $totleamt / $row->pople, //多項商品時，以「|」分開
