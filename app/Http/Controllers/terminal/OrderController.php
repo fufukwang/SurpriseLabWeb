@@ -82,6 +82,7 @@ class OrderController extends WebController
             'pay_type'   => $request->pay_type,
             'tel'        => $request->tel,
             'email'      => $request->email,
+            'name'       => $request->name,
             'vegetarian' => $request->vegetarian,
         ];
         $order = order::find($id);

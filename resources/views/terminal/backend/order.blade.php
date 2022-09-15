@@ -99,7 +99,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">姓名</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="name" readonly value="{{ $order->name or ''  }}">
+                                                    <input type="text" class="form-control" name="name" required value="{{ $order->name or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -111,7 +111,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">EMail</label>
                                                 <div class="col-sm-8">
-                                                    <input type="email" class="form-control" name="email" required value="{{ $order->email or ''  }}">
+                                                    <input type="email" class="form-control" name="email" value="{{ $order->email or ''  }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
