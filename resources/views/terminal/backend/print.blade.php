@@ -229,7 +229,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                                     @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -809,7 +809,8 @@ $(function(){
         var phone = dial.replace('+886','0') + $(this).data('phone');
         var totle_money = $(this).data('totle_money');
         var people = $(this).data('people');
-
+        var plan = $(this).data('plan');
+console.log(plan);
         $('input[name="MerchantOrderNo"]').val($(this).data('sn'));
         $('#BuyerName').val($(this).data('buyername'));
         $('#BuyerEmail').val($(this).data('buyeremail'));
