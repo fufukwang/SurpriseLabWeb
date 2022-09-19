@@ -504,6 +504,13 @@
                                         <td>X</td>
                                         <td>O</td>
                                     </tr>
+                                    <tr>
+                                        <td>用餐前十日</td>
+                                        <td>01/01</td>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>90%</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                                 <div class="table-note-text">
