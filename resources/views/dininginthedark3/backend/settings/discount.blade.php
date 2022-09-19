@@ -184,9 +184,9 @@ $('.pay-add-new').bind('click',function(){
     pay_num++;
     $('#pay-table tbody').append('<tr id="tr_'+pay_num+'"><td>'+pay_num+'</td>'+
         '<td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20"></td>'+
-        '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000"></td>'+
-        '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)"></td>'+
-        '<td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)"></td>'+
+        '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000" value="100"></td>'+
+        '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="0"></td>'+
+        '<td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)" value="0"></td>'+
         '<td><button class="btn btn-danger btn-xs remove-pay-discount" data-id="'+pay_num+'"><i class="fa fa-remove"></i></button></td>'+
     '</tr>');
 });
@@ -209,7 +209,7 @@ $('.pay-discuount-store').bind('click',function(){
         if(input_code == '' || checkCode(input_code)) message += '流水號 '+id+' 折扣碼有誤<br>';
         if(input_money == '' || isNaN(input_money)) message += '流水號 '+id+' 折抵金額有誤<br>';
         if(input_num == '' || isNaN(input_num)) message += '流水號 '+id+' 限制數量有誤<br>';
-        if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 金額數字有誤<br>';
+        if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 可使用折扣金額數字有誤<br>';
         obj.push({code: input_code,money: input_money,number: input_num,satisfy: input_max});
     });
 
@@ -251,9 +251,9 @@ $('.sp-add-new').bind('click',function(){
     spe_num++;
     $('#sp-table tbody').append('<tr id="tr_'+spe_num+'"><td>'+spe_num+'</td>'+
         '<td><input type="text" class="form-control" placeholder="折扣碼" maxlength="20"></td>'+
-        '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000"></td>'+
-        '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)"></td>'+
-        '<td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)"></td>'+
+        '<td><input type="number" class="form-control" placeholder="折抵金額" min="1" max="1000" value="100"></td>'+
+        '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="0"></td>'+
+        '<td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)" value="0"></td>'+
         '<td><button class="btn btn-danger btn-xs remove-sp-discount" data-id="'+spe_num+'"><i class="fa fa-remove"></i></button></td>'+
     '</tr>');
 });
@@ -276,7 +276,7 @@ $('.sp-discuount-store').bind('click',function(){
         if(input_code == '' || checkCode(input_code)) message += '流水號 '+id+' 折扣碼有誤<br>';
         if(input_money == '' || isNaN(input_money)) message += '流水號 '+id+' 折抵金額有誤<br>';
         if(input_num == '' || isNaN(input_num)) message += '流水號 '+id+' 限制數量有誤<br>';
-        if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 金額數字有誤<br>';
+        if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 可使用折扣金額數字有誤<br>';
         obj.push({code: input_code,money: input_money,number: input_num,satisfy: input_max});
     });
 

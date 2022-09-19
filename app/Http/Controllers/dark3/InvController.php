@@ -134,7 +134,7 @@ class InvController extends Controller
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id')->get();
+            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','money')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
                 $phone = $row->tel;
@@ -154,9 +154,9 @@ class InvController extends Controller
                         if($coup->type == 'p2'){ $coupon_pople += 2; } elseif ($coup->type == 'p4') { $coupon_pople += 4; }
                     }
                     $last_four = backme::select('last_four')->find($coup->b_id)->last_four;
-                    if($row->OM>0){ $totleamt = $row->OM; }
+                    if($row->money>0){ $totleamt = $row->money; }
                 } else {
-                    $totleamt = $row->OM;
+                    $totleamt = $row->money;
                     if($row->pay_type == '信用卡'){
                         if($row->result !=''){
                             $card_info = json_decode($row->result);
@@ -267,7 +267,7 @@ class InvController extends Controller
                 'CarrierNum' => rawurlencode($request->CarrierNum),
                 'LoveCode' => $request->LoveCode,
                 'PrintFlag' => 'Y',
-                'ItemName' => '微醺大飯店票券('.$request->ItemCount.'人票)', //多項商品時，以「|」分開
+                'ItemName' => '無光晚餐S3票券('.$request->ItemCount.'人票)', //多項商品時，以「|」分開
                 'ItemCount' => 1, //多項商品時，以「|」分開
                 'ItemUnit' => '組', //多項商品時，以「|」分開
                 'ItemPrice' => $request->ItemPrice, //多項商品時，以「|」分開

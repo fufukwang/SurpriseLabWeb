@@ -114,7 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <a href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a><br/><br/>
                 </p>
                 <div class="feature-btn" style="text-align: center;">
-                    <a class="btn-outline" href="booking.html">重新預約</a>
+                    <a class="btn-outline" href="booking_pay.html">重新預約</a>
                 </div>
             </div>
         </div>

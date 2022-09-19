@@ -134,17 +134,18 @@ class InvController extends WebController
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id')->get();
+            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','plan','money')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
                 $phone = $row->tel;
                 $coupons = coupon::where('o_id',$row->sn)->get();
-                $coupon_pople = 0;
+                // $coupon_pople = 0;
                 $tmp_b_id = 0;
                 $totleamt = 0;
                 $inv_open = false;
                 $last_four = '';
                 if(count($coupons)>0){
+                    /*
                     foreach($coupons as $coup){
                         $single_money = backme::select('money')->find($coup->b_id)->money;
                         if($tmp_b_id != $coup->b_id){
@@ -153,10 +154,12 @@ class InvController extends WebController
                         }
                         if($coup->type == 'p1'){ $coupon_pople += 1; } elseif ($coup->type == 'p4') { $coupon_pople += 4; } elseif ($coup->type == 'p10') { $coupon_pople += 10; }
                     }
+                    */
+                    $totleamt = count($coupons) * 4400;
                     $last_four = backme::select('last_four')->find($coup->b_id)->last_four;
-                    if($row->OM>0){ $totleamt = $row->OM; }
+                    if($row->money>0){ $totleamt = $row->money; }
                 } else {
-                    $totleamt = $row->OM;
+                    $totleamt = $row->money;
                     if($row->pay_type == '信用卡'){
                         if($row->result !=''){
                             $card_info = json_decode($row->result);
@@ -168,6 +171,52 @@ class InvController extends WebController
                     }
                 }
                 $taxamt = $totleamt - round($totleamt / (1 + (5 / 100)));
+                $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
+                switch($row->plan){
+                    case 'train':
+                        $ItemName .= '微醺列車：BON VOYAGE';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '1250';$ItemAmt .= (1250*$row->pople);
+                        if(1250 * $row->pople != $totleamt){
+                            $discountLine = $totleamt - (1250 * $row->pople);
+                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                        }
+                        break;
+                    case 'flight':
+                        $ItemName .= 'FLIGHT 無光飛航';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '500';$ItemAmt .= (500*$row->pople);
+                        if(500 * $row->pople != $totleamt){
+                            $discountLine = $totleamt - (500 * $row->pople);
+                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                        }
+                        break;
+                    case 'boat':
+                        $ItemName .= 'Boat for ONE 單程船票';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '800';$ItemAmt .= (800*$row->pople);
+                        if(800 * $row->pople != $totleamt){
+                            $discountLine = $totleamt - (800 * $row->pople);
+                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                        }
+                        break;
+                    case 'A':
+                        $ItemName .= '微醺列車：BON VOYAGE';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '1250';$ItemAmt .= (1250*$row->pople);
+                        $ItemName .= '|FLIGHT 無光飛航';$ItemCount .= '|'.$row->pople;$ItemUnit .= '|張';$ItemPrice .= '|500';$ItemAmt .= '|'.(500*$row->pople);
+                        $ItemName .= '|套票折扣';$ItemCount .= '|'.$row->pople;$ItemUnit .= '|張';$ItemPrice .= '|-100';$ItemAmt .= '|'.(-100*$row->pople);
+                        if(1250 * $row->pople + 500 * $row->pople + (-100 * $row->pople) != $totleamt){
+                            $discountLine = $totleamt - (1250 * $row->pople) - (500 * $row->pople) - (-100 * $row->pople);
+                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                        }
+                        break;
+                    case 'B':
+                        $ItemName .= '微醺列車：BON VOYAGE';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '1250';$ItemAmt .= (1250*$row->pople);
+                        $ItemName .= '|FLIGHT 無光飛航';$ItemCount .= '|'.$row->pople;$ItemUnit .= '|張';$ItemPrice .= '|500';$ItemAmt .= '|'.(500*$row->pople);
+                        $ItemName .= '|Boat for ONE 單程船票';$ItemCount .= '|'.$row->pople;$ItemUnit .= '|張';$ItemPrice .= '|800';$ItemAmt .= '|'.(800*$row->pople);
+                        $ItemName .= '|套票折扣';$ItemCount .= '|'.$row->pople;$ItemUnit .= '|張';$ItemPrice .= '|-150';$ItemAmt .= '|'.(-150*$row->pople);
+                        if(1250 * $row->pople + 500 * $row->pople + 800 * $row->pople + (-150 * $row->pople) != $totleamt){
+                            $discountLine = $totleamt - (1250 * $row->pople) - (500 * $row->pople) - (800 * $row->pople) - (-150 * $row->pople);
+                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                        }
+                        break;
+                }
+
+
+
                 $post_data_array = [
                     'RespondType' => 'JSON',
                     'Version' => '1.4',
@@ -189,16 +238,16 @@ class InvController extends WebController
                     'CarrierNum' => rawurlencode(''),
                     'LoveCode' => '',
                     'PrintFlag' => 'Y',
-                    'ItemName' => '微醺大飯店票券('.$row->pople.'人票)', //多項商品時，以「|」分開
-                    'ItemCount' => 1, //多項商品時，以「|」分開
-                    'ItemUnit' => '組', //多項商品時，以「|」分開
-                    'ItemPrice' => $totleamt / $row->pople, //多項商品時，以「|」分開
-                    'ItemAmt' => $totleamt, //多項商品時，以「|」分開
+                    'ItemName' => $ItemName, //多項商品時，以「|」分開
+                    'ItemCount' => $ItemCount, //多項商品時，以「|」分開
+                    'ItemUnit' => $ItemUnit, //多項商品時，以「|」分開
+                    'ItemPrice' => $ItemPrice, //多項商品時，以「|」分開
+                    'ItemAmt' => $ItemAmt, //多項商品時，以「|」分開
                     'Comment' => $last_four,
                     'Status' => '1' //1=立即開立，0=待開立，3=延遲開立
                 ];
                 $result = $this->inv_sent($post_data_array);
-                // Log::error($result);
+                Log::error($post_data_array);
                 $results = json_decode($result['web_info'],true);
                 if($results['Status'] != 'LIB10003'){
                     if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
@@ -267,9 +316,16 @@ class InvController extends WebController
                 'CarrierNum' => rawurlencode($request->CarrierNum),
                 'LoveCode' => $request->LoveCode,
                 'PrintFlag' => 'Y',
+                /*
                 'ItemName' => '落日轉運站票券('.$request->ItemCount.'人票)', //多項商品時，以「|」分開
                 'ItemCount' => 1, //多項商品時，以「|」分開
                 'ItemUnit' => '組', //多項商品時，以「|」分開
+                'ItemPrice' => $request->ItemPrice, //多項商品時，以「|」分開
+                'ItemAmt' => $request->ItemAmt, //多項商品時，以「|」分開
+                */
+                'ItemName' => $request->ItemName, //多項商品時，以「|」分開
+                'ItemCount' => $request->ItemCount, //多項商品時，以「|」分開
+                'ItemUnit' => $request->ItemUnit, //多項商品時，以「|」分開
                 'ItemPrice' => $request->ItemPrice, //多項商品時，以「|」分開
                 'ItemAmt' => $request->ItemAmt, //多項商品時，以「|」分開
                 'Comment' => $request->Comment,

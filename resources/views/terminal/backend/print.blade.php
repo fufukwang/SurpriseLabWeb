@@ -229,7 +229,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                                     @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -399,13 +399,16 @@
                                                 <th>單價<span class="b2c">(含稅)</span></th>
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
-                                            <tr>
+                                            <input type="hidden" id="TaxPlan" value="">
+                                            <input type="hidden" id="inv_people" value="">
+                                            <tbody id="itemBody"></tbody>
+                                            <!-- <tr>
                                                 <td>落日轉運站(<span  id="inv_people"></span>人)</td>
                                                 <td>1</td>
                                                 <td>組</td>
                                                 <td id="inv_price"></td>
                                                 <td id="inv_amt"></td>
-                                            </tr>
+                                            </tr> -->
                                         </thead>
                                     </table>
                                                 </div>
@@ -809,7 +812,9 @@ $(function(){
         var phone = dial.replace('+886','0') + $(this).data('phone');
         var totle_money = $(this).data('totle_money');
         var people = $(this).data('people');
-
+        var plan = $(this).data('plan');
+        $('#TaxPlan').val(plan);
+// console.log(plan);
         $('input[name="MerchantOrderNo"]').val($(this).data('sn'));
         $('#BuyerName').val($(this).data('buyername'));
         $('#BuyerEmail').val($(this).data('buyeremail'));
@@ -820,9 +825,9 @@ $(function(){
         $('#LoveCode,#CarrierNum,#BuyerUBN').val('');
         $('#Comment').val($(this).data('last_four'));
         $('#TotalAmt').val(totle_money);
-        $('#inv_people').text(people);
-        $('#inv_price').text(totle_money/people);
-        $('#inv_amt').text(totle_money);
+        $('#inv_people').val(people);
+        // $('#inv_price').text(totle_money/people);
+        // $('#inv_amt').text(totle_money);
         $('#inv_use_id').val(id);
 
         var now_tax = Math.round(totle_money*5/100);
@@ -835,6 +840,29 @@ $(function(){
     $('#sent_inv_open').bind('click',function(){
         if(parseInt($('#Amt').val()) + parseInt($('#TaxAmt').val()) == parseInt($('#TotalAmt').val())){
             var id = $('#inv_use_id').val();
+
+
+            var item1 = '';
+            var item2 = '';
+            var item3 = '';
+            var item4 = '';
+            var item5 = '';
+            $('#itemBody tr').each(function(index, value){
+                if(index>0){
+                    item1 += '|';item2 += '|';item3 += '|';item4 += '|';item5 += '|';
+                }
+                item1 += $(value).find('td').eq(0).text();
+                item2 += $(value).find('td').eq(1).text();
+                item3 += $(value).find('td').eq(2).text();
+                item4 += $(value).find('td').eq(3).text();
+                item5 += $(value).find('td').eq(4).text();
+            });
+
+
+
+
+
+
             $.post('/terminal/order/inv/single/open',{
                 'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
                 'BuyerName' : $('#BuyerName').val(),
@@ -850,11 +878,18 @@ $(function(){
                 'CarrierType' : $('input[name="CarrierType"]:checked').val(),
                 'CarrierNum' : $('#CarrierNum').val(),
                 'LoveCode' : $('#LoveCode').val(),
+                /*
                 'ItemName' : '落日轉運站('+$('#inv_people').text()+'人票)',
                 'ItemCount' : $('#inv_people').text(),
                 'ItemUnit' : '組',
                 'ItemPrice' : $('#inv_price').text(),
                 'ItemAmt' : $('#inv_amt').text(),
+                */
+                'ItemName' : item1,
+                'ItemCount' : item2,
+                'ItemUnit' : item3,
+                'ItemPrice' : item4,
+                'ItemAmt' : item5,
                 'Comment' : $('#LoveCode').val(),
                 'id' : id
             },function(data){
@@ -1013,23 +1048,79 @@ function taxchange(){
 // 重算稅額
 function calAmt(){
     var taxrate = $('#TaxRate').val();
-    var people = $('#inv_people').text();
+    var people = $('#inv_people').val();
     var totleamt = $('#TotalAmt').val();
+    var nowPlan = $('#TaxPlan').val();
     var now_tax = totleamt - Math.round(totleamt / (1 + (taxrate/100)));
+    var taxTrain = 0;
+    var taxFlight = 0;
+    var taxBoat = 0;
     // var now_tax = Math.round(totleamt*taxrate/100);
     $('#TaxAmt').val(now_tax);
     $('#Amt').val(totleamt - now_tax);
     if($('input[name="Category"]:checked').val() == 'B2C'){
         //$('#inv_price').text(totleamt / people);
         //$('#inv_price').text(Math.round(totleamt / people *100)/100);
-        $('#inv_price').text(totleamt);
-        $('#inv_amt').text(totleamt);
+        // $('#inv_price').text(totleamt);
+        // $('#inv_amt').text(totleamt);
+        taxTrain = 1250;
+        taxFlight = 500;
+        taxBoat = 800;
     } else {
         //var itemPrice = Math.round((totleamt - now_tax) / people);
         //$('#inv_price').text(itemPrice);
-        $('#inv_price').text(totleamt - now_tax);
-        $('#inv_amt').text(totleamt - now_tax);
+        // $('#inv_price').text(totleamt - now_tax);
+        // $('#inv_amt').text(totleamt - now_tax);
+        taxTrain = 1190;
+        taxFlight = 476;
+        taxBoat = 762;
     }
+    var html = '<tr>';
+    switch(nowPlan){
+        case 'train':
+            html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td>';
+            if(1250 * people != totleamt){
+                discountLine = totleamt - (1250 * people);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            }
+            break;
+        case 'flight':
+            html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td>';
+            if(500 * people != totleamt){
+                discountLine = totleamt - (500 * people);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            }
+            break;
+        case 'boat':
+            html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td>';
+            if(800 * people != totleamt){
+                discountLine = totleamt - (800 * people);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            }
+            break;
+        case 'A':
+            html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td></tr><tr>';
+            html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
+            html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-100</td><td>'+(-100 * people)+'</td>';
+            if((1250 * people)+(500 * people)+(-100 * people) != totleamt){
+                discountLine = totleamt - (1250 * people) - (500 * people) - (-100 * people);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            }
+            break;
+        case 'B':
+            html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td></tr><tr>';
+            html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
+            html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td></tr><tr>';
+            html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-150</td><td>'+(-150 * people)+'</td>';
+            if((1250 * people)+(500 * people)+(800 * people)+(-150 * people) != totleamt){
+                discountLine = totleamt - (1250 * people) - (500 * people) - (800 * people) - (-150 * people);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            }
+            break;
+    }
+    html += '</tr>';
+    $('#itemBody').html(html);
+    
 }
 
 function submitXLSForm(){

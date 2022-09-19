@@ -56,7 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7V2BQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     @include('terminal.frontend._nav')
-
+{{--
     <!-- fixed btn - message -->
     <aside class="fixed-btn message-btn js-hidden-target">
         <!-- Button trigger modal -->
@@ -65,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="/terminalAssets/images/general/btn_news_mobile.png" class="mobile-style" alt="message">
         </a>
     </aside>
-
+--}}
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
         <a href="booking_now" class="image-wrap">

@@ -66,8 +66,8 @@ class OrderController extends Controller
                 abort(404);
             }
         }
-        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0))>=".$order->pople)
-            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE()))),0))>=".$order->pople)
+            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE()))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
         return view('dininginthedark3.backend.order',compact('order','pro'));
     }
     public function OrderUpdate(Request $request,$id){
@@ -78,6 +78,7 @@ class OrderController extends Controller
             'pay_type'   => $request->pay_type,
             'tel'        => $request->tel,
             'email'      => $request->email,
+            'name'       => $request->name,
             'vegetarian' => $request->vegetarian,
         ];
         $order = order::find($id);
@@ -173,7 +174,7 @@ class OrderController extends Controller
             } else {
                 $count = Carbon::now()->format('Ymd').'0001';
             }
-            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 900 second and SYSDATE()))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
             $meat = [];
             /*
             for($i=0;$i<$people;$i++){
@@ -432,7 +433,7 @@ class OrderController extends Controller
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","回傳交易時間","藍新交易序號"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     if($row['pay_type'] == '信用卡'){
@@ -453,6 +454,8 @@ class OrderController extends Controller
                     $pay_last = '';
                     $coupons = coupon::where('o_id',$row['sn'])->get();
                     $modify_money = '';
+                    $return_Tr_time = '';
+                    $blue_sn = '';
                     if(count($coupons)>0){
                         $couponNumber = 0;
                         foreach($coupons as $c){
@@ -477,6 +480,8 @@ class OrderController extends Controller
                             if($json['Status'] == "SUCCESS"){
                                 $pay_last = $json['data']['Result']['Card4No'];
                             }
+                            $return_Tr_time = $json['data']['Result']['PayTime'];
+                            $blue_sn = $json['data']['Result']['TradeNo'];
                         }
                     }
                     
@@ -497,6 +502,8 @@ class OrderController extends Controller
                         $pay_status,
                         $pay_money,
                         $pay_last,
+                        $return_Tr_time,
+                        " ".$blue_sn,
                     ];
                     array_push($data,$sheetRow);
                 }

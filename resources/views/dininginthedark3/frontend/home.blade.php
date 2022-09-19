@@ -255,8 +255,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     
                                     <div class="type-item type-matinee">
                                         <a href="booking_pay.html" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.1" alt="雙人即享票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.1" alt="雙人即享票">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.3" alt="雙人即享票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-1-mobile.png?v=0.3" alt="雙人即享票">
                                             <p class="ticket-state">
                                                 直購票形式，付款後立刻選擇兩個月區段
                                             </p>
@@ -264,8 +264,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="type-item type-great-tipsy">
                                         <a href="https://surpriselab.backme.tw/checkout/2534/19985?locale=zh-TW" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.1" alt="年度套票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.1" alt="年度套票">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.3" alt="年度套票">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.3" alt="年度套票">
                                             {{--<!--p class="ticket-state timeLimit">
                                                 限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                                     class="highlight rest-ticket">XXX</span> 張

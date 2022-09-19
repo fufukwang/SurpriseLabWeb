@@ -154,6 +154,7 @@ class NewPayController extends WebController
                     $comments, // 交易描述
                     $data['email'] // 付款人信箱
                 )
+                ->setTradeLimit(600)
                 ->setReturnURL(env('APP_URL').'/terminal/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
                 ->setNotifyURL(env('APP_URL').'/terminal/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
                 ->setClientBackURL(env('APP_URL').'/terminal/booking_now') // 付款取消後返回的網址
