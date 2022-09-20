@@ -64,7 +64,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 --}}
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
-        <a href="booking_now" class="image-wrap">
+        <a href="/terminal/booking_now" class="image-wrap">
             <img src="/terminalAssets/images/general/btn_booking.png" class="pc-style" alt="what's on">
             <img src="/terminalAssets/images/general/btn_booking_mobile.png" class="mobile-style" alt="what's on">
         </a>
@@ -117,7 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <p>身為體驗者的你，可以自由選擇要哪些作品。當然，兩項都體驗一定是最讚的！</p>
                                                             <p>現場也有一戶外場域《 落日月台 》，並開放給所有人。此處散發著落日的燈光氛圍，並販售簡易酒飲與小點，供大家小酌聊天。</p>
                                                             <p>若你於體驗前提早抵達，歡迎在此等待；體驗後也能在此與同場次者分享感覺、拼湊故事；未購買體驗票券能進入《 落日月台 》嗎？當然，此處開放給所有人，只要你想來，我們就歡迎。</p>
-                                                            <p>欲購了解作品與價位，請至 <a href="booking_now" class="link-text style-qa">Ticket</a> 了解更多；欲了解落日月台，請至 <a href="/terminal#projects" class="link-text style-qa">Projects</a>了解更多。</p>
+                                                            <p>欲購了解作品與價位，請至 <a href="/terminal/booking_now" class="link-text style-qa">Ticket</a> 了解更多；欲了解落日月台，請至 <a href="/terminal#projects" class="link-text style-qa">Projects</a>了解更多。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -212,7 +212,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                                 官網售票：歡迎至 購票頁面 了解更多，線上刷卡完成購票。<br>
                                                                 現場購票：歡迎至場內票務櫃檯詢問剩餘場次與座位。
                                                             </p>
-                                                            <p>建議可以行前先至 <a href="booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 完成購票留位，避免向隅。</p>
+                                                            <p>建議可以行前先至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 完成購票留位，避免向隅。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -251,7 +251,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                                     </tr>
                                                                 </table>
                                                             </div>
-                                                            <p>歡迎至 <a href="booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
+                                                            <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
                                                         </div>
                                                     </div>
                                                 </div>
