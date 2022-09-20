@@ -154,12 +154,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-train">
 
-                                            <!-- 01 -->
-                                            <div class="item">
-                                                <div class="slideshow-video">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zjL1_8RqjtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                </div>
-                                            </div>
+                                            
 
                                             <!-- 02 -->
                                             <div class="item">
@@ -169,6 +164,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
                                                 </figure>
+                                            </div>
+
+                                            <!-- 01 -->
+                                            <div class="item">
+                                                <div class="slideshow-video">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zjL1_8RqjtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
                                             </div>
 
                                             <!-- 03 -->
