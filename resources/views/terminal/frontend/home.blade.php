@@ -721,7 +721,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div class="text-wrap">
                                 <p class="color-y200">
-                                    有任何問題，可以先至 <a class="link-text style-regular" href="rules">規則頁面</a> 查看<br/>
+                                    有任何問題，可以先至 <a class="link-text style-regular" href="/terminal/rules">規則頁面</a> 查看<br/>
                                     包場、大宗購票、異業合作，歡迎來信詢問
                                 </p>
                                 <h4 class="color-y100">客服信箱</h4>
