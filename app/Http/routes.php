@@ -677,7 +677,6 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
     });
-if(env('APP_ENV') != 'production'){
     // terminal 落日轉運站
     Route::group(['prefix' => 'terminal'], function(){
         Route::get('/',function(){ return view('terminal.frontend.home'); });
@@ -696,7 +695,6 @@ if(env('APP_ENV') != 'production'){
         // Route::post('PostAjaxData','terminal\FrontController@PostAjaxData');
         // Route::post('ReOrderData','terminal\FrontController@ReOrderData');
     });
-}
     // thegreattipsy S2
     Route::group(['prefix' => 'thegreattipsy'], function(){
         Route::get('index.html',function(){ return view('thegreattipsy.frontend.home'); });
