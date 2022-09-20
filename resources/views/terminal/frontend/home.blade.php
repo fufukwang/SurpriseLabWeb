@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 --}}
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
-        <a href="booking_now" class="image-wrap">
+        <a href="/terminal/booking_now" class="image-wrap">
             <img src="/terminalAssets/images/general/btn_booking.png" class="pc-style" alt="what's on">
             <img src="/terminalAssets/images/general/btn_booking_mobile.png" class="mobile-style" alt="what's on">
         </a>
@@ -378,7 +378,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <div class="cta-wrap">
                 <div class="btn-wrap">
-                    <a href="booking_now" class="activity-btn">購票去</a>
+                    <a href="/terminal/booking_now" class="activity-btn">購票去</a>
                 </div>
             </div>
         </section>
