@@ -84,6 +84,7 @@ class OrderController extends WebController
             'email'      => $request->email,
             'name'       => $request->name,
             'vegetarian' => $request->vegetarian,
+            'pople'      => $request->people,
         ];
         $order = order::find($id);
         if(
@@ -105,7 +106,7 @@ class OrderController extends WebController
                     DB::table('terminal_pro_order')->where('id',$request['boat-id'])->update(['pro_id'=>$request->boat]);
                 }
                 $mailer = [
-                    'pople' => $order->pople,
+                    'pople' => $request->people,
                     'email' => $order->email,
                     'name'  => $order->name,
                     'phone' => $order->tel,
@@ -128,6 +129,9 @@ class OrderController extends WebController
             }
             if(isset($data['money']) && $order->money != $data['money']){
                 $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整金額{$order->money}->{$data['money']}";
+            }
+            if($order->pople != $data['pople']){
+                $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整人數{$order->pople}->{$data['pople']}";
             }
             order::where('id',$id)->update($data);
         } 
@@ -369,11 +373,11 @@ class OrderController extends WebController
                         $pay_last,
                         $row['created_at'],
                         $return_Tr_time,
-                        " ".$blue_sn,
+                        $blue_sn."\t",
                     ];
                     array_push($data,$sheetRow);
                 }
-
+                // $sheet->setColumnFormat(['P' => '*']);
                 $zero = $sheet->rows($data);
                 for($i=0;$i<=count($data);$i++){
                     $zero->getStyle('A'.$i)->getAlignment()->setWrapText(true);
@@ -383,6 +387,7 @@ class OrderController extends WebController
                     $zero->getStyle('I'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('L'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('M'.$i)->getAlignment()->setWrapText(true);
+                    // $zero->getStyle('P'.$i)->setDataType(\PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING);
                     // $sheet->fromArray($data, null, 'A1', false, false)
                 }
             });

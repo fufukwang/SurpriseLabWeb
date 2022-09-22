@@ -123,7 +123,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="people" readonly value="{{ $order->pople or ''  }}">
+                                                    <input type="number" class="form-control" name="people" value="{{ $order->pople or ''  }}" max="36" min="0" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">

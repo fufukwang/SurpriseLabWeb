@@ -80,6 +80,7 @@ class OrderController extends Controller
             'email'      => $request->email,
             'name'       => $request->name,
             'vegetarian' => $request->vegetarian,
+            'pople'      => $request->people,
         ];
         $order = order::find($id);
         if($request->has('pro_id') && $request->pro_id>0){
@@ -93,7 +94,7 @@ class OrderController extends Controller
                 $mailer = [
                     'day'   => Carbon::parse($pro->day)->format('Y / m / d'),
                     'time'  => substr($pro->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
-                    'pople' => $order->pople,
+                    'pople' => $request->people,
                     'email' => $request->email,
                     'name'  => $order->name,
                     'gday'  => $rangStart.'/'.$rangEnd,
@@ -135,6 +136,9 @@ class OrderController extends Controller
             }
             if(isset($data['money']) && $order->money != $data['money']){
                 $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整金額{$order->money}->{$data['money']}";
+            }
+            if($order->pople != $data['pople']){
+                $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整人數{$order->pople}->{$data['pople']}";
             }
             order::where('id',$id)->update($data);
             
@@ -503,11 +507,11 @@ class OrderController extends Controller
                         $pay_money,
                         $pay_last,
                         $return_Tr_time,
-                        " ".$blue_sn,
+                        $blue_sn."\t",
                     ];
                     array_push($data,$sheetRow);
                 }
-
+                // $sheet->setColumnFormat(['O' => 'General']);
                 $zero = $sheet->rows($data);
                 for($i=0;$i<count($data);$i++){
                     $zero->getStyle('G'.$i)->getAlignment()->setWrapText(true);
