@@ -83,7 +83,7 @@ class Dark3Task extends Command
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=7")->get();
             foreach($pr07day as $pro){
                 // 找出正常的訂單
-                $order07 = order::select('id','name','email','tel')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                $order07 = order::select('id','name','email','tel','day','rang_start','peple')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($order07 as $ord) {
                     if($ord->tel != '' && $ord->email != ''){
                         $toData = [
@@ -91,6 +91,15 @@ class Dark3Task extends Command
                             'template' => 'D7',
                         ];
                         SLS::SendSmsByTemplateName($toData);
+                        $toData = [
+                            'pople'    => $ord->peple,
+                            'name'     => $ord->name,
+                            'email'    => $ord->email,
+                            'day'      => Carbon::parse($ord->day)->format(' m 月 d 日'),
+                            'time'     => substr($ord->rang_start,0,5),
+                            'template' => 'D7',
+                        ];
+                        SLS::SendEmailByTemplateName($toData);
                         /*
                         $teamMail = TeamMail::where('order_id',$ord->id)->get();
                         $needSend = true;

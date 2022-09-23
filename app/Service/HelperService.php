@@ -95,6 +95,9 @@ class HelperService {
                     case 'D14':
                         $m->subject('【無光晚餐來信】');
                         break;
+                    case 'D7':
+                        $m->subject('【無光晚餐】你需要先知道的注意事項 8 Tips for Dining in the Dark');
+                        break;
                 }
                     
             });

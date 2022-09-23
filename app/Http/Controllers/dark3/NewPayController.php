@@ -310,6 +310,7 @@ class NewPayController extends Controller
                     }
                     if($day <= 7){
                         $mailer['template'] = 'D7';
+                        SLS::SendEmailByTemplateName($mailer);
                         SLS::SendSmsByTemplateName($mailer);
                     }
                     if($day == 0){
