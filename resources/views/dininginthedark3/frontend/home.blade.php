@@ -199,7 +199,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <!-- Tab Nav -->
                                         <ul class="nav nav-tabs tab-controls" id="menuTab" role="tablist">
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="menu-no1-tab" data-toggle="tab" data-target="#menu-no1" type="button" role="tab" aria-controls="menu-no1" aria-selected="true">1+2</button>
+                                                <button class="nav-link" id="menu-no1-tab" data-toggle="tab" data-target="#menu-no1" type="button" role="tab" aria-controls="menu-no1" aria-selected="true">1+2</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="menu-no3-tab" data-toggle="tab" data-target="#menu-no3" type="button" role="tab" aria-controls="menu-no3" aria-selected="false">3</button>
@@ -208,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <button class="nav-link" id="menu-no4-tab" data-toggle="tab" data-target="#menu-no4" type="button" role="tab" aria-controls="menu-no4" aria-selected="false">4</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
+                                                <button class="nav-link active" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
                                             </li>
                                             {{--<!--li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
@@ -223,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div class="tab-content" id="menuTabContent">
                 
                                         <!-- 01+02 -->
-                                        <div class="tab-pane fade show active" id="menu-no1" role="tabpanel" aria-labelledby="menu-no1-tab">
+                                        <div class="tab-pane fade" id="menu-no1" role="tabpanel" aria-labelledby="menu-no1-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -245,16 +245,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                 </figure>
                                                             </div>
 
-                                                        </div>
-                
-                                                        <!-- Custom Controls -->
-                                                        <div class="custom-owl-nav">
-                                                            <button class="custom-owl-prev">
-                                                                <img src="img/home/landing/btn-left.svg" alt="btn-left">
-                                                            </button>
-                                                            <button class="custom-owl-next">
-                                                                <img src="img/home/landing/btn-right.svg" alt="btn-right">
-                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -285,16 +275,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             </div>
                                                             
                                                         </div>
-                
-                                                        <!-- Custom Controls -->
-                                                        <div class="custom-owl-nav">
-                                                            <button class="custom-owl-prev">
-                                                                <img src="img/home/landing/btn-left.svg" alt="btn-left">
-                                                            </button>
-                                                            <button class="custom-owl-next">
-                                                                <img src="img/home/landing/btn-right.svg" alt="btn-right">
-                                                            </button>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -324,23 +304,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             </div>
                                                             
                                                         </div>
-                
-                                                        <!-- Custom Controls -->
-                                                        <div class="custom-owl-nav">
-                                                            <button class="custom-owl-prev">
-                                                                <img src="img/home/landing/btn-left.svg" alt="btn-left">
-                                                            </button>
-                                                            <button class="custom-owl-next">
-                                                                <img src="img/home/landing/btn-right.svg" alt="btn-right">
-                                                            </button>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <!-- 05 -->
-                                        <div class="tab-pane fade" id="menu-no5" role="tabpanel" aria-labelledby="menu-no5-tab">
+                                        <div class="tab-pane fade show active" id="menu-no5" role="tabpanel" aria-labelledby="menu-no5-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -362,16 +332,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                 </figure>
                                                             </div>
                                                             
-                                                        </div>
-                
-                                                        <!-- Custom Controls -->
-                                                        <div class="custom-owl-nav">
-                                                            <button class="custom-owl-prev">
-                                                                <img src="img/home/landing/btn-left.svg" alt="btn-left">
-                                                            </button>
-                                                            <button class="custom-owl-next">
-                                                                <img src="img/home/landing/btn-right.svg" alt="btn-right">
-                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -407,15 +367,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             </div>
                                                             
                                                         </div>
-                
-                                                        <div class="custom-owl-nav">
-                                                            <button class="custom-owl-prev">
-                                                                <img src="img/home/landing/btn-left.svg" alt="btn-left">
-                                                            </button>
-                                                            <button class="custom-owl-next">
-                                                                <img src="img/home/landing/btn-right.svg" alt="btn-right">
-                                                            </button>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -449,15 +400,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                 </figure>
                                                             </div>
                                                             
-                                                        </div>
-                
-                                                        <div class="custom-owl-nav">
-                                                            <button class="custom-owl-prev">
-                                                                <img src="img/home/landing/btn-left.svg" alt="btn-left">
-                                                            </button>
-                                                            <button class="custom-owl-next">
-                                                                <img src="img/home/landing/btn-right.svg" alt="btn-right">
-                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
