@@ -1,6 +1,6 @@
 $(function() {
     // Owl Carousel
-    let $owl = $('#owl-01, #owl-02, #owl-03, #owl-04, #owl-05');
+    let $owl = $('#owl-01, #owl-03, #owl-04, #owl-05');
 
     // Slideshow Nav
     let $btnPrev = $('.custom-owl-prev');

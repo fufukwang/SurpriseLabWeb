@@ -878,7 +878,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/index.js?v=0.11"></script>
     <script src="js/main.js?v=0.1"></script>
     <script src="js/board-modal.js?v=0.11"></script>
-    <script src="js/index-slideshow.js?v=0.1"></script>
+    <script src="js/index-slideshow.js?v=0.11"></script>
 
 </body>
 </html>
