@@ -26,6 +26,10 @@
     <!-- Loading Animation CSS -->
     <link rel="stylesheet" type="text/css" href="css/plugins/imagesloaded/loading.css"/>
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="css/owl2/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl2/owl.theme.default.min.css">
+
     <!-- Flashlight CSS -->
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
@@ -862,6 +866,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Aos -->
     <script src="js/plugins/aos/aos.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="/js/plugins/owl2/owl.carousel.min.js"></script>
 
     <!-- Flashlight JS -->
     <script src="js/flashlight/imagesLoaded.js"></script>
