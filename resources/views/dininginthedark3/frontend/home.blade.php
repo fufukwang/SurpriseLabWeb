@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.15"/>
+    <link rel="stylesheet" href="css/style.css?v=0.16"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -182,233 +182,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- History Menu -->
-                        <div class="section sec-menu" id="Menu">
-
-                            <div class="section-header">
-                                <div class="section-title">
-                                    <h3>過往菜單</h3>
-                                    <h4>History Menu</h4>
-                                </div>
-                            </div>
-
-                            <div class="menu-wrap">
-                                <div class="menu-tab-wrap">
-                                    <div class="tab-header">
-                                        <!-- Tab Nav -->
-                                        <ul class="nav nav-tabs tab-controls" id="menuTab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no1-tab" data-toggle="tab" data-target="#menu-no1" type="button" role="tab" aria-controls="menu-no1" aria-selected="true">1+2</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no3-tab" data-toggle="tab" data-target="#menu-no3" type="button" role="tab" aria-controls="menu-no3" aria-selected="false">3</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no4-tab" data-toggle="tab" data-target="#menu-no4" type="button" role="tab" aria-controls="menu-no4" aria-selected="false">4</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
-                                            </li>
-                                            {{--<!--li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
-                                            </li-->--}}
-                                            {{--<!--li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no7-tab" data-toggle="tab" data-target="#menu-no7" type="button" role="tab" aria-controls="menu-no7" aria-selected="false">7</button>
-                                            </li-->--}}
-                                        </ul>
-                                    </div>
-                
-                                    <!-- Tab Content -->
-                                    <div class="tab-content" id="menuTabContent">
-                
-                                        <!-- 01+02 -->
-                                        <div class="tab-pane fade" id="menu-no1" role="tabpanel" aria-labelledby="menu-no1-tab">
-                                            <div class="tab-content-inner">
-                                                <div class="menu-slideshow">
-                                                    <div class="content-inner--slideshow-cover">
-                                                        <div class="owl-carousel owl-theme" id="owl-01">
-                
-                                                            <!-- 1-1 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-1.png" data-src="img/home/menu/no1+2/menu-1-1.png" data-src-retina="img/home/menu/no1+2/menu-1-1.png" alt="1-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-1-mobile.png" data-src="img/home/menu/no1+2/menu-1-1-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-1-mobile.png" alt="1-1">
-                                                                </figure>
-                                                            </div>
-
-                                                            <!-- 1-2 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-2.png" data-src="img/home/menu/no1+2/menu-1-2.png" data-src-retina="img/home/menu/no1+2/menu-1-2.png" alt="1-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-2-mobile.png" data-src="img/home/menu/no1+2/menu-1-2-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-2-mobile.png" alt="1-2">
-                                                                </figure>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- 03 -->
-                                        <div class="tab-pane fade" id="menu-no3" role="tabpanel" aria-labelledby="menu-no3-tab">
-                                            <div class="tab-content-inner">
-                                                <div class="menu-slideshow">
-                                                    <div class="content-inner--slideshow-cover">
-                                                        <div class="owl-carousel owl-theme" id="owl-03">
-                
-                                                            <!-- 3-1 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-1.png" data-src="img/home/menu/no3/menu-3-1.png" data-src-retina="img/home/menu/no3/menu-3-1.png" alt="3-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-1-mobile.png" data-src="img/home/menu/no3/menu-3-1-mobile.png" data-src-retina="img/home/menu/no3/menu-3-1-mobile.png" alt="3-1">
-                                                                </figure>
-                                                            </div>
-
-                                                            <!-- 3-2 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-2.png" data-src="img/home/menu/no3/menu-3-2.png" data-src-retina="img/home/menu/no3/menu-3-2.png" alt="3-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-2-mobile.png" data-src="img/home/menu/no3/menu-3-2-mobile.png" data-src-retina="img/home/menu/no3/menu-3-2-mobile.png" alt="3-2">
-                                                                </figure>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- 04 -->
-                                        <div class="tab-pane fade" id="menu-no4" role="tabpanel" aria-labelledby="menu-no4-tab">
-                                            <div class="tab-content-inner">
-                                                <div class="menu-slideshow">
-                                                    <div class="content-inner--slideshow-cover">
-                                                        <div class="owl-carousel owl-theme" id="owl-04">
-                
-                                                            <!-- 4-1 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-1.png" data-src="img/home/menu/no4/menu-4-1.png" data-src-retina="img/home/menu/no4/menu-4-1.png" alt="4-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-1-mobile.png" data-src="img/home/menu/no4/menu-4-1-mobile.png" data-src-retina="img/home/menu/no4/menu-4-1-mobile.png" alt="4-1">
-                                                                </figure>
-                                                            </div>
-
-                                                            <!-- 4-2 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-2.png" data-src="img/home/menu/no4/menu-4-2.png" data-src-retina="img/home/menu/no4/menu-4-2.png" alt="4-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-2-mobile.png" data-src="img/home/menu/no4/menu-4-2-mobile.png" data-src-retina="img/home/menu/no4/menu-4-2-mobile.png" alt="4-2">
-                                                                </figure>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- 05 -->
-                                        <div class="tab-pane fade show active" id="menu-no5" role="tabpanel" aria-labelledby="menu-no5-tab">
-                                            <div class="tab-content-inner">
-                                                <div class="menu-slideshow">
-                                                    <div class="content-inner--slideshow-cover">
-                                                        <div class="owl-carousel owl-theme" id="owl-05">
-                
-                                                            <!-- 5-1 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-1.png" data-src="img/home/menu/no5/menu-5-1.png" data-src-retina="img/home/menu/no5/menu-5-1.png" alt="5-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-1-mobile.png" data-src="img/home/menu/no5/menu-5-1-mobile.png" data-src-retina="img/home/menu/no5/menu-5-1-mobile.png" alt="5-1">
-                                                                </figure>
-                                                            </div>
-
-                                                            <!-- 5-2 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-2.png" data-src="img/home/menu/no5/menu-5-2.png" data-src-retina="img/home/menu/no5/menu-5-2.png" alt="5-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-2-mobile.png" data-src="img/home/menu/no5/menu-5-2-mobile.png" data-src-retina="img/home/menu/no5/menu-5-2-mobile.png" alt="5-2">
-                                                                </figure>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {{--<!-- 06 -->
-                                        <!--div class="tab-pane fade" id="menu-no6" role="tabpanel" aria-labelledby="menu-no6-tab">
-                                            <div class="tab-content-inner">
-                                                <div class="menu-slideshow">
-                                                    <div class="content-inner--slideshow-cover">
-                                                        <div class="owl-carousel owl-theme" id="owl-06">
-                
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="6-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="6-1">
-                                                                </figure>
-                                                            </div>
-
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="6-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="6-2">
-                                                                </figure>
-                                                            </div>
-
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="6-3">
-                                                                </figure>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div-->--}}
-
-                                        {{--<!-- 07 -->
-                                        <!--div class="tab-pane fade" id="menu-no7" role="tabpanel" aria-labelledby="menu-no7-tab">
-                                            <div class="tab-content-inner">
-                                                <div class="menu-slideshow">
-                                                    <div class="content-inner--slideshow-cover">
-                                                        <div class="owl-carousel owl-theme" id="owl-07">
-                
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-1">
-                                                                </figure>
-                                                            </div>
-
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-2">
-                                                                </figure>
-                                                            </div>
-
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-3">
-                                                                </figure>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div-->--}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </section>
 
                     <!-- Section2 Ticket -->
@@ -514,6 +287,233 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     單一場次最高可容納人數 12 人，<br/>
                                     若人數超過 12 人可來信客服信箱，由我們協助劃位
                                 </p>
+                            </div>
+                        </div>
+
+                        <!-- History Menu -->
+                        <div class="section sec-menu" id="Menu">
+
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>過往菜單</h3>
+                                    <h4>History Menu</h4>
+                                </div>
+                            </div>
+
+                            <div class="menu-wrap">
+                                <div class="menu-tab-wrap">
+                                    <div class="tab-header">
+                                        <!-- Tab Nav -->
+                                        <ul class="nav nav-tabs tab-controls" id="menuTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="menu-no1-tab" data-toggle="tab" data-target="#menu-no1" type="button" role="tab" aria-controls="menu-no1" aria-selected="true">1+2</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="menu-no3-tab" data-toggle="tab" data-target="#menu-no3" type="button" role="tab" aria-controls="menu-no3" aria-selected="false">3</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="menu-no4-tab" data-toggle="tab" data-target="#menu-no4" type="button" role="tab" aria-controls="menu-no4" aria-selected="false">4</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
+                                            </li>
+                                            {{--<!--li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
+                                            </li-->--}}
+                                            {{--<!--li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="menu-no7-tab" data-toggle="tab" data-target="#menu-no7" type="button" role="tab" aria-controls="menu-no7" aria-selected="false">7</button>
+                                            </li-->--}}
+                                        </ul>
+                                    </div>
+
+                                    <!-- Tab Content -->
+                                    <div class="tab-content" id="menuTabContent">
+
+                                        <!-- 01+02 -->
+                                        <div class="tab-pane fade" id="menu-no1" role="tabpanel" aria-labelledby="menu-no1-tab">
+                                            <div class="tab-content-inner">
+                                                <div class="menu-slideshow">
+                                                    <div class="content-inner--slideshow-cover">
+                                                        <div class="owl-carousel owl-theme" id="owl-01">
+
+                                                            <!-- 1-1 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-1.png" data-src="img/home/menu/no1+2/menu-1-1.png" data-src-retina="img/home/menu/no1+2/menu-1-1.png" alt="1-1">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-1-mobile.png" data-src="img/home/menu/no1+2/menu-1-1-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-1-mobile.png" alt="1-1">
+                                                                </figure>
+                                                            </div>
+
+                                                            <!-- 1-2 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-2.png" data-src="img/home/menu/no1+2/menu-1-2.png" data-src-retina="img/home/menu/no1+2/menu-1-2.png" alt="1-2">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-2-mobile.png" data-src="img/home/menu/no1+2/menu-1-2-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-2-mobile.png" alt="1-2">
+                                                                </figure>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 03 -->
+                                        <div class="tab-pane fade" id="menu-no3" role="tabpanel" aria-labelledby="menu-no3-tab">
+                                            <div class="tab-content-inner">
+                                                <div class="menu-slideshow">
+                                                    <div class="content-inner--slideshow-cover">
+                                                        <div class="owl-carousel owl-theme" id="owl-03">
+
+                                                            <!-- 3-1 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-1.png" data-src="img/home/menu/no3/menu-3-1.png" data-src-retina="img/home/menu/no3/menu-3-1.png" alt="3-1">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-1-mobile.png" data-src="img/home/menu/no3/menu-3-1-mobile.png" data-src-retina="img/home/menu/no3/menu-3-1-mobile.png" alt="3-1">
+                                                                </figure>
+                                                            </div>
+
+                                                            <!-- 3-2 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-2.png" data-src="img/home/menu/no3/menu-3-2.png" data-src-retina="img/home/menu/no3/menu-3-2.png" alt="3-2">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-2-mobile.png" data-src="img/home/menu/no3/menu-3-2-mobile.png" data-src-retina="img/home/menu/no3/menu-3-2-mobile.png" alt="3-2">
+                                                                </figure>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 04 -->
+                                        <div class="tab-pane fade" id="menu-no4" role="tabpanel" aria-labelledby="menu-no4-tab">
+                                            <div class="tab-content-inner">
+                                                <div class="menu-slideshow">
+                                                    <div class="content-inner--slideshow-cover">
+                                                        <div class="owl-carousel owl-theme" id="owl-04">
+
+                                                            <!-- 4-1 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-1.png" data-src="img/home/menu/no4/menu-4-1.png" data-src-retina="img/home/menu/no4/menu-4-1.png" alt="4-1">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-1-mobile.png" data-src="img/home/menu/no4/menu-4-1-mobile.png" data-src-retina="img/home/menu/no4/menu-4-1-mobile.png" alt="4-1">
+                                                                </figure>
+                                                            </div>
+
+                                                            <!-- 4-2 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-2.png" data-src="img/home/menu/no4/menu-4-2.png" data-src-retina="img/home/menu/no4/menu-4-2.png" alt="4-2">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-2-mobile.png" data-src="img/home/menu/no4/menu-4-2-mobile.png" data-src-retina="img/home/menu/no4/menu-4-2-mobile.png" alt="4-2">
+                                                                </figure>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 05 -->
+                                        <div class="tab-pane fade show active" id="menu-no5" role="tabpanel" aria-labelledby="menu-no5-tab">
+                                            <div class="tab-content-inner">
+                                                <div class="menu-slideshow">
+                                                    <div class="content-inner--slideshow-cover">
+                                                        <div class="owl-carousel owl-theme" id="owl-05">
+
+                                                            <!-- 5-1 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-1.png" data-src="img/home/menu/no5/menu-5-1.png" data-src-retina="img/home/menu/no5/menu-5-1.png" alt="5-1">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-1-mobile.png" data-src="img/home/menu/no5/menu-5-1-mobile.png" data-src-retina="img/home/menu/no5/menu-5-1-mobile.png" alt="5-1">
+                                                                </figure>
+                                                            </div>
+
+                                                            <!-- 5-2 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-2.png" data-src="img/home/menu/no5/menu-5-2.png" data-src-retina="img/home/menu/no5/menu-5-2.png" alt="5-2">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-2-mobile.png" data-src="img/home/menu/no5/menu-5-2-mobile.png" data-src-retina="img/home/menu/no5/menu-5-2-mobile.png" alt="5-2">
+                                                                </figure>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {{--<!-- 06 -->
+                                        <!--div class="tab-pane fade" id="menu-no6" role="tabpanel" aria-labelledby="menu-no6-tab">
+                                            <div class="tab-content-inner">
+                                                <div class="menu-slideshow">
+                                                    <div class="content-inner--slideshow-cover">
+                                                        <div class="owl-carousel owl-theme" id="owl-06">
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="6-1">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="6-1">
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="6-2">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="6-2">
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="6-3">
+                                                                </figure>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div-->--}}
+
+                                        {{--<!-- 07 -->
+                                        <!--div class="tab-pane fade" id="menu-no7" role="tabpanel" aria-labelledby="menu-no7-tab">
+                                            <div class="tab-content-inner">
+                                                <div class="menu-slideshow">
+                                                    <div class="content-inner--slideshow-cover">
+                                                        <div class="owl-carousel owl-theme" id="owl-07">
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-1">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-1">
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-2">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-2">
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-3">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-3">
+                                                                </figure>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div-->--}}
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
