@@ -868,7 +868,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/plugins/aos/aos.min.js"></script>
 
     <!-- Owl Carousel JS -->
-    <script src="/js/plugins/owl2/owl.carousel.min.js"></script>
+    <script src="js/plugins/owl2/owl.carousel.min.js"></script>
 
     <!-- Flashlight JS -->
     <script src="js/flashlight/imagesLoaded.js"></script>
