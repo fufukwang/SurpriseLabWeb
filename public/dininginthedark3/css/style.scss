@@ -1056,6 +1056,168 @@ header.logo {
     }
   }
 
+  // History Menu
+  .sec-menu {
+    .menu-wrap {
+      .menu-tab-wrap {
+        .tab-header {
+          margin-bottom: 30px;
+
+          @media screen and (max-width: 1199.98px) {
+            margin-top: 16px;
+            margin-bottom: 16px;
+          }
+
+          .tab-controls {
+            display: flex;
+            justify-content: center;
+            border: none;
+
+            .nav-item {
+              
+              .nav-link {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.5;
+                text-decoration: underline;
+                color: $color-purple;
+                background-color: transparent;
+                border: none;
+                padding: 8px 15px;
+                transition: 0.3s;
+
+                @media screen and (max-width: 1199.98px) {
+                  font-size: 14px;
+                  line-height: 1.42;
+                  padding: 6px 14px;
+                }
+
+                &.active {
+                  text-decoration: none;
+                  color: $color-text-lightgray;
+                }
+
+                &:hover {
+                  cursor: pointer;
+                  color: $color-text-lightgray;
+                }
+
+                &:focus {
+                  outline: none;
+                }
+              }
+            }
+          }
+        }
+
+        .tab-content {
+
+          > .tab-pane {
+            display: block;
+            height: 0;
+            pointer-events: none;
+          }
+
+          > .active {
+            height: auto;
+            pointer-events: unset;
+          }
+            
+          .menu-slideshow {
+            .content-inner--slideshow-cover {
+              position: relative;
+              z-index: 1;
+    
+              .slideshow-card {
+                position: relative;
+                z-index: 0;
+                margin: 0;
+                text-align: center;
+                border-radius: 8px;
+                overflow: hidden;
+              }
+                
+              // Override Owl
+              .owl-theme {
+                .owl-nav {
+                  display: flex;
+                  justify-content: space-between;
+                  width: calc((100vw - 120px) / 2.07 + 60px);
+                  height: 0;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -30px);
+                  z-index: 1;
+                  margin: 0;
+
+                  @media screen and (max-width: 1199.98px) {
+                    display: none;
+                  }
+
+                  .owl-prev,
+                  .owl-next {
+                    width: 60px;
+                    margin: 0;
+                    opacity: 0.5;
+                    transition: opacity 0.3s;
+
+                    &.disabled {
+                      opacity: 0 !important;
+                    }
+
+                    &:hover {
+                      opacity: 1;
+                      background: none;
+                    }
+
+                    &:focus {
+                      outline: none;
+                    }
+
+                    img {
+                      width: 48px;
+                      height: 48px;
+                      user-drag: none;
+                      -webkit-user-drag: none;
+                      user-select: none;
+                      -moz-user-select: none;
+                      -webkit-user-select: none;
+                      -ms-user-select: none;
+                    }
+                  }
+                }
+
+                .owl-dots {
+                  width: 100%;
+                  line-height: 1;
+                  margin-top: 9px;
+
+                  .owl-dot {                    
+                    &.active {
+                      span {
+                        background-color: $color-text-lightgray;
+                        opacity: 1;
+                      }
+                    }
+
+                    span {
+                      width: 6px;
+                      height: 6px;
+                      margin: 3px;
+                      background-color: $color-text-lightgray;
+                      opacity: 0.5;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   // 預售劃位流程
   .sec-ticket-process {
     .presale-process {
