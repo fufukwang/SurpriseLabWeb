@@ -219,7 +219,7 @@
                                                 </td>
                                                 <td class="actions">
                                                     @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
-                                                    @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')
+                                                    @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') && !$inv_open)
                                                     <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
@@ -559,6 +559,7 @@
                                 主揪(訂位者)補寄功能
                                 <!-- <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會邀請函">邀請函</a>
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D21" data-toggle="tooltip" data-placement="top" data-original-title="寄送21天前的通知信">21</a> -->
+                                <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前的通知信">7</a>
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送14天前的通知信">14</a>
                                 <!-- <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知信">11</a>
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D05" data-toggle="tooltip" data-placement="top" data-original-title="寄送5天前的通知信">05</a> -->

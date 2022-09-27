@@ -208,6 +208,12 @@ class MasterController extends Controller
                 'email' => $request->email,
                 'template'  => $request->type,
             ];
+            if($toData['template'] == 'D7'){
+                $ord = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('pople','day','rang_start')->find($request->id);
+                $toData['day'] = Carbon::parse($ord->day)->format(' m 月 d 日');
+                $toData['time'] = substr($ord->rang_start,0,5);
+                $toData['pople'] = $ord->peple;
+            }
             // 信件補送
             if(SLS::SendEmailByTemplateName($toData)){
                 return response()->json(["success"=>true]);
