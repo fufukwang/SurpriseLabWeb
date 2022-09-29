@@ -441,7 +441,7 @@ class OrderController extends WebController
                       ->groupBy('order_id')
                       ->from('terminalpro');
                     if($request->has('daystart') && $request->daystart!='') $query->where('day','>=',$request->daystart);
-                    if($request->has('dayend') && $request->dayend!='') $query->where('day','>=',$request->dayend);
+                    if($request->has('dayend') && $request->dayend!='') $query->where('day','<=',$request->dayend);
                 });
             }
             if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
