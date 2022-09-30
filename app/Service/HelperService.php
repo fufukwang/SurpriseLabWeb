@@ -12,15 +12,16 @@ class HelperService {
 	}
 
 	// 送出 SMS
-	public function sent_single_sms($phone_number,$message){
+	public function sent_single_sms($phone_number,$message,$token = ''){
 		try{
+            if($token == '') $token = env('SMS_API_TOKEN');
             $client = new \GuzzleHttp\Client();
             $response = $client->request('POST','https://api.smartdove.net/index.php?r=smsApi/SendOneSms', [
               'headers' => [
                 'Content-Type' => 'application/x-www-form-urlencoded'
               ],
               'form_params' => [
-                'token'        => env('SMS_API_TOKEN'),
+                'token'        => $token,
                 'phone_number' => $phone_number,
                 'content'      => $message,
                 //'campaign_id'  =>

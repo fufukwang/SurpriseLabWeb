@@ -89,9 +89,9 @@ class InvController extends Controller
 
     private function inv_sent($post_data_array){
         $post_data_str = http_build_query($post_data_array); //轉成字串排列
-        $key = env('INV_KEY'); //商店專屬串接金鑰
+        $key = env('DARK_KEY'); //商店專屬串接金鑰
         //HashKey 值
-        $iv = env('INV_IV'); //商店專屬串接金鑰 HashIV 值
+        $iv = env('DARK_IV'); //商店專屬串接金鑰 HashIV 值
         if (phpversion() > 7) {
             $post_data = trim(bin2hex(openssl_encrypt($this->addpadding($post_data_str),'AES-256-CBC', $key, OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING, $iv)));
             //php 7 以上版本加密
@@ -99,7 +99,7 @@ class InvController extends Controller
             $post_data = trim(bin2hex(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key,$this->addpadding($post_data_str), MCRYPT_MODE_CBC, $iv))); //php 7 之前版本加密
         }
         $url = env('INV_URL') . 'invoice_issue';
-        $MerchantID = env('INV_ID'); //商店代號
+        $MerchantID = env('DARK_INV_ID'); //商店代號
         $transaction_data_array = array(//送出欄位
             'MerchantID_' => $MerchantID,
             'PostData_' => $post_data
@@ -111,9 +111,9 @@ class InvController extends Controller
     // 發票作廢
     private function inv_cancel($post_data_array){
         $post_data_str = http_build_query($post_data_array); //轉成字串排列
-        $key = env('INV_KEY'); //商店專屬串接金鑰
+        $key = env('DARK_KEY'); //商店專屬串接金鑰
         //HashKey 值
-        $iv = env('INV_IV'); //商店專屬串接金鑰 HashIV 值
+        $iv = env('DARK_IV'); //商店專屬串接金鑰 HashIV 值
         if (phpversion() > 7) {
             $post_data = trim(bin2hex(openssl_encrypt($this->addpadding($post_data_str),'AES-256-CBC', $key, OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING, $iv)));
             //php 7 以上版本加密
@@ -121,7 +121,7 @@ class InvController extends Controller
             $post_data = trim(bin2hex(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key,$this->addpadding($post_data_str), MCRYPT_MODE_CBC, $iv))); //php 7 之前版本加密
         }
         $url = env('INV_URL') . 'invoice_invalid';
-        $MerchantID = env('INV_ID'); //商店代號
+        $MerchantID = env('DARK_INV_ID'); //商店代號
         $transaction_data_array = array(//送出欄位
             'MerchantID_' => $MerchantID,
             'PostData_' => $post_data
