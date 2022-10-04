@@ -441,7 +441,7 @@ class OrderController extends Controller
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","回傳交易時間","藍新交易序號","訂單編號"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","回傳交易時間","藍新交易序號","訂單編號","貝殼的序號"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     if($row['pay_type'] == '信用卡'){
@@ -464,6 +464,7 @@ class OrderController extends Controller
                     $modify_money = '';
                     $return_Tr_time = '';
                     $blue_sn = '';
+                    $backme_sn = '';
                     if(count($coupons)>0){
                         $couponNumber = 0;
                         foreach($coupons as $c){
@@ -471,10 +472,12 @@ class OrderController extends Controller
                                 $coupon .= "\r\n";
                                 // $pay_money.= "\r\n";
                                 $pay_last.= "\r\n";
+                                $backme_sn.= "\r\n";
                             }
                             $coupon .= "{$c->code}";
                             // $pay_money .= backme::select('money')->find($c->b_id)->money;
                             $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
+                            $backme_sn .= backme::select('sn')->find($c->b_id)->sn;
                             $couponNumber++;
                         }
                         $pay_money .= ($couponNumber*4400);
@@ -513,6 +516,7 @@ class OrderController extends Controller
                         $return_Tr_time,
                         $blue_sn."\t",
                         $row['sn']."\t",
+                        $backme_sn."\t",
                     ];
                     array_push($data,$sheetRow);
                 }
@@ -524,6 +528,7 @@ class OrderController extends Controller
                     $zero->getStyle('I'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('L'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('M'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('Q'.$i)->getAlignment()->setWrapText(true);
                     // $sheet->fromArray($data, null, 'A1', false, false)
                 }
             });
