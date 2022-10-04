@@ -339,6 +339,8 @@ class InvController extends WebController
                 $r['InvoiceNumber'] = '';
             }
             $inv = inv::where('order_id',$request->id)->first();
+            $order->discount = $request->handling_fee;
+            $order->save();
             if($inv){
                 $inv->is_cancal = 0;
                 $inv->save();

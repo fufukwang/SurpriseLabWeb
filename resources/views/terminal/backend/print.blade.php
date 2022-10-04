@@ -229,7 +229,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                                     @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') && !$inv_open)
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}">發票開立</button><br /><br />
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -399,9 +399,8 @@
                                                 <th>單價<span class="b2c">(含稅)</span></th>
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
-                                            <input type="hidden" id="TaxPlan" value="">
-                                            <input type="hidden" id="inv_people" value="">
-                                            <tbody id="itemBody"></tbody>
+                                        </thead>
+                                        <tbody id="itemBody"></tbody>
                                             <!-- <tr>
                                                 <td>落日轉運站(<span  id="inv_people"></span>人)</td>
                                                 <td>1</td>
@@ -409,8 +408,16 @@
                                                 <td id="inv_price"></td>
                                                 <td id="inv_amt"></td>
                                             </tr> -->
-                                        </thead>
+                                        <tfoot id="pass_money">
+                                            <tr>
+                                                <td colspan="2"></td>
+                                                <td colspan="2">手續費調整</td>
+                                                <td><div class="form-group"><input type="number" id="handling_fee" value="0" style="width:100px;" class="form-control"></div></td>
+                                            </tr>
+                                        </tfoot>
                                     </table>
+                                    <input type="hidden" id="TaxPlan" value="">
+                                    <input type="hidden" id="inv_people" value="">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -829,11 +836,21 @@ $(function(){
         // $('#inv_price').text(totle_money/people);
         // $('#inv_amt').text(totle_money);
         $('#inv_use_id').val(id);
+        $('#handling_fee').val(0);
+        if($(this).data('pay_status') == '已付款(部分退款)'){
+            $('#pass_money').show();
+        } else {
+            $('#pass_money').hide();
+        }
 
         var now_tax = Math.round(totle_money*5/100);
         $('#TaxAmt').val(now_tax);
         $('#Amt').val(totle_money - now_tax);
         $('#con-close-modal').modal('show');
+        shb2c();shlove();shcarr();taxchange();calAmt();
+    });
+    // 手續費調整
+    $('#handling_fee').bind('blur keyup change',function(){
         shb2c();shlove();shcarr();taxchange();calAmt();
     });
     // 送出發票資料
@@ -891,6 +908,7 @@ $(function(){
                 'ItemPrice' : item4,
                 'ItemAmt' : item5,
                 'Comment' : $('#LoveCode').val(),
+                'handling_fee' : $('#handling_fee').val() ?? 0,
                 'id' : id
             },function(data){
                 // 顯示發票號碼
@@ -1075,27 +1093,28 @@ function calAmt(){
         taxFlight = 476;
         taxBoat = 762;
     }
+    var handling_fee = $('#handling_fee').val() ?? 0;
     var html = '<tr>';
     switch(nowPlan){
         case 'train':
             html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td>';
             if(1250 * people != totleamt){
-                discountLine = totleamt - (1250 * people);
-                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+                discountLine = totleamt - (1250 * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'flight':
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td>';
             if(500 * people != totleamt){
-                discountLine = totleamt - (500 * people);
-                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+                discountLine = totleamt - (500 * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'boat':
             html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td>';
             if(800 * people != totleamt){
-                discountLine = totleamt - (800 * people);
-                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+                discountLine = totleamt - (800 * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'A':
@@ -1103,8 +1122,8 @@ function calAmt(){
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
             html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-100</td><td>'+(-100 * people)+'</td>';
             if((1250 * people)+(500 * people)+(-100 * people) != totleamt){
-                discountLine = totleamt - (1250 * people) - (500 * people) - (-100 * people);
-                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+                discountLine = totleamt - (1250 * people) - (500 * people) - (-100 * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'B':
@@ -1113,11 +1132,12 @@ function calAmt(){
             html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td></tr><tr>';
             html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-150</td><td>'+(-150 * people)+'</td>';
             if((1250 * people)+(500 * people)+(800 * people)+(-150 * people) != totleamt){
-                discountLine = totleamt - (1250 * people) - (500 * people) - (800 * people) - (-150 * people);
-                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+                discountLine = totleamt - (1250 * people) - (500 * people) - (800 * people) - (-150 * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
     }
+    html += '</tr><tr><td>手續費</td><td>1</td><td>組</td><td>'+handling_fee+'</td><td>'+handling_fee+'</td>';
     html += '</tr>';
     $('#itemBody').html(html);
     

@@ -143,12 +143,12 @@ class BackController extends Controller
         return view('dininginthedark3.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $backmes = backme::select('name','email','tel','p2','p4','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE o_id=0 AND dark3coupon.b_id=dark3backme.id)>0")->get()->toArray();
+        $backmes = backme::select('id','name','email','tel','p2','p4','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE o_id=0 AND dark3coupon.b_id=dark3backme.id)>0")->get()->toArray();
         $cellData = [['姓名','信箱','電話','可劃位人數','訂購內容','註記']];
         foreach ($backmes as $val) {
             $num = 0;
-            if($val['p2']>0) $num += $val['p2'] * 2;
-            if($val['p4']>0) $num += $val['p4'] * 4;
+            $count = coupon::where('b_id',$val['id'])->where('o_id',0)->count();
+            $num = $count * 2;
             $temp = [
                 'name'   => $val['name'],
                 'email'  => $val['email'],

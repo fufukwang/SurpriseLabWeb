@@ -220,7 +220,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
                                                     @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') && !$inv_open)
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}">發票開立</button><br /><br />
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-pay_status="{{ $row->pay_status }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/dark3/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -391,7 +391,7 @@
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
                                             <tr>
-                                                <td>無光晚餐S3(<span  id="inv_people"></span>人)</td>
+                                                <td>無光晚餐S3(<span id="inv_people"></span>人)</td>
                                                 <td>1</td>
                                                 <td>組</td>
                                                 <td id="inv_price"></td>
