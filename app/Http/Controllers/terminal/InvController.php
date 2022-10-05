@@ -177,21 +177,21 @@ class InvController extends WebController
                         $ItemName .= '微醺列車：BON VOYAGE';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '1250';$ItemAmt .= (1250*$row->pople);
                         if(1250 * $row->pople != $totleamt){
                             $discountLine = $totleamt - (1250 * $row->pople);
-                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                            $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
                         }
                         break;
                     case 'flight':
                         $ItemName .= 'FLIGHT 無光飛航';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '500';$ItemAmt .= (500*$row->pople);
                         if(500 * $row->pople != $totleamt){
                             $discountLine = $totleamt - (500 * $row->pople);
-                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                            $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
                         }
                         break;
                     case 'boat':
                         $ItemName .= 'Boat for ONE 單程船票';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '800';$ItemAmt .= (800*$row->pople);
                         if(800 * $row->pople != $totleamt){
                             $discountLine = $totleamt - (800 * $row->pople);
-                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                            $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
                         }
                         break;
                     case 'A':
@@ -200,7 +200,7 @@ class InvController extends WebController
                         $ItemName .= '|套票折扣';$ItemCount .= '|'.$row->pople;$ItemUnit .= '|張';$ItemPrice .= '|-100';$ItemAmt .= '|'.(-100*$row->pople);
                         if(1250 * $row->pople + 500 * $row->pople + (-100 * $row->pople) != $totleamt){
                             $discountLine = $totleamt - (1250 * $row->pople) - (500 * $row->pople) - (-100 * $row->pople);
-                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                            $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
                         }
                         break;
                     case 'B':
@@ -210,10 +210,11 @@ class InvController extends WebController
                         $ItemName .= '|套票折扣';$ItemCount .= '|'.$row->pople;$ItemUnit .= '|張';$ItemPrice .= '|-150';$ItemAmt .= '|'.(-150*$row->pople);
                         if(1250 * $row->pople + 500 * $row->pople + 800 * $row->pople + (-150 * $row->pople) != $totleamt){
                             $discountLine = $totleamt - (1250 * $row->pople) - (500 * $row->pople) - (800 * $row->pople) - (-150 * $row->pople);
-                            $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                            $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
                         }
                         break;
                 }
+                $ItemName .= '|手續費';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|0';$ItemAmt .= '|0';
 
 
 

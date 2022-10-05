@@ -1092,28 +1092,29 @@ function calAmt(){
         taxTrain = 1190;
         taxFlight = 476;
         taxBoat = 762;
+        totleamt = totleamt - now_tax;
     }
     var handling_fee = $('#handling_fee').val() ?? 0;
     var html = '<tr>';
     switch(nowPlan){
         case 'train':
             html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td>';
-            if(1250 * people != totleamt){
-                discountLine = totleamt - (1250 * people) - parseInt(handling_fee);
+            if(taxTrain * people != totleamt){
+                discountLine = totleamt - (taxTrain * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'flight':
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td>';
-            if(500 * people != totleamt){
-                discountLine = totleamt - (500 * people) - parseInt(handling_fee);
+            if(taxFlight * people != totleamt){
+                discountLine = totleamt - (taxFlight * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'boat':
             html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td>';
-            if(800 * people != totleamt){
-                discountLine = totleamt - (800 * people) - parseInt(handling_fee);
+            if(taxBoat * people != totleamt){
+                discountLine = totleamt - (taxBoat * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
@@ -1121,8 +1122,8 @@ function calAmt(){
             html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td></tr><tr>';
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
             html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-100</td><td>'+(-100 * people)+'</td>';
-            if((1250 * people)+(500 * people)+(-100 * people) != totleamt){
-                discountLine = totleamt - (1250 * people) - (500 * people) - (-100 * people) - parseInt(handling_fee);
+            if((taxTrain * people)+(taxFlight * people)+(-100 * people) != totleamt){
+                discountLine = totleamt - (taxTrain * people) - (taxFlight * people) - (-100 * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
@@ -1131,8 +1132,8 @@ function calAmt(){
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
             html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td></tr><tr>';
             html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-150</td><td>'+(-150 * people)+'</td>';
-            if((1250 * people)+(500 * people)+(800 * people)+(-150 * people) != totleamt){
-                discountLine = totleamt - (1250 * people) - (500 * people) - (800 * people) - (-150 * people) - parseInt(handling_fee);
+            if((taxTrain * people)+(taxFlight * people)+(taxBoat * people)+(-150 * people) != totleamt){
+                discountLine = totleamt - (taxTrain * people) - (taxFlight * people) - (taxBoat * people) - (-150 * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;

@@ -189,11 +189,11 @@ class InvController extends Controller
                     'CarrierNum' => rawurlencode(''),
                     'LoveCode' => '',
                     'PrintFlag' => 'Y',
-                    'ItemName' => '無光晚餐S3票券('.$row->pople.'人票)', //多項商品時，以「|」分開
-                    'ItemCount' => 1, //多項商品時，以「|」分開
-                    'ItemUnit' => '組', //多項商品時，以「|」分開
-                    'ItemPrice' => $totleamt / $row->pople, //多項商品時，以「|」分開
-                    'ItemAmt' => $totleamt, //多項商品時，以「|」分開
+                    'ItemName' => '無光晚餐S3票券('.$row->pople.'人票)|手續費', //多項商品時，以「|」分開
+                    'ItemCount' => "1|1", //多項商品時，以「|」分開
+                    'ItemUnit' => '組|組', //多項商品時，以「|」分開
+                    'ItemPrice' => $totleamt."|0", //多項商品時，以「|」分開
+                    'ItemAmt' => $totleamt."|0", //多項商品時，以「|」分開
                     'Comment' => $last_four,
                     'Status' => '1' //1=立即開立，0=待開立，3=延遲開立
                 ];
@@ -267,9 +267,9 @@ class InvController extends Controller
                 'CarrierNum' => rawurlencode($request->CarrierNum),
                 'LoveCode' => $request->LoveCode,
                 'PrintFlag' => 'Y',
-                'ItemName' => '無光晚餐S3票券('.$request->ItemCount.'人票)', //多項商品時，以「|」分開
-                'ItemCount' => 1, //多項商品時，以「|」分開
-                'ItemUnit' => '組', //多項商品時，以「|」分開
+                'ItemName' => '無光晚餐S3票券('.$request->ItemCount.'人票)|手續費', //多項商品時，以「|」分開
+                'ItemCount' => '1|1', //多項商品時，以「|」分開
+                'ItemUnit' => '組|組', //多項商品時，以「|」分開
                 'ItemPrice' => $request->ItemPrice, //多項商品時，以「|」分開
                 'ItemAmt' => $request->ItemAmt, //多項商品時，以「|」分開
                 'Comment' => $request->Comment,
@@ -283,6 +283,8 @@ class InvController extends Controller
                 $r['InvoiceNumber'] = '';
             }
             $inv = inv::where('order_id',$request->id)->first();
+            $order->discount = $request->handling_fee;
+            $order->save();
             if($inv){
                 $inv->is_cancal = 0;
                 $inv->save();

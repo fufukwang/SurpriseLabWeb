@@ -390,6 +390,8 @@
                                                 <th>單價<span class="b2c">(含稅)</span></th>
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
+                                        </thead>
+                                        <tbody>
                                             <tr>
                                                 <td>無光晚餐S3(<span id="inv_people"></span>人)</td>
                                                 <td>1</td>
@@ -397,7 +399,21 @@
                                                 <td id="inv_price"></td>
                                                 <td id="inv_amt"></td>
                                             </tr>
-                                        </thead>
+                                            <tr>
+                                                <td>手續費</td>
+                                                <td>1</td>
+                                                <td>組</td>
+                                                <td id="inv_pass_price"></td>
+                                                <td id="inv_pass_amt"></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot id="pass_money">
+                                            <tr>
+                                                <td colspan="2"></td>
+                                                <td colspan="2">手續費調整</td>
+                                                <td><div class="form-group"><input type="number" id="handling_fee" value="0" style="width:100px;" class="form-control"></div></td>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                                 </div>
                                             </div>
@@ -814,6 +830,12 @@ $(function(){
         $('#inv_price').text(totle_money/people);
         $('#inv_amt').text(totle_money);
         $('#inv_use_id').val(id);
+        $('#handling_fee').val(0);
+        if($(this).data('pay_status') == '已付款(部分退款)'){
+            $('#pass_money').show();
+        } else {
+            $('#pass_money').hide();
+        }
 
         var now_tax = Math.round(totle_money*5/100);
         $('#TaxAmt').val(now_tax);
@@ -821,10 +843,22 @@ $(function(){
         $('#con-close-modal').modal('show');
         shb2c();shlove();shcarr();taxchange();calAmt();
     });
+    // 手續費調整
+    $('#handling_fee').bind('blur keyup change',function(){
+        shb2c();shlove();shcarr();taxchange();calAmt();
+    });
     // 送出發票資料
     $('#sent_inv_open').bind('click',function(){
         if(parseInt($('#Amt').val()) + parseInt($('#TaxAmt').val()) == parseInt($('#TotalAmt').val())){
             var id = $('#inv_use_id').val();
+
+            var handling_fee = $('#handling_fee').val() ?? 0;
+            ItemPrice = $("#inv_price").text()+"|"+$("#inv_pass_price").text();
+            ItemAmt = $("#inv_amt").text()+"|"+$("#inv_pass_amt").text();
+
+
+
+
             $.post('/dark3/order/inv/single/open',{
                 'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
                 'BuyerName' : $('#BuyerName').val(),
@@ -843,9 +877,10 @@ $(function(){
                 'ItemName' : '無光晚餐S3('+$('#inv_people').text()+'人票)',
                 'ItemCount' : $('#inv_people').text(),
                 'ItemUnit' : '組',
-                'ItemPrice' : $('#inv_price').text(),
-                'ItemAmt' : $('#inv_amt').text(),
+                'ItemPrice' : ItemPrice,
+                'ItemAmt' : ItemAmt,
                 'Comment' : $('#LoveCode').val(),
+                'handling_fee' : $('#handling_fee').val() ?? 0,
                 'id' : id
             },function(data){
                 // 顯示發票號碼
@@ -1009,18 +1044,20 @@ function calAmt(){
     // var now_tax = Math.round(totleamt*taxrate/100);
     $('#TaxAmt').val(now_tax);
     $('#Amt').val(totleamt - now_tax);
+    var handling_fee = $('#handling_fee').val() ?? 0;
     if($('input[name="Category"]:checked').val() == 'B2C'){
         //$('#inv_price').text(totleamt / people);
         //$('#inv_price').text(Math.round(totleamt / people *100)/100);
-        $('#inv_price').text(totleamt);
-        $('#inv_amt').text(totleamt);
+        $('#inv_price,#inv_amt').text(totleamt - handling_fee);
+        $('#inv_pass_price,#inv_pass_amt').text(handling_fee);
     } else {
         //var itemPrice = Math.round((totleamt - now_tax) / people);
         //$('#inv_price').text(itemPrice);
-        $('#inv_price').text(totleamt - now_tax);
-        $('#inv_amt').text(totleamt - now_tax);
+        $('#inv_price,#inv_amt').text(totleamt - now_tax - handling_fee);
+        $('#inv_pass_price,#inv_pass_amt').text(handling_fee);
     }
 }
+
 
 function submitXLSForm(){
     $('#SearchForm').attr('target','_blank')
