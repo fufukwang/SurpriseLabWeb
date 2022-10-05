@@ -331,6 +331,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-2-headingFive">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseFive" aria-expanded="false" aria-controls="flush-2-collapseFive">
+                                                            <span class="header-title">我想購買套票，請問有沒有建議搭配的購買方式？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-2-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-2-headingFive" data-bs-parent="#accordionFlushExample-2">
+                                                        <div class="accordion-body">
+                                                            <div class="title-list-wrap">
+                                                                <div class="list-caption">觀看順序</div>
+                                                                <ul class="list-wrap">
+                                                                    <li class="list-item">FLIGHT 與微醺列車是兩項獨立的作品，前後順序並不影響體驗的完整性，但就心境感受上，建議可以先體驗列車，再體驗飛機。</li>
+                                                                </ul>
+                                                            </div>
+                                
+                                                            <div class="title-list-wrap">
+                                                                <div class="list-caption">時間安排</div>
+                                                                <ul class="list-wrap">
+                                                                    <li class="list-item">購買套票時，建議間隔時間可以保留 10 分鐘以上；或中間也可以安排 30 分鐘至 1 小時的空檔，至落日月台走走晃晃，買點飲品，沉澱剛體驗完微醺列車的情緒，再全心投入在 FLIGHT 之中，祝你旅途愉快！</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="block-wrap">
@@ -460,6 +486,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div id="flush-3-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-3-headingSix" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
                                                             <p>兩作品皆無穿衣需求指令，歡迎穿著輕鬆舒適好移動的服裝。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-3-headingSeven">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseSeven" aria-expanded="false" aria-controls="flush-3-collapseSeven">
+                                                            <span class="header-title">我應該什麼時候抵達轉運站？是否需要提早報到？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-3-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-3-headingSeven" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>我們會在訂位確認信（訂位成功後寄出）、行前通知信（體驗日七天前寄出）以及提醒簡訊（體驗當日寄出）中，告知你報到時間，請協助確認信箱與簡訊唷。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -628,7 +668,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <tr>
                                                             <th></th>
                                                             <th>日期<br class="mobile-br">舉例</th>
-                                                            <th>更改<br class="mobile-br">日期</th>
+                                                            <th>更改<br class="mobile-br">日期<br>（至多<br class="mobile-br">乙次）</th>
                                                             <th>轉讓</th>
                                                             <th>退還<br class="mobile-br">費用</th>
                                                         </tr>
@@ -733,7 +773,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <th>然後再附上：</th>
                                                     </tr>
                                                     <tr>
-                                                        <th>改期</th>
+                                                        <th>改期<br>（至多<br class="mobile-br">乙次）</th>
                                                         <td>購票者的<br>姓名、電話、手機</td>
                                                         <td>欲更改場次<br>請提供3個時段</td>
                                                     </tr>

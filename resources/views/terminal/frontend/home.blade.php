@@ -425,7 +425,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.04</li>
+                                                        <li class="list-item">2022.11─2022.12</li>
                                                     </ul>
                                                 </div>
                     

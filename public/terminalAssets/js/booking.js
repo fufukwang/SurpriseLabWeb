@@ -28,6 +28,7 @@ $(function() {
     let $pro_flight = 0;
     let $pro_boat = 0;
 
+    let singleMoney = 0;
     let discountCode = '';
     let discountAmount = 0;
 /*
@@ -54,7 +55,7 @@ $(function() {
             case '微醺列車': max = 24; $ticket_value = 'train'; break;
             case 'FLIGHT': max = 30; $ticket_value = 'flight'; break;
             case 'Boat for ONE': max = 1; $ticket_value = 'boat'; break;
-            case '套票A：車票+飛機票': max = 24; $ticket_value = 'A'; break;
+            case '套票：車票+飛機票': max = 24; $ticket_value = 'A'; break;
             case '套票B：車票+飛機票+船票': max = 1; $ticket_value = 'B'; break;
         }
         if(max>0){
@@ -106,6 +107,7 @@ $(function() {
                     $s2_tr.find('.item-price').text('$1,250');
                     $s2_tr.find('.item-origin-price').text('');
                     $s2_tr.find('td').eq(0).html('<i class="icon-step-done"></i>');
+                    singleMoney = 1250;
                     train_date_enble = true;
                 break;
                 case 'flight':
@@ -116,6 +118,7 @@ $(function() {
                     $s2_tr.find('.item-price').text('$500');
                     $s2_tr.find('.item-origin-price').text('');
                     $s2_tr.find('td').eq(1).html('<i class="icon-step-done"></i>');
+                    singleMoney = 500;
                     flight_date_enble = true;
                 break;
                 case 'boat':
@@ -126,17 +129,19 @@ $(function() {
                     $s2_tr.find('.item-price').text('$800');
                     $s2_tr.find('.item-origin-price').text('');
                     $s2_tr.find('td').eq(2).html('<i class="icon-step-done"></i>');
+                    singleMoney = 800;
                     boat_date_enble = true;
                 break;
                 case 'A':
                     $s2_tr.removeClass('tr-bg-dark');
                     $s2_tr.addClass('tr-bg-light');
-                    $s2_tr.find('.name').text('套票A');
+                    $s2_tr.find('.name').text('套票');
                     $s2_tr.find('.name').removeClass('name-en').addClass('name-ch');
                     $s2_tr.find('.item-price').text('$1,650');
                     $s2_tr.find('.item-origin-price').text('原價 $ 1,750');
                     $s2_tr.find('td').eq(0).html('<i class="icon-step-done"></i>');
                     $s2_tr.find('td').eq(1).html('<i class="icon-step-done"></i>');
+                    singleMoney = 1650;
                     train_date_enble = true;
                     flight_date_enble = true;
                 break;
@@ -148,6 +153,7 @@ $(function() {
                     $s2_tr.find('.item-price').text('$2,400');
                     $s2_tr.find('.item-origin-price').text('原價 $ 2,550');
                     $s2_tr.find('td').html('<i class="icon-step-done"></i>');
+                    singleMoney = 2400;
                     train_date_enble = true;
                     flight_date_enble = true;
                     boat_date_enble = true;
@@ -417,6 +423,7 @@ $(function() {
                 $('#filled-telephone').text($input_tel.val());
                 $('#filled-email').text($input_email.val());
                 $('#filled-remark').text($('#remark').val());
+                $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney));
                 $step3_scenes.hide();
                 $step4_scenes.show();
                 $("html,body").animate({scrollTop: 0}, 300);
@@ -462,6 +469,7 @@ $(function() {
                     // $('#discount').val(discountCode);
                     $('.verification-code').addClass('status-disabled');
                     $('input[name=coupon]').prop('readonly',true);
+                    $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney - discountAmount));
                 } else {
                     $('.verify-layout').addClass('error-style');
                      

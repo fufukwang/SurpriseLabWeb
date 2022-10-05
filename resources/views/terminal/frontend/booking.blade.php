@@ -150,7 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <tr class="tr-bg-light">
                                             <th>
                                                 <div class="item-name body-01 style-smaller">
-                                                    <span class="name-ch">套票A</span>
+                                                    <span class="name-ch">套票</span>
                                                     <span class="item-text">/人</span>
                                                 </div>
                                                 <div class="item-price body-02">$1,650</div>
@@ -187,7 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <li class="dropdown-item body-04 @if($train->Count<=0) disabled @endif">微醺列車 @if($train->Count<=0) disabled @endif</li>
                                             <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($train->Count<=0) disabled @endif</li>
                                             <!-- <li class="dropdown-item body-04 @if($boat->Count<=0) disabled @endif">Boat for ONE @if($train->Count<=0) disabled @endif</li> -->
-                                            <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0) disabled @endif">套票A：車票+飛機票 @if($train->Count<=0 || $flight->Count<=0) disabled @endif</li>
+                                            <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0) disabled @endif">套票：車票+飛機票 @if($train->Count<=0 || $flight->Count<=0) disabled @endif</li>
                                             <!-- <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif">套票B：車票+飛機票+船票 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif</li> -->
                                         </ul>
                                     </div>
@@ -282,7 +282,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </table>
                                     <div class="notice-wrap">
                                         <div class="notice-text-wrap">
-                                            <p class="notice-text body-01 style-smaller">請確認每個作品的演出區間，前後安排是否重疊。</p>
+                                            <p class="notice-text body-01 style-smaller">請確認好每個作品的間隔時間，至少保留10分鐘。</p>
                                             <p class="notice-text body-01 style-smaller">如您在選擇時間時安排有誤，還請自行承擔負責。</p>
                                         </div>
                                     </div>
@@ -704,6 +704,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking.js"></script>
+    <script src="/terminalAssets/js/booking.js?v=0.1"></script>
 </body>
 </html>
