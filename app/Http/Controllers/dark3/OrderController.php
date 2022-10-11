@@ -278,6 +278,27 @@ class OrderController extends Controller
         }
     }
 
+    // ajax 修改資料
+    public function StoreByAjax(Request $request,$id){
+        try{
+            if($request->ajax() && $request->has('act')){
+                if($request->act == 'upateNotes'){
+                    order::where('id',$id)->update([
+                        'notes' => $request->notes
+                    ]);
+                    return Response::json(['success'=>true,'message'=> '已更新'], 200);
+                } else {
+                    return Response::json(['success'=>false],200);
+                }
+            } else {
+                return Response::json(['success'=>false],200);
+            }
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return Response::json(['success'=>false],200);
+        }
+    }
+
 
     public function Print(Request $request){
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');

@@ -209,7 +209,8 @@
 
 
                                                 </td>
-                                                <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td>
+                                                <td class="editable" style="word-break: break-all;max-width: 200px;" data-id="{{ $row->id }}" contenteditable="true">{!! nl2br($row->notes) !!}</td>
+                                                <!-- <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td> -->
                                                 <th>@forelse(App\model\terminal\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\terminal\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
 @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
 <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
@@ -774,7 +775,18 @@ $(function(){
             $.Notification.notify('success','bottom left','行前確認信 已重發', '信件已重新發送');
         },'json');
     });
-
+    // 修改餐飲備註
+    $('.editable').bind('blur',function(){
+        var val = $(this).html();
+        var id  = $(this).data('id');
+        $.post('/terminal/order/'+id+'/store/ajax',{
+            act: 'upateNotes',
+            notes : val
+        },function(data){
+            if(data.success){ $.Notification.notify('success','bottom left','已更新', '備註已更新'); 
+            } else { $.Notification.notify('error','bottom left','更新失敗', '餐飲備註更新失敗'); }
+        },'json');
+    });
 
     jQuery('#datepicker-autoclose').datepicker({
         format: "yyyy-mm-dd",
@@ -787,7 +799,6 @@ $(function(){
         var day      = $('input[name=day]').val();
         var dayparts = $('select[name=dayparts]').val();
         if(day == '' || dayparts == ''){
-            console.log('test');
             if(confirm("尚未選擇日期或時段確定要產生此表格?!")){
                 submitSearchForm();
             }

@@ -200,6 +200,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::delete('order/{id}/delete','dark3\OrderController@OrderDelete');
         Route::get('order/{pro_id}/appointment','dark3\OrderController@Appointment');  // 後臺預約
         Route::post('order/{pro_id}/appointmentUpdate','dark3\OrderController@AppointmentUpdate');
+        Route::post('order/{id}/store/ajax','dark3\OrderController@StoreByAjax');
 
         // 報表列印
         Route::get('print','dark3\OrderController@Print');
@@ -261,6 +262,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::delete('order/{id}/delete','terminal\OrderController@OrderDelete');
         Route::get('order/{pro_id}/appointment','terminal\OrderController@Appointment');  // 後臺預約
         Route::post('order/{pro_id}/appointmentUpdate','terminal\OrderController@AppointmentUpdate');
+        Route::post('order/{id}/store/ajax','terminal\OrderController@StoreByAjax');
 
         // 報表列印
         Route::get('print','terminal\OrderController@Print');
