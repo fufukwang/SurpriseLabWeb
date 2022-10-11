@@ -467,17 +467,23 @@ class OrderController extends Controller
                     $backme_sn = '';
                     if(count($coupons)>0){
                         $couponNumber = 0;
+                        $tmpBackSn = '';
                         foreach($coupons as $c){
                             if($coupon!=''){
                                 $coupon .= "\r\n";
                                 // $pay_money.= "\r\n";
                                 $pay_last.= "\r\n";
-                                $backme_sn.= "\r\n";
+                                
                             }
                             $coupon .= "{$c->code}";
                             // $pay_money .= backme::select('money')->find($c->b_id)->money;
                             $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
-                            $backme_sn .= backme::select('sn')->find($c->b_id)->sn;
+                            if($tmpBackSn != backme::select('sn')->find($c->b_id)->sn){
+                                if($backme_sn != '') $backme_sn.= "\r\n";
+                                $tmpBackSn = backme::select('sn')->find($c->b_id)->sn;
+                                $backme_sn .= $tmpBackSn;
+                            }
+                            
                             $couponNumber++;
                         }
                         $pay_money .= ($couponNumber*4400);
