@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7V2BQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     @include('terminal.frontend._nav')
-{{--
+
     <!-- fixed btn - message -->
     <aside class="fixed-btn message-btn js-hidden-target">
         <!-- Button trigger modal -->
@@ -61,7 +61,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="/terminalAssets/images/general/btn_news_mobile.png" class="mobile-style" alt="message">
         </a>
     </aside>
---}}
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
         <a href="/terminal/booking_now" class="image-wrap">
@@ -572,7 +571,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </div> -->
                                             </div>
                                         </div>
-                                        <!-- <div class="block-wrap">
+                                        <div class="block-wrap">
                                             <div class="section-heading-wrap">
                                                 <h2 class="heading-accordion-title">關於搭配套組</h2>
                                             </div>
@@ -581,18 +580,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="flush-5-headingOne">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-5-collapseOne" aria-expanded="false" aria-controls="flush-5-collapseOne">
-                                                            <span class="header-title">請問有搭配住宿與交通套組嗎？</span>
+                                                            <span class="header-title">有高雄在地住宿的優惠嗎？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
                                                     <div id="flush-5-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-5-headingOne" data-bs-parent="#accordionFlushExample-5">
                                                         <div class="accordion-body">
-                                                            <p>初期搭配套組會先隱藏</p>
+                                                            <p>有的，我們提供給轉運站乘客旅宿的特別優惠，AisaYo 高雄住宿最低七折，輸入折扣碼「surprise8」訂房再享 5% 優惠。<br />
+                                                            住宿優惠請點擊<a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">此處</a>。</p>
                                                         </div>
                                                     </div>
                                                 </div>
                 
-                                                <div class="accordion-item">
+                                                <!-- <div class="accordion-item">
                                                     <h2 class="accordion-header" id="flush-5-headingTwo">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-5-collapseTwo" aria-expanded="false" aria-controls="flush-5-collapseTwo">
                                                             <span class="header-title">請問有建議的兩天一夜行程嗎？</span>
@@ -604,9 +604,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <p>初期搭配套組會先隱藏</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
-                                        </div> -->
+                                        </div>
                                         <div class="block-wrap layout-contact">
                                             <div class="section-heading-wrap">
                                                 <h2 class="heading-accordion-title">客服信箱</h2>
@@ -827,8 +827,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="modal-body">
                     <div class="image-wrap">
-                        <img src="/terminalAssets/images/main/img_news.png" class="pc-style" alt="message">
-                        <img src="/terminalAssets/images/main/img_news_mobile.png" class="mobile-style" alt="message">
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/W6fIt-Sg.jpeg" class="pc-style" alt="message"></a>
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/W6fIt-Sg.jpeg" class="mobile-style" alt="message"></a>
                     </div>
                 </div>
                 <div class="modal-footer">

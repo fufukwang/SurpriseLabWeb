@@ -56,7 +56,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7V2BQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     @include('terminal.frontend._nav')
-{{--
     <!-- fixed btn - message -->
     <aside class="fixed-btn message-btn js-hidden-target">
         <!-- Button trigger modal -->
@@ -65,7 +64,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="/terminalAssets/images/general/btn_news_mobile.png" class="mobile-style" alt="message">
         </a>
     </aside>
---}}
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
         <a href="/terminal/booking_now" class="image-wrap">
@@ -781,8 +779,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="modal-body">
                     <div class="image-wrap">
-                        <img src="/terminalAssets/images/main/img_news.png" class="pc-style" alt="message">
-                        <img src="/terminalAssets/images/main/img_news_mobile.png" class="mobile-style" alt="message">
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/W6fIt-Sg.jpeg" class="pc-style" alt="message"></a>
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/W6fIt-Sg.jpeg" class="mobile-style" alt="message"></a>
                     </div>
                 </div>
                 <div class="modal-footer">
