@@ -426,7 +426,7 @@ class OrderController extends WebController
 
     private function getOrderSearch(Request $request){
         try {
-            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result');
+            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result','dis_money');
 
             //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
             if($request->has('srday')  && $request->srday!=1){

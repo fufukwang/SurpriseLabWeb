@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use App\model\dark3\pro;
 use App\model\dark3\order;
 use App\model\dark3\TeamMail;
-use log;
+use Illuminate\Support\Facades\Log;
 use SLS;
 
 // use DB;
@@ -83,7 +83,9 @@ class Dark3Task extends Command
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=7")->get();
             foreach($pr07day as $pro){
                 // 找出正常的訂單
-                $order07 = order::select('id','name','email','tel','day','rang_start','peple')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
+                $order07 = order::select('dark3order.id','name','email','tel','day','rang_start','pople')
+                    ->leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')
+                    ->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($order07 as $ord) {
                     if($ord->tel != '' && $ord->email != ''){
                         $toData = [
@@ -92,7 +94,7 @@ class Dark3Task extends Command
                         ];
                         SLS::SendSmsByTemplateName($toData);
                         $toData = [
-                            'pople'    => $ord->peple,
+                            'pople'    => $ord->pople,
                             'name'     => $ord->name,
                             'email'    => $ord->email,
                             'day'      => Carbon::parse($ord->day)->format(' m 月 d 日'),

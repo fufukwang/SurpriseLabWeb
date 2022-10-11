@@ -229,7 +229,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                                     @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') && !$inv_open)
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}">發票開立</button><br /><br />
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -417,6 +417,7 @@
                                         </tfoot>
                                     </table>
                                     <input type="hidden" id="TaxPlan" value="">
+                                    <input type="hidden" id="TaxDisMoney" value="">
                                     <input type="hidden" id="inv_people" value="">
                                                 </div>
                                             </div>
@@ -821,6 +822,8 @@ $(function(){
         var people = $(this).data('people');
         var plan = $(this).data('plan');
         $('#TaxPlan').val(plan);
+        $('#TaxDisMoney').val($(this).data('dis_money'));
+        
 // console.log(plan);
         $('input[name="MerchantOrderNo"]').val($(this).data('sn'));
         $('#BuyerName').val($(this).data('buyername'));
@@ -1076,6 +1079,7 @@ function calAmt(){
     // var now_tax = Math.round(totleamt*taxrate/100);
     $('#TaxAmt').val(now_tax);
     $('#Amt').val(totleamt - now_tax);
+    var disMoney = parseInt($('#TaxDisMoney').val());
     if($('input[name="Category"]:checked').val() == 'B2C'){
         //$('#inv_price').text(totleamt / people);
         //$('#inv_price').text(Math.round(totleamt / people *100)/100);
@@ -1099,32 +1103,36 @@ function calAmt(){
     switch(nowPlan){
         case 'train':
             html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td>';
-            if(taxTrain * people != totleamt){
-                discountLine = totleamt - (taxTrain * people) - parseInt(handling_fee);
-                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            if(taxTrain * people != parseInt(totleamt) + parseInt(disMoney)){
+                discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'flight':
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td>';
-            if(taxFlight * people != totleamt){
-                discountLine = totleamt - (taxFlight * people) - parseInt(handling_fee);
-                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            if(taxFlight * people != parseInt(totleamt) + parseInt(disMoney)){
+                discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxFlight * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'boat':
             html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td>';
-            if(taxBoat * people != totleamt){
-                discountLine = totleamt - (taxBoat * people) - parseInt(handling_fee);
-                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            if(taxBoat * people != parseInt(totleamt) + parseInt(disMoney)){
+                discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxBoat * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'A':
             html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td></tr><tr>';
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
             html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-100</td><td>'+(-100 * people)+'</td>';
-            if((taxTrain * people)+(taxFlight * people)+(-100 * people) != totleamt){
-                discountLine = totleamt - (taxTrain * people) - (taxFlight * people) - (-100 * people) - parseInt(handling_fee);
-                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            if((taxTrain * people)+(taxFlight * people)+(-100 * people) != parseInt(totleamt) + parseInt(disMoney)){
+                discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - (taxFlight * people) - (-100 * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
         case 'B':
@@ -1132,9 +1140,10 @@ function calAmt(){
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
             html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td></tr><tr>';
             html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-150</td><td>'+(-150 * people)+'</td>';
-            if((taxTrain * people)+(taxFlight * people)+(taxBoat * people)+(-150 * people) != totleamt){
-                discountLine = totleamt - (taxTrain * people) - (taxFlight * people) - (taxBoat * people) - (-150 * people) - parseInt(handling_fee);
-                html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            if((taxTrain * people)+(taxFlight * people)+(taxBoat * people)+(-150 * people) != parseInt(totleamt) + parseInt(disMoney)){
+                discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - (taxFlight * people) - (taxBoat * people) - (-150 * people) - parseInt(handling_fee);
+                html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
             }
             break;
     }
