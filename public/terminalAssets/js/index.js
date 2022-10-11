@@ -17,11 +17,17 @@ $(function(){
     let $mobile_nav_bar_btn = $('.js-nav-bar-btn');
     let $mobile_nav_bar_btn_text = $mobile_nav_bar_btn.find('.menu-btn-text');
 
+    let $is_opend = false;
+    let $end_time = (new Date("2022-10-31 23:59:59")).getTime();
 
     // section hide target effect
     function sectionHideTargetEffect(scrolled) {
         if ( scrolled > hidden_section_height - nav_height - 5 ) {
             $hidden_targets.removeClass('target-hidden');
+            if($end_time>(new Date().getTime()) && !$is_opend){
+                $('#staticBackdrop').modal('show');
+                $is_opend = true;
+            }
         } else {
             $hidden_targets.addClass('target-hidden');
         }
