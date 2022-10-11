@@ -134,7 +134,7 @@ class InvController extends Controller
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','money')->get();
+            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','money','dis_money')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
                 $phone = $row->tel;
@@ -168,6 +168,16 @@ class InvController extends Controller
                     }
                 }
                 $taxamt = $totleamt - round($totleamt / (1 + (5 / 100)));
+                $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
+                $ItemName .= '無光晚餐S3';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '2200';$ItemAmt .= (2200*$row->pople);
+                $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->dis_money;$ItemAmt .= '|'.$row->dis_money;
+                if(2200 * $row->pople != $totleamt + $row->dis_money){
+                    $discountLine = $totleamt + $row->dis_money - (2200 * $row->pople);
+                    $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                }
+                $ItemName .= '|手續費';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|0';$ItemAmt .= '|0';
+
+
                 $post_data_array = [
                     'RespondType' => 'JSON',
                     'Version' => '1.4',
@@ -189,16 +199,16 @@ class InvController extends Controller
                     'CarrierNum' => rawurlencode(''),
                     'LoveCode' => '',
                     'PrintFlag' => 'Y',
-                    'ItemName' => '無光晚餐S3票券('.$row->pople.'人票)|手續費', //多項商品時，以「|」分開
-                    'ItemCount' => "1|1", //多項商品時，以「|」分開
-                    'ItemUnit' => '組|組', //多項商品時，以「|」分開
-                    'ItemPrice' => $totleamt."|0", //多項商品時，以「|」分開
-                    'ItemAmt' => $totleamt."|0", //多項商品時，以「|」分開
+                    'ItemName' => $ItemName, //多項商品時，以「|」分開
+                    'ItemCount' => $ItemCount, //多項商品時，以「|」分開
+                    'ItemUnit' => $ItemUnit, //多項商品時，以「|」分開
+                    'ItemPrice' => $ItemPrice, //多項商品時，以「|」分開
+                    'ItemAmt' => $ItemAmt, //多項商品時，以「|」分開
                     'Comment' => $last_four,
                     'Status' => '1' //1=立即開立，0=待開立，3=延遲開立
                 ];
                 $result = $this->inv_sent($post_data_array);
-                // Log::error($result);
+                Log::error($result);
                 $results = json_decode($result['web_info'],true);
                 if($results['Status'] != 'LIB10003'){
                     if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
@@ -267,9 +277,9 @@ class InvController extends Controller
                 'CarrierNum' => rawurlencode($request->CarrierNum),
                 'LoveCode' => $request->LoveCode,
                 'PrintFlag' => 'Y',
-                'ItemName' => '無光晚餐S3票券('.$request->ItemCount.'人票)|手續費', //多項商品時，以「|」分開
-                'ItemCount' => '1|1', //多項商品時，以「|」分開
-                'ItemUnit' => '組|組', //多項商品時，以「|」分開
+                'ItemName' => $request->ItemName, //多項商品時，以「|」分開
+                'ItemCount' => $request->ItemCount, //多項商品時，以「|」分開
+                'ItemUnit' => $request->ItemUnit, //多項商品時，以「|」分開
                 'ItemPrice' => $request->ItemPrice, //多項商品時，以「|」分開
                 'ItemAmt' => $request->ItemAmt, //多項商品時，以「|」分開
                 'Comment' => $request->Comment,

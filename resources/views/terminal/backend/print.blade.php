@@ -1103,7 +1103,7 @@ function calAmt(){
     switch(nowPlan){
         case 'train':
             html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td>';
-            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
             if(taxTrain * people != parseInt(totleamt) + parseInt(disMoney)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
@@ -1111,7 +1111,7 @@ function calAmt(){
             break;
         case 'flight':
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td>';
-            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
             if(taxFlight * people != parseInt(totleamt) + parseInt(disMoney)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxFlight * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
@@ -1119,7 +1119,7 @@ function calAmt(){
             break;
         case 'boat':
             html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td>';
-            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
             if(taxBoat * people != parseInt(totleamt) + parseInt(disMoney)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxBoat * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
@@ -1129,7 +1129,7 @@ function calAmt(){
             html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td></tr><tr>';
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
             html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-100</td><td>'+(-100 * people)+'</td>';
-            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
             if((taxTrain * people)+(taxFlight * people)+(-100 * people) != parseInt(totleamt) + parseInt(disMoney)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - (taxFlight * people) - (-100 * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
@@ -1140,7 +1140,7 @@ function calAmt(){
             html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
             html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td></tr><tr>';
             html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-150</td><td>'+(-150 * people)+'</td>';
-            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+disMoney+'</td><td>'+disMoney+'</td>';
+            html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
             if((taxTrain * people)+(taxFlight * people)+(taxBoat * people)+(-150 * people) != parseInt(totleamt) + parseInt(disMoney)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - (taxFlight * people) - (taxBoat * people) - (-150 * people) - parseInt(handling_fee);
                 html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';

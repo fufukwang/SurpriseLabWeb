@@ -220,7 +220,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
                                                     @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') && !$inv_open)
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-pay_status="{{ $row->pay_status }}">發票開立</button><br /><br />
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}">發票開立</button><br /><br />
                                                     @endif
                                                     @endif
                                                     <a class="btn btn-primary btn-xs" href="/dark3/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -391,7 +391,8 @@
                                                 <th>金額<span class="b2c">(含稅)</span></th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="itemBody"></tbody>
+                                        <!-- <tbody>
                                             <tr>
                                                 <td>無光晚餐S3(<span id="inv_people"></span>人)</td>
                                                 <td>1</td>
@@ -406,7 +407,7 @@
                                                 <td id="inv_pass_price"></td>
                                                 <td id="inv_pass_amt"></td>
                                             </tr>
-                                        </tbody>
+                                        </tbody> -->
                                         <tfoot id="pass_money">
                                             <tr>
                                                 <td colspan="2"></td>
@@ -415,6 +416,9 @@
                                             </tr>
                                         </tfoot>
                                     </table>
+                                    <input type="hidden" id="TaxPlan" value="">
+                                    <input type="hidden" id="TaxDisMoney" value="">
+                                    <input type="hidden" id="inv_people" value="">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -815,6 +819,7 @@ $(function(){
         var phone = dial.replace('+886','0') + $(this).data('phone');
         var totle_money = $(this).data('totle_money');
         var people = $(this).data('people');
+        $('#TaxDisMoney').val($(this).data('dis_money'));
 
         $('input[name="MerchantOrderNo"]').val($(this).data('sn'));
         $('#BuyerName').val($(this).data('buyername'));
@@ -826,8 +831,8 @@ $(function(){
         $('#LoveCode,#CarrierNum,#BuyerUBN').val('');
         $('#Comment').val($(this).data('last_four'));
         $('#TotalAmt').val(totle_money);
-        $('#inv_people').text(people);
-        $('#inv_price').text(totle_money/people);
+        $('#inv_people').val(people);
+        // $('#inv_price').text(totle_money/people);
         $('#inv_amt').text(totle_money);
         $('#inv_use_id').val(id);
         $('#handling_fee').val(0);
@@ -851,10 +856,26 @@ $(function(){
     $('#sent_inv_open').bind('click',function(){
         if(parseInt($('#Amt').val()) + parseInt($('#TaxAmt').val()) == parseInt($('#TotalAmt').val())){
             var id = $('#inv_use_id').val();
-
+            /*
             var handling_fee = $('#handling_fee').val() ?? 0;
             ItemPrice = $("#inv_price").text()+"|"+$("#inv_pass_price").text();
             ItemAmt = $("#inv_amt").text()+"|"+$("#inv_pass_amt").text();
+            */
+            var item1 = '';
+            var item2 = '';
+            var item3 = '';
+            var item4 = '';
+            var item5 = '';
+            $('#itemBody tr').each(function(index, value){
+                if(index>0){
+                    item1 += '|';item2 += '|';item3 += '|';item4 += '|';item5 += '|';
+                }
+                item1 += $(value).find('td').eq(0).text();
+                item2 += $(value).find('td').eq(1).text();
+                item3 += $(value).find('td').eq(2).text();
+                item4 += $(value).find('td').eq(3).text();
+                item5 += $(value).find('td').eq(4).text();
+            });
 
 
 
@@ -874,11 +895,18 @@ $(function(){
                 'CarrierType' : $('input[name="CarrierType"]:checked').val(),
                 'CarrierNum' : $('#CarrierNum').val(),
                 'LoveCode' : $('#LoveCode').val(),
+                /*
                 'ItemName' : '無光晚餐S3('+$('#inv_people').text()+'人票)',
                 'ItemCount' : $('#inv_people').text(),
                 'ItemUnit' : '組',
                 'ItemPrice' : ItemPrice,
                 'ItemAmt' : ItemAmt,
+                */
+                'ItemName' : item1,
+                'ItemCount' : item2,
+                'ItemUnit' : item3,
+                'ItemPrice' : item4,
+                'ItemAmt' : item5,
                 'Comment' : $('#LoveCode').val(),
                 'handling_fee' : $('#handling_fee').val() ?? 0,
                 'id' : id
@@ -1038,13 +1066,14 @@ function taxchange(){
 // 重算稅額
 function calAmt(){
     var taxrate = $('#TaxRate').val();
-    var people = $('#inv_people').text();
+    var people = $('#inv_people').val();
     var totleamt = $('#TotalAmt').val();
     var now_tax = totleamt - Math.round(totleamt / (1 + (taxrate/100)));
     // var now_tax = Math.round(totleamt*taxrate/100);
     $('#TaxAmt').val(now_tax);
     $('#Amt').val(totleamt - now_tax);
     var handling_fee = $('#handling_fee').val() ?? 0;
+    var disMoney = parseInt($('#TaxDisMoney').val());
     if($('input[name="Category"]:checked').val() == 'B2C'){
         //$('#inv_price').text(totleamt / people);
         //$('#inv_price').text(Math.round(totleamt / people *100)/100);
@@ -1056,6 +1085,15 @@ function calAmt(){
         $('#inv_price,#inv_amt').text(totleamt - now_tax - handling_fee);
         $('#inv_pass_price,#inv_pass_amt').text(handling_fee);
     }
+    var html = '<tr>';
+    html += '<td>無光晚餐S3</td><td>'+people+'</td><td>張</td><td>2200</td><td>'+(2200 * people)+'</td>';
+    html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
+    if(2200 * people != parseInt(totleamt) + parseInt(disMoney)){
+        discountLine = parseInt(totleamt) + parseInt(disMoney) - (2200 * people) - parseInt(handling_fee);
+        html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+    }
+    html += '</tr><tr><td>手續費</td><td>1</td><td>組</td><td>'+handling_fee+'</td><td>'+handling_fee+'</td></tr>';
+    $('#itemBody').html(html);
 }
 
 
