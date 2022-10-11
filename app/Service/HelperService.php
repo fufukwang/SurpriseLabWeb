@@ -69,7 +69,7 @@ class HelperService {
     public function SendEmailByTemplateName($data){
         try{
             // 暫停發送 D7 信件
-            if($data['template'] == 'D7') return false;
+            // if($data['template'] == 'D7') return false;
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_DARK_USER')]);
@@ -99,7 +99,7 @@ class HelperService {
                         $m->subject('【無光晚餐來信】');
                         break;
                     case 'D7':
-                        $m->subject('【無光晚餐】你需要先知道的注意事項 8 Tips for Dining in the Dark');
+                        $m->subject('【無光晚餐】你需要先知道的注意事項 7 Tips for Dining in the Dark');
                         break;
                 }
                     

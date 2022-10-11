@@ -212,7 +212,7 @@ class MasterController extends Controller
                 $ord = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('pople','day','rang_start')->find($request->id);
                 $toData['day'] = Carbon::parse($ord->day)->format(' m 月 d 日');
                 $toData['time'] = substr($ord->rang_start,0,5);
-                $toData['pople'] = $ord->peple;
+                $toData['pople'] = $ord->pople;
             }
             // 信件補送
             if(SLS::SendEmailByTemplateName($toData)){

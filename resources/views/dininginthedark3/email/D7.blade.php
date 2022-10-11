@@ -102,9 +102,12 @@
 <div style="text-align: left;"><br>
 <br>
 &nbsp;</div>
-
+@if((int) substr($time,0,2) > 18)
+<div style="text-align: left;"><strong><span style="color:#D3D3D3">1. 當天請「</span><u><span style="color:#8C5FB4">依照您訂位的場次時間準時抵達</span></u><span style="color:#D3D3D3">」以下地點</span></strong></div>
+@else
 <div style="text-align: left;"><strong><span style="color:#D3D3D3">1. 當天請「</span><span style="color:#8C5FB4"><u>提早 15 分鐘抵達</u></span><span style="color:#D3D3D3">」以下地點</span></strong><br>
 &nbsp;</div>
+@endif
 
 <div style="text-align: left;"><a href="https://goo.gl/maps/qsZiGCftj2R31aUw9" target="_blank"><span style="color:#FFFFFF"><u>106台北市大安區仁愛路四段345巷4弄3號</u></span></a></div>
 
@@ -140,18 +143,10 @@
 <div>&nbsp;</div>
 如果只是單純不喜歡吃某種食材，建議可以在黑暗中，給這些食材一次機會。有時候看不到、少了假設，平常不喜歡的，有可能在黑暗中瞬間愛上唷！
 
-<div><br>
-<br>
-&nbsp;</div>
-<span style="color:#D3D3D3"><strong>5. 請問是否可以加點酒水呢？</strong></span>
-
-<div>&nbsp;</div>
-現場提供<span style="color:#8C5FB4"><u><strong>有酒精與無酒精的 pairing</strong> </u></span>供你選擇，如有需要可於報到時加點。
-
 <div>&nbsp;</div>
 <br>
 <br>
-<span style="color:#D3D3D3"><strong>6. 關於穿什麼，有哪些特別限制嗎？</strong></span>
+<span style="color:#D3D3D3"><strong>5. 關於穿什麼，有哪些特別限制嗎？</strong></span>
 
 <div>&nbsp;</div>
 可以穿著你喜歡的服裝前來，不過我們會建議穿平底鞋，畢竟需要在黑暗中走動還是安全點好。不過，為維持無光環境，<span style="color:#8C5FB4"><strong><u>請避免穿著會反光或閃閃動人的華麗服裝</u></strong></span>。
@@ -162,7 +157,7 @@
 <div><br>
 &nbsp;</div>
 <br>
-<span style="color:#D3D3D3"><strong>7. 發票可以打統編嗎？</strong></span>
+<span style="color:#D3D3D3"><strong>6. 發票可以打統編嗎？</strong></span>
 
 <div>&nbsp;</div>
 可以。若你在訂位時忘了備註，歡迎先來信說明註記（比如，現在回個信與我們說一聲），讓當天好好用餐，不被小事干擾。
@@ -170,7 +165,7 @@
 <div><br>
 &nbsp;</div>
 <br>
-<span style="color:#D3D3D3"><strong>8. 黑暗中會發生意想不到的事嗎？</strong></span>
+<span style="color:#D3D3D3"><strong>7. 黑暗中會發生意想不到的事嗎？</strong></span>
 
 <div>&nbsp;</div>
 在黑暗中你可能會遇到各種意料之外的事，如果遇到了，不妨開心接受他。例如：與鄰桌客人開始尬聊，結果發現你們同一個國小同一屆隔壁班。（開玩笑的）<br>
