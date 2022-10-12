@@ -464,7 +464,7 @@
                                 </p>
 
                                 <h5 class="sub-title highlight change-seat">
-                                    雙人即享票退費異動規則
+                                    雙人套票/雙人即享票退費異動規則
                                 </h5>
                                 <table class="rule-table two-people">
                                     <tbody>
@@ -515,7 +515,7 @@
                                 </table>
                                 <div class="table-note-text">
                                     ※ 來信時間請於當日下班時間 18:00 前，超過以隔日計<br/>
-                                    ※ 訂位完成後申請退費退還金額 90%，係因 10% 金流手續費
+                                    ※ 雙人即享票訂位完成後申請退費退還金額 90%，係因 10% 金流手續費
                                 </div>
 
                                 <h5 class="sub-title highlight change-seat">
