@@ -347,7 +347,7 @@
                                     <p>其他事項：</p>
                                     <p>① 為了各位消費者的權益與安全，餐廳內部設有夜視監視器全程錄影，必要時將會調閱影像紀錄。</p>
                                     <p>② 為顧及安全與⽤餐品質，不建議懷孕超過 28 週之孕婦與年紀低於 15 歲之孩童前來⽤餐。</p>
-                                    <p>③ 為顧及體驗品質食物設計，不建議對乳製品過敏或嚴重乳糖不耐症體質者前來用餐。</p>
+                                    <p>③ 為顧及體驗品質食物設計，不建議對乳製品過敏或嚴重乳糖不耐症體質者前來用餐；素食者僅提供蛋奶素。</p>
                                     <p>④ 無光晚餐不提供開瓶服務，現場提供可加點的酒水單。</p>
                                     <p>⑤ 在座位分配上若有特殊需求可於訂位時備註，但以現場服務⼈員之安排為準。</p>
                                     <p>⑥ 若有活動包場需求、任何特殊訂位服務、天馬⾏空的奇想、為愛準備的驚喜，請來信詢問 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></p>
@@ -464,7 +464,7 @@
                                 </p>
 
                                 <h5 class="sub-title highlight change-seat">
-                                    雙人即享票退費異動規則
+                                    雙人套票/雙人即享票退費異動規則
                                 </h5>
                                 <table class="rule-table two-people">
                                     <tbody>
@@ -515,7 +515,7 @@
                                 </table>
                                 <div class="table-note-text">
                                     ※ 來信時間請於當日下班時間 18:00 前，超過以隔日計<br/>
-                                    ※ 訂位完成後申請退費退還金額 90%，係因 10% 金流手續費
+                                    ※ 雙人即享票訂位完成後申請退費退還金額 90%，係因 10% 金流手續費
                                 </div>
 
                                 <h5 class="sub-title highlight change-seat">

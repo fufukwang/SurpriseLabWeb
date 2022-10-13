@@ -725,6 +725,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
+
+                        {{--<!--div class="section sec-partner">
+                            <div class="container">
+
+                                <div class="section-header">
+                                    <div class="section-title">
+                                        <h3>合作夥伴</h3>
+                                        <h4>Our Partners</h4>
+                                    </div>
+                                </div>
+
+                                <div class="partner-sec-wrapper">
+                                    <div class="partners-img">
+                                        <img class="img-fluid d-sm-block d-none" src="img/other/partners.png" alt="partners">
+                                        <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png" alt="partners">
+                                    </div>
+                                </div>
+                            </div>
+                        </div-->--}}
                     </section>
                 </div>
                 
@@ -818,7 +837,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Custom Js -->
     <script src="js/index.js?v=0.11"></script>
-    <script src="js/main.js?v=0.1"></script>
+    <script src="js/main.js?v=0.11"></script>
     <script src="js/board-modal.js?v=0.11"></script>
     <script src="js/index-slideshow.js?v=0.11"></script>
 
