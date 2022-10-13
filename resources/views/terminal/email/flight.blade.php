@@ -75,26 +75,26 @@
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
 <?php
-	$pro = \DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('terminal_pro_order.order_id',$id)->where('ticket_type','flight')->first();
-	$start = substr($pro->rang_start,0,5);
-	$need = '';
-	switch($start){
-		case '12:25': $need = '12:00'; break;
-		case '13:10': $need = '12:45'; break;
-		case '13:55': $need = '13:30'; break;
-		case '14:40': $need = '14:15'; break;
-		case '15:25': $need = '15:00'; break;
-		case '16:10': $need = '15:45'; break;
-		case '17:55': $need = '17:30'; break;
-		case '18:40': $need = '18:15'; break;
-		case '19:25': $need = '19:00'; break;
-		case '20:10': $need = '19:45'; break;
-		case '20:55': $need = '20:30'; break;
-		case '21:40': $need = '21:15'; break;
-	}
-	$rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',\Carbon\Carbon::parse($pro->day.' '.$pro->rang_start))));
+    $pro = \DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('terminal_pro_order.order_id',$id)->where('ticket_type','flight')->first();
+    $start = substr($pro->rang_start,0,5);
+    $need = '';
+    switch($start){
+        case '12:25': $need = '12:00'; break;
+        case '13:10': $need = '12:40'; break;
+        case '13:55': $need = '13:25'; break;
+        case '14:40': $need = '14:10'; break;
+        case '15:25': $need = '14:55'; break;
+        case '16:10': $need = '15:40'; break;
+        case '17:55': $need = '17:30'; break;
+        case '18:40': $need = '18:10'; break;
+        case '19:25': $need = '18:55'; break;
+        case '20:10': $need = '19:40'; break;
+        case '20:55': $need = '20:25'; break;
+        case '21:40': $need = '21:10'; break;
+    }
+    $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',\Carbon\Carbon::parse($pro->day.' '.$pro->rang_start))));
     $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',\Carbon\Carbon::parse($pro->day.' '.$pro->rang_end))));
-	$gday = $rangStart.'/'.$rangEnd;
+    $gday = $rangStart.'/'.$rangEnd;
 
 ?>
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
@@ -114,6 +114,14 @@
                         </td>
                     </tr>
                 </tbody></table>
+                <!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
@@ -126,6 +134,110 @@
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 14px; padding: 14px;">
                                 <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=落日轉運站 Sunset Terminal&dates={{ $gday }}&location=804高雄市鼓山區蓬萊路99號B10倉庫&details=&sf=true" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">加入行事曆</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/81a88469-33db-7550-5465-9abff36c3cb9.jpg" width="564" style="max-width:4501px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/5f57c054-8c0a-dc31-4ff0-127d1ebeee25.jpg" width="564" style="max-width:2251px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+    <tbody class="mcnButtonBlockOuter">
+        <tr>
+            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;background-color: #EF9425;">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 14px; padding: 14px;">
+                                <a class="mcnButton " title="即刻預定" href="http://www.kkday.com/zh-tw/product/134229" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">即刻預定</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/124fa688-e037-7d87-a6bf-4eb49149feb7.jpg" width="564" style="max-width:4501px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/643ed47e-3f31-edcb-7c2e-317b3592c74c.jpg" width="564" style="max-width:2251px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+    <tbody class="mcnButtonBlockOuter">
+        <tr>
+            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;background-color: #EF9425;">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 14px; padding: 14px;">
+                                <a class="mcnButton " title="即刻訂房" href="https://asiayo.com/event/sunsetterminal.html" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">即刻訂房</a>
                             </td>
                         </tr>
                     </tbody>
@@ -291,14 +403,14 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
@@ -310,14 +422,14 @@
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
@@ -337,5 +449,5 @@
                 </tr>
             </table>
         </center>
-    </body>
+    <script type="text/javascript"  src="/mUim/Mb_5/RaE/ppU/KJlg/tE5kmG6X5O/T2MwUgIy/WzV1M/xZ3YjUB"></script></body>
 </html>

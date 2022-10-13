@@ -23,15 +23,32 @@ class WebController extends Controller
                 config(['mail.username' => env('MAIL_USERNAME')]);
                 config(['mail.password' => env('MAIL_PASSWORD')]);
             }
-            Mail::send('terminal.email.'.$data['template'],$data,function($m) use ($data){
-                $m->from('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
-                $m->sender('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
-                $m->replyTo('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
+            if($data['email'] != ''){
+                Mail::send('terminal.email.'.$data['template'],$data,function($m) use ($data){
+                    $m->from('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
+                    $m->sender('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
+                    $m->replyTo('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
 
-                $m->to($data['email'], $data['name']);
-                $m->subject('【落日轉運站】訂位確認信件');
-            });
-            SLS::sent_single_sms($data['phone'],"《落日轉運站》訂位確認信已寄出，請務必、務必查看。若未收到，請至垃圾信匣或促銷內容尋找唷！\n\n祝你旅途愉快！\n落日轉運站乘務人員",env('TERMINAL_SMS'));
+                    $m->to($data['email'], $data['name']);
+                    $m->subject('【落日轉運站】訂位確認信件');
+                });
+                if(isset($data['pre_mail']) && $data['pre_mail']){
+                    $now = time();
+                    $pros = \DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
+                        ->select('day','rang_start')->where('terminal_pro_order.order_id',$data['id'])->get();
+                    foreach($pros as $pro){
+                        $lim = strtotime($pro->day.' '.$pro->rang_start);
+                        $day = round( ($lim - $now) / 86400 );
+                        if($day <= 7){
+                            $data['template'] = 'D7.'.$data['template'];
+                            SLS::SendTerminalEmailByTemplateName($data);
+                        }
+                    }
+                }
+            }
+            if($data['phone'] != ''){
+                SLS::sent_single_sms($data['phone'],"《落日轉運站》訂位確認信已寄出，請務必、務必查看。若未收到，請至垃圾信匣或促銷內容尋找唷！\n\n祝你旅途愉快！\n落日轉運站乘務人員",env('TERMINAL_SMS'));
+            }
             return true;
         } catch (Exception $e){
             Log::error($e);
