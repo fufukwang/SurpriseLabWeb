@@ -69,7 +69,7 @@ class HelperService {
     public function SendEmailByTemplateName($data){
         try{
             // 暫停發送 D7 信件
-            // if($data['template'] == 'D7') return false;
+            if($data['template'] == 'D7') return false;
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_DARK_USER')]);
