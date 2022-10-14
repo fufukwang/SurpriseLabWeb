@@ -69,9 +69,9 @@
 
 @if(isset($pro->id))
 <input type="hidden" name="ticket_type" value="{{ $pro->ticket_type }}">
-<input type="hidden" name="train" value="{{ $train[0]->id ?? 0 }}">
-<input type="hidden" name="flight" value="{{ $flight[0]->id ?? 0 }}">
-<input type="hidden" name="boat" value="{{ $boat[0]->id ?? 0 }}">
+<input type="hidden" name="train" value="{{ $pro->id ?? 0 }}">
+<input type="hidden" name="flight" value="{{ $pro->id ?? 0 }}">
+<input type="hidden" name="boat" value="{{ $pro->id ?? 0 }}">
 @endif
 
 
