@@ -68,12 +68,13 @@ class TerminalTask extends Command
                 // 找出正常的訂單
                 $order07 = order::select('terminalorder.id','name','email','tel','plan')
                     ->leftJoin('terminal_pro_order', 'terminal_pro_order.order_id', '=', 'terminalorder.id')
-                    ->where('terminalorder.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
+                    ->where('terminal_pro_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
                 foreach ($order07 as $ord) {
                     if($ord->email != ''){
                         $toData = [
                             'name'     => $ord->name,
                             'email'    => $ord->email,
+                            'id'       => $ord->id,
                             'template' => 'D7.'.$ord->plan,
                         ];
                         SLS::SendTerminalEmailByTemplateName($toData);
