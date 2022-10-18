@@ -190,7 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h2>Ticket</h2>
 
                         <!-- 售票狀況 -->
-                        <div class="section sec-ticket-status" style="display: none;">
+                        <div class="section sec-ticket-status">
                             <div class="container">
 
                                 <div class="section-header">
