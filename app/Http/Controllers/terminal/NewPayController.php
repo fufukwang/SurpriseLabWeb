@@ -242,6 +242,7 @@ class NewPayController extends WebController
                     'phone' => $order->tel,
                     'id'    => $order->id,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'pre_mail' => true,
                     'template' => $order->plan,
                 ];
                 $this->SendOrderEmailByTemplateName($mailer);

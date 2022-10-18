@@ -19,6 +19,7 @@ class Kernel extends ConsoleKernel
         Commands\MasterMailSend::class,
         // Commands\Covid19CouponRestore::class,
         Commands\Dark3Task::class,
+        Commands\TerminalTask::class,
     ];
 
     /**
@@ -42,5 +43,6 @@ class Kernel extends ConsoleKernel
         $schedule->command('team:sentmail 12')->dailyAt('12:00'); //  簡訊時間調整
         // dark3 寄送
         $schedule->command('dark3:task 17')->dailyAt('17:00'); // 無光S3 行前信寄送
+        $schedule->command('terminal:task 18')->dailyAt('18:00'); // 落日 行前信寄送
     }
 }

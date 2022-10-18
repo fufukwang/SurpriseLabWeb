@@ -69,7 +69,7 @@ class HelperService {
     public function SendEmailByTemplateName($data){
         try{
             // 暫停發送 D7 信件
-            // if($data['template'] == 'D7') return false;
+            if($data['template'] == 'D7') return false;
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_DARK_USER')]);
@@ -167,7 +167,43 @@ class HelperService {
     // dark3 行前信寄送
 
 
+    // terminal 信件寄送
+    public function SendTerminalEmailByTemplateName($data){
+        try{
+            if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
+                config(['mail.host' => 'smtp.gmail.com']);
+                config(['mail.username' => env('MAIL_TERMINAL_USER')]);
+                config(['mail.password' => env('MAIL_TERMINAL_PASS')]);
+            } else {
+                config(['mail.host' => env('MAIL_HOST')]);
+                config(['mail.username' => env('MAIL_USERNAME')]);
+                config(['mail.password' => env('MAIL_PASSWORD')]);
+            }
+            Mail::send('terminal.email.'.$data['template'],$data,function($m) use ($data){
+                $m->from('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
+                $m->sender('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
+                $m->replyTo('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
 
+                $m->to($data['email'], $data['name']);
+                switch ($data['template']) {
+                    case 'D7.train':
+                    case 'D7.boat':
+                    case 'D7.A':
+                    case 'D7.B':
+                        $m->subject('【落日轉運站】旅程即將啟程，行前您需要知道的十件事');
+                        break;
+                    case 'D7.flight':
+                        $m->subject('【落日轉運站】旅程即將啟程，行前您需要知道的九件事');
+                        break;
+                }
+                    
+            });
+            return true;
+        } catch (Exception $e){
+            Log::error($e);
+            return false;
+        }
+    }
 
 
 

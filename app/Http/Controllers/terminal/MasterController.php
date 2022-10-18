@@ -176,7 +176,7 @@ class MasterController extends WebController
             $order_id = $request->order_id;
             // 取得訂單資料
             $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id');
-            $order = $order->select('name','day','rang_start','terminalorder.id','tel','email','sn')->where('terminalorder.id',$order_id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->first();
+            $order = $order->select('name','day','rang_start','terminalorder.id','tel','email','sn','plan')->where('terminalorder.id',$order_id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->first();
             if($order){
                 $order->md5id = md5($order->id);
             } else {
@@ -206,8 +206,9 @@ class MasterController extends WebController
                 'id'    => $request->id,
                 'name'  => $request->name,
                 'email' => $request->email,
-                'type'  => $request->type,
+                'template' => $request->type.'.'.$request->plan,
             ];
+            /*
             if($toData['type'] == 'D10'){
                 $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id');
                 $order = $order->select('day','rang_start')->where('terminalorder.id',$toData['id'])->whereIn('pay_status',['已付款','已付款(部分退款)'])->first();
@@ -220,8 +221,9 @@ class MasterController extends WebController
                     $toData['link'] = 'http://dev.surpriselab.com.tw/terminal/nameFix?d='.md5($toData['id']).'&e='.md5($toData['email']);
                 }
             }
+            */
             // 信件補送
-            if(SLS::SendPreviewEmail($toData)){
+            if(SLS::SendTerminalEmailByTemplateName($toData)){
                 return response()->json(["success"=>true]);
             } else {
                 return response()->json(["success"=>false]);
