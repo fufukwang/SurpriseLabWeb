@@ -267,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </a>
                                     </div>
                                     <div class="type-item type-great-tipsy">
-                                        <a href="https://surpriselab.backme.tw/checkout/2534/19985?locale=zh-TW" class="ticket-frame" target="_blank">
+                                        <a href="mailto:dininginthedark@surpriselab.com.tw" class="ticket-frame" target="_blank">
                                             <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-5.png?v=0.4" alt="包場圖">
                                             <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-5-mobile.png?v=0.4" alt="包場圖">
                                             {{--<!--p class="ticket-state timeLimit">
@@ -275,7 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     class="highlight rest-ticket">XXX</span> 張
                                             </p-->--}}
                                             <p class="ticket-state">
-                                                包場請來信客服 <a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a>
+                                                包場請來信客服 dininginthedark@surpriselab.com.tw</a>
                                             </p>
                                         </a>
                                     </div>
