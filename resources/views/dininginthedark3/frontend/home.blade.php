@@ -268,14 +268,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="type-item type-great-tipsy">
                                         <a href="https://surpriselab.backme.tw/checkout/2534/19985?locale=zh-TW" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-0.png?v=0.3" alt="年度套票">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-0-mobile.png?v=0.3" alt="年度套票">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-5.png?v=0.4" alt="包場圖">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-5-mobile.png?v=0.4" alt="包場圖">
                                             {{--<!--p class="ticket-state timeLimit">
                                                 限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                                     class="highlight rest-ticket">XXX</span> 張
                                             </p-->--}}
                                             <p class="ticket-state">
-                                                預售票形式，依照購買順序收到序號後，可選擇近一年區段
+                                                包場請來信客服 <a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a>
                                             </p>
                                         </a>
                                     </div>
@@ -517,8 +517,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-                        <!-- 預售劃位流程 -->
-                        <div class="section sec-ticket-process">
+                        {{--<!-- 預售劃位流程 -->
+                        <!--div class="section sec-ticket-process">
                             <div class="container">
 
                                 <div class="section-header">
@@ -579,7 +579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div-->--}}
 
                         <!-- 營業時間 -->
                         <div class="section sec-ticket-slots">
@@ -612,8 +612,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-                        <!-- 時程表 -->
-                        <div class="section sec-ticket-schedule">
+                        {{--<!-- 時程表 -->
+                        <!--div class="section sec-ticket-schedule">
                             <div class="container">
 
                                 <div class="section-header">
@@ -654,7 +654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <a class="btn-outline smoothScroll" href="#Ticket-type">我要預約</a>
                                 </div>
                             </div>
-                        </div>
+                        </div-->--}}
                     </section>
 
                     <!-- Section3 Rules -->
@@ -726,7 +726,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-                        {{--<!--div class="section sec-partner">
+                        <div class="section sec-partner">
                             <div class="container">
 
                                 <div class="section-header">
@@ -738,12 +738,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="partner-sec-wrapper">
                                     <div class="partners-img">
-                                        <img class="img-fluid d-sm-block d-none" src="img/other/partners.png" alt="partners">
-                                        <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png" alt="partners">
+                                        <img class="img-fluid d-sm-block d-none" src="img/other/partners.png?v=0.1" alt="partners">
+                                        <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png?v=0.1" alt="partners">
                                     </div>
                                 </div>
                             </div>
-                        </div-->--}}
+                        </div>
                     </section>
                 </div>
                 

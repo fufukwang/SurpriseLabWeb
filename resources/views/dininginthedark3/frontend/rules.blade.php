@@ -146,7 +146,7 @@
                                         <div id="qa2" class="collapse" aria-labelledby="qa2-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                                體驗時⻑約 90 分鐘，符合專家建議之身處⿊暗中的最適⻑度。
+                                                <b>體驗時間約為90分鐘</b>，加上您報到、離場流連忘返的餘音繞樑的時間，請預留120分鐘給我們，這是都市傳說中建議的最適黑暗時間。
                                             </div>
                                         </div>
                                     </div>
@@ -341,6 +341,23 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="card">
+                                        <div class="card-header" id="qa14-header">
+                                            <h6 data-toggle="collapse" data-target="#qa14" aria-expanded="false"
+                                                aria-controls="qa14" class="collapsed d-flex align-items-center">
+                                                ・發票可以打統編嗎？
+                                                <i class="icon icon-arrow"></i>
+                                            </h6>
+                                        </div>
+                                        <div id="qa14" class="collapse" aria-labelledby="qa14-header"
+                                            data-parent="#qa-according">
+                                            <div class="card-body">
+                                                可以，請在購票時的備註欄打上：公司抬頭+統編。<br/>
+                                                因作業流程，發票會在體驗後 7-10 個工作天寄至訂位信箱。
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="qa-note">
@@ -455,6 +472,9 @@
                                         用餐遲到 / 未到<br/>以致無法入場者
                                     </div>
                                 </div>
+                                <p>
+                                    遲到時間計算方式：依照用餐七日前行前提醒信件指示報到時間為準。若未準時報到者將不予進場、亦無法退費、改期。
+                                </p>
 
                                 <h5 class="sub-title highlight">
                                     不可抗力因素之更改訂位及退費辦法
