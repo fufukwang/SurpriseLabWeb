@@ -691,7 +691,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <h2>Contact</h2>
 
-                        <div class="fullpage section sec-contact">
+                        <div class="section sec-contact">
                             <div class="container">
 
                                 <div class="section-header">

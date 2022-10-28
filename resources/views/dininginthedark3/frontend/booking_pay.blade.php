@@ -260,7 +260,7 @@
 
                         <div class="form-group textarea-with-label">
                             <label for="notice">其他備註</label>
-                            <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註/發票是否打統編/過敏食材"></textarea>
+                            <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註/發票是否打統編/過敏食材&#10;食材過敏請標明人數＋過敏食材 EX:一位不吃牛&#10;發票若要打統編，請直接註明公司抬頭與統一編號"></textarea>
                         </div>
 
                         <div class="form-group radio__button">
