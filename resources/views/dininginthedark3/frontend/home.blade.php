@@ -275,7 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     class="highlight rest-ticket">XXX</span> 張
                                             </p-->--}}
                                             <p class="ticket-state">
-                                                包場請來信客服 dininginthedark@surpriselab.com.tw</a>
+                                                包場請來信客服 dininginthedark@surpriselab.com.tw
                                             </p>
                                         </a>
                                     </div>
