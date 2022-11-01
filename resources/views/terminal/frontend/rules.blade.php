@@ -254,6 +254,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-2-headingSix">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseSix" aria-expanded="false" aria-controls="flush-2-collapseSix">
+                                                            <span class="header-title">我想了解不同演出場次的時刻表是什麼？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-2-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-2-headingSix" data-bs-parent="#accordionFlushExample-2">
+                                                        <div class="accordion-body">
+                                                            <div class="table-wrap style-qa">
+                                                                <table>
+                                                                    <tr>
+                                                                        <th>微醺列車</th>
+                                                                        <th><span class="style-bolder">FLIGHT</span></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder">12:40-13:40</td>
+                                                                        <td><span class="style-bolder">12:25-12:55</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder">14:00-15:00</td>
+                                                                        <td><span class="style-bolder">13:10-13:40</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder">15:20-16:20</td>
+                                                                        <td><span class="style-bolder">13:55-14:25</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder">18:10-19:10</td>
+                                                                        <td><span class="style-bolder">14:40-15:10</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder">19:30-20:30</td>
+                                                                        <td><span class="style-bolder">15:25-15:55</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder">20:50-21:50</td>
+                                                                        <td><span class="style-bolder">16:10-16:40</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder"></td>
+                                                                        <td><span class="style-bolder">17:55-18:25</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder"></td>
+                                                                        <td><span class="style-bolder">18:40-19:10</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder"></td>
+                                                                        <td><span class="style-bolder">19:25-19:55</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder"></td>
+                                                                        <td><span class="style-bolder">20:10-20:40</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder"></td>
+                                                                        <td><span class="style-bolder">20:55-21:25</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="style-bolder"></td>
+                                                                        <td><span class="style-bolder">21:40-22:10</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                 
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="flush-2-headingThree">
@@ -353,6 +423,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                                     <li class="list-item">購買套票時，建議間隔時間可以保留 10 分鐘以上；或中間也可以安排 30 分鐘至 1 小時的空檔，至落日月台走走晃晃，買點飲品，沉澱剛體驗完微醺列車的情緒，再全心投入在 FLIGHT 之中，祝你旅途愉快！</li>
                                                                 </ul>
                                                             </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-2-headingSenve">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseSenve" aria-expanded="false" aria-controls="flush-2-collapseSenve">
+                                                            <span class="header-title">請問可以打統編嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-2-collapseSenve" class="accordion-collapse collapse" aria-labelledby="flush-2-headingSenve" data-bs-parent="#accordionFlushExample-2">
+                                                        <div class="accordion-body">
+                                                            <p>可以，請在購票時的備註欄打上：公司抬頭+統編。</p>
+                                                            <p>因作業流程，發票會在體驗後 7-10 個工作天寄至訂位信箱。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -502,6 +587,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-3-headingEight">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseEight" aria-expanded="false" aria-controls="flush-3-collapseEight">
+                                                            <span class="header-title">購買套票需要分兩次取票嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-3-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-3-headingEight" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>
+                                                                可以一次領取兩項體驗票券喔！<br>
+                                                                但在開演前請務必在至等候區等候。
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="block-wrap">
@@ -573,18 +675,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </div>
                                         <div class="block-wrap">
                                             <div class="section-heading-wrap">
-                                                <h2 class="heading-accordion-title">關於搭配套組</h2>
+                                                <h2 class="heading-accordion-title">關於旅遊折扣套組</h2>
                                             </div>
 
                                             <div class="accordion rule-accordion-wrap" id="accordionFlushExample-5">
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="flush-5-headingOne">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-5-collapseOne" aria-expanded="false" aria-controls="flush-5-collapseOne">
-                                                            <span class="header-title">有高雄在地住宿的優惠嗎？</span>
+                                                            <span class="header-title">有推薦在地飯店住宿嗎？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
                                                     <div id="flush-5-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-5-headingOne" data-bs-parent="#accordionFlushExample-5">
+                                                        <div class="accordion-body">
+                                                            <p>
+                                                                城市商旅 真愛館 - 無敵海景、緊鄰駁二，步行10 分鐘抵達落日轉運站<br>
+                                                                此次轉運站指定下榻飯店！擁有絕佳視野，除了可以欣賞高雄的都市風貌，還能眺望海灣，將港區景觀盡收眼底，<br>
+                                                                睡前還有免費宵夜可以吃，吃完再到港區散散步，情調滿分，快來一趟最浪漫的落日小旅行。
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-5-headingTwo">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-5-collapseTwo" aria-expanded="false" aria-controls="flush-5-collapseTwo">
+                                                            <span class="header-title">有高雄在地住宿的優惠嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-5-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-5-headingTwo" data-bs-parent="#accordionFlushExample-5">
                                                         <div class="accordion-body">
                                                             <p>有的，我們提供給轉運站乘客旅宿的特別優惠，AisaYo 高雄住宿最低七折，輸入折扣碼「surprise8」訂房再享 5% 優惠。<br />
                                                             住宿優惠請點擊<a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">此處</a>。</p>
@@ -774,7 +894,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </tr>
                                                     <tr>
                                                         <th>改期<br>（至多<br class="mobile-br">乙次）</th>
-                                                        <td>購票者的<br>姓名、電話、手機</td>
+                                                        <td>購票者的<br>姓名、購票信箱、手機</td>
                                                         <td>欲更改場次<br>請提供3個時段</td>
                                                     </tr>
                                                     <tr>
@@ -784,7 +904,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </tr>
                                                     <tr>
                                                         <th>退票</th>
-                                                        <td>購票者的<br>姓名、電話、手機</td>
+                                                        <td>購票者的<br>姓名、購票信箱、手機</td>
                                                         <td>訂單編號</td>
                                                     </tr>
                                                 </table>

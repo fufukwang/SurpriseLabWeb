@@ -687,6 +687,88 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
+
+
+        <section class="section-wrap skip-background-light js-anchor-section project-section" id="discount">
+            <div class="section-heading-wrap">
+                <h2 class="heading-title">聯合優惠</h2>
+                <h3 class="heading-subtitle">Discount</h3>
+            </div>
+
+
+
+
+
+                            <div class="cta-wrap">
+
+                                                <div class="owl-carousel owl-theme">
+
+                                                    
+
+                                                    <!-- 02 -->
+                                                    <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                                                        <figure class="slideshow-card">
+                                                            <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
+                                                        </figure>
+                                                    </a></div>
+
+                                                    <!-- 01 -->
+                                                    <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                                                        <figure class="slideshow-card">
+                                                            <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
+                                                        </figure>
+                                                    </a></div>
+
+                                                    <!-- 03 -->
+                                                    <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                                                        <figure class="slideshow-card">
+                                                            <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
+                                                        </figure>
+                                                    </a></div>
+                                                </div>
+
+                                                <!-- Custom Controls -->
+                                                <div class="custom-owl-nav">
+                                                    <button class="custom-owl-prev">
+                                                        <i class="icon-arrow-slides-left"></i>
+                                                    </button>
+                                                    <button class="custom-owl-next">
+                                                        <i class="icon-arrow-slides-right"></i>
+                                                    </button>
+                                                </div>
+
+
+                            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section class="section-wrap skip-background-light text-sction js-anchor-section" id="rules">
             <div class="container-xl">
                 <div class="row">
@@ -750,11 +832,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="b-content-wrap">
                             <div class="section-heading-wrap">
                                 <h2 class="heading-title">合作夥伴</h2>
-                                <h3 class="heading-subtitle">Partners</h3>
+                                <h3 class="heading-subtitle">Our Partners</h3>
                             </div>
                             <div class="img-wrap">
-                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png" alt="Partners">
-                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner_mobile.png" alt="Partners">
+                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png?v=0.1" alt="Partners">
+                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner_mobile.png?v=0.1" alt="Partners">
                             </div>
                         </div>
                     </div>
@@ -803,7 +885,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js"></script>
+    <script src="/terminalAssets/js/index.js?v=0.1"></script>
     <script src="/terminalAssets/js/home-slideshow.js"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
 </body>

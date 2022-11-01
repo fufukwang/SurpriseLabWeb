@@ -446,7 +446,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="remark">其他備註</label>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
-                                    <textarea id="remark" class="body-04" name="remark" placeholder="ex. 特殊事項備註 / 發票是否打統編"></textarea>
+                                    <textarea id="remark" class="body-04" name="remark" placeholder="ex. 特殊事項備註 / 發票若要打統編，請直接註明公司抬頭與統一編號"></textarea>
                                 </div>
                                 <fieldset class="checkbox-block">
                                     <div class="form-group checkbox-layout">
