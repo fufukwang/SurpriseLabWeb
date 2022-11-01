@@ -688,8 +688,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="flush-5-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-5-headingOne" data-bs-parent="#accordionFlushExample-5">
                                                         <div class="accordion-body">
+                                                            <p>城市商旅 真愛館 - 無敵海景、緊鄰駁二，步行10 分鐘抵達落日轉運站</p>
                                                             <p>
-                                                                城市商旅 真愛館 - 無敵海景、緊鄰駁二，步行10 分鐘抵達落日轉運站<br>
                                                                 此次轉運站指定下榻飯店！擁有絕佳視野，除了可以欣賞高雄的都市風貌，還能眺望海灣，將港區景觀盡收眼底，<br>
                                                                 睡前還有免費宵夜可以吃，吃完再到港區散散步，情調滿分，快來一趟最浪漫的落日小旅行。
                                                             </p>

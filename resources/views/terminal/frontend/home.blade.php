@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?v=0.1">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -885,7 +885,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?v=0.1"></script>
+    <script src="/terminalAssets/js/index.js"></script>
     <script src="/terminalAssets/js/home-slideshow.js"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
 </body>
