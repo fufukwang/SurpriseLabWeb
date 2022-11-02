@@ -153,7 +153,8 @@ class HelperService {
                     $this->sent_single_sms($smsData['phone'],"【無光晚餐】\n\n行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找。\n\n期待在黑暗中相見\n\n無光晚餐團隊");
                     break;
                 case 'DX':
-                    $this->sent_single_sms($smsData['phone'],"【無光晚餐】\n\n您好，來訊提醒您今日有預約無光晚餐。\n\n期待在黑暗中相見\n\n無光晚餐團隊");
+                    // $this->sent_single_sms($smsData['phone'],"【無光晚餐】\n\n您好，來訊提醒您今日有預約無光晚餐。\n\n期待在黑暗中相見\n\n無光晚餐團隊");
+                    $this->sent_single_sms($smsData['phone'],"【無光晚餐】嘿，準備好迎接黑暗了嗎？來訊提醒您今日有預約無光晚餐。請依訂位確認信中告知時間抵達，「遲到」將無法入場。期待與你在無光中相見。");
                     break;
 
 
