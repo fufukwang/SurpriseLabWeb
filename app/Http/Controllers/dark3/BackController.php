@@ -248,33 +248,41 @@ class BackController extends Controller
         $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
         $pros = pro::select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS now,(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open"));
         if($request->has('day') && $request->has('day_end')){
+            $open_count = pro::select(DB::raw("SUM((IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))) AS sale,count(id) as num,SUM(sites) as site"))->where('open',1); 
             $all_count = pro::select(DB::raw("SUM((IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))) AS sale,count(id) as num,SUM(sites) as site"));
         } else {
+            $open_count = pro::select('id')->where('id',0);
             $all_count = pro::select('id')->where('id',0);
         }
 
         if($request->has('day')){
             $pros = $pros->where('day','>=',$request->day);
+            $open_count = $open_count->where('day','>=',$request->day);
             $all_count = $all_count->where('day','>=',$request->day);
         }
         if($request->has('day_end')){
             $pros = $pros->where('day','<=',$request->day_end);
+            $open_count = $open_count->where('day','<=',$request->day_end);
             $all_count = $all_count->where('day','<=',$request->day_end);
         }
         if($request->has('dayparts')){
             $pros = $pros->where('day_parts',$request->dayparts);
+            $open_count = $open_count->where('day_parts',$request->dayparts);
             $all_count = $all_count->where('day_parts',$request->dayparts);
         }
         if($request->has('special')){
             $pros = $pros->where('special',$request->special);
+            $open_count = $open_count->where('special',$request->special);
             $all_count = $all_count->where('special',$request->special);
         }
         if($request->has('open')){
             if($request->open==1 || $request->open==0){
                 $pros = $pros->where('open',$request->open);
+                $open_count = $open_count->where('open',$request->open);
                 $all_count = $all_count->where('open',$request->open);
             } else {
                 $pros = $pros->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
+                $open_count = $open_count->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
                 $all_count = $all_count->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
             }
         }
@@ -282,6 +290,7 @@ class BackController extends Controller
             $open_number = $request->open_number;
             if($request->open_limit==1 && is_numeric($open_number)){
                 $pros = $pros->where('sites','<=',$open_number);
+                $open_count = $open_count->where('sites','<=',$open_number);
                 $all_count = $all_count->where('sites','<=',$open_number);
             }
         }
@@ -292,8 +301,9 @@ class BackController extends Controller
             }
         } else { $pros = $pros->orderBy('updated_at','desc'); }
         $pros = $pros->paginate($this->perpage);
+        $open = $open_count->get();
         $count = $all_count->get();
-        return view('dininginthedark3.backend.pros',compact('pros','request','count'));
+        return view('dininginthedark3.backend.pros',compact('pros','request','count','open'));
     }
     public function ProEdit(Request $request,$id){
         $pro = collect();

@@ -102,8 +102,9 @@
                                 <div class="sticky-table-header fixed-solution" style="width: auto;">
 @if(isset($request->day) && isset($request->day_end) && $request->day!='' && $request->day_end!='')
     <p>
-        {{$request->day}} - {{$request->day_end}} 已開放席次之剩餘空位數：{{ $count[0]->site - $count[0]->sale }}<br>
-        {{$request->day}} - {{$request->day_end}} 全部席次剩餘空位數：{{ $count[0]->num * 12  - $count[0]->sale }}
+        {{$request->day}} - {{$request->day_end}} 已開放席次之剩餘空位數：{{ $open[0]->site - $open[0]->sale }}<br>
+        {{$request->day}} - {{$request->day_end}} 已開放席次之剩餘空位數：{{ $count[0]->site - $count[0]->sale }}
+        {{-- {{$request->day}} - {{$request->day_end}} 全部席次剩餘空位數：{{ $count[0]->num * 12  - $count[0]->sale }} --}}
     </p>
 @endif
                                     <form method="post" id="openForm">
