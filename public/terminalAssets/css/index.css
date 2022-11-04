@@ -445,7 +445,9 @@ a {
           transform: translate(-50%, -24px);
   z-index: 1;
 }
-
+#discount .cta-wrap .custom-owl-nav{
+  top: 56%;
+}
 @media screen and (max-width: 1199.98px) {
   .project-section .project-wrap .project-tab-wrap .tab-content .project-slideshow .content-inner--slideshow-cover .custom-owl-nav ,#discount .cta-wrap .custom-owl-nav{
     width: 100%;

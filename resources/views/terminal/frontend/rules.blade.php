@@ -458,8 +458,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="flush-3-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-3-headingOne" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>為維護體驗品質，於進入體驗區域前，所有觀眾都必須寄物。較大型的物品(如：行李箱)，將會無法寄物。</p>
-                                                            <p>建議大家輕便前來，減少需要寄放的大小物品也能少些擔憂，放鬆體驗！</p>
+                                                            <!-- <p>為維護體驗品質，於進入體驗區域前，所有觀眾都必須寄物。較大型的物品(如：行李箱)，將會無法寄物。</p>
+                                                            <p>建議大家輕便前來，減少需要寄放的大小物品也能少些擔憂，放鬆體驗！</p> -->
+                                                            <p>為維護體驗品質，建議大家輕便前來，也能少些擔憂，放鬆體驗！</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -474,8 +475,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div id="flush-3-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-3-headingTwo" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
                                                             <p>
-                                                                可以，但手機必須全程維持飛航模式並禁止錄影錄音。<br>
-                                                                現場提供寄物，但不負保管責任。
+                                                                <!-- 可以，但手機必須全程維持飛航模式並禁止錄影錄音。<br>
+                                                                現場提供寄物，但不負保管責任。 -->
+                                                                可以，但手機必須全程維持飛航模式並禁止錄影錄音。
                                                             </p>
                                                         </div>
                                                     </div>
@@ -688,7 +690,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="flush-5-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-5-headingOne" data-bs-parent="#accordionFlushExample-5">
                                                         <div class="accordion-body">
-                                                            <p>城市商旅 真愛館 - 無敵海景、緊鄰駁二，步行10 分鐘抵達落日轉運站</p>
+                                                            <p><a href="https://www.citysuites.com.tw/zh-tw" target="_blank">城市商旅 真愛館</a> - 無敵海景、緊鄰駁二，步行10 分鐘抵達落日轉運站</p>
                                                             <p>
                                                                 此次轉運站指定下榻飯店！擁有絕佳視野，除了可以欣賞高雄的都市風貌，還能眺望海灣，將港區景觀盡收眼底，<br>
                                                                 睡前還有免費宵夜可以吃，吃完再到港區散散步，情調滿分，快來一趟最浪漫的落日小旅行。
