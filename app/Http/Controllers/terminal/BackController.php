@@ -209,37 +209,73 @@ class BackController extends WebController
         $pros = pro::select(DB::raw("({$this->oquery}) AS now,(sites-{$this->oquery}) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open,ticket_type"));
         if($request->has('day') && $request->has('day_end')){
             $all_count = pro::select(DB::raw("SUM({$this->oquery}) AS sale,count(id) as num,SUM(sites) as site"));
+            $flight_open = pro::select(DB::raw("SUM({$this->oquery}) AS sale,count(id) as num,SUM(sites) as site"))->where('open',1)->where('ticket_type','flight');
+            $flight_all = pro::select(DB::raw("SUM({$this->oquery}) AS sale,count(id) as num,SUM(sites) as site"))->where('ticket_type','flight');
+            $train_open = pro::select(DB::raw("SUM({$this->oquery}) AS sale,count(id) as num,SUM(sites) as site"))->where('open',1)->where('ticket_type','train');
+            $train_all = pro::select(DB::raw("SUM({$this->oquery}) AS sale,count(id) as num,SUM(sites) as site"))->where('ticket_type','train');
         } else {
             $all_count = pro::select('id')->where('id',0);
+            $flight_open = pro::select('id')->where('id',0);
+            $flight_all = pro::select('id')->where('id',0);
+            $train_open = pro::select('id')->where('id',0);
+            $train_all = pro::select('id')->where('id',0);
         }
 
         if($request->has('day')){
             $pros = $pros->where('day','>=',$request->day);
             $all_count = $all_count->where('day','>=',$request->day);
+            $flight_open = $flight_open->where('day','>=',$request->day);
+            $flight_all = $flight_all->where('day','>=',$request->day);
+            $train_open = $train_open->where('day','>=',$request->day);
+            $train_all = $train_all->where('day','>=',$request->day);
         }
         if($request->has('day_end')){
             $pros = $pros->where('day','<=',$request->day_end);
             $all_count = $all_count->where('day','<=',$request->day_end);
+            $flight_open = $flight_open->where('day','<=',$request->day_end);
+            $flight_all = $flight_all->where('day','<=',$request->day_end);
+            $train_open = $train_open->where('day','<=',$request->day_end);
+            $train_all = $train_all->where('day','<=',$request->day_end);
         }
         if($request->has('dayparts')){
             $pros = $pros->where('day_parts',$request->dayparts);
             $all_count = $all_count->where('day_parts',$request->dayparts);
+            $flight_open = $flight_open->where('day_parts',$request->dayparts);
+            $flight_all = $flight_all->where('day_parts',$request->dayparts);
+            $train_open = $train_open->where('day_parts',$request->dayparts);
+            $train_all = $train_all->where('day_parts',$request->dayparts);
         }
         if($request->has('ticket_type')){
             $pros = $pros->where('ticket_type',$request->ticket_type);
             $all_count = $all_count->where('ticket_type',$request->ticket_type);
+            $flight_open = $flight_open->where('ticket_type',$request->ticket_type);
+            $flight_all = $flight_all->where('ticket_type',$request->ticket_type);
+            $train_open = $train_open->where('ticket_type',$request->ticket_type);
+            $train_all = $train_all->where('ticket_type',$request->ticket_type);
         }
         if($request->has('special')){
             $pros = $pros->where('special',$request->special);
             $all_count = $all_count->where('special',$request->special);
+            $flight_open = $flight_open->where('special',$request->special);
+            $flight_all = $flight_all->where('special',$request->special);
+            $train_open = $train_open->where('special',$request->special);
+            $train_all = $train_all->where('special',$request->special);
         }
         if($request->has('open')){
             if($request->open==1 || $request->open==0){
                 $pros = $pros->where('open',$request->open);
                 $all_count = $all_count->where('open',$request->open);
+                $flight_open = $flight_open->where('open',$request->open);
+                $flight_all = $flight_all->where('open',$request->open);
+                $train_open = $train_open->where('open',$request->open);
+                $train_all = $train_all->where('open',$request->open);
             } else {
                 $pros = $pros->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
                 $all_count = $all_count->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
+                $flight_open = $flight_open->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
+                $flight_all = $flight_all->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
+                $train_open = $train_open->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
+                $train_all = $train_all->where('open',0)->where('day','>=',Carbon::now()->format('Y-m-d'));
             }
         }
         if($request->has('open_limit') && $request->has('open_number')){
@@ -247,6 +283,10 @@ class BackController extends WebController
             if($request->open_limit==1 && is_numeric($open_number)){
                 $pros = $pros->where('sites','<=',$open_number);
                 $all_count = $all_count->where('sites','<=',$open_number);
+                $flight_open = $flight_open->where('sites','<=',$open_number);
+                $flight_all = $flight_all->where('sites','<=',$open_number);
+                $train_open = $train_open->where('sites','<=',$open_number);
+                $train_all = $train_all->where('sites','<=',$open_number);
             }
         }
         if($request->has('order')){
@@ -256,7 +296,13 @@ class BackController extends WebController
             }
         } else { $pros = $pros->orderBy('updated_at','desc'); }
         $pros = $pros->paginate($this->perpage);
-        $count = $all_count->whereIn('ticket_type',['flight','train'])->orderBy('ticket_type')->groupBy('ticket_type')->get();
+        // $count = $all_count->whereIn('ticket_type',['flight','train'])->orderBy('ticket_type')->groupBy('ticket_type')->get();
+        $count = [
+            'flight_open' => $flight_open->get(),
+            'flight_all'  => $flight_all->get(),
+            'train_open'  => $train_open->get(),
+            'train_all'   => $train_all->get()
+        ];
         return view('terminal.backend.pros',compact('pros','request','count'));
     }
     public function ProEdit(Request $request,$id){

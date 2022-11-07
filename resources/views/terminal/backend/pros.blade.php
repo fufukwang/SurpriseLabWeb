@@ -111,10 +111,10 @@
                                 <div class="sticky-table-header fixed-solution" style="width: auto;">
 @if(isset($request->day) && isset($request->day_end) && $request->day!='' && $request->day_end!='')
     <p>
-        {{$request->day}} - {{$request->day_end}} 微醺列車 已開放席次之剩餘空位數：{{ $count[1]->site - $count[1]->sale }}<br>
-        {{$request->day}} - {{$request->day_end}} 微醺列車 全部席次剩餘空位數：{{ $count[1]->num * 24  - $count[1]->sale }}<br><br>
-        {{$request->day}} - {{$request->day_end}} FLIGHT 已開放席次之剩餘空位數：{{ $count[0]->site - $count[0]->sale }}<br>
-        {{$request->day}} - {{$request->day_end}} FLIGHT 全部席次剩餘空位數：{{ $count[0]->num * 30  - $count[0]->sale }}<br><br>
+        {{$request->day}} - {{$request->day_end}} 微醺列車 已開放席次之剩餘空位數：{{ $count['train_open'][0]->site - $count['train_open'][0]->sale }}<br>
+        {{$request->day}} - {{$request->day_end}} 微醺列車 全部席次剩餘空位數：{{ $count['train_all'][0]->num * 24  - $count['train_all'][0]->sale }}<br><br>
+        {{$request->day}} - {{$request->day_end}} FLIGHT 已開放席次之剩餘空位數：{{ $count['flight_open'][0]->site - $count['flight_open'][0]->sale }}<br>
+        {{$request->day}} - {{$request->day_end}} FLIGHT 全部席次剩餘空位數：{{ $count['flight_all'][0]->num * 30  - $count['flight_all'][0]->sale }}<br><br>
         {{--
         {{$request->day}} - {{$request->day_end}} Boat 已開放席次之剩餘空位數：{{ $count[0]->site - $count[0]->sale }}<br>
         {{$request->day}} - {{$request->day_end}} Boat 全部席次剩餘空位數：{{ $count[0]->num * 12  - $count[0]->sale }}<br><br>
