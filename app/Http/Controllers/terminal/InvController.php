@@ -170,7 +170,7 @@ class InvController extends WebController
                           
                     }
                 }
-                $taxamt = 0;$totleamt - round($totleamt / (1 + (5 / 100)));
+                $taxamt = 0;// $totleamt - round($totleamt / (1 + (5 / 100)));
                 $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
                 switch($row->plan){
                     case 'train':
