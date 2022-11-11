@@ -170,7 +170,7 @@ class InvController extends WebController
                           
                     }
                 }
-                $taxamt = $totleamt - round($totleamt / (1 + (5 / 100)));
+                $taxamt = 0;$totleamt - round($totleamt / (1 + (5 / 100)));
                 $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
                 switch($row->plan){
                     case 'train':
@@ -235,8 +235,8 @@ class InvController extends WebController
                     'BuyerAddress' => '',
                     'BuyerEmail' => $row->email,
                     'Category' => 'B2C',
-                    'TaxType' => '1',
-                    'TaxRate' => '5',
+                    'TaxType' => '3', // 1 應稅 3 是免稅
+                    'TaxRate' => '0', // 正常是5%
                     'Amt' => $totleamt - $taxamt,
                     'TaxAmt' => $taxamt,
                     'TotalAmt' => $totleamt,
