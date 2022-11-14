@@ -1107,7 +1107,7 @@ function calAmt(){
         //$('#inv_price').text(itemPrice);
         // $('#inv_price').text(totleamt - now_tax);
         // $('#inv_amt').text(totleamt - now_tax);
-        if($('input[name="TaxType"]:checked').val() == 3){
+        if($('input[name="TaxType"]:checked').val() == 3 || $('input[name="TaxType"]:checked').val() == 2){
             taxTrain = 1250;
             taxFlight = 500;
             taxBoat = 800;
