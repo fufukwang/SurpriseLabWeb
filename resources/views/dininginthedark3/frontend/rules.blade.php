@@ -316,11 +316,12 @@
                                             data-parent="#qa-according">
                                             <div class="card-body">
                                                 無光晚餐採網路購票、線上劃位方式進行，無販售現場票券。<br/><br/>
-                                                共有兩種票券，享有權益不同，分別為：<br/><br/>
-                                                <ol>
+                                                <!-- 共有兩種票券，享有權益不同，分別為：<br/><br/> -->
+                                                雙人即享票：包含一組雙人票券，直購票形式，購票當下即可選擇用餐日期。<br/><br/>
+                                                <!-- <ol>
                                                     <li>雙人即享票：包含一組雙人票券，直購票形式，購票當下即可選擇用餐日期。</li>
                                                     <li>年度套票：包含兩組雙人票券，預售票形式，依照購票順序收到劃位序號後，即可劃位。可前來無光晚餐用餐兩次，體驗不同菜單，可隨時預約一年之內的用餐日期。</li>
-                                                </ol>
+                                                </ol> -->
                                                 購票請至<a class="default-light btn-link" href="index.html#Ticket-type">我要預約</a>購買，相關規則請參考<span class="default-light btn-link to-presale-rules">預售劃位</span>。
                                             </div>
                                         </div>
