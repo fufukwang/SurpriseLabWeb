@@ -1107,10 +1107,16 @@ function calAmt(){
         //$('#inv_price').text(itemPrice);
         // $('#inv_price').text(totleamt - now_tax);
         // $('#inv_amt').text(totleamt - now_tax);
-        taxTrain = 1190;
-        taxFlight = 476;
-        taxBoat = 762;
-        totleamt = totleamt - now_tax;
+        if($('input[name="TaxType"]:checked').val() == 3){
+            taxTrain = 1250;
+            taxFlight = 500;
+            taxBoat = 800;
+        } else {
+            taxTrain = 1190;
+            taxFlight = 476;
+            taxBoat = 762;
+            totleamt = totleamt - now_tax;
+        }
     }
     var handling_fee = $('#handling_fee').val() ?? 0;
     var html = '<tr>';
