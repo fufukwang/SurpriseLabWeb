@@ -410,7 +410,7 @@
                                     <li>為確保訂位成功，若無收到訂位確認信，請務必來信客服查詢</li>
                                 </ul>
 
-                                <h5 class="sub-title highlight">
+                                <!-- <h5 class="sub-title highlight">
                                     年度套票說明
                                 </h5>
                                 <br/><br/>
@@ -432,7 +432,7 @@
                                     <li>兩組序號可於 12 個月內，自由選擇時間使用，請留意失效日，序號失效後無法退款</li>
                                     <li>為確保訂位成功，若無收到訂位確認信，請務必來信客服查詢</li>
                                     <li>購買前請詳閱套票退費規則</li>
-                                </ul>
+                                </ul> -->
                             </div>
 
                             <div class="feature-btn">
@@ -540,7 +540,7 @@
                                     ※ 雙人即享票訂位完成後申請退費退還金額 90%，係因 10% 金流手續費
                                 </div>
 
-                                <h5 class="sub-title highlight change-seat">
+                                <!-- <h5 class="sub-title highlight change-seat">
                                     年度套票退費異動規則
                                 </h5>
                                 <p>套票享有一整年劃位時段，不同於一般票券，退換票請參照套票規則辦理。<br/>一組序號為$4,400元（年度套票含兩組雙人票，共8,800元）</p>
@@ -585,7 +585,7 @@
                                         <td colspan="2">不可退費</td>
                                     </tr>
                                     </tbody>
-                                </table>
+                                </table> -->
 
                                 <h5 class="sub-title highlight transfer-ticket">
                                     票券異動申請
@@ -678,14 +678,14 @@
                                     </div>
                                 </div>
                                 <br/><br/>
-                                <h6 class="highlight">年度套票（原雙菜單套票）</h6>
+                                <!-- <h6 class="highlight">年度套票（原雙菜單套票）</h6>
                                 <ul>
                                     <li>可劃位區間：2022/10/12 - 2023/10/31</li>
                                     <li>序號失效日期：2023/08/31 18:00</li>
                                 </ul>
                                 <p class="text-left">
                                     * 上述劃位批次與失效日期，由驚喜製造 Surprise Lab. 保留調整與修改之權利
-                                </p>
+                                </p> -->
 
                                 <h5 class="sub-title highlight">
                                     線上金流系統

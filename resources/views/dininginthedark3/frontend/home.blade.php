@@ -283,7 +283,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <p class="ticket-area-note">
                                     以上價格包含 10% 服務費<br/>
                                     現場提供 pairing 加購<br/><br/>
-                                    <span class="btn-link" id="js-open-btn">點此查看票券差異比較</span><br/><br/>
+                                    <!-- <span class="btn-link" id="js-open-btn">點此查看票券差異比較</span><br/><br/> -->
                                     單一場次最高可容納人數 12 人，<br/>
                                     若人數超過 12 人可來信客服信箱，由我們協助劃位
                                 </p>
