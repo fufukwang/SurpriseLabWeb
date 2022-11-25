@@ -359,8 +359,8 @@ class OrderController extends WebController
                             if($json['Status'] == "SUCCESS"){
                                 $pay_last = $json['data']['Result']['Card4No'];
                             }
-                            $return_Tr_time = $json['data']['Result']['PayTime'];
-                            $blue_sn = $json['data']['Result']['TradeNo'];
+                            $return_Tr_time = $json['data']['Result']['PayTime'] ?? '';
+                            $blue_sn = $json['data']['Result']['TradeNo'] ?? '';
                         }
                     }
                     
