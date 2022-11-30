@@ -9,7 +9,7 @@ use SLS;
 class WebController extends Controller
 {
     // +8hr - 900 sec = 27900
-    protected $oquery = "IFNULL((SELECT SUM(pople) FROM(terminalorder) LEFT JOIN terminal_pro_order ON terminalorder.id=terminal_pro_order.order_id WHERE terminalpro.id=terminal_pro_order.pro_id AND (pay_status IN ('已付款','已付款(部分退款)') OR (pay_status='未完成' AND terminalorder.created_at BETWEEN SYSDATE()+interval 27900 second and SYSDATE()+interval 28800 second))),0)";
+    protected $oquery = "IFNULL((SELECT SUM(pople)-SUM(cut) FROM(terminalorder) LEFT JOIN terminal_pro_order ON terminalorder.id=terminal_pro_order.order_id WHERE terminalpro.id=terminal_pro_order.pro_id AND (pay_status IN ('已付款','已付款(部分退款)') OR (pay_status='未完成' AND terminalorder.created_at BETWEEN SYSDATE()+interval 27900 second and SYSDATE()+interval 28800 second))),0)";
 
 
     public function SendOrderEmailByTemplateName($data){

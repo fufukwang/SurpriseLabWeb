@@ -61,7 +61,7 @@ class OrderController extends WebController
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::select('id','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','edit_type','money','plan')->find($id);
+                $order = order::select('id','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','edit_type','money','plan','refund','cut','handling')->find($id);
             } else {
                 abort(404);
             }
@@ -133,6 +133,16 @@ class OrderController extends WebController
             }
             if($order->pople != $data['pople']){
                 $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整人數{$order->pople}->{$data['pople']}";
+            }
+            // 退款 & 手續費 & 退票人數
+            if($request->has('handling') && $request->has('cut') && $request->has('refund')){
+                $data['handling'] = $request->handling;
+                $data['cut']      = $request->cut;
+                $data['refund']   = $request->refund;
+                $handling_fee = round($data['handling']*$data['refund']/100);
+                if($order->cut != $data['cut'] || $order->refund != $data['refund'] || $order->handling != $data['handling']){
+                    $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 取消 {$data['cut']} 人，\n退款{$data['refund']}，手續費{$data['handling']}%金額{$handling_fee}";
+                }
             }
             order::where('id',$id)->update($data);
         } 
@@ -306,7 +316,7 @@ class OrderController extends WebController
     }
 
     public function Table(Request $request){
-        $order = $this->getOrderSearch($request);
+        $order = $this->getOrderSearch($request,true);
         $order = $order->get();
         return view('terminal.backend.table',compact('order','request'));
     }
@@ -319,7 +329,7 @@ class OrderController extends WebController
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","取消人數","手續費%數","手續費金額","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     if($row['pay_type'] == '信用卡'){
@@ -364,7 +374,14 @@ class OrderController extends WebController
                         }
                     }
                     
-                    if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
+                    $handling_fee = 0;
+                    if($pay_status == '未完成'){
+                        $pay_money = 0;
+                    } else {
+                        if($row['handling'] > 0 && $row['refund'] > 0) $handling_fee = round($row['handling'] * $row['refund'] / 100);
+                        $pay_money -= $row['refund'];
+                        $pay_money += $handling_fee;
+                    }
                     $plan = '';
                     switch($row['plan']){
                         case 'train': $plan = "微醺列車 The Great Tipsy : The Next Stop"; break;
@@ -392,6 +409,9 @@ class OrderController extends WebController
                         $coupon,
                         $pay_type,
                         $pay_status,
+                        $row['cut'],
+                        $row['handling'],
+                        $handling_fee,
                         $pay_money,
                         $pay_last,
                         $row['created_at'],
@@ -447,9 +467,13 @@ class OrderController extends WebController
 
 
 
-    private function getOrderSearch(Request $request){
+    private function getOrderSearch(Request $request,$isTable=false){
         try {
-            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result','dis_money');
+            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result','dis_money','refund','handling','cut');
+
+            if($isTable){
+                $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
+            }
 
             //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
             if($request->has('srday')  && $request->srday!=1){

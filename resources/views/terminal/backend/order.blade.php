@@ -202,10 +202,43 @@
                                             
                                             
                                             <div align="right">
-                                                <!-- <button type="button" class="btn btn-info btn-custom waves-effect w-md waves-light m-b-5 change_day">我要改期</button> -->
+                                                <button type="button" class="btn btn-danger btn-custom waves-effect w-md waves-light m-b-5 ref_money">退款</button>
                                                 <button type="submit" class="btn btn-primary btn-custom waves-effect w-md waves-light m-b-5">送出</button>
                                             </div>
-                                        
+                                            
+                                            <div class="form-group ref_input">
+                                                <label class="control-label col-sm-4">退款金額</label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" name="refund" class="form-control" value="{{ $order->refund ?? 0 }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group ref_input">
+                                                <label class="control-label col-sm-4">取消人數</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control" name="cut">
+                                                        @for ($i = 0; $i <= $order->pople; $i++)
+                                                        <option value="{{ $i }}"@if($order->cut==$i) selected @endif>{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group ref_input">
+                                                <label class="control-label col-sm-4">手續費%數</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control" name="handling">
+                                                        @for ($i = 0; $i <= 100; $i++)
+                                                        <option value="{{ $i }}"@if($order->handling==$i) selected @endif>{{ $i }} %</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group ref_input">
+                                                <label class="control-label col-sm-4">手續費金額</label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" class="form-control" id="handling_fee" readonly value="">
+                                                    <span class="text-warning">手續費金額計算公式；退款金額 X 手續費%數</span>
+                                                </div>
+                                            </div>
 @if(isset($order->result) && $order->result!='')<?php $res = json_decode($order->result,true); ?>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">回傳交易時間</label>
@@ -305,6 +338,9 @@ $('.change_day').bind('click',function(){
     $('select[name=flight]').prop('disabled',false);
 });
 */
+            $('.ref_money').bind('click',function(){
+                $('.ref_input').show();
+            })
 $('.change-pro-bnt').bind('click',function(){
     var type = $(this).data('type');
     $('.hide-form-'+type).hide();
@@ -321,7 +357,12 @@ $('form').bind('submit',function(){
         }
     }
 });
-
+$('input[name=refund]').bind('blur keyup change',function(){
+    $('#handling_fee').val(Math.round($(this).val() * $('select[name=handling]').val() / 100));
+});
+$('select[name=handling]').bind('change',function(){
+    $('#handling_fee').val(Math.round($(this).val() * $('input[name=refund]').val() / 100));
+});
 
 
 $('#pay_type').bind('change',function(){
@@ -358,8 +399,8 @@ $('select[name=pay_status]').bind('change',function(){
         if($('#pay_type').val() == '後台編輯') $('.back_control').show();
     }
 });
-$('select[name=pay_status]').trigger('change');
-
+$('select[name=pay_status],select[name=handling]').trigger('change');
+@if($order->refund == 0) $('.ref_input').hide(); @endif
         });
 
 
