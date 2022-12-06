@@ -61,7 +61,7 @@ class OrderController extends WebController
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::select('id','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','edit_type','money','plan','refund','cut','handling')->find($id);
+                $order = order::select('id','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','edit_type','money','plan','refund','cut','handling','num_f','num_b','num_t')->find($id);
             } else {
                 abort(404);
             }
@@ -120,6 +120,10 @@ class OrderController extends WebController
                 Log::error($e);
             }
         }
+        // 自條數量
+        if($request->has('num_f')) $data['num_f'] = $request->num_f;
+        if($request->has('num_t')) $data['num_t'] = $request->num_t;
+        if($request->has('num_b')) $data['num_b'] = $request->num_b;
         if(is_numeric($id) && $id>0){
             if($request->pay_type == '後台編輯'){
                 $data['edit_type'] = $request->edit_type;
@@ -222,6 +226,9 @@ class OrderController extends WebController
             } else {
                 $money = $act->cash * $people * 1.1;
             }
+            if($boat > 0) $num_b = $people;
+            if($train > 0) $num_t = $people;
+            if($flight > 0) $num_f = $people;
             
             $data = [
                 // 'pro_id'     => $pro_id,
@@ -243,6 +250,9 @@ class OrderController extends WebController
                 'is_overseas'=> $is_overseas,
                 'edit_type'  => $request->edit_type,
                 'plan'       => $request->ticket_type,
+                'num_b'      => $num_b,
+                'num_t'      => $num_t,
+                'num_f'      => $num_f,
             ];
             $order = order::create($data);
             switch($data['plan']){
@@ -329,7 +339,7 @@ class OrderController extends WebController
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","取消人數","手續費%數","手續費金額","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","微醺列車訂位人數","FLIGHT訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","原始付款金額","行銷折扣","取消人數","手續費%數","手續費金額","退款金額","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號","發票號碼","發票開立時間"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     if($row['pay_type'] == '信用卡'){
@@ -396,6 +406,19 @@ class OrderController extends WebController
                         $day .= "\r\n{$r->day} {$r->day_parts} ";
                         $range .= "\r\n" . substr($r->rang_start,0,5) . " ~ " . substr($r->rang_end,0,5) . "({$r->ticket_type})";
                     }
+                    // 發票
+                    $inv_number = '';
+                    $inv_time = '';
+                    $inv = inv::select('number','is_cancal','results')->where('order_id',$row['id'])->first();
+                    if($inv && $inv->is_cancal == 0){
+                        $inv_number = $inv->number;
+                        $inv_json = json_decode($inv->results,true);
+                        if(isset($inv_json['Result']) && $inv_json['Status'] == 'SUCCESS'){
+                            $inv_json2 = json_decode($inv_json['Result'],true);
+                            $inv_time = $inv_json2['CreateTime'];
+                        }
+                        
+                    }
 
                     $sheetRow = [
                         $day,
@@ -404,20 +427,27 @@ class OrderController extends WebController
                         $row['tel'],
                         $row['email'],
                         $row['pople'],
+                        $row['num_t'],
+                        $row['num_f'],
                         $row['notes'],
                         $row['manage'],
                         $coupon,
                         $pay_type,
                         $pay_status,
+                        $row['OM'],
+                        $row['dis_money'],
                         $row['cut'],
                         $row['handling'],
                         $handling_fee,
+                        $row['refund'],
                         $pay_money,
                         $pay_last,
                         $row['created_at'],
                         $return_Tr_time,
                         $blue_sn."\t",
                         $row['sn']."\t",
+                        $inv_number,
+                        $inv_time,
                     ];
                     array_push($data,$sheetRow);
                 }
@@ -429,7 +459,7 @@ class OrderController extends WebController
                     $zero->getStyle('G'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('H'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('I'.$i)->getAlignment()->setWrapText(true);
-                    $zero->getStyle('L'.$i)->getAlignment()->setWrapText(true);
+                    $zero->getStyle('J'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('M'.$i)->getAlignment()->setWrapText(true);
                     // $zero->getStyle('P'.$i)->setDataType(\PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING);
                     // $sheet->fromArray($data, null, 'A1', false, false)
@@ -469,7 +499,7 @@ class OrderController extends WebController
 
     private function getOrderSearch(Request $request,$isTable=false){
         try {
-            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result','dis_money','refund','handling','cut');
+            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result','dis_money','refund','handling','cut','num_t','num_f','num_b');
 
             if($isTable){
                 $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);

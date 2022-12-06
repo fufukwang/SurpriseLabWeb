@@ -45,12 +45,13 @@ class NewPayController extends WebController
             $money = 0;
             $cut1 = 0; $cut2 = 0;
             $train_check = false;$flight_check = false;$boat_check = false;
+            $num_b = 0; $num_t = 0; $num_f = 0;
             switch($request->ticket_type){
-                case 'train': $money = $people * 1250; $train_check = true; break;
-                case 'flight': $money = $people * 500; $flight_check = true; break;
-                case 'boat': $money = $people * 800; $boat_check = true; break;
-                case 'A': $money = $people * 1650; $train_check = true; $flight_check = true; break;
-                case 'B': $money = $people * 2400; $train_check = true; $flight_check = true; $boat_check = true; break;
+                case 'train': $money = $people * 1250; $train_check = true; $num_t = $people; break;
+                case 'flight': $money = $people * 500; $flight_check = true; $num_f = $people; break;
+                case 'boat': $money = $people * 800; $boat_check = true; $num_b = $people; break;
+                case 'A': $money = $people * 1650; $train_check = true; $flight_check = true; $num_t = $people; $num_f = $people; break;
+                case 'B': $money = $people * 2400; $train_check = true; $flight_check = true; $boat_check = true; $num_t = $people; $num_b = $people; $num_f = $people; break;
             }
 
             // 確認人數
@@ -116,6 +117,9 @@ class NewPayController extends WebController
                 'dis_code'   => $discountCode,
                 'dis_money'  => $cut2,
                 'plan'       => $request->ticket_type,
+                'num_b'      => $num_b,
+                'num_t'      => $num_t,
+                'num_f'      => $num_f,
             ];
             // 10% 服務費
             $order = order::create($data);

@@ -127,6 +127,36 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <label class="control-label col-sm-4">微醺列車參加人數</label>
+                                                <div class="col-sm-8">
+                                                    <select name="num_t" id="num_t" class="form-control">
+                                                        @for($i=0;$i<=$order->pople;$i++)
+                                                        <option value="{{ $i }}"@if(isset($order->num_t) && $order->num_t==$i) selected @endif>{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">FLIGHT參加人數</label>
+                                                <div class="col-sm-8">
+                                                    <select name="num_f" id="num_f" class="form-control">
+                                                        @for($i=0;$i<=$order->pople;$i++)
+                                                        <option value="{{ $i }}"@if(isset($order->num_f) && $order->num_f==$i) selected @endif>{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="form-group">
+                                                <label class="control-label col-sm-4">船參加人數</label>
+                                                <div class="col-sm-8">
+                                                    <select name="num_b" id="num_b" class="form-control">
+                                                        @for($i=0;$i<=$order->pople;$i++)
+                                                        <option value="{{ $i }}"@if(isset($order->num_b) && $order->num_b==$i) selected @endif>{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                            </div> -->
+                                            <div class="form-group boat">
                                                 <label class="control-label col-sm-4">素食</label>
                                                 <div class="col-sm-8">
                                                     <select name="vegetarian" id="vegetarian" class="form-control">
