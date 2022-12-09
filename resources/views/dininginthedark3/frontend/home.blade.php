@@ -738,8 +738,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="partner-sec-wrapper">
                                     <div class="partners-img">
-                                        <img class="img-fluid d-sm-block d-none" src="img/other/partners.png?v=0.1" alt="partners">
-                                        <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png?v=0.1" alt="partners">
+                                        <img class="img-fluid d-sm-block d-none" src="img/other/partners.png?v=0.2" alt="partners">
+                                        <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png?v=0.2" alt="partners">
                                     </div>
                                 </div>
                             </div>
