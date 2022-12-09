@@ -97,7 +97,6 @@
     $gday = $rangStart.'/'.$rangEnd;
 
 ?>
-
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
@@ -126,7 +125,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/d01ee503-3f33-8c28-4cef-93ecc70cf2e9.jpg" width="564" style="max-width:2250px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/d4a48e1f-68fb-4f02-0ce6-9a4133618da1.jpg" width="564" style="max-width:2250px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -144,7 +143,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/ed6e4d25-e189-ce57-f2db-dd06a9fb5a91.jpg" width="564" style="max-width:2250px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/4c3b145b-0454-1cd9-f433-7317420184e4.jpg" width="564" style="max-width:2250px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -339,5 +338,4 @@
                 </tr>
             </table>
         </center>
-    <script type="text/javascript"  src="/mUim/Mb_5/RaE/ppU/KJlg/tE5kmG6X5O/T2MwUgIy/WzV1M/xZ3YjUB"></script></body>
 </html>
