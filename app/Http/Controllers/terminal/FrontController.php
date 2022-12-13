@@ -117,7 +117,7 @@ class FrontController extends WebController
                             // 數量確認
                             if($discount_obj['number'] > 0){
                                 $used_count = order::where('dis_code',$discount_code)
-                                    ->whereRaw("pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE())")->count();
+                                    ->whereRaw("(pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()-interval 600 second and SYSDATE()))")->count();
                                 if($discount_obj['number'] <= $used_count){
                                     return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
                                 }
