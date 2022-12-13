@@ -506,7 +506,7 @@ class OrderController extends WebController
             if($request->has('plan') && $request->plan!='') $order->where('plan',$request->plan);
             if($request->has('search') && $request->search!=''){
                 $search = $request->search;
-                $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'  OR result LIKE '%{$search}%' ");
+                $order = $order->whereRaw("(name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'  OR result LIKE '%{$search}%' )");
             }
             if($request->has('code') && $request->code!=''){
                 $text = trim($request->code);
