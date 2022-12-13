@@ -180,6 +180,7 @@
                                                         <option value="後台編輯"@if(isset($order->edit_type) && $order->edit_type=='後台編輯') selected @endif>後台編輯</option>
                                                         <option value="藍新快速"@if(isset($order->edit_type) && $order->edit_type=='藍新快速') selected @endif>藍新快速</option>
                                                         <option value="自行匯款"@if(isset($order->edit_type) && $order->edit_type=='自行匯款') selected @endif>自行匯款</option>
+                                                        <option value="現場購票"@if(isset($order->edit_type) && $order->edit_type=='現場購票') selected @endif>現場購票</option>
                                                         <option value="公關位"@if(isset($order->edit_type) && $order->edit_type=='公關位') selected @endif>公關位</option>
                                                     </select>
                                                 </div>
