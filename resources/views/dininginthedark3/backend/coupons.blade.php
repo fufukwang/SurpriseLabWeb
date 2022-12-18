@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/dark3/coupons" id="SearchForm">
+                                        <div class="btn-group focus-btn-group" style="width:100%"><form action="/dark3/coupons" id="SearchForm">
 
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -34,7 +34,15 @@
                                                     </div>
                                                 </div>
                                             </div-->
-                                            <div class="form-group col-sm-8">
+                                            <div class="form-group col-sm-1">
+                                                <select name="type" class="form-control">
+                                                    <option value="">票券類別</option>
+                                                    <option value="p2"@if($request->type=='p2') selected @endif>雙人套票</option>
+                                                    <option value="p4"@if($request->type=='p4') selected @endif>雙菜單套票</option>
+                                                    <option value="gift"@if($request->type=='gift') selected @endif>禮物卡</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="搜尋" name="search" id="datepicker-autoclose" value="{{ $request->search or ''}}">

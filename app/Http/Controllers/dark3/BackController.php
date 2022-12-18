@@ -450,13 +450,19 @@ class BackController extends Controller
      */
     public function Coupons(Request $request){
 
-        $coupons = coupon::orderBy('updated_at','desc')->whereIn('type',['p2','p4','gift']);
+        $coupons = coupon::orderBy('updated_at','desc');
         //if($request->has('day')) $coupons = $coupons->where('created_at','like',$request->day.'%');
         if($request->has('search')){
             $search = $request->search;
             $coupons = $coupons->whereRaw("(
                 code LIKE '%{$search}%'
             )");
+        }
+        if($request->has('type')){
+            $type = $request->type;
+            $coupons = $coupons->where('type',$type);
+        } else {
+            $coupons = $coupons->whereIn('type',['p2','p4','gift']);
         }
 
         $coupons = $coupons->paginate($this->perpage);
