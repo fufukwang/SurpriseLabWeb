@@ -66,6 +66,7 @@
                                                 <td>
 @if( $row->type == 'p2' ) 雙人套票 
 @elseif( $row->type == 'p4' ) 雙菜單套票
+@elseif( $row->type == 'gift' ) 禮物卡
 @endif</td>
                                                 <td>@if($row->o_id > 0) 
                                                     {{ App\model\dark3\order::where('sn',$row->o_id)->first()->created_at }}

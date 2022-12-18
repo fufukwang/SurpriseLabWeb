@@ -36,8 +36,8 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/dark3/backmes">
-
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form id="backmeform" action="/dark3/backmes">
+                                            <input type="hidden" name="xls" value="">
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
@@ -72,6 +72,9 @@
                                             @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
                                             <div class="form-group col-sm-1">
                                                 <a target="_blank" href="/dark3/backmenouse/xls" class="btn btn-danger">匯出未兌換名單</a>
+                                            </div>
+                                            <div class="form-group col-sm-1">
+                                                <button type="button" class="btn btn-danger outCoupon">匯出名單酷碰</button>
                                             </div>
                                             @endif
 
@@ -195,6 +198,7 @@
                                             last_four 刷卡後四碼<br />
                                             p2 雙人套票<br />
                                             p4 雙菜單套票<br />
+                                            gift 禮物卡<br />
                                             time 付款時間<br />
                                             <!-- eb1 早鳥票<br />
                                             p1 單人票<br />
@@ -338,6 +342,11 @@ $(function(){
     $('#goPage').bind('click',function(){
         var page = $('#page_input').val();
         window.location = "?page="+page;
+    });
+    $('.outCoupon').bind('click',function(){
+        $('input[name=xls]').val('1');
+        $('#backmeform').submit();
+        $('input[name=xls]').val('');
     });
 
 });

@@ -151,7 +151,7 @@ class InvController extends Controller
                             $tmp_b_id = $coup->b_id;
                             $totleamt += $single_money;
                         }
-                        if($coup->type == 'p2'){ $coupon_pople += 2; } elseif ($coup->type == 'p4') { $coupon_pople += 4; }
+                        if($coup->type == 'p2'){ $coupon_pople += 2; } elseif ($coup->type == 'p4') { $coupon_pople += 4; } elseif ($coup->type == 'gift') { $coupon_pople += 2; }
                     }
                     $last_four = backme::select('last_four')->find($coup->b_id)->last_four;
                     if($row->money>0){ $totleamt = $row->money; }

@@ -68,6 +68,7 @@ class BackController extends Controller
                 $pp = '';
                 if($xls->p2>0){ $pp = 'p2';}
                 if($xls->p4>0){ $pp = 'p4';}
+                if($xls->gift>0){ $pp = 'gift';}
                 $data = [
                     'email'    => $xls->email,
                     'name'     => $xls->name,
@@ -136,6 +137,28 @@ class BackController extends Controller
         if($request->has('season')){
             $mes = $mes->where('quarter',$request->season);
         }
+
+        if($request->has('xls') && $request->xls == 1){
+            // 輸出 XLS
+            $cellData = [['庫碰','類別','兌換狀態']];
+            foreach ($mes->get() as $val) {
+                foreach(coupon::where('b_id',$val['id'])->get() as $row){
+                    $type = '';
+                    if($row->type == 'p2'){ $type ='雙人套票'; }elseif( $row->type == 'p4' ){ $type ='雙菜單套票'; }elseif( $row->type == 'gift' ){ $type ='禮物卡'; } 
+                    $temp = [
+                        'sn'     => $row->code,
+                        'type'   => $type,
+                        'status' => ($row->o_id === 0) ? '尚未兌換' : '兌換或已失效',
+                    ];
+                    array_push($cellData, $temp);
+                }
+            }
+            Excel::create('匯出名單酷碰',function ($excel) use ($cellData){
+                $excel->sheet('data', function ($sheet) use ($cellData){
+                    $sheet->rows($cellData);
+                });
+            })->export('xls');
+        }
         
         $mes = $mes->paginate($this->perpage);
         $quart = backme::select('quarter')->groupBy('quarter')->get();
@@ -143,7 +166,7 @@ class BackController extends Controller
         return view('dininginthedark3.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $backmes = backme::select('id','name','email','tel','p2','p4','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE o_id=0 AND dark3coupon.b_id=dark3backme.id)>0")->get()->toArray();
+        $backmes = backme::select('id','name','email','tel','p2','p4','gift','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE o_id=0 AND dark3coupon.b_id=dark3backme.id)>0")->get()->toArray();
         $cellData = [['姓名','信箱','電話','可劃位人數','訂購內容','註記']];
         foreach ($backmes as $val) {
             $num = 0;
@@ -204,6 +227,7 @@ class BackController extends Controller
             $pp = '';
             if($xls->p2>0){ $pp = 'p2';}
             if($xls->p4>0){ $pp = 'p4';}
+            if($xls->gift>0){ $pp = 'gift';}
             $data = [
                 'email'    => $xls->email,
                 'name'     => $xls->name,
@@ -211,7 +235,7 @@ class BackController extends Controller
                 'coupons'  => $coupons,
                 'template' => 'coupon'.$pp,
             ];
-            SLS::SendEmailByTemplateName($data);
+            $success = SLS::SendEmailByTemplateName($data);
 
             /*
             Mail::send('thegreattipsy.email.coupon',$data,function($m) use ($data){
@@ -223,8 +247,12 @@ class BackController extends Controller
                 $m->subject('【微醺大飯店：1980s】劃位序號信件');
             });
             */
-            backme::where('id',$id)->update(['is_sent'=>1]);
-            return Response::json(['message'=> 'success'], 200);
+            if($success){
+                backme::where('id',$id)->update(['is_sent'=>1]);
+                return Response::json(['message'=> 'success'], 200);
+            } else {
+                return Response::json(['message'=> 'error'], 200);
+            }
         }
         return Response::json(['message'=> 'error'], 200);
     }
@@ -422,7 +450,7 @@ class BackController extends Controller
      */
     public function Coupons(Request $request){
 
-        $coupons = coupon::orderBy('updated_at','desc')->whereIn('type',['p2','p4']);
+        $coupons = coupon::orderBy('updated_at','desc')->whereIn('type',['p2','p4','gift']);
         //if($request->has('day')) $coupons = $coupons->where('created_at','like',$request->day.'%');
         if($request->has('search')){
             $search = $request->search;
@@ -498,6 +526,7 @@ class BackController extends Controller
                         if($row['sponsor_id'] == '') $row['sponsor_id'] = 0;
                         if($row['p2'] == '') $row['p2'] = 0;
                         if($row['p4'] == '') $row['p4'] = 0;
+                        if($row['gift'] == '') $row['gift'] = 0;
                         $r = [
                             'sn'         => $row['sn'],
                             'detail'     => $row['detail'],
@@ -509,6 +538,7 @@ class BackController extends Controller
                             'sponsor_id' => $row['sponsor_id'],
                             'p2'         => $row['p2'],
                             'p4'         => $row['p4'],
+                            'gift'         => $row['gift'],
                             'quarter'    => $quarter,  // 產出季度
                             'buy_at'     => Carbon::parse($row['time'])->format('Y-m-d H:i:s')
                         ];
@@ -531,7 +561,7 @@ class BackController extends Controller
     }
 
     private function Db2Coupon(){
-        $xls = backme::select('p2','p4','id')->where('gen_coup',0)->get();
+        $xls = backme::select('p2','p4','gift','id')->where('gen_coup',0)->get();
         foreach($xls as $row){
             $data = [
                 'b_id' => $row->id
@@ -540,6 +570,12 @@ class BackController extends Controller
                 for($i=0;$i<$row->p2;$i++){
                     $data['type'] = 'p2';
                     $data['code'] = $this->GenerateGiftCodeSN();
+                    coupon::insert($data);
+                }
+            } elseif($row->gift >= 1){
+                for($i=0;$i<$row->gift;$i++){
+                    $data['type'] = 'gift';
+                    $data['code'] = $this->GenerateGiftCodeSN(true);
                     coupon::insert($data);
                 }
             } elseif($row->p4 >= 1){
@@ -556,15 +592,18 @@ class BackController extends Controller
 
     }
 
-    private function GenerateGiftCodeSN(){
-        $random = 8;$SN = '';
+    private function GenerateGiftCodeSN($gift=false){
+        $random = 8;$SN = '';$inNum = 1;
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        for($i=1;$i<=$random;$i++){
+        if($gift){
+            $inNum = 5; $SN = 'GIFT';
+        }
+        for($i=$inNum;$i<=$random;$i++){
             $b = $characters[rand(0, strlen($characters)-1)];
             $SN .= $b;
         }
         if(coupon::where('code',$SN)->count()>0){
-            $this->GenerateGiftCodeSN();
+            $this->GenerateGiftCodeSN($gift);
         } else {
             return $SN;
         }
