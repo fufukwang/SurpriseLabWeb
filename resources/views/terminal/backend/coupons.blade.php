@@ -24,8 +24,8 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/terminal/coupons" id="SearchForm">
-
+                                        <div class="btn-group focus-btn-group" style="width:100%"><form action="/terminal/coupons" id="SearchForm">
+                                            <input type="hidden" name="xls" value="">
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
@@ -34,7 +34,14 @@
                                                     </div>
                                                 </div>
                                             </div-->
-                                            <div class="form-group col-sm-8">
+                                            <div class="form-group col-sm-1">
+                                                <select name="type" class="form-control">
+                                                    <option value="">票券類別</option>
+                                                    <option value="train"@if($request->type=='train') selected @endif>微醺列車</option>
+                                                    <option value="flight"@if($request->type=='flight') selected @endif>FLIGHT無光飛航</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="搜尋" name="search" id="datepicker-autoclose" value="{{ $request->search or ''}}">
@@ -43,8 +50,8 @@
                                             </div>
 
                                             <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>&nbsp;
-                                            <!--button type="button" class="btn btn-info" onclick="submitSearchForm();" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 列印</button>
-                                            <button type="button" class="btn btn-info" onclick="submitPrintCover();" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 封面列印</button-->
+                                            <button type="button" class="btn btn-info outXls" style="margin-left: 10px;">匯出</button>
+                                            <!--button type="button" class="btn btn-info" onclick="submitPrintCover();" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 封面列印</button-->
 
 
                                         </form></div>
@@ -52,26 +59,29 @@
                                     <div class="sticky-table-header fixed-solution" style="width: auto;"><table id="tech-companies-1-clone" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Code</th>
+                                                <th>編號</th>
+                                                <th>禮物卡</th>
                                                 <th>類別</th>
+                                                <th>折扣金額</th>
                                                 <th>兌換日期</th>
                                                 <th>訂單編號</th>
+                                                <th>備註</th>
                                                 <th>功能</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 @forelse ($coupons as $row)
                                             <tr id="tr_{{ $row->id }}">
+                                                <td>{{ $row->id }}</td>
                                                 <td>{{ $row->code }}</td>
-                                                <td>
-@if( $row->type == 'p2' ) 雙人套票 
-@elseif( $row->type == 'p4' ) 雙菜單套票
-@endif</td>
+                                                <td>@if( $row->type == 'train' ) 微醺列車 @elseif( $row->type == 'flight' ) FLIGHT無光飛航 @endif</td>
+                                                <td>@if( $row->type == 'train' ) 1250 @elseif( $row->type == 'flight' ) 500 @endif</td>
                                                 <td>@if($row->o_id > 0) 
                                                     {{ App\model\terminal\order::where('sn',$row->o_id)->first()->created_at }}
                                                 @else 尚未兌換
                                                 @endif</td>
                                                 <th>{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
+                                                <td>{{ $row->remark }}</td>
                                                 <td class="actions">
                                                     <!--a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a-->
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-o_id={{ $row->o_id }} data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
@@ -167,7 +177,11 @@ $(function(){
         }
     });
 
-
+    $('.outXls').bind('click',function(){
+        $('input[name=xls]').val('1');
+        $('#SearchForm').submit();
+        $('input[name=xls]').val('');
+    })
 });
 
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif

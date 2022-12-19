@@ -422,7 +422,7 @@ class BackController extends WebController
      */
     public function Coupons(Request $request){
 
-        $coupons = coupon::orderBy('updated_at','desc')->whereIn('type',['p2','p4']);
+        $coupons = coupon::orderBy('id','asc');
         //if($request->has('day')) $coupons = $coupons->where('created_at','like',$request->day.'%');
         if($request->has('search')){
             $search = $request->search;
@@ -430,6 +430,53 @@ class BackController extends WebController
                 code LIKE '%{$search}%'
             )");
         }
+        if($request->has('type')){
+            $type = $request->type;
+            $coupons = $coupons->where('type',$type);
+        } else {
+            $coupons = $coupons->whereIn('type',['train','flight']);
+        }
+
+
+/*
+for($i=0;$i<1000;$i++){
+    $data = [
+        'b_id' => 1,
+        'type' => 'train',
+        'code' => $this->GenerateGiftCodeSN(true)
+    ];
+    coupon::insert($data);
+}
+for($i=0;$i<1000;$i++){
+    $data = [
+        'b_id' => 1,
+        'type' => 'flight',
+        'code' => $this->GenerateGiftCodeSN(true)
+    ];
+    coupon::insert($data);
+}
+*/
+
+        if($request->has('xls') && $request->xls == 1){
+            // 輸出 XLS
+            $cellData = [['庫碰','類別','兌換狀態']];
+            foreach ($coupons->get() as $row) {
+                $type = '';
+                if( $row->type == 'train' ){ $type ='微醺列車'; }elseif( $row->type == 'flight' ){ $type ='FLIGHT無光飛航'; } 
+                $temp = [
+                    'sn'     => $row->code,
+                    'type'   => $type,
+                    'status' => ($row->o_id === 0) ? '尚未兌換' : '兌換或已失效',
+                ];
+                array_push($cellData, $temp);
+            }
+            Excel::create('兌換碼',function ($excel) use ($cellData){
+                $excel->sheet('data', function ($sheet) use ($cellData){
+                    $sheet->rows($cellData);
+                });
+            })->export('xls');
+        }
+
 
         $coupons = $coupons->paginate($this->perpage);
         return view('terminal.backend.coupons',compact('coupons','request'));
@@ -555,10 +602,13 @@ class BackController extends WebController
 
     }
 
-    private function GenerateGiftCodeSN(){
-        $random = 8;$SN = '';
+    private function GenerateGiftCodeSN($gift=false){
+        $random = 8;$SN = '';$inNum = 1;
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        for($i=1;$i<=$random;$i++){
+        if($gift){
+            $inNum = 5; $SN = 'GIFT';
+        }
+        for($i=$inNum;$i<=$random;$i++){
             $b = $characters[rand(0, strlen($characters)-1)];
             $SN .= $b;
         }

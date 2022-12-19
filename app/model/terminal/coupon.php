@@ -8,7 +8,7 @@ class coupon extends Model
 {
     protected $table = 'terminalcoupon';
     
-    protected $fillable = ['code','b_id','o_id','type'];
+    protected $fillable = ['code','b_id','o_id','type','remark'];
     protected $guarded = [];
     protected $primaryKey = 'id';
     protected $dates = ['created_at', 'updated_at'];
