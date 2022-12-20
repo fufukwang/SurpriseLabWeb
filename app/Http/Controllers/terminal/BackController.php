@@ -613,7 +613,7 @@ for($i=0;$i<1000;$i++){
             $SN .= $b;
         }
         if(coupon::where('code',$SN)->count()>0){
-            $this->GenerateGiftCodeSN();
+            return $this->GenerateGiftCodeSN();
         } else {
             return $SN;
         }

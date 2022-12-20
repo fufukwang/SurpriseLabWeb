@@ -609,7 +609,7 @@ class BackController extends Controller
             $SN .= $b;
         }
         if(coupon::where('code',$SN)->count()>0){
-            $this->GenerateGiftCodeSN($gift);
+            return $this->GenerateGiftCodeSN($gift);
         } else {
             return $SN;
         }
