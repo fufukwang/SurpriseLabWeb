@@ -21,6 +21,7 @@ $(function() {
     let $dropdown_ticket = $('#dropdownMenuButtonTicket');
     let $dropdown_count = $('#dropdownMenuButtonCount');
     let maxDateVal = "+3m";
+    var usedCoupons = [];
 
     let $ticket_value = '';
     let $people_value = 0;
@@ -451,14 +452,25 @@ $(function() {
         couponVal = couponVal.trim();
         couponVal = couponVal.toUpperCase();
         if(discountCode == ''){
+            if(($people_value - usedCoupons.length) * singleMoney <= 0){
+                $('.not-found').html('已不需要折扣' );
+                $('.not-found').addClass('active');
+                return false;
+            }
             $.get('/terminal/GetAjaxData',{
                 'act':'CheckDiscount',
                 'code':couponVal,
                 'pople':$people_value,
                 'ticketType':$ticket_value,
                 'useType': 'pay',
+                'coupon':usedCoupons
             },function(data){
-                if(data.success == 'Y'){
+                if(data.success == 'Y' && data.discount == 'Y'){
+                    if(usedCoupons.length > 0){
+                        $('.not-found').html('已使用禮物卡無法使用折扣碼' );
+                        $('.not-found').addClass('active');
+                        return false;
+                    }
                     discountCode = couponVal;
                     discountAmount = data.money;
                     $('.use-discount').html('折扣碼' + discountCode + ' 折抵 ' + discountAmount );
@@ -470,6 +482,14 @@ $(function() {
                     $('.verification-code').addClass('status-disabled');
                     $('input[name=coupon]').prop('readonly',true);
                     $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney - discountAmount));
+                } else if(data.success == 'Y' && data.discount == 'N'){
+                    usedCoupons.push(couponVal);
+                    $('.use-discount').append('折扣碼' + couponVal + ' 折抵 ' + data.money + '<br>');
+                    $('.use-discount').addClass('active');
+                    $('.verify-layout').removeClass('error-style');
+                    $('.not-found').removeClass('active');
+                    $('#js-next-btn4').html("前往購買<br>$"+(($people_value - usedCoupons.length) * singleMoney));
+
                 } else {
                     $('.verify-layout').addClass('error-style');
                      
@@ -496,12 +516,17 @@ $(function() {
     });
     // 去結帳
     $btn_next4.on('click', function(){
+        $.blockUI();
         $('input[name=train]').val($pro_train);
         $('input[name=flight]').val($pro_flight);
         $('input[name=boat]').val($pro_boat);
         $('input[name=booking_people]').val($people_value);
         $('input[name=ticket_type]').val($ticket_value);
         $('input[name=discount]').val(discountCode);
+        $.each( usedCoupons, function( key, val ) {
+            $('#final-form').append('<input type="hidden" name="coupon[]" value="'+val+'" />');
+        });
+        
         $('#final-form').submit();
     });
 });

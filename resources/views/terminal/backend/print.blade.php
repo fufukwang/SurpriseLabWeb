@@ -135,13 +135,15 @@
                                         <tbody>
 @forelse ($order as $row)
     <?php 
-        $coupons = App\model\terminal\coupon::where('o_id',$row->sn)->get();
+        $coupons = App\model\terminal\coupon::where('o_id',$row->sn)->where('type',$row->plan)->get();
         $coupon_pople = 0;
         $tmp_b_id = 0;
         $totle_money = 0;
         $inv_open = false;
         $last_four = '';
+        $couponNumber = 0;
         if($coupons && count($coupons)>0){
+            /*
             foreach($coupons as $coup){
                 $single_money = App\model\terminal\backme::select('money')->find($coup->b_id)->money;
                 if($tmp_b_id != $coup->b_id){
@@ -153,6 +155,10 @@
                 // 這裡取得貝殼過來的後四碼
                 $last_four = App\model\terminal\backme::select('last_four')->find($coup->b_id)->last_four;
             }
+            */
+            $couponNumber = 1;
+            if($row->plan == 'train'){ $totle_money = count($coupons) * 1250; } elseif ($row->plan == 'flight') { $totle_money = count($coupons) * 500; }
+            if($row->OM>0){ $totle_money += $row->OM; }
         } else {
             $totle_money = $row->OM;
             if($row->pay_type == '信用卡'){
@@ -211,8 +217,11 @@
                                                 </td>
                                                 <td class="editable" style="word-break: break-all;max-width: 200px;" data-id="{{ $row->id }}" contenteditable="true">{!! nl2br($row->notes) !!}</td>
                                                 <!-- <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td> -->
-                                                <th>@forelse(App\model\terminal\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} [{{App\model\terminal\backme::select('money')->find($coup->b_id)->money}}]<br >@empty 
-@if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
+                                                <th>
+                                                    @forelse(App\model\terminal\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} <br>@empty 
+                                                    @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
+                                                    @if($couponNumber>0) [{{ $totle_money }}] @endif
+
 <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
 </th>
                                                 <td>{!! nl2br($row->manage) !!}</td>

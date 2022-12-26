@@ -155,9 +155,12 @@ class InvController extends WebController
                         if($coup->type == 'p1'){ $coupon_pople += 1; } elseif ($coup->type == 'p4') { $coupon_pople += 4; } elseif ($coup->type == 'p10') { $coupon_pople += 10; }
                     }
                     */
+                    /*
                     $totleamt = count($coupons) * 4400;
                     $last_four = backme::select('last_four')->find($coup->b_id)->last_four;
-                    if($row->money>0){ $totleamt = $row->money; }
+                    */
+                    if($row->plan == 'train'){ $totleamt = count($coupons) * 1250; } elseif ($row->plan == 'flight') { $totleamt = count($coupons) * 500; }
+                    if($row->money>0){ $totleamt += $row->money; }
                 } else {
                     $totleamt = $row->money;
                     if($row->pay_type == '信用卡'){

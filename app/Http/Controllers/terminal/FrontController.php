@@ -137,9 +137,24 @@ class FrontController extends WebController
                                     return Response::json(['success'=> 'N','message'=>'金額未達此折扣碼限制'], 200);
                                 }
                             }
-                            return Response::json(['success'=> 'Y','money'=>$discount_obj['money']], 200);
+                            return Response::json(['success'=> 'Y','discount'=>'Y','money'=>$discount_obj['money']], 200);
                         } else {
-                            return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
+                            // 確認是否為禮物卡
+                            $coupon = coupon::where('code',$request->code)->where('o_id',0)->where('type',$request->ticketType);
+                            if($request->has('coupon') && count($request->coupon)>0){
+                                $coupon = $coupon->whereNotIn('code',$request->coupon);
+                            }
+                            $coupon = $coupon->count();
+                            if($coupon>0){
+                                if($request->ticketType == 'train'){ $money = 1250; } elseif($request->ticketType == 'flight'){ $money = 500; }
+                                return Response::json([
+                                    'success' => 'Y',
+                                    'discount'=>'N',
+                                    'money'  => $money
+                                ], 200);    
+                            } else {
+                                return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
+                            }
                         }
                     break;
                 }

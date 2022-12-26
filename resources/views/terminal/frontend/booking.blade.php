@@ -560,7 +560,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <a href="javascript://" class="booking-btn shape-square color-input-use verification-code">確認</a>
                                                 <ul class="verify-status-list body-02 style-smaller">
                                                     <li class="status-list-item not-found">找不到此筆折扣序號</li>
-                                                    <li class="status-list-item use-discount">已使用折扣序號 XXXXXX</li>
+                                                    <li class="status-list-item use-discount"></li>
                                                 </ul>
                                             </div>
                                         </td>
@@ -704,6 +704,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking.js?v=0.1"></script>
+    <script src="/terminalAssets/js/booking.js?v=0.2"></script>
 </body>
 </html>

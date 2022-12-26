@@ -197,6 +197,7 @@
                             <li><a href="/terminal/discount/setting">Coupon</a></li>
                             <li><a href="/terminal/print">Order</a></li>
                             <li><a href="/terminal/getMasterList">Master</a></li>
+                            <li><a href="/terminal/coupons">Gift Coupon</a></li>
                             <!-- <li><a href="/terminal/special/setting">Special</a></li> -->
 
                         </ul>

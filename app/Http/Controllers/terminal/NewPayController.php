@@ -78,6 +78,22 @@ class NewPayController extends WebController
             }
             // 確認庫碰碼
             $coupon = 0;
+
+            $cutPeople = 0;
+            $ticket_type = $request->ticket_type;
+            if($request->has('coupon')){
+                foreach ($request->coupon as $key => $value) {
+                    $coupon_count = coupon::where('code',$value)->where('type',$ticket_type)->where('o_id',0)->count();
+                    if($coupon_count>0){
+                        if($ticket_type == 'train'){ $cut1 += 1250; } elseif($ticket_type == 'flight') { $cut1 += 500; }
+                        $coupon++;
+                        coupon::where('code',$value)->where('type',$ticket_type)->where('o_id',0)->update(['o_id'=>$count]);
+                    }
+                }
+            }
+
+
+
             // 折扣碼
             $manage = '';
             $discountCode = '';
@@ -145,6 +161,19 @@ class NewPayController extends WebController
             }
             $sentSuccess = false;
             if($data['money'] == 0){
+                $mailer = [
+                    'pople' => $order->pople,
+                    'email' => $order->email,
+                    'name'  => $order->name,
+                    'phone' => $order->tel,
+                    'id'    => $order->id,
+                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'pre_mail' => true,
+                    'template' => $order->plan,
+                ];
+                $this->SendOrderEmailByTemplateName($mailer);
+                $order->is_send = 1;
+                $order->save();
                 return view('terminal.frontend.booking_success');
             } else {
                 $comments = "落日轉運站";
