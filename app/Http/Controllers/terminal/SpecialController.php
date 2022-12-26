@@ -265,6 +265,9 @@ class SpecialController extends WebController
                 } elseif($request->slug == 'terminal_pay_discount'){
                     $is_store = setting::where('slug','terminal_pay_discount')->update(['json'=>$request->obj]);
                     if($is_store) $return['success'] = true;
+                } elseif($request->slug == 'upateCouponNotes'){
+                    $is_store = coupon::where('id',$request->id)->update(['remark'=>$request->notes]);
+                    if($is_store) $return['success'] = true;
                 }
             }
             return response()->json($return);

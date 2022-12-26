@@ -81,7 +81,7 @@
                                                 @else 尚未兌換
                                                 @endif</td>
                                                 <th>{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
-                                                <td>{{ $row->remark }}</td>
+                                                <td class="editable" style="word-break: break-all;max-width: 200px;" data-id="{{ $row->id }}" contenteditable="true">{!! nl2br($row->remark) !!}</td>
                                                 <td class="actions">
                                                     <!--a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a-->
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-o_id={{ $row->o_id }} data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
@@ -175,6 +175,19 @@ $(function(){
                 $('#tr_'+id).remove();
             });
         }
+    });
+    // 修改備註
+    $('.editable').bind('blur',function(){
+        var val = $(this).html();
+        var id  = $(this).data('id');
+        $.post('/terminal/setting/store',{
+            slug: 'upateCouponNotes',
+            notes : val,
+            id: id,
+        },function(data){
+            if(data.success){ $.Notification.notify('success','bottom left','已更新', '備註已更新'); 
+            } else { $.Notification.notify('error','bottom left','更新失敗', '備註更新失敗'); }
+        },'json');
     });
 
     $('.outXls').bind('click',function(){
