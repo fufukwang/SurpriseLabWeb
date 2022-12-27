@@ -459,21 +459,45 @@ for($i=0;$i<1000;$i++){
 
         if($request->has('xls') && $request->xls == 1){
             // 輸出 XLS
-            $cellData = [['庫碰','類別','兌換狀態']];
+            $cellData = [['庫碰','類別','折扣金額','兌換日期','訂單編號','備註']];
             foreach ($coupons->get() as $row) {
-                $type = '';
-                if( $row->type == 'train' ){ $type ='微醺列車'; }elseif( $row->type == 'flight' ){ $type ='FLIGHT無光飛航'; } 
+                $type = ''; $money = 0; $day = '尚未兌換'; $sn = '尚未兌換';
+                if( $row->type == 'train' ){ 
+                    $type ='微醺列車'; 
+                    $money = 1250;
+                }elseif( $row->type == 'flight' ){ 
+                    $type ='FLIGHT無光飛航'; 
+                    $money = 500;
+                } 
+                if($row->o_id > 0){
+                    $day = order::where('sn',$row->o_id)->first()->created_at;
+                    $sn = $row->o_id;
+                } elseif($row->o_id == -1){
+                    $day = '訂單已刪除';
+                    $sn = '訂單已刪除';
+                }
                 $temp = [
-                    'sn'     => $row->code,
+                    'code'   => $row->code,
                     'type'   => $type,
-                    'status' => ($row->o_id === 0) ? '尚未兌換' : '兌換或已失效',
+                    // 'status' => ($row->o_id === 0) ? '尚未兌換' : '兌換或已失效',
+                    'money'  => $money,
+                    'day'    => $day,
+                    'sn'     => $sn."\t",
+                    'note'   => $this->br2nl($row->remark)
                 ];
                 array_push($cellData, $temp);
             }
             Excel::create('兌換碼',function ($excel) use ($cellData){
                 $excel->sheet('data', function ($sheet) use ($cellData){
+
                     $sheet->rows($cellData);
+
+                    $zero = $sheet->rows($cellData);
+                    for($i=0;$i<=count($cellData);$i++){
+                        $zero->getStyle('F'.$i)->getAlignment()->setWrapText(true);
+                    }
                 });
+                $excel->getActiveSheet()->getColumnDimension('F')->setWidth(300)->setAutoSize(false);
             })->export('xls');
         }
 
@@ -486,6 +510,9 @@ for($i=0;$i<1000;$i++){
         return Response::json(['message'=> '已刪除'], 200);
 
     }
+    public static function br2nl($text) {    
+        return preg_replace( '!<br.*>!iU', "\n", $text );
+    } 
     /**
      *  gift
      **/
