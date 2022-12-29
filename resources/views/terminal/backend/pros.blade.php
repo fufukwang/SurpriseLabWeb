@@ -130,7 +130,7 @@
                                                 <tr>
                                                     <th><input type="checkbox" id="checkAll"></th>
                                                     <th>開放訂位</th>
-                                                    <th>票種</th>
+                                                    <th>票種/場次編號</th>
                                                     <th>營業日期</th>
                                                     <th>營業時段</th>
                                                     <th class="text-center">剩餘空位 / 目前訂位 / 開放位置</th>
@@ -150,6 +150,7 @@
                                                         @if($row->ticket_type == 'train') 微醺列車 The Great Tipsy : The Next Stop @endif
                                                         @if($row->ticket_type == 'flight') FLIGHT 無光飛航 @endif
                                                         @if($row->ticket_type == 'boat') Boat for ONE 單人船票 @endif
+                                                        <br>{{ $row->id }}
                                                     </td>
                                                     <td>{{ $row->day }}</td>
                                                     <td>{{ $row->day_parts }}<br />
