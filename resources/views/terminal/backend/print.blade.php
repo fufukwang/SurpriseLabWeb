@@ -829,7 +829,8 @@ $(function(){
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
-                swal(data.message);
+                // swal(data.message);
+                $.Notification.notify('success','bottom left','提示訊息', data.message);
                 $('#tr_'+id).remove();
             });
         }

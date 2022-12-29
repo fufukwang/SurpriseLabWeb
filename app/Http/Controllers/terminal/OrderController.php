@@ -210,6 +210,7 @@ class OrderController extends WebController
             }
             $meat = [];
             $is_overseas = 0;
+            $num_b = 0; $num_t = 0; $num_f = 0;
             if($act->special) {
                 $is_overseas = 9;
                 if($people!=1 && $people!=2 && $people!=6){
