@@ -343,6 +343,10 @@ class OrderController extends Controller
 
             // $order = $order->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE code='{$request->code}' AND dark3coupon.o_id=dark3order.sn)>0");
         }
+        // 尚未開過發票
+        if($request->has('no_inv') && $request->no_inv == 1){
+            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0");
+        }
 
         if($request->has('order') && $request->order!=''){
             $ord = explode('|',$request->order);
@@ -394,6 +398,10 @@ class OrderController extends Controller
             )")->get();
             $order = $order->whereIn('sn',$coupons->toArray());
             // $order = $order->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE code='{$request->code}' AND dark3coupon.o_id=dark3order.sn)>0");
+        }
+        // 尚未開過發票
+        if($request->has('no_inv') && $request->no_inv == 1){
+            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0");
         }
 
         if($request->has('order') && $request->order!=''){
@@ -447,6 +455,10 @@ class OrderController extends Controller
             )")->get();
             $order = $order->whereIn('sn',$coupons->toArray());
             // $order = $order->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE code='{$request->code}' AND dark3coupon.o_id=dark3order.sn)>0");
+        }
+        // 尚未開過發票
+        if($request->has('no_inv') && $request->no_inv == 1){
+            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0");
         }
 
         if($request->has('order') && $request->order!=''){

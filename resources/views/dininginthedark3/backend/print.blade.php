@@ -25,7 +25,7 @@
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
                                         <div class="btn-group focus-btn-group"><form action="/dark3/print" id="SearchForm">
-
+                                            <div class="row">
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
 <input name="dayrange" type="text" class="form-control" placeholder="yyyy-mm-dd">
@@ -91,17 +91,17 @@
                                             <div class="form-group col-sm-1">
                                                 <input type="text" name="code" placeholder="優惠碼(需較長時間)" class="form-control" value="{{ $request->code or ''}}">
                                             </div>
+                                            <div class="form-group col-sm-1">
+                                                <label><input type="checkbox" name="no_inv" value="1"@if($request->no_inv==1) checked @endif>未開發票</label>
+                                            </div>
+                                        </div><div class="row">
  
-                                            <div class="form-group col-sm-1">
-                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+                                            <div class="form-group col-sm-12">
+                                                <button type="submit" class="btn btn-info" style="margin:3px;"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+                                                <button type="button" class="btn btn-primary" id="grTable" style="margin:3px;"><span class="glyphicon glyphicon-search"></span> 產生列印表格</button>
+                                                <button type="button" class="btn btn-warning" id="exportXls" style="margin:3px;">匯出XLS</button>
                                             </div>
-                                            <div class="form-group col-sm-1">
-                                                <button type="button" class="btn btn-primary" id="grTable"><span class="glyphicon glyphicon-search"></span> 產生列印表格</button>
-                                            </div>
-                                            <div class="form-group col-sm-1">
-                                                <button type="button" class="btn btn-warning" id="exportXls">匯出XLS</button>
-                                            </div>
-
+                                        </div>
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
                                         <form action="/dark3/order/inv/mult/open" method="post">{!! csrf_field() !!}

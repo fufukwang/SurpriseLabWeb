@@ -531,7 +531,7 @@ class OrderController extends WebController
                     $order->where('is_overseas','<',5); 
                 }
             }
-            // 開過發票
+            // 尚未開過發票
             if($request->has('no_inv') && $request->no_inv == 1){
                 $order->whereRaw("(SELECT COUNT(terminalinv.id) FROM terminalinv WHERE is_cancal=0 AND terminalorder.id=terminalinv.order_id)=0");
             }
