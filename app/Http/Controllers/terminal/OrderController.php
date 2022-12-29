@@ -125,7 +125,7 @@ class OrderController extends WebController
         if($request->has('num_t')) $data['num_t'] = $request->num_t;
         if($request->has('num_b')) $data['num_b'] = $request->num_b;
         if(is_numeric($id) && $id>0){
-            if($request->pay_type == '後台編輯'){
+            if($request->pay_type == '後台編輯' || $request->pay_type == '現場購票'){
                 $data['edit_type'] = $request->edit_type;
                 $data['money'] =  $request->money;
             }
@@ -349,7 +349,7 @@ class OrderController extends WebController
                         } else {
                             $pay_type = '貝殼集器';
                         }
-                    } elseif($row['pay_type'] == '後台編輯'){
+                    } elseif($row['pay_type'] == '後台編輯' || $request->pay_type == '現場購票'){
                         $pay_type = $row['edit_type'];
                     }
                     $pay_status = $row['pay_status'];
@@ -529,6 +529,10 @@ class OrderController extends WebController
                 if($request->special == 0){
                     $order->where('is_overseas','<',5); 
                 }
+            }
+            // 開過發票
+            if($request->has('no_inv') && $request->no_inv == 1){
+                $order->whereRaw("(SELECT COUNT(terminalinv.id) FROM terminalinv WHERE is_cancal=0 AND terminalorder.id=terminalinv.order_id)=0");
             }
 
             if($request->has('dayparts') && $request->dayparts!=''){

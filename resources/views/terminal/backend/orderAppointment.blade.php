@@ -129,6 +129,7 @@
                                                 <div class="col-sm-8">
                                                     <select name="pay_type" class="form-control">
                                                         <option value="後台編輯">後台編輯</option>
+                                                        <option value="現場購票">現場購票</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -160,7 +161,7 @@
                                                         <option value="後台編輯">後台編輯</option>
                                                         <option value="藍新快速">藍新快速</option>
                                                         <option value="自行匯款">自行匯款</option>
-                                                        <option value="現場購票">現場購票</option>
+                                                        <!-- <option value="現場購票">現場購票</option> -->
                                                         <option value="公關位">公關位</option>
                                                     </select>
                                                 </div>
@@ -268,13 +269,29 @@ $('select[name=ticket_type]').bind('change',function(){
 });
 $('select[name=ticket_type]').trigger('change');
 $('#pople').trigger('change');
+$('select[name=pay_type]').bind('change',function(){
+    console.log($(this).val());
+    if($(this).val() == '後台編輯'){
+        $('select[name=edit_type]').html(
+            '<option value="後台編輯">後台編輯</option>' +
+            '<option value="藍新快速">藍新快速</option>' +
+            '<option value="自行匯款">自行匯款</option>' +
+            '<option value="公關位">公關位</option>'
+        );
+    } else if($(this).val() == '現場購票'){
+         $('select[name=edit_type]').html(
+            '<option value="Line Pay">Line Pay</option>' +
+            '<option value="現金付款">現金付款</option>' +
+            '<option value="現場刷卡">現場刷卡</option>' +
+            '<option value="銀行匯款">銀行匯款</option>'
+        );
+    }
+});
         });
 
 
 
         </script>
-
-
 
     </body>
 </html>

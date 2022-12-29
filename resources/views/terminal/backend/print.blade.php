@@ -80,6 +80,7 @@
                                                     <option value="">付款類型</option>
                                                     <option value="信用卡"@if(isset($request->pay_type) && $request->pay_type=='信用卡') selected @endif>信用卡</option>
                                                     <option value="後台編輯"@if(isset($request->pay_type) && $request->pay_type=='後台編輯') selected @endif>後台編輯</option>
+                                                    <option value="現場購票"@if(isset($request->pay_type) && $request->pay_type=='現場購票') selected @endif>現場購票</option>
                                                 </select>
                                                 <!-- <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label> -->
                                                 <label><input type="checkbox" name="is_overseas" value="2"@if($request->is_overseas==2) checked @endif>國內信用卡</label>
@@ -107,8 +108,11 @@
                                                 <input type="text" name="discount" placeholder="折扣碼" class="form-control" value="{{ $request->discount or ''}}">
                                             </div>
                                         </div><div class="row">
- 
-                                            <div class="form-group col-sm-12">
+                                            <div class="form-group col-sm-1">
+                                                <label><input type="checkbox" name="no_inv" value="1"@if($request->no_inv==1) checked @endif>未開發票</label>
+                                            </div>
+    
+                                            <div class="form-group col-sm-11">
                                                 <button type="submit" class="btn btn-info" style="margin:3px;"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
                                                 <button type="button" class="btn btn-primary" style="margin:3px;" id="grTable"><span class="glyphicon glyphicon-search"></span> 產生列印表格</button>
                                                 <button type="button" class="btn btn-warning" style="margin:3px;" id="exportXls">匯出XLS</button>
