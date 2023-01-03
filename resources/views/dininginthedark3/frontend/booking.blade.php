@@ -326,55 +326,11 @@
                             <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. dininginthedark@surpriselab.com.tw">
                         </div>
 
-                        <div class="form-group">
-                            <label class="form-label">* 飲食禁忌（請確實填答人數。無光晚餐將依照訂位資訊準備體驗內容，現場無法更改。）</label>
-                        </div>
-
                         <div class="form-group select-format">
-                            <div class="form-row">
-                                <div class="form-col">
-                                    <label class="form-label" for="meat_food">* 葷食</label>
-                                    <select id="meat_food" name="meat_food" data-placeholder="選擇人數" required>
-                                    </select>
-                                </div>
-                                <div class="col-wrap">
-                                    <div class="form-col">
-                                        <label class="form-label" for="meat_food_noBeef">* 不吃牛肉</label>
-                                        <select id="meat_food_noBeef" name="meat_food_noBeef" data-placeholder="選擇人數" required>
-                                        </select>
-                                    </div>
-                                    <div class="form-col">
-                                        <label class="form-label" for="meat_food_noPork">* 不吃豬肉</label>
-                                        <select id="meat_food_noPork" name="meat_food_noPork" data-placeholder="選擇人數" required>
-                                        </select>
-                                    </div>
-                                    <div class="form-col">
-                                        <label class="form-label" for="meat_food_noNut">* 不吃堅果</label>
-                                        <select id="meat_food_noNut" name="meat_food_noNut" data-placeholder="選擇人數" required>
-                                        </select>
-                                    </div>
-                                    <div class="form-col">
-                                        <label class="form-label" for="meat_food_noSeafood">* 不吃帶殼海鮮</label>
-                                        <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-col">
-                                    <label class="form-label" for="vegetarian_food">* 蛋奶五辛素</label>
-                                    <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
-                                    </select>
-                                </div>
-                                <div class="col-wrap">
-                                    <div class="form-col">
-                                        <label class="form-label" for="vegetarian_food_noNut">* 不吃堅果</label>
-                                        <select id="vegetarian_food_noNut" name="vegetarian_food_noNut" data-placeholder="選擇人數" required>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
+                            <label class="form-label" for="vegetarian_food">* 蛋奶素（如果都吃葷，請選0人）</label>
+                            <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
 
+                            </select>
                         </div>
 
                         <div class="form-group textarea-with-label">
