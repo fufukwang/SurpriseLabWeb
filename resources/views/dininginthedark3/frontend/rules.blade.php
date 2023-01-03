@@ -136,10 +136,26 @@
                                     </div>
 
                                     <div class="card">
+                                        <div class="card-header" id="qa12-header">
+                                            <h6 data-toggle="collapse" data-target="#qa12" aria-expanded="false"
+                                                aria-controls="qa12" class="collapsed d-flex align-items-center">
+                                                ・無光晚餐有特約停車場嗎？
+                                                <i class="icon icon-arrow"></i>
+                                            </h6>
+                                        </div>
+                                        <div id="qa12" class="collapse" aria-labelledby="qa12-header"
+                                            data-parent="#qa-according">
+                                            <div class="card-body">
+                                                無光晚餐無特約的停車場。體驗地點位於熱鬧的東區街頭，附近停車較不方便，建議搭乘大眾運輸前來，避免遲到後無法入場參加體驗。
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
                                         <div class="card-header" id="qa2-header">
                                             <h6 data-toggle="collapse" data-target="#qa2" aria-expanded="false"
                                                 aria-controls="qa2" class="collapsed d-flex align-items-center">
-                                                ・用餐時間⼤概多久？
+                                                ・體驗時間⼤概多久？
                                                 <i class="icon icon-arrow"></i>
                                             </h6>
                                         </div>
@@ -147,6 +163,22 @@
                                             data-parent="#qa-according">
                                             <div class="card-body">
                                                 <b>體驗時間約為90分鐘</b>，加上您報到、離場流連忘返的餘音繞樑的時間，請預留120分鐘給我們，這是都市傳說中建議的最適黑暗時間。
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header" id="qa13-header">
+                                            <h6 data-toggle="collapse" data-target="#qa13" aria-expanded="false"
+                                                aria-controls="qa13" class="collapsed d-flex align-items-center">
+                                                ・飲食有禁忌該怎麼辦？
+                                                <i class="icon icon-arrow"></i>
+                                            </h6>
+                                        </div>
+                                        <div id="qa13" class="collapse" aria-labelledby="qa13-header"
+                                            data-parent="#qa-according">
+                                            <div class="card-body">
+                                                若因宗教因素有飲食禁忌、有任何飲食過敏，又或是體驗者中有孕婦，請於訂位時確實填答飲食禁忌欄位。無光晚餐將依照訂位資訊準備體驗內容，現場無法更改。
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +227,7 @@
                                         <div id="qa5" class="collapse" aria-labelledby="qa5-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                                ① 無光環境中聽覺相對敏銳，請顧客輕聲細語，降低⾳量，⼀同維護⽤餐品質。<br/>
+                                                ① 無光環境中聽覺相對敏銳，請顧客輕聲細語，降低⾳量，⼀同維護體驗品質。<br/>
                                                 ② 為了顧客的安全，在⿊暗之中請遵守服務⼈員引導，不得擅⾃⾛動。若有不聽勸之⾏為發⽣，現場服務⼈員有權力終⽌您的體驗並請求離場，且不另⾏退費。
                                             </div>
                                         </div>
@@ -282,7 +314,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card">
+                                    <!-- <div class="card">
                                         <div class="card-header" id="qa11-header">
                                             <h6 data-toggle="collapse" data-target="#qa11" aria-expanded="false"
                                                 aria-controls="qa11" class="collapsed d-flex align-items-center">
@@ -297,7 +329,7 @@
                                                 年度套票：想體驗兩種完全不同的菜單，可隨時預約一年之內的用餐日期。
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <!--Section separator-->
                                     <div class="qa-title-separator">
@@ -317,7 +349,7 @@
                                             <div class="card-body">
                                                 無光晚餐採網路購票、線上劃位方式進行，無販售現場票券。<br/><br/>
                                                 <!-- 共有兩種票券，享有權益不同，分別為：<br/><br/> -->
-                                                雙人即享票：包含一組雙人票券，直購票形式，購票當下即可選擇用餐日期。<br/><br/>
+                                                雙人即享票：包含一組雙人票券，直購票形式，購票當下即可選擇體驗日期。<br/><br/>
                                                 <!-- <ol>
                                                     <li>雙人即享票：包含一組雙人票券，直購票形式，購票當下即可選擇用餐日期。</li>
                                                     <li>年度套票：包含兩組雙人票券，預售票形式，依照購票順序收到劃位序號後，即可劃位。可前來無光晚餐用餐兩次，體驗不同菜單，可隨時預約一年之內的用餐日期。</li>
@@ -338,7 +370,7 @@
                                         <div id="qa13" class="collapse" aria-labelledby="qa13-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                                無光晚餐僅販售雙人票，若想買 6 人票券，請購買 3 組雙人票即可，需留意用餐時為兩兩一組，無法併桌。
+                                                無光晚餐僅販售雙人票，若想買 6 人票券，請購買 3 組雙人票即可，需留意體驗時為兩人一組，無法併桌。
                                             </div>
                                         </div>
                                     </div>
@@ -364,11 +396,12 @@
                                 <div class="qa-note">
                                     <p>其他事項：</p>
                                     <p>① 為了各位消費者的權益與安全，餐廳內部設有夜視監視器全程錄影，必要時將會調閱影像紀錄。</p>
-                                    <p>② 為顧及安全與⽤餐品質，不建議懷孕超過 28 週之孕婦與年紀低於 15 歲之孩童前來⽤餐。</p>
-                                    <p>③ 為顧及體驗品質食物設計，不建議對乳製品過敏或嚴重乳糖不耐症體質者前來用餐；素食者僅提供蛋奶五辛素。</p>
+                                    <p>② 為顧及安全與表演體驗品質，不建議懷孕超過 28 週之孕婦前來體驗；不開放年紀低於15歲之孩童前來體驗。</p>
+                                    <p>③ 為顧及體驗品質食物設計，不建議對乳製品過敏或嚴重乳糖不耐症體質者前來體驗；素食者僅提供蛋奶五辛素。</p>
                                     <p>④ 無光晚餐不提供開瓶服務，現場提供可加點的酒水單。</p>
                                     <p>⑤ 在座位分配上若有特殊需求可於訂位時備註，但以現場服務⼈員之安排為準。</p>
-                                    <p>⑥ 若有活動包場需求、任何特殊訂位服務、天馬⾏空的奇想、為愛準備的驚喜，請來信詢問 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></p>
+                                    <p>⑥ 為不影響體驗設計內容，不接受任何在黑暗中贈送蛋糕、鮮花等服務，若有其他需求可來信詢問。</p>
+                                    <p>⑦ 若有活動包場需求、任何特殊訂位服務、天馬⾏空的奇想、為愛準備的驚喜，請來信詢問 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw">dininginthedark@surpriselab.com.tw</a></p>
                                 </div>
                             </div>
 
@@ -467,15 +500,15 @@
                                         劃位序號<br/>過期不使用者
                                     </div>
                                     <div class="circle-item">
-                                        用餐當日<br/>申請退費者
+                                        體驗當日<br/>申請退費者
                                     </div>
                                     <div class="circle-item">
-                                        用餐遲到 / 未到<br/>以致無法入場者
+                                        體驗遲到 / 未到<br/>以致無法入場者
                                     </div>
                                 </div>
                                 <br/><br/>
                                 <p>
-                                    遲到時間計算方式：依照用餐七日前行前提醒信件指示報到時間為準。若未準時報到者將不予進場、亦無法退費、改期。
+                                    遲到時間計算方式：依照體驗七日前行前提醒信件指示報到時間為準。若未準時報到者將不予進場、亦無法退費、改期。
                                 </p>
 
                                 <h5 class="sub-title highlight">
@@ -507,27 +540,27 @@
                                     </tr>
 
                                     <tr>
-                                        <td>用餐當日</td>
+                                        <td>體驗當日</td>
                                         <td>01/11</td>
                                         <td>X</td>
                                         <td>O</td>
                                         <td>X</td>
                                     </tr>
                                     <tr>
-                                        <td>用餐前一日</td>
+                                        <td>體驗前一日</td>
                                         <td>01/10</td>
                                         <td>X</td>
                                         <td>O</td>
                                         <td rowspan="2">50%</td>
                                     </tr>
                                     <tr>
-                                        <td>用餐前九日</td>
+                                        <td>體驗前九日</td>
                                         <td>01/02</td>
                                         <td>X</td>
                                         <td>O</td>
                                     </tr>
                                     <tr>
-                                        <td>用餐前十日</td>
+                                        <td>體驗前十日</td>
                                         <td>01/01</td>
                                         <td>O</td>
                                         <td>O</td>
