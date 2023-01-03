@@ -100,7 +100,7 @@
                 <input type="hidden" name="discount" id="discount" value="">
                 <!--progress title-->
                 <h3 class="progress-title">
-                    《無光晚餐》<br/>用餐登記
+                    《無光晚餐》<br/>預約體驗登記
                 </h3>
                 <!-- progressbar -->
                 <div class="bar-wrapper hide-steps">

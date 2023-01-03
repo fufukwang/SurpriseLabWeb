@@ -162,8 +162,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     <img src="img/home/about/about-2-shadow.png" alt="五道料理">
                                                 </div>
                                                 <p class="color-lightgray">
-                                                    五道料理<br/>
-                                                    <span class="color-k0">(葷/蛋奶素)</span>
+                                                    五道料理體驗<br/>
+                                                    <span class="color-k0">(葷/蛋奶五辛素)</span>
                                                 </p>
                                             </div>
                                         </div>
