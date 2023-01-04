@@ -262,7 +262,7 @@
                             <label class="form-label">* 飲食禁忌（請確實填答人數。無光晚餐將依照訂位資訊準備體驗內容，現場無法更改。）</label>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group select-food">
                             <div class="form-row">
                                 <div class="form-col">
                                     <label class="form-label" for="meat_food">* 葷食</label>

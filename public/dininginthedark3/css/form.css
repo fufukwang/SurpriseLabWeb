@@ -1284,7 +1284,7 @@ fieldset.step-4 .field-intro {
 fieldset.step-4 .form-group label,
 fieldset.step-4 .form-group .table-label {
   font-size: 16px;
-  line-height: 1;
+  /* line-height: 1; */
   letter-spacing: 1.6px;
   text-align: left;
   display: -webkit-box;
@@ -1827,4 +1827,46 @@ fieldset .prefix-step .prefix {
     font-size: 14px;
   }
 }
+/* 20230104飲食禁忌欄位新增 */
+@media (min-width: 992px){
+  .select-food {
+    display: flex;
+  }
+}
+.select-food .form-col {
+  width: 100%;
+  display: flex;
+}
+.select-food .form-col .form-label {
+  min-width: 125px;
+  margin-bottom: 0;
+}
+
+.select-food .form-row {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+}
+@media (min-width: 992px){
+  .select-food .form-row:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 991px){
+.select-food .form-row:first-child {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+}
+.select-food .col-wrap {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.select-food .col-wrap .form-col {
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=form.css.map */
