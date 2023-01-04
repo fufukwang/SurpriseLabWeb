@@ -488,14 +488,23 @@ $('.step-3 input, .step-3 select').on('change', function () {
     updateField(nextFieldset, accessHide);
 
 });
-$('.step-4 input, .step-4 select').on('change', function () {
+$('.step-4 select').on('change', function () {
     if ($(this).attr('id') === 'meat_food') {
         eatHabit['meat_food'] = parseInt($(this).find(':selected').text());
         eatHabit['vegetarian_food'] = submitDatas['booking_people'] - eatHabit['meat_food']
+        $('#vegetarian_food').val(eatHabit['vegetarian_food'])
+        $('#vegetarian_food').next().find('.select2-selection__rendered').text(eatHabit['vegetarian_food'])
         $(this).closest('.form-row').find('.col-wrap').slideDown()
+        $(this).closest('.form-row').next().find('.col-wrap').slideDown()
         $(this).closest('.form-row').find('.col-wrap .form-col').each(function(){
             $(this).find('select').children().remove()
             for(let a=0;a<=eatHabit['meat_food'];a++){
+                $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
+            }
+        })
+        $(this).closest('.form-row').next().find('.col-wrap .form-col').each(function(){
+            $(this).find('select').children().remove()
+            for(let a=0;a<=eatHabit['vegetarian_food'];a++){
                 $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
             }
         })
@@ -503,10 +512,19 @@ $('.step-4 input, .step-4 select').on('change', function () {
     }else if($(this).attr('id') === 'vegetarian_food') {
         eatHabit['vegetarian_food'] = parseInt($(this).find(':selected').text());
         eatHabit['meat_food'] = submitDatas['booking_people'] - eatHabit['vegetarian_food']
+        $('#meat_food').val(eatHabit['meat_food'])
+        $('#meat_food').next().find('.select2-selection__rendered').text(eatHabit['meat_food'])
         $(this).closest('.form-row').find('.col-wrap').slideDown()
+        $(this).closest('.form-row').prev().find('.col-wrap').slideDown()
         $(this).closest('.form-row').find('.col-wrap .form-col').each(function(){
             $(this).find('select').children().remove()
             for(let a=0;a<=eatHabit['vegetarian_food'];a++){
+                $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
+            }
+        })
+        $(this).closest('.form-row').prev().find('.col-wrap .form-col').each(function(){
+            $(this).find('select').children().remove()
+            for(let a=0;a<=eatHabit['meat_food'];a++){
                 $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
             }
         })

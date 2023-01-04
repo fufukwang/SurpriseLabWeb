@@ -1858,16 +1858,28 @@ fieldset .prefix-step .prefix {
 .select-food .form-row:first-child {
     padding-bottom: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.3);
   }
 }
 .select-food .col-wrap {
   width: 100%;
   padding: 0;
   margin: 0;
+  border-top: 1px dashed rgba(255,255,255,.2);
+  margin-top: 20px;
+}
+.select-food .col-wrap .form-col:first-child {
+  margin-top: 20px;
 }
 .select-food .col-wrap .form-col {
   margin-top: 20px;
 }
-
+@media (max-width: 991px){
+  .select-food .col-wrap .form-col:first-child {
+    margin-top: 10px;
+  }
+  .select-food .col-wrap .form-col {
+    margin-top: 10px;
+  }
+}
 /*# sourceMappingURL=form.css.map */
