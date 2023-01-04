@@ -336,7 +336,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
         $('#vegetarian_food').html('');
         for(var pc=0;pc<=submitDatas['booking_people'];pc++){
             $('#vegetarian_food').append('<option value="'+pc+'">'+pc+'</option>');
-            ('#meat_food').append('<option value="'+pc+'">'+pc+'</option>');
+            $('#meat_food').append('<option value="'+pc+'">'+pc+'</option>');
         }
         //update_isVegetarian(submitDatas['booking_people']);
         //update_amountToGo(submitDatas['booking_people']);
