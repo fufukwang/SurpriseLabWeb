@@ -333,6 +333,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
         submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
+        eatHabit[totalPeople] = submitDatas['booking_people']
         $('#vegetarian_food').html('');
         for(var pc=0;pc<=submitDatas['booking_people'];pc++){
             $('#vegetarian_food').append('<option value="'+pc+'">'+pc+'</option>');
@@ -489,7 +490,26 @@ $('.step-3 input, .step-3 select').on('change', function () {
 });
 $('.step-4 input, .step-4 select').on('change', function () {
     if ($(this).attr('id') === 'meat_food') {
+        eatHabit['meat_food'] = parseInt($(this).find(':selected').text());
+        eatHabit['vegetarian_food'] = submitDatas['booking_people'] - eatHabit['meat_food']
+        $(this).closest('.form-row').find('.col-wrap').slideDown()
+        $(this).closest('.form-row').find('.col-wrap .form-col').each(function(){
+            $(this).find('select').children().remove()
+            for(let a=0;a<=eatHabit['meat_food'];a++){
+                $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
+            }
+        })
         
+    }else if($(this).attr('id') === 'vegetarian_food') {
+        eatHabit['vegetarian_food'] = parseInt($(this).find(':selected').text());
+        eatHabit['meat_food'] = submitDatas['booking_people'] - eatHabit['vegetarian_food']
+        $(this).closest('.form-row').find('.col-wrap').slideDown()
+        $(this).closest('.form-row').find('.col-wrap .form-col').each(function(){
+            $(this).find('select').children().remove()
+            for(let a=0;a<=eatHabit['vegetarian_food'];a++){
+                $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
+            }
+        })
     }
 })
 
@@ -499,6 +519,7 @@ function update_isVegetarian(people) {
     radioGroup.removeClass('show-radioGroup').removeClass('last-row');
     radioGroup.slice(0,people).addClass('show-radioGroup');
     $('.show-radioGroup').last().addClass('last-row');
+
 }
 /*
 // 更新完成劃位所需金額

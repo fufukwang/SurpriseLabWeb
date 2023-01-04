@@ -1357,6 +1357,7 @@ fieldset.step-4 .form-group textarea:-webkit-autofill:focus {
 
 fieldset.step-4 .form-group textarea {
   line-height: 2.25;
+  height: 150px;
 }
 
 @media (min-width: 1200px) {
