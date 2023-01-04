@@ -24,6 +24,7 @@ var paidAmount = 0; // 已折抵金額
 var restAmount = 0; // 剩餘折抵金額
 var discountCode = '';
 var discountAmount = 0;
+var eatHabit = [];
 
 
 $.getJSON('/dininginthedark3/GetAjaxData?method=getMaxDate').done(function(max){ maxDateVal = max.pay_max_date;});
@@ -335,6 +336,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
         $('#vegetarian_food').html('');
         for(var pc=0;pc<=submitDatas['booking_people'];pc++){
             $('#vegetarian_food').append('<option value="'+pc+'">'+pc+'</option>');
+            ('#meat_food').append('<option value="'+pc+'">'+pc+'</option>');
         }
         //update_isVegetarian(submitDatas['booking_people']);
         //update_amountToGo(submitDatas['booking_people']);
@@ -345,7 +347,6 @@ $('.step-2 input, .step-2 select').on('change', function () {
             accessHide = false;
         }
     }
-
 });
 // Step 3 - 日期、時段選擇
 $('.step-3 input, .step-3 select').on('change', function () {
@@ -486,6 +487,11 @@ $('.step-3 input, .step-3 select').on('change', function () {
     updateField(nextFieldset, accessHide);
 
 });
+$('.step-4 input, .step-4 select').on('change', function () {
+    if ($(this).attr('id') === 'meat_food') {
+        
+    }
+})
 
 // 更新餐點選擇的顧客數
 function update_isVegetarian(people) {

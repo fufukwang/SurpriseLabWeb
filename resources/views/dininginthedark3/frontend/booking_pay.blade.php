@@ -269,7 +269,7 @@
                                     <select id="meat_food" name="meat_food" data-placeholder="選擇人數" required>
                                     </select>
                                 </div>
-                                <div class="col-wrap">
+                                <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
                                         <label class="form-label" for="meat_food_noBeef">* 不吃牛肉</label>
                                         <select id="meat_food_noBeef" name="meat_food_noBeef" data-placeholder="選擇人數" required>
@@ -298,7 +298,7 @@
                                     <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
                                     </select>
                                 </div>
-                                <div class="col-wrap">
+                                <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
                                         <label class="form-label" for="vegetarian_food_noNut">* 不吃堅果</label>
                                         <select id="vegetarian_food_noNut" name="vegetarian_food_noNut" data-placeholder="選擇人數" required>

@@ -780,7 +780,7 @@ form .btn-outline {
 }
 
 .select2-container--default.select2-container--open, .select2-container--default.select2-container--focus {
-  width: 536px !important;
+  /* width: 536px !important; */
   max-width: 100%;
 }
 
