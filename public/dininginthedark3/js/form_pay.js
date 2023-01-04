@@ -333,7 +333,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
         submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
-        eatHabit[totalPeople] = submitDatas['booking_people']
+        eatHabit['totalPeople'] = submitDatas['booking_people']
         $('#vegetarian_food').html('');
         for(var pc=0;pc<=submitDatas['booking_people'];pc++){
             $('#vegetarian_food').append('<option value="'+pc+'">'+pc+'</option>');
