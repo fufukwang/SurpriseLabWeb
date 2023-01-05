@@ -1356,8 +1356,8 @@ fieldset.step-4 .form-group textarea:-webkit-autofill:focus {
 }
 
 fieldset.step-4 .form-group textarea {
-  line-height: 2.25;
-  height: 150px;
+  line-height: 2;
+  height: 180px;
 }
 
 @media (min-width: 1200px) {
@@ -1875,6 +1875,9 @@ fieldset .prefix-step .prefix {
   margin-top: 20px;
 }
 @media (max-width: 991px){
+  .select-food .col-wrap {
+    margin-top: 10px;
+  }
   .select-food .col-wrap .form-col:first-child {
     margin-top: 10px;
   }
