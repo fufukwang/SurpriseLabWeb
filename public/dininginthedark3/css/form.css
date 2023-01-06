@@ -1885,4 +1885,12 @@ fieldset .prefix-step .prefix {
     margin-top: 10px;
   }
 }
+fieldset.step-5 .filled-data td p {
+  font-size: 13px;
+}
+@media (max-width: 575.98px){
+  fieldset.step-5 .filled-data td p {
+    font-size: 12px;
+  }
+}
 /*# sourceMappingURL=form.css.map */

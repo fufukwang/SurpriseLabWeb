@@ -497,8 +497,16 @@ $('.step-4 select').on('change', function () {
         eatHabit['vegetarian_food'] = submitDatas['booking_people'] - eatHabit['meat_food']
         $('#vegetarian_food').val(eatHabit['vegetarian_food'])
         $('#vegetarian_food').next().find('.select2-selection__rendered').text(eatHabit['vegetarian_food'])
-        $(this).closest('.form-row').find('.col-wrap').slideDown()
-        $(this).closest('.form-row').next().find('.col-wrap').slideDown()
+        if(eatHabit['meat_food'] == 0){
+            $(this).closest('.form-row').find('.col-wrap').slideUp()
+            $(this).closest('.form-row').next().find('.col-wrap').slideDown()
+        }else if(eatHabit['vegetarian_food'] == 0){
+            $(this).closest('.form-row').find('.col-wrap').slideDown()
+            $(this).closest('.form-row').next().find('.col-wrap').slideUp()
+        }else{
+            $(this).closest('.form-row').find('.col-wrap').slideDown()
+            $(this).closest('.form-row').next().find('.col-wrap').slideDown()
+        }
         $(this).closest('.form-row').find('.col-wrap .form-col').each(function(){
             $(this).find('select').children().remove()
             for(let a=0;a<=eatHabit['meat_food'];a++){
@@ -517,8 +525,16 @@ $('.step-4 select').on('change', function () {
         eatHabit['meat_food'] = submitDatas['booking_people'] - eatHabit['vegetarian_food']
         $('#meat_food').val(eatHabit['meat_food'])
         $('#meat_food').next().find('.select2-selection__rendered').text(eatHabit['meat_food'])
-        $(this).closest('.form-row').find('.col-wrap').slideDown()
-        $(this).closest('.form-row').prev().find('.col-wrap').slideDown()
+        if(eatHabit['vegetarian_food'] == 0){
+            $(this).closest('.form-row').find('.col-wrap').slideUp()
+            $(this).closest('.form-row').prev().find('.col-wrap').slideDown()
+        }else if(eatHabit['meat_food'] == 0){
+            $(this).closest('.form-row').find('.col-wrap').slideDown()
+            $(this).closest('.form-row').prev().find('.col-wrap').slideUp()
+        }else{
+            $(this).closest('.form-row').find('.col-wrap').slideDown()
+            $(this).closest('.form-row').prev().find('.col-wrap').slideDown()
+        }
         $(this).closest('.form-row').find('.col-wrap .form-col').each(function(){
             $(this).find('select').children().remove()
             for(let a=0;a<=eatHabit['vegetarian_food'];a++){

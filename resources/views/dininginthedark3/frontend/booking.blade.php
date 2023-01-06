@@ -436,7 +436,17 @@
                             </tr>
                             <tr>
                                 <td>飲食選項</td>
-                                <td>葷食 <span id="filled_pv"></span> 人，蛋奶素 <span class="filled" data-filled="vegetarian_food"></span> 人</td>
+                                <!-- <td>葷食 <span id="filled_pv"></span> 人，蛋奶素 <span class="filled" data-filled="vegetarian_food"></span> 人</td> -->
+                                <td>
+                                    葷食 <span id="filled_pv"></span> 人：
+                                    <p>不吃牛肉 <span class="filled" data-filled="meat_food_noBeef">0</span> 人</p>
+                                    <p>不吃豬肉 <span class="filled" data-filled="meat_food_noPork">0</span> 人</p>
+                                    <p>不吃堅果 <span class="filled" data-filled="meat_food_noNut">0</span> 人</p>
+                                    <p>不吃帶殼海鮮 <span class="filled" data-filled="meat_food_noSeafood">0</span> 人</p>
+                                    <br>
+                                    蛋奶五辛素 <span class="filled" data-filled="vegetarian_food"></span> 人：
+                                    <p>不吃堅果 <span class="filled" data-filled="vegetarian_food_noNut">0</span> 人</p>
+                                </td>
                             </tr>
                             <tr class="notice">
                                 <td>其他備註</td>
