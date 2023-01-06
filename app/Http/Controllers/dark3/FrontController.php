@@ -274,6 +274,12 @@ class FrontController extends Controller
                 'vegetarian' => $request->vegetarian,
                 'dis_code'   => '',
                 'dis_money'  => $cut2,
+                'meat_eat'   => $request->meat_food ?? 0,
+                'no_beef'    => $request->meat_food_noBeef ?? 0,
+                'no_pork'    => $request->meat_food_noPork ?? 0,
+                'no_nut_m'   => $request->meat_food_noNut ?? 0,
+                'no_shell'   => $request->meat_food_noSeafood ?? 0,
+                'no_nut_v'   => $request->vegetarian_food_noNut ?? 0,
             ];
 
             $order = order::create($data);
@@ -351,6 +357,13 @@ class FrontController extends Controller
                     'phone' => $data['tel'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'vegetarian' => $data['vegetarian'],
+                    'meat_eat' => $data['meat_eat'],
+                    'no_beef' => $data['no_beef'],
+                    'no_pork' => $data['no_pork'],
+                    'no_nut_m' => $data['no_nut_m'],
+                    'no_shell' => $data['no_shell'],
+                    'no_nut_v' => $data['no_nut_v'],
                     'template' => 'order',
                 ];
                 SLS::SendEmailByTemplateName($mailer);

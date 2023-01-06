@@ -876,6 +876,12 @@ function SendOrderData(Pay,prime){
         'Pay'   : Pay,
         'coupon': usedCoupons,
         'vegetarian': $('#vegetarian_food').val(),
+        'meat_food': $('#meat_food').val(),
+        'meat_food_noBeef': $('#meat_food_noBeef').val(),
+        'meat_food_noPork': $('#meat_food_noPork').val(),
+        'meat_food_noNut': $('#meat_food_noNut').val(),
+        'meat_food_noSeafood': $('#meat_food_noSeafood').val(),
+        'vegetarian_food_noNut': $('#vegetarian_food_noNut').val(),
     };
     $.post('/dininginthedark3/ReOrderData',obj,function(data){
         $('<link>').appendTo('head')

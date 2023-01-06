@@ -69,14 +69,44 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">素食</label>
-                                                <div class="col-sm-8">
-                                                    <select name="vegetarian" id="vegetarian" class="form-control">
-                                                        @for($i=0;$i<37;$i++)
-                                                        <option value="{{ $i }}">{{ $i }}</option>
-                                                        @endfor
-                                                    </select>
+                                                <label class="control-label col-sm-4">葷食</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="meat_eat" id="meat_eat" class="form-control" value="0">
                                                 </div>
+                                                <label class="control-label col-sm-4">素食</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="vegetarian" id="vegetarian" class="form-control" value="0">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">葷食/不吃牛肉</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_beef" id="no_beef" class="form-control" value="0">
+                                                </div>
+                                                <label class="control-label col-sm-4">素食/不吃堅果</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_nut_v" id="no_nut_v" class="form-control" value="0">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">葷食/不吃豬肉</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_pork" id="no_pork" class="form-control" value="0">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">葷食/不吃堅果</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_nut_m" id="no_nut_m" class="form-control" value="0">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">葷食/不吃帶殼海鮮</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_shell" id="no_shell" class="form-control" value="0">
+                                                </div>
+                                                
                                             </div>
 
                                             

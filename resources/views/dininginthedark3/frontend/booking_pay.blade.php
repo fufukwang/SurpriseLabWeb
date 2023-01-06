@@ -33,7 +33,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
-    <link rel="stylesheet" href="css/form.css"/>
+    <link rel="stylesheet" href="css/form.css?v=0.1"/>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -575,7 +575,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.2"></script>
+    <script src="js/form_pay.js?v=0.3"></script>
 
 </body>
 </html>

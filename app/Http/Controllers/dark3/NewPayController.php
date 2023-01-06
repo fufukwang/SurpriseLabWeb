@@ -106,6 +106,7 @@ class NewPayController extends Controller
             if(intval($money - $cut1 - $cut2)  == 0){
                 $pay_status = '已付款';
             }
+
             $data = [
                 'pro_id'     => $request->booking_time,
                 'pople'      => $people,
@@ -125,6 +126,12 @@ class NewPayController extends Controller
                 'vegetarian' => $request->vegetarian_food,
                 'dis_code'   => $discountCode,
                 'dis_money'  => $cut2,
+                'meat_eat'   => $request->meat_food ?? 0,
+                'no_beef'    => $request->meat_food_noBeef ?? 0,
+                'no_pork'    => $request->meat_food_noPork ?? 0,
+                'no_nut_m'   => $request->meat_food_noNut ?? 0,
+                'no_shell'   => $request->meat_food_noSeafood ?? 0,
+                'no_nut_v'   => $request->vegetarian_food_noNut ?? 0,
             ];
             // 10% 服務費
             $order = order::create($data);
@@ -291,10 +298,16 @@ class NewPayController extends Controller
                     'name'  => $order->name,
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'vegetarian' => $order->vegetarian,
+                    'meat_eat' => $order->meat_eat,
+                    'no_beef' => $order->no_beef,
+                    'no_pork' => $order->no_pork,
+                    'no_nut_m' => $order->no_nut_m,
+                    'no_shell' => $order->no_shell,
+                    'no_nut_v' => $order->no_nut_v,
                     'template' => 'order',
                 ];
                 SLS::SendEmailByTemplateName($mailer);
-
 
                 try {
 

@@ -61,7 +61,7 @@ class OrderController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash')->find($id);
+                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v')->find($id);
             } else {
                 abort(404);
             }
@@ -82,6 +82,12 @@ class OrderController extends Controller
             'name'       => $request->name,
             'vegetarian' => $request->vegetarian,
             'pople'      => $request->people,
+            'meat_eat'   => $request->meat_eat ?? 0,
+            'no_beef'    => $request->no_beef ?? 0,
+            'no_pork'    => $request->no_pork ?? 0,
+            'no_nut_m'   => $request->no_nut_m ?? 0,
+            'no_shell'   => $request->no_shell ?? 0,
+            'no_nut_v'   => $request->no_nut_v ?? 0,
         ];
         $order = order::find($id);
         if($request->has('pro_id') && $request->pro_id>0){
@@ -101,6 +107,13 @@ class OrderController extends Controller
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'phone' => $request->tel,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'vegetarian' => $request->vegetarian ?? 0,
+                    'meat_eat' => $request->meat_eat ?? 0,
+                    'no_beef' => $request->no_beef ?? 0,
+                    'no_pork' => $request->no_pork ?? 0,
+                    'no_nut_m' => $request->no_nut_m ?? 0,
+                    'no_shell' => $request->no_shell ?? 0,
+                    'no_nut_v' => $request->no_nut_v ?? 0,
                     'template' => 'order',
                 ];
                 if($mailer['email'] != ''){
@@ -225,6 +238,12 @@ class OrderController extends Controller
                 'vegetarian' => $request->vegetarian,
                 'is_overseas'=> $is_overseas,
                 'edit_type'  => $request->edit_type,
+                'meat_eat'   => $request->meat_eat ?? 0,
+                'no_beef'    => $request->no_beef ?? 0,
+                'no_pork'    => $request->no_pork ?? 0,
+                'no_nut_m'   => $request->no_nut_m ?? 0,
+                'no_shell'   => $request->no_shell ?? 0,
+                'no_nut_v'   => $request->no_nut_v ?? 0,
             ];
             $order = order::create($data);
 
@@ -244,6 +263,13 @@ class OrderController extends Controller
                     'phone' => $data['tel'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                    'vegetarian' => $request->vegetarian ?? 0,
+                    'meat_eat' => $request->meat_eat ?? 0,
+                    'no_beef' => $request->no_beef ?? 0,
+                    'no_pork' => $request->no_pork ?? 0,
+                    'no_nut_m' => $request->no_nut_m ?? 0,
+                    'no_shell' => $request->no_shell ?? 0,
+                    'no_nut_v' => $request->no_nut_v ?? 0,
                     'template' => 'order',
                 ];
                 if($mailer['email'] != ''){
@@ -301,68 +327,16 @@ class OrderController extends Controller
 
 
     public function Print(Request $request){
-        $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money');
-
-        //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
-        if($request->has('srday')  && $request->srday!=1){
-            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
-            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
-        }
-        
-        if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
-
-
-        if($request->has('special')){
-            if($request->special == 1){
-                $order->where('is_overseas',9); 
-            }
-            if($request->special == 0){
-                $order->where('is_overseas','<',5); 
-            }
-        }
-
-        if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
-        if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(dark3order.pay_status='已付款' OR pay_status='已付款(部分退款)' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
-        } elseif($request->pay_status!=''){
-            $order->where('dark3order.pay_status',$request->pay_status);  
-        } 
-        if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
-        if($request->has('search') && $request->search!=''){
-            $search = $request->search;
-            $order = $order->whereRaw("name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%'");
-        }
-        if($request->has('code') && $request->code!=''){
-            $text = trim($request->code);
-            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
-                code LIKE '%{$text}%'
-            )")->get();
-            $order = $order->whereIn('sn',$coupons->toArray());
-
-
-            // $order = $order->whereRaw("(SELECT COUNT(id) FROM(dark3coupon) WHERE code='{$request->code}' AND dark3coupon.o_id=dark3order.sn)>0");
-        }
-        // 尚未開過發票
-        if($request->has('no_inv') && $request->no_inv == 1){
-            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0");
-        }
-
-        if($request->has('order') && $request->order!=''){
-            $ord = explode('|',$request->order);
-            if(count($ord)>0){
-                if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
-                $order = $order->OrderBy($ord[0],$ord[1]);
-            }
-        } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
+        $order = $this->orderQuery($request);
         $order = $order->paginate($this->perpage);
 
         return view('dininginthedark3.backend.print',compact('order','request'));
     }
 
     public function Table(Request $request){
+        /*
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
@@ -411,6 +385,8 @@ class OrderController extends Controller
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
         } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
+        */
+        $order = $this->orderQuery($request);
         $order = $order->get();
         
 
@@ -418,6 +394,7 @@ class OrderController extends Controller
     }
 
     public function XlsDataOuput(Request $request){
+        /*
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
         $order = $order->select('rang_start','rang_end','name','tel','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','email','pay_type','pople','pro_id','dis_code','is_overseas','edit_type','result');
         //if($request->has('day') && $request->day!='') $order->where('day',$request->day);
@@ -468,6 +445,8 @@ class OrderController extends Controller
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
         } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
+        */
+        $order = $this->orderQuery($request);
         $order = $order->get();
 
         $cellData = $order->toArray();
@@ -589,7 +568,7 @@ class OrderController extends Controller
     public function beSentOrderMail(Request $request,$id){
         $act = pro::select('day','rang_start','rang_end')->find($id);
 
-
+        $order = order::find($request->oid);
         $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
         $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
         $mailer = [
@@ -601,12 +580,72 @@ class OrderController extends Controller
             'phone' => $request->phone,
             'gday'  => $rangStart.'/'.$rangEnd,
             'master'=> "?id=".md5($request->oid)."&sn=".$request->sn,
+            'vegetarian' => $order->vegetarian,
+            'meat_eat' => $order->meat_eat,
+            'no_beef' => $order->no_beef,
+            'no_pork' => $order->no_pork,
+            'no_nut_m' => $order->no_nut_m,
+            'no_shell' => $order->no_shell,
+            'no_nut_v' => $order->no_nut_v,
             'template' => 'order',
         ];
         SLS::SendEmailByTemplateName($mailer);
         SLS::SendSmsByTemplateName($mailer);
         order::where('id',$request->oid)->update(['is_send'=>1]);
         return Response::json(['message'=> '已更新'], 200);
+    }
+
+    private function orderQuery(Request $request){
+        $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v');
+        if($request->has('srday')  && $request->srday!=1){
+            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
+        }
+        
+        if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 
+
+
+        if($request->has('special')){
+            if($request->special == 1){
+                $order->where('is_overseas',9); 
+            }
+            if($request->special == 0){
+                $order->where('is_overseas','<',5); 
+            }
+        }
+
+        if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
+        if($request->has('pay_status') && $request->pay_status=='已預約'){
+            $order->whereRaw("(dark3order.pay_status='已付款' OR pay_status='已付款(部分退款)' OR (dark3order.pay_type='現場付款' AND dark3order.pay_status<>'取消訂位'))");
+        } elseif($request->pay_status!=''){
+            $order->where('dark3order.pay_status',$request->pay_status);  
+        } 
+        if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
+        if($request->has('search') && $request->search!=''){
+            $search = $request->search;
+            $order = $order->whereRaw("(name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%')");
+        }
+        if($request->has('code') && $request->code!=''){
+            $text = trim($request->code);
+            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
+                code LIKE '%{$text}%'
+            )")->get();
+            $order = $order->whereIn('sn',$coupons->toArray());
+        }
+        // 尚未開過發票
+        if($request->has('no_inv') && $request->no_inv == 1){
+            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0");
+        }
+
+        if($request->has('order') && $request->order!=''){
+            $ord = explode('|',$request->order);
+            if(count($ord)>0){
+                if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
+                $order = $order->OrderBy($ord[0],$ord[1]);
+            }
+        } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
+        return $order;
     }
 
 }

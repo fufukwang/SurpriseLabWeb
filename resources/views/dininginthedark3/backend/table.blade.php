@@ -31,7 +31,9 @@
     background-color: #eeeeee !important;
     -webkit-print-color-adjust: exact; 
 }}
-
+.food_list td { border: none;}
+.food_list td:nth-child(1),.food_list td:nth-child(2),.food_list td:nth-child(3),.food_list td:nth-child(4){ border-right: solid 1px #444444;}
+.food_list tr:nth-child(1) td{ border-bottom: solid 1px #444444; }
 	</style>
 </head>
 <body>
@@ -89,6 +91,11 @@
    }
                     
    if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
+   if($row->pople == ($row->vegetarian + $row->meat_eat)){
+   	$no_beef = $row->no_beef; $no_pork = $row->no_pork; $no_nut_m = $row->no_nut_m; $no_shell = $row->no_shell; $no_nut_v = $row->no_nut_v;
+   } else {
+   	$no_beef = ""; $no_pork = ""; $no_nut_m = ""; $no_shell = ""; $no_nut_v = "";
+   }
    ?>
 		<tr>
 			<td rowspan="2"></td>
@@ -104,8 +111,15 @@
 			<td rowspan="2">{!! nl2br($row->manage) !!}</td>
 		</tr>
 		<tr>
-			<td>團員</td>
-			<td colspan="5">
+			<td>飲食禁忌</td>
+			<td colspan="5" style="padding: 0px;">
+				<table class="food_list">
+					<tr><td>葷食/不吃牛肉</td><td>葷食/不吃豬肉</td><td>葷食/不吃堅果</td><td>葷食/不吃帶殼海鮮</td><td>素食/不吃堅果</td></tr>
+					<tr><td>{{ $no_beef }} 人</td><td>{{ $no_pork }} 人</td><td>{{ $no_nut_m }} 人</td><td>{{ $no_shell }} 人</td><td>{{ $no_nut_v }} 人</td></tr>
+				</table>
+
+
+				{{--
 				<table>
 					@forelse(App\model\dark3\TeamMail::where('order_id',$row->id)->get() as $tm)
 					<tr>
@@ -118,6 +132,7 @@
 					</tr>
 					@endforelse
 				</table>
+				--}}
 			</td>
 		</tr>
 @empty
