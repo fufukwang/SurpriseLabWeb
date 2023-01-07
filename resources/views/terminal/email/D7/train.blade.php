@@ -92,7 +92,7 @@
         case '15:20': $need = '15:10'; break;
         case '18:10': $need = '17:40'; break;
         case '19:30': $need = '19:10'; break;
-        case '20:50': $need = '20:40'; break;
+        case '20:50': $need = '20:50'; break;
     }
 ?>
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">

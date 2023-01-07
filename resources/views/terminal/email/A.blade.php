@@ -5,7 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>【落日轉運站】訂位確認信件</title>
-<style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}h1,h2,h3{font-style:normal;font-weight:700;letter-spacing:normal}h1,h2,h3,h4{letter-spacing:normal}h1,h2,h3{font-family:Helvetica;line-height:150%}#templateBody,#templateFooter,#templateHeader{background-color:#26296c}#templateBody,#templateFooter,#templateHeader,.bodyContainer,.footerContainer,.headerContainer{background-image:none;background-repeat:no-repeat;background-position:center;background-size:cover;border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}h1,h2,h3,h4,h5,h6{display:block;margin:0}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td{line-height:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}.templateContainer{max-width:600px!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}h1{color:#dbdbdb;font-size:40px;text-align:center}h2,h3,h4{text-align:left}h2{color:#4977c7;font-size:34px}h3{color:#444;font-size:22px}h4{color:#949494;font-family:Georgia;font-size:20px;font-style:italic;font-weight:400;line-height:125%}#templateHeader{padding-top:6px;padding-bottom:6px}.bodyContainer,.footerContainer,.headerContainer{background-color:#transparent;padding-top:0;padding-bottom:0}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#757575;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left}.bodyContainer .mcnTextContent a,.bodyContainer .mcnTextContent p a,.headerContainer .mcnTextContent a,.headerContainer .mcnTextContent p a{color:#007c89;font-weight:400;text-decoration:underline}#templateBody{padding-top:0;padding-bottom:0}#templateFooter{padding-top:45px;padding-bottom:63px}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#666;font-family:'Times New Roman',Times,Baskerville,Georgia,serif;font-size:8px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a{color:#666;font-weight:400;text-decoration:underline}@media only screen and (min-width:768px){.templateContainer{width:600px!important}}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:30px!important;line-height:125%!important}h2{font-size:26px!important;line-height:125%!important}h3{font-size:20px!important;line-height:150%!important}h4{font-size:18px!important;line-height:150%!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p,.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{font-size:14px!important;line-height:150%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{font-size:16px!important;line-height:150%!important}}</style></head>
+        <style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}h1,h2,h3{font-style:normal;font-weight:700;letter-spacing:normal}h1,h2,h3,h4{letter-spacing:normal}h1,h2,h3{font-family:Helvetica;line-height:150%}#templateBody,#templateFooter,#templateHeader{background-color:#26296c}#templateBody,#templateFooter,#templateHeader,.bodyContainer,.footerContainer,.headerContainer{background-image:none;background-repeat:no-repeat;background-position:center;background-size:cover;border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}h1,h2,h3,h4,h5,h6{display:block;margin:0}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td{line-height:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}.templateContainer{max-width:600px!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}h1{color:#dbdbdb;font-size:40px;text-align:center}h2,h3,h4{text-align:left}h2{color:#4977c7;font-size:34px}h3{color:#444;font-size:22px}h4{color:#949494;font-family:Georgia;font-size:20px;font-style:italic;font-weight:400;line-height:125%}#templateHeader{padding-top:6px;padding-bottom:6px}.bodyContainer,.footerContainer,.headerContainer{background-color:#transparent;padding-top:0;padding-bottom:0}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#757575;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left}.bodyContainer .mcnTextContent a,.bodyContainer .mcnTextContent p a,.headerContainer .mcnTextContent a,.headerContainer .mcnTextContent p a{color:#007c89;font-weight:400;text-decoration:underline}#templateBody{padding-top:0;padding-bottom:0}#templateFooter{padding-top:45px;padding-bottom:63px}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#666;font-family:'Times New Roman',Times,Baskerville,Georgia,serif;font-size:8px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a{color:#666;font-weight:400;text-decoration:underline}@media only screen and (min-width:768px){.templateContainer{width:600px!important}}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:30px!important;line-height:125%!important}h2{font-size:26px!important;line-height:125%!important}h3{font-size:20px!important;line-height:150%!important}h4{font-size:18px!important;line-height:150%!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p,.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{font-size:14px!important;line-height:150%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{font-size:16px!important;line-height:150%!important}}
+        </style>
+                    </head>
     <body>
         <span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">感謝您的訂購，請收好此封訂位信及確認時刻表，我們即將啟程。</span>
         <center>
@@ -79,6 +81,14 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
 <?php
     
     $start = substr($pro->rang_start,0,5);
@@ -89,7 +99,7 @@
         case '15:20': $need = '15:10'; break;
         case '18:10': $need = '17:40'; break;
         case '19:30': $need = '19:10'; break;
-        case '20:50': $need = '20:40'; break;
+        case '20:50': $need = '20:50'; break;
     }
     $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',\Carbon\Carbon::parse($pro->day.' '.$pro->rang_start))));
     $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',\Carbon\Carbon::parse($pro->day.' '.$pro->rang_end))));
@@ -168,6 +178,14 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
 <?php
     $start = substr($pro->rang_start,0,5);
     $need = '';
@@ -300,7 +318,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/a6ad9468-4641-67ab-a21b-acb44e49825c.jpg" width="564" style="max-width:2251px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/57712978-98fd-f3f8-455b-b09a0caddbb4.jpg" width="564" style="max-width:4501px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -317,7 +335,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 14px; padding: 14px;">
-                                <a class="mcnButton " title="即刻預定" href="https://www.kkday.com/zh-tw/product/134229" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">即刻預定</a>
+                                <a class="mcnButton " title="即刻訂房" href="https://ec.citysuiteshotels.com/webhotel/0274/index?_rand=kjxzg148cf9" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">即刻訂房</a>
                             </td>
                         </tr>
                     </tbody>
@@ -352,7 +370,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/84fc2497-841b-d2d1-a6de-6698abe7a636.jpg" width="564" style="max-width:2251px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/605cc99b-9b3d-528c-1a7f-2c11ab8b3ce4.jpg" width="564" style="max-width:4501px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -369,7 +387,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 14px; padding: 14px;">
-                                <a class="mcnButton " title="即刻訂房" href="http://​​asiayo.com/event/sunsetterminal.html" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">即刻訂房</a>
+                                <a class="mcnButton " title="即刻租車" href="https://pse.is/4np74d" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">即刻租車</a>
                             </td>
                         </tr>
                     </tbody>
@@ -543,7 +561,7 @@
                 <!--[if mso]>
                 <td valign="top" width="600" style="width:600px;">
                 <![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                             <span style="font-size:10px"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="color:#808080"><em>Copyright © 2022 surpriselab, All rights reserved.</em><br>
@@ -581,5 +599,4 @@
                 </tr>
             </table>
         </center>
-    <script type="text/javascript"  src="/mUim/Mb_5/RaE/ppU/KJlg/tE5kmG6X5O/T2MwUgIy/WzV1M/xZ3YjUB"></script></body>
 </html>
