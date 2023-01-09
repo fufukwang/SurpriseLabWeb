@@ -350,7 +350,7 @@ class OrderController extends WebController
                         } else {
                             $pay_type = '貝殼集器';
                         }
-                    } elseif($row['pay_type'] == '後台編輯' || $request->pay_type == '現場購票'){
+                    } elseif($row['pay_type'] == '後台編輯' || $row['pay_type'] == '現場購票'){
                         $pay_type = $row['edit_type'];
                     }
                     $pay_status = $row['pay_status'];
