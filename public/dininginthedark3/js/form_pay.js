@@ -334,7 +334,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
     if ($(this).attr('id') === 'booking_people') {
         submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
         eatHabit['totalPeople'] = submitDatas['booking_people']
-        $('#vegetarian_food').html('');
+        $('#vegetarian_food,#meat_food').html('');
         for(var pc=0;pc<=submitDatas['booking_people'];pc++){
             $('#vegetarian_food').append('<option value="'+pc+'">'+pc+'</option>');
             $('#meat_food').append('<option value="'+pc+'">'+pc+'</option>');
