@@ -57,13 +57,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager (noscript) -->
     @include('terminal.frontend._nav')
     <!-- fixed btn - message -->
-    <aside class="fixed-btn message-btn js-hidden-target">
+    <!-- <aside class="fixed-btn message-btn js-hidden-target"> -->
         <!-- Button trigger modal -->
-        <a href="javascript://" class="image-wrap" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <!-- <a href="javascript://" class="image-wrap" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <img src="/terminalAssets/images/general/btn_news.png" class="pc-style" alt="message">
             <img src="/terminalAssets/images/general/btn_news_mobile.png" class="mobile-style" alt="message">
-        </a>
-    </aside>
+        </a> -->
+    <!-- </aside> -->
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
         <a href="/terminal/booking_now" class="image-wrap">
@@ -381,6 +381,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <a href="/terminal/booking_now" class="activity-btn">購票去</a>
                 </div>
             </div>
+            <div class="elfsight-app-bfcc5c1c-9303-4b2c-9427-808555aa10bc"></div>
+
         </section>
 
         <section class="section-wrap js-anchor-section" id="tour">
@@ -689,46 +691,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-        <section class="section-wrap skip-background-light js-anchor-section project-section" id="discount">
+        <!-- <section class="section-wrap skip-background-light js-anchor-section project-section" id="discount">
             <div class="section-heading-wrap">
                 <h2 class="heading-title">聯合優惠</h2>
                 <h3 class="heading-subtitle">Discount</h3>
             </div>
-
-
-
-
-
                             <div class="cta-wrap">
 
-                                                <div class="owl-carousel owl-theme">
+                                                <div class="owl-carousel owl-theme"> -->
 
                                                     
 
                                                     <!-- 02 -->
-                                                    <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                                                    <!-- <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
                                                         <figure class="slideshow-card">
                                                             <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
                                                         </figure>
-                                                    </a></div>
+                                                    </a></div> -->
 
                                                     <!-- 01 -->
-                                                    <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                                                    <!-- <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
                                                         <figure class="slideshow-card">
                                                             <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
                                                         </figure>
-                                                    </a></div>
+                                                    </a></div> -->
 
                                                     <!-- 03 -->
-                                                    <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                                                    <!-- <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
                                                         <figure class="slideshow-card">
                                                             <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
                                                         </figure>
                                                     </a></div>
-                                                </div>
+                                                </div> -->
 
                                                 <!-- Custom Controls -->
-                                                <div class="custom-owl-nav">
+                                                <!-- <div class="custom-owl-nav">
                                                     <button class="custom-owl-prev">
                                                         <i class="icon-arrow-slides-left"></i>
                                                     </button>
@@ -740,7 +737,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                             </div>
 
-        </section>
+        </section> -->
 
 
 
@@ -888,5 +885,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/terminalAssets/js/index.js"></script>
     <script src="/terminalAssets/js/home-slideshow.js"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 </html>
