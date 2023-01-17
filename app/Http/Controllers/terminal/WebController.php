@@ -47,7 +47,8 @@ class WebController extends Controller
                 }
             }
             if($data['phone'] != ''){
-                SLS::sent_single_sms($data['phone'],"《落日轉運站》訂位確認信已寄出，請務必、務必查看。若未收到，請至垃圾信匣或促銷內容尋找唷！\n\n祝你旅途愉快！\n落日轉運站乘務人員",env('TERMINAL_SMS'));
+                // SLS::sent_single_sms($data['phone'],"《落日轉運站》訂位確認信已寄出，請務必、務必查看。若未收到，請至垃圾信匣或促銷內容尋找唷！\n\n祝你旅途愉快！\n落日轉運站乘務人員",env('TERMINAL_SMS'));
+                SLS::sent_single_sms($data['phone'],"《落日轉運站》訂位確認信已寄出，若未收到，請至垃圾信匣或促銷內容尋找唷！當天請於開演前20分鐘取票辦理劃位手續，遲到恕不開放進場。",env('TERMINAL_SMS'));
             }
             return true;
         } catch (Exception $e){
