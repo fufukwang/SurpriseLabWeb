@@ -858,8 +858,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="modal-body">
                     <div class="image-wrap">
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/notice_716x480.jpg" class="pc-style" alt="message"></a>
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/notice_460x310.jpg" class="mobile-style" alt="message"></a>
+                        <a href="https://www.facebook.com/surpriselabtw/posts/pfbid0JNf62LDHYG3So29CteN6e2qYMrDNzhTYFCnBNV1syHcj3CE7HvPqdQRvGCBYVk7ul" target="_blank"><img src="/terminalAssets/images/other/notice_716x480.jpg" class="pc-style" alt="message"></a>
+                        <a href="https://www.facebook.com/surpriselabtw/posts/pfbid0JNf62LDHYG3So29CteN6e2qYMrDNzhTYFCnBNV1syHcj3CE7HvPqdQRvGCBYVk7ul" target="_blank"><img src="/terminalAssets/images/other/notice_460x310.jpg" class="mobile-style" alt="message"></a>
                     </div>
                 </div>
                 <div class="modal-footer">
