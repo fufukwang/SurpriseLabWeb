@@ -54,13 +54,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     @include('terminal.frontend._nav')
 
     <!-- fixed btn - message -->
-    <!-- <aside class="fixed-btn message-btn js-hidden-target"> -->
+    <aside class="fixed-btn message-btn js-hidden-target">
         <!-- Button trigger modal -->
-        <!-- <a href="javascript://" class="image-wrap" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <a href="javascript://" class="image-wrap" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <img src="/terminalAssets/images/general/btn_news.png" class="pc-style" alt="message">
             <img src="/terminalAssets/images/general/btn_news_mobile.png" class="mobile-style" alt="message">
-        </a> -->
-    <!-- </aside> -->
+        </a>
+    </aside>
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
         <a href="/terminal/booking_now" class="image-wrap">
@@ -949,8 +949,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="modal-body">
                     <div class="image-wrap">
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/W6fIt-Sg.jpeg" class="pc-style" alt="message"></a>
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/W6fIt-Sg.jpeg" class="mobile-style" alt="message"></a>
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/notice_716x480.jpg" class="pc-style" alt="message"></a>
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank"><img src="/terminalAssets/images/other/notice_460x310.jpg" class="mobile-style" alt="message"></a>
                     </div>
                 </div>
                 <div class="modal-footer">
