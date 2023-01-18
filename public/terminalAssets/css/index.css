@@ -439,7 +439,8 @@ a {
   width: calc((100vw - 120px) / 2.216 + 48px);
   height: 0;
   position: absolute;
-  top: 50%;
+  top: 10.5vw;
+  /* top: 50%; */
   left: 50%;
   -webkit-transform: translate(-50%, -24px);
           transform: translate(-50%, -24px);
@@ -576,6 +577,7 @@ a {
   line-height: 1.428;
   letter-spacing: 0.1em;
   color: #ffcc99;
+  min-height: 36px;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -583,6 +585,7 @@ a {
     width: 50%;
     font-size: 12px;
     line-height: 1.5;
+    min-height: 30px;
   }
 }
 
@@ -648,6 +651,38 @@ a {
   }
 }
 /*# sourceMappingURL=index.css.map */
+#introduce .project-intro,
+#introduce .cta-wrap{
+  max-height: 0;
+  overflow: hidden;
+  transition: .8s;
+}
+
+#introduce .owl-item.center .project-intro,
+#introduce .owl-item.center .project-intro {
+  max-height: 600px;
+}
+
+.heading-p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.9;
+  letter-spacing: 0.1em;
+  color: #efaf50;
+  width: calc((100vw - 120px) / 2.216);
+  margin: 0 auto;
+  padding: 0 30px 20px;
+}
+@media screen and (max-width: 1199.98px){
+  .heading-p {
+    font-size: 14px;
+    line-height: 1.8;
+    width: 100%;
+    padding: 0 15px 20px;
+  }
+}
+
+
 .eapps-instagram-feed-title-container .eapps-instagram-feed-title {
   color: #efaf50;
   font-size: 36px;
