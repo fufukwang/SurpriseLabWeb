@@ -674,14 +674,21 @@ a {
   width: calc((100vw - 120px) / 2.216);
   margin: 0 auto;
   padding: 0 30px 20px;
+  text-align: center;
 }
 
 #introduce .heading-p p:not(:first-child) {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #introduce .heading-p p.italic {
   font-style: italic;
+}
+
+@media screen and (max-width: 768px){
+  #introduce .project-wrap .project-tab-wrap .tab-content .project-intro .feature-wrap .feature-item {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1199.98px){
