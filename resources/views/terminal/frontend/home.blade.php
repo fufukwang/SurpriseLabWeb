@@ -398,7 +398,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <!-- Tab Nav -->
                         <ul class="nav nav-tabs tab-controls" id="introduceTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="into-surpriselab-tab" data-bs-toggle="tab" data-bs-target="#into-surpriselab" type="button" role="tab" aria-controls="into-surpriselab" aria-selected="true">驚喜製造</button>
+                                <button class="nav-link active" id="intro-surpriselab-tab" data-bs-toggle="tab" data-bs-target="#intro-surpriselab" type="button" role="tab" aria-controls="intro-surpriselab" aria-selected="true">驚喜製造</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="intro-darkfield-tab" data-bs-toggle="tab" data-bs-target="#intro-darkfield" type="button" role="tab" aria-controls="intro-darkfield" aria-selected="false">Darkfield</button>
@@ -603,7 +603,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="into-darkfield" role="tabpanel" aria-labelledby="into-darkfield-tab">
+                        <div class="tab-pane fade" id="intro-darkfield" role="tabpanel" aria-labelledby="intro-darkfield-tab">
                             <div class="tab-content-inner">
                                 <div class="heading-p">
                                     <p>來自英國的 DARKFIELD 擁有強大的創作能量，專精於各形式的聲音劇場創作，同時擁有豐富的國際巡演經驗。《FLIGHT》相關系列作品共有 4 項，全球體驗人次累積超過 25 萬人。過往合作夥伴包含微軟（Microsoft）、環球影城（Universal Studios）、阿爾梅達劇院（Almeida Theatre）、阿姆斯特丹國際電影節等（Amsterdam International Film Festival）等，橫跨知名品牌、樂園、藝文活動與場館，深受大眾喜愛。</p>
