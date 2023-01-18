@@ -648,6 +648,49 @@ a {
   }
 }
 /*# sourceMappingURL=index.css.map */
+#introduce .project-intro,
+#introduce .cta-wrap{
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity .5s,transform 0s .5s;
+}
+
+#introduce .owl-item.center .project-intro,
+#introduce .owl-item.center .project-intro {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: .5s .5s;
+}
+
+#introduce .heading-p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.9;
+  letter-spacing: 0.1em;
+  color: #efaf50;
+  width: calc((100vw - 120px) / 2.216);
+  margin: 0 auto;
+  padding: 0 30px 20px;
+}
+
+#introduce .heading-p p:not(:first-child) {
+  margin-top: 10px;
+}
+
+#introduce .heading-p p.italic {
+  font-style: italic;
+}
+
+@media screen and (max-width: 1199.98px){
+  .heading-p {
+    font-size: 14px;
+    line-height: 1.8;
+    width: 100%;
+    padding: 0 10px 20px;
+  }
+}
+
+
 .eapps-instagram-feed-title-container .eapps-instagram-feed-title {
   color: #efaf50;
   font-size: 36px;
