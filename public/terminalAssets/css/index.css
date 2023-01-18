@@ -685,7 +685,7 @@ a {
 }
 
 @media screen and (max-width: 1199.98px){
-  .heading-p {
+  #introduce .heading-p {
     font-size: 14px;
     line-height: 1.8;
     width: 100%;
