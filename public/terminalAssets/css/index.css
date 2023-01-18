@@ -659,7 +659,7 @@ a {
 }
 
 #introduce .owl-item.center .project-intro,
-#introduce .owl-item.center .project-intro {
+#introduce .owl-item.center .cta-wrap {
   opacity: 1;
   transform: translateY(0px);
   transition: .5s .5s;
