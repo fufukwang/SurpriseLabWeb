@@ -653,17 +653,19 @@ a {
 /*# sourceMappingURL=index.css.map */
 #introduce .project-intro,
 #introduce .cta-wrap{
-  max-height: 0;
-  overflow: hidden;
-  transition: .8s;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity .5s,transform 0s .5s;
 }
 
 #introduce .owl-item.center .project-intro,
 #introduce .owl-item.center .project-intro {
-  max-height: 600px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: .5s .5s;
 }
 
-.heading-p {
+#introduce .heading-p {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.9;
@@ -673,12 +675,21 @@ a {
   margin: 0 auto;
   padding: 0 30px 20px;
 }
+
+#introduce .heading-p p:not(:first-child) {
+  margin-top: 10px;
+}
+
+#introduce .heading-p p.italic {
+  font-style: italic;
+}
+
 @media screen and (max-width: 1199.98px){
   .heading-p {
     font-size: 14px;
     line-height: 1.8;
     width: 100%;
-    padding: 0 15px 20px;
+    padding: 0 10px 20px;
   }
 }
 
