@@ -467,7 +467,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </div>
                                                 <div class="cta-wrap">
                                                     <div class="btn-wrap">
-                                                        <a href="https://www.surpriselab.com.tw/dininginthedark3/index.html?utm_source=SunsetTerminal&utm_medium=Website_team" class="activity-btn">購票去</a>
+                                                        <a href="https://www.surpriselab.com.tw/dininginthedark3/index.html?utm_source=SunsetTerminal&utm_medium=Website_team" class="activity-btn">現正售票中</a>
                                                     </div>
                                                 </div>
                                             </div>
