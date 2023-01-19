@@ -685,7 +685,22 @@ a {
   font-style: italic;
 }
 
-@media screen and (max-width: 768px){
+#introduce .feature-item {
+  padding: 5px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  #introduce .feature-wrap {
+    width: 40%;
+    padding: 25px 10px;
+  }
+  #introduce .project-desc {
+    width: 60%;
+    padding: 25px 10px;
+  }
+}
+
+@media screen and (max-width: 767px){
   #introduce .project-wrap .project-tab-wrap .tab-content .project-intro .feature-wrap .feature-item {
     width: 100%;
   }
