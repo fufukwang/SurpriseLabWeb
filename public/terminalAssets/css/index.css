@@ -656,7 +656,7 @@ a {
 }
 
 #introduce .owl-item.center .project-intro,
-#introduce .owl-item.center .project-intro {
+#introduce .owl-item.center .cta-wrap {
   opacity: 1;
   transform: translateY(0px);
   transition: .5s .5s;
@@ -671,18 +671,40 @@ a {
   width: calc((100vw - 120px) / 2.216);
   margin: 0 auto;
   padding: 0 30px 20px;
+  text-align: center;
 }
 
 #introduce .heading-p p:not(:first-child) {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #introduce .heading-p p.italic {
   font-style: italic;
 }
 
+#introduce .feature-item {
+  padding: 5px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  #introduce .feature-wrap {
+    width: 40%;
+    padding: 25px 10px;
+  }
+  #introduce .project-desc {
+    width: 60%;
+    padding: 25px 10px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  #introduce .project-wrap .project-tab-wrap .tab-content .project-intro .feature-wrap .feature-item {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1199.98px){
-  .heading-p {
+  #introduce .heading-p {
     font-size: 14px;
     line-height: 1.8;
     width: 100%;
