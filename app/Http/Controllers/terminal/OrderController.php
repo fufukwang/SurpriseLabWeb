@@ -359,19 +359,22 @@ class OrderController extends WebController
                     }
                     $pay_money = '';
                     $pay_last = '';
-                    $coupons = coupon::where('o_id',$row['sn'])->get();
+                    $coupons = coupon::select('code','b_id','type')->where('o_id',$row['sn'])->get();
                     $return_Tr_time = '';
                     $blue_sn = '';
                     if(count($coupons)>0){
+                        $pay_money = $row['OM'];
                         foreach($coupons as $c){
                             if($coupon!=''){
                                 $coupon .= "\r\n";
-                                $pay_money.= "\r\n";
-                                $pay_last.= "\r\n";
+                                // $pay_money.= "\r\n";
+                                // $pay_last.= "\r\n";
                             }
                             $coupon .= "{$c->code}";
-                            $pay_money .= backme::select('money')->find($c->b_id)->money;
-                            $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
+                            if($c->type == 'train'){ $pay_money += 1250;
+                            } elseif($c->type == 'flight'){ $pay_money += 500; }
+                            // $pay_money .= backme::select('money')->find($c->b_id)->money;
+                            // $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
                         }
                     } else {
                         $pay_money = $row['OM'];
@@ -390,8 +393,13 @@ class OrderController extends WebController
                         $pay_money = 0;
                     } else {
                         if($row['handling'] > 0 && $row['refund'] > 0) $handling_fee = round($row['handling'] * $row['refund'] / 100);
-                        $pay_money -= $row['refund'];
-                        $pay_money += $handling_fee;
+                        if(is_numeric($pay_money)){
+                            $pay_money -= $row['refund'];
+                            $pay_money += $handling_fee;
+                        } else {
+                            $pay_money .= " - " . $row['refund'] . " + " . $handling_fee;
+                        }
+                        
                     }
                     $plan = '';
                     switch($row['plan']){
@@ -403,7 +411,7 @@ class OrderController extends WebController
                     }
                     $day = $plan;
                     $range = $plan;
-                    foreach(DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('order_id',$row['id'])->get() as $r){
+                    foreach(DB::table('terminal_pro_order')->select('day','day_parts','rang_start','rang_end','ticket_type')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('order_id',$row['id'])->get() as $r){
                         $day .= "\r\n{$r->day} {$r->day_parts} ";
                         $range .= "\r\n" . substr($r->rang_start,0,5) . " ~ " . substr($r->rang_end,0,5) . "({$r->ticket_type})";
                     }
@@ -430,7 +438,7 @@ class OrderController extends WebController
                         $row['pople'],
                         $row['num_t'],
                         $row['num_f'],
-                        $row['notes'],
+                        strip_tags(preg_replace('/\<br(\s*)?\/?\>/i',"\n",$row['notes'])),
                         $row['manage'],
                         $coupon,
                         $pay_type,
