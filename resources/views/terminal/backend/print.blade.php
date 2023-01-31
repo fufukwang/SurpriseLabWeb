@@ -277,6 +277,114 @@
 
 
 
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <h4 class="page-title">落日轉運站訂單資料匯入 </h4>
+                            <div class="table-rep-plugin">
+                                <div class="table-wrapper">
+                                    @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
+                                    <div class="btn-toolbar">
+                                        <!-- <div class="btn-group focus-btn-group" style="width: 100%"><form action="/terminal/uploadxlsx" method="post" enctype="multipart/form-data"> -->
+                                            {{ csrf_field() }}
+                                            <div class="form-group col-sm-1">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        匯入資料
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-2">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        <input type="file" class="form-control" placeholder="XLSX檔案" name="xlsx">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-sm-1">
+                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 上傳</button>
+                                            </div>
+                                        </form></div>
+                                    </div>
+                                    @endif
+                                    <div>
+                                        <p>
+                                            範例檔案 : <a href="/example/落日轉運站訂單資料匯入範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
+                                        </p>
+                                        <p>
+                                            說明:<br />
+                                            source 來源名稱<br />
+                                            name 姓名<br />
+                                            phone 電話<br />
+                                            email 信箱<br />
+                                            ticket 票種  <br />
+                                            <ol>
+                                                <li>train(微醺列車)</li>
+                                                <li>flight(無光飛航)</li>
+                                                <li>A(A套票 微醺列車+無光飛航)</li>
+                                                <li>boat(單人船票)</li>
+                                                <li>B(B套票 微醺列車+無光飛航+單人船票)</li>
+                                            </ol>
+                                            train 微醺列車場次編號  <br />
+                                            flight 無光飛航場次編號  <br />
+                                            boat 單人船票場次編號  <br />
+                                            people 人數  <br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card-box">
