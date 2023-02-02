@@ -284,7 +284,7 @@
                                 <div class="table-wrapper">
                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                     <div class="btn-toolbar">
-                                        <!-- <div class="btn-group focus-btn-group" style="width: 100%"><form action="/terminal/uploadxlsx" method="post" enctype="multipart/form-data"> -->
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/terminal/order/import.xls" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-1">
                                                 <div class="col-sm-12">
@@ -1473,7 +1473,7 @@ function submitSearchForm(){
     $('#SearchForm').attr('target','_top');
     $('#SearchForm').attr('action','/terminal/print');
 }
-@if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
+@if(Session::has('message')) Swal.fire('{!! Session::get('message') !!}'); @endif
 		</script>
 
 

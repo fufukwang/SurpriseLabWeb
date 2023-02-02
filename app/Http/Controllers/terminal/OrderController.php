@@ -319,6 +319,201 @@ class OrderController extends WebController
         }
     }
 
+    // XLS上傳訂單
+    public function orderImportXls(Request $request){
+        $filePath = '';
+        $message = '';
+        try{
+            $rules = [
+                'xlsx'    => 'required|mimetypes:application/octet-stream,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip'
+            ];
+            $validator = Validator::make($request->all(), $rules);
+            if ($validator->fails()) {
+                return redirect('/terminal/backmes')->with('message','新增失敗!(請檢查檔案)');
+            } else {
+                if ($request->hasFile('xlsx')) {
+                    if ($request->file('xlsx')->isValid())
+                    {
+                        $destinationPath = base_path() . '/storage/app';
+                        $extension = $request->file('xlsx')->getClientOriginalExtension();
+                        $fileName = 'tgt_' . date('YmdHis') . '.' . $extension;
+                        $request->file('xlsx')->move($destinationPath, $fileName);
+                        $filePath = '/storage/app/' . $fileName;
+                    }
+                }
+            }
+
+            $i = 2; $count = 0;
+            Excel::load($filePath, function($reader) use (&$i,&$count,&$message) {
+                $data = [];
+                $xlsx = $reader->toArray();
+                $now = Carbon::now()->toDateString();
+                foreach($xlsx as $row){
+                    if($row['name'] == ''){
+                        $message .= "第{$i}列 姓名有誤<br>";
+                        break;
+                    } elseif(!is_numeric($row['people']) && $row['people']<=0) {
+                        $message .= "第{$i}列 人數有誤<br>";
+                        break;
+                    } elseif(!in_array($row['ticket'],['train','flight','boat','A','B'])) {
+                        $message .= "第{$i}列 票種錯誤有誤<br>";
+                        break;
+                    } else {
+                        $meat = [];
+                        $is_overseas = 0;
+                        $num_b = 0; $num_t = 0; $num_f = 0;
+                        $money = 0;
+                        // 檢查座位
+                        if($row['ticket'] == 'boat'){
+                            if(!is_numeric($row['boat']) && $row['boat']<=0) { $message .= "第{$i}列 船票數量有誤<br>"; break; }
+                            $act = pro::where('id',$row['boat'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'cash')->first();
+                            if($row['people']>$act->Count){
+                                $message .= "第{$i}列 船票({$row['boat']})人數已滿<br>";
+                                break;
+                            }
+                            $money = $act->cash * $row['people'];
+                            $num_b = $row['people'];
+                        } elseif($row['ticket'] == 'train'){
+                            if(!is_numeric($row['train']) && $row['train']<=0) { $message .= "第{$i}列 車票數量有誤<br>"; break; }
+                            $act = pro::where('id',$row['train'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'cash')->first();
+                            if($row['people']>$act->Count){
+                                $message .= "第{$i}列 車票({$row['train']})人數已滿<br>";
+                                break;
+                            }
+                            $money = $act->cash * $row['people'];
+                            $num_t = $row['people'];
+                        } elseif($row['ticket'] == 'flight'){
+                            if(!is_numeric($row['flight']) && $row['flight']<=0) { $message .= "第{$i}列 機票數量有誤<br>"; break; }
+                            $act = pro::where('id',$row['flight'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'cash')->first();
+                            if($row['people']>$act->Count){
+                                $message .= "第{$i}列 機票({$row['flight']})人數已滿<br>";
+                                break;
+                            }
+                            $money = $act->cash * $row['people'];
+                            $num_f = $row['people'];
+                        } elseif($row['ticket'] == 'A'){
+                            if(!is_numeric($row['train']) && $row['train']<=0) { $message .= "第{$i}列 車票數量有誤<br>"; break; }
+                            if(!is_numeric($row['flight']) && $row['flight']<=0) { $message .= "第{$i}列 機票數量有誤<br>"; break; }
+                            $act = pro::where('id',$row['train'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'cash')->first();
+                            if($row['people']>$act->Count){
+                                $message .= "第{$i}列 車票({$row['train']})人數已滿<br>";
+                                break;
+                            }
+                            $money = $act->cash * $row['people'];
+                            $act = pro::where('id',$row['flight'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'cash')->first();
+                            if($row['people']>$act->Count){
+                                $message .= "第{$i}列 機票({$row['flight']})人數已滿<br>";
+                                break;
+                            }
+                            $money = $money + ($act->cash * $row['people']);
+                            $num_t = $row['people'];
+                            $num_f = $row['people'];
+                        } elseif($row['ticket'] == 'B'){
+                            if(!is_numeric($row['boat']) && $row['boat']<=0) { $message .= "第{$i}列 船票數量有誤<br>"; break; }
+                            if(!is_numeric($row['train']) && $row['train']<=0) { $message .= "第{$i}列 車票數量有誤<br>"; break; }
+                            if(!is_numeric($row['flight']) && $row['flight']<=0) { $message .= "第{$i}列 機票數量有誤<br>"; break; }
+                            $act = pro::where('id',$row['train'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'cash')->first();
+                            if($row['people']>$act->Count){
+                                $message .= "第{$i}列 車票({$row['train']})人數已滿<br>";
+                                break;
+                            }
+                            $money = $act->cash * $row['people'];
+                            $act = pro::where('id',$row['flight'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'cash')->first();
+                            if($row['people']>$act->Count){
+                                $message .= "第{$i}列 機票({$row['flight']})人數已滿<br>";
+                                break;
+                            }
+                            $money = $money + ($act->cash * $row['people']);
+                            $act = pro::where('id',$row['boat'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'cash')->first();
+                            if($row['people']>$act->Count){
+                                $message .= "第{$i}列 船票({$row['boat']})人數已滿<br>";
+                                break;
+                            }
+                            $money = $money + ($act->cash * $row['people']);
+                            $num_t = $row['people'];
+                            $num_f = $row['people'];
+                            $num_b = $row['people'];
+                        } else {
+                            $message .= "第{$i}列 票種錯誤有誤<br>";
+                            break;
+                        }
+                        // 寫入
+                        $sn = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
+                        if($sn>0){
+                            $sn += 1;
+                        } else {
+                            $sn = '1'.Carbon::now()->format('Ymd').'0001';
+                        }
+                        $data = [
+                            'pople'      => $row['people'],
+                            'name'       => $row['name'],
+                            'tel'        => $row['phone'],
+                            'email'      => $row['email'],
+                            'notes'      => '',
+                            'meat'       => json_encode($meat),
+                            'coupon'     => 0,
+                            'sn'         => $sn,
+                            'money'      => $money,
+                            'pay_type'   => '合作販售',
+                            'pay_status' => '已付款',
+                            'result'     => '',
+                            'manage'     => date('Y-m-d H:i:s').' 匯入來源:'.$row['source'],
+                            'discount'   => '',
+                            'vegetarian' => 0,
+                            'is_overseas'=> $is_overseas,
+                            'edit_type'  => '合作販售',
+                            'plan'       => $row['ticket'],
+                            'num_b'      => $num_b,
+                            'num_t'      => $num_t,
+                            'num_f'      => $num_f,
+                        ];
+                        $order = order::create($data);
+                        switch($data['plan']){
+                            case 'boat':
+                                DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['boat']]);
+                                break;
+                            case 'train':
+                                DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['train']]);
+                                break;
+                            case 'flight':
+                                DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['flight']]);
+                                break;
+                            case 'A':
+                                DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['train']]);
+                                DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['flight']]);
+                                break;
+                            case 'B':
+                                DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['train']]);
+                                DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['flight']]);
+                                DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['boat']]);
+                                break;
+                        }
+                        if($order->pay_status == '已付款'){
+                            $count++;
+                            $mailer = [
+                                'pople' => $order->pople,
+                                'email' => $order->email,
+                                'name'  => $order->name,
+                                'phone' => $order->tel,
+                                'id'    => $order->id,
+                                'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
+                                'pre_mail' => true,
+                                'template' => $order->plan,
+                            ];
+                            if($mailer['email'] != ''){ $this->SendOrderEmailByTemplateName($mailer); }
+                        }
+                        $i++;
+                    }
+                    
+                }
+            });
+            return redirect('/terminal/print')->with('message',"新增完成!!共新增{$count}筆資料<br>{$message}");
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return redirect('/terminal/print')->with('message','新增失敗!');
+        }
+    }
+
 
     public function Print(Request $request){
         $order = $this->getOrderSearch($request);

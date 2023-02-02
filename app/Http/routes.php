@@ -270,6 +270,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('xls/data/output','terminal\OrderController@XlsDataOuput');
         Route::get('xls/emaildata/output','terminal\OrderController@XlsEmailDataOuput');
         Route::post('order/{id}/resent','terminal\OrderController@beSentOrderMail');
+        Route::post('order/import.xls','terminal\OrderController@orderImportXls');
 
         // 發票相關
         Route::post('order/inv/single/open','terminal\InvController@singleInvOpne');
