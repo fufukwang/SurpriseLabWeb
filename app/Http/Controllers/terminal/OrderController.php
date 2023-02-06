@@ -62,6 +62,7 @@ class OrderController extends WebController
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
                 $order = order::select('id','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','edit_type','money','plan','refund','cut','handling','num_f','num_b','num_t')->find($id);
+                $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
             }
@@ -72,7 +73,7 @@ class OrderController extends WebController
                 ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day,day_parts"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
         $boat = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")->where('ticket_type','boat')
                 ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day,day_parts"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
-        return view('terminal.backend.order',compact('order','train','flight','boat'));
+        return view('terminal.backend.order',compact('order','train','flight','boat','cooperate'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -461,7 +462,7 @@ class OrderController extends WebController
                             'discount'   => '',
                             'vegetarian' => 0,
                             'is_overseas'=> $is_overseas,
-                            'edit_type'  => '合作販售',
+                            'edit_type'  => '合作-'.$row['source'],
                             'plan'       => $row['ticket'],
                             'num_b'      => $num_b,
                             'num_t'      => $num_t,
@@ -488,8 +489,9 @@ class OrderController extends WebController
                                 DB::table('terminal_pro_order')->insert(['order_id'=>$order->id,'pro_id'=>$row['boat']]);
                                 break;
                         }
+                        $count++;
+                        /*
                         if($order->pay_status == '已付款'){
-                            $count++;
                             $mailer = [
                                 'pople' => $order->pople,
                                 'email' => $order->email,
@@ -502,6 +504,7 @@ class OrderController extends WebController
                             ];
                             if($mailer['email'] != ''){ $this->SendOrderEmailByTemplateName($mailer); }
                         }
+                        */
                         $i++;
                     }
                     
