@@ -410,6 +410,7 @@ class BackController extends Controller
         Excel::create('座位狀況',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [[
+                    'id'   => '編號',
                     'day'  => '日期',
                     'mon'  => '星期',
                     'part' => '時段',
@@ -429,6 +430,7 @@ class BackController extends Controller
                         default: $mon = '日'; break;
                     }
                     $tmp = [
+                        'id'   => $row['id'],
                         'day'  => $day->format('m/d'),
                         'mon'  => $mon,
                         'part' => substr($row['rang_start'],0,5).'~'.substr($row['rang_end'],0,5),
