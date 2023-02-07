@@ -152,9 +152,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-train">
 
-                                            
-
                                             <!-- 02 -->
+                                            <div class="item">
+                                                <div class="slideshow-video">
+                                                    <iframe width="324" height="576" src="https://www.youtube.com/embed/yo5YYJVmuYE" title="《微醺列車 THE GREAT TIPSY：BON VOYAGE》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/zjL1_8RqjtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                                </div>
+                                            </div>
+
+                                            <!-- 03 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
                                                     <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_1.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_1.jpg" alt="微醺列車">
@@ -164,17 +170,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </figure>
                                             </div>
 
-                                            <!-- 01 -->
-                                            <div class="item">
-                                                <div class="slideshow-video">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zjL1_8RqjtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                </div>
-                                            </div>
-
-                                            <!-- 03 -->
+                                            <!-- 04 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_1.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_1.jpg" alt="微醺列車">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_2.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_2.jpg" alt="微醺列車：藏女2">
+                                                    <figcaption>
+                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 05 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_3.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_3.jpg" alt="微醺列車：列車長">
+                                                    <figcaption>
+                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 06 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_4.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_4.jpg" alt="微醺列車：工人">
+                                                    <figcaption>
+                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 07 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_5.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_5.jpg" alt="微醺列車：小魏">
+                                                    <figcaption>
+                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 08 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_6.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_6.jpg" alt="微醺列車：貴婦">
+                                                    <figcaption>
+                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 01 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_7.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_7.jpg" alt="微醺列車：貴婦2">
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
@@ -231,23 +280,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-flight">
 
-                                            <!-- 01 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg" alt="無光飛航">
-                                                    <figcaption>
-                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-
                                             <!-- 02 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg" alt="無光飛航">
+                                                    <iframe width="324" height="576" src="https://www.youtube.com/embed/zMXs50QmPZE" title="《FLIGHT 無光飛航》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                    <!-- <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg" alt="無光飛航">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
-                                                    </figcaption>
+                                                    </figcaption> -->
                                                 </figure>
                                             </div>
 
@@ -260,6 +300,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </figcaption>
                                                 </figure>
                                             </div>
+
+                                            <!-- 04 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_2.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_2.jpg" alt="無光飛航：空服員">
+                                                    <figcaption>
+                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+
+                                            <!-- 05 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_3.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_3.jpg" alt="無光飛航：空服員與乘客">
+                                                    <figcaption>
+                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 06 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_4.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_4.jpg" alt="無光飛航：安全須知卡">
+                                                    <figcaption>
+                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 07 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_5.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_5.jpg" alt="無光飛航：窗景">
+                                                    <figcaption>
+                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+
+                                            <!-- 01 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_6.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_6.jpg" alt="無光飛航:雜訊">
+                                                    <figcaption>
+                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
                                         </div>
 
                                         <!-- Custom Controls -->
@@ -308,20 +401,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-bistro">
 
-                                            <!-- 01 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_1.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_1.jpg" alt="落日小酒館">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-
                                             <!-- 02 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_1.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_1.jpg" alt="落日小酒館">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_1.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_1.jpg" alt="落日轉運站：夜間售票亭">
                                                     <figcaption>
                                                         飲品 ╳ 小點 ╳ 周邊
                                                     </figcaption>
@@ -331,7 +414,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 03 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_1.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_1.jpg" alt="落日小酒館">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_2.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_2.jpg" alt="落日轉運站：夜間售票亭">
+                                                    <figcaption>
+                                                        飲品 ╳ 小點 ╳ 周邊
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 04 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_3.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_3.jpg" alt="落日轉運站：打卡區">
+                                                    <figcaption>
+                                                        飲品 ╳ 小點 ╳ 周邊
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 05 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_4.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_4.jpg" alt="落日轉運站：售票亭">
+                                                    <figcaption>
+                                                        飲品 ╳ 小點 ╳ 周邊
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 06 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_5.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_5.jpg" alt="落日轉運站：裝置打卡點">
+                                                    <figcaption>
+                                                        飲品 ╳ 小點 ╳ 周邊
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 01 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_6.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_6.jpg" alt="落日轉運站：票卷">
                                                     <figcaption>
                                                         飲品 ╳ 小點 ╳ 周邊
                                                     </figcaption>
