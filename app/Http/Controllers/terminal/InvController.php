@@ -392,9 +392,11 @@ class InvController extends WebController
             );
             $result = $this->inv_cancel($post_data_array);
             $results = json_decode($result['web_info'],true);
-            $r = json_decode($results['Result'],true);
-            $inv->is_cancal = 1;
-            $inv->save();
+            // $r = json_decode($results['Result'],true);
+            if($results['Status'] == 'SUCCESS'){
+                $inv->is_cancal = 1;
+                $inv->save();
+            }
             return Response::json($results, 200);
         } catch (Exception $exception) {
             Log::error($exception);

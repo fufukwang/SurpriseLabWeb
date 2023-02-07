@@ -490,7 +490,6 @@ class OrderController extends WebController
                                 break;
                         }
                         $count++;
-                        /*
                         if($order->pay_status == '已付款'){
                             $mailer = [
                                 'pople' => $order->pople,
@@ -504,7 +503,6 @@ class OrderController extends WebController
                             ];
                             if($mailer['email'] != ''){ $this->SendOrderEmailByTemplateName($mailer); }
                         }
-                        */
                         $i++;
                     }
                     

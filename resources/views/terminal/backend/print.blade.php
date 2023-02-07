@@ -81,6 +81,7 @@
                                                     <option value="信用卡"@if(isset($request->pay_type) && $request->pay_type=='信用卡') selected @endif>信用卡</option>
                                                     <option value="後台編輯"@if(isset($request->pay_type) && $request->pay_type=='後台編輯') selected @endif>後台編輯</option>
                                                     <option value="現場購票"@if(isset($request->pay_type) && $request->pay_type=='現場購票') selected @endif>現場購票</option>
+                                                    <option value="合作販售"@if(isset($request->pay_type) && $request->pay_type=='合作販售') selected @endif>合作販售</option>
                                                 </select>
                                                 <!-- <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label> -->
                                                 <label><input type="checkbox" name="is_overseas" value="2"@if($request->is_overseas==2) checked @endif>國內信用卡</label>
@@ -243,11 +244,13 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                                     @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && !$inv_open)
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}">發票開立</button><br /><br />
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" style="margin-bottom: 20px;" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}">發票開立</button>
                                                     @endif
                                                     @endif
-                                                    <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
-                                                    <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                    <div>
+                                                        <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
+                                                        <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                    </div>
                                                 </td>
                                             </tr>
 @empty
@@ -1195,7 +1198,7 @@ $(function(){
                     $.Notification.notify('success','bottom left','發票已作廢', '發票已作廢');
                     $('.remove-inv[data-id='+id+']').remove();
                 } else {
-                    $.Notification.notify('error','bottom left','請聯繫資訊人員', '發票作廢失敗');
+                    $.Notification.notify('error','bottom left',data.Message, '發票作廢失敗');
                 }
             },'json');
         } else {
