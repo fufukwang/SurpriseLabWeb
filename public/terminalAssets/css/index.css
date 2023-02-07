@@ -446,6 +446,17 @@ a {
           transform: translate(-50%, -24px);
   z-index: 1;
 }
+@media screen and (min-width: 1200px) {
+  #projects.project-section .project-wrap .project-tab-wrap .tab-content .project-slideshow .content-inner--slideshow-cover .custom-owl-nav ,
+  #discount .cta-wrap .custom-owl-nav{
+    top: 13.5vw;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  #projects.project-section .project-wrap .project-tab-wrap .tab-content .project-slideshow .content-inner--slideshow-cover .custom-owl-nav ,#discount .cta-wrap .custom-owl-nav{
+    top: calc((100vw - 40px) * 0.65 / 2);
+  }
+}
 #discount .cta-wrap .custom-owl-nav{
   top: 56%;
 }
