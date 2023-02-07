@@ -282,7 +282,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                                             <!-- 02 -->
                                             <div class="item">
-                                                <figure class="slideshow-card">
+                                                <figure class="slideshow-video">
                                                     <iframe width="324" height="576" src="https://www.youtube.com/embed/zMXs50QmPZE" title="《FLIGHT 無光飛航》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                                     <!-- <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg" alt="無光飛航">
                                                     <figcaption>
