@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0208">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
