@@ -163,7 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 03 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_1.jpg" data-src="/terminalAssets/images/main/img_train_1.jpg" data-src-retina="/terminalAssets/images/main/img_train_1.jpg" alt="微醺列車">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_train_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_train_1.jpg?date=0208" alt="微醺列車">
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
@@ -294,7 +294,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 03 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg" alt="無光飛航">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_flight_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg?date=0208" alt="無光飛航">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
@@ -404,7 +404,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 02 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_1.jpg" data-src="/terminalAssets/images/main/img_bistro_1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_1.jpg" alt="落日轉運站：夜間售票亭">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" alt="落日轉運站：夜間售票亭">
                                                     <figcaption>
                                                         飲品 ╳ 小點 ╳ 周邊
                                                     </figcaption>
