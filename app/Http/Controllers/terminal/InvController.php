@@ -304,12 +304,17 @@ class InvController extends WebController
     public function singleInvOpne(Request $request){
         try{
             $order = order::find($request->id);
+            $inv_count = inv::where('order_id',$request->id)->where('is_cancal',1)->count();
+            $psn = '';
+            if($inv_count>0){
+                $psn = '_'.$inv_count;
+            }
             $post_data_array = [
                 'RespondType' => 'JSON',
                 'Version' => '1.4',
                 'TimeStamp' => time(), //請以 time() 格式
                 'TransNum' => '',
-                'MerchantOrderNo' => $request->MerchantOrderNo,
+                'MerchantOrderNo' => $request->MerchantOrderNo.$psn,
                 'BuyerName' => $request->BuyerName,
                 'BuyerUBN' => $request->BuyerUBN,
                 'BuyerPhone' => $request->BuyerPhone,
@@ -342,14 +347,31 @@ class InvController extends WebController
             ];
             $result = $this->inv_sent($post_data_array);
             $results = json_decode($result['web_info'],true);
+            if($results['Status'] == 'SUCCESS'){
+                $order->discount = $request->handling_fee;
+                $order->save();
+                if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
+                if(isset($r['InvoiceNumber'])){
+                    inv::insert([
+                        'order_id'  => $request->id,
+                        'number'    => $r['InvoiceNumber'],
+                        'is_cancal' => 0,
+                        'sent_obj'  => json_encode($post_data_array),
+                        'results'   => $result['web_info']
+                    ]);
+                } else {
+                    return Response::json(['Status' => false,'message' => '無法取得發票號碼'], 200);
+                }
+            }
+
+/*
             if($results['Status'] != 'LIB10003'){
                 if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
             } else {
                 $r['InvoiceNumber'] = '';
             }
             $inv = inv::where('order_id',$request->id)->first();
-            $order->discount = $request->handling_fee;
-            $order->save();
+            
             if($inv){
                 $inv->is_cancal = 0;
                 $inv->save();
@@ -370,6 +392,7 @@ class InvController extends WebController
                     return Response::json(['Status' => false], 200);
                 }
             }
+            */
             return Response::json($results, 200);
         } catch (Exception $exception) {
             Log::error($exception);
@@ -382,7 +405,7 @@ class InvController extends WebController
     // 發票報廢
     public function InvClose(Request $request){
         try{
-            $inv = inv::where('order_id',$request->id)->first();
+            $inv = inv::where('order_id',$request->id)->orderBy('created_at','desc')->first();
             $post_data_array = array(
                 'RespondType' => 'JSON',
                 'Version' => '1.0',

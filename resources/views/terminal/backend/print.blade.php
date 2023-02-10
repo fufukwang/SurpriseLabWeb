@@ -1,4 +1,5 @@
 @include('backstage.header',['title' => '落日轉運站訂單列表'])
+<style>.inv_btn{margin-bottom: 20px;}</style>
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -176,7 +177,8 @@
                   
             }
         }
-        $number = App\model\terminal\inv::select('number','is_cancal')->where('order_id',$row->id)->first();
+        $number = App\model\terminal\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
+        $inv_count = App\model\terminal\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
         if($number){
             $inv_open = true;
         }
@@ -205,7 +207,7 @@
     @if(!$number->is_cancal)
         <a class="btn btn-danger btn-xs remove-inv" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
     @else
-        (已報廢)
+        <span id="inv_span_{{ $row->id }}">(已報廢)</span>
     @endif
 @endif
 <br />
@@ -243,9 +245,9 @@
                                                 </td>
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
-                                                    @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && !$inv_open)
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" style="margin-bottom: 20px;" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}">發票開立</button>
-                                                    @endif
+                                                    
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal))) @else style="display:none" @endif>發票開立</button>
+                                                    
                                                     @endif
                                                     <div>
                                                         <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -1159,11 +1161,13 @@ $(function(){
                     $.Notification.notify('success','bottom left','發票已建立', '發票已建立');
                     $('.inv_btn[data-id='+id+']').remove();
                     $('input[checkbox][value='+id+']').remove();
+                    $('#inv_span_'+id).text('');
                 } else if(data.Status == 'LIB10003'){
                     $('#con-close-modal').modal('hide');
                     $.Notification.notify('success','bottom left','發票已建立過了', '發票已建立');
                     $('.inv_btn[data-id='+id+']').remove();
                     $('input[checkbox][value='+id+']').remove();
+                    $('#inv_span_'+id).text('');
                 } else {
                     $.Notification.notify('error','bottom left','請聯繫資訊人員', '發票建立失敗');
                 }
@@ -1193,10 +1197,11 @@ $(function(){
             },function(data){
                 // 顯示發票號碼
                 if(data.Status == 'SUCCESS'){
-                    var result = JSON.parse(data.Result);
+                    // var result = JSON.parse(data.Result);
                     $('#inv_cancal_modal').modal('hide');
                     $.Notification.notify('success','bottom left','發票已作廢', '發票已作廢');
                     $('.remove-inv[data-id='+id+']').remove();
+                    $('.inv_btn[data-id='+id+']').show();
                 } else {
                     $.Notification.notify('error','bottom left',data.Message, '發票作廢失敗');
                 }
