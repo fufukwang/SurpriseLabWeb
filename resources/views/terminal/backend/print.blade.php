@@ -182,6 +182,15 @@
         if($number){
             $inv_open = true;
         }
+        $inv_money = $totle_money;
+        if($row->pay_status == '未完成'){
+            $inv_money = 0;
+        } else {
+            $handling_fee = 0;
+            if($row->handling > 0 && $row->refund > 0) $handling_fee = round($row->handling * $row->refund / 100);
+            $inv_money -= $row->refund;
+            $inv_money += $handling_fee;
+        }
     ?>
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>@if($row->pay_status=='已付款' && $row->refund == 0 && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
@@ -229,7 +238,7 @@
                                                     @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
                                                     @if($couponNumber>0) [{{ $totle_money }}] @endif
 
-<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
+<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;"><span style="color:red">(免稅額)</span><br>小計：{{ $inv_money }}<br>稅額：0<br>總計：{{$inv_money}}</div>'>{{--<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>--}}發票資訊</span>]
 </th>
                                                 <td>{!! nl2br($row->manage) !!}</td>
 
