@@ -1063,7 +1063,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="tab-pane fade" id="intro-darkfield" role="tabpanel" aria-labelledby="intro-darkfield-tab">
                             <div class="tab-content-inner">
                                 <div class="heading-p">
-                                    <p>來自英國的 DARKFIELD 擁有強大的創作能量，專精於各形式的聲音劇場創作，同時擁有豐富的國際巡演經驗。《FLIGHT》相關系列作品共有 4 項，全球體驗人次累積超過 25 萬人。過往合作夥伴包含微軟（Microsoft）、環球影城（Universal Studios）、阿爾梅達劇院（Almeida Theatre）、阿姆斯特丹國際電影節等（Amsterdam International Film Festival）等，橫跨知名品牌、樂園、藝文活動與場館，深受大眾喜愛。</p>
+                                    <p>來自英國的 DARKFIELD 擁有強大的創作能量，<br><br>專精於各形式的聲音劇場創作，<br>同時擁有豐富的國際巡演經驗。<br><br>《FLIGHT》相關系列作品共有 4 項，<br>全球體驗人次累積超過 25 萬人。</p>
                                 </div>
                                 <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
@@ -1078,12 +1078,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </figcaption> -->
                                                 </figure>
                                                 <div class="project-intro">
-                                                    <div class="feature-wrap">
-                                                    </div>
+                                                    <!-- <div class="feature-wrap">
+                                                    </div> -->
                                                     <div class="project-desc">
-                                                        EULOGY 是一個超現實且超凡脫俗的旅程，你將穿越一個完全存在於你腦海中的夢幻般的迷宮酒店。 該如何到達是一個謎，你為什麼在那裡也仍不清楚。確保你有閱讀小冊子即可。 
-                                                        <br/><br/>
-                                                        EULOGY 既是一次緊湊且令人振奮的旅程，也是對具體的人類意識體驗與僅存在想像中的體驗之相對價值的更深入探索。
+                                                        EULOGY 是一個超現實且超凡脫俗的旅程，你將穿越一個完全存在於你腦海中的夢幻般的迷宮酒店。 該如何到達是一個謎，你為什麼在那裡也仍不清楚。確保你有閱讀小冊子即可。
                                                     </div>
                                                 </div>
                                             </div>
@@ -1097,12 +1095,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </figcaption> -->
                                                 </figure>
                                                 <div class="project-intro">
-                                                    <div class="feature-wrap">
-                                                    </div>
+                                                    <!-- <div class="feature-wrap">
+                                                    </div> -->
                                                     <div class="project-desc">
-                                                        DARKFIELD RADIO 通過手機APP將 DARKFIELD 的作品和雙聲道音檔帶入觀眾的周圍—他們的家、汽車、附近的公園都成為怪奇世界開展的場景，帶他們遠離現實。 
-                                                        <br/>
-                                                        節目推出後廣受好評，在威尼斯國際電影節、IDFA、倫敦電影節、飛雨電影節、翠貝卡電影節、SXSW 等主要電影節上放映，以年度最具創新性的敘事贏得哥倫比亞數位故事實驗室的突破獎。
+                                                        DARKFIELD RADIO 通過手機APP將 DARKFIELD 的作品和雙聲道音檔帶入觀眾的周圍—他們的家、汽車、附近的公園都成為怪奇世界開展的場景，帶他們遠離現實。
                                                     </div>
                                                 </div>
                                             </div>
@@ -1116,8 +1112,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </figcaption> -->
                                                 </figure>
                                                 <div class="project-intro">
-                                                    <div class="feature-wrap">
-                                                    </div>
+                                                    <!-- <div class="feature-wrap">
+                                                    </div> -->
                                                     <div class="project-desc">
                                                         SÉANCE(降神會)是DARKFIELD第一個沈浸式作品，將24呎的貨櫃轉變為維多莉雅風格的降神廳。20分鐘的體驗中將探索一群人的心理及信仰，不只關於貨櫃內發生的事，也可能與在降神廳內的想像有關。
                                                     </div>
@@ -1143,7 +1139,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="tab-pane fade" id="intro-roguewave" role="tabpanel" aria-labelledby="intro-roguewave-tab">
                             <div class="tab-content-inner">
                                 <div class="heading-p">
-                                    <p>「風狗浪ROGUE WAVE」，於2022年成立，由進港浪製作所的導演洪唯堯，帶領的全新沉浸式團隊。風狗浪致力研究沉浸式及互動式展演，由多位導演共同組成。表現形式上並不侷限特定媒材、形式、議題，目標找尋更多不同的體驗、活動、事件，期待為觀眾創造新的旅程。</p>
+                                    <p>「風狗浪ROGUE WAVE」於2022年成立，<br>是由進港浪製作所的導演洪唯堯帶領的全新沉浸式團隊。<br><br>風狗浪致力研究沉浸式及互動式展演，由多位導演共同組成。<br>表現形式上並不侷限特定媒材、形式、議題，<br><br>目標為找尋更多不同的體驗、活動、事件，<br>期待為觀眾創造新的旅程。</p>
                                 </div>
                                 <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
