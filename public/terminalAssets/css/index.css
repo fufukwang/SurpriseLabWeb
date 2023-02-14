@@ -694,7 +694,7 @@ a {
 
 #introduce .heading-p p.italic {
   font-style: italic;
-  opacity: .9;
+  opacity: .8;
   font-weight: lighter;
 }
 
@@ -719,8 +719,16 @@ a {
     padding: 25px 10px;
   }
   #introduce .project-desc {
-    width: 60%;
+    max-width: 600px;
+    width: 100%;
     padding: 25px 10px;
+    margin: 0 auto;
+    text-align: center
+  }
+  #introduce .feature-wrap + .project-desc {
+    max-width: 100%;
+    width: 60%;
+    text-align: left;
   }
 }
 
@@ -782,7 +790,9 @@ a {
 .eapps-instagram-feed-posts-item-template-classic {
   border: none!important;
 }
-
+.eapps-instagram-feed-content {
+  min-height: 500px;
+}
 #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-content, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-text, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a:hover{
   color: #fff!important;
   background: none;
