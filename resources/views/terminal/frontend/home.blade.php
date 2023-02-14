@@ -504,12 +504,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <a href="/terminal/booking_now" class="activity-btn">購票去</a>
                 </div>
             </div>
-            <div class="elfsight-app-bfcc5c1c-9303-4b2c-9427-808555aa10bc"></div>
+            <div class="elfsight-app-bfcc5c1c-9303-4b2c-9427-808555aa10bc js-anchor-section review-section"></div>
 
         </section>
         
 
-        <section class="section-wrap js-anchor-section" id="tour">
+        <section class="section-wrap" id="tour">
             <div class="container-xl">
                 <div class="row">
                     <div class="offset-xl-2 col-xl-8 col-12">
@@ -917,7 +917,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
-        <section class="section-wrap skip-background-light project-section" id="introduce">
+        <section class="section-wrap skip-background-light project-section js-anchor-section" id="introduce">
             <div class="section-heading-wrap">
                 <h2 class="heading-title">團隊介紹</h2>
                 <h3 class="heading-subtitle">Team</h3>

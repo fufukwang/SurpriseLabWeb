@@ -752,19 +752,26 @@ a {
   }
 }
 
+.review-section {
+  margin-top: 125px;
+  padding-top: 125px;
+}
 
 .eapps-instagram-feed-title-container .eapps-instagram-feed-title {
   color: #efaf50;
   font-size: 36px;
-  padding-top: 250px;
   padding-bottom: 30px;
   line-height: 1.5;
 }
 @media screen and (max-width: 1199.98px) {
+  .review-section {
+    margin-top: 90px;
+    padding-top: 90px;
+  }
+
   .eapps-instagram-feed-title-container .eapps-instagram-feed-title {
     font-size: 28px;
     line-height: 1.46;
-    padding-top: 125px;
   }
 }
 
