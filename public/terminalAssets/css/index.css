@@ -694,10 +694,23 @@ a {
 
 #introduce .heading-p p.italic {
   font-style: italic;
+  opacity: .9;
+  font-weight: lighter;
 }
 
 #introduce .feature-item {
+  position: relative;
   padding: 5px 0;
+  width: auto;
+}
+
+#introduce .feature-item::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ffcc99;
+  margin-right: 13px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -713,7 +726,8 @@ a {
 
 @media screen and (max-width: 767px){
   #introduce .project-wrap .project-tab-wrap .tab-content .project-intro .feature-wrap .feature-item {
-    width: 100%;
+    padding: 3px 7px 3px 0;
+    min-height: 25px;
   }
 }
 
@@ -723,6 +737,18 @@ a {
     line-height: 1.8;
     width: 100%;
     padding: 0 10px 20px;
+  }
+  #introduce .feature-item:first-child::before{
+    content: none;
+    margin-right: 0;
+  }
+  #introduce .feature-item:not(:first-child)::before {
+    content: '/';
+    width: 0;
+    height: auto;
+  }
+  #introduce .feature-item {
+    padding-right: 7px;
   }
 }
 
