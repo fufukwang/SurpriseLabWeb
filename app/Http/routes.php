@@ -208,6 +208,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('xls/data/output','dark3\OrderController@XlsDataOuput');
         Route::get('xls/emaildata/output','dark3\OrderController@XlsEmailDataOuput');
         Route::post('order/{id}/resent','dark3\OrderController@beSentOrderMail');
+        Route::post('order/import.xls','terminal\OrderController@orderImportXls');
 
         // 發票相關
         Route::post('order/inv/single/open','dark3\InvController@singleInvOpne');
@@ -228,7 +229,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('setting/store', 'dark3\SpecialController@postSettingStore');
     });
 
-    // 落日轉運站 S3
+    // 落日轉運站
     Route::group(['prefix' => 'terminal'], function(){
         Route::get('backmes','terminal\BackController@BackMes');
         Route::post('backmes','terminal\BackController@BackMes');
@@ -270,6 +271,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('xls/data/output','terminal\OrderController@XlsDataOuput');
         Route::get('xls/emaildata/output','terminal\OrderController@XlsEmailDataOuput');
         Route::post('order/{id}/resent','terminal\OrderController@beSentOrderMail');
+        Route::post('order/import.xls','terminal\OrderController@orderImportXls');
 
         // 發票相關
         Route::post('order/inv/single/open','terminal\InvController@singleInvOpne');

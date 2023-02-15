@@ -1,4 +1,5 @@
 @include('backstage.header',['title' => '落日轉運站訂單列表'])
+<style>.inv_btn{margin-bottom: 20px;}</style>
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -81,6 +82,7 @@
                                                     <option value="信用卡"@if(isset($request->pay_type) && $request->pay_type=='信用卡') selected @endif>信用卡</option>
                                                     <option value="後台編輯"@if(isset($request->pay_type) && $request->pay_type=='後台編輯') selected @endif>後台編輯</option>
                                                     <option value="現場購票"@if(isset($request->pay_type) && $request->pay_type=='現場購票') selected @endif>現場購票</option>
+                                                    <option value="合作販售"@if(isset($request->pay_type) && $request->pay_type=='合作販售') selected @endif>合作販售</option>
                                                 </select>
                                                 <!-- <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label> -->
                                                 <label><input type="checkbox" name="is_overseas" value="2"@if($request->is_overseas==2) checked @endif>國內信用卡</label>
@@ -175,9 +177,19 @@
                   
             }
         }
-        $number = App\model\terminal\inv::select('number','is_cancal')->where('order_id',$row->id)->first();
+        $number = App\model\terminal\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
+        $inv_count = App\model\terminal\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
         if($number){
             $inv_open = true;
+        }
+        $inv_money = $totle_money;
+        if($row->pay_status == '未完成'){
+            $inv_money = 0;
+        } else {
+            $handling_fee = 0;
+            if($row->handling > 0 && $row->refund > 0) $handling_fee = round($row->handling * $row->refund / 100);
+            $inv_money -= $row->refund;
+            $inv_money += $handling_fee;
         }
     ?>
                                             <tr id="tr_{{ $row->id }}">
@@ -204,7 +216,7 @@
     @if(!$number->is_cancal)
         <a class="btn btn-danger btn-xs remove-inv" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
     @else
-        (已報廢)
+        <span id="inv_span_{{ $row->id }}">(已報廢)</span>
     @endif
 @endif
 <br />
@@ -226,7 +238,7 @@
                                                     @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
                                                     @if($couponNumber>0) [{{ $totle_money }}] @endif
 
-<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]
+<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;"><span style="color:red">(免稅額)</span><br>小計：{{ $inv_money }}<br>稅額：0<br>總計：{{$inv_money}}</div>'>{{--<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>--}}發票資訊</span>]
 </th>
                                                 <td>{!! nl2br($row->manage) !!}</td>
 
@@ -242,12 +254,14 @@
                                                 </td>
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
-                                                    @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && !$inv_open)
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}">發票開立</button><br /><br />
+                                                    
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal))) @else style="display:none" @endif>發票開立</button>
+                                                    
                                                     @endif
-                                                    @endif
-                                                    <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
-                                                    <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                    <div>
+                                                        <a class="btn btn-primary btn-xs" href="/terminal/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
+                                                        <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                    </div>
                                                 </td>
                                             </tr>
 @empty
@@ -274,6 +288,114 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <h4 class="page-title">落日轉運站訂單資料匯入 </h4>
+                            <div class="table-rep-plugin">
+                                <div class="table-wrapper">
+                                    @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
+                                    <div class="btn-toolbar">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/terminal/order/import.xls" method="post" enctype="multipart/form-data">
+                                            {{ csrf_field() }}
+                                            <div class="form-group col-sm-1">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        匯入資料
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-2">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        <input type="file" class="form-control" placeholder="XLSX檔案" name="xlsx">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-sm-1">
+                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 上傳</button>
+                                            </div>
+                                        </form></div>
+                                    </div>
+                                    @endif
+                                    <div>
+                                        <p>
+                                            範例檔案 : <a href="/example/落日轉運站訂單資料匯入範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
+                                        </p>
+                                        <p>
+                                            說明:<br />
+                                            source 來源名稱<br />
+                                            name 姓名<br />
+                                            phone 電話<br />
+                                            email 信箱<br />
+                                            ticket 票種  <br />
+                                            <ol>
+                                                <li>train(微醺列車)</li>
+                                                <li>flight(無光飛航)</li>
+                                                <li>A(A套票 微醺列車+無光飛航)</li>
+                                                <li>boat(單人船票)</li>
+                                                <li>B(B套票 微醺列車+無光飛航+單人船票)</li>
+                                            </ol>
+                                            train 微醺列車場次編號  <br />
+                                            flight 無光飛航場次編號  <br />
+                                            boat 單人船票場次編號  <br />
+                                            people 人數  <br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1048,11 +1170,13 @@ $(function(){
                     $.Notification.notify('success','bottom left','發票已建立', '發票已建立');
                     $('.inv_btn[data-id='+id+']').remove();
                     $('input[checkbox][value='+id+']').remove();
+                    $('#inv_span_'+id).text('');
                 } else if(data.Status == 'LIB10003'){
                     $('#con-close-modal').modal('hide');
                     $.Notification.notify('success','bottom left','發票已建立過了', '發票已建立');
                     $('.inv_btn[data-id='+id+']').remove();
                     $('input[checkbox][value='+id+']').remove();
+                    $('#inv_span_'+id).text('');
                 } else {
                     $.Notification.notify('error','bottom left','請聯繫資訊人員', '發票建立失敗');
                 }
@@ -1082,12 +1206,13 @@ $(function(){
             },function(data){
                 // 顯示發票號碼
                 if(data.Status == 'SUCCESS'){
-                    var result = JSON.parse(data.Result);
+                    // var result = JSON.parse(data.Result);
                     $('#inv_cancal_modal').modal('hide');
                     $.Notification.notify('success','bottom left','發票已作廢', '發票已作廢');
                     $('.remove-inv[data-id='+id+']').remove();
+                    $('.inv_btn[data-id='+id+']').show();
                 } else {
-                    $.Notification.notify('error','bottom left','請聯繫資訊人員', '發票作廢失敗');
+                    $.Notification.notify('error','bottom left',data.Message, '發票作廢失敗');
                 }
             },'json');
         } else {
@@ -1365,7 +1490,7 @@ function submitSearchForm(){
     $('#SearchForm').attr('target','_top');
     $('#SearchForm').attr('action','/terminal/print');
 }
-@if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
+@if(Session::has('message')) Swal.fire('{!! Session::get('message') !!}'); @endif
 		</script>
 
 
