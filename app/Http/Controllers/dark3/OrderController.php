@@ -62,6 +62,7 @@ class OrderController extends Controller
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
                 $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v')->find($id);
+                $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
             }
@@ -69,7 +70,7 @@ class OrderController extends Controller
         $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
         $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))>=".$order->pople)
             ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
-        return view('dininginthedark3.backend.order',compact('order','pro'));
+        return view('dininginthedark3.backend.order',compact('order','pro','cooperate'));
     }
     public function OrderUpdate(Request $request,$id){
 
@@ -325,6 +326,114 @@ class OrderController extends Controller
         }
     }
 
+    // XLS上傳訂單
+    public function orderImportXls(Request $request){
+        $filePath = '';
+        $message = '';
+        try{
+            $rules = [
+                'xlsx'    => 'required|mimetypes:application/octet-stream,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip'
+            ];
+            $validator = Validator::make($request->all(), $rules);
+            if ($validator->fails()) {
+                return redirect('/dark3/backmes')->with('message','新增失敗!(請檢查檔案)');
+            } else {
+                if ($request->hasFile('xlsx')) {
+                    if ($request->file('xlsx')->isValid())
+                    {
+                        $destinationPath = base_path() . '/storage/app';
+                        $extension = $request->file('xlsx')->getClientOriginalExtension();
+                        $fileName = 'tgt_' . date('YmdHis') . '.' . $extension;
+                        $request->file('xlsx')->move($destinationPath, $fileName);
+                        $filePath = '/storage/app/' . $fileName;
+                    }
+                }
+            }
+
+            $i = 2; $count = 0;
+            Excel::load($filePath, function($reader) use (&$i,&$count,&$message) {
+                $data = [];
+                $xlsx = $reader->toArray();
+                $now = Carbon::now()->toDateString();
+                foreach($xlsx as $row){
+                    if($row['name'] == ''){
+                        $message .= "第{$i}列 姓名有誤<br>";
+                        break;
+                    } elseif(!is_numeric($row['people']) && $row['people']<=0) {
+                        $message .= "第{$i}列 人數有誤<br>";
+                        break;
+                    } elseif(!is_numeric($row['ticket']) && $row['ticket']<=0) {
+                        $message .= "第{$i}列 票券編號錯誤<br>";
+                        break;
+                    } elseif($row['people'] != $row['meat_eat'] + $row['vegetarian']) {
+                        $message .= "第{$i}列 葷/素人數與總人數不符<br>";
+                        break;
+                    } else {
+                        $meat = [];
+                        $is_overseas = 0;
+                        $money = 0;
+                        // 檢查座位
+                        $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
+                        $act = pro::where('id',$row['ticket'])->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
+                        if($row['people']>$act->Count){
+                            $message .= "第{$i}列 編號({$row['ticket']})人數已滿<br>";
+                            break;
+                        }
+                        $money = $act->cash * $people * 1.1;
+
+                        // 寫入
+                        $sn = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
+                        if($sn>0){
+                            $sn += 1;
+                        } else {
+                            $sn = Carbon::now()->format('Ymd').'0001';
+                        }
+                        $data = [
+                            'pro_id'     => $row['ticket'],
+                            'pople'      => $row['people'],
+                            'name'       => $row['name'],
+                            'tel'        => $row['phone'],
+                            'email'      => $row['email'],
+                            'notes'      => '',
+                            'meat'       => json_encode($meat),
+                            'coupon'     => 0,
+                            'sn'         => $sn,
+                            'money'      => $money,
+                            'pay_type'   => '合作販售',
+                            'pay_status' => '已付款',
+                            'result'     => '',
+                            'manage'     => date('Y-m-d H:i:s').' 匯入來源:'.$row['source'],
+                            'discount'   => '',
+                            'vegetarian' => 0,
+                            'is_overseas'=> $is_overseas,
+                            'edit_type'  => '合作-'.$row['source'],
+                            'vegetarian' => $request->vegetarian,
+                            'meat_eat'   => $row['meat_eat'] ?? 0,
+                            'no_beef'    => $row['no_beef'] ?? 0,
+                            'no_pork'    => $row['no_pork'] ?? 0,
+                            'no_nut_m'   => $row['no_nut_m'] ?? 0,
+                            'no_shell'   => $row['no_shell'] ?? 0,
+                            'no_nut_v'   => $row['no_nut_v'] ?? 0,
+                        ];
+                        $order = order::create($data);
+                        $count++;
+                        /*
+                        if($order->pay_status == '已付款'){
+                            
+                        }
+                        */
+                        $i++;
+                    }
+
+                }
+            });
+            return redirect('/dark3/print')->with('message',"新增完成!!共新增{$count}筆資料<br>{$message}");
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return redirect('/dark3/print')->with('message','新增失敗!');
+        }
+    }
+
 
     public function Print(Request $request){
         $order = $this->orderQuery($request);
@@ -456,6 +565,7 @@ class OrderController extends Controller
                 array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","回傳交易時間","藍新交易序號","訂單編號","貝殼的序號"]);
                 foreach($cellData as $row){
                     $coupon = "";
+                    $pay_type = $row['pay_type'];
                     if($row['pay_type'] == '信用卡'){
                         if($row['is_overseas']>0){
                             $pay_type = '藍新金流';

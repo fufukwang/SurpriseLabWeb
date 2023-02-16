@@ -256,12 +256,17 @@ class InvController extends Controller
     public function singleInvOpne(Request $request){
         try{
             $order = order::find($request->id);
+            $inv_count = inv::where('order_id',$request->id)->where('is_cancal',1)->count();
+            $psn = '';
+            if($inv_count>0){
+                $psn = '_'.$inv_count;
+            }
             $post_data_array = [
                 'RespondType' => 'JSON',
                 'Version' => '1.4',
                 'TimeStamp' => time(), //請以 time() 格式
                 'TransNum' => '',
-                'MerchantOrderNo' => $request->MerchantOrderNo,
+                'MerchantOrderNo' => $request->MerchantOrderNo.$psn,
                 'BuyerName' => $request->BuyerName,
                 'BuyerUBN' => $request->BuyerUBN,
                 'BuyerPhone' => $request->BuyerPhone,
@@ -287,6 +292,23 @@ class InvController extends Controller
             ];
             $result = $this->inv_sent($post_data_array);
             $results = json_decode($result['web_info'],true);
+            if($results['Status'] == 'SUCCESS'){
+                $order->discount = $request->handling_fee;
+                $order->save();
+                if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
+                if(isset($r['InvoiceNumber'])){
+                    inv::insert([
+                        'order_id'  => $request->id,
+                        'number'    => $r['InvoiceNumber'],
+                        'is_cancal' => 0,
+                        'sent_obj'  => json_encode($post_data_array),
+                        'results'   => $result['web_info']
+                    ]);
+                } else {
+                    return Response::json(['Status' => false,'message' => '無法取得發票號碼'], 200);
+                }
+            }
+            /*
             if($results['Status'] != 'LIB10003'){
                 if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
             } else {
@@ -315,6 +337,7 @@ class InvController extends Controller
                     return Response::json(['Status' => false], 200);
                 }
             }
+            */
             return Response::json($results, 200);
         } catch (Exception $exception) {
             Log::error($exception);
@@ -337,9 +360,11 @@ class InvController extends Controller
             );
             $result = $this->inv_cancel($post_data_array);
             $results = json_decode($result['web_info'],true);
-            $r = json_decode($results['Result'],true);
-            $inv->is_cancal = 1;
-            $inv->save();
+            // $r = json_decode($results['Result'],true);
+            if($results['Status'] == 'SUCCESS'){
+                $inv->is_cancal = 1;
+                $inv->save();
+            }
             return Response::json($results, 200);
         } catch (Exception $exception) {
             Log::error($exception);
