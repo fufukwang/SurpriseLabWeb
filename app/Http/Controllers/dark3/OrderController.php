@@ -379,7 +379,7 @@ class OrderController extends Controller
                             $message .= "第{$i}列 編號({$row['ticket']})人數已滿<br>";
                             break;
                         }
-                        $money = $act->cash * $people * 1.1;
+                        $money = $act->cash * $row['people'] * 1.1;
 
                         // 寫入
                         $sn = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
@@ -407,7 +407,7 @@ class OrderController extends Controller
                             'vegetarian' => 0,
                             'is_overseas'=> $is_overseas,
                             'edit_type'  => '合作-'.$row['source'],
-                            'vegetarian' => $request->vegetarian,
+                            'vegetarian' => $row['meat_eat'] ?? 0,
                             'meat_eat'   => $row['meat_eat'] ?? 0,
                             'no_beef'    => $row['no_beef'] ?? 0,
                             'no_pork'    => $row['no_pork'] ?? 0,

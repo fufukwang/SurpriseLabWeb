@@ -164,8 +164,8 @@
                   
             }
         }
-        $number = App\model\terminal\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
-        $inv_count = App\model\terminal\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
+        $number = App\model\dark3\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
+        $inv_count = App\model\dark3\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
         if($number){
             $inv_open = true;
         }
@@ -273,7 +273,7 @@
                             <h4 class="page-title">無光晚餐S3訂單資料匯入 </h4>
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
-                                    @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
+                                    @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
                                     <div class="btn-toolbar">
                                         <div class="btn-group focus-btn-group" style="width: 100%"><form action="/dark3/order/import.xls" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
@@ -802,6 +802,7 @@
         <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
         <script src="/backstage/plugins/notifications/notify-metro.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11.6.14/dist/sweetalert2.all.min.js"></script>
         <script>
 
 
@@ -831,7 +832,8 @@ $(function(){
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
-                swal(data.message);
+                // swal(data.message);
+                $.Notification.notify('success','bottom left','提示訊息', data.message);
                 $('#tr_'+id).remove();
             });
         }
