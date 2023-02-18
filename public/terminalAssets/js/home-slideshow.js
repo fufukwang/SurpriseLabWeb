@@ -6,7 +6,7 @@ $(function() {
         let $btnPrev = $(this).find('.custom-owl-prev');
         let $btnNext = $(this).find('.custom-owl-next');
     
-        $owl.owlCarousel({
+        $(this).owlCarousel({
             center: true,
             loop: true,
             margin: 60,
@@ -29,11 +29,11 @@ $(function() {
         });
     
         $btnPrev.on('click', function(){
-            $owl.trigger('prev.owl.carousel');
+            $(this).trigger('prev.owl.carousel');
         });
     
         $btnNext.on('click', function(){
-            $owl.trigger('next.owl.carousel');
+            $(this).trigger('next.owl.carousel');
         });
     })
 });
