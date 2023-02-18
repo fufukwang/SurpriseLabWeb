@@ -1,11 +1,11 @@
 $(function() {
     // Owl Carousel
-    let $owl = $('.owl-carousel');
+    const $owl = $('.owl-carousel');
 
     $owl.each(function(){
         const $this = $(this)
-        let $btnPrev = $this.find('.custom-owl-prev');
-        let $btnNext = $this.find('.custom-owl-next');
+        const $btnPrev = $this.next('.custom-owl-nav').find('.custom-owl-prev');
+        const $btnNext = $this.next('.custom-owl-nav').find('.custom-owl-next');
     
         $this.owlCarousel({
             center: true,
