@@ -40,9 +40,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/activity-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0214">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?date=0218">
+    <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0218">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -155,20 +155,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 02 -->
                                             <div class="item">
                                                 <div class="slideshow-video">
-                                                    <iframe width="324" height="576" src="https://www.youtube.com/embed/yo5YYJVmuYE" title="《微醺列車 THE GREAT TIPSY：BON VOYAGE》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                    <iframe width="901" height="507" src="https://www.youtube.com/embed/y3vVzoC2W2A?list=PL_XNZCnBb9xEl7EDitRolq1YIxNCZYDdx" title="《落日轉運站：The Sunset Terminal》｜高雄站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                    <!-- <iframe width="324" height="576" src="https://www.youtube.com/embed/yo5YYJVmuYE" title="《微醺列車 THE GREAT TIPSY：BON VOYAGE》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                                                     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/zjL1_8RqjtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                                 </div>
                                             </div>
 
                                             <!-- 03 -->
-                                            <div class="item">
+                                            <!-- <div class="item">
                                                 <figure class="slideshow-card">
                                                     <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_train_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_train_1.jpg?date=0208" alt="微醺列車">
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
                                                 </figure>
-                                            </div>
+                                            </div> -->
 
                                             <!-- 04 -->
                                             <div class="item">
@@ -292,14 +293,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </div>
 
                                             <!-- 03 -->
-                                            <div class="item">
+                                            <!-- <div class="item">
                                                 <figure class="slideshow-card">
                                                     <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_flight_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg?date=0208" alt="無光飛航">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
                                                 </figure>
-                                            </div>
+                                            </div> -->
 
                                             <!-- 04 -->
                                             <div class="item">
@@ -402,9 +403,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <div class="owl-carousel owl-theme" id="owl-bistro">
 
                                             <!-- 02 -->
-                                            <div class="item">
+                                            <!-- <div class="item">
                                                 <figure class="slideshow-card">
                                                     <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" alt="落日轉運站：夜間售票亭">
+                                                    <figcaption>
+                                                        飲品 ╳ 小點 ╳ 周邊
+                                                    </figcaption>
+                                                </figure>
+                                            </div> -->
+
+                                            <!-- 05 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_4.jpg" data-src="/terminalAssets/images/main/img_bistro_4.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_4.jpg" alt="落日轉運站：售票亭">
                                                     <figcaption>
                                                         飲品 ╳ 小點 ╳ 周邊
                                                     </figcaption>
@@ -431,16 +442,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </figure>
                                             </div>
 
-                                            <!-- 05 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_4.jpg" data-src="/terminalAssets/images/main/img_bistro_4.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_4.jpg" alt="落日轉運站：售票亭">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-
                                             <!-- 06 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
@@ -451,10 +452,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </figure>
                                             </div>
 
-                                            <!-- 01 -->
+                                            <!-- 07 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
                                                     <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_6.jpg" data-src="/terminalAssets/images/main/img_bistro_6.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_6.jpg" alt="落日轉運站：票卷">
+                                                    <figcaption>
+                                                        飲品 ╳ 小點 ╳ 周邊
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 01 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_7.jpg" data-src="/terminalAssets/images/main/img_bistro_7.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_7.jpg" alt="落日月台">
                                                     <figcaption>
                                                         飲品 ╳ 小點 ╳ 周邊
                                                     </figcaption>
@@ -1256,7 +1267,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
     <script src="/terminalAssets/js/index.js"></script>
-    <script src="/terminalAssets/js/home-slideshow.js"></script>
+    <script src="/terminalAssets/js/home-slideshow.js?date=0218"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
