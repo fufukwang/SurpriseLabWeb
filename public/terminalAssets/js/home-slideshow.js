@@ -3,10 +3,11 @@ $(function() {
     let $owl = $('.owl-carousel');
 
     $owl.each(function(){
-        let $btnPrev = $(this).find('.custom-owl-prev');
-        let $btnNext = $(this).find('.custom-owl-next');
+        const $this = $(this)
+        let $btnPrev = $this.find('.custom-owl-prev');
+        let $btnNext = $this.find('.custom-owl-next');
     
-        $(this).owlCarousel({
+        $this.owlCarousel({
             center: true,
             loop: true,
             margin: 60,
@@ -29,11 +30,11 @@ $(function() {
         });
     
         $btnPrev.on('click', function(){
-            $(this).trigger('prev.owl.carousel');
+            $this.trigger('prev.owl.carousel');
         });
     
         $btnNext.on('click', function(){
-            $(this).trigger('next.owl.carousel');
+            $this.trigger('next.owl.carousel');
         });
     })
 });
