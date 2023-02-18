@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
     <meta property="og:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
-    <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png"/>
+    <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph1.jpg"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
@@ -22,7 +22,7 @@
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
     <meta name="twitter:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
-    <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png">
+    <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph1.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
     <title>落日轉運站 The Sunset Terminal</title>
@@ -462,10 +462,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </figure>
                                             </div>
 
+                                            <!-- 08 -->
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_7.jpg" data-src="/terminalAssets/images/main/img_bistro_7.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_7.jpg" alt="落日轉運站啤酒">
+                                                    <figcaption>
+                                                        飲品 ╳ 小點 ╳ 周邊
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
                                             <!-- 01 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_7.jpg" data-src="/terminalAssets/images/main/img_bistro_7.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_7.jpg" alt="落日月台">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_8.jpg" data-src="/terminalAssets/images/main/img_bistro_8.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_8.jpg" alt="落日轉運站啤酒、徽章、飛機餅乾">
                                                     <figcaption>
                                                         飲品 ╳ 小點 ╳ 周邊
                                                     </figcaption>
