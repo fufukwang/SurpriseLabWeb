@@ -482,6 +482,11 @@ h6 {
   width: 131px;
   height: 71.6px;
 }
+@media screen and (max-height: 800px) {
+  .fixed-btn.message-btn {
+    bottom: 20px;
+  }
+}
 @media screen and (max-width: 1199.98px) {
   .fixed-btn.message-btn {
     bottom: 24.2px;
@@ -492,6 +497,11 @@ h6 {
   right: 0;
   width: 218.6px;
   height: 159px;
+}
+@media screen and (max-height: 800px) {
+  .fixed-btn.cta-btn {
+    bottom: 30px;
+  }
 }
 @media screen and (max-width: 1199.98px) {
   .fixed-btn.cta-btn {

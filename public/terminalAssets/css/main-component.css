@@ -338,6 +338,12 @@ body.modal-open {
   margin-top: 24px;
 }
 
+@media screen and (max-height: 800px) {
+  .pc-nav-menu-wrap .menu-wrap .menu-item + .menu-item {
+    margin-top: 15px;
+  }
+}
+
 .pc-nav-menu-wrap .menu-wrap .menu-item {
   display: -ms-grid;
   display: grid;
