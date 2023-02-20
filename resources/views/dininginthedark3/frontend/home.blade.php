@@ -147,6 +147,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <div class="col-md-4 col-12">
                                             <div>
                                                 <div>
+                                                    <img src="img/home/about/about-4.png" alt="二人同行">
+                                                    <img src="img/home/about/about-4-shadow.png" alt="二人同行">
+                                                </div>
+                                                <p class="color-lightgray">
+                                                    二人同行
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12">
+                                            <div>
+                                                <div>
                                                     <img src="img/home/about/about-1.png" alt="九十分鐘">
                                                     <img src="img/home/about/about-1-shadow.png" alt="九十分鐘">
                                                 </div>
@@ -164,17 +175,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <p class="color-lightgray">
                                                     五道料理體驗<br/>
                                                     <span class="color-k0">(葷/蛋奶五辛素)</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-12">
-                                            <div>
-                                                <div>
-                                                    <img src="img/home/about/about-3.png" alt="無限驚喜">
-                                                    <img src="img/home/about/about-3-shadow.png" alt="無限驚喜">
-                                                </div>
-                                                <p class="color-lightgray">
-                                                    無限驚喜
                                                 </p>
                                             </div>
                                         </div>
@@ -719,7 +719,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             地址
                                         </div>
                                         <p>
-                                            台北市大安區，捷運忠孝敦化站
+                                            台北市大安區仁愛路四段345巷4弄3號
                                         </p>
                                     </div>
                                 </div>
