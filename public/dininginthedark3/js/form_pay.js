@@ -59,56 +59,56 @@ $(".action-button").on('click', function(){
     progress_title.html(title);
 
     // 如果下一步為最後一步驟，抓取已填寫的資料使用
-    if (next_fs.hasClass('step-5')) {
+    if (next_fs.hasClass('step-4')) {
         filledDataChecker();
     }
 
-    // 取得可定位日期
-    if (next_fs.hasClass('step-3')) {
-        var booking_date = $("#booking_date");
+    // // 取得可定位日期
+    // if (next_fs.hasClass('step-2')) {
+    //     var booking_date = $("#booking_date");
 
-        booking_date.on('focus', function () {
-            $('#ui-datepicker-div').appendTo('.calender-wrapper');
-        });
+    //     booking_date.on('focus', function () {
+    //         $('#ui-datepicker-div').appendTo('.calender-wrapper');
+    //     });
 
-        // 可選擇的日期
-        var enableDays = [];
-        if(!isNaN(submitDatas['booking_people'])){
-            $.blockUI();
-            $.get('/dininginthedark3/GetAjaxData',{
-                'act':'getBypople',
-                'pople':submitDatas['booking_people'],
-                'ticketType':$('input[name="ticket-type"]:checked').val(),
-            },function(data){
-                for(i=0;i<data.length;i++){
-                    enableDays.push(data[i].day);
-                }
-                var minD = 0;
-                if(enableDays.length>0){
-                    minD = enableDays[0];
-                }
-                booking_date.datepicker("destroy");
-                booking_date.datepicker({
-                    minDate: minD,// minD,
-                    maxDate: maxDateVal,// new Date(2022, 1, 28),
-                    dateFormat: 'yy-mm-dd', 
-                    beforeShowDay: enableAllTheseDays
-                });
-                $.unblockUI();
-            },'json');
-        }
+    //     // 可選擇的日期
+    //     var enableDays = [];
+    //     if(!isNaN(submitDatas['booking_people'])){
+    //         $.blockUI();
+    //         $.get('/dininginthedark3/GetAjaxData',{
+    //             'act':'getBypople',
+    //             'pople':submitDatas['booking_people'],
+    //             'ticketType':$('input[name="ticket-type"]:checked').val(),
+    //         },function(data){
+    //             for(i=0;i<data.length;i++){
+    //                 enableDays.push(data[i].day);
+    //             }
+    //             var minD = 0;
+    //             if(enableDays.length>0){
+    //                 minD = enableDays[0];
+    //             }
+    //             booking_date.datepicker("destroy");
+    //             booking_date.datepicker({
+    //                 minDate: minD,// minD,
+    //                 maxDate: maxDateVal,// new Date(2022, 1, 28),
+    //                 dateFormat: 'yy-mm-dd', 
+    //                 beforeShowDay: enableAllTheseDays
+    //             });
+    //             $.unblockUI();
+    //         },'json');
+    //     }
         
 
-        function enableAllTheseDays(date) {
-            var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
+    //     function enableAllTheseDays(date) {
+    //         var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
 
-            if($.inArray(sdate, enableDays) !== -1 /*&& $.inArray(sdate, ['2022-02-08','2022-02-09','2022-02-10','2022-02-15','2022-02-16','2022-02-17']) !== -1*/) {
-                return [true];
-            }
-            return [false];
-        }
-        // console.log('取得日期');
-    }
+    //         if($.inArray(sdate, enableDays) !== -1 /*&& $.inArray(sdate, ['2022-02-08','2022-02-09','2022-02-10','2022-02-15','2022-02-16','2022-02-17']) !== -1*/) {
+    //             return [true];
+    //         }
+    //         return [false];
+    //     }
+    //     // console.log('取得日期');
+    // }
 
     // 重新判別用戶是否可點選下一步按鈕
     next_fs.find('.next, .submit').attr('disabled', true);
@@ -348,9 +348,54 @@ $('.step-2 input, .step-2 select').on('change', function () {
             accessHide = false;
         }
     }
+    // 取得可定位日期
+    var booking_date = $("#booking_date");
+
+    booking_date.on('focus', function () {
+        $('#ui-datepicker-div').appendTo('.calender-wrapper');
+    });
+
+    // 可選擇的日期
+    var enableDays = [];
+    if(!isNaN(submitDatas['booking_people'])){
+        $.blockUI();
+        $.get('/dininginthedark3/GetAjaxData',{
+            'act':'getBypople',
+            'pople':submitDatas['booking_people'],
+            'ticketType':$('input[name="ticket-type"]:checked').val(),
+        },function(data){
+            for(i=0;i<data.length;i++){
+                enableDays.push(data[i].day);
+            }
+            var minD = 0;
+            if(enableDays.length>0){
+                minD = enableDays[0];
+            }
+            booking_date.datepicker("destroy");
+            booking_date.datepicker({
+                minDate: minD,// minD,
+                maxDate: maxDateVal,// new Date(2022, 1, 28),
+                dateFormat: 'yy-mm-dd', 
+                beforeShowDay: enableAllTheseDays
+            });
+            $.unblockUI();
+        },'json');
+    }
+    
+
+    function enableAllTheseDays(date) {
+        var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
+
+        if($.inArray(sdate, enableDays) !== -1 /*&& $.inArray(sdate, ['2022-02-08','2022-02-09','2022-02-10','2022-02-15','2022-02-16','2022-02-17']) !== -1*/) {
+            return [true];
+        }
+        return [false];
+    }
+    // console.log('取得日期');
+
 });
 // Step 3 - 日期、時段選擇
-$('.step-3 input, .step-3 select').on('change', function () {
+$('.step-2 input, .step-2 select').on('change', function () {
 
     // 取得下一個欄位的標籤名稱
     var nextFieldset = $(this).closest('.form-group').next();

@@ -268,8 +268,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="type-item type-great-tipsy">
                                         <a href="mailto:dininginthedark@surpriselab.com.tw" class="ticket-frame" target="_blank">
-                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-5.png?v=0.4" alt="包場圖">
-                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-5-mobile.png?v=0.4" alt="包場圖">
+                                            <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-6.png" alt="包場圖">
+                                            <img class="img-fluid d-block d-sm-none" src="img/tickets/ticket-face-6-mobile.png" alt="包場圖">
                                             {{--<!--p class="ticket-state timeLimit">
                                                 限量 <span class="highlight total-ticket">500</span> 張 | 剩餘 <span
                                                     class="highlight rest-ticket">XXX</span> 張
@@ -287,9 +287,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     單一場次最高可容納人數 12 人，<br/>
                                     若人數超過 12 人可來信客服信箱，由我們協助劃位
                                 </p>
+                                <div id="homeDatepicker"></div>
+                                <div class="datepicker-ps">
+                                    <div>
+                                        <span style="background: #E6A046"></span>
+                                        <p>好評熱賣</p>
+                                    </div>
+                                    <div>
+                                        <span style="background: #AD0000"></span>
+                                        <p>即將完售</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="section sec-review" id="Review">
+
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>觀眾評價</h3>
+                                    <h4>Review</h4>
+                                </div>
+                            </div>
+
+                            <div class="review-wrap">
+                                <div class="review-tab-wrap">
+
+                                    <!-- Tab Content -->
+                                    <div class="tab-content" id="reviewTabContent">
+
+                                        <!-- 01+02 -->
+                                        <div class="tab-pane fade" id="review-no1" role="tabpanel" aria-labelledby="review-no1-tab">
+                                            <div class="tab-content-inner">
+                                                <div class="review-slideshow">
+                                                    <div class="content-inner--slideshow-cover">
+                                                        <div class="owl-carousel owl-theme" id="owl-01">
+
+                                                            <!-- 1 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>01</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        人生第一次體驗無光用餐，在全黑的環境，除了能更用心品嚐食材外，還能無忌的做自己。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 2 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>02</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                            今年跟老婆再次前來回味無光晚餐，就算不是第一次嘗試，卻依舊讓人深刻難忘。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 3 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>03</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        不論與你同桌的對象是朋友、戀人或家人，都很適合一起體驗，一定會成為最難忘的回憶！
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
+
+
+                        
                         <!-- History Menu -->
                         <div class="section sec-menu" id="Menu">
 

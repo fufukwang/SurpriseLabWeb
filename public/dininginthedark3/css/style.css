@@ -2156,4 +2156,82 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 .ticket-modal-wrap .ticket-modal-content .ticket-table {
   width: 100%;
 }
+
+.review-block {
+  height: 326px;
+  padding: 30px 36px;
+  border-radius: 6px;
+  background-color: #323232;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1200px) {
+  .review-block {
+    height: 242px;
+    padding: 18px 20px;
+  }
+}
+.review-block .review-hd {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #939393;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .review-block .review-hd {
+    padding-bottom: 18px;
+  }
+}
+
+.review-block .review-hd span {
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+}
+@media screen and (max-width: 1200px) {
+  .review-block .review-hd span {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+}
+.review-block .review-hd p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 1.6px;
+  color: #939393;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+}
+.review-block .review-ct {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  overflow-y: auto;
+  height: 215px;
+}
+@media screen and (max-width: 1200px) {
+  .review-block .review-ct {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 160px;
+  }
+}
+.review-block .review-ct p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.775;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+@media screen and (max-width: 1200px) {
+  .review-block .review-ct p {
+    font-size: 16px;
+    line-height: 1.69;
+    letter-spacing: 1.6px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

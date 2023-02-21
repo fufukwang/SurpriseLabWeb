@@ -136,4 +136,52 @@ $(document).ready(function () {
             $('body').removeClass('menu-open');
         });
     });
+
+    const indexViewDatepicker = () =>{
+        const booking_date = $("#homeDatepicker");
+
+        // booking_date.on('focus', function () {
+        //     $('#ui-datepicker-div').appendTo('.calender-wrapper');
+        // });
+
+        $.get('/dininginthedark3/GetAjaxData',{
+                'act':'getBypople',
+                'pople':2,
+                'ticketType':$('input[name="ticket-type"]:checked').val(),
+            },function(data){
+                for(i=0;i<data.length;i++){
+                    enableDays.push(data[i].day);
+                }
+                var minD = 0;
+                if(enableDays.length>0){
+                    minD = enableDays[0];
+                }
+                booking_date.datepicker("destroy");
+                booking_date.datepicker({
+                    minDate: minD,// minD,
+                    maxDate: maxDateVal,// new Date(2022, 1, 28),
+                    dateFormat: 'yy-mm-dd', 
+                    beforeShowDay: enableAllTheseDays
+                });
+                // $.unblockUI();
+            },'json');
+        // 可選擇的日期
+        var enableDays = [];
+        if(!isNaN(submitDatas['booking_people'])){
+            // $.blockUI();
+            
+        }
+        
+
+        function enableAllTheseDays(date) {
+            var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
+
+            if($.inArray(sdate, enableDays) !== -1 /*&& $.inArray(sdate, ['2022-02-08','2022-02-09','2022-02-10','2022-02-15','2022-02-16','2022-02-17']) !== -1*/) {
+                return [true];
+            }
+            return [false];
+        }
+        // console.log('取得日期');
+    }
+    indexViewDatepicker()
 });
