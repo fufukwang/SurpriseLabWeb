@@ -313,6 +313,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </div>
 
 
+
                                             <!-- 05 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
@@ -476,6 +477,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="item">
                                                 <figure class="slideshow-card">
                                                     <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_8.jpg" data-src="/terminalAssets/images/main/img_bistro_8.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_8.jpg" alt="落日轉運站啤酒、徽章、飛機餅乾">
+
                                                     <figcaption>
                                                         飲品 ╳ 小點 ╳ 周邊
                                                     </figcaption>
