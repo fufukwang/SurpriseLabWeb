@@ -394,8 +394,15 @@ class BackController extends Controller
 
     public function ProOutputSite(Request $request){
         $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
-        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))>0")
-            ->select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS now,sites,id,rang_start,rang_end,day"));
+        $pro = pro::select(DB::raw("(IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS now,sites,id,rang_start,rang_end,day"));
+        if($request->has('type')){
+            if($request->type == 'not'){
+                $pro = $pro->where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))>0");
+            } elseif($request->type == 'open'){
+                $pro = $pro->where('open',1);
+            }
+        }
+
         if($request->daystart == ''){
             $pro = $pro->where('day',Carbon::today()->format('Y-m-d'));
         } else {

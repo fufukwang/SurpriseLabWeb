@@ -202,7 +202,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <div class="form-group col-sm-1">
+                                                <select class="form-control" name="type">
+                                                    <option value="">所有場次</option>
+                                                    <option value="open">開放中場次</option>
+                                                    <option value="not">未滿座</option>
+                                                </select>
+                                            </div>
                                             <div class="form-group col-sm-1">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 下載</button>
                                             </div>
