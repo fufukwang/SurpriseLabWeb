@@ -2157,6 +2157,34 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   width: 100%;
 }
 
+.ticket-datepicker {
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.ticket-datepicker .datepicker-ps {
+  max-width: 380px;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.ticket-datepicker div {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.ticket-datepicker span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.ticket-datepicker p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .review-block {
   height: 326px;
   padding: 30px 36px;

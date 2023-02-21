@@ -409,7 +409,7 @@ form .form-group:last-child {
 }
 
 form .form-container {
-  width: 536px;
+  width: 600px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -1026,6 +1026,28 @@ form .btn-outline {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #CCCCCC;
+}
+
+.calender-ps {
+  max-width: 380px;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.calender-ps div {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.calender-ps span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.calender-ps p {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 @media (max-width: 575.98px) {
@@ -1891,6 +1913,30 @@ fieldset.step-5 .filled-data td p {
 @media (max-width: 575.98px){
   fieldset.step-5 .filled-data td p {
     font-size: 12px;
+  }
+}
+
+.form-grid {
+  display: flex;
+}
+.form-grid .form-group {
+  width: 40%;
+}
+.form-grid .form-group + .form-group {
+  width: 60%;
+  margin-left: 20px;
+}
+@media (max-width: 992px){
+  .form-grid {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .form-grid .form-group {
+    width: 100%;
+  }
+  .form-grid .form-group + .form-group {
+    width: 100%;
+    margin-left: 0px;
   }
 }
 /*# sourceMappingURL=form.css.map */

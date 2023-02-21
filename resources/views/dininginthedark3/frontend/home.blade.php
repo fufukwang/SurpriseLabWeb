@@ -84,6 +84,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="smoothScroll ticket" href="#Ticket">Ticket</a>
             </li>
             <li>
+                <a class="smoothScroll review" href="#Review">Review</a>
+            </li>
+            <li>
                 <a class="smoothScroll rules" href="#Rules">Rules</a>
             </li>
             <li>
@@ -287,15 +290,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     單一場次最高可容納人數 12 人，<br/>
                                     若人數超過 12 人可來信客服信箱，由我們協助劃位
                                 </p>
-                                <div id="homeDatepicker"></div>
-                                <div class="datepicker-ps">
-                                    <div>
-                                        <span style="background: #E6A046"></span>
-                                        <p>好評熱賣</p>
-                                    </div>
-                                    <div>
-                                        <span style="background: #AD0000"></span>
-                                        <p>即將完售</p>
+                                <div class="ticket-datepicker">
+                                    <div id="homeDatepicker"></div>
+                                    <div class="datepicker-ps">
+                                        <div>
+                                            <span style="background: #E6A046"></span>
+                                            <p>好評熱賣</p>
+                                        </div>
+                                        <div>
+                                            <span style="background: #AD0000"></span>
+                                            <p>即將完售</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -321,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <div class="tab-content-inner">
                                                 <div class="review-slideshow">
                                                     <div class="content-inner--slideshow-cover">
-                                                        <div class="owl-carousel owl-theme" id="owl-01">
+                                                        <div class="owl-carousel owl-theme" id="owl-review-01">
 
                                                             <!-- 1 -->
                                                             <div class="item">
@@ -379,9 +384,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-
-
-                        
                         <!-- History Menu -->
                         <div class="section sec-menu" id="Menu">
 
@@ -902,6 +904,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Bootstrap -->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="js/plugins/jquery-ui.js"></script>
     <script src="js/plugins/popper.min.js"></script>
     <script src="js/plugins/bootstrap-4.1.0/bootstrap.min.js"></script>
     <script src="js/plugins/jquery.scrollify.js"></script>

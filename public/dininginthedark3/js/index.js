@@ -167,10 +167,10 @@ $(document).ready(function () {
             },'json');
         // 可選擇的日期
         var enableDays = [];
-        if(!isNaN(submitDatas['booking_people'])){
-            // $.blockUI();
+        // if(!isNaN(submitDatas['booking_people'])){
+        //     // $.blockUI();
             
-        }
+        // }
         
 
         function enableAllTheseDays(date) {
@@ -181,7 +181,7 @@ $(document).ready(function () {
             }
             return [false];
         }
-        // console.log('取得日期');
+        console.log('取得日期');
     }
     indexViewDatepicker()
 });

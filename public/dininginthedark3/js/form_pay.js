@@ -59,7 +59,7 @@ $(".action-button").on('click', function(){
     progress_title.html(title);
 
     // 如果下一步為最後一步驟，抓取已填寫的資料使用
-    if (next_fs.hasClass('step-4')) {
+    if (next_fs.hasClass('step-3')) {
         filledDataChecker();
     }
 
@@ -353,9 +353,20 @@ $('.step-2 input, .step-2 select').on('change', function () {
 
     booking_date.on('focus', function () {
         $('#ui-datepicker-div').appendTo('.calender-wrapper');
+        $('#ui-datepicker-div').append(`<div class="calender-ps">
+            <div>
+                <span style="background: #E6A046"></span>
+                <p>好評熱賣</p>
+            </div>
+            <div>
+                <span style="background: #AD0000"></span>
+                <p>即將完售</p>
+            </div>
+        </div>`)
     });
 
     // 可選擇的日期
+    $()
     var enableDays = [];
     if(!isNaN(submitDatas['booking_people'])){
         $.blockUI();
@@ -533,7 +544,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
     updateField(nextFieldset, accessHide);
 
 });
-$('.step-4 select').on('change', function () {
+$('.step-3 select').on('change', function () {
     if ($(this).attr('id') === 'meat_food') {
         eatHabit['meat_food'] = parseInt($(this).find(':selected').text());
         eatHabit['vegetarian_food'] = submitDatas['booking_people'] - eatHabit['meat_food']
@@ -634,7 +645,7 @@ function updateOptions(select_filed, data) {
 function updateField(fieldGroup, accessHide) {
     // 每次重新點選選項後，除了下一個選項會重新載入外，後面的選項都會隱藏並清空值
     // 避免使用者又回到前面的選項選取時，下方的選項沒改變造成誤會
-    var hidefield = $('.step-3 .form-group').slice(fieldGroup.index());
+    var hidefield = $('.step-2 .form-group').slice(fieldGroup.index());
 
     hidefield.each(function () {
         $(this).find('input, select').val('').trigger('change');
