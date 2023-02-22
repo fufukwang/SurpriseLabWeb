@@ -254,6 +254,7 @@ class NewPayController extends WebController
             if($order && $retrunData['Status'] == 'SUCCESS'){
                 if($order->result == ''){
                     $pay_data = [
+                        'result' => json_encode($retrunData),
                         'pay_status' => '已付款'
                     ];
                     order::where('id',$order->id)->orderBy('created_at','DESC')->limit(1)->update($pay_data);
