@@ -199,21 +199,33 @@
                                 <div class="calender-wrapper"></div>
                             </div>
                         </div>
-                        <div class="form-group select-format">
+                        <!-- <div class="form-group select-format">
                             <label class="form-label" for="booking_time_slot">時段</label>
                             <select id="booking_time_slot" name="booking_time_slot" data-placeholder="選擇時段" required>
                                 <option></option>
-                                <!--<option>上午</option>-->
-                                <!--<option>晚上</option>-->
                             </select>
-                        </div>
+                        </div> -->
                         <div class="form-group select-format">
-                            <label class="form-label" for="booking_time">時間</label>
-                            <select id="booking_time" name="booking_time" data-placeholder="選擇時間" required>
-                                <option></option>
+                            <label class="form-label" for="booking_time">場次時間</label>
+                            <!-- <div class="form-select">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="time" id="time1">
+                                    <label class="form-check-label" for="time1">
+                                        20:30 - 22:30 剩餘12位
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="time" id="time2" checked>
+                                    <label class="form-check-label" for="time2">
+                                        20:30 - 22:30 剩餘12位
+                                    </label>
+                                </div>
+                            </div> -->
+                            <!-- <select id="booking_time" name="booking_time" data-placeholder="選擇場次時間" required>
+                                <option></option> -->
                                 <!--<option>18:00-19:30</option>-->
                                 <!--<option>20:00-21:30</option>-->
-                            </select>
+                            <!-- </select> -->
                         </div>
 
 

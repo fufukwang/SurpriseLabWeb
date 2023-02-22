@@ -409,7 +409,7 @@ form .form-group:last-child {
 }
 
 form .form-container {
-  width: 600px;
+  width: 700px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -980,6 +980,30 @@ form .btn-outline {
   color: #4D4D4D;
 }
 
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a {
+  position: relative;
+}
+
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a.dot-y:after {
+  background: #E6A046;
+}
+
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a.dot-r:after {
+  background: #AD0000;
+}
+
+
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
   border-color: #CCCCCC;
   background-color: #CCCCCC;
@@ -1041,11 +1065,12 @@ form .btn-outline {
   margin-left: 15px;
 }
 .calender-ps span {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
 }
 .calender-ps p {
+  font-size: 14px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -1937,6 +1962,30 @@ fieldset.step-5 .filled-data td p {
   .form-grid .form-group + .form-group {
     width: 100%;
     margin-left: 0px;
+  }
+}
+.form-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  margin-bottom: -10px;
+}
+.form-select .form-check {
+  width: calc((100% - 40px) / 3);
+}
+@media (max-width: 992px){
+  .form-select .form-check {
+    width: 100%;
+  }
+}
+.form-select .form-check-label{
+  padding: 5px 17px;
+  line-height: 2.25;
+}
+@media (max-width: 992px){
+  .form-select .form-check-label{
+    padding: 6px 20px;
+    line-height: 2;
   }
 }
 /*# sourceMappingURL=form.css.map */

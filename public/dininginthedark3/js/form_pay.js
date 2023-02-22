@@ -353,16 +353,21 @@ $('.step-2 input, .step-2 select').on('change', function () {
 
     booking_date.on('focus', function () {
         $('#ui-datepicker-div').appendTo('.calender-wrapper');
-        $('#ui-datepicker-div').append(`<div class="calender-ps">
-            <div>
-                <span style="background: #E6A046"></span>
-                <p>好評熱賣</p>
-            </div>
-            <div>
-                <span style="background: #AD0000"></span>
-                <p>即將完售</p>
-            </div>
-        </div>`)
+        setTimeout(() => {
+            if($('.calender-ps').length == 0){
+                $('#ui-datepicker-div').append(`<div class="calender-ps">
+                    <div>
+                        <span style="background: #E6A046"></span>
+                        <p>好評熱賣</p>
+                    </div>
+                    <div>
+                        <span style="background: #AD0000"></span>
+                        <p>即將完售</p>
+                    </div>
+                </div>`)
+            }
+        }, 100);
+        
     });
 
     // 可選擇的日期
@@ -409,7 +414,9 @@ $('.step-2 input, .step-2 select').on('change', function () {
 $('.step-2 input, .step-2 select').on('change', function () {
 
     // 取得下一個欄位的標籤名稱
-    var nextFieldset = $(this).closest('.form-group').next();
+    var nextFieldset = $(this).parents().hasClass('form-grid') ? 
+    $(this).closest('.form-grid').next() : 
+    $(this).closest('.form-group').next();
     var nextField = nextFieldset.find('input, select');
     var nextElementType = nextField.prop('tagName');
     var accessHide = true;
@@ -511,21 +518,36 @@ $('.step-2 input, .step-2 select').on('change', function () {
                     'act':'getBydartpart',
                     'ticketType':$('input[name="ticket-type"]:checked').val(),
                     'day':$('#booking_date').val(),
-                    'day_parts':$('#booking_time_slot').val(),
+                    'day_parts':'晚場',//$('#booking_time_slot').val(),
                     'pople':submitDatas['booking_people']
                 },function(obj){
-                    data = [];
+                    // data = [];
+                    template = ''
                     proObject = [];
                     if(obj.length>0){
                         proObject = obj;
                         for(i=0;i<obj.length;i++){
                             var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位'
-                            data.push({
-                                id   : obj[i].id,
-                                text : range
-                            });
+                            // data.push({
+                            //     id   : obj[i].id,
+                            //     text : range
+                            // });
+                            template = template +
+                            `<div class="form-check">
+                                <input class="form-check-input" type="radio" name="time" id="time${i}">
+                                <label class="form-check-label" for="time${i}">
+                                    ${range}
+                                </label>
+                            </div>`
+                            // </div>`
+                            
                         }
-                        updateOptions(nextField, data);
+                        $('label[for="booking_time_slot"]').after(`
+                            <div class="form-select">
+                            ${template}
+                            </div>
+                        `)
+                        // updateOptions(nextField, data);
                         nextField.val(null).trigger('change');
                     }
                 },'json');
