@@ -414,12 +414,15 @@ $('.step-2 input, .step-2 select').on('change', function () {
 $('.step-2 input, .step-2 select').on('change', function () {
 
     // 取得下一個欄位的標籤名稱
-    var nextFieldset = $(this).parents().hasClass('form-grid') ? 
+    var nextFieldset = $(this).parents().hasClass('form-grid') &&
+    $(this).closest('.form-group').next().length == 0 ? 
     $(this).closest('.form-grid').next() : 
     $(this).closest('.form-group').next();
     var nextField = nextFieldset.find('input, select');
     var nextElementType = nextField.prop('tagName');
     var accessHide = true;
+    console.log('nextFieldset',nextFieldset)
+    console.log('nextFieldID',nextFieldID);
 /*
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
@@ -478,9 +481,58 @@ $('.step-2 input, .step-2 select').on('change', function () {
         }
     } else 
 */
+
+
+    if (nextFieldset.hasClass('select-time')) {
+        $.get('/dininginthedark3/GetAjaxData',{
+            'act':'getBydartpart',
+            'ticketType':$('input[name="ticket-type"]:checked').val(),
+            'day':$('#booking_date').val(),
+            'day_parts':'晚場',//$('#booking_time_slot').val(),
+            'pople':submitDatas['booking_people']
+        },function(obj){
+            // data = [];
+            template = ''
+            proObject = [];
+            if(obj.length>0){
+                proObject = obj;
+                for(i=0;i<obj.length;i++){
+                    var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位'
+                    // data.push({
+                    //     id   : obj[i].id,
+                    //     text : range
+                    // });
+                    template = template +
+                    `<div class="form-check">
+                        <input class="form-check-input" type="radio" name="time" id="time${i}">
+                        <label class="form-check-label" for="time${i}">
+                            ${range}
+                        </label>
+                    </div>`
+                    // </div>`
+                    
+                }
+                $('label[for="booking_time"]').next().remove()
+                $('label[for="booking_time"]').after(`
+                    <div class="form-select">
+                    ${template}
+                    </div>
+                `)
+                // updateOptions(nextField, data);
+                nextField.val(null).trigger('change');
+            }
+        },'json');
+    }
+
+    $(".select-time input[type=radio]:checked").each(function () {
+        result = $(this).next().text() ;
+        console.log(result)
+    });
+    
     if (nextElementType === 'SELECT') {
         var nextFieldID = nextField.attr('id');
         var data;
+
 
         if (nextFieldID === 'booking_time_slot') { // 時段
             nextField.html('');

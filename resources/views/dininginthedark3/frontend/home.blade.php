@@ -322,7 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div class="tab-content" id="reviewTabContent">
 
                                         <!-- 01+02 -->
-                                        <div class="tab-pane fade" id="review-no1" role="tabpanel" aria-labelledby="review-no1-tab">
+                                        <div class="tab-pane fade show active" id="review-no1" role="tabpanel" aria-labelledby="review-no1-tab">
                                             <div class="tab-content-inner">
                                                 <div class="review-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -368,6 +368,276 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <div class="review-ct">
                                                                         <p>
                                                                         不論與你同桌的對象是朋友、戀人或家人，都很適合一起體驗，一定會成為最難忘的回憶！
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 4 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>04</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        透過這頓晚餐，我才知道自己真正想要的是什麼，以及希望坐在對面陪伴我的人是誰。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 5 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>05</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        很享受的體驗，過程中有滿滿細節，推薦給想嘗試挑戰排除視覺，利用感官享用美食的人。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 6 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>06</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        很值得的體驗，整體活動設計的很棒，能感受到和同行之人更深刻的依賴和連結。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 7 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>07</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        是一場前所未有、含套餐餐點的無光體驗，可以從過程中感受到團隊非常用心在經營。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 8 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>08</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        比起一次特別的用餐經驗，更像是一場別出心裁的互動表演藝術。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 9 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>09</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        最重要的體會是黑暗不一定代表恐懼，進場的忐忑跟離場前習慣黑暗的自在形成強烈對比。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 10 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>10</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        時隔四年，對活動內容還是感到很有趣跟滿意，更重要的是和重要的人一起獲得難忘回憶。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 11 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>11</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        很特別的體驗，在感官放最大時，用心體驗料理，真心和夥伴相處，欣賞平常忽略的事。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 12 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>12</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        在黑暗中營造了另類浪漫，過程中看不見對面的老婆，卻能跟著氣氛一起回味過往的點點滴滴。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 13 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>13</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        不管有沒有睜開眼睛都沒差，因為完全一點東西都看不到！考驗對於食物的記憶與印象。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 14 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>14</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        無光，在黑暗中聽覺、觸覺、嗅覺會盡全力的放大，讓人深深體會每一個片段、橋段。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 15 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>15</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        非常特別的體驗，讓我了解到看不見也能享受美食，甚至平常不敢接受的食物也敢吃了。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 16 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>16</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        全程都在黑暗中度過，不會有玩手機的時間，能盡情和對方好好吃頓飯一起享受當下！
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 17 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>17</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        每個環節都很有趣，更像是參與了一場演出，一輩子忘不了的人生體驗！
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 18 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>18</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        睽違十年終於帶生命中的貴人，一起體驗無光晚餐，每分每秒都是充滿驚喜與感動的夜晚。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 19 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>19</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        很有趣的體驗，過程中會讓人思考：自己和旅伴的關係，也能彼此分享些更深刻的記憶。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 20 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>20</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        整個超出期待，本來以為是純噱頭不好吃的餐廳，但真的有感受到創新、創意的體驗。
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 21 -->
+                                                            <div class="item">
+                                                                <div class="review-block">
+                                                                    <div class="review-hd">
+                                                                        <span>21</span>
+                                                                        <p>顧客</p>
+                                                                    </div>
+                                                                    <div class="review-ct">
+                                                                        <p>
+                                                                        很特別的體驗，讓兩個人又更靠近一些，很高興有來參加無光晚餐。
                                                                         </p>
                                                                     </div>
                                                                 </div>

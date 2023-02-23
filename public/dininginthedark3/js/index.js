@@ -139,40 +139,28 @@ $(document).ready(function () {
 
     const indexViewDatepicker = () =>{
         const booking_date = $("#homeDatepicker");
-
-        // booking_date.on('focus', function () {
-        //     $('#ui-datepicker-div').appendTo('.calender-wrapper');
-        // });
-
-        $.get('/dininginthedark3/GetAjaxData',{
-                'act':'getBypople',
-                'pople':2,
-                'ticketType':$('input[name="ticket-type"]:checked').val(),
-            },function(data){
-                for(i=0;i<data.length;i++){
-                    enableDays.push(data[i].day);
-                }
-                var minD = 0;
-                if(enableDays.length>0){
-                    minD = enableDays[0];
-                }
-                booking_date.datepicker("destroy");
-                booking_date.datepicker({
-                    minDate: minD,// minD,
-                    maxDate: maxDateVal,// new Date(2022, 1, 28),
-                    dateFormat: 'yy-mm-dd', 
-                    beforeShowDay: enableAllTheseDays
-                });
-                // $.unblockUI();
-            },'json');
-        // 可選擇的日期
         var enableDays = [];
-        // if(!isNaN(submitDatas['booking_people'])){
-        //     // $.blockUI();
-            
-        // }
-        
-
+        $.get('/dininginthedark3/GetAjaxData',{
+            'act':'getBypople',
+            'pople':2,
+            'ticketType':$('input[name="ticket-type"]:checked').val(),
+        },function(data){
+            for(i=0;i<data.length;i++){
+                enableDays.push(data[i].day);
+            }
+            var minD = 0;
+            if(enableDays.length>0){
+                minD = enableDays[0];
+            }
+            booking_date.datepicker("destroy");
+            booking_date.datepicker({
+                minDate: minD,// minD,
+                maxDate: '+3m',// new Date(2022, 1, 28),
+                dateFormat: 'yy-mm-dd', 
+                beforeShowDay: enableAllTheseDays
+            });
+            // $.unblockUI();
+        },'json');
         function enableAllTheseDays(date) {
             var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
 
@@ -181,7 +169,10 @@ $(document).ready(function () {
             }
             return [false];
         }
-        console.log('取得日期');
+
+        $('#homeDatepicker a').on('click',function(){
+            window.location.href = 'https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar'
+        })
     }
     indexViewDatepicker()
 });
