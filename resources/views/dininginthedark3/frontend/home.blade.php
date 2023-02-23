@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.16"/>
+    <link rel="stylesheet" href="css/style.css?data=0223"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -1201,10 +1201,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?v=0.11"></script>
+    <script src="js/index.js?data=0223"></script>
     <script src="js/main.js?v=0.12"></script>
     <script src="js/board-modal.js?v=0.11"></script>
-    <script src="js/index-slideshow.js?v=0.11"></script>
+    <script src="js/index-slideshow.js?data=0223"></script>
 
 </body>
 </html>

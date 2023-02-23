@@ -200,8 +200,7 @@ $('input, select').on('change', function () {
 // 檢查是否可以進入下一步
 function allowChecker(thisStep){
     isAllowToNextStep = true;
-
-    if (thisStep.hasClass('step-5')) {
+    if (thisStep.hasClass('step-4')) {
 
         // 最後一步驟要確認已輸入的票券代碼數量是否與人數相符
         if (restAmount != 0) {
@@ -214,14 +213,15 @@ function allowChecker(thisStep){
             var element = $(this);
 
             if (element.attr('type') === 'checkbox') {
-
+                console.log(159);
                 if (!element.is(':checked')) {
                     isAllowToNextStep = false;
                     return false;
                 }
 
             } else if (element.attr('type') === 'radio') {
-                if (thisStep.hasClass('step-4')) {
+                console.log(789);
+                if (thisStep.hasClass('step-3')) {
 
                     // 餐點選擇(葷素)
                     for (var p = 0; p < submitDatas['booking_people']; p++) {
@@ -233,7 +233,13 @@ function allowChecker(thisStep){
                         }
                     }
 
-                }/* else {
+                } else if (thisStep.hasClass('step-2')) {
+                    if (!$('.form-check-input').is(":checked")){
+                        isAllowToNextStep = false;
+                        return false;
+                    }
+                }
+                /* else {
 
                     // 票券種類
                     if (!$('input:radio[name="ticket-type"]').is(":checked")) {
@@ -421,8 +427,6 @@ $('.step-2 input, .step-2 select').on('change', function () {
     var nextField = nextFieldset.find('input, select');
     var nextElementType = nextField.prop('tagName');
     var accessHide = true;
-    console.log('nextFieldset',nextFieldset)
-    console.log('nextFieldID',nextFieldID);
 /*
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
@@ -520,14 +524,14 @@ $('.step-2 input, .step-2 select').on('change', function () {
                 `)
                 // updateOptions(nextField, data);
                 nextField.val(null).trigger('change');
+
             }
         },'json');
-    }
+        $('.form-check-input').on('click',function(){
 
-    $(".select-time input[type=radio]:checked").each(function () {
-        result = $(this).next().text() ;
-        console.log(result)
-    });
+        })
+    }
+    
     
     if (nextElementType === 'SELECT') {
         var nextFieldID = nextField.attr('id');
