@@ -1,6 +1,6 @@
 $(function() {
     // Owl Carousel
-    let $owl = $('#owl-01, #owl-03, #owl-04, #owl-05, #owl-review-01');
+    let $owl = $('#owl-01, #owl-03, #owl-04, #owl-05');
 
     // 觸發 Owl Carousel
     $owl.each(function(){

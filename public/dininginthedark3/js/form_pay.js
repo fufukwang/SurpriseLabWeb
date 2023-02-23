@@ -213,14 +213,14 @@ function allowChecker(thisStep){
             var element = $(this);
 
             if (element.attr('type') === 'checkbox') {
-                console.log(159);
+                console.log(11);
                 if (!element.is(':checked')) {
                     isAllowToNextStep = false;
                     return false;
                 }
 
             } else if (element.attr('type') === 'radio') {
-                console.log(789);
+                console.log(22);
                 if (thisStep.hasClass('step-3')) {
 
                     // 餐點選擇(葷素)
@@ -234,6 +234,7 @@ function allowChecker(thisStep){
                     }
 
                 } else if (thisStep.hasClass('step-2')) {
+                    console.log(33);
                     if (!$('.form-check-input').is(":checked")){
                         isAllowToNextStep = false;
                         return false;
@@ -622,6 +623,9 @@ $('.step-2 input, .step-2 select').on('change', function () {
     updateField(nextFieldset, accessHide);
 
 });
+$('.form-check-input').on('click',function(){
+    allowChecker(thisStep)
+})
 $('.step-3 select').on('change', function () {
     if ($(this).attr('id') === 'meat_food') {
         eatHabit['meat_food'] = parseInt($(this).find(':selected').text());
