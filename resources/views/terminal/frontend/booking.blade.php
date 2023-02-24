@@ -430,11 +430,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="name">* 姓名</label>
+                                    <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
                                     <input type="text" id="name" class="body-04" name="name" placeholder="ex. 轉運站吉祥物" required>
                                 </div>
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="telephone">* 電話</label>
+                                    <p>無台灣電話者，請輸入0900000000</p>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
                                     <input type="text" id="telephone" class="body-04" name="telephone" placeholder="ex. 0987654321" required>
                                 </div>

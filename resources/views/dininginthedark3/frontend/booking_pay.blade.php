@@ -238,11 +238,13 @@
 
                         <div class="form-group input-with-label">
                             <label for="name">* 姓名</label>
+                            <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p>
                             <input type="text" name="name" class="form-control" id="name" placeholder="ex. 無光晚餐">
                         </div>
 
                         <div class="form-group input-with-label">
                             <label for="phone">* 電話<span class="error-msg"></span></label>
+                            <p>無台灣電話者，請輸入0900000000</p>
                             <input type="text" name="phone" class="form-control phone" id="phone" placeholder="ex. 0912345678">
                         </div>
 

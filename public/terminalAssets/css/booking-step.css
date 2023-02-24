@@ -116,6 +116,9 @@ a {
 
 .content-wrap .form-wrap-step-1 .form-group + .form-group {
   margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 
 .content-wrap .form-wrap-step-2 {

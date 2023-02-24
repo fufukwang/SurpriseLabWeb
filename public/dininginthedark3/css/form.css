@@ -1542,6 +1542,18 @@ fieldset .prefix-step .prefix {
   color: #8C5FB4;
 }
 
+fieldset .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+fieldset .form-group p {
+  font-size: 12px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 575.98px) {
   fieldset .prefix-step .prefix {
     padding-right: 24px;

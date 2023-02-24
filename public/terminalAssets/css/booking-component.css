@@ -1408,6 +1408,13 @@ input[type="checkbox"]:checked::after {
   margin-left: 4px;
 }
 
+.form-group p {
+  color: #efcabf;
+  font-size: 12px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
 .form-group.error-style input[type="text"] {
   border: 2px solid #ff291f;
   color: #ff291f;
@@ -1418,7 +1425,7 @@ input[type="checkbox"]:checked::after {
   display: inline-block;
   color: #ff291f;
   line-height: 1.5;
-  margin: 0 0 12px 12px;
+  margin: 0 0 12px 15px;
 }
 
 .form-group.disabled-style label {
