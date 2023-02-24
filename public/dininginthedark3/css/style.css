@@ -2226,6 +2226,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   width: 60px;
   margin: 0;
   opacity: 0.5;
+  display: flex;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
