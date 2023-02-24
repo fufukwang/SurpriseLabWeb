@@ -42,27 +42,27 @@ $(function() {
             responsive: {
                 0: {
                     items: 1.24,
-                    dots: true,
+                    dots: false,
                     margin: 20
                 },
                 767: {
                     items: 3.1,
-                    dots: true,
+                    dots: false,
                     margin: 20
                 },
                 992: {
                     items: 3.5,
-                    dots: true,
+                    dots: false,
                     margin: 20
                 },
                 1200: {
                     items: 3.5,
-                    dots: true,
+                    dots: false,
                     margin: 60
                 },
                 1441: {
                     items: 5,
-                    dots: true,
+                    dots: false,
                     margin: 60
                 }
             }

@@ -2214,17 +2214,38 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 @media screen and (max-width: 1199.98px) {
   #Review .owl-nav {
-    display: none;
+    /* display: none; */
+    top: calc(100% + 40px);
+    width: 100px;
   }
 }
 
 #Review .owl-nav .owl-prev,
 #Review .owl-nav .owl-next {
+  position: relative;
   width: 60px;
   margin: 0;
   opacity: 0.5;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+@media screen and (max-width: 1199.98px) {
+  #Review .owl-nav .owl-prev:after,
+  #Review .owl-nav .owl-next:after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 20px;
+      background: #919191;
+      display: block;
+      top: 15px;
+  }
+  #Review .owl-nav .owl-prev:after {
+    right: -1px;
+  }
+  #Review .owl-nav .owl-next:after {
+    left: 0;
+  }
 }
 
 #Review .owl-nav .owl-prev.disabled,
