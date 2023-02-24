@@ -1542,13 +1542,13 @@ fieldset .prefix-step .prefix {
   color: #8C5FB4;
 }
 
-fieldset.step-3 .form-group {
+fieldset.step-3 .form-group:not(.select-food) {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
 }
 
-fieldset.step-3 .form-group p {
+fieldset.step-3 .form-group:not(.select-food) p {
   font-size: 12px;
   margin-left: 10px;
   margin-bottom: 10px;
