@@ -181,4 +181,177 @@
     transition: 0.8s cubic-bezier(0, 0, 0.2, 1);
   }
 }
+
+/* datepicker樣式 */
+.datepicker-block {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.datepicker-block #homeDatepicker {
+  top: 5px !important;
+  right: 0;
+  left: inherit !important;
+  width: 378px;
+  max-width: 100%;
+  border: solid 1px #8C5FB4;
+  border-radius: 6px;
+  background-color: #101010;
+  padding: 8px;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 8px;
+  background-color: rgba(77, 77, 77, 0.8);
+  border-radius: 4px;
+  padding: 7px 16px;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-title {
+  font-size: 16px;
+  line-height: 2.25;
+  letter-spacing: 1.6px;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-title .ui-datepicker-month,
+.datepicker-block #homeDatepicker .ui-datepicker-title .ui-datepicker-year {
+  color: #CCCCCC;
+}
+
+.datepicker-block #homeDatepicker .ui-corner-all .ui-icon {
+  display: block;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon/icon-arrow.svg") no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  background-color: #101010;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-prev {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-next {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar {
+  width: 100%;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td, .datepicker-block #homeDatepicker .ui-datepicker-calendar th {
+  height: 36px;
+  position: relative;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar th span {
+  color: #8C5FB4;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td.ui-datepicker-today::before {
+  opacity: 1;
+  border-color: #CCCCCC;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td.ui-datepicker-unselectable a, .datepicker-block #homeDatepicker .ui-datepicker-calendar td.ui-datepicker-unselectable span {
+  color: #4D4D4D;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td.ui-datepicker-current-day a {
+  color: #4D4D4D;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td.ui-datepicker-current-day::before {
+  border-color: #CCCCCC;
+  background-color: #CCCCCC;
+  opacity: 1;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {
+  cursor: pointer;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
+  color: #4D4D4D;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {
+  border-color: #CCCCCC;
+  background-color: #CCCCCC;
+  opacity: 1;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td::before {
+  position: absolute;
+  opacity: 0;
+  content: '';
+  width: 36px;
+  height: 36px;
+  border: solid 1px #ddd;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.datepicker-block #homeDatepicker .ui-datepicker-calendar td a, .datepicker-block #homeDatepicker .ui-datepicker-calendar td span {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  margin-left: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #CCCCCC;
+}
+
+@media (max-width: 575.98px) {
+  .datepicker-block #homeDatepicker .ui-datepicker-header {
+    padding: 3px 14px;
+    margin-bottom: 5px;
+  }
+  .datepicker-block #homeDatepicker .ui-datepicker-title {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+  .datepicker-block #homeDatepicker .ui-datepicker-calendar th {
+    height: 20px;
+  }
+  .datepicker-block #homeDatepicker .ui-datepicker-calendar th span {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+  .datepicker-block #homeDatepicker .ui-datepicker-calendar td {
+    height: 33px;
+  }
+  .datepicker-block #homeDatepicker .ui-datepicker-calendar td a, .datepicker-block #homeDatepicker .ui-datepicker-calendar td span {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+}
 /*# sourceMappingURL=board-modal.css.map */
