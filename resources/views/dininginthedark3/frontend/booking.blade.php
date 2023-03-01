@@ -91,7 +91,7 @@
         </ul>
     </nav>
 
-    <main class="sections">
+    <main class="sections booking">
 
         <div class="container" id="bookingPage">
             <!-- form -->
@@ -282,16 +282,16 @@
                             </div>
                             <div class="calender-wrapper"></div>
                         </div>
-                        <div class="form-group select-format">
+                        <!-- <div class="form-group select-format">
                             <label class="form-label" for="booking_time_slot">時段</label>
                             <select id="booking_time_slot" name="booking_time_slot" data-placeholder="選擇時段" required>
-                                <option></option>
+                                <option></option> -->
                                 <!--<option>上午</option>-->
                                 <!--<option>晚上</option>-->
-                            </select>
-                        </div>
+                            <!-- </select>
+                        </div> -->
                         <div class="form-group select-format">
-                            <label class="form-label" for="booking_time">時間</label>
+                            <label class="form-label" for="booking_time">場次時間</label>
                             <select id="booking_time" name="booking_time" data-placeholder="選擇時間" required>
                                 <option></option>
                                 <!--<option>18:00-19:30</option>-->
@@ -313,11 +313,13 @@
 
                         <div class="form-group input-with-label">
                             <label for="name">* 姓名</label>
+                            <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p>
                             <input type="text" name="name" class="form-control" id="name" placeholder="ex. 無光晚餐">
                         </div>
 
                         <div class="form-group input-with-label">
                             <label for="phone">* 電話<span class="error-msg"></span></label>
+                            <p>無台灣電話者，請輸入0900000000</p>
                             <input type="text" name="phone" class="form-control phone" id="phone" maxlength="10" placeholder="ex. 0912345678">
                         </div>
 

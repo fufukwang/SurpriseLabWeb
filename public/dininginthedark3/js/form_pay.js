@@ -328,6 +328,14 @@ $('input[name="ticket-type"]').on('click', function () {
 */
 // Step 2 - 選擇人數
 $('.step-2 input, .step-2 select').on('change', function () {
+    var nextFieldset = $(this).parents().hasClass('form-grid') &&
+    $(this).closest('.form-group').next().length == 0 ? 
+    $(this).closest('.form-grid').next() : 
+    $(this).closest('.form-group').next();
+    var nextField = nextFieldset.find('input, select');
+    var nextElementType = nextField.prop('tagName');
+    var accessHide = true;
+    
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
         submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
@@ -345,6 +353,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
         if (!$(this).val()) {
             accessHide = false;
         }
+        updateField(nextFieldset, accessHide);
     }
     // });
     // // Step 3 - 日期、時段選擇
@@ -352,13 +361,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
 
     // 取得下一個欄位的標籤名稱
     // var nextFieldset = $(this).closest('.form-group').next();
-    var nextFieldset = $(this).parents().hasClass('form-grid') &&
-    $(this).closest('.form-group').next().length == 0 ? 
-    $(this).closest('.form-grid').next() : 
-    $(this).closest('.form-group').next();
-    var nextField = nextFieldset.find('input, select');
-    var nextElementType = nextField.prop('tagName');
-    // var accessHide = true;
+    
 /*
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
@@ -371,7 +374,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
         }
     }
 */
-/*
+
     // 如果下一個欄位是日期，且人數的值不為空值
     if (nextElementType === 'INPUT' && accessHide) {
         
@@ -409,9 +412,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
             }
             return [false];
         }
-    } else 
-*/
-    if (nextElementType === 'SELECT') {
+    } else if (nextElementType === 'SELECT') {
         var nextFieldID = nextField.attr('id');
         var data;
 
@@ -585,7 +586,7 @@ function updateOptions(select_filed, data) {
 function updateField(fieldGroup, accessHide) {
     // 每次重新點選選項後，除了下一個選項會重新載入外，後面的選項都會隱藏並清空值
     // 避免使用者又回到前面的選項選取時，下方的選項沒改變造成誤會
-    var hidefield = $('.step-3 .form-group').slice(fieldGroup.index());
+    var hidefield = $('.step-2 .form-group').slice(fieldGroup.index());
 
     hidefield.each(function () {
         $(this).find('input, select').val('').trigger('change');

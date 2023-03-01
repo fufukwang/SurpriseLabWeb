@@ -91,7 +91,7 @@
         </ul>
     </nav>
 
-    <main class="sections">
+    <main class="sections bookingPay">
 
         <div class="container" id="bookingPage">
             <!-- form -->

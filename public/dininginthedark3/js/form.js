@@ -453,12 +453,13 @@ $('.step-3 input, .step-3 select').on('change', function () {
             
         } else if (nextFieldID === 'booking_time') { // 時間
             nextField.html('').trigger('change');
-            if($('#booking_date').val()!='' && $('#booking_time_slot').val() != ''){
+            // && $('#booking_time_slot').val() != ''
+            if($('#booking_date').val()!=''){
                 $.get('/dininginthedark3/GetAjaxData',{
                     'act':'getBydartpart',
                     'ticketType':$('input[name="ticket-type"]:checked').val(),
                     'day':$('#booking_date').val(),
-                    'day_parts':$('#booking_time_slot').val(),
+                    'day_parts':'晚場',//$('#booking_time_slot').val(),
                     'pople':submitDatas['booking_people']
                 },function(obj){
                     data = [];
