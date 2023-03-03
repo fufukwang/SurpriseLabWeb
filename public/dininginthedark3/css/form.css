@@ -1638,7 +1638,7 @@ main.booking fieldset.step-4 .form-group:not(.select-food) {
   align-items: baseline;
 }
 
-fieldset.step-4 .form-group:not(.select-food) p,
+fieldset.step-3 .form-group:not(.select-food) p,
 main.booking fieldset.step-4 .form-group:not(.select-food) p {
   font-size: 12px;
   margin-left: 10px;
