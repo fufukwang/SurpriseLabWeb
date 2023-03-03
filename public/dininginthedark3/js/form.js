@@ -65,6 +65,20 @@ $(".action-button").on('click', function(){
 
         booking_date.on('focus', function () {
             $('#ui-datepicker-div').appendTo('.calender-wrapper');
+            setTimeout(() => {
+                if($('.calender-ps').length == 0){
+                    $('#ui-datepicker-div').append(`<div class="calender-ps">
+                        <div>
+                            <span style="background: #E6A046"></span>
+                            <p>好評熱賣</p>
+                        </div>
+                        <div>
+                            <span style="background: #AD0000"></span>
+                            <p>即將完售</p>
+                        </div>
+                    </div>`)
+                }
+            }, 100);
         });
 
         // 可選擇的日期
