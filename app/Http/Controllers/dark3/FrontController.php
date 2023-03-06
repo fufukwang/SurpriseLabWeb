@@ -44,7 +44,7 @@ class FrontController extends Controller
                 switch ($request->act) {
                     case 'getBypople': // 票種 & 人數 取得 day
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',0);
+                        $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS sites,day"))->groupBy('day')->where('day','>=',Carbon::today())->where('special',0);
                         if($ticketType == 1){
                             $pro = $pro->whereRaw("floor(ABS(DATEDIFF( '17530101', `dark3pro`.`day`)) % 7 / 5)=0");
                         }

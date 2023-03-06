@@ -33,7 +33,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
-    <link rel="stylesheet" href="css/form.css?v=0.1"/>
+    <link rel="stylesheet" href="css/form.css?v=0.2"/>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -637,7 +637,7 @@
     <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
     
     <!-- Custom Js -->
-    <script src="js/form.js?v=0.20"></script>
+    <script src="js/form.js?v=0.21"></script>
 
 </body>
 </html>
