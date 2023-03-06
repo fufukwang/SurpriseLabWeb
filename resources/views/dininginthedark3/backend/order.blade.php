@@ -142,10 +142,11 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">付款方式</label>
                                                 <div class="col-sm-8">
-                                                    <select name="pay_type" id="pay_type" class="form-control">
+                                                    <select name="pay_type" id="pay_type" class="form-control" data-edit_type="{{ $order->edit_type or '' }}">
                                                         <option value="後台編輯"@if(isset($order->pay_type) && $order->pay_type=='後台編輯') selected @endif>後台編輯</option>
                                                         <option value="信用卡"@if(isset($order->pay_type) && $order->pay_type=='信用卡') selected @endif>信用卡</option>
                                                         <!-- <option value="現場付款"@if(isset($order->pay_type) && $order->pay_type=='現場付款') selected @endif>現場付款</option> -->
+                                                        <option value="合作販售"@if(isset($order->pay_type) && $order->pay_type=='合作販售') selected @endif>合作販售</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -173,7 +174,7 @@
                                             <div class="form-group back_control">
                                                 <label class="control-label col-sm-4">XLS顯示</label>
                                                 <div class="col-sm-8">
-                                                    <select name="edit_type" class="form-control">
+                                                    <select name="edit_type" class="form-control" data-json="{{ json_encode($cooperate) }}">
                                                         <option value="後台編輯"@if(isset($order->edit_type) && $order->edit_type=='後台編輯') selected @endif>後台編輯</option>
                                                         <option value="藍新快速"@if(isset($order->edit_type) && $order->edit_type=='藍新快速') selected @endif>藍新快速</option>
                                                         <option value="自行匯款"@if(isset($order->edit_type) && $order->edit_type=='自行匯款') selected @endif>自行匯款</option>
@@ -308,8 +309,25 @@ $('form').bind('submit',function(){
 
 $('#pay_type').bind('change',function(){
     const type = $(this).val();
+    const edit_type = $(this).data('edit_type');
+    var etp = $('select[name=edit_type]');
     if(type == '後台編輯'){
+        etp.html('');
+        if(edit_type == '後台編輯'){ etp.append('<option value="後台編輯" selected>後台編輯</option>'); } else { etp.append('<option value="後台編輯">後台編輯</option>'); }
+        if(edit_type == '藍新快速'){ etp.append('<option value="藍新快速" selected>藍新快速</option>'); } else { etp.append('<option value="藍新快速">藍新快速</option>'); }
+        if(edit_type == '自行匯款'){ etp.append('<option value="自行匯款" selected>自行匯款</option>'); } else { etp.append('<option value="自行匯款">自行匯款</option>'); }
+        if(edit_type == '現場購票'){ etp.append('<option value="現場購票" selected>現場購票</option>'); } else { etp.append('<option value="現場購票">現場購票</option>'); }
+        if(edit_type == '公關位'){ etp.append('<option value="公關位" selected>公關位</option>'); } else { etp.append('<option value="公關位">公關位</option>'); }
         $('.back_control').show();
+    } else if(type == '合作販售'){
+        etp.html('');
+        var json = etp.data('json');
+        if(json != ''){
+            $.each( json, function( key, value ) {
+                if(edit_type == value.edit_type){ etp.append('<option value="'+value.edit_type+'" selected>'+value.edit_type+'</option>'); } else { etp.append('<option value="Line Pay">'+value.edit_type+'</option>'); }
+            });
+            $('.back_control').show();    
+        }
     } else {
         $('.back_control').hide();
         if($('#pay_type').val() == '已付款(部分退款)') $('.part_control').show();

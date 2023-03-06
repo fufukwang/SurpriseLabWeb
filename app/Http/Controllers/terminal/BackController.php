@@ -366,8 +366,16 @@ class BackController extends WebController
     }
 
     public function ProOutputSite(Request $request){
-        $pro = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>0")
-            ->select(DB::raw("({$this->oquery}) AS now,sites,id,rang_start,rang_end,day"));
+
+        $pro = pro::select(DB::raw("({$this->oquery}) AS now,sites,id,rang_start,rang_end,day"));
+        if($request->has('type')){
+            if($request->type == 'not'){
+                $pro = $pro->where('open',1)->whereRaw("(sites-{$this->oquery})>0");
+            } elseif($request->type == 'open'){
+                $pro = $pro->where('open',1);
+            }
+        }
+
         if($request->daystart == ''){
             $pro = $pro->where('day',Carbon::today()->format('Y-m-d'));
         } else {

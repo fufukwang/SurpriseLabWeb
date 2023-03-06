@@ -208,7 +208,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('xls/data/output','dark3\OrderController@XlsDataOuput');
         Route::get('xls/emaildata/output','dark3\OrderController@XlsEmailDataOuput');
         Route::post('order/{id}/resent','dark3\OrderController@beSentOrderMail');
-        Route::post('order/import.xls','terminal\OrderController@orderImportXls');
+        Route::post('order/import.xls','dark3\OrderController@orderImportXls');
 
         // 發票相關
         Route::post('order/inv/single/open','dark3\InvController@singleInvOpne');
