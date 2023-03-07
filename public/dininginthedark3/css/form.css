@@ -987,19 +987,20 @@ form .btn-outline {
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a:after {
   position: absolute;
   content: "";
-  top: 100%;
+  top: calc(100% + 3px);
   left: 50%;
   transform: translateX(-50%);
   width: 5px;
   height: 5px;
   border-radius: 50%;
+  z-index: -1;
 }
 
-.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.dot-y a.dot-y:after {
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.still-vacancy a:after {
   background: #E6A046;
 }
 
-.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.dot-r a.dot-r:after {
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out-soon a:after {
   background: #AD0000;
 }
 
@@ -1055,7 +1056,7 @@ form .btn-outline {
 .calender-ps {
   max-width: 380px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-end;
 }

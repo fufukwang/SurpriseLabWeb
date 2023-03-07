@@ -2516,11 +2516,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   border-radius: 50%;
 }
 
-.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.dot-y:after {
+.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.sold-out-soon:after {
   background: #E6A046;
 }
 
-.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.dot-r:after {
+.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.still-vacancy:after {
   background: #AD0000;
 }
 
@@ -2559,10 +2559,10 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     letter-spacing: 1.4px;
   }
 }
-.sold-out-soon a{
+/* .sold-out-soon a{
   color:#E6A046!important;
 }
 .still-vacancy a{
   color:#AD0000!important;
-}
+} */
 /*# sourceMappingURL=style.css.map */
