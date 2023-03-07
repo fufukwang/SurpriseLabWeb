@@ -65,7 +65,6 @@ $(".action-button").on('click', function(){
 
         booking_date.on('focus', function () {
             $('#ui-datepicker-div').appendTo('.calender-wrapper');
-            /*
             setTimeout(() => {
                 if($('.calender-ps').length == 0){
                     $('#ui-datepicker-div').append(`<div class="calender-ps">
@@ -80,7 +79,6 @@ $(".action-button").on('click', function(){
                     </div>`)
                 }
             }, 100);
-            */
         });
 
         // 可選擇的日期
@@ -117,8 +115,8 @@ $(".action-button").on('click', function(){
         function enableAllTheseDays(date) {
             var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
             if($.inArray(sdate, enableDays) !== -1) {
-                var myDateClass = "";
-                var myDateTip = "";
+                var myDateClass = "";  // 加入的樣式
+                var myDateTip = "";  // tooltip 文字
                 var myDateDay = date.getDay();
                 if(myDateDay === 0 || myDateDay === 6){
                     if(dateSite[sdate]<=36){
