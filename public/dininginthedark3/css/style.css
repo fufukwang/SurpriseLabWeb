@@ -2380,7 +2380,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   border: solid 1px #8C5FB4;
   border-radius: 6px;
   background-color: #101010;
-  padding: 8px;
+  padding: 8px 8px 25px;
 }
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-header {
