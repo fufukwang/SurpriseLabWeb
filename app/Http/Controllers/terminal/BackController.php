@@ -560,7 +560,7 @@ for($i=0;$i<1000;$i++){
                     {
                         $destinationPath = base_path() . '/storage/app';
                         $extension = $request->file('xlsx')->getClientOriginalExtension();
-                        $fileName = 'tgt_' . date('YmdHis') . '.' . $extension;
+                        $fileName = 'terminal_' . date('YmdHis') . '.' . $extension;
                         $request->file('xlsx')->move($destinationPath, $fileName);
                         $filePath = '/storage/app/' . $fileName;
                     }
@@ -587,13 +587,13 @@ for($i=0;$i<1000;$i++){
                             'num'        => $row['num'],
                             'money'      => $row['money'],
                             'name'       => $row['name'],
-                            'email'      => $row['email'],
-                            'tel'        => $row['tel'],
+                            'email'      => $row['email'] ?? '',
+                            'tel'        => $row['tel'] ?? '',
                             'sponsor_id' => $row['sponsor_id'],
                             'p2'         => $row['p2'],
                             'p4'         => $row['p4'],
                             'quarter'    => $quarter,  // 產出季度
-                            'buy_at'     => Carbon::parse($row['time'])->format('Y-m-d H:i:s')
+                            'buy_at'     => ''// Carbon::parse($row['time'])->format('Y-m-d H:i:s')
                         ];
                         if(backme::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){
                             backme::insert($r);
@@ -621,16 +621,15 @@ for($i=0;$i<1000;$i++){
             ];
             if($row->p2 >= 1){
                 for($i=0;$i<$row->p2;$i++){
-                    $data['type'] = 'p2';
-                    $data['code'] = $this->GenerateGiftCodeSN();
+                    $data['type'] = 'train';
+                    $data['code'] = $this->GenerateGiftCodeSN(true);
                     coupon::insert($data);
                 }
-            } elseif($row->p4 >= 1){
+            } 
+            if($row->p4 >= 1){
                 for($i=0;$i<$row->p4;$i++){
-                    $data['type'] = 'p4';
-                    $data['code'] = $this->GenerateGiftCodeSN();
-                    coupon::insert($data);
-                    $data['code'] = $this->GenerateGiftCodeSN();
+                    $data['type'] = 'flight';
+                    $data['code'] = $this->GenerateGiftCodeSN(true);
                     coupon::insert($data);
                 }
             }
@@ -643,6 +642,7 @@ for($i=0;$i<1000;$i++){
         $random = 8;$SN = '';$inNum = 1;
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         if($gift){
+            $random = 9;
             $inNum = 5; $SN = 'GIFT';
         }
         for($i=$inNum;$i<=$random;$i++){
