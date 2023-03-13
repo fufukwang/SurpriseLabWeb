@@ -617,7 +617,7 @@ class OrderController extends WebController
                     // 發票
                     $inv_number = '';
                     $inv_time = '';
-                    $inv = inv::select('number','is_cancal','results')->where('order_id',$row['id'])->first();
+                    $inv = inv::select('number','is_cancal','results')->where('order_id',$row['id'])->orderBy('created_at','desc')->first();
                     if($inv && $inv->is_cancal == 0){
                         $inv_number = $inv->number;
                         $inv_json = json_decode($inv->results,true);
