@@ -177,13 +177,17 @@ class InvController extends Controller
                 }
                 $ItemName .= '|手續費';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|0';$ItemAmt .= '|0';
 
-
+                $inv_count = inv::where('order_id',$row->id)->where('is_cancal',1)->count();
+                $psn = '';
+                if($inv_count>0){
+                    $psn = '_'.$inv_count;
+                }
                 $post_data_array = [
                     'RespondType' => 'JSON',
                     'Version' => '1.4',
                     'TimeStamp' => time(), //請以 time() 格式
                     'TransNum' => '',
-                    'MerchantOrderNo' => $row->sn,
+                    'MerchantOrderNo' => $row->sn.$psn,
                     'BuyerName' => $row->name,
                     'BuyerUBN' => '',
                     'BuyerPhone' => $phone,
@@ -208,8 +212,24 @@ class InvController extends Controller
                     'Status' => '1' //1=立即開立，0=待開立，3=延遲開立
                 ];
                 $result = $this->inv_sent($post_data_array);
-                Log::error($result);
+                // Log::error($result);
                 $results = json_decode($result['web_info'],true);
+                if($results['Status'] == 'SUCCESS'){
+                    if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
+                    if(isset($r['InvoiceNumber'])){
+                        inv::insert([
+                            'order_id'  => $row->id,
+                            'number'    => $r['InvoiceNumber'],
+                            'is_cancal' => 0,
+                            'sent_obj'  => json_encode($post_data_array),
+                            'results'   => $result['web_info']
+                        ]);
+                    } else {
+                        // return Response::json(['Status' => false,'message' => '無法取得發票號碼'], 200);
+                    }
+                }
+
+                /*
                 if($results['Status'] != 'LIB10003'){
                     if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
                 } else {
@@ -234,6 +254,7 @@ class InvController extends Controller
                         ]);
                     }
                 }
+                */
                 /*
                 $r = json_decode($results['Result'],true);
                 inv::insert([

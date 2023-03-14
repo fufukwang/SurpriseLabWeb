@@ -132,6 +132,7 @@
         $last_four = '';
         $modify_money = '';
         $couponNumber = 0;
+        $not_inv = false;
         if(count($coupons)>0){
             foreach($coupons as $coup){
                 $single_money = App\model\dark3\backme::select('money')->find($coup->b_id)->money;
@@ -139,6 +140,7 @@
                     $tmp_b_id = $coup->b_id;
                     $totle_money += $single_money;
                 }
+                if($coup->type == 'gift') $not_inv = true;
                 $couponNumber++;
             }
             if(isset($coup->b_id) && $totle_money == 4400*$couponNumber ){
@@ -180,7 +182,7 @@
         }
     ?>
                                             <tr id="tr_{{ $row->id }}">
-                                                <td>@if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)') && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
+                                                <td>@if($row->pay_status=='已付款' && $row->refund == 0 && $totle_money>0 && !$inv_open && !$not_inv)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
                                                 <td>{{ $row->sn }}<br />{{ $row->day }}<br />{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}
@@ -215,7 +217,7 @@
     @forelse(App\model\dark3\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} {{--[{{App\model\dark3\backme::select('money')->find($coup->b_id)->money}}]--}}<br >@empty 
     @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
     @if($couponNumber>0) [{{ $couponNumber * 4400 }}] @endif
-    <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($totle_money / (1 + (5 / 100))) }}<br>稅額：{{ $totle_money - round($totle_money / (1 + (5 / 100))) }}<br>總計：{{$totle_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
+    <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($inv_money / (1 + (5 / 100))) }}<br>稅額：{{ $inv_money - round($inv_money / (1 + (5 / 100))) }}<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
 </th>
                                                 <td>{!! nl2br($row->manage) !!}</td>
 
@@ -232,7 +234,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->dark3 == 1 && Session::get('key')->admin == 1 )
                                                     
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal))) @else style="display:none" @endif>發票開立</button>
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal)) && !$not_inv) @else style="display:none" @endif>發票開立</button>
                                                     @endif
                                                     <div>
                                                         <a class="btn btn-primary btn-xs" href="/dark3/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -485,6 +487,7 @@
                                                 <th>單位</th>
                                                 <th>單價<span class="b2c">(含稅)</span></th>
                                                 <th>金額<span class="b2c">(含稅)</span></th>
+                                                <th>功能</th>
                                             </tr>
                                         </thead>
                                         <tbody id="itemBody"></tbody>
@@ -506,15 +509,18 @@
                                         </tbody> -->
                                         <tfoot id="pass_money">
                                             <tr>
-                                                <td colspan="2"></td>
-                                                <td colspan="2">手續費調整</td>
-                                                <td><div class="form-group"><input type="number" id="handling_fee" value="0" style="width:100px;" class="form-control"></div></td>
+                                                <td><button type="button" class="btn btn-info additembtn">新增品項</button></td>
+                                                <td colspan="5"><span class="text-danger small">計算金額會重新編輯品項，如要修改請在最後步驟更改。</span></td>
                                             </tr>
                                         </tfoot>
                                     </table>
                                     <input type="hidden" id="TaxPlan" value="">
                                     <input type="hidden" id="TaxDisMoney" value="">
                                     <input type="hidden" id="inv_people" value="">
+
+                                    <input type="hidden" id="inv_cut" value="">
+                                    <input type="hidden" id="inv_handling" value="">
+                                    <input type="hidden" id="inv_refund" value="">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -596,7 +602,50 @@
 
 
 
-
+<div class="modal fade bd-example-modal-sm" id="inputModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">新增品項</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="addname" class="control-label">品名</label>
+                        <input type="text" class="form-control" id="addname" placeholder="品名">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="addnum" class="control-label">數量</label>
+                        <input type="number" class="form-control" id="addnum" placeholder="數量">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="addunit" class="control-label">單位</label>
+                        <input type="text" class="form-control" id="addunit" maxlength="1" placeholder="單位">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="addprice" class="control-label">單價</label>
+                        <input type="number" class="form-control" id="addprice" placeholder="單價">
+                    </div>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+        <button type="button" class="btn btn-primary additemModalbtn">新增品項</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -790,6 +839,7 @@
         <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.14/dist/sweetalert2.all.min.js"></script>
         <!--
 <link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
 <script src="/backstage/plugins/switchery/switchery.min.js"></script>
@@ -927,6 +977,9 @@ $(function(){
         var dial = $(this).data('dial');
         var phone = dial.replace('+886','0') + $(this).data('phone');
         var totle_money = $(this).data('totle_money');
+        var handling = $(this).data('handling');
+        var refund = $(this).data('refund');
+        totle_money = parseInt(totle_money) - parseInt(refund) + Math.round((parseInt(refund) * parseInt(handling)) / 100);
         var people = $(this).data('people');
         $('#TaxDisMoney').val($(this).data('dis_money'));
 
@@ -945,6 +998,9 @@ $(function(){
         $('#inv_amt').text(totle_money);
         $('#inv_use_id').val(id);
         $('#handling_fee').val(0);
+        $('#inv_cut').val($(this).data('cut'));
+        $('#inv_handling').val(handling);
+        $('#inv_refund').val(refund);
         if($(this).data('pay_status') == '已付款(部分退款)'){
             $('#pass_money').show();
         } else {
@@ -975,6 +1031,7 @@ $(function(){
             var item3 = '';
             var item4 = '';
             var item5 = '';
+            var itemMoney = 0;
             $('#itemBody tr').each(function(index, value){
                 if(index>0){
                     item1 += '|';item2 += '|';item3 += '|';item4 += '|';item5 += '|';
@@ -984,9 +1041,20 @@ $(function(){
                 item3 += $(value).find('td').eq(2).text();
                 item4 += $(value).find('td').eq(3).text();
                 item5 += $(value).find('td').eq(4).text();
+                itemMoney += parseInt($(value).find('td').eq(4).text());
             });
 
-
+            if($('input[name="Category"]:checked').val() == 'B2C'){
+                if(parseInt($('#TotalAmt').val()) != itemMoney){
+                    $.Notification.notify('error','bottom left','品項金額與總金額不符', '發票建立失敗');
+                    return false;
+                }
+            } else {
+                if(parseInt($('#Amt').val()) != itemMoney){
+                    $.Notification.notify('error','bottom left','品項金額與總金額不符', '發票建立失敗');
+                    return false;
+                }
+            }
 
 
             $.post('/dark3/order/inv/single/open',{
@@ -1045,6 +1113,42 @@ $(function(){
             $.Notification.notify('error','bottom left','金額錯誤', '發票建立失敗');
         }
     });
+
+
+
+$('#itemBody').on('click','.remove-item',function(){
+    $(this).parent().parent().remove();
+});
+$('.additembtn').bind('click',function(){
+    $('#inputModal').modal('show');
+    
+});
+$('.additemModalbtn').bind('click',function(){
+    var name = $('#addname').val();
+    var num = $('#addnum').val();
+    var unit = $('#addunit').val();
+    var price = $('#addprice').val();
+    if(name != '' && unit != '' && num != '' && price != ''){
+        addItem(name,num,unit,price,(num * price));
+        $('#addname,#addnum,#addunit,#addprice').val('');
+        $('#inputModal').modal('hide');
+    } else {
+        $.Notification.notify('error','bottom left','資料不完整無法新增品項', '內容錯誤');
+    }
+});
+$('#inputModal').on('hide.bs.modal', function (e) {
+    $('#con-close-modal').modal('hide');
+    setTimeout(function(){
+        $('#con-close-modal').modal('show');
+    },800)
+    
+});
+
+
+
+
+
+
 
     // 報廢訂單確認視窗
     $('.remove-inv').bind('click',function(){
@@ -1197,17 +1301,28 @@ function calAmt(){
         $('#inv_price,#inv_amt').text(totleamt - now_tax - handling_fee);
         $('#inv_pass_price,#inv_pass_amt').text(handling_fee);
     }
-    var html = '<tr>';
-    html += '<td>無光晚餐S3</td><td>'+people+'</td><td>張</td><td>2200</td><td>'+(2200 * people)+'</td>';
-    html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
-    if(2200 * people != parseInt(totleamt) + parseInt(disMoney)){
-        discountLine = parseInt(totleamt) + parseInt(disMoney) - (2200 * people) - parseInt(handling_fee);
-        html += '</tr><tr><td>折扣</td><td>1</td><td>組</td><td>'+discountLine+'</td><td>'+discountLine+'</td>';
+    var cut = parseInt($('#inv_cut').val());
+    var handling = parseInt($('#inv_handling').val());
+    var refund = parseInt($('#inv_refund').val());
+    if(refund>0 && handling>0){
+        handling_fee = Math.round((handling * refund) / 100);
     }
-    html += '</tr><tr><td>手續費</td><td>1</td><td>組</td><td>'+handling_fee+'</td><td>'+handling_fee+'</td></tr>';
-    $('#itemBody').html(html);
-}
+    $('#itemBody').html('');
+    addItem('無光晚餐S3',people,'張','2200',2200 * people);
+    addItem('行銷折扣',1,'組',(disMoney * -1),(disMoney * -1));
 
+    if(2200 * people != parseInt(totleamt) + parseInt(disMoney)){
+        discountLine = parseInt(totleamt) + parseInt(disMoney) - (2200 * people) - parseInt(handling_fee) + refund;
+        addItem('折扣',1,'組',discountLine,discountLine);
+    }
+    if(refund>0) addItem('退費',cut,'張',(refund/cut)*-1,(refund*-1));
+    if(handling_fee > 0) addItem('手續費',1,'組',handling_fee,handling_fee);
+    // $('#itemBody').html(html);
+}
+function addItem(name,num,unit,sprice,tprice){
+    var html = '<tr><td>'+name+'</td><td>'+num+'</td><td>'+unit+'</td><td>'+sprice+'</td><td>'+tprice+'</td><td><a class="btn btn-danger btn-xs remove-item" href="javascript:;"><i class="fa fa-remove"></i></a></td></tr>';
+    $('#itemBody').append(html);
+}
 
 function submitXLSForm(){
     $('#SearchForm').attr('target','_blank')
