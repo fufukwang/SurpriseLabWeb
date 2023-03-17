@@ -26,7 +26,7 @@
                     <li class="menu-item" data-id="about"><a href="/terminal#about">ABOUT</a></li>
                     <li class="menu-item" data-id="projects"><a href="/terminal#projects">PROJECTS</a></li>
                     <li class="menu-item" data-id="eapps-instagram-feed-1"><a href="/terminal#eapps-instagram-feed-1">REVIEW</a></li>
-                    <!-- <li class="menu-item" data-id="discount"><a href="/terminal#discount">DISCOUNT</a></li> -->
+                    <li class="menu-item" data-id="discount"><a href="/terminal#discount">DISCOUNT</a></li>
                     <!-- <li class="menu-item" data-id="tour"><a href="/terminal#tour">TOUR</a></li> -->
                     <li class="menu-item" data-id="rules"><a href="/terminal#rules">RULES</a></li>
                     <li class="menu-item" data-id="contact"><a href="/terminal#contact">CONTACT</a></li>
@@ -43,7 +43,7 @@
             <li class="menu-item" data-id="about"><a href="/terminal#about">ABOUT</a></li>
             <li class="menu-item" data-id="projects"><a href="/terminal#projects">PROJECTS</a></li>
             <li class="menu-item" data-id="eapps-instagram-feed-1"><a href="/terminal#eapps-instagram-feed-1">REVIEW</a></li>
-            <!-- <li class="menu-item" data-id="discount"><a href="/terminal#discount">DISCOUNT</a></li> -->
+            <li class="menu-item" data-id="discount"><a href="/terminal#discount">DISCOUNT</a></li>
             <!-- <li class="menu-item" data-id="tour"><a href="/terminal#tour">TOUR</a></li> -->
             <li class="menu-item" data-id="rules"><a href="/terminal#rules">RULES</a></li>
             <li class="menu-item" data-id="contact"><a href="/terminal#contact">CONTACT</a></li>

@@ -413,7 +413,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <div class="title-list-wrap">
                                                                 <div class="list-caption">觀看順序</div>
                                                                 <ul class="list-wrap">
-                                                                    <li class="list-item">FLIGHT 與微醺列車是兩項獨立的作品，前後順序並不影響體驗的完整性，但就心境感受上，建議可以先體驗列車，再體驗飛機。</li>
+                                                                    <li class="list-item">FLIGHT 與微醺列車是兩項獨立的作品，前後順序並不影響體驗的完整性，但就心境感受上，建議可以先體驗飛機，再體驗列車。</li>
                                                                 </ul>
                                                             </div>
                                 
