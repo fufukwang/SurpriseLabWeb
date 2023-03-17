@@ -858,9 +858,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <!-- 03 -->
                     <div class="item">
-                        <a href="https://www.kkday.com/zh-tw/product/136530" target="_blank">
+                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount02.png" data-src="/terminalAssets/images/main/discount02.png" data-src-retina="/terminalAssets/images/main/discount02.png" alt="Klook 四人票">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">Klook 限定《FLIGHT無光飛航》機加酒四人票</div>
+                            <div class="discount-p">Klook獨家限定機加酒套票，購買四人無光飛航機票，贈落日限定飲品 4 瓶（原價$800 元）。</br>
+                            搭完刺激的無光飛航，喝瓶落日限定蜂蜜桂花釀飲品，走過高雄港畔，看看駁二夕陽，有了機加酒的旅程，更臻完美。</br></br>
+                            本演出套票加贈落日限定飲品會含有酒精，因此未滿十八歲者禁止飲酒，並請理性飲酒，酒後禁止酒駕。
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 04 -->
+                    <div class="item">
+                        <a href="https://www.kkday.com/zh-tw/product/134229" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png" data-src="/terminalAssets/images/main/discount03.png" data-src-retina="/terminalAssets/images/main/discount03.png" alt="KKday 六人票">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">KKday 限定《FLIGHT無光飛航》9 折六人票</div>
+                            <div class="discount-p">這趟無光旅途充滿未知，讓你有點害怕？</div>
+                            沒關係，我們早就幫你準備好！</div>
+                            KKday 獨家 9 折六人機票，帶上五個好友</div>
+                            陪你一起體驗刺激旅程，就不害怕了！
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 05 -->
+                    <div class="item">
+                        <a href="https://www.kkday.com/zh-tw/product/136530" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount04.png" data-src="/terminalAssets/images/main/discount04.png" data-src-retina="/terminalAssets/images/main/discount04.png" alt="KKDay">
                             </figure>
                         </a>
                         <div class="discount-intro">
@@ -871,49 +904,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                     </div>
 
-                    <!-- 04 -->
+                    <!-- 01 -->
                     <div class="item">
                         <a href="https://ec.citysuiteshotels.com/webhotel/0274/index?_rand=59ufuaxww47" target="_blank">
                             <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png" data-src="/terminalAssets/images/main/discount03.png" data-src-retina="/terminalAssets/images/main/discount03.png" alt="KKday 六人票">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount05.png" data-src="/terminalAssets/images/main/discount05.png" data-src-retina="/terminalAssets/images/main/discount05.png" alt="城市商旅">
                             </figure>
                         </a>
                         <div class="discount-intro">
                             <div class="discount-title">真愛館港景房＋微醺列車／FLIGHT</div>
                             <div class="discount-p">旅途上，有很多事物不能選擇，但我們可以選擇，暫時落腳的地點。</br>
                             在城市商旅真愛館，擁有港景第一排的視野，還有星空SkyBar，最優秀的是，步行10分鐘就抵達落日轉運站！
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 05 -->
-                    <div class="item">
-                        <a href="https://www.kkday.com/zh-tw/product/134229" target="_blank">
-                            <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount04.png" data-src="/terminalAssets/images/main/discount04.png" data-src-retina="/terminalAssets/images/main/discount04.png" alt="KKDay">
-                            </figure>
-                        </a>
-                        <div class="discount-intro">
-                            <div class="discount-title">KKday 限定《FLIGHT無光飛航》9 折六人票</div>
-                            <div class="discount-p">這趟無光旅途充滿未知，讓你有點害怕？</br>
-                            沒關係，我們早就幫你準備好！</br>
-                            在城市商旅真愛館，擁有港景第一排的視野，還有星空SkyBar，最優秀的是，步行10分鐘就抵達落日轉運站！
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 01 -->
-                    <div class="item">
-                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/" target="_blank">
-                            <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount05.png" data-src="/terminalAssets/images/main/discount05.png" data-src-retina="/terminalAssets/images/main/discount05.png" alt="城市商旅">
-                            </figure>
-                        </a>
-                        <div class="discount-intro">
-                            <div class="discount-title">Klook 限定《FLIGHT無光飛航》機加酒四人票</div>
-                            <div class="discount-p">Klook獨家限定機加酒套票，購買四人無光飛航機票，贈落日限定飲品 4 瓶（原價$800 元）。</br>
-                            搭完刺激的無光飛航，喝瓶落日限定蜂蜜桂花釀飲品，走過高雄港畔，看看駁二夕陽，有了機加酒的旅程，更臻完美。</br></br>
-                            本演出套票加贈落日限定飲品會含有酒精，因此未滿十八歲者禁止飲酒，並請理性飲酒，酒後禁止酒駕。
                             </div>
                         </div>
                     </div>
