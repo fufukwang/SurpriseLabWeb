@@ -571,7 +571,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.04，陸續開放劃位。</li>
+                                                        <li class="list-item">2022.11─2023.08，陸續開放劃位。</li>
                                                     </ul>
                                                 </div>
                     
@@ -724,7 +724,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.04，陸續開放劃位。</li>
+                                                        <li class="list-item">2022.11─2023.08，陸續開放劃位。</li>
                                                     </ul>
                                                 </div>
                     
@@ -835,53 +835,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
-        <!-- <section class="section-wrap skip-background-light js-anchor-section project-section" id="discount">
+        <section class="section-wrap skip-background-light js-anchor-section project-section" id="discount">
             <div class="section-heading-wrap">
                 <h2 class="heading-title">聯合優惠</h2>
                 <h3 class="heading-subtitle">Discount</h3>
             </div>
-                            <div class="cta-wrap">
-
-                                                <div class="owl-carousel owl-theme"> -->
-
-                                                    
-
-                                                    <!-- 02 -->
-                                                    <!-- <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
-                                                        <figure class="slideshow-card">
-                                                            <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
-                                                        </figure>
-                                                    </a></div> -->
-
-                                                    <!-- 01 -->
-                                                    <!-- <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
-                                                        <figure class="slideshow-card">
-                                                            <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
-                                                        </figure>
-                                                    </a></div> -->
-
-                                                    <!-- 03 -->
-                                                    <!-- <div class="item"><a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
-                                                        <figure class="slideshow-card">
-                                                            <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount_1.jpg" data-src="/terminalAssets/images/main/discount_1.jpg" data-src-retina="/terminalAssets/images/main/discount_1.jpg" alt="微醺列車 聯合優惠">
-                                                        </figure>
-                                                    </a></div>
-                                                </div> -->
-
-                                                <!-- Custom Controls -->
-                                                <!-- <div class="custom-owl-nav">
-                                                    <button class="custom-owl-prev">
-                                                        <i class="icon-arrow-slides-left"></i>
-                                                    </button>
-                                                    <button class="custom-owl-next">
-                                                        <i class="icon-arrow-slides-right"></i>
-                                                    </button>
-                                                </div>
-
-
+            <div class="cta-wrap">
+                <div class="owl-carousel owl-theme">
+                    <!-- 02 -->
+                    <div class="item">
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount01.png" data-src="/terminalAssets/images/main/discount01.png" data-src-retina="/terminalAssets/images/main/discount01.png" alt="Klook">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">Klook 限定《FLIGHT 無光飛航》雙人套票</div>
+                            <div class="discount-p">在 Klook 上有超過 100 個高雄景點，一站式預訂高雄旅行的所有行程。</br>
+                            在動身出發之前，帶上 Klook 獨家限定的《FLIGHT 無光飛航》雙人票，搭上來自英國的班機，置身伸手不見五指的黑暗之中，開啟跨越世界的飛行。
                             </div>
+                        </div>
+                    </div>
 
-        </section> -->
+                    <!-- 03 -->
+                    <div class="item">
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount02.png" data-src="/terminalAssets/images/main/discount02.png" data-src-retina="/terminalAssets/images/main/discount02.png" alt="Klook 四人票">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">KKday 限定《國旅聯票》加購高鐵票 8 折</div>
+                            <div class="discount-p">落日轉運站與KKday合作推出「國旅聯票」，購買微醺列車或 FLIGHT 任一體驗，就享高鐵車票全時段8折起。</br>
+                            不但有得玩還省到錢，手指點點你會發現，原來去一趟高雄，沒那麼遠也沒麼難。
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 04 -->
+                    <div class="item">
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png" data-src="/terminalAssets/images/main/discount03.png" data-src-retina="/terminalAssets/images/main/discount03.png" alt="KKday 六人票">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">真愛館港景房＋微醺列車／FLIGHT</div>
+                            <div class="discount-p">旅途上，有很多事物不能選擇，但我們可以選擇，暫時落腳的地點。</br>
+                            在城市商旅真愛館，擁有港景第一排的視野，還有星空SkyBar，最優秀的是，步行10分鐘就抵達落日轉運站！
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 05 -->
+                    <div class="item">
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount04.png" data-src="/terminalAssets/images/main/discount04.png" data-src-retina="/terminalAssets/images/main/discount04.png" alt="KKDay">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">KKday 限定《FLIGHT無光飛航》9 折六人票</div>
+                            <div class="discount-p">這趟無光旅途充滿未知，讓你有點害怕？</br>
+                            沒關係，我們早就幫你準備好！</br>
+                            在城市商旅真愛館，擁有港景第一排的視野，還有星空SkyBar，最優秀的是，步行10分鐘就抵達落日轉運站！
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 01 -->
+                    <div class="item">
+                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount05.png" data-src="/terminalAssets/images/main/discount05.png" data-src-retina="/terminalAssets/images/main/discount05.png" alt="城市商旅">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">Klook 限定《FLIGHT無光飛航》機加酒四人票</div>
+                            <div class="discount-p">Klook獨家限定機加酒套票，購買四人無光飛航機票，贈落日限定飲品 4 瓶（原價$800 元）。</br>
+                            搭完刺激的無光飛航，喝瓶落日限定蜂蜜桂花釀飲品，走過高雄港畔，看看駁二夕陽，有了機加酒的旅程，更臻完美。</br></br>
+                            本演出套票加贈落日限定飲品會含有酒精，因此未滿十八歲者禁止飲酒，並請理性飲酒，酒後禁止酒駕。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Controls -->
+                <div class="custom-owl-nav">
+                    <button class="custom-owl-prev">
+                        <i class="icon-arrow-slides-left"></i>
+                    </button>
+                    <button class="custom-owl-next">
+                        <i class="icon-arrow-slides-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
 
         <section class="section-wrap skip-background-light text-sction js-anchor-section" id="rules">
             <div class="container-xl">
