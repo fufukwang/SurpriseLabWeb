@@ -801,10 +801,6 @@ a {
 #discount .cta-wrap {
   position: relative;
 }
-#discount .slideshow-card {
-  border-radius: 8px;
-  overflow: hidden;
-}
 #discount .discount-intro {
   max-width: 600px;
   width: 95%;
@@ -812,6 +808,9 @@ a {
   margin-top: 20px;
   line-height: 2;
   letter-spacing: 0.1em;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity .5s,transform 0s .5s;
 }
 #discount .discount-title {
   font-size: 22px;
@@ -832,6 +831,11 @@ a {
     font-size: 14px;
     line-height: 1.8;
   }
+}
+#discount .owl-item.center .discount-intro {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: .5s .5s;
 }
 @media screen and (min-width: 1200px) {
   #discount .cta-wrap div.custom-owl-nav {

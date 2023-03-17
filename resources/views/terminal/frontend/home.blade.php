@@ -843,7 +843,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="owl-carousel owl-theme">
                     <!-- 02 -->
                     <div class="item">
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount01.png" data-src="/terminalAssets/images/main/discount01.png" data-src-retina="/terminalAssets/images/main/discount01.png" alt="Klook">
                             </figure>
@@ -858,7 +858,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <!-- 03 -->
                     <div class="item">
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                        <a href="https://www.kkday.com/zh-tw/product/136530" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount02.png" data-src="/terminalAssets/images/main/discount02.png" data-src-retina="/terminalAssets/images/main/discount02.png" alt="Klook 四人票">
                             </figure>
@@ -873,7 +873,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <!-- 04 -->
                     <div class="item">
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                        <a href="https://ec.citysuiteshotels.com/webhotel/0274/index?_rand=59ufuaxww47" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png" data-src="/terminalAssets/images/main/discount03.png" data-src-retina="/terminalAssets/images/main/discount03.png" alt="KKday 六人票">
                             </figure>
@@ -888,7 +888,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <!-- 05 -->
                     <div class="item">
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                        <a href="https://www.kkday.com/zh-tw/product/134229" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount04.png" data-src="/terminalAssets/images/main/discount04.png" data-src-retina="/terminalAssets/images/main/discount04.png" alt="KKDay">
                             </figure>
@@ -904,7 +904,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <!-- 01 -->
                     <div class="item">
-                        <a href="https://asiayo.com/event/sunsetterminal.html" target="_blank">
+                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount05.png" data-src="/terminalAssets/images/main/discount05.png" data-src-retina="/terminalAssets/images/main/discount05.png" alt="城市商旅">
                             </figure>
