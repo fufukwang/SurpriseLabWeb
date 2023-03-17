@@ -881,9 +881,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </a>
                         <div class="discount-intro">
                             <div class="discount-title">KKday 限定《FLIGHT無光飛航》9 折六人票</div>
-                            <div class="discount-p">這趟無光旅途充滿未知，讓你有點害怕？</div>
-                            沒關係，我們早就幫你準備好！</div>
-                            KKday 獨家 9 折六人機票，帶上五個好友</div>
+                            <div class="discount-p">這趟無光旅途充滿未知，讓你有點害怕？</br>
+                            沒關係，我們早就幫你準備好！</br>
+                            KKday 獨家 9 折六人機票，帶上五個好友</br>
                             陪你一起體驗刺激旅程，就不害怕了！
                             </div>
                         </div>
