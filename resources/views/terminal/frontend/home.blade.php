@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?date=0218">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0218">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0320">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -905,7 +905,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
 
                     <!-- 01 -->
-                    <div class="item">
+                    <!-- <div class="item">
                         <a href="https://ec.citysuiteshotels.com/webhotel/0274/index?_rand=59ufuaxww47" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount05.png" data-src="/terminalAssets/images/main/discount05.png" data-src-retina="/terminalAssets/images/main/discount05.png" alt="城市商旅">
@@ -917,7 +917,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             在城市商旅真愛館，擁有港景第一排的視野，還有星空SkyBar，最優秀的是，步行10分鐘就抵達落日轉運站！
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Custom Controls -->
