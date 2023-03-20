@@ -379,7 +379,7 @@ class OrderController extends Controller
                             $message .= "第{$i}列 編號({$row['ticket']})人數已滿<br>";
                             break;
                         }
-                        $money = $act->cash * $row['people'] * 1.1;
+                        $money = $act->money * $row['people'];
 
                         // 寫入
                         $sn = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
