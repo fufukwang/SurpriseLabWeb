@@ -163,8 +163,10 @@
                         $last_four = $card_info->card_info->last_four;
                     }
                 }
-                  
+            } elseif($row->pay_type == '合作販售'){
+                $totle_money = $row->PM * $row->pople;
             }
+
         }
         $number = App\model\dark3\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
         $inv_count = App\model\dark3\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
