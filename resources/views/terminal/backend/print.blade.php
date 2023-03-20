@@ -148,6 +148,7 @@
         $inv_open = false;
         $last_four = '';
         $couponNumber = 0;
+        $gift_money = 0;
         if($coupons && count($coupons)>0){
             /*
             foreach($coupons as $coup){
@@ -163,7 +164,11 @@
             }
             */
             $couponNumber = 1;
-            if($row->plan == 'train'){ $totle_money = count($coupons) * 1250; } elseif ($row->plan == 'flight') { $totle_money = count($coupons) * 500; }
+            if($row->plan == 'train'){ 
+                $gift_money = count($coupons) * 1250; //$gift_money = $totle_money; 
+            } elseif ($row->plan == 'flight') { 
+                $gift_money = count($coupons) * 500; //$gift_money = $totle_money; 
+            }
             if($row->OM>0){ $totle_money += $row->OM; }
         } else {
             $totle_money = $row->OM;
@@ -255,7 +260,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                                     
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal))) @else style="display:none" @endif>發票開立</button>
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}" data-gift_money="{{ $gift_money }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal))) @else style="display:none" @endif>發票開立</button>
                                                     
                                                     @endif
                                                     <div>
@@ -559,6 +564,7 @@
                                     <input type="hidden" id="inv_cut" value="">
                                     <input type="hidden" id="inv_handling" value="">
                                     <input type="hidden" id="inv_refund" value="">
+                                    <input type="hidden" id="gift_money" value="">
 
                                     
                                                 </div>
@@ -1074,6 +1080,7 @@ $(function(){
         $('#inv_cut').val($(this).data('cut'));
         $('#inv_handling').val(handling);
         $('#inv_refund').val(refund);
+        $('#gift_money').val($(this).data('gift_money'));
         /*
         if($(this).data('pay_status') == '已付款(部分退款)'){
             $('#pass_money').show();
@@ -1398,6 +1405,7 @@ function calAmt(){
     var cut = parseInt($('#inv_cut').val());
     var handling = parseInt($('#inv_handling').val());
     var refund = parseInt($('#inv_refund').val());
+    var gift_money = parseInt($('#gift_money').val());
     if(refund>0 && handling>0){
         handling_fee = Math.round((handling * refund) / 100);
     }
@@ -1409,7 +1417,7 @@ function calAmt(){
             addItem('行銷折扣',1,'組',(disMoney * -1),(disMoney * -1));
             // html += '<td>微醺列車：BON VOYAGE</td><td>'+people+'</td><td>張</td><td>'+taxTrain+'</td><td>'+(taxTrain * people)+'</td>';
             // html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
-            if(taxTrain * people != parseInt(totleamt) + parseInt(disMoney)){
+            if(taxTrain * people != parseInt(totleamt) + parseInt(disMoney) + parseInt(gift_money)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - parseInt(handling_fee) + refund;
                 addItem('折扣',1,'組',discountLine,discountLine);
             }
@@ -1419,7 +1427,7 @@ function calAmt(){
             addItem('行銷折扣',1,'組',(disMoney * -1),(disMoney * -1));
             // html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td>';
             // html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
-            if(taxFlight * people != parseInt(totleamt) + parseInt(disMoney)){
+            if(taxFlight * people != parseInt(totleamt) + parseInt(disMoney) + parseInt(gift_money)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxFlight * people) - parseInt(handling_fee) + refund;
                 addItem('折扣',1,'組',discountLine,discountLine);
             }
@@ -1429,7 +1437,7 @@ function calAmt(){
             addItem('行銷折扣',1,'組',(disMoney * -1),(disMoney * -1));
             // html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td>';
             // html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
-            if(taxBoat * people != parseInt(totleamt) + parseInt(disMoney)){
+            if(taxBoat * people != parseInt(totleamt) + parseInt(disMoney) + parseInt(gift_money)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxBoat * people) - parseInt(handling_fee) + refund;
                 addItem('折扣',1,'組',discountLine,discountLine);
             }
@@ -1443,7 +1451,7 @@ function calAmt(){
             // html += '<td>FLIGHT 無光飛航</td><td>'+people+'</td><td>張</td><td>'+taxFlight+'</td><td>'+(taxFlight * people)+'</td></tr><tr>';
             // html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-100</td><td>'+(-100 * people)+'</td>';
             // html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
-            if((taxTrain * people)+(taxFlight * people)+(-100 * people) != parseInt(totleamt) + parseInt(disMoney)){
+            if((taxTrain * people)+(taxFlight * people)+(-100 * people) != parseInt(totleamt) + parseInt(disMoney) + parseInt(gift_money)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - (taxFlight * people) - (-100 * people) - parseInt(handling_fee) + refund;
                 addItem('折扣',1,'組',discountLine,discountLine);
             }
@@ -1459,12 +1467,13 @@ function calAmt(){
             // html += '<td>Boat for ONE 單程船票</td><td>'+people+'</td><td>張</td><td>'+taxBoat+'</td><td>'+(taxBoat * people)+'</td></tr><tr>';
             // html += '<td>套票折扣</td><td>'+people+'</td><td>張</td><td>-150</td><td>'+(-150 * people)+'</td>';
             // html += '</tr><tr><td>行銷折扣</td><td>1</td><td>組</td><td>'+(disMoney * -1)+'</td><td>'+(disMoney * -1)+'</td>';
-            if((taxTrain * people)+(taxFlight * people)+(taxBoat * people)+(-150 * people) != parseInt(totleamt) + parseInt(disMoney)){
+            if((taxTrain * people)+(taxFlight * people)+(taxBoat * people)+(-150 * people) != parseInt(totleamt) + parseInt(disMoney) + parseInt(gift_money)){
                 discountLine = parseInt(totleamt) + parseInt(disMoney) - (taxTrain * people) - (taxFlight * people) - (taxBoat * people) - (-150 * people) - parseInt(handling_fee) + refund;
                 addItem('折扣',1,'組',discountLine,discountLine);
             }
             break;
     }
+    if(gift_money>0) addItem('禮物卡折抵',1,'張',(gift_money)*-1,(gift_money*-1));
     // html += '</tr>';
     // html += addItem('手續費',1,'組',handling_fee,handling_fee);//'</tr><tr><td>手續費</td><td>1</td><td>組</td><td>'+handling_fee+'</td><td>'+handling_fee+'</td>';
     // $('#itemBody').html(html);

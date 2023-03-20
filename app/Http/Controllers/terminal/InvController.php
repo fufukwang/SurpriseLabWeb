@@ -144,6 +144,7 @@ class InvController extends WebController
                 $totleamt = 0;
                 $inv_open = false;
                 $last_four = '';
+                $gift_money = 0;
                 if(count($coupons)>0){
                     /*
                     foreach($coupons as $coup){
@@ -159,7 +160,11 @@ class InvController extends WebController
                     $totleamt = count($coupons) * 4400;
                     $last_four = backme::select('last_four')->find($coup->b_id)->last_four;
                     */
-                    if($row->plan == 'train'){ $totleamt = count($coupons) * 1250; } elseif ($row->plan == 'flight') { $totleamt = count($coupons) * 500; }
+                    if($row->plan == 'train'){ 
+                        $gift_money = count($coupons) * 1250; // $gift_money = $totle_money; 
+                    } elseif ($row->plan == 'flight') { 
+                        $gift_money = count($coupons) * 500; // $gift_money = $totle_money; 
+                    }
                     if($row->money>0){ $totleamt += $row->money; }
                 } else {
                     $totleamt = $row->money;
@@ -179,7 +184,7 @@ class InvController extends WebController
                     case 'train':
                         $ItemName .= '微醺列車：BON VOYAGE';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '1250';$ItemAmt .= (1250*$row->pople);
                         $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->dis_money;$ItemAmt .= '|'.$row->dis_money;
-                        if(1250 * $row->pople != $totleamt + $row->dis_money){
+                        if(1250 * $row->pople != $totleamt + $row->dis_money + $gift_money){
                             $discountLine = $totleamt + $row->dis_money - (1250 * $row->pople);
                             $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
                         }
@@ -187,7 +192,7 @@ class InvController extends WebController
                     case 'flight':
                         $ItemName .= 'FLIGHT 無光飛航';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '500';$ItemAmt .= (500*$row->pople);
                         $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->dis_money;$ItemAmt .= '|'.$row->dis_money;
-                        if(500 * $row->pople != $totleamt + $row->dis_money){
+                        if(500 * $row->pople != $totleamt + $row->dis_money + $gift_money){
                             $discountLine = $totleamt + $row->dis_money - (500 * $row->pople);
                             $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
                         }
@@ -195,7 +200,7 @@ class InvController extends WebController
                     case 'boat':
                         $ItemName .= 'Boat for ONE 單程船票';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '800';$ItemAmt .= (800*$row->pople);
                         $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->dis_money;$ItemAmt .= '|'.$row->dis_money;
-                        if(800 * $row->pople != $totleamt + $row->dis_money){
+                        if(800 * $row->pople != $totleamt + $row->dis_money + $gift_money){
                             $discountLine = $totleamt + $row->dis_money - (800 * $row->pople);
                             $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
                         }
@@ -223,7 +228,9 @@ class InvController extends WebController
                         break;
                 }
                 $ItemName .= '|手續費';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|0';$ItemAmt .= '|0';
-
+                if($gift_money>0){
+                    $ItemName .= '|禮物卡折抵';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.($gift_money*-1);$ItemAmt .= '|'.($gift_money*-1);
+                }
 
                 $inv_count = inv::where('order_id',$row->id)->where('is_cancal',1)->count();
                 $psn = '';
