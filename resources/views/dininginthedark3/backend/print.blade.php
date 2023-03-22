@@ -67,6 +67,7 @@
                                                     <option value="">付款類型</option>
                                                     <option value="信用卡"@if(isset($request->pay_type) && $request->pay_type=='信用卡') selected @endif>信用卡</option>
                                                     <option value="後台編輯"@if(isset($request->pay_type) && $request->pay_type=='後台編輯') selected @endif>後台編輯</option>
+                                                    <option value="合作販售"@if(isset($request->pay_type) && $request->pay_type=='合作販售') selected @endif>合作販售</option>
                                                 </select>
                                                 <!-- <label><input type="checkbox" name="is_overseas" value="1"@if($request->is_overseas==1) checked @endif>海外信用卡</label> -->
                                                 <label><input type="checkbox" name="is_overseas" value="2"@if($request->is_overseas==2) checked @endif>國內信用卡</label>
