@@ -381,7 +381,7 @@ $('select[name=pay_status]').bind('change',function(){
         if($('#pay_type').val() == '後台編輯') $('.back_control').show();
     }
 });
-$('select[name=pay_status],select[name=handling]').trigger('change');
+// $('select[name=pay_status],select[name=handling]').trigger('change');
 $('.ref_money').bind('click',function(){
     $('.ref_input').show();
 })
@@ -391,7 +391,7 @@ $('input[name=refund]').bind('blur keyup change',function(){
 $('select[name=handling]').bind('change',function(){
     $('#handling_fee').val(Math.round($(this).val() * $('input[name=refund]').val() / 100));
 });
-
+$('select[name=pay_status],select[name=handling]').trigger('change');
 @if($order->refund == 0) $('.ref_input').hide(); @endif
         });
 
