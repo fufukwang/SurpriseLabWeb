@@ -1,11 +1,11 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
     <head>
-		<meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>【無光晚餐】你需要先知道的注意事項 7 Tips for Dining in the Dark</title>
-    <style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td,h1{line-height:100%}h1,h2{font-family:Helvetica;text-align:center}h1,h2,h3,h4{display:block;font-style:normal;font-weight:700;margin:0}h1,h2,h3,h4,h5,h6{margin:0}#templateColumns,#templateFooter{border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}h1,h2,h3,h4,h5,h6{display:block}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}#bodyTable,#templateFooter,body{background-color:#333232}#bodyCell{border-top:0}#templateContainer{border:0}h1{color:#fff!important;font-size:40px;letter-spacing:-1px}h2{color:#000!important;font-size:36px;line-height:125%;letter-spacing:-.75px}h3,h4{line-height:125%;text-align:left;font-family:Helvetica}h3{color:#606060!important;font-size:18px;letter-spacing:-.5px}h4{color:grey!important;font-size:16px;letter-spacing:normal}#templateBody,#templateHeader,#templatePreheader{background-color:#333232;border-top:0;border-bottom:0}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left}.bodyContainer .mcnTextContent a,.headerContainer .mcnTextContent a,.leftColumnContainer .mcnTextContent a,.preheaderContainer .mcnTextContent a,.rightColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}#templateColumns{background-color:#262626}.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:14px;line-height:150%;text-align:center}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a{color:#262626;font-weight:400;text-decoration:underline}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}#bodyCell{padding-top:10px!important}.templateContainer{max-width:600px!important;width:100%!important}.columnsContainer{display:block!important;max-width:600px!important;padding-bottom:18px!important;padding-left:0!important;width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{height:auto!important;width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:24px!important;line-height:125%!important}h2{font-size:20px!important;line-height:125%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p,.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p,h3{font-size:18px!important;line-height:125%!important}h4{font-size:16px!important;line-height:125%!important}#templatePreheader{display:block!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p,.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}</style></head>
+        <title>【無光晚餐】你需要先知道的注意事項 7 Tips for Dining in the Dark</title>
+        <style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td,h1{line-height:100%}h1,h2{font-family:Helvetica;text-align:center}h1,h2,h3,h4{display:block;font-style:normal;font-weight:700;margin:0}h1,h2,h3,h4,h5,h6{margin:0}#templateColumns,#templateFooter{border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}h1,h2,h3,h4,h5,h6{display:block}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}#bodyTable,#templateFooter,body{background-color:#333232}#bodyCell{border-top:0}#templateContainer{border:0}h1{color:#fff!important;font-size:40px;letter-spacing:-1px}h2{color:#000!important;font-size:36px;line-height:125%;letter-spacing:-.75px}h3,h4{line-height:125%;text-align:left;font-family:Helvetica}h3{color:#606060!important;font-size:18px;letter-spacing:-.5px}h4{color:grey!important;font-size:16px;letter-spacing:normal}#templateBody,#templateHeader,#templatePreheader{background-color:#333232;border-top:0;border-bottom:0}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left}.bodyContainer .mcnTextContent a,.headerContainer .mcnTextContent a,.leftColumnContainer .mcnTextContent a,.preheaderContainer .mcnTextContent a,.rightColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}#templateColumns{background-color:#262626}.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:14px;line-height:150%;text-align:center}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a{color:#262626;font-weight:400;text-decoration:underline}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}#bodyCell{padding-top:10px!important}.templateContainer{max-width:600px!important;width:100%!important}.columnsContainer{display:block!important;max-width:600px!important;padding-bottom:18px!important;padding-left:0!important;width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{height:auto!important;width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:24px!important;line-height:125%!important}h2{font-size:20px!important;line-height:125%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p,.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p,h3{font-size:18px!important;line-height:125%!important}h4{font-size:16px!important;line-height:125%!important}#templatePreheader{display:block!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p,.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}</style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
         <span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">【無光晚餐】你需要先知道的注意事項 7 Tips for Dining in the Dark</span>
         <center>
@@ -19,7 +19,7 @@
                                     <!-- BEGIN PREHEADER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
                                         <tr>
-                                        	<td align="center" valign="top">
+                                            <td align="center" valign="top">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
                                                     <tr>
                                                         <td valign="top" class="preheaderContainer" style="padding-top:10px; padding-bottom:10px;"></td>
@@ -78,14 +78,14 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
@@ -123,8 +123,8 @@
 <span style="color:#D3D3D3"><strong>2. 用餐有時間限制嗎？</strong></span>
 
 <div>&nbsp;</div>
-在黑暗中的<span style="color:#8C5FB4"><strong><u>體驗時間約為90分鐘</u></strong></span>，加上您報到、離場流連忘返的餘音繞樑的時間，<span style="color:#8c5fb4"><strong><u>請預留120分鐘給我們</u></strong></span>，這是都市傳說中建議的最適黑暗時間。用餐後續若你需要趕車、趕下一攤、趕電影放映等等，請在當日事先告知服務人員。若無法完整體驗部分餐點，無光晚餐不提供外帶或打包服務。
-
+在黑暗中的<span style="color:#8C5FB4"><strong><u>體驗時間約為90分鐘</u></strong></span>，加上您報到、離場流連忘返的餘音繞樑的時間，<span style="color:#8c5fb4"><strong><u>請預留120分鐘給我們</u></strong></span>，這是都市傳說中建議的最適黑暗時間。用餐後續若你需要趕車、趕下一攤、趕電影放映等等，請在當日事先告知服務人員。
+@if($time == '19:30' || $time == '20:00' || $time == '20:30') @else 若無法完整體驗部分餐點，無光晚餐不提供外帶或打包服務。 @endif
 <div><br>
 <br>
 &nbsp;</div>
@@ -139,10 +139,9 @@
 <span style="color:#D3D3D3"><strong>4. 如果有飲食禁忌該怎麼辦？</strong></span>
 
 <div>&nbsp;</div>
-為顧及體驗品質食物設計，不建議乳製品過敏或嚴重乳糖不耐症體質者來體驗；素食者僅提供蛋奶五辛素。<br>
-無光晚餐將依照訂位時填答之飲食禁忌準備體驗內容，現場無法更改。<br>
+若因宗教因素有飲食禁忌、有任何飲食過敏，又或是體驗者中有孕婦，請於訂位時確實填答飲食禁忌欄位。無光晚餐將依照訂位資訊準備體驗內容，現場無法更改。<br>
 <br>
-若需更改飲食禁忌，請於訂位日期到來前七天（也就是現在）回信告知。
+若需更改飲食禁忌，請於訂位日期到來前七天（也就是現在）回信告知。<br>
 <div>&nbsp;</div>
 如果只是單純不喜歡吃某種食材，建議可以在黑暗中，給這些食材一次機會。有時候看不到、少了假設，平常不喜歡的，有可能在黑暗中瞬間愛上唷！
 
@@ -201,14 +200,14 @@ Cheers,</div>
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
@@ -444,14 +443,14 @@ Cheers,</div>
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
@@ -463,14 +462,14 @@ Cheers,</div>
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
@@ -489,5 +488,4 @@ Cheers,</div>
                 </tr>
             </table>
         </center>
-    </body>
 </html>
