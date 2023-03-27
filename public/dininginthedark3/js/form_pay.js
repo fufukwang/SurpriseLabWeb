@@ -385,11 +385,11 @@ $('.step-2 input, .step-2 select').on('change', function () {
                 if($('.calender-ps').length == 0){
                     $('#ui-datepicker-div').append(`<div class="calender-ps">
                         <div>
-                            <span style="background: #E6A046"></span>
+                            <span style="background: #85AA59"></span>
                             <p>好評熱賣</p>
                         </div>
                         <div>
-                            <span style="background: #AD0000"></span>
+                            <span style="background: #AF2822"></span>
                             <p>即將完售</p>
                         </div>
                     </div>`)

@@ -997,11 +997,11 @@ form .btn-outline {
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.still-vacancy a:after {
-  background: #E6A046;
+  background: #85AA59;
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out-soon a:after {
-  background: #AD0000;
+  background: #AF2822;
 }
 
 

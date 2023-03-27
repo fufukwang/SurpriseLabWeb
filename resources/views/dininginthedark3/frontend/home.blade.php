@@ -294,11 +294,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div id="homeDatepicker"></div>
                                     <div class="datepicker-ps">
                                         <div>
-                                            <span style="background: #E6A046"></span>
+                                            <span style="background: #85AA59"></span>
                                             <p>好評熱賣</p>
                                         </div>
                                         <div>
-                                            <span style="background: #AD0000"></span>
+                                            <span style="background: #AF2822"></span>
                                             <p>即將完售</p>
                                         </div>
                                     </div>

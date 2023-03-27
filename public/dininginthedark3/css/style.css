@@ -2517,11 +2517,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.sold-out-soon:after {
-  background: #E6A046;
+  background: #85AA59;
 }
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.still-vacancy:after {
-  background: #AD0000;
+  background: #AF2822;
 }
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td a, .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td span {
