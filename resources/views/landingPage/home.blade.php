@@ -21,12 +21,12 @@
     <div class="wrap">
         <div class="container">
             <div class="box">
-                <a href="https://www.surpriselab.com.tw/dininginthedark2">
+                <a href="https://www.surpriselab.com.tw/dininginthedark/">
                     <did class="did"></did>
                 </a>
             </div>
             <div class="box">
-                <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html">
+                <a href="https://www.surpriselab.com.tw/terminal">
                     <div class="tgt"></div>
                 </a>
             </div>
