@@ -305,7 +305,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="section sec-ig" id="Ig">
+                            <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
+                        </div>
                         <div class="section sec-review" id="Review">
 
                             <div class="section-header">
@@ -1205,6 +1207,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/main.js?v=0.12"></script>
     <script src="js/board-modal.js?v=0.11"></script>
     <script src="js/index-slideshow.js?data=0223"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 
 </body>
 </html>
