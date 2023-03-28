@@ -297,6 +297,7 @@ class NewPayController extends Controller
                     'pople' => $order->pople,
                     'email' => $order->email,
                     'name'  => $order->name,
+                    'phone' => $order->tel,
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
                     'vegetarian' => $order->vegetarian,
@@ -309,7 +310,7 @@ class NewPayController extends Controller
                     'template' => 'order',
                 ];
                 SLS::SendEmailByTemplateName($mailer);
-
+                SLS::SendSmsByTemplateName($mailer);
                 try {
 
                     $order->is_send = 1;
