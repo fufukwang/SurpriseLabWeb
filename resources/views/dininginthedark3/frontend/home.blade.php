@@ -290,22 +290,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     單一場次最高可容納人數 12 人，<br/>
                                     若人數超過 12 人可來信客服信箱，由我們協助劃位
                                 </p>
-                                <!-- <div class="ticket-datepicker">
+                                <div class="ticket-datepicker">
                                     <div id="homeDatepicker"></div>
                                     <div class="datepicker-ps">
                                         <div>
-                                            <span style="background: #E6A046"></span>
+                                            <span style="background: #85AA59"></span>
                                             <p>好評熱賣</p>
                                         </div>
                                         <div>
-                                            <span style="background: #AD0000"></span>
+                                            <span style="background: #AF2822"></span>
                                             <p>即將完售</p>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
-                        
+                        <div class="section sec-ig" id="Ig">
+                            <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
+                        </div>
                         <div class="section sec-review" id="Review">
 
                             <div class="section-header">
@@ -1174,7 +1176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Bootstrap -->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>
-    <!-- <script src="js/plugins/jquery-ui.js"></script> -->
+    <script src="js/plugins/jquery-ui.js"></script>
     <script src="js/plugins/popper.min.js"></script>
     <script src="js/plugins/bootstrap-4.1.0/bootstrap.min.js"></script>
     <script src="js/plugins/jquery.scrollify.js"></script>
@@ -1201,10 +1203,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?data=0223"></script>
+    <script src="js/index.js?data=0307"></script>
     <script src="js/main.js?v=0.12"></script>
     <script src="js/board-modal.js?v=0.11"></script>
     <script src="js/index-slideshow.js?data=0223"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 
 </body>
 </html>

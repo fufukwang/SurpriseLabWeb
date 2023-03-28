@@ -740,7 +740,7 @@ class OrderController extends WebController
             }
             // 尚未開過發票
             if($request->has('no_inv') && $request->no_inv == 1){
-                $order->whereRaw("(SELECT COUNT(terminalinv.id) FROM terminalinv WHERE is_cancal=0 AND terminalorder.id=terminalinv.order_id)=0");
+                $order->whereRaw("(SELECT COUNT(terminalinv.id) FROM terminalinv WHERE is_cancal=0 AND terminalorder.id=terminalinv.order_id)=0 AND pay_status IN ('已付款','已付款(部分退款)')");
             }
 
             if($request->has('dayparts') && $request->dayparts!=''){

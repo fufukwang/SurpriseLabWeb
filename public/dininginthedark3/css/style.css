@@ -2380,7 +2380,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   border: solid 1px #8C5FB4;
   border-radius: 6px;
   background-color: #101010;
-  padding: 8px;
+  padding: 8px 8px 25px;
 }
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-header {
@@ -2516,12 +2516,12 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   border-radius: 50%;
 }
 
-.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.dot-y:after {
-  background: #E6A046;
+.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.sold-out-soon:after {
+  background: #85AA59;
 }
 
-.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.dot-r:after {
-  background: #AD0000;
+.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.still-vacancy:after {
+  background: #AF2822;
 }
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td a, .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td span {

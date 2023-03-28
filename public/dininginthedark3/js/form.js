@@ -65,10 +65,25 @@ $(".action-button").on('click', function(){
 
         booking_date.on('focus', function () {
             $('#ui-datepicker-div').appendTo('.calender-wrapper');
+            setTimeout(() => {
+                if($('.calender-ps').length == 0){
+                    $('#ui-datepicker-div').append(`<div class="calender-ps">
+                        <div>
+                            <span style="background: #85AA59"></span>
+                            <p>好評熱賣</p>
+                        </div>
+                        <div>
+                            <span style="background: #AF2822"></span>
+                            <p>即將完售</p>
+                        </div>
+                    </div>`)
+                }
+            }, 100);
         });
 
         // 可選擇的日期
         var enableDays = [];
+        var dateSite = [];
         if(!isNaN(submitDatas['booking_people'])){
 
             $.blockUI();
@@ -79,6 +94,7 @@ $(".action-button").on('click', function(){
             },function(data){
                 for(i=0;i<data.length;i++){
                     enableDays.push(data[i].day);
+                    dateSite[data[i].day] = data[i].sites
                 }
                 var minD = 0;
                 if(enableDays.length>0){
@@ -98,9 +114,28 @@ $(".action-button").on('click', function(){
 
         function enableAllTheseDays(date) {
             var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
-
             if($.inArray(sdate, enableDays) !== -1) {
-                return [true];
+                var myDateClass = "";  // 加入的樣式
+                var myDateTip = "";  // tooltip 文字
+                var myDateDay = date.getDay();
+                if(myDateDay === 0 || myDateDay === 6){
+                    if(dateSite[sdate]<=36){
+                        myDateClass = "sold-out-soon";
+                        myDateTip = "即將完售";
+                    } else if(dateSite[sdate]<=108){
+                        myDateClass = "still-vacancy";
+                        myDateTip = "好評熱賣";
+                    }
+                } else {
+                    if(dateSite[sdate]<=24){
+                        myDateClass = "sold-out-soon";
+                        myDateTip = "即將完售";
+                    } else if(dateSite[sdate]<=72){
+                        myDateClass = "still-vacancy";
+                        myDateTip = "好評熱賣";
+                    }
+                }
+                return [true,myDateClass,myDateTip];
             }
             return [false];
         }
@@ -453,12 +488,13 @@ $('.step-3 input, .step-3 select').on('change', function () {
             
         } else if (nextFieldID === 'booking_time') { // 時間
             nextField.html('').trigger('change');
-            if($('#booking_date').val()!='' && $('#booking_time_slot').val() != ''){
+            // && $('#booking_time_slot').val() != ''
+            if($('#booking_date').val()!=''){
                 $.get('/dininginthedark3/GetAjaxData',{
                     'act':'getBydartpart',
                     'ticketType':$('input[name="ticket-type"]:checked').val(),
                     'day':$('#booking_date').val(),
-                    'day_parts':$('#booking_time_slot').val(),
+                    'day_parts':'晚場',//$('#booking_time_slot').val(),
                     'pople':submitDatas['booking_people']
                 },function(obj){
                     data = [];

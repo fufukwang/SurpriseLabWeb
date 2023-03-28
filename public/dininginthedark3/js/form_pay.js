@@ -59,12 +59,12 @@ $(".action-button").on('click', function(){
     progress_title.html(title);
 
     // 如果下一步為最後一步驟，抓取已填寫的資料使用
-    if (next_fs.hasClass('step-5')) {
+    if (next_fs.hasClass('step-4')) {
         filledDataChecker();
     }
 
     // 取得可定位日期
-    if (next_fs.hasClass('step-3')) {
+    if (next_fs.hasClass('step-2')) {
         var booking_date = $("#booking_date");
 
         booking_date.on('focus', function () {
@@ -114,7 +114,7 @@ $(".action-button").on('click', function(){
     next_fs.find('.next, .submit').attr('disabled', true);
     allowChecker(next_fs);
 
-    if (current_fs.hasClass('step-4') && !prev_fs) {
+    if (current_fs.hasClass('step-3') && !prev_fs) {
         if (verificationChecker()) {
             current_fs.hide();
             next_fs.show();
@@ -201,7 +201,7 @@ $('input, select').on('change', function () {
 function allowChecker(thisStep){
     isAllowToNextStep = true;
 
-    if (thisStep.hasClass('step-5')) {
+    if (thisStep.hasClass('step-4')) {
 
         // 最後一步驟要確認已輸入的票券代碼數量是否與人數相符
         if (restAmount != 0) {
@@ -221,7 +221,7 @@ function allowChecker(thisStep){
                 }
 
             } else if (element.attr('type') === 'radio') {
-                if (thisStep.hasClass('step-4')) {
+                if (thisStep.hasClass('step-3')) {
 
                     // 餐點選擇(葷素)
                     for (var p = 0; p < submitDatas['booking_people']; p++) {
@@ -234,13 +234,11 @@ function allowChecker(thisStep){
                     }
 
                 }/* else {
-
                     // 票券種類
                     if (!$('input:radio[name="ticket-type"]').is(":checked")) {
                         isAllowToNextStep = false;
                         return false;
                     }
-
                 }*/
             } else {
 
@@ -330,6 +328,14 @@ $('input[name="ticket-type"]').on('click', function () {
 */
 // Step 2 - 選擇人數
 $('.step-2 input, .step-2 select').on('change', function () {
+    var nextFieldset = $(this).parents().hasClass('form-grid') &&
+    $(this).closest('.form-group').next().length == 0 ? 
+    $(this).closest('.form-grid').next() : 
+    $(this).closest('.form-group').next();
+    var nextField = nextFieldset.find('input, select');
+    var nextElementType = nextField.prop('tagName');
+    var accessHide = true;
+    
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
         submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
@@ -347,42 +353,52 @@ $('.step-2 input, .step-2 select').on('change', function () {
         if (!$(this).val()) {
             accessHide = false;
         }
+        updateField(nextFieldset, accessHide);
     }
-});
-// Step 3 - 日期、時段選擇
-$('.step-3 input, .step-3 select').on('change', function () {
+    // });
+    // // Step 3 - 日期、時段選擇
+    // $('.step-3 input, .step-3 select').on('change', function () {
 
     // 取得下一個欄位的標籤名稱
-    var nextFieldset = $(this).closest('.form-group').next();
-    var nextField = nextFieldset.find('input, select');
-    var nextElementType = nextField.prop('tagName');
-    var accessHide = true;
+    // var nextFieldset = $(this).closest('.form-group').next();
+    
 /*
     // 當用戶選擇人數時，更新葷素區塊及完成劃位所需金額
     if ($(this).attr('id') === 'booking_people') {
         submitDatas['booking_people'] = parseInt($(this).find(':selected').text());
         update_isVegetarian(submitDatas['booking_people']);
         //update_amountToGo(submitDatas['booking_people']);
-
         usedCoupons = []; // 清空已使用的票券代碼
-
         if (!$(this).val()) {
             accessHide = false;
         }
     }
 */
-/*
+
     // 如果下一個欄位是日期，且人數的值不為空值
     if (nextElementType === 'INPUT' && accessHide) {
         
         var booking_date = $("#booking_date");
-
         booking_date.on('focus', function () {
             $('#ui-datepicker-div').appendTo('.calender-wrapper');
+            setTimeout(() => {
+                if($('.calender-ps').length == 0){
+                    $('#ui-datepicker-div').append(`<div class="calender-ps">
+                        <div>
+                            <span style="background: #85AA59"></span>
+                            <p>好評熱賣</p>
+                        </div>
+                        <div>
+                            <span style="background: #AF2822"></span>
+                            <p>即將完售</p>
+                        </div>
+                    </div>`)
+                }
+            }, 100);
         });
-
         // 可選擇的日期
         var enableDays = [];
+        var dateSite = [];
         if(!isNaN(submitDatas['booking_people'])){
             $.blockUI();
             $.get('/dininginthedark3/GetAjaxData',{
@@ -392,6 +408,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
             },function(data){
                 for(i=0;i<data.length;i++){
                     enableDays.push(data[i].day);
+                    dateSite[data[i].day] = data[i].sites
                 }
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
@@ -404,58 +421,77 @@ $('.step-3 input, .step-3 select').on('change', function () {
             },'json');
         }
         
-
         function enableAllTheseDays(date) {
             var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
-
             if($.inArray(sdate, enableDays) !== -1) {
-                return [true];
+                var myDateClass = ""; // 加入的樣式
+                var myDateTip = "";  // tooltip 文字
+                var myDateDay = date.getDay();
+                if(myDateDay === 0 || myDateDay === 6){
+                    if(dateSite[sdate]<=36){
+                        myDateClass = "sold-out-soon";
+                        myDateTip = "即將完售";
+                    } else if(dateSite[sdate]<=108){
+                        myDateClass = "still-vacancy";
+                        myDateTip = "好評熱賣";
+                    }
+                } else {
+                    if(dateSite[sdate]<=24){
+                        myDateClass = "sold-out-soon";
+                        myDateTip = "即將完售";
+                    } else if(dateSite[sdate]<=72){
+                        myDateClass = "still-vacancy";
+                        myDateTip = "好評熱賣";
+                    }
+                }
+                return [true,myDateClass,myDateTip];
             }
             return [false];
         }
-    } else 
-*/
-    if (nextElementType === 'SELECT') {
+    } else if (nextElementType === 'SELECT') {
         var nextFieldID = nextField.attr('id');
         var data;
 
-        if (nextFieldID === 'booking_time_slot') { // 時段
-            nextField.html('');
-            if($('#booking_date').val()!=''){
-                $.get('/dininginthedark3/GetAjaxData',{
-                    'act':'getByday',
-                    'ticketType':$('input[name="ticket-type"]:checked').val(),
-                    'day':$('#booking_date').val(),
-                    'pople':submitDatas['booking_people']
-                },function(obj){
-                    data = [];
-                    if(obj.length>0){
-                        for(i=0;i<obj.length;i++){
-                            data.push({
-                                id   : obj[i].day_parts,
-                                text : obj[i].day_parts
-                            });
-                        }
-                        updateOptions(nextField, data);
-                    } else {
-                        if($('#booking_date').val() != ''){
-                            alert("此日期午場座位不足喔!!\n請再重新選擇日期!");
-                            return false;
-                        }
-                    }
-                    nextField.val(null).trigger('change');
-                    updateField(nextFieldset, accessHide);
-                },'json');
-            }
+        // if (nextFieldID === 'booking_time_slot') { // 時段
+        //     nextField.html('');
+        //     if($('#booking_date').val()!=''){
+        //         $.get('/dininginthedark3/GetAjaxData',{
+        //             'act':'getByday',
+        //             'ticketType':$('input[name="ticket-type"]:checked').val(),
+        //             'day':$('#booking_date').val(),
+        //             'pople':submitDatas['booking_people']
+        //         },function(obj){
+        //             data = [];
+        //             if(obj.length>0){
+        //                 for(i=0;i<obj.length;i++){
+        //                     data.push({
+        //                         id   : obj[i].day_parts,
+        //                         text : obj[i].day_parts
+        //                     });
+        //                 }
+        //                 updateOptions(nextField, data);
+        //             } else {
+        //                 if($('#booking_date').val() != ''){
+        //                     alert("此日期午場座位不足喔!!\n請再重新選擇日期!");
+        //                     return false;
+        //                 }
+        //             }
+        //             nextField.val(null).trigger('change');
+        //             updateField(nextFieldset, accessHide);
+        //         },'json');
+        //     }
             
-        } else if (nextFieldID === 'booking_time') { // 時間
+        // } else 
+        if (nextFieldID === 'booking_time') { // 時間
+            console.log(157);
             nextField.html('').trigger('change');
-            if($('#booking_date').val()!='' && $('#booking_time_slot').val() != ''){
+            // && $('#booking_time_slot').val() != ''
+            if($('#booking_date').val()!=''){
                 $.get('/dininginthedark3/GetAjaxData',{
                     'act':'getBydartpart',
                     'ticketType':$('input[name="ticket-type"]:checked').val(),
                     'day':$('#booking_date').val(),
-                    'day_parts':$('#booking_time_slot').val(),
+                    'day_parts':'晚場',//$('#booking_time_slot').val(),
                     'pople':submitDatas['booking_people']
                 },function(obj){
                     data = [];
@@ -488,7 +524,7 @@ $('.step-3 input, .step-3 select').on('change', function () {
     updateField(nextFieldset, accessHide);
 
 });
-$('.step-4 select').on('change', function () {
+$('.step-3 select').on('change', function () {
     if ($(this).attr('id') === 'meat_food') {
         eatHabit['meat_food'] = parseInt($(this).find(':selected').text());
         eatHabit['vegetarian_food'] = submitDatas['booking_people'] - eatHabit['meat_food']
@@ -559,13 +595,10 @@ function update_isVegetarian(people) {
 // 更新完成劃位所需金額
 function update_amountToGo(people) {
     ticketInfo = ticketInfos[$('input[name="ticket-type"]:checked').val()];
-
     var summary = formatPrice(people * ticketInfo.price); // 數字變成貨幣格式
-
     // 更新完成劃位金額
     amountToGo.text(summary);
     $('.submit-coupon').remove();
-
     // 並清空已輸入的折扣碼 / 已折抵金額 / 重置輸入次數
     usedCoupons = [];
     paidAmount = 0;
@@ -589,7 +622,7 @@ function updateOptions(select_filed, data) {
 function updateField(fieldGroup, accessHide) {
     // 每次重新點選選項後，除了下一個選項會重新載入外，後面的選項都會隱藏並清空值
     // 避免使用者又回到前面的選項選取時，下方的選項沒改變造成誤會
-    var hidefield = $('.step-3 .form-group').slice(fieldGroup.index());
+    var hidefield = $('.step-2 .form-group').slice(fieldGroup.index());
 
     hidefield.each(function () {
         $(this).find('input, select').val('').trigger('change');
@@ -661,7 +694,6 @@ $('.verification-code').on('click', function () {
         } else if(couponVal == 'TIPSYAGAIN01' || couponVal == 'TIPSYAGAIN02' || couponVal == 'TIPSYAGAIN03'){
             discountAmount = 200;
         }
-
         // discountAmount = 100;
         var summary = formatPrice((($('[name="booking_people"]').val()-cutPelple) * proSingle * 1.1) - discountAmount); // 數字變成貨幣格式
         amountToGo.text(summary);
@@ -713,34 +745,24 @@ $('.verification-code').on('click', function () {
 /*
     // 票券是否在表單送出前重複使用
     var isAllow = $.inArray(couponVal, usedCoupons);
-
     // 如果票券代碼可使用，且代碼的票券類型等於已選擇類型
     var typeInCouponInfo = coupons[couponIndex]; // 取得用戶選擇的票券資訊
     if (couponIndex !== -1 && isAllow == -1) {
-
         // 時間有點限制票，且選擇的時段不符
         if (typeInCouponInfo.type == 1 && submitDatas['booking_time'] === '09:00-10:30') {
-
             $(this).closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' 票券選擇時間錯誤</p>');
-
         } else {
-
             // 更新暫存已使用代碼
             usedCoupons.push(couponVal);
-
             // 更新完成劃位所需金額
             paidAmount = paidAmount + couponAmount(typeInCouponInfo.type, ticketInfo.price);
             restAmount = submitDatas['booking_people'] * ticketInfo.price - paidAmount;
             console.log(paidAmount, restAmount);
             amountToGo.text(formatPrice(restAmount));
-
             $(this).closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' ' + ticketInfo.name +'</p>');
         }
-
     } else {
-
         $(this).closest('td').find('.submit-coupon-wrapper').append('<p class="submit-coupon">劃位序號' + passTimes + ' ' + couponVal + ' 序號錯誤或已使用</p>');
-
     }
 */
     coupon.val('').trigger('change');

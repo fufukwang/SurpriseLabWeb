@@ -33,7 +33,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=0.1"/>
-    <link rel="stylesheet" href="css/form.css?v=0.1"/>
+    <link rel="stylesheet" href="css/form.css?v=0.2"/>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -91,7 +91,7 @@
         </ul>
     </nav>
 
-    <main class="sections">
+    <main class="sections bookingPay">
 
         <div class="container" id="bookingPage">
             <!-- form -->
@@ -106,7 +106,6 @@
                 <div class="bar-wrapper hide-steps">
                     <ul id="progressbar">
                         <li class="active"></li>
-                        <li></li>
                         <li></li>
                         <li></li>
                     </ul>
@@ -167,7 +166,7 @@
                         <button type="button" name="next" class="btn-outline next action-button" disabled>開始預約</button>
                     </div>
                 </fieldset>
-                <fieldset class="step step-2" title="選擇人數">
+                <fieldset class="step step-2" title="體驗場次預約">
                     <div class="form-container">
                         <p class="field-intro">
                             請點選你的預約人數
@@ -178,59 +177,60 @@
                         </ul>
                         <br/><br/>
 
-                        <div class="form-group select-format">
-                            <label class="form-label" for="booking_people">人數</label>
-                            <select id="booking_people" name="booking_people" data-placeholder="選擇人數" required>
-                                <option></option>
-                                <option value="2">2</option>
-                                <option value="4">4</option>
-                                <option value="6">6</option>
-                                <option value="8">8</option>
-                                <option value="10">10</option>
-                                <option value="12">12</option>
-                            </select>
-                        </div>
-
-                        <div class="feature-btn d-flex justify-content-between multi-btn">
-                            <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
-                            <button type="button" name="next" class="btn-outline next action-button">下一步</button>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset class="step step-3" title="日期、時段選擇">
-                    <div class="form-container">
-                        <div class="form-group with-icon">
-                            <label class="form-label" for="booking_date">日期</label>
-                            <div class="field-icon-wrapper">
-                                <input type="text" name="booking_date" id="booking_date" readonly placeholder="選擇日期"/>
-                                <span class="field-icon"></span>
+                        <div class="form-grid">
+                            <div class="form-group select-format">
+                                <label class="form-label" for="booking_people">人數</label>
+                                <select id="booking_people" name="booking_people" data-placeholder="選擇人數" required>
+                                    <option></option>
+                                    <option value="2">2</option>
+                                    <option value="4">4</option>
+                                    <option value="6">6</option>
+                                    <option value="8">8</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                </select>
                             </div>
-                            <div class="calender-wrapper"></div>
+                            <div class="form-group with-icon">
+                                <label class="form-label" for="booking_date">日期</label>
+                                <div class="field-icon-wrapper">
+                                    <input type="text" name="booking_date" id="booking_date" readonly placeholder="選擇日期"/>
+                                    <span class="field-icon"></span>
+                                </div>
+                                <div class="calender-wrapper"></div>
+                            </div>
                         </div>
-                        <div class="form-group select-format">
+                        <!-- <div class="form-group select-format">
                             <label class="form-label" for="booking_time_slot">時段</label>
                             <select id="booking_time_slot" name="booking_time_slot" data-placeholder="選擇時段" required>
                                 <option></option>
-                                <!--<option>上午</option>-->
-                                <!--<option>晚上</option>-->
                             </select>
-                        </div>
+                        </div> -->
                         <div class="form-group select-format">
-                            <label class="form-label" for="booking_time">時間</label>
-                            <select id="booking_time" name="booking_time" data-placeholder="選擇時間" required>
+                            <label class="form-label" for="booking_time">場次時間</label>
+                            <select id="booking_time" name="booking_time" data-placeholder="選擇場次時間" required>
                                 <option></option>
                                 <!--<option>18:00-19:30</option>-->
                                 <!--<option>20:00-21:30</option>-->
                             </select>
                         </div>
 
+
                         <div class="feature-btn d-flex justify-content-between multi-btn">
                             <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
                             <button type="button" name="next" class="btn-outline next action-button">下一步</button>
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="step step-4" title="資料填寫">
+                <!-- <fieldset class="step step-3" title="日期、時段選擇">
+                    <div class="form-container">
+
+                        <div class="feature-btn d-flex justify-content-between multi-btn">
+                            <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
+                            <button type="button" name="next" class="btn-outline next action-button">下一步</button>
+                        </div>
+                    </div>
+                </fieldset> -->
+                <fieldset class="step step-3" title="資料填寫">
                     <div class="form-container">
                         <div class="field-intro">
                             請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息（建議避開 yahoo 與 hotmail 信箱，以免漏信）
@@ -335,7 +335,7 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="step step-5" title="確認預約資訊">
+                <fieldset class="step step-4" title="確認預約資訊">
                     <div class="form-container">
                         <table class="filled-data">
                             <tr>
@@ -577,7 +577,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.3"></script>
+    <script src="js/form_pay.js?v=0.4"></script>
 
 </body>
 </html>

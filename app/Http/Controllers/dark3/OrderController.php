@@ -61,15 +61,15 @@ class OrderController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v')->find($id);
+                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','refund','cut','handling')->find($id);
                 $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
             }
         }
         $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
-        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))>=".$order->pople)
-            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
+        $pro = pro::where('open',1)->whereRaw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))>=".$order->pople)
+            ->select(DB::raw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
         return view('dininginthedark3.backend.order',compact('order','pro','cooperate'));
     }
     public function OrderUpdate(Request $request,$id){
@@ -156,6 +156,16 @@ class OrderController extends Controller
             if($order->pople != $data['pople']){
                 $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 調整人數{$order->pople}->{$data['pople']}";
             }
+            // 退款 & 手續費 & 退票人數
+            if($request->has('handling') && $request->has('cut') && $request->has('refund')){
+                $data['handling'] = $request->handling;
+                $data['cut']      = $request->cut;
+                $data['refund']   = $request->refund;
+                $handling_fee = round($data['handling']*$data['refund']/100);
+                if($order->cut != $data['cut'] || $order->refund != $data['refund'] || $order->handling != $data['handling']){
+                    $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 取消 {$data['cut']} 人，\n退款{$data['refund']}，手續費{$data['handling']}%金額{$handling_fee}";
+                }
+            }
             order::where('id',$id)->update($data);
             
         } 
@@ -195,7 +205,7 @@ class OrderController extends Controller
                 $count = Carbon::now()->format('Ymd').'0001';
             }
             $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
-            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
             $meat = [];
             /*
             for($i=0;$i<$people;$i++){
@@ -374,7 +384,7 @@ class OrderController extends Controller
                         $money = 0;
                         // 檢查座位
                         $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
-                        $act = pro::where('id',$row['ticket'])->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
+                        $act = pro::where('id',$row['ticket'])->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
                         if($row['people']>$act->Count){
                             $message .= "第{$i}列 編號({$row['ticket']})人數已滿<br>";
                             break;
@@ -555,14 +565,14 @@ class OrderController extends Controller
             }
         } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
         */
-        $order = $this->orderQuery($request);
+        $order = $this->orderQuery($request,true);
         $order = $order->get();
 
         $cellData = $order->toArray();
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","實際付款金額","後四碼","回傳交易時間","藍新交易序號","訂單編號","貝殼的序號"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","原始付款金額","行銷折扣","取消人數","手續費%數","手續費金額","退款金額","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號","貝殼的序號","發票號碼","發票開立時間"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     $pay_type = $row['pay_type'];
@@ -582,7 +592,7 @@ class OrderController extends Controller
                     }
                     $pay_money = '';
                     $pay_last = '';
-                    $coupons = coupon::where('o_id',$row['sn'])->get();
+                    $coupons = coupon::select('code','b_id','type')->where('o_id',$row['sn'])->get();
                     $modify_money = '';
                     $return_Tr_time = '';
                     $blue_sn = '';
@@ -594,7 +604,7 @@ class OrderController extends Controller
                             if($coupon!=''){
                                 $coupon .= "\r\n";
                                 // $pay_money.= "\r\n";
-                                $pay_last.= "\r\n";
+                                // $pay_last.= "\r\n";
                                 
                             }
                             $coupon .= "{$c->code}";
@@ -617,15 +627,39 @@ class OrderController extends Controller
                         if($pay_type == '藍新金流' && ($pay_status == '已付款' || $pay_status == '已付款(部分退款)')){
                             $json = json_decode($row['result'],true);
                             if($json['Status'] == "SUCCESS"){
-                                $pay_last = $json['data']['Result']['Card4No'];
+                                $pay_last = $json['data']['Result']['Card4No'] ?? '';
                             }
                             $return_Tr_time = $json['data']['Result']['PayTime'] ?? '';
                             $blue_sn = $json['data']['Result']['TradeNo'] ?? '';
                         }
                     }
                     
-                    if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
-
+                    // if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
+                    $handling_fee = 0;
+                    if($pay_status == '未完成'){
+                        $pay_money = 0;
+                    } else {
+                        if($row['handling'] > 0 && $row['refund'] > 0) $handling_fee = round($row['handling'] * $row['refund'] / 100);
+                        if(is_numeric($pay_money)){
+                            $pay_money -= $row['refund'];
+                            $pay_money += $handling_fee;
+                        } else {
+                            $pay_money .= " - " . $row['refund'] . " + " . $handling_fee;
+                        }
+                    }
+                    // 發票
+                    $inv_number = '';
+                    $inv_time = '';
+                    $inv = inv::select('number','is_cancal','results')->where('order_id',$row['id'])->orderBy('created_at','desc')->first();
+                    if($inv && $inv->is_cancal == 0){
+                        $inv_number = $inv->number;
+                        $inv_json = json_decode($inv->results,true);
+                        if(isset($inv_json['Result']) && $inv_json['Status'] == 'SUCCESS'){
+                            $inv_json2 = json_decode($inv_json['Result'],true);
+                            $inv_time = $inv_json2['CreateTime'];
+                        }
+                        
+                    }
 
                     $sheetRow = [
                         $row['day'],
@@ -634,17 +668,26 @@ class OrderController extends Controller
                         $row['tel'],
                         $row['email'],
                         $row['pople'],
-                        $row['notes'],
+                        strip_tags(preg_replace('/\<br(\s*)?\/?\>/i',"\n",$row['notes'])),
                         $row['manage'],
                         $coupon,
                         $pay_type,
                         $pay_status,
+                        $row['OM'],
+                        $row['dis_money'],
+                        $row['cut'],
+                        $row['handling'],
+                        $handling_fee,
+                        $row['refund'],
                         $pay_money,
                         $pay_last,
+                        $row['created_at'],
                         $return_Tr_time,
                         $blue_sn."\t",
                         $row['sn']."\t",
                         $backme_sn."\t",
+                        $inv_number,
+                        $inv_time,
                     ];
                     array_push($data,$sheetRow);
                 }
@@ -705,9 +748,12 @@ class OrderController extends Controller
         return Response::json(['message'=> '已更新'], 200);
     }
 
-    private function orderQuery(Request $request){
+    private function orderQuery(Request $request,$isTable=false){
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','refund','handling','cut');
+        if($isTable){
+            $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
+        }
         if($request->has('srday')  && $request->srday!=1){
             if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
             if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
@@ -745,7 +791,7 @@ class OrderController extends Controller
         }
         // 尚未開過發票
         if($request->has('no_inv') && $request->no_inv == 1){
-            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0");
+            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0 AND pay_status IN ('已付款','已付款(部分退款)')");
         }
 
         if($request->has('order') && $request->order!=''){

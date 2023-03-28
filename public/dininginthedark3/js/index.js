@@ -136,4 +136,65 @@ $(document).ready(function () {
             $('body').removeClass('menu-open');
         });
     });
+
+    const indexViewDatepicker = () =>{
+        const booking_date = $("#homeDatepicker");
+        var enableDays = [];
+        var dateSite = [];
+        $.get('/dininginthedark3/GetAjaxData',{
+            'act':'getBypople',
+            'pople':2,
+            'ticketType':'',
+        },function(data){
+            for(i=0;i<data.length;i++){
+                enableDays.push(data[i].day);
+                dateSite[data[i].day] = data[i].sites
+            }
+            var minD = 0;
+            if(enableDays.length>0){
+                minD = enableDays[0];
+            }
+            booking_date.datepicker("destroy");
+            booking_date.datepicker({
+                minDate: minD,// minD,
+                maxDate: '+3m',// new Date(2022, 1, 28),
+                dateFormat: 'yy-mm-dd', 
+                beforeShowDay: enableAllTheseDays
+            });
+            // $.unblockUI();
+        },'json');
+        function enableAllTheseDays(date) {
+            var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
+
+            if($.inArray(sdate, enableDays) !== -1) {
+                var myDateClass = ""; // 加入的樣式
+                var myDateTip = "";  // tooltip 文字
+                var myDateDay = date.getDay();
+                if(myDateDay === 0 || myDateDay === 6){
+                    if(dateSite[sdate]<=36){
+                        myDateClass = "sold-out-soon";
+                        myDateTip = "即將完售";
+                    } else if(dateSite[sdate]<=108){
+                        myDateClass = "still-vacancy";
+                        myDateTip = "好評熱賣";
+                    }
+                } else {
+                    if(dateSite[sdate]<=24){
+                        myDateClass = "sold-out-soon";
+                        myDateTip = "即將完售";
+                    } else if(dateSite[sdate]<=72){
+                        myDateClass = "still-vacancy";
+                        myDateTip = "好評熱賣";
+                    }
+                }
+                return [true,myDateClass,myDateTip];
+            }
+            return [false];
+        }
+
+        $('#homeDatepicker a').on('click',function(){
+            window.location.href = 'https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar'
+        })
+    }
+    indexViewDatepicker()
 });

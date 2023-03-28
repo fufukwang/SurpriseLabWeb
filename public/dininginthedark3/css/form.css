@@ -409,7 +409,7 @@ form .form-group:last-child {
 }
 
 form .form-container {
-  width: 536px;
+  width: 700px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -482,25 +482,25 @@ form fieldset {
 
 @media (min-width: 1200px) {
   form fieldset {
-    padding-bottom: calc((720px + 30px) * 0.05367);
+    padding-bottom: calc((720px + 30px) * 0.2);
   }
 }
 
 @media (min-width: 1440px) {
   form fieldset {
-    padding-bottom: calc((900px + 30px) * 0.05367);
+    padding-bottom: calc((900px + 30px) * 0.2);
   }
 }
 
 @media (min-width: 1920px) {
   form fieldset {
-    padding-bottom: calc((1088px + 30px) * 0.05367);
+    padding-bottom: calc((1088px + 30px) * 0.2);
   }
 }
 
 @media (max-width: 1199.98px) {
   form fieldset {
-    padding-bottom: calc(100% * 0.05367);
+    padding-bottom: calc(100% * 0.2);
   }
 }
 
@@ -528,7 +528,7 @@ form .btn-outline {
     letter-spacing: 1.4px;
   }
   form fieldset {
-    padding-bottom: 36px;
+    padding-bottom: 80px;
   }
 }
 
@@ -980,6 +980,31 @@ form .btn-outline {
   color: #4D4D4D;
 }
 
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a {
+  position: relative;
+}
+
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a:after {
+  position: absolute;
+  content: "";
+  top: calc(100% + 3px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.still-vacancy a:after {
+  background: #85AA59;
+}
+
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out-soon a:after {
+  background: #AF2822;
+}
+
+
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
   border-color: #CCCCCC;
   background-color: #CCCCCC;
@@ -1026,6 +1051,29 @@ form .btn-outline {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #CCCCCC;
+}
+
+.calender-ps {
+  max-width: 380px;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.calender-ps div {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.calender-ps span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.calender-ps p {
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 @media (max-width: 575.98px) {
@@ -1211,46 +1259,48 @@ fieldset.step-2 .filled-data td:first-child {
 }
 
 @media (min-width: 1200px) {
-  fieldset.step-3 .feature-btn {
+  fieldset.step-2 .feature-btn {
     padding-top: calc((720px + 30px) * 0.07513);
   }
 }
 
 @media (min-width: 1440px) {
-  fieldset.step-3 .feature-btn {
+  fieldset.step-2 .feature-btn {
     padding-top: calc((900px + 30px) * 0.07513);
   }
 }
 
 @media (min-width: 1920px) {
-  fieldset.step-3 .feature-btn {
+  fieldset.step-2 .feature-btn {
     padding-top: calc((1088px + 30px) * 0.07513);
   }
 }
 
 @media (max-width: 1199.98px) {
-  fieldset.step-3 .feature-btn {
+  fieldset.step-2 .feature-btn {
     padding-top: calc(100% * 0.07513);
   }
 }
 
-fieldset.step-3 .form-group {
+fieldset.step-2 .form-group {
   opacity: 0;
   pointer-events: none;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-fieldset.step-3 .form-group:first-child, fieldset.step-3 .form-group.show-field {
+fieldset.step-2 .form-group:first-child, fieldset.step-2 .form-group.show-field {
   opacity: 1;
   pointer-events: inherit;
 }
 
-fieldset.step-4 .form-container {
+fieldset.step-3 .form-container,
+main.booking fieldset.step-4 .form-container {
   padding-top: 0;
 }
 
-fieldset.step-4 .field-intro {
+fieldset.step-3 .field-intro,
+main.booking fieldset.step-4 .field-intro {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 1.6px;
@@ -1258,31 +1308,37 @@ fieldset.step-4 .field-intro {
 }
 
 @media (min-width: 1200px) {
-  fieldset.step-4 .field-intro {
+  fieldset.step-3 .field-intro,
+  main.booking fieldset.step-4 .field-intro {
     padding-bottom: calc((720px + 30px) * 0.05367);
   }
 }
 
 @media (min-width: 1440px) {
-  fieldset.step-4 .field-intro {
+  fieldset.step-3 .field-intro,
+  main.booking fieldset.step-4 .field-intro {
     padding-bottom: calc((900px + 30px) * 0.05367);
   }
 }
 
 @media (min-width: 1920px) {
-  fieldset.step-4 .field-intro {
+  fieldset.step-3 .field-intro,
+  main.booking fieldset.step-4 .field-intro {
     padding-bottom: calc((1088px + 30px) * 0.05367);
   }
 }
 
 @media (max-width: 1199.98px) {
-  fieldset.step-4 .field-intro {
+  fieldset.step-3 .field-intro,
+  main.booking fieldset.step-4 .field-intro {
     padding-bottom: calc(100% * 0.05367);
   }
 }
 
-fieldset.step-4 .form-group label,
-fieldset.step-4 .form-group .table-label {
+fieldset.step-3 .form-group label,
+fieldset.step-3 .form-group .table-label,
+main.booking fieldset.step-4 .form-group label,
+main.booking fieldset.step-4 .form-group .table-label{
   font-size: 16px;
   /* line-height: 1; */
   letter-spacing: 1.6px;
@@ -1296,16 +1352,20 @@ fieldset.step-4 .form-group .table-label {
   margin-bottom: 10px;
 }
 
-fieldset.step-4 .form-group label .error-msg,
-fieldset.step-4 .form-group .table-label .error-msg {
+fieldset.step-3 .form-group label .error-msg,
+fieldset.step-3 .form-group .table-label .error-msg,
+main.booking fieldset.step-4 .form-group label .error-msg,
+main.booking fieldset.step-4 .form-group .table-label .error-msg {
   font-size: 12px;
   letter-spacing: 1.2px;
   margin-left: 10px;
   color: #ff7ea4;
 }
 
-fieldset.step-4 .form-group input,
-fieldset.step-4 .form-group textarea {
+fieldset.step-3 .form-group input,
+fieldset.step-3 .form-group textarea,
+main.booking fieldset.step-4 .form-group input,
+main.booking fieldset.step-4 .form-group textarea {
   width: 100%;
   border-radius: 6px;
   border: solid 1px #9FA0A0;
@@ -1318,121 +1378,150 @@ fieldset.step-4 .form-group textarea {
   transition: 0.3s;
 }
 
-fieldset.step-4 .form-group input::-webkit-input-placeholder,
-fieldset.step-4 .form-group textarea::-webkit-input-placeholder {
+fieldset.step-3 .form-group input::-webkit-input-placeholder,
+fieldset.step-3 .form-group textarea::-webkit-input-placeholder,
+main.booking fieldset.step-4 .form-group input::-webkit-input-placeholder,
+main.booking fieldset.step-4 .form-group textarea::-webkit-input-placeholder {
   color: #595757;
 }
 
-fieldset.step-4 .form-group input:-ms-input-placeholder,
-fieldset.step-4 .form-group textarea:-ms-input-placeholder {
+fieldset.step-3 .form-group input:-ms-input-placeholder,
+fieldset.step-3 .form-group textarea:-ms-input-placeholder,
+main.booking fieldset.step-4 .form-group input:-ms-input-placeholder,
+main.booking fieldset.step-4 .form-group textarea:-ms-input-placeholder {
   color: #595757;
 }
 
-fieldset.step-4 .form-group input::-ms-input-placeholder,
-fieldset.step-4 .form-group textarea::-ms-input-placeholder {
+fieldset.step-3 .form-group input::-ms-input-placeholder,
+fieldset.step-3 .form-group textarea::-ms-input-placeholder,
+main.booking fieldset.step-4 .form-group input::-ms-input-placeholder,
+main.booking fieldset.step-4 .form-group textarea::-ms-input-placeholder {
   color: #595757;
 }
 
-fieldset.step-4 .form-group input::placeholder,
-fieldset.step-4 .form-group textarea::placeholder {
+fieldset.step-3 .form-group input::placeholder,
+fieldset.step-3 .form-group textarea::placeholder,
+main.booking fieldset.step-4 .form-group input::placeholder,
+main.booking fieldset.step-4 .form-group textarea::placeholder {
   color: #595757;
 }
 
-fieldset.step-4 .form-group input:-webkit-autofill,
-fieldset.step-4 .form-group textarea:-webkit-autofill {
+fieldset.step-3 .form-group input:-webkit-autofill,
+fieldset.step-3 .form-group textarea:-webkit-autofill,
+main.booking fieldset.step-4 .form-group input:-webkit-autofill,
+main.booking fieldset.step-4 .form-group textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 100px #101010 inset;
   background-color: transparent;
   color: #8C5FB4;
   -webkit-text-fill-color: #8C5FB4;
 }
 
-fieldset.step-4 .form-group input:focus, fieldset.step-4 .form-group input:-webkit-autofill:focus,
-fieldset.step-4 .form-group textarea:focus,
-fieldset.step-4 .form-group textarea:-webkit-autofill:focus {
+fieldset.step-3 .form-group input:focus, fieldset.step-3 .form-group input:-webkit-autofill:focus,
+fieldset.step-3 .form-group textarea:focus,
+fieldset.step-3 .form-group textarea:-webkit-autofill:focus,
+main.booking fieldset.step-4 .form-group input:focus,
+main.booking fieldset.step-4 .form-group input:-webkit-autofill:focus,
+main.booking fieldset.step-4 .form-group textarea:focu,
+main.booking fieldset.step-4 .form-group textarea:-webkit-autofill:focus {
   border-color: #8C5FB4;
   box-shadow: none;
   -webkit-box-shadow: 0 0 0 100px #101010 inset;
   outline: 0;
 }
 
-fieldset.step-4 .form-group textarea {
+fieldset.step-3 .form-group textarea,
+main.booking fieldset.step-4 .form-group textarea {
   line-height: 2;
   height: 200px;
 }
 
 @media (min-width: 1200px) {
-  fieldset.step-4 .feature-btn {
+  fieldset.step-3 .feature-btn,
+  main.booking fieldset.step-4 .feature-bt {
     padding-top: calc((720px + 30px) * 0.07513);
   }
 }
 
 @media (min-width: 1440px) {
-  fieldset.step-4 .feature-btn {
+  fieldset.step-3 .feature-btn,
+  main.booking fieldset.step-4 .feature-bt {
     padding-top: calc((900px + 30px) * 0.07513);
   }
 }
 
 @media (min-width: 1920px) {
-  fieldset.step-4 .feature-btn {
+  fieldset.step-3 .feature-btn,
+  main.booking fieldset.step-4 .feature-btn {
     padding-top: calc((1088px + 30px) * 0.07513);
   }
 }
 
 @media (max-width: 1199.98px) {
-  fieldset.step-4 .feature-btn {
+  fieldset.step-3 .feature-btn,
+  main.booking fieldset.step-4 .feature-btn {
     padding-top: calc(100% * 0.07513);
   }
 }
 
 @media (min-width: 1200px) {
-  fieldset.step-5 .feature-btn {
+  fieldset.step-4 .feature-btn,
+  main.booking fieldset.step-5 .feature-btn {
     padding-top: calc((720px + 30px) * 0.10197);
   }
 }
 
 @media (min-width: 1440px) {
-  fieldset.step-5 .feature-btn {
+  fieldset.step-4 .feature-btn,
+  main.booking fieldset.step-5 .feature-btn {
     padding-top: calc((900px + 30px) * 0.10197);
   }
 }
 
 @media (min-width: 1920px) {
-  fieldset.step-5 .feature-btn {
+  fieldset.step-4 .feature-btn,
+  main.booking fieldset.step-5 .feature-btn {
     padding-top: calc((1088px + 30px) * 0.10197);
   }
 }
 
 @media (max-width: 1199.98px) {
-  fieldset.step-5 .feature-btn {
+  fieldset.step-4 .feature-btn,
+  main.booking fieldset.step-5 .feature-btn {
     padding-top: calc(100% * 0.10197);
   }
 }
 
-fieldset.step-5 .feature-btn .multi-btn .previous {
+fieldset.step-4 .feature-btn .multi-btn .previous,
+main.booking fieldset.step-5 .feature-btn .multi-btn .previous {
   -ms-flex: 1 1 auto !important;
   -webkit-box-flex: 1 !important;
           flex: 1 1 auto !important;
 }
 
-fieldset.step-5 .feature-btn .multi-btn .submit {
+fieldset.step-4 .feature-btn .multi-btn .submit,
+main.booking fieldset.step-5 .feature-btn .multi-btn .submit {
   width: 240px;
   margin-left: 20px;
 }
 
-fieldset.step-5 .filled-data {
+fieldset.step-4 .filled-data,
+main.booking fieldset.step-5 .filled-data {
   width: 100%;
 }
 
-fieldset.step-5 .filled-data .notice td {
+fieldset.step-4 .filled-data .notice td,
+main.booking fieldset.step-5 .filled-data .notice td {
   padding-top: 36px;
   padding-bottom: 36px;
 }
 
-fieldset.step-5 .filled-data .notice td:last-child {
+fieldset.step-4 .filled-data .notice td:last-child,
+main.booking fieldset.step-5 .filled-data .notice td:last-child {
   white-space: pre-wrap;
 }
 
-fieldset.step-5 .filled-data td {
+fieldset.step-4 .filled-data td,
+main.booking fieldset.step-5 .filled-data td {
   text-align: left;
   color: #CCCCCC;
   font-size: 16px;
@@ -1441,7 +1530,8 @@ fieldset.step-5 .filled-data td {
   vertical-align: top;
 }
 
-fieldset.step-5 .filled-data td:first-child {
+fieldset.step-4 .filled-data td:first-child,
+main.booking fieldset.step-5 .filled-data td:first-child {
   text-align: right;
   padding-right: 48px;
   min-width: 120px;
@@ -1542,13 +1632,15 @@ fieldset .prefix-step .prefix {
   color: #8C5FB4;
 }
 
-fieldset.step-3 .form-group:not(.select-food) {
+fieldset.step-3 .form-group:not(.select-food),
+main.booking fieldset.step-4 .form-group:not(.select-food) {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
 }
 
-fieldset.step-3 .form-group:not(.select-food) p {
+fieldset.step-3 .form-group:not(.select-food) p,
+main.booking fieldset.step-4 .form-group:not(.select-food) p {
   font-size: 12px;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -1579,50 +1671,62 @@ fieldset.step-3 .form-group:not(.select-food) p {
   fieldset.step-2 .field-intro {
     padding-bottom: 20px;
   }
-  fieldset.step-4 .form-container {
+  fieldset.step-3 .form-container,
+  main.booking fieldset.step-4 .form-container {
     padding-top: 30px;
   }
-  fieldset.step-4 .form-group label,
-  fieldset.step-4 .form-group .table-label {
+  fieldset.step-3 .form-group label,
+  fieldset.step-3 .form-group .table-label,
+  main.booking fieldset.step-4 .form-group label,
+  main.booking fieldset.step-4 .form-group .table-label {
     font-size: 14px;
     letter-spacing: 1.4px;
   }
-  fieldset.step-4 .form-group input,
-  fieldset.step-4 .form-group textarea {
+  fieldset.step-3 .form-group input,
+  fieldset.step-3 .form-group textarea,
+  main.booking fieldset.step-4 .form-group input,
+  main.booking fieldset.step-4 .form-group textarea {
     font-size: 14px;
     letter-spacing: 1.4px;
     padding: 10px 20px;
   }
-  fieldset.step-4 .form-group textarea {
+  fieldset.step-3 .form-group textarea,
+  main.booking fieldset.step-4 .form-group textarea {
     line-height: 2;
     padding: 7px 20px;
   }
-  fieldset.step-4 .field-intro {
+  fieldset.step-3 .field-intro,
+  main.booking fieldset.step-4 .field-intro {
     font-size: 14px;
     line-height: 2;
     letter-spacing: 1.4px;
     text-align: left;
   }
-  fieldset.step-5 .filled-data.notice td {
+  fieldset.step-4 .filled-data.notice td,
+  main.booking fieldset.step-5 .filled-data.notice td{
     padding-top: 27px;
     padding-bottom: 27px;
   }
-  fieldset.step-5 .filled-data td {
+  fieldset.step-4 .filled-data td,
+  main.booking fieldset.step-5 .filled-data td {
     font-size: 14px;
     line-height: 2;
     letter-spacing: 1.4px;
   }
-  fieldset.step-5 .filled-data td:first-child {
+  fieldset.step-4 .filled-data td:first-child,
+  main.booking fieldset.step-5 .filled-data td:first-child {
     font-size: 12px;
     line-height: 2.33;
     letter-spacing: 1.2px;
     padding-right: 12px;
     min-width: 66px;
   }
-  fieldset.step-5 .multi-btn .previous {
+  fieldset.step-4 .multi-btn .previous,
+  main.booking fieldset.step-5 .multi-btn .previous {
     width: 120px;
   }
-  fieldset.step-5 .multi-btn .submit {
+  fieldset.step-4 .multi-btn .submit,
+  main.booking fieldset.step-5 .multi-btn .submit {
     width: 192px;
   }
   fieldset .coupon-code input {
@@ -1809,31 +1913,38 @@ fieldset.step-3 .form-group:not(.select-food) p {
     text-align: left;
     margin-left: 25px;
   }
-  fieldset.step-3 .feature-btn {
+  fieldset.step-2 .feature-btn {
     padding-top: 50px;
   }
-  fieldset.step-5 .multi-btn .previous {
+  fieldset.step-4 .multi-btn .previous,
+  main.booking fieldset.step-5 .multi-btn .previous {
     width: 80px;
   }
-  fieldset.step-5 .filled-data tr {
+  fieldset.step-4 .filled-data tr,
+  main.booking fieldset.step-5 .filled-data tr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  fieldset.step-5 .filled-data .coupon-note {
+  fieldset.step-4 .filled-data .coupon-note,
+  main.booking fieldset.step-5 .filled-data .coupon-note {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  fieldset.step-5 .filled-data .coupon-note td {
+  fieldset.step-4 .filled-data .coupon-note td,
+  main.booking fieldset.step-5 .filled-data .coupon-note td {
     width: 100%;
   }
-  fieldset.step-5 .filled-data .coupon-note td:first-child {
+  fieldset.step-4 .filled-data .coupon-note td:first-child,
+  main.booking fieldset.step-5 .filled-data .coupon-note td:first-child {
     text-align: left;
   }
-  fieldset.step-5 .filled-data .coupon-code td {
+  fieldset.step-4 .filled-data .coupon-code td,
+  main.booking fieldset.step-5 .filled-data .coupon-code td {
     width: 100%;
   }
-  fieldset.step-5 .filled-data .coupon-code td:first-child {
+  fieldset.step-4 .filled-data .coupon-code td:first-child,
+  main.booking fieldset.step-5 .filled-data .coupon-code td:first-child {
     display: none;
   }
   button.btn-outline {
@@ -1897,12 +2008,63 @@ fieldset.step-3 .form-group:not(.select-food) p {
     margin-top: 10px;
   }
 }
-fieldset.step-5 .filled-data td p {
+fieldset.step-4 .filled-data td p,
+main.booking fieldset.step-5 .filled-data td p {
   font-size: 13px;
 }
 @media (max-width: 575.98px){
-  fieldset.step-5 .filled-data td p {
+  fieldset.step-4 .filled-data td p,
+  main.booking fieldset.step-5 .filled-data td p {
     font-size: 12px;
   }
 }
+
+.form-grid {
+  display: flex;
+}
+.form-grid .form-group {
+  width: 40%;
+}
+.form-grid .form-group + .form-group {
+  width: 60%;
+  margin-left: 20px;
+}
+@media (max-width: 992px){
+  .form-grid {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .form-grid .form-group {
+    width: 100%;
+  }
+  .form-grid .form-group + .form-group {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+.form-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  margin-bottom: -10px;
+}
+.form-select .form-check {
+  width: calc((100% - 40px) / 3);
+}
+@media (max-width: 992px){
+  .form-select .form-check {
+    width: 100%;
+  }
+}
+.form-select .form-check-label{
+  padding: 5px 17px;
+  line-height: 2.25;
+}
+@media (max-width: 992px){
+  .form-select .form-check-label{
+    padding: 6px 20px;
+    line-height: 2;
+  }
+}
+
 /*# sourceMappingURL=form.css.map */
