@@ -791,7 +791,7 @@ class OrderController extends Controller
         }
         // 尚未開過發票
         if($request->has('no_inv') && $request->no_inv == 1){
-            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0 AND pay_status IN ('已付款','已付款(部分退款)')");
+            $order->whereRaw("(SELECT COUNT(dark3inv.id) FROM dark3inv WHERE is_cancal=0 AND dark3order.id=dark3inv.order_id)=0 AND pay_status IN ('已付款','已付款(部分退款)') AND pay_type IN ('信用卡','後台編輯')");
         }
 
         if($request->has('order') && $request->order!=''){

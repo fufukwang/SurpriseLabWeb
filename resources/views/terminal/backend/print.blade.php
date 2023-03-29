@@ -198,7 +198,7 @@
         }
     ?>
                                             <tr id="tr_{{ $row->id }}">
-                                                <td>@if($row->pay_status=='已付款' && $row->refund == 0 && $totle_money>0 && !$inv_open)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
+                                                <td>@if($row->pay_status=='已付款' && $row->refund == 0 && $totle_money>0 && !$inv_open && $row->pay_type !== '合作販售')<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
                                                 <td> 
                     @if($row->plan == 'train') 微醺列車 The Great Tipsy : The Next Stop @endif
                     @if($row->plan == 'flight') FLIGHT 無光飛航 @endif
