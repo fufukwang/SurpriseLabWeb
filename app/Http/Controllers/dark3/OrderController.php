@@ -417,7 +417,7 @@ class OrderController extends Controller
                             'vegetarian' => 0,
                             'is_overseas'=> $is_overseas,
                             'edit_type'  => '合作-'.$row['source'],
-                            'vegetarian' => $row['meat_eat'] ?? 0,
+                            'vegetarian' => $row['vegetarian'] ?? 0,
                             'meat_eat'   => $row['meat_eat'] ?? 0,
                             'no_beef'    => $row['no_beef'] ?? 0,
                             'no_pork'    => $row['no_pork'] ?? 0,

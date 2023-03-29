@@ -1046,7 +1046,7 @@ $(function(){
                 item5 += $(value).find('td').eq(4).text();
                 itemMoney += parseInt($(value).find('td').eq(4).text());
             });
-
+/*
             if($('input[name="Category"]:checked').val() == 'B2C'){
                 if(parseInt($('#TotalAmt').val()) != itemMoney){
                     $.Notification.notify('error','bottom left','品項金額與總金額不符', '發票建立失敗');
@@ -1058,7 +1058,11 @@ $(function(){
                     return false;
                 }
             }
-
+*/
+            if(parseInt($('#TotalAmt').val()) != itemMoney){
+                $.Notification.notify('error','bottom left','品項金額與總金額不符', '發票建立失敗');
+                return false;
+            }
 
             $.post('/dark3/order/inv/single/open',{
                 'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
