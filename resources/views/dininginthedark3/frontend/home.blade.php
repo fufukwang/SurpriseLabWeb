@@ -305,9 +305,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
-                        <div class="section sec-ig" id="Ig">
+                        <!-- <div class="section sec-ig" id="Ig">
                             <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
-                        </div>
+                        </div> -->
                         <div class="section sec-review" id="Review">
 
                             <div class="section-header">
