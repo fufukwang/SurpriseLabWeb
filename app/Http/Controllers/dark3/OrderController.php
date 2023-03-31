@@ -375,13 +375,16 @@ class OrderController extends Controller
                     } elseif(!is_numeric($row['ticket']) && $row['ticket']<=0) {
                         $message .= "第{$i}列 票券編號錯誤<br>";
                         break;
+                    } elseif(!is_numeric($row['money']) && $row['money']<=0) {
+                        $message .= "第{$i}列 金額輸入錯誤<br>";
+                        break;
                     } elseif($row['people'] != $row['meat_eat'] + $row['vegetarian']) {
                         $message .= "第{$i}列 葷/素人數與總人數不符<br>";
                         break;
                     } else {
                         $meat = [];
                         $is_overseas = 0;
-                        $money = 0;
+                        $money = $row['money'];
                         // 檢查座位
                         $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
                         $act = pro::where('id',$row['ticket'])->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
@@ -389,7 +392,7 @@ class OrderController extends Controller
                             $message .= "第{$i}列 編號({$row['ticket']})人數已滿<br>";
                             break;
                         }
-                        $money = $act->money * $row['people'];
+                        // $money = $act->money * $row['people'];
 
                         // 寫入
                         $sn = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
