@@ -719,7 +719,7 @@ class OrderController extends WebController
                 if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
                 if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
                 */
-                $order->whereIn('id', function($query) use ($request)
+                $order->whereIn('terminalorder.id', function($query) use ($request)
                 {
                     $query->select('order_id')
                       ->leftJoin('terminal_pro_order', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
@@ -740,11 +740,27 @@ class OrderController extends WebController
             }
             // 尚未開過發票
             if($request->has('no_inv') && $request->no_inv == 1){
-                $order->whereRaw("(SELECT COUNT(terminalinv.id) FROM terminalinv WHERE is_cancal=0 AND terminalorder.id=terminalinv.order_id)=0 AND pay_status IN ('已付款','已付款(部分退款)')");
+                $order->whereIn('terminalorder.pay_status',['已付款','已付款(部分退款)']);  
+                $order->leftJoin('terminalinv',function($join){
+                    $join->on('terminalorder.id', '=', 'terminalinv.order_id');
+                    $join->where('is_cancal','=',0);
+                });
+                $order->whereNull('is_cancal');
+                // $order->leftJoin('terminalinv', 'terminalorder.id', '=', 'terminalinv.order_id');
+                /*
+                $order->whereIn('id', function($query) use ($request)
+                {
+                    $query->select('order_id')
+                      ->from('terminalinv');
+                    $query->where('ticket_type',$request->ticket_type);
+                });
+                */
+                // $order->whereRaw('(`is_cancal` = 1 or `is_cancal` is null)');
+                // $order->whereRaw("(SELECT COUNT(terminalinv.id) FROM terminalinv WHERE is_cancal=0 AND terminalorder.id=terminalinv.order_id)=0 AND pay_status IN ('已付款','已付款(部分退款)')");
             }
 
             if($request->has('dayparts') && $request->dayparts!=''){
-                $order->whereIn('id', function($query) use ($request)
+                $order->whereIn('terminalorder.id', function($query) use ($request)
                 {
                     $query->select('order_id')
                       ->leftJoin('terminal_pro_order', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
@@ -754,7 +770,7 @@ class OrderController extends WebController
                 });
             }
             if($request->has('ticket_type') && $request->ticket_type!=''){
-                $order->whereIn('id', function($query) use ($request)
+                $order->whereIn('terminalorder.id', function($query) use ($request)
                 {
                     $query->select('order_id')
                       ->leftJoin('terminal_pro_order', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
