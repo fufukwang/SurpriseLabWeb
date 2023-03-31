@@ -185,7 +185,7 @@
         }
     ?>
                                             <tr id="tr_{{ $row->id }}">
-                                                <td>@if($row->pay_status=='已付款' && $row->refund == 0 && $totle_money>0 && !$inv_open && !$not_inv && $row->pay_type !== '合作販售')<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
+                                                <td>@if($row->pay_status=='已付款' && $row->refund == 0 && $totle_money>0 && !$inv_open && !$not_inv)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>
                                                 <td>{{ $row->sn }}<br />{{ $row->day }}<br />{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}
