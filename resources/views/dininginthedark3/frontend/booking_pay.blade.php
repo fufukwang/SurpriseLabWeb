@@ -577,7 +577,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.4"></script>
+    <script src="js/form_pay.js?v=0.5"></script>
 
 </body>
 </html>
