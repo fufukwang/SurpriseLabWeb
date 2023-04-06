@@ -410,10 +410,14 @@ $('.step-2 input, .step-2 select').on('change', function () {
                     enableDays.push(data[i].day);
                     dateSite[data[i].day] = data[i].sites
                 }
+                var minD = 0;
+                if(enableDays.length>0){
+                    minD = enableDays[0];
+                }
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
-                    minDate:0,
-                    maxDate:"+5m",
+                    minDate: minD,
+                    maxDate: maxDateVal,
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: enableAllTheseDays
                 });
