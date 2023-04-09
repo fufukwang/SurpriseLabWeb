@@ -68,7 +68,7 @@ class FrontController extends Controller
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
                         $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
-                        $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS sites,id,rang_start,rang_end,money,cash"))->where('day_parts',$dayparts)->where('day',$day)->get();
+                        $pro = $pro->select(DB::raw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS sites,id,rang_start,rang_end,money,cash"))->where('day',$day)->get();
                         return $pro->toJson();
                     break;
 
