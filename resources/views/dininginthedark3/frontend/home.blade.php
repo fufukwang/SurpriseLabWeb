@@ -142,6 +142,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <h3>體驗內容</h3>
                                     <h4>Experience</h4>
                                 </div>
+                                <p class="section-desc">
+                                    <b>6 號菜單 ON AIR</b>
+                                    <br><br>
+                                    人與人相遇的機率只有 0.00369，<br>
+                                    初見時，如同在收音機上反覆對頻，
+                                    <br><br>
+                                    你們將跟隨 5 個電台的指引，<br>
+                                    與彼此重新經歷相遇、磨合、確認。
+                                </p>
                             </div>
 
                             <div class="about-box">
@@ -193,17 +202,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h2>Ticket</h2>
 
                         <!-- 售票狀況 -->
-                        <div class="section sec-ticket-status" style="display: none;">
+                        <div class="section sec-ticket-status">
                             <div class="container">
 
                                 <div class="section-header">
                                     <div class="section-title">
-                                        <h3>售票狀況</h3>
+                                        <h3>6號菜單體驗倒數中</h3>
                                         <h4>Ticket Status</h4>
                                     </div>
                                 </div>
 
-                                {{--<!--div class="time-counter">
+                                <div class="time-counter">
                                     <p>剩餘時間</p>
                                     <div class="d-flex time-rest d-flex align-items-center justify-content-center">
                                         <span class="days">00</span>天
@@ -211,7 +220,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <span class="minutes">00</span>分
                                         <span class="seconds">00</span>秒
                                     </div>
-                                </div-->--}}
+                                </div>
 
                                 <div class="sale-progress">
                                     <div class="progress">
@@ -228,16 +237,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             </p>
                                         </div>
                                         <div class="info-text">
-                                            <p>* 現正販售</p>
-                                            <ul>
+                                            <p>* 每號菜單皆為限時推出，錯過不再復刻。</p>
+                                            <p>* 5月底體驗正式更換為 7 號菜單。</p>
+                                            <p>（7號菜單上線時間將另行公告）</p>
+                                            <!-- <ul>
                                                 <li>
-                                                    <p>雙人即享票：可劃位區間請依劃位網站為主</p>
+                                                    <p>（7號菜單上線時間將另行公告）</p>
                                                 </li>
-                                                <li>
-                                                    <p>年度套票：即日起至-2023/10/31</p>
-                                                </li>
-                                            </ul>
-                                            <p>* 可劃位區間將依照實際狀況加開或縮短</p>
+                                            </ul> -->
                                         </div>
                                     </div>
                                 </div>
@@ -302,6 +309,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <p>即將完售</p>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="ticket-btn">
+                                    <a class="btn-outline" href="https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar&utm_campaign=button">我要預約</a>
                                 </div>
                             </div>
                         </div>
@@ -657,7 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <!-- History Menu -->
-                        <div class="section sec-menu" id="Menu">
+                        <div class="section sec-menu" id="Menu"  style="display: none;">
 
                             <div class="section-header">
                                 <div class="section-title">
