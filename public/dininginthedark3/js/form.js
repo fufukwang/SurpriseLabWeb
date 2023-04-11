@@ -119,7 +119,7 @@ $(".action-button").on('click', function(){
                 var myDateTip = "";  // tooltip 文字
                 var myDateDay = date.getDay();
                 if(myDateDay === 0 || myDateDay === 6){
-                    if(dateSite[sdate]<=36){
+                    if(dateSite[sdate]<=50){
                         myDateClass = "sold-out-soon";
                         myDateTip = "即將完售";
                     } else if(dateSite[sdate]<=108){
@@ -127,7 +127,7 @@ $(".action-button").on('click', function(){
                         myDateTip = "好評熱賣";
                     }
                 } else {
-                    if(dateSite[sdate]<=24){
+                    if(dateSite[sdate]<=50){
                         myDateClass = "sold-out-soon";
                         myDateTip = "即將完售";
                     } else if(dateSite[sdate]<=72){

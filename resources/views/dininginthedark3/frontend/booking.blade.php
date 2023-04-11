@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.1"/>
+    <link rel="stylesheet" href="css/style.css?v=0.2"/>
     <link rel="stylesheet" href="css/form.css?v=0.2"/>
 
     <!-- Google Tag Manager -->
@@ -637,7 +637,7 @@
     <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
     
     <!-- Custom Js -->
-    <script src="js/form.js?v=0.21"></script>
+    <script src="js/form.js?v=0.22"></script>
 
 </body>
 </html>

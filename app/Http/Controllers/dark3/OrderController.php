@@ -508,7 +508,7 @@ class OrderController extends Controller
             }
         } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
         */
-        $order = $this->orderQuery($request);
+        $order = $this->orderQuery($request,true);
         $order = $order->get();
         
 
@@ -568,7 +568,7 @@ class OrderController extends Controller
             }
         } else { $order = $order->orderBy('dark3order.updated_at','desc'); }
         */
-        $order = $this->orderQuery($request,true);
+        $order = $this->orderQuery($request);
         $order = $order->get();
 
         $cellData = $order->toArray();

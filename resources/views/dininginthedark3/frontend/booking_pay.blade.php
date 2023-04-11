@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.1"/>
+    <link rel="stylesheet" href="css/style.css?v=0.2"/>
     <link rel="stylesheet" href="css/form.css?v=0.2"/>
 
     <!-- Google Tag Manager -->
@@ -577,7 +577,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.5"></script>
+    <script src="js/form_pay.js?v=0.6"></script>
 
 </body>
 </html>
