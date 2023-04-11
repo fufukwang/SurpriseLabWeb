@@ -64,7 +64,7 @@
       } else {
           $pay_type = '貝殼集器';
       }
-  	} elseif($row->pay_type == '後台編輯'){
+  	} else {
       $pay_type = $row->edit_type;
   	}
    $pay_status = $row->pay_status;
