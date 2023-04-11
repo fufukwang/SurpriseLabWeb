@@ -164,8 +164,8 @@
                         $last_four = $card_info->card_info->last_four;
                     }
                 }
-            } elseif($row->pay_type == '合作販售'){
-                $totle_money = $row->PM * $row->pople;
+            /*} elseif($row->pay_type == '合作販售'){
+                $totle_money = $row->PM * $row->pople;*/
             }
 
         }
@@ -315,6 +315,7 @@
                                             email 信箱<br />
                                             ticket 場次  <br />
                                             people 人數  <br />
+                                            money 金額(請輸入半形數字)，金額會直接存入訂單總金額。<br />
                                             meat_eat 葷食  <br />
                                             no_beef 葷食/不吃牛肉  <br />
                                             no_pork 葷食/不吃豬肉  <br />
