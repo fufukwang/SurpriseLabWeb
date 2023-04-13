@@ -135,8 +135,14 @@ class FrontController extends Controller
             } elseif($request->has('method')){
                 // 總售出票數
                 if($request->method == 'getMaxPeople'){
+                    /*
                     $json = json_decode(setting::where('slug','dark3_setting')->first()->json,true);
                     $json['pay'] = order::whereIn('pay_status',['已付款','已付款(部分退款)'])->where('is_overseas',2)->sum('pople') ?? 0;
+                    */
+                    $json = [
+                        'max' => pro::where('open',1)->sum('sites') ?? 0,
+                        'pay' => order::whereIn('pay_status',['已付款','已付款(部分退款)'])->sum('pople') ?? 0,
+                    ];
                     return Response::json($json,200);
                 }
                 // 刷卡票數

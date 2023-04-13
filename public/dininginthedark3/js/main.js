@@ -34,7 +34,8 @@ $(document).ready(function () {
         var goal = before + parseInt(max.max);//2750; // 目標張數 /* SaleStep1_amount + 1500 */
         //var amount = data["pledged_count"] /*+ SaleStep1_amount + SaleStep2_amount + SaleStep3_amount + SaleStep4_amount + SaleStep5_amount + SaleStep6_amount*/; //已售出總票數
         //var amount = item1_amount + item2_amount + item3_amount;
-        var amount = data["pledged_unit_count"] + parseInt(max.pay);
+        // var amount = data["pledged_unit_count"] + parseInt(max.pay);
+        var amount = parseInt(max.pay);
         var sale_progress = (before + amount) / goal * 100; // 募款進度
         var rest_tickets = goal - before - amount; // 剩餘可銷售票數
 
@@ -119,7 +120,8 @@ $(document).ready(function () {
         var timer = setInterval(function () {
             // 剩餘時間倒數器
             var Today = new Date();
-            var EndDay = new Date(data.end_date);
+            // var EndDay = new Date(data.end_date);
+            var EndDay = new Date('2023-05-15 00:00:00');
             var distance = EndDay - Today;
             var time_rest = $('.time-rest');
             var days, hours, minutes, seconds;
