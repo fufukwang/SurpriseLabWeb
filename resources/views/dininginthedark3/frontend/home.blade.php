@@ -84,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="smoothScroll ticket" href="#Ticket">Ticket</a>
             </li>
             <li>
-                <a class="smoothScroll review" href="#Review">Review</a>
+                <a class="smoothScroll ig" href="#Ig">Review</a>
             </li>
             <li>
                 <a class="smoothScroll rules" href="#Rules">Rules</a>
@@ -315,9 +315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="section sec-ig" id="Ig">
-                            <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
-                        </div> -->
+                        
                         <div class="section sec-review" id="Review">
 
                             <div class="section-header">
@@ -664,6 +662,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="section sec-ig" id="Ig">
+                            <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
                         </div>
 
                         <!-- History Menu -->
