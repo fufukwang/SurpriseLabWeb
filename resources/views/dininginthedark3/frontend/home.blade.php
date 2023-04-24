@@ -315,16 +315,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="section sec-review" id="Review">
 
+                        <div class="section sec-ig" id="Ig">
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>無光晚餐 真實評價</h3>
+                                    <!-- <h4>Review</h4> -->
+                                </div>
+                            </div>
+                            <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
+                        </div>
+
+                        <div class="section sec-review" id="Review">
                             <div class="section-header">
                                 <div class="section-title">
                                     <h3>觀眾評價</h3>
                                     <h4>Review</h4>
                                 </div>
                             </div>
-
                             <div class="review-wrap">
                                 <div class="review-tab-wrap">
 
@@ -663,9 +671,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
-                        <div class="section sec-ig" id="Ig">
-                            <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
-                        </div>
+                        
 
                         <!-- History Menu -->
                         <div class="section sec-menu" id="Menu"  style="display: none;">
