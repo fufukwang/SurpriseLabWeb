@@ -142,7 +142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <h3>體驗內容</h3>
                                     <h4>Experience</h4>
                                 </div>
-                                <p class="section-desc">
+                                <!-- <p class="section-desc">
                                     <b>6 號菜單 ON AIR</b>
                                     <br><br>
                                     人與人相遇的機率只有 0.00369，<br>
@@ -150,7 +150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <br><br>
                                     你們將跟隨 5 個電台的指引，<br>
                                     與彼此重新經歷相遇、磨合、確認。
-                                </p>
+                                </p> -->
                             </div>
 
                             <div class="about-box">
@@ -202,7 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h2>Ticket</h2>
 
                         <!-- 售票狀況 -->
-                        <div class="section sec-ticket-status">
+                        <div class="section sec-ticket-status" style="display:none;">
                             <div class="container">
 
                                 <div class="section-header">
@@ -296,6 +296,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <!-- <span class="btn-link" id="js-open-btn">點此查看票券差異比較</span><br/><br/> -->
                                     單一場次最高可容納人數 12 人，<br/>
                                     若人數超過 12 人可來信客服信箱，由我們協助劃位
+                                    <br/><br/>
+                                    <b><u>7號菜單於 5/31（三）起正式上線！</u></b>
                                 </p>
                                 <div class="ticket-datepicker">
                                     <div id="homeDatepicker"></div>
