@@ -212,11 +212,15 @@
 <br>
 <span style="font-size:13px"><strong><span style="color:#D3D3D3">6. 關於穿什麼，有哪些特別限制嗎？</span></strong></span></div>
 
-<div style="text-align: left;"><span style="font-size:13px"><a href="https://goo.gl/maps/qsZiGCftj2R31aUw9" target="_blank"><span style="color:#FFFFFF"><u>106台北市大安區仁愛路四段345巷4弄3號</u></span></a></span></div>
+<!-- <div style="text-align: left;"><span style="font-size:13px"><a href="https://goo.gl/maps/qsZiGCftj2R31aUw9" target="_blank"><span style="color:#FFFFFF"><u>106台北市大安區仁愛路四段345巷4弄3號</u></span></a></span></div>
 
-<div style="text-align: left;"><span style="font-size:13px">（忠孝敦化站3號出口步行10分鐘）<br>
-<br>
-可以穿著你喜歡的服裝前來，不過我們會建議穿平底鞋，畢竟需要在黑暗中走動還是安全點好。不過，為維持無光環境，<span style="color:#8C5FB4"><u><strong>請避免穿著會反光或閃閃動人的華麗服裝</strong></u></span>。<br>
+<div style="text-align: left;"><span style="font-size:13px">（忠孝敦化站3號出口步行10分鐘）<br> -->
+<br><br>
+
+<div style="text-align: left;"><span style="font-size:13px">可以穿著你喜歡的服裝前來，不過我們會建議穿平底鞋，畢竟需要在黑暗中走動還是安全點好。不過，為維持無光環境，<span style="color:#8C5FB4"><u><strong>請避免穿著會反光或閃閃動人的華麗服裝</strong></u></span>。<br>
+
+    
+<!-- 可以穿著你喜歡的服裝前來，不過我們會建議穿平底鞋，畢竟需要在黑暗中走動還是安全點好。不過，為維持無光環境，<span style="color:#8C5FB4"><u><strong>請避免穿著會反光或閃閃動人的華麗服裝</strong></u></span>。<br> -->
 <br>
 除此之外，用餐前需將包包、⼤型⾐物（如厚重外套、手錶、手機、或任何會發光的物品）寄放於接待區，所以建議不要帶太多東西到訪。同時，為使⿊暗中體驗順暢，<span style="color:#8C5FB4"><u><strong>個人物品需全部寄物，無法攜帶進場。</strong></u></span></span><br>
 <br>
