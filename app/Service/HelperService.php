@@ -70,6 +70,17 @@ class HelperService {
         try{
             // 暫停發送 D7 信件
             // if($data['template'] == 'D7') return false;
+            // 5/22 (含)的訂單不受到 7 & 14 的信件
+            if($data['template'] == 'D7' || $data['template'] == 'D14'){
+                if(isset($data['mday']) && $data['mday']>='2023-05-22'){
+                    return false;
+                }
+            }
+            if($data['template'] == 'order'){
+                if(isset($data['mday']) && $data['mday']>='2023-05-22'){
+                    $data['template'] = 'order_0522';
+                }
+            }
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_DARK_USER')]);
@@ -95,6 +106,9 @@ class HelperService {
                     case 'order':
                         $m->subject('【無光晚餐】訂位確認信件');
                         break;
+                    case 'order_0522':
+                        $m->subject('【無光晚餐】訂位確認信件');
+                        break;
                     case 'D14':
                         $m->subject('【無光晚餐來信】');
                         break;
@@ -114,6 +128,12 @@ class HelperService {
     // dark3 sms
     public function SendSmsByTemplateName($smsData){
         try{
+            // 5/22 (含)的訂單不受到 7 & 14 的信件
+            if($smsData['template'] == 'D7'){
+                if(isset($data['mday']) && $data['mday']>='2023-05-22'){
+                    return false;
+                }
+            }
             switch ($smsData['template']) {
                 case 'order':
                     $requestUrl = 'https://api-ssl.bitly.com/v4/shorten';

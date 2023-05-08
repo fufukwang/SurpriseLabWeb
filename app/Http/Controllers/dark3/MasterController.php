@@ -213,6 +213,7 @@ class MasterController extends Controller
                 $toData['day'] = Carbon::parse($ord->day)->format(' m 月 d 日');
                 $toData['time'] = substr($ord->rang_start,0,5);
                 $toData['pople'] = $ord->pople;
+                $toData['mday'] = $ord->day;
             }
             // 信件補送
             if(SLS::SendEmailByTemplateName($toData)){

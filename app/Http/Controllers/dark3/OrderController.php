@@ -116,6 +116,7 @@ class OrderController extends Controller
                     'no_shell' => $request->no_shell ?? 0,
                     'no_nut_v' => $request->no_nut_v ?? 0,
                     'template' => 'order',
+                    'mday'     => $pro->day,
                 ];
                 if($mailer['email'] != ''){
                     SLS::SendEmailByTemplateName($mailer);
@@ -282,6 +283,7 @@ class OrderController extends Controller
                     'no_shell' => $request->no_shell ?? 0,
                     'no_nut_v' => $request->no_nut_v ?? 0,
                     'template' => 'order',
+                    'mday'     => $act->day,
                 ];
                 if($mailer['email'] != ''){
                     SLS::SendEmailByTemplateName($mailer);
@@ -744,6 +746,7 @@ class OrderController extends Controller
             'no_shell' => $order->no_shell,
             'no_nut_v' => $order->no_nut_v,
             'template' => 'order',
+            'mday'     => $act->day,
         ];
         SLS::SendEmailByTemplateName($mailer);
         SLS::SendSmsByTemplateName($mailer);

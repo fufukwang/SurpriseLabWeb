@@ -372,6 +372,7 @@ class FrontController extends Controller
                     'no_shell' => $data['no_shell'],
                     'no_nut_v' => $data['no_nut_v'],
                     'template' => 'order',
+                    'mday'     => $act->day,
                 ];
                 SLS::SendEmailByTemplateName($mailer);
                 SLS::SendSmsByTemplateName($mailer);

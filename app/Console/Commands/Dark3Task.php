@@ -62,7 +62,7 @@ class Dark3Task extends Command
         // 前 7 天 & 當天
         try {
             // 14 天
-            $pr14day = pro::select('id')->where('open',1)
+            $pr14day = pro::select('id','day')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=14")->get();
             foreach($pr14day as $pro){
                 // 找出正常的訂單
@@ -73,6 +73,7 @@ class Dark3Task extends Command
                             'name'     => $ord->name,
                             'email'    => $ord->email,
                             'template' => 'D14',
+                            'mday' => $pro->day,
                         ];
                         SLS::SendEmailByTemplateName($toData);
                     }
@@ -100,6 +101,7 @@ class Dark3Task extends Command
                             'day'      => Carbon::parse($ord->day)->format(' m 月 d 日'),
                             'time'     => substr($ord->rang_start,0,5),
                             'template' => 'D7',
+                            'mday'     => $ord->day,
                         ];
                         SLS::SendEmailByTemplateName($toData);
                         /*

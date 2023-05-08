@@ -308,6 +308,7 @@ class NewPayController extends Controller
                     'no_shell' => $order->no_shell,
                     'no_nut_v' => $order->no_nut_v,
                     'template' => 'order',
+                    'mday'     => $act->day,
                 ];
                 SLS::SendEmailByTemplateName($mailer);
                 SLS::SendSmsByTemplateName($mailer);
