@@ -9,6 +9,7 @@ class order extends Model
     protected $table = 'dark3order';
     
     protected $fillable = ['pro_id','pople','name','tel','email','notes','meat','coupon','sn','money','pay_type','pay_status','result','manage','discount','is_overseas','is_send','vegetarian','dis_code','dis_money','edit_type',
+        'tax_id','tax_name','need_english',
         'meat_eat',
         'no_beef',
         'no_pork',

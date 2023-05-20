@@ -61,7 +61,7 @@ class OrderController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','refund','cut','handling')->find($id);
+                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','refund','cut','handling','need_english','tax_id','tax_name')->find($id);
                 $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
@@ -89,6 +89,9 @@ class OrderController extends Controller
             'no_nut_m'   => $request->no_nut_m ?? 0,
             'no_shell'   => $request->no_shell ?? 0,
             'no_nut_v'   => $request->no_nut_v ?? 0,
+            'need_english' => $request->need_english ?? 0,
+            'tax_id'     => $request->tax_id ?? '',
+            'tax_name'   => $request->tax_name ?? '',
         ];
         $order = order::find($id);
         if($request->has('pro_id') && $request->pro_id>0){
@@ -256,6 +259,9 @@ class OrderController extends Controller
                 'no_nut_m'   => $request->no_nut_m ?? 0,
                 'no_shell'   => $request->no_shell ?? 0,
                 'no_nut_v'   => $request->no_nut_v ?? 0,
+                'need_english' => $request->need_english ?? 0,
+                'tax_id'     => $request->tax_id ?? '',
+                'tax_name'   => $request->tax_name ?? '',
             ];
             $order = order::create($data);
 

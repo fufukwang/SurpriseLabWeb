@@ -71,6 +71,19 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <label class="control-label col-sm-4">統編(發票使用)</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" maxlength="10" class="form-control" name="tax_id" value="{{ $order->tax_id or ''  }}" placeholder="統編(發票使用)">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">公司名稱(發票使用)</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" maxlength="50" class="form-control" name="tax_name" value="{{ $order->tax_name or ''  }}" placeholder="公司名稱(發票使用)">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
                                                 <label class="control-label col-sm-4">訂單號碼</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" readonly value="{{ $order->sn or '請留白系統會自動生成' }}">
