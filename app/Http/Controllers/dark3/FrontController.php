@@ -26,7 +26,27 @@ class FrontController extends Controller
     {
         DB::enableQueryLog();
     }
-    
+    public function getBookingPage(Request $request){
+        try{
+            $code = 'pass';$day = '';
+            if($request->has('day')){
+                $day = $request->day;
+                $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
+                $act = pro::where('day',$day)->where('open',1)->select(DB::raw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS Count"))->first();
+                if($act){
+                    if($act->Count<2){ $code = 'max'; }
+                } else {
+                    $code = 'null';
+                }
+                
+            }
+
+            return view('dininginthedark3.frontend.booking_pay',compact('code','day'));
+        } catch (\Exception $exception) {
+            Log::error($exception);
+            return response()->json(["success"=>false]);
+        }
+    }
 
 
     public function GetAjaxData(Request $request){

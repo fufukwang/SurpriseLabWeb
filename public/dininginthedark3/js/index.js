@@ -161,6 +161,14 @@ $(document).ready(function () {
                 dateFormat: 'yy-mm-dd', 
                 beforeShowDay: enableAllTheseDays
             });
+            $('a.ui-state-active').bind('click',function(){
+                let tr_day = booking_date.datepicker( "getDate" );
+                let sp_date = tr_day.getDate();
+                let sp_mont = (tr_day.getMonth() + 1);
+                let sp_year = tr_day.getFullYear();
+                let out_date = sp_year + '-' + sp_mont + '-' + sp_date;
+                window.location.href = '/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar&day='+out_date;
+            });
             // $.unblockUI();
         },'json');
         function enableAllTheseDays(date) {

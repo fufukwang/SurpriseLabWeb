@@ -577,7 +577,13 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.6"></script>
-
+    <script src="js/form_pay.js?v=0.7"></script>
+@if($day!='')
+    @if($code == 'pass')
+    <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
+    @else
+    <script type="text/javascript">alert('該場次人數已達上限!請從心開始登記選擇!');</script>
+    @endif
+@endif
 </body>
 </html>

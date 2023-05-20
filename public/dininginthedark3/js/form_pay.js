@@ -912,6 +912,18 @@ $('#phone').bind('keyup paste', function(){
     this.value = this.value.replace(/[^0-9\+\-\ ]/g, '');
 });
 
+// 到選擇的日期
+function goDay(day){
+    $.blockUI();
+    $('#agreerule').prop('checked',true);
+    $('.action-button').eq(0).trigger('click');
+    $('#booking_people').val(2);
+    $('#booking_people').trigger('change');
+    $('#booking_date').val(day);
+    $('#booking_date').trigger('change');
+    $.unblockUI();
+}
+
 
 // 送出資料
 function SendOrderData(Pay,prime){

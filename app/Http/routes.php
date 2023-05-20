@@ -664,7 +664,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('rules.html',function(){ return view('dininginthedark3.frontend.rules'); });
         // 劃位
         Route::get('booking.html',function(){ return view('dininginthedark3.frontend.booking'); });
-        Route::get('booking_pay.html',function(){ return view('dininginthedark3.frontend.booking_pay'); });
+        // Route::get('booking_pay.html',function(){ return view('dininginthedark3.frontend.booking_pay'); });
+        Route::get('booking_pay.html', 'dark3\FrontController@getBookingPage');
         // 藍新金流路由
         Route::post('Neweb.OrderPay', 'dark3\NewPayController@postOrderByNeweb'); // 存訂單
         Route::post('Neweb.ReturnResult', 'dark3\NewPayController@postReturnByNeweb'); // 回傳內容

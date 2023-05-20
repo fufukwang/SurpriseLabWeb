@@ -1222,7 +1222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?data=0411"></script>
+    <script src="js/index.js?data=0520"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?v=0.11"></script>
     <script src="js/index-slideshow.js?data=0223"></script>
