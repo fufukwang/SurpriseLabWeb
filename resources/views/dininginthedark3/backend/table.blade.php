@@ -51,7 +51,7 @@
 			<td>人數<!-- 主餐 --></td>
 			<td>素食</td>
 			<td>備註</td>
-			<td>優惠券</td>
+			<td>優惠券 / 統編</td>
 			<td>註記</td>
 		</tr>
 @forelse ($order as $row)
@@ -107,7 +107,13 @@
 			<td>{{ $row->pople }} 人 </td>
 			<td>{{ $row->vegetarian }} 人</td>
 			<td rowspan="2">{!! nl2br($row->notes) !!}</td>
-			<td rowspan="2">{!! $coupon !!}</td>
+			<td rowspan="2">
+				{!! $coupon !!}
+				@if($row->tax_id != '')
+				<br >{{ $row->tax_id }}(統編)
+				<br >{{ $row->tax_name }}
+				@endif
+			</td>
 			<td rowspan="2">{!! nl2br($row->manage) !!}</td>
 		</tr>
 		<tr>

@@ -260,7 +260,7 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->terminal == 1 && Session::get('key')->admin == 1 )
                                                     
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}" data-gift_money="{{ $gift_money }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal))) @else style="display:none" @endif>發票開立</button>
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-plan="{{ $row->plan }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}" data-gift_money="{{ $gift_money }}" data-tax_id="{{ $row->tax_id }}" data-tax_name="{{ $row->tax_name }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal))) @else style="display:none" @endif>發票開立</button>
                                                     
                                                     @endif
                                                     <div>
@@ -565,7 +565,8 @@
                                     <input type="hidden" id="inv_handling" value="">
                                     <input type="hidden" id="inv_refund" value="">
                                     <input type="hidden" id="gift_money" value="">
-
+                                    <input type="hidden" id="tax_id" value="">
+                                    <input type="hidden" id="tax_name" value="">
                                     
                                                 </div>
                                             </div>
@@ -1093,6 +1094,15 @@ $(function(){
         $('#TaxAmt').val(now_tax);
         $('#Amt').val(totle_money - now_tax);
         $('#con-close-modal').modal('show');
+
+        $('#tax_id').val($(this).data('tax_id'));
+        $('#tax_name').val($(this).data('tax_name'));
+        if($('#tax_id').val() !='' && $('#tax_name').val() !=''){
+            $('#B2B').trigger('click');
+            $('#BuyerName').val($('#tax_name').val());
+            $('#BuyerUBN').val($('#tax_name').val());
+        }
+        
         shb2c();shlove();shcarr();taxchange();calAmt();
     });
     // 手續費調整

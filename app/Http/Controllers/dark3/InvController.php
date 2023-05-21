@@ -134,7 +134,7 @@ class InvController extends Controller
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','money','dis_money')->get();
+            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','money','dis_money','tax_id','tax_name')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
                 $phone = $row->tel;
@@ -182,18 +182,22 @@ class InvController extends Controller
                 if($inv_count>0){
                     $psn = '_'.$inv_count;
                 }
+                $category = 'B2C'; $buyername = $row->name; $buyerUBN = '';
+                if($row->tax_id!='' && $row->tax_name!=''){
+                    $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;
+                }
                 $post_data_array = [
                     'RespondType' => 'JSON',
                     'Version' => '1.4',
                     'TimeStamp' => time(), //請以 time() 格式
                     'TransNum' => '',
                     'MerchantOrderNo' => $row->sn.$psn,
-                    'BuyerName' => $row->name,
-                    'BuyerUBN' => '',
+                    'BuyerName' => $buyername,
+                    'BuyerUBN' => $buyerUBN,
                     'BuyerPhone' => $phone,
                     'BuyerAddress' => '',
                     'BuyerEmail' => $row->email,
-                    'Category' => 'B2C',
+                    'Category' => $category,
                     'TaxType' => '1',
                     'TaxRate' => '5',
                     'Amt' => $totleamt - $taxamt,
