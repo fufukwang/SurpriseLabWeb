@@ -159,8 +159,12 @@ $(document).ready(function () {
                 minDate: minD,// minD,
                 maxDate: '+3m',// new Date(2022, 1, 28),
                 dateFormat: 'yy-mm-dd', 
-                beforeShowDay: enableAllTheseDays
+                beforeShowDay: enableAllTheseDays,
+                onSelect: function(dateText) {
+                    window.location.href = '/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar&day='+dateText;
+                }
             });
+            /*
             $('a.ui-state-active').bind('click',function(){
                 let tr_day = booking_date.datepicker( "getDate" );
                 let sp_date = tr_day.getDate();
@@ -169,6 +173,7 @@ $(document).ready(function () {
                 let out_date = sp_year + '-' + sp_mont + '-' + sp_date;
                 window.location.href = '/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar&day='+out_date;
             });
+            */
             // $.unblockUI();
         },'json');
         function enableAllTheseDays(date) {
@@ -204,5 +209,7 @@ $(document).ready(function () {
             window.location.href = 'https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar'
         })
     }
+
+
     indexViewDatepicker()
 });
