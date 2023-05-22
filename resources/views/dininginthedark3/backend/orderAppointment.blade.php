@@ -59,6 +59,18 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <label class="control-label col-sm-4">統編(發票使用)</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" maxlength="10" class="form-control" name="tax_id" placeholder="統編(發票使用)">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">公司名稱(發票使用)</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" maxlength="50" class="form-control" name="tax_name" placeholder="公司名稱(發票使用)">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
                                                 <label class="control-label col-sm-4">人數</label>
                                                 <div class="col-sm-8">
                                                     <select name="people" id="pople" class="form-control" data-cash="{{ $pro->cash }}">

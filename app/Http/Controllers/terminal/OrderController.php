@@ -61,7 +61,7 @@ class OrderController extends WebController
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::select('id','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','edit_type','money','plan','refund','cut','handling','num_f','num_b','num_t')->find($id);
+                $order = order::select('id','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','edit_type','money','plan','refund','cut','handling','num_f','num_b','num_t','need_english','tax_id','tax_name')->find($id);
                 $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
@@ -86,6 +86,9 @@ class OrderController extends WebController
             'name'       => $request->name,
             'vegetarian' => $request->vegetarian,
             'pople'      => $request->people,
+            'need_english' => $request->need_english ?? 0,
+            'tax_id'     => $request->tax_id ?? '',
+            'tax_name'   => $request->tax_name ?? '',
         ];
         $order = order::find($id);
         if(
@@ -255,6 +258,9 @@ class OrderController extends WebController
                 'num_b'      => $num_b,
                 'num_t'      => $num_t,
                 'num_f'      => $num_f,
+                'need_english' => $request->need_english ?? 0,
+                'tax_id'     => $request->tax_id ?? '',
+                'tax_name'   => $request->tax_name ?? '',
             ];
             $order = order::create($data);
             switch($data['plan']){
@@ -707,7 +713,7 @@ class OrderController extends WebController
 
     private function getOrderSearch(Request $request,$isTable=false){
         try {
-            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result','dis_money','refund','handling','cut','num_t','num_f','num_b');
+            $order = order::select('name','tel','meat','notes','terminalorder.manage','terminalorder.money AS OM','terminalorder.created_at AS created_at','terminalorder.pay_status','email','terminalorder.sn','terminalorder.id','email','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','plan','result','dis_money','refund','handling','cut','num_t','num_f','num_b','tax_id','tax_name');
 
             if($isTable){
                 $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
