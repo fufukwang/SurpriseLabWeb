@@ -76,6 +76,10 @@ $(".action-button").on('click', function(){
                             <span style="background: #AF2822"></span>
                             <p>即將完售</p>
                         </div>
+                        <div>
+                            <span style="background: #4b4b4b"></span>
+                            <p>已售完</p>
+                        </div>
                     </div>`)
                 }
             }, 100);

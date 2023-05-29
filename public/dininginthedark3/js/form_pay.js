@@ -1,7 +1,8 @@
-var current_fs, next_fs, prev_fs, title;
+var current_fs, next_fs, prev_fs, title, sub;
 var progressWrapper = $('.bar-wrapper');
 var progress = $('#progressbar li');
 var progress_title = $('.progress-title');
+var progress_sub = $('.progress-sub');
 var filedset = $('fieldset');
 var activeIndex;
 var isAllowToNextStep; // 是否可以進入下一步
@@ -57,6 +58,9 @@ $(".action-button").on('click', function(){
     // 更新步驟標題
     title =  next_fs.attr('title');
     progress_title.html(title);
+
+    sub =  next_fs.attr('sub');
+    progress_sub.html(sub);
 
     // 如果下一步為最後一步驟，抓取已填寫的資料使用
     if (next_fs.hasClass('step-4')) {
@@ -391,6 +395,10 @@ $('.step-2 input, .step-2 select').on('change', function () {
                         <div>
                             <span style="background: #AF2822"></span>
                             <p>即將完售</p>
+                        </div>
+                        <div>
+                            <span style="background: #4b4b4b"></span>
+                            <p>已售完</p>
                         </div>
                     </div>`)
                 }
