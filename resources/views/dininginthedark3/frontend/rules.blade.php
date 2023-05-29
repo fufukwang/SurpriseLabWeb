@@ -371,7 +371,7 @@
                                         <div id="qa13" class="collapse" aria-labelledby="qa13-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                                無光晚餐僅販售雙人票，若想買 6 人票券，請購買 3 組雙人票即可，需留意體驗時為兩人一組，無法併桌。
+                                                無光晚餐僅提供雙人預約，體驗時為兩人一組，且無法多人併桌。若想多人體驗，請於訂購時，點選前來體驗的雙數人數。
                                             </div>
                                         </div>
                                     </div>
@@ -387,7 +387,7 @@
                                         <div id="qa14" class="collapse" aria-labelledby="qa14-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                                可以，請在購票時的備註欄打上：公司抬頭+統編。<br/>
+                                                可以，請在購票時，確保填寫統一編號及公司抬頭欄位。<br/>
                                                 因作業流程，發票會在體驗後 7-10 個工作天寄至訂位信箱。
                                             </div>
                                         </div>
@@ -520,7 +520,7 @@
                                 </p>
 
                                 <h5 class="sub-title highlight change-seat">
-                                    雙人套票/雙人即享票退費異動規則
+                                    退費異動規則
                                 </h5>
                                 <table class="rule-table two-people">
                                     <tbody>
@@ -544,7 +544,7 @@
                                         <td>體驗當日</td>
                                         <td>01/11</td>
                                         <td>X</td>
-                                        <td>O</td>
+                                        <td>X</td>
                                         <td>X</td>
                                     </tr>
                                     <tr>
@@ -640,7 +640,7 @@
                                         </div>
                                         <div class="change-row-content">
                                             <div class="change-row-content-inner">
-                                                劃位序號
+                                                原訂購場次＋要改的日期場次
                                             </div>
                                         </div>
                                     </div>
@@ -670,41 +670,42 @@
                                         </div>
                                         <div class="change-row-content">
                                             <div class="change-row-content-inner">
-                                                訂單編號
+                                                原訂購場次＋退費原因
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <ol>
                                     <li>請依照上述說明附上相關資訊，來信 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a> 。</li>
-                                    <li>改期者需要重新進行劃位流程。</li>
+                                    <li>無光晚餐因經常客滿，改期請事先查詢剩餘場次，並於來信時提供 3 個可體驗時段。</li>
                                     <li>退費入帳約需七至十個工作天，實際日期請依購票時使用信用卡銀行規定為主。（特殊情況採 ATM 退費，入帳時間請依照客服人員回信為主）</li>
                                 </ol>
 
                                 <h5 class="sub-title highlight">
-                                    劃位批次
+                                    雙菜單劃位
                                 </h5>
-                                <p class="text-left">
+                                <!-- <p class="text-left">
                                     各批次預售劃位期限與序號規則。
                                 </p>
-                                <br/><br/>
-                                <h6 class="highlight">雙人即享票</h6>
+                                <br/>
+                                <br/> -->
+                                <h6 class="highlight">雙菜單年度套票</h6>
                                 <div class="tab-content-inner">
                                     <div class="rule-according" id="#stage-according">
                                         <div class="card">
                                             <div class="card-header" id="stage1-header">
-                                                <h6 data-toggle="collapse" data-target="#stage1" aria-expanded="false"
+                                                <!-- <h6 data-toggle="collapse" data-target="#stage1" aria-expanded="false"
                                                     aria-controls="stage1" class="collapsed d-flex align-items-center">
                                                     ・第一批劃位
                                                     <i class="icon icon-arrow"></i>
-                                                </h6>
+                                                </h6> -->
                                             </div>
     
-                                            <div id="stage1" class="collapse" aria-labelledby="stage1-header">
+                                            <div id="stage1" class="collapse show" aria-labelledby="stage1-header">
                                                 <div class="card-body">
                                                     <ul>
                                                         <li>可劃位區間：依照劃位網站為主</li>
-                                                        <li>失效日期：直購形式票券，購買即劃位，依照退換票規則辦理退費，無失效日期</li>
+                                                        <li>請儘早劃位，以免引響權益；一旦劃位序號已失效，無法提供退費服務。</li>
                                                     </ul>
                                                 </div>
                                             </div>
