@@ -443,6 +443,14 @@ form .form-container .field-intro {
   text-align: center;
 }
 
+form .form-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 20px;
+}
+
 @media (min-width: 1200px) {
   form .form-container .field-intro {
     padding-bottom: calc((720px + 30px) * 0.0322);
@@ -1004,6 +1012,9 @@ form .btn-outline {
   background: #AF2822;
 }
 
+.calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out a:after {
+  background: #4b4b4b;
+}
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
   border-color: #CCCCCC;
@@ -1350,6 +1361,7 @@ main.booking fieldset.step-4 .form-group .table-label{
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 10px;
+  flex: 1% 1 0;
 }
 
 fieldset.step-3 .form-group label .error-msg,

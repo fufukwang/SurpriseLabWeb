@@ -102,6 +102,7 @@
                 <h3 class="progress-title">
                     《無光晚餐》<br/>預約體驗登記
                 </h3>
+                <h4 class="progress-sub">Reservation</h4>
                 <!-- progressbar -->
                 <div class="bar-wrapper hide-steps">
                     <ul id="progressbar">
@@ -112,7 +113,7 @@
                 </div>
 
                 <!-- fieldsets -->
-                <fieldset class="step step-1" title="無光晚餐 用餐登記">
+                <!-- <fieldset class="step step-1" title="無光晚餐 用餐登記">
                     <p class="sub-title text-lining">
                         告訴我們何時可以見到你
                     </p>
@@ -165,15 +166,21 @@
                     <div class="feature-btn text-center">
                         <button type="button" name="next" class="btn-outline next action-button" disabled>開始預約</button>
                     </div>
-                </fieldset>
-                <fieldset class="step step-2" title="體驗場次預約">
+                </fieldset> -->
+                <fieldset class="step step-2" title="預約體驗" sub="Reservation">
                     <div class="form-container">
                         <p class="field-intro">
                             請點選你的預約人數
                         </p>
                         <ul class="prefix-dash">
-                            <li>單一場次最高可容納 12 人</li>
+                            <!-- <li>單一場次最高可容納 12 人</li>
+                            <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li> -->
+                            <li>無光晚餐僅接受雙數訂位</li>
+                            <li>單一場次最高可容納 12 人，若人數為12人或以上，歡迎預約包場。請來信客服 dininginthedark@surpriselab.com.tw</li>
+                            <li>無光晚餐每人優惠價格為2,200元/人</li>
+                            <li>票價已含10%服務費</li>
                             <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li>
+                            <li>若日期無法選擇，代表該場次已滿，或是當日不開放</li>
                         </ul>
                         <br/><br/>
 
@@ -216,8 +223,8 @@
 
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
-                            <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
-                            <button type="button" name="next" class="btn-outline next action-button">下一步</button>
+                            <!-- <button type="button" name="previous" class="btn-outline previous action-button">上一步</button> -->
+                            <button type="button" name="next" class="btn-outline next action-button" disabled="disabled" style="margin-left: auto;">下一步</button>
                         </div>
                     </div>
                 </fieldset>
@@ -230,27 +237,44 @@
                         </div>
                     </div>
                 </fieldset> -->
-                <fieldset class="step step-3" title="資料填寫">
+                <fieldset class="step step-3" title="顧客資料" sub="Customer Info">
                     <div class="form-container">
-                        <div class="field-intro">
+                        <!-- <div class="field-intro">
                             請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息（建議避開 yahoo 與 hotmail 信箱，以免漏信）
+                        </div> -->
+
+                        <div class="form-group input-with-label">
+                            <label for="name">* 姓名 Name</label>
+                            <!-- <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p> -->
+                            <input type="text" name="name" class="form-control" id="name" placeholder="ex. 無光先生, Mr. Dark">
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="name">* 姓名</label>
-                            <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p>
-                            <input type="text" name="name" class="form-control" id="name" placeholder="ex. 無光晚餐">
+                            <label for="phone" style="flex: 100%;">* 電話 Phone Number <span class="error-msg"></span></label>
+                            <!-- <p>無台灣電話者，請輸入0900000000</p> -->
+                            <input type="text" name="Area code" class="form-control phone" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
+                            <input type="text" name="phone" class="form-control phone" id="phone" placeholder="ex. 0912345678" style="width: calc(100% - 110px);margin-left: auto;">
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="phone">* 電話<span class="error-msg"></span></label>
-                            <p>無台灣電話者，請輸入0900000000</p>
-                            <input type="text" name="phone" class="form-control phone" id="phone" placeholder="ex. 0912345678">
-                        </div>
-
-                        <div class="form-group input-with-label">
-                            <label for="email">* 電子信箱<span class="error-msg"></span></label>
+                            <label for="email">* 電子信箱 Email<span class="error-msg"></span></label>
                             <input type="email" name="email" class="form-control has-verification email" id="email" placeholder="ex. dininginthedark@surpriselab.com.tw">
+                        </div>
+
+                        <div class="form-group input-with-label">
+                            <label for="company_tax_ID">統一編號 Company Tax ID<span class="error-msg"></span></label>
+                            <input type="text" name="company_tax_ID" class="form-control has-verification" id="company_tax_ID" placeholder="">
+                        </div>
+
+                        <div class="form-group input-with-label">
+                            <label for="company_name">公司抬頭 Company Name<span class="error-msg"></span></label>
+                            <input type="text" name="company_name" class="form-control has-verification" id="company_name" placeholder="">
+                        </div>
+
+                        <div class="form-group input-with-label">
+                            <label for="english_service">英文服務<span class="error-msg"></span></label>
+                            <select id="english_service" name="english_service" data-placeholder="選擇人數" required>
+                            </select>
                         </div>
 
                         <!-- <div class="form-group select-format">
@@ -261,34 +285,34 @@
                         </div> -->
 
                         <div class="form-group">
-                            <label class="form-label">* 飲食禁忌（請確實填答人數。無光晚餐將依照訂位資訊準備體驗內容，現場無法更改。）</label>
+                            <label class="form-label">* 飲食禁忌 Regular Menu（請確實填答人數。無光晚餐將依照訂位資訊準備體驗內容，現場無法更改。）</label>
                         </div>
 
                         <div class="form-group select-food">
                             <div class="form-row">
                                 <div class="form-col">
-                                    <label class="form-label" for="meat_food">* 葷食</label>
+                                    <label class="form-label" for="meat_food">* 葷食 Regular Menu</label>
                                     <select id="meat_food" name="meat_food" data-placeholder="選擇人數" required>
                                     </select>
                                 </div>
                                 <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noBeef">* 不吃牛肉</label>
+                                        <label class="form-label" for="meat_food_noBeef">* 不吃牛肉 No Beef</label>
                                         <select id="meat_food_noBeef" name="meat_food_noBeef" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noPork">* 不吃豬肉</label>
+                                        <label class="form-label" for="meat_food_noPork">* 不吃豬肉 No Pork</label>
                                         <select id="meat_food_noPork" name="meat_food_noPork" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noNut">* 不吃堅果</label>
+                                        <label class="form-label" for="meat_food_noNut">* 不吃堅果 No Nut</label>
                                         <select id="meat_food_noNut" name="meat_food_noNut" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noSeafood">* 不吃帶殼海鮮</label>
+                                        <label class="form-label" for="meat_food_noSeafood">* 不吃帶殼海鮮 No Shell Seafood</label>
                                         <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
@@ -296,13 +320,13 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-col">
-                                    <label class="form-label" for="vegetarian_food">* 蛋奶五辛素</label>
+                                    <label class="form-label" for="vegetarian_food">* 蛋奶五辛素 Five pungent spices & Lacto-vegetarian.</label>
                                     <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
                                     </select>
                                 </div>
                                 <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
-                                        <label class="form-label" for="vegetarian_food_noNut">* 不吃堅果</label>
+                                        <label class="form-label" for="vegetarian_food_noNut">* 不吃堅果 No Nut</label>
                                         <select id="vegetarian_food_noNut" name="vegetarian_food_noNut" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
@@ -312,10 +336,22 @@
                         </div>
 
                         <div class="form-group textarea-with-label">
-                            <label for="notice">其他備註</label>
-                            <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註/發票是否打統編/過敏食材&#10;食材過敏請標明人數＋過敏食材 EX:一位不吃牛&#10;素食者僅提供蛋奶五辛素&#10;發票若要打統編，請直接註明公司抬頭與統一編號"></textarea>
+                            <label for="notice">其他備註 Other Comments</label>
+                            <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註/孕婦/慶生需求/特殊紀念&#10;Special Request, Birthday or Anniversary Celebration, etc."></textarea>
+                            <!-- 特殊事項備註/發票是否打統編/過敏食材&#10;食材過敏請標明人數＋過敏食材 EX:一位不吃牛&#10;素食者僅提供蛋奶五辛素&#10;發票若要打統編，請直接註明公司抬頭與統一編號 -->
                         </div>
-
+                        
+                        <div class="form-group radio__button">
+                            <div class="d-flex align-items-center flex-wrap">
+                                <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
+                                    <input type="checkbox" id="agreerule" name="agree" class="custom-control-input" value="1" required>
+                                    <span class="custom-control-label">我已詳讀並遵守</span>
+                                </label>
+                                <a href="rules.html" target="_blank">
+                                    無光晚餐用餐與體驗規則
+                                </a>
+                            </div>
+                        </div>
                         <div class="form-group radio__button">
                             <div class="d-flex align-items-center">
                                 <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
@@ -327,6 +363,15 @@
                                     隱私條款
                                 </a>
                             </div>
+                        </div>
+
+                        <div class="field-intro">
+                            <ul>
+                                <li>請務必填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息（建議避開 yahoo 與 hotmail 信箱，以免漏信）
+                                </li>
+                                <li>無光晚餐僅依照顧客過敏狀況調整餐點，請確實填寫餐飲過敏狀況與人數。</li>
+                                <li>無光晚餐將依照訂位過敏資訊準備體驗內容，現場無法更改。</li>
+                            </ul>
                         </div>
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
@@ -359,8 +404,12 @@
                                 <td class="filled" data-filled="booking_date"></td>
                             </tr>
                             <tr>
-                                <td>時段</td>
+                                <td>體驗時段</td>
                                 <td class="filled" data-filled="booking_time"></td>
+                            </tr>
+                            <tr>
+                                <td>體驗地址</td>
+                                <td class="filled">106 台北市大安區仁愛路四段345巷4弄3號</td>
                             </tr>
                             <tr>
                                 <td>飲食選項</td>
@@ -393,7 +442,12 @@
                             </tr>
                         </table>
                         <br/><br/>
-                        <p>提醒：即將跳轉離開網站，進入結帳流程。最後需進入「完成預約」頁面才算預約成功。</p>
+                        <!-- <p>提醒：即將跳轉離開網站，進入結帳流程。最後需進入「完成預約」頁面才算預約成功。</p> -->
+                        <ul>
+                            <li>即將跳轉離開網站，進入結帳流程，完成付款。</li>
+                            <li>完成付款後，Email信箱中會收到訂位確認信，請前往確認。</li>
+                        </ul>
+
                         <div class="feature-btn d-flex justify-content-between multi-btn">
                             <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
                             <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
