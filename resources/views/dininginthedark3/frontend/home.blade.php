@@ -78,6 +78,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="smoothScroll intro" href="#Intro">Intro</a>
             </li>
             <li>
+                <a class="smoothScroll" href="https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html">Reservation</a>
+            </li>
+            <li>
                 <a class="smoothScroll about" href="#About">About</a>
             </li>
             <li>
@@ -86,6 +89,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li>
                 <a class="smoothScroll ig" href="#Ig">Review</a>
             </li>
+            <!-- <li>
+                <a class="smoothScroll review" href="#Review">Review</a>
+            </li> -->
             <li>
                 <a class="smoothScroll rules" href="#Rules">Rules</a>
             </li>
@@ -257,16 +263,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="section-header">
                                     <div class="section-title">
-                                        <h3>選擇票券</h3>
-                                        <h4>Ticket Type</h4>
+                                        <h3>預約體驗</h3>
+                                        <h4>Reservation</h4>
                                     </div>
                                     <p class="section-desc">
                                         無光晚餐皆為雙數訂位
                                     </p>
                                 </div>
 
-                                <div class="ticket-type">
-                                    
+                                <div class="ticket-type" style="display: none;">
                                     <div class="type-item type-matinee">
                                         <a href="booking_pay.html" class="ticket-frame" target="_blank">
                                             <img class="img-fluid d-none d-sm-block" src="img/tickets/ticket-face-1.png?v=0.3" alt="雙人即享票">
@@ -290,16 +295,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </a>
                                     </div>
                                 </div>
-                                <p class="ticket-area-note">
-                                    以上價格包含 10% 服務費<br/>
-                                    現場提供 pairing 加購<br/><br/>
-                                    <!-- <span class="btn-link" id="js-open-btn">點此查看票券差異比較</span><br/><br/> -->
-                                    單一場次最高可容納人數 12 人，<br/>
-                                    若人數超過 12 人可來信客服信箱，由我們協助劃位
-                                    <br/><br/>
-                                    <b><u>7號菜單於 5/31（三）起正式上線！</u></b>
-                                </p>
                                 <div class="ticket-datepicker">
+                                    <!-- sold-out-soon / still-vacancy / sold-out -->
                                     <div id="homeDatepicker"></div>
                                     <div class="datepicker-ps">
                                         <div>
@@ -310,25 +307,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <span style="background: #AF2822"></span>
                                             <p>即將完售</p>
                                         </div>
+                                        <div>
+                                            <span style="background: #4b4b4b"></span>
+                                            <p>已售完Sold Out</p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <p class="ticket-area-note">
+                                    <br>
+                                    <b>
+                                        <u>雙數訂位，每位 2,200 元
+                                        </u>
+                                    </b>
+                                    <br>
+                                    <br>
+                                </p>
+
+                                <ul>
+                                    <li>現場另提供 pairing 加購</li>
+                                    <li>體驗皆為雙數入席，無法獨售</li>
+                                </ul>
+
                                 <div class="ticket-btn">
-                                    <a class="btn-outline" href="https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar&utm_campaign=button">我要預約</a>
+                                    <a class="btn-outline" href="https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html">立即預約</a>
                                 </div>
+
+                                <p class="ticket-area-note">
+                                    Click for Reservation
+                                    <br>
+                                    <br>
+                                    單一場次最高可容納人數 12 人，
+                                    <br>
+                                    若人數為12人或以上，歡迎預約包場。
+                                    <br>
+                                    請來信客服 dininginthedark@surpriselab.com.tw 
+
+                                    <!-- <b><u>雙數訂位，每位 2,200 元</u></b>
+                                    以上價格包含 10% 服務費<br/>
+                                    現場提供 pairing 加購<br/><br/> -->
+                                    <!-- <span class="btn-link" id="js-open-btn">點此查看票券差異比較</span><br/><br/> -->
+                                    <!-- 單一場次最高可容納人數 12 人，<br/>
+                                    若人數超過 12 人可來信客服信箱，由我們協助劃位 -->
+                                </p>
+                                
                             </div>
                         </div>
 
                         <div class="section sec-ig" id="Ig">
                             <div class="section-header">
                                 <div class="section-title">
-                                    <h3>無光晚餐 真實評價</h3>
-                                    <!-- <h4>Review</h4> -->
+                                    <h3>觀眾評價</h3>
+                                    <h4>Review</h4>
                                 </div>
                             </div>
                             <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
                         </div>
 
-                        <div class="section sec-review" id="Review">
+                        <div class="section sec-review" id="Review" style="display:none;">
                             <div class="section-header">
                                 <div class="section-title">
                                     <h3>觀眾評價</h3>
@@ -1111,7 +1147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-                        <div class="section sec-partner">
+                        <div class="section sec-partner" style="display:none;">
                             <div class="container">
 
                                 <div class="section-header">

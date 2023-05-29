@@ -940,6 +940,20 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   line-height: 2;
 }
 
+#Ticket ul {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 1.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1199.98px) {
+  #Ticket ul {
+    font-size: 14px;
+  }
+}
+  
 @media (min-width: 1200px) {
   #Ticket .sec-ticket-status .time-counter ~ .sale-progress {
     padding-top: calc((720px + 30px) * 0.00894);
@@ -2161,7 +2175,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   max-width: 380px;
   width: 100%;
   margin: 0 auto;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 .ticket-datepicker .datepicker-ps {
   max-width: 380px;
@@ -2175,6 +2189,13 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   align-items: center;
   margin-left: 15px;
 }
+@media (max-width: 1199.98px) {
+  .ticket-datepicker .datepicker-ps div {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+}
+
 .ticket-datepicker span {
   width: 10px;
   height: 10px;
@@ -2186,10 +2207,8 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 14px;
 }
 
-@media (max-width: 1199.98px) {
-  #Review {
-    padding-bottom: 120px;
-  }
+#Ticket-type .ticket-btn {
+  margin-bottom: 10px;
 }
 
 #Review .owl-carousel {
@@ -2527,6 +2546,10 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.still-vacancy:after {
   background: #85AA59;
+}
+
+.ticket-datepicker #homeDatepicker .ui-datepicker-calendar td.sold-out:after {
+  background: #4b4b4b;
 }
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td a, .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td span {
