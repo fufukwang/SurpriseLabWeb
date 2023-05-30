@@ -450,6 +450,11 @@ form .form-container ul {
   text-align: left;
   padding-left: 20px;
 }
+@media (max-width: 575.98px) {
+  form .form-container ul {
+    font-size: 14px;
+  }
+}
 
 @media (min-width: 1200px) {
   form .form-container .field-intro {
@@ -1374,6 +1379,19 @@ main.booking fieldset.step-4 .form-group .table-label .error-msg {
   color: #ff7ea4;
 }
 
+fieldset.step-3 .form-group label .en,
+fieldset.step-3 .form-group .table-label .en,
+main.booking fieldset.step-4 .form-group label .en,
+main.booking fieldset.step-4 .form-group .table-label .en {
+  position: absolute;
+  top: 75%;
+  left: 13px;
+  font-size: 12px;
+  width: 130px;
+  text-align: left;
+  line-height: 1.2;
+}
+
 fieldset.step-3 .form-group input,
 fieldset.step-3 .form-group textarea,
 main.booking fieldset.step-4 .form-group input,
@@ -1970,6 +1988,7 @@ main.booking fieldset.step-4 .form-group:not(.select-food) p {
   }
 }
 .select-food .form-col {
+  position: relative;
   width: 100%;
   display: flex;
 }
@@ -2001,20 +2020,20 @@ main.booking fieldset.step-4 .form-group:not(.select-food) p {
   padding: 0;
   margin: 0;
   border-top: 1px dashed rgba(255,255,255,.2);
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .select-food .col-wrap .form-col:first-child {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .select-food .col-wrap .form-col {
   margin-top: 20px;
 }
 @media (max-width: 991px){
   .select-food .col-wrap {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .select-food .col-wrap .form-col:first-child {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .select-food .col-wrap .form-col {
     margin-top: 10px;

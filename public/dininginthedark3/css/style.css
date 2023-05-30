@@ -937,7 +937,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 #Ticket .ticket-area-note {
-  line-height: 2;
+  line-height: 1.8;
 }
 
 #Ticket ul {
@@ -2204,7 +2204,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 .ticket-datepicker p {
   margin-left: 5px;
   margin-right: 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #Ticket-type .ticket-btn {
@@ -2400,11 +2400,12 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   right: 0;
   left: inherit !important;
   width: 378px;
-  max-width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
   border: solid 1px #8C5FB4;
   border-radius: 6px;
   background-color: #101010;
-  padding: 8px 8px 25px;
+  padding: 8px 8px 15px;
 }
 
 .ticket-datepicker #homeDatepicker .ui-datepicker-header {
@@ -2564,8 +2565,17 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 @media (max-width: 575.98px) {
+  .ticket-datepicker #homeDatepicker {
+    padding: 10px 10px 10px;
+  }
+  .ticket-datepicker .datepicker-ps {
+    margin-top: 5px;
+  }
+  #Ticket-type .ticket-btn {
+    margin-top: 20px;
+  }
   .ticket-datepicker #homeDatepicker .ui-datepicker-header {
-    padding: 3px 14px;
+    padding: 0px 10px;
     margin-bottom: 5px;
   }
   .ticket-datepicker #homeDatepicker .ui-datepicker-title {
@@ -2580,7 +2590,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
     letter-spacing: 1.4px;
   }
   .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td {
-    height: 33px;
+    height: 30px;
+  }
+  .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td::before {
+    width: 30px;
+    height: 30px;
   }
   .ticket-datepicker #homeDatepicker .ui-datepicker-calendar td a, .calender-wrapper #homeDatepicker .ui-datepicker-calendar td span {
     font-size: 14px;

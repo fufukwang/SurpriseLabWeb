@@ -252,7 +252,7 @@
                         <div class="form-group input-with-label">
                             <label for="phone" style="flex: 100%;">* 電話 Phone Number <span class="error-msg"></span></label>
                             <!-- <p>無台灣電話者，請輸入0900000000</p> -->
-                            <input type="text" name="Area code" class="form-control phone" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
+                            <input type="text" name="Area code" class="form-control" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
                             <input type="text" name="phone" class="form-control phone" id="phone" placeholder="ex. 0912345678" style="width: calc(100% - 110px);margin-left: auto;">
                         </div>
 
@@ -291,28 +291,33 @@
                         <div class="form-group select-food">
                             <div class="form-row">
                                 <div class="form-col">
-                                    <label class="form-label" for="meat_food">* 葷食 Regular Menu</label>
+                                    <label class="form-label" for="meat_food">* 葷食</label>
+                                    <span class="en">Regular Menu</span>
                                     <select id="meat_food" name="meat_food" data-placeholder="選擇人數" required>
                                     </select>
                                 </div>
                                 <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noBeef">* 不吃牛肉 No Beef</label>
+                                        <label class="form-label" for="meat_food_noBeef">* 不吃牛肉</label>
+                                        <span class="en">No Beef</span>
                                         <select id="meat_food_noBeef" name="meat_food_noBeef" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noPork">* 不吃豬肉 No Pork</label>
+                                        <label class="form-label" for="meat_food_noPork">* 不吃豬肉</label>
+                                        <span class="en">No Pork</span>
                                         <select id="meat_food_noPork" name="meat_food_noPork" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noNut">* 不吃堅果 No Nut</label>
+                                        <label class="form-label" for="meat_food_noNut">* 不吃堅果</label>
+                                        <span class="en">No Nut</span>
                                         <select id="meat_food_noNut" name="meat_food_noNut" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noSeafood">* 不吃帶殼海鮮 No Shell Seafood</label>
+                                        <label class="form-label" for="meat_food_noSeafood">* 不吃帶殼海鮮</label>
+                                        <span class="en">No Shell Seafood</span>
                                         <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
@@ -320,13 +325,15 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-col">
-                                    <label class="form-label" for="vegetarian_food">* 蛋奶五辛素 Five pungent spices & Lacto-vegetarian.</label>
+                                    <label class="form-label" for="vegetarian_food">* 蛋奶五辛素</label>
+                                    <span class="en">Five pungent spices & Lacto-vegetarian.</span>
                                     <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
                                     </select>
                                 </div>
                                 <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
-                                        <label class="form-label" for="vegetarian_food_noNut">* 不吃堅果 No Nut</label>
+                                        <label class="form-label" for="vegetarian_food_noNut">* 不吃堅果</label>
+                                        <span class="en">No Nut</span>
                                         <select id="vegetarian_food_noNut" name="vegetarian_food_noNut" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
