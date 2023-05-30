@@ -48,8 +48,8 @@ $(".action-button").on('click', function(){
     }
 
     // 第一步驟時，隱藏步驟進度條
-    activeIndex = filedset.index(next_fs);
-    stepWrapperChecker(activeIndex);
+    // activeIndex = filedset.index(next_fs);
+    // stepWrapperChecker(activeIndex);
 
     // 更新步驟進度條
     progress.removeClass('active');
@@ -192,7 +192,7 @@ function radioGroupChecker() {
     for (i = 0; i < people; i++) {
         foodTypes.push($('[name="food-type[' + i + ']"]:checked').val());
     }
-
+    console.log(foodTypes)
     return foodTypes;
 }
 
@@ -246,7 +246,7 @@ function allowChecker(thisStep){
                 }*/
             } else {
 
-                if (!$(this).val()) {
+                if (!$(this).val() && !$(this).hasClass('nomust')) {
                     isAllowToNextStep = false;
                     return false;
                 }
@@ -348,6 +348,10 @@ $('.step-2 input, .step-2 select').on('change', function () {
         for(var pc=0;pc<=submitDatas['booking_people'];pc++){
             $('#vegetarian_food').append('<option value="'+pc+'">'+pc+'</option>');
             $('#meat_food').append('<option value="'+pc+'">'+pc+'</option>');
+            // 英文服務
+            if(pc%2 == 0){
+                $('#english_service').append('<option value="'+pc+'">'+pc+'</option>');
+            }
         }
         //update_isVegetarian(submitDatas['booking_people']);
         //update_amountToGo(submitDatas['booking_people']);

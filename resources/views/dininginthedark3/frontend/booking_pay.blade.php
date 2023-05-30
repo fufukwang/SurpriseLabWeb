@@ -100,7 +100,7 @@
                 <input type="hidden" name="discount" id="discount" value="">
                 <!--progress title-->
                 <h3 class="progress-title">
-                    《無光晚餐》<br/>預約體驗登記
+                    預約體驗
                 </h3>
                 <h4 class="progress-sub">Reservation</h4>
                 <!-- progressbar -->
@@ -263,17 +263,17 @@
 
                         <div class="form-group input-with-label">
                             <label for="company_tax_ID">統一編號 Company Tax ID<span class="error-msg"></span></label>
-                            <input type="text" name="company_tax_ID" class="form-control has-verification" id="company_tax_ID" placeholder="">
+                            <input type="text" name="company_tax_ID" class="form-control nomust" id="company_tax_ID" placeholder="">
                         </div>
 
                         <div class="form-group input-with-label">
                             <label for="company_name">公司抬頭 Company Name<span class="error-msg"></span></label>
-                            <input type="text" name="company_name" class="form-control has-verification" id="company_name" placeholder="">
+                            <input type="text" name="company_name" class="form-control nomust" id="company_name" placeholder="">
                         </div>
 
                         <div class="form-group input-with-label">
                             <label for="english_service">英文服務<span class="error-msg"></span></label>
-                            <select id="english_service" name="english_service" data-placeholder="選擇人數" required>
+                            <select id="english_service" name="english_service" class="nomust" data-placeholder="選擇人數" required>
                             </select>
                         </div>
 
@@ -285,7 +285,7 @@
                         </div> -->
 
                         <div class="form-group">
-                            <label class="form-label">* 飲食禁忌 Regular Menu（請確實填答人數。無光晚餐將依照訂位資訊準備體驗內容，現場無法更改。）</label>
+                            <label class="form-label">* 飲食禁忌 Dietary Restrictions</label>
                         </div>
 
                         <div class="form-group select-food">
