@@ -87,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="smoothScroll ticket" href="#Ticket">Ticket</a>
             </li>
             <li>
-                <a class="smoothScroll ig" href="#Ig">Review</a>
+                <a class="smoothScroll ig" href="#Ig">Reviews</a>
             </li>
             <!-- <li>
                 <a class="smoothScroll review" href="#Review">Review</a>
@@ -266,9 +266,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <h3>預約體驗</h3>
                                         <h4>Reservation</h4>
                                     </div>
-                                    <p class="section-desc">
+                                    <!-- <p class="section-desc">
                                         無光晚餐皆為雙數訂位
-                                    </p>
+                                    </p> -->
                                 </div>
 
                                 <div class="ticket-type" style="display: none;">
@@ -358,7 +358,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="section-header">
                                 <div class="section-title">
                                     <h3>觀眾評價</h3>
-                                    <h4>Review</h4>
+                                    <h4>Reviews</h4>
                                 </div>
                             </div>
                             <div class="elfsight-app-9920281d-8ac7-4fc7-be24-863cd1ec93cb"></div>
