@@ -81,6 +81,12 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <label class="control-label col-sm-4">英文服務</label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" name="need_english" id="need_english" class="form-control" value="0">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
                                                 <label class="control-label col-sm-4">葷食</label>
                                                 <div class="col-sm-2">
                                                     <input type="number" name="meat_eat" id="meat_eat" class="form-control" value="0">

@@ -50,6 +50,7 @@
 			<td>電話</td>
 			<td>人數<!-- 主餐 --></td>
 			<td>素食</td>
+			<td>英文</td>
 			<td>備註</td>
 			<td>優惠券 / 統編</td>
 			<td>註記</td>
@@ -106,6 +107,7 @@
 			<td>{{ $row->tel }}</td>
 			<td>{{ $row->pople }} 人 </td>
 			<td>{{ $row->vegetarian }} 人</td>
+			<td>{{ $row->need_english }} 人</td>
 			<td rowspan="2">{!! nl2br($row->notes) !!}</td>
 			<td rowspan="2">
 				{!! $coupon !!}
@@ -118,7 +120,7 @@
 		</tr>
 		<tr>
 			<td>飲食禁忌</td>
-			<td colspan="5" style="padding: 0px;">
+			<td colspan="6" style="padding: 0px;">
 				<table class="food_list">
 					<tr><td>葷食/不吃牛肉</td><td>葷食/不吃豬肉</td><td>葷食/不吃堅果</td><td>葷食/不吃帶殼海鮮</td><td>素食/不吃堅果</td></tr>
 					<tr><td>{{ $no_beef }} 人</td><td>{{ $no_pork }} 人</td><td>{{ $no_nut_m }} 人</td><td>{{ $no_shell }} 人</td><td>{{ $no_nut_v }} 人</td></tr>

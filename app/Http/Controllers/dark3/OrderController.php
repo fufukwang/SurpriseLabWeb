@@ -762,7 +762,7 @@ class OrderController extends Controller
 
     private function orderQuery(Request $request,$isTable=false){
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','refund','handling','cut','tax_id','tax_name');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','refund','handling','cut','tax_id','tax_name','need_english');
         if($isTable){
             $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
         }

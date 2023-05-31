@@ -95,6 +95,12 @@
                                                     <input type="number" class="form-control" name="people" value="{{ $order->pople or ''  }}" max="36" min="0" required>
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">英文服務</label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" class="form-control" name="need_english" value="{{ $order->need_english or ''  }}" max="36" min="0" required>
+                                                </div>
+                                            </div>
                                             {{--
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">素食</label>
