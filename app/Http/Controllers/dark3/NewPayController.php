@@ -111,7 +111,7 @@ class NewPayController extends Controller
                 'pro_id'     => $request->booking_time,
                 'pople'      => $people,
                 'name'       => $request->name,
-                'tel'        => $request->phone,
+                'tel'        => $request->area_code.$request->phone,
                 'email'      => $request->email,
                 'notes'      => $request->notice,
                 'meat'       => json_encode([]),
@@ -132,6 +132,9 @@ class NewPayController extends Controller
                 'no_nut_m'   => $request->meat_food_noNut ?? 0,
                 'no_shell'   => $request->meat_food_noSeafood ?? 0,
                 'no_nut_v'   => $request->vegetarian_food_noNut ?? 0,
+                'tax_id'     => $request->company_tax_ID ?? 0,
+                'tax_name'   => $request->company_name ?? 0,
+                'need_english' => $request->english_service ?? 0,
             ];
             // 10% 服務費
             $order = order::create($data);

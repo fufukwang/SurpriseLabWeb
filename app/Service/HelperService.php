@@ -15,6 +15,8 @@ class HelperService {
 	public function sent_single_sms($phone_number,$message,$token = ''){
 		try{
             if($token == '') $token = env('SMS_API_TOKEN');
+            $phone_number = str_replace('+886', '0', $phone_number); // 台灣國碼改成 0
+            $phone_number = str_replace('+', '', $phone_number);  // 刪除 + 號
             $client = new \GuzzleHttp\Client();
             $response = $client->request('POST','https://api.smartdove.net/index.php?r=smsApi/SendOneSms', [
               'headers' => [

@@ -119,10 +119,14 @@ $(".action-button").on('click', function(){
     allowChecker(next_fs);
 
     if (current_fs.hasClass('step-3') && !prev_fs) {
+        /*
         if (verificationChecker()) {
             current_fs.hide();
             next_fs.show();
         }
+        */
+        current_fs.hide();
+        next_fs.show();
     } else {
         // 隱藏目前欄位，並顯示下一步的欄位
         current_fs.hide();
@@ -921,14 +925,16 @@ function formatPrice(n) {
 
 // Only number
 $('#phone').bind('keyup paste', function(){
-    this.value = this.value.replace(/[^0-9\+\-\ ]/g, '');
+    // 允許所有數字
+    this.value = this.value.replace(/[^0-9]/g, '');
 });
 
 // 到選擇的日期
 function goDay(day){
     $.blockUI();
-    $('#agreerule').prop('checked',true);
-    $('.action-button').eq(0).trigger('click');
+    // agree page 被刪掉了
+    // $('#agreerule').prop('checked',true);
+    // $('.action-button').eq(0).trigger('click');
     $('#booking_people').val(2);
     $('#booking_people').trigger('change');
     $('#booking_date').val(day);
@@ -943,10 +949,14 @@ function SendOrderData(Pay,prime){
     var people = $('[name="booking_people"]').val();
     var obj = {
         'name'  : $('[name=name]').val(),
+        // 'go_co' : $('#area_code').val(),
         'tel'   : $('[name=phone]').val(),
         'email' : $('[name=email]').val(),
         'notes' : $('[name=notice]').val(),
         'pro_id': $('[name=booking_time]').find(':selected').val(),
+        // 'tax_id': $('#company_tax_ID').val(),
+        // 'tax_na': $('#company_name').val(),
+        // 'en_s'  : $('#english_service').val(),
         'Pople' : people,
         'prime' : prime,
         'Pay'   : Pay,

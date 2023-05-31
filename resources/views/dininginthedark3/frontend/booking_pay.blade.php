@@ -252,8 +252,8 @@
                         <div class="form-group input-with-label">
                             <label for="phone" style="flex: 100%;">* 電話 Phone Number <span class="error-msg"></span></label>
                             <!-- <p>無台灣電話者，請輸入0900000000</p> -->
-                            <input type="text" name="Area code" class="form-control" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
-                            <input type="text" name="phone" class="form-control phone" id="phone" placeholder="ex. 0912345678" style="width: calc(100% - 110px);margin-left: auto;">
+                            <input type="text" name="area_code" class="form-control" id="area_code" placeholder="+886" value="+886" style="width: 100px;">
+                            <input type="text" name="phone" maxlength="14" class="form-control phone" id="phone" placeholder="ex. 0912345678" style="width: calc(100% - 110px);margin-left: auto;">
                         </div>
 
                         <div class="form-group input-with-label">
@@ -263,12 +263,12 @@
 
                         <div class="form-group input-with-label">
                             <label for="company_tax_ID">統一編號 Company Tax ID<span class="error-msg"></span></label>
-                            <input type="text" name="company_tax_ID" class="form-control nomust" id="company_tax_ID" placeholder="">
+                            <input type="text" name="company_tax_ID" class="form-control nomust" id="company_tax_ID" maxlength="10" placeholder="">
                         </div>
 
                         <div class="form-group input-with-label">
                             <label for="company_name">公司抬頭 Company Name<span class="error-msg"></span></label>
-                            <input type="text" name="company_name" class="form-control nomust" id="company_name" placeholder="">
+                            <input type="text" name="company_name" class="form-control nomust" id="company_name" maxlength="50" placeholder="">
                         </div>
 
                         <div class="form-group input-with-label">
@@ -396,7 +396,10 @@
                             </tr>
                             <tr>
                                 <td>電話</td>
-                                <td class="filled" data-filled="phone"></td>
+                                <td>
+                                    <span class="filled" data-filled="area_code"></span>
+                                    <span class="filled" data-filled="phone"></span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>電子信箱</td>
@@ -405,6 +408,10 @@
                             <tr>
                                 <td>人數</td>
                                 <td class="filled" data-filled="booking_people"></td>
+                            </tr>
+                            <tr>
+                                <td>英文服務</td>
+                                <td class="filled" data-filled="english_service"></td>
                             </tr>
                             <tr>
                                 <td>日期</td>
@@ -431,6 +438,14 @@
                                     蛋奶五辛素 <span class="filled" data-filled="vegetarian_food"></span> 人：
                                     <p>不吃堅果 <span class="filled" data-filled="vegetarian_food_noNut">0</span> 人</p>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td>統一編號</td>
+                                <td class="filled" data-filled="company_tax_ID"></td>
+                            </tr>
+                            <tr>
+                                <td>公司抬頭</td>
+                                <td class="filled" data-filled="company_name"></td>
                             </tr>
                             <tr class="notice">
                                 <td>其他備註</td>
