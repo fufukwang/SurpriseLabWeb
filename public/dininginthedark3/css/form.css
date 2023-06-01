@@ -1379,10 +1379,8 @@ main.booking fieldset.step-4 .form-group .table-label .error-msg {
   color: #ff7ea4;
 }
 
-fieldset.step-3 .form-group label .en,
-fieldset.step-3 .form-group .table-label .en,
-main.booking fieldset.step-4 .form-group label .en,
-main.booking fieldset.step-4 .form-group .table-label .en {
+fieldset.step-3 .form-group .en,
+main.booking fieldset.step-4 .form-group .en{
   position: absolute;
   top: 75%;
   left: 13px;
