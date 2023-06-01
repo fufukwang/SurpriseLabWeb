@@ -1099,8 +1099,8 @@ $(function(){
         $('#tax_name').val($(this).data('tax_name'));
         if($('#tax_id').val() !='' && $('#tax_name').val() !=''){
             $('#B2B').trigger('click');
-            $('#BuyerName').val($('#tax_id').val());
-            $('#BuyerUBN').val($('#tax_name').val());
+            $('#BuyerName').val($('#tax_name').val());
+            $('#BuyerUBN').val($('#tax_id').val());
         }
         
         shb2c();shlove();shcarr();taxchange();calAmt();
