@@ -42,7 +42,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('team:sentmail 11')->dailyAt('11:00'); // 前一天寄送簡訊 // 2024 D10 信件改為11點寄送
         $schedule->command('team:sentmail 12')->dailyAt('12:00'); //  簡訊時間調整
         // dark3 寄送
-        $schedule->command('dark3:task 17')->dailyAt('17:00'); // 無光S3 行前信寄送
+        // 230601 先停掉整個排程
+        // $schedule->command('dark3:task 17')->dailyAt('17:00'); // 無光S3 行前信寄送
         $schedule->command('terminal:task 18')->dailyAt('18:00'); // 落日 行前信寄送
     }
 }

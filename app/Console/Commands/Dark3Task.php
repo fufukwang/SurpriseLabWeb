@@ -92,6 +92,7 @@ class Dark3Task extends Command
                         $toData = [
                             'phone'    => $ord->tel,
                             'template' => 'D7',
+                            'mday'     => $ord->day,
                         ];
                         SLS::SendSmsByTemplateName($toData);
                         $toData = [
