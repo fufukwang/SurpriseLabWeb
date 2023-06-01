@@ -325,6 +325,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </p>
 
                                 <ul>
+                                    <li>以上價格包含10%服務費</li>
                                     <li>現場另提供 pairing 加購</li>
                                     <li>體驗皆為雙數入席，無法獨售</li>
                                 </ul>
