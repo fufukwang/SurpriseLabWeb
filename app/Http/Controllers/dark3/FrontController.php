@@ -32,7 +32,7 @@ class FrontController extends Controller
             if($request->has('day')){
                 $day = $request->day;
                 $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
-                $act = pro::where('day',$day)->where('open',1)->where('special',0)->select(DB::raw("(SUM(sites)-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0)) AS Count"))->whereRaw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))>=2")->groupBy('day')->first();
+                $act = pro::where('day',$day)->where('open',1)->where('special',0)->select(DB::raw("(SUM(sites)-SUM(IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))) AS Count"))->whereRaw("(sites-IFNULL((SELECT SUM(pople)-SUM(cut) FROM(dark3order) WHERE dark3order.pro_id=dark3pro.id AND (pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))),0))>=2")->groupBy('day')->first();
                 if($act){
                     if($act->Count<2){ $code = 'max'; }
                 } else {
