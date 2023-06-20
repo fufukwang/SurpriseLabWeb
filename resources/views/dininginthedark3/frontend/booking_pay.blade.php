@@ -272,7 +272,7 @@
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="english_service">英文服務<span class="error-msg"></span></label>
+                            <label for="english_service">英文服務 English Service<span class="error-msg"></span></label>
                             <select id="english_service" name="english_service" class="nomust" data-placeholder="選擇人數" required>
                             </select>
                         </div>
@@ -658,7 +658,7 @@
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
     @else
-    <script type="text/javascript">alert('該場次人數已達上限!請從心開始登記選擇!');</script>
+    <script type="text/javascript">alert('該場次人數已達上限!請新開始登記選擇!');</script>
     @endif
 @endif
 </body>
