@@ -68,6 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div class="text-wrap">
                                 <h6 class="color-o200">恭喜您，已經完成訂位！</h6>
+                                <h6 class="color-o200" style="font-weight: bold;max-width: 560px;">您購買的班次時間是發車、起飛時間，請務必提前20分鐘取票，完成報到流程，遲到不予進場</h6>
                                 <p class="color-n100 body-04">每一作品皆會有一封獨立的訂位成功信件，<br/>請至您的信箱確認</p>
                                 <p class="color-n100 opacity-50 body-04">它有時候會跑到垃圾郵件，可以翻找一下</p>
                             </div>
