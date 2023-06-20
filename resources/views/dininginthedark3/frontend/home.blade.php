@@ -1047,40 +1047,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <!-- 6-1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-6-1.jpg" data-src="img/home/menu/no1/menu-6-1.jpg" data-src-retina="img/home/menu/no1/menu-6-1.jpg" alt="6-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-6-1-mobile.jpg" data-src="img/home/menu/no1/menu-6-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-6-1-mobile.jpg" alt="6-1">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-1.jpg" data-src="img/home/menu/no6/menu-6-1.jpg" data-src-retina="img/home/menu/no6/menu-6-1.jpg" alt="6-1">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-1-mobile.jpg" data-src="img/home/menu/no6/menu-6-1-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-1-mobile.jpg" alt="6-1">
                                                                 </figure>
                                                             </div>
 
                                                             <!-- 6-2 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-6-2.jpg" data-src="img/home/menu/no1/menu-6-2.jpg" data-src-retina="img/home/menu/no1/menu-6-2.jpg" alt="6-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-6-2-mobile.jpg" data-src="img/home/menu/no1/menu-6-2-mobile.jpg" data-src-retina="img/home/menu/no1/menu-6-2-mobile.jpg" alt="6-2">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-2.jpg" data-src="img/home/menu/no6/menu-6-2.jpg" data-src-retina="img/home/menu/no6/menu-6-2.jpg" alt="6-2">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-2-mobile.jpg" data-src="img/home/menu/no6/menu-6-2-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-2-mobile.jpg" alt="6-2">
                                                                 </figure>
                                                             </div>
 
                                                             <!-- 6-3 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-6-3.jpg" data-src="img/home/menu/no1/menu-6-3.jpg" data-src-retina="img/home/menu/no1/menu-6-3.jpg" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-6-3-mobile.jpg" data-src="img/home/menu/no1/menu-6-3-mobile.jpg" data-src-retina="img/home/menu/no1/menu-6-3-mobile.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-3.jpg" data-src="img/home/menu/no6/menu-6-3.jpg" data-src-retina="img/home/menu/no6/menu-6-3.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-3-mobile.jpg" data-src="img/home/menu/no6/menu-6-3-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-3-mobile.jpg" alt="6-3">
                                                                 </figure>
                                                             </div>
                                                             
                                                             <!-- 6-4 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-6-4.jpg" data-src="img/home/menu/no1/menu-6-4.jpg" data-src-retina="img/home/menu/no1/menu-6-4.jpg" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-6-4-mobile.jpg" data-src="img/home/menu/no1/menu-6-4-mobile.jpg" data-src-retina="img/home/menu/no1/menu-6-4-mobile.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-4.jpg" data-src="img/home/menu/no6/menu-6-4.jpg" data-src-retina="img/home/menu/no6/menu-6-4.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-4-mobile.jpg" data-src="img/home/menu/no6/menu-6-4-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-4-mobile.jpg" alt="6-3">
                                                                 </figure>
                                                             </div>
 
                                                             <!-- 6-5 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-6-5.jpg" data-src="img/home/menu/no1/menu-6-5.jpg" data-src-retina="img/home/menu/no1/menu-6-5.jpg" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-6-5-mobile.jpg" data-src="img/home/menu/no1/menu-6-5-mobile.jpg" data-src-retina="img/home/menu/no1/menu-6-5-mobile.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-5.jpg" data-src="img/home/menu/no6/menu-6-5.jpg" data-src-retina="img/home/menu/no6/menu-6-5.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-5-mobile.jpg" data-src="img/home/menu/no6/menu-6-5-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-5-mobile.jpg" alt="6-3">
                                                                 </figure>
                                                             </div>
                                                         </div>

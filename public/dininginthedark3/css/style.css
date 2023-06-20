@@ -940,12 +940,12 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   line-height: 1.8;
 }
 
-#Ticket ul {
+#Ticket #Ticket-type ul {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 1.8px;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
 }
 @media (max-width: 1199.98px) {
@@ -1471,7 +1471,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 @media screen and (max-width: 1199.98px) {
   #Ticket .sec-menu .menu-wrap .menu-tab-wrap .tab-header {
-    margin-top: 16px;
+    /* margin-top: 16px; */
     margin-bottom: 16px;
   }
 }
@@ -1484,6 +1484,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
       -ms-flex-pack: center;
           justify-content: center;
   border: none;
+  align-items: center;
 }
 
 #Ticket .sec-menu .menu-wrap .menu-tab-wrap .tab-header .tab-controls .nav-item .nav-link {
@@ -2713,7 +2714,8 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 @media screen and (max-width: 1199.98px) {
   #Experience .owl-nav {
-    width: 10%;
+    width: 100%;
+    display: none;
   }
 }
 #Experience .owl-dots {
