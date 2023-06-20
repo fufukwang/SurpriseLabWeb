@@ -435,10 +435,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <input type="text" id="name" class="body-04" name="name" placeholder="ex. 轉運站吉祥物" required>
                                 </div>
                                 <div class="form-group normal-layout">
+                                    <label class="body-04" for="company_name">統編抬頭</label>
+                                    <!-- <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p> -->
+                                    <!-- <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div> -->
+                                    <input type="text" id="company_name" class="body-04" name="company_name" placeholder="" required>
+                                </div>
+                                <div class="form-group normal-layout">
+                                    <label class="body-04" for="company_tax_ID">統一編號</label>
+                                    <!-- <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p> -->
+                                    <!-- <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div> -->
+                                    <input type="text" id="company_tax_ID" class="body-04" name="company_tax_ID" placeholder="" required>
+                                </div>
+                                <div class="form-group normal-layout">
                                     <label class="body-04" for="telephone">* 電話</label>
                                     <p>無台灣電話者，請輸入0900000000</p>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
-                                    <input type="text" id="telephone" class="body-04" name="telephone" placeholder="ex. 0987654321" required>
+                                    <div style="display: flex;width: 100%;">
+                                        <input type="text" name="Area code" class="body-04" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
+                                        <input type="text" id="telephone" class="body-04" name="telephone" placeholder="ex. 0987654321" required style="width: calc(100% - 110px);margin-left: auto;">
+                                    </div>
                                 </div>
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="email">* 電子信箱</label>
@@ -510,6 +525,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <ul class="item-list">
                                             <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
                                             <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
+                                            <li class="list-item body-01 style-smaller">乘客人數 <span class="filled-people"></span></li>
                                         </ul>
                                     </div>
                                     <div class="notice-item-wrap notice-item-area notice-item-flight">
@@ -519,6 +535,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <ul class="item-list">
                                             <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
                                             <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
+                                            <li class="list-item body-01 style-smaller">乘客人數 <span class="filled-people"></span></li>
                                         </ul>
                                     </div>
                                     <div class="notice-item-wrap notice-item-area notice-item-boat">
@@ -528,6 +545,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <ul class="item-list">
                                             <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
                                             <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
+                                            <li class="list-item body-01 style-smaller">乘客人數 <span class="filled-people"></span></li>
                                         </ul>
                                     </div>
                                 </div>

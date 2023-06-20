@@ -102,7 +102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="text-wrap">
                                 <!-- A Test -->
                                 <p class="color-y200">
-                                    《落日轉運站》包含兩個作品，分別為英國Darkfield團隊製作的聲音沈浸《FLIGHT》、與驚喜製造原創的《微醺列車》。並另有落日月台提供各位酒飲小食與休憩聊天
+                                驚喜製造首度南下高雄，打造突破過往製作規格的全新力作《落日轉運站》，並以交通工具為題推出兩項作品：分別為微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《無光飛航 FLIGHT》，歡迎旅客在此自由轉乘，前往想去的目的地。
                                 </p>
 
                                 <!-- B Test -->
@@ -268,7 +268,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
 
                                     <div class="project-desc">
-                                        你將穿梭在如電影般的車廂間，遇見多位抱有遺憾、無法下車的乘客。微醺之間，你將逐步揭開列車上的秘密<br/><br/>
+                                    你將穿梭在如電影般的車廂間，遇見四位抱有遺憾的乘客，微醺之際，你也可能一不小心踏入隱藏空間，親自前來，一窺列車上不為人知的秘密吧！<br/><br/>
                                         <i>──　願你安全到站</i>
                                     </div>
                                 </div>
@@ -390,7 +390,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
 
                                     <div class="project-desc">
-                                        在全黑的機艙中，你將於專屬座位上透過耳機傳來的對話、地板的振動，體驗一場博奕幸運、無處可逃的飛行<br/><br/>
+                                    在黑暗無光的真實機艙中，繫好安全帶的你將戴上全罩耳機，透過忽遠忽近的聲音以及突如其來的地板震動，體驗飛往未知的恐懼。<br/><br/>
                                         <i>──　願你順利降落</i>
                                     </div>
                                 </div>
@@ -512,7 +512,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                                     <div class="project-desc">
                                         戶外休憩空間<br/><br/>
-                                        落日月台為落日轉運站的開放場域，場內設有落日燈光氛圍，販售簡易酒飲與小點，並開放給所有人小酌聊天
+                                        同一車次、同一航班的旅客將會在此聚集，這會是你們最後一次見面嗎？離站後再和他／她聊聊吧！<br/><br/>
+                                        同步販售簡易小點與金色三麥聯名的限量落日啤酒，讓你把落日帶回家。
                                     </div>
                                 </div>
                             </div>
@@ -571,7 +572,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.08，陸續開放劃位。</li>
+                                                        <li class="list-item">2022.11.10 - 2023.09.03 陸續開放劃位</li>
                                                     </ul>
                                                 </div>
                     
@@ -724,7 +725,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.08，陸續開放劃位。</li>
+                                                        <li class="list-item">2022.11.10 - 2023.09.03 陸續開放劃位</li>
                                                     </ul>
                                                 </div>
                     

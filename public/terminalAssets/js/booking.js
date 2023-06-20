@@ -424,6 +424,7 @@ $(function() {
                 $('#filled-telephone').text($input_tel.val());
                 $('#filled-email').text($input_email.val());
                 $('#filled-remark').text($('#remark').val());
+                $('.filled-people').text($('#people').text());
                 $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney));
                 $step3_scenes.hide();
                 $step4_scenes.show();
