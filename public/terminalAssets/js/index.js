@@ -75,7 +75,36 @@ $(function(){
         // mobile - set nav bar section text
         setNavBarSectionText();
     });
-   
+
+    function timeoff() {
+        function showTime() {
+            const nowDate = new Date();
+            const endDate = new Date('2023-06-27 24:00:00');
+
+            const timeDiff = endDate.getTime() - nowDate.getTime();
+
+            const daysDiff = String(Math.floor(timeDiff / (1000 * 60 * 60 * 24))).padStart(2, '0')
+            const hoursDiff = String(Math.floor((timeDiff / (1000 * 60 * 60)) % 24)).padStart(2, '0')
+            const minutesDiff = String(Math.floor((timeDiff / (1000 * 60)) % 60)).padStart(2, '0')
+
+            console.log("相差天数：", daysDiff);
+            console.log("相差小时数：", hoursDiff);
+            console.log("相差分钟数：", minutesDiff);
+
+            handleDigitalbodyElement(daysDiff, "day-1", 0);
+            handleDigitalbodyElement(daysDiff, "day-2", 1);
+            handleDigitalbodyElement(hoursDiff, "hour-1", 0);
+            handleDigitalbodyElement(hoursDiff, "hour-2", 1);
+            handleDigitalbodyElement(minutesDiff, "min-1", 0);
+            handleDigitalbodyElement(minutesDiff, "min-2", 1);
+        }
+        function handleDigitalbodyElement(targetArray, targetElement, targetIndex) {
+            const tmpElement = document.getElementById(targetElement).classList;
+            tmpElement.remove(tmpElement.item(2));
+            tmpElement.add("num-" + targetArray[targetIndex]);
+        }
+        setInterval(showTime, 1000);
+    }
 
     /* init */
 
@@ -87,5 +116,7 @@ $(function(){
 
     // mobile - set nav bar section text
     setNavBarSectionText();
+
+    timeoff();
 
 });
