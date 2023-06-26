@@ -391,6 +391,8 @@ class FrontController extends Controller
                     'no_nut_m' => $data['no_nut_m'],
                     'no_shell' => $data['no_shell'],
                     'no_nut_v' => $data['no_nut_v'],
+                    'need_english' => 0, // 前端沒數字
+                    'eday'   => Carbon::parse($act->day)->format('d / m / Y'),
                     'template' => 'order',
                     'mday'     => $act->day,
                 ];

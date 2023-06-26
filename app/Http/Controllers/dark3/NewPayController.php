@@ -310,7 +310,9 @@ class NewPayController extends Controller
                     'no_nut_m' => $order->no_nut_m,
                     'no_shell' => $order->no_shell,
                     'no_nut_v' => $order->no_nut_v,
+                    'need_english' => $order->need_english,
                     'template' => 'order',
+                    'eday'   => Carbon::parse($act->day)->format('d / m / Y'),
                     'mday'     => $act->day,
                 ];
                 SLS::SendEmailByTemplateName($mailer);

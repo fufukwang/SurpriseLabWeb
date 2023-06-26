@@ -74,6 +74,7 @@ class HelperService {
             // 暫停發送 D7 信件
             // if($data['template'] == 'D7') return false;
             // 5/22 (含)的訂單不受到 7 & 14 的信件
+            /*
             if($data['template'] == 'D7' || $data['template'] == 'D14'){
                 if(isset($data['mday']) && $data['mday']>='2023-05-22'){
                     return false;
@@ -84,6 +85,7 @@ class HelperService {
                     $data['template'] = 'order_0522';
                 }
             }
+            */
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_DARK_USER')]);
@@ -98,6 +100,7 @@ class HelperService {
                 $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐 Dining In The Dark');
                 $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐 Dining In The Dark');
 
+                // $m->cc(['dininginthedark@surpriselab.com.tw']);
                 $m->to($data['email'], $data['name']);
                 switch ($data['template']) {
                     case 'couponp2':
@@ -132,11 +135,13 @@ class HelperService {
     public function SendSmsByTemplateName($smsData){
         try{
             // 5/22 (含)的訂單不受到 7 & 14 的信件
+            /*
             if($smsData['template'] == 'D7'){
                 if(isset($data['mday']) && $data['mday']>='2023-05-22'){
                     return false;
                 }
             }
+            */
             switch ($smsData['template']) {
                 case 'order':
                     $requestUrl = 'https://api-ssl.bitly.com/v4/shorten';
@@ -209,6 +214,7 @@ class HelperService {
                 $m->sender('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
                 $m->replyTo('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
 
+                // $m->cc(['terminal@surpriselab.com.tw']);
                 $m->to($data['email'], $data['name']);
                 switch ($data['template']) {
                     case 'D7.train':

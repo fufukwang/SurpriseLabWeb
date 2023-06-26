@@ -118,8 +118,10 @@ class OrderController extends Controller
                     'no_nut_m' => $request->no_nut_m ?? 0,
                     'no_shell' => $request->no_shell ?? 0,
                     'no_nut_v' => $request->no_nut_v ?? 0,
+                    'need_english' => $request->need_english ?? 0,
                     'template' => 'order',
                     'mday'     => $pro->day,
+                    'eday'   => Carbon::parse($pro->day)->format('d / m / Y'),
                 ];
                 if($mailer['email'] != ''){
                     SLS::SendEmailByTemplateName($mailer);
@@ -288,8 +290,10 @@ class OrderController extends Controller
                     'no_nut_m' => $request->no_nut_m ?? 0,
                     'no_shell' => $request->no_shell ?? 0,
                     'no_nut_v' => $request->no_nut_v ?? 0,
+                    'need_english' => $request->need_english ?? 0,
                     'template' => 'order',
                     'mday'     => $act->day,
+                    'eday'   => Carbon::parse($act->day)->format('d / m / Y'),
                 ];
                 if($mailer['email'] != ''){
                     SLS::SendEmailByTemplateName($mailer);
@@ -751,6 +755,7 @@ class OrderController extends Controller
             'no_nut_m' => $order->no_nut_m,
             'no_shell' => $order->no_shell,
             'no_nut_v' => $order->no_nut_v,
+            'need_english' => $order->need_english ?? 0,
             'template' => 'order',
             'mday'     => $act->day,
         ];

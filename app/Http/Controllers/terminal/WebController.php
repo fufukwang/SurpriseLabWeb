@@ -29,6 +29,7 @@ class WebController extends Controller
                     $m->sender('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
                     $m->replyTo('terminal@surpriselab.com.tw', '落日轉運站 Sunset Terminal');
 
+                    // $m->cc(['terminal@surpriselab.com.tw']);
                     $m->to($data['email'], $data['name']);
                     $m->subject('【落日轉運站】訂位確認信件');
                 });

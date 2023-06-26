@@ -84,7 +84,7 @@ class Dark3Task extends Command
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=7")->get();
             foreach($pr07day as $pro){
                 // 找出正常的訂單
-                $order07 = order::select('dark3order.id','name','email','tel','day','rang_start','pople')
+                $order07 = order::select('dark3order.id','name','email','tel','day','rang_start','pople','vegetarian','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','need_english')
                     ->leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')
                     ->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
                 foreach ($order07 as $ord) {
@@ -103,6 +103,15 @@ class Dark3Task extends Command
                             'time'     => substr($ord->rang_start,0,5),
                             'template' => 'D7',
                             'mday'     => $ord->day,
+                            'vegetarian' => $ord->vegetarian,
+                            'meat_eat' => $ord->meat_eat,
+                            'no_beef' => $ord->no_beef,
+                            'no_pork' => $ord->no_pork,
+                            'no_nut_m' => $ord->no_nut_m,
+                            'no_shell' => $ord->no_shell,
+                            'no_nut_v' => $ord->no_nut_v,
+                            'need_english' => $ord->need_english,
+                            'eday'   => Carbon::parse($ord->day)->format('d / m / Y'),
                         ];
                         SLS::SendEmailByTemplateName($toData);
                         /*
