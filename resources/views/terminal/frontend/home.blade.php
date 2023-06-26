@@ -98,12 +98,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div class="timetable">
                                 <div class="bg">
-                                    <img src="/terminalAssets/images/main/btn_enter.png" alt="">
+                                    <img src="/terminalAssets/images/main/timetable.png" alt="">
                                 </div>
                                 <div class="marquee">
                                     <p>高鐵離站倒數中...</p>
                                 </div>
-                                <div class="number">
+                                <div class="number" data-end="2023-06-30 24:00:00">
                                     <div class="digitalitem day-1 num-0" id="day-1">
                                         <div class="digitalbody h1"></div>
                                         <div class="digitalbody h2"></div>
@@ -174,7 +174,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <img class="img-fluid" src="/terminalAssets/images/main/img_about.png" alt="About">
                             </div>
                             <div class="prograssbar">
-                                <div class="bar"></div>
+                                <div class="wrap">
+                                    <div class="bar" style="width:80%;"></div>
+                                </div>
                                 <p>剩餘座位<span>20%</span></p>
                             </div>
                             <div class="text-wrap">
@@ -921,6 +923,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="cta-wrap">
                 <div class="owl-carousel owl-theme">
+                    <!-- 01 -->
+                    <div class="item">
+                        <a href="https://www.surpriselab.com.tw/terminal/booking" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount06.png" data-src="/terminalAssets/images/main/discount06.png" data-src-retina="/terminalAssets/images/main/discount06.png" alt="Klook">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">《落日轉運站》獨家雙作品套票</div>
+                            <div class="discount-p">我們準備了兩個作品的獨家優惠套票，給特別驅車前往落日轉運站的你購買套票搶先體驗《微醺列車》及《無光飛航》，體驗時間可分開選擇。</br>偷偷推薦你，可以先登機再搭列車唷！祝你旅途愉快！
+                            </div>
+                        </div>
+                    </div>
+                
                     <!-- 02 -->
                     <div class="item">
                         <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/" target="_blank">
