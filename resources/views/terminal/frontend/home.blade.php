@@ -60,8 +60,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <aside class="fixed-btn message-btn js-hidden-target">
         <!-- Button trigger modal -->
         <a href="javascript://" class="image-wrap" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <img src="/terminalAssets/images/general/btn_news.png" class="pc-style" alt="message">
-            <img src="/terminalAssets/images/general/btn_news_mobile.png" class="mobile-style" alt="message">
+            <img src="/terminalAssets/images/general/btn_q&a.png" class="pc-style" alt="message">
+            <img src="/terminalAssets/images/general/btn_q&a_mobile.png" class="mobile-style" alt="message">
         </a>
     </aside>
     <!-- fixed btn - what's on -->
@@ -96,8 +96,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <h1 class="heading-title">落日轉運站</h1>
                                 <h2 class="heading-subtitle">About</h2>
                             </div>
+                            <div class="timetable">
+                                <div class="bg">
+                                    <img src="/terminalAssets/images/main/btn_enter.png" alt="">
+                                </div>
+                                <div class="marquee">
+                                    <p>高鐵離站倒數中...</p>
+                                </div>
+                                <div class="number">
+                                    <div class="digitalitem day-1 num-0" id="day-1">
+                                        <div class="digitalbody h1"></div>
+                                        <div class="digitalbody h2"></div>
+                                        <div class="digitalbody h3"></div>
+                                        <div class="digitalbody v1"></div>
+                                        <div class="digitalbody v2"></div>
+                                        <div class="digitalbody v3"></div>
+                                        <div class="digitalbody v4"></div>
+                                    </div>
+                                    <div class="digitalitem day-2 num-0" id="day-2">
+                                        <div class="digitalbody h1"></div>
+                                        <div class="digitalbody h2"></div>
+                                        <div class="digitalbody h3"></div>
+                                        <div class="digitalbody v1"></div>
+                                        <div class="digitalbody v2"></div>
+                                        <div class="digitalbody v3"></div>
+                                        <div class="digitalbody v4"></div>
+                                    </div>
+                                    <div class="digitalitem separate1">
+                                        <p>天</p>
+                                        <!-- <div class="dot"></div> -->
+                                    </div>
+                                    <div class="digitalitem hour-1 num-0" id="hour-1">
+                                        <div class="digitalbody h1"></div>
+                                        <div class="digitalbody h2"></div>
+                                        <div class="digitalbody h3"></div>
+                                        <div class="digitalbody v1"></div>
+                                        <div class="digitalbody v2"></div>
+                                        <div class="digitalbody v3"></div>
+                                        <div class="digitalbody v4"></div>
+                                    </div>
+                                    <div class="digitalitem hour-2 num-0" id="hour-2">
+                                        <div class="digitalbody h1"></div>
+                                        <div class="digitalbody h2"></div>
+                                        <div class="digitalbody h3"></div>
+                                        <div class="digitalbody v1"></div>
+                                        <div class="digitalbody v2"></div>
+                                        <div class="digitalbody v3"></div>
+                                        <div class="digitalbody v4"></div>
+                                    </div>
+                                    <div class="digitalitem separate2">
+                                        <p>時</p>
+                                    </div>
+                                    <div class="digitalitem min-1 num-0" id="min-1">
+                                        <div class="digitalbody h1"></div>
+                                        <div class="digitalbody h2"></div>
+                                        <div class="digitalbody h3"></div>
+                                        <div class="digitalbody v1"></div>
+                                        <div class="digitalbody v2"></div>
+                                        <div class="digitalbody v3"></div>
+                                        <div class="digitalbody v4"></div>
+                                    </div>
+                                    <div class="digitalitem min-2 num-0" id="min-2">
+                                        <div class="digitalbody h1"></div>
+                                        <div class="digitalbody h2"></div>
+                                        <div class="digitalbody h3"></div>
+                                        <div class="digitalbody v1"></div>
+                                        <div class="digitalbody v2"></div>
+                                        <div class="digitalbody v3"></div>
+                                        <div class="digitalbody v4"></div>
+                                    </div>
+                                    <div class="digitalitem separate2">
+                                        <p>分</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="img-wrap break-grid">
                                 <img class="img-fluid" src="/terminalAssets/images/main/img_about.png" alt="About">
+                            </div>
+                            <div class="prograssbar">
+                                <div class="bar"></div>
+                                <p>剩餘座位<span>20%</span></p>
                             </div>
                             <div class="text-wrap">
                                 <!-- A Test -->
@@ -838,7 +916,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <section class="section-wrap skip-background-light js-anchor-section project-section" id="discount">
             <div class="section-heading-wrap">
-                <h2 class="heading-title">聯合優惠</h2>
+                <h2 class="heading-title">熱門優惠</h2>
                 <h3 class="heading-subtitle">Discount</h3>
             </div>
             <div class="cta-wrap">
@@ -1304,9 +1382,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="image-wrap">
+                    <!-- <div class="image-wrap">
                         <a href="https://www.facebook.com/surpriselabtw/posts/pfbid0JNf62LDHYG3So29CteN6e2qYMrDNzhTYFCnBNV1syHcj3CE7HvPqdQRvGCBYVk7ul" target="_blank"><img src="/terminalAssets/images/other/notice_716x480.jpg" class="pc-style" alt="message"></a>
                         <a href="https://www.facebook.com/surpriselabtw/posts/pfbid0JNf62LDHYG3So29CteN6e2qYMrDNzhTYFCnBNV1syHcj3CE7HvPqdQRvGCBYVk7ul" target="_blank"><img src="/terminalAssets/images/other/notice_460x310.jpg" class="mobile-style" alt="message"></a>
+                    </div> -->
+                    <div class="accordion-wrap">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-3-headingNine">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseNine" aria-expanded="false" aria-controls="flush-3-collapseNine">
+                                    <span class="header-title">我想跟朋友坐在一起可以嗎？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-3-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-3-headingNine" data-bs-parent="#accordionFlushExample-3">
+                                <div class="accordion-body">
+                                    <p>微醺列車歡迎您與友人一起搭乘，於「候車室劃位時」請告知乘務員，FLIGHT為維護體驗品質建議分開搭乘，若有特殊需求請於「取票時」告知月台服務人員。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-3-headingTen">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseTen" aria-expanded="false" aria-controls="flush-3-collapseTen">
+                                    <span class="header-title">如果我不喝酒怎麼辦？會影響體驗嗎？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-3-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-3-headingTen" data-bs-parent="#accordionFlushExample-3">
+                                <div class="accordion-body">
+                                    <p>微醺列車提供一杯調飲，不飲用不會影響體驗內容不便飲酒的乘客可以將調飲轉讓給同行友人或選擇不飲用，轉運站不提供外帶服務。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-2-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseTwo" aria-expanded="false" aria-controls="flush-2-collapseTwo">
+                                    <span class="header-title">各個作品的體驗價位與時長各是多少呢？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-2-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-2-headingTwo" data-bs-parent="#accordionFlushExample-2">
+                                <div class="accordion-body">
+                                    <div class="table-wrap style-qa layout-qa">
+                                        <table>
+                                            <tr>
+                                                <th></th>
+                                                <th>微醺列車</th>
+                                                <th><span class="style-bolder">FLIGHT</span></th>
+                                            </tr>
+                                            <tr>
+                                                <th>體驗時長</th>
+                                                <td>
+                                                    <span class="style-bolder">60</span> 分鐘
+                                                    <br class="mobile-br"> / 每場次
+                                                </td>
+                                                <td>
+                                                    <span class="style-bolder">30</span> 分鐘
+                                                    <br class="mobile-br"> / 每場次
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>票價</th>
+                                                <td><span class="style-bolder">$1,250</span> / 每人</td>
+                                                <td><span class="style-bolder">$500</span> / 每人</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
