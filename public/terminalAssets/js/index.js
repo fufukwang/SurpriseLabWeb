@@ -79,7 +79,8 @@ $(function(){
     function timeoff() {
         function showTime() {
             const nowDate = new Date();
-            const endDate = new Date('2023-06-27 24:00:00');
+            const endDate = new Date($('timetable .number').attr('data-end'));
+            // '2023-06-27 24:00:00'
 
             const timeDiff = endDate.getTime() - nowDate.getTime();
 
@@ -87,9 +88,9 @@ $(function(){
             const hoursDiff = String(Math.floor((timeDiff / (1000 * 60 * 60)) % 24)).padStart(2, '0')
             const minutesDiff = String(Math.floor((timeDiff / (1000 * 60)) % 60)).padStart(2, '0')
 
-            console.log("相差天数：", daysDiff);
-            console.log("相差小时数：", hoursDiff);
-            console.log("相差分钟数：", minutesDiff);
+            // console.log("相差天数：", daysDiff);
+            // console.log("相差小时数：", hoursDiff);
+            // console.log("相差分钟数：", minutesDiff);
 
             handleDigitalbodyElement(daysDiff, "day-1", 0);
             handleDigitalbodyElement(daysDiff, "day-2", 1);
