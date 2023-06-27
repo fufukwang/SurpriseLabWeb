@@ -79,7 +79,7 @@ $(function(){
     function timeoff() {
         function showTime() {
             const nowDate = new Date();
-            const endDate = new Date($('timetable .number').attr('data-end'));
+            const endDate = new Date($('.timetable .number').attr('data-end'));
             // '2023-06-27 24:00:00'
 
             const timeDiff = endDate.getTime() - nowDate.getTime();

@@ -103,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="marquee">
                                     <p>高鐵離站倒數中...</p>
                                 </div>
-                                <div class="number" data-end="2023-06-30 24:00:00">
+                                <div class="number" data-end="2023-07-31 24:00:00">
                                     <div class="digitalitem day-1 num-0" id="day-1">
                                         <div class="digitalbody h1"></div>
                                         <div class="digitalbody h2"></div>
@@ -165,7 +165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <div class="digitalbody v3"></div>
                                         <div class="digitalbody v4"></div>
                                     </div>
-                                    <div class="digitalitem separate2">
+                                    <div class="digitalitem separate3">
                                         <p>分</p>
                                     </div>
                                 </div>
@@ -177,7 +177,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="wrap">
                                     <div class="bar" style="width:80%;"></div>
                                 </div>
-                                <p>剩餘座位<span>20%</span></p>
+                                <p>剩餘座位數<span>20%</span></p>
                             </div>
                             <div class="text-wrap">
                                 <!-- A Test -->
