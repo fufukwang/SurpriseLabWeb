@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=0601"/>
+    <link rel="stylesheet" href="css/style.css?date=0627"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -1047,40 +1047,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <!-- 6-1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-1.jpg" data-src="img/home/menu/no6/menu-6-1.jpg" data-src-retina="img/home/menu/no6/menu-6-1.jpg" alt="6-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-1-mobile.jpg" data-src="img/home/menu/no6/menu-6-1-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-1-mobile.jpg" alt="6-1">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-1.png" data-src="img/home/menu/no6/menu-6-1.png" data-src-retina="img/home/menu/no6/menu-6-1.png" alt="6-1">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-1-mobile.png" data-src="img/home/menu/no6/menu-6-1-mobile.png" data-src-retina="img/home/menu/no6/menu-6-1-mobile.png" alt="6-1">
                                                                 </figure>
                                                             </div>
 
                                                             <!-- 6-2 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-2.jpg" data-src="img/home/menu/no6/menu-6-2.jpg" data-src-retina="img/home/menu/no6/menu-6-2.jpg" alt="6-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-2-mobile.jpg" data-src="img/home/menu/no6/menu-6-2-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-2-mobile.jpg" alt="6-2">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-2.png" data-src="img/home/menu/no6/menu-6-2.png" data-src-retina="img/home/menu/no6/menu-6-2.png" alt="6-2">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-2-mobile.png" data-src="img/home/menu/no6/menu-6-2-mobile.png" data-src-retina="img/home/menu/no6/menu-6-2-mobile.png" alt="6-2">
                                                                 </figure>
                                                             </div>
 
                                                             <!-- 6-3 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-3.jpg" data-src="img/home/menu/no6/menu-6-3.jpg" data-src-retina="img/home/menu/no6/menu-6-3.jpg" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-3-mobile.jpg" data-src="img/home/menu/no6/menu-6-3-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-3-mobile.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-3.png" data-src="img/home/menu/no6/menu-6-3.png" data-src-retina="img/home/menu/no6/menu-6-3.png" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-3-mobile.png" data-src="img/home/menu/no6/menu-6-3-mobile.png" data-src-retina="img/home/menu/no6/menu-6-3-mobile.png" alt="6-3">
                                                                 </figure>
                                                             </div>
                                                             
                                                             <!-- 6-4 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-4.jpg" data-src="img/home/menu/no6/menu-6-4.jpg" data-src-retina="img/home/menu/no6/menu-6-4.jpg" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-4-mobile.jpg" data-src="img/home/menu/no6/menu-6-4-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-4-mobile.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-4.png" data-src="img/home/menu/no6/menu-6-4.png" data-src-retina="img/home/menu/no6/menu-6-4.png" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-4-mobile.png" data-src="img/home/menu/no6/menu-6-4-mobile.png" data-src-retina="img/home/menu/no6/menu-6-4-mobile.png" alt="6-3">
                                                                 </figure>
                                                             </div>
 
                                                             <!-- 6-5 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-5.jpg" data-src="img/home/menu/no6/menu-6-5.jpg" data-src-retina="img/home/menu/no6/menu-6-5.jpg" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-5-mobile.jpg" data-src="img/home/menu/no6/menu-6-5-mobile.jpg" data-src-retina="img/home/menu/no6/menu-6-5-mobile.jpg" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-5.png" data-src="img/home/menu/no6/menu-6-5.png" data-src-retina="img/home/menu/no6/menu-6-5.png" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-5-mobile.png" data-src="img/home/menu/no6/menu-6-5-mobile.png" data-src-retina="img/home/menu/no6/menu-6-5-mobile.png" alt="6-3">
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -1450,7 +1450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/index.js?date=0601"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?v=0.11"></script>
-    <script src="js/index-slideshow.js?data=0223"></script>
+    <script src="js/index-slideshow.js?date=0627"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 
 </body>

@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?date=0218">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0320">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0627">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -103,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="marquee">
                                     <p>高鐵離站倒數中...</p>
                                 </div>
-                                <div class="number" data-end="2023-07-31 24:00:00">
+                                <div class="number" data-end="2023-09-03 24:00:00">
                                     <div class="digitalitem day-1 num-0" id="day-1">
                                         <div class="digitalbody h1"></div>
                                         <div class="digitalbody h2"></div>
@@ -936,6 +936,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                         </div>
                     </div>
+
+                    <!-- 07 -->
+                    <!-- <div class="item">
+                        <a href="" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount07.png" data-src="/terminalAssets/images/main/discount07.png" data-src-retina="/terminalAssets/images/main/discount07.png" alt="Klook">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">KLOOK x 落日轉運站</div>
+                            <div class="discount-p">微醺列車 x 落日啤酒 限時優惠 成年禮金適用</br>83折微醺雙人票
+                            </div>
+                        </div>
+                    </div> -->
                 
                     <!-- 02 -->
                     <div class="item">
@@ -1492,7 +1506,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
     <script src="/terminalAssets/js/index.js"></script>
-    <script src="/terminalAssets/js/home-slideshow.js?date=0218"></script>
+    <script src="/terminalAssets/js/home-slideshow.js?date=0627"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
