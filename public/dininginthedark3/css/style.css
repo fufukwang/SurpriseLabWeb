@@ -2224,7 +2224,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: calc((100vw - 120px) / 4.6 + 60px);
+  width: calc((100vw - 120px) / 4.6 + 48px);
   height: 0;
   position: absolute;
   top: 50%;
@@ -2303,6 +2303,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+#Review .owl-nav .owl-next img {
+  margin-left: auto;
+}
+
 #Review .owl-dots {
   width: 100%;
   line-height: 1;
@@ -2698,12 +2703,12 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 #Experience .owl-nav {
   display: flex;
   justify-content: space-between;
-  width: calc((100vw - 100px) / 2.27 + 100px);
+  width: calc((100vw - 120px) / 2.07 + 48px);
   height: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -30px);
+  transform: translate(-50%, -24px);
   z-index: 1;
   margin: 0;
 }
@@ -2775,6 +2780,9 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   -ms-user-select: none;
 }
 
+#Experience .owl-nav .owl-next img {
+  margin-left: auto;
+}
 
 #Experience .experience-intro {
   width: calc((100vw - 120px) / 2.216);
