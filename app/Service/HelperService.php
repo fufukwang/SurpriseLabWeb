@@ -86,6 +86,8 @@ class HelperService {
                 }
             }
             */
+            // 230629 暫停發送 D14信件
+            if($data['template'] == 'D14'){ return false; }
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_DARK_USER')]);
