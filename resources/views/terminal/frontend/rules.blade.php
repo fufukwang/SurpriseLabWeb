@@ -694,7 +694,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="flush-3-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-3-headingEleven" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>遲到將無法進場，並且無法退費。</p>
                                                             <p>轉運站禁止攜帶飲食入內，落日月台提供食物及飲料寄放服務，體驗後記得領取即可呦！</p>
                                                         </div>
                                                     </div>
@@ -723,7 +722,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="flush-3-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-3-headingSeven" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>我們會在訂位確認信（訂位成功後寄出）、行前通知信（體驗日七天前寄出）以及提醒簡訊（體驗當日寄出）中，告知你報到時間，請協助確認信箱與簡訊唷。</p>
+                                                            <p>需要，每場次需要提早取票劃位時間不同，請預留至少20分鐘，並依照訂位確認信時間提早取票劃位呦！</p>
                                                         </div>
                                                     </div>
                                                 </div>
