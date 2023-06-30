@@ -357,7 +357,8 @@ $(function() {
     let format_flag_tel = false;
     let format_flag_email = false;
 
-    let tel_rule = /^09\d{8}$/;
+    let tel_rule = /^\d+$/;
+    // /^09\d{8}$/;
     let email_rule = /^(\w|\.|\-)+@(\w|\.|\-)+\.(\w|\.|\-)+$/;
 
 

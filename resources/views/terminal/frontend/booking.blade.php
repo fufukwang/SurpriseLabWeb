@@ -448,7 +448,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="telephone">* 電話</label>
-                                    <p>無台灣電話者，請輸入0900000000</p>
+                                    <p>手機號碼將作為取票依據，請務必填寫正確</p>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
                                     <div style="display: flex;width: 100%;">
                                         <input type="text" name="Area code" class="body-04" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
@@ -463,7 +463,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="remark">其他備註</label>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
-                                    <textarea id="remark" class="body-04" name="remark" placeholder="ex. 特殊事項備註 / 發票若要打統編，請直接註明公司抬頭與統一編號"></textarea>
+                                    <textarea id="remark" class="body-04" name="remark" placeholder="ex. 特殊事項備註"></textarea>
                                 </div>
                                 <fieldset class="checkbox-block">
                                     <div class="form-group checkbox-layout">

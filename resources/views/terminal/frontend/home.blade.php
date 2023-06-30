@@ -983,7 +983,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
 
                     <!-- 04 -->
-                    <div class="item">
+                    <!-- <div class="item">
                         <a href="https://www.kkday.com/zh-tw/product/134229" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png" data-src="/terminalAssets/images/main/discount03.png" data-src-retina="/terminalAssets/images/main/discount03.png" alt="KKday 六人票">
@@ -997,7 +997,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             陪你一起體驗刺激旅程，就不害怕了！
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- 05 -->
                     <div class="item">

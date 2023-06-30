@@ -218,11 +218,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         <div class="feature-item">90分鐘體驗時間</div>
                                                     </div>
                                                     <div class="experience-desc">
-                                                        「Everything you can imagine is real.」 - Pablo Picasso
+                                                        “ Everything you can imagine is real.” - <b>Pablo Picasso</b>
                                                         <br/><br/>
-                                                        世界上有沒有一種可能，是坐在餐桌前就能來趟星際旅行？踏進黑暗，一切可能性皆始於想像，你將跟隨領航員的引導，一一探索 5 個星球的秘密。
+                                                        踏進黑暗，跟隨想像力展開星際之旅，只要你願意相信，你的想像力，可以把所有不可能，變成可能。
                                                         <br/><br/>
-                                                        最終，你會發現：「想像力，可以創造出一個世界。
+                                                        最終，你會發現：「想像力，可以創造出一個世界。」
                                                     </div>
                                                 </div>
                                             </div>
@@ -790,7 +790,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
 
                         <!-- History Menu -->
-                        <div class="section sec-menu" id="Menu">
+                        <div class="section sec-menu" id="Menu" style="display:none;">
 
                             <div class="section-header">
                                 <div class="section-title">
