@@ -434,13 +434,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
                                     <input type="text" id="name" class="body-04" name="name" placeholder="ex. 轉運站吉祥物" required>
                                 </div>
-                                <div class="form-group normal-layout">
+                                <div class="form-group normal-layout" style="display:none;">
                                     <label class="body-04" for="company_name">統編抬頭</label>
                                     <!-- <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p> -->
                                     <!-- <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div> -->
                                     <input type="text" id="company_name" class="body-04" name="company_name" placeholder="" required>
                                 </div>
-                                <div class="form-group normal-layout">
+                                <div class="form-group normal-layout" style="display:none;">
                                     <label class="body-04" for="company_tax_ID">統一編號</label>
                                     <!-- <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p> -->
                                     <!-- <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div> -->
@@ -451,8 +451,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <p>手機號碼將作為取票依據，請務必填寫正確</p>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
                                     <div style="display: flex;width: 100%;">
-                                        <input type="text" name="Area code" class="body-04" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
-                                        <input type="text" id="telephone" class="body-04" name="telephone" placeholder="ex. 0987654321" required style="width: calc(100% - 110px);margin-left: auto;">
+                                        <input type="text" id="telephone" class="body-04" name="telephone" placeholder="ex. 0987654321" required>
+                                        <!-- 以下為更新後結構 -->
+                                        <!-- <input type="text" name="Area code" class="body-04" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
+                                        <input type="text" id="telephone" class="body-04" name="telephone" placeholder="ex. 0987654321" required style="width: calc(100% - 110px);margin-left: auto;"> -->
                                     </div>
                                 </div>
                                 <div class="form-group normal-layout">
