@@ -1089,13 +1089,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div> -->
                     <div class="accordion-wrap">
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-q&a-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-q&a-collapseOne" aria-expanded="false" aria-controls="flush-q&a-collapseOne">
+                            <h2 class="accordion-header" id="flush-001-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-001-collapseOne" aria-expanded="false" aria-controls="flush-001-collapseOne">
                                     <span class="header-title">我想跟朋友坐在一起可以嗎？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-q&a-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-q&a-headingOne" data-bs-parent="#accordionFlushExample-3">
+                            <div id="flush-001-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-001-headingOne" data-bs-parent="#accordionFlushExample-3">
                                 <div class="accordion-body">
                                     <p>微醺列車歡迎您與友人一起搭乘，於「候車室劃位時」請告知乘務員，FLIGHT為維護體驗品質建議分開搭乘，若有特殊需求請於「取票時」告知月台服務人員。</p>
                                 </div>
@@ -1103,13 +1103,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-q&a-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-q&a-collapseTwo" aria-expanded="false" aria-controls="flush-q&a-collapseTwo">
+                            <h2 class="accordion-header" id="flush-002-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-002-collapseTwo" aria-expanded="false" aria-controls="flush-002-collapseTwo">
                                     <span class="header-title">如果我不喝酒怎麼辦？會影響體驗嗎？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-q&a-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-q&a-headingTwo" data-bs-parent="#accordionFlushExample-3">
+                            <div id="flush-002-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-002-headingTwo" data-bs-parent="#accordionFlushExample-3">
                                 <div class="accordion-body">
                                     <p>微醺列車提供一杯調飲，不飲用不會影響體驗內容不便飲酒的乘客可以將調飲轉讓給同行友人或選擇不飲用，轉運站不提供外帶服務。</p>
                                 </div>
@@ -1117,13 +1117,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-q&a-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-q&a-collapseThree" aria-expanded="false" aria-controls="flush-q&a-collapseThree">
+                            <h2 class="accordion-header" id="flush-003-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-003-collapseThree" aria-expanded="false" aria-controls="flush-003-collapseThree">
                                     <span class="header-title">各個作品的體驗價位與時長各是多少呢？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-q&a-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-q&a-headingThree" data-bs-parent="#accordionFlushExample-2">
+                            <div id="flush-003-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-003-headingThree" data-bs-parent="#accordionFlushExample-2">
                                 <div class="accordion-body">
                                     <div class="table-wrap style-qa layout-qa">
                                         <table>
