@@ -451,7 +451,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <p>手機號碼將作為取票依據，請務必填寫正確</p>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
                                     <div style="display: flex;width: 100%;">
-                                        <input type="text" name="Area code" class="body-04" id="Area code" placeholder="+886" value="+886" style="width: 100px;">
+                                        <input type="text" name="area_code" class="body-04" id="area_code" placeholder="+886" value="+886" style="width: 100px;">
                                         <input type="text" id="telephone" class="body-04" name="telephone" placeholder="ex. 0987654321" required style="width: calc(100% - 110px);margin-left: auto;">
                                     </div>
                                 </div>

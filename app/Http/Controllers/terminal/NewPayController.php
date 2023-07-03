@@ -117,7 +117,7 @@ class NewPayController extends WebController
                 // 'pro_id'     => $request->booking_time,
                 'pople'      => $people,
                 'name'       => $request->name,
-                'tel'        => $request->telephone,
+                'tel'        => $request->area_code.$request->telephone,
                 'email'      => $request->email,
                 'notes'      => $request->remark,
                 'meat'       => json_encode([]),
@@ -136,6 +136,9 @@ class NewPayController extends WebController
                 'num_b'      => $num_b,
                 'num_t'      => $num_t,
                 'num_f'      => $num_f,
+                'tax_id'     => $request->company_tax_ID ?? 0,
+                'tax_name'   => $request->company_name ?? 0,
+                'need_english' => $request->english_service ?? 0,
             ];
             // 10% 服務費
             $order = order::create($data);
