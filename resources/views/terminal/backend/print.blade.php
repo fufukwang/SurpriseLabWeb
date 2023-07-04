@@ -1101,8 +1101,9 @@ $(function(){
             $('#B2B').trigger('click');
             $('#BuyerName').val($('#tax_name').val());
             $('#BuyerUBN').val($('#tax_id').val());
+        } else {
+            $('#ct2').trigger('click');
         }
-        $('#ct2').trigger('click');
         
         shb2c();shlove();shcarr();taxchange();calAmt();
     });

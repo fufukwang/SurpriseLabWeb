@@ -286,10 +286,11 @@ class InvController extends Controller
             if($inv_count>0){
                 $psn = '_'.$inv_count;
             }
-            $printFlag = 'Y';
+            $printFlag = 'Y'; $CarrierNum = rawurlencode($request->CarrierNum);
             if((int)$request->CarrierType == 2){
                 $printFlag = 'N';
             }
+            if($request->CarrierType == ''){ $CarrierNum = '';}
             $post_data_array = [
                 'RespondType' => 'JSON',
                 'Version' => '1.4',
@@ -308,7 +309,7 @@ class InvController extends Controller
                 'TaxAmt' => $request->TaxAmt,
                 'TotalAmt' => $request->TotalAmt,
                 'CarrierType' => $request->CarrierType,
-                'CarrierNum' => rawurlencode($request->CarrierNum),
+                'CarrierNum' => $CarrierNum,
                 'LoveCode' => $request->LoveCode,
                 'PrintFlag' => $printFlag,
                 'ItemName' => $request->ItemName, //多項商品時，以「|」分開
