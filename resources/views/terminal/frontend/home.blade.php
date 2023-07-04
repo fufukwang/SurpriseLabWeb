@@ -173,7 +173,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="img-wrap break-grid">
                                 <img class="img-fluid" src="/terminalAssets/images/main/img_about.png" alt="About">
                             </div>
+<<<<<<< HEAD
                             <div class="prograssbar">
+=======
+                            <div class="prograssbar" style="display:none;">
+>>>>>>> master
                                 <div class="wrap">
                                     <div class="bar" style="width:80%;"></div>
                                 </div>
