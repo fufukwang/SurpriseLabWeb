@@ -563,6 +563,7 @@ class OrderController extends WebController
                         $pay_status = '公關位';
                     }
                     $pay_money = '';
+                    $pay_org = $row['OM'];
                     $pay_last = '';
                     $coupons = coupon::select('code','b_id','type')->where('o_id',$row['sn'])->get();
                     $return_Tr_time = '';
@@ -578,11 +579,13 @@ class OrderController extends WebController
                             }
                             $coupon .= "{$c->code}";
                             if($c->type == 'train'){ 
-                                $pay_money += 1250;
+                                // $pay_money -= 1250;
                                 $discount_money += 1250;
+                                $pay_org += 1250;
                             } elseif($c->type == 'flight'){ 
-                                $pay_money += 500; 
+                                // $pay_money -= 500; 
                                 $discount_money += 500;
+                                $pay_org += 500;
                             }
                             // $pay_money .= backme::select('money')->find($c->b_id)->money;
                             // $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
@@ -654,13 +657,13 @@ class OrderController extends WebController
                         $coupon,
                         $pay_type,
                         $pay_status,
-                        $pay_money,
+                        $pay_org,
                         $discount_money,
                         $row['cut'],
                         $row['handling'],
                         $handling_fee,
                         $row['refund'],
-                        $row['OM'],
+                        $pay_money,
                         $pay_last,
                         $row['created_at'],
                         $return_Tr_time,
