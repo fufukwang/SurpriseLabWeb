@@ -1026,6 +1026,7 @@ $(function(){
             $('#BuyerName').val($('#tax_name').val());
             $('#BuyerUBN').val($('#tax_id').val());
         }
+        $('#ct2').trigger('click');
         
 
         shb2c();shlove();shcarr();taxchange();calAmt();
@@ -1289,6 +1290,13 @@ function shcarr(){
     if($('input[name="CarrierType"]:checked').val() == ''){
         $('.ctyes').hide();
     } else {
+        if(parseInt($('input[name="CarrierType"]:checked').val()) == 2){
+            $('#CarrierNum').val($('#BuyerEmail').val());
+            $('#CarrierNum').prop('readonly',true);
+        } else {
+            $('#CarrierNum').val('');
+            $('#CarrierNum').prop('readonly',false);
+        }
         $('.ctyes').show();
     }
 }

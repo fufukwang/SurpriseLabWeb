@@ -182,9 +182,9 @@ class InvController extends Controller
                 if($inv_count>0){
                     $psn = '_'.$inv_count;
                 }
-                $category = 'B2C'; $buyername = $row->name; $buyerUBN = '';
+                $category = 'B2C'; $buyername = $row->name; $buyerUBN = '';$printFlag = 'N';
                 if($row->tax_id!='' && $row->tax_name!=''){
-                    $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;
+                    $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;$printFlag = 'Y';
                 }
                 $post_data_array = [
                     'RespondType' => 'JSON',
@@ -203,10 +203,10 @@ class InvController extends Controller
                     'Amt' => $totleamt - $taxamt,
                     'TaxAmt' => $taxamt,
                     'TotalAmt' => $totleamt,
-                    'CarrierType' => '',
-                    'CarrierNum' => rawurlencode(''),
+                    'CarrierType' => '2',
+                    'CarrierNum' => rawurlencode($row->email),
                     'LoveCode' => '',
-                    'PrintFlag' => 'Y',
+                    'PrintFlag' => $printFlag,
                     'ItemName' => $ItemName, //多項商品時，以「|」分開
                     'ItemCount' => $ItemCount, //多項商品時，以「|」分開
                     'ItemUnit' => $ItemUnit, //多項商品時，以「|」分開
@@ -286,6 +286,10 @@ class InvController extends Controller
             if($inv_count>0){
                 $psn = '_'.$inv_count;
             }
+            $printFlag = 'Y';
+            if((int)$request->CarrierType == 2){
+                $printFlag = 'N';
+            }
             $post_data_array = [
                 'RespondType' => 'JSON',
                 'Version' => '1.4',
@@ -306,7 +310,7 @@ class InvController extends Controller
                 'CarrierType' => $request->CarrierType,
                 'CarrierNum' => rawurlencode($request->CarrierNum),
                 'LoveCode' => $request->LoveCode,
-                'PrintFlag' => 'Y',
+                'PrintFlag' => $printFlag,
                 'ItemName' => $request->ItemName, //多項商品時，以「|」分開
                 'ItemCount' => $request->ItemCount, //多項商品時，以「|」分開
                 'ItemUnit' => $request->ItemUnit, //多項商品時，以「|」分開

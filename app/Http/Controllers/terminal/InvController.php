@@ -258,8 +258,8 @@ class InvController extends WebController
                     'Amt' => $totleamt - $taxamt,
                     'TaxAmt' => $taxamt,
                     'TotalAmt' => $totleamt,
-                    'CarrierType' => '',
-                    'CarrierNum' => rawurlencode(''),
+                    'CarrierType' => '2',
+                    'CarrierNum' => rawurlencode($row->email),
                     'LoveCode' => '',
                     'PrintFlag' => 'Y',
                     'ItemName' => $ItemName, //多項商品時，以「|」分開
@@ -341,6 +341,10 @@ class InvController extends WebController
             if($inv_count>0){
                 $psn = '_'.$inv_count;
             }
+            $printFlag = 'Y';
+            if((int)$request->CarrierType == 2){
+                $printFlag = 'N';
+            }
             $post_data_array = [
                 'RespondType' => 'JSON',
                 'Version' => '1.4',
@@ -361,7 +365,7 @@ class InvController extends WebController
                 'CarrierType' => $request->CarrierType,
                 'CarrierNum' => rawurlencode($request->CarrierNum),
                 'LoveCode' => $request->LoveCode,
-                'PrintFlag' => 'Y',
+                'PrintFlag' => $printFlag,
                 /*
                 'ItemName' => '落日轉運站票券('.$request->ItemCount.'人票)', //多項商品時，以「|」分開
                 'ItemCount' => 1, //多項商品時，以「|」分開
