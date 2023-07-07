@@ -51,8 +51,35 @@ class TerminalTask extends Command
             $hour = $this->argument('hour');
             switch ((int)$hour) {
                 case 18: $this->checkHour18(); break;
+                case 25: $this->checkEveryHour(); break;
             }
 
+        } catch (Exception $exception) {
+            Log::error($exception);
+        }
+    }
+    // 每小時執行
+    private function checkEveryHour(){
+        try {
+            $undone = order::select('id','email','name')->where('pay_status','未完成')
+                ->whereRaw("floor(UNIX_TIMESTAMP()/3600)-floor(UNIX_TIMESTAMP(created_at)/3600)=12")->get();
+            // 找出12小時前的未完成訂單
+            foreach($undone as $ord){
+                // 確認 12 小時內此信箱沒有已完成訂單
+                $isdone = order::select('id')->whereIn('pay_status',['已付款','已付款(部分退款)'])->where('email',$ord->email)
+                    ->whereRaw("floor(UNIX_TIMESTAMP()/3600)-floor(UNIX_TIMESTAMP(created_at)/3600)<=12")->count();
+                if($isdone == 0){
+                    // 確認沒訂單的就發送 undone 信件
+                    if($ord->email != ''){
+                        $toData = [
+                            'name'     => $ord->name,
+                            'email'    => $ord->email,
+                            'template' => 'undone'
+                        ];
+                    }
+                    SLS::SendTerminalEmailByTemplateName($toData);
+                }
+            }
         } catch (Exception $exception) {
             Log::error($exception);
         }
@@ -81,6 +108,30 @@ class TerminalTask extends Command
                     }
                 }
             }
+
+            // 10 天
+            $pr10day = pro::select('id')->where('open',1)
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=10")->get();
+            foreach($pr10day as $pro){
+                // 找出正常的訂單
+                $order10 = order::select('terminalorder.id','name','email','tel','plan')
+                    ->leftJoin('terminal_pro_order', 'terminal_pro_order.order_id', '=', 'terminalorder.id')
+                    ->where('terminal_pro_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
+                foreach ($order10 as $ord) {
+                    if($ord->email != ''){
+                        $toData = [
+                            'name'     => $ord->name,
+                            'email'    => $ord->email,
+                            'id'       => $ord->id,
+                            'template' => 'D10',
+                        ];
+                        SLS::SendTerminalEmailByTemplateName($toData);
+                    }
+                }
+            }
+
+
+
             /*
             $proday = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=0")->get();

@@ -208,6 +208,9 @@ class MasterController extends WebController
                 'email' => $request->email,
                 'template' => $request->type.'.'.$request->plan,
             ];
+            if($request->type == 'D10'){
+                $toData['template'] = 'D10';
+            }
             /*
             if($toData['type'] == 'D10'){
                 $order = order::leftJoin('terminalpro', 'terminalpro.id', '=', 'terminalorder.pro_id');

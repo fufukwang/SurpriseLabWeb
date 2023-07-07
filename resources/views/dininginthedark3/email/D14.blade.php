@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>【無光晚餐來信】</title>
-<style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}h1,h2,h3{font-style:normal;font-weight:700;letter-spacing:normal}h1,h2,h3,h4{letter-spacing:normal}h1,h2,h3{font-family:Helvetica;line-height:150%}#templateBody,#templateFooter,#templateHeader,.bodyContainer,.footerContainer,.headerContainer{background-image:none;background-repeat:no-repeat;background-position:center;background-size:cover;border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}h1,h2,h3,h4,h5,h6{display:block;margin:0}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td{line-height:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}.templateContainer{max-width:600px!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}h1{color:#dbdbdb;font-size:40px;text-align:center}h2,h3,h4{text-align:left}h2{color:#222;font-size:34px}h3{color:#444;font-size:22px}h4{color:#949494;font-family:Georgia;font-size:20px;font-style:italic;font-weight:400;line-height:125%}#templateHeader{background-color:#333;padding-top:6px;padding-bottom:6px}.bodyContainer,.footerContainer,.headerContainer{background-color:#transparent;padding-top:0;padding-bottom:0}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#757575;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left}.bodyContainer .mcnTextContent a,.bodyContainer .mcnTextContent p a,.headerContainer .mcnTextContent a,.headerContainer .mcnTextContent p a{color:#007c89;font-weight:400;text-decoration:underline}#templateBody{background-color:#333;padding-top:0;padding-bottom:0}#templateFooter{background-color:#333;padding-top:45px;padding-bottom:63px}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#666;font-family:'Times New Roman',Times,Baskerville,Georgia,serif;font-size:8px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a{color:#666;font-weight:400;text-decoration:underline}@media only screen and (min-width:768px){.templateContainer{width:600px!important}}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:30px!important;line-height:125%!important}h2{font-size:26px!important;line-height:125%!important}h3{font-size:20px!important;line-height:150%!important}h4{font-size:18px!important;line-height:150%!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p,.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{font-size:14px!important;line-height:150%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{font-size:16px!important;line-height:150%!important}}</style></head>
+<style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}h1,h2,h3{font-style:normal;font-weight:700;letter-spacing:normal}h1,h2,h3,h4{letter-spacing:normal}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,h1,h2,h3{font-family:Helvetica;line-height:150%}#templateBody,#templateFooter,#templateHeader{background-color:#1e1e1e}#templateBody,#templateFooter,#templateHeader,.bodyContainer,.footerContainer,.headerContainer{background-image:none;background-repeat:no-repeat;background-position:center;background-size:cover;border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}h1,h2,h3,h4,h5,h6{display:block;margin:0}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td{line-height:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}.templateContainer{max-width:600px!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}h1{color:#dbdbdb;font-size:40px;text-align:center}h2{color:#222;font-size:34px;text-align:left}h3{color:#1b1c1c;font-size:22px;text-align:left}h4{color:#949494;font-family:Georgia;font-size:20px;font-style:italic;font-weight:400;line-height:125%;text-align:left}#templateHeader{padding-top:6px;padding-bottom:6px}.bodyContainer,.footerContainer,.headerContainer{background-color:#transparent;padding-top:0;padding-bottom:0}.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#757575;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left}.bodyContainer .mcnTextContent a,.bodyContainer .mcnTextContent p a,.headerContainer .mcnTextContent a,.headerContainer .mcnTextContent p a{color:#007c89;font-weight:400;text-decoration:underline}#templateBody{padding-top:0;padding-bottom:0}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{color:#1e1e1e;font-size:16px;text-align:left}#templateFooter{padding-top:45px;padding-bottom:63px}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#666;font-family:'Times New Roman',Times,Baskerville,Georgia,serif;font-size:8px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a{color:#666;font-weight:400;text-decoration:underline}@media only screen and (min-width:768px){.templateContainer{width:600px!important}}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:30px!important;line-height:125%!important}h2{font-size:26px!important;line-height:125%!important}h3{font-size:20px!important;line-height:150%!important}h4{font-size:18px!important;line-height:150%!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p,.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{font-size:14px!important;line-height:150%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{font-size:16px!important;line-height:150%!important}}</style></head>
     <body>
-        <span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">在黑暗中，點一首歌給餐桌對面的那個人吧</span>
+        <span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">登陸旅客資料</span>
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
                 <tr>
@@ -61,7 +61,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/63fb6c4f-48f6-7abe-0270-d67790542312.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/26e3fd78-14d6-7236-6457-8ae41a891954.jpg" width="558.36" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -70,33 +70,163 @@
                 </td>
             </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCodeBlock">
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/1336390f-f95a-f7d2-7ff1-4ea7f97a0cec.gif" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/a0b5e8a8-a403-26ae-faca-9ae7f05c4af8.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
-            <td valign="top" class="mcnTextBlockInner">
-                <div class="rwd-embed-video">
-
-</div>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
                 
+                <!--[if mso]>
+                <td valign="top" width="600" style="width:600px;">
+                <![endif]-->
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+                        
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+                        
+                            <a id="Middle" name="Middle"></a>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <!--[if mso]>
+                </td>
+                <![endif]-->
                 
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 10px;background-color: #8C5FB4;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif; font-size: 16px; padding: 20px;">
-                                <a class="mcnButton " title="送個驚喜，給同行的他" href="https://surpriselab.typeform.com/to/MyXHAtRt" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #D5D5D5;">送個驚喜，給同行的他</a>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/54c7f19d-d1ac-f7b0-8080-95d20f71da16.gif" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/ea89d39b-633a-5863-5a3c-7cf0849d2bc8.gif" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/31935938-471d-7aa4-66f2-f33f57b494be.gif" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/3600e0c9-afdb-db46-7e5b-a0910e5b23bc.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+                                    <a href="https://surpriselab.typeform.com/to/r6pzwd54" title="" class="" target="_blank">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/f1a5c8f5-f100-a954-c4bc-efbf93d8d328.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    </a>
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
     </tbody>
 </table></td>
                                         </tr>
@@ -117,25 +247,7 @@
                                     <![endif]-->
                                     <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
                                         <tr>
-                                            <td valign="top" class="footerContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
-    <tbody class="mcnImageBlockOuter">
-            <tr>
-                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
-                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
-                        <tbody><tr>
-                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
-                                
-                                    
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/images/28564589-a905-a050-e714-55aa6f7f77c4.jpg" width="564" style="max-width:1080px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
-                                    
-                                
-                            </td>
-                        </tr>
-                    </tbody></table>
-                </td>
-            </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock" style="min-width:100%;">
+                                            <td valign="top" class="footerContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock" style="min-width:100%;">
     <tbody class="mcnFollowBlockOuter">
         <tr>
             <td align="center" valign="top" style="padding:9px" class="mcnFollowBlockInner">
@@ -152,6 +264,70 @@
                                     <table align="center" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                     <![endif]-->
+                                    
+                                        <!--[if mso]>
+                                        <td align="center" valign="top">
+                                        <![endif]-->
+                                        
+                                        
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
+                                                <tbody><tr>
+                                                    <td valign="top" style="padding-right:10px; padding-bottom:9px;" class="mcnFollowContentItemContainer">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentItem">
+                                                            <tbody><tr>
+                                                                <td align="left" valign="middle" style="padding-top:5px; padding-right:10px; padding-bottom:5px; padding-left:9px;">
+                                                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
+                                                                        <tbody><tr>
+                                                                            
+                                                                                <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
+                                                                                    <a href="https://www.surpriselab.com.tw/dininginthedark3/index.html" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-gray-link-48.png" alt="Website" style="display:block;" height="24" width="24" class=""></a>
+                                                                                </td>
+                                                                            
+                                                                            
+                                                                        </tr>
+                                                                    </tbody></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+                                    
+                                        <!--[if mso]>
+                                        <td align="center" valign="top">
+                                        <![endif]-->
+                                        
+                                        
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
+                                                <tbody><tr>
+                                                    <td valign="top" style="padding-right:10px; padding-bottom:9px;" class="mcnFollowContentItemContainer">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentItem">
+                                                            <tbody><tr>
+                                                                <td align="left" valign="middle" style="padding-top:5px; padding-right:10px; padding-bottom:5px; padding-left:9px;">
+                                                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
+                                                                        <tbody><tr>
+                                                                            
+                                                                                <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
+                                                                                    <a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-gray-forwardtofriend-48.png" alt="Email" style="display:block;" height="24" width="24" class=""></a>
+                                                                                </td>
+                                                                            
+                                                                            
+                                                                        </tr>
+                                                                    </tbody></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
                                     
                                         <!--[if mso]>
                                         <td align="center" valign="top">
@@ -267,7 +443,7 @@
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            <span style="font-size:10px"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="color:#808080"><em>Copyright © 2022 surpriselab, All rights reserved.</em><br>
+                            <span style="font-size:10px"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="color:#808080"><em>Copyright © {{ date('Y') }} surpriselab, All rights reserved.</em><br>
 <br>
 <strong>Our mailing address is:</strong><br>
 <a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a><br>
@@ -302,5 +478,4 @@
                 </tr>
             </table>
         </center>
-    <script type="text/javascript"  src="/bn6n/YzIc/5E/wOhq/sCkw/puaVShQVYaif/IB4VP0sEBw/F2AYN0/MVW08B"></script></body>
 </html>

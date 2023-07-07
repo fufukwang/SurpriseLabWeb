@@ -37,11 +37,16 @@ class WebController extends Controller
                     $now = time();
                     $pros = \DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')
                         ->select('day','rang_start')->where('terminal_pro_order.order_id',$data['id'])->get();
+                    $plan = $data['template'];
                     foreach($pros as $pro){
                         $lim = strtotime($pro->day.' '.$pro->rang_start);
                         $day = round( ($lim - $now) / 86400 );
                         if($day <= 7){
-                            $data['template'] = 'D7.'.$data['template'];
+                            $data['template'] = 'D7.'.$plan;
+                            SLS::SendTerminalEmailByTemplateName($data);
+                        }
+                        if($day <= 10){
+                            $data['template'] = 'D10';
                             SLS::SendTerminalEmailByTemplateName($data);
                         }
                     }

@@ -86,8 +86,8 @@ class HelperService {
                 }
             }
             */
-            // 230629 暫停發送 D14信件
-            if($data['template'] == 'D14'){ return false; }
+            // 230629 暫停發送 D14信件 // dt-mail 中重新啟用
+            // if($data['template'] == 'D14'){ return false; }
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_DARK_USER')]);
@@ -122,6 +122,9 @@ class HelperService {
                         break;
                     case 'D7':
                         $m->subject('【無光晚餐】你需要先知道的注意事項 8 Tips for Dining in the Dark');
+                        break;
+                    case 'undone':
+                        $m->subject('【無光晚餐】未完成訂單信件');
                         break;
                 }
                     
@@ -180,12 +183,14 @@ class HelperService {
                     $this->sent_single_sms($smsData['phone'],"【無光晚餐】訂位確認信已寄出\n若未收到，請至垃圾信匣或促銷內容尋找。\n\n加入行事曆：".$url);
                     break;
                 case 'D7':
-                    $this->sent_single_sms($smsData['phone'],"【無光晚餐】\n\n行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找。\n\n期待在黑暗中相見\n\n無光晚餐團隊");
+                    // $this->sent_single_sms($smsData['phone'],"【無光晚餐】\n\n行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找。\n\n期待在黑暗中相見\n\n無光晚餐團隊");
+                    $this->sent_single_sms($smsData['phone'],"【無光晚餐預約】嘿，準備好迎接黑暗了嗎？見面之前，請記得到信箱檢查行前提醒信。另提醒為防疫等需求，請依訂位確認信中告知時間抵達。期待與你在無光中相見。");
                     break;
                 case 'DX':
                     // $this->sent_single_sms($smsData['phone'],"【無光晚餐】\n\n您好，來訊提醒您今日有預約無光晚餐。\n\n期待在黑暗中相見\n\n無光晚餐團隊");
                     // $this->sent_single_sms($smsData['phone'],"【無光晚餐】嘿，準備好迎接黑暗了嗎？來訊提醒您今日有預約無光晚餐。請依訂位確認信中告知時間抵達，「遲到」將無法入場。期待與你在無光中相見。");
-                    $this->sent_single_sms($smsData['phone'],"【無光晚餐】嘿，準備好迎接黑暗了嗎？來訊提醒您今日有預約無光晚餐。請依訂位確認信中告知時間抵達，「遲到」將無法入場。若有緊急狀況，請主動致電 02-87739661 與我們聯繫。期待與你在無光中相見。");
+                    // $this->sent_single_sms($smsData['phone'],"【無光晚餐】嘿，準備好迎接黑暗了嗎？來訊提醒您今日有預約無光晚餐。請依訂位確認信中告知時間抵達，「遲到」將無法入場。若有緊急狀況，請主動致電 02-87739661 與我們聯繫。期待與你在無光中相見。");
+                    $this->sent_single_sms($smsData['phone'],"【無光晚餐】嘿，準備好迎接黑暗了嗎？來訊提醒您今日有預約無光晚餐。請依訂位確認信中告知時間抵達，「遲到」將無法入場。若有緊急狀況，請主動致電02-87739661與我們聯繫。期待與你在無光中相見。");
                     break;
 
 
@@ -227,6 +232,12 @@ class HelperService {
                         break;
                     case 'D7.flight':
                         $m->subject('【落日轉運站】旅程即將啟程，行前您需要知道的九件事');
+                        break;
+                    case 'D10':
+                        $m->subject('【落日轉運站】任性出逃信');
+                        break;
+                    case 'undone':
+                        $m->subject('【落日轉運站】未完成訂單信件');
                         break;
                 }
                     

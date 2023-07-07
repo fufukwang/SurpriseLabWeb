@@ -89,7 +89,6 @@
                         
                             <div style="text-align: center;"><span style="font-size:14px"><span style="color:#FFFFFF">您預約的落日轉運站</span><br>
 <br>
-
 <?php
     $pro = \DB::table('terminal_pro_order')->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('terminal_pro_order.order_id',$id)->where('ticket_type','train')->first();
     if($pro){
@@ -106,9 +105,6 @@
 <span style="color:#FFFFFF">將於 {{ \Carbon\Carbon::parse($pro->day)->format('m/d') }} {{ substr($pro->rang_start, 0,5) }}-{{ substr($pro->rang_end, 0,5) }} 啟動<br>
 <br>
 <?php } ?>
-
-
-
 非常期待各位的前來</span></span></div>
 
                         </td>
@@ -134,7 +130,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/f0a6c599-f382-e77e-78cf-ebae4a209f96.jpg" width="564" style="max-width:2251px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/dbdc5b6a-fb47-2a87-f143-e5161dbe9038.jpg" width="564" style="max-width:2251px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -152,7 +148,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/ded9b80c-5e00-0d7b-3466-dc3e501c39ee.jpg" width="564" style="max-width:2251px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://mcusercontent.com/703b108a2ad1da1887fe106f9/_compresseds/1dfad042-e5a1-62a3-83fc-3eb6735372ef.jpg" width="564" style="max-width:2251px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -312,7 +308,7 @@
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            <span style="font-size:10px"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="color:#808080"><em>Copyright © 2022 surpriselab, All rights reserved.</em><br>
+                            <span style="font-size:10px"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="color:#808080"><em>Copyright © {{ date('Y') }} surpriselab, All rights reserved.</em><br>
 <br>
 <strong>Our mailing address is:</strong><br>
 <a href="mailto:terminal@surpriselab.com.tw" target="_blank">terminal@surpriselab.com.tw</a><br>
