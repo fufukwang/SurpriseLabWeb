@@ -28,7 +28,7 @@ class Dark3Task extends Command
      *
      * @var string
      */
-    protected $description = 'team send 5 mail in 21,14,10,5,1 . check every hour.';
+    protected $description = 'dark3 task';
 
 
     /**
