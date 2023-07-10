@@ -124,7 +124,7 @@ class HelperService {
                         $m->subject('【無光晚餐】你需要先知道的注意事項 8 Tips for Dining in the Dark');
                         break;
                     case 'undone':
-                        $m->subject('【無光晚餐】未完成訂單信件');
+                        $m->subject('【無光晚餐】慶祝重要日子，還差一步....你完成下訂了嗎？');
                         break;
                 }
                     
@@ -234,10 +234,10 @@ class HelperService {
                         $m->subject('【落日轉運站】旅程即將啟程，行前您需要知道的九件事');
                         break;
                     case 'D10':
-                        $m->subject('【落日轉運站】任性出逃信');
+                        $m->subject('【落日轉運站】準備好了嗎？踏上通往落日的任性之旅');
                         break;
                     case 'undone':
-                        $m->subject('【落日轉運站】未完成訂單信件');
+                        $m->subject('【落日轉運站】即將啟航…你的車票和機票完成下訂了嗎？');
                         break;
                 }
                     
