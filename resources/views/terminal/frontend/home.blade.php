@@ -378,7 +378,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 04 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_2.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_2.jpg" data-src-retina="/terminalAssets/images/main/img_flight_2.jpg" alt="無光飛航：空服員">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_2.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_2.jpg?date=0713" data-src-retina="/terminalAssets/images/main/img_flight_2.jpg?date=0713" alt="無光飛航：空服員">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
@@ -388,7 +388,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 05 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_3.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_3.jpg" data-src-retina="/terminalAssets/images/main/img_flight_3.jpg" alt="無光飛航：空服員與乘客">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_3.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_3.jpg?date=0713" data-src-retina="/terminalAssets/images/main/img_flight_3.jpg?date=0713" alt="無光飛航：空服員與乘客">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
@@ -398,7 +398,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 06 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_4.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_4.jpg" data-src-retina="/terminalAssets/images/main/img_flight_4.jpg" alt="無光飛航：安全須知卡">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_4.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_4.jpg?date=0713" data-src-retina="/terminalAssets/images/main/img_flight_4.jpg?date=0713" alt="無光飛航：安全須知卡">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
