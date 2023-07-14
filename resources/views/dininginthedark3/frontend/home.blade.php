@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=0627"/>
+    <link rel="stylesheet" href="css/style.css?date=0714"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -790,7 +790,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
 
                         <!-- History Menu -->
-                        <div class="section sec-menu" id="Menu" style="display:none;">
+                        <div class="section sec-menu" id="Menu">
 
                             <div class="section-header">
                                 <div class="section-title">
@@ -835,46 +835,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     <div class="content-inner--slideshow-cover">
                                                         <div class="owl-carousel owl-theme" id="owl-01">
 
-                                                            <!-- 1-1 -->
+                                                            <!-- 0 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-1.png" data-src="img/home/menu/no1+2/menu-1-1.png" data-src-retina="img/home/menu/no1+2/menu-1-1.png" alt="1-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-1-mobile.png" data-src="img/home/menu/no1+2/menu-1-1-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-1-mobile.png" alt="1-1">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1%2B2/0.png" data-src="img/home/menu/no1%2B2/0.png" data-src-retina="img/home/menu/no1%2B2/0.png" alt="1號菜單，2號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1%2B2/0-m.png" data-src="img/home/menu/no1%2B2/0-m.png" data-src-retina="img/home/menu/no1%2B2/0-m.png" alt="1號菜單，2號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 1-2 -->
+                                                            <!-- 1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-2.png" data-src="img/home/menu/no1+2/menu-1-2.png" data-src-retina="img/home/menu/no1+2/menu-1-2.png" alt="1-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-2-mobile.png" data-src="img/home/menu/no1+2/menu-1-2-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-2-mobile.png" alt="1-2">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1%2B2/1.png" data-src="img/home/menu/no1%2B2/1.png" data-src-retina="img/home/menu/no1%2B2/1.png" alt="1號菜單，2號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1%2B2/1-m.png" data-src="img/home/menu/no1%2B2/1-m.png" data-src-retina="img/home/menu/no1%2B2/1-m.png" alt="1號菜單，2號菜單">
+                                                                </figure>
+                                                            </div>
+                                                            
+                                                            <!-- 2 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1%2B2/2.png" data-src="img/home/menu/no1%2B2/2.png" data-src-retina="img/home/menu/no1%2B2/2.png" alt="1號菜單，2號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1%2B2/2-m.png" data-src="img/home/menu/no1%2B2/2-m.png" data-src-retina="img/home/menu/no1%2B2/2-m.png" alt="1號菜單，2號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 1-3 -->
+                                                            <!-- 3 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-3.png" data-src="img/home/menu/no1+2/menu-1-3.png" data-src-retina="img/home/menu/no1+2/menu-1-3.png" alt="1-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-3-mobile.png" data-src="img/home/menu/no1+2/menu-1-3-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-3-mobile.png" alt="1-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1%2B2/3.png" data-src="img/home/menu/no1%2B2/3.png" data-src-retina="img/home/menu/no1%2B2/3.png" alt="1號菜單，2號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1%2B2/3-m.png" data-src="img/home/menu/no1%2B2/3-m.png" data-src-retina="img/home/menu/no1%2B2/3-m.png" alt="1號菜單，2號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 1-4 -->
+                                                            <!-- 4 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-4.png" data-src="img/home/menu/no1+2/menu-1-4.png" data-src-retina="img/home/menu/no1+2/menu-1-4.png" alt="1-4">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-4-mobile.png" data-src="img/home/menu/no1+2/menu-1-4-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-4-mobile.png" alt="1-4">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1%2B2/4.png" data-src="img/home/menu/no1%2B2/4.png" data-src-retina="img/home/menu/no1%2B2/4.png" alt="1號菜單，2號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1%2B2/4-m.png" data-src="img/home/menu/no1%2B2/4-m.png" data-src-retina="img/home/menu/no1%2B2/4-m.png" alt="1號菜單，2號菜單">
                                                                 </figure>
                                                             </div>
-
-                                                            <!-- 1-5 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1+2/menu-1-5.png" data-src="img/home/menu/no1+2/menu-1-5.png" data-src-retina="img/home/menu/no1+2/menu-1-5.png" alt="1-5">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1+2/menu-1-5-mobile.png" data-src="img/home/menu/no1+2/menu-1-5-mobile.png" data-src-retina="img/home/menu/no1+2/menu-1-5-mobile.png" alt="1-5">
-                                                                </figure>
-                                                            </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -888,43 +887,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     <div class="content-inner--slideshow-cover">
                                                         <div class="owl-carousel owl-theme" id="owl-03">
 
-                                                            <!-- 3-1 -->
+                                                            <!-- 0 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-1.png" data-src="img/home/menu/no3/menu-3-1.png" data-src-retina="img/home/menu/no3/menu-3-1.png" alt="3-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-1-mobile.png" data-src="img/home/menu/no3/menu-3-1-mobile.png" data-src-retina="img/home/menu/no3/menu-3-1-mobile.png" alt="3-1">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/0.png" data-src="img/home/menu/no3/0.png" data-src-retina="img/home/menu/no3/0.png" alt="3號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/0-m.png" data-src="img/home/menu/no3/0-m.png" data-src-retina="img/home/menu/no3/0-m.png" alt="3號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 3-2 -->
+                                                            <!-- 1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-2.png" data-src="img/home/menu/no3/menu-3-2.png" data-src-retina="img/home/menu/no3/menu-3-2.png" alt="3-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-2-mobile.png" data-src="img/home/menu/no3/menu-3-2-mobile.png" data-src-retina="img/home/menu/no3/menu-3-2-mobile.png" alt="3-2">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/1.png" data-src="img/home/menu/no3/1.png" data-src-retina="img/home/menu/no3/1.png" alt="3號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/1-m.png" data-src="img/home/menu/no3/1-m.png" data-src-retina="img/home/menu/no3/1-m.png" alt="3號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 3-3 -->
+                                                            <!-- 2 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-3.png" data-src="img/home/menu/no3/menu-3-3.png" data-src-retina="img/home/menu/no3/menu-3-3.png" alt="3-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-3-mobile.png" data-src="img/home/menu/no3/menu-3-3-mobile.png" data-src-retina="img/home/menu/no3/menu-3-3-mobile.png" alt="3-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/2.png" data-src="img/home/menu/no3/2.png" data-src-retina="img/home/menu/no3/2.png" alt="3號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/2-m.png" data-src="img/home/menu/no3/2-m.png" data-src-retina="img/home/menu/no3/2-m.png" alt="3號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 3-4 -->
+                                                            <!-- 3 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-4.png" data-src="img/home/menu/no3/menu-3-4.png" data-src-retina="img/home/menu/no3/menu-3-4.png" alt="3-4">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-4-mobile.png" data-src="img/home/menu/no3/menu-3-4-mobile.png" data-src-retina="img/home/menu/no3/menu-3-4-mobile.png" alt="3-4">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/3.png" data-src="img/home/menu/no3/3.png" data-src-retina="img/home/menu/no3/3.png" alt="3號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/3-m.png" data-src="img/home/menu/no3/3-m.png" data-src-retina="img/home/menu/no3/3-m.png" alt="3號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 3-5 -->
+                                                            <!-- 4 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/menu-3-5.png" data-src="img/home/menu/no3/menu-3-5.png" data-src-retina="img/home/menu/no3/menu-3-5.png" alt="3-5">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/menu-3-5-mobile.png" data-src="img/home/menu/no3/menu-3-5-mobile.png" data-src-retina="img/home/menu/no3/menu-3-5-mobile.png" alt="3-5">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no3/4.png" data-src="img/home/menu/no3/4.png" data-src-retina="img/home/menu/no3/4.png" alt="3號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no3/4-m.png" data-src="img/home/menu/no3/4-m.png" data-src-retina="img/home/menu/no3/4-m.png" alt="3號菜單">
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -940,43 +939,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     <div class="content-inner--slideshow-cover">
                                                         <div class="owl-carousel owl-theme" id="owl-04">
 
-                                                            <!-- 4-1 -->
+                                                            <!-- 0 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-1.png" data-src="img/home/menu/no4/menu-4-1.png" data-src-retina="img/home/menu/no4/menu-4-1.png" alt="4-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-1-mobile.png" data-src="img/home/menu/no4/menu-4-1-mobile.png" data-src-retina="img/home/menu/no4/menu-4-1-mobile.png" alt="4-1">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/0.png" data-src="img/home/menu/no4/0.png" data-src-retina="img/home/menu/no4/0.png" alt="4號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/0-m.png" data-src="img/home/menu/no4/0-m.png" data-src-retina="img/home/menu/no4/0-m.png" alt="4號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 4-2 -->
+                                                            <!-- 1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-2.png" data-src="img/home/menu/no4/menu-4-2.png" data-src-retina="img/home/menu/no4/menu-4-2.png" alt="4-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-2-mobile.png" data-src="img/home/menu/no4/menu-4-2-mobile.png" data-src-retina="img/home/menu/no4/menu-4-2-mobile.png" alt="4-2">
-                                                                </figure>
-                                                            </div>
-                                                            
-                                                            <!-- 4-3 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-3.png" data-src="img/home/menu/no4/menu-4-3.png" data-src-retina="img/home/menu/no4/menu-4-3.png" alt="4-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-3-mobile.png" data-src="img/home/menu/no4/menu-4-3-mobile.png" data-src-retina="img/home/menu/no4/menu-4-3-mobile.png" alt="4-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/1.png" data-src="img/home/menu/no4/1.png" data-src-retina="img/home/menu/no4/1.png" alt="4號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/1-m.png" data-src="img/home/menu/no4/1-m.png" data-src-retina="img/home/menu/no4/1-m.png" alt="4號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 4-4 -->
+                                                            <!-- 2 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-4.png" data-src="img/home/menu/no4/menu-4-4.png" data-src-retina="img/home/menu/no4/menu-4-4.png" alt="4-4">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-4-mobile.png" data-src="img/home/menu/no4/menu-4-4-mobile.png" data-src-retina="img/home/menu/no4/menu-4-4-mobile.png" alt="4-4">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/2.png" data-src="img/home/menu/no4/2.png" data-src-retina="img/home/menu/no4/2.png" alt="4號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/2-m.png" data-src="img/home/menu/no4/2-m.png" data-src-retina="img/home/menu/no4/2-m.png" alt="4號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 4-5 -->
+                                                            <!-- 3 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/menu-4-5.png" data-src="img/home/menu/no4/menu-4-5.png" data-src-retina="img/home/menu/no4/menu-4-5.png" alt="4-5">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/menu-4-5-mobile.png" data-src="img/home/menu/no4/menu-4-5-mobile.png" data-src-retina="img/home/menu/no4/menu-4-5-mobile.png" alt="4-5">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/3.png" data-src="img/home/menu/no4/3.png" data-src-retina="img/home/menu/no4/3.png" alt="4號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/3-m.png" data-src="img/home/menu/no4/3-m.png" data-src-retina="img/home/menu/no4/3-m.png" alt="4號菜單">
+                                                                </figure>
+                                                            </div>
+
+                                                            <!-- 4 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no4/4.png" data-src="img/home/menu/no4/4.png" data-src-retina="img/home/menu/no4/4.png" alt="4號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no4/4-m.png" data-src="img/home/menu/no4/4-m.png" data-src-retina="img/home/menu/no4/4-m.png" alt="4號菜單">
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -992,43 +991,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     <div class="content-inner--slideshow-cover">
                                                         <div class="owl-carousel owl-theme" id="owl-05">
 
-                                                            <!-- 5-1 -->
+                                                            <!-- 0 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-1.png" data-src="img/home/menu/no5/menu-5-1.png" data-src-retina="img/home/menu/no5/menu-5-1.png" alt="5-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-1-mobile.png" data-src="img/home/menu/no5/menu-5-1-mobile.png" data-src-retina="img/home/menu/no5/menu-5-1-mobile.png" alt="5-1">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/0.png" data-src="img/home/menu/no5/0.png" data-src-retina="img/home/menu/no5/0.png" alt="5號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/0-m.png" data-src="img/home/menu/no5/0-m.png" data-src-retina="img/home/menu/no5/0-m.png" alt="5號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 5-2 -->
+                                                            <!-- 1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-2.png" data-src="img/home/menu/no5/menu-5-2.png" data-src-retina="img/home/menu/no5/menu-5-2.png" alt="5-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-2-mobile.png" data-src="img/home/menu/no5/menu-5-2-mobile.png" data-src-retina="img/home/menu/no5/menu-5-2-mobile.png" alt="5-2">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/1.png" data-src="img/home/menu/no5/1.png" data-src-retina="img/home/menu/no5/1.png" alt="5號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/1-m.png" data-src="img/home/menu/no5/1-m.png" data-src-retina="img/home/menu/no5/1-m.png" alt="5號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 5-3 -->
+                                                            <!-- 2 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-3.png" data-src="img/home/menu/no5/menu-5-3.png" data-src-retina="img/home/menu/no5/menu-5-3.png" alt="5-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-3-mobile.png" data-src="img/home/menu/no5/menu-5-3-mobile.png" data-src-retina="img/home/menu/no5/menu-5-3-mobile.png" alt="5-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/2.png" data-src="img/home/menu/no5/2.png" data-src-retina="img/home/menu/no5/2.png" alt="5號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/2-m.png" data-src="img/home/menu/no5/2-m.png" data-src-retina="img/home/menu/no5/2-m.png" alt="5號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 5-4 -->
+                                                            <!-- 3 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-4.png" data-src="img/home/menu/no5/menu-5-4.png" data-src-retina="img/home/menu/no5/menu-5-4.png" alt="5-4">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-4-mobile.png" data-src="img/home/menu/no5/menu-5-4-mobile.png" data-src-retina="img/home/menu/no5/menu-5-4-mobile.png" alt="5-4">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/3.png" data-src="img/home/menu/no5/3.png" data-src-retina="img/home/menu/no5/3.png" alt="5號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/3-m.png" data-src="img/home/menu/no5/3-m.png" data-src-retina="img/home/menu/no5/3-m.png" alt="5號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 5-5 -->
+                                                            <!-- 4 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/menu-5-5.png" data-src="img/home/menu/no5/menu-5-5.png" data-src-retina="img/home/menu/no5/menu-5-5.png" alt="5-5">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/menu-5-5-mobile.png" data-src="img/home/menu/no5/menu-5-5-mobile.png" data-src-retina="img/home/menu/no5/menu-5-5-mobile.png" alt="5-5">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no5/4.png" data-src="img/home/menu/no5/4.png" data-src-retina="img/home/menu/no5/4.png" alt="5號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no5/4-m.png" data-src="img/home/menu/no5/4-m.png" data-src-retina="img/home/menu/no5/4-m.png" alt="5號菜單">
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -1044,43 +1043,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     <div class="content-inner--slideshow-cover">
                                                         <div class="owl-carousel owl-theme" id="owl-06">
 
-                                                            <!-- 6-1 -->
+                                                            <!-- 0 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-1.png" data-src="img/home/menu/no6/menu-6-1.png" data-src-retina="img/home/menu/no6/menu-6-1.png" alt="6-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-1-mobile.png" data-src="img/home/menu/no6/menu-6-1-mobile.png" data-src-retina="img/home/menu/no6/menu-6-1-mobile.png" alt="6-1">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/0.png" data-src="img/home/menu/no6/0.png" data-src-retina="img/home/menu/no6/0.png" alt="6號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/0-m.png" data-src="img/home/menu/no6/0-m.png" data-src-retina="img/home/menu/no6/0-m.png" alt="6號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 6-2 -->
+                                                            <!-- 1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-2.png" data-src="img/home/menu/no6/menu-6-2.png" data-src-retina="img/home/menu/no6/menu-6-2.png" alt="6-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-2-mobile.png" data-src="img/home/menu/no6/menu-6-2-mobile.png" data-src-retina="img/home/menu/no6/menu-6-2-mobile.png" alt="6-2">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/1.png" data-src="img/home/menu/no6/1.png" data-src-retina="img/home/menu/no6/1.png" alt="6號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/1-m.png" data-src="img/home/menu/no6/1-m.png" data-src-retina="img/home/menu/no6/1-m.png" alt="6號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 6-3 -->
+                                                            <!-- 2 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-3.png" data-src="img/home/menu/no6/menu-6-3.png" data-src-retina="img/home/menu/no6/menu-6-3.png" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-3-mobile.png" data-src="img/home/menu/no6/menu-6-3-mobile.png" data-src-retina="img/home/menu/no6/menu-6-3-mobile.png" alt="6-3">
-                                                                </figure>
-                                                            </div>
-                                                            
-                                                            <!-- 6-4 -->
-                                                            <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-4.png" data-src="img/home/menu/no6/menu-6-4.png" data-src-retina="img/home/menu/no6/menu-6-4.png" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-4-mobile.png" data-src="img/home/menu/no6/menu-6-4-mobile.png" data-src-retina="img/home/menu/no6/menu-6-4-mobile.png" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/2.png" data-src="img/home/menu/no6/2.png" data-src-retina="img/home/menu/no6/2.png" alt="6號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/2-m.png" data-src="img/home/menu/no6/2-m.png" data-src-retina="img/home/menu/no6/2-m.png" alt="6號菜單">
                                                                 </figure>
                                                             </div>
 
-                                                            <!-- 6-5 -->
+                                                            <!-- 3 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/menu-6-5.png" data-src="img/home/menu/no6/menu-6-5.png" data-src-retina="img/home/menu/no6/menu-6-5.png" alt="6-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/menu-6-5-mobile.png" data-src="img/home/menu/no6/menu-6-5-mobile.png" data-src-retina="img/home/menu/no6/menu-6-5-mobile.png" alt="6-3">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/3.png" data-src="img/home/menu/no6/3.png" data-src-retina="img/home/menu/no6/3.png" alt="6號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/3-m.png" data-src="img/home/menu/no6/3-m.png" data-src-retina="img/home/menu/no6/3-m.png" alt="6號菜單">
+                                                                </figure>
+                                                            </div>
+
+                                                            <!-- 4 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no6/4.png" data-src="img/home/menu/no6/4.png" data-src-retina="img/home/menu/no6/4.png" alt="6號菜單">
+                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no6/4-m.png" data-src="img/home/menu/no6/4-m.png" data-src-retina="img/home/menu/no6/4-m.png" alt="6號菜單">
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -1122,6 +1121,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 </div>
                                             </div>
                                         </div-->--}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 無光故事館 -->
+                        <div class="section sec-story" id="story">
+                            
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>無光故事館</h3>
+                                    <h4>Story</h4>
+                                </div>
+                            </div>
+
+                            <div class="story-slideshow">
+                                <div class="content-inner--slideshow-cover">
+                                    <div class="owl-carousel owl-theme" id="owl-story">
+
+                                        <!-- 1 -->
+                                        <div class="item">
+                                            <figure class="slideshow-card">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/d0cv1fs9GS0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </figure>
+                                            <div class="story-intro">
+                                                <div class="story-title">【情侶篇】</div>
+                                                <div class="story-p">當火柴劃破黑暗，將點亮世上最珍貴的事，猜猜他們看見了什麼？</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 2 -->
+                                        <div class="item">
+                                            <figure class="slideshow-card">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sRvLfsum-Do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </figure>
+                                            <div class="story-intro">
+                                                <div class="story-title">【母子篇】</div>
+                                                <div class="story-p">在吐真劑的催化下，這對母子會在黑暗中說些什麼悄悄話呢？</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

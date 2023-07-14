@@ -1491,37 +1491,50 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  text-decoration: underline;
-  color: #8C5FB4;
+  color: #fff;
   background-color: transparent;
   border: none;
   padding: 8px 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 4px;
+  color: #fff;
+  background: rgba(160, 159, 159, 0.4);
+  padding: 0;
 }
 
 @media screen and (max-width: 1199.98px) {
   #Ticket .sec-menu .menu-wrap .menu-tab-wrap .tab-header .tab-controls .nav-item .nav-link {
     font-size: 14px;
-    line-height: 1.42;
-    padding: 6px 14px;
   }
 }
 
 #Ticket .sec-menu .menu-wrap .menu-tab-wrap .tab-header .tab-controls .nav-item .nav-link.active {
-  text-decoration: none;
   color: #CCCCCC;
   font-size: 30px;
   font-weight: bold;
+  width: auto;
+  background: none;
+  line-height: 40px;
+  padding: 0;
+  margin: 0 14px;
 }
 
 #Ticket .sec-menu .menu-wrap .menu-tab-wrap .tab-header .tab-controls .nav-item .nav-link:hover {
   cursor: pointer;
-  color: #CCCCCC;
+  background: rgba(160, 159, 159, 1);
 }
 
 #Ticket .sec-menu .menu-wrap .menu-tab-wrap .tab-header .tab-controls .nav-item .nav-link:focus {
   outline: none;
+}
+
+#Ticket .sec-menu .menu-wrap .menu-tab-wrap .tab-header .tab-controls .nav-item .nav-link.active:hover {
+  background: none;
 }
 
 #Ticket .sec-menu .menu-wrap .menu-tab-wrap .tab-content > .tab-pane {
@@ -2895,4 +2908,123 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   #Experience .feature-item {
     padding-right: 7px;
   }
+}
+
+#story figure {
+  width: 100%;
+  height: 0;
+  padding-bottom: 65%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+#story figure iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#story .story-intro {
+  text-align: center;
+}
+
+#story .story-title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+#story .story-p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+#story .owl-dots {
+  width: 100%;
+  line-height: 1;
+  margin-top: 9px;
+}
+
+#story .owl-dots .owl-dot span {
+  width: 6px;
+  height: 6px;
+  margin: 3px;
+  background-color: #CCCCCC;
+  opacity: 0.5;
+}
+
+#story .owl-dots .owl-dot.active span {
+  background-color: #CCCCCC;
+  opacity: 1;
+}
+
+@media (max-width: 1199.98px) {
+  #story {
+    padding: 60px 20px;
+  }
+}
+
+#story .owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc((100vw - 120px) / 2.07 + 60px);
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30px);
+          transform: translate(-50%, -30px);
+  z-index: 1;
+  margin: 0;
+}
+
+@media screen and (max-width: 1199.98px) {
+  #story .owl-nav {
+    display: none;
+  }
+}
+
+#story .owl-prev,
+#story .owl-next {
+  width: 60px;
+  margin: 0;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+#story .owl-prev.disabled,
+#story .owl-next.disabled {
+  opacity: 0 !important;
+}
+
+#story .owl-prev:hover,
+#story .owl-next:hover {
+  opacity: 1;
+  background: none;
+}
+
+#story .owl-prev:focus,
+#story .owl-next:focus {
+  outline: none;
+}
+
+#story .owl-prev img,
+#story .owl-next img {
+  width: 48px;
+  height: 48px;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

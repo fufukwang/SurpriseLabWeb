@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?date=0218">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0627">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0714">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -101,7 +101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <img src="/terminalAssets/images/main/timetable.png" alt="">
                                 </div>
                                 <div class="marquee">
-                                    <p>高鐵離站倒數中...</p>
+                                    <p>高雄離站倒數中...</p>
                                 </div>
                                 <div class="number" data-end="2023-09-03 24:00:00">
                                     <div class="digitalitem day-1 num-0" id="day-1">
@@ -173,30 +173,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="img-wrap break-grid">
                                 <img class="img-fluid" src="/terminalAssets/images/main/img_about.png" alt="About">
                             </div>
-<<<<<<< HEAD
-                            <div class="prograssbar">
-=======
-                            <div class="prograssbar" style="display:none;">
->>>>>>> master
+                            
+                            <div class="prograssbar" style="color: #8be664; display:none;">
                                 <div class="wrap">
                                     <div class="bar" style="width:80%;"></div>
                                 </div>
                                 <p>剩餘座位數<span>20%</span></p>
                             </div>
-                            <div class="text-wrap">
-                                <!-- A Test -->
-                                <p class="color-y200">
-                                驚喜製造首度南下高雄，打造突破過往製作規格的全新力作《落日轉運站》，並以交通工具為題推出兩項作品：分別為微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《無光飛航 FLIGHT》，歡迎旅客在此自由轉乘，前往想去的目的地。
-                                </p>
 
-                                <!-- B Test -->
-                                <!-- <p class="color-y200">
-                                    乘著飛機，翱翔天際<br/>
-                                    搭上列車，看遍山海<br/><br/>
-                                    在一切終將結束的落日之際<br/>
-                                    你想透過什麼方式，前往終點？<br/><br/>
-                                    落日轉運站，期待你的搭乘
-                                </p> -->
+                            <div class="prograssbar">
+                                <div class="text-wrap">
+                                    <!-- A Test -->
+                                    <p class="color-y200">
+                                    驚喜製造首度南下高雄，打造突破過往製作規格的全新力作《落日轉運站》，並以交通工具為題推出兩項作品：分別為微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT 無光飛航》，歡迎旅客在此自由轉乘，前往想去的目的地。
+                                    </p>
+
+                                    <!-- B Test -->
+                                    <!-- <p class="color-y200">
+                                        乘著飛機，翱翔天際<br/>
+                                        搭上列車，看遍山海<br/><br/>
+                                        在一切終將結束的落日之際<br/>
+                                        你想透過什麼方式，前往終點？<br/><br/>
+                                        落日轉運站，期待你的搭乘
+                                    </p> -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -365,17 +365,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-flight">
 
-                                            <!-- 02 -->
-                                            <div class="item">
-                                                <figure class="slideshow-video">
-                                                    <iframe width="324" height="576" src="https://www.youtube.com/embed/zMXs50QmPZE" title="《FLIGHT 無光飛航》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                                    <!-- <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg" alt="無光飛航">
-                                                    <figcaption>
-                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
-                                                    </figcaption> -->
-                                                </figure>
-                                            </div>
-
                                             <!-- 03 -->
                                             <!-- <div class="item">
                                                 <figure class="slideshow-card">
@@ -389,19 +378,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 04 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_2.jpg" data-src="/terminalAssets/images/main/img_flight_2.jpg" data-src-retina="/terminalAssets/images/main/img_flight_2.jpg" alt="無光飛航：空服員">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_2.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_2.jpg" data-src-retina="/terminalAssets/images/main/img_flight_2.jpg" alt="無光飛航：空服員">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-
-
                                             <!-- 05 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_3.jpg" data-src="/terminalAssets/images/main/img_flight_3.jpg" data-src-retina="/terminalAssets/images/main/img_flight_3.jpg" alt="無光飛航：空服員與乘客">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_3.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_3.jpg" data-src-retina="/terminalAssets/images/main/img_flight_3.jpg" alt="無光飛航：空服員與乘客">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
@@ -411,7 +398,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 06 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_4.jpg" data-src="/terminalAssets/images/main/img_flight_4.jpg" data-src-retina="/terminalAssets/images/main/img_flight_4.jpg" alt="無光飛航：安全須知卡">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_4.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_4.jpg" data-src-retina="/terminalAssets/images/main/img_flight_4.jpg" alt="無光飛航：安全須知卡">
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
@@ -436,6 +423,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <!-- 02 -->
+                                            <div class="item">
+                                                <figure class="slideshow-video">
+                                                    <iframe width="324" height="576" src="https://www.youtube.com/embed/zMXs50QmPZE" title="《FLIGHT 無光飛航》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                    <!-- <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg" alt="無光飛航">
+                                                    <figcaption>
+                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
+                                                    </figcaption> -->
                                                 </figure>
                                             </div>
 
@@ -936,7 +934,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </a>
                         <div class="discount-intro">
                             <div class="discount-title">《落日轉運站》獨家雙作品套票</div>
-                            <div class="discount-p">我們準備了兩個作品的獨家優惠套票，給特別驅車前往落日轉運站的你購買套票搶先體驗《微醺列車》及《無光飛航》，體驗時間可分開選擇。</br>偷偷推薦你，可以先登機再搭列車唷！祝你旅途愉快！
+                            <div class="discount-p">
+                                我們準備兩個作品的獨家優惠套票，給特別驅車前往落日轉運站的你，<br />
+                                購買套票搶先體驗《微醺列車》及《FLIGHT》，體驗時間可分開選擇。<br />
+                                偷偷推薦你，歡迎先體驗FLIGHT再搭上微醺列車，祝你旅途愉快！
                             </div>
                         </div>
                     </div>
@@ -1005,7 +1006,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <!-- 05 -->
                     <div class="item">
-                        <a href="https://www.kkday.com/zh-tw/product/136530" target="_blank">
+                        <a href="https://www.kkday.com/zh-tw/product/134229-kaohsiung-pier-2-immersive-experience-exhibition" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount04.png" data-src="/terminalAssets/images/main/discount04.png" data-src-retina="/terminalAssets/images/main/discount04.png" alt="KKDay">
                             </figure>
@@ -1412,7 +1413,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">重要訊息</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">熱門問題</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -1490,7 +1491,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn activity-btn" data-bs-dismiss="modal">CLOSE</button>
+                    <!-- <button type="button" class="btn activity-btn" data-bs-dismiss="modal">CLOSE</button> -->
+                    <a class="btn activity-btn" href="https://www.surpriselab.com.tw/terminal/rules">更多資訊</a>
                 </div>
             </div>
         </div>

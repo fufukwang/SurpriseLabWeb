@@ -1201,11 +1201,11 @@ a {
   }
 }
 .prograssbar p {
-  margin-top: 10px;
   text-align: center;
-  color: #8be664;
   font-size: 14px;
   letter-spacing: 2px;
+  max-width: 512px;
+  margin: 10px auto 0;
 }
 .prograssbar span{
   font-size: 18px;
