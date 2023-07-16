@@ -684,8 +684,12 @@ Route::group(['middleware' => ['web']], function () {
     });
     // terminal 落日轉運站
     Route::group(['prefix' => 'terminal'], function(){
-        Route::get('/',function(){ return view('terminal.frontend.home'); });
-        Route::get('/index.html',function(){ return view('terminal.frontend.home'); });
+        // Route::get('/',function(){ return view('terminal.frontend.home'); });
+        // Route::get('/index.html',function(){ return view('terminal.frontend.home'); });
+
+        Route::get('/', 'terminal\FrontController@getHome');
+        Route::get('/index.html', 'terminal\FrontController@getHome');
+
         Route::get('rules',function(){ return view('terminal.frontend.rules'); });
         // 劃位
         Route::get('booking_now',function(){ return view('terminal.frontend.booking_now'); });

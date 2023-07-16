@@ -26,13 +26,26 @@ class FrontController extends WebController
     {
         DB::enableQueryLog();
     }
-    
+    // 訂位葉面
     public function getOrderPage(Request $request){
         try{
             $train = pro::where('open',1)->where('ticket_type','train')->select(DB::raw("SUM(sites-{$this->oquery}) AS Count"))->first();
             $flight = pro::where('open',1)->where('ticket_type','flight')->select(DB::raw("SUM(sites-{$this->oquery}) AS Count"))->first();
             $boat = pro::where('open',1)->where('ticket_type','boat')->select(DB::raw("SUM(sites-{$this->oquery}) AS Count"))->first();
             return view('terminal.frontend.booking',compact('train','flight','boat'));
+        } catch (Exception $exception) {
+            Log::error($exception);
+            abort(404);
+        }
+    }
+    // 首頁
+    public function getHome(Request $request){
+        try{
+            $sites = pro::where('open',1)->sum('sites');
+            $pople = order::whereIn('pay_status',['已付款(部分退款)','已付款'])->sum('pople');
+            $process = round($pople / $sites * 100);
+            $remaining = 100 - $process;
+            return view('terminal.frontend.home',compact('process','remaining'));
         } catch (Exception $exception) {
             Log::error($exception);
             abort(404);

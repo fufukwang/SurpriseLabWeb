@@ -154,14 +154,19 @@ $(document).ready(function () {
             if(enableDays.length>0){
                 minD = enableDays[0];
             }
+            var maxD;
+            const date = new Date();
+            const newDate = addMonths(date, 4);
+            maxD = new Date(newDate.getFullYear(), newDate.getMonth()-1, lastday(newDate.getFullYear(),newDate.getMonth()-1));
+// console.log(maxD);
             booking_date.datepicker("destroy");
             booking_date.datepicker({
                 minDate: minD,// minD,
-                maxDate: '+3m',// new Date(2022, 1, 28),
+                maxDate: maxD,//'+3m',// new Date(2022, 1, 28),
                 dateFormat: 'yy-mm-dd', 
                 beforeShowDay: enableAllTheseDays,
                 onSelect: function(dateText) {
-                    window.location.href = '/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar&day='+dateText;
+                    window.location.href = '/dininginthedark3/booking_pay.html?day='+dateText;
                 }
             });
             /*
@@ -213,3 +218,10 @@ $(document).ready(function () {
 
     indexViewDatepicker()
 });
+
+function addMonths(date, months) {
+  date.setMonth(date.getMonth() + months);
+
+  return date;
+}
+var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
