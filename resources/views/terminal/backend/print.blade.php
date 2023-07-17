@@ -1346,9 +1346,11 @@ function shb2c(){
     if($('input[name="Category"]:checked').val() == 'B2C'){
         $('.b2b').hide();
         $('.b2c').show();
+
     } else {
         $('.b2c').hide();
         $('.b2b').show();
+        $('#ct').trigger('click');
     }
     calAmt();
 }

@@ -1276,6 +1276,7 @@ function shb2c(){
     } else {
         $('.b2c').hide();
         $('.b2b').show();
+        $('#ct').trigger('click');
     }
     calAmt();
 }
