@@ -182,9 +182,9 @@ class InvController extends Controller
                 if($inv_count>0){
                     $psn = '_'.$inv_count;
                 }
-                $category = 'B2C'; $buyername = $row->name; $buyerUBN = '';$printFlag = 'N';
+                $category = 'B2C'; $buyername = $row->name; $buyerUBN = '';$printFlag = 'N';$CarrierType = '2';$CarrierNum = rawurlencode($row->email);
                 if($row->tax_id!='' && $row->tax_name!=''){
-                    $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;$printFlag = 'Y';
+                    $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;$printFlag = 'Y';$CarrierType = '';$CarrierNum = '';
                 }
                 $post_data_array = [
                     'RespondType' => 'JSON',
@@ -203,8 +203,8 @@ class InvController extends Controller
                     'Amt' => $totleamt - $taxamt,
                     'TaxAmt' => $taxamt,
                     'TotalAmt' => $totleamt,
-                    'CarrierType' => '2',
-                    'CarrierNum' => rawurlencode($row->email),
+                    'CarrierType' => $CarrierType,
+                    'CarrierNum' => $CarrierNum,
                     'LoveCode' => '',
                     'PrintFlag' => $printFlag,
                     'ItemName' => $ItemName, //多項商品時，以「|」分開
