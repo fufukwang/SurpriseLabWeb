@@ -237,9 +237,9 @@ class InvController extends WebController
                 if($inv_count>0){
                     $psn = '_'.$inv_count;
                 }
-                $category = 'B2C'; $buyername = $row->name; $buyerUBN = '';
+                $printFlag = 'N';$category = 'B2C'; $buyername = $row->name; $buyerUBN = '';$CarrierType = '2';$CarrierNum = rawurlencode($row->email);
                 if($row->tax_id!='' && $row->tax_name!=''){
-                    $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;
+                    $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;$printFlag = 'Y';$CarrierType = '';$CarrierNum = '';
                 }
                 $post_data_array = [
                     'RespondType' => 'JSON',
@@ -258,10 +258,10 @@ class InvController extends WebController
                     'Amt' => $totleamt - $taxamt,
                     'TaxAmt' => $taxamt,
                     'TotalAmt' => $totleamt,
-                    'CarrierType' => '2',
-                    'CarrierNum' => rawurlencode($row->email),
+                    'CarrierType' => $CarrierType,
+                    'CarrierNum' => $CarrierNum,
                     'LoveCode' => '',
-                    'PrintFlag' => 'Y',
+                    'PrintFlag' => $printFlag,
                     'ItemName' => $ItemName, //多項商品時，以「|」分開
                     'ItemCount' => $ItemCount, //多項商品時，以「|」分開
                     'ItemUnit' => $ItemUnit, //多項商品時，以「|」分開
@@ -272,6 +272,7 @@ class InvController extends WebController
                 ];
                 $result = $this->inv_sent($post_data_array);
                 // Log::error($post_data_array);
+                // Log::error($result);
                 $results = json_decode($result['web_info'],true);
                 if($results['Status'] == 'SUCCESS'){
                     if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
