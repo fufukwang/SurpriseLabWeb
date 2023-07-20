@@ -42,6 +42,7 @@ class FrontController extends WebController
     // 首頁
     public function getHome(Request $request){
         try{
+            /*
             $key = "terminal_home_".env('APP_ENV')."_cache_key";
             if (Cache::has($key)) {
                 $tmp = Cache::get($key);
@@ -60,9 +61,10 @@ class FrontController extends WebController
                 ];
                 Cache::put($key, $data, 300); // 五分鐘
             }
-            
-            
             $process = round($pople / $sites * 100);
+            $remaining = 100 - $process;
+            */
+            $process = round(6400 / 7394 * 100);
             $remaining = 100 - $process;
             return view('terminal.frontend.home',compact('process','remaining'));
         } catch (Exception $exception) {
