@@ -19,6 +19,7 @@ use Mail;
 use Log;
 use Redirect;
 use SLS;
+use Illuminate\Support\Facades\Cache;
 
 class FrontController extends WebController
 {
@@ -41,8 +42,26 @@ class FrontController extends WebController
     // 首頁
     public function getHome(Request $request){
         try{
-            $sites = pro::where('open',1)->sum('sites');
-            $pople = order::whereIn('pay_status',['已付款(部分退款)','已付款'])->sum('pople');
+            $key = "home".env('APP_ENV')."cache_key";
+            if (Cache::has($key)) {
+                $tmp = Cache::get($key);
+                $sites = $tmp['sites'];
+                $pople = $tmp['pople'];
+            } else {
+                $sites = pro::where('open',1)->sum('sites');
+                $op_pr = [];
+                $open_pro = DB::table('terminal_pro_order')->select('order_id')
+                    ->leftJoin('terminalpro', 'terminalpro.id', '=', 'terminal_pro_order.pro_id')->where('open',1)->get();
+                foreach($open_pro as $op){ array_push($op_pr,$op->order_id); }
+                $pople = order::whereIn('pay_status',['已付款(部分退款)','已付款'])->whereIn('id',$op_pr)->sum('pople');
+                $data = [
+                    'pople' => $pople,
+                    'sites' => $sites
+                ];
+                // Cache::put($key, $data, 300); // 五分鐘
+            }
+            
+            
             $process = round($pople / $sites * 100);
             $remaining = 100 - $process;
             return view('terminal.frontend.home',compact('process','remaining'));
