@@ -42,7 +42,7 @@ class FrontController extends WebController
     // 首頁
     public function getHome(Request $request){
         try{
-            $key = "home".env('APP_ENV')."cache_key";
+            $key = "terminal_home_".env('APP_ENV')."_cache_key";
             if (Cache::has($key)) {
                 $tmp = Cache::get($key);
                 $sites = $tmp['sites'];
@@ -58,7 +58,7 @@ class FrontController extends WebController
                     'pople' => $pople,
                     'sites' => $sites
                 ];
-                // Cache::put($key, $data, 300); // 五分鐘
+                Cache::put($key, $data, 300); // 五分鐘
             }
             
             
