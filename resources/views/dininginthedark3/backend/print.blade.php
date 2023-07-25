@@ -191,7 +191,7 @@
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}
                                                     <br >@if($row->is_overseas == 9) <span class="badge badge-pill badge-info">特別場次</span> @endif
                                                 </td>
-                                                <td>{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 素食:{{ $row->vegetarian }}人 英文:{{ $row->need_english }}人</td>
+                                                <td>{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 取消:{{ $row->cut }}人 素食:{{ $row->vegetarian }}人 英文:{{ $row->need_english }}人</td>
                                                 <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='已付款(部分退款)')info @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
 @if($row->is_overseas == 1) <br />海外刷卡 @endif<br />
 <span id="inv_{{ $row->id }}">{{ $inv_open ? $number->number : '' }}</span> 
