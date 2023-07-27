@@ -186,7 +186,7 @@
 
                         <div class="form-grid">
                             <div class="form-group select-format">
-                                <label class="form-label" for="booking_people">人數</label>
+                                <label class="form-label" for="booking_people">人數 Guests</label>
                                 <select id="booking_people" name="booking_people" data-placeholder="選擇人數" required>
                                     <option></option>
                                     <option value="2">2</option>
@@ -198,7 +198,7 @@
                                 </select>
                             </div>
                             <div class="form-group with-icon">
-                                <label class="form-label" for="booking_date">日期</label>
+                                <label class="form-label" for="booking_date">日期 Date</label>
                                 <div class="field-icon-wrapper">
                                     <input type="text" name="booking_date" id="booking_date" readonly placeholder="選擇日期"/>
                                     <span class="field-icon"></span>
@@ -213,7 +213,7 @@
                             </select>
                         </div> -->
                         <div class="form-group select-format">
-                            <label class="form-label" for="booking_time">場次時間</label>
+                            <label class="form-label" for="booking_time">場次時間 Select Time</label>
                             <select id="booking_time" name="booking_time" data-placeholder="選擇場次時間" required>
                                 <option></option>
                                 <!--<option>18:00-19:30</option>-->
@@ -250,7 +250,7 @@
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="phone" style="flex: 100%;">* 電話 Phone Number <span class="error-msg"></span></label>
+                            <label for="phone" style="flex: 100%;">* 電話 Phone Number（預約登記使用，請確保填寫正確。） <span class="error-msg"></span></label>
                             <!-- <p>無台灣電話者，請輸入0900000000</p> -->
                             <input type="text" name="area_code" class="form-control" id="area_code" placeholder="+886" value="+886" style="width: 100px;">
                             <input type="text" name="phone" maxlength="14" class="form-control phone" id="phone" placeholder="ex. 0912345678" style="width: calc(100% - 110px);margin-left: auto;">
@@ -316,7 +316,7 @@
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noSeafood">* 不吃帶殼海鮮</label>
+                                        <label class="form-label" for="meat_food_noSeafood">* 甲殼類過敏 Crustacean Allergy</label>
                                         <span class="en">No Shell Seafood</span>
                                         <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required>
                                         </select>
@@ -344,7 +344,7 @@
 
                         <div class="form-group textarea-with-label">
                             <label for="notice">其他備註 Other Comments</label>
-                            <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註/孕婦/慶生需求/特殊紀念&#10;Special Request, Birthday or Anniversary Celebration, etc."></textarea>
+                            <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註/孕婦/慶生需求/特殊紀念&#10;Special Request, Birthday or Anniversary Celebration, etc.&#10;飲食禁忌僅能提供以上餐點變動，無提供餐點客製化服務，請評估自身狀況體驗。&#10;We can only make adjustments to the listed meals due to dietary restrictions. We do not offer custom meal services. "></textarea>
                             <!-- 特殊事項備註/發票是否打統編/過敏食材&#10;食材過敏請標明人數＋過敏食材 EX:一位不吃牛&#10;素食者僅提供蛋奶五辛素&#10;發票若要打統編，請直接註明公司抬頭與統一編號 -->
                         </div>
                         

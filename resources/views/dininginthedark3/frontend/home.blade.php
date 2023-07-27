@@ -402,9 +402,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     margin-left: auto;
                                     margin-right: auto;
                                 ">
-                                    <li>以上價格包含10%服務費</li>
-                                    <li>現場另提供 pairing 加購</li>
+                                    <li>以上價格包含 10% 服務費</li>
                                     <li>體驗皆為雙數入席，無法獨售</li>
+                                    <li>現場另提供酒水調飲加購</li>
                                 </ul>
 
                                 <div class="ticket-btn">
@@ -415,11 +415,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     Click for Reservation
                                     <br>
                                     <br>
-                                    單一場次最高可容納人數 12 人，
+                                    <!-- 單一場次最高可容納人數 12 人，
                                     <br>
                                     若人數為12人或以上，歡迎預約包場。
                                     <br>
-                                    請來信客服 <a href="mailto:dininginthedark@surpriselab.com.tw" >dininginthedark@surpriselab.com.tw</a>
+                                    請來信客服 <a href="mailto:dininginthedark@surpriselab.com.tw" >dininginthedark@surpriselab.com.tw</a> -->
 
                                     <!-- <b><u>雙數訂位，每位 2,200 元</u></b>
                                     以上價格包含 10% 服務費<br/>
