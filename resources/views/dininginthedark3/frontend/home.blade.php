@@ -408,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </ul>
 
                                 <div class="ticket-btn">
-                                    <a class="btn-outline" href="https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html">立即預約</a>
+                                    <a class="btn-outline" href="/dininginthedark3/booking_pay.html">立即預約</a>
                                 </div>
 
                                 <p class="ticket-area-note">
