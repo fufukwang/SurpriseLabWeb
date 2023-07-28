@@ -894,35 +894,27 @@ jQuery(function($){
         $('#lightbox2pay').fadeToggle(700);
     });
     */
-    // $('#btn-online-submit').bind('click',function(){
-    //     // 判斷是否到達可過關的地方
-    //     if($('[name="booking_people"]').val() - cutPelple == 0){
-    //         SendOrderData('online','');
-    //     } else {
-    //         // 改成送到 藍新
-    //         $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
-    //         $('form#booking').submit();
-    //         // 開啟刷卡介面
-    //         // $('#lightbox2pay').fadeToggle(700);   
-    //     }
-    // });
+    $('#btn-online-submit').bind('click',function(){
+        // 判斷是否到達可過關的地方
+        if($('[name="booking_people"]').val() - cutPelple == 0){
+            SendOrderData('online','');
+        } else {
+            // // 改成送到 藍新
+            // $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
+            // $('form#booking').submit();
+            // // 開啟刷卡介面
+            // // $('#lightbox2pay').fadeToggle(700);
+            // 警告 modal
+            $('#bookingFormModal').modal('show');
+        }
+    });
     $('.submit-coupon-error-message').hide();
-});
 
-function bookingFormSubmit() {
-    // 判斷是否到達可過關的地方
-    if($('[name="booking_people"]').val() - cutPelple == 0){
-        SendOrderData('online','');
-    } else {
-        $('#bookingFormModal').modal('show');
-    }
-    return false;
-}
-
-$('#bookingFormModal .modal-footer').on('click', function(){
-    // 改成送到 藍新
-    $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
-    $('form#booking').submit();
+    $('#bookingFormModal .modal-footer').on('click', function(){
+        // 改成送到 藍新
+        $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
+        $('form#booking').submit();
+    });
 });
 
 // ===================================

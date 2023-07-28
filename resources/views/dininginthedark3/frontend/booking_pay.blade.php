@@ -472,7 +472,7 @@
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
                             <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
-                            <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
+                            <button type="button" name="submit" class="btn-outline submit" id="btn-online-submit">
                                 前往付款 NT$<span class="amountToGo"></span>
                             </button>
                         </div>
@@ -615,7 +615,7 @@
                     <div class="modal-body">
                         <p>付款之前請確保所有資料、飲食禁忌填寫完整及正確，一旦送出將無法修改。</p>
                         <p>&nbsp;</p>
-                        <p>再次提醒：不建議乳糖不耐症嚴重患者及未滿16歲以下體驗者前來體驗。</p>
+                        <p>再次提醒：不建議<span style="color: red;">乳糖不耐症嚴重患者及未滿16歲以下體驗者</span>前來體驗。</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -673,7 +673,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.7.1"></script>
+    <script src="js/form_pay.js?v=0.7.2"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
