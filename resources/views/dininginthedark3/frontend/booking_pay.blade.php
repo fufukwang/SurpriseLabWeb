@@ -95,7 +95,7 @@
 
         <div class="container" id="bookingPage">
             <!-- form -->
-            <form id="booking" method="post" onsubmit="return bookingFormSubmit()">
+            <form id="booking" method="post">
                 {!! csrf_field() !!}
                 <input type="hidden" name="discount" id="discount" value="">
                 <!--progress title-->
