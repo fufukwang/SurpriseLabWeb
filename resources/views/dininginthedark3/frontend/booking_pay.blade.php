@@ -472,7 +472,7 @@
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
                             <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
-                            <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
+                            <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit" onsubmit="return bookingFormSubmit()">
                                 前往付款 NT$<span class="amountToGo"></span>
                             </button>
                         </div>
@@ -605,6 +605,26 @@
         </div>
     </div>
 
+    <div class="modal" id="bookingFormModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content text-left">
+                <div class="modal-header">
+                    <h5 class="modal-title">注意</h5>
+                </div>
+                <div class="modal-body-container">
+                    <div class="modal-body">
+                        <p>付款之前請確保所有資料、飲食禁忌填寫完整及正確，一旦送出將無法修改。</p>
+                        <p>&nbsp;</p>
+                        <p>再次提醒：不建議乳糖不耐症嚴重患者及未滿16歲以下體驗者前來體驗。</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    我同意，前往付款
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Social Links -->
     <aside class="social-wrapper">
         <ul>
@@ -653,7 +673,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.7"></script>
+    <script src="js/form_pay.js?v=0.7.1"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
