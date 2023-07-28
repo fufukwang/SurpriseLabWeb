@@ -95,7 +95,7 @@
 
         <div class="container" id="bookingPage">
             <!-- form -->
-            <form id="booking" method="post">
+            <form id="booking" method="post" onsubmit="return bookingFormSubmit()">
                 {!! csrf_field() !!}
                 <input type="hidden" name="discount" id="discount" value="">
                 <!--progress title-->
@@ -472,7 +472,7 @@
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
                             <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
-                            <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit" onsubmit="return bookingFormSubmit()">
+                            <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
                                 前往付款 NT$<span class="amountToGo"></span>
                             </button>
                         </div>
