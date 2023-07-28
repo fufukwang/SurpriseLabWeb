@@ -472,7 +472,7 @@
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
                             <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
-                            <button type="button" name="submit" class="btn-outline submit" id="btn-online-submit">
+                            <button type="submit" name="submit" class="btn-outline submit" id="btn-online-submit">
                                 前往付款 NT$<span class="amountToGo"></span>
                             </button>
                         </div>
