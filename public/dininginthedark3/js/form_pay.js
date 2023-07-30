@@ -900,13 +900,21 @@ jQuery(function($){
             SendOrderData('online','');
         } else {
             // 改成送到 藍新
-            $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
-            $('form#booking').submit();
+            // $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
+            // $('form#booking').submit();
+            // 開啟注意事項
+            $('#bookingFormModal').modal('show');
             // 開啟刷卡介面
             // $('#lightbox2pay').fadeToggle(700);   
         }
     });
     $('.submit-coupon-error-message').hide();
+
+    $('#bookingFormModal .modal-footer').on('click', function(){
+        // 改成送到 藍新
+        $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
+        $('form#booking').submit();
+    });
 });
 
 // ===================================

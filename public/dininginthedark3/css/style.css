@@ -3028,3 +3028,62 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+#bookingFormModal .modal-content {
+  border-radius: 6px;
+  border: 0;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+#bookingFormModal .modal-header {
+  background-color: #8C5FB4;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 21px 0;
+  border-bottom: 0;
+}
+#bookingFormModal .modal-header .modal-title {
+  font-size: 18px;
+  color: #000000;
+  line-height: 1;
+  letter-spacing: 1.8px;
+  font-weight: bold;
+}
+#bookingFormModal .modal-body {
+  margin: 50px 20px;
+  padding: 0 100px;
+  max-height: 55vh;
+}
+@media (max-width: 1440px) {
+  #bookingFormModal .modal-body {
+      max-height: 40vh;
+      margin: 40px 20px;
+      padding: 0 20px;
+  }
+}
+#bookingFormModal .modal-body p {
+  line-height: 1.75;
+  letter-spacing: 1.6px;
+  color: #CCCCCC;
+}
+#bookingFormModal .modal-footer {
+  border-top: 0;
+  padding: 21px 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 1.8px;
+  background-color: #8C5FB4;
+  color: #EFEFEF;
+  opacity: 1;
+  text-shadow: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+#bookingFormModal .modal-footer:hover {
+  opacity: 0.9;
+}
