@@ -3087,3 +3087,12 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 #bookingFormModal .modal-footer:hover {
   opacity: 0.9;
 }
+#btn-online-submit {
+  max-width: initial;
+  width: 240px;
+}
+@media (max-width: 575.98px) {
+  #btn-online-submit {
+    width: 192px;
+  }
+}

@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=0.2a"/>
+    <link rel="stylesheet" href="css/style.css?v=230730"/>
     <link rel="stylesheet" href="css/form.css?date=0601"/>
 
     <!-- Google Tag Manager -->
@@ -472,7 +472,7 @@
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
                             <button type="button" name="previous" class="btn-outline previous action-button">上一步</button>
-                            <button type="button" name="submit" class="btn-outline submit" id="btn-online-submit">
+                            <button type="button" class="btn-outline" id="btn-online-submit">
                                 前往付款 NT$<span class="amountToGo"></span>
                             </button>
                         </div>
@@ -673,7 +673,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?v=0.7a"></script>
+    <script src="js/form_pay.js?230730"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
