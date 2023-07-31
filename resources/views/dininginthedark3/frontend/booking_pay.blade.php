@@ -32,15 +32,7 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <link rel="stylesheet" href="css/style.css?v=0.2.1"/>
-=======
-    <link rel="stylesheet" href="css/style.css?v=0.2a"/>
->>>>>>> b36e9c0d0af33176e9ec2c8f946946216ca87203
-=======
     <link rel="stylesheet" href="css/style.css?v=230730"/>
->>>>>>> e3f9301bbdbe1c8e0c44f39434b4bb6eff044613
     <link rel="stylesheet" href="css/form.css?date=0601"/>
 
     <!-- Google Tag Manager -->
@@ -681,15 +673,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <script src="js/form_pay.js?v=0.7.2"></script>
-=======
-    <script src="js/form_pay.js?v=0.7a"></script>
->>>>>>> b36e9c0d0af33176e9ec2c8f946946216ca87203
-=======
     <script src="js/form_pay.js?230730"></script>
->>>>>>> e3f9301bbdbe1c8e0c44f39434b4bb6eff044613
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
