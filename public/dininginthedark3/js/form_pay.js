@@ -899,6 +899,7 @@ jQuery(function($){
         if($('[name="booking_people"]').val() - cutPelple == 0){
             SendOrderData('online','');
         } else {
+<<<<<<< HEAD
             // // 改成送到 藍新
             // $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
             // $('form#booking').submit();
@@ -906,6 +907,15 @@ jQuery(function($){
             // // $('#lightbox2pay').fadeToggle(700);
             // 警告 modal
             $('#bookingFormModal').modal('show');
+=======
+            // 改成送到 藍新
+            // $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
+            // $('form#booking').submit();
+            // 開啟注意事項
+            $('#bookingFormModal').modal('show');
+            // 開啟刷卡介面
+            // $('#lightbox2pay').fadeToggle(700);   
+>>>>>>> b36e9c0d0af33176e9ec2c8f946946216ca87203
         }
     });
     $('.submit-coupon-error-message').hide();
