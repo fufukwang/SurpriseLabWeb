@@ -316,8 +316,8 @@
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noSeafood">* 甲殼類過敏 Crustacean Allergy</label>
-                                        <span class="en">No Shell Seafood</span>
+                                        <label class="form-label" for="meat_food_noSeafood">* 甲殼類過敏</label>
+                                        <span class="en">Crustacean Allergy</span>
                                         <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
@@ -433,7 +433,7 @@
                                     <p>不吃牛肉 <span class="filled" data-filled="meat_food_noBeef">0</span> 人</p>
                                     <p>不吃豬肉 <span class="filled" data-filled="meat_food_noPork">0</span> 人</p>
                                     <p>不吃堅果 <span class="filled" data-filled="meat_food_noNut">0</span> 人</p>
-                                    <p>不吃帶殼海鮮 <span class="filled" data-filled="meat_food_noSeafood">0</span> 人</p>
+                                    <p>甲殼類過敏 <span class="filled" data-filled="meat_food_noSeafood">0</span> 人</p>
                                     <br>
                                     蛋奶五辛素 <span class="filled" data-filled="vegetarian_food"></span> 人：
                                     <p>不吃堅果 <span class="filled" data-filled="vegetarian_food_noNut">0</span> 人</p>
