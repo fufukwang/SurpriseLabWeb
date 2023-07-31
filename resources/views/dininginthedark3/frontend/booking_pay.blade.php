@@ -673,7 +673,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?230730"></script>
+    <script src="js/form_pay.js?230731"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>

@@ -201,9 +201,11 @@ function radioGroupChecker() {
 }
 
 // 每當欄位資料變動時，重新判別是否可啟用下一步按鈕
+$('.step-3, .step-3 .select-food .col-wrap').show();
 $('input, select').on('change', function () {
     allowChecker($(this).closest('fieldset'));
 });
+$('.step-3, .step-3 .select-food .col-wrap').hide();
 
 // 檢查是否可以進入下一步
 function allowChecker(thisStep){
