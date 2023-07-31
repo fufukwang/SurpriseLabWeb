@@ -201,11 +201,9 @@ function radioGroupChecker() {
 }
 
 // 每當欄位資料變動時，重新判別是否可啟用下一步按鈕
-$('.step-3, .step-3 .select-food .col-wrap').show();
 $('input, select').on('change', function () {
     allowChecker($(this).closest('fieldset'));
 });
-$('.step-3, .step-3 .select-food .col-wrap').hide();
 
 // 檢查是否可以進入下一步
 function allowChecker(thisStep){
@@ -220,7 +218,7 @@ function allowChecker(thisStep){
 
     } else {
 
-        thisStep.find('input, select').each(function () {
+        thisStep.find('input').each(function () {
             var element = $(this);
 
             if (element.attr('type') === 'checkbox') {
@@ -257,6 +255,15 @@ function allowChecker(thisStep){
                     return false;
                 }
 
+            }
+        });
+
+        thisStep.find('select').each(function () {
+            if( $(this).find('option').length > 0 ) {
+                if (!$(this).val() && !$(this).hasClass('nomust')) {
+                    isAllowToNextStep = false;
+                    return false;
+                }
             }
         });
 
