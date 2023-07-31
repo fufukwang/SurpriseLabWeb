@@ -259,7 +259,10 @@ function allowChecker(thisStep){
         });
 
         thisStep.find('select').each(function () {
-            if( $(this).find('option').length > 0 ) {
+            if( thisStep.hasClass('.step-3') && $('#meat_food').val() === 0 && $('#vegetarian_food').val() === 0 ) {
+                isAllowToNextStep = false;
+                return false;
+            } else if( $(this).find('option').length > 0 ) {
                 if (!$(this).val() && !$(this).hasClass('nomust')) {
                     isAllowToNextStep = false;
                     return false;
