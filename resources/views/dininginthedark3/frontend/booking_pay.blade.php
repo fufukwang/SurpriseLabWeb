@@ -615,7 +615,7 @@
                     <div class="modal-body">
                         <p>付款之前請確保所有資料、飲食禁忌填寫完整及正確，一旦送出將無法修改。</p>
                         <p>&nbsp;</p>
-                        <p>再次提醒：不建議<span style="color: red;">乳糖不耐症嚴重患者及未滿16歲以下體驗者</span>前來體驗。</p>
+                        <p>再次提醒：不建議<span style="color: #ff4242;">乳糖不耐症嚴重患者及未滿16歲以下體驗者</span>前來體驗。</p>
                     </div>
                 </div>
                 <div class="modal-footer">
