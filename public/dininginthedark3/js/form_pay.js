@@ -921,6 +921,7 @@ jQuery(function($){
     $('.submit-coupon-error-message').hide();
 
     $('#bookingFormModal .modal-footer').on('click', function(){
+        console.log('s')
         // 改成送到 藍新
         $('form#booking').attr('action','/dininginthedark3/Neweb.OrderPay');
         $('form#booking').submit();
