@@ -1991,7 +1991,7 @@ main.booking fieldset.step-4 .form-group:not(.select-food) p {
   display: flex;
 }
 .select-food .form-col .form-label {
-  min-width: 125px;
+  min-width: 170px;
   margin-bottom: 0;
 }
 
