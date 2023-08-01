@@ -321,6 +321,12 @@
                                         <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
+                                    <div class="form-col">
+                                        <label class="form-label" for="meat_food_noAllSeafood">* 所有海鮮過敏/不吃</label>
+                                        <span class="en">No All Seafood</span>
+                                        <select id="meat_food_noAllSeafood" name="meat_food_noAllSeafood" data-placeholder="選擇人數" required>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-row">

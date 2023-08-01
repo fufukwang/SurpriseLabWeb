@@ -363,8 +363,13 @@
                                         </select>
                                     </div>
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noSeafood">* 不吃帶殼海鮮</label>
+                                        <label class="form-label" for="meat_food_noSeafood">* 甲殼類過敏</label>
                                         <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required>
+                                        </select>
+                                    </div>
+                                    <div class="form-col">
+                                        <label class="form-label" for="meat_food_noAllSeafood">* 所有海鮮過敏/不吃</label>
+                                        <select id="meat_food_noAllSeafood" name="meat_food_noAllSeafood" data-placeholder="選擇人數" required>
                                         </select>
                                     </div>
                                 </div>
@@ -637,7 +642,7 @@
     <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
     
     <!-- Custom Js -->
-    <script src="js/form.js?v=0.22"></script>
+    <script src="js/form.js?v=230801"></script>
 
 </body>
 </html>
