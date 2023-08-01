@@ -8,7 +8,7 @@ var activeIndex;
 var isAllowToNextStep; // 是否可以進入下一步
 var passTimes = 1; // 票券代碼輸入次數
 var amountToGo = $('.amountToGo'); // 完成劃位金額
-var maxDateVal = "+3m";
+var maxDateVal = "+2m";
 /*
 var ticketInfos = [
     { type: 0, name: '暢行無阻票', price: 2000},

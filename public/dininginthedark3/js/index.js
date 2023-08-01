@@ -162,7 +162,8 @@ $(document).ready(function () {
             booking_date.datepicker("destroy");
             booking_date.datepicker({
                 minDate: minD,// minD,
-                maxDate: maxD,//'+3m',// new Date(2022, 1, 28),
+                // maxDate: maxD,//'+3m',// new Date(2022, 1, 28),
+                maxDate: '+2m',
                 dateFormat: 'yy-mm-dd', 
                 beforeShowDay: enableAllTheseDays,
                 onSelect: function(dateText) {
