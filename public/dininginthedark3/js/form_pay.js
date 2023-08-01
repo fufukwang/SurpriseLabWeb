@@ -28,7 +28,7 @@ var discountAmount = 0;
 var eatHabit = []; // 飲食習慣
 
 
-$.getJSON('/dininginthedark3/GetAjaxData?method=getMaxDate').done(function(max){ maxDateVal = max.pay_max_date;});
+$.getJSON('/dininginthedark3/GetAjaxData?method=getMaxDate').done(function(max){ /*maxDateVal = max.pay_max_date;*/ });
 // ===================================
 // Form Default Start
 // ===================================
