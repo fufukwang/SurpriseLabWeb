@@ -209,7 +209,7 @@ class MasterController extends Controller
                 'template'  => $request->type,
             ];
             if($toData['template'] == 'D7'){
-                $ord = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('pople','day','rang_start','vegetarian','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','need_english')->find($request->id);
+                $ord = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('pople','day','rang_start','vegetarian','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_nut_v','no_fish','need_english')->find($request->id);
                 $toData['day'] = Carbon::parse($ord->day)->format(' m 月 d 日');
                 $toData['time'] = substr($ord->rang_start,0,5);
                 $toData['pople'] = $ord->pople;
@@ -221,6 +221,7 @@ class MasterController extends Controller
                 $toData['no_pork'] = $ord->no_pork;
                 $toData['no_nut_m'] = $ord->no_nut_m;
                 $toData['no_shell'] = $ord->no_shell;
+                $toData['no_fish'] = $ord->no_fish;
                 $toData['no_nut_v'] = $ord->no_nut_v;
                 $toData['need_english'] = $ord->need_english;
             }

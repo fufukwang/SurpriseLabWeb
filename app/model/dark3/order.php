@@ -15,6 +15,7 @@ class order extends Model
         'no_pork',
         'no_nut_m',
         'no_shell',
+        'no_fish',
         'no_nut_v',
     ];
     protected $guarded = [];

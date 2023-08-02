@@ -306,6 +306,7 @@ class FrontController extends Controller
                 'no_pork'    => $request->meat_food_noPork ?? 0,
                 'no_nut_m'   => $request->meat_food_noNut ?? 0,
                 'no_shell'   => $request->meat_food_noSeafood ?? 0,
+                'no_fish'    => $request->meat_food_noAllSeafood ?? 0,
                 'no_nut_v'   => $request->vegetarian_food_noNut ?? 0,
             ];
 
@@ -390,6 +391,7 @@ class FrontController extends Controller
                     'no_pork' => $data['no_pork'],
                     'no_nut_m' => $data['no_nut_m'],
                     'no_shell' => $data['no_shell'],
+                    'no_fish' => $data['no_fish'],
                     'no_nut_v' => $data['no_nut_v'],
                     'need_english' => 0, // 前端沒數字
                     'eday'   => Carbon::parse($act->day)->format('d / m / Y'),

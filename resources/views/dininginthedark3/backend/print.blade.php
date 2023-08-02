@@ -321,6 +321,7 @@
                                             no_pork 葷食/不吃豬肉  <br />
                                             no_nut_m 葷食/不吃堅果  <br />
                                             no_shell 葷食/不吃帶殼海鮮  <br />
+                                            no_fish 葷食/所有海鮮過敏/不吃  <br />
                                             vegetarian 素食  <br />
                                             no_nut_v 素食/不吃堅果  <br />
                                         </p>

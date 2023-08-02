@@ -147,9 +147,15 @@
                                                 
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">葷食/不吃帶殼海鮮</label>
+                                                <label class="control-label col-sm-4">葷食/甲殼類過敏</label>
                                                 <div class="col-sm-2">
                                                     <input type="number" name="no_shell" id="no_shell" class="form-control" value="{{ $order->no_shell or '' }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">葷食/所有海鮮過敏/不吃</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_fish" id="no_fish" class="form-control" value="{{ $order->no_fish or '' }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">

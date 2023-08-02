@@ -103,7 +103,8 @@ Your reservation for <strong>{{$pople}}</strong> people is at <strong>{{$time}},
 <br>
 <strong>葷食 </strong>Regular Menu<strong> {{ $meat_eat }} 人</strong><br>
 <strong>不吃牛肉 </strong>No beef<strong> {{ $no_beef }} 人 / 不吃豬肉 </strong>No pork<strong> {{ $no_pork }} 人 /<br>
-不吃堅果 </strong>No nut<strong> {{ $no_nut_m }} 人 /不吃帶殼海鮮 </strong>No shell seafood<strong> {{ $no_shell }} 人</strong><br>
+不吃堅果 </strong>No nut<strong> {{ $no_nut_m }} 人 /甲殼類過敏 </strong>Crustacean Allergy<strong> {{ $no_shell }} 人</strong><br>
+<strong> 所有海鮮過敏/不吃 </strong>No All Seafood<strong> {{ $no_fish }} 人</strong><br>
 <br>
 <strong>蛋奶五辛素 </strong>Five pungent spices &amp; Lacto-vegetarian <strong>{{ $vegetarian }} 人<br>
 不吃堅果 </strong>no nut <strong>{{ $no_nut_v }} 人</strong></span><br>
