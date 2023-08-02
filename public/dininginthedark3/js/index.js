@@ -184,8 +184,11 @@ $(document).ready(function () {
         },'json');
         function enableAllTheseDays(date) {
             var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
+            var getMaxDate = $.datepicker._determineDate( booking_date, booking_date.datepicker( "option", "maxDate" ) );
+            var startDate = new Date(sdate);
+            var endDate   = new Date(getMaxDate);
 
-            if($.inArray(sdate, enableDays) !== -1) {
+            if($.inArray(sdate, enableDays) !== -1 && endDate>=startDate) {
                 var myDateClass = ""; // 加入的樣式
                 var myDateTip = "";  // tooltip 文字
                 var myDateDay = date.getDay();
