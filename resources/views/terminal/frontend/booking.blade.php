@@ -40,8 +40,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?230802">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?230802">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -294,6 +294,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <h4 class="sub-heading-title">微醺列車</h4>
                                         <p class="sub-heading-subtitle body-01 style-smaller">THE GREAT TIPSY：BON VOYAGE</p>
                                     </div>
+                                    <p class="note">9/22-10/15 為高雄最後場次《落日轉運站：Final Call》，將與一般演出不同，欲購買一般場次請選擇 9/3 以前的時段。</p>
                                     <div class="form-group normal-layout">
                                         <label class="body-04" for="js-datepicker-train">日期</label>
                                         <div class="datepicker-wrap">
@@ -324,6 +325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <h4 class="sub-heading-title">FLIGHT</h4>
                                         <p class="sub-heading-subtitle body-01 style-smaller">無光飛航</p>
                                     </div>
+                                    <p class="note">9/22-10/15 為高雄最後場次《落日轉運站：Final Call》，將與一般演出不同，欲購買一般場次請選擇 9/3 以前的時段。</p>
                                     <div class="form-group normal-layout">
                                         <label class="body-04" for="js-datepicker-flight">日期</label>
                                         <div class="datepicker-wrap">

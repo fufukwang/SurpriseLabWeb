@@ -206,8 +206,24 @@ $(function() {
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: function(date){
                         var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
-                        if($.inArray(sdate, enableDays) !== -1) { return [true]; }
-                        return [false];
+                        var allowSelected = false;
+                        var className = '';
+                        if($.inArray(sdate, enableDays) !== -1) {
+                            allowSelected = true;
+                        }
+                        if(type == 'train' || type == 'flight') {
+                            var startDate = 20230922;
+                            var endDate = 20231015;
+                            var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
+                            if (formatedDate == startDate) {
+                                className = 'have-bg have-bg-start';
+                            } else if (formatedDate > startDate && formatedDate < endDate) {
+                                className = 'have-bg';
+                            } else if (formatedDate == endDate) {
+                                className = 'have-bg have-bg-end';
+                            }
+                        }
+                        return [allowSelected, className];
                     },
                     beforeShow: function (input, inst) {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;

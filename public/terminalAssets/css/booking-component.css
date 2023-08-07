@@ -1902,4 +1902,21 @@ input[type="checkbox"]:checked::after {
   line-height: 1.5;
   color: #efcabf;
 }
-/*# sourceMappingURL=booking-component.css.map */
+
+.ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-calendar td.have-bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(239, 202, 191, 0.3);
+}
+
+.ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-calendar td.have-bg-start:after {
+  border-radius: 20px 0 0 20px;
+}
+
+.ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-calendar td.have-bg-end:after {
+  border-radius: 0 20px 20px 0;
+}

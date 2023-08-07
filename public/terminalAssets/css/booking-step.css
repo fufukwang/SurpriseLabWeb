@@ -218,4 +218,10 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/*# sourceMappingURL=booking-step.css.map */
+
+.form-wrap-step-2 .note {
+  color: #efcabf;
+  margin-top: 24px;
+  line-height: 1.7;
+  font-size: 14px;
+}
