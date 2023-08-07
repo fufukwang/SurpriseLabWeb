@@ -40,7 +40,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?230802">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?230807">
     <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?230802">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
