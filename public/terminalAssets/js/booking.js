@@ -211,18 +211,18 @@ $(function() {
                         if($.inArray(sdate, enableDays) !== -1) {
                             allowSelected = true;
                         }
-                        if(type == 'train' || type == 'flight') {
-                            var startDate = 20230922;
-                            var endDate = 20231015;
-                            var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
-                            if (formatedDate == startDate) {
-                                className = 'have-bg have-bg-start';
-                            } else if (formatedDate > startDate && formatedDate < endDate) {
-                                className = 'have-bg';
-                            } else if (formatedDate == endDate) {
-                                className = 'have-bg have-bg-end';
-                            }
-                        }
+                        // if(type == 'train' || type == 'flight') {
+                        //     var startDate = 20230922;
+                        //     var endDate = 20231015;
+                        //     var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
+                        //     if (formatedDate == startDate) {
+                        //         className = 'have-bg have-bg-start';
+                        //     } else if (formatedDate > startDate && formatedDate < endDate) {
+                        //         className = 'have-bg';
+                        //     } else if (formatedDate == endDate) {
+                        //         className = 'have-bg have-bg-end';
+                        //     }
+                        // }
                         return [allowSelected, className];
                     },
                     beforeShow: function (input, inst) {
