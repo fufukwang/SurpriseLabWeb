@@ -945,7 +945,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="item">
                         <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" target="_blank">
                             <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount08.png" data-src="/terminalAssets/images/main/discount08.png" data-src-retina="/terminalAssets/images/main/discount06.png" alt="Klook">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount08.png" data-src="/terminalAssets/images/main/discount08.png" data-src-retina="/terminalAssets/images/main/discount08.png" alt="Klook">
                             </figure>
                         </a>
                         <div class="discount-intro">
