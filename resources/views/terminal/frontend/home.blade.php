@@ -654,16 +654,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11.10 - 2023.09.03 陸續開放劃位</li>
+                                                        <li class="list-item">2022.11.10 - 2023.09.03</li>
                                                     </ul>
                                                 </div>
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item style-disabled">週一至週二｜休息</li>
-                                                        <li class="list-item">週三至週五｜18:00─23:00</li>
-                                                        <li class="list-item">週六、週日｜11:30─16:30、17:30─23:00</li>
+                                                        <li class="list-item style-disabled">週一至週二｜休息（8月加開週二）</li>
+                                                        <li class="list-item">週三至週五｜18:00-23:00</li>
+                                                        <li class="list-item">週六、週日｜11:30-16:30、17:30-23:00</li>
                                                     </ul>
                                                 </div>
                     
@@ -807,16 +807,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11.10 - 2023.09.03 陸續開放劃位</li>
+                                                        <li class="list-item">2022.11.10 - 2023.09.03</li>
                                                     </ul>
                                                 </div>
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item style-disabled">週一至週二｜休息</li>
-                                                        <li class="list-item">週三至週五｜18:00─23:00</li>
-                                                        <li class="list-item">週六、週日｜11:30─16:30、17:30─23:00</li>
+                                                        <li class="list-item style-disabled">週一至週二｜休息（8月加開週二）</li>
+                                                        <li class="list-item">週三至週五｜18:00-23:00</li>
+                                                        <li class="list-item">週六、週日｜11:30-16:30、17:30-23:00</li>
                                                     </ul>
                                                 </div>
                     
@@ -938,6 +938,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 我們準備兩個作品的獨家優惠套票，給特別驅車前往落日轉運站的你，<br />
                                 購買套票搶先體驗《微醺列車》及《FLIGHT》，體驗時間可分開選擇。<br />
                                 偷偷推薦你，歡迎先體驗FLIGHT再搭上微醺列車，祝你旅途愉快！
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount08.png" data-src="/terminalAssets/images/main/discount08.png" data-src-retina="/terminalAssets/images/main/discount08.png" alt="Klook">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">Klook 限定《微醺列車》雙人套票</div>
+                            <div class="discount-p">
+                                驚喜製造與Klook獨家推出文化幣適用的微醺列車雙人票，<br />
+                                暑期倒數中，限時優惠1個月。<br />
+                                拿著優惠與朋友一起到微醺列車中探險吧！
                             </div>
                         </div>
                     </div>
