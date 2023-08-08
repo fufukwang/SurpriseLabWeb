@@ -875,7 +875,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <!-- 4 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1%2B2/4.png" data-src="img/home/menu/no1%2B2/4.png" data-src-retina="img/home/menu/no1%2B2/4.png" alt="1號菜單，2號菜單">
+                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1%2B2/4.png?230808" data-src="img/home/menu/no1%2B2/4.png?230808" data-src-retina="img/home/menu/no1%2B2/4.png?230808" alt="1號菜單，2號菜單">
                                                                     <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1%2B2/4-m.png" data-src="img/home/menu/no1%2B2/4-m.png" data-src-retina="img/home/menu/no1%2B2/4-m.png" alt="1號菜單，2號菜單">
                                                                 </figure>
                                                             </div>
