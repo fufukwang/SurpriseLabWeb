@@ -338,9 +338,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <h3>預約體驗</h3>
                                         <h4>Reservation</h4>
                                     </div>
-                                    <!-- <p class="section-desc">
-                                        無光晚餐皆為雙數訂位
-                                    </p> -->
+                                    <style>
+                                        #Ticket-type .section-header .section-desc a { text-decoration: underline; }
+                                        #Ticket-type .section-header .section-desc a:hover { text-decoration: none; }
+                                    </style>
+                                    <p class="section-desc">
+                                        8/22 七夕特殊專場 <a target="_blank" href="https://www.myfunnow.com/zh-tw/branches/3049006901649">購票請點我</a><br />
+                                        浪漫晚餐 │ 精選調酒 │ 星級飯店
+                                    </p>
                                 </div>
 
                                 <div class="ticket-type" style="display: none;">
