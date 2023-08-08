@@ -262,12 +262,12 @@
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="company_tax_ID">統一編號 Company Tax ID<span class="error-msg"></span></label>
+                            <label for="company_tax_ID">統一編號 Company Tax ID（無開立統編發票需求請留空，不須填寫）<span class="error-msg"></span></label>
                             <input type="text" name="company_tax_ID" class="form-control nomust" id="company_tax_ID" maxlength="10" placeholder="">
                         </div>
 
                         <div class="form-group input-with-label">
-                            <label for="company_name">公司抬頭 Company Name<span class="error-msg"></span></label>
+                            <label for="company_name">公司抬頭 Company Name（無開立統編發票需求請留空，不須填寫）<span class="error-msg"></span></label>
                             <input type="text" name="company_name" class="form-control nomust" id="company_name" maxlength="50" placeholder="">
                         </div>
 
