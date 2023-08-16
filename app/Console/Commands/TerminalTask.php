@@ -80,6 +80,23 @@ class TerminalTask extends Command
                     SLS::SendTerminalEmailByTemplateName($toData);
                 }
             }
+
+            $hour12 = pro::select('id')->where('open',1)
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/3600)-floor(UNIX_TIMESTAMP()/3600)=12")->toSql();
+            foreach($hour12 as $pro){
+                $ord12 = order::select('terminalorder.id','name','email','tel','plan')
+                    ->leftJoin('terminal_pro_order', 'terminal_pro_order.order_id', '=', 'terminalorder.id')
+                    ->where('terminal_pro_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
+                foreach ($ord12 as $ord) {
+                    if($ord->tel != ''){
+                        $toData = [
+                            'phone'    => $ord->tel,
+                            'template' => 'DX',
+                        ];
+                        SLS::TerminalSendSMS($toData);
+                    }
+                }
+            }
         } catch (Exception $exception) {
             Log::error($exception);
         }

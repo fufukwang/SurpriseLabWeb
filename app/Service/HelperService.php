@@ -248,6 +248,20 @@ class HelperService {
             return false;
         }
     }
+    // terminal sms
+    public function TerminalSendSMS($smsData){
+        try{
+            switch ($smsData['template']) {
+                case 'DX':
+                    $this->sent_single_sms($smsData['phone'],"【落日轉運站】旅程即將啟程，行前溫馨提醒\n乘客您好，很高興今日能邀請您踏上落日轉運站的旅程：)\n乘務員提醒您，旅途中禁止攜帶任何外食、飲品，請於旅程開始前食用完畢。\n\n同時請務必於訂位確認信中指定時間（約班次時間30分鐘前）抵達劃位取票。若您晚於班次時間抵達則恕不入場。\n\n期待您的搭乘，我們稍後轉運站見囉！");
+                    break;
+            }
+            return true;
+        } catch (Exception $e) {
+            Log::error($e);
+            return false;
+        }
+    }
 
 
 
