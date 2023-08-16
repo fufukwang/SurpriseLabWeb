@@ -207,6 +207,11 @@ class HelperService {
     // terminal 信件寄送
     public function SendTerminalEmailByTemplateName($data){
         try{
+            if($data['template'] == 'D10'){
+                $overDay = \App\model\terminal\pro::select('day')->whereIn('id',\DB::table('terminal_pro_order')->select('pro_id')->where('order_id',$data['id']))
+                    ->where('day','>=','2023-09-22')->count();
+                if($overDay>0){ return false;}
+            }
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_TERMINAL_USER')]);
