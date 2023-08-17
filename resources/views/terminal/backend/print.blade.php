@@ -734,8 +734,8 @@
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送10天前的通知信">10</a>
 
                                 <!-- <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="order" data-toggle="tooltip" data-placement="top" data-original-title="訂位確認簡訊(訂位確認信也會觸發簡訊)">訂位確認</a>
-                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前的通知簡訊">7</a>
-                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a> -->
+                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前的通知簡訊">7</a> -->
+                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
                             </p>
 
                             <table class="table table-bordered table-hover m-0">
