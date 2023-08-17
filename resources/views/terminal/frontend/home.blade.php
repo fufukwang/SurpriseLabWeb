@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?date=0218">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=230817">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=2308171">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -101,7 +101,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <img src="/terminalAssets/images/main/timetable.png" alt="">
                                 </div>
                                 <div class="marquee">
-                                    <p>高雄離站倒數...9/22-10/15《落日轉運站：Final Call》最終場開放劃位</p>
+                                    <p>
+                                        <span>高雄離站倒數...9/22-10/15《落日轉運站：Final Call》最終場開放劃位</span>
+                                        <!-- <span>高雄離站倒數...9/22-10/15《落日轉運站：Final Call》最終場開放劃位</span> -->
+                                    </p>
                                 </div>
                                 <div class="number" data-end="2023-09-03 24:00:00">
                                     <div class="digitalitem day-1 num-0" id="day-1">
