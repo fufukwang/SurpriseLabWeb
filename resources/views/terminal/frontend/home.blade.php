@@ -1527,7 +1527,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </h2>
                             <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
                                 <div class="accordion-body">
-                                    <p>9/22-10/15 為落日轉運站最後停留在高雄的日子，這段時間裡〈微醺列車〉將探索更多空間，並有不一樣的結局；〈無光飛航〉在降落後，將會有小驚喜；詳情請<a class="text-dark" target="_blank" href="#" style="text-decoration: underline;">點我查看</a>。</p>
+                                    <p>9/22-10/15 為落日轉運站最後停留在高雄的日子，這段時間裡〈微醺列車〉將探索更多空間，並有不一樣的結局；〈無光飛航〉在降落後，將會有小驚喜；詳情請<a class="text-dark" target="_blank" href="https://www.facebook.com/surpriselabtw/posts/pfbid0n4pZNwJuRdujVyrfdH99JwhUfV6yMbYnn3umjcfhQZoTC4PH2Nx4CWF5SpL9AfX5l" style="text-decoration: underline;">點我查看</a>。</p>
                                 </div>
                             </div>
                         </div>

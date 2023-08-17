@@ -294,7 +294,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <h4 class="sub-heading-title">微醺列車</h4>
                                         <p class="sub-heading-subtitle body-01 style-smaller">THE GREAT TIPSY：BON VOYAGE</p>
                                     </div>
-                                    <p class="note">10/14-10/15 微醺列車將正式與高雄告別，體驗內容與一般場不同，詳情請<a target="_blank" href="#">點我查看</a>。</p>
+                                    <p class="note">10/14-10/15 微醺列車將正式與高雄告別，體驗內容與一般場不同，詳情請<a target="_blank" href="https://www.facebook.com/surpriselabtw/posts/pfbid0n4pZNwJuRdujVyrfdH99JwhUfV6yMbYnn3umjcfhQZoTC4PH2Nx4CWF5SpL9AfX5l">點我查看</a>。</p>
                                     <div class="form-group normal-layout">
                                         <label class="body-04" for="js-datepicker-train">日期</label>
                                         <div class="datepicker-wrap">
