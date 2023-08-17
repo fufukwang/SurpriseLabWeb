@@ -225,3 +225,14 @@ a {
   line-height: 1.7;
   font-size: 14px;
 }
+
+.form-wrap-step-2 .note a {
+  color: #efcabf;
+  text-decoration: underline;
+  transition: .15s color;
+}
+
+.form-wrap-step-2 .note a:hover {
+  color: #ff9c9c;
+  text-decoration: none;
+}

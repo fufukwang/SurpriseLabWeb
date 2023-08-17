@@ -930,6 +930,7 @@ a {
 }
 .timetable .marquee p {
   animation: marquee 15s infinite linear;
+  white-space: nowrap;
 }
 @keyframes marquee {
   0%{

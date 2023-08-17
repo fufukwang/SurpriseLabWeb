@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?date=0218">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=0714">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=230817">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -101,7 +101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <img src="/terminalAssets/images/main/timetable.png" alt="">
                                 </div>
                                 <div class="marquee">
-                                    <p>高雄離站倒數中...</p>
+                                    <p>高雄離站倒數...9/22-10/15《落日轉運站：Final Call》最終場開放劃位</p>
                                 </div>
                                 <div class="number" data-end="2023-09-03 24:00:00">
                                     <div class="digitalitem day-1 num-0" id="day-1">
@@ -178,14 +178,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="wrap">
                                     <div class="bar" style="width:{{ $process }}%;"></div>
                                 </div>
-                                <p>剩餘座位數<span>{{ $remaining }}%</span></p>
+                                <p class="text-white">剩餘座位數<span>{{ $remaining }}%</span></p>
                             </div>
 
                             <div class="prograssbar">
                                 <div class="text-wrap">
                                     <!-- A Test -->
-                                    <p class="color-y200">
-                                    驚喜製造首度南下高雄，打造突破過往製作規格的全新力作《落日轉運站》，並以交通工具為題推出兩項作品：分別為微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT 無光飛航》，歡迎旅客在此自由轉乘，前往想去的目的地。
+                                    <p class="color-y200 fw-normal">
+                                        <b>9/22-10/15 最終場《落日轉運站：Final Call》</b><br>
+                                        <b>時空發生裂變，讓那些不可能的，成為可能。</b><br>
+                                        <br>
+                                        驚喜製造抵達高雄，打造突破規格的沉浸體驗<br>
+                                        《落日轉運站》，並以交通工具為題推出兩項<br>
+                                        作品：微醺系列互動表演《微醺列車》及英國<br>
+                                        團隊DARKFIELD的巡演之作《FLIGHT》。
                                     </p>
 
                                     <!-- B Test -->
@@ -655,6 +661,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">2022.11.10 - 2023.09.03</li>
+                                                        <li class="list-item">2023.09.22 - 2023.10.15 《落日轉運站：Final Call》最終場熱賣中</li>
                                                     </ul>
                                                 </div>
                     
@@ -664,6 +671,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item style-disabled">週一至週二｜休息（8月加開週二）</li>
                                                         <li class="list-item">週三至週五｜18:00-23:00</li>
                                                         <li class="list-item">週六、週日｜11:30-16:30、17:30-23:00</li>
+                                                        <li class="list-item">*9/29-10/1 & 10/7-10/10 連假期間與週末營業時間相同</li>
                                                     </ul>
                                                 </div>
                     
@@ -808,6 +816,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">2022.11.10 - 2023.09.03</li>
+                                                        <li class="list-item">2023.09.22 - 2023.10.15 《落日轉運站：Final Call》最終場熱賣中</li>
                                                     </ul>
                                                 </div>
                     
@@ -817,6 +826,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item style-disabled">週一至週二｜休息（8月加開週二）</li>
                                                         <li class="list-item">週三至週五｜18:00-23:00</li>
                                                         <li class="list-item">週六、週日｜11:30-16:30、17:30-23:00</li>
+                                                        <li class="list-item">*9/29-10/1 & 10/7-10/10 連假期間與週末營業時間相同</li>
                                                     </ul>
                                                 </div>
                     
@@ -1501,6 +1511,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </table>
                                     </div>
                                     <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-3-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
+                                    <span class="header-title">《落日轉運站：Final Call》體驗內容與先前有差別嗎？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
+                                <div class="accordion-body">
+                                    <p>9/22-10/15 為落日轉運站最後停留在高雄的日子，這段時間裡〈微醺列車〉將探索更多空間，並有不一樣的結局；〈無光飛航〉在降落後，將會有小驚喜；詳情請<a class="text-dark" target="_blank" href="#" style="text-decoration: underline;">點我查看</a>。</p>
                                 </div>
                             </div>
                         </div>

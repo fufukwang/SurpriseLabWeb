@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?230807">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?230802">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?230817">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -294,7 +294,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <h4 class="sub-heading-title">微醺列車</h4>
                                         <p class="sub-heading-subtitle body-01 style-smaller">THE GREAT TIPSY：BON VOYAGE</p>
                                     </div>
-                                    <!-- <p class="note">9/22-10/15 為高雄站最終場次《落日轉運站：Final Call》</p> -->
+                                    <p class="note">10/14-10/15 微醺列車將正式與高雄告別，體驗內容與一般場不同，詳情請<a target="_blank" href="#">點我查看</a>。</p>
                                     <div class="form-group normal-layout">
                                         <label class="body-04" for="js-datepicker-train">日期</label>
                                         <div class="datepicker-wrap">
@@ -325,7 +325,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <h4 class="sub-heading-title">FLIGHT</h4>
                                         <p class="sub-heading-subtitle body-01 style-smaller">無光飛航</p>
                                     </div>
-                                    <!-- <p class="note">9/22-10/15 為高雄站最終場次《落日轉運站：Final Call》</p> -->
                                     <div class="form-group normal-layout">
                                         <label class="body-04" for="js-datepicker-flight">日期</label>
                                         <div class="datepicker-wrap">
@@ -726,6 +725,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking.js?v=230816"></script>
+    <script src="/terminalAssets/js/booking.js?v=230817"></script>
 </body>
 </html>
