@@ -82,7 +82,7 @@ class TerminalTask extends Command
             }
 
             $hour12 = pro::select('id')->where('open',1)
-                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/3600)-floor(UNIX_TIMESTAMP()/3600)=3")->get();
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/3600)-floor((UNIX_TIMESTAMP()/3600)+8)=3")->get();
             foreach($hour12 as $pro){
                 $ord12 = order::select('terminalorder.id','name','email','tel','plan')
                     ->leftJoin('terminal_pro_order', 'terminal_pro_order.order_id', '=', 'terminalorder.id')
