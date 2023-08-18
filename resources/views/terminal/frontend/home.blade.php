@@ -674,7 +674,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item style-disabled">週一至週二｜休息（8月加開週二）</li>
                                                         <li class="list-item">週三至週五｜18:00-23:00</li>
                                                         <li class="list-item">週六、週日｜11:30-16:30、17:30-23:00</li>
-                                                        <li class="list-item">*9/29-10/1 & 10/7-10/10 連假期間與週末營業時間相同</li>
+                                                        <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
                                                 </div>
                     
@@ -829,7 +829,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item style-disabled">週一至週二｜休息（8月加開週二）</li>
                                                         <li class="list-item">週三至週五｜18:00-23:00</li>
                                                         <li class="list-item">週六、週日｜11:30-16:30、17:30-23:00</li>
-                                                        <li class="list-item">*9/29-10/1 & 10/7-10/10 連假期間與週末營業時間相同</li>
+                                                        <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
                                                 </div>
                     
@@ -1452,6 +1452,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div> -->
                     <div class="accordion-wrap">
                         <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-3-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
+                                    <span class="header-title">《落日轉運站：Final Call》體驗內容與先前有差別嗎？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
+                                <div class="accordion-body">
+                                    <p>9/22-10/15 為落日轉運站最後停留在高雄的日子，這段時間裡〈微醺列車〉將探索更多空間，並有不一樣的結局；〈FLIGHT〉在降落後，將會有小驚喜；詳情請<a class="text-dark" target="_blank" href="https://www.facebook.com/surpriselabtw/posts/pfbid0n4pZNwJuRdujVyrfdH99JwhUfV6yMbYnn3umjcfhQZoTC4PH2Nx4CWF5SpL9AfX5l" style="text-decoration: underline;">點我查看</a>。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-3-headingNine">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseNine" aria-expanded="false" aria-controls="flush-3-collapseNine">
                                     <span class="header-title">我想跟朋友坐在一起可以嗎？</span>
@@ -1514,20 +1528,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </table>
                                     </div>
                                     <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-3-headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
-                                    <span class="header-title">《落日轉運站：Final Call》體驗內容與先前有差別嗎？</span>
-                                    <div class="header-icon"></div>
-                                </button>
-                            </h2>
-                            <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
-                                <div class="accordion-body">
-                                    <p>9/22-10/15 為落日轉運站最後停留在高雄的日子，這段時間裡〈微醺列車〉將探索更多空間，並有不一樣的結局；〈無光飛航〉在降落後，將會有小驚喜；詳情請<a class="text-dark" target="_blank" href="https://www.facebook.com/surpriselabtw/posts/pfbid0n4pZNwJuRdujVyrfdH99JwhUfV6yMbYnn3umjcfhQZoTC4PH2Nx4CWF5SpL9AfX5l" style="text-decoration: underline;">點我查看</a>。</p>
                                 </div>
                             </div>
                         </div>
