@@ -293,7 +293,7 @@
                                 <div class="form-col">
                                     <label class="form-label" for="meat_food">
                                         * 葷食
-                                        <span class="en">* Regular Menu</span>
+                                        <span class="en">* Regular Menu<br><br></span>
                                     </label>
                                     <select id="meat_food" name="meat_food" data-placeholder="選擇人數" required>
                                     </select>
@@ -311,6 +311,7 @@
                                         </select>
                                     </div>
                                     <hr>
+                                    <label class="form-label mt-lg-4 mb-lg-4">* 特定食材忌口/過敏人數 Dietary Restrictions</label>
                                     <div class="form-col amount">
                                         <label class="form-label" for="meat_food_noBeef">
                                             牛肉忌口/過敏
@@ -379,6 +380,7 @@
                                         </select>
                                     </div>
                                     <hr>
+                                    <label class="form-label mt-lg-4 mb-lg-4">* 特定食材忌口/過敏人數 Dietary Restrictions</label>
                                     <div class="form-col amount">
                                         <label class="form-label" for="vegetarian_food_noNut">
                                             堅果忌口/過敏
