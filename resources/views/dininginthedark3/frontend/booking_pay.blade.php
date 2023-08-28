@@ -306,8 +306,8 @@
                                             <span class="en">* Dietary Restrictions</span>
                                         </label>
                                         <select id="meat_food_allergy" name="meat_food_allergy" data-placeholder="用餐者是否有忌口/過敏食材" required>
-                                            <option value="0" selected>否</option>
-                                            <option value="1">是</option>
+                                            <option value="0" selected>否 No</option>
+                                            <option value="1">是 Yes</option>
                                         </select>
                                     </div>
                                     <hr>
@@ -374,8 +374,8 @@
                                             <span class="en">* Dietary Restrictions</span>
                                         </label>
                                         <select id="vegetarian_food_allergy" name="vegetarian_food_allergy" data-placeholder="用餐者是否有忌口/過敏食材" required>
-                                            <option value="0" selected>否</option>
-                                            <option value="1">是</option>
+                                            <option value="0" selected>否 No</option>
+                                            <option value="1">是 Yes</option>
                                         </select>
                                     </div>
                                     <hr>
