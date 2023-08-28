@@ -716,6 +716,15 @@ form .btn-outline {
   }
 }
 
+.select2 .selection {
+  position: relative;
+}
+
+.step-3 .select2-container {
+  width: auto !important;
+  flex: 1;
+}
+
 .select2-container--default .select2-selection--single {
   height: auto;
 }
@@ -737,10 +746,15 @@ form .btn-outline {
   color: #595757;
 }
 
+.step-3 .select2-container--disabled .select2-selection__rendered {
+  border-color: #6d6d6d !important;
+  color: #777777;
+}
+
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   position: absolute;
   top: 50%;
-  right: 14px;
+  right: 9px;
   width: 20px;
   height: 20px;
   -webkit-transform: translateY(-50%);
@@ -1379,13 +1393,24 @@ main.booking fieldset.step-4 .form-group .table-label .error-msg {
   color: #ff7ea4;
 }
 
-fieldset.step-3 .form-group .en,
+/* fieldset.step-3 .form-group .en,
 main.booking fieldset.step-4 .form-group .en{
   position: absolute;
   top: 75%;
   left: 13px;
   font-size: 12px;
   width: 130px;
+  text-align: left;
+  line-height: 1.2;
+} */
+
+fieldset.step-3 .form-group .en,
+main.booking fieldset.step-4 .form-group .en{
+  /* position: absolute;
+  top: 75%;
+  left: 13px; */
+  display: block;
+  font-size: 12px;
   text-align: left;
   line-height: 1.2;
 }
@@ -1989,10 +2014,23 @@ main.booking fieldset.step-4 .form-group:not(.select-food) p {
   position: relative;
   width: 100%;
   display: flex;
+  align-items: center;
 }
 .select-food .form-col .form-label {
   min-width: 170px;
   margin-bottom: 0;
+  display: block;
+}
+
+.select-food .form-col .unit {
+  width: 70px;
+  display: block;
+  margin: 0 0 0 10px;
+  min-width: unset;
+  max-width: unset;
+  flex: unset;
+  font-size: 14px;
+  text-align: right;
 }
 
 .select-food .form-row {
@@ -2003,7 +2041,7 @@ main.booking fieldset.step-4 .form-group:not(.select-food) p {
 }
 @media (min-width: 992px){
   .select-food .form-row:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 @media (max-width: 991px){
@@ -2017,8 +2055,12 @@ main.booking fieldset.step-4 .form-group:not(.select-food) p {
   width: 100%;
   padding: 0;
   margin: 0;
+  /* border-top: 1px dashed rgba(255,255,255,.2);
+  margin-top: 25px; */
+}
+.select-food .col-wrap hr {
   border-top: 1px dashed rgba(255,255,255,.2);
-  margin-top: 25px;
+  margin: 20px 0;
 }
 .select-food .col-wrap .form-col:first-child {
   margin-top: 25px;

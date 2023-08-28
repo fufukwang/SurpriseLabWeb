@@ -33,7 +33,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=230730"/>
-    <link rel="stylesheet" href="css/form.css?date=230801"/>
+    <link rel="stylesheet" href="css/form.css?date=230828"/>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -285,63 +285,108 @@
                         </div> -->
 
                         <div class="form-group">
-                            <label class="form-label">* 飲食禁忌 Dietary Restrictions</label>
+                            <label class="form-label">* 套餐選擇 Menu</label>
                         </div>
 
                         <div class="form-group select-food">
                             <div class="form-row">
                                 <div class="form-col">
-                                    <label class="form-label" for="meat_food">* 葷食</label>
-                                    <span class="en">Regular Menu</span>
+                                    <label class="form-label" for="meat_food">
+                                        * 葷食
+                                        <span class="en">* Regular Menu</span>
+                                    </label>
                                     <select id="meat_food" name="meat_food" data-placeholder="選擇人數" required>
                                     </select>
+                                    <label class="unit">位 Guests</label>
                                 </div>
                                 <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
-                                        <label class="form-label" for="meat_food_noBeef">* 不吃牛肉</label>
-                                        <span class="en">No Beef</span>
-                                        <select id="meat_food_noBeef" name="meat_food_noBeef" data-placeholder="選擇人數" required>
+                                        <label class="form-label" for="meat_food_allergy">
+                                            * 用餐者是否有忌口/過敏食材
+                                            <span class="en">* Dietary Restrictions</span>
+                                        </label>
+                                        <select id="meat_food_allergy" name="meat_food_allergy" data-placeholder="用餐者是否有忌口/過敏食材" required>
+                                            <option value="0" selected>否</option>
+                                            <option value="1">是</option>
                                         </select>
                                     </div>
-                                    <div class="form-col">
-                                        <label class="form-label" for="meat_food_noPork">* 不吃豬肉</label>
-                                        <span class="en">No Pork</span>
-                                        <select id="meat_food_noPork" name="meat_food_noPork" data-placeholder="選擇人數" required>
+                                    <hr>
+                                    <div class="form-col amount">
+                                        <label class="form-label" for="meat_food_noBeef">
+                                            牛肉忌口/過敏
+                                            <span class="en">No Beef</span>
+                                        </label>
+                                        <select id="meat_food_noBeef" name="meat_food_noBeef" data-placeholder="選擇人數" required disabled>
                                         </select>
+                                        <label class="unit">位 Guests</label>
                                     </div>
-                                    <div class="form-col">
-                                        <label class="form-label" for="meat_food_noNut">* 不吃堅果</label>
-                                        <span class="en">No Nut</span>
-                                        <select id="meat_food_noNut" name="meat_food_noNut" data-placeholder="選擇人數" required>
+                                    <div class="form-col amount">
+                                        <label class="form-label" for="meat_food_noPork">
+                                            豬肉忌口/過敏
+                                            <span class="en">No Pork</span>
+                                        </label>
+                                        <select id="meat_food_noPork" name="meat_food_noPork" data-placeholder="選擇人數" required disabled>
                                         </select>
+                                        <label class="unit">位 Guests</label>
                                     </div>
-                                    <div class="form-col">
-                                        <label class="form-label" for="meat_food_noSeafood">* 甲殼類過敏</label>
-                                        <span class="en">Crustacean Allergy</span>
-                                        <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required>
+                                    <div class="form-col amount">
+                                        <label class="form-label" for="meat_food_noNut">
+                                            堅果忌口/過敏
+                                            <span class="en">No Nut</span>
+                                        </label>
+                                        <select id="meat_food_noNut" name="meat_food_noNut" data-placeholder="選擇人數" required disabled>
                                         </select>
+                                        <label class="unit">位 Guests</label>
                                     </div>
-                                    <div class="form-col">
-                                        <label class="form-label" for="meat_food_noAllSeafood">* 所有海鮮過敏/不吃</label>
-                                        <span class="en">No All Seafood</span>
-                                        <select id="meat_food_noAllSeafood" name="meat_food_noAllSeafood" data-placeholder="選擇人數" required>
+                                    <div class="form-col amount">
+                                        <label class="form-label" for="meat_food_noSeafood">
+                                            甲殼類忌口/過敏
+                                            <span class="en">Crustacean Allergy</span>
+                                        </label>
+                                        <select id="meat_food_noSeafood" name="meat_food_noSeafood" data-placeholder="選擇人數" required disabled>
                                         </select>
+                                        <label class="unit">位 Guests</label>
+                                    </div>
+                                    <div class="form-col amount">
+                                        <label class="form-label" for="meat_food_noAllSeafood">
+                                            所有海鮮忌口/過敏
+                                            <span class="en">Seafood Allergy</span>
+                                        </label>
+                                        <select id="meat_food_noAllSeafood" name="meat_food_noAllSeafood" data-placeholder="選擇人數" required disabled>
+                                        </select>
+                                        <label class="unit">位 Guests</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-col">
-                                    <label class="form-label" for="vegetarian_food">* 蛋奶五辛素</label>
-                                    <span class="en">Five pungent spices & Lacto-vegetarian.</span>
+                                    <label class="form-label" for="vegetarian_food">
+                                        * 素食
+                                        <span class="en">* Five pungent spices & Lacto-vegetarian</span>
+                                    </label>
                                     <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
                                     </select>
                                 </div>
                                 <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
-                                        <label class="form-label" for="vegetarian_food_noNut">* 不吃堅果</label>
-                                        <span class="en">No Nut</span>
-                                        <select id="vegetarian_food_noNut" name="vegetarian_food_noNut" data-placeholder="選擇人數" required>
+                                        <label class="form-label" for="vegetarian_food_allergy">
+                                            * 用餐者是否有忌口/過敏食材
+                                            <span class="en">* Dietary Restrictions</span>
+                                        </label>
+                                        <select id="vegetarian_food_allergy" name="vegetarian_food_allergy" data-placeholder="用餐者是否有忌口/過敏食材" required>
+                                            <option value="0" selected>否</option>
+                                            <option value="1">是</option>
                                         </select>
+                                    </div>
+                                    <hr>
+                                    <div class="form-col amount">
+                                        <label class="form-label" for="vegetarian_food_noNut">
+                                            堅果忌口/過敏
+                                            <span class="en">No Nut</span>
+                                        </label>
+                                        <select id="vegetarian_food_noNut" name="vegetarian_food_noNut" data-placeholder="選擇人數" required disabled>
+                                        </select>
+                                        <label class="unit">位 Guests</label>
                                     </div>
                                 </div>
                             </div>
@@ -436,13 +481,14 @@
                                 <!-- <td>葷食 <span id="filled_pv"></span> 人，蛋奶素 <span class="filled" data-filled="vegetarian_food"></span> 人</td> -->
                                 <td>
                                     葷食 <span id="filled_pv"></span> 人：
-                                    <p>不吃牛肉 <span class="filled" data-filled="meat_food_noBeef">0</span> 人</p>
-                                    <p>不吃豬肉 <span class="filled" data-filled="meat_food_noPork">0</span> 人</p>
-                                    <p>不吃堅果 <span class="filled" data-filled="meat_food_noNut">0</span> 人</p>
-                                    <p>甲殼類過敏 <span class="filled" data-filled="meat_food_noSeafood">0</span> 人</p>
+                                    <p>牛肉忌口/過敏 <span class="filled" data-filled="meat_food_noBeef">0</span> 人</p>
+                                    <p>豬肉忌口/過敏 <span class="filled" data-filled="meat_food_noPork">0</span> 人</p>
+                                    <p>堅果忌口/過敏 <span class="filled" data-filled="meat_food_noNut">0</span> 人</p>
+                                    <p>甲殼類忌口/過敏 <span class="filled" data-filled="meat_food_noSeafood">0</span> 人</p>
+                                    <p>所有海鮮忌口/過敏 <span class="filled" data-filled="meat_food_noAllSeafood">0</span> 人</p>
                                     <br>
-                                    蛋奶五辛素 <span class="filled" data-filled="vegetarian_food"></span> 人：
-                                    <p>不吃堅果 <span class="filled" data-filled="vegetarian_food_noNut">0</span> 人</p>
+                                    素食 <span class="filled" data-filled="vegetarian_food"></span> 人：
+                                    <p>堅果忌口/過敏 <span class="filled" data-filled="vegetarian_food_noNut">0</span> 人</p>
                                 </td>
                             </tr>
                             <tr>
@@ -679,7 +725,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?2308012"></script>
+    <script src="js/form_pay.js?230828"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
