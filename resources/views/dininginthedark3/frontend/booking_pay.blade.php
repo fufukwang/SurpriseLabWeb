@@ -367,6 +367,7 @@
                                     </label>
                                     <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
                                     </select>
+                                    <label class="unit">位 Guests</label>
                                 </div>
                                 <div class="col-wrap" style="display:none;">
                                     <div class="form-col">
