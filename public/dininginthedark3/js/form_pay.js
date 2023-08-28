@@ -563,22 +563,26 @@ $('.step-3 select').on('change', function () {
         $('#vegetarian_food').val(eatHabit['vegetarian_food'])
         $('#vegetarian_food').next().find('.select2-selection__rendered').text(eatHabit['vegetarian_food'])
         if(eatHabit['meat_food'] == 0){
-            $(this).closest('.form-row').find('.col-wrap').slideUp()
+            $(this).closest('.form-row').find('.col-wrap').slideUp(400, function(){
+                $('#meat_food_allergy').val('0').trigger('change')
+            })
             $(this).closest('.form-row').next().find('.col-wrap').slideDown()
         }else if(eatHabit['vegetarian_food'] == 0){
             $(this).closest('.form-row').find('.col-wrap').slideDown()
-            $(this).closest('.form-row').next().find('.col-wrap').slideUp()
+            $(this).closest('.form-row').next().find('.col-wrap').slideUp(400, function(){
+                $('#vegetarian_food_allergy').val('0').trigger('change')
+            })
         }else{
             $(this).closest('.form-row').find('.col-wrap').slideDown()
             $(this).closest('.form-row').next().find('.col-wrap').slideDown()
         }
-        $(this).closest('.form-row').find('.col-wrap .form-col').each(function(){
+        $(this).closest('.form-row').find('.col-wrap .form-col.amount').each(function(){
             $(this).find('select').children().remove()
             for(let a=0;a<=eatHabit['meat_food'];a++){
                 $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
             }
         })
-        $(this).closest('.form-row').next().find('.col-wrap .form-col').each(function(){
+        $(this).closest('.form-row').next().find('.col-wrap .form-col.amount').each(function(){
             $(this).find('select').children().remove()
             for(let a=0;a<=eatHabit['vegetarian_food'];a++){
                 $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
@@ -591,22 +595,26 @@ $('.step-3 select').on('change', function () {
         $('#meat_food').val(eatHabit['meat_food'])
         $('#meat_food').next().find('.select2-selection__rendered').text(eatHabit['meat_food'])
         if(eatHabit['vegetarian_food'] == 0){
-            $(this).closest('.form-row').find('.col-wrap').slideUp()
+            $(this).closest('.form-row').find('.col-wrap').slideUp(400, function(){
+                $('#vegetarian_food_allergy').val('0').trigger('change')
+            })
             $(this).closest('.form-row').prev().find('.col-wrap').slideDown()
         }else if(eatHabit['meat_food'] == 0){
             $(this).closest('.form-row').find('.col-wrap').slideDown()
-            $(this).closest('.form-row').prev().find('.col-wrap').slideUp()
+            $(this).closest('.form-row').prev().find('.col-wrap').slideUp(400, function(){
+                $('#meat_food_allergy').val('0').trigger('change')
+            })
         }else{
             $(this).closest('.form-row').find('.col-wrap').slideDown()
             $(this).closest('.form-row').prev().find('.col-wrap').slideDown()
         }
-        $(this).closest('.form-row').find('.col-wrap .form-col').each(function(){
+        $(this).closest('.form-row').find('.col-wrap .form-col.amount').each(function(){
             $(this).find('select').children().remove()
             for(let a=0;a<=eatHabit['vegetarian_food'];a++){
                 $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
             }
         })
-        $(this).closest('.form-row').prev().find('.col-wrap .form-col').each(function(){
+        $(this).closest('.form-row').prev().find('.col-wrap .form-col.amount').each(function(){
             $(this).find('select').children().remove()
             for(let a=0;a<=eatHabit['meat_food'];a++){
                 $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
@@ -614,6 +622,15 @@ $('.step-3 select').on('change', function () {
         })
     }
 })
+
+$('.step-3 #meat_food_allergy, .step-3 #vegetarian_food_allergy').on('change', function () {
+    if( $(this).val() === '0' ) {
+        $(this).closest('.col-wrap').find('.amount select').prop('disabled', true);
+        $(this).closest('.col-wrap').find('.amount select').val('0').trigger('change')
+    } else {
+        $(this).closest('.col-wrap').find('.amount select').prop('disabled', false);
+    }
+});
 
 // 更新餐點選擇的顧客數
 function update_isVegetarian(people) {
