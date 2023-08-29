@@ -362,7 +362,7 @@
                             <div class="form-row">
                                 <div class="form-col">
                                     <label class="form-label" for="vegetarian_food">
-                                        * 素食
+                                        * 奶蛋五辛素
                                         <span class="en">* Five pungent spices & Lacto-vegetarian</span>
                                     </label>
                                     <select id="vegetarian_food" name="vegetarian_food" data-placeholder="選擇人數" required>
@@ -490,7 +490,7 @@
                                     <p>甲殼類忌口/過敏 <span class="filled" data-filled="meat_food_noSeafood">0</span> 人</p>
                                     <p>所有海鮮忌口/過敏 <span class="filled" data-filled="meat_food_noAllSeafood">0</span> 人</p>
                                     <br>
-                                    素食 <span class="filled" data-filled="vegetarian_food"></span> 人：
+                                    奶蛋五辛素 <span class="filled" data-filled="vegetarian_food"></span> 人：
                                     <p>堅果忌口/過敏 <span class="filled" data-filled="vegetarian_food_noNut">0</span> 人</p>
                                 </td>
                             </tr>
