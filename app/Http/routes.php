@@ -452,6 +452,69 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('order/inv/cancal','clubT\InvController@InvClose');
     });
 
+    // 巴黎舞會
+    Route::group(['prefix' => 'paris'], function(){
+        Route::get('backmes','paris\BackController@BackMes');
+        Route::post('backmes','paris\BackController@BackMes');
+        Route::get('backme/{id}','paris\BackController@BackMe');
+        Route::delete('backme/{id}/delete','paris\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','paris\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','paris\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','paris\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','paris\BackController@infoUpdate');
+        Route::post('backmes/CanelCoupon','paris\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','paris\BackController@NotUseXls');
+        Route::post('uploadxlsx','paris\BackController@UploadXlsx2Db');
+
+        // coupon
+        Route::get('coupons','paris\BackController@Coupons');
+        Route::get('coupon/{id}','paris\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','paris\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','paris\BackController@Pros');
+        Route::get('pro/{id}/edit','paris\BackController@ProEdit');
+        Route::post('pro/{id}/update','paris\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','paris\BackController@ProDelete');
+        Route::post('pros','paris\BackController@Pros');
+        Route::post('pros/output/only','paris\BackController@ProOutputSite');
+
+        // 訂單
+        Route::get('orders/{id}','paris\OrderController@Orders');
+        Route::get('order/{id}/edit','paris\OrderController@OrderEdit');
+        Route::post('order/{id}/update','paris\OrderController@OrderUpdate');
+        Route::delete('order/{id}/delete','paris\OrderController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','paris\OrderController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','paris\OrderController@AppointmentUpdate');
+        Route::post('order/{id}/store/ajax','paris\OrderController@StoreByAjax');
+
+        // 報表列印
+        Route::get('print','paris\OrderController@Print');
+        Route::get('table','paris\OrderController@Table');
+        Route::get('xls/data/output','paris\OrderController@XlsDataOuput');
+        Route::get('xls/emaildata/output','paris\OrderController@XlsEmailDataOuput');
+        Route::post('order/{id}/resent','paris\OrderController@beSentOrderMail');
+        Route::post('order/import.xls','paris\OrderController@orderImportXls');
+
+        // 發票相關
+        Route::post('order/inv/single/open','paris\InvController@singleInvOpne');
+        Route::post('order/inv/mult/open','paris\InvController@muInvOpen');
+        Route::post('order/inv/cancal','paris\InvController@InvClose');
+
+        // 主揪相關
+        Route::post('getMasterData', 'paris\MasterController@getMasterAndSend');
+        Route::post('postReSendMail', 'paris\MasterController@postReSendMail');
+        Route::post('postReSendSMS', 'paris\MasterController@postReSendSMS');
+        Route::get('getMasterList','paris\MasterController@getMasterList');
+        Route::post('postMaster/{id}/store','paris\MasterController@postMasterStore');
+        Route::delete('postMaster/{id}/delete','paris\MasterController@postMasterDelete');
+
+        // 特殊場次設定
+        Route::get('special/setting', 'paris\SpecialController@getSpecialSetting');
+        Route::get('discount/setting', 'paris\SpecialController@getDiscountSetting');
+        Route::post('setting/store', 'paris\SpecialController@postSettingStore');
+    });
+
     Route::group(['prefix' => 'surprise'], function(){
         Route::get('wishs','SurpriseLabHome\BackController@wishs');
         Route::get('wish/{id}/modify','SurpriseLabHome\BackController@wish');
