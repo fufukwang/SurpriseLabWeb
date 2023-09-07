@@ -196,18 +196,12 @@
                                             tel 電話<br />
                                             sponsor_id 贊助者ID<br />
                                             last_four 刷卡後四碼<br />
-                                            p2 雙人套票<br />
-                                            p4 雙菜單套票<br />
-                                            gift 禮物卡<br />
-                                            time 付款時間<br />
-                                            <!-- eb1 早鳥票<br />
                                             p1 單人票<br />
                                             p2 雙人票<br />
-                                            p6 六人票<br />
-                                            p4 四人票<br /> -->
-                                            <!--l1 時間有點限制票數量<br />
-                                            a1 無限暢飲票數量<br />
-                                            a4 四人沉醉票數量<br /-->
+                                            p4 四人票<br />
+                                            gift 禮物卡<br />
+                                            time 付款時間<br />
+
                                             其他的位置可以保留<br />
                                             <span style="color:#f55">同一季只會存入一組相同的單號</span>
                                         </p>

@@ -31,7 +31,6 @@ class FrontController extends WebController
             $code = 'pass';$day = '';
             if($request->has('day')){
                 $day = $request->day;
-                $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
                 $act = pro::where('day',$day)->where('open',1)->where('special',0)->select(DB::raw("(SUM(sites)-SUM({$this->oquery})) AS Count"))->whereRaw("(sites-{$this->oquery})>=2")->groupBy('day')->first();
                 if($act){
                     if($act->Count<2){ $code = 'max'; }
@@ -54,7 +53,6 @@ class FrontController extends WebController
             if($request->has('act')){
                 $pople = $request->pople;
                 if(is_numeric($pople) && $pople>0){
-                    $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
                     $pro = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>=".$pople);
                 } else {
                     return Response::json(['success'=> 'N'], 200);
@@ -87,7 +85,6 @@ class FrontController extends WebController
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
                         $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash"))->where('day',$day)->get();
                         return $pro->toJson();
                     break;
@@ -216,7 +213,6 @@ class FrontController extends WebController
                 $count = Carbon::now()->format('Ymd').'0001';
             }
             $people = $request->Pople;
-            $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
             $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');

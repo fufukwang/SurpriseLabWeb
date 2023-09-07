@@ -37,9 +37,10 @@
                                                         <span class="input-group-addon bg-primary b-0 text-white"><i class="ion-calendar"></i></span>
                                                     </div--><!-- input-group -->
                                                 </div>
-                                                <div class="col-sm-12">不搜尋日期
-<label><input type="radio" name="srday" value="1"@if($request->srday==1) checked @endif>是</label>
-<label><input type="radio" name="srday" value="0"@if($request->srday!=1) checked @endif>否</label>
+                                                <div class="col-sm-12">
+<label><input type="radio" name="srday" value="1"@if($request->srday==1) checked @endif>訂單時間</label>
+<label><input type="radio" name="srday" value="2"@if($request->srday==2) checked @endif>體驗時間</label>
+<label><input type="radio" name="srday" value="0"@if($request->srday<=0) checked @endif>不設定</label>
                                                 </div>
                                             </div>
                                             
@@ -191,7 +192,7 @@
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}
                                                     <br >@if($row->is_overseas == 9) <span class="badge badge-pill badge-info">特別場次</span> @endif
                                                 </td>
-                                                <td>{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 取消:{{ $row->cut }}人 素食:{{ $row->vegetarian }}人 英文:{{ $row->need_english }}人</td>
+                                                <td>{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 取消:{{ $row->cut }}人 英文:{{ $row->need_english }}人</td>
                                                 <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='已付款(部分退款)')info @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
 @if($row->is_overseas == 1) <br />海外刷卡 @endif<br />
 <span id="inv_{{ $row->id }}">{{ $inv_open ? $number->number : '' }}</span> 
@@ -316,14 +317,6 @@
                                             ticket 場次  <br />
                                             people 人數  <br />
                                             money 金額(請輸入半形數字)，金額會直接存入訂單總金額。<br />
-                                            meat_eat 葷食  <br />
-                                            no_beef 葷食/不吃牛肉  <br />
-                                            no_pork 葷食/不吃豬肉  <br />
-                                            no_nut_m 葷食/不吃堅果  <br />
-                                            no_shell 葷食/不吃帶殼海鮮  <br />
-                                            no_fish 葷食/所有海鮮過敏/不吃  <br />
-                                            vegetarian 素食  <br />
-                                            no_nut_v 素食/不吃堅果  <br />
                                         </p>
                                     </div>
                                 </div>

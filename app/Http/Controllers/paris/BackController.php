@@ -273,7 +273,6 @@ class BackController extends WebController
                 return Response::json(['success'=> true], 200);
             }
         }
-        $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
         $pros = pro::select(DB::raw("({$this->oquery}) AS now,(sites-{$this->oquery}) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open"));
         if($request->has('day') && $request->has('day_end')){
             $open_count = pro::select(DB::raw("SUM(({$this->oquery})) AS sale,count(id) as num,SUM(sites) as site"))->where('open',1); 
@@ -393,7 +392,6 @@ class BackController extends WebController
     }
 
     public function ProOutputSite(Request $request){
-        $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
         $pro = pro::select(DB::raw("({$this->oquery}) AS now,sites,id,rang_start,rang_end,day"));
         if($request->has('type')){
             if($request->type == 'not'){
@@ -417,6 +415,7 @@ class BackController extends WebController
         Excel::create('座位狀況',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [[
+                    'name' => '作品',
                     'id'   => '編號',
                     'day'  => '日期',
                     'mon'  => '星期',
@@ -437,6 +436,7 @@ class BackController extends WebController
                         default: $mon = '日'; break;
                     }
                     $tmp = [
+                        'name' => '巴黎舞會',
                         'id'   => $row['id'],
                         'day'  => $day->format('m/d'),
                         'mon'  => $mon,

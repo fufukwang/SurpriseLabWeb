@@ -41,7 +41,6 @@ class NewPayController extends WebController
             }
 
             $people = $request->booking_people;
-            $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
             $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');

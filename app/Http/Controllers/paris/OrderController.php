@@ -67,7 +67,6 @@ class OrderController extends WebController
                 abort(404);
             }
         }
-        $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
         $pro = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>=".$order->pople)
             ->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,day"))->orderBy('day','asc')->orderBy('rang_start','asc')->get();
         return view('paris.backend.order',compact('order','pro','cooperate'));
@@ -212,7 +211,6 @@ class OrderController extends WebController
             } else {
                 $count = Carbon::now()->format('Ymd').'0001';
             }
-            $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
             $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
             $meat = [];
             /*
@@ -369,7 +367,7 @@ class OrderController extends WebController
                     {
                         $destinationPath = base_path() . '/storage/app';
                         $extension = $request->file('xlsx')->getClientOriginalExtension();
-                        $fileName = 'tgt_' . date('YmdHis') . '.' . $extension;
+                        $fileName = 'paris_inport_order_' . date('YmdHis') . '.' . $extension;
                         $request->file('xlsx')->move($destinationPath, $fileName);
                         $filePath = '/storage/app/' . $fileName;
                     }
@@ -394,15 +392,11 @@ class OrderController extends WebController
                     } elseif(!is_numeric($row['money']) && $row['money']<=0) {
                         $message .= "第{$i}列 金額輸入錯誤<br>";
                         break;
-                    } elseif($row['people'] != $row['meat_eat'] + $row['vegetarian']) {
-                        $message .= "第{$i}列 葷/素人數與總人數不符<br>";
-                        break;
                     } else {
                         $meat = [];
                         $is_overseas = 0;
                         $money = $row['money'];
                         // 檢查座位
-                        $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
                         $act = pro::where('id',$row['ticket'])->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
                         if($row['people']>$act->Count){
                             $message .= "第{$i}列 編號({$row['ticket']})人數已滿<br>";
@@ -673,9 +667,17 @@ class OrderController extends WebController
         if($isTable){
             $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
         }
-        if($request->has('srday')  && $request->srday!=1){
-            if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
-            if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
+
+
+        if($request->has('srday')  && $request->srday>=1){
+            if($request->srday == 1){
+                if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
+                if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
+            }
+            if($request->srday == 2){
+                if($request->has('daystart') && $request->daystart!='') $order->where('paris_order.created_at','>=',$request->daystart);
+                if($request->has('dayend') && $request->dayend!='') $order->where('paris_order.created_at','<=',$request->dayend);    
+            }
         }
         
         if($request->has('is_overseas') && ($request->is_overseas==1 || $request->is_overseas==2)) $order->where('is_overseas',$request->is_overseas); 

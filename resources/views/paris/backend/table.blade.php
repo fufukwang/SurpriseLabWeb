@@ -49,7 +49,6 @@
 			<td>付款</td>
 			<td>電話</td>
 			<td>人數<!-- 主餐 --></td>
-			<td>素食</td>
 			<td>英文</td>
 			<td>備註</td>
 			<td>優惠券 / 統編</td>
@@ -106,7 +105,6 @@
 			<td>{{ $pay_type}} {{ $pay_money }} （ @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')) Y @else N @endif ）{{ $modify_money }}</td>
 			<td>{{ $row->tel }}</td>
 			<td>{{ $row->pople }} 人 </td>
-			<td>{{ $row->vegetarian }} 人</td>
 			<td>{{ $row->need_english }} 人</td>
 			<td rowspan="2">{!! nl2br($row->notes) !!}</td>
 			<td rowspan="2">
