@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>【無光晚餐】你需要先知道的注意事項 8 Tips for Dining in the Dark</title>
-<style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td,h1{line-height:100%}h1,h2{font-family:Helvetica;text-align:center}h1,h2,h3,h4{display:block;font-style:normal;font-weight:700;margin:0}h1,h2,h3,h4,h5,h6{margin:0}#templateColumns,#templateFooter{border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}h1,h2,h3,h4,h5,h6{display:block}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}#bodyTable,#templateFooter,body{background-color:#333232}#bodyCell{border-top:0}#templateContainer{border:0}h1{color:#fff!important;font-size:40px;letter-spacing:-1px}h2{color:#000!important;font-size:36px;line-height:125%;letter-spacing:-.75px}h3,h4{line-height:125%;text-align:left;font-family:Helvetica}h3{color:#606060!important;font-size:18px;letter-spacing:-.5px}h4{color:grey!important;font-size:16px;letter-spacing:normal}#templateBody,#templateHeader,#templatePreheader{background-color:#333232;border-top:0;border-bottom:0}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left}.bodyContainer .mcnTextContent a,.headerContainer .mcnTextContent a,.leftColumnContainer .mcnTextContent a,.preheaderContainer .mcnTextContent a,.rightColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}#templateColumns{background-color:#262626}.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:14px;line-height:150%;text-align:center}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a{color:#262626;font-weight:400;text-decoration:underline}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}#bodyCell{padding-top:10px!important}.templateContainer{max-width:600px!important;width:100%!important}.columnsContainer{display:block!important;max-width:600px!important;padding-bottom:18px!important;padding-left:0!important;width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{height:auto!important;width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:24px!important;line-height:125%!important}h2{font-size:20px!important;line-height:125%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p,.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p,h3{font-size:18px!important;line-height:125%!important}h4{font-size:16px!important;line-height:125%!important}#templatePreheader{display:block!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p,.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}
+    <style type="text/css">#outlook a,h1,h2,h3,h4,h5,h6,p{padding:0}.ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td,h1{line-height:100%}h1,h2{font-family:Helvetica;text-align:center}h1,h2,h3,h4{display:block;font-style:normal;font-weight:700;margin:0}h1,h2,h3,h4,h5,h6{margin:0}#templateColumns,#templateFooter{border-top:0;border-bottom:0}p{margin:10px 0}table{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}h1,h2,h3,h4,h5,h6{display:block}a img,img{border:0;height:auto;outline:0;text-decoration:none}#bodyCell,#bodyTable,body{height:100%;margin:0;padding:0;width:100%}.mcnPreviewText{display:none!important}img{-ms-interpolation-mode:bicubic}.ExternalClass,.ReadMsgBody{width:100%}a,blockquote,li,p,td{mso-line-height-rule:exactly}a[href^=sms],a[href^=tel]{color:inherit;cursor:default;text-decoration:none}a,blockquote,body,li,p,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}a.mcnButton{display:block}.mcnImage,.mcnRetinaImage{vertical-align:bottom}.mcnTextContent{word-break:break-word}.mcnTextContent img{height:auto!important}.mcnDividerBlock{table-layout:fixed!important}#bodyTable,#templateFooter,body{background-color:#333232}#bodyCell{border-top:0}#templateContainer{border:0}h1{color:#fff!important;font-size:40px;letter-spacing:-1px}h2{color:#000!important;font-size:36px;line-height:125%;letter-spacing:-.75px}h3,h4{line-height:125%;text-align:left;font-family:Helvetica}h3{color:#606060!important;font-size:18px;letter-spacing:-.5px}h4{color:grey!important;font-size:16px;letter-spacing:normal}#templateBody,#templateHeader,#templatePreheader{background-color:#333232;border-top:0;border-bottom:0}.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left}.bodyContainer .mcnTextContent a,.headerContainer .mcnTextContent a,.leftColumnContainer .mcnTextContent a,.preheaderContainer .mcnTextContent a,.rightColumnContainer .mcnTextContent a{color:#000;font-weight:400;text-decoration:underline}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center}#templateColumns{background-color:#262626}.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:14px;line-height:150%;text-align:center}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{color:#000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center}.footerContainer .mcnTextContent a{color:#262626;font-weight:400;text-decoration:underline}@media only screen and (max-width:480px){a,blockquote,body,li,p,table,td{-webkit-text-size-adjust:none!important}body{width:100%!important;min-width:100%!important}#bodyCell{padding-top:10px!important}.templateContainer{max-width:600px!important;width:100%!important}.columnsContainer{display:block!important;max-width:600px!important;padding-bottom:18px!important;padding-left:0!important;width:100%!important}.mcnRetinaImage{max-width:100%!important}.mcnImage{height:auto!important;width:100%!important}.mcnBoxedTextContentContainer,.mcnCaptionBottomContent,.mcnCaptionLeftImageContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightImageContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionTopContent,.mcnCartContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightImageContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageGroupContentContainer,.mcnRecContentContainer,.mcnTextContentContainer{max-width:100%!important;width:100%!important}.mcnBoxedTextContentContainer{min-width:100%!important}.mcnImageGroupContent{padding:9px!important}.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{padding-top:9px!important}.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnImageCardTopImageContent{padding-top:18px!important}.mcnImageCardBottomImageContent{padding-bottom:9px!important}.mcnImageGroupBlockInner{padding-top:0!important;padding-bottom:0!important}.mcnImageGroupBlockOuter{padding-top:9px!important;padding-bottom:9px!important}.mcnBoxedTextContentColumn,.mcnTextContent{padding-right:18px!important;padding-left:18px!important}.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{padding-right:18px!important;padding-bottom:0!important;padding-left:18px!important}.mcpreview-image-uploader{display:none!important;width:100%!important}h1{font-size:24px!important;line-height:125%!important}h2{font-size:20px!important;line-height:125%!important}.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p,.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p,.leftColumnContainer .mcnTextContent,.leftColumnContainer .mcnTextContent p,.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p,.rightColumnContainer .mcnTextContent,.rightColumnContainer .mcnTextContent p,h3{font-size:18px!important;line-height:125%!important}h4{font-size:16px!important;line-height:125%!important}#templatePreheader{display:block!important}.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p,.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{font-size:14px!important;line-height:115%!important}}
         </style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
         <span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">【無光晚餐】你需要先知道的注意事項 8 Tips for Dining in the Dark</span>
@@ -120,7 +120,6 @@ Your reservation for <strong>{{$pople}}</strong> people is at <strong>{{$time}},
 <a href="https://drive.google.com/file/d/1lvWYUsbtpcke70WN5KqL_d1t7shnJ1zf/view?usp=drive_link" target="_blank"><span style="font-size:12px"><u><strong><span style="background-color:#D3D3D3">For English Version please click HERE.</span></strong></u></span></a><br>
 <br>
 &nbsp;</div>
-
 @if($time == '19:30' || $time == '20:00' || $time == '20:30')
 <div style="text-align: left;"><span style="font-size:12px"><strong><span style="color:#D3D3D3">1. 當天請「</span><font color="#8c5fb4"><u>準時抵達</u></font><span style="color:#D3D3D3">」以下地點</span></strong></span><br>
 &nbsp;</div>
@@ -128,7 +127,6 @@ Your reservation for <strong>{{$pople}}</strong> people is at <strong>{{$time}},
 <div style="text-align: left;"><span style="font-size:12px"><strong><span style="color:#D3D3D3">1. 當天請「</span><span style="color:#8C5FB4"><u>提早 15 分鐘抵達</u></span><span style="color:#D3D3D3">」以下地點</span></strong></span><br>
 &nbsp;</div>
 @endif
-
 <div style="text-align: left;"><span style="font-size:12px"><a href="https://goo.gl/maps/qsZiGCftj2R31aUw9" target="_blank"><span style="color:#FFFFFF"><u>106台北市大安區仁愛路四段345巷4弄3號</u></span></a></span></div>
 
 <div style="text-align: left;"><span style="font-size:12px">（忠孝敦化站3號出口步行10分鐘）<br>
@@ -156,12 +154,14 @@ Your reservation for <strong>{{$pople}}</strong> people is at <strong>{{$time}},
 <br>
 <span style="font-size:12px"><span style="color:#D3D3D3"><strong>4. 如果有飲食禁忌該怎麼辦？</strong></span></span>
 
+<div>&nbsp;</div>
+<span style="font-size:12px"> 為顧及體驗品質食物設計，不建議乳製品過敏或嚴重乳糖不耐症體質者來體驗；素食者僅提供蛋奶五辛素；<span style="color:#8C5FB4"><strong><u>孕婦如有飲食禁忌、帶殼類海鮮過敏者</u></strong><strong><u>，請先來信客服信箱確認</u></strong>。<strong><u>無光晚餐將依照訂位時填答之飲食禁忌準備體驗內容，現場無法更改。</u></strong></span><br>
+<br>
+若需更改飲食禁忌，請於訂位日期到來前七天（也就是現在）回信告知。<br>
+&nbsp;<br>
+如果只是單純不喜歡吃某種食材，建議可以在黑暗中，給這些食材一次機會。有時候看不到、少了假設，平常不喜歡的，有可能在黑暗中瞬間愛上唷！</span>
+
 <div><br>
-<span style="font-size:12px">無光晚餐每季菜單皆出自體驗設計主廚的巧思，不僅限時限量供應，錯過也不再復刻，誠摯邀請你以好奇的心感受主廚的原創精神，<span style="color:#8c5fb4"><strong><u>恕不接受個人飲食喜好調整</u></strong></span>。同時，<span style="color:#8c5fb4"><strong><u>餐點均含有五辛、奶蛋不可調整</u></strong></span>，因此<span style="color:#8c5fb4"><strong><u>不建議乳製品過敏或嚴重乳糖不耐症體質者來體驗</u></strong>；<strong><u>素食者僅提供蛋奶五辛素</u></strong></span>。<br>
-<br>
-若是因為過敏與宗教飲食需求考量，例如：孕婦、帶殼類海鮮過敏者等，無光晚餐將依照訂位時填答之飲食禁忌準備體驗內容。<br>
-<br>
-若需更改飲食禁忌，請於訂位日期到來前七天（也就是現在）回信告知，現場無法更改。</span><br>
 <br>
 <span style="font-size:12px"><span style="color:#D3D3D3"><strong>5. 請問是否可以加點酒水呢？</strong></span></span>
 
@@ -231,63 +231,24 @@ Your reservation for <strong>{{$pople}}</strong> people is at <strong>{{$time}},
 <br>
 體驗時，若你或同行友人，出現幽閉恐懼等相關症狀，或因⿊暗嚇到吃⼿⼿、需要使⽤洗⼿間，可隨時向服務人員反應，將由服務人員引導出場休息。此外，考量到星際旅行時的安全以及效果，無光晚餐需年滿 16 歲以上方可體驗。</span></span>
 
-<div>&nbsp;
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="color:#D3D3D3"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif"><strong>最後，兩個貼心的小資訊，給即將到訪的你：</strong></span></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="color:#cccccc"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif"><strong>無光晚餐鄰近停車場資訊｜</strong></span></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif"><u><strong>嘟嘟房（僑安站）</strong></u></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">營業時間：24小時</span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">地址：<a href="https://goo.gl/maps/HnGdPBN5HRGVaNRw7"><span style="color:#D3D3D3">106台北市大安區忠孝東路四段306號B1F</span></a></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif"><u><strong>CITY PARKING</strong></u></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">營業時間：24小時</span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">地址：<a href="https://goo.gl/maps/HjUpMEtxXuYrPw246" target="_blank"><span style="color:#D3D3D3">106台北市大安區仁愛路四段280號</span></a></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif"><strong>溫馨提醒：東區商圈車位較少，建議儘早前來尋找適合的車位，或搭乘大眾交通運輸，以避免遲到後無法入場體驗。</strong></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="color:#cccccc"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">無光晚餐合作推薦住宿｜</span></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">《南港老爺行旅 The Place Taipei》位於台北南港，從茶鄉、黑鄉到科技之都，串聯城市歷史，打造充滿活力的休憩與交流空間，讓您重新探索城市魅力！</span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">專屬訂房優惠請至南港老爺行旅訂房網站，輸入折扣碼【2023dining】，即可享「旅人專案」9折優惠。</span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">訂購期間｜2023/09/01-09/30</span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">入住期間｜2023/09/01-11/30</span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">立即訂房｜<a href="https://lihi2.com/S5jM9" target="_blank"><u><span style="color:#cccccc">https://lihi2.com/S5jM9</span></u></a></span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;">&nbsp;</p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><u><strong><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">飯店資訊</span></span></strong></u></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">電話｜02 - 7750 - 0588</span></span></p>
-
-<p style="text-align: left;color: #A7A7A7;font-family: &quot;Times New Roman&quot;, Times, Baskerville, Georgia, serif;font-size: 13px;font-style: normal;font-weight: normal;line-height: 200%;"><span style="font-size:12px"><span style="font-family:georgia,times,times new roman,serif">地址｜<a href="https://www.google.com/maps/search/台北市南港區經貿二路196號10樓?entry=gmail&source=g" target="_blank"><span style="color:#D3D3D3"><u>台北市南港區經貿二路196號10樓</u></span></a></span></span></p>
-</div>
+<div><br>
+<br>
+<span style="font-family:georgia,times,times new roman,serif"><span style="font-size:12px"><span style="color:#D3D3D3"><strong>最後，一個貼心的小資訊，給開車前來的你：</strong></span><br>
+<br>
+無光晚餐鄰近停車場資訊｜<br>
+<br>
+<span style="color:#D3D3D3"><strong>嘟嘟房（僑安站）</strong></span><br>
+營業時間：24小時<br>
+地址：<a href="https://goo.gl/maps/HnGdPBN5HRGVaNRw7" target="_blank"><span style="color:#D3D3D3"><u>106台北市大安區忠孝東路四段306號B1F</u></span></a><br>
+<br>
+<span style="color:#D3D3D3"><strong>CITY PARKING</strong></span><br>
+營業時間：24小時<br>
+地址：<a href="https://goo.gl/maps/HjUpMEtxXuYrPw246" target="_blank"><span style="color:#D3D3D3"><u>106台北市大安區仁愛路四段280號</u></span></a><br>
+<br>
+溫馨提醒：東區商圈車位較少，建議儘早前來尋找適合的車位，或搭乘大眾交通運輸，以避免遲到後無法入場體驗。</span></span><br>
+<br>
+<br>
+&nbsp;</div>
 
 <div style="text-align: center;"><span style="font-family:georgia,times,times new roman,serif"><span style="font-size:12px">期待與你在無光中相見<br>
 Cheers,</span></span></div>
@@ -553,7 +514,7 @@ Cheers,</span></span></div>
                             <span style="font-size:10px"><span style="font-family:courier new,courier,lucida sans typewriter,lucida typewriter,monospace"><span style="color:#808080"><em>Copyright © {{ date('Y') }} surpriselab, All rights reserved.</em><br>
 <br>
 <strong>Our mailing address is:</strong><br>
-<a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank" style="color:#808080">dininginthedark@surpriselab.com.tw</a><br>
+<a href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a><br>
 </span></span></span>
                         </td>
                     </tr>
@@ -584,4 +545,5 @@ Cheers,</span></span></div>
                 </tr>
             </table>
         </center>
+    </body>
 </html>
