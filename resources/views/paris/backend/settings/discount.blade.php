@@ -40,7 +40,14 @@
                                                 <td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="{{ $row['number'] or 0 }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)" value="{{ $row['satisfy'] or 0 }}"></td>
                                                 <td><input type="date" class="form-control" placeholder="可使用日期(空白為無限制)" value="{{ $row['day'] or '' }}"></td>
-                                                <td><input type="text" class="form-control" placeholder="可使用票種(空白為無限制)" value="{{ $row['ticket'] or '' }}"></td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option value="">無限制</option>
+                                                        <option value="單人獨舞票"@if(isset($row['ticket']) && $row['ticket'] == '單人獨舞票') selected @endif>單人獨舞票</option>
+                                                        <option value="雙人共舞票"@if(isset($row['ticket']) && $row['ticket'] == '雙人共舞票') selected @endif>雙人共舞票</option>
+                                                        <option value="四人群舞票"@if(isset($row['ticket']) && $row['ticket'] == '四人群舞票') selected @endif>四人群舞票</option>
+                                                    </select>
+                                                </td>
                                                 <td><button class="btn btn-danger btn-xs remove-pay-discount" data-id="{{ $key+1 }}"><i class="fa fa-remove"></i></button></td>
                                             </tr>
                                             @endforeach
@@ -90,7 +97,14 @@
                                                 <td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="{{ $row['number'] or 0 }}"></td>
                                                 <td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)" value="{{ $row['satisfy'] or 0 }}"></td>
                                                 <td><input type="date" class="form-control" placeholder="可使用日期(空白為無限制)" value="{{ $row['day'] or '' }}"></td>
-                                                <td><input type="text" class="form-control" placeholder="可使用票種(空白為無限制)" value="{{ $row['ticket'] or '' }}"></td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option value="">無限制</option>
+                                                        <option value="單人獨舞票"@if(isset($row['ticket']) && $row['ticket'] == '單人獨舞票') selected @endif>單人獨舞票</option>
+                                                        <option value="雙人共舞票"@if(isset($row['ticket']) && $row['ticket'] == '雙人共舞票') selected @endif>雙人共舞票</option>
+                                                        <option value="四人群舞票"@if(isset($row['ticket']) && $row['ticket'] == '四人群舞票') selected @endif>四人群舞票</option>
+                                                    </select>
+                                                </td>
                                                 <td><button class="btn btn-danger btn-xs remove-sp-discount" data-id="{{ $key+1 }}"><i class="fa fa-remove"></i></button></td>
                                             </tr>
                                             @endforeach
@@ -194,7 +208,7 @@ $('.pay-add-new').bind('click',function(){
         '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="0"></td>'+
         '<td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)" value="0"></td>'+
         '<td><input type="date" class="form-control" placeholder="可使用日期(空白為無限制)" value=""></td>'+
-        '<td><input type="text" class="form-control" placeholder="可使用票種(空白為無限制)" value=""></td>'+
+        '<td><select class="form-control"><option value="">無限制</option><option value="單人獨舞票">單人獨舞票</option><option value="雙人共舞票">雙人共舞票</option><option value="四人群舞票">四人群舞票</option></select></td>'+
         '<td><button class="btn btn-danger btn-xs remove-pay-discount" data-id="'+pay_num+'"><i class="fa fa-remove"></i></button></td>'+
     '</tr>');
 });
@@ -214,14 +228,14 @@ $('.pay-discuount-store').bind('click',function(){
         let input_num   = $(this).find('input').eq(2).val();
         let input_max   = $(this).find('input').eq(3).val();
         let input_day   = $(this).find('input').eq(4).val();
-        let input_ticket= $(this).find('input').eq(5).val();
+        let input_ticket= $(this).find('select').eq(0).val();
         // 驗證資料正確
         if(input_code == '' || checkCode(input_code)) message += '流水號 '+id+' 折扣碼有誤<br>';
         if(input_money == '' || isNaN(input_money)) message += '流水號 '+id+' 折抵金額有誤<br>';
         if(input_num == '' || isNaN(input_num)) message += '流水號 '+id+' 限制數量有誤<br>';
         if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 可使用折扣金額數字有誤<br>';
         if(input_day!='' && !moment(input_day, 'YYYY-MM-DD',true).isValid()) message += '流水號 '+id+' 可使用日期有誤<br>';
-        if(input_ticket!='' && input_ticket!='p1' && input_ticket!='p2' && input_ticket!='p4') message += '流水號 '+id+' 可使用票種有誤<br>';
+        if(input_ticket!='' && input_ticket!='單人獨舞票' && input_ticket!='雙人共舞票' && input_ticket!='四人群舞票') message += '流水號 '+id+' 可使用票種有誤<br>';
         // if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 可使用折扣金額數字有誤<br>';
         // if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 可使用折扣金額數字有誤<br>';
         obj.push({code: input_code,money: input_money,number: input_num,satisfy: input_max,day: input_day,ticket: input_ticket});
@@ -271,7 +285,7 @@ $('.sp-add-new').bind('click',function(){
         '<td><input type="number" class="form-control" placeholder="限制數量(0無限制)" value="0"></td>'+
         '<td><input type="number" class="form-control" placeholder="可使用折扣金額(0無限制)" value="0"></td>'+
         '<td><input type="date" class="form-control" placeholder="可使用日期(空白為無限制)" value=""></td>'+
-        '<td><input type="text" class="form-control" placeholder="可使用票種(空白為無限制)" value=""></td>'+
+        '<td><select class="form-control"><option value="">無限制</option><option value="單人獨舞票">單人獨舞票</option><option value="雙人共舞票">雙人共舞票</option><option value="四人群舞票">四人群舞票</option></select></td>'+
         '<td><button class="btn btn-danger btn-xs remove-sp-discount" data-id="'+spe_num+'"><i class="fa fa-remove"></i></button></td>'+
     '</tr>');
 });
@@ -291,14 +305,14 @@ $('.sp-discuount-store').bind('click',function(){
         let input_num   = $(this).find('input').eq(2).val();
         let input_max   = $(this).find('input').eq(3).val();
         let input_day   = $(this).find('input').eq(4).val();
-        let input_ticket= $(this).find('input').eq(5).val();
+        let input_ticket= $(this).find('select').eq(0).val();
         // 驗證資料正確
         if(input_code == '' || checkCode(input_code)) message += '流水號 '+id+' 折扣碼有誤<br>';
         if(input_money == '' || isNaN(input_money)) message += '流水號 '+id+' 折抵金額有誤<br>';
         if(input_num == '' || isNaN(input_num)) message += '流水號 '+id+' 限制數量有誤<br>';
         if(input_max == '' || isNaN(input_max)) message += '流水號 '+id+' 可使用折扣金額數字有誤<br>';
         if(input_day!='' && !moment(input_day, 'YYYY-MM-DD',true).isValid()) message += '流水號 '+id+' 可使用日期有誤<br>';
-        if(input_ticket!='' && input_ticket!='p1' && input_ticket!='p2' && input_ticket!='p4') message += '流水號 '+id+' 可使用票種有誤<br>';
+        if(input_ticket!='' && input_ticket!='單人獨舞票' && input_ticket!='雙人共舞票' && input_ticket!='四人群舞票') message += '流水號 '+id+' 可使用票種有誤<br>';
         obj.push({code: input_code,money: input_money,number: input_num,satisfy: input_max,day: input_day,ticket: input_ticket});
     });
 

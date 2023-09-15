@@ -54,8 +54,6 @@
                                                     <option value="">全部</option>
                                                     <option value="午場"@if(isset($request->dayparts) && $request->dayparts=='午場') selected @endif>午場</option>
                                                     <option value="晚場"@if(isset($request->dayparts) && $request->dayparts=='晚場') selected @endif>晚場</option>
-                                                    <!--option value="下午茶"@if(isset($request->dayparts) && $request->dayparts=='下午茶') selected @endif>下午茶</option>
-                                                    <option value="特別活動"@if(isset($request->dayparts) && $request->dayparts=='特別活動') selected @endif>特別活動</option-->
                                                 </select>
                                         </div>
                                         <div class="form-group col-sm-1">
@@ -119,7 +117,7 @@
                                                     <th>營業日期</th>
                                                     <th>營業時段</th>
                                                     <th class="text-center">剩餘空位 / 目前訂位 / 開放位置</th>
-                                                    <th>金額 / 現場價</th>
+                                                    <th>票價</th>
                                                     <th>功能</th>
                                                 </tr>
                                             </thead>
@@ -140,7 +138,7 @@
                                                         {{ $row->now }} / 
                                                         {{ $row->sites }}
                                                     </td>
-                                                    <td>@if($row->special) <span class="badge badge-pill badge-info">特別場次</span> @else {{ $row->money }} / {{ $row->cash }} @endif</td>
+                                                    <td>@if($row->special) <span class="badge badge-pill badge-info">特別場次</span> @else {{ $row->p1 }} / {{ $row->p2 }} / {{ $row->p4 }} @endif</td>
                                                     <td class="actions">
                                                         <a class="btn btn-purple btn-xs" href="/paris/order/{{ $row->id }}/appointment">預約席</a>
                                                         <a class="btn btn-info btn-xs" href="/paris/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>

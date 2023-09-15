@@ -37,9 +37,9 @@
                                             <div class="form-group col-sm-1">
                                                 <select name="type" class="form-control">
                                                     <option value="">票券類別</option>
-                                                    <option value="p2"@if($request->type=='p2') selected @endif>雙人套票</option>
-                                                    <option value="p4"@if($request->type=='p4') selected @endif>雙菜單套票</option>
-                                                    <option value="gift"@if($request->type=='gift') selected @endif>禮物卡</option>
+                                                    <option value="p1"@if($request->type=='p1') selected @endif>單人獨舞票</option>
+                                                    <option value="p2"@if($request->type=='p2') selected @endif>雙人共舞票</option>
+                                                    <option value="p4"@if($request->type=='p4') selected @endif>四人群舞票</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2">
@@ -72,9 +72,9 @@
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->code }}</td>
                                                 <td>
-@if( $row->type == 'p1' ) 單人票 
-@elseif( $row->type == 'p2' ) 雙人票
-@elseif( $row->type == 'p4' ) 四人票
+@if( $row->type == 'p1' ) 單人獨舞票 
+@elseif( $row->type == 'p2' ) 雙人共舞票
+@elseif( $row->type == 'p4' ) 四人群舞票
 @elseif( $row->type == 'gift' ) 禮物卡
 @endif</td>
                                                 <td>@if($row->o_id > 0) 

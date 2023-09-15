@@ -37,10 +37,17 @@ class NewPayController extends WebController
             if($count>0){
                 $count += 1;
             } else {
-                $count = Carbon::now()->format('Ymd').'0001';
+                $count = '2'.Carbon::now()->format('Ymd').'0001';
             }
 
-            $people = $request->booking_people;
+            $people = $request->num;
+            if($request->has('ticket')){
+                if($request->ticket == '雙人共舞票'){
+                    $people = $people * 2;
+                } elseif($request->ticket == '四人群舞票'){
+                    $people = $people * 4;
+                }
+            }
             $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
@@ -78,7 +85,7 @@ class NewPayController extends WebController
             $discountCode = '';
             if($request->has('discount')){
                 $discountCode = $request->discount;
-                $discount_list = json_decode(setting::where('slug','dark3_pay_discount')->first()->json,true);
+                $discount_list = json_decode(setting::where('slug','paris_pay_discount')->first()->json,true);
                 foreach($discount_list as $row){
                     if(strtoupper($row['code']) == $discountCode){
                         $manage = $discountCode.'折扣 '.$row['money'];
@@ -86,24 +93,17 @@ class NewPayController extends WebController
                         break;
                     }
                 }
-                /*
-                $discountCode = $request->discount;
-                if($discountCode == 'TIPSYAGAIN' || $discountCode == 'TWATIPSY'){
-                    $manage = $request->discount.'折扣 100';
-                    $cut2 = 100;
-                } elseif($discountCode == 'SHOPEETIPSY' || $discountCode == 'GARENATIPSY' || $discountCode == 'LINEBANKTIPSY' || $discountCode == 'YOXITIPSY' || $discountCode == 'COMPALTIPSY' || $discountCode == 'NANSHANTIPSY' || $discountCode == 'MIXERBOXTIPSY' || $discountCode == 'YAHOOTIPSY' || $discountCode == 'MICROSOFTTIPSY' || $discountCode == 'GOOGLETIPSY' || $discountCode == 'CTBCTIPSY' || $discountCode == 'ESLITETIPSY'){
-                    $manage = $request->discount.'折扣 220';
-                    $cut2 = 220;
-                } elseif($discountCode == 'TIPSYAGAIN01' || $discountCode == 'TIPSYAGAIN02' || $discountCode == 'TIPSYAGAIN03'){
-                    $manage = $request->discount.'折扣 200';
-                    $cut2 = 200;
-                }
-                */
             }
 
             $pay_status = '未完成';
             if(intval($money - $cut1 - $cut2)  == 0){
                 $pay_status = '已付款';
+            }
+            $ticket = '';
+            switch($request->ticket){
+                case '單人獨舞票': $ticket = 'p1'; break;
+                case '雙人共舞票': $ticket = 'p2'; break;
+                case '四人群舞票': $ticket = 'p4'; break;
             }
 
             $data = [
@@ -113,7 +113,6 @@ class NewPayController extends WebController
                 'tel'        => $request->area_code.$request->phone,
                 'email'      => $request->email,
                 'notes'      => $request->notice,
-                'meat'       => json_encode([]),
                 'coupon'     => $coupon,
                 'sn'         => $count,
                 'money'      => $money - $cut1 - $cut2,
@@ -122,28 +121,25 @@ class NewPayController extends WebController
                 'result'     => '',
                 'manage'     => $manage,
                 'is_overseas'=> 2,
-                'vegetarian' => $request->vegetarian_food,
+                'ticket'     => $ticket,
+                // 'vegetarian' => $request->vegetarian_food,
                 'dis_code'   => $discountCode,
                 'dis_money'  => $cut2,
-                'meat_eat'   => $request->meat_food ?? 0,
-                'no_beef'    => $request->meat_food_noBeef ?? 0,
-                'no_pork'    => $request->meat_food_noPork ?? 0,
-                'no_nut_m'   => $request->meat_food_noNut ?? 0,
-                'no_shell'   => $request->meat_food_noSeafood ?? 0,
-                'no_fish'    => $request->meat_food_noAllSeafood ?? 0,
-                'no_nut_v'   => $request->vegetarian_food_noNut ?? 0,
-                'tax_id'     => $request->company_tax_ID ?? 0,
-                'tax_name'   => $request->company_name ?? 0,
-                'need_english' => $request->english_service ?? 0,
+                'co_code'    => $couponCode,
+                'co_money'   => $cut1,
+                'tax_id'     => $request->company_tax_ID ?? '',
+                'tax_name'   => $request->company_name ?? '',
+                'vehicle'    => $request->vehicle ?? '',
+                'need_english' => $request->need_english ?? 0,
+                'need_chinese' => $request->need_chinese ?? 0,
             ];
-            // 10% 服務費
             $order = order::create($data);
-            
+
             $sentSuccess = false;
             if($data['money'] == 0){
                 return view('paris.frontend.booking_success');
             } else {
-                $comments = "無光晚餐";
+                $comments = "巴黎舞會";
                 if($cut2>0){
                     $comments .= "(折扣  {$discountCode} - {$cut2})";
                 }
@@ -155,60 +151,10 @@ class NewPayController extends WebController
                     $data['email'] // 付款人信箱
                 )
                 ->setTradeLimit(600)
-                ->setReturnURL(env('APP_URL').'/paris/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
-                ->setNotifyURL(env('APP_URL').'/paris/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
-                ->setClientBackURL(env('APP_URL').'/paris/booking_pay.html') // 付款取消後返回的網址
+                ->setReturnURL(env('APP_URL').'/lebaldeparis/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
+                ->setNotifyURL(env('APP_URL').'/lebaldeparis/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
+                ->setClientBackURL(env('APP_URL').'/lebaldeparis/booking') // 付款取消後返回的網址
                 ->submit();
-                /*
-                if(env('APP_ENV') == 'production'){
-                    $pay_by_prime = 'https://prod.tappaysdk.com/tpc/payment/pay-by-prime'; // 正式
-                    $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
-                    $merchant_id  = 'surpriselab_00001';
-                } else {
-                    $pay_by_prime = 'https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime'; // 測試
-                    $partner_key  = 'partner_YtmrbXaN9Xl11iIO30AFBjoXR8pRqpON6SmNV0l2bXbde3L2Ut13SQAC';
-                    $merchant_id  = 'surpriselab_TAISHIN';
-                }
-                
-                $amount = $money - $cut1 - $cut2;
-                if($data['is_overseas'] == 1){
-                    $amount *= 1.1;
-                }
-                $postData = [
-                    "prime"       => $request->prime,
-                    "partner_key" => $partner_key,
-                    "merchant_id" => $merchant_id,
-                    "details"     => "微醺",
-                    "amount"      => $amount,
-                    "order_number"=> $count,
-                    "cardholder"  => [
-                        "phone_number" => $request->tel,
-                        "name"         => $request->name,
-                        "email"        => $request->email,
-                        "zip_code"     => "",
-                        "address"      => "",
-                        "national_id"  => "",
-                    ],
-                    "remember"    => false
-                ];
-
-                $r = curl_init();
-                curl_setopt($r, CURLOPT_URL, $pay_by_prime);
-                curl_setopt($r, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'x-api-key:'.$partner_key));
-                curl_setopt($r, CURLOPT_POST, 1);
-                curl_setopt($r, CURLOPT_POSTFIELDS, json_encode($postData));
-                curl_setopt($r, CURLOPT_RETURNTRANSFER, 1);
-                curl_setopt($r, CURLOPT_CONNECTTIMEOUT, 35);
-                $tappayData = curl_exec($r);
-                curl_close($r);
-                $order->result = $tappayData;
-                $tappayObj = json_decode($tappayData);
-                if($tappayObj->status == 0){
-                    $order->pay_status = '已付款';
-                    $sentSuccess = true;
-                }
-                $order->save();
-                */
             }
 
         } catch (\Exception $exception) {
@@ -280,20 +226,12 @@ class NewPayController extends WebController
                 }
             }
 
-            
-
-
-
             // 寄送信件
             if($order->pay_status == '已付款' && $order->is_send === 0 && $order->discount == null){
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update(['discount'=>'back']);
                 $act = pro::where('id',$order->pro_id)->first();
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                /*
-                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
-                */
                 $mailer = [
                     'day'   => Carbon::parse($act->day)->format('Y / m / d'),
                     'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
@@ -303,80 +241,24 @@ class NewPayController extends WebController
                     'phone' => $order->tel,
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'vegetarian' => $order->vegetarian,
-                    'meat_eat' => $order->meat_eat,
-                    'no_beef' => $order->no_beef,
-                    'no_pork' => $order->no_pork,
-                    'no_nut_m' => $order->no_nut_m,
-                    'no_shell' => $order->no_shell,
-                    'no_fish'  => $order->no_fish,
-                    'no_nut_v' => $order->no_nut_v,
                     'need_english' => $order->need_english,
                     'template' => 'order',
-                    'eday'   => Carbon::parse($act->day)->format('d / m / Y'),
                     'mday'     => $act->day,
                 ];
                 SLS::SendEmailByTemplateName($mailer);
                 SLS::SendSmsByTemplateName($mailer);
                 try {
-
                     $order->is_send = 1;
                     $order->save();
                     // 信件補送
                     $now = time();
                     $lim = strtotime($act->day.' '.$act->rang_start);
                     $day = round( ($lim - $now) / 86400 );
-                    if($day <= 14){
-                        $mailer['template'] = 'D14';
-                        SLS::SendEmailByTemplateName($mailer);
-                    }
                     if($day <= 7){
                         $mailer['template'] = 'D7';
                         SLS::SendEmailByTemplateName($mailer);
                         SLS::SendSmsByTemplateName($mailer);
                     }
-                    if($day == 0){
-                        $mailer['template'] = 'DX';
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                    /*
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($act->day.' '.$act->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    // 寄送 A 信件
-                    $toData = [
-                        'id'    => $order->id,
-                        'name'  => $order->name,
-                        'email' => $order->email,
-                        'type'  => "DX" // 邀請信件
-                    ];
-                    // 信件補送
-                    //SLS::SendPreviewEmail($toData);
-                    if($day <= 21){
-                        $toData['type'] = "D21";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 14){
-                        $toData['type'] = "D14";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 11){
-                        $toData['day'] = $act->day.' '.$act->rang_start;
-                        $toData['type'] = "D10";
-                        SLS::SendPreviewEmail($toData);
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
-                    }
-                    if($day <= 5){
-                        $toData['type'] = "D05";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day == 0){
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
-                    }
-                    // SLS::sent_single_sms($order->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
-                    */
                 } catch (\Exception $e){
                     Log::error($e);
                 }

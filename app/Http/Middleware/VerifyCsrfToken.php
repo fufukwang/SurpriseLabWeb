@@ -28,5 +28,9 @@ class VerifyCsrfToken extends BaseVerifier
         // 落日轉運站
         '/terminal/Neweb.ReturnResult',
         '/terminal/Neweb.BackReturn',
+        // 巴黎舞會
+        '/lebaldeparis/Neweb.ReturnResult',
+        '/lebaldeparis/Neweb.BackReturn',
+        
     ];
 }

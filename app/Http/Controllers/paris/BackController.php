@@ -273,7 +273,7 @@ class BackController extends WebController
                 return Response::json(['success'=> true], 200);
             }
         }
-        $pros = pro::select(DB::raw("({$this->oquery}) AS now,(sites-{$this->oquery}) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open"));
+        $pros = pro::select(DB::raw("({$this->oquery}) AS now,(sites-{$this->oquery}) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open,p1,p2,p4"));
         if($request->has('day') && $request->has('day_end')){
             $open_count = pro::select(DB::raw("SUM(({$this->oquery})) AS sale,count(id) as num,SUM(sites) as site"))->where('open',1); 
             $all_count = pro::select(DB::raw("SUM(({$this->oquery})) AS sale,count(id) as num,SUM(sites) as site"));
@@ -348,10 +348,13 @@ class BackController extends WebController
         $data = [
             //'day_parts'   => $request->dayparts,
             'sites'      => $request->sites,
-            'money'      => $request->money,
+            // 'money'      => $request->money,
             'open'       => $request->open,
-            'cash'       => $request->cash,
+            // 'cash'       => $request->cash,
             'special'    => $request->special,
+            'p1' => $request->p1,
+            'p2' => $request->p2,
+            'p4' => $request->p4,
         ];
         if(is_numeric($id) && $id>0){
             $data['day']       = $request->day;

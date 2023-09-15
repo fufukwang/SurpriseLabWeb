@@ -82,6 +82,12 @@
                                                     <input type="text" maxlength="50" class="form-control" name="tax_name" value="{{ $order->tax_name or ''  }}" placeholder="公司名稱(發票使用)">
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">載具(發票使用)</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" maxlength="50" class="form-control" name="vehicle" value="{{ $order->vehicle or ''  }}" placeholder="載具(發票使用)">
+                                                </div>
+                                            </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">訂單號碼</label>
@@ -101,63 +107,13 @@
                                                     <input type="number" class="form-control" name="need_english" value="{{ $order->need_english or ''  }}" max="36" min="0" required>
                                                 </div>
                                             </div>
-                                            {{--
                                             <div class="form-group">
-                                                <label class="control-label col-sm-4">素食</label>
+                                                <label class="control-label col-sm-4">中文服務</label>
                                                 <div class="col-sm-8">
-                                                    <select name="vegetarian" id="vegetarian" class="form-control">
-                                                        @for($i=0;$i<=$order->pople;$i++)
-                                                        <option value="{{ $i }}"@if(isset($order->vegetarian) && $order->vegetarian==$i) selected @endif>{{ $i }}</option>
-                                                        @endfor
-                                                    </select>
+                                                    <input type="number" name="need_chinese" id="need_chinese" class="form-control" value="{{ $order->need_chinese or ''  }}">
                                                 </div>
                                             </div>
-                                            --}}
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">葷食</label>
-                                                <div class="col-sm-2">
-                                                    <input type="number" name="meat_eat" id="meat_eat" class="form-control" value="{{ $order->meat_eat or '' }}">
-                                                </div>
-                                                <label class="control-label col-sm-4">素食</label>
-                                                <div class="col-sm-2">
-                                                    <input type="number" name="vegetarian" id="vegetarian" class="form-control" value="{{ $order->vegetarian or '' }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">葷食/不吃牛肉</label>
-                                                <div class="col-sm-2">
-                                                    <input type="number" name="no_beef" id="no_beef" class="form-control" value="{{ $order->no_beef or '' }}">
-                                                </div>
-                                                <label class="control-label col-sm-4">素食/不吃堅果</label>
-                                                <div class="col-sm-2">
-                                                    <input type="number" name="no_nut_v" id="no_nut_v" class="form-control" value="{{ $order->no_nut_v or '' }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">葷食/不吃豬肉</label>
-                                                <div class="col-sm-2">
-                                                    <input type="number" name="no_pork" id="no_pork" class="form-control" value="{{ $order->no_pork or '' }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">葷食/不吃堅果</label>
-                                                <div class="col-sm-2">
-                                                    <input type="number" name="no_nut_m" id="no_nut_m" class="form-control" value="{{ $order->no_nut_m or '' }}">
-                                                </div>
-                                                
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">葷食/甲殼類過敏</label>
-                                                <div class="col-sm-2">
-                                                    <input type="number" name="no_shell" id="no_shell" class="form-control" value="{{ $order->no_shell or '' }}">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-4">葷食/所有海鮮過敏/不吃</label>
-                                                <div class="col-sm-2">
-                                                    <input type="number" name="no_fish" id="no_fish" class="form-control" value="{{ $order->no_fish or '' }}">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">備註</label>
                                                 <div class="col-sm-8">

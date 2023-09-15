@@ -61,7 +61,7 @@ class OrderController extends WebController
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')->select('paris_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','paris_order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_fish','no_nut_v','refund','cut','handling','need_english','tax_id','tax_name')->find($id);
+                $order = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')->select('paris_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','paris_order.money','cash','refund','cut','handling','need_english','tax_id','tax_name','vehicle')->find($id);
                 $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
@@ -80,18 +80,13 @@ class OrderController extends WebController
             'tel'        => $request->tel,
             'email'      => $request->email,
             'name'       => $request->name,
-            'vegetarian' => $request->vegetarian,
+            // 'vegetarian' => $request->vegetarian,
             'pople'      => $request->people,
-            'meat_eat'   => $request->meat_eat ?? 0,
-            'no_beef'    => $request->no_beef ?? 0,
-            'no_pork'    => $request->no_pork ?? 0,
-            'no_nut_m'   => $request->no_nut_m ?? 0,
-            'no_shell'   => $request->no_shell ?? 0,
-            'no_fish'   => $request->no_fish ?? 0,
-            'no_nut_v'   => $request->no_nut_v ?? 0,
             'need_english' => $request->need_english ?? 0,
+            'need_chinese' => $request->need_chinese ?? 0,
             'tax_id'     => $request->tax_id ?? '',
             'tax_name'   => $request->tax_name ?? '',
+            'vehicle'   => $request->vehicle ?? '',
         ];
         $order = order::find($id);
         if($request->has('pro_id') && $request->pro_id>0){
@@ -111,15 +106,8 @@ class OrderController extends WebController
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'phone' => $request->tel,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'vegetarian' => $request->vegetarian ?? 0,
-                    'meat_eat' => $request->meat_eat ?? 0,
-                    'no_beef' => $request->no_beef ?? 0,
-                    'no_pork' => $request->no_pork ?? 0,
-                    'no_nut_m' => $request->no_nut_m ?? 0,
-                    'no_shell' => $request->no_shell ?? 0,
-                    'no_fish' => $request->no_fish ?? 0,
-                    'no_nut_v' => $request->no_nut_v ?? 0,
                     'need_english' => $request->need_english ?? 0,
+                    'need_chinese' => $request->need_chinese ?? 0,
                     'template' => 'order',
                     'mday'     => $pro->day,
                     'eday'   => Carbon::parse($pro->day)->format('d / m / Y'),
@@ -209,7 +197,7 @@ class OrderController extends WebController
             if($count>0){
                 $count += 1;
             } else {
-                $count = Carbon::now()->format('Ymd').'0001';
+                $count = "2".Carbon::now()->format('Ymd').'0001';
             }
             $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
             $meat = [];
@@ -255,16 +243,11 @@ class OrderController extends WebController
                 'vegetarian' => $request->vegetarian,
                 'is_overseas'=> $is_overseas,
                 'edit_type'  => $request->edit_type,
-                'meat_eat'   => $request->meat_eat ?? 0,
-                'no_beef'    => $request->no_beef ?? 0,
-                'no_pork'    => $request->no_pork ?? 0,
-                'no_nut_m'   => $request->no_nut_m ?? 0,
-                'no_shell'   => $request->no_shell ?? 0,
-                'no_fish'   => $request->no_fish ?? 0,
-                'no_nut_v'   => $request->no_nut_v ?? 0,
                 'need_english' => $request->need_english ?? 0,
+                'need_chinese' => $request->need_chinese ?? 0,
                 'tax_id'     => $request->tax_id ?? '',
                 'tax_name'   => $request->tax_name ?? '',
+                'vehicle'   => $request->vehicle ?? '',
             ];
             $order = order::create($data);
 
@@ -284,14 +267,7 @@ class OrderController extends WebController
                     'phone' => $data['tel'],
                     'gday'  => $rangStart.'/'.$rangEnd,
                     'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'vegetarian' => $request->vegetarian ?? 0,
-                    'meat_eat' => $request->meat_eat ?? 0,
-                    'no_beef' => $request->no_beef ?? 0,
-                    'no_pork' => $request->no_pork ?? 0,
-                    'no_nut_m' => $request->no_nut_m ?? 0,
-                    'no_shell' => $request->no_shell ?? 0,
-                    'no_fish' => $request->no_fish ?? 0,
-                    'no_nut_v' => $request->no_nut_v ?? 0,
+                    'need_chinese' => $request->need_chinese ?? 0,
                     'need_english' => $request->need_english ?? 0,
                     'template' => 'order',
                     'mday'     => $act->day,
@@ -643,14 +619,7 @@ class OrderController extends WebController
             'phone' => $request->phone,
             'gday'  => $rangStart.'/'.$rangEnd,
             'master'=> "?id=".md5($request->oid)."&sn=".$request->sn,
-            'vegetarian' => $order->vegetarian,
-            'meat_eat' => $order->meat_eat,
-            'no_beef' => $order->no_beef,
-            'no_pork' => $order->no_pork,
-            'no_nut_m' => $order->no_nut_m,
-            'no_shell' => $order->no_shell,
-            'no_fish' => $order->no_fish,
-            'no_nut_v' => $order->no_nut_v,
+            'need_chinese' => $order->need_chinese ?? 0,
             'need_english' => $order->need_english ?? 0,
             'template' => 'order',
             'mday'     => $act->day,
@@ -663,7 +632,7 @@ class OrderController extends WebController
 
     private function orderQuery(Request $request,$isTable=false){
         $order = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','paris_order.manage','paris_pro.money AS PM','paris_order.money AS OM','paris_order.created_at AS created_at','paris_order.pay_status','email','paris_order.sn','paris_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_fish','no_nut_v','refund','handling','cut','tax_id','tax_name','need_english');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','paris_order.manage','paris_pro.money AS PM','paris_order.money AS OM','paris_order.created_at AS created_at','paris_order.pay_status','email','paris_order.sn','paris_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','refund','handling','cut','tax_id','tax_name','need_english');
         if($isTable){
             $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
         }

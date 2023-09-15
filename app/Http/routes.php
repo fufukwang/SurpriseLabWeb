@@ -745,6 +745,29 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
     });
+        // parse ball
+    Route::group(['prefix' => 'lebaldeparis'], function(){
+        Route::get('index.html',function(){ return view('paris.frontend.home'); });
+        Route::get('/',function(){ return view('paris.frontend.home'); });
+        Route::get('rules',function(){ return view('paris.frontend.rules'); });
+        // 劃位
+        Route::get('booking',function(){ return view('paris.frontend.booking'); });
+        // 藍新金流路由
+        Route::post('Neweb.OrderPay', 'paris\NewPayController@postOrderByNeweb'); // 存訂單
+        Route::post('Neweb.ReturnResult', 'paris\NewPayController@postReturnByNeweb'); // 回傳內容
+        Route::post('Neweb.BackReturn', 'paris\NewPayController@postBackReturn'); // 背景回傳
+/*
+        // 特別場
+        Route::get('booking_special.html', 'paris\SpecialController@getHome'); // 特別場
+        Route::post('Special.OrderPay', 'paris\SpecialController@postOrderByNeweb'); // 存訂單
+*/        
+        Route::get('invitation','paris\MasterController@getTeamMaster');
+        Route::post('Team/SlaveStore', 'paris\MasterController@postTeamSlave');
+
+        Route::get('GetAjaxData','paris\FrontController@GetAjaxData');
+        Route::post('PostAjaxData','paris\FrontController@PostAjaxData');
+        Route::post('ReOrderData','paris\FrontController@ReOrderData');
+    });
     // terminal 落日轉運站
     Route::group(['prefix' => 'terminal'], function(){
         // Route::get('/',function(){ return view('terminal.frontend.home'); });

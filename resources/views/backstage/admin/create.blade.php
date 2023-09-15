@@ -73,6 +73,12 @@
                                         <input type="checkbox" name="terminal" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>巴黎舞會</label>
+                                        <input type="checkbox" name="paris" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">

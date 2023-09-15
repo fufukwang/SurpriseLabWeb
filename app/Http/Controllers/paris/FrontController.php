@@ -52,6 +52,13 @@ class FrontController extends WebController
         if($request->ajax()){
             if($request->has('act')){
                 $pople = $request->pople;
+                if($request->has('ticketType')){
+                    if($request->ticketType == '雙人共舞票'){
+                        $pople = $pople * 2;
+                    } elseif($request->ticketType == '四人群舞票'){
+                        $pople = $pople * 4;
+                    }
+                }
                 if(is_numeric($pople) && $pople>0){
                     $pro = pro::where('open',1)->whereRaw("(sites-{$this->oquery})>=".$pople);
                 } else {
@@ -63,12 +70,10 @@ class FrontController extends WebController
                     case 'getBypople': // 票種 & 人數 取得 day
                         $ticketType = $request->ticketType;
                         $pro = $pro->select(DB::raw("(SUM(sites) - SUM(({$this->oquery}))) AS sites,day"))->groupBy('day')->where('day','>=',Carbon::today())->where('special',0);
-                        if($ticketType == 1){
-                            $pro = $pro->whereRaw("floor(ABS(DATEDIFF( '17530101', `paris_pro`.`day`)) % 7 / 5)=0");
-                        }
                         $pro = $pro->get();
                         return $pro->toJson();
                     break;
+                    /*
                     case 'getSpecialBypople': // 票種 & 人數 取得 day
                         $ticketType = $request->ticketType;
                         $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',1);
@@ -81,14 +86,15 @@ class FrontController extends WebController
                         $pro = $pro->select('day_parts','day')->groupBy('day_parts')->where('day',$day)->get();
                         return $pro->toJson();
                     break;
+                    */
                     case 'getBydartpart': // 日期 時段 取得 range
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash"))->where('day',$day)->get();
+                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash,p1,p2,p4"))->where('day',$day)->get();
                         return $pro->toJson();
                     break;
-
+/*
                     case 'CheckCoupon':
                         $coupon = coupon::where('code',$request->code)->where('o_id',0);
                         if($request->has('coupon') && count($request->coupon)>0){
@@ -99,8 +105,9 @@ class FrontController extends WebController
                             $me = coupon::where('code',$request->code)->select('type')->first();
                             $type = '';
                             switch ($me->type) {
-                                case 'p2': $type = '雙人套票'; break;
-                                case 'p4': $type = '雙菜單套票'; break;
+                                case 'p2': $type = '單人獨舞票'; break;
+                                case 'p2': $type = '雙人共舞票'; break;
+                                case 'p4': $type = '四人群舞票'; break;
                                 case 'gift': $type = '禮物卡'; break;
                             }
                             $ticketType = $request->ticketType;
@@ -112,7 +119,7 @@ class FrontController extends WebController
                             return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                         }
                     break;
-
+*/
                     case 'CheckDiscount':
                         $slug = $request->useType;
                         $discount_obj = false;
@@ -135,12 +142,23 @@ class FrontController extends WebController
                                     return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
                                 }
                             }
+                            // 額度
                             if(isset($discount_obj['satisfy']) && $discount_obj['satisfy'] > 0){
                                 if($request->need >= $discount_obj['satisfy']){
                                     // do nothing
                                 } else {
                                     return Response::json(['success'=> 'N','message'=>'金額未達此折扣碼限制'], 200);
                                 }
+                            }
+                            // 期限限制
+                            if(isset($discount_obj['day']) && $discount_obj['day'] !=''){
+                                if(strtotime($discount_obj['day'].' 23:59:59')<time()){
+                                    return Response::json(['success'=> 'N','message'=>'此序號已過期'], 200);
+                                }
+                            }
+                            // 票種限制
+                            if(isset($discount_obj['ticket']) && $discount_obj['ticket'] !=''){
+
                             }
                             return Response::json(['success'=> 'Y','money'=>$discount_obj['money']], 200);
                         } else {
@@ -174,7 +192,14 @@ class FrontController extends WebController
 
     public function PostAjaxData(Request $request){
         if($request->ajax()){
-            if($request->has('act') && $request->act=='CheckDarkCoupon'){
+            if($request->has('act') && $request->has('ticket') && $request->act=='CheckParisCoupon'){
+
+
+
+
+
+
+                
                 $coupon = coupon::where('code',$request->code)->where('o_id',0);
                 if($request->has('coupon') && count($request->coupon)>0){
                     $coupon = $coupon->whereNotIn('code',$request->coupon);
@@ -184,24 +209,74 @@ class FrontController extends WebController
                     $me = coupon::where('code',$request->code)->select('type')->first();
                     $type = '';
                     switch ($me->type) {
-                        case 'p2': $type = '雙人套票'; break;
-                        case 'p4': $type = '雙菜單套票'; break;
-                        case 'gift': $type = '禮物卡'; break;
+                        case 'p1': $type = '單人獨舞票'; break;
+                        case 'p2': $type = '雙人共舞票'; break;
+                        case 'p4': $type = '四人群舞票'; break;
                     }
-                    $ticketType = $request->ticketType;
-                    return Response::json([
-                        'success' => 'Y',
-                        'ticket'  => $type
-                    ], 200);    
+                    if($request->ticket == $type){
+                        $pro = pro::select($me->type.' as money')->find($request->num);
+                        return Response::json([
+                            'success' => 'Y',
+                            'money'  => $pro->money
+                        ], 200);        
+                    } else {
+                        return Response::json(['success'=> 'N','message'=>'序號票種錯誤或已使用'], 200);
+                    }
                 } else {
                     return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                 }
+            } elseif($request->has('act') && $request->act=='CheckParisDiscount'){
+                $slug = $request->useType ?? 'pay';
+                $discount_obj = false;
+                $discount_code = strtoupper($request->code);
+                $discount_list = json_decode(setting::where('slug','paris_'.$slug.'_discount')->first()->json,true);
+                foreach($discount_list as $row){
+                    if(strtoupper($row['code']) == $discount_code){
+                        $discount_obj = $row;
+                        break;
+                    }
+                }
+
+                if($discount_obj){
+                    // 數量確認
+                    if($discount_obj['number'] > 0){
+                        $queryBetween = "'".Carbon::now()->subSeconds(900)->format('Y-m-d H:i:s')."' AND '".Carbon::now()->format('Y-m-d H:i:s')."'";
+                        $used_count = order::where('dis_code',$discount_code)
+                                    ->whereRaw("(pay_status='已付款' OR pay_status='已付款(部分退款)' OR (pay_status='未完成' AND created_at BETWEEN {$queryBetween}))")->count();
+                        if($discount_obj['number'] <= $used_count){
+                            return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
+                        }
+                    }
+                    // 額度
+                    if(isset($discount_obj['satisfy']) && $discount_obj['satisfy'] > 0){
+                        if($request->need >= $discount_obj['satisfy']){
+                            // do nothing
+                        } else {
+                            return Response::json(['success'=> 'N','message'=>'金額未達此折扣碼限制'], 200);
+                        }
+                    }
+                    // 期限限制
+                    if(isset($discount_obj['day']) && $discount_obj['day'] !=''){
+                        if(strtotime($discount_obj['day'].' 23:59:59')<time()){
+                            return Response::json(['success'=> 'N','message'=>'此序號已過期'], 200);
+                        }
+                    }
+                    // 票種限制
+                    if(isset($discount_obj['ticket']) && $discount_obj['ticket'] !=''){
+                        if($request->ticket != $discount_obj['ticket']){
+                            return Response::json(['success'=> 'N','message'=>'序號與票種不符!請檢察您選擇的票種!'], 200);
+                        }
+                    }
+                    return Response::json(['success'=> 'Y','money'=>$discount_obj['money']], 200);
+                } else {
+                    return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
+                }
             }
         } else {
-            abort(404);
+            return Response::json(['success'=> 'N','message'=>'序號錯誤'], 200);
         }
     }
-
+/*
     public function ReOrderData(Request $request){
         try {
             $now = Carbon::now()->toDateString();
@@ -240,38 +315,13 @@ class FrontController extends WebController
                         $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
                         $coupon++;
                         coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
-                        /*
-                        if($request->Pay == 'onsite'){
-                            if ($me->type == 'p2') {
-                                $cut1 += $act->cash * 2;
-                            } elseif ($me->type == 'p4') {
-                                $cut1 += $act->cash * 4;
-                            } elseif ($me->type == 'p6') {
-                                $cut1 += $act->cash * 6;
-                            }
-                        } else {
-                            if ($me->type == 'p2') {
-                                $cut1 += $act->money * 2;
-                            } elseif ($me->type == 'p4') {
-                                $cut1 += $act->money * 4;
-                            } elseif ($me->type == 'p6') {
-                                $cut1 += $act->money * 6;
-                            }
-                        }
-                        */
+
                         $cutPeople += 2;
                     }
                 }
             }
 
 
-            //$count = str_pad($count,3,"0",STR_PAD_LEFT);
-            /*
-            $meat = [];
-            for($i=0;$i<$people;$i++){
-                array_push($meat,$request->input('Meal.'.$i));
-            }
-            */
             $pay_status = '未完成';
             if($people - $cutPeople == 0){
                 $pay_status = '已付款';
@@ -367,10 +417,7 @@ class FrontController extends WebController
             if($order->pay_status == '已付款' || $order->pay_type == '現場付款'){
                 $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
                 $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                /*
-                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
-                */
+
                 $mailer = [
                     'day'   => Carbon::parse($act->day)->format('Y / m / d'),
                     'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
@@ -415,68 +462,6 @@ class FrontController extends WebController
                     SLS::SendSmsByTemplateName($mailer);
                 }
 
-                /*
-                if(strpos($mailer['email'],'@yahoo')) {
-                    config(['mail.host' => 'smtp.gmail.com']);
-                    config(['mail.username' => env('MAIL_TGT_USER')]);
-                    config(['mail.password' => env('MAIL_TGT_PASS')]);
-                }
-                try {
-                    if($mailer['pople']==1){
-                        $mailTheme = 'orderOne';
-                    } else {
-                        $mailTheme = 'order';
-                    }
-                    Mail::send('thegreattipsy.email.'.$mailTheme,$mailer,function($m) use ($mailer){
-                        $m->from('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->sender('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-                        $m->replyTo('thegreattipsy@surpriselab.com.tw', '微醺大飯店：1980s');
-
-                        $m->to($mailer['email'], $mailer['name']);
-                        $m->subject('訂位確認信 ── 內有重要任務');
-                    });
-                    $order->is_send = 1;
-                    $order->save();
-                    SLS::sent_single_sms($order->tel,"《微醺大飯店：1980s》訂位確認信已寄出，內含重要任務，請務必、務必查看。若未收到，請至促銷內容分類尋找，也歡迎來信客服信箱詢問！\n\n非常期待與您見面。\n\n順安, 微醺大飯店：1980s");
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($act->day.' '.$act->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    // 寄送 A 信件
-                    $toData = [
-                        'id'    => $order->id,
-                        'name'  => $order->name,
-                        'email' => $order->email,
-                        'type'  => "DX" // 邀請信件
-                    ];
-                    // 信件補送
-                    //SLS::SendPreviewEmail($toData);
-                    if($day <= 21){
-                        $toData['type'] = "D21";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 14){
-                        $toData['type'] = "D14";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day <= 11){
-                        $toData['day'] = $act->day.' '.$act->rang_start;
-                        $toData['type'] = "D10";
-                        SLS::SendPreviewEmail($toData);
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》行前提醒信已寄至您的信箱，請前往查看。 若未收到，請至垃圾信匣或促銷內容分類尋找唷！\n\n非常期待見面。\n\n順安, 微醺大飯店：1980s");
-                    }
-                    if($day <= 5){
-                        $toData['type'] = "D05";
-                        SLS::SendPreviewEmail($toData);
-                    }
-                    if($day == 0){
-                        SLS::sent_single_sms($order->tel,"敬愛的賓客，《微醺大飯店：1980s》開幕酒會將在今日舉行，期待見面！\n\n順安, 微醺大飯店：1980s");
-                    }
-                    // SLS::sent_single_sms($order->tel,"《微醺大飯店》酒會邀請函已寄出。\n\n若未收到，請由此開啟 ☛ https://bit.ly/tipsyinvt\n\n我們萬分期待您的前來。");
-                } catch (\Exception $e){
-                    Log::error($e);
-                }
-                */
             }
             
 
@@ -489,5 +474,5 @@ class FrontController extends WebController
             return response()->json(["success"=>false]);
         }
     }
-
+*/
 }
