@@ -127,6 +127,7 @@ $(".action-button").on('click', function(){
         */
         current_fs.hide();
         next_fs.show();
+        $(window).scrollTop(0);
     } else {
         // 隱藏目前欄位，並顯示下一步的欄位
         current_fs.hide();
