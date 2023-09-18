@@ -814,10 +814,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <button class="nav-link" id="menu-no4-tab" data-toggle="tab" data-target="#menu-no4" type="button" role="tab" aria-controls="menu-no4" aria-selected="false">4</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
+                                                <button class="nav-link" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
+                                                <button class="nav-link active" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
                                             </li>
                                             {{--<!--li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="menu-no7-tab" data-toggle="tab" data-target="#menu-no7" type="button" role="tab" aria-controls="menu-no7" aria-selected="false">7</button>
@@ -985,7 +985,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </div>
 
                                         <!-- 05 -->
-                                        <div class="tab-pane fade show active" id="menu-no5" role="tabpanel" aria-labelledby="menu-no5-tab">
+                                        <div class="tab-pane fade" id="menu-no5" role="tabpanel" aria-labelledby="menu-no5-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -1037,7 +1037,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </div>
 
                                         <!-- 06 -->
-                                        <div class="tab-pane fade" id="menu-no6" role="tabpanel" aria-labelledby="menu-no6-tab">
+                                        <div class="tab-pane fade show active" id="menu-no6" role="tabpanel" aria-labelledby="menu-no6-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">

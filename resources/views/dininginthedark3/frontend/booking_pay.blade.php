@@ -272,6 +272,11 @@
                         </div>
 
                         <div class="form-group input-with-label">
+                            <label for="notice">其他備註 Other Comments</label>
+                            <input type="text" name="notice" class="form-control nomust" id="notice" maxlength="50" placeholder="特殊事項備註/孕婦">
+                        </div>
+
+                        <div class="form-group input-with-label">
                             <label for="english_service">英文服務 English Service<span class="error-msg"></span></label>
                             <select id="english_service" name="english_service" class="nomust" data-placeholder="選擇人數" required>
                             </select>
@@ -285,7 +290,7 @@
                         </div> -->
 
                         <div class="form-group">
-                            <label class="form-label">* 套餐選擇 Menu</label>
+                            <label class="form-label">* 套餐選擇 Menu (飲食禁忌僅提供以下餐點變動，無提供客製化服務）</label>
                         </div>
 
                         <div class="form-group select-food">
@@ -396,11 +401,10 @@
 
                         </div>
 
-                        <div class="form-group textarea-with-label">
+                        <!-- <div class="form-group textarea-with-label">
                             <label for="notice">其他備註 Other Comments</label>
                             <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註/孕婦/慶生需求/特殊紀念&#10;Special Request, Birthday or Anniversary Celebration, etc.&#10;飲食禁忌僅能提供以上餐點變動，無提供餐點客製化服務，請評估自身狀況體驗。&#10;We can only make adjustments to the listed meals due to dietary restrictions. We do not offer custom meal services. "></textarea>
-                            <!-- 特殊事項備註/發票是否打統編/過敏食材&#10;食材過敏請標明人數＋過敏食材 EX:一位不吃牛&#10;素食者僅提供蛋奶五辛素&#10;發票若要打統編，請直接註明公司抬頭與統一編號 -->
-                        </div>
+                        </div> -->
                         
                         <div class="form-group radio__button">
                             <div class="d-flex align-items-center flex-wrap">
@@ -728,7 +732,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?230828"></script>
+    <script src="js/form_pay.js?230918"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
