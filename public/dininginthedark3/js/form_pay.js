@@ -575,13 +575,6 @@ $('.step-3 select').on('change', function () {
         $('#meat_food').next().find('.select2-selection__rendered').text(eatHabit['meat_food'])
         vegetarianChange();
         meatChange();
-    } else if($(this).attr('id') === 'vegetarian_food_allergy') {
-        if( $(this).val() === '0' ) {
-            $('#vegetarian-dropdown .amount select').prop('disabled', true);
-            $('#vegetarian-dropdown .amount select').val('0').trigger('change');
-        } else {
-            $('#vegetarian-dropdown .amount select').prop('disabled', false);
-        }
     } else if($(this).attr('id') === 'meat_food_allergy') {
         if( $(this).val() === '0' ) {
             $('#meat-dropdown2').slideUp();
@@ -597,33 +590,52 @@ $('.step-3 select').on('change', function () {
                 }
             });
         }
+    } else if($(this).attr('id') === 'vegetarian_food_allergy') {
+        if( $(this).val() === '0' ) {
+            $('#vegetarian-dropdown2').slideUp();
+            $('#vegetarian-dropdown2 .amount select').prop('disabled', true);
+            $('#vegetarian-dropdown2 .amount select').val('0').trigger('change');
+        } else {
+            $('#vegetarian-dropdown2').slideDown();
+            $('#vegetarian-dropdown2 .amount select').prop('disabled', false);
+            $('#vegetarian-dropdown2 .amount select').each(function(){
+                $(this).children().remove();
+                for(let a=0;a<=eatHabit['vegetarian_food'];a++){
+                    $(this).append('<option value="'+a+'">'+a+'</option>');
+                }
+            });
+        }
     }
 });
 
 function vegetarianChange() {
     if(eatHabit['vegetarian_food'] === 0){
-        $('#vegetarian-dropdown').slideUp(400, function(){
-            $('#vegetarian-dropdown select').each(function(){
-                $(this).val('0').trigger('change');
-            });
-        });
+        $('#vegetarian-dropdown1, #vegetarian-dropdown2').slideUp();
+        $('#vegetarian-dropdown1 select, #vegetarian-dropdown2 select').val('0').trigger('change');
     } else {
-        $('#vegetarian-dropdown .amount select').each(function(){
-            $(this).children().remove();
-            for(let a=0;a<=eatHabit['vegetarian_food'];a++){
-                $(this).append('<option value="'+a+'">'+a+'</option>');
-            }
-        });
-        $('#vegetarian-dropdown').slideDown();
+        $('#vegetarian-dropdown1').slideDown();
     }
+    $('#vegetarian-dropdown2 .amount select').each(function(){
+        $(this).children().remove();
+        for(let a=0;a<=eatHabit['vegetarian_food'];a++){
+            $(this).append('<option value="'+a+'">'+a+'</option>');
+        }
+    });
 }
 
 function meatChange() {
     if(eatHabit['meat_food'] === 0){
-        $('#meat-dropdown1').slideUp();
+        $('#meat-dropdown1, #meat-dropdown2').slideUp();
+        $('#meat-dropdown1 select, #meat-dropdown2 select').val('0').trigger('change');
     } else {
         $('#meat-dropdown1').slideDown();
     }
+    $('#meat-dropdown2 .amount select').each(function(){
+        $(this).children().remove();
+        for(let a=0;a<=eatHabit['meat_food'];a++){
+            $(this).append('<option value="'+a+'">'+a+'</option>');
+        }
+    });
 }
 
 // 更新餐點選擇的顧客數
