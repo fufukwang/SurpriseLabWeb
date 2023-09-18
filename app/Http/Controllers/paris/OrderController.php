@@ -61,7 +61,7 @@ class OrderController extends WebController
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')->select('paris_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','paris_order.money','cash','refund','cut','handling','need_english','tax_id','tax_name','vehicle')->find($id);
+                $order = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')->select('paris_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','paris_order.money','cash','refund','cut','handling','need_english','need_chinese','tax_id','tax_name','vehicle','ticket')->find($id);
                 $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
@@ -94,45 +94,10 @@ class OrderController extends WebController
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
             // 觸發補寄
             try {
-                $pro = pro::find($request->pro_id);
-                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($pro->day.' '.$pro->rang_start))));
-                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($pro->day.' '.$pro->rang_end))));
-                $mailer = [
-                    'day'   => Carbon::parse($pro->day)->format('Y / m / d'),
-                    'time'  => substr($pro->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
-                    'pople' => $request->people,
-                    'email' => $request->email,
-                    'name'  => $order->name,
-                    'gday'  => $rangStart.'/'.$rangEnd,
-                    'phone' => $request->tel,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'need_english' => $request->need_english ?? 0,
-                    'need_chinese' => $request->need_chinese ?? 0,
-                    'template' => 'order',
-                    'mday'     => $pro->day,
-                    'eday'   => Carbon::parse($pro->day)->format('d / m / Y'),
-                ];
-                if($mailer['email'] != ''){
-                    SLS::SendEmailByTemplateName($mailer);
-                    SLS::SendSmsByTemplateName($mailer);
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($pro->day.' '.$pro->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    if($day <= 14){
-                        $mailer['template'] = 'D14';
-                        SLS::SendEmailByTemplateName($mailer);
-                    }
-                    if($day <= 7){
-                        $mailer['template'] = 'D7';
-                        SLS::SendEmailByTemplateName($mailer);
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                    if($day == 0){
-                        $mailer['template'] = 'DX';
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                }
+                $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                    ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                if($ord->email != '') $this->sendMailCenter($ord);
+                if($ord->tel != '') $this->sendSmsCenter($ord);
             } catch (Exception $e){
                 Log::error($e);
             }
@@ -191,15 +156,9 @@ class OrderController extends WebController
     }
     public function AppointmentUpdate(Request $request,$pro_id){
         try {
-            $now = Carbon::now()->toDateString();
-            $count = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
             $people = $request->people;
-            if($count>0){
-                $count += 1;
-            } else {
-                $count = "2".Carbon::now()->format('Ymd').'0001';
-            }
-            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','special')->first();
+            $count = $this->grenOrderSN();
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','special','p1','p2','p4')->first();
             $meat = [];
             /*
             for($i=0;$i<$people;$i++){
@@ -238,9 +197,9 @@ class OrderController extends WebController
                 'pay_type'   => $request->pay_type,
                 'pay_status' => $request->pay_status,
                 'result'     => '',
+                'ticket'     => $request->ticket,
                 'manage'     => $request->manage,
                 'discount'   => '',
-                'vegetarian' => $request->vegetarian,
                 'is_overseas'=> $is_overseas,
                 'edit_type'  => $request->edit_type,
                 'need_english' => $request->need_english ?? 0,
@@ -252,50 +211,10 @@ class OrderController extends WebController
             $order = order::create($data);
 
             if($request->pay_status == '已付款'){
-                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
-                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                /*
-                $rangTS    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_start,0,5)))));
-                $rangTE    = str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($act->rang_end,0,5)))));
-                */
-                $mailer = [
-                    'day'   => Carbon::parse($act->day)->format('Y / m / d'),
-                    'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
-                    'pople' => $people,
-                    'email' => $data['email'],
-                    'name'  => $data['name'],
-                    'phone' => $data['tel'],
-                    'gday'  => $rangStart.'/'.$rangEnd,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'need_chinese' => $request->need_chinese ?? 0,
-                    'need_english' => $request->need_english ?? 0,
-                    'template' => 'order',
-                    'mday'     => $act->day,
-                    'eday'   => Carbon::parse($act->day)->format('d / m / Y'),
-                ];
-                if($mailer['email'] != ''){
-                    SLS::SendEmailByTemplateName($mailer);
-                    SLS::SendSmsByTemplateName($mailer);
-                    $order->is_send = 1;
-                    $order->save();
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($act->day.' '.$act->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    if($day <= 14){
-                        $mailer['template'] = 'D14';
-                        SLS::SendEmailByTemplateName($mailer);
-                    }
-                    if($day <= 7){
-                        $mailer['template'] = 'D7';
-                        SLS::SendEmailByTemplateName($mailer);
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                    if($day == 0){
-                        $mailer['template'] = 'DX';
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                }
+                $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                    ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                if($ord->email != '') $this->sendMailCenter($ord);
+                if($ord->tel != '') $this->sendSmsCenter($ord);
             }
 
             return redirect('/paris/pros?')->with('message','新增完成!');
@@ -368,6 +287,9 @@ class OrderController extends WebController
                     } elseif(!is_numeric($row['money']) && $row['money']<=0) {
                         $message .= "第{$i}列 金額輸入錯誤<br>";
                         break;
+                    } elseif(!in_array($row['type'],['p1','p2','p4','單人獨舞票','雙人共舞票','四人群舞票'])) {
+                        $message .= "第{$i}列 票種輸入錯誤輸入錯誤<br>";
+                        break;
                     } else {
                         $meat = [];
                         $is_overseas = 0;
@@ -378,23 +300,29 @@ class OrderController extends WebController
                             $message .= "第{$i}列 編號({$row['ticket']})人數已滿<br>";
                             break;
                         }
-                        // $money = $act->money * $row['people'];
+                        $ticket = $row['type'];$numTrue = true;
+                        switch($row['type']){
+                            case '單人獨舞票': $ticket = 'p1'; break;
+                            case '雙人共舞票': $ticket = 'p2'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
+                            case '四人群舞票': $ticket = 'p4'; if(($row['people'] % 4) != 0){ $numTrue = false;} break;
+                            case 'p2': $ticket = 'p4'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
+                            case 'p4': $ticket = 'p4'; if(($row['people'] % 4) != 0){ $numTrue = false;} break;
+                        }
+                        if(!$numTrue){
+                            $message .= "第{$i}列 票券人數錯誤<br>";
+                            break;
+                        }
 
                         // 寫入
-                        $sn = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
-                        if($sn>0){
-                            $sn += 1;
-                        } else {
-                            $sn = Carbon::now()->format('Ymd').'0001';
-                        }
+                        $sn = $this->grenOrderSN();
                         $data = [
                             'pro_id'     => $row['ticket'],
                             'pople'      => $row['people'],
                             'name'       => $row['name'],
                             'tel'        => $row['phone'],
                             'email'      => $row['email'],
+                            'ticket'     => $ticket,
                             'notes'      => '',
-                            'meat'       => json_encode($meat),
                             'coupon'     => 0,
                             'sn'         => $sn,
                             'money'      => $money,
@@ -406,14 +334,8 @@ class OrderController extends WebController
                             'vegetarian' => 0,
                             'is_overseas'=> $is_overseas,
                             'edit_type'  => '合作-'.$row['source'],
-                            'vegetarian' => $row['vegetarian'] ?? 0,
-                            'meat_eat'   => $row['meat_eat'] ?? 0,
-                            'no_beef'    => $row['no_beef'] ?? 0,
-                            'no_pork'    => $row['no_pork'] ?? 0,
-                            'no_nut_m'   => $row['no_nut_m'] ?? 0,
-                            'no_shell'   => $row['no_shell'] ?? 0,
-                            'no_fish'    => $row['no_fish'] ?? 0,
-                            'no_nut_v'   => $row['no_nut_v'] ?? 0,
+                            'need_english' => $row['need_english'] ?? 0,
+                            'need_chinese' => $row['need_chinese'] ?? 0,
                         ];
                         $order = order::create($data);
                         $count++;
@@ -458,7 +380,7 @@ class OrderController extends WebController
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","原始付款金額","行銷折扣","取消人數","手續費%數","手續費金額","退款金額","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號","貝殼的序號","發票號碼","發票開立時間"]);
+                array_push($data,["票種","體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","折扣碼/禮物卡","付款方式","付款狀態","原始付款金額","折扣碼折抵","禮物卡/序號折抵","取消人數","手續費%數","手續費金額","退款金額","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號","發票號碼","發票開立時間"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     $pay_type = $row['pay_type'];
@@ -478,37 +400,10 @@ class OrderController extends WebController
                     }
                     $pay_money = '';
                     $pay_last = '';
-                    $coupons = coupon::select('code','b_id','type')->where('o_id',$row['sn'])->get();
                     $modify_money = '';
                     $return_Tr_time = '';
                     $blue_sn = '';
                     $backme_sn = '';
-                    if(count($coupons)>0){
-                        $couponNumber = 0;
-                        $tmpBackSn = '';
-                        foreach($coupons as $c){
-                            if($coupon!=''){
-                                $coupon .= "\r\n";
-                                // $pay_money.= "\r\n";
-                                // $pay_last.= "\r\n";
-                                
-                            }
-                            $coupon .= "{$c->code}";
-                            // $pay_money .= backme::select('money')->find($c->b_id)->money;
-                            $pay_last .= backme::select('last_four')->find($c->b_id)->last_four;
-                            if($tmpBackSn != backme::select('sn')->find($c->b_id)->sn){
-                                if($backme_sn != '') $backme_sn.= "\r\n";
-                                $tmpBackSn = backme::select('sn')->find($c->b_id)->sn;
-                                $backme_sn .= $tmpBackSn;
-                            }
-                            
-                            $couponNumber++;
-                        }
-                        $pay_money .= ($couponNumber*4400);
-                        if($row['OM']>0){
-                            $pay_money .= "\r\n［{$row['OM']}］";
-                        }
-                    } else {
                         $pay_money = $row['OM'];
                         if($pay_type == '藍新金流' && ($pay_status == '已付款' || $pay_status == '已付款(部分退款)')){
                             $json = json_decode($row['result'],true);
@@ -518,9 +413,16 @@ class OrderController extends WebController
                             $return_Tr_time = $json['data']['Result']['PayTime'] ?? '';
                             $blue_sn = $json['data']['Result']['TradeNo'] ?? '';
                         }
-                    }
                     
-                    // if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
+                    $ticket = '';
+                    $num = 0;
+                    $price = 0;
+
+                    switch($row['ticket']){
+                        case 'p1': $ticket = '單人獨舞票'; $num = $row['pople']; $price = $row['p1']; break;
+                        case 'p2': $ticket = '雙人共舞票'; $num = $row['pople'] / 2; $price = $row['p2']; break;
+                        case 'p4': $ticket = '四人群舞票'; $num = $row['pople'] / 4; $price = $row['p4']; break;
+                    }
                     $handling_fee = 0;
                     if($pay_status == '未完成'){
                         $pay_money = 0;
@@ -533,6 +435,7 @@ class OrderController extends WebController
                             $pay_money .= " - " . $row['refund'] . " + " . $handling_fee;
                         }
                     }
+                    $imoney = (($price * $num) - $row['dis_money'] - $row['co_money'] - $row['refund'] + $handling_fee);
                     // 發票
                     $inv_number = '';
                     $inv_time = '';
@@ -548,6 +451,7 @@ class OrderController extends WebController
                     }
 
                     $sheetRow = [
+                        $ticket,
                         $row['day'],
                         substr($row['rang_start'],0,5).'~'.substr($row['rang_end'],0,5),
                         $row['name'],
@@ -556,22 +460,22 @@ class OrderController extends WebController
                         $row['pople'],
                         strip_tags(preg_replace('/\<br(\s*)?\/?\>/i',"\n",$row['notes'])),
                         $row['manage'],
-                        $coupon,
+                        $row['dis_code'].'/'.$row['co_code'],
                         $pay_type,
                         $pay_status,
-                        $row['OM'],
+                        ($price * $num),
                         $row['dis_money'],
+                        $row['co_money'],
                         $row['cut'],
                         $row['handling'],
                         $handling_fee,
                         $row['refund'],
-                        $pay_money,
+                        $imoney,
                         $pay_last,
                         $row['created_at'],
                         $return_Tr_time,
                         $blue_sn."\t",
                         $row['sn']."\t",
-                        $backme_sn."\t",
                         $inv_number,
                         $inv_time,
                     ];
@@ -580,13 +484,8 @@ class OrderController extends WebController
                 // $sheet->setColumnFormat(['O' => 'General']);
                 $zero = $sheet->rows($data);
                 for($i=0;$i<count($data);$i++){
-                    $zero->getStyle('G'.$i)->getAlignment()->setWrapText(true);
-                    $zero->getStyle('H'.$i)->getAlignment()->setWrapText(true);
                     $zero->getStyle('I'.$i)->getAlignment()->setWrapText(true);
-                    $zero->getStyle('L'.$i)->getAlignment()->setWrapText(true);
-                    $zero->getStyle('M'.$i)->getAlignment()->setWrapText(true);
-                    $zero->getStyle('Q'.$i)->getAlignment()->setWrapText(true);
-                    // $sheet->fromArray($data, null, 'A1', false, false)
+                    $zero->getStyle('J'.$i)->getAlignment()->setWrapText(true);
                 }
             });
         })->export('xls');
@@ -603,7 +502,7 @@ class OrderController extends WebController
             });
         })->export('xls');
     }
-
+/*
     public function beSentOrderMail(Request $request,$id){
         $act = pro::select('day','rang_start','rang_end')->find($id);
 
@@ -629,10 +528,10 @@ class OrderController extends WebController
         order::where('id',$request->oid)->update(['is_send'=>1]);
         return Response::json(['message'=> '已更新'], 200);
     }
-
+*/
     private function orderQuery(Request $request,$isTable=false){
         $order = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','paris_order.manage','paris_pro.money AS PM','paris_order.money AS OM','paris_order.created_at AS created_at','paris_order.pay_status','email','paris_order.sn','paris_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','refund','handling','cut','tax_id','tax_name','need_english');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','paris_order.manage','paris_pro.money AS PM','paris_order.money AS OM','paris_order.created_at AS created_at','paris_order.pay_status','email','paris_order.sn','paris_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','refund','handling','cut','tax_id','tax_name','need_english','vehicle','p1','p2','p4','co_code','co_money','ticket');
         if($isTable){
             $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
         }
@@ -674,10 +573,7 @@ class OrderController extends WebController
         }
         if($request->has('code') && $request->code!=''){
             $text = trim($request->code);
-            $coupons = coupon::orderBy('updated_at','desc')->select('o_id')->whereRaw("(
-                code LIKE '%{$text}%'
-            )")->get();
-            $order = $order->whereIn('sn',$coupons->toArray());
+            $order = $order->whereRaw("(co_code LIKE '%{$text}%' OR dis_code LIKE '%{$text}%')");
         }
         // 尚未開過發票
         if($request->has('no_inv') && $request->no_inv == 1){

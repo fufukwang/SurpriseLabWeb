@@ -123,31 +123,10 @@ class MasterController extends WebController
     public function postReSendMail(Request $request){
         try{
             $this->checkPower($request);
-            $toData = [
-                'id'    => $request->id,
-                'name'  => $request->name,
-                'email' => $request->email,
-                'template'  => $request->type,
-            ];
-            if($toData['template'] == 'D7'){
-                $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')->select('pople','day','rang_start','need_english')->find($request->id);
-                $toData['day'] = Carbon::parse($ord->day)->format(' m 月 d 日');
-                $toData['time'] = substr($ord->rang_start,0,5);
-                $toData['pople'] = $ord->pople;
-                $toData['mday'] = $ord->day;
-                $toData['eday'] = Carbon::parse($ord->day)->format('d / m / Y');
-                // $toData['vegetarian'] = $ord->vegetarian;
-                // $toData['meat_eat'] = $ord->meat_eat;
-                // $toData['no_beef'] = $ord->no_beef;
-                // $toData['no_pork'] = $ord->no_pork;
-                // $toData['no_nut_m'] = $ord->no_nut_m;
-                // $toData['no_shell'] = $ord->no_shell;
-                // $toData['no_fish'] = $ord->no_fish;
-                // $toData['no_nut_v'] = $ord->no_nut_v;
-                $toData['need_english'] = $ord->need_english;
-            }
-            // 信件補送
-            if(SLS::SendEmailByTemplateName($toData)){
+            $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($request->id);
+
+            if($this->sendMailCenter($ord,$request->type)){
                 return response()->json(["success"=>true]);
             } else {
                 return response()->json(["success"=>false]);
@@ -161,17 +140,14 @@ class MasterController extends WebController
     public function postReSendSMS(Request $request){
         try{
             $this->checkPower($request);
-            $toData = [
-                'phone'    => $request->tel,
-                'template' => $request->type,
-            ];
-            if($request->type == 'order'){
-                $order = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')->select('paris_order.id','day','rang_end','rang_start')->find($request->id);
-                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_start))));
-                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($order->day.' '.$order->rang_end))));
-                $toData['gday'] = $rangStart.'/'.$rangEnd;
+            $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($request->id);
+
+            if($this->sendSmsCenter($ord,$request->type)){
+                return response()->json(["success"=>true]);
+            } else {
+                return response()->json(["success"=>false]);
             }
-            SLS::SendSmsByTemplateName($toData);
             /*
             $tel = $request->tel;
             switch ($request->type) {

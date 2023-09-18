@@ -1,6 +1,6 @@
 <?php
 
-namespace App\model\paris_;
+namespace App\model\paris;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -89,7 +89,7 @@
                         
                             <div style="text-align: center;"><span style="font-size:12px"><span style="color:#FAEBD7">舞會日期：{{ $day }}<br>
 體驗場次：{{ $time }}<br>
-入場時間：xx : xx&nbsp;<br>
+入場時間：{{ \Carbon\Carbon::parse($mday.' '.$time.':00')->subMinutes(15)->format('H:i') }}&nbsp;<br>
 <br>
 舞會地點：</span><strong><a data-target-href="https://goo.gl/maps/KMkZ3ya7EG9xBHev6" href="https://goo.gl/maps/KMkZ3ya7EG9xBHev6" rel="noreferrer nofollow noopener" target="_blank"><span style="color:#FAEBD7">111 台北市士林區士商路189號</span></a></strong><a data-target-href="https://goo.gl/maps/KMkZ3ya7EG9xBHev6" href="https://goo.gl/maps/KMkZ3ya7EG9xBHev6" rel="noreferrer nofollow noopener" target="_blank"><span style="color:#FAEBD7"><strong></strong><strong>B1</strong></span></a><br>
 <span style="color:#FAEBD7">( 捷運劍潭站3號出口 / 士林站1號出口，均可轉乘前往 ）<br>

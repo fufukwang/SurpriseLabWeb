@@ -359,7 +359,7 @@ $('#discount').bind('blur',function(){
             discount_code = disVal;
             discount_money = data.money;
             $('.discount_note').html('折扣碼' + discount_code + ' 折扣 ' + discount_money + '<a href="javascript:;" class="arm"></a>');
-            $('#discount').attr('disabled',true);
+            $('#discount').attr('readonly',true);
         } else {
             $('.discount_note').html(data.message);
         }
@@ -371,7 +371,7 @@ $('.discount_note').on('click','.arm',function(){
     discount_money = 0;
     $('#discount').val('');
     $('.discount_note').html('');
-    $('#discount').attr('disabled',false);
+    $('#discount').attr('readonly',false);
 });
 // 禮物卡
 $('#gift').bind('blur',function(){
@@ -380,13 +380,14 @@ $('#gift').bind('blur',function(){
     $.post('/lebaldeparis/PostAjaxData',{
         'act': 'CheckParisCoupon',
         'ticket': $('.type select').val(),
+        'num': $('#booking_time').val(),
         'code': disVal
     },function(data){
         if(data.success == 'Y'){
             coupon_code = disVal;
             coupon_money = data.money;
             $('.gift_note').html('禮物卡' + coupon_code + ' 抵用 ' + coupon_money + '<a href="javascript:;" class="arm"></a>');
-            $('#gift').attr('disabled',true);
+            $('#gift').attr('readonly',true);
         } else {
             $('.gift_note').html(data.message);
         }
@@ -398,7 +399,7 @@ $('.gift_note').on('click','.arm',function(){
     discount_money = 0;
     $('#gift').val('');
     $('.gift_note').html('');
-    $('#gift').attr('disabled',false);
+    $('#gift').attr('readonly',false);
 });
 // ============================== #step2 - END
 $('.submitForm').bind('click',function(){

@@ -157,7 +157,7 @@ h4 {
     font-size: 18px;
   }
 }
-.input-group input[type=text], .input-group textarea {
+.input-group input[type=text],.input-group input[type=email], .input-group textarea {
   display: block;
   width: 100%;
   border-radius: 10px;
@@ -167,7 +167,7 @@ h4 {
   padding: 10px 12px;
   background: none;
 }
-.input-group input[type=text]:focus, .input-group textarea:focus {
+.input-group input[type=text]:focus,.input-group input[type=email]:focus, .input-group textarea:focus {
   outline: none;
   border-color: #fff;
 }

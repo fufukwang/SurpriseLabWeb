@@ -97,7 +97,7 @@ class HelperService {
                     
             });
             // 送件紀錄
-            SendMail::insert([
+            \App\model\paris\SendMail::insert([
                 'email'    => $data['email'],
                 'order_id' => $data['id'],
                 'type'     => $data['template'],

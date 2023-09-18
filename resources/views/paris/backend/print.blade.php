@@ -126,7 +126,6 @@
                                         <tbody>
 @forelse ($order as $row)
     <?php 
-        $coupons = App\model\paris\coupon::where('o_id',$row->sn)->get();
         $coupon_pople = 0;
         $tmp_b_id = 0;
         $totle_money = 0;
@@ -135,28 +134,7 @@
         $modify_money = '';
         $couponNumber = 0;
         $not_inv = false;
-        if(count($coupons)>0){
-            foreach($coupons as $coup){
-                $single_money = App\model\paris\backme::select('money')->find($coup->b_id)->money;
-                if($tmp_b_id != $coup->b_id){
-                    $tmp_b_id = $coup->b_id;
-                    $totle_money += $single_money;
-                }
-                if($coup->type == 'gift') $not_inv = true;
-                $couponNumber++;
-            }
-            if(isset($coup->b_id) && $totle_money == 4400*$couponNumber ){
-                // 這裡取得貝殼過來的後四碼
-                $last_four = App\model\paris\backme::select('last_four')->find($coup->b_id)->last_four;
-            } else {
-                $totle_money = 4400 * $couponNumber;
-            }
-            if($row->OM>0){
-                $totle_money = $row->OM;
-                $last_four = '';
-                $modify_money = "<br />修改金額:{$totle_money}";
-            }
-        } else {
+
             $totle_money = $row->OM;
             if($row->pay_type == '信用卡'){
                 if($row->result !=''){
@@ -165,17 +143,22 @@
                         $last_four = $card_info->card_info->last_four;
                     }
                 }
-            /*} elseif($row->pay_type == '合作販售'){
-                $totle_money = $row->PM * $row->pople;*/
             }
+        $ticket = '';
+        $num = 0;
+        $price = 0;
 
+        switch($row->ticket){
+            case 'p1': $ticket = '單人獨舞票'; $num = $row->pople; $price = $row->p1; break;
+            case 'p2': $ticket = '雙人共舞票'; $num = $row->pople / 2; $price = $row->p2; break;
+            case 'p4': $ticket = '四人群舞票'; $num = $row->pople / 4; $price = $row->p4; break;
         }
         $number = App\model\paris\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
         $inv_count = App\model\paris\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
         if($number){
             $inv_open = true;
         }
-        $inv_money = $totle_money;
+        $inv_money = ($price * $num) - $row->dis_money - $row->co_money;
         if($row->pay_status == '未完成'){
             $inv_money = 0;
         } else {
@@ -191,8 +174,9 @@
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_end,0,5))))) }}
                                                     <br >@if($row->is_overseas == 9) <span class="badge badge-pill badge-info">特別場次</span> @endif
+                                                    {{ $ticket }}
                                                 </td>
-                                                <td>{{ $row->name }}<br />phone:{{ $row->tel }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 取消:{{ $row->cut }}人 英文:{{ $row->need_english }}人</td>
+                                                <td>{{ $row->name }}<br />phone:{{ str_replace("+886","0",str_replace("+8860","0",$row->tel)) }}<br />email:{{ $row->email }}<br />{{ $row->created_at }}<br />人數:{{ $row->pople }}人 取消:{{ $row->cut }}人 英文:{{ $row->need_english }}人</td>
                                                 <td class="@if($row->pay_status=='已付款')success @elseif($row->pay_status=='已付款(部分退款)')info @elseif($row->pay_status=='未完成')danger @elseif($row->pay_status=='取消訂位')warning @endif">{{ $row->pay_type }} / {{ $row->pay_status }}
 @if($row->is_overseas == 1) <br />海外刷卡 @endif<br />
 <span id="inv_{{ $row->id }}">{{ $inv_open ? $number->number : '' }}</span> 
@@ -228,9 +212,8 @@
 
                                                 <td class="actions">
                                                     @if($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)')
-                                                    <a class="btn btn-primary btn-xs resent" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}" data-sn="{{ $row->sn }}" data-oid="{{ $row->id }}" data-phone="{{ $row->tel }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
+                                                    <a class="btn btn-primary btn-xs send_mail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->id }}" data-type="order" data-pople="{{ $row->pople }}" data-sn="{{ $row->sn }}" data-oid="{{ $row->id }}" data-phone="{{ $row->tel }}"><i class="fa fa-envelope"></i>訂位確認信</a><br /><br />
                                                     <!--a class="btn btn-primary btn-xs GoMail" href="javascript:;" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-id="{{ $row->pro_id }}" data-pople="{{ $row->pople }}"><i class="fa fa-envelope"></i>行前注意事項</a><br /-->
-
 
                                                     <a class="btn btn-primary btn-xs MasterBtn" href="javascript:;" data-id="{{ $row->id }}"><i class="fa fa-users"></i>團員</a>
                                                     @endif
@@ -238,7 +221,14 @@
                                                 <td class="actions">
                                                     @if( Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
                                                     
-                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}" data-tax_id="{{ $row->tax_id }}" data-tax_name="{{ $row->tax_name }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal)) && !$not_inv) @else style="display:none" @endif>發票開立</button>
+                                                    <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}"
+                                                        data-ticket="{{ $ticket }}" 
+                                                        data-num="{{ $num }}" 
+                                                        data-price="{{ $price }}" 
+                                                        data-co_money="{{ $row->co_money }}" 
+                                                        data-vehicle="{{ $row->vehicle }}" 
+                                                        data-tax_id="{{ $row->tax_id }}" 
+                                                        data-tax_name="{{ $row->tax_name }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal)) && !$not_inv) @else style="display:none" @endif>發票開立</button>
                                                     @endif
                                                     <div>
                                                         <a class="btn btn-primary btn-xs" href="/paris/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
@@ -315,8 +305,14 @@
                                             phone 電話<br />
                                             email 信箱<br />
                                             ticket 場次  <br />
-                                            people 人數  <br />
+                                            people 人數(人數和票種須吻合 ex.四人群舞票 須為4的倍數)  <br />
                                             money 金額(請輸入半形數字)，金額會直接存入訂單總金額。<br />
+                                            type 票券種類(輸入代號或中文都可以) <br>
+                                            <dt>
+                                                <li>p1 單人獨舞票</li>
+                                                <li>p2 雙人共舞票</li>
+                                                <li>p4 四人群舞票</li>
+                                            </dt>
                                         </p>
                                     </div>
                                 </div>
@@ -708,7 +704,6 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-box">
-                            {{--
                             <h4 class="m-t-0 header-title"><b>成員列表</b></h4>
                             <p class="text-muted font-13 m-b-25" id="MasterTitle">
                                 日期
@@ -720,19 +715,18 @@
 <!-- Trigger -->
 <button class="btn btnClip" data-clipboard-target="#copyMe">複製文字</button>
                             </p>
-                            --}}
                             <p class="text-muted font-13 m-b-25">
                                 主揪(訂位者)補寄功能
                                 <!-- <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會邀請函">邀請函</a>
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D21" data-toggle="tooltip" data-placement="top" data-original-title="寄送21天前的通知信">21</a> -->
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前的通知信">7</a>
-                                <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送14天前的通知信">14</a>
-                                <!-- <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知信">11</a>
+                                <!-- <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送14天前的通知信">14</a>
+                                <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知信">11</a>
                                 <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="0" data-name="-" data-email="-" data-type="D05" data-toggle="tooltip" data-placement="top" data-original-title="寄送5天前的通知信">05</a> -->
 
                                 <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="order" data-toggle="tooltip" data-placement="top" data-original-title="訂位確認簡訊(訂位確認信也會觸發簡訊)">訂位確認</a>
                                 <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前的通知簡訊">7</a>
-                                <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a>
+                                <!-- <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="0" data-name="-" data-tel="-" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="當天通知簡訊">當天</a> -->
                             </p>
 
                             <table class="table table-bordered table-hover m-0">
@@ -855,9 +849,10 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11.6.14/dist/sweetalert2.all.min.js"></script>
         <script>
-
+var invObject = {};
 
 $(function(){
+    
     $('#checkAll').bind('click', function() {
         $('input[name="id[]"]').prop('checked', $(this).prop('checked'));
     });
@@ -976,7 +971,7 @@ $(function(){
         var id = $(this).data('id');
         
         var dial = $(this).data('dial');
-        var phone = dial.replace('+886','0') + $(this).data('phone');
+        var phone = dial.replace('+886','0') + $(this).data('phone').replace('+8860','0').replace('+886','0');
         var totle_money = $(this).data('totle_money');
         var handling = $(this).data('handling');
         var refund = $(this).data('refund');
@@ -1022,7 +1017,15 @@ $(function(){
         } else {
             $('#ct2').trigger('click');
         }
-        
+        invObject = {
+            'ticket': $(this).data('ticket'),
+            'price': $(this).data('price'),
+            'num': $(this).data('num'),
+            'discount': $(this).data('dis_money'),
+            'coupon': $(this).data('co_money'),
+            // 'taxRate': '',
+            // 'money': '',
+        }
         
 
         shb2c();shlove();shcarr();taxchange();calAmt();
@@ -1035,11 +1038,6 @@ $(function(){
     $('#sent_inv_open').bind('click',function(){
         if(parseInt($('#Amt').val()) + parseInt($('#TaxAmt').val()) == parseInt($('#TotalAmt').val())){
             var id = $('#inv_use_id').val();
-            /*
-            var handling_fee = $('#handling_fee').val() ?? 0;
-            ItemPrice = $("#inv_price").text()+"|"+$("#inv_pass_price").text();
-            ItemAmt = $("#inv_amt").text()+"|"+$("#inv_pass_amt").text();
-            */
             var item1 = '';
             var item2 = '';
             var item3 = '';
@@ -1057,19 +1055,6 @@ $(function(){
                 item5 += $(value).find('td').eq(4).text();
                 itemMoney += parseInt($(value).find('td').eq(4).text());
             });
-/*
-            if($('input[name="Category"]:checked').val() == 'B2C'){
-                if(parseInt($('#TotalAmt').val()) != itemMoney){
-                    $.Notification.notify('error','bottom left','品項金額與總金額不符', '發票建立失敗');
-                    return false;
-                }
-            } else {
-                if(parseInt($('#Amt').val()) != itemMoney){
-                    $.Notification.notify('error','bottom left','品項金額與總金額不符', '發票建立失敗');
-                    return false;
-                }
-            }
-*/
             if(parseInt($('#TotalAmt').val()) != itemMoney){
                 $.Notification.notify('error','bottom left','品項金額與總金額不符', '發票建立失敗');
                 return false;
@@ -1090,13 +1075,6 @@ $(function(){
                 'CarrierType' : $('input[name="CarrierType"]:checked').val(),
                 'CarrierNum' : $('#CarrierNum').val(),
                 'LoveCode' : $('#LoveCode').val(),
-                /*
-                'ItemName' : '巴黎舞會('+$('#inv_people').text()+'人票)',
-                'ItemCount' : $('#inv_people').text(),
-                'ItemUnit' : '組',
-                'ItemPrice' : ItemPrice,
-                'ItemAmt' : ItemAmt,
-                */
                 'ItemName' : item1,
                 'ItemCount' : item2,
                 'ItemUnit' : item3,
@@ -1220,7 +1198,7 @@ $('#inputModal').on('hide.bs.modal', function (e) {
                 var Host = 'dev.surpriselab.com.tw';
                 var Protocol = 'http';
                 @endif
-                $("#copyMe").val(Protocol+"://"+Host+"/thegreattipsy/master?id="+data.master.md5id+"&sn="+data.master.sn);
+                $("#copyMe").val("{{env('APP_URL')}}lebaldeparis/invitation?id="+data.master.md5id+"&sn="+data.master.sn);
                 $('.send_mail,.send_sms').data('id',id);
                 $('.send_mail,.send_sms').data('name',data.master.name);
                 $('.send_mail').data('email',data.master.email);
@@ -1243,7 +1221,12 @@ $('#inputModal').on('hide.bs.modal', function (e) {
             email: email,
             type: type,
         },function(data){
-            $.Notification.notify('success','bottom left','已更新', '已重新送出');
+            if(data.success){
+                $.Notification.notify('success','bottom left','已更新', '已重新送出');
+            } else {
+                $.Notification.notify('error','bottom left','已更新', '信件送出失敗');
+            }
+            
         },'json');
     });
     $('.send_sms').bind('click',function(){
@@ -1311,19 +1294,14 @@ function calAmt(){
     var people = $('#inv_people').val();
     var totleamt = $('#TotalAmt').val();
     var now_tax = totleamt - Math.round(totleamt / (1 + (taxrate/100)));
-    // var now_tax = Math.round(totleamt*taxrate/100);
     $('#TaxAmt').val(now_tax);
     $('#Amt').val(totleamt - now_tax);
     var handling_fee = $('#handling_fee').val() ?? 0;
     var disMoney = parseInt($('#TaxDisMoney').val());
     if($('input[name="Category"]:checked').val() == 'B2C'){
-        //$('#inv_price').text(totleamt / people);
-        //$('#inv_price').text(Math.round(totleamt / people *100)/100);
         $('#inv_price,#inv_amt').text(totleamt - handling_fee);
         $('#inv_pass_price,#inv_pass_amt').text(handling_fee);
     } else {
-        //var itemPrice = Math.round((totleamt - now_tax) / people);
-        //$('#inv_price').text(itemPrice);
         $('#inv_price,#inv_amt').text(totleamt - now_tax - handling_fee);
         $('#inv_pass_price,#inv_pass_amt').text(handling_fee);
     }
@@ -1334,13 +1312,20 @@ function calAmt(){
         handling_fee = Math.round((handling * refund) / 100);
     }
     $('#itemBody').html('');
-    addItem('巴黎舞會',people,'張','2200',2200 * people);
-    addItem('行銷折扣',1,'組',(disMoney * -1),(disMoney * -1));
-
+    addItem('巴黎舞會'+invObject.ticket,invObject.num,'張',invObject.price,invObject.price * invObject.num);
+    if(invObject.discount>0){
+        addItem('行銷折扣',1,'組',(invObject.discount * -1),(invObject.discount * -1));    
+    }
+    if(invObject.coupon>0){
+        addItem('禮物卡/序號折抵',1,'組',(invObject.coupon * -1),(invObject.coupon * -1));    
+    }
+    
+/*
     if(2200 * people != parseInt(totleamt) + parseInt(disMoney)){
         discountLine = parseInt(totleamt) + parseInt(disMoney) - (2200 * people) - parseInt(handling_fee) + refund;
         addItem('折扣',1,'組',discountLine,discountLine);
     }
+    */
     if(refund>0) addItem('退費',cut,'張',(refund/cut)*-1,(refund*-1));
     if(handling_fee > 0) addItem('手續費',1,'組',handling_fee,handling_fee);
     // $('#itemBody').html(html);

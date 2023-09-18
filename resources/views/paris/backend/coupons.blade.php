@@ -62,6 +62,7 @@
                                             <tr>
                                                 <th>Code</th>
                                                 <th>類別</th>
+                                                <th>兌換期限</th>
                                                 <th>兌換日期</th>
                                                 <th>訂單編號</th>
                                                 <th>功能</th>
@@ -77,6 +78,7 @@
 @elseif( $row->type == 'p4' ) 四人群舞票
 @elseif( $row->type == 'gift' ) 禮物卡
 @endif</td>
+                                                <th>@if($row->end_at != '') <span @if($row->end_at->timestamp<time()) style="color:red;" @endif>{{$row->end_at}}</span> @else - @endif </th>
                                                 <td>@if($row->o_id > 0) 
                                                     {{ App\model\paris\order::where('sn',$row->o_id)->first()->created_at }}
                                                 @else 尚未兌換
@@ -102,9 +104,54 @@
                         </div>
                     </div>
                 </div>
-
-
-
+@if( Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <h4 class="page-title">巴黎舞會新增兌換碼 </h4>
+                            <div class="table-rep-plugin">
+                                <div class="table-wrapper">
+                                    <div class="btn-toolbar">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/paris/coupons" method="post">
+                                            {{ csrf_field() }}
+                                            <div class="form-group col-sm-12">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label for="ticket">票券類別</label>
+                                                        <select name="ticket" id="ticket" class="form-control">
+                                                            <option value="p1">單人獨舞票</option>
+                                                            <option value="p2">雙人共舞票</option>
+                                                            <option value="p4">四人群舞票</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-12">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label for="num">生成數量</label>
+                                                        <input type="number" value="1" class="form-control" id="num" name="num" min="1" max="3000" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-12">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label for="day">票券期限(指定日期的23:59:59，如無期限請留白)</label>
+                                                        <input type="date" class="form-control" id="day" name="day" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-12">
+                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span> 產生</button>
+                                            </div>
+                                        </form></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+@endif
 
 
 

@@ -31,64 +31,47 @@ class NewPayController extends WebController
     public function postOrderByNeweb(Request $request){
         try {
             $newebpay = new \NewebPay();
-            $now = Carbon::now()->toDateString();
-            $count = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
-
-            if($count>0){
-                $count += 1;
-            } else {
-                $count = '2'.Carbon::now()->format('Ymd').'0001';
+            $count = $this->grenOrderSN();
+            $people = $request->num;$ticket = '';
+            switch($request->ticket){
+                case '單人獨舞票': $ticket = 'p1'; break;
+                case '雙人共舞票': $ticket = 'p2';$people = $people * 2; break;
+                case '四人群舞票': $ticket = 'p4';$people = $people * 4; break;
             }
-
-            $people = $request->num;
-            if($request->has('ticket')){
-                if($request->ticket == '雙人共舞票'){
-                    $people = $people * 2;
-                } elseif($request->ticket == '四人群舞票'){
-                    $people = $people * 4;
-                }
-            }
-            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts')->first();
+            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts','p1','p2','p4')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
                 return view('paris.frontend.booking_fail');
             }
 
             $pay_type = '信用卡';
-            $money = $act->money * $people;
+            $money = $act->$ticket * $request->num;
             $cut1 = 0; $cut2 = 0;
             // 確認庫碰碼
             $coupon = 0;
-            /*
-            if($request->has('coupon')){
-                foreach ($request->coupon as $key => $value) {
-                    $coupon_count = coupon::where('code',$value)->where('o_id',0)->count();
-                    if($coupon_count>0){
-                        $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
-                        $coupon++;
-                        coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
-                        if($me->type == 'eb1' || $me->type == 'p1'){
-                            $cut1 += $act->money;
-                        } elseif ($me->type == 'p2') {
-                            $cut1 += $act->money * 2;
-                        } elseif ($me->type == 'p4') {
-                            $cut1 += $act->money * 4;
-                        } elseif ($me->type == 'p6') {
-                            $cut1 += $act->money * 6;
-                        }
-                    }
+            $couponCode = '';
+            $manage = '';
+            if($request->has('gift') && $request->gift !=''){
+                $couponCode = $request->gift;
+                $coN = coupon::where('code',$couponCode)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
+                if($coN>0){
+                    $me = coupon::where('code',$couponCode)->where('o_id',0)->select('type')->first();
+                    coupon::where('code',$couponCode)->where('o_id',0)->update(['o_id'=>$count]);
+                    $cut1 = $act->$ticket;
+                    $manage .= $couponCode.'折抵 '.$cut1."\n";
+                } else {
+                    Log::error('序號驗證錯誤');
+                    return view('paris.frontend.booking_fail');
                 }
             }
-            */
             // 折扣碼
-            $manage = '';
             $discountCode = '';
             if($request->has('discount')){
                 $discountCode = $request->discount;
                 $discount_list = json_decode(setting::where('slug','paris_pay_discount')->first()->json,true);
                 foreach($discount_list as $row){
                     if(strtoupper($row['code']) == $discountCode){
-                        $manage = $discountCode.'折扣 '.$row['money'];
+                        $manage .= $discountCode.'折扣 '.$row['money']."\n";
                         $cut2 = $row['money'];
                         break;
                     }
@@ -99,12 +82,7 @@ class NewPayController extends WebController
             if(intval($money - $cut1 - $cut2)  == 0){
                 $pay_status = '已付款';
             }
-            $ticket = '';
-            switch($request->ticket){
-                case '單人獨舞票': $ticket = 'p1'; break;
-                case '雙人共舞票': $ticket = 'p2'; break;
-                case '四人群舞票': $ticket = 'p4'; break;
-            }
+
 
             $data = [
                 'pro_id'     => $request->booking_time,
@@ -140,6 +118,9 @@ class NewPayController extends WebController
                 return view('paris.frontend.booking_success');
             } else {
                 $comments = "巴黎舞會";
+                if($cut1>0){
+                    $comments .= "(折抵  {$couponCode} - {$cut1})";
+                }
                 if($cut2>0){
                     $comments .= "(折扣  {$discountCode} - {$cut2})";
                 }
@@ -181,9 +162,25 @@ class NewPayController extends WebController
                     'pay_status' => '已付款'
                 ];
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update($pay_data);
-
-                return view('paris.frontend.booking_success');
+                $pro = pro::select('day','rang_start','rang_end')->find($order->pro_id);
+                $num = 0;
+                $ticket = '';
+                switch($order->ticket){
+                    case 'p1': $num = $order->pople; $ticket = '單人獨舞票'; break;
+                    case 'p2': $num = $order->pople / 2; $ticket = '雙人共舞票'; break;
+                    case 'p4': $num = $order->pople / 4; $ticket = '四人群舞票'; break;
+                }
+                $data = [
+                    'ticket' => $ticket,
+                    'num' => $num,
+                    'day' => preg_replace('/-/','/',$pro->day),
+                    'time' => substr($pro->rang_start,0,5).'-'.substr($pro->rang_end,0,5),
+                    'money' => $order->money,
+                ];
+                return view('paris.frontend.booking_success',compact('data'));
             } else {
+                // 移除 copon 的使用紀錄
+                coupon::where('o_id',$sn)->limit(1)->update(['o_id'=>0]);
                 $pay_data = [
                     'result'    => json_encode($retrunData),
                 ];
@@ -229,39 +226,12 @@ class NewPayController extends WebController
             // 寄送信件
             if($order->pay_status == '已付款' && $order->is_send === 0 && $order->discount == null){
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update(['discount'=>'back']);
-                $act = pro::where('id',$order->pro_id)->first();
-                $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_start))));
-                $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($act->day.' '.$act->rang_end))));
-                $mailer = [
-                    'day'   => Carbon::parse($act->day)->format('Y / m / d'),
-                    'time'  => substr($act->rang_start,0,5),//$act->day_parts.$rangTS.'-'.$rangTE,
-                    'pople' => $order->pople,
-                    'email' => $order->email,
-                    'name'  => $order->name,
-                    'phone' => $order->tel,
-                    'gday'  => $rangStart.'/'.$rangEnd,
-                    'master'=> "?id=".md5($order->id)."&sn=".$order->sn,
-                    'need_english' => $order->need_english,
-                    'template' => 'order',
-                    'mday'     => $act->day,
-                ];
-                SLS::SendEmailByTemplateName($mailer);
-                SLS::SendSmsByTemplateName($mailer);
-                try {
-                    $order->is_send = 1;
-                    $order->save();
-                    // 信件補送
-                    $now = time();
-                    $lim = strtotime($act->day.' '.$act->rang_start);
-                    $day = round( ($lim - $now) / 86400 );
-                    if($day <= 7){
-                        $mailer['template'] = 'D7';
-                        SLS::SendEmailByTemplateName($mailer);
-                        SLS::SendSmsByTemplateName($mailer);
-                    }
-                } catch (\Exception $e){
-                    Log::error($e);
-                }
+                
+                $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                    ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+
+                $this->sendMailCenter($ord);
+                $this->sendSmsCenter($ord);
             }
             return response('success');
 

@@ -454,20 +454,9 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
     // 巴黎舞會
     Route::group(['prefix' => 'paris'], function(){
-        Route::get('backmes','paris\BackController@BackMes');
-        Route::post('backmes','paris\BackController@BackMes');
-        Route::get('backme/{id}','paris\BackController@BackMe');
-        Route::delete('backme/{id}/delete','paris\BackController@BackMeDelete');
-        Route::post('backmes/{id}/sentcoupon','paris\BackController@SentCouponCode');
-        Route::post('backmes/{id}/sendUpdate','paris\BackController@sendUpdate');
-        Route::post('backmes/{id}/sendManageUpdate','paris\BackController@sendManageUpdate');
-        Route::post('backmes/{id}/infoUpdate','paris\BackController@infoUpdate');
-        Route::post('backmes/CanelCoupon','paris\BackController@CanelCoupon');
-        Route::get('backmenouse/xls','paris\BackController@NotUseXls');
-        Route::post('uploadxlsx','paris\BackController@UploadXlsx2Db');
-
         // coupon
         Route::get('coupons','paris\BackController@Coupons');
+        Route::post('coupons','paris\BackController@Coupons');
         Route::get('coupon/{id}','paris\BackController@Coupon');
         Route::delete('coupon/{id}/delete','paris\BackController@CouponDelete');
 
@@ -493,7 +482,7 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::get('table','paris\OrderController@Table');
         Route::get('xls/data/output','paris\OrderController@XlsDataOuput');
         Route::get('xls/emaildata/output','paris\OrderController@XlsEmailDataOuput');
-        Route::post('order/{id}/resent','paris\OrderController@beSentOrderMail');
+        // Route::post('order/{id}/resent','paris\OrderController@beSentOrderMail');
         Route::post('order/import.xls','paris\OrderController@orderImportXls');
 
         // 發票相關
@@ -766,7 +755,7 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::get('GetAjaxData','paris\FrontController@GetAjaxData');
         Route::post('PostAjaxData','paris\FrontController@PostAjaxData');
-        Route::post('ReOrderData','paris\FrontController@ReOrderData');
+        // Route::post('ReOrderData','paris\FrontController@ReOrderData');
     });
     // terminal 落日轉運站
     Route::group(['prefix' => 'terminal'], function(){

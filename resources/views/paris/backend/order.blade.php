@@ -40,6 +40,12 @@
                                                     <input type="text" class="form-control" readonly value="{{ substr($order->rang_start,0,5)  }} ~ {{ substr($order->rang_end,0,5)  }}">
                                                 </div>
                                             </div>
+                                            <div class="form-group hpro_id">
+                                                <label class="control-label col-sm-4">票種</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" readonly value="@if($order->ticket == 'p1') 單人獨舞票 @elseif($order->ticket == 'p2') 雙人共舞票 @elseif($order->ticket == 'p4') 四人群舞票 @endif">
+                                                </div>
+                                            </div>
 
                                             <div class="form-group spro_id" style="display: none;">
                                                 <label class="control-label col-sm-4">日期</label>

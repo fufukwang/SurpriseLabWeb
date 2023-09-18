@@ -94,7 +94,7 @@
 <br>
 舞會日期：{{ $day }}&nbsp;<br>
 體驗場次：{{ $time }}<br>
-入場時間：xx : xx&nbsp;<br>
+入場時間：{{ \Carbon\Carbon::parse($mday.' '.$time.':00')->subMinutes(15)->format('H:i') }}&nbsp;<br>
 舞會地點：台北市士林區的某棟秘密建築<br>
 （別急，詳細地點將於舞會前向你揭露）<br>
 <br>

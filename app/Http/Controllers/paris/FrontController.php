@@ -26,26 +26,6 @@ class FrontController extends WebController
     {
         DB::enableQueryLog();
     }
-    public function getBookingPage(Request $request){
-        try{
-            $code = 'pass';$day = '';
-            if($request->has('day')){
-                $day = $request->day;
-                $act = pro::where('day',$day)->where('open',1)->where('special',0)->select(DB::raw("(SUM(sites)-SUM({$this->oquery})) AS Count"))->whereRaw("(sites-{$this->oquery})>=2")->groupBy('day')->first();
-                if($act){
-                    if($act->Count<2){ $code = 'max'; }
-                } else {
-                    $code = 'null';
-                }
-                
-            }
-
-            return view('paris.frontend.booking_pay',compact('code','day'));
-        } catch (\Exception $exception) {
-            Log::error($exception);
-            return response()->json(["success"=>false]);
-        }
-    }
 
 
     public function GetAjaxData(Request $request){
@@ -193,18 +173,8 @@ class FrontController extends WebController
     public function PostAjaxData(Request $request){
         if($request->ajax()){
             if($request->has('act') && $request->has('ticket') && $request->act=='CheckParisCoupon'){
-
-
-
-
-
-
-                
-                $coupon = coupon::where('code',$request->code)->where('o_id',0);
-                if($request->has('coupon') && count($request->coupon)>0){
-                    $coupon = $coupon->whereNotIn('code',$request->coupon);
-                }
-                $coupon = $coupon->count();
+                $coupon = coupon::where('code',$request->code)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)');
+                $coupon = $coupon->where('o_id',0)->count();
                 if($coupon>0){
                     $me = coupon::where('code',$request->code)->select('type')->first();
                     $type = '';

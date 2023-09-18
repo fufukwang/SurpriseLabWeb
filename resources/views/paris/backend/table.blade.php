@@ -72,23 +72,9 @@
       $pay_status = '公關位';
    }
    $pay_money = 0;
-   $coupons = App\model\paris\coupon::where('o_id',$row->sn)->get();
    $modify_money = '';
-   if(count($coupons)>0){
-      foreach($coupons as $c){
-         if($coupon!=''){
-            $coupon .= "<br >";
-         }
-         $coupon .= "{$c->code}";
-         $pay_money+=4400;
-         // $pay_money .= App\model\paris\backme::select('money')->find($c->b_id)->money;
-      }
-      if($row->OM>0){
-         $modify_money = "修改金額:{$row->OM}";
-      }
-   } else {
+
       $pay_money = $row->OM;
-   }
                     
    if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
    if($row->pople == ($row->vegetarian + $row->meat_eat)){
@@ -119,11 +105,12 @@
 		<tr>
 			<td>飲食禁忌</td>
 			<td colspan="6" style="padding: 0px;">
+				{{--
 				<table class="food_list">
 					<tr><td>葷食/不吃牛肉</td><td>葷食/不吃豬肉</td><td>葷食/不吃堅果</td><td>葷食/甲殼類過敏</td><td>葷食/所有海鮮過敏/不吃</td><td>素食/不吃堅果</td></tr>
 					<tr><td>{{ $no_beef }} 人</td><td>{{ $no_pork }} 人</td><td>{{ $no_nut_m }} 人</td><td>{{ $no_shell }} 人</td><td>{{ $no_fish }} 人</td><td>{{ $no_nut_v }} 人</td></tr>
 				</table>
-
+				--}}
 
 				{{--
 				<table>

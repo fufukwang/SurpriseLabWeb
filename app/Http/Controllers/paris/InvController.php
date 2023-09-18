@@ -134,28 +134,16 @@ class InvController extends WebController
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','money','dis_money','tax_id','tax_name')->get();
+            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','money','dis_money','tax_id','tax_name','co_money','vehicle','p1','p2','p4','ticket')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
-                $phone = $row->tel;
-                $coupons = coupon::where('o_id',$row->sn)->get();
+                $phone = str_replace("+886","0",str_replace("+8860","0",$row->tel));
                 $coupon_pople = 0;
                 $tmp_b_id = 0;
                 $totleamt = 0;
                 $inv_open = false;
                 $last_four = '';
-                if(count($coupons)>0){
-                    foreach($coupons as $coup){
-                        $single_money = backme::select('money')->find($coup->b_id)->money;
-                        if($tmp_b_id != $coup->b_id){
-                            $tmp_b_id = $coup->b_id;
-                            $totleamt += $single_money;
-                        }
-                        if($coup->type == 'p2'){ $coupon_pople += 2; } elseif ($coup->type == 'p4') { $coupon_pople += 4; } elseif ($coup->type == 'gift') { $coupon_pople += 2; }
-                    }
-                    $last_four = backme::select('last_four')->find($coup->b_id)->last_four;
-                    if($row->money>0){ $totleamt = $row->money; }
-                } else {
+
                     $totleamt = $row->money;
                     if($row->pay_type == '信用卡'){
                         if($row->result !=''){
@@ -166,16 +154,25 @@ class InvController extends WebController
                         }
                           
                     }
+                $ticket = '';
+                $num = '';
+                $price = '';
+
+                switch($row->ticket){
+                    case 'p1': $ticket = '單人獨舞票'; $num = $row->pople; $price = $row->p1; break;
+                    case 'p2': $ticket = '雙人共舞票'; $num = $row->pople / 2; $price = $row->p2; break;
+                    case 'p4': $ticket = '四人群舞票'; $num = $row->pople / 4; $price = $row->p4; break;
                 }
                 $taxamt = $totleamt - round($totleamt / (1 + (5 / 100)));
                 $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
-                $ItemName .= '無光晚餐S3';$ItemCount .= $row->pople;$ItemUnit .= '張';$ItemPrice .= '2200';$ItemAmt .= (2200*$row->pople);
-                $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->dis_money;$ItemAmt .= '|'.$row->dis_money;
-                if(2200 * $row->pople != $totleamt + $row->dis_money){
-                    $discountLine = $totleamt + $row->dis_money - (2200 * $row->pople);
-                    $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$discountLine;$ItemAmt .= '|'.$discountLine;
+                $ItemName .= '巴黎舞會'.$ticket;$ItemCount .= $num;$ItemUnit .= '張';$ItemPrice .= $price;$ItemAmt .= ($price*$num);
+                if($row->dis_money>0){
+                    $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->dis_money;$ItemAmt .= '|'.$row->dis_money;
                 }
-                $ItemName .= '|手續費';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|0';$ItemAmt .= '|0';
+                if($row->co_money>0){
+                    $ItemName .= '|禮物卡/序號折抵';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->co_money;$ItemAmt .= '|'.$row->co_money;
+                }
+
 
                 $inv_count = inv::where('order_id',$row->id)->where('is_cancal',1)->count();
                 $psn = '';
@@ -185,6 +182,9 @@ class InvController extends WebController
                 $category = 'B2C'; $buyername = $row->name; $buyerUBN = '';$printFlag = 'N';$CarrierType = '2';$CarrierNum = rawurlencode($row->email);
                 if($row->tax_id!='' && $row->tax_name!=''){
                     $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;$printFlag = 'Y';$CarrierType = '';$CarrierNum = '';
+                    if($row->vehicle!=''){
+                        $printFlag = 'N';$CarrierType = '0';$CarrierNum = rawurlencode($row->vehicle);
+                    }
                 }
                 $post_data_array = [
                     'RespondType' => 'JSON',

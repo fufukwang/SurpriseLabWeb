@@ -36,23 +36,23 @@
             <table>
                 <tr>
                     <td>票種</td>
-                    <td>巴黎舞會雙人套票</td>
+                    <td>{{$data['ticket']}}</td>
                 </tr>
                 <tr>
                     <td>張數</td>
-                    <td>2</td>
+                    <td>{{$data['num']}}</td>
                 </tr>
                 <tr>
                     <td>預約日期</td>
-                    <td>2023/11/11</td>
+                    <td>{{$data['day']}}</td>
                 </tr>
                 <tr>
                     <td>預約時段</td>
-                    <td>18:30-20:00</td>
+                    <td>{{$data['time']}}</td>
                 </tr>
                 <tr>
                     <td>金額</td>
-                    <td>3,900 元</td>
+                    <td>{{$data['money']}} 元</td>
                 </tr>
             </table>
             <div class="addr">

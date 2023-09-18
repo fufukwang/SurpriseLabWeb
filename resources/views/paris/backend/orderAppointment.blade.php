@@ -19,7 +19,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/paris/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
+                                        <form data-parsley-validate novalidate method="post" action="/paris/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
 {!! csrf_field() !!}
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">日期</label>
@@ -39,7 +39,17 @@
                                                     <input type="text" class="form-control" name="range" value="{{ substr($pro->rang_start,0,5) }} ~ {{ substr($pro->rang_end,0,5) }}" readonly>
                                                 </div>
                                             </div>
-
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">票券類別</label>
+                                                <div class="col-sm-8">
+                                                    <select name="ticket" class="form-control" required>
+                                                        <option value="">票券類別</option>
+                                                        <option value="p1" data-price="{{ $pro->p1 }}">單人獨舞票</option>
+                                                        <option value="p2" data-price="{{ $pro->p2 }}">雙人共舞票</option>
+                                                        <option value="p4" data-price="{{ $pro->p4 }}">四人群舞票</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">姓名</label>
                                                 <div class="col-sm-8">
@@ -230,14 +240,35 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 <script type="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/3.1.2/jquery.bootstrap-touchspin.min.js"></script>
-
+<!-- Parsleyjs -->
+        <script type="text/javascript" src="/backstage/plugins/parsleyjs/dist/parsley.min.js"></script>
         <script>
         $(function(){
+            $('form').parsley();
 $('#pople').bind('change',function(){
     let people = $(this).val();
-    let cash = $(this).data('cash');
-    let money = Math.round(parseInt(cash) * parseInt(people) * 1.1);
-    $('#tipbox').text("單人金額:"+cash + " X 1 X 10%服務費 = " + Math.round(parseInt(cash) * 1.1));
+    let ticket_val = $('select[name=ticket] option:selected').val();
+    let ticket_name = $('select[name=ticket] option:selected').text();
+    let ticket_price = $('select[name=ticket] option:selected').data('price');
+    // let cash = $(this).data('cash');
+    if(ticket_val == 'p2'){
+        num = people / 2;
+        if(people % 2 != 0){
+            alert('雙人票人數請輸入2的倍數!');
+            $(this).val(0);
+        }
+    } else if(ticket_val == 'p4') {
+        num = people / 4;
+        if(people % 4 != 0){
+            alert('四人票人數請輸入4的倍數!');
+            $(this).val(0);
+        }
+    } else {
+        num = people;
+    }
+
+    let money = Math.round(parseInt(ticket_price) * parseInt(num) );
+    $('#tipbox').text(ticket_name+"金額:"+ticket_price + " X 1 = " + Math.round(parseInt(ticket_price)));
     $('#money').val(money);
 });
         });
