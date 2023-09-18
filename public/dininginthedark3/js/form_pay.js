@@ -557,81 +557,74 @@ $('.step-2 input, .step-2 select').on('change', function () {
     updateField(nextFieldset, accessHide);
 
 });
+
 $('.step-3 select').on('change', function () {
     if ($(this).attr('id') === 'meat_food') {
         eatHabit['meat_food'] = parseInt($(this).find(':selected').text());
-        eatHabit['vegetarian_food'] = submitDatas['booking_people'] - eatHabit['meat_food']
-        $('#vegetarian_food').val(eatHabit['vegetarian_food'])
-        $('#vegetarian_food').next().find('.select2-selection__rendered').text(eatHabit['vegetarian_food'])
-        if(eatHabit['meat_food'] == 0){
-            $(this).closest('.form-row').find('.col-wrap').slideUp(400, function(){
-                $('#meat_food_allergy').val('0').trigger('change')
-            })
-            $(this).closest('.form-row').next().find('.col-wrap').slideDown()
-        }else if(eatHabit['vegetarian_food'] == 0){
-            $(this).closest('.form-row').find('.col-wrap').slideDown()
-            $(this).closest('.form-row').next().find('.col-wrap').slideUp(400, function(){
-                $('#vegetarian_food_allergy').val('0').trigger('change')
-            })
-        }else{
-            $(this).closest('.form-row').find('.col-wrap').slideDown()
-            $(this).closest('.form-row').next().find('.col-wrap').slideDown()
-        }
-        $(this).closest('.form-row').find('.col-wrap .form-col.amount').each(function(){
-            $(this).find('select').children().remove()
-            for(let a=0;a<=eatHabit['meat_food'];a++){
-                $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
-            }
-        })
-        $(this).closest('.form-row').next().find('.col-wrap .form-col.amount').each(function(){
-            $(this).find('select').children().remove()
-            for(let a=0;a<=eatHabit['vegetarian_food'];a++){
-                $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
-            }
-        })
-        
-    }else if($(this).attr('id') === 'vegetarian_food') {
+        eatHabit['vegetarian_food'] = submitDatas['booking_people'] - eatHabit['meat_food'];
+        // 設素食人數select
+        $('#vegetarian_food').val(eatHabit['vegetarian_food']);
+        $('#vegetarian_food').next().find('.select2-selection__rendered').text(eatHabit['vegetarian_food']);
+        vegetarianChange();
+        meatChange();
+    } else if($(this).attr('id') === 'vegetarian_food') {
         eatHabit['vegetarian_food'] = parseInt($(this).find(':selected').text());
-        eatHabit['meat_food'] = submitDatas['booking_people'] - eatHabit['vegetarian_food']
-        $('#meat_food').val(eatHabit['meat_food'])
+        eatHabit['meat_food'] = submitDatas['booking_people'] - eatHabit['vegetarian_food'];
+        // 設葷食人數select
+        $('#meat_food').val(eatHabit['meat_food']);
         $('#meat_food').next().find('.select2-selection__rendered').text(eatHabit['meat_food'])
-        if(eatHabit['vegetarian_food'] == 0){
-            $(this).closest('.form-row').find('.col-wrap').slideUp(400, function(){
-                $('#vegetarian_food_allergy').val('0').trigger('change')
-            })
-            $(this).closest('.form-row').prev().find('.col-wrap').slideDown()
-        }else if(eatHabit['meat_food'] == 0){
-            $(this).closest('.form-row').find('.col-wrap').slideDown()
-            $(this).closest('.form-row').prev().find('.col-wrap').slideUp(400, function(){
-                $('#meat_food_allergy').val('0').trigger('change')
-            })
-        }else{
-            $(this).closest('.form-row').find('.col-wrap').slideDown()
-            $(this).closest('.form-row').prev().find('.col-wrap').slideDown()
+        vegetarianChange();
+        meatChange();
+    } else if($(this).attr('id') === 'vegetarian_food_allergy') {
+        if( $(this).val() === '0' ) {
+            $('#vegetarian-dropdown .amount select').prop('disabled', true);
+            $('#vegetarian-dropdown .amount select').val('0').trigger('change');
+        } else {
+            $('#vegetarian-dropdown .amount select').prop('disabled', false);
         }
-        $(this).closest('.form-row').find('.col-wrap .form-col.amount').each(function(){
-            $(this).find('select').children().remove()
-            for(let a=0;a<=eatHabit['vegetarian_food'];a++){
-                $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
-            }
-        })
-        $(this).closest('.form-row').prev().find('.col-wrap .form-col.amount').each(function(){
-            $(this).find('select').children().remove()
-            for(let a=0;a<=eatHabit['meat_food'];a++){
-                $(this).find('select').append('<option value="'+a+'">'+a+'</option>');
-            }
-        })
-    }
-})
-
-$('.step-3 #meat_food_allergy, .step-3 #vegetarian_food_allergy').on('change', function () {
-    if( $(this).val() === '0' ) {
-        $(this).closest('.col-wrap').find('.amount select').prop('disabled', true);
-        $(this).closest('.col-wrap').find('.amount select').val('0').trigger('change')
-    } else {
-        $(this).closest('.col-wrap').find('.amount select').prop('disabled', false);
+    } else if($(this).attr('id') === 'meat_food_allergy') {
+        if( $(this).val() === '0' ) {
+            $('#meat-dropdown2').slideUp();
+            $('#meat-dropdown2 .amount select').prop('disabled', true);
+            $('#meat-dropdown2 .amount select').val('0').trigger('change');
+        } else {
+            $('#meat-dropdown2').slideDown();
+            $('#meat-dropdown2 .amount select').prop('disabled', false);
+            $('#meat-dropdown2 .amount select').each(function(){
+                $(this).children().remove();
+                for(let a=0;a<=eatHabit['meat_food'];a++){
+                    $(this).append('<option value="'+a+'">'+a+'</option>');
+                }
+            });
+        }
     }
 });
+
+function vegetarianChange() {
+    if(eatHabit['vegetarian_food'] === 0){
+        $('#vegetarian-dropdown').slideUp(400, function(){
+            $('#vegetarian-dropdown select').each(function(){
+                $(this).val('0').trigger('change');
+            });
+        });
+    } else {
+        $('#vegetarian-dropdown .amount select').each(function(){
+            $(this).children().remove();
+            for(let a=0;a<=eatHabit['vegetarian_food'];a++){
+                $(this).append('<option value="'+a+'">'+a+'</option>');
+            }
+        });
+        $('#vegetarian-dropdown').slideDown();
+    }
+}
+
+function meatChange() {
+    if(eatHabit['meat_food'] === 0){
+        $('#meat-dropdown1').slideUp();
+    } else {
+        $('#meat-dropdown1').slideDown();
+    }
+}
 
 // 更新餐點選擇的顧客數
 function update_isVegetarian(people) {
