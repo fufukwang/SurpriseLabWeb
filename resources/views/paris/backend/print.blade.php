@@ -74,6 +74,14 @@
                                                 <label><input type="checkbox" name="is_overseas" value="2"@if($request->is_overseas==2) checked @endif>國內信用卡</label>
                                             </div>
                                             <div class="form-group col-sm-1">
+                                                <select name="ticket" class="form-control">
+                                                    <option value="">票券類別</option>
+                                                    <option value="p1"@if(isset($request->ticket) && $request->ticket=='p1') selected @endif>單人獨舞票</option>
+                                                    <option value="p2"@if(isset($request->ticket) && $request->ticket=='p2') selected @endif>雙人共舞票</option>
+                                                    <option value="p4"@if(isset($request->ticket) && $request->ticket=='p4') selected @endif>四人群舞票</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-1">
                                                 <select name="order" class="form-control">
                                                     <option value="">排序(預設為修改時間反序)</option>
                                                     <option value="rang_start|asc"@if(isset($request->order) && $request->order=='rang_start|asc') selected @endif>開始時間正序</option>

@@ -59,13 +59,13 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">電話</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" name="tel" required>
+                                                    <input type="text" class="form-control" name="tel" >
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">EMail</label>
                                                 <div class="col-sm-8">
-                                                    <input type="email" class="form-control" name="email" required email>
+                                                    <input type="email" class="form-control" name="email" email>
                                                 </div>
                                             </div>
                                             <div class="form-group">

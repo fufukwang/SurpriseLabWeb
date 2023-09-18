@@ -559,7 +559,7 @@ class OrderController extends WebController
                 $order->where('is_overseas','<',5); 
             }
         }
-
+        if($request->has('ticket') && $request->ticket!='') $order->where('ticket',$request->ticket);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
             $order->whereRaw("(paris_order.pay_status='已付款' OR pay_status='已付款(部分退款)' OR (paris_order.pay_type='現場付款' AND paris_order.pay_status<>'取消訂位'))");
