@@ -376,7 +376,7 @@
                                     </select>
                                     <label class="unit">位 Guests</label>
                                 </div>
-                                <div id="vegetarian-dropdown" class="col-wrap" style="display:none;">
+                                <div id="vegetarian-dropdown1" class="col-wrap" style="display:none;">
                                     <div class="form-col">
                                         <label class="form-label" for="vegetarian_food_allergy">
                                             * 用餐者是否有忌口/過敏食材
@@ -388,6 +388,8 @@
                                         </select>
                                     </div>
                                     <hr style="margin: 20px 0 0 0;">
+                                </div>
+                                <div id="vegetarian-dropdown2" class="col-wrap" style="display:none;">
                                     <label class="form-label mt-lg-4 mb-lg-4">* 特定食材忌口/過敏人數 Dietary Restrictions</label>
                                     <div class="form-col amount">
                                         <label class="form-label" for="vegetarian_food_noNut">
@@ -734,7 +736,7 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?2309181"></script>
+    <script src="js/form_pay.js?2309182"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
