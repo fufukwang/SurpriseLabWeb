@@ -130,4 +130,36 @@ $(function() {
             }
         });
     });
+
+    let $owlRecommend = $('#owl-recommend1, #owl-recommend2, #owl-recommend3');
+
+    $('#Recommend .tab-pane:eq(1), #Recommend .tab-pane:eq(2)').addClass('active');
+    $owlRecommend.each(function(){
+        const $this = $(this)
+        $this.owlCarousel({
+            center: true,
+            loop: true,
+            // margin: 60,
+            nav: true,
+            navText: ['<img src="img/home/landing/btn-left.svg" alt="btn-left"/>', '<img src="img/home/landing/btn-right.svg" alt="btn-right"/>'],
+            lazyLoad: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    dots: true
+                },
+                1200: {
+                    items: 2.27,
+                    dots: false,
+                    margin: 60
+                },
+                1441: {
+                    items: 2.27,
+                    dots: false,
+                    margin: 60
+                }
+            }
+        });
+    });
+    $('#Recommend .tab-pane:eq(1), #Recommend .tab-pane:eq(2)').removeClass('active');
 });
