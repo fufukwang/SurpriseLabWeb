@@ -3211,38 +3211,17 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-#Recommend .feature-wrap {
-  width: 33.33%;
-  padding: 18px 20px;
-}
-@media screen and (max-width: 1199.98px) {
-  #Recommend .feature-wrap {
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 12px 10px;
-    border-top: 1px solid rgba(255, 255,255, 0.3);
-    margin-top: 8px;
-    justify-content: center;
-  }
-}
-
 #Recommend .experience-desc {
-  width: 66.66%;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.8;
-  letter-spacing: 0.1em;
   padding: 24px 30px;
+  text-align: left;
 }
 @media screen and (max-width: 1199.98px) {
   #Recommend .experience-desc {
-    width: 100%;
     font-size: 14px;
-    line-height: 1.8;
     padding: 8px 10px;
-    text-align: left;
   }
 }
 
