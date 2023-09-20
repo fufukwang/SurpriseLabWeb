@@ -3202,6 +3202,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   width: calc((100vw - 120px) / 2.216);
   margin: 0 auto;
   display: flex;
+  text-align: center;
 }
 @media screen and (max-width: 1199.98px) {
   #Recommend .experience-intro {
@@ -3211,12 +3212,15 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
+#Recommend .experience-intro a {
+  color: #fff;
+}
+
 #Recommend .experience-desc {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.8;
   padding: 24px 30px;
-  text-align: left;
 }
 @media screen and (max-width: 1199.98px) {
   #Recommend .experience-desc {

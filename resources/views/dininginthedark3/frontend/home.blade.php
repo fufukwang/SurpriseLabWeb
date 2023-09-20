@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=2309191"/>
+    <link rel="stylesheet" href="css/style.css?date=230920"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -1198,6 +1198,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <img class="img-fluid owl-lazy" src="img/home/recommend/news/1.jpg" data-src="img/home/recommend/news/1.jpg" data-src-retina="img/home/recommend/news/1.jpg" alt="VOGUE">
                                                                 </a>
                                                             </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://www.vogue.com.tw/article/%E7%84%A1%E5%85%89%E6%99%9A%E9%A4%90-%E4%B8%83%E8%99%9F%E8%8F%9C%E5%96%AE-space">
+                                                                        《VOGUE》互動式餐飲體驗「無光晚餐」
+                                                                    </a>
+                                                                </div>
+                                                            </div>
                                                         </div>
 
                                                         <!-- 2 -->
@@ -1207,6 +1214,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <img class="img-fluid owl-lazy" src="img/home/recommend/news/2.jpg" data-src="img/home/recommend/news/2.jpg" data-src-retina="img/home/recommend/news/2.jpg" alt="妞新聞">
                                                                 </a>
                                                             </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://www.niusnews.com/=P088hgkw1">
+                                                                        《妞新聞》 2023 無光晚餐全新菜單
+                                                                    </a>
+                                                                </div>
+                                                            </div>
                                                         </div>
 
                                                         <!-- 3 -->
@@ -1216,15 +1230,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <img class="img-fluid owl-lazy" src="img/home/recommend/news/3.jpg" data-src="img/home/recommend/news/3.jpg" data-src-retina="img/home/recommend/news/3.jpg" alt="Shopping Design">
                                                                 </a>
                                                             </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://www.shoppingdesign.com.tw/post/view/9133">
+                                                                        《Shopping Design》全新七號菜單以「星際旅行」為題
+                                                                    </a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="experience-intro">
-                                                <div class="experience-desc">
-                                                    《VOGUE》互動式餐飲體驗「無光晚餐」<br />
-                                                    《妞新聞》 2023 無光晚餐全新菜單<br />
-                                                    《Shopping Design》全新七號菜單以「星際旅行」為題
                                                 </div>
                                             </div>
                                         </div>
@@ -1242,6 +1256,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <img class="img-fluid owl-lazy" src="img/home/recommend/blog/1.jpg" data-src="img/home/recommend/blog/1.jpg" data-src-retina="img/home/recommend/blog/1.jpg" alt="圈圈">
                                                                 </a>
                                                             </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://always1027.pixnet.net/blog/post/48627532-%E3%80%8A%E7%84%A1%E5%85%89%E6%99%9A%E9%A4%90%E3%80%8B%E5%BF%83%E5%BE%97%EF%BD%9C%E5%9C%A8%E9%BB%91%E6%9A%97%E4%B8%AD%E5%90%83%E4%B8%80%E9%A0%93%E9%A3%AF%EF%BD%9C%E5%8F%B0%E5%8C%97">
+                                                                        《圈圈的異想世界》最新七號菜單心得｜來一趟星際旅行
+                                                                    </a>
+                                                                </div>
+                                                            </div>
                                                         </div>
 
                                                         <!-- 2 -->
@@ -1251,6 +1272,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <img class="img-fluid owl-lazy" src="img/home/recommend/blog/2.jpg" data-src="img/home/recommend/blog/2.jpg" data-src-retina="img/home/recommend/blog/2.jpg" alt="莓姬貝利">
                                                                 </a>
                                                             </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://beri.tw/dining-in-the-dark/">
+                                                                        《莓姬貝利食事旅行》無光晚餐第三季心得
+                                                                    </a>
+                                                                </div>
+                                                            </div>
                                                         </div>
 
                                                         <!-- 3 -->
@@ -1260,16 +1288,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <img class="img-fluid owl-lazy" src="img/home/recommend/blog/3.jpg" data-src="img/home/recommend/blog/3.jpg" data-src-retina="img/home/recommend/blog/3.jpg" alt="Yen">
                                                                 </a>
                                                             </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://yenliving.com/taiwan-immersive-theatre-dininginthedark3/">
+                                                                        《Yen的邊走邊說》六號菜單驚喜回顧
+                                                                    </a>
+                                                                </div>
+                                                            </div>
                                                         </div>
 
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="experience-intro">
-                                                <div class="experience-desc">
-                                                    《圈圈的異想世界》最新七號菜單心得｜來一趟星際旅行<br />
-                                                    《莓姬貝利食事旅行》無光晚餐第三季心得<br />
-                                                    《Yen的邊走邊說》六號菜單驚喜回顧
                                                 </div>
                                             </div>
                                         </div>
