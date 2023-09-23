@@ -958,15 +958,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="item">
                         <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" target="_blank">
                             <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount08.png" data-src="/terminalAssets/images/main/discount08.png" data-src-retina="/terminalAssets/images/main/discount08.png" alt="Klook">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount09.png" data-src="/terminalAssets/images/main/discount09.png" data-src-retina="/terminalAssets/images/main/discount09.png" alt="Klook">
                             </figure>
                         </a>
                         <div class="discount-intro">
-                            <div class="discount-title">Klook 限定《微醺列車》雙人套票</div>
+                            <div class="discount-title">Klook 《微醺列車》單人票</div>
                             <div class="discount-p">
-                                驚喜製造與Klook獨家推出文化幣適用的微醺列車雙人票，<br />
-                                暑期倒數中，限時優惠1個月。<br />
-                                拿著優惠與朋友一起到微醺列車中探險吧！
+                                即日起，於Klook預訂任一《落日轉運站》體驗，<br />
+                                皆可以文化幣折抵，歡迎剛成年的你一同啟程，<br />
+                                踏上微醺列車，尋找下一站目的地。
                             </div>
                         </div>
                     </div>

@@ -490,6 +490,9 @@
                                     票券若需更改體驗日期、取消退費，<br/>
                                     請提供相應的資料，來信《無光晚餐》客服信箱 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a>
                                     <br/><br/>
+                                    若已申請過改期一次，欲再次申請退費者，僅能退50%。<br/>
+                                    不適用原訂退費規範。
+                                    <br/><br/>
                                     為確保你的權益，請根據需求，詳閱以下規則：
                                 </p>
 
@@ -681,24 +684,24 @@
                                     <li>退費入帳約需七至十個工作天，實際日期請依購票時使用信用卡銀行規定為主。（特殊情況採 ATM 退費，入帳時間請依照客服人員回信為主）</li>
                                 </ol>
 
-                                <h5 class="sub-title highlight">
+                                <!-- <h5 class="sub-title highlight">
                                     雙菜單劃位
-                                </h5>
+                                </h5> -->
                                 <!-- <p class="text-left">
                                     各批次預售劃位期限與序號規則。
                                 </p>
                                 <br/>
                                 <br/> -->
-                                <h6 class="highlight">雙菜單年度套票</h6>
+                                <!-- <h6 class="highlight">雙菜單年度套票</h6>
                                 <div class="tab-content-inner">
                                     <div class="rule-according" id="#stage-according">
                                         <div class="card">
                                             <div class="card-header" id="stage1-header">
-                                                <!-- <h6 data-toggle="collapse" data-target="#stage1" aria-expanded="false"
+                                                <h6 data-toggle="collapse" data-target="#stage1" aria-expanded="false"
                                                     aria-controls="stage1" class="collapsed d-flex align-items-center">
                                                     ・第一批劃位
                                                     <i class="icon icon-arrow"></i>
-                                                </h6> -->
+                                                </h6>
                                             </div>
     
                                             <div id="stage1" class="collapse show" aria-labelledby="stage1-header">
@@ -712,7 +715,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <br/><br/>
+                                <br/><br/> -->
                                 <!-- <h6 class="highlight">年度套票（原雙菜單套票）</h6>
                                 <ul>
                                     <li>可劃位區間：2022/10/12 - 2023/10/31</li>

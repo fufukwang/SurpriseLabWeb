@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?v=0.1"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=0714"/>
+    <link rel="stylesheet" href="css/style.css?date=230920"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -814,10 +814,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <button class="nav-link" id="menu-no4-tab" data-toggle="tab" data-target="#menu-no4" type="button" role="tab" aria-controls="menu-no4" aria-selected="false">4</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
+                                                <button class="nav-link" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
+                                                <button class="nav-link active" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
                                             </li>
                                             {{--<!--li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="menu-no7-tab" data-toggle="tab" data-target="#menu-no7" type="button" role="tab" aria-controls="menu-no7" aria-selected="false">7</button>
@@ -985,7 +985,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </div>
 
                                         <!-- 05 -->
-                                        <div class="tab-pane fade show active" id="menu-no5" role="tabpanel" aria-labelledby="menu-no5-tab">
+                                        <div class="tab-pane fade" id="menu-no5" role="tabpanel" aria-labelledby="menu-no5-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -1037,7 +1037,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </div>
 
                                         <!-- 06 -->
-                                        <div class="tab-pane fade" id="menu-no6" role="tabpanel" aria-labelledby="menu-no6-tab">
+                                        <div class="tab-pane fade show active" id="menu-no6" role="tabpanel" aria-labelledby="menu-no6-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -1165,6 +1165,171 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Section Recommend -->
+                        <section class="anchor-section" id="Recommend">
+                            <!-- Exp -->
+                            <div class="section">
+
+                                <div class="section-header">
+                                    <div class="section-title">
+                                        <h3>各界好評</h3>
+                                    </div>
+                                </div>
+
+                                <nav>
+                                    <div class="nav" role="tablist">
+                                        <button class="btn-outline active" id="recommend-news-tab" data-toggle="tab" data-target="#recommend-news" type="button" role="tab" aria-controls="recommend-news" aria-selected="true">媒體報導</button>
+                                        <button class="btn-outline" id="recommend-blog-tab" data-toggle="tab" data-target="#recommend-blog" type="button" role="tab" aria-controls="recommend-blog" aria-selected="false">部落客心得</button>
+                                        <button class="btn-outline" id="recommend-channel-tab" data-toggle="tab" data-target="#recommend-channel" type="button" role="tab" aria-controls="recommend-channel" aria-selected="false">節目合作</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="recommend-news" role="tabpanel" aria-labelledby="recommend-news-tab">
+                                        <div class="tab-content-inner">
+                                            <div class="recommend-slideshow">
+                                                <div class="content-inner--slideshow-cover">
+                                                    <div class="owl-carousel owl-theme" id="owl-recommend1">
+
+                                                        <!-- 1 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="https://www.vogue.com.tw/article/%E7%84%A1%E5%85%89%E6%99%9A%E9%A4%90-%E4%B8%83%E8%99%9F%E8%8F%9C%E5%96%AE-space">
+                                                                    <img class="img-fluid owl-lazy" src="img/home/recommend/news/1.jpg" data-src="img/home/recommend/news/1.jpg" data-src-retina="img/home/recommend/news/1.jpg" alt="VOGUE">
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://www.vogue.com.tw/article/%E7%84%A1%E5%85%89%E6%99%9A%E9%A4%90-%E4%B8%83%E8%99%9F%E8%8F%9C%E5%96%AE-space">
+                                                                        《VOGUE》互動式餐飲體驗「無光晚餐」
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 2 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="https://www.niusnews.com/=P088hgkw1">
+                                                                    <img class="img-fluid owl-lazy" src="img/home/recommend/news/2.jpg" data-src="img/home/recommend/news/2.jpg" data-src-retina="img/home/recommend/news/2.jpg" alt="妞新聞">
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://www.niusnews.com/=P088hgkw1">
+                                                                        《妞新聞》 2023 無光晚餐全新菜單
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 3 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="https://www.shoppingdesign.com.tw/post/view/9133">
+                                                                    <img class="img-fluid owl-lazy" src="img/home/recommend/news/3.jpg" data-src="img/home/recommend/news/3.jpg" data-src-retina="img/home/recommend/news/3.jpg" alt="Shopping Design">
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://www.shoppingdesign.com.tw/post/view/9133">
+                                                                        《Shopping Design》全新七號菜單以「星際旅行」為題
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="recommend-blog" role="tabpanel" aria-labelledby="recommend-blog-tab">
+                                        <div class="tab-content-inner">
+                                            <div class="recommend-slideshow">
+                                                <div class="content-inner--slideshow-cover">
+                                                    <div class="owl-carousel owl-theme" id="owl-recommend2">
+
+                                                        <!-- 1 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="https://always1027.pixnet.net/blog/post/48627532-%E3%80%8A%E7%84%A1%E5%85%89%E6%99%9A%E9%A4%90%E3%80%8B%E5%BF%83%E5%BE%97%EF%BD%9C%E5%9C%A8%E9%BB%91%E6%9A%97%E4%B8%AD%E5%90%83%E4%B8%80%E9%A0%93%E9%A3%AF%EF%BD%9C%E5%8F%B0%E5%8C%97">
+                                                                    <img class="img-fluid owl-lazy" src="img/home/recommend/blog/1.jpg" data-src="img/home/recommend/blog/1.jpg" data-src-retina="img/home/recommend/blog/1.jpg" alt="圈圈">
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://always1027.pixnet.net/blog/post/48627532-%E3%80%8A%E7%84%A1%E5%85%89%E6%99%9A%E9%A4%90%E3%80%8B%E5%BF%83%E5%BE%97%EF%BD%9C%E5%9C%A8%E9%BB%91%E6%9A%97%E4%B8%AD%E5%90%83%E4%B8%80%E9%A0%93%E9%A3%AF%EF%BD%9C%E5%8F%B0%E5%8C%97">
+                                                                        《圈圈的異想世界》最新七號菜單心得｜來一趟星際旅行
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 2 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="https://beri.tw/dining-in-the-dark/">
+                                                                    <img class="img-fluid owl-lazy" src="img/home/recommend/blog/2.jpg" data-src="img/home/recommend/blog/2.jpg" data-src-retina="img/home/recommend/blog/2.jpg" alt="莓姬貝利">
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://beri.tw/dining-in-the-dark/">
+                                                                        《莓姬貝利食事旅行》無光晚餐第三季心得
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 3 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="https://yenliving.com/taiwan-immersive-theatre-dininginthedark3/">
+                                                                    <img class="img-fluid owl-lazy" src="img/home/recommend/blog/3.jpg" data-src="img/home/recommend/blog/3.jpg" data-src-retina="img/home/recommend/blog/3.jpg" alt="Yen">
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://yenliving.com/taiwan-immersive-theatre-dininginthedark3/">
+                                                                        《Yen的邊走邊說》六號菜單驚喜回顧
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="recommend-channel" role="tabpanel" aria-labelledby="recommend-channel-tab">
+                                        <div class="tab-content-inner">
+                                            <div class="recommend-slideshow">
+                                                <div class="content-inner--slideshow-cover">
+                                                    <div class="owl-carousel owl-theme" id="owl-recommend3">
+
+                                                        <!-- 1 -->
+                                                        <div class="item">
+                                                            <div class="slideshow-video">
+                                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/z621WH3A05w?si=nuRfbtCCqZuKywQK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 2 -->
+                                                        <div class="item">
+                                                            <div class="slideshow-video">
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/07tD7cBDbNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
                         {{--<!-- 預售劃位流程 -->
                         <!--div class="section sec-ticket-process">
@@ -1489,7 +1654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/index.js?date=230802"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?v=0.11"></script>
-    <script src="js/index-slideshow.js?date=0712"></script>
+    <script src="js/index-slideshow.js?date=230919"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 
 </body>
