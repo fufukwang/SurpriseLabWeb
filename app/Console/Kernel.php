@@ -20,6 +20,7 @@ class Kernel extends ConsoleKernel
         // Commands\Covid19CouponRestore::class,
         Commands\Dark3Task::class,
         Commands\TerminalTask::class,
+        Commands\ParisTask::class,
     ];
 
     /**
@@ -47,5 +48,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('terminal:task 18')->dailyAt('18:00'); // 落日 行前信寄送
         $schedule->command('dark3:task 25')->hourly();
         $schedule->command('terminal:task 25')->hourly();
+
+
+        $schedule->command('paris:task 18')->dailyAt('18:00'); // 落日 行前信寄送
     }
 }

@@ -452,6 +452,58 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('order/inv/cancal','clubT\InvController@InvClose');
     });
 
+    // 巴黎舞會
+    Route::group(['prefix' => 'paris'], function(){
+        // coupon
+        Route::get('coupons','paris\BackController@Coupons');
+        Route::post('coupons','paris\BackController@Coupons');
+        Route::get('coupon/{id}','paris\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','paris\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','paris\BackController@Pros');
+        Route::get('pro/{id}/edit','paris\BackController@ProEdit');
+        Route::post('pro/{id}/update','paris\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','paris\BackController@ProDelete');
+        Route::post('pros','paris\BackController@Pros');
+        Route::post('pros/output/only','paris\BackController@ProOutputSite');
+
+        // 訂單
+        Route::get('orders/{id}','paris\OrderController@Orders');
+        Route::get('order/{id}/edit','paris\OrderController@OrderEdit');
+        Route::post('order/{id}/update','paris\OrderController@OrderUpdate');
+        Route::delete('order/{id}/delete','paris\OrderController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','paris\OrderController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','paris\OrderController@AppointmentUpdate');
+        Route::post('order/{id}/store/ajax','paris\OrderController@StoreByAjax');
+
+        // 報表列印
+        Route::get('print','paris\OrderController@Print');
+        Route::get('table','paris\OrderController@Table');
+        Route::get('xls/data/output','paris\OrderController@XlsDataOuput');
+        Route::get('xls/emaildata/output','paris\OrderController@XlsEmailDataOuput');
+        // Route::post('order/{id}/resent','paris\OrderController@beSentOrderMail');
+        Route::post('order/import.xls','paris\OrderController@orderImportXls');
+
+        // 發票相關
+        Route::post('order/inv/single/open','paris\InvController@singleInvOpne');
+        Route::post('order/inv/mult/open','paris\InvController@muInvOpen');
+        Route::post('order/inv/cancal','paris\InvController@InvClose');
+
+        // 主揪相關
+        Route::post('getMasterData', 'paris\MasterController@getMasterAndSend');
+        Route::post('postReSendMail', 'paris\MasterController@postReSendMail');
+        Route::post('postReSendSMS', 'paris\MasterController@postReSendSMS');
+        Route::get('getMasterList','paris\MasterController@getMasterList');
+        Route::post('postMaster/{id}/store','paris\MasterController@postMasterStore');
+        Route::delete('postMaster/{id}/delete','paris\MasterController@postMasterDelete');
+
+        // 特殊場次設定
+        Route::get('special/setting', 'paris\SpecialController@getSpecialSetting');
+        Route::get('discount/setting', 'paris\SpecialController@getDiscountSetting');
+        Route::post('setting/store', 'paris\SpecialController@postSettingStore');
+    });
+
     Route::group(['prefix' => 'surprise'], function(){
         Route::get('wishs','SurpriseLabHome\BackController@wishs');
         Route::get('wish/{id}/modify','SurpriseLabHome\BackController@wish');
@@ -681,6 +733,29 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('GetAjaxData','dark3\FrontController@GetAjaxData');
         Route::post('PostAjaxData','dark3\FrontController@PostAjaxData');
         Route::post('ReOrderData','dark3\FrontController@ReOrderData');
+    });
+        // parse ball
+    Route::group(['prefix' => 'lebaldeparis'], function(){
+        Route::get('index.html',function(){ return view('paris.frontend.home'); });
+        Route::get('/',function(){ return view('paris.frontend.home'); });
+        Route::get('rules',function(){ return view('paris.frontend.rules'); });
+        // 劃位
+        Route::get('booking',function(){ return view('paris.frontend.booking'); });
+        // 藍新金流路由
+        Route::post('Neweb.OrderPay', 'paris\NewPayController@postOrderByNeweb'); // 存訂單
+        Route::post('Neweb.ReturnResult', 'paris\NewPayController@postReturnByNeweb'); // 回傳內容
+        Route::post('Neweb.BackReturn', 'paris\NewPayController@postBackReturn'); // 背景回傳
+/*
+        // 特別場
+        Route::get('booking_special.html', 'paris\SpecialController@getHome'); // 特別場
+        Route::post('Special.OrderPay', 'paris\SpecialController@postOrderByNeweb'); // 存訂單
+*/        
+        Route::get('invitation','paris\MasterController@getTeamMaster');
+        Route::post('Team/SlaveStore', 'paris\MasterController@postTeamSlave');
+
+        Route::get('GetAjaxData','paris\FrontController@GetAjaxData');
+        Route::post('PostAjaxData','paris\FrontController@PostAjaxData');
+        // Route::post('ReOrderData','paris\FrontController@ReOrderData');
     });
     // terminal 落日轉運站
     Route::group(['prefix' => 'terminal'], function(){

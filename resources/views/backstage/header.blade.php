@@ -203,6 +203,20 @@
                         </ul>
                     </li>
                     @endif
+                    @if( Session::get('key')->paris )
+                    <li class="has-submenu @if(Request::segment(1) === 'paris')active @endif">
+                        <a href="#"><i class="md md-cake"></i>巴黎舞會</a>
+                        <ul class="submenu" style="left:0;right:auto">
+
+                            <li><a href="/paris/pros">Activaty</a></li>
+                            <li><a href="/paris/discount/setting">Discount</a></li>
+                            <li><a href="/paris/print">Order</a></li>
+                            <li><a href="/paris/getMasterList">Master</a></li>
+                            <li><a href="/paris/coupons">Gift Coupon</a></li>
+
+                        </ul>
+                    </li>
+                    @endif
                 @endif
                 </ul>
                 <!-- End navigation menu -->

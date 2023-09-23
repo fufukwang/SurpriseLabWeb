@@ -72,6 +72,12 @@
                                         <input type="checkbox" @if($admin->terminal)checked @endif name="terminal" value="1" data-plugin="switchery" data-color="#ffaa00"/>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>巴黎舞會</label>
+                                        <input type="checkbox" @if($admin->paris)checked @endif name="paris" value="1" data-plugin="switchery" data-color="#ffaa00"/>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">

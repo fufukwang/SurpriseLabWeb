@@ -11,6 +11,6 @@ class coupon extends Model
     protected $fillable = ['code','b_id','o_id','type'];
     protected $guarded = [];
     protected $primaryKey = 'id';
-    protected $dates = ['created_at', 'updated_at'];
+    protected $dates = ['end_at','created_at', 'updated_at'];
 }
 

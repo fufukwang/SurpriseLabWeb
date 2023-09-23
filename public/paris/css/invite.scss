@@ -1,0 +1,52 @@
+@import "_default";
+
+#invite {
+    color: $color17;
+
+    a {
+        color: $color17;
+    }
+
+    .invite-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 50px auto;
+    }
+
+    .info {
+        text-align: center;
+        margin-bottom: 140px;
+    }
+
+    form {
+        display: block;
+        width: 100%;
+        max-width: 544px;
+        margin: 0 auto;
+        
+    }
+
+    .checkboxes {
+        margin-top: 100px;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 108px;
+    }
+}
+
+#invite-success {
+    color: $color17;
+    
+    .info {
+        text-align: center;
+    }
+    
+    .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 108px;
+    }
+}

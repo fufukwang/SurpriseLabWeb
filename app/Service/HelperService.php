@@ -66,6 +66,68 @@ class HelperService {
         }
     }
 
+    // paris 信件寄送
+    public function SendEmailParisByTemplateName($data){
+        try{
+            if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
+                config(['mail.host' => 'smtp.gmail.com']);
+                config(['mail.username' => env('MAIL_PARIS_USER')]);
+                config(['mail.password' => env('MAIL_PARIS_PASS')]);
+            } else {
+                config(['mail.host' => env('MAIL_HOST')]);
+                config(['mail.username' => env('MAIL_USERNAME')]);
+                config(['mail.password' => env('MAIL_PASSWORD')]);
+            }
+            Mail::send('paris.email.'.$data['template'],$data,function($m) use ($data){
+                $m->from('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
+                $m->sender('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
+                $m->replyTo('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
+                $m->to($data['email'], $data['name']);
+                switch ($data['template']) {
+                    case 'order':
+                        $m->subject('【 巴黎舞會 】訂位確認信件');
+                        break;
+                    case 'D7':
+                        $m->subject('《巴黎舞會 Le Bal de Paris》即將展開，行前你需要知道的九件事');
+                        break;
+                    case 'undone':
+                        $m->subject('【巴黎舞會】慶祝重要日子，還差一步....你完成下訂了嗎？');
+                        break;
+                }
+                    
+            });
+            // 送件紀錄
+            \App\model\paris\SendMail::insert([
+                'email'    => $data['email'],
+                'order_id' => $data['id'],
+                'type'     => $data['template'],
+            ]);
+            return true;
+        } catch (Exception $e){
+            Log::error($e);
+            return false;
+        }
+    }
+    // paris 簡訊寄送
+    public function SendSmsParisByTemplateName($smsData){
+        try{
+            switch ($smsData['template']) {
+                case 'order':
+                    $this->sent_single_sms($smsData['phone'],"親愛的賓客，《巴黎舞會》訂位確認信已寄出，請務必查看！若未收到，請至垃圾信匣或促銷內容尋找。\n\n巴黎午夜，不見不散。");
+                    break;
+                case 'D7':
+                    $this->sent_single_sms($smsData['phone'],"親愛的賓客，你好。《巴黎舞會》邀請函已寄至你的信箱，請盡速前往查看。\n內含邀請資訊及舞會地點，非常期待你的蒞臨。");
+                    break;
+                case 'DX':
+                    $this->sent_single_sms($smsData['phone'],"巴黎舞會");
+                    break;
+            }
+            return true;
+        } catch (Exception $e) {
+            Log::error($e);
+            return false;
+        }
+    }
 
 
     // dark3 信件寄送
