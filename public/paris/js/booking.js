@@ -475,9 +475,15 @@ function onFormSubmit() {
         $('#leading .error').addClass('show');
         
     } else {
-        $('#leading').hide();
-        $('#notice').show();
-        $('html,body').animate({scrollTop: 0}, 300);
+
+        if(code == 'BEMYGUEST' || code == 'JUSTDANCE'){
+            $('#leading').hide();
+            $('#notice').show();
+            $('html,body').animate({scrollTop: 0}, 300);
+        } else {
+            $('#leading .error').addClass('show');
+        }
+        
     }
     $.unblockUI();
     return false;
