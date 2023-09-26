@@ -19,9 +19,33 @@ $('#step1 select').each(function () {
         dropdownParent: $(this).closest('.input-group').find('.select-wrapper')
     });
 });
-
-// 選擇票種&人數時
-$('#step1 .type select, #step1 .guests select').on('select2:select', function (e) {
+// 調整票種
+$('#step1 .type select').on('change', function (e) {
+    var val = $(this).val();
+    switch(val){
+        case '單人獨舞票': changeGuestNumber(20); break;
+        case '雙人共舞票': changeGuestNumber(10); break;
+        case '四人群舞票': changeGuestNumber(5); break;
+    }
+    function changeGuestNumber(num){
+        var $guest_select = $('#step1 .guests select');
+        $guest_select.empty();
+        var data = [];
+        for(i=1;i<=num;i++) data.push({id: i,text: i})
+        $guest_select.select2({
+            data: data,
+            placeholder: $guest_select.data('placeholder'),
+            minimumResultsForSearch: Infinity,
+            dropdownParent: $guest_select.closest('.input-group').find('.select-wrapper')
+        });
+        $guest_select.val(null).trigger('change');
+        $('#step1 .date').css({opacity: 0, 'pointer-events': 'none'});
+        $('#step1 .time').css({opacity: 0, 'pointer-events': 'none'});
+        $('#step1 .go-next').addClass('disabled');
+    }
+});
+// 選擇&人數時
+$('#step1 .guests select').on('select2:select', function (e) {
     var enableDays = [];
     var dateSite = [];
     

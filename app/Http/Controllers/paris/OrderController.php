@@ -460,7 +460,7 @@ class OrderController extends WebController
                         $row['pople'],
                         strip_tags(preg_replace('/\<br(\s*)?\/?\>/i',"\n",$row['notes'])),
                         $row['manage'],
-                        $row['dis_code'].'/'.$row['co_code'],
+                        $row['dis_code']."\n".$row['co_code'],
                         $pay_type,
                         $pay_status,
                         ($price * $num),
@@ -538,13 +538,13 @@ class OrderController extends WebController
 
 
         if($request->has('srday')  && $request->srday>=1){
-            if($request->srday == 1){
+            if($request->srday == 2){
                 if($request->has('daystart') && $request->daystart!='') $order->where('day','>=',$request->daystart);
                 if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
             }
-            if($request->srday == 2){
-                if($request->has('daystart') && $request->daystart!='') $order->where('paris_order.created_at','>=',$request->daystart);
-                if($request->has('dayend') && $request->dayend!='') $order->where('paris_order.created_at','<=',$request->dayend);    
+            if($request->srday == 1){
+                if($request->has('daystart') && $request->daystart!='') $order->where('paris_order.created_at','>=',$request->daystart.' 00:00:00');
+                if($request->has('dayend') && $request->dayend!='') $order->where('paris_order.created_at','<=',$request->dayend.' 23:59:59');    
             }
         }
         
