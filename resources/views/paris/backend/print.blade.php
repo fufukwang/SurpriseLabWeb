@@ -1206,7 +1206,7 @@ $('#inputModal').on('hide.bs.modal', function (e) {
                 var Host = 'dev.surpriselab.com.tw';
                 var Protocol = 'http';
                 @endif
-                $("#copyMe").val("{{env('APP_URL')}}lebaldeparis/invitation?id="+data.master.md5id+"&sn="+data.master.sn);
+                $("#copyMe").val("{{env('APP_URL')}}/lebaldeparis/invitation?id="+data.master.md5id+"&sn="+data.master.sn);
                 $('.send_mail,.send_sms').data('id',id);
                 $('.send_mail,.send_sms').data('name',data.master.name);
                 $('.send_mail').data('email',data.master.email);

@@ -177,6 +177,13 @@ class NewPayController extends WebController
                     'time' => substr($pro->rang_start,0,5).'-'.substr($pro->rang_end,0,5),
                     'money' => $order->money,
                 ];
+                if(env('APP_ENV') == 'dev'){
+                    $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                        ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+
+                    $this->sendMailCenter($ord);
+                    $this->sendSmsCenter($ord);
+                }
                 return view('paris.frontend.booking_success',compact('data'));
             } else {
                 // 移除 copon 的使用紀錄

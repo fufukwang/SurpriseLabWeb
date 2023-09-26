@@ -77,7 +77,10 @@ class MasterController extends WebController
                     ];
                     TeamMail::insert($data);
                     // 檢查確認日期補寄信件
-
+                    $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                        ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                    if($ord->email != '') $this->sendMailCenter($ord);
+                    if($ord->tel != '') $this->sendSmsCenter($ord);
                     return response()->json(["success"=>true]);
                 }
             } else {

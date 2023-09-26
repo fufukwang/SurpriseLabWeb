@@ -31,6 +31,7 @@ class HelperService {
                 //'response_url' =>
               ]
             ]);
+            Log::info($response->getBody());
             // return json_decode($response->getBody(),true);
         } catch (Exception $e){
             Log::error($e);
@@ -111,15 +112,16 @@ class HelperService {
     // paris 簡訊寄送
     public function SendSmsParisByTemplateName($smsData){
         try{
+            $token = env('PARIS_SMS');
             switch ($smsData['template']) {
                 case 'order':
-                    $this->sent_single_sms($smsData['phone'],"親愛的賓客，《巴黎舞會》訂位確認信已寄出，請務必查看！若未收到，請至垃圾信匣或促銷內容尋找。\n\n巴黎午夜，不見不散。");
+                    $this->sent_single_sms($smsData['phone'],"親愛的賓客，《巴黎舞會》訂位確認信已寄出，請務必查看！若未收到，請至垃圾信匣或促銷內容尋找。\n\n巴黎午夜，不見不散。",$token);
                     break;
                 case 'D7':
-                    $this->sent_single_sms($smsData['phone'],"親愛的賓客，你好。《巴黎舞會》邀請函已寄至你的信箱，請盡速前往查看。\n內含邀請資訊及舞會地點，非常期待你的蒞臨。");
+                    $this->sent_single_sms($smsData['phone'],"親愛的賓客，你好。《巴黎舞會》邀請函已寄至你的信箱，請盡速前往查看。\n內含邀請資訊及舞會地點，非常期待你的蒞臨。",$token);
                     break;
                 case 'DX':
-                    $this->sent_single_sms($smsData['phone'],"巴黎舞會");
+                    $this->sent_single_sms($smsData['phone'],"巴黎舞會",$token);
                     break;
             }
             return true;
