@@ -522,3 +522,12 @@ $('.notice-btn').bind('click',function(){
     $.unblockUI();
 });
 
+MicroModal.init({
+    openTrigger: 'data-custom-open',
+    closeTrigger: 'data-custom-close',
+    disableFocus: true,
+    disableScroll: true,
+    awaitOpenAnimation: true,
+    awaitCloseAnimation: true,
+    debugMode: true
+});
