@@ -49,8 +49,12 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 200%; /* 36px */
+    padding-top: 78px;
     @media screen and (min-width:768px) {
         font-size: 18px;
+    }
+    @media screen and (min-width:992px) {
+        padding-top: 0;
     }
 }
 
@@ -472,31 +476,93 @@ button.p-btn {
 }
 
 #main-header {
-    padding: 63px 15px 20px 15px;
-    background: linear-gradient(180deg, #260307 0%, rgba(38, 3, 7, 0.00) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    padding: 20px;
+    background: #260307;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    @media screen and (min-width:992px) {
+        position: static;
+        height: auto;
+        padding: 63px 20px 20px 20px;
+        background: linear-gradient(180deg, #260307 0%, rgba(38, 3, 7, 0.00) 100%);
+        display: block;
+    }
+
+    .pc {
+        display: none;
+        @media screen and (min-width:992px) {
+            display: block;
+        }
+    }
+
+    .m {
+        @media screen and (min-width:992px) {
+            display: none;
+        }
+    }
     
     .brand-logo {
         display: flex;
         justify-content: center;
-        margin-bottom: 32px;
+        @media screen and (min-width:992px) {
+            margin-bottom: 32px;
+        }
 
         img {
-            width: 187px;
+            width: 73px;
+            @media screen and (min-width:992px) {
+                width: 187px;
+            }
         }
     }
 
     nav {
+        position: fixed;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 78px);
+        background: #260307;
         display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
         @media screen and (min-width:992px) {
+            position: static;
+            width: auto;
+            height: auto;
+            background: none;
             max-width: 1114px;
             margin: 0 auto;
-            display: flex;
+            display: flex !important;
+            flex-direction: row;
             justify-content: space-between;
+        }
 
-            a {
-                position: relative;
-                color: $color17;
-                transform: color .4s;
+        a {
+            font-family: 'Noto Serif TC';
+            font-size: 34px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: 4.5px;
+            margin: 10px 0;
+            position: relative;
+            color: $color17;
+            transform: color .4s;
+            @media screen and (min-width:992px) {
+                font-family: 'Noto Sans TC';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 200%;
+                margin: 0;
 
                 &.active:before {
                     content: '';
@@ -533,6 +599,56 @@ button.p-btn {
                         transform: scaleX(1);
                     }
                 }
+            }
+        }
+    }
+
+    .mob-toggle {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        position: relative;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, calc(-50% - 5px));
+            width: 30px;
+            height: 1px;
+            background: #fff;
+            transform-origin: center center;
+            transition: transform .4s;
+        }
+
+        &:after {
+            transform: translate(-50%, calc(-50% + 5px));
+        }
+
+        // &.active {
+        //     &:before, &:after {
+        //         transform: translate(-50%, -50%) rotate(45deg);
+        //     }
+    
+        //     &:after {
+        //         transform: translate(-50%, -50%) rotate(-45deg);
+        //     }
+        // }
+    }
+
+    &.open {
+        nav {
+            display: flex;
+        }
+
+        .mob-toggle {
+            &:before, &:after {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+    
+            &:after {
+                transform: translate(-50%, -50%) rotate(-45deg);
             }
         }
     }
