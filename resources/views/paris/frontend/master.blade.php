@@ -86,6 +86,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="actions">
                 <button class="p-btn primary" type="submit" disabled>接受邀請</button>
             </div>
+            <input type="hidden" name="id" id="id" value="{{ md5($order->id) }}">
+            <input type="hidden" name="sn" id="sn" value="{{ $order->sn }}">
         </form>
     </main>
 
