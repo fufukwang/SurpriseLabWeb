@@ -420,6 +420,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris/js/plugins/select2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script src="/paris/js/phone_code.js"></script>
-    <script src="/paris/js/booking.js?09134"></script>
+    <script src="/paris/js/booking.js?230927"></script>
 </body>
 </html>
