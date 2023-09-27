@@ -12,28 +12,13 @@
     <link rel="stylesheet" href="/paris/css/booking.css?0913">
 </head>
 <body>
-    <header>
-        <div class="brand-logo">
-            <a href="#">
-                <img src="/paris/img/brand-logo.png" alt="巴黎舞會 LE BAL PARIS" />
-            </a>
-        </div>
-    </header>
+    
+    @include('paris.frontend._nav')
 
     <main id="booking-fail">
         <center>巴黎舞會首頁</center>
     </main>
 
-    <footer id="main-footer">
-        <div class="social">
-            <a target="_blank" href="https://www.facebook.com/surpriselabtw">
-                <img src="/paris/img/social_fb.svg" />
-            </a>
-            <a target="_blank" href="https://www.instagram.com/surpriselabtw">
-                <img src="/paris/img/social_ig.svg" />
-            </a>
-        </div>
-        <div class="copyright">Copyright © 2023 Surprise Lab. All rights reserved.</div>
-    </footer>
+    @include('paris.frontend._footer')
 </body>
 </html>
