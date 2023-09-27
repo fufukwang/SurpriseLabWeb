@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主揪/邀請成功</title>
+    <title>誠摯邀請｜巴黎舞會 Le Bal de Paris de Blanca</title>
+    <link rel="icon" href="/paris/img/favicon.png" type="image/x-icon">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
