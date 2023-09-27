@@ -23,13 +23,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSCVLLRP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <div class="brand-logo">
-            <a href="#">
-                <img src="/paris/img/brand-logo.png" alt="巴黎舞會 LE BAL PARIS" />
-            </a>
-        </div>
-    </header>
+    
+    @include('paris.frontend._nav')
 
     <main id="booking-fail">
         <div class="title">
@@ -49,16 +44,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </main>
 
-    <footer id="main-footer">
-        <div class="social">
-            <a target="_blank" href="https://www.facebook.com/surpriselabtw">
-                <img src="/paris/img/social_fb.svg" />
-            </a>
-            <a target="_blank" href="https://www.instagram.com/surpriselabtw">
-                <img src="/paris/img/social_ig.svg" />
-            </a>
-        </div>
-        <div class="copyright">Copyright © 2023 Surprise Lab. All rights reserved.</div>
-    </footer>
+    @include('paris.frontend._footer')
 </body>
 </html>
