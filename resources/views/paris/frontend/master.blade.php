@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
-    <link rel="stylesheet" href="/paris/css/invite.css?2309">
+    <link rel="stylesheet" href="/paris/css/plugins/select2.css"/>
+    <link rel="stylesheet" href="/paris/css/invite.css?2309272">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -46,9 +47,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <label>* 姓名（為維護你的訂位權益，請留全名）</label>
                 <input type="text" name="name" class="required" id="name" placeholder="兔子先生">
             </div>
-            <div class="input-group">
+            <div class="input-group phone-group">
                 <label>手機<span class="error-msg phoneErr" style="display: none;">請填寫正確的格式</span></label>
-                <input type="text" name="phone" id="phone" minlength="10" maxlength="10" placeholder="0912345678">
+                <div class="flex">
+                    <div class="code-wrapper">
+                        <select class="code" name="area_code" data-placeholder="選擇國碼"></select>
+                    </div>
+                    <input type="text" name="phone" id="phone" class="phone" minlength="10" maxlength="10" placeholder="0912345678">
+                </div>
+                <div class="select-wrapper"></div>
             </div>
             <div class="input-group">
                 <label>Email<span class="error-msg emailErr" style="display: none;">請填寫正確的格式</span></label>
@@ -79,8 +86,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="actions">
                 <button class="p-btn primary" type="submit" disabled>接受邀請</button>
             </div>
-            <input type="hidden" name="id" id="id" value="{{ md5($order->id) }}">
-            <input type="hidden" name="sn" id="sn" value="{{ $order->sn }}">
         </form>
     </main>
 
@@ -142,8 +147,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="/paris/js/plugins/select2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script src="/paris/js/plugins/micromodal.min.js"></script>
-    <script src="/paris/js/invite.js?2309"></script>
+    <script src="/paris/js/phone_code.js"></script>
+    <script src="/paris/js/invite.js?2309272"></script>
 </body>
 </html>

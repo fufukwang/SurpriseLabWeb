@@ -1,3 +1,19 @@
+// 手機國碼
+var data = PHONE_CODE.map(function(item){
+    return {
+        id: item.phoneCode,
+        text: item.phoneCode + ' ' + item.countryNameTw
+    }
+});
+var $select = $('#invite select.code');
+$select.select2({
+    data: data,
+    placeholder: $select.data('placeholder'),
+    minimumResultsForSearch: Infinity,
+    dropdownParent: $select.closest('.input-group').find('.select-wrapper')
+});
+$select.val('+886').trigger('change');
+
 function disableGoNext() {
     var disabled = false;
 
