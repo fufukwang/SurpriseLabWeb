@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主揪/邀請成功</title>
+    <title>誠摯邀請｜巴黎舞會 Le Bal de Paris de Blanca</title>
+    <link rel="icon" href="/paris/img/favicon.png" type="image/x-icon">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +56,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="text" name="phone" id="phone" minlength="10" maxlength="10" placeholder="0912345678">
             </div>
             <div class="input-group">
-                <label>Emai<span class="error-msg emailErr" style="display: none;">請填寫正確的格式</span></label>
+                <label>Email<span class="error-msg emailErr" style="display: none;">請填寫正確的格式</span></label>
                 <input type="email" name="email" id="email" placeholder="lebaldeparis@surpriselab.com.tw" />
             </div>
             <div class="checkboxes">
