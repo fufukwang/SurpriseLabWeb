@@ -1,6 +1,6 @@
     <header id="main-header">
         <div class="brand-logo">
-            <a href="/paris">
+            <a href="/lebaldeparis">
                 <img class="pc" src="/paris/img/brand-logo.png" alt="巴黎舞會 LE BAL PARIS" />
                 <img class="m" src="/paris/img/brand-logo-m.png" alt="巴黎舞會 LE BAL PARIS" />
             </a>
