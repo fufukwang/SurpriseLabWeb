@@ -316,17 +316,17 @@ function checkStep2Field() {
         allowNext = false;
     }
 
-    // 檢查載具格式 
-    var invoices = $('#step2 input.invoices').val();
-    if( invoices !== '' && !/^[a-zA-Z0-9]*$/.test(invoices) ) {
-        var $inputGroup = $('#step2 input.invoices').closest('.input-group');
-        if($inputGroup.find('.error').length === 0) {
-            $inputGroup.append('<div class="error">手機載具格式錯誤</div>');
-        } else {
-            $inputGroup.find('.error').text('手機載具格式錯誤');
-        }
-        allowNext = false;
-    }
+    // // 檢查載具格式 
+    // var invoices = $('#step2 input.invoices').val();
+    // if( invoices !== '' && !/^[a-zA-Z0-9]*$/.test(invoices) ) {
+    //     var $inputGroup = $('#step2 input.invoices').closest('.input-group');
+    //     if($inputGroup.find('.error').length === 0) {
+    //         $inputGroup.append('<div class="error">手機載具格式錯誤</div>');
+    //     } else {
+    //         $inputGroup.find('.error').text('手機載具格式錯誤');
+    //     }
+    //     allowNext = false;
+    // }
 
     if(!allowNext) {
         $('html, body').animate({
