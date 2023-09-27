@@ -1,3 +1,4 @@
+@import "_micromodal.css";
 * {
   box-sizing: border-box;
 }
@@ -38,6 +39,7 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+  word-break: break-all;
 }
 a.hover-underline:hover {
   text-decoration: underline;
@@ -157,7 +159,7 @@ h4 {
     font-size: 18px;
   }
 }
-.input-group input[type=text],.input-group input[type=email], .input-group textarea {
+.input-group input[type=text], .input-group input[type=email], .input-group textarea {
   display: block;
   width: 100%;
   border-radius: 10px;
@@ -167,7 +169,7 @@ h4 {
   padding: 10px 12px;
   background: none;
 }
-.input-group input[type=text]:focus,.input-group input[type=email]:focus, .input-group textarea:focus {
+.input-group input[type=text]:focus, .input-group input[type=email]:focus, .input-group textarea:focus {
   outline: none;
   border-color: #fff;
 }
@@ -434,16 +436,62 @@ button.p-btn.secondary:hover:not([disabled]) {
   padding-left: 0;
 }
 
-header {
+#main-header {
   padding: 63px 15px 20px 15px;
+  background: linear-gradient(180deg, #260307 0%, rgba(38, 3, 7, 0) 100%);
 }
-header .brand-logo {
+#main-header .brand-logo {
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
 }
-header .brand-logo img {
+#main-header .brand-logo img {
   width: 187px;
+}
+#main-header nav {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  #main-header nav {
+    max-width: 1114px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  #main-header nav a {
+    position: relative;
+    color: #F4D9D4;
+    transform: color 0.4s;
+  }
+  #main-header nav a.active:before {
+    content: "";
+    width: 190px;
+    height: 190px;
+    background-image: url(../img/nav-active.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  #main-header nav a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #F4D9D4;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.4s ease-out;
+  }
+  #main-header nav a:hover:after {
+    transform: scaleX(1);
+  }
 }
 
 #main-footer {
@@ -505,6 +553,42 @@ header .brand-logo img {
   width: 100%;
   max-width: 544px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  #invite .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+#invite .phone-group .flex {
+  display: flex;
+  justify-content: space-between;
+}
+#invite .phone-group .code-wrapper {
+  width: 130px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  #invite .phone-group .code-wrapper {
+    width: 245px;
+  }
+}
+#invite .phone-group .select2-container--open .select2-dropdown--below {
+  width: 255px !important;
+}
+#invite .phone-group .phone {
+  width: calc(100% - 130px - 14px);
+}
+@media screen and (min-width: 768px) {
+  #invite .phone-group .phone {
+    width: calc(100% - 245px - 32px);
+  }
+}
+#invite .error {
+  font-size: 14px;
+  color: #F4115D;
+  line-height: 1;
+  margin-top: 5px;
 }
 #invite .checkboxes {
   margin-top: 100px;
