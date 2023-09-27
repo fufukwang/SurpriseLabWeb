@@ -55,7 +55,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="text" name="phone" id="phone" minlength="10" maxlength="10" placeholder="0912345678">
             </div>
             <div class="input-group">
-                <label>Emai<span class="error-msg emailErr" style="display: none;">請填寫正確的格式</span></label>
+                <label>Email<span class="error-msg emailErr" style="display: none;">請填寫正確的格式</span></label>
                 <input type="email" name="email" id="email" placeholder="lebaldeparis@surpriselab.com.tw" />
             </div>
             <div class="checkboxes">
