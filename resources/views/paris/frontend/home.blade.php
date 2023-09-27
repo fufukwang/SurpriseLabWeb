@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
-    <link rel="stylesheet" href="/paris/css/booking.css?0913">
+    <link rel="stylesheet" href="/paris/css/booking.css?2309270">
 </head>
 <body>
     
@@ -20,5 +20,8 @@
     </main>
 
     @include('paris.frontend._footer')
+
+    <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="/paris/js/main.js"></script>
 </body>
 </html>
