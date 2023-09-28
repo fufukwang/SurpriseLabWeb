@@ -799,6 +799,31 @@ button.p-btn.secondary:hover:not([disabled]) {
 #booking #step1 .price h2 {
   color: #F4115D;
 }
+#booking #step1 .price h2 span {
+  font-family: "Noto Sans TC";
+  font-weight: 400;
+  line-height: 200%;
+  margin-left: 14px;
+  font-size: 16px;
+  font-style: normal;
+}
+@media screen and (min-width: 768px) {
+  #booking #step1 .price h2 span {
+    font-size: 18px;
+  }
+}
+#booking #step1 .price .desc {
+  margin-top: 30px;
+  color: #F4D9D4;
+  font-family: "Noto Sans TC";
+  font-weight: 400;
+  line-height: 200%; /* 36px */
+}
+@media screen and (min-width: 768px) {
+  #booking #step1 .price .desc {
+    text-align: left;
+  }
+}
 @media screen and (min-width: 768px) {
   #booking #step1 .selects {
     margin-bottom: 60px;

@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/select2.css"/>
-    <link rel="stylesheet" href="/paris/css/booking.css?2309270">
+    <link rel="stylesheet" href="/paris/css/booking.css?230928">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -141,20 +141,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <h4>單人獨舞票</h4>
                         <h2>$2,000</h2>
+                        <div class="desc">
+                            （含一杯調飲）<br>
+                            <br>
+                            一個人自由地探索<br>
+                            帶著好奇心闖入花漾年代
+                        </div>
                     </div>
                     <div class="item">
                         <div class="icon">
                             <img src="/paris/img/booking_ticket2.png" />
                         </div>
                         <h4>雙人共舞票</h4>
-                        <h2>$3,800<br>（$1,900/人）</h2>
+                        <h2>$3,800<span>($1,900/人)</span></h2>
+                        <div class="desc">
+                            （含兩杯調飲）<br>
+                            <br>
+                            邀請最重要的人<br>
+                            感受奢華絢爛的巴黎午夜
+                        </div>
                     </div>
                     <div class="item">
                         <div class="icon">
                             <img src="/paris/img/booking_ticket3.png" />
                         </div>
                         <h4>四人群舞票</h4>
-                        <h2>$7,400<br>（$1,850/人）</h2>
+                        <h2>$7,400<span>($1,850/人)</span></h2>
+                        <div class="desc">
+                            （含四杯調飲）<br>
+                            <br>
+                            與熟悉的人狂歡<br>
+                            摸索與彼此的第一支舞
+                        </div>
                     </div>
                 </div>
 
