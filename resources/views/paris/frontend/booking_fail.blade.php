@@ -40,7 +40,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a>
         </div>
         <div class="actions">
-            <a class="p-btn primary" href="#">重新購票</a>
+            <a class="p-btn primary" href="/lebaldeparis/booking">重新購票</a>
         </div>
     </main>
 
