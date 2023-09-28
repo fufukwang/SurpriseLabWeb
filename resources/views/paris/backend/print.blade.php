@@ -1022,6 +1022,9 @@ $(function(){
             $('#B2B').trigger('click');
             $('#BuyerName').val($('#tax_name').val());
             $('#BuyerUBN').val($('#tax_id').val());
+        } else if($(this).data('vehicle') != '') {
+            $('#ct0').trigger('click');
+            $('#CarrierNum').val($(this).data('vehicle'));
         } else {
             $('#ct2').trigger('click');
         }
@@ -1031,6 +1034,7 @@ $(function(){
             'num': $(this).data('num'),
             'discount': $(this).data('dis_money'),
             'coupon': $(this).data('co_money'),
+            'vehicle': $(this).data('vehicle'),
             // 'taxRate': '',
             // 'money': '',
         }
@@ -1281,6 +1285,8 @@ function shcarr(){
         if(parseInt($('input[name="CarrierType"]:checked').val()) == 2){
             $('#CarrierNum').val($('#BuyerEmail').val());
             $('#CarrierNum').prop('readonly',true);
+        }else if(parseInt($('input[name="CarrierType"]:checked').val()) == 0){
+            $('#CarrierNum').prop('readonly',false);
         } else {
             $('#CarrierNum').val('');
             $('#CarrierNum').prop('readonly',false);
