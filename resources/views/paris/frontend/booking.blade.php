@@ -147,14 +147,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <img src="/paris/img/booking_ticket2.png" />
                         </div>
                         <h4>雙人共舞票</h4>
-                        <h2>$3,800（$1,900/人）</h2>
+                        <h2>$3,800<br>（$1,900/人）</h2>
                     </div>
                     <div class="item">
                         <div class="icon">
                             <img src="/paris/img/booking_ticket3.png" />
                         </div>
                         <h4>四人群舞票</h4>
-                        <h2>$7,400（$1,850/人）</h2>
+                        <h2>$7,400<br>（$1,850/人）</h2>
                     </div>
                 </div>
 
