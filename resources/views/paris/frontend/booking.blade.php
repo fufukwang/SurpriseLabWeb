@@ -401,7 +401,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="note gift">已抵用4000元</div>
                             </div>
                         </div>
-                        <div class="notice">按下「前往付款」代表我已閱讀並同意 <span>隱私權條款</span> 與 <a href="#">購票規則</a></div>
+                        <div class="notice">按下「前往付款」代表我已閱讀並同意 <span data-custom-open="modal-privacy">隱私權條款</span> 與 <a href="/lebaldeparis/rules">購票規則</a></div>
                     </div>
                 </div>
 
