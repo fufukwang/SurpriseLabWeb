@@ -234,7 +234,7 @@ class FrontController extends WebController
                     // 票種限制
                     if(isset($discount_obj['ticket']) && $discount_obj['ticket'] !=''){
                         if($request->ticket != $discount_obj['ticket']){
-                            return Response::json(['success'=> 'N','message'=>'序號與票種不符!請檢察您選擇的票種!'], 200);
+                            return Response::json(['success'=> 'N','message'=>'序號與票種不符，請確認您選擇的票種'], 200);
                         }
                     }
                     return Response::json(['success'=> 'Y','money'=>$discount_obj['money']], 200);
