@@ -41,6 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             唯有收到獨特邀請的你，能優先推開舞會大門。
         </div>
         <div class="invite-code">
+            <p>請輸入獲得的專屬邀請碼<br> (找不到邀請碼？回頭看看信件或問卷吧！)</p>
             <form onsubmit="return onFormSubmit()">
                 <div class="input-wrapper">
                     <div class="input-group">
