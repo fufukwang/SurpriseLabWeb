@@ -52,7 +52,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="actions">
                     <button class="p-btn primary go-next" type="submit">進入舞會</button>
-                    <a class="p-btn secondary" href="/lebaldeparis">獲得邀請</a>
                 </div>
             </form>
         </div>
