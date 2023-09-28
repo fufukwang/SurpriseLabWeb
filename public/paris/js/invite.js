@@ -5,7 +5,7 @@ var data = PHONE_CODE.map(function(item){
         text: item.phoneCode + ' ' + item.countryNameTw
     }
 });
-var $select = $('#invite select.code');
+var $select = $('#invite select#area_code');
 $select.select2({
     data: data,
     placeholder: $select.data('placeholder'),
@@ -14,82 +14,88 @@ $select.select2({
 });
 $select.val('+886').trigger('change');
 
-function disableGoNext() {
+$('#invite input[type=checkbox].required').on('change', function() {
     var disabled = false;
-
-    $('#invite input[type=text].required').each(function(){
-        if($(this).val() == '') {
-            disabled = true;
-        }
-    });
-
+    // 必勾全勾按鈕才亮
     $('#invite input[type=checkbox].required').each(function(){
         if(!$(this).is(":checked")) {
             disabled = true;
         }
     });
-
-    return disabled;
-}
-
-$('#invite input[type=text].required').on('keyup', function() {
-    $('#invite .actions button').prop('disabled', disableGoNext());
-});
-
-$('#invite input[type=checkbox].required').on('change', function() {
-    $('#invite .actions button').prop('disabled', disableGoNext());
+    $('#invite .actions button').prop('disabled', disabled);
 });
 
 function onFormSubmit() {
-    if(!disableGoNext()){
-        $.post('/lebaldeparis/Team/SlaveStore',function(data){
-            // 檢查資料
-            var postData = true;
-            // 檢查電話
-            if($('#phone').val().length != 10){
-                $('.phoneErr').show();
-                postData = false;
+    var allowNext = true;
+    $('#invite .error').remove();
+
+    // 檢查必填
+    $('#invite input[type=text].required').each(function () {
+        if($(this).val() === '') {
+            var $inputGroup = $(this).closest('.input-group');
+            if($inputGroup.find('.error').length === 0) {
+                $inputGroup.append('<div class="error">此欄位為必填</div>');
             } else {
-                $('.phoneErr').hide();
+                $inputGroup.find('.error').text('此欄位為必填');
             }
-            // 檢查信箱
-            if(! /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($('#email').val())){
-                $('.emailErr').show();
-                postData = false;
-            } else {
-                $('.emailErr').hide();
-            }
-            if(postData){
-                $.blockUI();
-                var obj = {
-                    'id': $('#id').val(),
-                    'sn': $('#sn').val(),
-                    'name': $('#name').val(),
-                    'tel': $('#phone').val(),
-                    'email': $('#email').val(),
-                };
-                $.post('/lebaldeparis/Team/SlaveStore',obj,function(data){
-                    if(data.success==true){
-                        $('html,body').animate({scrollTop: 0}, 300);
-                        $('#invite').hide();
-                        $('#invite-success').fadeIn();
-                    } else {
-                        var message = '可使用通知數量已滿!';
-                        if(typeof data.message != 'undefined') message = data.message;
-                        alert(message);
-                        window.location.reload(true);
-                        console.log('失敗')
-                    }
-                    $.unblockUI();
-                },'json').fail(function() {
-                    alert('服務繁忙中請稍後在試!');
-                    window.location.reload(true);
-                    console.log('錯誤')
-                    $.unblockUI();
-                });
-            }
-        },'json');
+            allowNext = false;
+        }
+    });
+
+    // 檢查手機格式
+    var phone = $('#invite input#phone').val();
+    if( phone !== '' && !/^09\d{8}$/.test(phone) ) {
+        var $inputGroup = $('#invite input#phone').closest('.input-group');
+        if($inputGroup.find('.error').length === 0) {
+            $inputGroup.append('<div class="error">手機格式錯誤</div>');
+        } else {
+            $inputGroup.find('.error').text('手機格式錯誤');
+        }
+        allowNext = false;
     }
+
+    // 檢查Email格式
+    var email = $('#invite input#email').val();
+    if( email !== '' && !/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email) ) {
+        var $inputGroup = $('#invite input#email').closest('.input-group');
+        if($inputGroup.find('.error').length === 0) {
+            $inputGroup.append('<div class="error">Email格式錯誤</div>');
+        } else {
+            $inputGroup.find('.error').text('Email格式錯誤');
+        }
+        allowNext = false;
+    }
+
+    if(allowNext) {
+        $.blockUI();
+        var obj = {
+            'id': $('#id').val(),
+            'sn': $('#sn').val(),
+            'name': $('#name').val(),
+            'tel': $('#phone').val(),
+            'email': $('#email').val(),
+        };
+        $.post('/lebaldeparis/Team/SlaveStore',obj,function(data){
+            if(data.success==true){
+                $('html,body').animate({scrollTop: 0}, 300);
+                $('#invite').hide();
+                $('#invite-success').fadeIn();
+            } else {
+                var message = '可使用通知數量已滿!';
+                if(typeof data.message != 'undefined') message = data.message;
+                alert(message);
+                window.location.reload(true);
+                console.log('失敗')
+            }
+            $.unblockUI();
+        },'json').fail(function() {
+            alert('服務繁忙中請稍後在試!');
+            window.location.reload(true);
+            console.log('錯誤')
+            $.unblockUI();
+        });
+    }
+
     return false;
 }
 

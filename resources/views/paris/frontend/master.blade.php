@@ -48,18 +48,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="text" name="name" class="required" id="name" placeholder="兔子先生">
             </div>
             <div class="input-group phone-group">
-                <label>手機<span class="error-msg phoneErr" style="display: none;">請填寫正確的格式</span></label>
+                <label>* 手機</label>
                 <div class="flex">
                     <div class="code-wrapper">
-                        <select class="code" name="area_code" data-placeholder="選擇國碼"></select>
+                        <select id="area_code" name="area_code" class="code" data-placeholder="選擇國碼"></select>
                     </div>
-                    <input type="text" name="phone" id="phone" class="phone" minlength="10" maxlength="10" placeholder="0912345678">
+                    <input type="text" name="phone" class="phone required" id="phone" maxlength="10" placeholder="0912345678">
                 </div>
                 <div class="select-wrapper"></div>
             </div>
             <div class="input-group">
-                <label>Email<span class="error-msg emailErr" style="display: none;">請填寫正確的格式</span></label>
-                <input type="email" name="email" id="email" placeholder="lebaldeparis@surpriselab.com.tw" />
+                <label>Email</label>
+                <input type="text" name="email" id="email" placeholder="lebaldeparis@surpriselab.com.tw" />
             </div>
             <div class="checkboxes">
                 <div class="checkbox-group">
@@ -80,7 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <input class="required" type="checkbox" name="ck_rule" value="1" />
                         <span>我已詳讀並遵守</span> 
                     </label>
-                    <a href="#">舞會規則</a>
+                    <a href="/lebaldeparis/rules">舞會規則</a>
                 </div>
             </div>
             <div class="actions">
@@ -154,6 +154,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris/js/plugins/micromodal.min.js"></script>
     <script src="/paris/js/main.js"></script>
     <script src="/paris/js/phone_code.js"></script>
-    <script src="/paris/js/invite.js?2309272"></script>
+    <script src="/paris/js/invite.js?230928"></script>
 </body>
 </html>
