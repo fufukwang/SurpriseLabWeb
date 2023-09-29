@@ -185,7 +185,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTicket">
                                             <li class="dropdown-item body-04 @if($train->Count<=0) disabled @endif">微醺列車 @if($train->Count<=0) disabled @endif</li>
-                                            <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($train->Count<=0) disabled @endif</li>
+                                            <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($flight->Count<=0) disabled @endif</li>
                                             <!-- <li class="dropdown-item body-04 @if($boat->Count<=0) disabled @endif">Boat for ONE @if($train->Count<=0) disabled @endif</li> -->
                                             <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0) disabled @endif">套票：車票+飛機票 @if($train->Count<=0 || $flight->Count<=0) disabled @endif</li>
                                             <!-- <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif">套票B：車票+飛機票+船票 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif</li> -->
