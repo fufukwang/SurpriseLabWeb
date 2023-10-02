@@ -28,19 +28,19 @@
             </div>
             
             <div class="collapse-list">
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">什麼是巴黎舞會？</div>
                     <div class="item-body">
                         <p>《巴黎舞會》為西班牙編舞家 Blanca Li（布蘭卡・李）歷時四年打造的威尼斯影展獲獎作品，此次與驚喜製造、VIVE 合作結合沈浸式體驗與 VR 演出，帶領賓客穿上 CHANEL 數位訂製禮服，進入巴黎咆哮年代感受自由、真實體感，讓虛擬成為真實</p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">我能在《巴黎舞會》體驗到什麼？</div>
                     <div class="item-body">
                         <p>在 80 分鐘的虛實體驗中，你將步入 1 場盛會、飲盡 1 杯調飲、與 2 名舞者和 9 位賓客互動，以及探索更多的狂歡時刻</p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">《巴黎舞會》有任何參加限制嗎？</div>
                     <div class="item-body">
                         <p>現場包含 VR 體驗，為了你的體驗感受並保護你的身心狀況，請參照下表衡量自身狀況參與。若有任何問題，歡迎來信 <a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
@@ -77,13 +77,13 @@
                         </table>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">《巴黎舞會》在哪裡舉辦？</div>
                     <div class="item-body">
                         <p>舞會位在士林區，從士林捷運站前往巴黎舞會，搭乘公車和計程車距離約 7 分鐘、步行距離約 14 分鐘，確切地點會於體驗日前 7 天得知（請放心，舞會不存在戶外，而是隱藏於一棟建築中，請容許我們慢慢向你揭露）</p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">我想跟朋友一起體驗，有多人票價嗎？</div>
                     <div class="item-body">
                         <p>一人自由、雙人親密、四人狂熱，我們提供 3 種票價組合歡迎所有賓客前來體驗</p>
@@ -108,7 +108,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">如何購買《巴黎舞會》入場券？</div>
                     <div class="item-body">
                         <p>
@@ -117,13 +117,13 @@
                         </p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">是否接受團體包場和大宗購票？</div>
                     <div class="item-body">
                         <p>包場、大宗購票、客製化特殊需求與票價優惠，歡迎來信 <a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">我有改期、退費的需求</div>
                     <div class="item-body">
                         <p>
@@ -141,13 +141,13 @@
             </div>
     
             <div class="collapse-list">
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">取得票券後要注意什麼？</div>
                     <div class="item-body">
                         <p>我們將於<span>體驗日前 7 天寄送行前須知信，告知舞會地點和時間，體驗當天也會寄送提醒簡訊</span>，請記得確認你的信箱與簡訊</p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">當天著裝規定</div>
                     <div class="item-body">
                         <p>體驗過程須<span>穿戴頭顯設備與肢體追蹤器</span>，當天請依以下建議著裝，以免影響實際體驗</p>
@@ -163,13 +163,13 @@
                         <img width="100%" src="/paris/img/rules.svg" />           
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">我可以攜帶手機嗎？</div>
                     <div class="item-body">
                         <p>可以，<span>但手機必須全程維持飛航模式</span>（這是個秘密晚宴，賓客可以自由拍攝，但請於離場後再上網分享）</p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">現場可以寄物嗎？</div>
                     <div class="item-body">
                         <p>
@@ -178,19 +178,19 @@
                         </p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">物品遺失怎麼辦？</div>
                     <div class="item-body">
                         <p>如有物品遺失，現場提供協尋遺失物，但不負保管遺失物責任</p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">如果遲到怎麼辦？</div>
                     <div class="item-body">
                         <p>遲到將無法進場，並且無法退費。請注意自身時間安排，並務必提早 15 分鐘抵達</p>
                     </div>
                 </div>
-                <div class="collapse-item open">
+                <div class="collapse-item">
                     <div class="item-title">體驗結束後可以停留嗎？</div>
                     <div class="item-body">
                         <p>80 分鐘體驗結束後，歡迎賓客留下來繼續探索、小酌和聊天，續留時間無限制</p>
@@ -316,6 +316,10 @@
     </main>
 
     @include('paris.frontend._footer')
+
+    <a id="fixed-booking" href="/lebaldeparis/booking">
+        <img src="/paris/img/fixed-booking.png" />
+    </a>
 
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
     <script src="/paris/js/main.js"></script>
