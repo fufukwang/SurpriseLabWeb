@@ -112,7 +112,7 @@
                     <div class="item-title">如何購買《巴黎舞會》入場券？</div>
                     <div class="item-body">
                         <p>
-                            官網售票：歡迎至 <a href="/lebaldeparis#booking"><span>[購票資訊]</span></a> 瞭解更多，線上刷卡完成購票<br>
+                            官網售票：歡迎至 <a href="/lebaldeparis#sec-booking"><span>[購票資訊]</span></a> 瞭解更多，線上刷卡完成購票<br>
                             現場購票：歡迎至現場票務櫃檯詢問當天剩餘場次與座位
                         </p>
                     </div>
