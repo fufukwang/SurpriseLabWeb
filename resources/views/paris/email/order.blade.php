@@ -82,6 +82,17 @@
                 <!--[if mso]>
                 <td valign="top" width="600" style="width:600px;">
                 <![endif]-->
+<?php
+$inTime = \Carbon\Carbon::parse($mday.' '.$time.':00')->subMinutes(15)->format('H:i');
+switch ($time) {
+    case '13:30': $inTime = '13:10'; break;
+    case '14:45': $inTime = '14:35'; break;
+    case '16:00': $inTime = '16:00'; break;
+    case '18:10': $inTime = '17:50'; break;
+    case '19:30': $inTime = '19:20'; break;
+    case '20:45': $inTime = '20:45'; break;
+}
+?>
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
@@ -94,7 +105,7 @@
 <br>
 舞會日期：{{ $day }}&nbsp;<br>
 體驗場次：{{ $time }}<br>
-入場時間：{{ \Carbon\Carbon::parse($mday.' '.$time.':00')->subMinutes(15)->format('H:i') }}&nbsp;<br>
+入場時間：{{ $inTime }}&nbsp;<br>
 舞會地點：台北市士林區的某棟秘密建築<br>
 （別急，詳細地點將於舞會前向你揭露）<br>
 <br>
@@ -160,7 +171,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 14px; padding: 14px;">
-                                <a class="mcnButton " title="長按複製邀請函" href="{{env('APP_URL')}}lebaldeparis/invitation{{ $master }}" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">長按複製邀請函</a>
+                                <a class="mcnButton " title="長按複製邀請函" href="{{env('APP_URL')}}/lebaldeparis/invitation{{ $master }}" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">長按複製邀請函</a>
                             </td>
                         </tr>
                     </tbody>
