@@ -772,4 +772,7 @@ button.p-btn.secondary:hover:not([disabled]) {
 }
 #rules .item-body span {
   color: #E85454;
+}
+#rules .clickToChangeRefund {
+  cursor: pointer;
 }/*# sourceMappingURL=rules.css.map */

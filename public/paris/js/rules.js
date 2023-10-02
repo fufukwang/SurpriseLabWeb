@@ -1,4 +1,4 @@
-$('.collapse-list .collapse-item').each(function(){
+$('#rules .collapse-list .collapse-item').each(function(){
     $(this).find('.item-title').append('<div class="toogle"></div>');
     $(this).find('.item-title').on('click', function(){
         if( $(this).closest('.collapse-item').hasClass('open') ) {
@@ -11,7 +11,7 @@ $('.collapse-list .collapse-item').each(function(){
     });
 });
 
-$('#tab-qa, #tab-change-refund').on('click', function(){
+$('#rules #tab-qa, #rules #tab-change-refund').on('click', function(){
     $('.tab-item.active').removeClass('active');
     $(this).addClass('active');
     if( $(this).attr('id') === 'tab-qa' ) {
@@ -21,4 +21,14 @@ $('#tab-qa, #tab-change-refund').on('click', function(){
         $('#qa').fadeOut(200);
         $('#change-refund').fadeIn(200);
     }
+});
+
+$('#rules .clickToChangeRefund').on('click', function(){
+    $('.tab-item.active').removeClass('active');
+    $('#tab-change-refund').addClass('active');
+    $('#qa').fadeOut(200);
+    $('#change-refund').fadeIn(200);
+    $('html, body').animate({
+        scrollTop: 0
+    }, 1000);
 });

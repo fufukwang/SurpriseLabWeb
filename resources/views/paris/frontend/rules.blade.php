@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xxx｜巴黎舞會 Le Bal de Paris de Blanca</title>
-    <link rel="icon" href="paris/img/favicon.png" type="image/x-icon">
+    <title>舞會須知｜巴黎舞會 Le Bal de Paris de Blanca</title>
+    <link rel="icon" href="/paris/img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
                 <div class="collapse-item open">
                     <div class="item-title">《巴黎舞會》有任何參加限制嗎？</div>
                     <div class="item-body">
-                        <p>現場包含 VR 體驗，為了你的體驗感受並保護你的身心狀況，請參照下表衡量自身狀況參與。若有任何問題，歡迎來信 <a class="mailto" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
+                        <p>現場包含 VR 體驗，為了你的體驗感受並保護你的身心狀況，請參照下表衡量自身狀況參與。若有任何問題，歡迎來信 <a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
                         <br><br>
                         <table>
                             <tr>
@@ -112,7 +112,7 @@
                     <div class="item-title">如何購買《巴黎舞會》入場券？</div>
                     <div class="item-body">
                         <p>
-                            官網售票：歡迎至 <a href="#"><span>[購票資訊]</span></a> 瞭解更多，線上刷卡完成購票<br>
+                            官網售票：歡迎至 <a href="/lebaldeparis#booking"><span>[購票資訊]</span></a> 瞭解更多，線上刷卡完成購票<br>
                             現場購票：歡迎至現場票務櫃檯詢問當天剩餘場次與座位
                         </p>
                     </div>
@@ -121,7 +121,7 @@
                     <div class="item-title">我有改期、退費的需求</div>
                     <div class="item-body">
                         <p>
-                            關於改期或退費，詳情請參考《巴黎舞會》<a href="#"><span>[退換政策]</span></a>
+                            關於改期或退費，詳情請參考《巴黎舞會》<span class="clickToChangeRefund">[退換政策]</span>
                         </p>
                     </div>
                 </div>
