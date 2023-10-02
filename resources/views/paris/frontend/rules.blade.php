@@ -226,7 +226,7 @@
 
             <ul>
                 <li>改期後若仍需退票，退還費用為50%</li>
-                <li>請依照上述說明附上相關資訊，來信客服信箱：<a class="mailto" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></li>
+                <li>請依照上述說明附上相關資訊，來信客服信箱：<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></li>
                 <li>退費入帳約需 7 至 10 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</li>
             </ul>
 
