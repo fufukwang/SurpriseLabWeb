@@ -647,6 +647,25 @@ button.p-btn.secondary:hover:not([disabled]) {
   }
 }
 
+#fixed-booking {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 70px;
+  opacity: 0.95;
+  transition: opacity 0.2s;
+}
+@media screen and (min-width: 768px) {
+  #fixed-booking {
+    bottom: 150px;
+    right: 50px;
+    width: 100px;
+  }
+}
+#fixed-booking:hover {
+  opacity: 1;
+}
+
 #rules table {
   width: 100%;
   border-radius: 20px;
@@ -769,6 +788,7 @@ button.p-btn.secondary:hover:not([disabled]) {
 #rules .item-body {
   line-height: 200%; /* 36px */
   padding: 30px 0;
+  display: none;
 }
 #rules .item-body span {
   color: #E85454;
