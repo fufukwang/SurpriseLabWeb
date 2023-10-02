@@ -283,6 +283,7 @@ button.p-btn[disabled] {
   cursor: not-allowed;
 }
 button.p-btn.primary {
+  color: #F4D9D4;
   background: #016060;
   border: 2px solid #016060;
 }
@@ -528,7 +529,15 @@ button.p-btn.secondary:hover:not([disabled]) {
   margin: 10px 0;
   position: relative;
   color: #F4D9D4;
-  transform: color 0.4s;
+  transition: color 0.4s;
+}
+#main-header nav a.active {
+  color: #F4115D;
+}
+@media screen and (min-width: 992px) {
+  #main-header nav a.active {
+    color: #F4D9D4;
+  }
 }
 @media screen and (min-width: 992px) {
   #main-header nav a {
@@ -639,6 +648,9 @@ button.p-btn.secondary:hover:not([disabled]) {
   }
 }
 
+#leading {
+  color: #F4D9D4;
+}
 #leading .info {
   text-align: center;
   margin-bottom: 60px;
@@ -690,6 +702,12 @@ button.p-btn.secondary:hover:not([disabled]) {
   margin-bottom: 0;
 }
 
+#notice {
+  color: #F4D9D4;
+}
+#notice a {
+  color: #F4D9D4;
+}
 #notice .info {
   text-align: center;
   margin-bottom: 88px;
@@ -727,7 +745,6 @@ button.p-btn.secondary:hover:not([disabled]) {
 #notice .information .information-inner ul {
   margin: 0;
   padding-left: 18px;
-  font-size: 10px;
 }
 #notice .information .information-inner ul li {
   margin-bottom: 2rem;
@@ -736,7 +753,6 @@ button.p-btn.secondary:hover:not([disabled]) {
   list-style: disc;
   margin-bottom: 0;
   padding-left: 2em;
-  font-size: 18px;
 }
 #notice .information .information-inner ul li ul li {
   margin-bottom: 0;
@@ -747,6 +763,12 @@ button.p-btn.secondary:hover:not([disabled]) {
   margin-top: 56px;
 }
 
+#booking {
+  color: #F4D9D4;
+}
+#booking a {
+  color: #F4D9D4;
+}
 #booking #step1 {
   max-width: 784px;
   margin: 0 auto;

@@ -2,6 +2,8 @@
 @import "_micromodal.css";
 
 #leading {
+    color: $color17;
+
     .info {
         text-align: center;
         margin-bottom: 60px;
@@ -60,6 +62,12 @@
 }
 
 #notice {
+    color: $color17;
+
+    a {
+        color: $color17;
+    }
+
     .info {
         text-align: center;
         margin-bottom: 88px;
@@ -99,7 +107,6 @@
             ul {
                 margin: 0;
                 padding-left: 18px;
-                font-size: 10px;
 
                 li {
                     margin-bottom: 2rem;
@@ -108,7 +115,6 @@
                         list-style: disc;
                         margin-bottom: 0;
                         padding-left: 2em;
-                        font-size: 18px;
 
                         li {
                             margin-bottom: 0;
@@ -127,6 +133,12 @@
 }
 
 #booking {
+    color: $color17;
+
+    a {
+        color: $color17;
+    }
+    
     #step1 {
         max-width: 784px;
         margin: 0 auto;
