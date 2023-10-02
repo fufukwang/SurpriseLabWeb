@@ -118,6 +118,12 @@
                     </div>
                 </div>
                 <div class="collapse-item open">
+                    <div class="item-title">是否接受團體包場和大宗購票？</div>
+                    <div class="item-body">
+                        <p>包場、大宗購票、客製化特殊需求與票價優惠，歡迎來信 <a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
+                    </div>
+                </div>
+                <div class="collapse-item open">
                     <div class="item-title">我有改期、退費的需求</div>
                     <div class="item-body">
                         <p>
