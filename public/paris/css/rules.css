@@ -1,4 +1,3 @@
-@import "_micromodal.css";
 * {
   box-sizing: border-box;
 }
@@ -648,80 +647,129 @@ button.p-btn.secondary:hover:not([disabled]) {
   }
 }
 
-#invite {
-  color: #F4D9D4;
-}
-#invite a {
-  color: #F4D9D4;
-}
-#invite .invite-card {
+#rules table {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto 50px auto;
+  border-radius: 20px;
+  border-spacing: 0;
+  border-collapse: separate;
 }
-#invite .info {
+#rules table th, #rules table td {
   text-align: center;
-  margin-bottom: 140px;
-}
-#invite form {
-  display: block;
-  width: 100%;
-  max-width: 544px;
-  margin: 0 auto;
+  line-height: 200%; /* 36px */
+  border-top: 1px solid #C41244;
+  border-left: 1px solid #C41244;
+  padding: 14px 10px;
+  font-size: 13px;
 }
 @media screen and (min-width: 768px) {
-  #invite .flex {
-    display: flex;
-    justify-content: space-between;
+  #rules table th, #rules table td {
+    font-size: 18px;
   }
 }
-#invite .phone-group .flex {
+#rules table th {
+  background: #016060;
+}
+#rules table th:first-child {
+  border-radius: 10px 0px 0px 0px;
+}
+#rules table th:last-child {
+  border-radius: 0px 10px 0px 0px;
+}
+#rules table tr:last-child td {
+  border-bottom: 1px solid #C41244;
+}
+#rules table tr:last-child td:first-child {
+  border-radius: 0 0px 0 10px;
+}
+#rules table tr:last-child td:last-child {
+  border-radius: 0px 0px 10px 0px;
+}
+#rules table th:last-child, #rules table td:last-child {
+  border-right: 1px solid #C41244;
+}
+#rules ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+#rules .mailto {
+  color: #F4D9D4;
+}
+#rules .tabs {
+  width: 100%;
+  max-width: 544px;
+  margin: 0 auto 82px auto;
   display: flex;
   justify-content: space-between;
 }
-#invite .phone-group .code-wrapper {
-  width: 130px;
-  position: relative;
+#rules .tabs .tab-item {
+  text-align: center;
+  color: #F4D9D4;
+  font-weight: 500;
+  line-height: 200%;
+  padding: 0 10px 2px 10px;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  #invite .phone-group .code-wrapper {
-    width: 245px;
+  #rules .tabs .tab-item {
+    width: calc(50% - 16px);
+    padding: 0 0 2px 0;
   }
 }
-#invite .phone-group .select2-container--open .select2-dropdown--below {
-  width: 255px !important;
+#rules .tabs .tab-item.active {
+  border-bottom: 2px solid #F4115D;
+  cursor: unset;
 }
-#invite .phone-group .phone {
-  width: calc(100% - 130px - 14px);
-}
-@media screen and (min-width: 768px) {
-  #invite .phone-group .phone {
-    width: calc(100% - 245px - 32px);
-  }
-}
-#invite .error {
-  font-size: 14px;
-  color: #F4115D;
-  line-height: 1;
-  margin-top: 5px;
-}
-#invite .checkboxes {
-  margin-top: 100px;
-}
-#invite .actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 108px;
-}
-
-#invite-success {
+#rules .tab-content {
+  max-width: 736px;
+  margin: 0 auto;
   color: #F4D9D4;
 }
-#invite-success .info {
-  text-align: center;
+#rules .collapse-list {
+  padding: 16px 0;
 }
-#invite-success .actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 108px;
-}/*# sourceMappingURL=invite.css.map */
+#rules .collapse-list .item-title {
+  cursor: pointer;
+}
+#rules .collapse-item {
+  border-top: 1px solid #C41244;
+  padding: 16px 0;
+}
+#rules .item-title {
+  position: relative;
+  color: #E28A8A;
+  font-weight: 500;
+  line-height: 200%; /* 36px */
+}
+#rules .toogle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+#rules .toogle:before, #rules .toogle:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 2px;
+  background: #E28A8A;
+  transition: all 0.3s;
+}
+#rules .toogle:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+#rules .open .toogle:after {
+  transform: translate(-50%, -50%);
+}
+#rules .item-body {
+  line-height: 200%; /* 36px */
+  padding: 30px 0;
+}
+#rules .item-body span {
+  color: #E85454;
+}/*# sourceMappingURL=rules.css.map */

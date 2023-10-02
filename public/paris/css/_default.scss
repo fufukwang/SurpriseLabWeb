@@ -298,6 +298,7 @@ button.p-btn {
     }
 
     &.primary {
+        color: $color17;
         background: $color19;
         border: 2px solid $color19;
 
@@ -555,7 +556,15 @@ button.p-btn {
             margin: 10px 0;
             position: relative;
             color: $color17;
-            transform: color .4s;
+            transition: color .4s;
+
+            &.active {
+                color: $color4;
+                @media screen and (min-width:992px) {
+                    color: $color17;
+                }
+            }
+
             @media screen and (min-width:992px) {
                 font-family: 'Noto Sans TC';
                 font-size: 18px;
