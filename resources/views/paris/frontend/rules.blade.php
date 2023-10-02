@@ -160,7 +160,7 @@
                             <li><span>請勿綁馬尾、包包頭</span>出席</li>
                         </ul>
                         <br>
-                        <img width="100%" src="/paris/img/rules.svg" />           
+                        <img width="100%" src="/paris/img/rules.png" />           
                     </div>
                 </div>
                 <div class="collapse-item">
