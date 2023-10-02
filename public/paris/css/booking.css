@@ -648,6 +648,25 @@ button.p-btn.secondary:hover:not([disabled]) {
   }
 }
 
+#fixed-booking {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 70px;
+  opacity: 0.95;
+  transition: opacity 0.2s;
+}
+@media screen and (min-width: 768px) {
+  #fixed-booking {
+    bottom: 150px;
+    right: 50px;
+    width: 100px;
+  }
+}
+#fixed-booking:hover {
+  opacity: 1;
+}
+
 #leading {
   color: #F4D9D4;
 }
