@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
-    <link rel="stylesheet" href="/paris/css/booking.css?2309270">
+    <link rel="stylesheet" href="/paris/css/booking.css?231003">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -47,6 +47,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @include('paris.frontend._footer')
 
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
-    <script src="/paris/js/main.js"></script>
+    <script src="/paris/js/main.js?231003"></script>
 </body>
 </html>

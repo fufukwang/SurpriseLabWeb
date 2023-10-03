@@ -22,6 +22,6 @@
     @include('paris.frontend._footer')
 
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
-    <script src="/paris/js/main.js"></script>
+    <script src="/paris/js/main.js?231003"></script>
 </body>
 </html>
