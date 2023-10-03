@@ -37,7 +37,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   body {
-    padding-top: 0;
+    padding-top: 120px;
   }
 }
 
@@ -443,24 +443,19 @@ button.p-btn.secondary:hover:not([disabled]) {
 }
 
 #main-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 78px;
   padding: 20px;
-  background: #260307;
+  width: 100%;
+  max-width: 100% !important;
+  height: 78px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   z-index: 999;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 992px) {
   #main-header {
-    position: static;
-    height: auto;
-    padding: 63px 20px 20px 20px;
-    background: linear-gradient(180deg, #260307 0%, rgba(38, 3, 7, 0) 100%);
-    display: block;
+    height: 186px;
+    align-items: center;
   }
 }
 #main-header .pc {
@@ -476,17 +471,55 @@ button.p-btn.secondary:hover:not([disabled]) {
     display: none;
   }
 }
-#main-header .brand-logo {
+#main-header .flex {
   display: flex;
-  justify-content: center;
+}
+#main-header .justify-between {
+  justify-content: space-between;
+}
+#main-header .items-center {
+  align-items: center;
+}
+#main-header .mob-toggle {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  position: relative;
+}
+#main-header .mob-toggle:before, #main-header .mob-toggle:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 5px));
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  transform-origin: center center;
+  transition: transform 0.4s;
+}
+#main-header .mob-toggle:after {
+  transform: translate(-50%, calc(-50% + 5px));
+}
+#main-header.open {
+  height: 100%;
 }
 @media screen and (min-width: 992px) {
-  #main-header .brand-logo {
-    margin-bottom: 32px;
+  #main-header.open {
+    height: auto;
   }
 }
+#main-header.open .mob-toggle:before, #main-header.open .mob-toggle:after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#main-header.open .mob-toggle:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+#main-header.open nav {
+  display: flex;
+}
 #main-header .brand-logo img {
-  width: 73px;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 992px) {
   #main-header .brand-logo img {
@@ -494,29 +527,22 @@ button.p-btn.secondary:hover:not([disabled]) {
   }
 }
 #main-header nav {
-  position: fixed;
-  top: 78px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 78px);
-  background: #260307;
-  display: none;
+  flex: 1;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  display: none;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 992px) {
   #main-header nav {
-    position: static;
-    width: auto;
-    height: auto;
-    background: none;
-    max-width: 1114px;
-    margin: 0 auto;
     display: flex !important;
     flex-direction: row;
+    max-width: 1114px;
+    width: 100%;
     justify-content: space-between;
+    margin-top: 10px;
   }
 }
 #main-header nav a {
@@ -530,14 +556,6 @@ button.p-btn.secondary:hover:not([disabled]) {
   color: #F4D9D4;
   transition: color 0.4s;
 }
-#main-header nav a.active {
-  color: #F4115D;
-}
-@media screen and (min-width: 992px) {
-  #main-header nav a.active {
-    color: #F4D9D4;
-  }
-}
 @media screen and (min-width: 992px) {
   #main-header nav a {
     font-family: "Noto Sans TC";
@@ -549,8 +567,8 @@ button.p-btn.secondary:hover:not([disabled]) {
   }
   #main-header nav a.active:before {
     content: "";
-    width: 190px;
-    height: 190px;
+    width: 160px;
+    height: 160px;
     background-image: url(../img/nav-active.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -577,35 +595,37 @@ button.p-btn.secondary:hover:not([disabled]) {
     transform: scaleX(1);
   }
 }
-#main-header .mob-toggle {
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  position: relative;
+#main-header nav a.active {
+  color: #F4115D;
 }
-#main-header .mob-toggle:before, #main-header .mob-toggle:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, calc(-50% - 5px));
-  width: 30px;
-  height: 1px;
-  background: #fff;
-  transform-origin: center center;
-  transition: transform 0.4s;
+@media screen and (min-width: 992px) {
+  #main-header nav a.active {
+    color: #F4D9D4;
+  }
 }
-#main-header .mob-toggle:after {
-  transform: translate(-50%, calc(-50% + 5px));
+#main-header.always-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-#main-header.open nav {
-  display: flex;
+#main-header.fixed {
+  background: #260307;
 }
-#main-header.open .mob-toggle:before, #main-header.open .mob-toggle:after {
-  transform: translate(-50%, -50%) rotate(45deg);
+@media screen and (min-width: 992px) {
+  #main-header.fixed {
+    padding: 15px 20px 0;
+    height: 92px !important;
+  }
 }
-#main-header.open .mob-toggle:after {
-  transform: translate(-50%, -50%) rotate(-45deg);
+@media screen and (min-width: 992px) {
+  #main-header.fixed .brand-logo img {
+    width: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-header.fixed nav {
+    margin-top: 3px;
+  }
 }
 
 #main-footer {
@@ -654,6 +674,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   width: 70px;
   opacity: 0.95;
   transition: opacity 0.2s;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   #fixed-booking {

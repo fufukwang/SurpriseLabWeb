@@ -54,7 +54,7 @@ body {
         font-size: 18px;
     }
     @media screen and (min-width:992px) {
-        padding-top: 0;
+        padding-top: 120px;
     }
 }
 
@@ -477,22 +477,17 @@ button.p-btn {
 }
 
 #main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 78px;
     padding: 20px;
-    background: #260307;
+    width: 100%;
+    max-width: 100% !important;
+    height: 78px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     z-index: 999;
+    transition: all .3s;
     @media screen and (min-width:992px) {
-        position: static;
-        height: auto;
-        padding: 63px 20px 20px 20px;
-        background: linear-gradient(180deg, #260307 0%, rgba(38, 3, 7, 0.00) 100%);
-        display: block;
+        height: 186px;
+        align-items: center;
     }
 
     .pc {
@@ -507,44 +502,86 @@ button.p-btn {
             display: none;
         }
     }
-    
-    .brand-logo {
+
+    .flex {
         display: flex;
-        justify-content: center;
-        @media screen and (min-width:992px) {
-            margin-bottom: 32px;
+    }
+
+    .justify-between {
+        justify-content: space-between;
+    }
+
+    .items-center {
+        align-items: center;
+    }
+
+    .mob-toggle {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        position: relative;
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, calc(-50% - 5px));
+            width: 30px;
+            height: 1px;
+            background: #fff;
+            transform-origin: center center;
+            transition: transform 0.4s;
         }
 
-        img {
-            width: 73px;
-            @media screen and (min-width:992px) {
-                width: 187px;
+        &:after {
+            transform: translate(-50%, calc(-50% + 5px));
+        }
+    }
+
+    &.open {
+        height: 100%;
+        @media screen and (min-width:992px) {
+            height: auto;
+        }
+
+        .mob-toggle {
+            &:before, &:after {
+                transform: translate(-50%, -50%) rotate(45deg);
             }
+    
+            &:after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+
+        nav {
+            display: flex;
+        }
+    }
+
+    .brand-logo img {
+        transition: all .3s;
+        @media screen and (min-width:992px) {
+            width: 187px;
         }
     }
 
     nav {
-        position: fixed;
-        top: 78px;
-        left: 0;
-        width: 100%;
-        height: calc(100% - 78px);
-        background: #260307;
-        display: none;
+        flex: 1;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: 999;
+        display: none;
+        transition: all .3s;
         @media screen and (min-width:992px) {
-            position: static;
-            width: auto;
-            height: auto;
-            background: none;
-            max-width: 1114px;
-            margin: 0 auto;
             display: flex !important;
             flex-direction: row;
+            max-width: 1114px;
+            width: 100%;
             justify-content: space-between;
+            margin-top: 10px;
         }
 
         a {
@@ -557,14 +594,6 @@ button.p-btn {
             position: relative;
             color: $color17;
             transition: color .4s;
-
-            &.active {
-                color: $color4;
-                @media screen and (min-width:992px) {
-                    color: $color17;
-                }
-            }
-
             @media screen and (min-width:992px) {
                 font-family: 'Noto Sans TC';
                 font-size: 18px;
@@ -575,8 +604,8 @@ button.p-btn {
 
                 &.active:before {
                     content: '';
-                    width: 190px;
-                    height: 190px;
+                    width: 160px;
+                    height: 160px;
                     background-image: url(../img/nav-active.svg);
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -609,59 +638,43 @@ button.p-btn {
                     }
                 }
             }
-        }
-    }
 
-    .mob-toggle {
-        width: 36px;
-        height: 36px;
-        cursor: pointer;
-        position: relative;
-
-        &:before, &:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, calc(-50% - 5px));
-            width: 30px;
-            height: 1px;
-            background: #fff;
-            transform-origin: center center;
-            transition: transform .4s;
-        }
-
-        &:after {
-            transform: translate(-50%, calc(-50% + 5px));
-        }
-
-        // &.active {
-        //     &:before, &:after {
-        //         transform: translate(-50%, -50%) rotate(45deg);
-        //     }
-    
-        //     &:after {
-        //         transform: translate(-50%, -50%) rotate(-45deg);
-        //     }
-        // }
-    }
-
-    &.open {
-        nav {
-            display: flex;
-        }
-
-        .mob-toggle {
-            &:before, &:after {
-                transform: translate(-50%, -50%) rotate(45deg);
+            &.active {
+                color: $color4;
+                @media screen and (min-width:992px) {
+                    color: $color17;
+                }
             }
-    
-            &:after {
-                transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &.always-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    &.fixed {
+        background: #260307;
+        @media screen and (min-width:992px) {
+            padding: 15px 20px 0;
+            height: 92px !important;
+        }
+
+        .brand-logo img {
+            @media screen and (min-width:992px) {
+                width: 70px;
+            }
+        }
+
+        nav {
+            @media screen and (min-width:992px) {
+                margin-top: 3px;
             }
         }
     }
 }
+
 
 #main-footer {
     margin-top: 40px;
@@ -706,6 +719,7 @@ button.p-btn {
     width: 70px;
     opacity: .95;
     transition: opacity .2s;
+    z-index: 1;
     @media screen and (min-width:768px) {
         bottom: 150px;
         right: 50px;

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
-    <link rel="stylesheet" href="/paris/css/rules.css?231002">
+    <link rel="stylesheet" href="/paris/css/rules.css?231003">
 </head>
 <body>
 
@@ -322,7 +322,7 @@
     </a>
 
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
-    <script src="/paris/js/main.js"></script>
+    <script src="/paris/js/main.js?231003"></script>
     <script src="/paris/js/rules.js?231002"></script>
 </body>
 </html>
