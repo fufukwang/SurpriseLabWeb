@@ -790,16 +790,16 @@ body {
   color: #F4D9D4;
   padding-bottom: 0;
 }
+#home .pin-spacer {
+  height: 0 !important;
+}
 #home section {
   padding: 80px 0 0 0;
 }
 @media screen and (min-width: 768px) {
   #home section {
-    padding: 200px 0 0 0;
+    padding: 100px 0;
   }
-}
-#home section:first-child {
-  padding: 100px 0 0 0;
 }
 #home a {
   color: #F4D9D4;
