@@ -276,11 +276,11 @@
                             <input type="text" name="notice" class="form-control nomust" id="notice" maxlength="50" placeholder="特殊事項備註/孕婦">
                         </div>
 
-                        <div class="form-group input-with-label">
+                        <!-- <div class="form-group input-with-label">
                             <label for="english_service">英文服務 English Service<span class="error-msg"></span></label>
                             <select id="english_service" name="english_service" class="nomust" data-placeholder="選擇人數" required>
                             </select>
-                        </div>
+                        </div> -->
 
                         <!-- <div class="form-group select-format">
                             <label class="form-label" for="vegetarian_food">* 蛋奶素（如果都吃葷，請選0人）</label>
@@ -471,10 +471,10 @@
                                 <td>人數</td>
                                 <td class="filled" data-filled="booking_people"></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>英文服務</td>
                                 <td class="filled" data-filled="english_service"></td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>日期</td>
                                 <td class="filled" data-filled="booking_date"></td>

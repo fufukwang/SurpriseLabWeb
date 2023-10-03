@@ -177,12 +177,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <img class="img-fluid" src="/terminalAssets/images/main/img_about.png" alt="About">
                             </div>
                             
-                            <div class="prograssbar">
+                            <!-- <div class="prograssbar">
                                 <div class="wrap">
                                     <div class="bar" style="width:{{ $process }}%;"></div>
                                 </div>
                                 <p class="text-white">剩餘座位數<span>{{ $remaining }}%</span></p>
-                            </div>
+                            </div> -->
 
                             <div class="prograssbar">
                                 <div class="text-wrap">
