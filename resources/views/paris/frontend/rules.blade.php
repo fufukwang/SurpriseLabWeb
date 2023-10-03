@@ -31,7 +31,7 @@
                 <div class="collapse-item">
                     <div class="item-title">什麼是巴黎舞會？</div>
                     <div class="item-body">
-                        <p>《巴黎舞會》為西班牙編舞家 Blanca Li（布蘭卡・李）歷時四年打造的威尼斯影展獲獎作品，此次與驚喜製造、VIVE 合作結合沉浸式體驗與 VR 演出，帶領賓客穿上 CHANEL 數位訂製禮服，進入巴黎咆哮年代感受自由、真實體感，讓虛擬成為真實</p>
+                        <p>《巴黎舞會》為西班牙編舞家 Blanca Li（布蘭卡・李）歷時四年打造的威尼斯影展獲獎作品，此次與驚喜製造、VIVE 合作結合沉浸式體驗與 VR 演出，帶領賓客穿上香奈兒高級訂製服，進入巴黎咆哮年代感受自由、真實體感，讓虛擬成為真實</p>
                     </div>
                 </div>
                 <div class="collapse-item">
