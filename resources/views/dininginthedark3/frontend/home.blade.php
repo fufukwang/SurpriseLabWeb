@@ -1077,6 +1077,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="section sec-partner" style="display:none;">
+                            <div class="container">
+
+                                <div class="section-header">
+                                    <div class="section-title">
+                                        <h3>合作夥伴</h3>
+                                        <h4>Our Partners</h4>
+                                    </div>
+                                </div>
+
+                                <div class="partner-sec-wrapper">
+                                    <div class="partners-img">
+                                        <img class="img-fluid d-sm-block d-none" src="img/other/partners.png?v=0.2" alt="partners">
+                                        <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png?v=0.2" alt="partners">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                 </div>
                 
