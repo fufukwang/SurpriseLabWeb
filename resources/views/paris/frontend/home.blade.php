@@ -76,21 +76,21 @@
                         <img src="/paris/img/about1.png" />
                     </div>
                     <h4>威尼斯影展<br>最佳 VR 體驗</h4>
-                    <div class="desc">自由移動、真實互動的感官體驗</div>
+                    <!-- <div class="desc">自由移動、真實互動的感官體驗</div> -->
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/about2.png" />
                     </div>
                     <h4>香奈兒<br>高級訂製服</h4>
-                    <div class="desc">自由選擇虛擬世界的舞會服裝</div>
+                    <!-- <div class="desc">自由選擇虛擬世界的舞會服裝</div> -->
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/about3.png" />
                     </div>
                     <h4>80 分鐘<br>沉浸頂級晚宴</h4>
-                    <div class="desc">穿越 1920 年代的花園、舞會和狂歡</div>
+                    <!-- <div class="desc">穿越 1920 年代的花園、舞會和狂歡</div> -->
                 </div>
             </div>
 
@@ -277,6 +277,9 @@
                 <h1>舞會嘉賓</h1>
                 <h3>MORE</h3>
             </div>
+
+            <p><center>期待你的出席<br>我們在巴黎午夜見</center></p>
+            <br>
     
             <div class="more">
                 <div class="more-inner">
