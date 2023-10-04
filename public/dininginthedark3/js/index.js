@@ -229,3 +229,19 @@ function addMonths(date, months) {
   return date;
 }
 var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
+
+// webp-detect
+window.addEventListener('DOMContentLoaded', function() {
+    var hasSupport = false;
+    var pixel = new Image();
+    pixel.setAttribute('src', 'data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA'); // 開始載入測試圖
+    pixel.addEventListener('load', function() {
+        if(pixel.width > 0 && pixel.height > 0) {
+            hasSupport = true;
+        }
+        document.documentElement.classList.add(hasSupport ? 'webp' : 'no-webp');
+    });
+    pixel.addEventListener('error', function() {
+        document.documentElement.classList.add(hasSupport ? 'webp' : 'no-webp');
+    });
+});

@@ -1175,7 +1175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             imagesLoaded(document.body, function(){
                 document.body.classList.remove('loading');
             })
-        }, 1000);
+        }, 0);
     </script>
 
     <!-- Aos -->
