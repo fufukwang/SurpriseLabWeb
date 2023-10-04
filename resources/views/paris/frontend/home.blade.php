@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
-    <link rel="stylesheet" href="paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="paris/css/home.css">
+    <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
+    <link rel="stylesheet" href="/paris/css/home.css">
 </head>
 <body>
     <div id="banner">
