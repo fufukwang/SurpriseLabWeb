@@ -71,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         <div class="actions">
-            <a class="p-btn primary" href="#">關於巴黎舞會</a>
+            <a class="p-btn primary" href="/lebaldeparis#sec-about">關於巴黎舞會</a>
         </div>
     </main>
 
