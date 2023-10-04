@@ -114,7 +114,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </p>
                             </li>
                             <li><p>包場需求、其他特殊服務，請來信客服詢問<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
-                            <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" href="#">[舞會規則]</a></p></li>
+                            <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" href="/lebaldeparis/rules">[舞會規則]</a></p></li>
                         </ul>
                     </div>
                 </div>
@@ -308,7 +308,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <input type="checkbox" name="ck_rule" value="1" />
                                 <span>我已詳讀並遵守</span> 
                             </label>
-                            <a href="#">舞會規則</a>
+                            <a href="/lebaldeparis/rules">舞會規則</a>
                         </div>
                     </div>
                     <div class="actions">
