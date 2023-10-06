@@ -203,7 +203,7 @@ body {
     }
 
     .about, .price, .play {
-        max-width: 1108px;
+        max-width: 970px;
         margin: 0 auto;
         text-align: center;
         @media screen and (min-width:768px) {
@@ -259,7 +259,7 @@ body {
                 display: block;
                 margin-left: 0;
                 @media screen and (min-width:768px) {
-                    font-size: 18px;
+                    font-size: 16px;
                     display: inline;
                     margin-left: 14px;
                 }
@@ -281,11 +281,17 @@ body {
     }
 
     .price {
-        max-width: 1126px;
+        max-width: 970px;
 
         .item {
             @media screen and (min-width:768px) {
                 text-align: left;
+                width: 33.33%;
+            }
+
+            span {
+                font-weight: bold;
+                color: #E85454;
             }
         }
 
@@ -304,7 +310,7 @@ body {
                 display: none;
             }
         }
-        
+
         h2 {
             height: 80px;
             @media screen and (min-width:768px) {
@@ -319,9 +325,9 @@ body {
             }
         }
     }
-    
+
     .play {
-        max-width: 1120px;
+        max-width: 970px;
 
         .icon {
             @media screen and (min-width:768px) {
@@ -332,9 +338,9 @@ body {
 
     .more {
         position: relative;
-        max-width: 1209px;
+        max-width: 970px;
         margin: 0 auto;
-        
+
         .more-inner {
             @media screen and (min-width:768px) {
                 height: 0;
@@ -365,7 +371,7 @@ body {
     }
 
    .blancali {
-        max-width: 1116px;
+        max-width: 970px;
         margin: 0 auto;
         @media screen and (min-width:768px) {
             display: flex;
@@ -393,7 +399,7 @@ body {
    }
 
     .information {
-        max-width: 1032px;
+        max-width: 970px;
         margin: 0 auto;
         text-align: center;
         @media screen and (min-width:768px) {
@@ -429,7 +435,7 @@ body {
                 padding-left: 0;
                 list-style: none;
                 @media screen and (min-width:768px) {
-                    padding-left: 18px;
+                    padding-left: 16px;
                     list-style: disc;
                 }
 
@@ -458,7 +464,7 @@ body {
     }
 
     .partner {
-        max-width: 1085px;
+        max-width: 970px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -529,7 +535,7 @@ body {
         margin-top: 15px;
         display: flex;
         justify-content: center;
-        
+
         button.owl-dot {
             width: 10px;
             height: 10px;
@@ -537,7 +543,7 @@ body {
             margin: 0 7px;
             border-radius: 50%;
             opacity: .5;
-    
+
             &.active {
                 opacity: 1;
             }
@@ -609,7 +615,7 @@ body {
 
         @media screen and (min-width:992px) {
             font-family: 'Noto Sans TC';
-            font-size: 18px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: 200%;
