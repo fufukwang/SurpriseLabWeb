@@ -174,9 +174,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         （含四杯調飲）<br>
 
                         @if (Carbon\Carbon::parse('2023-10-18')->startOfDay() <= Carbon\Carbon::now())
-                            <span>[早鳥優惠]11/30前購買四人群舞票，輸入折扣碼【FREEBIRD】享$100折扣</span><br>
+                            <span>[早鳥優惠]11/30前購買四人群舞票，輸入折扣碼【FREEBIRD】享$100折扣</span>
                         @endif
 
+                        <br>
                         與熟悉的人狂歡<br>
                         摸索與彼此的第一支舞
                     </div>
@@ -241,9 +242,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         （含四杯調飲）<br>
 
                         @if (Carbon\Carbon::parse('2023-10-18')->startOfDay() <= Carbon\Carbon::now())
-                            <span>[早鳥優惠]11/30前購買四人群舞票，輸入折扣碼【FREEBIRD】享$100折扣</span><br>
+                            <span>[早鳥優惠]11/30前購買四人群舞票，輸入折扣碼【FREEBIRD】享$100折扣</span>
                         @endif
 
+                        <br>
                         與熟悉的人狂歡<br>
                         摸索與彼此的第一支舞
                     </div>
