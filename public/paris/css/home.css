@@ -1111,7 +1111,7 @@ body {
   max-height: 58px;
 }
 #home #sec-play .slider, #home #sec-review .slider {
-  max-width: 1060px;
+  max-width: 970px;
   margin: 0 auto;
   position: relative;
 }
