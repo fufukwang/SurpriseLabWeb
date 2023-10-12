@@ -22,8 +22,7 @@ $(function(){
 
     // section hide target effect
     function sectionHideTargetEffect(scrolled) {
-        if ( scrolled > 100 ) {
-        // if ( scrolled > hidden_section_height - nav_height - 5 ) {
+        if ( scrolled > hidden_section_height - nav_height - 5 ) {
             $hidden_targets.removeClass('target-hidden');
             if($end_time>(new Date().getTime()) && !$is_opend){
                 $('#staticBackdrop').modal('show');
@@ -68,13 +67,13 @@ $(function(){
         scrolled = $(this).scrollTop();
 
         // anchor menu effect
-        // anchorMenuEffect(scrolled);
+        anchorMenuEffect(scrolled);
 
         // section hide target effect
         sectionHideTargetEffect(scrolled);
 
         // mobile - set nav bar section text
-        // setNavBarSectionText();
+        setNavBarSectionText();
     });
 
     function timeoff() {
@@ -105,7 +104,7 @@ $(function(){
             tmpElement.remove(tmpElement.item(2));
             tmpElement.add("num-" + targetArray[targetIndex]);
         }
-        // setInterval(showTime, 1000);
+        setInterval(showTime, 1000);
     }
 
     /* init */
