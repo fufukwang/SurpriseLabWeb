@@ -656,10 +656,12 @@ $('.verification-code').on('click', function () {
     var couponVal = coupon.val(); 
     // 清除空白並驗證
     couponVal = couponVal.trim();
+    /*
     if(couponVal.length != 8){
         alert('請輸入一組序號，／與／之間是不同序號');
         return false;
     }
+    */
     couponVal = couponVal.toUpperCase();
 
 

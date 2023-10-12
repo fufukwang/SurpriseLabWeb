@@ -611,7 +611,7 @@ class BackController extends Controller
         $random = 8;$SN = '';$inNum = 1;
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         if($gift){
-            $inNum = 5; $SN = 'GIFT';
+            $SN = 'CHANGE';
         }
         for($i=$inNum;$i<=$random;$i++){
             $b = $characters[rand(0, strlen($characters)-1)];
