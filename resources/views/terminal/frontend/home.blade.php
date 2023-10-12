@@ -80,6 +80,12 @@
             line-height: 170%;
             margin-bottom: 20px;
         }
+        #fform .inpit-g {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 350px;
+        }
         #fform .err {
             color: #A5A1FF;
             font-weight: 500;
@@ -96,6 +102,9 @@
             border-bottom: 1px solid #A5A1FF;
             margin-right: 5px;
             color: #fff;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+            width: calc(100% - 75px);
         }
         #fform input:focus {
             outline: none;
@@ -112,6 +121,8 @@
             font-size: 15px;
             line-height: 1;
             padding: 6px 10px;
+            border-radius: 0;
+            width: 70px;
         }
         #fform button:active {
             border-bottom: 2px inset rgba(0,0,0,.5);
@@ -123,6 +134,9 @@
             font-size: 14px;
             color: #ffa541;
             opacity: 0;
+            width: 100%;
+            word-break: break-all;
+            line-height: 170%;
         }
         #fform .error-msg.show {
             opacity: 1;
@@ -162,7 +176,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <img class="img-fluid" src="/terminalAssets/images/main/btn_enter.png" alt="落日轉運站">
                     </a>
                 </div>
-                <img class="kv_enter" src="/terminalAssets/images/main/kv_enter.png" alt="落日轉運站">
+                <a href="#fform">
+                    <img class="kv_enter" src="/terminalAssets/images/main/kv_enter.png" alt="落日轉運站">
+                </a>
             </div>
         </section>
         
@@ -174,7 +190,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <ul>
                     <li>猜猜看，下一站我們將前往...？</li>
                     <li>留下E-mail，11/15我們將告訴你更多</li>
-                    <li><input type="text"><button>送出</button><div class="error-msg">E-mail格式錯誤</div></li>
+                    <li>
+                        <div class="inpit-g">
+                            <input type="text">
+                            <button>送出</button>
+                            <div class="error-msg">E-mail格式錯誤</div>
+                        </div>
+                    </li>
                 </ul>
                 <div class="err">ERR_THESUNSETTERMINAL_DISCONNECTED</div>
             </div>
