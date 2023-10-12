@@ -188,7 +188,7 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="14" placeholder="輸入一組劃位序號"/>
                                         <button type="button" class="verification-code btn-outline" data-sort=0>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
@@ -200,7 +200,7 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="14" placeholder="輸入一組劃位序號"/>
                                         <button type="button" class="verification-code btn-outline" data-sort=1>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
@@ -212,7 +212,7 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="14" placeholder="輸入一組劃位序號"/>
                                         <button type="button" class="verification-code btn-outline" data-sort=2>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
@@ -224,7 +224,7 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="14" placeholder="輸入一組劃位序號"/>
                                         <button type="button" class="verification-code btn-outline" data-sort=3>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
@@ -236,7 +236,7 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="14" placeholder="輸入一組劃位序號"/>
                                         <button type="button" class="verification-code btn-outline" data-sort=4>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
@@ -248,7 +248,7 @@
                                 <td></td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <input class="flex-fill" type="text" name="coupon" maxlength="10" placeholder="輸入一組劃位序號"/>
+                                        <input class="flex-fill" type="text" name="coupon" maxlength="14" placeholder="輸入一組劃位序號"/>
                                         <button type="button" class="verification-code btn-outline" data-sort=5>確認</button>
                                     </div>
                                     <div class="submit-coupon-wrapper"></div>
@@ -642,7 +642,7 @@
     <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
     
     <!-- Custom Js -->
-    <script src="js/form.js?v=230801"></script>
+    <script src="js/form.js?v=231012"></script>
 
 </body>
 </html>
