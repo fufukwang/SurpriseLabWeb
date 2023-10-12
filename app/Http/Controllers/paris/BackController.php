@@ -256,6 +256,8 @@ class BackController extends WebController
             $ticket = $request->ticket;
             $day = $request->day;
             $num = $request->num;
+            $prefix = $request->prefix;
+            $count = $request->count;
             if($day!='' && date('Y-m-d', strtotime($day)) != $day){
                 return redirect('/paris/coupons')->with('message','日期錯誤!新增失敗!');
             }
@@ -267,7 +269,7 @@ class BackController extends WebController
             for($i=0;$i<$num;$i++){
                 $data = [
                     'b_id' => 0,
-                    'code' => $this->GenerateGiftCodeSN(),
+                    'code' => $this->GenerateGiftCodeSN($prefix,$count),
                     'type' => $ticket,
                     'end_at' => $day
                 ];
@@ -299,12 +301,9 @@ class BackController extends WebController
 
     }
 
-    private function GenerateGiftCodeSN($gift=false){
-        $random = 8;$SN = '';$inNum = 1;
+    private function GenerateGiftCodeSN($prefix='',$count=8){
+        $random = $count;$SN = strtoupper($prefix);$inNum = 1;
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        if($gift){
-            $inNum = 5; $SN = 'GIFT';
-        }
         for($i=$inNum;$i<=$random;$i++){
             $b = $characters[rand(0, strlen($characters)-1)];
             $SN .= $b;

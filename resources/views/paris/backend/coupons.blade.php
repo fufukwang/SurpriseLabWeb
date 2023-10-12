@@ -111,7 +111,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/paris/coupons" method="post">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/paris/coupons" method="post" id="grFrom">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-12">
                                                 <div class="col-sm-4">
@@ -138,6 +138,21 @@
                                                     <div class="form-group">
                                                         <label for="day">票券期限(指定日期的23:59:59，如無期限請留白)</label>
                                                         <input type="date" class="form-control" id="day" name="day" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-12">
+                                                <div class="col-sm-2">
+                                                    <div class="form-group">
+                                                        <label for="prefix">前綴(自動轉為大寫字母)</label>
+                                                        <input type="text" class="form-control" id="prefix" name="prefix" maxlength="15" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="form-group">
+                                                        <label for="count">字數(不包含前綴最多20碼)</label>
+                                                        <input type="number" class="form-control" id="count" name="count" value="8" >
+                                                        <span id="lenText">長度 8</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -204,6 +219,7 @@
         <script>
         //$('#datatable').dataTable();
 			//$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+var couLen = 8;
 $(function(){
 
     $('.btn-danger').bind('click',function(){
@@ -223,10 +239,22 @@ $(function(){
             });
         }
     });
-
-
+    $('#prefix').bind('change keyup',function(){
+        Count_number();
+    });
+    $('#count').bind('change keyup',function(){
+        Count_number();
+    });
+    $('#grFrom').submit(function(){
+        if(couLen>20){ swal('超過長度'); return false; }
+    });
 });
-
+function Count_number(){
+    var perNum = $('#prefix').val().length;
+    var countNum = $('#count').val();
+    couLen = parseInt(perNum) + parseInt(countNum);
+    $('#lenText').text('長度 '+couLen);
+}
 @if(Session::has('message')) alert('{{ Session::get('message') }}'); @endif
 		</script>
 
