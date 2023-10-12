@@ -50,6 +50,179 @@ class BackController extends WebController
     }
 
     /**
+     * XLS data.
+     */
+    public function BackMes(Request $request){
+        if($request->isMethod('post') && $request->has('id')){
+            foreach($request->id as $row){
+                $id = $row;
+                $xls     = backme::find($id);
+                $coupons = coupon::where('b_id',$id)->get();
+                $data = [
+                    'email'    => $xls->email,
+                    'name'     => $xls->name,
+                    'xls'      => $xls,
+                    'coupons'  => $coupons,
+                    'template' => 'coupon',
+                ];
+                SLS::SendEmailByTemplateName($data);
+                backme::where('id',$id)->update(['is_sent'=>1]);
+            }
+            $par = '?';
+            if($request->has('search')) $par .= "&search=".$request->search;
+            if($request->has('isdone')) $par .= "&isdone=".$request->isdone;
+            if($request->has('is_sent')) $par .= "&is_sent=".$request->is_sent;
+            if($request->has('season')) $par .= "&season=".$request->season;
+            return redirect('/paris/backmes'.$par)->with('message','已寄送完成!');
+        }
+        $mes = backme::where('id','>',0);
+        if($request->has('search')){
+            $search = $request->search;
+            $mes = $mes->whereRaw("(
+                name LIKE '%{$search}%' OR 
+                tel LIKE '%{$search}%' OR 
+                email LIKE '%{$search}%'
+            )");
+        }
+        if($request->has('copuon')){
+            $text = trim($request->copuon);
+            $coupons = coupon::orderBy('updated_at','desc')->select('b_id')->whereRaw("(
+                code LIKE '%{$text}%'
+            )")->get();
+            $mes = $mes->whereIn('id',$coupons->toArray());
+        }
+        if($request->has('isdone')){
+            $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(paris_coupon) WHERE o_id=0 AND paris_coupon.b_id=paris_backme.id)>0");
+        }
+        if($request->has('is_sent')){
+            $mes = $mes->where('is_sent',0);
+        }
+        if($request->has('season')){
+            $mes = $mes->where('quarter',$request->season);
+        }
+
+        if($request->has('xls') && $request->xls == 1){
+            // 輸出 XLS
+            $cellData = [['庫碰','類別','兌換狀態']];
+            foreach ($mes->get() as $val) {
+                foreach(coupon::where('b_id',$val['id'])->get() as $row){
+                    $type = '';
+                    if($row->type == 'p2'){ $type ='雙人共舞票'; }elseif( $row->type == 'p4' ){ $type ='四人群舞票'; }elseif( $row->type == 'p1' ){ $type ='單人獨舞票'; } 
+                    $temp = [
+                        'sn'     => $row->code,
+                        'type'   => $type,
+                        'status' => ($row->o_id === 0) ? '尚未兌換' : '兌換或已失效',
+                    ];
+                    array_push($cellData, $temp);
+                }
+            }
+            Excel::create('匯出名單酷碰',function ($excel) use ($cellData){
+                $excel->sheet('data', function ($sheet) use ($cellData){
+                    $sheet->rows($cellData);
+                });
+            })->export('xls');
+        }
+        
+        $mes = $mes->paginate($this->perpage);
+        $quart = backme::select('quarter')->groupBy('quarter')->get();
+        return view('paris.backend.BackMes',compact('mes','request','quart'));
+    }
+    public function NotUseXls(Request $request){
+        $backmes = backme::select('id','name','email','tel','p2','p4','p1','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(paris_coupon) WHERE o_id=0 AND paris_coupon.b_id=paris_backme.id)>0")->get()->toArray();
+        $cellData = [['姓名','信箱','電話','可劃位人數','訂購內容','註記']];
+        foreach ($backmes as $val) {
+            $num = 0;
+            foreach(coupon::where('b_id',$val['id'])->select('type')->where('o_id',0)->get() as $row){
+                switch ($row->type) {
+                    case 'p1': $num = $num + 1 ; break;
+                    case 'p2': $num = $num + 2 ; break;
+                    case 'p4': $num = $num + 4 ; break;
+                }
+            }
+            $temp = [
+                'name'   => $val['name'],
+                'email'  => $val['email'],
+                'tel'    => $val['tel'],
+                'num'    => $num,
+                'detail' => $val['detail'],
+                'manage' => $val['manage'],
+            ];
+            array_push($cellData, $temp);
+        }
+        Excel::create('匯出未兌換名單',function ($excel) use ($cellData){
+            $excel->sheet('data', function ($sheet) use ($cellData){
+                $sheet->rows($cellData);
+            });
+        })->export('xls');
+    }
+    public function sendUpdate(Request $request,$id){
+        backme::where('id',$id)->update([
+            'is_sent' => $request->send
+        ]);
+        return Response::json(['message'=> '發送狀態已更新'], 200);
+    }
+    public function sendManageUpdate(Request $request,$id){
+        backme::where('id',$id)->update([
+            'manage' => $request->manage
+        ]);
+        return Response::json(['message'=> '已更新'], 200);
+    }
+    public function infoUpdate(Request $request,$id){
+        backme::where('id',$id)->update([
+            'name'  => strip_tags($request->name),
+            'tel'   => strip_tags($request->tel),
+            'email' => strip_tags($request->email)
+        ]);
+        return Response::json(['message'=> '已更新'], 200);
+    }
+    public function CanelCoupon(Request $request){
+        $id   = $request->b_id;
+        $code = $request->code;
+        coupon::where('b_id',$id)->where('code',$code)->update([
+            'o_id' => 0
+        ]);
+        backme::where('id',$id)->update([
+            'is_sent' => 0
+        ]);
+        return Response::json(['message'=> '已更新'], 200);
+    }
+    public function SentCouponCode(Request $request,$id){
+        if($request->isMethod('post')){
+            $id = $id;
+            $xls     = backme::find($id);
+            $coupons = coupon::where('b_id',$id)->get();
+            $data = [
+                'email'    => $xls->email,
+                'name'     => $xls->name,
+                'xls'      => $xls,
+                'coupons'  => $coupons,
+                'template' => 'coupon'.$pp,
+            ];
+            $success = SLS::SendEmailByTemplateName($data);
+            if($success){
+                backme::where('id',$id)->update(['is_sent'=>1]);
+                return Response::json(['message'=> 'success'], 200);
+            } else {
+                return Response::json(['message'=> 'error'], 200);
+            }
+        }
+        return Response::json(['message'=> 'error'], 200);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
      * 產品分類.
      */
     public function Pros(Request $request){
@@ -289,7 +462,7 @@ class BackController extends WebController
             $type = $request->type;
             $coupons = $coupons->where('type',$type);
         } else {
-            $coupons = $coupons->whereIn('type',['p1','p2','p4','gift']);
+            $coupons = $coupons->whereIn('type',['p1','p2','p4']);
         }
 
         $coupons = $coupons->paginate($this->perpage);
@@ -298,6 +471,114 @@ class BackController extends WebController
     public function CouponDelete(Request $request,$id){
         coupon::where('id', $id)->delete();
         return Response::json(['message'=> '已刪除'], 200);
+
+    }
+
+
+
+
+
+
+    public function UploadXlsx2Db(Request $request){
+        $filePath = '';
+//dd($request->file('xlsx')->getMimeType());
+        try{
+            $rules = [
+                'xlsx'    => 'required|mimetypes:application/octet-stream,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip',
+                'quarter' => 'required|numeric'
+            ];
+            $validator = Validator::make($request->all(), $rules);
+            if ($validator->fails()) {
+                return redirect('/paris/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
+            } else {
+                if ($request->hasFile('xlsx')) {
+                    if ($request->file('xlsx')->isValid())
+                    {
+                        $destinationPath = base_path() . '/storage/app';
+                        $extension = $request->file('xlsx')->getClientOriginalExtension();
+                        $fileName = 'tgt_' . date('YmdHis') . '.' . $extension;
+                        $request->file('xlsx')->move($destinationPath, $fileName);
+                        $filePath = '/storage/app/' . $fileName;
+                    }
+                }
+            }
+
+            $quarter = $request->quarter;
+            $i = 0;
+            Excel::load($filePath, function($reader) use (&$quarter,&$i) {
+                $data = [];
+                $xlsx = $reader->toArray();
+                foreach($xlsx as $row){
+                    if($row['sn'] == '' && $row['name'] == '' && $row['detail'] == ''){
+                        break;
+                    } else {
+                        //echo $row['sn'].'<br />';
+                        if($row['sn'] == '') $row['sn'] = 0;
+                        if($row['sponsor_id'] == '') $row['sponsor_id'] = 0;
+                        if($row['p1'] == '') $row['p1'] = 0;
+                        if($row['p2'] == '') $row['p2'] = 0;
+                        if($row['p4'] == '') $row['p4'] = 0;
+                        $r = [
+                            'sn'         => $row['sn'],
+                            'detail'     => $row['detail'],
+                            'num'        => $row['num'],
+                            'money'      => $row['money'],
+                            'name'       => $row['name'],
+                            'email'      => $row['email'],
+                            'tel'        => $row['tel'],
+                            'sponsor_id' => $row['sponsor_id'],
+                            'p1'         => $row['p1'],
+                            'p2'         => $row['p2'],
+                            'p4'         => $row['p4'],
+                            'gift'       => 0,
+                            'quarter'    => $quarter,  // 產出季度
+                            'buy_at'     => Carbon::parse($row['time'])->format('Y-m-d H:i:s')
+                        ];
+                        if(backme::where('quarter',$quarter)->where('sn', $row['sn'])->count()==0){
+                            backme::insert($r);
+                            $i++;
+                        }
+                        //array_push($data, $r);
+                    }
+                    
+                }
+                //backme::insert($data);
+                $this->Db2Coupon();
+            });
+            return redirect('/paris/backmes')->with('message','新增完成!!共新增'.$i.'筆資料');
+        } catch (Exception $exception) {
+            Log::error($exception);
+            return redirect('/paris/backmes')->with('message','新增失敗!');
+        }
+    }
+
+    private function Db2Coupon(){
+        $xls = backme::select('p2','p4','p1','id')->where('gen_coup',0)->get();
+        foreach($xls as $row){
+            $data = [
+                'b_id' => $row->id
+            ];
+            if($row->p2 >= 1){
+                for($i=0;$i<$row->p2;$i++){
+                    $data['type'] = 'p2';
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    coupon::insert($data);
+                }
+            } elseif($row->p1 >= 1){
+                for($i=0;$i<$row->p1;$i++){
+                    $data['type'] = 'p1';
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    coupon::insert($data);
+                }
+            } elseif($row->p4 >= 1){
+                for($i=0;$i<$row->p4;$i++){
+                    $data['type'] = 'p4';
+                    $data['code'] = $this->GenerateGiftCodeSN();
+                    coupon::insert($data);
+                }
+            }
+            backme::where('id',$row->id)->update(['gen_coup'=>1]);
+        }
 
     }
 
