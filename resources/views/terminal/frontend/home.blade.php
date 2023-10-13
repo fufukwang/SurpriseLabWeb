@@ -71,7 +71,7 @@
             margin-bottom: 20px;
         }
         #fform .title {
-            font-size: 30px;
+            font-size: 28px;
             margin-bottom: 20px;
         }
         #fform ul {
@@ -104,7 +104,8 @@
             color: #fff;
             -webkit-appearance: none;
             -webkit-border-radius: 0;
-            width: calc(100% - 75px);
+            width: calc(100% - 100px - 75px);
+            padding: 0 6px;
         }
         #fform input:focus {
             outline: none;
@@ -133,13 +134,10 @@
         #fform .error-msg {
             font-size: 14px;
             color: #ffa541;
-            opacity: 0;
             width: 100%;
             word-break: break-all;
             line-height: 170%;
-        }
-        #fform .error-msg.show {
-            opacity: 1;
+            display: none;
         }
     </style>
 <!-- Google Tag Manager -->
@@ -165,38 +163,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </aside>
 
     <main class="background-wallpaper">
-        <section class="skip-background-light js-hidden-section js-hero-section hero-section" id="home">
-            <div class="hero-wrap">
-                <div class="hero-img">                
-                    <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_kv_close.jpg" alt="落日轉運站">
-                    <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_kv_close_mobile.jpg" alt="落日轉運站">
-                </div>
-                <div class="hero-btn">
-                    <a href="#fform">
-                        <img class="img-fluid" src="/terminalAssets/images/main/btn_enter.png" alt="落日轉運站">
-                    </a>
-                </div>
-                <a href="#fform">
-                    <img class="kv_enter" src="/terminalAssets/images/main/kv_enter.png" alt="落日轉運站">
-                </a>
-            </div>
-        </section>
-        
         <section class="section-wrap skip-background-light" id="fform">
             <div class="container-xl">
                 <img class="img_fform" src="/terminalAssets/images/main/img_fform.png" alt="落日轉運站">
-                <div class="title">無法連上落日轉運站</div>
+                <div class="title">落日轉運站 下一站連接中</div>
                 <div>建議做法：</div>
                 <ul>
-                    <li>猜猜看，下一站我們將前往...？</li>
-                    <li>留下E-mail，11/15我們將告訴你更多</li>
                     <li>
                         <div class="inpit-g">
+                            <span>留下 E-mail </span>
                             <input type="text">
                             <button>送出</button>
                             <div class="error-msg">E-mail格式錯誤</div>
                         </div>
                     </li>
+                    <li>11月中 我們將來信告訴你更多</li>
+                    <li>猜猜看，下一站我們將前往…？</li>
+                    
                 </ul>
                 <div class="err">ERR_THESUNSETTERMINAL_DISCONNECTED</div>
             </div>
@@ -234,7 +217,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="accordion-body">
                                     <p>
                                         驚喜製造 2022.11.10 - 2023.10.15 於高雄推出的沉浸式計畫，包含以交通工具為題的兩項作品：<br>
-                                        微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT》，雙作品歷時11個月，超過38,000人次參與體驗。
+                                        微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT》，超過38,000人次參與體驗。
                                     </p>
                                 </div>
                             </div>
@@ -263,7 +246,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </h2>
                             <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
                                 <div class="accordion-body">
-                                    <p>留下E-mail，或關注驚喜製造，獲得《落日轉運站》的最新消息winking face</p>
+                                    <p>留下E-mail，或關注驚喜製造，獲得《落日轉運站》的最新消息。</p>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn activity-btn" data-bs-dismiss="modal">CLOSE</button> -->
-                    <a class="btn activity-btn" href="https://www.surpriselab.com.tw/terminal/rules">更多資訊</a>
+                    <a target="_blank" class="btn activity-btn" href="https://www.instagram.com/surpriselabtw/">關注驚喜</a>
                 </div>
             </div>
         </div>
@@ -283,23 +266,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/terminalAssets/js/plugins/bootstrap-5.1.3/bootstrap.min.js"></script>
 
     <!-- Owl Carousel JS -->
-    <script src="/terminalAssets/js/plugins/owlcarousel2-2.3.4/owl.carousel.min.js"></script>
+    <!-- <script src="/terminalAssets/js/plugins/owlcarousel2-2.3.4/owl.carousel.min.js"></script> -->
 
     <!-- Loading Js -->
     <script src="/terminalAssets/js/plugins/imagesloaded.pkgd.min.js"></script>
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?231012"></script>
-    <script src="/terminalAssets/js/home-slideshow.js?date=0627"></script>
-    <script src="/terminalAssets/js/home-scroll-background.js"></script>
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <!-- <script src="/terminalAssets/js/index.js?231012"></script> -->
+    <!-- <script src="/terminalAssets/js/home-slideshow.js?date=0627"></script> -->
+    <!-- <script src="/terminalAssets/js/home-scroll-background.js"></script> -->
+    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
 
     <script>
         $('#fform button').on('click', function() {
             var email = $('#fform input').val();
             var msg = '';
-            $('#fform .error-msg').css('opacity', 1);
+            $('#fform .error-msg').show();
             if( /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email) ) {
                 msg = '送出中...';
                 $('#fform .error-msg').text(msg);
