@@ -262,8 +262,8 @@ $(function(){
     $('#grFrom').submit(function(){
         if(couLen>20){ swal('超過長度'); return false; }
     });
-    $('.glyphicon-search').bind('click',function(){ $('input[name=act]').val(''); });
-    $('.glyphicon-print').bind('click',function(){ $('input[name=act]').val('xls'); });
+    $('.glyphicon-search').parent().bind('click',function(){ $('input[name=act]').val(''); });
+    $('.glyphicon-print').parent().bind('click',function(){ $('input[name=act]').val('xls'); });
 });
 function Count_number(){
     var perNum = $('#prefix').val().length;
