@@ -464,9 +464,44 @@ class BackController extends WebController
         } else {
             $coupons = $coupons->whereIn('type',['p1','p2','p4']);
         }
+        if($request->has('act') && $request->act=='xls'){
+            $cellData = $coupons->get()->toArray();
+            Excel::create('Coupons',function ($excel) use ($cellData){
+                $excel->sheet('data', function ($sheet) use ($cellData){
+                    $data = [];
+                    array_push($data,["code","類別","兌換期限","兌換日期","訂單編號","生成日期"]);
+                    foreach($cellData as $row){
+                        $type = '';
+                        switch ($row['type']) {
+                            case 'p1': $type = '單人獨舞票' ; break;
+                            case 'p2': $type = '雙人共舞票' ; break;
+                            case 'p4': $type = '四人群舞票' ; break;
+                        }
+                        if($row['o_id']>0){
+                            $change_day = order::where('sn',$row['o_id'])->first()->created_at;
+                        } else {
+                            $change_day = '尚未兌換';
+                        }
+                        $sheetRow = [
+                            $row['code'],
+                            $type,
+                            ($row['end_at']!='') ? $row['end_at'] : '-',
+                            $change_day,
+                            $row['o_id']."\t",
+                            $row['created_at']
+                        ];
+                        array_push($data,$sheetRow);
+                    }
+                    $zero = $sheet->rows($data);
+                });
+            })->export('xls');
 
-        $coupons = $coupons->paginate($this->perpage);
-        return view('paris.backend.coupons',compact('coupons','request'));
+
+
+        } else {
+            $coupons = $coupons->paginate($this->perpage);
+            return view('paris.backend.coupons',compact('coupons','request'));
+        }
     }
     public function CouponDelete(Request $request,$id){
         coupon::where('id', $id)->delete();

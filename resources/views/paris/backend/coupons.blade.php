@@ -25,7 +25,7 @@
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
                                         <div class="btn-group focus-btn-group" style="width:100%"><form action="/paris/coupons" id="SearchForm">
-
+                                            <input type="hidden" name="act" value="">
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
                                                     <div class="input-group">
@@ -49,8 +49,12 @@
                                                     </div><!-- input-group -->
                                                 </div>
                                             </div>
-
-                                            <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>&nbsp;
+                                            <div class="form-group col-sm-1">
+                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>&nbsp;
+                                            </div>
+                                            <div class="form-group col-sm-1">
+                                                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-print"></span> 匯出條件列表</button>
+                                            </div>
                                             <!--button type="button" class="btn btn-info" onclick="submitSearchForm();" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 列印</button>
                                             <button type="button" class="btn btn-info" onclick="submitPrintCover();" style="margin-left: 10px;"><span class="glyphicon glyphicon-print"></span> 封面列印</button-->
 
@@ -156,6 +160,14 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- <div class="form-group col-sm-12">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label for="prefix">預先訂購(訂單發票不扣除金額)</label><br>
+                                                        <input type="checkbox" data-plugin="switchery" data-color="#00b19d" data-size="small"/>
+                                                    </div>
+                                                </div>
+                                            </div> -->
                                             <div class="form-group col-sm-12">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span> 產生</button>
                                             </div>
@@ -208,13 +220,15 @@
 
 	    <script src="/backstage/pages/datatables.editable.init.js"></script>
         <script src="/backstage/plugins/sweetalert/dist/sweetalert.min.js"></script>
-
+        <link href="/backstage/plugins/switchery/switchery.min.css" rel="stylesheet" />
+        <script src="/backstage/plugins/switchery/switchery.min.js"></script>
 
         <script src="/backstage/js/jquery.core.js"></script>
         <script src="/backstage/js/jquery.app.js"></script>
         <!-- Notification js -->
         <script src="/backstage/plugins/notifyjs/dist/notify.min.js"></script>
         <script src="/backstage/plugins/notifications/notify-metro.js"></script>
+        
 
         <script>
         //$('#datatable').dataTable();
@@ -248,6 +262,8 @@ $(function(){
     $('#grFrom').submit(function(){
         if(couLen>20){ swal('超過長度'); return false; }
     });
+    $('.glyphicon-search').bind('click',function(){ $('input[name=act]').val(''); });
+    $('.glyphicon-print').bind('click',function(){ $('input[name=act]').val('xls'); });
 });
 function Count_number(){
     var perNum = $('#prefix').val().length;
