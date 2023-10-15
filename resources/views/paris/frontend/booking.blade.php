@@ -291,7 +291,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="input-group">
                             <label>禮物卡序號</label>
-                            <input type="text" name="gift" id="gift" maxlength="10" />
+                            <input type="text" name="gift" id="gift" maxlength="20" />
                             <span class="gift_note" style="color: #dc3545;"></span>
                         </div>
                     </div>

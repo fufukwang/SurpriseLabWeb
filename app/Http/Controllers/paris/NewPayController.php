@@ -115,7 +115,19 @@ class NewPayController extends WebController
 
             $sentSuccess = false;
             if($data['money'] == 0){
-                return view('paris.frontend.booking_success');
+                $data = [
+                    'ticket' => $request->ticket,
+                    'num' => $request->num,
+                    'day' => preg_replace('/-/','/',$act->day),
+                    'time' => substr($act->rang_start,0,5).'-'.substr($act->rang_end,0,5),
+                    'money' => $order->money,
+                ];
+                $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                    ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+
+                $this->sendMailCenter($ord);
+                $this->sendSmsCenter($ord);
+                return view('paris.frontend.booking_success',compact('data'));
             } else {
                 $comments = "巴黎舞會";
                 if($cut1>0){
