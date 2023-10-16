@@ -305,12 +305,16 @@ class OrderController extends WebController
                             case '單人獨舞票': $ticket = 'p1'; break;
                             case '雙人共舞票': $ticket = 'p2'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
                             case '四人群舞票': $ticket = 'p4'; if(($row['people'] % 4) != 0){ $numTrue = false;} break;
-                            case 'p2': $ticket = 'p4'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
+                            case 'p2': $ticket = 'p2'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
                             case 'p4': $ticket = 'p4'; if(($row['people'] % 4) != 0){ $numTrue = false;} break;
                         }
                         if(!$numTrue){
                             $message .= "第{$i}列 票券人數錯誤<br>";
                             break;
+                        }
+                        $manage = date('Y-m-d H:i:s').' 匯入來源:'.$row['source'];
+                        if($row['giftcard']!=''){
+                            $manage .= "\n禮物卡序號：".$row['giftcard'];
                         }
 
                         // 寫入
@@ -329,7 +333,7 @@ class OrderController extends WebController
                             'pay_type'   => '合作販售',
                             'pay_status' => '已付款',
                             'result'     => '',
-                            'manage'     => date('Y-m-d H:i:s').' 匯入來源:'.$row['source'],
+                            'manage'     => $manage,
                             'discount'   => '',
                             'vegetarian' => 0,
                             'is_overseas'=> $is_overseas,
@@ -569,7 +573,7 @@ class OrderController extends WebController
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
             $search = $request->search;
-            $order = $order->whereRaw("(name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%')");
+            $order = $order->whereRaw("(name LIKE '%{$search}%' OR tel LIKE '%{$search}%' OR email LIKE '%{$search}%' OR sn LIKE '%{$search}%' OR manage LIKE '%{$search}%')");
         }
         if($request->has('code') && $request->code!=''){
             $text = trim($request->code);
