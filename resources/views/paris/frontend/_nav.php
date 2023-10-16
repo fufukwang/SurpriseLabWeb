@@ -16,6 +16,6 @@
             <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
-            <a href="/lebaldeparis/booking">預約舞會</a>
+            <a target="_blank" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
         </nav>
     </header>

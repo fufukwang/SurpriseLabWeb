@@ -30,11 +30,6 @@ body {
   line-height: 200%; /* 36px */
   padding-top: 78px;
 }
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-}
 @media screen and (min-width: 992px) {
   body {
     padding-top: 120px;
@@ -58,11 +53,6 @@ p {
   line-height: 200%; /* 36px */
   margin: 0 0 15px 0;
 }
-@media screen and (min-width: 768px) {
-  p {
-    font-size: 18px;
-  }
-}
 
 main {
   padding: 76px 17px 146px 17px;
@@ -83,7 +73,7 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 }
 
@@ -97,7 +87,7 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 }
 
@@ -114,11 +104,6 @@ h3 {
   text-indent: 1.5px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) {
-  h3 {
-    font-size: 20px;
-  }
-}
 
 h4 {
   color: #E28A8A;
@@ -134,7 +119,7 @@ h4 {
 }
 @media screen and (min-width: 768px) {
   h4 {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0 0 14px 0;
   }
 }
@@ -539,7 +524,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   #main-header nav {
     display: flex !important;
     flex-direction: row;
-    max-width: 1114px;
+    max-width: 970px;
     width: 100%;
     justify-content: space-between;
     margin-top: 10px;
@@ -833,7 +818,7 @@ body {
   margin: 60px -17px 0 -17px;
 }
 #home .about, #home .price, #home .play {
-  max-width: 1108px;
+  max-width: 970px;
   margin: 0 auto;
   text-align: center;
 }
@@ -894,7 +879,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   #home .about h2 span, #home .price h2 span, #home .play h2 span {
-    font-size: 18px;
+    font-size: 16px;
     display: inline;
     margin-left: 14px;
   }
@@ -911,12 +896,17 @@ body {
   margin-top: 40px;
 }
 #home .price {
-  max-width: 1126px;
+  max-width: 970px;
 }
 @media screen and (min-width: 768px) {
   #home .price .item {
     text-align: left;
+    width: 33.33%;
   }
+}
+#home .price .item span {
+  font-weight: bold;
+  color: #E85454;
 }
 #home .price.pc {
   display: none;
@@ -953,7 +943,7 @@ body {
   }
 }
 #home .play {
-  max-width: 1120px;
+  max-width: 970px;
 }
 @media screen and (min-width: 768px) {
   #home .play .icon {
@@ -962,7 +952,7 @@ body {
 }
 #home .more {
   position: relative;
-  max-width: 1209px;
+  max-width: 970px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -992,7 +982,7 @@ body {
   }
 }
 #home .blancali {
-  max-width: 1116px;
+  max-width: 970px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -1024,7 +1014,7 @@ body {
   }
 }
 #home .information {
-  max-width: 1032px;
+  max-width: 970px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1061,7 +1051,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   #home .information .information-inner ul {
-    padding-left: 18px;
+    padding-left: 16px;
     list-style: disc;
   }
 }
@@ -1085,7 +1075,7 @@ body {
   margin-top: 56px;
 }
 #home .partner {
-  max-width: 1085px;
+  max-width: 970px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -1124,7 +1114,7 @@ body {
   max-height: 58px;
 }
 #home #sec-play .slider, #home #sec-review .slider {
-  max-width: 1060px;
+  max-width: 970px;
   margin: 0 auto;
   position: relative;
 }
@@ -1227,7 +1217,7 @@ body {
 @media screen and (min-width: 992px) {
   #m-nav a {
     font-family: "Noto Sans TC";
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 200%;
