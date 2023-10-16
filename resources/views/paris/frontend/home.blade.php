@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css">
+    <link rel="stylesheet" href="/paris/css/home.css?231016">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,7 +51,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
-            <a href="/lebaldeparis/booking">預約舞會</a>
+            <a target="_blank" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
         </nav>
     </header>
 
@@ -133,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -148,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -163,7 +163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         與熟悉的人狂歡<br>
                         摸索與彼此的第一支舞
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
             </div>
 
@@ -182,7 +182,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -198,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -213,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         與熟悉的人狂歡<br>
                         摸索與彼此的第一支舞
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
             </div>
         </section>
@@ -263,7 +263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <br>
                 <h4>這將是一場你從未歷經過的體驗</h4>
                 <br>
-                <div>你已受邀請參加巴黎最盛大的舞會！音樂與舞蹈與虛擬現實融合，為你帶來藝術和壯觀的歡樂體驗。無需熟悉舞蹈或虛擬現實，即可投入這場讓你漫遊於不同世界的舞會。</div>
+                <!-- <div>你已受邀請參加巴黎最盛大的舞會！音樂與舞蹈與虛擬現實融合，為你帶來藝術和壯觀的歡樂體驗。無需熟悉舞蹈或虛擬現實，即可投入這場讓你漫遊於不同世界的舞會。</div> -->
             </div>
 
             <div class="slider">
@@ -441,7 +441,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a id="fixed-booking" href="/lebaldeparis/booking" style="display: none;">
+    <a target="_blank" id="fixed-booking" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW" style="display: none;">
         <img src="paris/img/fixed-booking.png" />
     </a>
 

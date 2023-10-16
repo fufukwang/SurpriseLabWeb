@@ -49,11 +49,6 @@ p {
   line-height: 200%; /* 36px */
   margin: 0 0 15px 0;
 }
-@media screen and (min-width: 768px) {
-  p {
-    font-size: 18px;
-  }
-}
 
 main {
   padding: 76px 17px 146px 17px;
