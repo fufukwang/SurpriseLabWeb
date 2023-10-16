@@ -305,7 +305,7 @@ class OrderController extends WebController
                             case '單人獨舞票': $ticket = 'p1'; break;
                             case '雙人共舞票': $ticket = 'p2'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
                             case '四人群舞票': $ticket = 'p4'; if(($row['people'] % 4) != 0){ $numTrue = false;} break;
-                            case 'p2': $ticket = 'p4'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
+                            case 'p2': $ticket = 'p2'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
                             case 'p4': $ticket = 'p4'; if(($row['people'] % 4) != 0){ $numTrue = false;} break;
                         }
                         if(!$numTrue){
