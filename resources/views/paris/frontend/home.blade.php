@@ -128,7 +128,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$2,000</h2>
                     <div class="desc">
                         （含一杯調飲）<br>
-                        <br>
+                        <br> 
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
@@ -142,7 +142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$3,800<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <br>
+                        <br> 
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
@@ -150,14 +150,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket3_old.png" />
+                        <img src="/paris/img/booking_ticket3_old.png" /> 
                     </div>
                     <h4>四人群舞票</h4>
                     <h2>$7,400<span>($1,850/人)</span></h2>
                     <div class="desc">
-                        （含四杯調飲）<br>
-                        <br> 
-                        與熟悉的人狂歡<br>
+                        （含四杯調飲）<br> 
+                        <br>  
+                        與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
                     <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
