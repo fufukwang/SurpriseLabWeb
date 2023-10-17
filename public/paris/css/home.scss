@@ -64,12 +64,12 @@ body {
 #banner {
     position: relative;
     height: 100%;
-    background-image: url(../img/banner-bg.jpg);
+    background-image: url(../img/banner-bg-m.jpg?211017);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 37% center;
+    background-position: center center;
     @media screen and (min-width:768px) {
-        background-position: center center;
+        background-image: url(../img/banner-bg.jpg?211017);
     }
 
     .logo {
@@ -95,10 +95,10 @@ body {
         }
 
         .enter {
-            width: 248px;
-            height: 80px;
+            width: 205px;
+            height: 50px;
             background: #00AEA5;
-            background-image: url(../img/enter.svg);
+            // background-image: url(../img/enter.svg);
             background-size: 168px auto;
             background-position: center center;
             background-repeat: no-repeat;
@@ -108,11 +108,12 @@ body {
             color: #fff;
             font-family: "txc-pearl";
             font-size: 24px;
-            line-height: 120%; /* 28.8px */
+            line-height: 1;
             letter-spacing: 1.8px;
             cursor: pointer;
             transition: background .3s;
             margin: 0 auto 20px auto;
+            border-radius: 50px;
             @media screen and (min-width:768px) {
                 margin-bottom: 40px;
             }
@@ -203,7 +204,7 @@ body {
     }
 
     .about, .price, .play {
-        max-width: 1108px;
+        max-width: 970px;
         margin: 0 auto;
         text-align: center;
         @media screen and (min-width:768px) {
@@ -259,7 +260,7 @@ body {
                 display: block;
                 margin-left: 0;
                 @media screen and (min-width:768px) {
-                    font-size: 18px;
+                    font-size: 16px;
                     display: inline;
                     margin-left: 14px;
                 }
@@ -281,11 +282,17 @@ body {
     }
 
     .price {
-        max-width: 1126px;
+        max-width: 970px;
 
         .item {
             @media screen and (min-width:768px) {
                 text-align: left;
+                width: 33.33%;
+            }
+
+            span {
+                font-weight: bold;
+                color: #E85454;
             }
         }
 
@@ -304,7 +311,7 @@ body {
                 display: none;
             }
         }
-        
+
         h2 {
             height: 80px;
             @media screen and (min-width:768px) {
@@ -319,9 +326,9 @@ body {
             }
         }
     }
-    
+
     .play {
-        max-width: 1120px;
+        max-width: 970px;
 
         .icon {
             @media screen and (min-width:768px) {
@@ -332,9 +339,9 @@ body {
 
     .more {
         position: relative;
-        max-width: 1209px;
+        max-width: 970px;
         margin: 0 auto;
-        
+
         .more-inner {
             @media screen and (min-width:768px) {
                 height: 0;
@@ -365,7 +372,7 @@ body {
     }
 
    .blancali {
-        max-width: 1116px;
+        max-width: 970px;
         margin: 0 auto;
         @media screen and (min-width:768px) {
             display: flex;
@@ -393,7 +400,7 @@ body {
    }
 
     .information {
-        max-width: 1032px;
+        max-width: 970px;
         margin: 0 auto;
         text-align: center;
         @media screen and (min-width:768px) {
@@ -418,20 +425,16 @@ body {
                 margin-bottom: 20px;
             }
 
-            .col:nth-child(1) .grid:nth-child(1) {
-                @media screen and (min-width:768px) {
-                    margin-bottom: 70px;
-                }
-            }
+            // .col:nth-child(1) .grid:nth-child(1) {
+            //     @media screen and (min-width:768px) {
+            //         margin-bottom: 70px;
+            //     }
+            // }
 
             ul {
                 margin: 0;
-                padding-left: 0;
-                list-style: none;
-                @media screen and (min-width:768px) {
-                    padding-left: 18px;
-                    list-style: disc;
-                }
+                padding-left: 1.5em;
+                text-align: left;
 
                 li {
                     margin-bottom: 2rem;
@@ -458,7 +461,7 @@ body {
     }
 
     .partner {
-        max-width: 1085px;
+        max-width: 970px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -503,7 +506,7 @@ body {
 
     #sec-play, #sec-review {
         .slider {
-            max-width: 928px + 66px + 66px;
+            max-width: 838px + 66px + 66px;
             margin: 0 auto;
             position: relative;
             @media screen and (min-width:768px) {
@@ -529,7 +532,7 @@ body {
         margin-top: 15px;
         display: flex;
         justify-content: center;
-        
+
         button.owl-dot {
             width: 10px;
             height: 10px;
@@ -537,7 +540,7 @@ body {
             margin: 0 7px;
             border-radius: 50%;
             opacity: .5;
-    
+
             &.active {
                 opacity: 1;
             }
@@ -609,7 +612,7 @@ body {
 
         @media screen and (min-width:992px) {
             font-family: 'Noto Sans TC';
-            font-size: 18px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: 200%;

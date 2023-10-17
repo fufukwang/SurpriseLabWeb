@@ -1,10 +1,6 @@
 * {
   box-sizing: border-box;
 }
-*::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #C17F7E;
-  opacity: 1; /* Firefox */
-}
 *::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #C17F7E;
   opacity: 1; /* Firefox */
@@ -30,11 +26,6 @@ body {
   line-height: 200%; /* 36px */
   padding-top: 78px;
 }
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-}
 @media screen and (min-width: 992px) {
   body {
     padding-top: 120px;
@@ -58,11 +49,6 @@ p {
   line-height: 200%; /* 36px */
   margin: 0 0 15px 0;
 }
-@media screen and (min-width: 768px) {
-  p {
-    font-size: 18px;
-  }
-}
 
 main {
   padding: 76px 17px 146px 17px;
@@ -83,7 +69,7 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 }
 
@@ -97,7 +83,7 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 }
 
@@ -114,11 +100,6 @@ h3 {
   text-indent: 1.5px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) {
-  h3 {
-    font-size: 20px;
-  }
-}
 
 h4 {
   color: #E28A8A;
@@ -134,7 +115,7 @@ h4 {
 }
 @media screen and (min-width: 768px) {
   h4 {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0 0 14px 0;
   }
 }
@@ -336,9 +317,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   display: block;
   pointer-events: none;
   content: "";
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .checkbox-group label span:after {
   position: absolute;
@@ -539,7 +518,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   #main-header nav {
     display: flex !important;
     flex-direction: row;
-    max-width: 1114px;
+    max-width: 970px;
     width: 100%;
     justify-content: space-between;
     margin-top: 10px;
@@ -816,4 +795,6 @@ button.p-btn.secondary:hover:not([disabled]) {
 }
 #rules .clickToChangeRefund {
   cursor: pointer;
-}/*# sourceMappingURL=rules.css.map */
+}
+
+/*# sourceMappingURL=rules.css.map */

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css">
+    <link rel="stylesheet" href="/paris/css/home.css?231017">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div id="banner">
-        <img class="logo" src="/paris/img/logo.png" />
+        <img class="logo" src="/paris/img/logo.png?231017" />
         <div class="bottom">
             <div class="enter">ENTER</div>
             <img class="banner-logos pc" src="/paris/img/banner-logos.png" />
@@ -37,8 +37,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex justify-between items-center">
             <div class="brand-logo">
                 <a href="/lebaldeparis">
-                    <img class="pc" src="/paris/img/brand-logo.png" alt="巴黎舞會 LE BAL PARIS" />
-                    <img class="m" src="/paris/img/brand-logo-m.png" alt="巴黎舞會 LE BAL PARIS" />
+                    <img class="pc" src="/paris/img/brand-logo.png?231017" alt="巴黎舞會 LE BAL PARIS" />
+                    <img class="m" src="/paris/img/brand-logo-m.png?231017" alt="巴黎舞會 LE BAL PARIS" />
                 </a>
             </div>
             <div class="mob-toggle m"></div>
@@ -51,7 +51,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
-            <a href="/lebaldeparis/booking">預約舞會</a>
+            <a target="_blank" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
         </nav>
     </header>
 
@@ -128,11 +128,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$2,000</h2>
                     <div class="desc">
                         （含一杯調飲）<br>
-                        <br>
+                        <br> 
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -142,25 +142,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$3,800<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <br>
+                        <br> 
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket3.png" />
+                        <img src="/paris/img/booking_ticket3_old.png" /> 
                     </div>
                     <h4>四人群舞票</h4>
                     <h2>$7,400<span>($1,850/人)</span></h2>
                     <div class="desc">
-                        （含四杯調飲）<br>
-                        <br>
-                        與熟悉的人狂歡<br>
+                        （含四杯調飲）<br> 
+                        <br>  
+                        與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
             </div>
 
@@ -177,7 +177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -191,21 +191,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket3.png" />
+                        <img src="/paris/img/booking_ticket3_old.png" />
                     </div>
                     <h4>四人群舞票</h4>
                     <h2>$7,400<span>($1,850/人)</span></h2>
                     <div class="desc">
-                        （含四杯調飲）<br>
-                        <br>
-                        與熟悉的人狂歡<br>
+                        （含四杯調飲）<br> 
+                        <br> 
+                        與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
             </div>
         </section>
@@ -244,8 +244,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <h4>玩法三：打開感官</h4>
                     <div class="desc">
-                        一個人自由地探索<br>
-                        帶著好奇心闖入花漾年代
+                        相信當下所有感受<br>
+                        你的聽、嗅、觸覺都將被撩動
                     </div>
                 </div>
             </div>
@@ -255,7 +255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <br>
                 <h4>這將是一場你從未歷經過的體驗</h4>
                 <br>
-                <div>你已受邀請參加巴黎最盛大的舞會！音樂與舞蹈與虛擬現實融合，為你帶來藝術和壯觀的歡樂體驗。無需熟悉舞蹈或虛擬現實，即可投入這場讓你漫遊於不同世界的舞會。</div>
+                <!-- <div>你已受邀請參加巴黎最盛大的舞會！音樂與舞蹈與虛擬現實融合，為你帶來藝術和壯觀的歡樂體驗。無需熟悉舞蹈或虛擬現實，即可投入這場讓你漫遊於不同世界的舞會。</div> -->
             </div>
 
             <div class="slider">
@@ -289,7 +289,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>MORE</h3>
             </div>
 
-            <p><center>期待你的出席<br>我們在巴黎午夜見</center></p>
+            <!-- <center><p>期待你的出席<br>我們在巴黎午夜見</p></center> -->
             <br>
     
             <div class="more">
@@ -332,13 +332,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="blancali">
                 <img class="photo" src="/paris/img/blancali.jpg" />
                 <div class="desc">
-                    Blanca Li （布蘭卡˙李）<br>
+                    Blanca Li（布蘭卡・李）<br>
                     <br>
-                    西班牙跨界舞蹈鬼才，身兼編舞家、舞者、導演，新科技在她的各種創作中始終佔有特殊的位置。<br>
+                    西班牙跨界舞蹈鬼才，身兼編舞家、舞者、導演。新科技在她的創作中佔有特殊位置<br>
                     <br>
-                    曾受邀為巴黎歌劇院及紐約大都會歌劇院委託創作，也曾為佩卓˙阿莫多瓦 (Pedro Almodovar)、米歇爾˙龔特利 (Michael Gondry)、傻瓜龐克 (Daft Punk)、碧昂絲 (Beyoncé) 、酷玩樂團 (Coldplay) 等音樂人合作編舞。<br>
+                    曾受邀為巴黎歌劇院及紐約大都會歌劇院委託創作，並與佩卓・阿莫多瓦（Pedro Almodovar）、米歇爾・龔特利（Michel Gondry）、傻瓜龐克（Daft Punk）、碧昂絲（Beyoncé）、酷玩樂團（Coldplay）等電影人、音樂人合作<br>
                     <br>
-                    《巴黎舞會》由 Blanca Li 歷時四年、動用超過百名人力，並一舉奪下 2021 年威尼斯影展最佳 VR 體驗獎，除了選擇台灣作為亞洲首演地，《巴黎舞會》也預計於 2023 至坎城、新加坡、羅馬、紐約、上海演出。
+                    《巴黎舞會》 歷時四年、動用超過百名人力打造，一舉奪下 2021 年威尼斯影展最佳 VR 體驗。除了選擇台灣作為亞洲首演地，也預計於坎城、新加坡、羅馬、紐約、上海演出
                 </div>
             </div>
         </section>
@@ -355,21 +355,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col">
                         <div class="grid">
                             <h4>地點</h4>
-                            <p>兒童新樂園步行 3 分鐘處<br>（詳細地點請容許我們先保密，我們將慢慢向你揭露）</p>
+                            <p>詳細地點暫時保密，將慢慢向你揭露</p>
                         </div>
                         <div class="grid">
                             <h4>場次</h4>
-                            <p>
-                                每週一 - 二｜公休<br>
-                                每週三 - 五<br>
-                                晚場：18:10｜19:30｜ 20:45
-                            </p>
-                            <p>
-                                每週六 - 日<br>
+                            <p style="text-align: left;">
+                                週三至週五<br>
+                                晚場：18:10｜19:30｜20:45<br>
+                                <br>
+                                週六與週日<br>
                                 午場：13:20｜14:45｜16:00<br>
-                                晚場：18:10｜19:30｜ 20:45
+                                晚場：18:10｜19:30｜20:45<br>
+                                <br>
+                                週一、週二｜公休<br>
+                                <br>
+                                體驗時長：80 分鐘
                             </p>
-                            <p>體驗時長：80 分鐘</p>
                         </div>
                     </div>
                     <div class="col">
@@ -433,7 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a id="fixed-booking" href="/lebaldeparis/booking" style="display: none;">
+    <a target="_blank" id="fixed-booking" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW" style="display: none;">
         <img src="paris/img/fixed-booking.png" />
     </a>
 

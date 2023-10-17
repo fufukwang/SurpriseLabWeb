@@ -2,8 +2,8 @@
         <div class="flex justify-between items-center">
             <div class="brand-logo">
                 <a href="/lebaldeparis">
-                    <img class="pc" src="/paris/img/brand-logo.png" alt="巴黎舞會 LE BAL PARIS" />
-                    <img class="m" src="/paris/img/brand-logo-m.png" alt="巴黎舞會 LE BAL PARIS" />
+                    <img class="pc" src="/paris/img/brand-logo.png?231017" alt="巴黎舞會 LE BAL PARIS" />
+                    <img class="m" src="/paris/img/brand-logo-m.png?231017" alt="巴黎舞會 LE BAL PARIS" />
                 </a>
             </div>
             <div class="mob-toggle m"></div>
@@ -16,6 +16,6 @@
             <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
-            <a href="/lebaldeparis/booking">預約舞會</a>
+            <a target="_blank" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
         </nav>
     </header>
