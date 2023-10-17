@@ -2,8 +2,8 @@
         <div class="flex justify-between items-center">
             <div class="brand-logo">
                 <a href="/lebaldeparis">
-                    <img class="pc" src="/paris/img/brand-logo.png" alt="巴黎舞會 LE BAL PARIS" />
-                    <img class="m" src="/paris/img/brand-logo-m.png" alt="巴黎舞會 LE BAL PARIS" />
+                    <img class="pc" src="/paris/img/brand-logo.png?231017" alt="巴黎舞會 LE BAL PARIS" />
+                    <img class="m" src="/paris/img/brand-logo-m.png?231017" alt="巴黎舞會 LE BAL PARIS" />
                 </a>
             </div>
             <div class="mob-toggle m"></div>

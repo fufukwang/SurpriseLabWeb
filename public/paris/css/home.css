@@ -684,14 +684,14 @@ body {
 #banner {
   position: relative;
   height: 100%;
-  background-image: url(../img/banner-bg.jpg);
+  background-image: url(../img/banner-bg-m.jpg?211017);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 37% center;
+  background-position: center center;
 }
 @media screen and (min-width: 768px) {
   #banner {
-    background-position: center center;
+    background-image: url(../img/banner-bg.jpg?211017);
   }
 }
 #banner .logo {
@@ -720,10 +720,9 @@ body {
   }
 }
 #banner .bottom .enter {
-  width: 248px;
-  height: 80px;
+  width: 205px;
+  height: 50px;
   background: #00AEA5;
-  background-image: url(../img/enter.svg);
   background-size: 168px auto;
   background-position: center center;
   background-repeat: no-repeat;
@@ -733,11 +732,12 @@ body {
   color: #fff;
   font-family: "txc-pearl";
   font-size: 24px;
-  line-height: 120%; /* 28.8px */
+  line-height: 1;
   letter-spacing: 1.8px;
   cursor: pointer;
   transition: background 0.3s;
   margin: 0 auto 20px auto;
+  border-radius: 50px;
 }
 @media screen and (min-width: 768px) {
   #banner .bottom .enter {
@@ -1039,21 +1039,10 @@ body {
   padding-top: 24px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 768px) {
-  #home .information .information-inner .col:nth-child(1) .grid:nth-child(1) {
-    margin-bottom: 70px;
-  }
-}
 #home .information .information-inner ul {
   margin: 0;
-  padding-left: 0;
-  list-style: none;
-}
-@media screen and (min-width: 768px) {
-  #home .information .information-inner ul {
-    padding-left: 16px;
-    list-style: disc;
-  }
+  padding-left: 1.5em;
+  text-align: left;
 }
 #home .information .information-inner ul li {
   margin-bottom: 2rem;
