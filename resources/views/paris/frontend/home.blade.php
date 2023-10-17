@@ -174,8 +174,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="desc">
                         （含一杯調飲）<br>
                         <br>
-                        <br>
-                        <br>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
@@ -189,8 +187,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$3,800<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <br>
-                        <br>
                         <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
