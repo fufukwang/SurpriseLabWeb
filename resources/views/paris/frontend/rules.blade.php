@@ -304,7 +304,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>Change Your Booking</h3>
             </div>
 
-            <p>預售票券在劃位後若需更改體驗日期、取消退費，請提供相應的資料，請來信客服詢問：<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw"><span style="color: #F4D9D4;">lebaldeparis@surpriselab.com.tw</span></a></p>
+            <p>購票後若需要退費，或是劃位後需要退費、改期和轉讓，請來信客服詢問並附上所需資料：<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw"><span style="color: #F4D9D4;">lebaldeparis@surpriselab.com.tw</span></a></p>
             <br>
 
             <table>
@@ -324,21 +324,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>現場須出示確認信<br>及向櫃檯說明<br>原訂票人姓名、電話</td>
                 </tr>
                 <tr>
-                    <td>退票</td>
-                    <td>購票者的<br>姓名、購買信箱、手機</td>
+                    <td>退票<br>（未收到劃位序號）</td>
+                    <td>購票者的<br>姓名、購買信箱</td>
                     <td>訂單編號</td>
+                </tr>
+                <tr>
+                    <td>退票<br>（已收到劃位序號）</td>
+                    <td>購票者的<br>姓名、購買信箱</td>
+                    <td>劃位序號</td>
                 </tr>
             </table>
 
             <br>
 
             <ul>
-                <li>改期後若仍需退票，退還費用為50%</li>
-                <li>請依照上述說明附上相關資訊，來信客服信箱：<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></li>
+                <!-- <li>改期後若仍需退票，退還費用為50%</li>
+                <li>請依照上述說明附上相關資訊，來信客服信箱：<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></li> -->
                 <li>退費入帳約需 7 至 10 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</li>
-                <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
-                <li>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項。若有需要，請於重新訂購所需票券數量後，再聯繫主辦單位進行退款（退款酌收10%金流處理手續費）</li>
-                <li>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</li>
+                <!-- <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
+                <li>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
+                <li>購買預售票者，尚未收到劃位序號前申請退費，將不扣除10%手續費，可全額退費</li>
+                <li>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</li> -->
+                <li>
+                    預購與劃位注意事項：
+                    <ul>
+                        <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
+                        <li>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
+                        <li>購買預售票、尚未收到劃位序號前申請退費，將不扣除手續費全額退費</li>
+                        <li>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</li>
+                        <li>收到劃位信件當天，進入劃位網站後，若沒有能來的時段，在未使用序號的狀況下，收到劃位信件的 6 小時內可向客服信箱提出退費申請，亦將不扣除手續費全額退費</li>
+                    </ul>
+                </li>
                 <li>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 金流手續處理費）</li>
                 <li>發票若需新增/更改統編、抬頭或電子載具號碼，請先申請進行退款流程（規則同一般退款程序，且需酌收10%金流處理手續費），並重新訂購，再於訂購時填寫正確發票資訊</li>
             </ul>
@@ -360,6 +376,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>Refund Policy</h3>
             </div>
 
+            <center>
+                <p>已完成劃</p>
+            </center>
             <p>不可抗力因素之更改訂位及退費辦法：若因天災、國際病毒、戰爭等不可抗力因素，由政府、該縣市主管機關發布停止上班、停演訊息，本專案將暫停演出，並協助改期或全額退費</p>
             <br>
 
@@ -400,7 +419,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>90%</td>
                 </tr>
                 <tr>
-                    <td>線上購票結帳完成後</td>
+                    <td>劃位完成後</td>
                     <td>--</td>
                     <td>○</td>
                     <td>○</td>
@@ -414,7 +433,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>體驗前 10 日、結帳完成後退還費用 90%，係因 10% 金流手續費</li>
                 <li>申請退費需收到「退費確認信」，才是成功完成程序，後續請靜候金流系統 7-10 個工作天退費</li>
                 <li>票券有效期間為本演出期間內（依網站公告），逾期視同作廢</li>
-                <li>劃位序號過期未使用，導致序號失效者，不予退費</li>
+                <!-- <li>劃位序號過期未使用，導致序號失效者，不予退費</li> -->
             </ul>
             <br>
 
