@@ -400,9 +400,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <table>
                 <tr>
                     <th></th>
-                    <th>改期</th>
-                    <th>轉讓</th>
-                    <th>退費</th>
+                    <th style="white-space: nowrap;">改期</th>
+                    <th style="white-space: nowrap;">轉讓</th>
+                    <th style="white-space: nowrap;">退費</th>
                 </tr>
                 <tr>
                     <td>已完成預售票購買，未收到劃位序號</td>
