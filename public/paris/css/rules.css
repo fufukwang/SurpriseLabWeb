@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+*::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #C17F7E;
+  opacity: 1; /* Firefox */
+}
 *::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #C17F7E;
   opacity: 1; /* Firefox */
@@ -317,7 +321,9 @@ button.p-btn.secondary:hover:not([disabled]) {
   display: block;
   pointer-events: none;
   content: "";
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .checkbox-group label span:after {
   position: absolute;
@@ -529,10 +535,9 @@ button.p-btn.secondary:hover:not([disabled]) {
   font-size: 34px;
   font-weight: 600;
   line-height: 120%;
-  letter-spacing: 4.5px;
   margin: 10px 0;
   position: relative;
-  color: #F4D9D4;
+  color: #E28A8A;
   transition: color 0.4s;
 }
 @media screen and (min-width: 992px) {
@@ -565,7 +570,7 @@ button.p-btn.secondary:hover:not([disabled]) {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #F4D9D4;
+    background: #E28A8A;
     transform: scaleX(0);
     transform-origin: 0 50%;
     transition: transform 0.4s ease-out;
@@ -579,7 +584,7 @@ button.p-btn.secondary:hover:not([disabled]) {
 }
 @media screen and (min-width: 992px) {
   #main-header nav a.active {
-    color: #F4D9D4;
+    color: #E28A8A;
   }
 }
 #main-header.always-fixed {
@@ -795,6 +800,4 @@ button.p-btn.secondary:hover:not([disabled]) {
 }
 #rules .clickToChangeRefund {
   cursor: pointer;
-}
-
-/*# sourceMappingURL=rules.css.map */
+}/*# sourceMappingURL=rules.css.map */
