@@ -526,7 +526,8 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
 Route::group(['middleware' => ['web']], function () {
     if(env('APP_ENV') != 'production'){
-        Route::get('/',function(){  return redirect("/tw"); });
+        // Route::get('/',function(){  return redirect("/tw"); });
+        Route::get('/',function(){ return view('landingPage.home'); });
         Route::group(['prefix' => 'tw'], function(){
             Route::get('/',function(){ return view('SurpriseLabHome.home'); });
             Route::get('/index.html',function(){ return view('SurpriseLabHome.home'); });
