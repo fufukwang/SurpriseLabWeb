@@ -375,13 +375,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h1>票券退費規則</h1>
                 <h3>Refund Policy</h3>
             </div>
-
-            <center>
-                <p>已完成劃</p>
-            </center>
+            
             <p>不可抗力因素之更改訂位及退費辦法：若因天災、國際病毒、戰爭等不可抗力因素，由政府、該縣市主管機關發布停止上班、停演訊息，本專案將暫停演出，並協助改期或全額退費</p>
             <br>
 
+            <center>
+                <p style="font-size: 1.5em;">未完成劃位</p>
+            </center>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>改期</th>
+                    <th>轉讓</th>
+                    <th>退費</th>
+                </tr>
+                <tr>
+                    <td>已完成預售票購買，未收到劃位序號</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>100%</td>
+                </tr>
+                <tr>
+                    <td>已完成預售票購買，收到劃位序號 6 小時內申請退費</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>100%</td>
+                </tr>
+                <tr>
+                    <td>已完成預售票購買，已收到劃位序號，劃位序號過期未使用</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+            </table>
+            <br>
+
+            <center>
+                <p style="font-size: 1.5em;">已完成劃位</p>
+            </center>
             <table>
                 <tr>
                     <th></th>
