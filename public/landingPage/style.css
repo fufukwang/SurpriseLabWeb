@@ -19,12 +19,12 @@
 }
 
 .box{
-    width: 50%;
+    width: 33.333%;
     height: 100%;
     position: relative;
 }
 
-.did,.tgt{
+.did,.tgt,.paris{
     position: absolute;
     top: 0;
     left: 0;
@@ -58,14 +58,26 @@
     border-left-width: 13px;
 }
 
-@media(max-width:776px){
+@media(max-width:992px){
     .box{
         width: 100%;
-        height: 50%;
+        height: 33.333%;
         position: relative;
     }
     
-    .did,.tgt{
+    .did,.tgt,.paris{
         border: solid 10px #000;
     }
+}
+
+.paris{
+    background-image: url(img/bg-paris.jpg);
+    background-size: cover;
+    background-position: center;
+    border-left-width: 2.5px;
+}
+
+.paris:hover{
+    border-width: 15px;
+    border-left-width: 13px;
 }
