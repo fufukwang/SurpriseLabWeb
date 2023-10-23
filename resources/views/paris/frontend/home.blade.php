@@ -454,7 +454,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @include('paris.frontend._footer')
 
     <a target="_blank" id="fixed-booking" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW" style="display: none;">
-        <img src="paris/img/fixed-booking.png" />
+        <img src="/paris/img/fixed-booking.png" />
     </a>
 
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
