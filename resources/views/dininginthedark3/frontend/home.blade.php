@@ -1078,7 +1078,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-                        <div class="section sec-partner" style="display:none;">
+                        <div class="section sec-partner">
                             <div class="container">
 
                                 <div class="section-header">
@@ -1090,8 +1090,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="partner-sec-wrapper">
                                     <div class="partners-img">
-                                        <img class="img-fluid d-sm-block d-none" src="img/other/partners.png?v=0.2" alt="partners">
-                                        <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png?v=0.2" alt="partners">
+                                        <!-- <img class="img-fluid d-sm-block d-none" src="img/other/partners.png?v=0.2" alt="partners">
+                                        <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png?v=0.2" alt="partners"> -->
+                                        <picture>
+                                            <source srcset="img/other/partner-zenfone.webp" type="image/webp">
+                                            <img src="img/other/partner-zenfone.png" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;" />
+                                        </picture>
                                     </div>
                                 </div>
                             </div>
