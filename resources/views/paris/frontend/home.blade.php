@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css?231023">
+    <link rel="stylesheet" href="/paris/css/home.css?231027">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -43,8 +43,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img class="logo" src="/paris/img/logo.png?231017" />
         <div class="bottom">
             <div class="enter">ENTER</div>
-            <img class="banner-logos pc" src="/paris/img/banner-logos.png" />
-            <img class="banner-logos m" src="/paris/img/banner-logos-m.png" />
+            <!-- <img class="banner-logos pc" src="/paris/img/banner-logos.png" />
+            <img class="banner-logos m" src="/paris/img/banner-logos-m.png" /> -->
+            <img class="banner-logos" src="/paris/img/banner-logos.png?231027" />
         </div>
     </div>
 
@@ -93,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 來巴黎舞會<br>
                 跳場最自由的舞，做一場最真實的夢<br>
                 <br>
-                Now, should we dance?
+                Now, Shall we dance?
             </div>
     
             <div class="about">
@@ -344,16 +345,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section id="sec-group">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
-                <h1>BLANCA LI</h1>
-                <h3>創作團隊</h3>
+                <h1>創作團隊</h1>
+                <h3 style="line-height: 150%;">
+                    製作｜布蘭卡‧李舞團 Blanca Li Company<br>
+                    導演、編舞、設計與作詞｜布蘭卡‧李 Blanca Li
+                </h3>
             </div>
     
             <div class="blancali">
                 <img class="photo" src="/paris/img/blancali.jpg" />
                 <div class="desc">
-                    Blanca Li（布蘭卡・李）<br>
-                    <br>
-                    西班牙跨界舞蹈鬼才，身兼編舞家、舞者、導演。新科技在她的創作中佔有特殊位置<br>
+                    Blanca Li（布蘭卡・李）為西班牙跨界舞蹈鬼才，身兼編舞家、舞者、導演。新科技在他的創作中佔有特殊位置<br>
                     <br>
                     曾受邀為巴黎歌劇院及紐約大都會歌劇院委託創作，並與佩卓・阿莫多瓦（Pedro Almodovar）、米歇爾・龔特利（Michel Gondry）、傻瓜龐克（Daft Punk）、碧昂絲（Beyoncé）、酷玩樂團（Coldplay）等電影人、音樂人合作<br>
                     <br>
@@ -442,7 +444,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="/paris/img/partner-taicca.png" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-vive.png" />
+                    <img src="/paris/img/partner-vive.png?231027" />
                 </div>
                 <div class="logo">
                     <img src="/paris/img/partner-surpriseLab.png" />
