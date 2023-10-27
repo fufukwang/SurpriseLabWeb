@@ -71,7 +71,7 @@
 }
 
 .paris{
-    background-image: url(img/bg-paris.jpg?231027);
+    background-image: url(img/bg-paris.jpg?231027); 
     background-size: cover;
     background-position: center;
     border-left-width: 2.5px;
