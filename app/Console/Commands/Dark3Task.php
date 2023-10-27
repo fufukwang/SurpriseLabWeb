@@ -89,7 +89,7 @@ class Dark3Task extends Command
         // 前 7 天 & 當天
         try {
             // 14 天
-            $pr14day = pro::select('id','day')->where('open',1)
+            $pr14day = pro::select('id','day')
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=14")->get();
             foreach($pr14day as $pro){
                 // 找出正常的訂單
@@ -107,7 +107,7 @@ class Dark3Task extends Command
                 }
             }
             // 7 天
-            $pr07day = pro::select('id')->where('open',1)
+            $pr07day = pro::select('id')
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=7")->get();
             foreach($pr07day as $pro){
                 // 找出正常的訂單
@@ -173,7 +173,7 @@ class Dark3Task extends Command
                     }
                 }
             }
-            $proday = pro::select('id')->where('open',1)
+            $proday = pro::select('id')
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=0")->get();
             foreach($proday as $pro){
                 $ordernow = order::select('id','tel','email')->where('pro_id',$pro->id)->where('pay_status','已付款')->get();
