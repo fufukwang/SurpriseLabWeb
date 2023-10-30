@@ -218,7 +218,7 @@ class InvController extends WebController
                     'Comment' => $last_four,
                     'Status' => '1' //1=立即開立，0=待開立，3=延遲開立
                 ];
-                Log::error($post_data_array);
+                // Log::error($post_data_array);
                 $result = $this->inv_sent($post_data_array);
                 Log::error($result);
                 $results = json_decode($result['web_info'],true);
