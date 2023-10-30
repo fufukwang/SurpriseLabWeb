@@ -980,7 +980,7 @@ $(function(){
         var id = $(this).data('id');
         
         var dial = $(this).data('dial');
-        var phone = dial.replace('+886','0') + $(this).data('phone').replace('+8860','0').replace('+886','0');
+        var phone = dial.replace('+886','0') + $(this).data('phone').toString().replace('8860','0').replace('886','0').replace('+8860','0').replace('+886','0');
         var totle_money = $(this).data('totle_money');
         var handling = $(this).data('handling');
         var refund = $(this).data('refund');
