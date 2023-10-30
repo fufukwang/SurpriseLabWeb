@@ -170,11 +170,13 @@
         if($row->pay_status == '未完成'){
             $inv_money = 0;
         } else {
+            if($row->pay_type == '合作販售'){ $inv_money = $totle_money; }
             $handling_fee = 0;
             if($row->handling > 0 && $row->refund > 0) $handling_fee = round($row->handling * $row->refund / 100);
             $inv_money -= $row->refund;
             $inv_money += $handling_fee;
         }
+
     ?>
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>@if($row->pay_status=='已付款' && $row->refund == 0 && $totle_money>0 && !$inv_open && !$not_inv)<input type="checkbox" name="id[]" value="{{ $row->id }}">@endif</td>

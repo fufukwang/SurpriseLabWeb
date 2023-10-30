@@ -167,12 +167,14 @@ class InvController extends WebController
                 $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
                 $ItemName .= '巴黎舞會'.$ticket;$ItemCount .= $num;$ItemUnit .= '張';$ItemPrice .= $price;$ItemAmt .= ($price*$num);
                 if($row->dis_money>0){
-                    $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->dis_money;$ItemAmt .= '|'.$row->dis_money;
+                    $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|-'.$row->dis_money;$ItemAmt .= '|-'.$row->dis_money;
                 }
                 if($row->co_money>0){
-                    $ItemName .= '|禮物卡/序號折抵';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$row->co_money;$ItemAmt .= '|'.$row->co_money;
+                    $ItemName .= '|禮物卡/序號折抵';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|-'.$row->co_money;$ItemAmt .= '|-'.$row->co_money;
                 }
-
+                if(($price*$num) - $row->dis_money - $row->co_money != $totleamt){
+                    $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|-'.$row->dis_money;$ItemAmt .= '|-'.$row->dis_money;
+                }
 
                 $inv_count = inv::where('order_id',$row->id)->where('is_cancal',1)->count();
                 $psn = '';
