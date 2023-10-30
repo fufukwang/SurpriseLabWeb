@@ -134,7 +134,7 @@ class InvController extends WebController
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('id',$request->id)->select('name','sn','email','pople','tel',/*'dial_code',*/'id','money','dis_money','tax_id','tax_name','co_money','vehicle','p1','p2','p4','ticket')->get();
+            $orders = order::whereIn('paris_order.id',$request->id)->leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')->select('name','sn','email','pople','tel',/*'dial_code',*/'paris_order.id','paris_order.money','dis_money','tax_id','tax_name','co_money','p1','p2','p4','vehicle','ticket')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
                 $phone = str_replace("+886","0",str_replace("+8860","0",$row->tel));
@@ -173,7 +173,8 @@ class InvController extends WebController
                     $ItemName .= '|禮物卡/序號折抵';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|-'.$row->co_money;$ItemAmt .= '|-'.$row->co_money;
                 }
                 if(($price*$num) - $row->dis_money - $row->co_money != $totleamt){
-                    $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|-'.$row->dis_money;$ItemAmt .= '|-'.$row->dis_money;
+                    $balance = $totleamt - (($price*$num) - $row->dis_money - $row->co_money);
+                    $ItemName .= '|折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|'.$balance;$ItemAmt .= '|'.$balance;
                 }
 
                 $inv_count = inv::where('order_id',$row->id)->where('is_cancal',1)->count();
@@ -217,8 +218,9 @@ class InvController extends WebController
                     'Comment' => $last_four,
                     'Status' => '1' //1=立即開立，0=待開立，3=延遲開立
                 ];
+                Log::error($post_data_array);
                 $result = $this->inv_sent($post_data_array);
-                // Log::error($result);
+                Log::error($result);
                 $results = json_decode($result['web_info'],true);
                 if($results['Status'] == 'SUCCESS'){
                     if(isset($results['Result']) && gettype($results['Result']) == 'string') $r = json_decode($results['Result'],true);
