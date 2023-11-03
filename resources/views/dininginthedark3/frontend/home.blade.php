@@ -1089,6 +1089,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
 
                                 <div class="partner-sec-wrapper">
+
+                                    <div style="max-width: 460px; margin: 0 auto; text-align: center;">本季 7號菜單 與 Zenfone 10 跨界合作，你將體驗夜拍專用裝置，單手捕捉精彩瞬間，與夥伴留下難忘回憶。</div>
+
                                     <div class="partners-img">
                                         <!-- <img class="img-fluid d-sm-block d-none" src="img/other/partners.png?v=0.2" alt="partners">
                                         <img class="img-fluid d-sm-none d-block" src="img/other/partners-mobile.png?v=0.2" alt="partners"> -->
