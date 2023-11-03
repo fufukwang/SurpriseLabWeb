@@ -174,7 +174,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,400<span>($1,850/人)</span></h2>
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <span>【早鳥優惠】11/05 前購票輸入【FREEBIRD】享$100折扣 </span>
+                        <span>【早鳥優惠延長】11/13 前購票輸入【FRIENDS】享$100折扣</span>
                         <br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
@@ -220,7 +220,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,400<span>($1,850/人)</span></h2>
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <span>【早鳥優惠】11/05 前購票輸入【FREEBIRD】享$100折扣 </span>
+                        <span>【早鳥優惠延長】11/13 前購票輸入【FRIENDS】享$100折扣</span>
                         <br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞

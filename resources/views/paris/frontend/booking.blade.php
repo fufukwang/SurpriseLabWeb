@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/select2.css"/>
-    <link rel="stylesheet" href="/paris/css/booking.css?231020">
+    <link rel="stylesheet" href="/paris/css/booking.css?231103">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -83,10 +83,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             親愛的賓客，我們誠摯邀請你<br>
             跳一晚最自由的舞、做一場最清醒的夢<br>
             <br>
-            在這場 80 分鐘的頂級 VR 晚宴中<br>
+            在這場 80 分鐘 VR 頂級晚宴中<br>
             你可以期待<br>
-            跨越時空，沉浸咆哮年代的巴黎<br>
-            戴起面具，穿上 CHANEL 數位高訂禮服<br>
+            跨越時空，沉浸在巴黎午夜中<br>
+            戴起面具，穿上數位高級訂製服<br>
             脫離現實，做你選擇的自己<br>
             <br>
             期待與你在美好年代相見<br>
@@ -97,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="col">
                     <div class="grid">
                         <h4>地點</h4>
-                        <p>111 台北市士林區的某棟秘密建築<br>（詳細地點請容許我們先保密，我們將慢慢向你揭露）</p>
+                        <p>詳細地點暫時保密，將慢慢向你揭露</p>
                     </div>
                     <div class="grid">
                         <h4>場次</h4>
@@ -108,7 +108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                         <p>
                             每週六 - 日<br>
-                            午場：13:20｜14:45｜16:00<br>
+                            午場：12:50｜14:15｜15:30<br>
                             晚場：18:10｜19:30｜ 20:45
                         </p>
                         <p>體驗時長：80 分鐘</p>
@@ -120,7 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <ul>
                             <li>
                                 <p>
-                                    現場包含 VR 體驗和 1 杯酒精調飲，為顧及體驗安全：
+                                    現場包含 VR 體驗和 1 杯調飲，為顧及體驗安全：
                                     <ul>
                                         <li>孕婦、心臟病和高血壓患者不建議體驗</li>
                                         <li>體內有電子儀器者（例：心律調整器、助聽器、除顫器）及患有癲癇容易暈倒、視力受損者下訂前需諮詢專業醫師以維護體驗安全</li>
@@ -209,10 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <label>張數</label>
                             <select name="num" data-placeholder="選擇張數">
                                 <option></option>
-                                <option value="2">2</option>
-                                <option value="4">4</option>
-                                <option value="6">6</option>
-                                <option value="8">8</option>
+                                <option value="1">1</option>
                             </select>
                             <div class="select-wrapper"></div>
                         </div>
@@ -493,6 +490,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris/js/plugins/micromodal.min.js"></script>
     <script src="/paris/js/main.js?231003"></script>
     <script src="/paris/js/phone_code.js"></script>
-    <script src="/paris/js/booking.js?2309271"></script>
+    <script src="/paris/js/booking.js?231103"></script>
 </body>
 </html>
