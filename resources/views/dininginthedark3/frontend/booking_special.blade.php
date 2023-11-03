@@ -349,7 +349,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <div class="modal-body-container">
                                             <div class="modal-body">
                                                 <p>
-                                                    <span class="d-block d-sm-inline-block">《微醺大飯店：1980s》官方網站</span> <a href="http://www.surpriselab.com.tw/dininginthedark3" target="_blank">http://www.surpriselab.com.tw/dininginthedark3</a>（以下稱「本網站」）為驚喜製造有限公司（以下稱「本公司」）所經營，本網站尊重您的隱私權，並致力於保護您的個人資料。於使用《微醺大飯店：1980s》官方網站前，請您詳細閱讀本條之「隱私權政策」（以下稱「本政策」），並隨時注意本網站所公告之相關修改或變更，本公司有權於任何時間修改或變更本隱私權政策之內容。當您使用本網站時，或於任何修改、變更後繼續使用本網站，皆表示您已閱讀、瞭解並同意接受本政策，或該修改、變更後之內容，及同意依據本政策蒐集、處理與利用您的個人資料；如果您無法遵守或不同意本政策之內容，或您所屬的國家、地區排除本政策內容之全部或一部時，請您立即停止使用《微醺大飯店：1980s》官方網站。此外，驚喜製造有限公司於未經您許可的情形下，絕不會將您的個人資料提供予任何第三方。
+                                                    <span class="d-block d-sm-inline-block">《微醺大飯店：1980s》官方網站</span> <a href="https://www.surpriselab.com.tw/dininginthedark3/index.html" target="_blank">https://www.surpriselab.com.tw/dininginthedark3/index.html</a>（以下稱「本網站」）為驚喜製造有限公司（以下稱「本公司」）所經營，本網站尊重您的隱私權，並致力於保護您的個人資料。於使用《微醺大飯店：1980s》官方網站前，請您詳細閱讀本條之「隱私權政策」（以下稱「本政策」），並隨時注意本網站所公告之相關修改或變更，本公司有權於任何時間修改或變更本隱私權政策之內容。當您使用本網站時，或於任何修改、變更後繼續使用本網站，皆表示您已閱讀、瞭解並同意接受本政策，或該修改、變更後之內容，及同意依據本政策蒐集、處理與利用您的個人資料；如果您無法遵守或不同意本政策之內容，或您所屬的國家、地區排除本政策內容之全部或一部時，請您立即停止使用《微醺大飯店：1980s》官方網站。此外，驚喜製造有限公司於未經您許可的情形下，絕不會將您的個人資料提供予任何第三方。
                                                 </p>
                                                 <p>&nbsp;</p>
                                                 <p>
