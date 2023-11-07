@@ -279,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="select-wrapper"></div>
                         </div>
                     </div>
-                    <div class="input-group">
+                    <!-- <div class="input-group">
                         <label>統一編號（無此需求可不須填寫）</label>
                         <input class="tax" type="text" name="company_tax_ID" />
                     </div>
@@ -290,7 +290,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="input-group">
                         <label>手機載具 （無此需求可不須填寫）</label>
                         <input class="invoices" type="text" name="vehicle" />
-                    </div>
+                    </div> -->
                     <div class="input-group">
                         <label>備註</label>
                         <textarea name="notice" rows="8" placeholder="+特殊需求（行動不便等）可提前備註"></textarea>
@@ -302,7 +302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <span class="discount_note" style="color: #dc3545;"></span>
                         </div>
                         <div class="input-group">
-                            <label>禮物卡序號</label>
+                            <label>劃位序號</label>
                             <input type="text" name="gift" id="gift" maxlength="20" />
                             <span class="gift_note" style="color: #dc3545;"></span>
                         </div>
@@ -397,7 +397,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="filed-value">0</div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <!-- <div class="input-group">
                             <label>統一編號（無此需求可不須填寫）</label>
                             <div class="filed-value">12345678</div>
                         </div>
@@ -408,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="input-group">
                             <label>手機載具</label>
                             <div class="filed-value"></div>
-                        </div>
+                        </div> -->
                         <div class="input-group">
                             <label>備註</label>
                             <div class="filed-value">需要輪椅，一位孕婦</div>
@@ -424,7 +424,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="half-group flex align-items-end">
                             <div class="input-group">
-                                <label>禮物卡序號</label>
+                                <label>劃位序號</label>
                                 <div class="filed-value">XYZ321</div>
                             </div>
                             <div class="input-group">
