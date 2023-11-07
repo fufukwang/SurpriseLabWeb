@@ -304,17 +304,17 @@ function checkStep2Field() {
         allowNext = false;
     }
 
-    // 檢查統編格式
-    var tax = $('#step2 input.tax').val();
-    if( tax !== '' && !/^[0-9]*$/.test(tax) ) {
-        var $inputGroup = $('#step2 input.tax').closest('.input-group');
-        if($inputGroup.find('.error').length === 0) {
-            $inputGroup.append('<div class="error">統一編號格式錯誤</div>');
-        } else {
-            $inputGroup.find('.error').text('統一編號格式錯誤');
-        }
-        allowNext = false;
-    }
+    // // 檢查統編格式
+    // var tax = $('#step2 input.tax').val();
+    // if( tax !== '' && !/^[0-9]*$/.test(tax) ) {
+    //     var $inputGroup = $('#step2 input.tax').closest('.input-group');
+    //     if($inputGroup.find('.error').length === 0) {
+    //         $inputGroup.append('<div class="error">統一編號格式錯誤</div>');
+    //     } else {
+    //         $inputGroup.find('.error').text('統一編號格式錯誤');
+    //     }
+    //     allowNext = false;
+    // }
 
     // // 檢查載具格式 
     // var invoices = $('#step2 input.invoices').val();
