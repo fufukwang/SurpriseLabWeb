@@ -367,7 +367,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
                         <li>購買預售票、尚未收到劃位序號前申請退費，將不扣除手續費全額退費</li>
                         <li>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</li>
-                        <li>收到劃位信件當天，進入劃位網站後，若沒有能來的時段，在未使用序號的狀況下，收到劃位信件的 6 小時內可向客服信箱提出退費申請，亦將不扣除手續費全額退費</li>
+                        <li>收到劃位信件當天，進入劃位網站後，在未使用序號的狀況下，收到劃位信件的 6 小時內可向客服信箱提出延期劃位申請</li>
                     </ul>
                 </li>
                 <li>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 金流手續處理費）</li>
@@ -403,12 +403,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <th style="white-space: nowrap;">改期</th>
                     <th style="white-space: nowrap;">轉讓</th>
                     <th style="white-space: nowrap;">退費</th>
-                </tr>
-                <tr>
-                    <td>已完成預售票購買，未收到劃位序號</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>100%</td>
                 </tr>
                 <tr>
                     <td>已完成預售票購買，收到劃位序號 6 小時內申請退費</td>
