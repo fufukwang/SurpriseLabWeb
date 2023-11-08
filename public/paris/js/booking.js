@@ -42,6 +42,7 @@ $('#step1 .type select').on('change', function (e) {
         $('#step1 .date').css({opacity: 0, 'pointer-events': 'none'});
         $('#step1 .time').css({opacity: 0, 'pointer-events': 'none'});
         $('#step1 .go-next').addClass('disabled');
+        $('.arm').trigger('click');
     }
 });
 // 選擇&人數時
@@ -451,7 +452,7 @@ function setStep3Contents() {
     $('div.ticket > table > tbody > tr:nth-child(1) > td:nth-child(2)').text($('.type select').val());
     $('div.ticket > table > tbody > tr:nth-child(2) > td:nth-child(2)').text($('.guests select').val());
     $('div.ticket > table > tbody > tr:nth-child(3) > td:nth-child(2)').text($('#booking_date').val());
-    $('div.ticket > table > tbody > tr:nth-child(4) > td:nth-child(2)').text($('#booking_time').text().substr(0, 13));
+    $('div.ticket > table > tbody > tr:nth-child(4) > td:nth-child(2)').text($('#booking_time option:selected').text().substr(0, 13));
     $('div.ticket > table > tbody > tr:nth-child(5) > td:nth-child(2)').text(money+' 元');
     $('.submitForm').text('前往付款 '+money+' 元');
     if(discount_money>0){
