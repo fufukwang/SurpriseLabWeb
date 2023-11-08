@@ -1464,4 +1464,27 @@ button.p-btn.secondary:hover:not([disabled]) {
   display: flex;
   justify-content: center;
   margin-top: 60px;
-}/*# sourceMappingURL=booking.css.map */
+}
+.arm {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.arm:before, .arm:after {
+    position: absolute;
+    content: "";
+    height: 80%;
+    width: 3px;
+    background-color: #dc3545;
+    top:2px;
+    left:20px;
+}
+.arm:before {
+    transform: rotate(45deg);
+}
+.arm:after {
+    transform: rotate(-45deg);
+}
+/*# sourceMappingURL=booking.css.map */
+

@@ -42,6 +42,7 @@ $('#step1 .type select').on('change', function (e) {
         $('#step1 .date').css({opacity: 0, 'pointer-events': 'none'});
         $('#step1 .time').css({opacity: 0, 'pointer-events': 'none'});
         $('#step1 .go-next').addClass('disabled');
+        $('.arm').trigger('click');
     }
 });
 // 選擇&人數時
