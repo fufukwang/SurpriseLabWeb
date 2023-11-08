@@ -490,6 +490,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris/js/plugins/micromodal.min.js"></script>
     <script src="/paris/js/main.js?231003"></script>
     <script src="/paris/js/phone_code.js"></script>
-    <script src="/paris/js/booking.js?231107"></script>
+    <script src="/paris/js/booking.js?231108"></script>
 </body>
 </html>
