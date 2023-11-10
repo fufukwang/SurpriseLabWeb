@@ -405,16 +405,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <th style="white-space: nowrap;">退費</th>
                 </tr>
                 <tr>
-                    <td>已完成預售票購買，收到劃位序號 6 小時內申請退費</td>
+                    <td>已完成預售票購買，收到劃位序號後未使用</td>
                     <td>X</td>
                     <td>X</td>
                     <td>100%</td>
-                </tr>
-                <tr>
-                    <td>已完成預售票購買，已收到劃位序號，劃位序號過期未使用</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
                 </tr>
             </table>
             <br>

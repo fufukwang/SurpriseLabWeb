@@ -385,7 +385,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 晚場：18:10｜19:30｜20:45<br>
                                 <br>
                                 週六與週日<br>
-                                午場：13:20｜14:45｜16:00<br>
+                                午場：12:50｜14:15｜15:30<br>
                                 晚場：18:10｜19:30｜20:45<br>
                                 <br>
                                 週一、週二｜公休<br>
