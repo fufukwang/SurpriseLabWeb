@@ -144,8 +144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$2,000</h2>
                     <div class="desc">
                         （含一杯調飲）<br>
-                        <br> 
-                        <br>
+                        <br><br>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
@@ -159,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$3,800<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <br>
+                        <span>【早鳥優惠加碼】11/19前購票輸入【ONLYU】享$100折扣</span>
                         <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
@@ -174,8 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,400<span>($1,850/人)</span></h2>
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <span>【早鳥優惠延長】11/12 前購票輸入【FRIENDS】享$100折扣</span>
-                        <br>
+                        <br><br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
@@ -206,7 +204,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$3,800<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <br><br>
+                        <span>【早鳥優惠加碼】11/19前購票輸入【ONLYU】享$100折扣</span>
+                        <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
@@ -220,8 +219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,400<span>($1,850/人)</span></h2>
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <span>【早鳥優惠延長】11/12 前購票輸入【FRIENDS】享$100折扣</span>
-                        <br>
+                        <br><br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
