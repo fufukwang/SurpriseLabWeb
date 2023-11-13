@@ -61,6 +61,7 @@ class MasterController extends WebController
 
 
                 $email = $request->email;
+                $tel = $request->area_code . $request->tel;
                 if(TeamMail::where('order_id',$order->id)->where('email',$email)->count()>0){
                     return response()->json(["success"=>false,"message"=>"此信箱已完成登錄!"]);
                 } else {
@@ -72,13 +73,16 @@ class MasterController extends WebController
                     $data = [
                         'order_id' => $order->id,
                         'name'     => $request->name,
-                        'tel'      => $request->tel,
+                        'tel'      => $tel,
                         'email'    => $email,
                     ];
                     TeamMail::insert($data);
                     // 檢查確認日期補寄信件
                     $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
                         ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                    $ord->email = $email;
+                    $ord->tel = $tel;
+                    $ord->name = $request->name;
                     if($ord->email != '') $this->sendMailCenter($ord);
                     if($ord->tel != '') $this->sendSmsCenter($ord);
                     return response()->json(["success"=>true]);
