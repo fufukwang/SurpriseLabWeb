@@ -72,7 +72,7 @@ function onFormSubmit() {
             'id': $('#id').val(),
             'sn': $('#sn').val(),
             'name': $('#name').val(),
-            'tel': $('#phone').val(),
+            'tel': $('#area_code').val() + $('#phone').val(),
             'email': $('#email').val(),
         };
         $.post('/lebaldeparis/Team/SlaveStore',obj,function(data){
