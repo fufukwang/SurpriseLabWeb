@@ -1255,7 +1255,11 @@ $('#inputModal').on('hide.bs.modal', function (e) {
             tel: tel,
             type: type,
         },function(data){
-            $.Notification.notify('success','bottom left','已更新', '已重新送出');
+            if(data.success){
+                $.Notification.notify('success','bottom left','已更新', 'API 執行完成');
+            } else {
+                $.Notification.notify('error','bottom left','未更新', '傳送失敗，電話有誤。');
+            }
         },'json');
     });
 });
