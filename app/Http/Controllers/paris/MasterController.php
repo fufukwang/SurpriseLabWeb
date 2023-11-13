@@ -132,7 +132,8 @@ class MasterController extends WebController
             $this->checkPower($request);
             $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
                 ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($request->id);
-
+            $ord->name = $request->name;
+            $ord->email = $request->email;
             if($this->sendMailCenter($ord,$request->type)){
                 return response()->json(["success"=>true]);
             } else {
@@ -149,7 +150,7 @@ class MasterController extends WebController
             $this->checkPower($request);
             $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
                 ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($request->id);
-
+            $ord->tel = $request->tel;
             if($this->sendSmsCenter($ord,$request->type)){
                 return response()->json(["success"=>true]);
             } else {

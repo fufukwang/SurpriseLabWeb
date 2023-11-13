@@ -82,12 +82,14 @@
                                                     <!-- <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D21" data-toggle="tooltip" data-placement="top" data-original-title="寄送21天前的通知信">21</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D14" data-toggle="tooltip" data-placement="top" data-original-title="寄送14天前的通知信">14</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知信">11</a> -->
+                                                    <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="order" data-toggle="tooltip" data-placement="top" data-original-title="訂位確認">訂位確認</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前的通知信">07</a>
 
 
                                                     <!-- <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會簡訊邀請函">邀請函</a>
                                                     <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知簡訊">11</a> -->
-                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="D00" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前簡訊">07</a>
+                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="order" data-toggle="tooltip" data-placement="top" data-original-title="訂位確認">訂位確認</a>
+                                                    <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前簡訊">07</a>
 
                                                     <a class="btn btn-danger btn-xs" href="javascript:;" data-id="{{ $row->id }}" data-toggle="tooltip" data-placement="top" data-original-title="刪除此筆資料"><i class="fa fa-remove"></i></a>
                                                 </td>
@@ -213,7 +215,11 @@ $(function(){
             email: email,
             type: type,
         },function(data){
-            $.Notification.notify('success','bottom left','已更新', '已重新送出');
+            if(data.success){
+                $.Notification.notify('success','bottom left','已更新', '已重新送出');
+            } else {
+                $.Notification.notify('error','bottom left','未更新', '寄送失敗，信箱或資料有誤。');
+            }
         },'json');
     });
     $('.send_sms').bind('click',function(){
@@ -227,7 +233,11 @@ $(function(){
             tel: tel,
             type: type,
         },function(data){
-            $.Notification.notify('success','bottom left','已更新', '已重新送出');
+            if(data.success){
+                $.Notification.notify('success','bottom left','已更新', 'API 執行完成');
+            } else {
+                $.Notification.notify('error','bottom left','未更新', '傳送失敗，電話有誤。');
+            }
         },'json');
     });
 });
