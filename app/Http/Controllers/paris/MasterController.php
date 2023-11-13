@@ -61,7 +61,7 @@ class MasterController extends WebController
 
 
                 $email = $request->email;
-                $tel = $request->area_code . $request->tel;
+                $tel = $request->tel;
                 if(TeamMail::where('order_id',$order->id)->where('email',$email)->count()>0){
                     return response()->json(["success"=>false,"message"=>"此信箱已完成登錄!"]);
                 } else {
