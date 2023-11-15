@@ -111,7 +111,7 @@
             outline: none;
             border-bottom-color: #fff;
         }
-        #fform button {
+        #fform button, #fform a {
             background: #fff;
             color: #4C2F9E;
             border-radius: 0;
@@ -124,6 +124,12 @@
             padding: 6px 10px;
             border-radius: 0;
             width: 70px;
+            white-space: nowrap;
+        }
+        #fform a {
+            width: auto;
+            margin: 5px 0;
+            display: inline-block;
         }
         #fform button:active {
             border-bottom: 2px inset rgba(0,0,0,.5);
@@ -138,6 +144,17 @@
             word-break: break-all;
             line-height: 170%;
             display: none;
+        }
+        span.pc {
+            display: none;
+        }
+        @media (min-width: 800px) {
+            #fform br.m {
+                display: none;
+            }
+            span.pc {
+                display: inline;
+            }
         }
     </style>
 <!-- Google Tag Manager -->
@@ -166,10 +183,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <section class="section-wrap skip-background-light" id="fform">
             <div class="container-xl">
                 <img class="img_fform" src="/terminalAssets/images/main/img_fform.png" alt="落日轉運站">
-                <div class="title">落日轉運站 下一站連接中</div>
+                <div class="title">落日轉運站<span class="pc"> </span><br class="m">即將抵達台北站…</div>
                 <div>建議做法：</div>
                 <ul>
-                    <li>
+                    <!-- <li>
                         <div class="inpit-g">
                             <span>留下 E-mail </span>
                             <input type="text">
@@ -178,8 +195,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                     </li>
                     <li>11月中 我們將來信告訴你更多</li>
-                    <li>猜猜看，下一站我們將前往…？</li>
-                    
+                    <li>猜猜看，下一站我們將前往…？</li> -->
+                    <li>你是否曾聽說過《落日月台》？11/30 閘門即將開啟，敬請期待</li>
+                    <li>在閘門開啟之前，有三位神秘的目擊者，目睹了落日轉運站最新的變化，你願意，聽聽他們怎麼說嗎？ <a target="_blank" href="https://m.me/surpriselabtw?ref=Flow%205">和他們聊聊</a></li>
+                    <li>前往後，若對話沒有開啟，請打字輸入「落日月台」，即可開啟對話</li>
                 </ul>
                 <div class="err">ERR_THESUNSETTERMINAL_DISCONNECTED</div>
             </div>
@@ -216,8 +235,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div id="flush-1-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-1-headingFour" data-bs-parent="#accordionFlushExample-1">
                                 <div class="accordion-body">
                                     <p>
-                                        驚喜製造 2022.11.10 - 2023.10.15 於高雄推出的沉浸式計畫，包含以交通工具為題的兩項作品：<br>
-                                        微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT》，超過38,000人次參與體驗。
+                                        驚喜製造推出的巡迴沉浸式計畫，即將於2024年1月抵達台北站。<br>
+                                        2022.11.10 - 2023.10.15於首站：高雄，推出包含以交通工具為題的兩項作品，微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT》，超過 40,000 人次參與體驗。
                                     </p>
                                 </div>
                             </div>
@@ -226,13 +245,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-2-headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseFour" aria-expanded="false" aria-controls="flush-2-collapseFour">
-                                    <span class="header-title">落日轉運站結束了嗎？</span>
+                                    <span class="header-title">台北站跟高雄站有什麼差別？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
                             <div id="flush-2-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-2-headingFour" data-bs-parent="#accordionFlushExample-2">
                                 <div class="accordion-body">
-                                    <p>2023.10.15 是《落日轉運站》高雄站的最後一天，相信我們很快會再見的。</p>
+                                    <p>在巡迴第二站，落日轉運站突現奇幻時空《落日月台》；有別於高雄站的《微醺列車》及《FLIGHT》，將提供旅客探索多樣的場景變化並提供個人化全感官體驗。</p>
                                 </div>
                             </div>
                         </div>
@@ -240,13 +259,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-3-headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
-                                    <span class="header-title">下一站是哪裡？</span>
+                                    <span class="header-title">《落日月台》是什麼？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
                             <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
                                 <div class="accordion-body">
-                                    <p>留下E-mail，或關注驚喜製造，獲得《落日轉運站》的最新消息。</p>
+                                    <p>
+                                        踏入此處的旅客，皆遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的九位漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。<br>
+                                        《微醺列車》及《FLIGHT》還會回來嗎？<br>
+                                        會的！請持續關注驚喜製造，獲得最新消息。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-4-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-4-collapseFour" aria-expanded="false" aria-controls="flush-4-collapseFour">
+                                    <span class="header-title">《微醺列車》及《FLIGHT》還會回來嗎？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-4-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-4-headingFour" data-bs-parent="#accordionFlushExample-4">
+                                <div class="accordion-body">
+                                    <p>會的！請持續關注驚喜製造，獲得最新消息。</p>
                                 </div>
                             </div>
                         </div>
