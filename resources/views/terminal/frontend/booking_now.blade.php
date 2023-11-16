@@ -314,7 +314,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                             <div class="cta-wrap">
                                 <div class="btn-wrap">
-                                    <a href="booking" class="booking-btn shape-round color-primary">前往購票</a>
+                                    <a href="/terminal" class="booking-btn shape-round color-primary">前往購票</a>
                                 </div>
                                 <div class="notice-wrap">
                                     有任何問題歡迎來信：<a href="mailto:terminal@surpriselab.com.tw" class="link-text" target="_blank">terminal@surpriselab.com.tw</a>
