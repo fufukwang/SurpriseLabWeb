@@ -7,12 +7,12 @@
 
     <!-- Metadata -->
     <meta charset="UTF-8">
-    <meta name="description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="落日轉運站 The Sunset Terminal"/>
     <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
-    <meta property="og:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品"/>
+    <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
     <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png"/>
     <meta property="og:image:type" content="image/png"/>
@@ -21,7 +21,7 @@
 
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
-    <meta name="twitter:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png">
     <meta name="twitter:card" content="summary_large_image">
 

@@ -7,12 +7,12 @@
 
     <!-- Metadata -->
     <meta charset="UTF-8">
-    <meta name="description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="落日轉運站 The Sunset Terminal"/>
     <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
-    <meta property="og:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品"/>
+    <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
     <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png"/>
     <meta property="og:image:type" content="image/png"/>
@@ -21,7 +21,7 @@
 
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
-    <meta name="twitter:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div class="text-wrap">
                                 <h6 class="color-o200">恭喜您，已經完成訂位！</h6>
-                                <h6 class="color-o200" style="font-weight: bold;max-width: 560px;">您購買的班次時間是發車、起飛時間，請務必提前20分鐘取票，完成報到流程，遲到不予進場</h6>
+                                <h6 class="color-o200" style="font-weight: bold;max-width: 560px;">您購買的班次是「閘門開啟」時間，請務必提前 20 分鐘取票</h6>
                                 <p class="color-n100 body-04">每一作品皆會有一封獨立的訂位成功信件，<br/>請至您的信箱確認</p>
                                 <p class="color-n100 opacity-50 body-04">它有時候會跑到垃圾郵件，可以翻找一下</p>
                             </div>

@@ -53,17 +53,29 @@ $(function() {
         let val = $(this).text();
         let max = 0;
         switch(val.trim()){
-            case '微醺列車': max = 24; $ticket_value = 'train'; break;
-            case 'FLIGHT': max = 30; $ticket_value = 'flight'; break;
-            case 'Boat for ONE': max = 1; $ticket_value = 'boat'; break;
-            case '套票：車票+飛機票': max = 24; $ticket_value = 'A'; break;
-            case '套票B：車票+飛機票+船票': max = 1; $ticket_value = 'B'; break;
+            // case '微醺列車': max = 24; $ticket_value = 'train'; break;
+            // case 'FLIGHT': max = 30; $ticket_value = 'flight'; break;
+            // case 'Boat for ONE': max = 1; $ticket_value = 'boat'; break;
+            // case '套票：車票+飛機票': max = 24; $ticket_value = 'A'; break;
+            // case '套票B：車票+飛機票+船票': max = 1; $ticket_value = 'B'; break;
+            case '2,200/人 獨身踏上旅程': max = 1; $ticket_value = '單人票'; break;
+            case '2,100/人 雙人結伴同行': max = 2; $ticket_value = '雙人票'; break;
+            case '2,000/人 六人組隊探索': max = 2; $ticket_value = '六人票'; break;
         }
         if(max>0){
             $dropdown_count.prop('disabled',false);
             let html = '';
-            for(i=1;i<=max;i++){
-                html += '<li class="dropdown-item body-04">'+i+' 人</li>';
+            // for(i=1;i<=max;i++){
+            //     html += '<li class="dropdown-item body-04">'+i+' 人</li>';
+            // }
+            if($ticket_value == '單人票') {
+                html += '<li class="dropdown-item body-04" data-cnt="1">1張（1人）</li>';
+            } else if($ticket_value == '雙人票') {
+                html += '<li class="dropdown-item body-04" data-cnt="1">1張（2人）</li>';
+                html += '<li class="dropdown-item body-04" data-cnt="2">2張（4人）</li>';
+            } else if($ticket_value == '六人票') {
+                html += '<li class="dropdown-item body-04" data-cnt="1">1張（6人）</li>';
+                html += '<li class="dropdown-item body-04" data-cnt="2">2張（12人）</li>';
             }
             $('ul[aria-labelledby=dropdownMenuButtonCount]').html(html);
             $dropdown_count.text('選擇人數');
@@ -79,7 +91,7 @@ $(function() {
     $dropdown_count.parent().on('click','ul li',function(){
         let val = $(this).text();
         $dropdown_count.text(val);
-        $people_value = val.replace('人','').trim();
+        $people_value = $(this).data('cnt');
         controlStep2Button();
     });
 
@@ -93,91 +105,55 @@ $(function() {
     }
     // go step 2 button
     $btn_next1.on('click', function(){
+        console.log('now in step 2');
+
         // enabled
         if ( !$(this).hasClass('status-disabled') ) { 
-            let train_date_enble = false;
-            let flight_date_enble = false;
-            let boat_date_enble = false;
+            let t1_date_enble = false;
+            let t2_date_enble = false;
+            let t6_date_enble = false;
             $s2_tr.find('td').html('');
+
+            console.log('$ticket_value', $ticket_value);
+
             switch($ticket_value){
-                case 'train': 
-                    $s2_tr.removeClass('tr-bg-light');
-                    $s2_tr.removeClass('tr-bg-dark');
-                    $s2_tr.find('.name').text('微醺列車');
-                    $s2_tr.find('.name').removeClass('name-en').addClass('name-ch');
-                    $s2_tr.find('.item-price').text('$1,250');
-                    $s2_tr.find('.item-origin-price').text('');
-                    $s2_tr.find('td').eq(0).html('<i class="icon-step-done"></i>');
-                    singleMoney = 1250;
-                    train_date_enble = true;
+                case '單人票': 
+                    $s2_tr.find('.name').text('單人票');
+                    $s2_tr.find('.item-price').text('$2,200／人');
+                    singleMoney = 2200;
+                    t1_date_enble = true;
                 break;
-                case 'flight':
-                    $s2_tr.removeClass('tr-bg-light');
-                    $s2_tr.removeClass('tr-bg-dark');
-                    $s2_tr.find('.name').text('FLIGHT');
-                    $s2_tr.find('.name').removeClass('name-ch').addClass('name-en');
-                    $s2_tr.find('.item-price').text('$500');
-                    $s2_tr.find('.item-origin-price').text('');
-                    $s2_tr.find('td').eq(1).html('<i class="icon-step-done"></i>');
-                    singleMoney = 500;
-                    flight_date_enble = true;
+                case '雙人票':
+                    $s2_tr.find('.name').text('雙人票');
+                    $s2_tr.find('.item-price').text('$2,100／人');
+                    singleMoney = 2100;
+                    t2_date_enble = true;
                 break;
-                case 'boat':
-                    $s2_tr.removeClass('tr-bg-light');
-                    $s2_tr.removeClass('tr-bg-dark');
-                    $s2_tr.find('.name').text('Boat for ONE');
-                    $s2_tr.find('.name').removeClass('name-ch').addClass('name-en');
-                    $s2_tr.find('.item-price').text('$800');
-                    $s2_tr.find('.item-origin-price').text('');
-                    $s2_tr.find('td').eq(2).html('<i class="icon-step-done"></i>');
-                    singleMoney = 800;
-                    boat_date_enble = true;
-                break;
-                case 'A':
-                    $s2_tr.removeClass('tr-bg-dark');
-                    $s2_tr.addClass('tr-bg-light');
-                    $s2_tr.find('.name').text('套票');
-                    $s2_tr.find('.name').removeClass('name-en').addClass('name-ch');
-                    $s2_tr.find('.item-price').text('$1,650');
-                    $s2_tr.find('.item-origin-price').text('原價 $ 1,750');
-                    $s2_tr.find('td').eq(0).html('<i class="icon-step-done"></i>');
-                    $s2_tr.find('td').eq(1).html('<i class="icon-step-done"></i>');
-                    singleMoney = 1650;
-                    train_date_enble = true;
-                    flight_date_enble = true;
-                break;
-                case 'B':
-                    $s2_tr.removeClass('tr-bg-light');
-                    $s2_tr.addClass('tr-bg-dark');
-                    $s2_tr.find('.name').text('套票B');
-                    $s2_tr.find('.name').removeClass('name-en').addClass('name-ch');
-                    $s2_tr.find('.item-price').text('$2,400');
-                    $s2_tr.find('.item-origin-price').text('原價 $ 2,550');
-                    $s2_tr.find('td').html('<i class="icon-step-done"></i>');
-                    singleMoney = 2400;
-                    train_date_enble = true;
-                    flight_date_enble = true;
-                    boat_date_enble = true;
+                case '六人票':
+                    $s2_tr.find('.name').text('六人票');
+                    $s2_tr.find('.item-price').text('$2,000／人');
+                    singleMoney = 2000;
+                    t6_date_enble = true;
                 break;
             }
             $('.form-wrap-step-2 fieldset').hide(); // 整個日期選項
             $('.dropdown-time').hide(); // dropdown 選項
             $('.notice-item-area').hide(); // 最後的時間顯示
             // 讀取可選場次
-            if(train_date_enble){
-                let booking_date = $("#js-datepicker-train");
-                $('.from-block-train,.notice-item-train').show();
-                createDatepicker(booking_date,'train');
+            if(t1_date_enble){
+                let booking_date = $("#js-datepicker-t1");
+                $('.from-block-t1,.notice-item-t1').show();
+                createDatepicker(booking_date,'單人票');
             }
-            if(flight_date_enble){
-                let booking_date = $("#js-datepicker-flight");
-                $('.from-block-flight,.notice-item-flight').show();
-                createDatepicker(booking_date,'flight');
+            if(t2_date_enble){
+                let booking_date = $("#js-datepicker-t2");
+                $('.from-block-t2,.notice-item-t2').show();
+                createDatepicker(booking_date,'雙人票');
             }
-            if(boat_date_enble){
-                let booking_date = $("#js-datepicker-boat");
-                $('.from-block-boat,.notice-item-boat').show();
-                createDatepicker(booking_date,'boat');
+            if(t6_date_enble){
+                let booking_date = $("#js-datepicker-t6");
+                $('.from-block-t6,.notice-item-t6').show();
+                createDatepicker(booking_date,'六人票');
             }
             $step1_scenes.hide();
             $step2_scenes.show();
@@ -211,18 +187,18 @@ $(function() {
                         if($.inArray(sdate, enableDays) !== -1) {
                             allowSelected = true;
                         }
-                        if(type == 'train' || type == 'flight') {
-                            var startDate = 20230922;
-                            var endDate = 20231015;
-                            var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
-                            if (formatedDate == startDate) {
-                                className = 'have-bg have-bg-start';
-                            } else if (formatedDate > startDate && formatedDate < endDate) {
-                                className = 'have-bg';
-                            } else if (formatedDate == endDate) {
-                                className = 'have-bg have-bg-end';
-                            }
-                        }
+                        // if(type == 'train' || type == 'flight') {
+                        //     var startDate = 20230922;
+                        //     var endDate = 20231015;
+                        //     var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
+                        //     if (formatedDate == startDate) {
+                        //         className = 'have-bg have-bg-start';
+                        //     } else if (formatedDate > startDate && formatedDate < endDate) {
+                        //         className = 'have-bg';
+                        //     } else if (formatedDate == endDate) {
+                        //         className = 'have-bg have-bg-end';
+                        //     }
+                        // }
                         return [allowSelected, className];
                     },
                     beforeShow: function (input, inst) {
@@ -303,24 +279,24 @@ $(function() {
         let val = $(this).text();
         $('#dropdownMenuButtonTime-train').text(val);
         $pro_train = $(this).data('id');
-        $('.notice-item-train').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-train").val());
-        $('.notice-item-train').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
+        // $('.notice-item-train').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-t1").val());
+        // $('.notice-item-train').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
         controlStep3Button();
     });
     $('#dropdownMenuButtonTime-flight').parent().on('click','ul li',function(){
         let val = $(this).text();
         $('#dropdownMenuButtonTime-flight').text(val);
         $pro_flight = $(this).data('id');
-        $('.notice-item-flight').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-flight").val());
-        $('.notice-item-flight').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
+        // $('.notice-item-flight').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-t2").val());
+        // $('.notice-item-flight').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
         controlStep3Button();
     });
     $('#dropdownMenuButtonTime-boat').parent().on('click','ul li',function(){
         let val = $(this).text();
         $('#dropdownMenuButtonTime-boat').text(val);
         $pro_boat = $(this).data('id');
-        $('.notice-item-boat').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-boat").val());
-        $('.notice-item-boat').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
+        // $('.notice-item-boat').find('.list-item').eq(0).text('日期 '+$("#js-datepicker-t6").val());
+        // $('.notice-item-boat').find('.list-item').eq(1).text('時段 '+val.substr(0,13));
         controlStep3Button();
     });
     // control next button disabled
