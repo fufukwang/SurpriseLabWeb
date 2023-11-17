@@ -107,9 +107,7 @@ $(function() {
     $btn_next1.on('click', function(){
         // enabled
         if ( !$(this).hasClass('status-disabled') ) { 
-            let t1_date_enble = false;
-            let t2_date_enble = false;
-            let t6_date_enble = false;
+            let date_enble = false;
             $s2_tr.find('td').html('');
             
             switch($ticket_value){
@@ -117,39 +115,29 @@ $(function() {
                     $s2_tr.find('.name').text('單人票');
                     $s2_tr.find('.item-price').text('$2,200／人');
                     singleMoney = 2200;
-                    t1_date_enble = true;
+                    date_enble = true;
                 break;
                 case '雙人票':
                     $s2_tr.find('.name').text('雙人票');
                     $s2_tr.find('.item-price').text('$2,100／人');
                     singleMoney = 2100;
-                    t2_date_enble = true;
+                    date_enble = true;
                 break;
                 case '六人票':
                     $s2_tr.find('.name').text('六人票');
                     $s2_tr.find('.item-price').text('$2,000／人');
                     singleMoney = 2000;
-                    t6_date_enble = true;
+                    date_enble = true;
                 break;
             }
             $('.form-wrap-step-2 fieldset').hide(); // 整個日期選項
             $('.dropdown-time').hide(); // dropdown 選項
             $('.notice-item-area').hide(); // 最後的時間顯示
             // 讀取可選場次
-            if(t1_date_enble){
-                let booking_date = $("#js-datepicker-t1");
-                $('.from-block-t1,.notice-item-t1').show();
-                createDatepicker(booking_date,'單人票');
-            }
-            if(t2_date_enble){
-                let booking_date = $("#js-datepicker-t2");
-                $('.from-block-t2,.notice-item-t2').show();
-                createDatepicker(booking_date,'雙人票');
-            }
-            if(t6_date_enble){
-                let booking_date = $("#js-datepicker-t6");
-                $('.from-block-t6,.notice-item-t6').show();
-                createDatepicker(booking_date,'六人票');
+            if(date_enble){
+                let booking_date = $("#js-datepicker");
+                $('.from-block,.notice-item').show();
+                createDatepicker(booking_date, $ticket_value);
             }
             $step1_scenes.hide();
             $step2_scenes.show();
