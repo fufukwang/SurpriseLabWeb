@@ -72,10 +72,10 @@ $(function() {
                 html += '<li class="dropdown-item body-04" data-cnt="1">1張（1人）</li>';
             } else if($ticket_value == '雙人票') {
                 html += '<li class="dropdown-item body-04" data-cnt="1">1張（2人）</li>';
-                html += '<li class="dropdown-item body-04" data-cnt="2">2張（4人）</li>';
+                // html += '<li class="dropdown-item body-04" data-cnt="2">2張（4人）</li>';
             } else if($ticket_value == '六人票') {
                 html += '<li class="dropdown-item body-04" data-cnt="1">1張（6人）</li>';
-                html += '<li class="dropdown-item body-04" data-cnt="2">2張（12人）</li>';
+                // html += '<li class="dropdown-item body-04" data-cnt="2">2張（12人）</li>';
             }
             $('ul[aria-labelledby=dropdownMenuButtonCount]').html(html);
             $dropdown_count.text('選擇人數');
