@@ -7,12 +7,12 @@
 
     <!-- Metadata -->
     <meta charset="UTF-8">
-    <meta name="description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="落日轉運站 The Sunset Terminal"/>
     <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
-    <meta property="og:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品"/>
+    <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
     <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png"/>
     <meta property="og:image:type" content="image/png"/>
@@ -21,7 +21,7 @@
 
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
-    <meta name="twitter:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -69,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="text-wrap">
                                 <h6 class="color-o200">很抱歉，購買與劃位流程失敗</h6>
                                 <p class="color-n100 body-04">請確保網路訊號的穩定，再次前往購票。</p>
-                                <p class="color-n100 body-04">有任何問題歡迎來信：<a href="mailto:terminal@surpriselab.com.tw" class="link-text" target="_blank">terminal@surpriselab.com.tw</a></p>
+                                <p class="color-n100 body-04">有任何問題歡迎來信：<a href="mailto:mindthegap@surpriselab.com" class="link-text" target="_blank">mindthegap@surpriselab.com</a></p>
                             </div>
                             <div class="cta-wrap">
                                 <div class="btn-wrap">
