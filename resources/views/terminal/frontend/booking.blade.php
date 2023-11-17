@@ -268,16 +268,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                             </div>
                             <form class="form-wrap-step-2">
-                                <fieldset class="from-block from-block-t1">
+                                <fieldset class="from-block">
                                     <div class="section-heading-wrap">
                                         <h4 class="sub-heading-title">落日月台</h4>
                                         <p class="sub-heading-subtitle body-01 style-smaller">MIND THE GAP</p>
                                     </div>
                                     <!-- <p class="note">10/14-10/15 微醺列車將正式與高雄告別，體驗內容與一般場不同，詳情請<a target="_blank" href="https://www.facebook.com/surpriselabtw/posts/pfbid0n4pZNwJuRdujVyrfdH99JwhUfV6yMbYnn3umjcfhQZoTC4PH2Nx4CWF5SpL9AfX5l">點我查看</a>。</p> -->
                                     <div class="form-group normal-layout">
-                                        <label class="body-04" for="js-datepicker-t1">日期</label>
+                                        <label class="body-04" for="js-datepicker">日期</label>
                                         <div class="datepicker-wrap">
-                                            <input type="text" id="js-datepicker-t1" class="datepicker body-04" placeholder="選擇日期" readonly required>
+                                            <input type="text" id="js-datepicker" class="datepicker body-04" placeholder="選擇日期" readonly required>
                                         </div>
                                     </div>
                                     <div class="form-group normal-layout dropdown-time dropdown-datepart-train">
@@ -296,66 +296,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 選擇時間
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-train"></ul>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="from-block from-block-t2">
-                                    <div class="section-heading-wrap">
-                                        <h4 class="sub-heading-title">落日月台</h4>
-                                        <p class="sub-heading-subtitle body-01 style-smaller">MIND THE GAP</p>
-                                    </div>
-                                    <div class="form-group normal-layout">
-                                        <label class="body-04" for="js-datepicker-t2">日期</label>
-                                        <div class="datepicker-wrap">
-                                            <input type="text" id="js-datepicker-t2" class="datepicker body-04" placeholder="選擇日期" readonly required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group normal-layout dropdown-time dropdown-datepart-flight">
-                                        <label class="body-04" for="dropdownMenuButtonPeriod-flight">時段</label>
-                                        <div class="js-dropdown dropdown-wrap dropdown">
-                                            <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonPeriod-flight" data-bs-toggle="dropdown" aria-expanded="false">
-                                                選擇時段
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-flight"></ul>
-                                        </div>
-                                    </div>
-                                    <div class="form-group normal-layout dropdown-time dropdown-time-flight">
-                                        <label class="body-04" for="dropdownMenuButtonTime-flight">時間</label>
-                                        <div class="js-dropdown dropdown-wrap dropdown">
-                                            <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonTime-flight" data-bs-toggle="dropdown" aria-expanded="false">
-                                                選擇時間
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-flight"></ul>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="from-block from-block-t6">
-                                    <div class="section-heading-wrap">
-                                        <h4 class="sub-heading-title">落日月台</h4>
-                                        <p class="sub-heading-subtitle body-01 style-smaller">MIND THE GAP</p>
-                                    </div>
-                                    <div class="form-group normal-layout">
-                                        <label class="body-04" for="js-datepicker-t6">日期</label>
-                                        <div class="datepicker-wrap">
-                                            <input type="text" id="js-datepicker-t6" class="datepicker body-04" placeholder="選擇日期" readonly required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group normal-layout dropdown-time dropdown-datepart-boat">
-                                        <label class="body-04" for="dropdownMenuButtonPeriod-boat">時段</label>
-                                        <div class="js-dropdown dropdown-wrap dropdown">
-                                            <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonPeriod-boat" data-bs-toggle="dropdown" aria-expanded="false">
-                                                選擇時段
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-boat"></ul>
-                                        </div>
-                                    </div>
-                                    <div class="form-group normal-layout dropdown-time dropdown-time-boat">
-                                        <label class="body-04" for="dropdownMenuButtonTime-boat">時間</label>
-                                        <div class="js-dropdown dropdown-wrap dropdown">
-                                            <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonTime-boat" data-bs-toggle="dropdown" aria-expanded="false">
-                                                選擇時間
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-boat"></ul>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -498,29 +438,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <!-- <p class="notice-text body-01 style-smaller">請確認每個作品的演出區間，前後安排是否重疊。</p> -->
                                         <p class="notice-text body-01 style-smaller">如您在選擇時間時安排有誤，還請自行承擔負責。</p>
                                     </div>
-                                    <div class="notice-item-wrap notice-item-area notice-item-t1">
+                                    <div class="notice-item-wrap notice-item-area notice-item">
                                         <div class="item-caption body-01 style-smaller">
                                             單人票
-                                        </div>
-                                        <ul class="item-list">
-                                            <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
-                                            <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
-                                            <li class="list-item body-01 style-smaller">乘客人數 <span class="filled-people"></span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="notice-item-wrap notice-item-area notice-item-t2">
-                                        <div class="item-caption body-01 style-smaller">
-                                            雙人票
-                                        </div>
-                                        <ul class="item-list">
-                                            <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
-                                            <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
-                                            <li class="list-item body-01 style-smaller">乘客人數 <span class="filled-people"></span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="notice-item-wrap notice-item-area notice-item-t6">
-                                        <div class="item-caption body-01 style-smaller">
-                                            六人票
                                         </div>
                                         <ul class="item-list">
                                             <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
