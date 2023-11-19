@@ -168,7 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket3.png" /> 
+                        <img src="/paris/img/booking_ticket3_old.png" /> 
                     </div>
                     <h4>四人群舞票</h4>
                     <h2>$7,400<span>($1,850/人)</span></h2>
@@ -214,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket3.png" />
+                        <img src="/paris/img/booking_ticket3_old.png" />
                     </div>
                     <h4>四人群舞票</h4>
                     <h2>$7,400<span>($1,850/人)</span></h2>
