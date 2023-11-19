@@ -133,6 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="/paris/img/deco.svg" />
                 <h1>購票資訊</h1>
                 <h3>Ticket</h3>
+                <p><center>預購倒數最後一週，敬請把握票價優惠</center></p>
             </div>
             
             <div class="price pc">
@@ -158,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$3,800<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <span>【早鳥優惠加碼】11/19前購票輸入【ONLYU】享$100折扣</span>
+                        <span>【早鳥優惠倒數】11/26前購票輸入【twogether】享$100折扣</span>
                         <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
@@ -204,7 +205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$3,800<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <span>【早鳥優惠加碼】11/19前購票輸入【ONLYU】享$100折扣</span>
+                        <span>【早鳥優惠倒數】11/26前購票輸入【twogether】享$100折扣</span>
                         <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
