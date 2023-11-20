@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css?231027">
+    <link rel="stylesheet" href="/paris/css/home.css?231120">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -40,11 +40,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div id="banner">
+
+        <div class="pc">
+            <picture>
+                <source srcset="/paris/img/banner-bg-empty.webp" type="image/webp" />
+                <img class="bg" src="/paris/img/banner-bg-empty.png" />
+            </picture>
+        </div>
+        <div class="m">
+            <picture>
+                <source srcset="/paris/img/banner-bg-empty-m.webp" type="image/webp" />
+                <img class="bg" src="/paris/img/banner-bg-empty-m.png" />
+            </picture>
+        </div>
+        <!-- <div class="amimating"></div> -->
+
+        <img class="amimating" src="/paris/img/banner-amimating.gif" />
+
         <img class="logo" src="/paris/img/logo.png?231017" />
         <div class="bottom">
             <div class="enter">ENTER</div>
-            <!-- <img class="banner-logos pc" src="/paris/img/banner-logos.png" />
-            <img class="banner-logos m" src="/paris/img/banner-logos-m.png" /> -->
             <img class="banner-logos" src="/paris/img/banner-logos.png?231027" />
         </div>
     </div>

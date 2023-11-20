@@ -64,12 +64,69 @@ body {
 #banner {
     position: relative;
     height: 100%;
-    background-image: url(../img/banner-bg-m.jpg?211017);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    @media screen and (min-width:768px) {
-        background-image: url(../img/banner-bg.jpg?211017);
+    overflow: hidden;
+
+    .pc {
+        display: none;
+        @media screen and (min-width:768px) {
+            display: block;
+        }
+    }
+
+    .m {
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .amimating {
+        position: absolute;
+        top: 59%;
+        left: calc(50% + 24vh);
+        // width: 52.83018867vh; // auto
+        width: auto;
+        height: 33vh;
+        transform: translate(-50%, -50%);
+        background: rgba(255,255,0,0.4);
+        // opacity: 0.5;
+        max-width: none;
+        z-index: -1;
+        @media (min-aspect-ratio: 1080/1920) {
+            background: rgba(255,0,0,0.4);
+            top: calc(50% + 16vw);
+            left: calc(50% + 37vw);
+            width: 86vw;
+            // height: 40vh; // auto
+            height: auto;
+        }
+        @media screen and (min-width:768px) {
+            background: rgba(0,255,255,0.4);
+            top: 66%;
+            left: calc(50% + 8vh);
+            // width: 60.377358490vh; // auto
+            width: auto;
+            height: 37vh;
+        }
+        @media (min-aspect-ratio: 1920/1196) {
+            background: rgba(255,0,0,0.4);
+            top: calc(50% + 10vw);
+            left: calc(50% + 5vw);
+            width: 34vw;
+            // height: 40vh; // auto
+            height: auto;
+        }
     }
 
     .logo {
