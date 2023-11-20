@@ -86,6 +86,17 @@
                 <![endif]-->
 <?php
 $inTime = \Carbon\Carbon::parse($mday.' '.$time.':00')->subMinutes(15)->format('H:i');
+switch($time){
+    case '12:00': $inTime = '11:45'; break;
+    case '12:30': $inTime = '12:15'; break;
+    case '13:00': $inTime = '12:45'; break;
+    case '17:30': $inTime = '17:15'; break;
+    case '18:00': $inTime = '17:45'; break;
+    case '18:30': $inTime = '18:15'; break;
+    case '19:30': $inTime = '19:30'; break;
+    case '20:00': $inTime = '20:00'; break;
+    case '20:30': $inTime = '20:30'; break;
+}
 ?>
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
