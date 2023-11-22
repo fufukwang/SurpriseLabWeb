@@ -75,106 +75,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <li class="progress-item status-disabled"><div class="item-wrap"><span>4</span></div></li>
                                 </ul>
                             </div>
-                            <div class="body-wrap" style="display: none;">
-                                <div class="section-heading-wrap">
-                                    <h4 class="heading-content">套票組合說明</h4>
-                                </div>
-                                <div class="ticket-group-wrap bold-border-box">
-                                    <table class="ticket-group-table">
-                                        <tr>
-                                            <th class="column-2-th">
-                                                <span class="top-right item-name body-01 style-smaller">體驗</span>
-                                                <span class="bottom-left item-name body-01 style-smaller">票券</span>
-                                            </th>
-                                            <th>
-                                                <div class="icon-th">
-                                                    <i class="icon-train"></i>
-                                                    <div class="item-name body-01 style-smaller">
-                                                        <span class="name-ch">微醺列車</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th>
-                                                <div class="icon-th">
-                                                    <i class="icon-flight"></i>
-                                                    <div class="item-name body-01 style-smaller">
-                                                        <span class="name-en">FLIGHT</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <!-- <th>
-                                                <div class="icon-th">
-                                                    <i class="icon-boat"></i>
-                                                    <div class="item-name body-01 style-smaller">
-                                                        <span class="name-en">Boat for ONE</span>
-                                                    </div>
-                                                </div>
-                                            </th> -->
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-ch">微醺列車</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02"></div>
-                                            </th>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-en">FLIGHT</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$500</div>
-                                            </th>
-                                            <td></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <!-- <tr>
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-en">Boat for ONE</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$800</div>
-                                            </th>
-                                            <td></td>
-                                            <td></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                        </tr> -->
-                                        <tr class="tr-bg-light">
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-ch">套票</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$1,650</div>
-                                                <div class="item-origin-price body-02 style-smaller">原價 $ 1,750</div>
-                                            </th>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <!-- <tr class="tr-bg-dark">
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-ch">套票B</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$2,400</div>
-                                                <div class="item-origin-price body-02 style-smaller">原價 $ 2,550</div>
-                                            </th>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                        </tr> -->
-                                    </table>
-                                </div>
+                            <div class="body-wrap">
+                                <picture>
+                                    <source srcset="/terminalAssets/images/booking/ticket1.webp" type="image/webp" />
+                                    <img width="100%" src="/terminalAssets/images/booking/ticket1.png" />
+                                </picture>
+                                <br><br>
+                                <picture>
+                                    <source srcset="/terminalAssets/images/booking/ticket2.webp" type="image/webp" />
+                                    <img width="100%" src="/terminalAssets/images/booking/ticket2.png" />
+                                </picture>
+                                <br><br>
+                                <picture>
+                                    <source srcset="/terminalAssets/images/booking/ticket6.webp" type="image/webp" />
+                                    <img width="100%" src="/terminalAssets/images/booking/ticket6.png" />
+                                </picture>
                             </div>
                             <form class="form-wrap-step-1">
                                 <div class="form-group normal-layout">
