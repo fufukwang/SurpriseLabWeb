@@ -1354,7 +1354,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
     <script src="/terminalAssets/js/index.js?231123"></script>
-    <script src="/terminalAssets/js/home-slideshow.js?date=0627"></script>
+    <script src="/terminalAssets/js/home-slideshow.js?231123"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
