@@ -82,14 +82,9 @@ a {
 }
 
 .content-wrap {
-  width: 644px;
+  width: 100%;
+  max-width: 795px;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 1199.98px) {
-  .content-wrap {
-    width: 100%;
-  }
 }
 
 .block-wrap + .block-wrap {
@@ -174,5 +169,13 @@ a {
   .rule-tab-wrap .tab-content {
     padding-top: 36px;
   }
+}
+
+.notice-list-wrap .list-wrap .list-wrap {
+  margin-top: 4px;
+}
+
+.notice-list-wrap .list-wrap .list-wrap .list-item::marker {
+  content: unset;
 }
 /*# sourceMappingURL=rules.css.map */
