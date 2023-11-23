@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?231116">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?230817">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?231123">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -75,22 +75,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <li class="progress-item status-disabled"><div class="item-wrap"><span>4</span></div></li>
                                 </ul>
                             </div>
-                            <div class="body-wrap">
-                                <picture>
-                                    <source srcset="/terminalAssets/images/booking/ticket1.webp" type="image/webp" />
-                                    <img width="100%" src="/terminalAssets/images/booking/ticket1.png" />
-                                </picture>
-                                <br><br>
-                                <picture>
-                                    <source srcset="/terminalAssets/images/booking/ticket2.webp" type="image/webp" />
-                                    <img width="100%" src="/terminalAssets/images/booking/ticket2.png" />
-                                </picture>
-                                <br><br>
-                                <picture>
-                                    <source srcset="/terminalAssets/images/booking/ticket6.webp" type="image/webp" />
-                                    <img width="100%" src="/terminalAssets/images/booking/ticket6.png" />
-                                </picture>
+                        </div>
+                        
+                        <div class="body-wrap">
+                            <div class="tickets">
+                                <div class="ticket">
+                                    <picture>
+                                        <source srcset="/terminalAssets/images/booking/ticket1.webp" type="image/webp" />
+                                        <img width="100%" src="/terminalAssets/images/booking/ticket1.png" />
+                                    </picture>
+                                    <p>2,200/人 獨身踏上旅程</p>
+                                </div>
+                                <div class="ticket">
+                                    <picture>
+                                        <source srcset="/terminalAssets/images/booking/ticket2.webp" type="image/webp" />
+                                        <img width="100%" src="/terminalAssets/images/booking/ticket2.png" />
+                                    </picture>
+                                    <p>2,100/人 雙人結伴同行</p>
+                                </div>
+                                <div class="ticket">
+                                    <picture>
+                                        <source srcset="/terminalAssets/images/booking/ticket6.webp" type="image/webp" />
+                                        <img width="100%" src="/terminalAssets/images/booking/ticket6.png" />
+                                    </picture>
+                                    <p>2,000/人 六人組隊探索</p>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="content-wrap">
                             <form class="form-wrap-step-1">
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="dropdownMenuButtonTicket">票種</label>
