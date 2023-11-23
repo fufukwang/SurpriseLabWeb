@@ -949,7 +949,7 @@ h6 {
 }
 .table-wrap table tr th:first-child {
   border-right: 3px solid var(--color-primary);
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 .table-wrap table tr td + td {
   border-left: 1px solid var(--color-primary-half);

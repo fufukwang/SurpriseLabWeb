@@ -9,7 +9,8 @@ $(function() {
     
         $this.owlCarousel({
             center: true,
-            loop: true,
+            // loop: true,
+            loop: $this.attr('id') === 'owl-bistro' ? false : true,
             margin: 60,
             nav: false,
             lazyLoad: true,
@@ -36,5 +37,10 @@ $(function() {
         $btnNext.on('click', function(){
             $this.trigger('next.owl.carousel');
         });
+
+        if($this.attr('id') === 'owl-bistro') {
+            $btnPrev.hide();
+            $btnNext.hide();
+        }
     })
 });
