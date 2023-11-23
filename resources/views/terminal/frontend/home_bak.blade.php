@@ -44,7 +44,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?date=0218">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
     <link rel="stylesheet" href="/terminalAssets/css/index.css?date=2308171">
     <style>

@@ -68,13 +68,13 @@ $(function(){
         scrolled = $(this).scrollTop();
 
         // anchor menu effect
-        // anchorMenuEffect(scrolled);
+        anchorMenuEffect(scrolled);
 
         // section hide target effect
-        sectionHideTargetEffect(scrolled);
+        // sectionHideTargetEffect(scrolled);
 
         // mobile - set nav bar section text
-        // setNavBarSectionText();
+        setNavBarSectionText();
     });
 
     function timeoff() {
@@ -114,11 +114,17 @@ $(function(){
     anchorMenuEffect(scrolled);
 
     // section hide target effect
-    sectionHideTargetEffect(scrolled);
+    // sectionHideTargetEffect(scrolled);
 
     // mobile - set nav bar section text
     setNavBarSectionText();
 
     timeoff();
 
+});
+
+$('#home .sun-wrapper, #home .enter-btn').on('click', function() {
+    $('#home').fadeOut(600, function() {
+        $('body').removeClass('home-modal');
+    });
 });

@@ -400,6 +400,14 @@ body.modal-open {
   margin-top: 20px;
 }
 
+.mobile-nav-menu-wrap .menu-wrap .menu-item:hover,
+.mobile-nav-menu-wrap .menu-wrap .menu-item.active {
+  background-image: url(/terminalAssets/images/general/nav-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: 10% center;
+}
+
 .mobile-nav-menu-wrap .menu-wrap .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,10 +428,6 @@ body.modal-open {
   color: #ff5b7e;
 }
 
-.mobile-nav-menu-wrap .menu-wrap .menu-item:nth-child(2) {
-  margin-top: 36px;
-}
-
 .mobile-nav-menu-wrap .menu-wrap .menu-item a {
   text-decoration: none;
   font-family: "Shrikhand", cursive;
@@ -433,20 +437,6 @@ body.modal-open {
   color: #ef9425;
 }
 
-.mobile-nav-menu-wrap .menu-wrap .menu-item::after {
-  display: block;
-  width: 8px;
-  height: 8px;
-  margin-top: 6px;
-  border-radius: 100px;
-  background-color: #ffcc99;
-}
-
 .mobile-nav-menu-wrap .menu-wrap .menu-item:hover a, .mobile-nav-menu-wrap .menu-wrap .menu-item.active a {
   color: #ffcc99;
 }
-
-.mobile-nav-menu-wrap .menu-wrap .menu-item:hover::after, .mobile-nav-menu-wrap .menu-wrap .menu-item.active::after {
-  content: '';
-}
-/*# sourceMappingURL=main-component.css.map */

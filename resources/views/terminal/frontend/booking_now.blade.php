@@ -36,7 +36,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-now.css">
 <!-- Google Tag Manager -->
