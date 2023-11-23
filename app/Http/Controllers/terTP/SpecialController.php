@@ -37,8 +37,8 @@ class SpecialController extends WebController
 
         $data = [
             'count' => $count,
-            't6'    => json_decode(setting::where('slug','terTP_sp_t6')->first()->json,true),
-            'money' => json_decode(setting::where('slug','terTP_sp_money')->first()->json,true),
+            't6'    => json_decode(setting::where('slug','ter_sp_t6')->first()->json,true),
+            'money' => json_decode(setting::where('slug','ter_sp_money')->first()->json,true),
         ];
 
         return view('terTP.frontend.booking_special',compact('data'));
@@ -46,6 +46,7 @@ class SpecialController extends WebController
     // 訂單處理送往金流 ( 藍新 )
     public function postOrderByNeweb(Request $request){
         try {
+            return false;
             $newebpay = new \NewebPay();
             $now = Carbon::now()->toDateString();
             $count = order::whereRaw("DATE_FORMAT(created_at,'%Y-%m-%d')='{$now}'")->max('sn');
@@ -64,7 +65,7 @@ class SpecialController extends WebController
             }
 
             $pay_type = '信用卡';
-            $sp_money = json_decode(setting::where('slug','terTP_sp_money')->first()->json,true);
+            $sp_money = json_decode(setting::where('slug','ter_sp_money')->first()->json,true);
             if($people == 1){
                 $money = $sp_money[0]['money'];
             } elseif($people == 2){
@@ -101,7 +102,7 @@ class SpecialController extends WebController
             $discountCode = '';
             if($request->has('discount')){
                 $discountCode = $request->discount;
-                $discount_list = json_decode(setting::where('slug','terTP_sp_discount')->first()->json,true);
+                $discount_list = json_decode(setting::where('slug','ter_sp_discount')->first()->json,true);
                 foreach($discount_list as $row){
                     if(strtoupper($row['code']) == $discountCode){
                         $manage = $discountCode.'折扣 '.$row['money'];
@@ -174,9 +175,9 @@ class SpecialController extends WebController
                     $data['email'] // 付款人信箱
                 )
                 ->setTradeLimit(600)
-                ->setReturnURL(env('APP_URL').'/terTP/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
-                ->setNotifyURL(env('APP_URL').'/terTP/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
-                ->setClientBackURL(env('APP_URL').'/terTP/booking_pay.html') // 付款取消後返回的網址
+                ->setReturnURL(env('APP_URL').'/tertp/Neweb.ReturnResult') // 由藍新回傳後前景畫面要接收資料顯示的網址
+                ->setNotifyURL(env('APP_URL').'/tertp/Neweb.BackReturn') // 由藍新回傳後背景處理資料的接收網址
+                ->setClientBackURL(env('APP_URL').'/tertp/booking_pay.html') // 付款取消後返回的網址
                 ->submit();
                 
             }
@@ -207,9 +208,9 @@ class SpecialController extends WebController
             $this->checkPower($request);
 
             $data = [
-                't6'    => json_decode(setting::where('slug','terTP_sp_t6')->first()->json,true),
-                'money' => json_decode(setting::where('slug','terTP_sp_money')->first()->json,true),
-                'setting' => json_decode(setting::where('slug','terTP_setting')->first()->json,true),
+                't6'    => json_decode(setting::where('slug','ter_sp_t6')->first()->json,true),
+                'money' => json_decode(setting::where('slug','ter_sp_money')->first()->json,true),
+                'setting' => json_decode(setting::where('slug','ter_setting')->first()->json,true),
             ];
 
 
@@ -227,8 +228,8 @@ class SpecialController extends WebController
 
 
             $data = [
-                'pay' => json_decode(setting::where('slug','terTP_pay_discount')->first()->json,true),
-                'sp'  => json_decode(setting::where('slug','terTP_sp_discount')->first()->json,true),
+                'pay' => json_decode(setting::where('slug','ter_pay_discount')->first()->json,true),
+                'sp'  => json_decode(setting::where('slug','ter_sp_discount')->first()->json,true),
             ];
 
 
@@ -250,27 +251,27 @@ class SpecialController extends WebController
             $this->checkPower($request);
             
             if($request->has('slug')){
-                if($request->slug == 'terTP_sp_t6'){
-                    $is_store = setting::where('slug','terTP_sp_t6')->update(['json'=>json_encode(['number'=> $request->number])]);
+                if($request->slug == 'ter_sp_t6'){
+                    $is_store = setting::where('slug','ter_sp_t6')->update(['json'=>json_encode(['number'=> $request->number])]);
                     if($is_store) $return['success'] = true;
-                } elseif($request->slug == 'terTP_sp_money'){
-                    $is_store = setting::where('slug','terTP_sp_money')->update(['json'=>json_encode([
+                } elseif($request->slug == 'ter_sp_money'){
+                    $is_store = setting::where('slug','ter_sp_money')->update(['json'=>json_encode([
                         [ 'number' => 1,'money' => $request->t1_money ],
                         [ 'number' => 2,'money' => $request->t2_money ],
                         [ 'number' => 6,'money' => $request->t6_money ],
                     ])]);
                     if($is_store) $return['success'] = true;
-                } elseif($request->slug == 'terTP_setting'){
-                    $is_store = setting::where('slug','terTP_setting')->update(['json'=>json_encode([
+                } elseif($request->slug == 'ter_setting'){
+                    $is_store = setting::where('slug','ter_setting')->update(['json'=>json_encode([
                         "max" => $request->max,
                         "pay_max_date" => $request->pay_max_date
                     ])]);
                     if($is_store) $return['success'] = true;
-                } elseif($request->slug == 'terTP_sp_discount'){
-                    $is_store = setting::where('slug','terTP_sp_discount')->update(['json'=>$request->obj]);
+                } elseif($request->slug == 'ter_sp_discount'){
+                    $is_store = setting::where('slug','ter_sp_discount')->update(['json'=>$request->obj]);
                     if($is_store) $return['success'] = true;
-                } elseif($request->slug == 'terTP_pay_discount'){
-                    $is_store = setting::where('slug','terTP_pay_discount')->update(['json'=>$request->obj]);
+                } elseif($request->slug == 'ter_pay_discount'){
+                    $is_store = setting::where('slug','ter_pay_discount')->update(['json'=>$request->obj]);
                     if($is_store) $return['success'] = true;
                 }
             }

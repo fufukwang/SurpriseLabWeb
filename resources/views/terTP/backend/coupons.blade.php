@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '巴黎舞會兌換碼列表'])
+@include('backstage.header',['title' => '落日台北兌換碼列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,7 +9,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">巴黎舞會兌換碼列表 </h4>
+                        <h4 class="page-title">落日台北兌換碼列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -24,7 +24,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width:100%"><form action="/paris/coupons" id="SearchForm">
+                                        <div class="btn-group focus-btn-group" style="width:100%"><form action="/tertp/coupons" id="SearchForm">
                                             <input type="hidden" name="act" value="">
                                             <!--div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -37,9 +37,9 @@
                                             <div class="form-group col-sm-1">
                                                 <select name="type" class="form-control">
                                                     <option value="">票券類別</option>
-                                                    <option value="p1"@if($request->type=='p1') selected @endif>單人獨舞票</option>
-                                                    <option value="p2"@if($request->type=='p2') selected @endif>雙人共舞票</option>
-                                                    <option value="p4"@if($request->type=='p4') selected @endif>四人群舞票</option>
+                                                    <option value="p1"@if($request->type=='p1') selected @endif>單人票</option>
+                                                    <option value="p2"@if($request->type=='p2') selected @endif>雙人票</option>
+                                                    <option value="p6"@if($request->type=='p6') selected @endif>六人票</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2">
@@ -77,14 +77,14 @@
                                             <tr id="tr_{{ $row->id }}">
                                                 <td>{{ $row->code }}</td>
                                                 <td>
-@if( $row->type == 'p1' ) 單人獨舞票 
-@elseif( $row->type == 'p2' ) 雙人共舞票
-@elseif( $row->type == 'p4' ) 四人群舞票
+@if( $row->type == 'p1' ) 單人票 
+@elseif( $row->type == 'p2' ) 雙人票
+@elseif( $row->type == 'p6' ) 六人票
 @elseif( $row->type == 'gift' ) 禮物卡
 @endif</td>
                                                 <th>@if($row->end_at != '') <span @if($row->end_at->timestamp<time()) style="color:red;" @endif>{{$row->end_at}}</span> @else - @endif </th>
                                                 <td>@if($row->o_id > 0) 
-                                                    {{ App\model\paris\order::where('sn',$row->o_id)->first()->created_at }}
+                                                    {{ App\model\terTP\order::where('sn',$row->o_id)->first()->created_at }}
                                                 @else 尚未兌換
                                                 @endif</td>
                                                 <th>{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
@@ -108,23 +108,23 @@
                         </div>
                     </div>
                 </div>
-@if( Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
+@if( Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                     <div class="col-sm-12">
                         <div class="card-box">
-                            <h4 class="page-title">巴黎舞會新增兌換碼 </h4>
+                            <h4 class="page-title">落日台北新增兌換碼 </h4>
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/paris/coupons" method="post" id="grFrom">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/tertp/coupons" method="post" id="grFrom">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-12">
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
                                                         <label for="ticket">票券類別</label>
                                                         <select name="ticket" id="ticket" class="form-control">
-                                                            <option value="p1">單人獨舞票</option>
-                                                            <option value="p2">雙人共舞票</option>
-                                                            <option value="p4">四人群舞票</option>
+                                                            <option value="p1">單人票</option>
+                                                            <option value="p2">雙人票</option>
+                                                            <option value="p6">六人票</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -244,7 +244,7 @@ $(function(){
         }
         if(confirm(txt + "確定要刪除此優惠券")) {
              $.ajax({
-                url: '/paris/coupon/'+id+'/delete',
+                url: '/tertp/coupon/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){

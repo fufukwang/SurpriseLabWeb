@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '巴黎舞會預約席次設定'])
+@include('backstage.header',['title' => '落日台北預約席次設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>巴黎舞會預約席次設定</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>落日台北預約席次設定</b></h4>
                                 </div>
                             </div>
 
@@ -19,7 +19,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form data-parsley-validate novalidate method="post" action="/paris/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
+                                        <form data-parsley-validate novalidate method="post" action="/tertp/order/{{ $pro_id }}/appointmentUpdate" class="form-horizontal">
 {!! csrf_field() !!}
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">日期</label>
@@ -44,9 +44,9 @@
                                                 <div class="col-sm-8">
                                                     <select name="ticket" class="form-control" required>
                                                         <option value="">票券類別</option>
-                                                        <option value="p1" data-price="{{ $pro->p1 }}">單人獨舞票</option>
-                                                        <option value="p2" data-price="{{ $pro->p2 }}">雙人共舞票</option>
-                                                        <option value="p4" data-price="{{ $pro->p4 }}">四人群舞票</option>
+                                                        <option value="p1" data-price="{{ $pro->p1 }}">單人票</option>
+                                                        <option value="p2" data-price="{{ $pro->p2 }}">雙人票</option>
+                                                        <option value="p6" data-price="{{ $pro->p6 }}">六人票</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -257,10 +257,10 @@ $('#pople').bind('change',function(){
             alert('雙人票人數請輸入2的倍數!');
             $(this).val(0);
         }
-    } else if(ticket_val == 'p4') {
-        num = people / 4;
-        if(people % 4 != 0){
-            alert('四人票人數請輸入4的倍數!');
+    } else if(ticket_val == 'p6') {
+        num = people / 6;
+        if(people % 6 != 0){
+            alert('六人票人數請輸入6的倍數!');
             $(this).val(0);
         }
     } else {

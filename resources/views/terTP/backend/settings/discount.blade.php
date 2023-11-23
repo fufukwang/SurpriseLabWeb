@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '巴黎舞會 折扣設定'])
+@include('backstage.header',['title' => '落日台北 折扣設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -248,10 +248,10 @@ $('.pay-discuount-store').bind('click',function(){
 
     if(message == ''){
         let myObj = {
-            slug: 'paris_pay_discount',
+            slug: 'ter_pay_discount',
             obj: JSON.stringify(obj)
         }
-        $.post('/paris/setting/store',myObj,function(data){
+        $.post('/tertp/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '一般場直購折扣設定已更新');
             } else {
@@ -321,10 +321,10 @@ $('.sp-discuount-store').bind('click',function(){
 
     if(message == ''){
         let myObj = {
-            slug: 'paris_sp_discount',
+            slug: 'ter_sp_discount',
             obj: JSON.stringify(obj)
         }
-        $.post('/paris/setting/store',myObj,function(data){
+        $.post('/tertp/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '一般場直購折扣設定已更新');
             } else {

@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '巴黎舞會營業日列表'])
+@include('backstage.header',['title' => '落日台北營業日列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -9,9 +9,9 @@
         <!-- Page-Title -->
         <div class="row">
             <div class="col-sm-12">
-                <h4 class="page-title">巴黎舞會營業日 
-                    @if( Session::has('key') && Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
-                    <a href="/paris/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>
+                <h4 class="page-title">落日台北營業日 
+                    @if( Session::has('key') && Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
+                    <a href="/tertp/pro/0/edit" class="btn btn-primary waves-effect waves-light">新增營業日 <i class="fa fa-plus"></i></a>
                     @endif
                 </h4>
             </div>
@@ -29,7 +29,7 @@
                         <div class="table-wrapper">
                             <div class="btn-toolbar">
                                 <div class="btn-group focus-btn-group">
-                                    <form action="/paris/pros" autocomplete="off">
+                                    <form action="/tertp/pros" autocomplete="off">
 
                                         <div class="form-group col-sm-2">
                                             <div class="col-sm-12">
@@ -138,12 +138,12 @@
                                                         {{ $row->now }} / 
                                                         {{ $row->sites }}
                                                     </td>
-                                                    <td>@if($row->special) <span class="badge badge-pill badge-info">特別場次</span> @else {{ $row->p1 }} / {{ $row->p2 }} / {{ $row->p4 }} @endif</td>
+                                                    <td>@if($row->special) <span class="badge badge-pill badge-info">特別場次</span> @else {{ $row->p1 }} / {{ $row->p2 }} / {{ $row->p6 }} @endif</td>
                                                     <td class="actions">
-                                                        <a class="btn btn-purple btn-xs" href="/paris/order/{{ $row->id }}/appointment">預約席</a>
-                                                        <a class="btn btn-info btn-xs" href="/paris/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
-                                                        @if(  Session::has('key') && Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
-                                                        <a class="btn btn-primary btn-xs" href="/paris/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
+                                                        <a class="btn btn-purple btn-xs" href="/tertp/order/{{ $row->id }}/appointment">預約席</a>
+                                                        <a class="btn btn-info btn-xs" href="/tertp/orders/{{ $row->id }}"><i class="fa fa-list-alt"></i></a>
+                                                        @if(  Session::has('key') && Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
+                                                        <a class="btn btn-primary btn-xs" href="/tertp/pro/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a>
                                                         @endif
                                                         <a class="btn btn-danger btn-xs" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                     </td>
@@ -182,7 +182,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/paris/pros/output/only" method="post">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/tertp/pros/output/only" method="post">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-1">
                                                 <div class="col-sm-12">
@@ -273,7 +273,7 @@
                 var id = $(this).data('id');
                 if (confirm("確定要刪除此營業日?如有訂單將一併刪除")) {
                     $.ajax({
-                        url: '/paris/pro/' + id + '/delete',
+                        url: '/tertp/pro/' + id + '/delete',
                         method: 'delete',
                         dataType: 'json'
                     }).done(function(data) {
@@ -302,7 +302,7 @@ $('.oclink').bind('click',function(){
     var obj = $(this);
     var val = 0;
     if(text == "關閉中") val = 1;
-    $.post('/paris/pros',{
+    $.post('/tertp/pros',{
         "act" : "oneUpdate",
         "id"  : id,
         "muopVal" : val
@@ -318,7 +318,7 @@ $('.soclink').bind('change',function(){
     var id = $(this).data('id');
     var val = 0;
     if($(this).prop('checked')) val = 1;
-    $.post('/paris/pros',{
+    $.post('/tertp/pros',{
         "act" : "oneUpdate",
         "id"  : id,
         "muopVal" : val

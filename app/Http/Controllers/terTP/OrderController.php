@@ -130,9 +130,9 @@ class OrderController extends WebController
             
         } 
         if($request->has('qxx') && $request->qxx != ''){
-            return redirect('/terTP/print?'.$request->qxx)->with('message','編輯完成!');
+            return redirect('/tertp/print?'.$request->qxx)->with('message','編輯完成!');
         } else {
-            return redirect('/terTP/orders/'.$order->pro_id)->with('message','編輯完成!');
+            return redirect('/tertp/orders/'.$order->pro_id)->with('message','編輯完成!');
         }
     }
     public function OrderDelete(Request $request,$id){
@@ -151,14 +151,14 @@ class OrderController extends WebController
             return view('terTP.backend.orderAppointment',compact('pro_id','pro'));
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/terTP/pros?')->with('message','此編號無座位表!');
+            return redirect('/tertp/pros?')->with('message','此編號無座位表!');
         }
     }
     public function AppointmentUpdate(Request $request,$pro_id){
         try {
             $people = $request->people;
             $count = $this->grenOrderSN();
-            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','special','p1','p2','p4')->first();
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','special','p1','p2','p6')->first();
             $meat = [];
             /*
             for($i=0;$i<$people;$i++){
@@ -169,7 +169,7 @@ class OrderController extends WebController
             if($act->special) {
                 $is_overseas = 9;
                 if($people!=1 && $people!=2 && $people!=6){
-                    return redirect('/terTP/pros?')->with('message','新增失敗!特別場次請選擇 1、2、6符合票券人數');
+                    return redirect('/tertp/pros?')->with('message','新增失敗!特別場次請選擇 1、2、6符合票券人數');
                 }
                 $sp_money = json_decode(setting::where('slug','terTP_sp_money')->first()->json,true);
                 if($people == 1){
@@ -217,10 +217,10 @@ class OrderController extends WebController
                 if($ord->tel != '') $this->sendSmsCenter($ord);
             }
 
-            return redirect('/terTP/pros?')->with('message','新增完成!');
+            return redirect('/tertp/pros?')->with('message','新增完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/terTP/pros?')->with('message','新增失敗!');
+            return redirect('/tertp/pros?')->with('message','新增失敗!');
         }
     }
 
@@ -255,7 +255,7 @@ class OrderController extends WebController
             ];
             $validator = Validator::make($request->all(), $rules);
             if ($validator->fails()) {
-                return redirect('/terTP/backmes')->with('message','新增失敗!(請檢查檔案)');
+                return redirect('/tertp/backmes')->with('message','新增失敗!(請檢查檔案)');
             } else {
                 if ($request->hasFile('xlsx')) {
                     if ($request->file('xlsx')->isValid())
@@ -287,7 +287,7 @@ class OrderController extends WebController
                     } elseif(!is_numeric($row['money']) && $row['money']<=0) {
                         $message .= "第{$i}列 金額輸入錯誤<br>";
                         break;
-                    } elseif(!in_array($row['type'],['p1','p2','p4','單人獨舞票','雙人共舞票','四人群舞票'])) {
+                    } elseif(!in_array($row['type'],['p1','p2','p6','單人票','雙人票','六人票'])) {
                         $message .= "第{$i}列 票種輸入錯誤輸入錯誤<br>";
                         break;
                     } else {
@@ -302,11 +302,11 @@ class OrderController extends WebController
                         }
                         $ticket = $row['type'];$numTrue = true;
                         switch($row['type']){
-                            case '單人獨舞票': $ticket = 'p1'; break;
-                            case '雙人共舞票': $ticket = 'p2'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
-                            case '四人群舞票': $ticket = 'p4'; if(($row['people'] % 4) != 0){ $numTrue = false;} break;
+                            case '單人票': $ticket = 'p1'; break;
+                            case '雙人票': $ticket = 'p2'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
+                            case '六人票': $ticket = 'p6'; if(($row['people'] % 6) != 0){ $numTrue = false;} break;
                             case 'p2': $ticket = 'p2'; if(($row['people'] % 2) != 0){ $numTrue = false;} break;
-                            case 'p4': $ticket = 'p4'; if(($row['people'] % 4) != 0){ $numTrue = false;} break;
+                            case 'p6': $ticket = 'p6'; if(($row['people'] % 6) != 0){ $numTrue = false;} break;
                         }
                         if(!$numTrue){
                             $message .= "第{$i}列 票券人數錯誤<br>";
@@ -353,10 +353,10 @@ class OrderController extends WebController
 
                 }
             });
-            return redirect('/terTP/print')->with('message',"新增完成!!共新增{$count}筆資料<br>{$message}");
+            return redirect('/tertp/print')->with('message',"新增完成!!共新增{$count}筆資料<br>{$message}");
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/terTP/print')->with('message','新增失敗!');
+            return redirect('/tertp/print')->with('message','新增失敗!');
         }
     }
 
@@ -423,9 +423,9 @@ class OrderController extends WebController
                     $price = 0;
 
                     switch($row['ticket']){
-                        case 'p1': $ticket = '單人獨舞票'; $num = $row['pople']; $price = $row['p1']; break;
-                        case 'p2': $ticket = '雙人共舞票'; $num = $row['pople'] / 2; $price = $row['p2']; break;
-                        case 'p4': $ticket = '四人群舞票'; $num = $row['pople'] / 4; $price = $row['p4']; break;
+                        case 'p1': $ticket = '單人票'; $num = $row['pople']; $price = $row['p1']; break;
+                        case 'p2': $ticket = '雙人票'; $num = $row['pople'] / 2; $price = $row['p2']; break;
+                        case 'p6': $ticket = '六人票'; $num = $row['pople'] / 6; $price = $row['p6']; break;
                     }
                     $handling_fee = 0;
                     if($pay_status == '未完成'){
@@ -535,7 +535,7 @@ class OrderController extends WebController
 */
     private function orderQuery(Request $request,$isTable=false){
         $order = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','terTP_order.manage','terTP_pro.money AS PM','terTP_order.money AS OM','terTP_order.created_at AS created_at','terTP_order.pay_status','email','terTP_order.sn','terTP_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','refund','handling','cut','tax_id','tax_name','need_english','vehicle','p1','p2','p4','co_code','co_money','ticket');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','terTP_order.manage','terTP_pro.money AS PM','terTP_order.money AS OM','terTP_order.created_at AS created_at','terTP_order.pay_status','email','terTP_order.sn','terTP_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','refund','handling','cut','tax_id','tax_name','need_english','vehicle','p1','p2','p6','co_code','co_money','ticket');
         if($isTable){
             $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
         }

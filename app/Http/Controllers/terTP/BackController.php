@@ -73,7 +73,7 @@ class BackController extends WebController
             if($request->has('isdone')) $par .= "&isdone=".$request->isdone;
             if($request->has('is_sent')) $par .= "&is_sent=".$request->is_sent;
             if($request->has('season')) $par .= "&season=".$request->season;
-            return redirect('/terTP/backmes'.$par)->with('message','已寄送完成!');
+            return redirect('/tertp/backmes'.$par)->with('message','已寄送完成!');
         }
         $mes = backme::where('id','>',0);
         if($request->has('search')){
@@ -107,7 +107,7 @@ class BackController extends WebController
             foreach ($mes->get() as $val) {
                 foreach(coupon::where('b_id',$val['id'])->get() as $row){
                     $type = '';
-                    if($row->type == 'p2'){ $type ='雙人共舞票'; }elseif( $row->type == 'p4' ){ $type ='四人群舞票'; }elseif( $row->type == 'p1' ){ $type ='單人獨舞票'; } 
+                    if($row->type == 'p2'){ $type ='雙人票'; }elseif( $row->type == 'p6' ){ $type ='六人票'; }elseif( $row->type == 'p1' ){ $type ='單人票'; } 
                     $temp = [
                         'sn'     => $row->code,
                         'type'   => $type,
@@ -128,7 +128,7 @@ class BackController extends WebController
         return view('terTP.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $backmes = backme::select('id','name','email','tel','p2','p4','p1','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(terTP_coupon) WHERE o_id=0 AND terTP_coupon.b_id=terTP_backme.id)>0")->get()->toArray();
+        $backmes = backme::select('id','name','email','tel','p2','p6','p1','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(terTP_coupon) WHERE o_id=0 AND terTP_coupon.b_id=terTP_backme.id)>0")->get()->toArray();
         $cellData = [['姓名','信箱','電話','可劃位人數','訂購內容','註記']];
         foreach ($backmes as $val) {
             $num = 0;
@@ -136,7 +136,7 @@ class BackController extends WebController
                 switch ($row->type) {
                     case 'p1': $num = $num + 1 ; break;
                     case 'p2': $num = $num + 2 ; break;
-                    case 'p4': $num = $num + 4 ; break;
+                    case 'p6': $num = $num + 6 ; break;
                 }
             }
             $temp = [
@@ -237,7 +237,7 @@ class BackController extends WebController
                 return Response::json(['success'=> true], 200);
             }
         }
-        $pros = pro::select(DB::raw("({$this->oquery}) AS now,(sites-{$this->oquery}) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open,p1,p2,p4"));
+        $pros = pro::select(DB::raw("({$this->oquery}) AS now,(sites-{$this->oquery}) AS space,sites,id,rang_start,rang_end,day,id,rang_start,rang_end,day_parts,money,cash,open,p1,p2,p6"));
         if($request->has('day') && $request->has('day_end')){
             $open_count = pro::select(DB::raw("SUM(({$this->oquery})) AS sale,count(id) as num,SUM(sites) as site"))->where('open',1); 
             $all_count = pro::select(DB::raw("SUM(({$this->oquery})) AS sale,count(id) as num,SUM(sites) as site"));
@@ -328,7 +328,7 @@ class BackController extends WebController
             $arr = [];
             $data['p1'] = $request->p1;
             $data['p2'] = $request->p2;
-            $data['p4'] = $request->p4;
+            $data['p6'] = $request->p6;
             for($i=0 ; $i<count($request->rangstart) ; $i++){
                 $data['day_parts'] = $request->dayparts[$i];
                 $data['rang_start'] = $request->rangstart[$i];
@@ -349,7 +349,7 @@ class BackController extends WebController
             }
             pro::insert($arr);
         }
-        return redirect('/terTP/pros')->with('message','編輯完成!');
+        return redirect('/tertp/pros')->with('message','編輯完成!');
     }
     public function ProDelete(Request $request,$id){
         order::where('pro_id',$id)->delete();
@@ -417,7 +417,7 @@ class BackController extends WebController
                 $sheet->rows($data);
             });
         })->export('xls');
-        return redirect('/terTP/pros');
+        return redirect('/tertp/pros');
     }
 
 
@@ -432,7 +432,7 @@ class BackController extends WebController
             $prefix = $request->prefix;
             $count = $request->count;
             if($day!='' && date('Y-m-d', strtotime($day)) != $day){
-                return redirect('/terTP/coupons')->with('message','日期錯誤!新增失敗!');
+                return redirect('/tertp/coupons')->with('message','日期錯誤!新增失敗!');
             }
             if($day == ''){
                 $day = null;
@@ -448,7 +448,7 @@ class BackController extends WebController
                 ];
                 coupon::insert($data);
             }
-            return redirect('/terTP/coupons')->with('message','新增'.$num.'筆完成!');
+            return redirect('/tertp/coupons')->with('message','新增'.$num.'筆完成!');
         }
         $coupons = coupon::orderBy('updated_at','desc');
         //if($request->has('day')) $coupons = $coupons->where('created_at','like',$request->day.'%');
@@ -462,7 +462,7 @@ class BackController extends WebController
             $type = $request->type;
             $coupons = $coupons->where('type',$type);
         } else {
-            $coupons = $coupons->whereIn('type',['p1','p2','p4']);
+            $coupons = $coupons->whereIn('type',['p1','p2','p6']);
         }
         if($request->has('act') && $request->act=='xls'){
             $cellData = $coupons->get()->toArray();
@@ -473,9 +473,9 @@ class BackController extends WebController
                     foreach($cellData as $row){
                         $type = '';
                         switch ($row['type']) {
-                            case 'p1': $type = '單人獨舞票' ; break;
-                            case 'p2': $type = '雙人共舞票' ; break;
-                            case 'p4': $type = '四人群舞票' ; break;
+                            case 'p1': $type = '單人票' ; break;
+                            case 'p2': $type = '雙人票' ; break;
+                            case 'p6': $type = '六人票' ; break;
                         }
                         if($row['o_id']>0){
                             $change_day = order::where('sn',$row['o_id'])->first()->created_at;
@@ -524,7 +524,7 @@ class BackController extends WebController
             ];
             $validator = Validator::make($request->all(), $rules);
             if ($validator->fails()) {
-                return redirect('/terTP/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
+                return redirect('/tertp/backmes')->with('message','新增失敗!(請輸入季度或檢查檔案)');
             } else {
                 if ($request->hasFile('xlsx')) {
                     if ($request->file('xlsx')->isValid())
@@ -552,7 +552,7 @@ class BackController extends WebController
                         if($row['sponsor_id'] == '') $row['sponsor_id'] = 0;
                         if($row['p1'] == '') $row['p1'] = 0;
                         if($row['p2'] == '') $row['p2'] = 0;
-                        if($row['p4'] == '') $row['p4'] = 0;
+                        if($row['p6'] == '') $row['p6'] = 0;
                         $r = [
                             'sn'         => $row['sn'],
                             'detail'     => $row['detail'],
@@ -564,7 +564,7 @@ class BackController extends WebController
                             'sponsor_id' => $row['sponsor_id'],
                             'p1'         => $row['p1'],
                             'p2'         => $row['p2'],
-                            'p4'         => $row['p4'],
+                            'p6'         => $row['p6'],
                             'gift'       => 0,
                             'quarter'    => $quarter,  // 產出季度
                             'buy_at'     => Carbon::parse($row['time'])->format('Y-m-d H:i:s')
@@ -580,15 +580,15 @@ class BackController extends WebController
                 //backme::insert($data);
                 $this->Db2Coupon();
             });
-            return redirect('/terTP/backmes')->with('message','新增完成!!共新增'.$i.'筆資料');
+            return redirect('/tertp/backmes')->with('message','新增完成!!共新增'.$i.'筆資料');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/terTP/backmes')->with('message','新增失敗!');
+            return redirect('/tertp/backmes')->with('message','新增失敗!');
         }
     }
 
     private function Db2Coupon(){
-        $xls = backme::select('p2','p4','p1','id')->where('gen_coup',0)->get();
+        $xls = backme::select('p2','p6','p1','id')->where('gen_coup',0)->get();
         foreach($xls as $row){
             $data = [
                 'b_id' => $row->id
@@ -605,9 +605,9 @@ class BackController extends WebController
                     $data['code'] = $this->GenerateGiftCodeSN();
                     coupon::insert($data);
                 }
-            } elseif($row->p4 >= 1){
-                for($i=0;$i<$row->p4;$i++){
-                    $data['type'] = 'p4';
+            } elseif($row->p6 >= 1){
+                for($i=0;$i<$row->p6;$i++){
+                    $data['type'] = 'p6';
                     $data['code'] = $this->GenerateGiftCodeSN();
                     coupon::insert($data);
                 }

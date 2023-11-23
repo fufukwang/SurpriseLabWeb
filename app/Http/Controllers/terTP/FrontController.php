@@ -71,7 +71,7 @@ class FrontController extends WebController
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash,p1,p2,p4"))->where('day',$day)->get();
+                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash,p1,p2,p6"))->where('day',$day)->get();
                         return $pro->toJson();
                     break;
 /*
@@ -87,7 +87,7 @@ class FrontController extends WebController
                             switch ($me->type) {
                                 case 'p2': $type = '單人獨舞票'; break;
                                 case 'p2': $type = '雙人共舞票'; break;
-                                case 'p4': $type = '四人群舞票'; break;
+                                case 'p6': $type = '四人群舞票'; break;
                                 case 'gift': $type = '禮物卡'; break;
                             }
                             $ticketType = $request->ticketType;
@@ -179,9 +179,9 @@ class FrontController extends WebController
                     $me = coupon::where('code',$request->code)->select('type')->first();
                     $type = '';
                     switch ($me->type) {
-                        case 'p1': $type = '單人獨舞票'; break;
-                        case 'p2': $type = '雙人共舞票'; break;
-                        case 'p4': $type = '四人群舞票'; break;
+                        case 'p1': $type = '單人票'; break;
+                        case 'p2': $type = '雙人票'; break;
+                        case 'p6': $type = '六人票'; break;
                     }
                     if($request->ticket == $type){
                         $pro = pro::select($me->type.' as money')->find($request->num);

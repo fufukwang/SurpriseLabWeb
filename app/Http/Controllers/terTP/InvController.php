@@ -134,7 +134,7 @@ class InvController extends WebController
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('terTP_order.id',$request->id)->leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')->select('name','sn','email','pople','tel',/*'dial_code',*/'terTP_order.id','terTP_order.money','dis_money','tax_id','tax_name','co_money','p1','p2','p4','vehicle','ticket')->get();
+            $orders = order::whereIn('terTP_order.id',$request->id)->leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')->select('name','sn','email','pople','tel',/*'dial_code',*/'terTP_order.id','terTP_order.money','dis_money','tax_id','tax_name','co_money','p1','p2','p6','vehicle','ticket')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
                 $phone = str_replace("+886","0",str_replace("+8860","0",$row->tel));
@@ -159,9 +159,9 @@ class InvController extends WebController
                 $price = '';
 
                 switch($row->ticket){
-                    case 'p1': $ticket = '單人獨舞票'; $num = $row->pople; $price = $row->p1; break;
-                    case 'p2': $ticket = '雙人共舞票'; $num = $row->pople / 2; $price = $row->p2; break;
-                    case 'p4': $ticket = '四人群舞票'; $num = $row->pople / 4; $price = $row->p4; break;
+                    case 'p1': $ticket = '單人票'; $num = $row->pople; $price = $row->p1; break;
+                    case 'p2': $ticket = '雙人票'; $num = $row->pople / 2; $price = $row->p2; break;
+                    case 'p6': $ticket = '六人票'; $num = $row->pople / 6; $price = $row->p6; break;
                 }
                 $taxamt = $totleamt - round($totleamt / (1 + (5 / 100)));
                 $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
@@ -275,10 +275,10 @@ class InvController extends WebController
 
                 */
             }
-            return redirect('/terTP/print?')->with('message','發票開立完成!');
+            return redirect('/tertp/print?')->with('message','發票開立完成!');
         } catch (Exception $exception) {
             Log::error($exception);
-            return redirect('/terTP/print?')->with('message','發票開立失敗!');
+            return redirect('/tertp/print?')->with('message','發票開立失敗!');
         }
     }
     // 單一發票開立

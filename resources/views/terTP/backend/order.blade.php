@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '巴黎舞會訂單列表'])
+@include('backstage.header',['title' => '落日台北訂單列表'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>巴黎舞會訂單列表</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>落日台北訂單列表</b></h4>
                                 </div>
                             </div>
 
@@ -19,7 +19,7 @@
                                 <div class="col-lg-8">
 
                                     <div class="p-20">
-                                        <form  data-parsley-validate novalidate method="post" action="/paris/order/{{ $order->id or 0}}/update" class="form-horizontal">
+                                        <form  data-parsley-validate novalidate method="post" action="/tertp/order/{{ $order->id or 0}}/update" class="form-horizontal">
                                             <input type="hidden" name="qxx" value="{{ Request::getQueryString() }}">
 {!! csrf_field() !!}
                                             <div class="form-group hpro_id">
@@ -43,7 +43,7 @@
                                             <div class="form-group hpro_id">
                                                 <label class="control-label col-sm-4">票種</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" readonly value="@if($order->ticket == 'p1') 單人獨舞票 @elseif($order->ticket == 'p2') 雙人共舞票 @elseif($order->ticket == 'p4') 四人群舞票 @endif">
+                                                    <input type="text" class="form-control" readonly value="@if($order->ticket == 'p1') 單人票 @elseif($order->ticket == 'p2') 雙人票 @elseif($order->ticket == 'p6') 六人票 @endif">
                                                 </div>
                                             </div>
 

@@ -34,11 +34,11 @@ class NewPayController extends WebController
             $count = $this->grenOrderSN();
             $people = $request->num;$ticket = '';
             switch($request->ticket){
-                case '單人獨舞票': $ticket = 'p1'; break;
-                case '雙人共舞票': $ticket = 'p2';$people = $people * 2; break;
-                case '四人群舞票': $ticket = 'p4';$people = $people * 4; break;
+                case '單人票': $ticket = 'p1'; break;
+                case '雙人票': $ticket = 'p2';$people = $people * 2; break;
+                case '六人票': $ticket = 'p6';$people = $people * 4; break;
             }
-            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts','p1','p2','p4')->first();
+            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts','p1','p2','p6')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
                 return view('terminal.frontend.booking_fail');
@@ -184,9 +184,9 @@ class NewPayController extends WebController
                 $num = 0;
                 $ticket = '';
                 switch($order->ticket){
-                    case 'p1': $num = $order->pople; $ticket = '單人獨舞票'; break;
-                    case 'p2': $num = $order->pople / 2; $ticket = '雙人共舞票'; break;
-                    case 'p4': $num = $order->pople / 4; $ticket = '四人群舞票'; break;
+                    case 'p1': $num = $order->pople; $ticket = '單人票'; break;
+                    case 'p2': $num = $order->pople / 2; $ticket = '雙人票'; break;
+                    case 'p6': $num = $order->pople / 6; $ticket = '六人票'; break;
                 }
                 $data = [
                     'ticket' => $ticket,

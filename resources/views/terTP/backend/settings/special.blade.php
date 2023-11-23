@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '巴黎舞會 特殊場設定'])
+@include('backstage.header',['title' => '落日台北 特殊場設定'])
 <!-- =======================
 ===== START PAGE ======
 ======================= -->
@@ -11,7 +11,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <h4 class="m-t-0 header-title"><b>巴黎舞會 特殊場設定</b></h4>
+                                    <h4 class="m-t-0 header-title"><b>落日台北 特殊場設定</b></h4>
                                 </div>
                             </div>
 
@@ -58,7 +58,7 @@
                                         </form>
                                     </div>
                                     <div class="p-20">
-                                        <h4 class="m-t-0 header-title"><b>巴黎舞會 修改設定值</b></h4>
+                                        <h4 class="m-t-0 header-title"><b>落日台北 修改設定值</b></h4>
                                         <form data-parsley-validate novalidate class="form-horizontal">
                                             <div class="form-group hpro_id">
                                                 <label class="control-label col-sm-4">票券目標數量</label>
@@ -158,7 +158,7 @@ $('.t6_setting_button').bind('click',function(){
             slug: 'paris_sp_t6',
             number: t6_number
         }
-        $.post('/paris/setting/store',myObj,function(data){
+        $.post('/tertp/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '六人沉醉票最大數量已更新');
             } else {
@@ -181,7 +181,7 @@ $('.setting_button').bind('click',function(){
             max: max,
             pay_max_date: pay_max_date
         }
-        $.post('/paris/setting/store',myObj,function(data){
+        $.post('/tertp/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '設定值已修改已更新');
             } else {
@@ -206,7 +206,7 @@ $('.sp_money_button').bind('click',function(){
             t2_money: t2_money,
             t6_money: t6_money,
         }
-        $.post('/paris/setting/store',myObj,function(data){
+        $.post('/tertp/setting/store',myObj,function(data){
             if(Boolean.parse(data.success)){
                 $.Notification.notify('success','bottom left','已更新', '票價金額已更新');
             } else {

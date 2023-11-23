@@ -114,7 +114,7 @@
 
 				{{--
 				<table>
-					@forelse(App\model\paris\TeamMail::where('order_id',$row->id)->get() as $tm)
+					@forelse(App\model\terTP\TeamMail::where('order_id',$row->id)->get() as $tm)
 					<tr>
 						<td>{{ $tm->name }}</td>
 						<td>{{ $tm->tel }}</td>

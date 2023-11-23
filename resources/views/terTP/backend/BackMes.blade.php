@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '巴黎舞會貝殼匯入列表'])
+@include('backstage.header',['title' => '落日台北貝殼匯入列表'])
 <!-- =======================
              ===== START PAGE ======
              ======================= -->
@@ -25,7 +25,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">巴黎舞會貝殼匯入列表 </h4>
+                        <h4 class="page-title">落日台北貝殼匯入列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -36,7 +36,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form id="backmeform" action="/paris/backmes">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form id="backmeform" action="/tertp/backmes">
                                             <input type="hidden" name="xls" value="">
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -69,9 +69,9 @@
                                             <div class="form-group col-sm-1">
                                                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
                                             </div>
-                                            @if( Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
+                                            @if( Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                                             <div class="form-group col-sm-1">
-                                                <a target="_blank" href="/paris/backmenouse/xls" class="btn btn-danger">匯出未兌換名單</a>
+                                                <a target="_blank" href="/tertp/backmenouse/xls" class="btn btn-danger">匯出未兌換名單</a>
                                             </div>
                                             <div class="form-group col-sm-1">
                                                 <button type="button" class="btn btn-danger outCoupon">匯出名單酷碰</button>
@@ -105,7 +105,7 @@
                                                 <td><div class="single-line name_{{ $row->id }}">{{ $row->name }}</div>{{ $row->sponsor_id }}</td>
                                                 <td>{{ $row->detail }}</td>
                                                 <td><div class="single-line tel_{{ $row->id }}">{{ $row->tel }}</div><div class="single-line email_{{ $row->id }}">{{ $row->email }}</div></td>
-                                                <td>@forelse(App\model\paris\coupon::where('b_id',$row->id)->get() as $coup){{ $coup->code }}@if($coup->o_id>0) <a href="javascript:;" class="canelCoupon" data-id="{{ $row->id }}" data-code="{{ $coup->code }}"><i class="fa fa-times"></i></a> @endif<br >@empty 無優惠券 @endforelse</td>
+                                                <td>@forelse(App\model\terTP\coupon::where('b_id',$row->id)->get() as $coup){{ $coup->code }}@if($coup->o_id>0) <a href="javascript:;" class="canelCoupon" data-id="{{ $row->id }}" data-code="{{ $coup->code }}"><i class="fa fa-times"></i></a> @endif<br >@empty 無優惠券 @endforelse</td>
                                                 <td class="editable" style="border:1px solid #eee" data-id="{{ $row->id }}" contenteditable="true">{!! $row->manage !!}</td>
                                                 <td><input type="checkbox" class="sendbox" value="{{ $row->id }}" @if($row->is_sent)checked @endif /></td>
                                                 <td class="actions">
@@ -142,16 +142,16 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">巴黎舞會貝殼資料匯入 </h4>
+                        <h4 class="page-title">落日台北貝殼資料匯入 </h4>
                     </div>
                 </div>
                     <div class="col-sm-12">
                         <div class="card-box">
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
-                                    @if( Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
+                                    @if( Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/paris/uploadxlsx" method="post" enctype="multipart/form-data">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/tertp/uploadxlsx" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-1">
                                                 <div class="col-sm-12">
@@ -183,7 +183,7 @@
                                     @endif
                                     <div>
                                         <p>
-                                            範例檔案 : <a href="/example/paris範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
+                                            範例檔案 : <a href="/example/terTP範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
                                         </p>
                                         <p>
                                             說明:<br />
@@ -198,7 +198,7 @@
                                             last_four 刷卡後四碼<br />
                                             p1 單人票<br />
                                             p2 雙人票<br />
-                                            p4 四人票<br />
+                                            p6 六人票<br />
                                             time 付款時間<br />
 
                                             其他的位置可以保留<br />
@@ -264,7 +264,7 @@ $(function(){
         var id   = $(this).data('id');
         var code = $(this).data('code');
         if(confirm("確定要移除此優惠碼的使用紀錄?!(此動作無法復原)")) {
-            $.post('/paris/backmes/CanelCoupon',{
+            $.post('/tertp/backmes/CanelCoupon',{
                 b_id : id,
                 code : code,
             },function(data){
@@ -278,7 +278,7 @@ $(function(){
     $('.editable').bind('blur',function(){
         var val = $(this).html();
         var id  = $(this).data('id');
-        $.post('/paris/backmes/'+id+'/sendManageUpdate',{
+        $.post('/tertp/backmes/'+id+'/sendManageUpdate',{
             manage : val
         },function(data){
             $.Notification.notify('success','bottom left','已更新', '備註已更新')
@@ -299,7 +299,7 @@ $(function(){
             var name  = $('.name_'+id).html();
             var tel   = $('.tel_'+id).html();
             var email = $('.email_'+id).html();
-            $.post('/paris/backmes/'+id+'/infoUpdate',{
+            $.post('/tertp/backmes/'+id+'/infoUpdate',{
                 name  : name,
                 tel   : tel,
                 email : email
@@ -311,7 +311,7 @@ $(function(){
     $('.sendbox').bind('click',function(){
         var send = $(this).prop('checked');
         var id   = $(this).val();
-        $.post('/paris/backmes/'+id+'/sendUpdate',{
+        $.post('/tertp/backmes/'+id+'/sendUpdate',{
             send : (send ? 1 : 0)
         },function(data){
             $.Notification.notify('success','bottom left','已更新', '發送狀態已更新')
@@ -319,7 +319,7 @@ $(function(){
     });
     $('.sent_mail').bind('click',function(){
         var id   = $(this).data('id');
-        $.post('/paris/backmes/'+id+'/sentcoupon',{},function(data){
+        $.post('/tertp/backmes/'+id+'/sentcoupon',{},function(data){
             if(data.message == 'success'){
                 $('.sendbox[value="'+id+'"]').prop('checked',true);
                 $.Notification.notify('success','bottom left','已更新', '發送狀態已更新');
