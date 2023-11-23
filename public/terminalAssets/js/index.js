@@ -3,6 +3,14 @@ $(function(){
     let scrolled = $win.scrollTop();
     let nav_height = $('#js-nav-bar').innerHeight();
 
+    // To anchor
+    let hash = window.location.hash;
+    if (hash) {
+        $('#home').hide();
+        $('body').removeClass('home-modal');
+        window.history.replaceState(null, null, ' ');
+    }
+
     // section hide target effect
     let $hidden_section = $('.js-hidden-section');
     let $hidden_targets = $('.js-hidden-target');
