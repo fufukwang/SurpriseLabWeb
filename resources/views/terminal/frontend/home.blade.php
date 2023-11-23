@@ -60,8 +60,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section class="skip-background-light js-hidden-section js-hero-section hero-section" id="home">
         <div class="hero-wrap">
             <div class="hero-img">                
-                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_kv.jpg" alt="落日轉運站">
-                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_kv_mobile.jpg" alt="落日轉運站">
+                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_kv.jpg?231123" alt="落日轉運站">
+                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_kv_mobile.jpg?231123" alt="落日轉運站">
             </div>
             <div class="hero-btn">
                 <a href="#about">
