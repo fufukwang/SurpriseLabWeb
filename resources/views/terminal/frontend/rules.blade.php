@@ -37,7 +37,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
-    <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?231123">
+    <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?2311231">
     <link rel="stylesheet" href="/terminalAssets/css/rules.css?231123">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -558,7 +558,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <th>然後再附上：</th>
                                                         </tr>
                                                         <tr>
-                                                            <th>改期（至多 1 次）</th>
+                                                            <th>改期<br class="mobile-br">（至多 1 次）</th>
                                                             <td>購票者的<br>姓名、購買信箱、手機</td>
                                                             <td>欲更改場次<br>參考線上剩餘座位，提供 3 個時段</td>
                                                         </tr>
