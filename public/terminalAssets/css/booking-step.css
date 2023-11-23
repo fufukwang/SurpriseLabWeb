@@ -236,3 +236,36 @@ a {
   color: #ff9c9c;
   text-decoration: none;
 }
+
+@media screen and (min-width: 800px) {
+  .tickets {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.tickets .ticket {
+  max-width: 350px;
+  margin: 0 auto 30px auto;
+}
+@media screen and (min-width: 800px) {
+  .tickets .ticket {
+    margin: 0;
+    width: calc(33.3333% - 20px);
+  }
+}
+.tickets img {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.tickets p {
+  color: #ff9c9c;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#step1 .body-wrap {
+  max-width: 900px;
+  margin: 30px auto 20px auto;
+}
