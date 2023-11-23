@@ -292,6 +292,58 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('setting/store', 'terminal\SpecialController@postSettingStore');
     });
 
+    // 台北站
+    Route::group(['prefix' => 'tertp'], function(){
+        // coupon
+        Route::get('coupons','terTP\BackController@Coupons');
+        Route::post('coupons','terTP\BackController@Coupons');
+        Route::get('coupon/{id}','terTP\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','terTP\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','terTP\BackController@Pros');
+        Route::get('pro/{id}/edit','terTP\BackController@ProEdit');
+        Route::post('pro/{id}/update','terTP\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','terTP\BackController@ProDelete');
+        Route::post('pros','terTP\BackController@Pros');
+        Route::post('pros/output/only','terTP\BackController@ProOutputSite');
+
+        // 訂單
+        Route::get('orders/{id}','terTP\OrderController@Orders');
+        Route::get('order/{id}/edit','terTP\OrderController@OrderEdit');
+        Route::post('order/{id}/update','terTP\OrderController@OrderUpdate');
+        Route::delete('order/{id}/delete','terTP\OrderController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','terTP\OrderController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','terTP\OrderController@AppointmentUpdate');
+        Route::post('order/{id}/store/ajax','terTP\OrderController@StoreByAjax');
+
+        // 報表列印
+        Route::get('print','terTP\OrderController@Print');
+        Route::get('table','terTP\OrderController@Table');
+        Route::get('xls/data/output','terTP\OrderController@XlsDataOuput');
+        Route::get('xls/emaildata/output','terTP\OrderController@XlsEmailDataOuput');
+        // Route::post('order/{id}/resent','terTP\OrderController@beSentOrderMail');
+        Route::post('order/import.xls','terTP\OrderController@orderImportXls');
+
+        // 發票相關
+        Route::post('order/inv/single/open','terTP\InvController@singleInvOpne');
+        Route::post('order/inv/mult/open','terTP\InvController@muInvOpen');
+        Route::post('order/inv/cancal','terTP\InvController@InvClose');
+
+        // 主揪相關
+        Route::post('getMasterData', 'terTP\MasterController@getMasterAndSend');
+        Route::post('postReSendMail', 'terTP\MasterController@postReSendMail');
+        Route::post('postReSendSMS', 'terTP\MasterController@postReSendSMS');
+        Route::get('getMasterList','terTP\MasterController@getMasterList');
+        Route::post('postMaster/{id}/store','terTP\MasterController@postMasterStore');
+        Route::delete('postMaster/{id}/delete','terTP\MasterController@postMasterDelete');
+
+        // 特殊場次設定
+        Route::get('special/setting', 'terTP\SpecialController@getSpecialSetting');
+        Route::get('discount/setting', 'terTP\SpecialController@getDiscountSetting');
+        Route::post('setting/store', 'terTP\SpecialController@postSettingStore');
+    });
+
 
 
     // 微醺大飯店 S1
