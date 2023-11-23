@@ -103,8 +103,7 @@ switch ($time) {
 體驗場次：{{ $time }}<br>
 入場時間：{{ $inTime }}&nbsp;<br>
 <br>
-舞會地點：</span><strong><a data-target-href="https://goo.gl/maps/KMkZ3ya7EG9xBHev6" href="https://goo.gl/maps/KMkZ3ya7EG9xBHev6" rel="noreferrer nofollow noopener" target="_blank"><span style="color:#FAEBD7">111 台北市士林區士商路189號</span></a></strong><a data-target-href="https://goo.gl/maps/KMkZ3ya7EG9xBHev6" href="https://goo.gl/maps/KMkZ3ya7EG9xBHev6" rel="noreferrer nofollow noopener" target="_blank"><span style="color:#FAEBD7"><strong></strong><strong>B1</strong></span></a><br>
-<span style="color:#FAEBD7">( 捷運劍潭站3號出口 / 士林站1號出口，均可轉乘前往 ）<br>
+舞會地點：國立臺灣科學教育館（<a href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9FB1/@25.0961424,121.5145216,17z/data=!3m1!4b1!4m6!3m5!1s0x3442aebed5e7b1bf:0x735a0bf0d1780e6b!8m2!3d25.0961424!4d121.5170965!16s%2Fg%2F11llc588sp?entry=tts&amp;shorturl=1" target="_blank"><span style="color:#FAEBD7">台北市士林區士商路189號</span></a><a href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9FB1/@25.0961424,121.5145216,17z/data=!3m1!4b1!4m6!3m5!1s0x3442aebed5e7b1bf:0x735a0bf0d1780e6b!8m2!3d25.0961424!4d121.5170965!16s%2Fg%2F11llc588sp?entry=tts&amp;shorturl=1"><span style="color:#FAEBD7"><strong>B1</strong></span></a><span style="color:#FAEBD7">）</span><br>
 <br>
 舞會將準時開始，遲到將無法入場<br>
 請務必於入場時間準時抵達<br>
@@ -143,7 +142,7 @@ switch ($time) {
                 </td>
             </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+</table><!-- <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
         <tr>
             <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
@@ -159,7 +158,7 @@ switch ($time) {
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+</table> --><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
     <tbody class="mcnImageBlockOuter">
             <tr>
                 <td valign="top" style="padding:9px" class="mcnImageBlockInner">
