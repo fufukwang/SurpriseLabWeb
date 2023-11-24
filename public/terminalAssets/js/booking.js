@@ -20,7 +20,7 @@ $(function() {
     
     let $dropdown_ticket = $('#dropdownMenuButtonTicket');
     let $dropdown_count = $('#dropdownMenuButtonCount');
-    let maxDateVal = "2023-10-31";//"+3m";
+    let maxDateVal = "+4m";
     var usedCoupons = [];
 
     let $ticket_value = '';
