@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </aside>
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
-        <a href="/terminal/booking_now" class="image-wrap">
+        <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" class="image-wrap">
             <img src="/terminalAssets/images/general/btn_booking.png" class="pc-style" alt="what's on">
             <img src="/terminalAssets/images/general/btn_booking_mobile.png" class="mobile-style" alt="what's on">
         </a>
@@ -306,22 +306,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                                     </tr>
                                                                     <tr>
                                                                         <th>1</th>
-                                                                        <td>獨身踏上旅程*1張</td>
+                                                                        <td>單人票 *1 張</td>
                                                                         <td>劃位 1 次</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>2</th>
-                                                                        <td>雙人結伴同行*1張</td>
+                                                                        <td>雙人票 *1 張</td>
                                                                         <td>劃位 1 次</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>3</th>
-                                                                        <td>獨身踏上旅程*1張+雙人結伴同行*1張</td>
+                                                                        <td>單人票 *1 張 + 雙人票 *1 張</td>
                                                                         <td>劃位 2 次</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>6</th>
-                                                                        <td>六人組隊探索*1張</td>
+                                                                        <td>六人票 *1 張</td>
                                                                         <td>劃位 1 次</td>
                                                                     </tr>
                                                                 </table>
@@ -532,7 +532,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="section-heading-wrap">
                                                 <h2 class="heading-accordion-title">客服信箱</h2>
                                             </div>
-                                            <a href="mailto:terminal@surpriselab.com.tw" class="link-text style-regular">terminal@surpriselab.com.tw</a>
+                                            <a href="mailto:mindthegap@surpriselab.com.tw" class="link-text style-regular">mindthegap@surpriselab.com.tw</a>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="change" role="tabpanel" aria-labelledby="change-tab">
@@ -818,7 +818,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </tr>
                                         </table>
                                     </div>
-                                    <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
+                                    <p>歡迎至 <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
                                 </div>
                             </div>
                         </div>
