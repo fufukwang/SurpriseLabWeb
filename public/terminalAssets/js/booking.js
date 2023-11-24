@@ -78,7 +78,7 @@ $(function() {
                 // html += '<li class="dropdown-item body-04" data-cnt="2">2張（12人）</li>';
             }
             $('ul[aria-labelledby=dropdownMenuButtonCount]').html(html);
-            $dropdown_count.text('選擇人數');
+            $dropdown_count.text('選擇張數');
             $people_value = 0;
         } else {
             $dropdown_count.prop('disabled',true);
