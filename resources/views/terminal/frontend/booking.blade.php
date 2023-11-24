@@ -112,9 +112,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             選擇票種
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTicket">
-                                            <li class="dropdown-item body-04">2,200/人 獨身踏上旅程</li>
-                                            <li class="dropdown-item body-04">2,100/人 雙人結伴同行</li>
-                                            <li class="dropdown-item body-04">2,000/人 六人組隊探索</li>
+                                            <li class="dropdown-item body-04">2,200/人 單人票</li>
+                                            <li class="dropdown-item body-04">2,100/人 雙人票</li>
+                                            <li class="dropdown-item body-04">2,000/人 六人票</li>
                                             
                                             <!-- <li class="dropdown-item body-04 @if($train->Count<=0) disabled @endif">微醺列車 @if($train->Count<=0) (完售) @endif</li>
                                             <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($flight->Count<=0) (完售) @endif</li> -->
@@ -306,7 +306,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="email">* 電子信箱</label>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
-                                    <input type="text" id="email" class="body-04" name="email" placeholder="ex. terminal@surpriselab.com.tw" required>
+                                    <input type="text" id="email" class="body-04" name="email" placeholder="ex. mindthegap@surpriselab.com.tw" required>
                                 </div>
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="remark">其他備註</label>
