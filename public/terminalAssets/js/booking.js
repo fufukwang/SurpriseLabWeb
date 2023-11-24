@@ -20,7 +20,7 @@ $(function() {
     
     let $dropdown_ticket = $('#dropdownMenuButtonTicket');
     let $dropdown_count = $('#dropdownMenuButtonCount');
-    let maxDateVal = "2023-10-31";//"+3m";
+    let maxDateVal = "+4m";
     var usedCoupons = [];
 
     let $ticket_value = '';
@@ -58,9 +58,9 @@ $(function() {
             // case 'Boat for ONE': max = 1; $ticket_value = 'boat'; break;
             // case '套票：車票+飛機票': max = 24; $ticket_value = 'A'; break;
             // case '套票B：車票+飛機票+船票': max = 1; $ticket_value = 'B'; break;
-            case '2,200/人 獨身踏上旅程': max = 1; $ticket_value = '單人票'; break;
-            case '2,100/人 雙人結伴同行': max = 2; $ticket_value = '雙人票'; break;
-            case '2,000/人 六人組隊探索': max = 2; $ticket_value = '六人票'; break;
+            case '2,200/人 單人票': max = 1; $ticket_value = '單人票'; break;
+            case '2,100/人 雙人票': max = 1; $ticket_value = '雙人票'; break;
+            case '2,000/人 六人票': max = 1; $ticket_value = '六人票'; break;
         }
         if(max>0){
             $dropdown_count.prop('disabled',false);

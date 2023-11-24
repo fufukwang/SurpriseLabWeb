@@ -22,7 +22,7 @@
             <div class="mobile-nav-menu-wrap">
                 <ul class="menu-wrap js-anchor-menu">
                     <!-- javascript:// -->
-                    <li class="menu-item active" data-id="ticket"><a href="/terminal/booking_now">“TICKET”</a></li>
+                    <li class="menu-item active" data-id="ticket"><a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW">“TICKET”</a></li>
                     <li class="menu-item" data-id="about"><a href="/terminal#about">ABOUT</a></li>
                     <li class="menu-item" data-id="projects"><a href="/terminal#projects">PROJECTS</a></li>
                     <li class="menu-item" data-id="eapps-instagram-feed-1"><a href="/terminal#eapps-instagram-feed-1">REVIEW</a></li>
@@ -39,7 +39,7 @@
     <!-- nav menu - pc -->
     <nav class="pc-nav-menu-wrap js-hidden-target">
         <ul class="menu-wrap js-anchor-menu">
-            <li class="menu-item active"><a href="/terminal/booking_now">TICKET</a></li>
+            <li class="menu-item active"><a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW">TICKET</a></li>
             <li class="menu-item" data-id="about"><a href="/terminal#about">ABOUT</a></li>
             <li class="menu-item" data-id="projects"><a href="/terminal#projects">PROJECTS</a></li>
             <li class="menu-item" data-id="eapps-instagram-feed-1"><a href="/terminal#eapps-instagram-feed-1">REVIEW</a></li>
