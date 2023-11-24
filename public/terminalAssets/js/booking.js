@@ -295,11 +295,13 @@ $(function() {
     //         $btn_next2.addClass('status-disabled');
     //     }
     // }
-    // // back to step 1
-    // $btn_prev2.on('click', function(){
-    //     $step2_scenes.hide();
-    //     $step1_scenes.show();
-    // });
+
+    // back to step 1
+    $btn_prev2.on('click', function(){
+        $step2_scenes.hide();
+        $step1_scenes.show();
+    });
+    
     // // go step 3 button
     // $btn_next2.on('click', function(){
     //     // enabled
