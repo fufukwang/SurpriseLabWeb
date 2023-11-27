@@ -725,6 +725,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking.js?v=230817"></script>
+    <script src="/terminalAssets/js/booking.js?v=231127"></script>
 </body>
 </html>
