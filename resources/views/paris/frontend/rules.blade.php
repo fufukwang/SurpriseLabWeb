@@ -106,7 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="collapse-item">
                     <div class="item-title">《巴黎舞會》在哪裡舉辦？</div>
                     <div class="item-body">
-                        <p>舞會位在士林區，從士林捷運站前往巴黎舞會，搭乘公車和計程車距離約 7 分鐘、步行距離約 14 分鐘，確切地點會於體驗日前 7 天得知（請放心，舞會不存在戶外，而是隱藏於一棟建築中，請容許我們慢慢向你揭露）</p>
+                        <p>舞會位在舞會位在國立臺灣科學教育館（<a class="mailto hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳），從士林捷運站前往巴黎舞會，搭乘公車和計程車距離約 7 分鐘、步行距離約 14 分鐘，確切地點會於體驗日前 7 天得知</p>
                     </div>
                 </div>
                 <div class="collapse-item">
