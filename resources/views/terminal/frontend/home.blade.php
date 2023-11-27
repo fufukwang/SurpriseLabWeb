@@ -40,9 +40,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?date=0218">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=2308171">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=231123">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,11 +51,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T7V2BQQ');</script>
 <!-- End Google Tag Manager -->
 </head>
-<body class="loading">
+<body class="loading home-modal">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7V2BQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     @include('terminal.frontend._nav')
+
+    <section class="skip-background-light js-hidden-section js-hero-section hero-section" id="home">
+        <div class="hero-wrap">
+            <div class="hero-img">                
+                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_kv.jpg?231123" alt="落日轉運站">
+                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_kv_mobile.jpg?231123" alt="落日轉運站">
+            </div>
+            <div class="hero-btn">
+                <a href="#about">
+                    <img class="img-fluid" src="/terminalAssets/images/main/btn_enter.png" alt="落日轉運站">
+                </a>
+            </div>
+            <div class="sun-wrapper">
+                <img class="sun" src="/terminalAssets/images/main/sun.png" alt="落日轉運站">
+            </div>
+            <img class="enter-btn" src="/terminalAssets/images/main/kv_enter.png" alt="落日轉運站">
+        </div>
+    </section>
+
     <!-- fixed btn - message -->
     <aside class="fixed-btn message-btn js-hidden-target">
         <!-- Button trigger modal -->
@@ -66,27 +85,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </aside>
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
-        <a href="/terminal/booking_now" class="image-wrap">
+        <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" class="image-wrap">
             <img src="/terminalAssets/images/general/btn_booking.png" class="pc-style" alt="what's on">
             <img src="/terminalAssets/images/general/btn_booking_mobile.png" class="mobile-style" alt="what's on">
         </a>
     </aside>
 
     <main class="background-wallpaper">
-        <section class="skip-background-light js-hidden-section js-hero-section hero-section" id="home">
-            <div class="hero-wrap">
-                <div class="hero-img">                
-                    <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_kv.jpg" alt="落日轉運站">
-                    <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_kv_mobile.jpg" alt="落日轉運站">
-                </div>
-                <div class="hero-btn">
-                    <a href="#about">
-                        <img class="img-fluid" src="/terminalAssets/images/main/btn_enter.png" alt="落日轉運站">
-                    </a>
-                </div>
-            </div>
-        </section>
-        
         <section class="section-wrap text-sction skip-background-light js-anchor-section js-about-section" id="about">
             <div class="container-xl">
                 <div class="row">
@@ -96,7 +101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <h1 class="heading-title">落日轉運站</h1>
                                 <h2 class="heading-subtitle">About</h2>
                             </div>
-                            <div class="timetable">
+                            <div class="timetable" style="display: none;">
                                 <div class="bg">
                                     <img src="/terminalAssets/images/main/timetable.png" alt="">
                                 </div>
@@ -174,7 +179,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                             </div>
                             <div class="img-wrap break-grid">
-                                <img class="img-fluid" src="/terminalAssets/images/main/img_about.png" alt="About">
+                                <img class="img-fluid" src="/terminalAssets/images/main/img_about.png?231123" alt="About">
                             </div>
                             
                             <!-- <div class="prograssbar">
@@ -188,13 +193,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="text-wrap">
                                     <!-- A Test -->
                                     <p class="color-y200 fw-normal">
-                                        <b>9/22-10/15 最終場《落日轉運站：Final Call》</b><br>
-                                        <b>時空發生裂變，讓那些不可能的，成為可能。</b><br>
+                                        <b>《落日月台 MIND THE GAP》1~2 月預售中</b><br>
                                         <br>
-                                        驚喜製造抵達高雄，打造突破規格的沉浸體驗<br>
-                                        《落日轉運站》，並以交通工具為題推出兩項<br>
-                                        作品：微醺系列互動表演《微醺列車》及英國<br>
-                                        團隊DARKFIELD的巡演之作《FLIGHT》。
+                                        驚喜製造首項巡迴沉浸式計劃《落日轉運站》，<br>
+                                        在此提供各種交通方式，接駁旅客前往終點。<br>
+                                        於高雄歷時一年後，抵達第二站 ⎯ 台北。<br>
+                                        座落於松菸文創園區的全新作品《落日月台》，<br>
+                                        將透過多樣場景變化及個人化全感官體驗，引領<br>
+                                        旅客探索落日之時、月升之際的彌留世界。
                                     </p>
 
                                     <!-- B Test -->
@@ -216,7 +222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <section class="section-wrap skip-background-light js-anchor-section project-section" id="projects">
             <div class="section-heading-wrap">
                 <h2 class="heading-title">體驗內容</h2>
-                <h3 class="heading-subtitle">Project</h3>
+                <h3 class="heading-subtitle">Projects</h3>
             </div>
 
             <div class="project-wrap">
@@ -225,13 +231,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <!-- Tab Nav -->
                         <ul class="nav nav-tabs tab-controls" id="projectTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="project-train-tab" data-bs-toggle="tab" data-bs-target="#project-train" type="button" role="tab" aria-controls="project-train" aria-selected="true">微醺列車</button>
+                                <button class="nav-link active" id="project-bistro-tab" data-bs-toggle="tab" data-bs-target="#project-bistro" type="button" role="tab" aria-controls="project-bistro" aria-selected="true">落日月台</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="project-train-tab" data-bs-toggle="tab" data-bs-target="#project-train" type="button" role="tab" aria-controls="project-train" aria-selected="false">微醺列車</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="project-flight-tab" data-bs-toggle="tab" data-bs-target="#project-flight" type="button" role="tab" aria-controls="project-flight" aria-selected="false">FLIGHT</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="project-bistro-tab" data-bs-toggle="tab" data-bs-target="#project-bistro" type="button" role="tab" aria-controls="project-bistro" aria-selected="false">落日月台</button>
                             </li>
                         </ul>
                     </div>
@@ -239,90 +245,102 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <!-- Tab Content -->
                     <div class="tab-content" id="projectTabContent">
 
-                        <div class="tab-pane fade show active" id="project-train" role="tabpanel" aria-labelledby="project-train-tab">
+                        <div class="tab-pane fade" id="project-train" role="tabpanel" aria-labelledby="project-train-tab">
                             <div class="tab-content-inner">
                                 <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-train">
-
-                                            <!-- 02 -->
-                                            <div class="item">
+                                            
+                                            <!-- <div class="item">
                                                 <div class="slideshow-video">
                                                     <iframe width="901" height="507" src="https://www.youtube.com/embed/y3vVzoC2W2A?list=PL_XNZCnBb9xEl7EDitRolq1YIxNCZYDdx" title="《落日轉運站：The Sunset Terminal》｜高雄站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                                    <!-- <iframe width="324" height="576" src="https://www.youtube.com/embed/yo5YYJVmuYE" title="《微醺列車 THE GREAT TIPSY：BON VOYAGE》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-                                                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/zjL1_8RqjtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                                 </div>
-                                            </div>
-
-                                            <!-- 03 -->
-                                            <!-- <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_train_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_train_1.jpg?date=0208" alt="微醺列車">
-                                                    <figcaption>
-                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
-                                                    </figcaption>
-                                                </figure>
                                             </div> -->
-
-                                            <!-- 04 -->
+                                            
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_2.jpg" data-src="/terminalAssets/images/main/img_train_2.jpg" data-src-retina="/terminalAssets/images/main/img_train_2.jpg" alt="微醺列車：藏女2">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/train/1.webp" type="image/webp" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/train/1.jpg" data-src="/terminalAssets/images/main/stop/train/1.jpg" data-src-retina="/terminalAssets/images/main/stop/train/1.jpg" alt="落日轉運站" />
+                                                    </picture>
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 05 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_3.jpg" data-src="/terminalAssets/images/main/img_train_3.jpg" data-src-retina="/terminalAssets/images/main/img_train_3.jpg" alt="微醺列車：列車長">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/train/2.webp" type="image/webp" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/train/2.jpg" data-src="/terminalAssets/images/main/stop/train/2.jpg" data-src-retina="/terminalAssets/images/main/stop/train/2.jpg" alt="落日轉運站" />
+                                                    </picture>
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 06 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_4.jpg" data-src="/terminalAssets/images/main/img_train_4.jpg" data-src-retina="/terminalAssets/images/main/img_train_4.jpg" alt="微醺列車：工人">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/train/3.webp" type="image/webp" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/train/3.jpg" data-src="/terminalAssets/images/main/stop/train/3.jpg" data-src-retina="/terminalAssets/images/main/stop/train/3.jpg" alt="落日轉運站" />
+                                                    </picture>
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 07 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_5.jpg" data-src="/terminalAssets/images/main/img_train_5.jpg" data-src-retina="/terminalAssets/images/main/img_train_5.jpg" alt="微醺列車：小魏">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/train/4.webp" type="image/webp" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/train/4.jpg" data-src="/terminalAssets/images/main/stop/train/4.jpg" data-src-retina="/terminalAssets/images/main/stop/train/4.jpg" alt="落日轉運站" />
+                                                    </picture>
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 08 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_6.jpg" data-src="/terminalAssets/images/main/img_train_6.jpg" data-src-retina="/terminalAssets/images/main/img_train_6.jpg" alt="微醺列車：貴婦">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/train/5.webp" type="image/webp" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/train/5.jpg" data-src="/terminalAssets/images/main/stop/train/5.jpg" data-src-retina="/terminalAssets/images/main/stop/train/5.jpg" alt="落日轉運站" />
+                                                    </picture>
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 01 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_train_7.jpg" data-src="/terminalAssets/images/main/img_train_7.jpg" data-src-retina="/terminalAssets/images/main/img_train_7.jpg" alt="微醺列車：貴婦2">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/train/6.webp" type="image/webp" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/train/6.jpg" data-src="/terminalAssets/images/main/stop/train/6.jpg" data-src-retina="/terminalAssets/images/main/stop/train/6.jpg" alt="落日轉運站" />
+                                                    </picture>
                                                     <figcaption>
                                                         故事沉浸 ╳ 互動式 ╳ 即時演出
                                                     </figcaption>
                                                 </figure>
                                             </div>
+
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/train/7.webp" type="image/webp" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/train/7.jpg" data-src="/terminalAssets/images/main/stop/train/7.jpg" data-src-retina="/terminalAssets/images/main/stop/train/7.jpg" alt="落日轉運站" />
+                                                    </picture>
+                                                    <figcaption>
+                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            
                                         </div>
 
                                         <!-- Custom Controls -->
@@ -374,75 +392,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-flight">
 
-                                            <!-- 03 -->
-                                            <!-- <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_flight_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg?date=0208" alt="無光飛航">
-                                                    <figcaption>
-                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
-                                                    </figcaption>
-                                                </figure>
-                                            </div> -->
-
-                                            <!-- 04 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_2.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_2.jpg?date=0713" data-src-retina="/terminalAssets/images/main/img_flight_2.jpg?date=0713" alt="無光飛航：空服員">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/flight/1.webp" type="image/webp">
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/flight/1.jpg" data-src="/terminalAssets/images/main/stop/flight/1.jpg" data-src-retina="/terminalAssets/images/main/stop/flight/1.jpg" />
+                                                    </picture>
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 05 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_3.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_3.jpg?date=0713" data-src-retina="/terminalAssets/images/main/img_flight_3.jpg?date=0713" alt="無光飛航：空服員與乘客">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/flight/2.webp" type="image/webp">
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/flight/2.jpg" data-src="/terminalAssets/images/main/stop/flight/2.jpg" data-src-retina="/terminalAssets/images/main/stop/flight/2.jpg" />
+                                                    </picture>
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 06 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_4.jpg?date=0713" data-src="/terminalAssets/images/main/img_flight_4.jpg?date=0713" data-src-retina="/terminalAssets/images/main/img_flight_4.jpg?date=0713" alt="無光飛航：安全須知卡">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/flight/3.webp" type="image/webp">
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/flight/3.jpg" data-src="/terminalAssets/images/main/stop/flight/3.jpg" data-src-retina="/terminalAssets/images/main/stop/flight/3.jpg" />
+                                                    </picture>
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 07 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_5.jpg" data-src="/terminalAssets/images/main/img_flight_5.jpg" data-src-retina="/terminalAssets/images/main/img_flight_5.jpg" alt="無光飛航：窗景">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/flight/4.webp" type="image/webp">
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/flight/4.jpg" data-src="/terminalAssets/images/main/stop/flight/4.jpg" data-src-retina="/terminalAssets/images/main/stop/flight/4.jpg" />
+                                                    </picture>
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-
-                                            <!-- 01 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_6.jpg" data-src="/terminalAssets/images/main/img_flight_6.jpg" data-src-retina="/terminalAssets/images/main/img_flight_6.jpg" alt="無光飛航:雜訊">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/stop/flight/5.webp" type="image/webp">
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/stop/flight/5.jpg" data-src="/terminalAssets/images/main/stop/flight/5.jpg" data-src-retina="/terminalAssets/images/main/stop/flight/5.jpg" />
+                                                    </picture>
                                                     <figcaption>
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption>
-                                                </figure>
-                                            </div>
-
-                                            <!-- 02 -->
-                                            <div class="item">
-                                                <figure class="slideshow-video">
-                                                    <iframe width="324" height="576" src="https://www.youtube.com/embed/zMXs50QmPZE" title="《FLIGHT 無光飛航》｜落日轉運站｜驚喜製造 Surprise Lab." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                                    <!-- <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_flight_1.jpg" data-src="/terminalAssets/images/main/img_flight_1.jpg" data-src-retina="/terminalAssets/images/main/img_flight_1.jpg" alt="無光飛航">
-                                                    <figcaption>
-                                                        英國製作 ╳ 無光體驗 ╳ 聲音劇場
-                                                    </figcaption> -->
                                                 </figure>
                                             </div>
 
@@ -488,91 +494,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="project-bistro" role="tabpanel" aria-labelledby="project-bistro-tab">
+                        <div class="tab-pane fade show active" id="project-bistro" role="tabpanel" aria-labelledby="project-bistro-tab">
                             <div class="tab-content-inner">
                                 <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-bistro">
 
-                                            <!-- 02 -->
-                                            <!-- <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" data-src="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" data-src-retina="/terminalAssets/images/main/img_bistro_1.jpg?date=0208" alt="落日轉運站：夜間售票亭">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div> -->
-
-                                            <!-- 05 -->
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_4.jpg" data-src="/terminalAssets/images/main/img_bistro_4.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_4.jpg" alt="落日轉運站：售票亭">
+                                                    <picture>
+                                                        <source srcset="/terminalAssets/images/main/img_bistro_231123.webp" type="image/webp" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日轉運站" />
+                                                    </picture>
+                                                    <!-- <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日轉運站：夜間售票亭"> -->
                                                     <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
+                                                        多場域沉浸 ╳ 全感官體驗
                                                     </figcaption>
                                                 </figure>
                                             </div>
 
-                                            <!-- 03 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_2.jpg" data-src="/terminalAssets/images/main/img_bistro_2.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_2.jpg" alt="落日轉運站：夜間售票亭">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-
-                                            <!-- 04 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_3.jpg" data-src="/terminalAssets/images/main/img_bistro_3.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_3.jpg" alt="落日轉運站：打卡區">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-
-                                            <!-- 06 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_5.jpg" data-src="/terminalAssets/images/main/img_bistro_5.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_5.jpg" alt="落日轉運站：裝置打卡點">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-
-                                            <!-- 07 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_6.jpg" data-src="/terminalAssets/images/main/img_bistro_6.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_6.jpg" alt="落日轉運站：票卷">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-
-                                            <!-- 08 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_7.jpg" data-src="/terminalAssets/images/main/img_bistro_7.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_7.jpg" alt="落日轉運站啤酒">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-
-                                            <!-- 01 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_8.jpg" data-src="/terminalAssets/images/main/img_bistro_8.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_8.jpg" alt="落日轉運站啤酒、徽章、飛機餅乾">
-                                                    <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
                                         </div>
 
                                         <!-- Custom Controls -->
@@ -591,20 +531,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="project-intro">
                                     <div class="feature-wrap">
                                         <div class="feature-item">
-                                            <i class="icon-drink"></i> 100-200 元
+                                            <i class="icon-ticket"></i> 2,200 元
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="icon-time"></i> 70-80 分鐘
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="icon-user"></i> 6 人
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="icon-drink"></i> 3 道小點
                                         </div>
                                         <div class="feature-item has-emoji">
                                             <i class="icon-feel"></i>
-                                            <img src="/terminalAssets/images/emoji/yellow/smiling-face-with-heart-eyes.png" alt="smiling-face-with-heart-eyes">
-                                            <img src="/terminalAssets/images/emoji/yellow/face-with-party-horn-and-party-hat-emoji.png" alt="face-with-party-horn-and-party-hat-emoji">
-                                            <img src="/terminalAssets/images/emoji/yellow/grinning-face-with-star-eyes-emoji.png" alt="grinning-face-with-star-eyes-emoji">
+                                            <img src="/terminalAssets/images/emoji/svg/face-yellow1.svg" style="width: auto;" />
+                                            <img src="/terminalAssets/images/emoji/svg/face-yellow2.svg" style="width: auto;" />
+                                            <img src="/terminalAssets/images/emoji/svg/face-yellow3.svg" style="width: auto;" />
                                         </div>
                                     </div>
 
                                     <div class="project-desc">
-                                        戶外休憩空間<br/><br/>
-                                        同一車次、同一航班的旅客將會在此聚集，這會是你們最後一次見面嗎？離站後再和他／她聊聊吧！<br/><br/>
-                                        同步販售簡易小點與金色三麥聯名的限量落日啤酒，讓你把落日帶回家。
+                                        你遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的九位漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。
+                                        <i>──　願你留心腳步</i>
+                                    </div>
+                                </div>
+                                <div class="cta-wrap">
+                                    <div class="btn-wrap">
+                                        <a target="_blank" href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" class="activity-btn">購票去</a>
                                     </div>
                                 </div>
                             </div>
@@ -613,11 +566,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
             </div>
 
-            <div class="cta-wrap">
+            <!-- <div class="cta-wrap">
                 <div class="btn-wrap">
-                    <a href="/terminal/booking_now" class="activity-btn">購票去</a>
+                    <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" class="activity-btn">購票去</a>
                 </div>
-            </div>
+            </div> -->
             <div class="elfsight-app-bfcc5c1c-9303-4b2c-9427-808555aa10bc js-anchor-section review-section"></div>
 
         </section>
@@ -639,20 +592,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <!-- Tab Nav -->
                                     <ul class="nav nav-tabs progress-list" id="pc-tourTab" role="tablist">
                                         <li class="nav-item progress-item" role="presentation">
-                                            <button class="nav-link item-wrap active" id="pc-step1-tab" data-bs-toggle="tab" data-bs-target="#pc-step1" type="button" role="tab" aria-controls="pc-step1" aria-selected="true"><span>1</span></button>
+                                            <button class="nav-link item-wrap" id="pc-step1-tab" data-bs-toggle="tab" data-bs-target="#pc-step1" type="button" role="tab" aria-controls="pc-step1" aria-selected="false"><span>1</span></button>
                                         </li>
-                                        <!--li class="nav-item progress-item" role="presentation">
-                                            <button class="nav-link item-wrap" id="pc-step2-tab" data-bs-toggle="tab" data-bs-target="#pc-step2" type="button" role="tab" aria-controls="pc-step2" aria-selected="false"><span>2</span></button>
-                                        </li-->
-                                        <!--li class="nav-item progress-item" role="presentation">
-                                            <button class="nav-link item-wrap" id="pc-step3-tab" data-bs-toggle="tab" data-bs-target="#pc-step3" type="button" role="tab" aria-controls="pc-step3" aria-selected="false" disabled><span>3</span></button>
-                                        </li-->
+                                        <li class="nav-item progress-item" role="presentation">
+                                            <button class="nav-link item-wrap active" id="pc-step2-tab" data-bs-toggle="tab" data-bs-target="#pc-step2" type="button" role="tab" aria-controls="pc-step2" aria-selected="true"><span>2</span></button>
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!-- Tab Content -->
                                 <div class="tab-content" id="pc-tourTabContent">
-                                    <div class="tab-pane fade show active" id="pc-step1" role="tabpanel" aria-labelledby="step1-tab">
+                                    <div class="tab-pane fade" id="pc-step1" role="tabpanel" aria-labelledby="step1-tab">
                                         <div class="tab-content-inner">
                                             <div class="tab-content-text">
                                                 <div class="section-heading-wrap align-left style-tab">
@@ -663,12 +613,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11.10 - 2023.09.03</li>
-                                                        <li class="list-item">2023.09.22 - 2023.10.15 《落日轉運站：Final Call》最終場熱賣中</li>
+                                                        <li class="list-item">2022.11.10 - 2023.10.15</li>
+                                                        <!-- <li class="list-item">2023.09.22 - 2023.10.15 《落日轉運站：Final Call》最終場熱賣中</li> -->
                                                     </ul>
                                                 </div>
                     
-                                                <div class="tour-list-wrap">
+                                                <!-- <div class="tour-list-wrap">
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item style-disabled">週一至週二｜休息（8月加開週二）</li>
@@ -676,13 +626,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item">週六、週日｜11:30-16:30、17:30-23:00</li>
                                                         <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
-                                                </div>
+                                                </div> -->
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">地點 Location</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">高雄駁二藝術特區蓬萊區B10倉庫</li>
                                                         <li class="list-item">80441 台灣高雄市鼓山區蓬萊路 99 號</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="tour-list-wrap">
+                                                    <div class="list-caption">展演資訊 Information</div>
+                                                    <ul class="list-wrap">
+                                                        <li class="list-item">《落日轉運站》於首站高雄推出雙作品包含：故事互動演出《微醺列車》以及無光聲音劇場《FLIGHT》雙作品，超過 40,000 人次造訪</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -694,86 +651,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </div>
                                         </div>
                                     </div>
-                                    <!--div class="tab-pane fade" id="pc-step2" role="tabpanel" aria-labelledby="step2-tab">
+                                    
+                                    <div class="tab-pane fade show active" id="pc-step2" role="tabpanel" aria-labelledby="step2-tab">
                                         <div class="tab-content-inner">
                                             <div class="tab-content-text">
                                                 <div class="section-heading-wrap align-left style-tab">
-                                                    <h2 class="heading-title">高雄站</h2>
-                                                    <h3 class="heading-subtitle">Kaohsiung Station</h3>
+                                                    <h2 class="heading-title">台北站</h2>
+                                                    <h3 class="heading-subtitle">TAIPEI STATION</h3>
                                                 </div>
 
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.04</li>
+                                                        <li class="list-item"> 2024.01.17 - 2025.03.30</li>
                                                     </ul>
                                                 </div>
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item style-disabled">週一至週二｜休息</li>
-                                                        <li class="list-item">週三至週五｜18:00─23:00</li>
-                                                        <li class="list-item">週六、週日｜11:30─16:30、17:30─23:00</li>
+                                                        <li class="list-item">週一至週二｜公休</li>
+                                                        <li class="list-item">週三至週五｜17:30 - 21:15</li>
+                                                        <li class="list-item">週六、週日｜11:00 - 12:45、17:30 - 21:15</li>
+                                                        <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
                                                 </div>
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">地點 Location</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">高雄駁二藝術特區蓬萊區B10倉庫</li>
-                                                        <li class="list-item">80441 台灣高雄市鼓山區蓬萊路 99 號</li>
+                                                        <li class="list-item">台北松菸文創園區藝巷空間</li>
+                                                        <li class="list-item">110055 台北市信義區光復南路133號</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="tab-content-image">
                                                 <div class="image-wrap">
-                                                    <img src="/terminalAssets/images/main/img_map_taichung.png" alt="taichung" class="pc-style">
-                                                    <img src="/terminalAssets/images/main/img_map_taichung_mobile.png" alt="taichung" class="mobile-style">
+                                                    <img src="/terminalAssets/images/main/img_map_taipei.png" alt="Taipei" class="pc-style">
+                                                    <img src="/terminalAssets/images/main/img_map_taipei_mobile.png" alt="Taipei" class="mobile-style">
                                                 </div>
                                             </div>
                                         </div>
-                                    </div-->
-                                    <!--div class="tab-pane fade" id="pc-step3" role="tabpanel" aria-labelledby="step3-tab">
-                                        <div class="tab-content-inner">
-                                            <div class="tab-content-text">
-                                                <div class="section-heading-wrap align-left style-tab">
-                                                    <h2 class="heading-title">高雄站</h2>
-                                                    <h3 class="heading-subtitle">Kaohsiung Station</h3>
-                                                </div>
-
-                                                <div class="tour-list-wrap">
-                                                    <div class="list-caption">日期 Date</div>
-                                                    <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.04</li>
-                                                    </ul>
-                                                </div>
-                    
-                                                <div class="tour-list-wrap">
-                                                    <div class="list-caption">時間 Time</div>
-                                                    <ul class="list-wrap">
-                                                        <li class="list-item style-disabled">週一至週二｜休息</li>
-                                                        <li class="list-item">週三至週五｜18:00─23:00</li>
-                                                        <li class="list-item">週六、週日｜11:30─16:30、17:30─23:00</li>
-                                                    </ul>
-                                                </div>
-                    
-                                                <div class="tour-list-wrap">
-                                                    <div class="list-caption">地點 Location</div>
-                                                    <ul class="list-wrap">
-                                                        <li class="list-item">高雄駁二藝術特區蓬萊區B10倉庫</li>
-                                                        <li class="list-item">80441 台灣高雄市鼓山區蓬萊路 99 號</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="tab-content-image">
-                                                <div class="image-wrap">
-                                                    <img src="/terminalAssets/images/main/img_map_taipei.png" alt="taipei" class="pc-style">
-                                                    <img src="/terminalAssets/images/main/img_map_taipei_mobile.png" alt="taipei" class="mobile-style">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div-->
+                                    </div>
                                 </div>
                             </div>
 
@@ -788,20 +707,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <!-- Tab Nav -->
                                     <ul class="nav nav-tabs progress-list" id="mobile-tourTab" role="tablist">
                                         <li class="nav-item progress-item" role="presentation">
-                                            <button class="nav-link item-wrap active" id="mobile-step1-tab" data-bs-toggle="tab" data-bs-target="#mobile-step1" type="button" role="tab" aria-controls="mobile-step1" aria-selected="true"><span>1</span></button>
+                                            <button class="nav-link item-wrap" id="mobile-step1-tab" data-bs-toggle="tab" data-bs-target="#mobile-step1" type="button" role="tab" aria-controls="mobile-step1" aria-selected="false"><span>1</span></button>
                                         </li>
-                                        <!--li class="nav-item progress-item" role="presentation">
-                                            <button class="nav-link item-wrap" id="mobile-step2-tab" data-bs-toggle="tab" data-bs-target="#mobile-step2" type="button" role="tab" aria-controls="mobile-step2" aria-selected="false"><span>2</span></button>
-                                        </li-->
-                                        <!--li class="nav-item progress-item" role="presentation">
-                                            <button class="nav-link item-wrap" id="mobile-step3-tab" data-bs-toggle="tab" data-bs-target="#mobile-step3" type="button" role="tab" aria-controls="mobile-step3" aria-selected="false" disabled><span>3</span></button>
-                                        </li-->
+                                        <li class="nav-item progress-item" role="presentation">
+                                            <button class="nav-link item-wrap active" id="mobile-step2-tab" data-bs-toggle="tab" data-bs-target="#mobile-step2" type="button" role="tab" aria-controls="mobile-step2" aria-selected="true"><span>2</span></button>
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!-- Tab Content -->
                                 <div class="tab-content" id="mobile-tourTabContent">
-                                    <div class="tab-pane fade show active" id="mobile-step1" role="tabpanel" aria-labelledby="step1-tab">
+                                    <div class="tab-pane fade" id="mobile-step1" role="tabpanel" aria-labelledby="step1-tab">
                                         <div class="tab-content-inner">
                                             <div class="tab-content-image">
                                                 <div class="image-wrap">
@@ -818,12 +734,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11.10 - 2023.09.03</li>
-                                                        <li class="list-item">2023.09.22 - 2023.10.15 《落日轉運站：Final Call》最終場熱賣中</li>
+                                                        <li class="list-item">2022.11.10 - 2023.10.15</li>
                                                     </ul>
                                                 </div>
                     
-                                                <div class="tour-list-wrap">
+                                                <!-- <div class="tour-list-wrap">
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item style-disabled">週一至週二｜休息（8月加開週二）</li>
@@ -831,98 +746,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item">週六、週日｜11:30-16:30、17:30-23:00</li>
                                                         <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
-                                                </div>
+                                                </div> -->
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">地點 Location</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">高雄駁二藝術特區蓬萊區B10倉庫</li>
                                                         <li class="list-item">80441 台灣高雄市鼓山區蓬萊路 99 號</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="tour-list-wrap">
+                                                    <div class="list-caption">展演資訊 Information</div>
+                                                    <ul class="list-wrap">
+                                                        <li class="list-item">《落日轉運站》於首站高雄推出雙作品包含：故事互動演出《微醺列車》以及無光聲音劇場《FLIGHT》雙作品，超過 40,000 人次造訪</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--div class="tab-pane fade" id="mobile-step2" role="tabpanel" aria-labelledby="step2-tab">
+                                    
+                                    <div class="tab-pane fade show active" id="mobile-step2" role="tabpanel" aria-labelledby="step2-tab">
                                         <div class="tab-content-inner">
                                             <div class="tab-content-image">
                                                 <div class="image-wrap">
-                                                    <img src="/terminalAssets/images/main/img_map_kaohsiung.png" alt="kaohsiung" class="pc-style">
-                                                    <img src="/terminalAssets/images/main/img_map_kaohsiung_mobile.png" alt="kaohsiung" class="mobile-style">
+                                                    <img src="/terminalAssets/images/main/img_map_taipei.png" alt="Taipei" class="pc-style">
+                                                    <img src="/terminalAssets/images/main/img_map_taipei_mobile.png" alt="Taipei" class="mobile-style">
                                                 </div>
                                             </div>
                                             <div class="tab-content-text">
                                                 <div class="section-heading-wrap align-left style-tab">
-                                                    <h2 class="heading-title">高雄站</h2>
-                                                    <h3 class="heading-subtitle">Kaohsiung Station</h3>
+                                                    <h2 class="heading-title">台北站</h2>
+                                                    <h3 class="heading-subtitle">TAIPEI STATION</h3>
                                                 </div>
 
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">日期 Date</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.04</li>
+                                                        <li class="list-item">2024.01.17 - 2025.03.30</li>
                                                     </ul>
                                                 </div>
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item style-disabled">週一至週二｜休息</li>
-                                                        <li class="list-item">週三至週五｜18:00─23:00</li>
-                                                        <li class="list-item">週六、週日｜11:30─16:30、17:30─23:00</li>
+                                                        <li class="list-item">週一至週二｜公休</li>
+                                                        <li class="list-item">週三至週五｜17:30 - 21:15</li>
+                                                        <li class="list-item">週六、週日｜11:00 - 12:45、17:30 - 21:15</li>
+                                                        <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
                                                 </div>
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">地點 Location</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">高雄駁二藝術特區蓬萊區B10倉庫</li>
-                                                        <li class="list-item">80441 台灣高雄市鼓山區蓬萊路 99 號</li>
+                                                        <li class="list-item">台北松菸文創園區藝巷空間</li>
+                                                        <li class="list-item">110055 台北市信義區光復南路133號</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div-->
-                                    <!--div class="tab-pane fade" id="mobile-step3" role="tabpanel" aria-labelledby="step3-tab">
-                                        <div class="tab-content-inner">
-                                            <div class="tab-content-image">
-                                                <div class="image-wrap">
-                                                    <img src="/terminalAssets/images/main/img_map_kaohsiung.png" alt="kaohsiung" class="pc-style">
-                                                    <img src="/terminalAssets/images/main/img_map_kaohsiung_mobile.png" alt="kaohsiung" class="mobile-style">
-                                                </div>
-                                            </div>
-                                            <div class="tab-content-text">
-                                                <div class="section-heading-wrap align-left style-tab">
-                                                    <h2 class="heading-title">高雄站</h2>
-                                                    <h3 class="heading-subtitle">Kaohsiung Station</h3>
-                                                </div>
-
-                                                <div class="tour-list-wrap">
-                                                    <div class="list-caption">日期 Date</div>
-                                                    <ul class="list-wrap">
-                                                        <li class="list-item">2022.11─2023.04</li>
-                                                    </ul>
-                                                </div>
-                    
-                                                <div class="tour-list-wrap">
-                                                    <div class="list-caption">時間 Time</div>
-                                                    <ul class="list-wrap">
-                                                        <li class="list-item style-disabled">週一至週二｜休息</li>
-                                                        <li class="list-item">週三至週五｜18:00─23:00</li>
-                                                        <li class="list-item">週六、週日｜11:30─16:30、17:30─23:00</li>
-                                                    </ul>
-                                                </div>
-                    
-                                                <div class="tour-list-wrap">
-                                                    <div class="list-caption">地點 Location</div>
-                                                    <ul class="list-wrap">
-                                                        <li class="list-item">高雄駁二藝術特區蓬萊區B10倉庫</li>
-                                                        <li class="list-item">80441 台灣高雄市鼓山區蓬萊路 99 號</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -938,130 +822,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="cta-wrap">
                 <div class="owl-carousel owl-theme">
-                    <!-- 01 -->
+                    
                     <div class="item">
-                        <a href="https://www.surpriselab.com.tw/terminal/booking" target="_blank">
+                        <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" target="_blank">
                             <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount06.png" data-src="/terminalAssets/images/main/discount06.png" data-src-retina="/terminalAssets/images/main/discount06.png" alt="Klook">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount01.svg?231123" data-src="/terminalAssets/images/main/discount01.svg?231123" data-src-retina="/terminalAssets/images/main/discount01.svg?231123" alt="Klook">
                             </figure>
                         </a>
                         <div class="discount-intro">
-                            <div class="discount-title">《落日轉運站》獨家雙作品套票</div>
+                            <div class="discount-title">《落日月台》雙人結伴同行</div>
                             <div class="discount-p">
-                                我們準備兩個作品的獨家優惠套票，給特別驅車前往落日轉運站的你，<br />
-                                購買套票搶先體驗《微醺列車》及《FLIGHT》，體驗時間可分開選擇。<br />
-                                偷偷推薦你，歡迎先體驗FLIGHT再搭上微醺列車，祝你旅途愉快！
+                                找到一位你最熟悉的朋友或親人，一同前往彌留世界《落日月台》。<br>
+                                12/20前，前往預購並輸入折扣碼「2bird」再折200，享91折優惠！
                             </div>
                         </div>
                     </div>
 
                     <div class="item">
-                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" target="_blank">
+                        <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" target="_blank">
                             <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount09.png" data-src="/terminalAssets/images/main/discount09.png" data-src-retina="/terminalAssets/images/main/discount09.png" alt="Klook">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount02.svg?231123" data-src="/terminalAssets/images/main/discount02.svg?231123" data-src-retina="/terminalAssets/images/main/discount02.svg?231123" alt="Klook">
                             </figure>
                         </a>
                         <div class="discount-intro">
-                            <div class="discount-title">Klook 《微醺列車》單人票</div>
+                            <div class="discount-title">《落日月台》六人組隊探索</div>
                             <div class="discount-p">
-                                即日起，於Klook預訂任一《落日轉運站》體驗，<br />
-                                皆可以文化幣折抵，歡迎剛成年的你一同啟程，<br />
-                                踏上微醺列車，尋找下一站目的地。
+                                《落日月台》一次將開放六人入場，選擇此門票的你，將佔有一個時段。<br>
+                                也許，你們所遇到的人、事、物都將不同。
                             </div>
                         </div>
                     </div>
 
-                    <!-- 07 -->
-                    <!-- <div class="item">
-                        <a href="" target="_blank">
-                            <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount07.png" data-src="/terminalAssets/images/main/discount07.png" data-src-retina="/terminalAssets/images/main/discount07.png" alt="Klook">
-                            </figure>
-                        </a>
-                        <div class="discount-intro">
-                            <div class="discount-title">KLOOK x 落日轉運站</div>
-                            <div class="discount-p">微醺列車 x 落日啤酒 限時優惠 成年禮金適用</br>83折微醺雙人票
-                            </div>
-                        </div>
-                    </div> -->
-                
-                    <!-- 02 -->
-                    <div class="item">
-                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/" target="_blank">
-                            <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount01.png" data-src="/terminalAssets/images/main/discount01.png" data-src-retina="/terminalAssets/images/main/discount01.png" alt="Klook">
-                            </figure>
-                        </a>
-                        <div class="discount-intro">
-                            <div class="discount-title">Klook 限定《FLIGHT 無光飛航》雙人套票</div>
-                            <div class="discount-p">在 Klook 上有超過 100 個高雄景點，一站式預訂高雄旅行的所有行程。</br>
-                            在動身出發之前，帶上 Klook 獨家限定的《FLIGHT 無光飛航》雙人票，搭上來自英國的班機，置身伸手不見五指的黑暗之中，開啟跨越世界的飛行。
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 03 -->
-                    <div class="item">
-                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal-kaohsiung/" target="_blank">
-                            <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount02.png" data-src="/terminalAssets/images/main/discount02.png" data-src-retina="/terminalAssets/images/main/discount02.png" alt="Klook 四人票">
-                            </figure>
-                        </a>
-                        <div class="discount-intro">
-                            <div class="discount-title">Klook 限定《FLIGHT無光飛航》機加酒四人票</div>
-                            <div class="discount-p">Klook獨家限定機加酒套票，購買四人無光飛航機票，贈落日限定飲品 4 瓶（原價$800 元）。</br>
-                            搭完刺激的無光飛航，喝瓶落日限定蜂蜜桂花釀飲品，走過高雄港畔，看看駁二夕陽，有了機加酒的旅程，更臻完美。</br></br>
-                            本演出套票加贈落日限定飲品會含有酒精，因此未滿十八歲者禁止飲酒，並請理性飲酒，酒後禁止酒駕。
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 04 -->
-                    <!-- <div class="item">
-                        <a href="https://www.kkday.com/zh-tw/product/134229" target="_blank">
-                            <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png" data-src="/terminalAssets/images/main/discount03.png" data-src-retina="/terminalAssets/images/main/discount03.png" alt="KKday 六人票">
-                            </figure>
-                        </a>
-                        <div class="discount-intro">
-                            <div class="discount-title">KKday 限定《FLIGHT無光飛航》9 折六人票</div>
-                            <div class="discount-p">這趟無光旅途充滿未知，讓你有點害怕？</br>
-                            沒關係，我們早就幫你準備好！</br>
-                            KKday 獨家 9 折六人機票，帶上五個好友</br>
-                            陪你一起體驗刺激旅程，就不害怕了！
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- 05 -->
-                    <div class="item">
-                        <a href="https://www.kkday.com/zh-tw/product/134229-kaohsiung-pier-2-immersive-experience-exhibition" target="_blank">
-                            <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount04.png" data-src="/terminalAssets/images/main/discount04.png" data-src-retina="/terminalAssets/images/main/discount04.png" alt="KKDay">
-                            </figure>
-                        </a>
-                        <div class="discount-intro">
-                            <div class="discount-title">KKday 限定《國旅聯票》加購高鐵票 8 折</div>
-                            <div class="discount-p">落日轉運站與KKday合作推出「國旅聯票」，購買微醺列車或 FLIGHT 任一體驗，就享高鐵車票全時段8折起。</br>
-                            不但有得玩還省到錢，手指點點你會發現，原來去一趟高雄，沒那麼遠也沒麼難。
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 01 -->
-                    <!-- <div class="item">
-                        <a href="https://ec.citysuiteshotels.com/webhotel/0274/index?_rand=59ufuaxww47" target="_blank">
-                            <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount05.png" data-src="/terminalAssets/images/main/discount05.png" data-src-retina="/terminalAssets/images/main/discount05.png" alt="城市商旅">
-                            </figure>
-                        </a>
-                        <div class="discount-intro">
-                            <div class="discount-title">真愛館港景房＋微醺列車／FLIGHT</div>
-                            <div class="discount-p">旅途上，有很多事物不能選擇，但我們可以選擇，暫時落腳的地點。</br>
-                            在城市商旅真愛館，擁有港景第一排的視野，還有星空SkyBar，最優秀的是，步行10分鐘就抵達落日轉運站！
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
 
                 <!-- Custom Controls -->
@@ -1115,7 +906,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     包場、大宗購票、異業合作，歡迎來信詢問
                                 </p>
                                 <h4 class="color-y100">客服信箱</h4>
-                                <a class="link-text style-regular" href="mailto:terminal@surpriselab.com.tw" target="_blank">terminal@surpriselab.com.tw</a>
+                                <a class="link-text style-regular" href="mailto:mindthegap@surpriselab.com.tw" target="_blank">mindthegap@surpriselab.com.tw</a>
                             </div>
                             <div class="cta-wrap">
                                 <div class="btn-wrap">
@@ -1147,9 +938,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="intro-surpriselab-tab" data-bs-toggle="tab" data-bs-target="#intro-surpriselab" type="button" role="tab" aria-controls="intro-surpriselab" aria-selected="true">驚喜製造</button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="intro-darkfield-tab" data-bs-toggle="tab" data-bs-target="#intro-darkfield" type="button" role="tab" aria-controls="intro-darkfield" aria-selected="false">DARKFIELD</button>
-                            </li>
+                            </li> -->
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="intro-roguewave-tab" data-bs-toggle="tab" data-bs-target="#intro-roguewave" type="button" role="tab" aria-controls="intro-roguewave" aria-selected="false">風狗浪</button>
                             </li>
@@ -1161,10 +952,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="tab-pane fade show active" id="intro-surpriselab" role="tabpanel" aria-labelledby="intro-surpriselab-tab">
                             <div class="tab-content-inner">
                                 <div class="heading-p">
-                                    <p>出沒時間、地點難以預測的體驗製造商。<br><br>用娛樂傳遞價值，以體驗拋出提問，<br>在日常生活中，實現那些難以想像的畫面。</p>
-                                    <p class="italic">2019｜La Vie 台灣創意力 100 創意品牌首獎<br>2018｜Taiwan Design Best 100 年度設計團隊</p>
+                                    <p>
+                                        出沒時間、地點難以預測的體驗製造商。<br>
+                                        <br>
+                                        用娛樂傳遞價值，以體驗拋出提問，<br>
+                                        在日常生活中，實現那些難以想像的畫面。
+                                    </p>
+                                    <p class="italic">
+                                        2023-2024｜沉浸式 VR 體驗<a href="https://utm.to/5d4dqf" style="color: #efaf50; text-decoration: underline;">《巴黎舞會》</a><br>
+                                        2022-2024｜黑暗互動餐飲體驗<a href="https://utm.to/5beceh" style="color: #efaf50; text-decoration: underline;">《無光晚餐》</a>
+                                    </p>
                                 </div>
-                                <div class="project-slideshow">
+                                <div class="project-slideshow" style="display: none;">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-train">
 
@@ -1357,7 +1156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="heading-p">
                                     <p>「風狗浪ROGUE WAVE」於2022年成立，<br>是由進港浪製作所的導演洪唯堯帶領的全新沉浸式團隊。<br><br>風狗浪致力研究沉浸式及互動式展演，由多位導演共同組成。<br>表現形式上並不侷限特定媒材、形式、議題，<br><br>目標為找尋更多不同的體驗、活動、事件，<br>期待為觀眾創造新的旅程。</p>
                                 </div>
-                                <div class="project-slideshow">
+                                <div class="project-slideshow" style="display: none;">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-bistro">
 
@@ -1421,8 +1220,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <h3 class="heading-subtitle">Our Partners</h3>
                             </div>
                             <div class="img-wrap">
-                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png?v=0.1" alt="Partners">
-                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner_mobile.png?v=0.1" alt="Partners">
+                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png?231123" alt="Partners">
+                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner_mobile.png?231123" alt="Partners">
                             </div>
                         </div>
                     </div>
@@ -1452,82 +1251,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div> -->
                     <div class="accordion-wrap">
                         <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-1-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseFour" aria-expanded="false" aria-controls="flush-1-collapseFour">
+                                    <span class="header-title">落日轉運站是什麼？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-1-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-1-headingFour" data-bs-parent="#accordionFlushExample-1">
+                                <div class="accordion-body">
+                                    <p>
+                                        驚喜製造推出的巡迴沉浸式計畫，即將於2024年1月抵達台北站。<br>
+                                        2022.11.10 - 2023.10.15於首站：高雄，推出包含以交通工具為題的兩項作品，微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT》，超過 40,000 人次參與體驗。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-2-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseFour" aria-expanded="false" aria-controls="flush-2-collapseFour">
+                                    <span class="header-title">台北站跟高雄站有什麼差別？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-2-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-2-headingFour" data-bs-parent="#accordionFlushExample-2">
+                                <div class="accordion-body">
+                                    <p>在巡迴第二站，落日轉運站突現奇幻時空《落日月台》；有別於高雄站的《微醺列車》及《FLIGHT》，將提供旅客探索多樣的場景變化並提供個人化全感官體驗。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-3-headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
-                                    <span class="header-title">《落日轉運站：Final Call》體驗內容與先前有差別嗎？</span>
+                                    <span class="header-title">《落日月台》是什麼？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
                             <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
                                 <div class="accordion-body">
-                                    <p>9/22-10/15 為落日轉運站最後停留在高雄的日子，這段時間裡〈微醺列車〉將探索更多空間，並有不一樣的結局；〈FLIGHT〉在降落後，將會有小驚喜；詳情請<a class="text-dark" target="_blank" href="https://www.facebook.com/surpriselabtw/posts/pfbid0n4pZNwJuRdujVyrfdH99JwhUfV6yMbYnn3umjcfhQZoTC4PH2Nx4CWF5SpL9AfX5l" style="text-decoration: underline;">點我查看</a>。</p>
+                                    <p>
+                                        踏入此處的旅客，皆遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的九位漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-3-headingNine">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseNine" aria-expanded="false" aria-controls="flush-3-collapseNine">
-                                    <span class="header-title">我想跟朋友坐在一起可以嗎？</span>
+                            <h2 class="accordion-header" id="flush-4-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-4-collapseFour" aria-expanded="false" aria-controls="flush-4-collapseFour">
+                                    <span class="header-title">《微醺列車》及《FLIGHT》還會回來嗎？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-3-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-3-headingNine" data-bs-parent="#accordionFlushExample-3">
+                            <div id="flush-4-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-4-headingFour" data-bs-parent="#accordionFlushExample-4">
                                 <div class="accordion-body">
-                                    <p>微醺列車歡迎您與友人一起搭乘，於「候車室劃位時」請告知乘務員，FLIGHT為維護體驗品質建議分開搭乘，若有特殊需求請於「取票時」告知月台服務人員。</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-3-headingTen">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseTen" aria-expanded="false" aria-controls="flush-3-collapseTen">
-                                    <span class="header-title">如果我不喝酒怎麼辦？會影響體驗嗎？</span>
-                                    <div class="header-icon"></div>
-                                </button>
-                            </h2>
-                            <div id="flush-3-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-3-headingTen" data-bs-parent="#accordionFlushExample-3">
-                                <div class="accordion-body">
-                                    <p>微醺列車提供一杯調飲，不飲用不會影響體驗內容不便飲酒的乘客可以將調飲轉讓給同行友人或選擇不飲用，轉運站不提供外帶服務。</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-2-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseTwo" aria-expanded="false" aria-controls="flush-2-collapseTwo">
-                                    <span class="header-title">各個作品的體驗價位與時長各是多少呢？</span>
-                                    <div class="header-icon"></div>
-                                </button>
-                            </h2>
-                            <div id="flush-2-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-2-headingTwo" data-bs-parent="#accordionFlushExample-2">
-                                <div class="accordion-body">
-                                    <div class="table-wrap style-qa layout-qa">
-                                        <table>
-                                            <tr>
-                                                <th></th>
-                                                <th>微醺列車</th>
-                                                <th><span class="style-bolder">FLIGHT</span></th>
-                                            </tr>
-                                            <tr>
-                                                <th>體驗時長</th>
-                                                <td>
-                                                    <span class="style-bolder">60</span> 分鐘
-                                                    <br class="mobile-br"> / 每場次
-                                                </td>
-                                                <td>
-                                                    <span class="style-bolder">30</span> 分鐘
-                                                    <br class="mobile-br"> / 每場次
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>票價</th>
-                                                <td><span class="style-bolder">$1,250</span> / 每人</td>
-                                                <td><span class="style-bolder">$500</span> / 每人</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
+                                    <p>會的！請持續關注驚喜製造，獲得最新消息。</p>
                                 </div>
                             </div>
                         </div>
@@ -1535,7 +1314,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn activity-btn" data-bs-dismiss="modal">CLOSE</button> -->
-                    <a class="btn activity-btn" href="https://www.surpriselab.com.tw/terminal/rules">更多資訊</a>
+                    <a target="_blank" class="btn activity-btn" href="https://www.instagram.com/surpriselabtw/">關注驚喜</a>
                 </div>
             </div>
         </div>
@@ -1554,8 +1333,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js"></script>
-    <script src="/terminalAssets/js/home-slideshow.js?date=0627"></script>
+    <script src="/terminalAssets/js/index.js?2311231"></script>
+    <script src="/terminalAssets/js/home-slideshow.js?231123"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>

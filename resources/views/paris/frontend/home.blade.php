@@ -82,7 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
-            <a target="_blank" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
+            <a target="_blank" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
         </nav>
     </header>
 
@@ -148,7 +148,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="/paris/img/deco.svg" />
                 <h1>購票資訊</h1>
                 <h3>Ticket</h3>
-                <p><center>預購倒數最後一週，敬請把握票價優惠</center></p>
+                <p><center>11/26-11/28 將暫停購票、11/29 開放直購，完成購票即可劃位</center></p>
+                <p><center>暫停購票期間，點擊 <a class="hover-underline" target="_blank" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a> 留下聯絡資訊的賓客，我們將在開放購票後第一時間通知你</center></p>
             </div>
             
             <div class="price pc">
@@ -157,21 +158,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket1.png" />
                     </div>
                     <h4>單人獨舞票</h4>
-                    <h2>$2,000</h2>
+                    <h2>$2,100</h2>
                     <div class="desc">
                         （含一杯調飲）<br>
                         <br><br>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/booking_ticket2.png" />
                     </div>
                     <h4>雙人共舞票</h4>
-                    <h2>$3,800<span>($1,900/人)</span></h2>
+                    <h2>$4,000<span>($2,000/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
                         <span>【早鳥優惠倒數】11/26前購票輸入【twogether】享$100折扣</span>
@@ -179,21 +180,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/booking_ticket3_old.png" /> 
                     </div>
                     <h4>四人群舞票</h4>
-                    <h2>$7,400<span>($1,850/人)</span></h2>
+                    <h2>$7,600<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含四杯調飲）<br> 
                         <br><br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
                 </div>
             </div>
 
@@ -203,21 +204,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket1.png" />
                     </div>
                     <h4>單人獨舞票</h4>
-                    <h2>$2,000</h2>
+                    <h2>$2,100</h2>
                     <div class="desc">
                         （含一杯調飲）<br>
                         <br><br>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/booking_ticket2.png" />
                     </div>
                     <h4>雙人共舞票</h4>
-                    <h2>$3,800<span>($1,900/人)</span></h2>
+                    <h2>$4,000<span>($2,000/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
                         <span>【早鳥優惠倒數】11/26前購票輸入【twogether】享$100折扣</span>
@@ -225,21 +226,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/booking_ticket3_old.png" />
                     </div>
                     <h4>四人群舞票</h4>
-                    <h2>$7,400<span>($1,850/人)</span></h2>
+                    <h2>$7,600<span>($1,900/人)</span></h2>
                     <div class="desc">
                         （含四杯調飲）<br> 
                         <br><br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
                 </div>
             </div>
         </section>
@@ -469,7 +470,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a target="_blank" id="fixed-booking" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW" style="display: none;">
+    <a target="_blank" id="fixed-booking" href="https://m.me/surpriselabtw?ref=presaleend" style="display: none;">
         <img src="/paris/img/fixed-booking.png" />
     </a>
 

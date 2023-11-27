@@ -36,7 +36,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css">
     <link rel="stylesheet" href="/terminalAssets/css/booking-now.css">
 <!-- Google Tag Manager -->
@@ -126,7 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="feature-item">
                                                     <div class="item-title body-01">
                                                         <i class="icon-drink"></i>
-                                                        調飲<span class="color-o400">1</span>杯
+                                                        <span class="color-o400">3</span>道小點
                                                     </div>
                                                     <div class="item-unit body-02">每人　</div>
                                                 </div>
@@ -332,7 +332,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <a href="booking" class="booking-btn shape-round color-primary">前往劃位</a>
                                 </div>
                                 <div class="notice-wrap">
-                                    有任何問題歡迎來信：<a href="mailto:terminal@surpriselab.com.tw" class="link-text" target="_blank">terminal@surpriselab.com.tw</a>
+                                    有任何問題歡迎來信：<a href="mailto:mindthegap@surpriselab.com.tw" class="link-text" target="_blank">mindthegap@surpriselab.com.tw</a>
                                 </div>
                             </div>
                         </div>

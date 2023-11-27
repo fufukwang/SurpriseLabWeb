@@ -20,7 +20,7 @@ $(function() {
     
     let $dropdown_ticket = $('#dropdownMenuButtonTicket');
     let $dropdown_count = $('#dropdownMenuButtonCount');
-    let maxDateVal = "2023-10-31";//"+3m";
+    let maxDateVal = "2025-03-31"; // "+3m"
     var usedCoupons = [];
 
     let $ticket_value = '';
@@ -58,9 +58,9 @@ $(function() {
             // case 'Boat for ONE': max = 1; $ticket_value = 'boat'; break;
             // case '套票：車票+飛機票': max = 24; $ticket_value = 'A'; break;
             // case '套票B：車票+飛機票+船票': max = 1; $ticket_value = 'B'; break;
-            case '2,200/人 獨身踏上旅程': max = 1; $ticket_value = '單人票'; break;
-            case '2,100/人 雙人結伴同行': max = 2; $ticket_value = '雙人票'; break;
-            case '2,000/人 六人組隊探索': max = 2; $ticket_value = '六人票'; break;
+            case '2,200/人 單人票': max = 1; $ticket_value = '單人票'; break;
+            case '2,100/人 雙人票': max = 1; $ticket_value = '雙人票'; break;
+            case '2,000/人 六人票': max = 1; $ticket_value = '六人票'; break;
         }
         if(max>0){
             $dropdown_count.prop('disabled',false);
@@ -78,7 +78,7 @@ $(function() {
                 // html += '<li class="dropdown-item body-04" data-cnt="2">2張（12人）</li>';
             }
             $('ul[aria-labelledby=dropdownMenuButtonCount]').html(html);
-            $dropdown_count.text('選擇人數');
+            $dropdown_count.text('選擇張數');
             $people_value = 0;
         } else {
             $dropdown_count.prop('disabled',true);
@@ -295,11 +295,13 @@ $(function() {
     //         $btn_next2.addClass('status-disabled');
     //     }
     // }
-    // // back to step 1
-    // $btn_prev2.on('click', function(){
-    //     $step2_scenes.hide();
-    //     $step1_scenes.show();
-    // });
+
+    // back to step 1
+    $btn_prev2.on('click', function(){
+        $step2_scenes.hide();
+        $step1_scenes.show();
+    });
+    
     // // go step 3 button
     // $btn_next2.on('click', function(){
     //     // enabled

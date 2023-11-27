@@ -3,6 +3,14 @@ $(function(){
     let scrolled = $win.scrollTop();
     let nav_height = $('#js-nav-bar').innerHeight();
 
+    // To anchor
+    let hash = window.location.hash;
+    if (hash) {
+        $('#home').hide();
+        $('body').removeClass('home-modal');
+        window.history.replaceState(null, null, ' ');
+    }
+
     // section hide target effect
     let $hidden_section = $('.js-hidden-section');
     let $hidden_targets = $('.js-hidden-target');
@@ -68,13 +76,13 @@ $(function(){
         scrolled = $(this).scrollTop();
 
         // anchor menu effect
-        // anchorMenuEffect(scrolled);
+        anchorMenuEffect(scrolled);
 
         // section hide target effect
-        sectionHideTargetEffect(scrolled);
+        // sectionHideTargetEffect(scrolled);
 
         // mobile - set nav bar section text
-        // setNavBarSectionText();
+        setNavBarSectionText();
     });
 
     function timeoff() {
@@ -114,11 +122,17 @@ $(function(){
     anchorMenuEffect(scrolled);
 
     // section hide target effect
-    sectionHideTargetEffect(scrolled);
+    // sectionHideTargetEffect(scrolled);
 
     // mobile - set nav bar section text
     setNavBarSectionText();
 
     timeoff();
 
+});
+
+$('#home .sun-wrapper, #home .enter-btn').on('click', function() {
+    $('#home').fadeOut(600, function() {
+        $('body').removeClass('home-modal');
+    });
 });

@@ -115,7 +115,7 @@ switch($time){
 <strong>{{$day}}&nbsp; {{$pople}} 位 </strong>的無光晚餐嗎？<br>
 Your reservation for <strong>{{$pople}}</strong> people is at <strong>{{$eday}}.&nbsp;</strong><br>
 <br>
-你的體驗場次時間為&nbsp; {{$time}}，請於 {{$inTime}} 前抵達入場，<br>
+你的體驗場次時間為&nbsp; {{$time}}，請於 {{$inTime}} 前抵達報到，<br>
 The show will start at {{$time}}, please arrive at {{$inTime}}.<br>
 <br>
 <strong>葷食 </strong>Regular Menu<strong> {{ $meat_eat }} 人</strong><br>
@@ -130,9 +130,9 @@ The show will start at {{$time}}, please arrive at {{$inTime}}.<br>
 <br>
 &nbsp;</div>
 
-<div style="text-align: left;"><span style="font-size:12px"><strong><span style="color:#D3D3D3">1. </span></strong></span><span><span style="color:#D3D3D3"><span style="font-size:12px"><strong>當天請「</strong><strong><u>提早 15 分鐘抵達</u></strong><strong>」以下地點</strong></span></span><br>
+<div style="text-align: left;"><span style="font-size:12px"><strong><span style="color:#D3D3D3">1. </span></strong></span><span><span style="color:#D3D3D3"><span style="font-size:12px"><strong>當天請於「</strong><strong><u>上述報到時間前</u></strong><strong>」以下地點</strong></span></span><br>
 &nbsp;<br>
-<span style="font-size:12px"><a data-target-href="https://goo.gl/maps/qsZiGCftj2R31aUw9" href="https://goo.gl/maps/qsZiGCftj2R31aUw9" rel="noreferrer nofollow noopener" target="_blank"><u>106台北市大安區仁愛路四段345巷4弄3號</u></a><br>
+<span style="font-size:12px"><a style="color:#d3d3d3" data-target-href="https://goo.gl/maps/qsZiGCftj2R31aUw9" href="https://goo.gl/maps/qsZiGCftj2R31aUw9" rel="noreferrer nofollow noopener" target="_blank"><u>106台北市大安區仁愛路四段345巷4弄3號</u></a><br>
 （忠孝敦化站3號出口步行10分鐘）<br>
 <br>
 無光晚餐採按時段場次分批入場制，<span style="color:#8B5FB3"><strong><u>預約時間為開場時間</u></strong>，<strong><u>若遲到導致超過入場時間，航行已啟程，將會錯過部分體驗與餐點；遲到者將無法入場</u></strong></span>，又因訂位額滿，無法臨時前後調動體驗場次，無光晚餐<strong><u>亦不予以退費或打包</u></strong>，再次提醒，請務必準時。<br>
