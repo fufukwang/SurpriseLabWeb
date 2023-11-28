@@ -32,27 +32,28 @@ class NewPayController extends WebController
         try {
             $newebpay = new \NewebPay();
             $count = $this->grenOrderSN();
-            $people = $request->num;$ticket = '';
-            switch($request->ticket){
+            $people = $request->booking_people;$ticket = '';
+            switch($request->ticket_type){
                 case '單人票': $ticket = 'p1'; break;
                 case '雙人票': $ticket = 'p2';$people = $people * 2; break;
-                case '六人票': $ticket = 'p6';$people = $people * 4; break;
+                case '六人票': $ticket = 'p6';$people = $people * 6; break;
             }
-            $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts','p1','p2','p6')->first();
+            $pro_id = $request->train;
+            $act = pro::where('id',$pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts','p1','p2','p6')->first();
             if($people>$act->Count){
                 Log::error('人數滿了');
                 return view('terminal.frontend.booking_fail');
             }
 
             $pay_type = '信用卡';
-            $money = $act->$ticket * $request->num;
+            $money = $act->$ticket * $request->booking_people;
             $cut1 = 0; $cut2 = 0;
             // 確認庫碰碼
             $coupon = 0;
             $couponCode = '';
             $manage = '';
-            if($request->has('gift') && $request->gift !=''){
-                $couponCode = $request->gift;
+            if($request->has('allocation') && $request->allocation !=''){
+                $couponCode = $request->allocation;
                 $coN = coupon::where('code',$couponCode)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
                 if($coN>0){
                     $me = coupon::where('code',$couponCode)->where('o_id',0)->select('type')->first();
@@ -70,11 +71,12 @@ class NewPayController extends WebController
                     return view('terTP.frontend.booking_fail');
                 }
             }
+
             // 折扣碼
             $discountCode = '';
-            if($request->has('discount')){
-                $discountCode = $request->discount;
-                $discount_list = json_decode(setting::where('slug','terTP_pay_discount')->first()->json,true);
+            if($request->has('coupon') && $request->coupon !=''){
+                $discountCode = $request->coupon;
+                $discount_list = json_decode(setting::where('slug','ter_pay_discount')->first()->json,true);
                 foreach($discount_list as $row){
                     if(strtoupper($row['code']) == $discountCode){
                         $manage .= $discountCode.'折扣 '.$row['money']."\n";
@@ -85,18 +87,18 @@ class NewPayController extends WebController
             }
 
             $pay_status = '未完成';
-            if(intval($money - $cut1 - $cut2)  == 0){
+            if(intval($money - $cut1 - $cut2)  <= 0){
                 $pay_status = '已付款';
             }
 
 
             $data = [
-                'pro_id'     => $request->booking_time,
+                'pro_id'     => $pro_id,
                 'pople'      => $people,
                 'name'       => $request->name,
-                'tel'        => $request->area_code.$request->phone,
+                'tel'        => $request->area_code.$request->telephone,
                 'email'      => $request->email,
-                'notes'      => $request->notice,
+                'notes'      => $request->remark,
                 'coupon'     => $coupon,
                 'sn'         => $count,
                 'money'      => $money - $cut1 - $cut2,
@@ -122,12 +124,13 @@ class NewPayController extends WebController
             $sentSuccess = false;
             if($data['money'] == 0){
                 $data = [
-                    'ticket' => $request->ticket,
-                    'num' => $request->num,
+                    'ticket' => $request->ticket_type,
+                    'num' => $request->booking_people,
                     'day' => preg_replace('/-/','/',$act->day),
                     'time' => substr($act->rang_start,0,5).'-'.substr($act->rang_end,0,5),
                     'money' => $order->money,
                 ];
+
                 $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
                     ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($order->id);
 

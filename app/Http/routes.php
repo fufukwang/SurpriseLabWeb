@@ -827,20 +827,21 @@ Route::group(['middleware' => ['web']], function () {
         // Route::get('/',function(){ return view('terminal.frontend.home'); });
         // Route::get('/index.html',function(){ return view('terminal.frontend.home'); });
 
-        Route::get('/', 'terminal\FrontController@getHome');
-        Route::get('/index.html', 'terminal\FrontController@getHome');
+        Route::get('/', function(){ return view('terminal.frontend.home'); });
+        Route::get('/index.html', function(){ return view('terminal.frontend.home'); });
 
         Route::get('rules',function(){ return view('terminal.frontend.rules'); });
         // 劃位
         Route::get('booking_now',function(){ return view('terminal.frontend.booking_now'); });
         // Route::get('booking',function(){ return view('terminal.frontend.booking'); });
-        Route::get('booking', 'terminal\FrontController@getOrderPage');
+        Route::get('booking',function(){ return view('terminal.frontend.booking'); });
         // 藍新金流路由
-        Route::post('Neweb.OrderPay', 'terminal\NewPayController@postOrderByNeweb'); // 存訂單
-        Route::post('Neweb.ReturnResult', 'terminal\NewPayController@postReturnByNeweb'); // 回傳內容
-        Route::post('Neweb.BackReturn', 'terminal\NewPayController@postBackReturn'); // 背景回傳
+        Route::post('Neweb.OrderPay', 'terTP\NewPayController@postOrderByNeweb'); // 存訂單
+        Route::post('Neweb.ReturnResult', 'terTP\NewPayController@postReturnByNeweb'); // 回傳內容
+        Route::post('Neweb.BackReturn', 'terTP\NewPayController@postBackReturn'); // 背景回傳
 
-        Route::get('GetAjaxData','terminal\FrontController@GetAjaxData');
+        Route::get('GetAjaxData','terTP\FrontController@GetAjaxData');
+        Route::post('PostAjaxData','terTP\FrontController@PostAjaxData');
         // Route::post('PostAjaxData','terminal\FrontController@PostAjaxData');
         // Route::post('ReOrderData','terminal\FrontController@ReOrderData');
     });

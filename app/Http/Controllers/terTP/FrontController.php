@@ -33,10 +33,10 @@ class FrontController extends WebController
             if($request->has('act')){
                 $pople = $request->pople;
                 if($request->has('ticketType')){
-                    if($request->ticketType == '雙人共舞票'){
+                    if($request->ticketType == '雙人票'){
                         $pople = $pople * 2;
-                    } elseif($request->ticketType == '四人群舞票'){
-                        $pople = $pople * 4;
+                    } elseif($request->ticketType == '六人票'){
+                        $pople = $pople * 6;
                     }
                 }
                 if(is_numeric($pople) && $pople>0){
@@ -59,14 +59,13 @@ class FrontController extends WebController
                         $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',1);
                         $pro = $pro->get();
                         return $pro->toJson();
-                    break;
+                    break;*/
                     case 'getByday': // 日期 取得 時段
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
                         $pro = $pro->select('day_parts','day')->groupBy('day_parts')->where('day',$day)->get();
                         return $pro->toJson();
                     break;
-                    */
                     case 'getBydartpart': // 日期 時段 取得 range
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
@@ -104,7 +103,7 @@ class FrontController extends WebController
                         $slug = $request->useType;
                         $discount_obj = false;
                         $discount_code = strtoupper($request->code);
-                        $discount_list = json_decode(setting::where('slug','terTP_'.$slug.'_discount')->first()->json,true);
+                        $discount_list = json_decode(setting::where('slug','ter_'.$slug.'_discount')->first()->json,true);
                         foreach($discount_list as $row){
                             if(strtoupper($row['code']) == $discount_code){
                                 $discount_obj = $row;
@@ -161,7 +160,7 @@ class FrontController extends WebController
                 }
                 // 刷卡票數
                 if($request->method == 'getMaxDate'){
-                    $json = json_decode(setting::where('slug','terTP_setting')->first()->json,true);
+                    $json = json_decode(setting::where('slug','ter_setting')->first()->json,true);
                     return Response::json($json,200);
                 }
             }
@@ -199,7 +198,7 @@ class FrontController extends WebController
                 $slug = $request->useType ?? 'pay';
                 $discount_obj = false;
                 $discount_code = strtoupper($request->code);
-                $discount_list = json_decode(setting::where('slug','terTP_'.$slug.'_discount')->first()->json,true);
+                $discount_list = json_decode(setting::where('slug','ter_'.$slug.'_discount')->first()->json,true);
                 foreach($discount_list as $row){
                     if(strtoupper($row['code']) == $discount_code){
                         $discount_obj = $row;

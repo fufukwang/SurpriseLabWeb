@@ -32,6 +32,8 @@ $(function() {
     let singleMoney = 0;
     let discountCode = '';
     let discountAmount = 0;
+    let couponCode = '';
+    let couponAmount = 0;
 /*
     let flag_ticket = false;
     let flag_count = false;
@@ -189,6 +191,30 @@ $(function() {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;
                         setTimeout(function () {inst.dpDiv.css({top: $top});}, 0);
                     },
+                    onSelect: function(date, inst) {
+                        // blockUI
+                        $.blockUI({message: null});
+
+                        // show datepart
+                        $.get('/terminal/GetAjaxData',{
+                            'act': 'getByday',
+                            'ticketType': type,
+                            'day':date,
+                            'pople': $people_value,
+                        },function(data){
+                            $.unblockUI();
+                            if(data.length>0){
+                                let html = '';
+                                for(i=0;i<data.length;i++){ html += '<li class="dropdown-item body-04">'+data[i].day_parts+'</li>'; }
+                                $('#dropdownMenuButtonPeriod-train').html('選擇時段');
+                                $('ul[aria-labelledby=dropdownMenuButtonPeriod-train]').html(html);
+                            }
+                            $('.dropdown-time-train').hide();
+                            $('.dropdown-datepart-train').show();
+
+                        },'json');
+                    }
+
                     // onSelect: function(date, inst){
                     //     $.get('/terminal/GetAjaxData',{
                     //         'act':'getByday',
@@ -218,7 +244,47 @@ $(function() {
             },'json');
         }
     }
-
+    // setp 2
+    $('#dropdownMenuButtonPeriod-train').parent().on('click','ul li',function(){
+        let val = $(this).text();
+        $('#dropdownMenuButtonPeriod-train').text(val);
+        $pro_train = 0;
+        $.get('/terminal/GetAjaxData',{
+            'act':'getBydartpart',
+            'ticketType': $ticket_value,
+            'day': $('#js-datepicker').val(),
+            'day_parts': val,
+            'pople': $people_value,
+        },function(obj){
+            if(obj.length>0){
+                let html = '';
+                for(i=0;i<obj.length;i++){ 
+                    var range = obj[i].rang_start.substring(0,5) + ' - ' + obj[i].rang_end.substring(0,5) + ' 剩餘'+obj[i].sites+'位'
+                    html += '<li class="dropdown-item body-04" data-id="'+obj[i].id+'">'+range+'</li>'; 
+                }
+                $('ul[aria-labelledby=dropdownMenuButtonTime-train]').html(html);
+                $('#dropdownMenuButtonTime-train').text('選擇時間');
+                $('.dropdown-time-train').show();
+                controlStep3Button();
+            }
+        },'json');
+    });
+    $('#dropdownMenuButtonTime-train').parent().on('click','ul li',function(){
+        let val = $(this).text();
+        $('#dropdownMenuButtonTime-train').text(val);
+        $pro_train = $(this).data('id');
+        controlStep3Button();
+    });
+    // control next button disabled
+    function controlStep3Button() {
+        if (
+            $('.dropdown-time-train').is(":visible") && $('#dropdownMenuButtonTime-train').text() != '選擇時間'
+        ) {
+            $btn_next2.removeClass('status-disabled');
+        } else {
+            $btn_next2.addClass('status-disabled');
+        }
+    }
     // // step 2
     // $('#dropdownMenuButtonPeriod-train').parent().on('click','ul li',function(){
     //     let val = $(this).text();
@@ -302,212 +368,306 @@ $(function() {
         $step1_scenes.show();
     });
     
-    // // go step 3 button
-    // $btn_next2.on('click', function(){
-    //     // enabled
-    //     if ( !$(this).hasClass('status-disabled') ) { 
-    //         $step2_scenes.hide();
-    //         $step3_scenes.show();
-    //         $("html,body").animate({scrollTop: 0}, 300);
-    //     } else {
-    //         $(this).addClass('status-disabled');
-    //     }
-    // });
+    // go step 3 button
+    $btn_next2.on('click', function(){
+        // enabled
+        if ( !$(this).hasClass('status-disabled') ) { 
+            $step2_scenes.hide();
+            $step3_scenes.show();
+            $("html,body").animate({scrollTop: 0}, 300);
+        } else {
+            $(this).addClass('status-disabled');
+        }
+    });
 
 
-    // // step 3
-    // // Only number
-    // $('#telephone').bind('keyup paste', function(){
-    //     this.value = this.value.replace(/[^0-9\+\-\ ]/g, '');
-    // });
-    // let $input_name = $('#name');
-    // let $input_tel = $('#telephone');
-    // let $input_email = $('#email');
-    // let $checkbox_agree_rules = $('#agree-rules');
-    // let $checkbox_agree_privacy = $('#agree-privacy');
+    // step 3
+    // Only number
+    $('#telephone').bind('keyup paste', function(){
+        this.value = this.value.replace(/[^0-9\+\-\ ]/g, '');
+    });
+    let $input_name = $('#name');
+    let $input_tel = $('#telephone');
+    let $input_email = $('#email');
+    let $checkbox_agree_rules = $('#agree-rules');
+    let $checkbox_agree_privacy = $('#agree-privacy');
 
-    // let flag_name = false;
-    // let flag_tel = false;
-    // let flag_email = false;
-    // let flag_agree_rules = false;
-    // let flag_agree_privacy = false;
+    let flag_name = false;
+    let flag_tel = false;
+    let flag_email = false;
+    let flag_agree_rules = false;
+    let flag_agree_privacy = false;
 
-    // let format_flag_tel = false;
-    // let format_flag_email = false;
+    let format_flag_tel = false;
+    let format_flag_email = false;
 
-    // let tel_rule = /^\d+$/;
-    // // /^09\d{8}$/;
-    // let email_rule = /^(\w|\.|\-)+@(\w|\.|\-)+\.(\w|\.|\-)+$/;
-
-
-    // // control next button disabled
-    // function controlButton() {
-    //     if ( flag_name && flag_tel && flag_email && flag_agree_rules && flag_agree_privacy ) {
-    //         $btn_next3.removeClass('status-disabled');
-    //     } else {
-    //         $btn_next3.addClass('status-disabled');
-    //     }
-    // }
-
-    // // verify input
-    // function verifyInput() {
-    //     flag_name = $input_name.val().length == 0 ? false : true;
-    //     flag_tel = $input_tel.val().length == 0 ? false : true;
-    //     flag_email = $input_email.val().length == 0 ? false : true;
-    //     controlButton();
-    // }
-
-    // // verify checkbox
-    // function verifyCheckbox() {
-    //     flag_agree_rules = $checkbox_agree_rules.prop('checked');
-    //     flag_agree_privacy = $checkbox_agree_privacy.prop('checked');
-    //     controlButton();
-    // }
+    let tel_rule = /^\d+$/;
+    // /^09\d{8}$/;
+    let email_rule = /^(\w|\.|\-)+@(\w|\.|\-)+\.(\w|\.|\-)+$/;
 
 
-    // // verify input
-    // $('input[type="text"]').on('input', function(){
-    //     verifyInput();
-    // });
+    // control next button disabled
+    function controlButton() {
+        if ( flag_name && flag_tel && flag_email && flag_agree_rules && flag_agree_privacy ) {
+            $btn_next3.removeClass('status-disabled');
+        } else {
+            $btn_next3.addClass('status-disabled');
+        }
+    }
 
-    // // verify checkbox
-    // $('input[type="checkbox"]').parents('.form-group').on('click', function(){
-    //     verifyCheckbox();
-    // });
+    // verify input
+    function verifyInput() {
+        flag_name = $input_name.val().length == 0 ? false : true;
+        flag_tel = $input_tel.val().length == 0 ? false : true;
+        flag_email = $input_email.val().length == 0 ? false : true;
+        controlButton();
+    }
 
-    // // go step 4 button
-    // $btn_next3.on('click', function(){
+    // verify checkbox
+    function verifyCheckbox() {
+        flag_agree_rules = $checkbox_agree_rules.prop('checked');
+        flag_agree_privacy = $checkbox_agree_privacy.prop('checked');
+        controlButton();
+    }
+
+
+    // verify input
+    $('input[type="text"]').on('input', function(){
+        verifyInput();
+    });
+
+    // verify checkbox
+    $('input[type="checkbox"]').parents('.form-group').on('click', function(){
+        verifyCheckbox();
+    });
+
+    // go step 4 button
+    $btn_next3.on('click', function(){
         
-    //     if ( !$(this).hasClass('status-disabled') ) {
+        if ( !$(this).hasClass('status-disabled') ) {
             
-    //         // verify format
-    //         format_flag_tel = tel_rule.test($input_tel.val());
-    //         format_flag_email = email_rule.test($input_email.val());
+            // verify format
+            format_flag_tel = tel_rule.test($input_tel.val());
+            format_flag_email = email_rule.test($input_email.val());
 
-    //         if ( format_flag_tel ) {
-    //             $input_tel.parents('.form-group').removeClass('error-style');
-    //         } else {
-    //             $input_tel.parents('.form-group').addClass('error-style');
-    //         }
+            if ( format_flag_tel ) {
+                $input_tel.parents('.form-group').removeClass('error-style');
+            } else {
+                $input_tel.parents('.form-group').addClass('error-style');
+            }
 
-    //         if ( format_flag_email ) {
-    //             $input_email.parents('.form-group').removeClass('error-style');
-    //         } else {
-    //             $input_email.parents('.form-group').addClass('error-style');
-    //         }
+            if ( format_flag_email ) {
+                $input_email.parents('.form-group').removeClass('error-style');
+            } else {
+                $input_email.parents('.form-group').addClass('error-style');
+            }
 
-    //         // enabled
-    //         if ( format_flag_tel && format_flag_email ) {
-    //             $(this).removeClass('status-disabled');
-    //             $('#filled-name').text($input_name.val());
-    //             $('#filled-telephone').text($input_tel.val());
-    //             $('#filled-email').text($input_email.val());
-    //             $('#filled-remark').text($('#remark').val());
-    //             $('.filled-people').text($('#dropdownMenuButtonCount').text());
-    //             $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney));
-    //             $step3_scenes.hide();
-    //             $step4_scenes.show();
-    //             $("html,body").animate({scrollTop: 0}, 300);
-    //         } else {
-    //             $(this).addClass('status-disabled');
-    //         }
-    //     }
-    // });
+            // enabled
+            if ( format_flag_tel && format_flag_email ) {
+                $(this).removeClass('status-disabled');
+                $('#filled-name').text($input_name.val());
+                $('#filled-telephone').text($('#area_code').val()+' '+$input_tel.val());
+                $('#filled-email').text($input_email.val());
+                $('#filled-remark').text($('#remark').val());
+                $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney));
+                // ticket info
+                $('#ticket-info .item-caption').text($ticket_value);
+                $('#ticket-info ul li:eq(0)').text("日期 "+$('#js-datepicker').val());
+                $('#ticket-info ul li:eq(1)').text("時段 "+$('#dropdownMenuButtonTime-train').text().substring(0,13));
+                $('.filled-people').text($('#dropdownMenuButtonCount').text());
+                $step3_scenes.hide();
+                $step4_scenes.show();
+                $("html,body").animate({scrollTop: 0}, 300);
+            } else {
+                $(this).addClass('status-disabled');
+            }
+        }
+    });
 
-    // /* init */
-    // verifyInput();
-    // verifyCheckbox();
+    /* init */
+    verifyInput();
+    verifyCheckbox();
 
-    // // back to step 2
-    // $btn_prev3.on('click', function(){
-    //     $step3_scenes.hide();
-    //     $step2_scenes.show();
-    // });
+    // back to step 2
+    $btn_prev3.on('click', function(){
+        $step3_scenes.hide();
+        $step2_scenes.show();
+    });
 
-    // // step 4
-    // $('.verification-code').on('click', function () {
-    //     var coupon = $('input[name="coupon"]');
-    //     var couponVal = coupon.val(); // 取得用戶輸入的票券代碼
-    //     // 清除空白並驗證
-    //     couponVal = couponVal.trim();
-    //     couponVal = couponVal.toUpperCase();
-    //     if(discountCode == ''){
-    //         if(($people_value - usedCoupons.length) * singleMoney <= 0){
-    //             $('.not-found').html('已不需要折扣' );
-    //             $('.not-found').addClass('active');
-    //             return false;
-    //         }
-    //         $.get('/terminal/GetAjaxData',{
-    //             'act':'CheckDiscount',
-    //             'code':couponVal,
-    //             'pople':$people_value,
-    //             'ticketType':$ticket_value,
-    //             'useType': 'pay',
-    //             'coupon':usedCoupons
-    //         },function(data){
-    //             if(data.success == 'Y' && data.discount == 'Y'){
-    //                 if(usedCoupons.length > 0){
-    //                     $('.not-found').html('已使用禮物卡無法使用折扣碼' );
-    //                     $('.not-found').addClass('active');
-    //                     return false;
-    //                 }
-    //                 discountCode = couponVal;
-    //                 discountAmount = data.money;
-    //                 $('.use-discount').html('折扣碼' + discountCode + ' 折抵 ' + discountAmount );
-    //                 $('.use-discount').addClass('active');
-    //                 $('.verify-layout').removeClass('error-style');
-    //                 $('.not-found').removeClass('active');
+    // step 4
+    $('.verification-code').on('click', function () {
+        var type = $(this).data('type')
+        var coupon = $('input[name="coupon"]');
+        if(type == 'coupon'){
+            coupon = $('input[name="allocation"]');
+        }
+        var couponVal = coupon.val(); // 取得用戶輸入的票券代碼
+        // 清除空白並驗證
+        couponVal = couponVal.trim();
+        couponVal = couponVal.toUpperCase();
+        
 
-    //                 // $('#discount').val(discountCode);
-    //                 $('.verification-code').addClass('status-disabled');
-    //                 $('input[name=coupon]').prop('readonly',true);
-    //                 $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney - discountAmount));
-    //             } else if(data.success == 'Y' && data.discount == 'N'){
-    //                 usedCoupons.push(couponVal);
-    //                 $('.use-discount').append('折扣碼' + couponVal + ' 折抵 ' + data.money + '<br>');
-    //                 $('.use-discount').addClass('active');
-    //                 $('.verify-layout').removeClass('error-style');
-    //                 $('.not-found').removeClass('active');
-    //                 $('#js-next-btn4').html("前往購買<br>$"+(($people_value - usedCoupons.length) * singleMoney));
-
-    //             } else {
-    //                 $('.verify-layout').addClass('error-style');
+        if(type == 'coupon'){
+            $.blockUI({message: null});
+            $.post('/terminal/PostAjaxData',{
+                'act': 'CheckterTPCoupon',
+                'ticket': $ticket_value,
+                'num': $pro_train,
+                'code': couponVal
+            },function(data){
+                if(data.success == 'Y'){
+                    usedCoupons.push(couponVal);
+                    couponCode = couponVal;
+                    couponAmount = data.money;
+                    $('.use-coupon').append('折扣碼' + couponVal + ' 折抵 ' + data.money + '<br>');
+                    $('.use-coupon').addClass('active');
+                    $('.use-coupon').parent().parent().removeClass('error-style');
+                    $('.use-coupon').parent().find('.not-found').removeClass('active');
+                    $('#js-next-btn4').html("前往購買<br>$"+(($people_value - usedCoupons.length) * singleMoney));
+                } else {
+                    $('.use-coupon').parent().parent().addClass('error-style');
                      
-    //                 $('.not-found').html('找不到此筆折扣序號' );
-    //                 $('.not-found').addClass('active');
-    //             }
-    //         },'json');
-    //         coupon.val('');
-    //         return false;
-    //     } else {
-    //         // alert('折扣碼錯誤或多次輸入!');
-    //         $('.not-found').html('折扣碼限用一組' );
-    //         $('.not-found').addClass('active');
-    //         return false;
-    //     }
-        
-    //     return false;
-    // });
+                    $('.use-coupon').parent().find('.not-found').html('找不到此筆折扣序號' );
+                    $('.use-coupon').parent().find('.not-found').addClass('active');
+                }
+                $.unblockUI();
+            },'json');
+        }
 
-    // // back to step 3
-    // $btn_prev4.on('click', function(){
-    //     $step4_scenes.hide();
-    //     $step3_scenes.show();
-    // });
-    // // 去結帳
-    // $btn_next4.on('click', function(){
-    //     $.blockUI();
-    //     $('input[name=train]').val($pro_train);
-    //     $('input[name=flight]').val($pro_flight);
-    //     $('input[name=boat]').val($pro_boat);
-    //     $('input[name=booking_people]').val($people_value);
-    //     $('input[name=ticket_type]').val($ticket_value);
-    //     $('input[name=discount]').val(discountCode);
-    //     $.each( usedCoupons, function( key, val ) {
-    //         $('#final-form').append('<input type="hidden" name="coupon[]" value="'+val+'" />');
-    //     });
-        
-    //     $('#final-form').submit();
-    // });
+        if(type == 'discount'){
+            $.blockUI({message: null});
+            $.post('/terminal/PostAjaxData',{
+                'act': 'CheckterTPDiscount',
+                'ticket': $ticket_value,
+                'num': $pro_train,
+                'code': couponVal
+            },function(data){
+                if(data.success == 'Y'){
+                    discountCode = couponVal;
+                    discountAmount = data.money;
+                    $('.use-discount').html('折扣碼' + discountCode + ' 折抵 ' + discountAmount );
+                    $('.use-discount').addClass('active');
+                    $('.use-discount').parent().parent().removeClass('error-style');
+                    $('.use-discount').parent().find('.not-found').removeClass('active');
+                    $('.use-discount').parent().parent().addClass('status-disabled');
+                    coupon.prop('readonly',true);
+                    $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney - discountAmount));
+                } else {
+                    $('.use-discount').parent().parent().addClass('error-style');
+                     
+                    $('.use-discount').parent().find('.not-found').html('找不到此筆折扣序號' );
+                    $('.use-discount').parent().find('.not-found').addClass('active');
+                }
+                $.unblockUI();
+            },'json');
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+        if((type=='discount' &&discountCode == '') || (type=='coupon' &&couponCode == '')){
+            if(($people_value - usedCoupons.length) * singleMoney <= 0){
+                $('.not-found').html('已不需要折扣' );
+                $('.not-found').addClass('active');
+                return false;
+            }
+            $.get('/terminal/GetAjaxData',{
+                'act':'CheckDiscount',
+                'code':couponVal,
+                'pople':$people_value,
+                'ticketType':$ticket_value,
+                'useType': 'pay',
+                'coupon':usedCoupons
+            },function(data){
+                if(data.success == 'Y' && data.discount == 'Y'){
+                    if(usedCoupons.length > 0){
+                        $('.not-found').html('已使用禮物卡無法使用折扣碼' );
+                        $('.not-found').addClass('active');
+                        return false;
+                    }
+                    discountCode = couponVal;
+                    discountAmount = data.money;
+                    $('.use-discount').html('折扣碼' + discountCode + ' 折抵 ' + discountAmount );
+                    $('.use-discount').addClass('active');
+                    $('.verify-layout').removeClass('error-style');
+                    $('.not-found').removeClass('active');
+
+                    // $('#discount').val(discountCode);
+                    $('.verification-code').addClass('status-disabled');
+                    $('input[name=coupon]').prop('readonly',true);
+                    $('#js-next-btn4').html("前往購買<br>$"+($people_value * singleMoney - discountAmount));
+                } else if(data.success == 'Y' && data.discount == 'N'){
+                    usedCoupons.push(couponVal);
+                    couponCode = couponVal;
+                    couponAmount = data.money;
+                    $('.use-coupon').append('折扣碼' + couponVal + ' 折抵 ' + data.money + '<br>');
+                    $('.use-coupon').addClass('active');
+                    $('.verify-layout').removeClass('error-style');
+                    $('.not-found').removeClass('active');
+                    $('#js-next-btn4').html("前往購買<br>$"+(($people_value - usedCoupons.length) * singleMoney));
+
+                } else {
+                    $('.verify-layout').addClass('error-style');
+                     
+                    $('.not-found').html('找不到此筆折扣序號' );
+                    $('.not-found').addClass('active');
+                }
+            },'json');
+            coupon.val('');
+            return false;
+        } else {
+            // alert('折扣碼錯誤或多次輸入!');
+            $('.not-found').html('折扣碼限用一組' );
+            $('.not-found').addClass('active');
+            return false;
+        }
+        */
+        return false;
+    });
+
+    // back to step 3
+    $btn_prev4.on('click', function(){
+        $step4_scenes.hide();
+        $step3_scenes.show();
+    });
+    // 去結帳
+    $btn_next4.on('click', function(){
+        $.blockUI();
+        $('input[name=train]').val($pro_train);
+        $('input[name=flight]').val($pro_flight);
+        $('input[name=boat]').val($pro_boat);
+        $('input[name=booking_people]').val($people_value);
+        $('input[name=ticket_type]').val($ticket_value);
+        // $('input[name=discount]').val(discountCode);
+        /*
+        $.each( usedCoupons, function( key, val ) {
+            $('#final-form').append('<input type="hidden" name="coupon[]" value="'+val+'" />');
+        });
+        */
+        $('#final-form').submit();
+    });
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 });
-
