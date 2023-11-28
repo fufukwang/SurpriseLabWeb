@@ -383,7 +383,7 @@ $('#discount').bind('blur',function(){
         if(data.success == 'Y'){
             discount_code = disVal;
             discount_money = data.money;
-            $('.discount_note').html('折扣碼' + discount_code + ' 折扣 ' + discount_money + '<a href="javascript:;" class="arm"></a>');
+            $('.discount_note').html('折扣碼' + discount_code + ' 折扣 ' + discount_money + '<!--a href="javascript:;" class="arm"></a-->');
             $('#discount').attr('readonly',true);
         } else {
             $('.discount_note').html(data.message);
@@ -411,7 +411,7 @@ $('#gift').bind('blur',function(){
         if(data.success == 'Y'){
             coupon_code = disVal;
             coupon_money = data.money;
-            $('.gift_note').html('禮物卡' + coupon_code + ' 抵用 ' + coupon_money + '<a href="javascript:;" class="arm"></a>');
+            $('.gift_note').html('禮物卡' + coupon_code + ' 抵用 ' + coupon_money + '<!--a href="javascript:;" class="arm"></a-->');
             $('#gift').attr('readonly',true);
         } else {
             $('.gift_note').html(data.message);
