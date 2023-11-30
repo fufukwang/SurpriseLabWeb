@@ -7,12 +7,12 @@
 
     <!-- Metadata -->
     <meta charset="UTF-8">
-    <meta name="description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="落日轉運站 The Sunset Terminal"/>
     <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
-    <meta property="og:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品"/>
+    <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
     <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png"/>
     <meta property="og:image:type" content="image/png"/>
@@ -21,7 +21,7 @@
 
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
-    <meta name="twitter:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -36,9 +36,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/activity-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/rules.css">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
+    <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?2311231">
+    <link rel="stylesheet" href="/terminalAssets/css/rules.css?231123">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </aside>
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
-        <a href="/terminal/booking_now" class="image-wrap">
+        <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" class="image-wrap">
             <img src="/terminalAssets/images/general/btn_booking.png" class="pc-style" alt="what's on">
             <img src="/terminalAssets/images/general/btn_booking_mobile.png" class="mobile-style" alt="what's on">
         </a>
@@ -89,7 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <button class="nav-link tag-btn active" id="qa-tab" data-bs-toggle="tab" data-bs-target="#qa" type="button" role="tab" aria-controls="qa" aria-selected="true">問與答</button>
                                     </li>
                                     <li class="nav-item js-scroll-top" role="presentation">
-                                        <button class="nav-link tag-btn" id="change-tab" data-bs-toggle="tab" data-bs-target="#change" type="button" role="tab" aria-controls="change" aria-selected="false">改期退費</button>
+                                        <button class="nav-link tag-btn" id="change-tab" data-bs-toggle="tab" data-bs-target="#change" type="button" role="tab" aria-controls="change" aria-selected="false">退換政策</button>
                                     </li>
                                 </ul>
 
@@ -98,126 +98,121 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <div class="tab-pane fade show active" id="qa" role="tabpanel" aria-labelledby="qa-tab">
                                         <div class="block-wrap">
                                             <div class="section-heading-wrap">
-                                                <h2 class="heading-accordion-title">關於落日轉運站</h2>
+                                                <h2 class="heading-accordion-title">關於《落日月台》</h2>
                                             </div>
 
                                             <div class="accordion rule-accordion-wrap" id="accordionFlushExample-1">
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-1-headingOne">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseOne" aria-expanded="false" aria-controls="flush-1-collapseOne">
-                                                            <span class="header-title">落日轉運站的內容有什麼？</span>
+                                                    <h2 class="accordion-header" id="accordion1-1-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-1" aria-expanded="false" aria-controls="accordion1-1">
+                                                            <span class="header-title">落日轉運站是什麼？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-1-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-1-headingOne" data-bs-parent="#accordionFlushExample-1">
+                                                    <div id="accordion1-1" class="accordion-collapse collapse" aria-labelledby="accordion1-1-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>《 落日轉運站 Sunset Terminal 》為驚喜製造第八號沉浸式作品，也是團隊於台北累積 6 年後，首次於南台灣的製作。</p>
-                                                            <p>《 落日轉運站 》中包含兩項沉浸式體驗，分別為探討遺憾的故事沉浸體驗《 微醺列車 》及由英國 DARKFILED 團隊製作的聲音劇場《 FLIGHT 》。</p>
-                                                            <p>身為體驗者的你，可以自由選擇要哪些作品。當然，兩項都體驗一定是最讚的！</p>
-                                                            <p>現場也有一戶外場域《 落日月台 》，並開放給所有人。此處散發著落日的燈光氛圍，並販售簡易酒飲與小點，供大家小酌聊天。</p>
-                                                            <p>若你於體驗前提早抵達，歡迎在此等待；體驗後也能在此與同場次者分享感覺、拼湊故事；未購買體驗票券能進入《 落日月台 》嗎？當然，此處開放給所有人，只要你想來，我們就歡迎。</p>
-                                                            <p>欲購了解作品與價位，請至 <a href="/terminal/booking_now" class="link-text style-qa">Ticket</a> 了解更多；欲了解落日月台，請至 <a href="/terminal#projects" class="link-text style-qa">Projects</a>了解更多。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-1-headingTwo">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseTwo" aria-expanded="false" aria-controls="flush-1-collapseTwo">
-                                                            <span class="header-title">落日轉運站的地點在哪裡？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-1-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-1-headingTwo" data-bs-parent="#accordionFlushExample-1">
-                                                        <div class="accordion-body">
-                                                            <p>
-                                                                <a href="https://www.google.com.tw/maps/place/804%E9%AB%98%E9%9B%84%E5%B8%82%E9%BC%93%E5%B1%B1%E5%8D%80%E8%93%AC%E8%90%8A%E8%B7%AF99%E8%99%9FB10%E5%80%89%E5%BA%AB/@22.6202115,120.2754939,17.57z/data=!4m5!3m4!1s0x346e04758890c707:0xbcaf77f6705ee84a!8m2!3d22.6210043!4d120.2779986?hl=zh-TW&shorturl=1" target="_blank" class="link-text style-qa">高雄駁二藝術特區蓬萊區B10倉庫</a>，正港小劇場旁<br>
-                                                                地址：80441台灣高雄市鼓山區蓬萊路99號
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-1-headingThree">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseThree" aria-expanded="false" aria-controls="flush-1-collapseThree">
-                                                            <span class="header-title">如何前往落日轉運站？/ 捷運輕軌</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-1-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-1-headingThree" data-bs-parent="#accordionFlushExample-1">
-                                                        <div class="accordion-body">
-                                                            <div class="title-list-wrap">
-                                                                <div class="list-caption">捷運</div>
-                                                                <ul class="list-wrap">
-                                                                    <li class="list-item">西子灣站：步行6分鐘</li>
-                                                                    <li class="list-item">鹽埕埔站：步行12分鐘</li>
-                                                                </ul>
-                                                            </div>
-                                
-                                                            <div class="title-list-wrap">
-                                                                <div class="list-caption">輕軌</div>
-                                                                <ul class="list-wrap">
-                                                                    <li class="list-item">哈瑪星站：步行4分鐘</li>
-                                                                    <li class="list-item">駁二蓬萊站：步行3分鐘</li>
-                                                                </ul>
-                                                            </div>
+                                                            <p>驚喜製造推出的巡迴沉浸式計畫，即將於 2024 年 1 月抵達台北站。</p>
+                                                            <p>2022.11.10 - 2023.10.15 於首站：高雄，推出包含以交通工具為題的兩項作品，微醺系列互動表演《微醺列車》及英國團隊 DARKFIELD 的巡演之作《FLIGHT》，超過 40,000 人次參與體驗。</p>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-1-headingFour">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseFour" aria-expanded="false" aria-controls="flush-1-collapseFour">
-                                                            <span class="header-title">如何前往落日轉運站？/ 停車資訊</span>
+                                                    <h2 class="accordion-header" id="accordion1-2-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-2" aria-expanded="false" aria-controls="accordion1-2">
+                                                            <span class="header-title">台北站跟高雄站有什麼差別？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-1-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-1-headingFour" data-bs-parent="#accordionFlushExample-1">
+                                                    <div id="accordion1-2" class="accordion-collapse collapse" aria-labelledby="accordion1-2-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <div class="title-list-wrap">
-                                                                <div class="list-caption">鄰近停車場</div>
-                                                                <ul class="list-wrap">
-                                                                    <li class="list-item">俥停棧庫東停車場：步行5分鐘</li>
-                                                                    <li class="list-item">大勇路駁二停車場(高雄市鼓山區大勇路1號)：步行5分鐘</li>
-                                                                    <li class="list-item">棧西停車場(高雄市鼓山區臨海新路33號)：步行6分鐘</li>
-                                                                </ul>
-                                                            </div>
-                                                            <p>
-                                                                溫馨提醒，喝酒不開車、開車不喝酒。<br>
-                                                                若預計小酌，請搭乘計程車或大眾交通運輸工具前來。
-                                                            </p>   
+                                                            <p>在巡迴第二站，落日轉運站突現奇幻時空《落日月台》；有別於高雄站的《微醺列車》及《FLIGHT》，將提供旅客探索全新場域並帶來專屬互動體驗。</p>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-1-headingFive">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseFive" aria-expanded="false" aria-controls="flush-1-collapseFive">
-                                                            <span class="header-title">我應該什麼時候抵達轉運站？是否需要提早報到？</span>
+                                                    <h2 class="accordion-header" id="accordion1-3-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-3" aria-expanded="false" aria-controls="accordion1-3">
+                                                            <span class="header-title">《落日月台》是什麼？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-1-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-1-headingFive" data-bs-parent="#accordionFlushExample-1">
+                                                    <div id="accordion1-3" class="accordion-collapse collapse" aria-labelledby="accordion1-3-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>需要，每場次需要提早取票劃位時間不同，請預留至少20分鐘，並依照訂位確認信時間提早取票劃位呦！</p>
+                                                            <p>踏入此處的旅客，將遺失前往終點的車票，困在未知的月台。但別擔心，滯留於此的引路者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。</p>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-1-headingSix">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseSix" aria-expanded="false" aria-controls="flush-1-collapseSix">
-                                                            <span class="header-title">如果遲到怎麼辦？</span>
+                                                    <h2 class="accordion-header" id="accordion1-4-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-4" aria-expanded="false" aria-controls="accordion1-4">
+                                                            <span class="header-title">《落日月台》的地點在哪裡？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-1-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-1-headingSix" data-bs-parent="#accordionFlushExample-1">
+                                                    <div id="accordion1-4" class="accordion-collapse collapse" aria-labelledby="accordion1-4-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>
-                                                                遲到將無法進場，並且無法退費。</br>
-                                                                請注意自身時間安排，並務必、務必、務必提早抵達。
-                                                            </p>   
+                                                            <p>在台北松菸文創園區內的藝巷空間（南向製菸工廠西側），地址是台北市信義區光復南路 133 號。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion1-5-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-5" aria-expanded="false" aria-controls="accordion1-5">
+                                                            <span class="header-title">如何參與《落日月台》？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion1-5" class="accordion-collapse collapse" aria-labelledby="accordion1-5-header" data-bs-parent="#accordionFlushExample-1">
+                                                        <div class="accordion-body">
+                                                            <p>先預售：歡迎至此選購票券種類和數量</p>
+                                                            <p>後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion1-6-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-6" aria-expanded="false" aria-controls="accordion1-6">
+                                                            <span class="header-title">是否接受團體包場和大宗購票？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion1-6" class="accordion-collapse collapse" aria-labelledby="accordion1-6-header" data-bs-parent="#accordionFlushExample-1">
+                                                        <div class="accordion-body">
+                                                            <p>先預售：歡迎至此選購票券種類和數量</p>
+                                                            <p>包場、大宗購票、客製化特殊需求與票價優惠，歡迎來信 <a href="mailto:mindthegap@surpriselab.com.tw" class="link-text style-qa">mindthegap@surpriselab.com.tw</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion1-7-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-7" aria-expanded="false" aria-controls="accordion1-7">
+                                                            <span class="header-title">我有改期、退費的需求</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion1-7" class="accordion-collapse collapse" aria-labelledby="accordion1-7-header" data-bs-parent="#accordionFlushExample-1">
+                                                        <div class="accordion-body">
+                                                            <p>關於改期或退費，詳情請參考《落日月台》[退換政策]</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion1-8-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-8" aria-expanded="false" aria-controls="accordion1-8">
+                                                            <span class="header-title">《微醺列車》及《FLIGHT》還會出現嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion1-8" class="accordion-collapse collapse" aria-labelledby="accordion1-8-header" data-bs-parent="#accordionFlushExample-1">
+                                                        <div class="accordion-body">
+                                                            <p>會的！請持續關注驚喜製造，獲得最新消息。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -225,314 +220,112 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </div>
                                         <div class="block-wrap">
                                             <div class="section-heading-wrap">
-                                                <h2 class="heading-accordion-title">關於購票</h2>
+                                                <h2 class="heading-accordion-title">購票資訊</h2>
                                             </div>
 
                                             <div class="accordion rule-accordion-wrap" id="accordionFlushExample-2">
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingOne">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseOne" aria-expanded="false" aria-controls="flush-2-collapseOne">
-                                                            <span class="header-title">請問要如何購票呢？</span>
+                                                    <h2 class="accordion-header" id="accordion2-1-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2-1" aria-expanded="false" aria-controls="accordion2-1">
+                                                            <span class="header-title">預售票券購買成功，要注意什麼？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-2-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-2-headingOne" data-bs-parent="#accordionFlushExample-2">
+                                                    <div id="accordion2-1" class="accordion-collapse collapse" aria-labelledby="accordion2-1-header" data-bs-parent="#accordionFlushExample-2">
                                                         <div class="accordion-body">
-                                                            <p>
-                                                                官網售票：歡迎至 購票頁面 了解更多，線上刷卡完成購票。<br>
-                                                                現場購票：歡迎至場內票務櫃檯詢問剩餘場次與座位。
-                                                            </p>
-                                                            <p>建議可以行前先至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 完成購票留位，避免向隅。</p>
+                                                            <p>預售票券購買成功後，驚喜製造將會於至多 20 天工作日內寄出劃位信至你預售時所留下的信箱，信件內容將提供專屬劃位序號、劃位網站連結</p>
+                                                            <p>請密切注意信箱的促銷分頁或垃圾信件匣，以及 <a href="https://www.instagram.com/surpriselabtw/" target="_blank" class="link-text style-qa">驚喜製造 Surprise Lab 官方社群</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion2-2-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2-2" aria-expanded="false" aria-controls="accordion2-2">
+                                                            <span class="header-title">收到劃位信後，我要做什麼？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion2-2" class="accordion-collapse collapse" aria-labelledby="accordion2-2-header" data-bs-parent="#accordionFlushExample-2">
+                                                        <div class="accordion-body">
+                                                            <p>劃位步驟與說明請見 <a href="https://paper.dropbox.com/doc/wZafkX2rem1FHlz37FlOi" target="_blank" class="link-text style-qa">劃位序號使用指南</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion2-3-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2-3" aria-expanded="false" aria-controls="accordion2-3">
+                                                            <span class="header-title">劃位序號的注意事項？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion2-3" class="accordion-collapse collapse" aria-labelledby="accordion2-3-header" data-bs-parent="#accordionFlushExample-2">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>劃位序號僅適用於預售票券</li>
+                                                                <li>1 張預售票券只會收到 1 個劃位序號，同時購買 2 張預售票券，則會在劃位信中收到 2 個劃位序號</li>
+                                                                <li>每次劃位只能使用 1 個劃位序號，若你有 2 個以上劃位序號，請分次劃位</li>
+                                                                <li>多人票共享 1 個劃位序號，僅能劃位同一場次，無法分開使用</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion2-4-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2-4" aria-expanded="false" aria-controls="accordion2-4">
+                                                            <span class="header-title">劃位序號有兌換期限嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion2-4" class="accordion-collapse collapse" aria-labelledby="accordion2-4-header" data-bs-parent="#accordionFlushExample-2">
+                                                        <div class="accordion-body">
+                                                            <p>兌換期限將依照劃位序號信件內為準，若超過期限，序號將不再開放使用</p>
                                                         </div>
                                                     </div>
                                                 </div>
                 
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingTwo">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseTwo" aria-expanded="false" aria-controls="flush-2-collapseTwo">
-                                                            <span class="header-title">各個作品的體驗價位與時長各是多少呢？</span>
+                                                    <h2 class="accordion-header" id="accordion2-5-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2-5" aria-expanded="false" aria-controls="accordion2-5">
+                                                            <span class="header-title">如果我想買多人票或多張票，有建議的買法嗎？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-2-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-2-headingTwo" data-bs-parent="#accordionFlushExample-2">
+                                                    <div id="accordion2-5" class="accordion-collapse collapse" aria-labelledby="accordion2-5-header" data-bs-parent="#accordionFlushExample-2">
                                                         <div class="accordion-body">
+                                                            <p>1 個劃位序號只會對應到 1 張預售票券，若你購買 3 張預售票券，須分成 3 次劃位，且不一定預約得到同場次的位置</p>
+                                                            <p>以下是建議購買方式：</p>
                                                             <div class="table-wrap style-qa layout-qa">
                                                                 <table>
                                                                     <tr>
-                                                                        <th></th>
-                                                                        <th>微醺列車</th>
-                                                                        <th><span class="style-bolder">FLIGHT</span></th>
+                                                                        <th>參加人數</th>
+                                                                        <th>建議購買方式</th>
+                                                                        <th><span class="style-bolder">劃位方式</span></th>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>體驗時長</th>
-                                                                        <td>
-                                                                            <span class="style-bolder">60</span> 分鐘
-                                                                            <br class="mobile-br"> / 每場次
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="style-bolder">30</span> 分鐘
-                                                                            <br class="mobile-br"> / 每場次
-                                                                        </td>
+                                                                        <th>1</th>
+                                                                        <td>單人票 *1 張</td>
+                                                                        <td>劃位 1 次</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>票價</th>
-                                                                        <td><span class="style-bolder">$1,250</span> / 每人</td>
-                                                                        <td><span class="style-bolder">$500</span> / 每人</td>
+                                                                        <th>2</th>
+                                                                        <td>雙人票 *1 張</td>
+                                                                        <td>劃位 1 次</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>3</th>
+                                                                        <td>單人票 *1 張 + 雙人票 *1 張</td>
+                                                                        <td>劃位 2 次</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>6</th>
+                                                                        <td>六人票 *1 張</td>
+                                                                        <td>劃位 1 次</td>
                                                                     </tr>
                                                                 </table>
                                                             </div>
-                                                            <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingSix">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseSix" aria-expanded="false" aria-controls="flush-2-collapseSix">
-                                                            <span class="header-title">我想了解不同演出場次的時刻表是什麼？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-2-headingSix" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <div class="table-wrap style-qa">
-                                                                <table>
-                                                                    <tr>
-                                                                        <th>微醺列車</th>
-                                                                        <th><span class="style-bolder">FLIGHT</span></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder">12:40-13:40</td>
-                                                                        <td><span class="style-bolder">12:25-12:55</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder">14:00-15:00</td>
-                                                                        <td><span class="style-bolder">13:10-13:40</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder">15:20-16:20</td>
-                                                                        <td><span class="style-bolder">13:55-14:25</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder">18:10-19:10</td>
-                                                                        <td><span class="style-bolder">14:40-15:10</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder">19:30-20:30</td>
-                                                                        <td><span class="style-bolder">15:25-15:55</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder">20:50-21:50</td>
-                                                                        <td><span class="style-bolder">16:10-16:40</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder"></td>
-                                                                        <td><span class="style-bolder">17:55-18:25</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder"></td>
-                                                                        <td><span class="style-bolder">18:40-19:10</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder"></td>
-                                                                        <td><span class="style-bolder">19:25-19:55</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder"></td>
-                                                                        <td><span class="style-bolder">20:10-20:40</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder"></td>
-                                                                        <td><span class="style-bolder">20:55-21:25</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><span class="style-bolder"></td>
-                                                                        <td><span class="style-bolder">21:40-22:10</td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-                                                            <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingThree">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseThree" aria-expanded="false" aria-controls="flush-2-collapseThree">
-                                                            <span class="header-title">我想一口氣看兩個作品，是否有套票的選項呢？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-2-headingThree" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <p>
-                                                                有的，《落日轉運站》有體驗套票，內容包含完整的《 微醺列車 》及《 FLIGHT 》。<br>
-                                                                原價 $1,750，套票優惠價 $1,650 。
-                                                            </p>
-                                                            <p>歡迎至 購票頁面 了解更多。選位時請特別注意兩作品的演出時間，並免重疊而影響自身權益。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingFive">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseFive" aria-expanded="false" aria-controls="flush-2-collapseFive">
-                                                            <span class="header-title">我想購買套票，請問有沒有建議搭配的購買方式？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-2-headingFive" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <div class="title-list-wrap">
-                                                                <div class="list-caption">觀看順序</div>
-                                                                <ul class="list-wrap">
-                                                                    <li class="list-item">FLIGHT 與微醺列車是兩項獨立的作品，前後順序並不影響體驗的完整性，但就心境感受上，建議可以先體驗飛機，再體驗列車。</li>
-                                                                </ul>
-                                                            </div>
-                                
-                                                            <div class="title-list-wrap">
-                                                                <div class="list-caption">時間安排</div>
-                                                                <ul class="list-wrap">
-                                                                    <li class="list-item">購買套票時，建議間隔時間可以保留 10 分鐘以上；或中間也可以安排 30 分鐘至 1 小時的空檔，至落日月台走走晃晃，買點飲品，沉澱剛體驗完 FLIGHT 的情緒，再全心投入在微醺列車之中，祝你旅途愉快！</li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="title-list-wrap">
-                                                                <div class="list-caption"></div>
-                                                                <ul class="list-wrap">
-                                                                    <li class="list-item">備註：買套票者可以於落日月台一次領取兩種體驗票券，不用擔心趕不上班機／列車呦！</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingEight">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseEight" aria-expanded="false" aria-controls="flush-2-collapseEight">
-                                                            <span class="header-title">購買套票可以一起取票嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-2-headingEight" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <p>可以的！請於訂位確認信指定時間抵達至落日月台報電話取票！</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingNine">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseNine" aria-expanded="false" aria-controls="flush-2-collapseNine">
-                                                            <span class="header-title">我想更改體驗時間可以嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-2-headingNine" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <p>可以的，體驗前10日轉運站提供每筆訂單一次改期的機會。</br>
-                                                            有改期需求請來信客服信箱terminal@surpriselab.com.tw，體驗前9日至體驗當日內恕不提供改期。規則詳見退費改期規則。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingTen">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseTen" aria-expanded="false" aria-controls="flush-2-collapseTen">
-                                                            <span class="header-title">我想退費可以嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-2-headingTen" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <p>體驗前10日提供退費90%，體驗前9日至體驗前3日提供退費50%，有退費需求請來信客服信箱terminal@surpriselab.com.tw，體驗前2日至體驗當日內恕不提供退費。規則詳見退費改期規則。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingEleven">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseEleven" aria-expanded="false" aria-controls="flush-2-collapseEleven">
-                                                            <span class="header-title">我想轉讓體驗可以嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-2-headingEleven" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <p>可以的，請將訂位確認信轉寄給親友，取票時請親友報訂票人的姓名電話即可呦！</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingFour">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseFour" aria-expanded="false" aria-controls="flush-2-collapseFour">
-                                                            <span class="header-title">是否接受大宗團體包場？人數需為多少人？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-2-headingFour" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <div class="table-wrap style-qa layout-qa">
-                                                                <table>
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th>微醺列車</th>
-                                                                        <th>FLIGHT</th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>體驗時長</th>
-                                                                        <td>
-                                                                            <span class="style-bolder">60</span>分鐘
-                                                                            <br class="mobile-br"> / 每場次
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="style-bolder">30</span>分鐘
-                                                                            <br class="mobile-br"> / 每場次
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>包場人數</th>
-                                                                        <td><span class="style-bolder">1-24</span> 位</td>
-                                                                        <td><span class="style-bolder">1-30</span> 位</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>包場價格</th>
-                                                                        <td>
-                                                                            <span class="style-bolder">$27,000</span> / 每場<br>
-                                                                            (原價<span class="style-bolder">$30,000</span>)
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="style-bolder">$13,500</span> / 每場<br>
-                                                                            (原價<span class="style-bolder">$15,000</span>)
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>大宗購票</th>
-                                                                        <td colspan="2">
-                                                                            <span class="style-bolder">24-200</span>張 <span class="style-bolder">9</span>折<br>
-                                                                            <span class="style-bolder">201-500</span>張 <span class="style-bolder">85</span>折<br>
-                                                                            <span class="style-bolder">501</span>張以上 <span class="style-bolder">8</span>折
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-                                                            <p>若有包場、大宗購票、客製化特殊需求，歡迎來信 <a href="mailto:terminal@surpriselab.com.tw" class="link-text style-qa">terminal@surpriselab.com.tw</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-2-headingSenve">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseSenve" aria-expanded="false" aria-controls="flush-2-collapseSenve">
-                                                            <span class="header-title">請問可以打統編嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-2-collapseSenve" class="accordion-collapse collapse" aria-labelledby="flush-2-headingSenve" data-bs-parent="#accordionFlushExample-2">
-                                                        <div class="accordion-body">
-                                                            <p>可以，請在購票時的備註欄打上：公司抬頭+統編。</p>
-                                                            <p>因作業流程，發票會在體驗後 7-10 個工作天寄至訂位信箱。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -540,212 +333,83 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </div>
                                         <div class="block-wrap">
                                             <div class="section-heading-wrap">
-                                                <h2 class="heading-accordion-title">關於現場體驗</h2>
+                                                <h2 class="heading-accordion-title">行前須知</h2>
                                             </div>
 
                                             <div class="accordion rule-accordion-wrap" id="accordionFlushExample-3">
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingOne">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseOne" aria-expanded="false" aria-controls="flush-3-collapseOne">
+                                                    <h2 class="accordion-header" id="accordion3-1-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-1" aria-expanded="false" aria-controls="accordion3-1">
+                                                            <span class="header-title">完成預約後，要注意什麼？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-1" class="accordion-collapse collapse" aria-labelledby="accordion3-1-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>我們將於體驗日前 7 天寄送行前須知信，告知地點和時間，體驗當天也會寄送提醒簡訊，請記得確認你的信箱與簡訊</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-2-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-2" aria-expanded="false" aria-controls="accordion3-2">
                                                             <span class="header-title">現場可以寄物嗎？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-3-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-3-headingOne" data-bs-parent="#accordionFlushExample-3">
+                                                    <div id="accordion3-2" class="accordion-collapse collapse" aria-labelledby="accordion3-2-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <!-- <p>為維護體驗品質，於進入體驗區域前，所有觀眾都必須寄物。較大型的物品(如：行李箱)，將會無法寄物。</p>
-                                                            <p>建議大家輕便前來，減少需要寄放的大小物品也能少些擔憂，放鬆體驗！</p> -->
-                                                            <p>為維護體驗品質，建議大家輕便前來，也能少些擔憂，放鬆體驗！</p>
+                                                            <p>為維護體驗品質，於進入體驗區域前，所有觀眾都必須寄物</p>
+                                                            <p>現場無提供較大型的物品（如：行李箱）寄物服務，建議大家輕便前來、放鬆體驗</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                
+                                                
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingTwo">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseTwo" aria-expanded="false" aria-controls="flush-3-collapseTwo">
-                                                            <span class="header-title">手機貴重物品可以帶進體驗之中嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-3-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-3-headingTwo" data-bs-parent="#accordionFlushExample-3">
-                                                        <div class="accordion-body">
-                                                            <p>
-                                                                <!-- 可以，但手機必須全程維持飛航模式並禁止錄影錄音。<br>
-                                                                現場提供寄物，但不負保管責任。 -->
-                                                                可以，但手機必須全程維持飛航模式並禁止錄影錄音。
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingThree">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseThree" aria-expanded="false" aria-controls="flush-3-collapseThree">
+                                                    <h2 class="accordion-header" id="accordion3-3-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-3" aria-expanded="false" aria-controls="accordion3-3">
                                                             <span class="header-title">物品遺失怎麼辦？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-3-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-3-headingThree" data-bs-parent="#accordionFlushExample-3">
+                                                    <div id="accordion3-3" class="accordion-collapse collapse" aria-labelledby="accordion3-3-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>如有物品遺失，現場提供協尋遺失物，但不負保管遺失物責任。</p>
+                                                            <p>如有物品遺失，現場提供協尋遺失物，但不負保管遺失物責任</p>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingFour">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
+                                                    <h2 class="accordion-header" id="accordion3-4-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-4" aria-expanded="false" aria-controls="accordion3-4">
+                                                            <span class="header-title">我應該什麼時候抵達月台？是否需要提早報到？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-4" class="accordion-collapse collapse" aria-labelledby="accordion3-4-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>請提早 10 分鐘抵達</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-5-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-5" aria-expanded="false" aria-controls="accordion3-5">
                                                             <span class="header-title">如果遲到怎麼辦？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
-                                                    <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
+                                                    <div id="accordion3-5" class="accordion-collapse collapse" aria-labelledby="accordion3-5-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>遲到將無法進場，並且無法退費。</p>
-                                                            <p>請注意自身時間安排，並務必、務必、務必提早抵達。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingFive">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFive" aria-expanded="false" aria-controls="flush-3-collapseFive">
-                                                            <span class="header-title">有任何參與限制嗎？未成年人可以參加嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-3-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFive" data-bs-parent="#accordionFlushExample-3">
-                                                        <div class="accordion-body">
-                                                            <div class="table-wrap style-qa layout-qa qa-limit">
-                                                                <table>
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th>微醺列車</th>
-                                                                        <th>FLIGHT</th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>未滿 <span class="style-bolder">18</span> 歲</th>
-                                                                        <td><i class="icon-cross"></i></td>
-                                                                        <td><i class="icon-triangle"></i> / 需滿 12 歲以上，且12-17歲需家長陪同</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>孕婦</th>
-                                                                        <td><i class="icon-triangle"></i> / 過程中有酒精飲品並需要來回移動</td>
-                                                                        <td><i class="icon-cross"></i></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>行動不便</th>
-                                                                        <td><i class="icon-cross"></i></td>
-                                                                        <td><i class="icon-triangle"></i> / 需能移動至指定座位</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>幽閉<br class="mobile-br">恐懼症</th>
-                                                                        <td><i class="icon-round"></i></td>
-                                                                        <td><i class="icon-cross"></i> / 全程會在全黑無光的密閉環境中進行</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>恐慌症</th>
-                                                                        <td><i class="icon-round"></i></td>
-                                                                        <td><i class="icon-cross"></i> / 過程中有劇烈震動、巨響、閃光效果</td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-                                                            <p>兩項作品皆包含聲音、燈光、影像、煙霧等效果，且未包含輪椅座位。</p>
-                                                            <p>為了你的體驗感受並保護你的身心狀況，請參照上表衡量自身狀況參與。</p>
-                                                            <p>若有任何問題，歡迎來信 <a href="mailto:terminal@surpriselab.com.tw" class="link-text style-qa">terminal@surpriselab.com.tw</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingNine">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseNine" aria-expanded="false" aria-controls="flush-3-collapseNine">
-                                                            <span class="header-title">我想跟朋友坐在一起可以嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-3-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-3-headingNine" data-bs-parent="#accordionFlushExample-3">
-                                                        <div class="accordion-body">
-                                                            <p>微醺列車歡迎您與友人一起搭乘，於「候車室劃位時」請告知乘務員，FLIGHT為維護體驗品質建議分開搭乘，若有特殊需求請於「取票時」告知月台服務人員。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingTen">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseTen" aria-expanded="false" aria-controls="flush-3-collapseTen">
-                                                            <span class="header-title">如果我不喝酒怎麼辦？會影響體驗嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-3-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-3-headingTen" data-bs-parent="#accordionFlushExample-3">
-                                                        <div class="accordion-body">
-                                                            <p>微醺列車提供一杯調飲，不飲用不會影響體驗內容不便飲酒的乘客可以將調飲轉讓給同行友人或選擇不飲用，轉運站不提供外帶服務。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingEleven">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseEleven" aria-expanded="false" aria-controls="flush-3-collapseEleven">
-                                                            <span class="header-title">請問現場可以攜帶飲食入場嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-3-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-3-headingEleven" data-bs-parent="#accordionFlushExample-3">
-                                                        <div class="accordion-body">
-                                                            <p>轉運站禁止攜帶飲食入內，落日月台提供食物及飲料寄放服務，體驗後記得領取即可呦！</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingSix">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseSix" aria-expanded="false" aria-controls="flush-3-collapseSix">
-                                                            <span class="header-title">是否有建議的衣著？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-3-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-3-headingSix" data-bs-parent="#accordionFlushExample-3">
-                                                        <div class="accordion-body">
-                                                            <p>兩作品皆無穿衣需求指令，歡迎穿著輕鬆舒適好移動的服裝。</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingSeven">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseSeven" aria-expanded="false" aria-controls="flush-3-collapseSeven">
-                                                            <span class="header-title">我應該什麼時候抵達轉運站？是否需要提早報到？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-3-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-3-headingSeven" data-bs-parent="#accordionFlushExample-3">
-                                                        <div class="accordion-body">
-                                                            <p>需要，每場次需要提早取票劃位時間不同，請預留至少20分鐘，並依照訂位確認信時間提早取票劃位呦！</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-3-headingEight">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseEight" aria-expanded="false" aria-controls="flush-3-collapseEight">
-                                                            <span class="header-title">購買套票需要分兩次取票嗎？</span>
-                                                            <div class="header-icon"></div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-3-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-3-headingEight" data-bs-parent="#accordionFlushExample-3">
-                                                        <div class="accordion-body">
-                                                            <p>
-                                                                可以一次領取兩項體驗票券喔！<br>
-                                                                但在開演前請務必在至等候區等候。
-                                                            </p>
+                                                            <p>遲到將無法進場，並且無法退費。請注意自身時間安排，並務必提早 10 分鐘抵達</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="block-wrap">
+                                        <div class="block-wrap" style="display:none;">
                                             <div class="section-heading-wrap">
                                                 <h2 class="heading-accordion-title">關於落日月台</h2>
                                             </div>
@@ -868,66 +532,146 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="section-heading-wrap">
                                                 <h2 class="heading-accordion-title">客服信箱</h2>
                                             </div>
-                                            <a href="mailto:terminal@surpriselab.com.tw" class="link-text style-regular">terminal@surpriselab.com.tw</a>
+                                            <a href="mailto:mindthegap@surpriselab.com.tw" class="link-text style-regular">mindthegap@surpriselab.com.tw</a>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="change" role="tabpanel" aria-labelledby="change-tab">
                                         <div class="block-wrap">
                                             <div class="section-heading-wrap">
-                                                <h2 class="heading-block-title">無法退費項目</h2>
-                                                <h3 class="heading-block-subtitle">NON-REFUNDABLE</h3>
+                                                <h2 class="heading-block-title">票券異動申請</h2>
+                                                <h3 class="heading-block-subtitle">CHANGE YOUR BOOKING</h3>
                                             </div>
-
-                                            <div class="number-list-wrap">
-                                                <ul class="list-wrap">
-                                                    <li class="list-item">演出當日至前 2 日申請退費者</li>
-                                                    <li class="list-item">遲到 / 未到以致無法入場者</li>
-                                                    <li class="list-item">當天購買當天場次票券者</li>
-                                                    <li class="list-item">購買套票組合，已使用其中一項體驗後，另外一項體驗不得退費</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="block-wrap">
-                                            <div class="section-heading-wrap">
-                                                <h2 class="heading-block-title">退費規則</h2>
-                                                <h3 class="heading-block-subtitle">REFUND POLICY</h3>
-                                            </div>
-
                                             <div class="sub-block-wrap">
-                                                <div class="section-heading-wrap">
-                                                    <h4 class="heading-content-title">不可抗力因素之更改訂位及退費辦法</h4>
-                                                </div>
-    
                                                 <div class="text-wrap">
-                                                    <p class="body-03">若因天災、國際病毒、戰爭等不可抗力因素，由政府、該縣市主管機關發布停止上班、停演之訊息，本專案將暫停演出，並協助改期或全額退費。</p>
+                                                    <p class="body-03">
+                                                        購票後若需要退費，或是劃位後需要退費、改期和轉讓，請來信客服詢問並附上所需資料：<br>
+                                                        <a href="mailto:mindthegap@surpriselab.com.tw" class="link-text style-regular">mindthegap@surpriselab.com.tw</a>
+                                                    </p>
                                                 </div>
                                             </div>
-
                                             <div class="sub-block-wrap">
-                                                <div class="section-heading-wrap">
-                                                    <h4 class="heading-content-title">改期、轉讓、退費</h4>
-                                                </div>
-    
-                                                <div class="text-wrap">
-                                                    <p class="body-03">若有改期、取消退費</p>
-                                                    <p class="body-03">請提供相應資料來信《落日轉運站》客服信箱</p>
-                                                    <a href="mailto:terminal@surpriselab.com.tw" class="link-text style-regular">terminal@surpriselab.com.tw</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="sub-block-wrap">
-                                                <div class="section-heading-wrap">
-                                                    <h4 class="heading-content-title">票券退費規則</h4>
-                                                </div>
-    
                                                 <div class="table-wrap style-rule layout-refund">
                                                     <table>
                                                         <tr>
                                                             <th></th>
-                                                            <th>日期<br class="mobile-br">舉例</th>
-                                                            <th>更改<br class="mobile-br">日期<br>（至多<br class="mobile-br">乙次）</th>
+                                                            <th>你需要附上：</th>
+                                                            <th>然後再附上：</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>改期<br class="mobile-br">（至多 1 次）</th>
+                                                            <td>購票者的<br>姓名、購買信箱、手機</td>
+                                                            <td>欲更改場次<br>參考線上剩餘座位，提供 3 個時段</td>
+                                                        </tr>
+                                                        <tr>
                                                             <th>轉讓</th>
-                                                            <th>退還<br class="mobile-br">費用</th>
+                                                            <td>將訂位確認信轉寄<br>或截圖給親朋好友即可</td>
+                                                            <td>現場須出示確認信<br>及向櫃檯說明<br>原訂票人姓名、電話</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>退票<br>（未收到劃位序號）</th>
+                                                            <td>購票者的<br>姓名、購買信箱</td>
+                                                            <td>訂單編號</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>退票<br>（已收到劃位序號）</th>
+                                                            <td>購票者的<br>姓名、購買信箱</td>
+                                                            <td>欲更改場次<br>劃位序號</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="sub-block-wrap">
+                                                <div class="notice-list-wrap">
+                                                    <ul class="list-wrap">
+                                                        <li class="list-item"><p>退費入帳約需 7 至 1 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</p></li>
+                                                        <li class="list-item">
+                                                            <p>預購與劃位注意事項：</p>
+                                                            <ul class="list-wrap">
+                                                                <li class="list-item"><p>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</p></li>
+                                                                <li class="list-item"><p>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</p></li>
+                                                                <li class="list-item"><p>購買預售票、尚未收到劃位序號前申請退費，將不扣除手續費全額退費</p></li>
+                                                                <li class="list-item"><p>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</p></li>
+                                                                <li class="list-item"><p>收到劃位信件當天，進入劃位網站後，若沒有能前來的時段，劃位資格將保留至 3/31（日），逾期劃位序號將無法使用</p></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="list-item"><p>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 金流手續處理費）</p></li>
+                                                        <li class="list-item"><p>開立發票後若需新增/更改統編、抬頭或電子載具號碼，請先申請進行退款流程（規則同一般退款程序，且需酌收 10% 金流處理手續費），並重新訂購，再於訂購時填寫正確發票資訊</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="sub-block-wrap">
+                                                <div class="section-heading-wrap">
+                                                    <h4 class="heading-content-title">多人票種退費/改期規範</h4>
+                                                </div>
+                                                <br>
+                                                <div class="text-wrap">
+                                                    <p class="body-03">購買多人票種者無法部分退費。如需改期，請提供姓名、購票信箱、手機，參考線上剩餘座位，提供改期時段至信箱</p>
+                                                    <br>
+                                                    <p class="body-03">或是……另外找位新夥伴，給他個驚喜吧！</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="block-wrap">
+                                            <div class="section-heading-wrap">
+                                                <h2 class="heading-block-title">票券退費規則</h2>
+                                                <h3 class="heading-block-subtitle">REFUND POLICY</h3>
+                                            </div>
+
+                                            <div class="sub-block-wrap">
+                                                <div class="text-wrap">
+                                                    <p class="body-03">不可抗力因素之更改訂位及退費辦法：若因天災、國際病毒、戰爭等不可抗力因素，由政府、該縣市主管機關發布停止上班、停演訊息，本專案將暫停演出，並協助改期或全額退費</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="sub-block-wrap">
+                                                <div class="section-heading-wrap">
+                                                    <h4 class="heading-content-title">未完成劃位</h4>
+                                                </div>
+
+                                                <div class="table-wrap style-rule layout-refund">
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>改期</th>
+                                                            <th>轉讓</th>
+                                                            <th>退費</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>已完成預售票購買，<br class="mobile-br">未收到劃位序號</th>
+                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
+                                                            <td><i class="icon-cross"></i></td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>已完成預售票購買，<br class="mobile-br">收到劃位序號後申請退費</th>
+                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
+                                                            <td><i class="icon-cross"></i></td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>已完成預售票購買，<br class="mobile-br">已收到劃位序號，<br class="mobile-br">劃位序號過期未使用</th>
+                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
+                                                            <td><i class="icon-cross"></i></td>
+                                                            <td><i class="icon-cross"></i></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="sub-block-wrap">
+                                                <div class="section-heading-wrap">
+                                                    <h4 class="heading-content-title">已完成劃位</h4>
+                                                </div>
+
+                                                <div class="table-wrap style-rule layout-refund">
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>日期舉例</th>
+                                                            <th>改期</th>
+                                                            <th>轉讓</th>
+                                                            <th>退費</th>
                                                         </tr>
                                                         <tr>
                                                             <th>體驗當日</th>
@@ -948,120 +692,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <td><span class="style-bolder">01/02</span></td>
                                                             <td><i class="icon-cross"></i></td>
                                                             <td><i class="icon-round"></i></td>
-                                                            <td><span class="style-bolder">50%</span></td>
+                                                            <td>50%</td>
                                                         </tr>
                                                         <tr>
                                                             <th>體驗前十日</th>
                                                             <td><span class="style-bolder">01/01</span></td>
                                                             <td><i class="icon-round"></i></td>
                                                             <td><i class="icon-round"></i></td>
-                                                            <td><span class="style-bolder">90%</span></td>
+                                                            <td>90%</td>
                                                         </tr>
                                                         <tr>
-                                                            <th>線上購票<br>結帳完成後</th>
-                                                            <td>-</td>
+                                                            <th>劃位完成後</th>
+                                                            <td><span class="style-bolder">--</span></td>
                                                             <td><i class="icon-round"></i></td>
                                                             <td><i class="icon-round"></i></td>
-                                                            <td><span class="style-bolder">90%</span></td>
+                                                            <td>90%</td>
                                                         </tr>
                                                     </table>
                                                 </div>
-    
+                                            </div>
+
+                                            <div class="sub-block-wrap">
                                                 <div class="notice-list-wrap">
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">來信申請退費請於下班18:00前，超過以隔日計算。</li>
-                                                        <li class="list-item">體驗前十日、結帳完成後退還費用90%，係因10%金流手續費。</li>
-                                                        <li class="list-item">申請退費須收到「退費確認信」，才是成功完成程序，並請靜候金流系統退費。</li>
-                                                        <li class="list-item">票券有效期間為本展覽期間內(依網站公告)，逾期視同作廢。</li>
+                                                        <li class="list-item"><p>來信申請退費請於下班 18:00 前，超過以隔日計算</p></li>
+                                                        <li class="list-item"><p>體驗前 10 日、結帳完成後退還費用 90%，係因 10% 金流手續費</p></li>
+                                                        <li class="list-item"><p>申請退費需收到「退費確認信」，才是成功完成程序，後續請靜候金流系統 7-10 個工作天退費</p></li>
+                                                        <li class="list-item"><p>票券有效期間為本演出期間內（依網站公告），逾期視同作廢</p></li>
                                                     </ul>
                                                 </div>
                                             </div>
 
                                             <div class="sub-block-wrap">
                                                 <div class="section-heading-wrap">
-                                                    <h4 class="heading-content-title">套票退費規則</h4>
+                                                    <h2 class="heading-block-title">線上金流系統</h2>
                                                 </div>
-    
-                                                <div class="number-list-wrap">
-                                                    <ul class="list-wrap">
-                                                        <li class="list-item">
-                                                            購買套票組合如需退費，將失去套票折扣。<br>
-                                                            退還金額扣除10%手續費及套票折扣金額後，依照退費規則退費。
-
-                                                            <div class="example-wrap">
-                                                                <p>
-                                                                    以 微醺列車+FLIGHT套票 為例：<br>
-                                                                    體驗前十日來信申請《微醺列車》退費，退回的款項為：
-                                                                </p>
-                                                                <p>
-                                                                    票面金額-(票面金額 x 10%手續費)-折扣金額<br>
-                                                                    $1250-($1250*10%)-100=1025
-                                                                </p>
-                                                            </div>
-                                                        </li>
-                                                        <li class="list-item">
-                                                            購買套票者，兩項體驗是預訂日期不同時，如需退費依該體驗日期計算退還費用比例
-                                                            <div class="example-wrap">
-                                                                <p>
-                                                                    EX：預訂的場次為，1/11《微醺列車》、1/05《FLIGHT》。
-                                                                </p>
-                                                                <p>
-                                                                    假設今日為1/1，<br>
-                                                                    申請《微醺列車》退費＝體驗前十日退費=退還90%票面金額<br>
-                                                                    申請《FLIGHT》退費＝體驗前四日退費=退還50%票面金額
-                                                                </p>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                                                <div class="text-wrap">
+                                                    <p class="body-03">本專案之線上付款透過藍新金流第三方平台支付</p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="block-wrap">
-                                            <div class="section-heading-wrap">
-                                                <h2 class="heading-block-title">票券異動申請</h2>
-                                                <h3 class="heading-block-subtitle">CHANGE APPLICATION</h3>
-                                            </div>
-
-                                            <div class="table-wrap style-rule style-plus layout-change">
-                                                <table>
-                                                    <tr>
-                                                        <th></th>
-                                                        <th>你需要附上：</th>
-                                                        <th>然後再附上：</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>改期<br>（至多<br class="mobile-br">乙次）</th>
-                                                        <td>購票者的<br>姓名、購票信箱、手機</td>
-                                                        <td>欲更改場次<br>請提供3個時段</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>轉讓</th>
-                                                        <td>將訂位確認信<br>轉寄或截圖給<br>親朋好友即可</td>
-                                                        <td>現場須出示確認信<br>及向櫃台說明<br>原訂票人姓名、電話</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>退票</th>
-                                                        <td>購票者的<br>姓名、購票信箱、手機</td>
-                                                        <td>訂單編號</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-
-                                            <div class="number-list-wrap">
-                                                <ul class="list-wrap">
-                                                    <li class="list-item">請依照上述說明附上相關資訊，來信落日轉運站客服信箱。</li>
-                                                    <li class="list-item">退費入帳約需七至十個工作天，實際日期請依購票時使用信用卡銀行規定為主。（特殊情況採ATM退費，入帳時間以客服人員回信為主）</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="block-wrap">
-                                            <div class="section-heading-wrap">
-                                                <h2 class="heading-block-title">線上金流系統</h2>
-                                                <h3 class="heading-block-subtitle">Neweb Pay</h3>
-                                            </div>
-
-                                            <div class="text-wrap">
-                                                <p class="body-03">本專案之線上付款透過藍新金流第三方平台支付。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1150,7 +818,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </tr>
                                         </table>
                                     </div>
-                                    <p>歡迎至 <a href="/terminal/booking_now" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
+                                    <p>歡迎至 <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
                                 </div>
                             </div>
                         </div>

@@ -7,12 +7,12 @@
 
     <!-- Metadata -->
     <meta charset="UTF-8">
-    <meta name="description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="落日轉運站 The Sunset Terminal"/>
     <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
-    <meta property="og:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品"/>
+    <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
     <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png"/>
     <meta property="og:image:type" content="image/png"/>
@@ -21,7 +21,7 @@
 
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
-    <meta name="twitter:description" content="歡迎來到落日轉運站，我們提供列車、飛機兩種交通方式，準時接駁您前往旅途的終點  ─落日轉運站第一站落點於高雄，其中共有三項沈浸式體驗，為驚喜製造至今規模最大之沉浸式作品">
+    <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -39,9 +39,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/terminalAssets/css/main-component.css">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?230807">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?230817">
+    <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?231116">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?231123">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -75,107 +75,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <li class="progress-item status-disabled"><div class="item-wrap"><span>4</span></div></li>
                                 </ul>
                             </div>
-                            <div class="body-wrap">
-                                <div class="section-heading-wrap">
-                                    <h4 class="heading-content">套票組合說明</h4>
+                        </div>
+                        
+                        <div class="body-wrap">
+                            <div class="tickets">
+                                <div class="ticket">
+                                    <picture>
+                                        <source srcset="/terminalAssets/images/booking/ticket1.webp" type="image/webp" />
+                                        <img width="100%" src="/terminalAssets/images/booking/ticket1.png" />
+                                    </picture>
+                                    <p>2,200/人 獨身踏上旅程</p>
                                 </div>
-                                <div class="ticket-group-wrap bold-border-box">
-                                    <table class="ticket-group-table">
-                                        <tr>
-                                            <th class="column-2-th">
-                                                <span class="top-right item-name body-01 style-smaller">體驗</span>
-                                                <span class="bottom-left item-name body-01 style-smaller">票券</span>
-                                            </th>
-                                            <th>
-                                                <div class="icon-th">
-                                                    <i class="icon-train"></i>
-                                                    <div class="item-name body-01 style-smaller">
-                                                        <span class="name-ch">微醺列車</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th>
-                                                <div class="icon-th">
-                                                    <i class="icon-flight"></i>
-                                                    <div class="item-name body-01 style-smaller">
-                                                        <span class="name-en">FLIGHT</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <!-- <th>
-                                                <div class="icon-th">
-                                                    <i class="icon-boat"></i>
-                                                    <div class="item-name body-01 style-smaller">
-                                                        <span class="name-en">Boat for ONE</span>
-                                                    </div>
-                                                </div>
-                                            </th> -->
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-ch">微醺列車</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$1,250</div>
-                                            </th>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-en">FLIGHT</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$500</div>
-                                            </th>
-                                            <td></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <!-- <tr>
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-en">Boat for ONE</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$800</div>
-                                            </th>
-                                            <td></td>
-                                            <td></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                        </tr> -->
-                                        <tr class="tr-bg-light">
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-ch">套票</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$1,650</div>
-                                                <div class="item-origin-price body-02 style-smaller">原價 $ 1,750</div>
-                                            </th>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <!-- <tr class="tr-bg-dark">
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name-ch">套票B</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$2,400</div>
-                                                <div class="item-origin-price body-02 style-smaller">原價 $ 2,550</div>
-                                            </th>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                        </tr> -->
-                                    </table>
+                                <div class="ticket">
+                                    <picture>
+                                        <source srcset="/terminalAssets/images/booking/ticket2.webp" type="image/webp" />
+                                        <img width="100%" src="/terminalAssets/images/booking/ticket2.png" />
+                                    </picture>
+                                    <p>2,100/人 雙人結伴同行</p>
+                                </div>
+                                <div class="ticket">
+                                    <picture>
+                                        <source srcset="/terminalAssets/images/booking/ticket6.webp" type="image/webp" />
+                                        <img width="100%" src="/terminalAssets/images/booking/ticket6.png" />
+                                    </picture>
+                                    <p>2,000/人 六人組隊探索</p>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="content-wrap">
                             <form class="form-wrap-step-1">
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="dropdownMenuButtonTicket">票種</label>
@@ -184,19 +112,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             選擇票種
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTicket">
-                                            <li class="dropdown-item body-04 @if($train->Count<=0) disabled @endif">微醺列車 @if($train->Count<=0) (完售) @endif</li>
-                                            <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($flight->Count<=0) (完售) @endif</li>
+                                            <li class="dropdown-item body-04">2,200/人 單人票</li>
+                                            <li class="dropdown-item body-04">2,100/人 雙人票</li>
+                                            <li class="dropdown-item body-04">2,000/人 六人票</li>
+                                            
+                                            <!-- <li class="dropdown-item body-04 @if($train->Count<=0) disabled @endif">微醺列車 @if($train->Count<=0) (完售) @endif</li>
+                                            <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($flight->Count<=0) (完售) @endif</li> -->
                                             <!-- <li class="dropdown-item body-04 @if($boat->Count<=0) disabled @endif">Boat for ONE @if($train->Count<=0) disabled @endif</li> -->
-                                            <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0) disabled @endif">套票：車票+飛機票 @if($train->Count<=0 || $flight->Count<=0) (完售) @endif</li>
+                                            <!-- <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0) disabled @endif">套票：車票+飛機票 @if($train->Count<=0 || $flight->Count<=0) (完售) @endif</li> -->
                                             <!-- <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif">套票B：車票+飛機票+船票 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif</li> -->
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="form-group normal-layout">
-                                    <label class="body-04" for="dropdownMenuButtonCount">人數</label>
+                                    <label class="body-04" for="dropdownMenuButtonCount">張數</label>
                                     <div class="js-dropdown dropdown-wrap dropdown">
                                         <button class="js-required-dropdown dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonCount" data-bs-toggle="dropdown" aria-expanded="false" disabled>
-                                            選擇人數
+                                            選擇張數
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonCount"></ul>
                                     </div>
@@ -237,68 +169,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="ticket-group-wrap bold-border-box">
                                     <table class="ticket-group-table">
                                         <tr>
-                                            <th class="column-2-th">
+                                            <th width="33.333%" class="column-2-th">
                                                 <span class="top-right item-name body-01 style-smaller">體驗</span>
                                                 <span class="bottom-left item-name body-01 style-smaller">票券</span>
                                             </th>
                                             <th>
                                                 <div class="icon-th">
-                                                    <i class="icon-train"></i>
+                                                    <!-- <i class="icon-train"></i> -->
                                                     <div class="item-name body-01 style-smaller">
-                                                        <span class="name-ch">微醺列車</span>
+                                                        <span class="name-ch">落日月台</span>
                                                     </div>
                                                 </div>
                                             </th>
-                                            <th>
-                                                <div class="icon-th">
-                                                    <i class="icon-flight"></i>
-                                                    <div class="item-name body-01 style-smaller">
-                                                        <span class="name-en">FLIGHT</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <!-- <th>
-                                                <div class="icon-th">
-                                                    <i class="icon-boat"></i>
-                                                    <div class="item-name body-01 style-smaller">
-                                                        <span class="name-en">Boat for ONE</span>
-                                                    </div>
-                                                </div>
-                                            </th> -->
                                         </tr>
-                                        <tr class="tr-bg-dark" id="selected-ticket-tr">
-                                            <th>
-                                                <div class="item-name body-01 style-smaller">
-                                                    <span class="name name-ch">套票B</span>
-                                                    <span class="item-text">/人</span>
-                                                </div>
-                                                <div class="item-price body-02">$2,400</div>
-                                                <div class="item-origin-price body-02 style-smaller">原價 $ 2,550</div>
-                                            </th>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <td><i class="icon-step-done"></i></td>
-                                            <!-- <td><i class="icon-step-done"></i></td> -->
+                                        <tr id="selected-ticket-tr">
+                                            <th class="name"></th>
+                                            <td class="item-price"></td>
                                         </tr>
                                     </table>
-                                    <div class="notice-wrap">
+                                    <!-- <div class="notice-wrap">
                                         <div class="notice-text-wrap">
                                             <p class="notice-text body-01 style-smaller">請確認好每個作品的間隔時間，至少保留10分鐘。</p>
                                             <p class="notice-text body-01 style-smaller">如您在選擇時間時安排有誤，還請自行承擔負責。</p>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <form class="form-wrap-step-2">
-                                <fieldset class="from-block from-block-train">
+                                <fieldset class="from-block">
                                     <div class="section-heading-wrap">
-                                        <h4 class="sub-heading-title">微醺列車</h4>
-                                        <p class="sub-heading-subtitle body-01 style-smaller">THE GREAT TIPSY：BON VOYAGE</p>
+                                        <h4 class="sub-heading-title">落日月台</h4>
+                                        <p class="sub-heading-subtitle body-01 style-smaller">MIND THE GAP</p>
                                     </div>
-                                    <p class="note">10/14-10/15 微醺列車將正式與高雄告別，體驗內容與一般場不同，詳情請<a target="_blank" href="https://www.facebook.com/surpriselabtw/posts/pfbid0n4pZNwJuRdujVyrfdH99JwhUfV6yMbYnn3umjcfhQZoTC4PH2Nx4CWF5SpL9AfX5l">點我查看</a>。</p>
+                                    <!-- <p class="note">10/14-10/15 微醺列車將正式與高雄告別，體驗內容與一般場不同，詳情請<a target="_blank" href="https://www.facebook.com/surpriselabtw/posts/pfbid0n4pZNwJuRdujVyrfdH99JwhUfV6yMbYnn3umjcfhQZoTC4PH2Nx4CWF5SpL9AfX5l">點我查看</a>。</p> -->
                                     <div class="form-group normal-layout">
-                                        <label class="body-04" for="js-datepicker-train">日期</label>
+                                        <label class="body-04" for="js-datepicker">日期</label>
                                         <div class="datepicker-wrap">
-                                            <input type="text" id="js-datepicker-train" class="datepicker body-04" placeholder="選擇日期" readonly required>
+                                            <input type="text" id="js-datepicker" class="datepicker body-04" placeholder="選擇日期" readonly required>
                                         </div>
                                     </div>
                                     <div class="form-group normal-layout dropdown-time dropdown-datepart-train">
@@ -317,66 +224,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 選擇時間
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-train"></ul>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="from-block from-block-flight">
-                                    <div class="section-heading-wrap">
-                                        <h4 class="sub-heading-title">FLIGHT</h4>
-                                        <p class="sub-heading-subtitle body-01 style-smaller">無光飛航</p>
-                                    </div>
-                                    <div class="form-group normal-layout">
-                                        <label class="body-04" for="js-datepicker-flight">日期</label>
-                                        <div class="datepicker-wrap">
-                                            <input type="text" id="js-datepicker-flight" class="datepicker body-04" placeholder="選擇日期" readonly required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group normal-layout dropdown-time dropdown-datepart-flight">
-                                        <label class="body-04" for="dropdownMenuButtonPeriod-flight">時段</label>
-                                        <div class="js-dropdown dropdown-wrap dropdown">
-                                            <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonPeriod-flight" data-bs-toggle="dropdown" aria-expanded="false">
-                                                選擇時段
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-flight"></ul>
-                                        </div>
-                                    </div>
-                                    <div class="form-group normal-layout dropdown-time dropdown-time-flight">
-                                        <label class="body-04" for="dropdownMenuButtonTime-flight">時間</label>
-                                        <div class="js-dropdown dropdown-wrap dropdown">
-                                            <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonTime-flight" data-bs-toggle="dropdown" aria-expanded="false">
-                                                選擇時間
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-flight"></ul>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="from-block from-block-boat">
-                                    <div class="section-heading-wrap">
-                                        <h4 class="sub-heading-title">Boat for ONE</h4>
-                                        <p class="sub-heading-subtitle body-01 style-smaller">單程船票</p>
-                                    </div>
-                                    <div class="form-group normal-layout">
-                                        <label class="body-04" for="js-datepicker-boat">日期</label>
-                                        <div class="datepicker-wrap">
-                                            <input type="text" id="js-datepicker-boat" class="datepicker body-04" placeholder="選擇日期" readonly required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group normal-layout dropdown-time dropdown-datepart-boat">
-                                        <label class="body-04" for="dropdownMenuButtonPeriod-boat">時段</label>
-                                        <div class="js-dropdown dropdown-wrap dropdown">
-                                            <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonPeriod-boat" data-bs-toggle="dropdown" aria-expanded="false">
-                                                選擇時段
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonPeriod-boat"></ul>
-                                        </div>
-                                    </div>
-                                    <div class="form-group normal-layout dropdown-time dropdown-time-boat">
-                                        <label class="body-04" for="dropdownMenuButtonTime-boat">時間</label>
-                                        <div class="js-dropdown dropdown-wrap dropdown">
-                                            <button class="dropdown-toggle mimicry-input body-04 no-value" type="button" id="dropdownMenuButtonTime-boat" data-bs-toggle="dropdown" aria-expanded="false">
-                                                選擇時間
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonTime-boat"></ul>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -431,22 +278,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="name">* 姓名</label>
-                                    <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p>
+                                    <!-- <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p> -->
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
                                     <input type="text" id="name" class="body-04" name="name" placeholder="ex. 轉運站吉祥物" required>
                                 </div>
-                                <div class="form-group normal-layout">
-                                    <label class="body-04" for="company_name">統編抬頭</label>
+                                <!-- <div class="form-group normal-layout"> -->
+                                    <!-- <label class="body-04" for="company_name">統編抬頭</label> -->
                                     <!-- <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p> -->
                                     <!-- <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div> -->
-                                    <input type="text" id="company_name" class="body-04" name="company_name" placeholder="" required>
-                                </div>
-                                <div class="form-group normal-layout">
-                                    <label class="body-04" for="company_tax_ID">統一編號</label>
+                                    <!-- <input type="text" id="company_name" class="body-04" name="company_name" placeholder="" required> -->
+                                <!-- </div> -->
+                                <!-- <div class="form-group normal-layout"> -->
+                                    <!-- <label class="body-04" for="company_tax_ID">統一編號</label> -->
                                     <!-- <p>若需打統編,請填寫發票抬頭(公司完整名稱)，並在備註留下聯络人姓名與統一編號</p> -->
                                     <!-- <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div> -->
-                                    <input type="text" id="company_tax_ID" class="body-04" name="company_tax_ID" placeholder="" required>
-                                </div>
+                                    <!-- <input type="text" id="company_tax_ID" class="body-04" name="company_tax_ID" placeholder="" required> -->
+                                <!-- </div> -->
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="telephone">* 電話</label>
                                     <p>手機號碼將作為取票依據，請務必填寫正確</p>
@@ -459,7 +306,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="email">* 電子信箱</label>
                                     <div class="form-error body-02 style-smaller">格式錯誤，請重新填寫</div>
-                                    <input type="text" id="email" class="body-04" name="email" placeholder="ex. terminal@surpriselab.com.tw" required>
+                                    <input type="text" id="email" class="body-04" name="email" placeholder="ex. mindthegap@surpriselab.com.tw" required>
                                 </div>
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="remark">其他備註</label>
@@ -516,32 +363,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                                 <div class="notice-wrap bold-border-box">
                                     <div class="notice-text-wrap">
-                                        <p class="notice-text body-01 style-smaller">請確認每個作品的演出區間，前後安排是否重疊。</p>
+                                        <!-- <p class="notice-text body-01 style-smaller">請確認每個作品的演出區間，前後安排是否重疊。</p> -->
                                         <p class="notice-text body-01 style-smaller">如您在選擇時間時安排有誤，還請自行承擔負責。</p>
                                     </div>
-                                    <div class="notice-item-wrap notice-item-area notice-item-train">
+                                    <div class="notice-item-wrap notice-item-area notice-item">
                                         <div class="item-caption body-01 style-smaller">
-                                            微醺列車 THE GREAT TIPSY：BON VOYAGE
-                                        </div>
-                                        <ul class="item-list">
-                                            <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
-                                            <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
-                                            <li class="list-item body-01 style-smaller">乘客人數 <span class="filled-people"></span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="notice-item-wrap notice-item-area notice-item-flight">
-                                        <div class="item-caption body-01 style-smaller">
-                                            FLIGHT 無光飛航
-                                        </div>
-                                        <ul class="item-list">
-                                            <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
-                                            <li class="list-item body-01 style-smaller">時段 18:00-20:00</li>
-                                            <li class="list-item body-01 style-smaller">乘客人數 <span class="filled-people"></span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="notice-item-wrap notice-item-area notice-item-boat">
-                                        <div class="item-caption body-01 style-smaller">
-                                            Boat for ONE 單程船票
+                                            單人票
                                         </div>
                                         <ul class="item-list">
                                             <li class="list-item body-01 style-smaller">日期 2022-7-19</li>
@@ -581,6 +408,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <a href="javascript://" class="booking-btn shape-square color-input-use verification-code">確認</a>
                                                 <ul class="verify-status-list body-02 style-smaller">
                                                     <li class="status-list-item not-found">找不到此筆折扣序號</li>
+                                                    <li class="status-list-item use-discount"></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>劃位序號</th>
+                                        <td>
+                                            <!-- 尚未輸入 -->
+                                            <div class="form-group verify-layout">
+                                                <input type="text" id="allocation" class="body-04" name="allocation" placeholder="請輸入劃位序號">
+                                                <a href="javascript://" class="booking-btn shape-square color-input-use">確認</a>
+                                                <ul class="verify-status-list body-02 style-smaller">
+                                                    <li class="status-list-item not-found">找不到此劃位序號</li>
                                                     <li class="status-list-item use-discount"></li>
                                                 </ul>
                                             </div>
@@ -725,6 +566,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking.js?v=230817"></script>
+    <script src="/terminalAssets/js/booking.js?v=2311242"></script>
 </body>
 </html>

@@ -865,7 +865,8 @@ h6 {
 @media screen and (max-width: 1199.98px) {
   .table-wrap.layout-refund table tr th:nth-child(2),
 .table-wrap.layout-refund table tr td:first-child {
-    width: 20%;
+    /* width: 20%; */
+    width: auto;
   }
 }
 .table-wrap.layout-change table tr th:first-child {
@@ -873,7 +874,8 @@ h6 {
 }
 @media screen and (max-width: 1199.98px) {
   .table-wrap.layout-change table tr th:first-child {
-    width: 15%;
+    /* width: 15%; */
+    width: auto;
   }
 }
 .table-wrap.layout-qa table tr th:first-child {
@@ -944,12 +946,12 @@ h6 {
 }
 @media screen and (max-width: 1199.98px) {
   .table-wrap table tr th, .table-wrap table tr td {
-    padding: 12px 8px;
+    padding: 12px 3px;
   }
 }
 .table-wrap table tr th:first-child {
   border-right: 3px solid var(--color-primary);
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 .table-wrap table tr td + td {
   border-left: 1px solid var(--color-primary-half);

@@ -736,6 +736,7 @@ h6 {
 .ticket-group-table tr th:first-child, .ticket-group-table tr td:first-child {
   border-left: none;
   border-right: 3px solid #dd7777;
+  text-align: center;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -749,7 +750,7 @@ h6 {
   border-right: none;
 }
 
-.ticket-group-table tr th {
+.ticket-group-table tr th, .ticket-group-table tr td {
   color: #efcabf;
 }
 
