@@ -130,7 +130,69 @@ class HelperService {
             return false;
         }
     }
-
+    // terTP 信件寄送
+    public function SendEmailterTPByTemplateName($data){
+        try{
+            if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
+                config(['mail.host' => 'smtp.gmail.com']);
+                config(['mail.username' => env('MAIL_TERTP_USER')]);
+                config(['mail.password' => env('MAIL_TERTP_PASS')]);
+            } else {
+                config(['mail.host' => env('MAIL_HOST')]);
+                config(['mail.username' => env('MAIL_USERNAME')]);
+                config(['mail.password' => env('MAIL_PASSWORD')]);
+            }
+            Mail::send('terTP.email.'.$data['template'],$data,function($m) use ($data){
+                $m->from('mindthegap@surpriselab.com.tw', '落日轉運站-台北站');
+                $m->sender('mindthegap@surpriselab.com.tw', '落日轉運站-台北站');
+                $m->replyTo('mindthegap@surpriselab.com.tw', '落日轉運站-台北站');
+                $m->to($data['email'], $data['name']);
+                switch ($data['template']) {
+                    case 'order':
+                        $m->subject('【 terTP 】訂位確認信件');
+                        break;
+                    case 'D7':
+                        $m->subject('terTP 行前你需要知道的九件事');
+                        break;
+                    case 'undone':
+                        $m->subject('terTP....你完成下訂了嗎？');
+                        break;
+                }
+                    
+            });
+            // 送件紀錄
+            \App\model\terTP\SendMail::insert([
+                'email'    => $data['email'],
+                'order_id' => $data['id'],
+                'type'     => $data['template'],
+            ]);
+            return true;
+        } catch (Exception $e){
+            Log::error($e);
+            return false;
+        }
+    }
+    // terTP 簡訊寄送
+    public function SendSmsterTPByTemplateName($smsData){
+        try{
+            $token = '';// env('PARIS_SMS');
+            switch ($smsData['template']) {
+                case 'order':
+                    $this->sent_single_sms($smsData['phone'],"。",$token);
+                    break;
+                case 'D7':
+                    $this->sent_single_sms($smsData['phone'],"臨。",$token);
+                    break;
+                case 'DX':
+                    $this->sent_single_sms($smsData['phone'],"h",$token);
+                    break;
+            }
+            return true;
+        } catch (Exception $e) {
+            Log::error($e);
+            return false;
+        }
+    }
 
     // dark3 信件寄送
     public function SendEmailByTemplateName($data){

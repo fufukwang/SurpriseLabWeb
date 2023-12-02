@@ -218,6 +218,21 @@
                         </ul>
                     </li>
                     @endif
+                    @if( Session::get('key')->terTP )
+                    <li class="has-submenu @if(Request::segment(1) === 'tertp')active @endif">
+                        <a href="#"><i class="md md-local-airport"></i>落日台北站</a>
+                        <ul class="submenu" style="left:0;right:auto">
+
+                            <li><a href="/tertp/pros">Activaty</a></li>
+                            <!-- <li><a href="/tertp/backmes">Backme</a></li> -->
+                            <li><a href="/tertp/discount/setting">Discount</a></li>
+                            <li><a href="/tertp/print">Order</a></li>
+                            <li><a href="/tertp/getMasterList">Master</a></li>
+                            <li><a href="/tertp/coupons">Gift Coupon</a></li>
+
+                        </ul>
+                    </li>
+                    @endif
                 @endif
                 </ul>
                 <!-- End navigation menu -->
