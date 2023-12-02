@@ -1,6 +1,6 @@
 <?php
 
-namespace App\model\tertp;
+namespace App\model\terTP;
 
 use Illuminate\Database\Eloquent\Model;
 
