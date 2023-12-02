@@ -131,8 +131,8 @@ class NewPayController extends WebController
                     'money' => $order->money,
                 ];
 
-                $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                    ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                    ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
 
                 $this->sendMailCenter($ord);
                 $this->sendSmsCenter($ord);
@@ -199,8 +199,8 @@ class NewPayController extends WebController
                     'money' => $order->money,
                 ];
                 if(env('APP_ENV') == 'dev'){
-                    $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                        ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                    $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                        ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
 
                     $this->sendMailCenter($ord);
                     $this->sendSmsCenter($ord);
@@ -255,8 +255,8 @@ class NewPayController extends WebController
             if($order->pay_status == '已付款' && $order->is_send === 0 && $order->discount == null){
                 order::where('sn',$sn)->orderBy('created_at','DESC')->limit(1)->update(['discount'=>'back']);
                 
-                $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                    ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                    ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
 
                 $this->sendMailCenter($ord);
                 $this->sendSmsCenter($ord);

@@ -134,7 +134,7 @@ class InvController extends WebController
     // 列表多人開立發票
     public function muInvOpen(Request $request){
         try{
-            $orders = order::whereIn('terTP_order.id',$request->id)->leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')->select('name','sn','email','pople','tel',/*'dial_code',*/'terTP_order.id','terTP_order.money','dis_money','tax_id','tax_name','co_money','p1','p2','p6','vehicle','ticket')->get();
+            $orders = order::whereIn('tertp_order.id',$request->id)->leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')->select('name','sn','email','pople','tel',/*'dial_code',*/'tertp_order.id','tertp_order.money','dis_money','tax_id','tax_name','co_money','p1','p2','p6','vehicle','ticket')->get();
             foreach($orders as $row){
                 //$phone = str_replace("+886","0",$row->dial_code) . $row->tel;
                 $phone = str_replace("+886","0",str_replace("+8860","0",$row->tel));
