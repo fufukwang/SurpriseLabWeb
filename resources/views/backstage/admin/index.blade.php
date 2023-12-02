@@ -41,6 +41,7 @@
                             <th>無光晚餐3</th>
                             <th>落日轉運站</th>
                             <th>巴黎舞會</th>
+                            <th>落日台北站</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -59,6 +60,7 @@
                                 <td>@if($row->dark3) yes @else no @endif</td>
                                 <td>@if($row->terminal) yes @else no @endif</td>
                                 <td>@if($row->paris) yes @else no @endif</td>
+                                <td>@if($row->terTP) yes @else no @endif</td>
                             <td class="actions">
                                 <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
                                 <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
