@@ -97,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="col">
                     <div class="grid">
                         <h4>地點</h4>
-                        <p>詳細地點暫時保密，將慢慢向你揭露</p>
+                        <p>地點：國立臺灣科學教育館<br>（<a class="hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳）</p>
                     </div>
                     <div class="grid">
                         <h4>場次</h4>
@@ -491,5 +491,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris/js/main.js?231003"></script>
     <script src="/paris/js/phone_code.js"></script>
     <script src="/paris/js/booking.js?231127"></script>
+    <script src="/paris/js/booking.js?231128"></script>
 </body>
 </html>
