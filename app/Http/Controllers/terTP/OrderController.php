@@ -61,7 +61,7 @@ class OrderController extends WebController
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')->select('terTP_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','terTP_order.money','cash','refund','cut','handling','need_english','need_chinese','tax_id','tax_name','vehicle','ticket')->find($id);
+                $order = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')->select('tertp_order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','tertp_order.money','cash','refund','cut','handling','need_english','need_chinese','tax_id','tax_name','vehicle','ticket')->find($id);
                 $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
@@ -94,8 +94,8 @@ class OrderController extends WebController
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
             // 觸發補寄
             try {
-                $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                    ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                    ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
                 if($ord->email != '') $this->sendMailCenter($ord);
                 if($ord->tel != '') $this->sendSmsCenter($ord);
             } catch (Exception $e){
@@ -211,8 +211,8 @@ class OrderController extends WebController
             $order = order::create($data);
 
             if($request->pay_status == '已付款'){
-                $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                    ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                    ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
                 if($ord->email != '') $this->sendMailCenter($ord);
                 if($ord->tel != '') $this->sendSmsCenter($ord);
             }
@@ -495,10 +495,10 @@ class OrderController extends WebController
         })->export('xls');
     }
     public function XlsEmailDataOuput(Request $request){
-        $order = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id');
+        $order = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id');
         $order = $order->select('name','email')->groupBy('email');
-        $order->whereRaw("(terTP_order.pay_status='已付款' OR terTP_order.pay_status='已付款(部分退款)' OR (terTP_order.pay_type='現場付款' AND terTP_order.pay_status<>'取消訂位'))");
-        $order = $order->orderBy('terTP_order.updated_at','desc')->get();
+        $order->whereRaw("(tertp_order.pay_status='已付款' OR tertp_order.pay_status='已付款(部分退款)' OR (tertp_order.pay_type='現場付款' AND tertp_order.pay_status<>'取消訂位'))");
+        $order = $order->orderBy('tertp_order.updated_at','desc')->get();
         $cellData = $order->toArray();
         Excel::create('Email 名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
@@ -534,8 +534,8 @@ class OrderController extends WebController
     }
 */
     private function orderQuery(Request $request,$isTable=false){
-        $order = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','terTP_order.manage','terTP_pro.money AS PM','terTP_order.money AS OM','terTP_order.created_at AS created_at','terTP_order.pay_status','email','terTP_order.sn','terTP_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','refund','handling','cut','tax_id','tax_name','need_english','vehicle','p1','p2','p6','co_code','co_money','ticket');
+        $order = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','tertp_order.manage','tertp_pro.money AS PM','tertp_order.money AS OM','tertp_order.created_at AS created_at','tertp_order.pay_status','email','tertp_order.sn','tertp_order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','refund','handling','cut','tax_id','tax_name','need_english','vehicle','p1','p2','p6','co_code','co_money','ticket');
         if($isTable){
             $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
         }
@@ -547,8 +547,8 @@ class OrderController extends WebController
                 if($request->has('dayend') && $request->dayend!='') $order->where('day','<=',$request->dayend);    
             }
             if($request->srday == 1){
-                if($request->has('daystart') && $request->daystart!='') $order->where('terTP_order.created_at','>=',$request->daystart.' 00:00:00');
-                if($request->has('dayend') && $request->dayend!='') $order->where('terTP_order.created_at','<=',$request->dayend.' 23:59:59');    
+                if($request->has('daystart') && $request->daystart!='') $order->where('tertp_order.created_at','>=',$request->daystart.' 00:00:00');
+                if($request->has('dayend') && $request->dayend!='') $order->where('tertp_order.created_at','<=',$request->dayend.' 23:59:59');    
             }
         }
         
@@ -566,9 +566,9 @@ class OrderController extends WebController
         if($request->has('ticket') && $request->ticket!='') $order->where('ticket',$request->ticket);
         if($request->has('dayparts') && $request->dayparts!='') $order->where('day_parts',$request->dayparts);
         if($request->has('pay_status') && $request->pay_status=='已預約'){
-            $order->whereRaw("(terTP_order.pay_status='已付款' OR pay_status='已付款(部分退款)' OR (terTP_order.pay_type='現場付款' AND terTP_order.pay_status<>'取消訂位'))");
+            $order->whereRaw("(tertp_order.pay_status='已付款' OR pay_status='已付款(部分退款)' OR (tertp_order.pay_type='現場付款' AND tertp_order.pay_status<>'取消訂位'))");
         } elseif($request->pay_status!=''){
-            $order->where('terTP_order.pay_status',$request->pay_status);  
+            $order->where('tertp_order.pay_status',$request->pay_status);  
         } 
         if($request->has('pay_type') && $request->pay_type!='') $order->where('pay_type',$request->pay_type);
         if($request->has('search') && $request->search!=''){
@@ -581,10 +581,10 @@ class OrderController extends WebController
         }
         // 尚未開過發票
         if($request->has('no_inv') && $request->no_inv == 1){
-            // $order->whereRaw("(SELECT COUNT(terTP_inv.id) FROM terTP_inv WHERE is_cancal=0 AND terTP_order.id=terTP_inv.order_id)=0 AND pay_status IN ('已付款','已付款(部分退款)')");
-            $order->whereIn('terTP_order.pay_status',['已付款','已付款(部分退款)']);  
-            $order->leftJoin('terTP_inv',function($join){
-                $join->on('terTP_order.id', '=', 'terTP_inv.order_id');
+            // $order->whereRaw("(SELECT COUNT(tertp_inv.id) FROM tertp_inv WHERE is_cancal=0 AND tertp_order.id=tertp_inv.order_id)=0 AND pay_status IN ('已付款','已付款(部分退款)')");
+            $order->whereIn('tertp_order.pay_status',['已付款','已付款(部分退款)']);  
+            $order->leftJoin('tertp_inv',function($join){
+                $join->on('tertp_order.id', '=', 'tertp_inv.order_id');
                 $join->where('is_cancal','=',0);
             });
             $order->whereNull('is_cancal');
@@ -596,7 +596,7 @@ class OrderController extends WebController
                 if($ord[0] == 'rang_start') $order = $order->OrderBy('day',$ord[1]);
                 $order = $order->OrderBy($ord[0],$ord[1]);
             }
-        } else { $order = $order->orderBy('terTP_order.updated_at','desc'); }
+        } else { $order = $order->orderBy('tertp_order.updated_at','desc'); }
         return $order;
     }
 
