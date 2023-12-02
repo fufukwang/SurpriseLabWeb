@@ -92,7 +92,7 @@ class BackController extends WebController
             $mes = $mes->whereIn('id',$coupons->toArray());
         }
         if($request->has('isdone')){
-            $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(terTP_coupon) WHERE o_id=0 AND terTP_coupon.b_id=terTP_backme.id)>0");
+            $mes = $mes->whereRaw("(SELECT COUNT(id) FROM(tertp_coupon) WHERE o_id=0 AND tertp_coupon.b_id=tertp_backme.id)>0");
         }
         if($request->has('is_sent')){
             $mes = $mes->where('is_sent',0);
@@ -128,7 +128,7 @@ class BackController extends WebController
         return view('terTP.backend.BackMes',compact('mes','request','quart'));
     }
     public function NotUseXls(Request $request){
-        $backmes = backme::select('id','name','email','tel','p2','p6','p1','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(terTP_coupon) WHERE o_id=0 AND terTP_coupon.b_id=terTP_backme.id)>0")->get()->toArray();
+        $backmes = backme::select('id','name','email','tel','p2','p6','p1','detail','manage')->whereRaw("(SELECT COUNT(id) FROM(tertp_coupon) WHERE o_id=0 AND tertp_coupon.b_id=tertp_backme.id)>0")->get()->toArray();
         $cellData = [['姓名','信箱','電話','可劃位人數','訂購內容','註記']];
         foreach ($backmes as $val) {
             $num = 0;
