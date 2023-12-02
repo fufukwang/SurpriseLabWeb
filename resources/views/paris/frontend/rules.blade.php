@@ -106,12 +106,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="collapse-item">
                     <div class="item-title">《巴黎舞會》在哪裡舉辦？</div>
                     <div class="item-body">
-                        <p>
+                        <!--合併衝突保留 master--><!-- <p> 
                             <b>國立臺灣科學教育館</b><br>
                             <b>台北市士林區士商路189號</b><br>
                             <br>
                             舞會將隱藏於上方建築物中，詳細進入路線，我們將於體驗前告知，敬請期待。
-                        </p>
+                        </p> -->
+                        <p>舞會位在舞會位在國立臺灣科學教育館（<a class="mailto hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳），從士林捷運站前往巴黎舞會，搭乘公車和計程車距離約 7 分鐘、步行距離約 14 分鐘，確切地點會於體驗日前 7 天得知</p>
                     </div>
                 </div>
                 <div class="collapse-item">
@@ -143,11 +144,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="item-title">如何預約《巴黎舞會》？</div>
                     <div class="item-body">
                         <p>
-                            【預購】<br>
+                            <!--合併衝突保留 master-->
+                            <!-- 【預購】<br>
                             預購已於 2023/11/26 結束，劃位序號信已寄送至購票者信箱，請於序號失效期限前完成劃位<br>
                             <br>
                             【直購】<br>
-                            巴黎舞會採網路購票、線上劃位方式進行，購票請至 <a href="/lebaldeparis/booking"><span>預約舞會</span></a> ，相關規則請參閱 <a href="/lebaldeparis/rules"><span>舞會須知</span></a>
+                            巴黎舞會採網路購票、線上劃位方式進行，購票請至 <a href="/lebaldeparis/booking"><span>預約舞會</span></a> ，相關規則請參閱 <a href="/lebaldeparis/rules"><span>舞會須知</span></a> -->
+                            先預售：歡迎至<a target="_blank" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW"><span>預約舞會</span></a>選購票券種類和數量<br>
+                            後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約
                         </p>
                     </div>
                 </div>
@@ -483,7 +487,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a target="_blank" id="fixed-booking" href="https://m.me/surpriselabtw?ref=presaleend">
+    <a target="_blank" id="fixed-booking" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">
         <img src="/paris/img/fixed-booking.png" />
     </a>
 

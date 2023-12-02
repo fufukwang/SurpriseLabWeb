@@ -82,7 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
-            <a target="_blank" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
+            <a target="_blank" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
         </nav>
     </header>
 
@@ -148,8 +148,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="/paris/img/deco.svg" />
                 <h1>購票資訊</h1>
                 <h3>Ticket</h3>
-                <p><center>11/26-11/28 將暫停購票、11/29 開放直購，完成購票即可劃位</center></p>
-                <p><center>暫停購票期間，點擊 <a class="hover-underline" target="_blank" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a> 留下聯絡資訊的賓客，我們將在開放購票後第一時間通知你</center></p>
+                <p><center>12月座位全數完售，立即購票享 開演前預購早鳥價</center></p>
+                <p><center>現在預約舞會，可劃「2024/1-2月」座位</center></p>
             </div>
             
             <div class="price pc">
@@ -165,7 +165,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -175,12 +175,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$4,000<span>($2,000/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <span>【早鳥優惠倒數】11/26前購票輸入【twogether】享$100折扣</span>
+                        <span>【雙人預購優惠】購票輸入<br>【twogether】享$100折扣</span>
                         <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -194,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
             </div>
 
@@ -211,7 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -221,12 +221,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$4,000<span>($2,000/人)</span></h2>
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <span>【早鳥優惠倒數】11/26前購票輸入【twogether】享$100折扣</span>
+                        <span>【雙人預購優惠】購票輸入<br>【twogether】享$100折扣</span>
                         <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
                 <div class="item">
                     <div class="icon">
@@ -240,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
-                    <a target="_blank" class="p-btn primary" href="https://m.me/surpriselabtw?ref=presaleend">預約舞會</a>
+                    <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">預約舞會</a>
                 </div>
             </div>
         </section>
@@ -391,7 +391,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col">
                         <div class="grid">
                             <h4>地點</h4>
-                            <p>詳細地點暫時保密，將慢慢向你揭露</p>
+                            <p>地點：國立臺灣科學教育館<br>（<a class="hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳）</p>
                         </div>
                         <div class="grid">
                             <h4>場次</h4>
@@ -470,7 +470,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a target="_blank" id="fixed-booking" href="https://m.me/surpriselabtw?ref=presaleend" style="display: none;">
+    <a target="_blank" id="fixed-booking" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW" style="display: none;">
         <img src="/paris/img/fixed-booking.png" />
     </a>
 
