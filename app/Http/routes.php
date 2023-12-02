@@ -292,6 +292,58 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
         Route::post('setting/store', 'terminal\SpecialController@postSettingStore');
     });
 
+    // 台北站
+    Route::group(['prefix' => 'tertp'], function(){
+        // coupon
+        Route::get('coupons','terTP\BackController@Coupons');
+        Route::post('coupons','terTP\BackController@Coupons');
+        Route::get('coupon/{id}','terTP\BackController@Coupon');
+        Route::delete('coupon/{id}/delete','terTP\BackController@CouponDelete');
+
+        // 營業日
+        Route::get('pros','terTP\BackController@Pros');
+        Route::get('pro/{id}/edit','terTP\BackController@ProEdit');
+        Route::post('pro/{id}/update','terTP\BackController@ProUpdate');
+        Route::delete('pro/{id}/delete','terTP\BackController@ProDelete');
+        Route::post('pros','terTP\BackController@Pros');
+        Route::post('pros/output/only','terTP\BackController@ProOutputSite');
+
+        // 訂單
+        Route::get('orders/{id}','terTP\OrderController@Orders');
+        Route::get('order/{id}/edit','terTP\OrderController@OrderEdit');
+        Route::post('order/{id}/update','terTP\OrderController@OrderUpdate');
+        Route::delete('order/{id}/delete','terTP\OrderController@OrderDelete');
+        Route::get('order/{pro_id}/appointment','terTP\OrderController@Appointment');  // 後臺預約
+        Route::post('order/{pro_id}/appointmentUpdate','terTP\OrderController@AppointmentUpdate');
+        Route::post('order/{id}/store/ajax','terTP\OrderController@StoreByAjax');
+
+        // 報表列印
+        Route::get('print','terTP\OrderController@Print');
+        Route::get('table','terTP\OrderController@Table');
+        Route::get('xls/data/output','terTP\OrderController@XlsDataOuput');
+        Route::get('xls/emaildata/output','terTP\OrderController@XlsEmailDataOuput');
+        // Route::post('order/{id}/resent','terTP\OrderController@beSentOrderMail');
+        Route::post('order/import.xls','terTP\OrderController@orderImportXls');
+
+        // 發票相關
+        Route::post('order/inv/single/open','terTP\InvController@singleInvOpne');
+        Route::post('order/inv/mult/open','terTP\InvController@muInvOpen');
+        Route::post('order/inv/cancal','terTP\InvController@InvClose');
+
+        // 主揪相關
+        Route::post('getMasterData', 'terTP\MasterController@getMasterAndSend');
+        Route::post('postReSendMail', 'terTP\MasterController@postReSendMail');
+        Route::post('postReSendSMS', 'terTP\MasterController@postReSendSMS');
+        Route::get('getMasterList','terTP\MasterController@getMasterList');
+        Route::post('postMaster/{id}/store','terTP\MasterController@postMasterStore');
+        Route::delete('postMaster/{id}/delete','terTP\MasterController@postMasterDelete');
+
+        // 特殊場次設定
+        Route::get('special/setting', 'terTP\SpecialController@getSpecialSetting');
+        Route::get('discount/setting', 'terTP\SpecialController@getDiscountSetting');
+        Route::post('setting/store', 'terTP\SpecialController@postSettingStore');
+    });
+
 
 
     // 微醺大飯店 S1
@@ -775,20 +827,21 @@ Route::group(['middleware' => ['web']], function () {
         // Route::get('/',function(){ return view('terminal.frontend.home'); });
         // Route::get('/index.html',function(){ return view('terminal.frontend.home'); });
 
-        Route::get('/', 'terminal\FrontController@getHome');
-        Route::get('/index.html', 'terminal\FrontController@getHome');
+        Route::get('/', function(){ return view('terminal.frontend.home'); });
+        Route::get('/index.html', function(){ return view('terminal.frontend.home'); });
 
         Route::get('rules',function(){ return view('terminal.frontend.rules'); });
         // 劃位
         Route::get('booking_now',function(){ return view('terminal.frontend.booking_now'); });
         // Route::get('booking',function(){ return view('terminal.frontend.booking'); });
-        Route::get('booking', 'terminal\FrontController@getOrderPage');
+        Route::get('booking',function(){ return view('terminal.frontend.booking'); });
         // 藍新金流路由
-        Route::post('Neweb.OrderPay', 'terminal\NewPayController@postOrderByNeweb'); // 存訂單
-        Route::post('Neweb.ReturnResult', 'terminal\NewPayController@postReturnByNeweb'); // 回傳內容
-        Route::post('Neweb.BackReturn', 'terminal\NewPayController@postBackReturn'); // 背景回傳
+        Route::post('Neweb.OrderPay', 'terTP\NewPayController@postOrderByNeweb'); // 存訂單
+        Route::post('Neweb.ReturnResult', 'terTP\NewPayController@postReturnByNeweb'); // 回傳內容
+        Route::post('Neweb.BackReturn', 'terTP\NewPayController@postBackReturn'); // 背景回傳
 
-        Route::get('GetAjaxData','terminal\FrontController@GetAjaxData');
+        Route::get('GetAjaxData','terTP\FrontController@GetAjaxData');
+        Route::post('PostAjaxData','terTP\FrontController@PostAjaxData');
         // Route::post('PostAjaxData','terminal\FrontController@PostAjaxData');
         // Route::post('ReOrderData','terminal\FrontController@ReOrderData');
     });
