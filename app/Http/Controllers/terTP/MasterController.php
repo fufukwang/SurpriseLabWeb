@@ -32,9 +32,9 @@ class MasterController extends WebController
                 $md5id = $request->id;
                 $sn    = $request->sn;
                 // 時間還沒超過的正常訂單
-                $order = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id');
-                $order = $order->select('name','day','rang_start','terTP_order.id','sn')->where('sn',$sn)->whereIn('pay_status',['已付款','已付款(部分退款)'])
-                    ->whereRaw("MD5(terTP_order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")
+                $order = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id');
+                $order = $order->select('name','day','rang_start','tertp_order.id','sn')->where('sn',$sn)->whereIn('pay_status',['已付款','已付款(部分退款)'])
+                    ->whereRaw("MD5(tertp_order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")
                     ->first();
                 if($order){
                     return view('terTP.frontend.master',compact('order'));
@@ -54,9 +54,9 @@ class MasterController extends WebController
         try {
             $md5id = $request->id;
             $sn    = $request->sn;
-            $order = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id');
-            $order = $order->select('name','day','rang_start','terTP_order.id','sn','pople')->where('sn',$sn)->whereIn('pay_status',['已付款','已付款(部分退款)'])
-                ->whereRaw("MD5(terTP_order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")->first();
+            $order = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id');
+            $order = $order->select('name','day','rang_start','tertp_order.id','sn','pople')->where('sn',$sn)->whereIn('pay_status',['已付款','已付款(部分退款)'])
+                ->whereRaw("MD5(tertp_order.id)='".$md5id."' AND UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))>=UNIX_TIMESTAMP()")->first();
             if($order){
 
 
@@ -78,8 +78,8 @@ class MasterController extends WebController
                     ];
                     TeamMail::insert($data);
                     // 檢查確認日期補寄信件
-                    $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                        ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                    $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                        ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
                     $ord->email = $email;
                     $ord->tel = $tel;
                     $ord->name = $request->name;
@@ -103,8 +103,8 @@ class MasterController extends WebController
             $this->checkPower($request);
             $order_id = $request->order_id;
             // 取得訂單資料
-            $order = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id');
-            $order = $order->select('name','day','rang_start','terTP_order.id','tel','email','sn')->where('terTP_order.id',$order_id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->first();
+            $order = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id');
+            $order = $order->select('name','day','rang_start','tertp_order.id','tel','email','sn')->where('tertp_order.id',$order_id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->first();
             if($order){
                 $order->md5id = md5($order->id);
             } else {
@@ -130,8 +130,8 @@ class MasterController extends WebController
     public function postReSendMail(Request $request){
         try{
             $this->checkPower($request);
-            $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($request->id);
+            $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($request->id);
             $ord->name = $request->name;
             $ord->email = $request->email;
             if($this->sendMailCenter($ord,$request->type)){
@@ -148,8 +148,8 @@ class MasterController extends WebController
     public function postReSendSMS(Request $request){
         try{
             $this->checkPower($request);
-            $ord = order::leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                ->select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn')->find($request->id);
+            $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($request->id);
             $ord->tel = $request->tel;
             if($this->sendSmsCenter($ord,$request->type)){
                 return response()->json(["success"=>true]);
@@ -180,22 +180,22 @@ class MasterController extends WebController
         try{
             $this->checkPower($request);
 
-            $master = TeamMail::leftJoin('terTP_order', 'terTP_team_mail.order_id', '=', 'terTP_order.id')->orderBy('terTP_team_mail.updated_at','desc');
+            $master = TeamMail::leftJoin('tertp_order', 'tertp_team_mail.order_id', '=', 'tertp_order.id')->orderBy('tertp_team_mail.updated_at','desc');
             $master = $master->select(
-                'terTP_team_mail.id',
+                'tertp_team_mail.id',
                 'order_id',
-                'terTP_team_mail.name',
-                'terTP_team_mail.tel',
-                'terTP_team_mail.email',
-                'terTP_order.name as master_name',
-                'terTP_order.email as master_email'
+                'tertp_team_mail.name',
+                'tertp_team_mail.tel',
+                'tertp_team_mail.email',
+                'tertp_order.name as master_name',
+                'tertp_order.email as master_email'
             ); 
             if($request->has('search')){
                 $search = $request->search;
                 $master = $master->whereRaw("(
-                    terTP_team_mail.tel LIKE '%{$search}%' OR
-                    terTP_team_mail.name LIKE '%{$search}%' OR
-                    terTP_team_mail.email LIKE '%{$search}%'
+                    tertp_team_mail.tel LIKE '%{$search}%' OR
+                    tertp_team_mail.name LIKE '%{$search}%' OR
+                    tertp_team_mail.email LIKE '%{$search}%'
                 )");
             }
 
