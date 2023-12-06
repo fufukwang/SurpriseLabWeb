@@ -118,7 +118,7 @@ $('#sec-group .tab').on('click', function(e){
 });
 
 var Scrollbar = window.Scrollbar;
-$('#sec-group .g2, #sec-group .g3, #sec-group .g4').each(function(idx, el) {
+$('#sec-group .g2, #sec-group .g3, #sec-group .g4, #sec-group .g5').each(function(idx, el) {
     Scrollbar.init(el, {
         alwaysShowTracks: true
     });
