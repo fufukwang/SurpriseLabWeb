@@ -149,7 +149,7 @@ class HelperService {
                 $m->to($data['email'], $data['name']);
                 switch ($data['template']) {
                     case 'order':
-                        $m->subject('【 terTP 】訂位確認信件');
+                        $m->subject('【落日轉運站】落日月台 訂位確認信');
                         break;
                     case 'D7':
                         $m->subject('terTP 行前你需要知道的九件事');
@@ -178,7 +178,7 @@ class HelperService {
             $token = '';// env('PARIS_SMS');
             switch ($smsData['template']) {
                 case 'order':
-                    $this->sent_single_sms($smsData['phone'],"。",$token);
+                    $this->sent_single_sms($smsData['phone'],"親愛的旅客，《落日月台》訂位確認信已寄出，請務必前往查看，如未收到，請至垃圾信匣或促銷內容尋找。\n\n一旦踏上旅途，請小心你的腳步，Mind the gap。",$token);
                     break;
                 case 'D7':
                     $this->sent_single_sms($smsData['phone'],"臨。",$token);

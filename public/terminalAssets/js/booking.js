@@ -122,13 +122,13 @@ $(function() {
                 case '雙人票':
                     $s2_tr.find('.name').text('雙人票');
                     $s2_tr.find('.item-price').text('$2,100／人');
-                    singleMoney = 2100;
+                    singleMoney = 2100*2;
                     date_enble = true;
                 break;
                 case '六人票':
                     $s2_tr.find('.name').text('六人票');
                     $s2_tr.find('.item-price').text('$2,000／人');
-                    singleMoney = 2000;
+                    singleMoney = 2000*6;
                     date_enble = true;
                 break;
             }
@@ -527,7 +527,7 @@ $(function() {
                 } else {
                     $('.use-coupon').parent().parent().addClass('error-style');
                      
-                    $('.use-coupon').parent().find('.not-found').html('找不到此筆折扣序號' );
+                    $('.use-coupon').parent().find('.not-found').html('序號票種錯誤或已使用' );
                     $('.use-coupon').parent().find('.not-found').addClass('active');
                 }
                 $.unblockUI();
@@ -555,7 +555,7 @@ $(function() {
                 } else {
                     $('.use-discount').parent().parent().addClass('error-style');
                      
-                    $('.use-discount').parent().find('.not-found').html('找不到此筆折扣序號' );
+                    $('.use-discount').parent().find('.not-found').html('序號票種錯誤或已使用' );
                     $('.use-discount').parent().find('.not-found').addClass('active');
                 }
                 $.unblockUI();
