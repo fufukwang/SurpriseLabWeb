@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css?231120">
+    <link rel="stylesheet" href="/paris/css/home.css?231206">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -361,20 +361,313 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="title">
                 <img src="/paris/img/deco.svg" />
                 <h1>創作團隊</h1>
+            </div>
+    
+            <div class="tabs">
+                <div class="tab active" data-group="g1"><h3>法國創作團隊</h3></div>
+                <div class="tab" data-group="g2"><h3>台灣製作團隊</h3></div>
+                <div class="tab" data-group="g3"><h3>演出執行團隊</h3></div>
+                <div class="tab" data-group="g4"><h3>臺灣華語配唱配音團隊</h3></div>
+            </div>
+
+            <div class="tab-content g1 active">
                 <h3 style="line-height: 150%;">
                     製作｜布蘭卡‧李舞團 Blanca Li Company<br>
                     導演、編舞、設計與作詞｜布蘭卡‧李 Blanca Li
                 </h3>
+                <br>
+                <div class="blancali">
+                    <img class="photo" src="/paris/img/blancali.jpg" />
+                    <div class="desc">
+                        Blanca Li（布蘭卡・李）為西班牙跨界舞蹈鬼才，身兼編舞家、舞者、導演。新科技在他的創作中佔有特殊位置<br>
+                        <br>
+                        曾受邀為巴黎歌劇院及紐約大都會歌劇院委託創作，並與佩卓・阿莫多瓦（Pedro Almodovar）、米歇爾・龔特利（Michel Gondry）、傻瓜龐克（Daft Punk）、碧昂絲（Beyoncé）、酷玩樂團（Coldplay）等電影人、音樂人合作<br>
+                        <br>
+                        《巴黎舞會》 歷時四年、動用超過百名人力打造，一舉奪下 2021 年威尼斯影展最佳 VR 體驗。除了選擇台灣作為亞洲首演地，也預計於坎城、新加坡、羅馬、紐約、上海演出
+                    </div>
+                </div>
             </div>
-    
-            <div class="blancali">
-                <img class="photo" src="/paris/img/blancali.jpg" />
-                <div class="desc">
-                    Blanca Li（布蘭卡・李）為西班牙跨界舞蹈鬼才，身兼編舞家、舞者、導演。新科技在他的創作中佔有特殊位置<br>
-                    <br>
-                    曾受邀為巴黎歌劇院及紐約大都會歌劇院委託創作，並與佩卓・阿莫多瓦（Pedro Almodovar）、米歇爾・龔特利（Michel Gondry）、傻瓜龐克（Daft Punk）、碧昂絲（Beyoncé）、酷玩樂團（Coldplay）等電影人、音樂人合作<br>
-                    <br>
-                    《巴黎舞會》 歷時四年、動用超過百名人力打造，一舉奪下 2021 年威尼斯影展最佳 VR 體驗。除了選擇台灣作為亞洲首演地，也預計於坎城、新加坡、羅馬、紐約、上海演出
+
+            <div class="tab-content g2" style="display: none;">
+                <div class="row">
+                    <div class="desc">
+                        <table>
+                            <tr>
+                                <td>共同製作</td>
+                                <td>驚喜製造 Surprise Lab, 宏艺數位藝術 VIVE Arts</td>
+                            </tr>
+                            <tr>
+                                <td>主辦單位</td>
+                                <td>驚喜製造 Surprise Lab, 宏艺數位藝術 VIVE Arts</td>
+                            </tr>
+                            <tr>
+                                <td>共同主辦</td>
+                                <td>國立臺灣科學教育館</td>
+                            </tr>
+                            <tr>
+                                <td>支持單位</td>
+                                <td>TAICCA 文化內容策進院</td>
+                            </tr>
+                            <tr>
+                                <td>威士忌贊助品牌</td>
+                                <td>Johnnie Walker</td>
+                            </tr>
+                            <tr>
+                                <td>製作人</td>
+                                <td>吳允方</td>
+                            </tr>
+                            <tr>
+                                <td>製作統籌</td>
+                                <td>賴畇安、趙曼伶</td>
+                            </tr>
+                            <tr>
+                                <td>體驗統籌</td>
+                                <td>陳心龍</td>
+                            </tr>
+                            <tr>
+                                <td>台法 VR 統籌</td>
+                                <td>陳大再｜大再工作室有限公司</td>
+                            </tr>
+                            <tr>
+                                <td>台灣動作指導</td>
+                                <td>王筑樺</td>
+                            </tr>
+                            <tr>
+                                <td>表演統籌協力</td>
+                                <td>高迺森</td>
+                            </tr>
+                            <tr>
+                                <td>台灣技術統籌</td>
+                                <td>銘君國際有限公司</td>
+                            </tr>
+                            <tr>
+                                <td>舞監人力統籌</td>
+                                <td>銘君國際有限公司</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="desc">
+                        <table>
+                            <tr>
+                                <td>空間設計統籌</td>
+                                <td>胡芷寧</td>
+                            </tr>
+                            <tr>
+                                <td>空間美術設計</td>
+                                <td>林欣伊｜有直感空間設計工作室</td>
+                            </tr>
+                            <tr>
+                                <td>空間工程</td>
+                                <td>劉威志｜邦克創意設計</td>
+                            </tr>
+                            <tr>
+                                <td>現場燈光設計</td>
+                                <td>陳以欣｜銘君藝術設計</td>
+                            </tr>
+                            <tr>
+                                <td>現場服裝設計</td>
+                                <td>林馨｜知織實業</td>
+                            </tr>
+                            <tr>
+                                <td>平面設計統籌</td>
+                                <td>林家興</td>
+                            </tr>
+                            <tr>
+                                <td>平面設計</td>
+                                <td>詹佩倫</td>
+                            </tr>
+                            <tr>
+                                <td>空間美術</td>
+                                <td>龍莉敏</td>
+                            </tr>
+                            <tr>
+                                <td>行銷統籌</td>
+                                <td>楊庭芸、李秋容</td>
+                            </tr>
+                            <tr>
+                                <td>行銷執行</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>行銷總監</td>
+                                <td>江舒韵</td>
+                            </tr>
+                            <tr>
+                                <td>網站統籌</td>
+                                <td>洪馨</td>
+                            </tr>
+                            <tr>
+                                <td>商業開發</td>
+                                <td>郭庭珊</td>
+                            </tr>
+                            <tr>
+                                <td>會計財務</td>
+                                <td>許順凱、陳彩靜</td>
+                            </tr>
+                            <tr>
+                                <td>宏艺數位藝術 VIVE Arts</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>執行總監</td>
+                                <td>葉心宇</td>
+                            </tr>
+                            <tr>
+                                <td>製作統籌</td>
+                                <td>鄭芳</td>
+                            </tr>
+                            <tr>
+                                <td>執行製作</td>
+                                <td>郭安</td>
+                            </tr>
+                            <tr>
+                                <td>行銷宣傳</td>
+                                <td>陳識安</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content g3" style="display: none;">
+                <div class="row">
+                    <div class="desc">
+                        <table>
+                            <tr>
+                                <td>演出執行團隊</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>前期統籌舞監</td>
+                                <td>許正蕾</td>
+                            </tr>
+                            <tr>
+                                <td>營運執行舞監</td>
+                                <td>符芷瑄</td>
+                            </tr>
+                            <tr>
+                                <td>前台經理</td>
+                                <td>李靜如</td>
+                            </tr>
+                            <tr>
+                                <td>動作指導</td>
+                                <td>王筑樺</td>
+                            </tr>
+                            <tr>
+                                <td>演員指導</td>
+                                <td>高迺森</td>
+                            </tr>
+                            <tr>
+                                <td>Game Masters</td>
+                                <td>陳大再、楊慶之、楊子慕、陳韋安、謝潔明、韓希妶</td>
+                            </tr>
+                            <tr>
+                                <td>舞監助理暨 VR 技術執行</td>
+                                <td>許正姸、劉育雯、李紹庭、方琬婷、林珈含、蘇吉安、孫于崴、林翊柔、徐鈺荃、彭安佐、陳映慈、王瓈萱、許正玟</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="desc">
+                        <table>
+                            <tr>
+                                <td>舞者</td>
+                                <td>牛筱晴、王官穎、呂莛、李奇書、周芊華、周新杰、邱兪懷、施姵君、張靜宜、陳逸恩、曾淯婷、黃婷徽、黃筱庭、詹佩瑄、廖健堯、劉廷音、蔡昀庭、鄭舜文、Alberto Jesus Hipolito Garcia</td>
+                            </tr>
+                            <tr>
+                                <td>演員</td>
+                                <td>李慕恩、許庭禎、賀駿騏、楊奇殷、魏子慕</td>
+                            </tr>
+                            <tr>
+                                <td>排練助理</td>
+                                <td>陳捷、蔡汶璇</td>
+                            </tr>
+                            <tr>
+                                <td>燈光技術執行</td>
+                                <td>周俁辰、詹皓宇、李紹庭、彭安佐</td>
+                            </tr>
+                            <tr>
+                                <td>服裝助理</td>
+                                <td>吳定盛、李宗翰、林巧薇、徐婕倫、黃孜恩、趙天誠、廖妍寧</td>
+                            </tr>
+                            <tr>
+                                <td>前台人員</td>
+                                <td>張惠婷、蕭藝萱、朱珮瀅、林俐瑜、葉柔妡、林語彤</td>
+                            </tr>
+                            <tr>
+                                <td>裝台協力</td>
+                                <td>蘇權威、張善婷、蕭如君、楊鈺婕</td>
+                            </tr>
+                            <tr>
+                                <td>網站設計</td>
+                                <td>芮騰數位科技</td>
+                            </tr>
+                            <tr>
+                                <td>特別感謝</td>
+                                <td>天下空間團隊、黃承畯｜艾立思窗飾藝術、Victor｜瑞海室內裝修有限公司、Vintage & Deco 復古飾</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content g4" style="display: none;">
+                <div class="row">
+                    <div class="desc">
+                        <table>
+                            <tr>
+                                <td>臺灣華語配唱配音團隊</td>
+                                <td>活性界面製作</td>
+                            </tr>
+                            <tr>
+                                <td>製作人</td>
+                                <td>陳午明</td>
+                            </tr>
+                            <tr>
+                                <td>製作統籌</td>
+                                <td>陳怡蓁</td>
+                            </tr>
+                            <tr>
+                                <td>譯配</td>
+                                <td>陳星佑</td>
+                            </tr>
+                            <tr>
+                                <td>主角配音</td>
+                                <td>桂綸鎂、陳柏霖</td>
+                            </tr>
+                            <tr>
+                                <td>主角配音指導</td>
+                                <td>黃浩詠</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="desc">
+                        <table>
+                            <tr>
+                                <td>錄音室</td>
+                                <td>Lights Up Studio</td>
+                            </tr>
+                            <tr>
+                                <td>錄音師</td>
+                                <td>于世政</td>
+                            </tr>
+                            <tr>
+                                <td>配音及配唱</td>
+                                <td>陳品伶、蔡邵桓、王悅甄、尹仲敏、呂寰宇、顏志翔、周宛怡</td>
+                            </tr>
+                            <tr>
+                                <td>配唱指導</td>
+                                <td>薛詒丹</td>
+                            </tr>
+                            <tr>
+                                <td>錄音室</td>
+                                <td>玉成戲院錄音室</td>
+                            </tr>
+                            <tr>
+                                <td>錄音師</td>
+                                <td>徐振程</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
@@ -478,7 +771,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris/js/plugins/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="/paris/js/main.js?231003"></script>
-    <script src="/paris/js/home.js"></script>
+    <script src="/paris/js/home.js?231206"></script>
 </body>
 </html>
