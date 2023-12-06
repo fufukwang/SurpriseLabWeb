@@ -600,10 +600,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="desc">
                         <table>
                             <tr>
-                                <td>演出執行團隊</td>
-                                <td></td>
-                            </tr>
-                            <tr>
                                 <td>前期統籌舞監</td>
                                 <td>許正蕾</td>
                             </tr>
