@@ -465,6 +465,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="/paris/img/partner-surpriseLab.png" />
                 </div>
             </div>
+
+            <br><br>
+
+            <h3>飲品協力</h3>
+            <div class="partner">
+                <img width="270" src="/paris/img/jw-logo.png" />
+            </div>
         </section>
     </main>
 
