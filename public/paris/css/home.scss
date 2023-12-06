@@ -428,7 +428,7 @@ body {
         }
     }
 
-   .blancali {
+    .blancali {
         max-width: 970px;
         margin: 0 auto;
         @media screen and (min-width:768px) {
@@ -454,7 +454,7 @@ body {
                 text-align: left;
             }
         }
-   }
+    }
 
     .information {
         max-width: 970px;
@@ -718,5 +718,88 @@ body {
     display: none;
     @media screen and (min-width:992px) {
         display: none !important;
+    }
+}
+
+#sec-group {
+    .tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+
+        .tab {
+            margin: 7px 10px;
+            cursor: pointer;
+
+            h3 {
+                margin: 0;
+
+                &:hover {
+                    color: #bb7373;
+                }
+            }
+
+            &.active {
+                border-bottom: 1px solid #bb7373;
+            }
+        }
+    }
+
+    .g2, .g3, .g4 {
+        height: 500px;
+        overflow: auto;
+        @media screen and (min-width:768px) {
+            height: auto;
+        }
+    }
+
+    .row {
+        max-width: 970px;
+        margin: 0 auto;
+        @media screen and (min-width:768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .desc {
+            @media screen and (min-width:768px) {
+                width: calc(50% - 45px);
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            td {
+                vertical-align: top;
+                padding: 10px;
+                line-height: 1.5;
+
+                &:nth-child(1) {
+                    font-weight: 700;
+                    width: 140px;
+                    @media screen and (min-width:768px) {
+                        width: auto;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .scrollbar-track-y,
+    .scrollbar-thumb {
+        width: 4px;
+    }
+
+    .scrollbar-track {
+        background: #F4D9D4;
+    }
+
+    .scrollbar-thumb {
+        background: #E28A8A;
     }
 }
