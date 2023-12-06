@@ -364,13 +364,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
     
             <div class="tabs">
-                <div class="tab active" data-group="g1"><h3>法國創作團隊</h3></div>
-                <div class="tab" data-group="g2"><h3>台灣製作團隊</h3></div>
-                <div class="tab" data-group="g3"><h3>演出執行團隊</h3></div>
-                <div class="tab" data-group="g4"><h3>臺灣華語配唱配音團隊</h3></div>
+                <div class="tab" data-group="g1"><h3>Blanca Li</h3></div>
+                <div class="tab" data-group="g2"><h3>法國創作團隊</h3></div>
+                <div class="tab active" data-group="g3"><h3>台灣製作團隊</h3></div>
+                <div class="tab" data-group="g4"><h3>演出執行團隊</h3></div>
+                <div class="tab" data-group="g5"><h3>臺灣華語配唱配音團隊</h3></div>
             </div>
 
-            <div class="tab-content g1 active">
+            <div class="tab-content g1" style="display: none;">
                 <h3 style="line-height: 150%;">
                     製作｜布蘭卡‧李舞團 Blanca Li Company<br>
                     導演、編舞、設計與作詞｜布蘭卡‧李 Blanca Li
@@ -389,6 +390,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="tab-content g2" style="display: none;">
+                <div class="row">
+                    <div class="desc">
+                        <table>
+                            <tr>
+                                <td>製作</td>
+                                <td>Blanca Li Company</td>
+                            </tr>
+                            <tr>
+                                <td>導演、編舞、設計與作詞</td>
+                                <td>Blanca Li</td>
+                            </tr>
+                            <tr>
+                                <td>原創音樂與音樂指導</td>
+                                <td>Tao Gutierrez</td>
+                            </tr>
+                            <tr>
+                                <td>視覺設計</td>
+                                <td>Vincent Chazal</td>
+                            </tr>
+                            <tr>
+                                <td>虛擬服裝設計</td>
+                                <td>CHANEL</td>
+                            </tr>
+                            <tr>
+                                <td>VR虛擬實境開發</td>
+                                <td>BackLight Studio</td>
+                            </tr>
+                            <tr>
+                                <td>技術指導</td>
+                                <td>Nicolas Huertas Ballester</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="desc">
+                        <table>
+                            <tr>
+                                <td>助理編舞家</td>
+                                <td>Rafael Linares Torres</td>
+                            </tr>
+                            <tr>
+                                <td>動作指導舞者</td>
+                                <td>Jonathan Ber</td>
+                            </tr>
+                            <tr>
+                                <td>共製單位</td>
+                                <td>BackLight Studio (France) 、Fabrique d'Images (Luxembourg) 、 Actrio Studio (Germany) 、 Chaillot - Théâtre national de la Danse (France) 、 Teatros del Canal Madrid (Spain)</td>
+                            </tr>
+                            <tr>
+                                <td>支持單位</td>
+                                <td>Center national du cinéma et de l'image animée CNC (France)、Film Fund Luxembourg Epic MegaGrants (USA)、Creative Europe Programme - MEDIA of the European Union City of Paris (France)、Medienboard Berlin Brandenburg (Germany)、DICRéAM</td>
+                            </tr>
+                            <tr>
+                                <td>獨家合作夥伴</td>
+                                <td>CHANEL</td>
+                            </tr>
+                            <tr>
+                                <td>VR 內容合作夥伴</td>
+                                <td>VIVE Arts Limited, UK</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content g3 active">
                 <div class="row">
                     <div class="desc">
                         <table>
@@ -486,7 +552,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>行銷執行</td>
-                                <td></td>
+                                <td>邱瓊頤</td>
                             </tr>
                             <tr>
                                 <td>行銷總監</td>
@@ -529,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
 
-            <div class="tab-content g3" style="display: none;">
+            <div class="tab-content g4" style="display: none;">
                 <div class="row">
                     <div class="desc">
                         <table>
@@ -610,7 +676,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
 
-            <div class="tab-content g4" style="display: none;">
+            <div class="tab-content g5" style="display: none;">
                 <div class="row">
                     <div class="desc">
                         <table>
@@ -773,6 +839,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="/paris/js/main.js?231003"></script>
-    <script src="/paris/js/home.js?231206"></script>
+    <script src="/paris/js/home.js?2312061"></script>
 </body>
 </html>
