@@ -20,7 +20,7 @@ class WebController extends Controller
         if($sn>0){
             $sn += 1;
         } else {
-            $sn = "2".\Carbon\Carbon::now()->format('Ymd').'0001';
+            $sn = "3".\Carbon\Carbon::now()->format('Ymd').'0001';
         }
         return $sn;
     }

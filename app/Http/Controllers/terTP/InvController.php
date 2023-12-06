@@ -165,7 +165,7 @@ class InvController extends WebController
                 }
                 $taxamt = $totleamt - round($totleamt / (1 + (5 / 100)));
                 $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
-                $ItemName .= '巴黎舞會'.$ticket;$ItemCount .= $num;$ItemUnit .= '張';$ItemPrice .= $price;$ItemAmt .= ($price*$num);
+                $ItemName .= '落日台北站'.$ticket;$ItemCount .= $num;$ItemUnit .= '張';$ItemPrice .= $price;$ItemAmt .= ($price*$num);
                 if($row->dis_money>0){
                     $ItemName .= '|行銷折扣';$ItemCount .= '|1';$ItemUnit .= '|組';$ItemPrice .= '|-'.$row->dis_money;$ItemAmt .= '|-'.$row->dis_money;
                 }
