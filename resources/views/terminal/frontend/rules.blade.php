@@ -154,7 +154,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion1-4" class="accordion-collapse collapse" aria-labelledby="accordion1-4-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>在台北松菸文創園區內的藝巷空間（南向製菸工廠西側），地址是台北市信義區光復南路 133 號。</p>
+                                                            <p>在台北松山文創園區內的藝巷空間（南向製菸工廠西側），地址是台北市信義區光復南路 133 號。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -168,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion1-5" class="accordion-collapse collapse" aria-labelledby="accordion1-5-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>先預售：歡迎至此選購票券種類和數量</p>
+                                                            <p>先預售：<a class="link-text style-qa" target="_blank" href="https://surpriselab.backme.tw/shops/3460">歡迎至此</a>選購票券種類和數量</p>
                                                             <p>後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約</p>
                                                         </div>
                                                     </div>
@@ -183,7 +183,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion1-6" class="accordion-collapse collapse" aria-labelledby="accordion1-6-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>先預售：歡迎至此選購票券種類和數量</p>
                                                             <p>包場、大宗購票、客製化特殊需求與票價優惠，歡迎來信 <a href="mailto:mindthegap@surpriselab.com.tw" class="link-text style-qa">mindthegap@surpriselab.com.tw</a></p>
                                                         </div>
                                                     </div>
@@ -198,7 +197,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion1-7" class="accordion-collapse collapse" aria-labelledby="accordion1-7-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>關於改期或退費，詳情請參考《落日月台》[退換政策]</p>
+                                                            <p>關於改期或退費，詳情請參考《落日月台》<a class="link-text style-qa changeToPolicy" href="#">[退換政策]</a></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -248,7 +247,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion2-2" class="accordion-collapse collapse" aria-labelledby="accordion2-2-header" data-bs-parent="#accordionFlushExample-2">
                                                         <div class="accordion-body">
-                                                            <p>劃位步驟與說明請見 <a href="https://paper.dropbox.com/doc/wZafkX2rem1FHlz37FlOi" target="_blank" class="link-text style-qa">劃位序號使用指南</a></p>
+                                                            <p>劃位步驟與說明請見 <a href="https://drive.google.com/drive/folders/1YICN9jXa-_QMZjM2-Z-sRUjYpASE6QUM?usp=sharing" target="_blank" class="link-text style-qa">劃位序號使用指南</a></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -747,7 +746,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">重要訊息</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">熱門問題</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -757,75 +756,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div> -->
                     <div class="accordion-wrap">
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-001-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-001-collapseOne" aria-expanded="false" aria-controls="flush-001-collapseOne">
-                                    <span class="header-title">我想跟朋友坐在一起可以嗎？</span>
+                            <h2 class="accordion-header" id="flush-1-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseFour" aria-expanded="false" aria-controls="flush-1-collapseFour">
+                                    <span class="header-title">落日轉運站是什麼？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-001-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-001-headingOne" data-bs-parent="#accordionFlushExample-3">
+                            <div id="flush-1-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-1-headingFour" data-bs-parent="#accordionFlushExample-1">
                                 <div class="accordion-body">
-                                    <p>微醺列車歡迎您與友人一起搭乘，於「候車室劃位時」請告知乘務員，FLIGHT為維護體驗品質建議分開搭乘，若有特殊需求請於「取票時」告知月台服務人員。</p>
+                                    <p>
+                                        驚喜製造推出的巡迴沉浸式計畫，即將於2024年1月抵達台北站。<br>
+                                        2022.11.10 - 2023.10.15於首站：高雄，推出包含以交通工具為題的兩項作品，微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT》，超過 40,000 人次參與體驗。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-2-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseFour" aria-expanded="false" aria-controls="flush-2-collapseFour">
+                                    <span class="header-title">台北站跟高雄站有什麼差別？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-2-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-2-headingFour" data-bs-parent="#accordionFlushExample-2">
+                                <div class="accordion-body">
+                                    <p>在巡迴第二站，落日轉運站突現奇幻時空《落日月台》；有別於高雄站的《微醺列車》及《FLIGHT》，將提供旅客探索多樣的場景變化並提供個人化全感官體驗。</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-002-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-002-collapseTwo" aria-expanded="false" aria-controls="flush-002-collapseTwo">
-                                    <span class="header-title">如果我不喝酒怎麼辦？會影響體驗嗎？</span>
+                            <h2 class="accordion-header" id="flush-3-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
+                                    <span class="header-title">《落日月台》是什麼？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-002-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-002-headingTwo" data-bs-parent="#accordionFlushExample-3">
+                            <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
                                 <div class="accordion-body">
-                                    <p>微醺列車提供一杯調飲，不飲用不會影響體驗內容不便飲酒的乘客可以將調飲轉讓給同行友人或選擇不飲用，轉運站不提供外帶服務。</p>
+                                    <p>
+                                        踏入此處的旅客，皆遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的九位漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-003-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-003-collapseThree" aria-expanded="false" aria-controls="flush-003-collapseThree">
-                                    <span class="header-title">各個作品的體驗價位與時長各是多少呢？</span>
+                            <h2 class="accordion-header" id="flush-4-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-4-collapseFour" aria-expanded="false" aria-controls="flush-4-collapseFour">
+                                    <span class="header-title">《微醺列車》及《FLIGHT》還會回來嗎？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-003-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-003-headingThree" data-bs-parent="#accordionFlushExample-2">
+                            <div id="flush-4-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-4-headingFour" data-bs-parent="#accordionFlushExample-4">
                                 <div class="accordion-body">
-                                    <div class="table-wrap style-qa layout-qa">
-                                        <table>
-                                            <tr>
-                                                <th></th>
-                                                <th>微醺列車</th>
-                                                <th><span class="style-bolder">FLIGHT</span></th>
-                                            </tr>
-                                            <tr>
-                                                <th>體驗時長</th>
-                                                <td>
-                                                    <span class="style-bolder">60</span> 分鐘
-                                                    <br class="mobile-br"> / 每場次
-                                                </td>
-                                                <td>
-                                                    <span class="style-bolder">30</span> 分鐘
-                                                    <br class="mobile-br"> / 每場次
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>票價</th>
-                                                <td><span class="style-bolder">$1,250</span> / 每人</td>
-                                                <td><span class="style-bolder">$500</span> / 每人</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <p>歡迎至 <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" target="_blank" class="link-text style-qa">購票頁面</a> 了解更多。</p>
+                                    <p>會的！請持續關注驚喜製造，獲得最新消息。</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn activity-btn" data-bs-dismiss="modal">CLOSE</button>
+                    <!-- <button type="button" class="btn activity-btn" data-bs-dismiss="modal">CLOSE</button> -->
+                    <a target="_blank" class="btn activity-btn" href="https://www.instagram.com/surpriselabtw/">關注驚喜</a>
                 </div>
             </div>
         </div>
@@ -841,6 +835,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/rules.js"></script>
+    <script src="/terminalAssets/js/rules.js?231206"></script>
 </body>
 </html>

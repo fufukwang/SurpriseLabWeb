@@ -189,12 +189,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <p class="color-y200 fw-normal">
                                         <b>《落日月台 MIND THE GAP》1~2 月預售中</b><br>
                                         <br>
-                                        驚喜製造首項巡迴沉浸式計劃《落日轉運站》，<br>
-                                        在此提供各種交通方式，接駁旅客前往終點。<br>
-                                        於高雄歷時一年後，抵達第二站 ⎯ 台北。<br>
-                                        座落於松菸文創園區的全新作品《落日月台》，<br>
-                                        將透過多樣場景變化及個人化全感官體驗，引領<br>
-                                        旅客探索落日之時、月升之際的彌留世界。
+                                        歡迎來到巡迴沉浸式計劃《落日轉運站》，<br>
+                                        在此提供各種交通方式，接駁旅客前往終點。於高雄歷時一年後，抵達第二站 ⎯ 台北，<br>
+                                        並推出全新作品《落日月台》，將透過<br>
+                                        多樣場景變化及個人化全感官體驗，引領<br>
+                                        旅客探索落日將近、月升之際的彌留世界。
                                     </p>
 
                                     <!-- B Test -->
@@ -1214,8 +1213,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <h3 class="heading-subtitle">Our Partners</h3>
                             </div>
                             <div class="img-wrap">
-                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png?231123" alt="Partners">
-                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner_mobile.png?231123" alt="Partners">
+                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png?231206" alt="Partners">
+                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner_mobile.png?231206" alt="Partners">
                             </div>
                         </div>
                     </div>

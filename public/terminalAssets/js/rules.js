@@ -7,3 +7,12 @@ $(function() {
         }, 0);
     });
 });
+
+var policyTab = new bootstrap.Tab(document.querySelector('#change-tab'));
+$('.changeToPolicy').on('click', function(event) {
+    event.preventDefault();
+    policyTab.show();
+    $('html, body').animate({
+        'scrollTop': 0
+    }, 0);
+})
