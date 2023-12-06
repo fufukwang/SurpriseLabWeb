@@ -138,7 +138,7 @@ class NewPayController extends WebController
                 $this->sendSmsCenter($ord);
                 return view('terminal.frontend.booking_success',compact('data'));
             } else {
-                $comments = "巴黎舞會";
+                $comments = "落日台北站";
                 if($cut1>0){
                     $comments .= "(折抵  {$couponCode} - {$cut1})";
                 }
