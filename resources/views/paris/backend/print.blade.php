@@ -1214,10 +1214,10 @@ $('#inputModal').on('hide.bs.modal', function (e) {
                 var Protocol = 'http';
                 @endif
                 $("#copyMe").val("{{env('APP_URL')}}/lebaldeparis/invitation?id="+data.master.md5id+"&sn="+data.master.sn);
-                $('.send_mail,.send_sms').data('id',id);
-                $('.send_mail,.send_sms').data('name',data.master.name);
-                $('.send_mail').data('email',data.master.email);
-                $('.send_sms').data('tel',data.master.tel);
+                $('.text-muted .send_mail,.text-muted .send_sms').data('id',id);
+                $('.text-muted .send_mail,.text-muted .send_sms').data('name',data.master.name);
+                $('.text-muted .send_mail').data('email',data.master.email);
+                $('.text-muted .send_sms').data('tel',data.master.tel);
                 $('#master_modal').modal('show');
             } else {
                 $.Notification.notify('error','bottom left','無法開啟內容', '內容錯誤');
