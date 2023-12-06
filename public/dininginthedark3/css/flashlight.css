@@ -128,13 +128,13 @@
   width: 100%;
 }
 
-@media (max-width: 1199.98px) {
+/* @media (max-width: 1199.98px) {
   .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img img:first-child {
     display: none;
   }
-}
+} */
 
-.lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img img:last-child {
+/* .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img img:last-child {
   display: none;
 }
 
@@ -142,7 +142,7 @@
   .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .slogan-img img:last-child {
     display: block;
   }
-}
+} */
 
 .lighting-wrap .lighting-inner .mask-box .sec-intro .intro-wrap .shadow {
   width: 100%;
