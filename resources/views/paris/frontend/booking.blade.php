@@ -155,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <img src="/paris/img/booking_ticket1.png" />
                         </div>
                         <h4>單人獨舞票</h4>
-                        <h2>$2,000</h2>
+                        <h2>$2,100</h2>
                         <div class="desc">
                             （含一杯調飲）<br>
                             <br>
@@ -168,7 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <img src="/paris/img/booking_ticket2.png" />
                         </div>
                         <h4>雙人共舞票</h4>
-                        <h2>$3,800<span>($1,900/人)</span></h2>
+                        <h2>$4,000<span>（$2,000/人）</span></h2>
                         <div class="desc">
                             （含兩杯調飲）<br>
                             <br>
@@ -181,7 +181,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <img src="/paris/img/booking_ticket3.png" />
                         </div>
                         <h4>四人群舞票</h4>
-                        <h2>$7,400<span>($1,850/人)</span></h2>
+                        <h2>$7,600<span>（$1,900/人）</span></h2>
                         <div class="desc">
                             （含四杯調飲）<br>
                             <br>
@@ -279,21 +279,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="select-wrapper"></div>
                         </div>
                     </div>
-                    <!-- <div class="input-group">
+                    <div class="input-group">
                         <label>統一編號（無此需求可不須填寫）</label>
                         <input class="tax" type="text" name="company_tax_ID" />
                     </div>
                     <div class="input-group">
-                        <label>發票抬頭（無此需求可不須填寫）</label>
+                        <label>公司抬頭（無此需求可不須填寫）</label>
                         <input type="text" name="company_name" />
                     </div>
                     <div class="input-group">
                         <label>手機載具 （無此需求可不須填寫）</label>
                         <input class="invoices" type="text" name="vehicle" />
-                    </div> -->
+                    </div>
                     <div class="input-group">
                         <label>備註</label>
-                        <textarea name="notice" rows="8" placeholder="+特殊需求（行動不便等）可提前備註"></textarea>
+                        <textarea name="notice" rows="8" placeholder="本體驗也提供法文、西班牙文、義大利文、德文。若有需求，請備註語言與對應人數"></textarea>
                     </div>
                     <div class="half-group flex">
                         <div class="input-group">
@@ -320,7 +320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <input type="checkbox" name="ck_rule" value="1" />
                                 <span>我已詳讀並遵守</span> 
                             </label>
-                            <a href="/lebaldeparis/rules">舞會規則</a>
+                            <a target="_blank" href="/lebaldeparis/rules">舞會規則</a>
                         </div>
                     </div>
                     <div class="actions">
@@ -397,18 +397,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="filed-value">0</div>
                             </div>
                         </div>
-                        <!-- <div class="input-group">
+                        <div class="input-group">
                             <label>統一編號（無此需求可不須填寫）</label>
                             <div class="filed-value">12345678</div>
                         </div>
                         <div class="input-group">
-                            <label>發票抬頭</label>
+                            <label>公司抬頭</label>
                             <div class="filed-value"></div>
                         </div>
                         <div class="input-group">
                             <label>手機載具</label>
                             <div class="filed-value"></div>
-                        </div> -->
+                        </div>
                         <div class="input-group">
                             <label>備註</label>
                             <div class="filed-value">需要輪椅，一位孕婦</div>
@@ -431,7 +431,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="note gift">已抵用4000元</div>
                             </div>
                         </div>
-                        <div class="notice">按下「前往付款」代表我已閱讀並同意 <span data-custom-open="modal-privacy">隱私權條款</span> 與 <a href="/lebaldeparis/rules">購票規則</a></div>
+                        <div class="notice">按下「前往付款」代表我已閱讀並同意 <span data-custom-open="modal-privacy">隱私權條款</span> 與 <a target="_blank" href="/lebaldeparis/rules">購票規則</a></div>
                     </div>
                 </div>
 

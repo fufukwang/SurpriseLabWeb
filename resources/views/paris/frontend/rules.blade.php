@@ -121,15 +121,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>單人獨舞票（含一杯調飲）</td>
-                                <td>$2,000</td>
+                                <td>$2,100</td>
                             </tr>
                             <tr>
                                 <td>雙人共舞票（含兩杯調飲）</td>
-                                <td>$3,800（一人$1,900）</td>
+                                <td>$4,000（一人$2,000）</td>
                             </tr>
                             <tr>
                                 <td>四人群舞票（含四杯調飲）</td>
-                                <td>$7,400（一人$1,850）</td>
+                                <td>$7,600（一人$1,900）</td>
                             </tr>
                         </table>
                     </div>
@@ -143,15 +143,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </p>
                     </div>
                 </div>
-                <!-- <div class="collapse-item">
-                    <div class="item-title">如何購買《巴黎舞會》入場券？</div>
-                    <div class="item-body">
-                        <p>
-                            官網售票：歡迎至 <a href="/lebaldeparis#sec-booking"><span>[購票資訊]</span></a> 瞭解更多，線上刷卡完成購票<br>
-                            現場購票：歡迎至現場票務櫃檯詢問當天剩餘場次與座位
-                        </p>
-                    </div>
-                </div> -->
                 <div class="collapse-item">
                     <div class="item-title">是否接受團體包場和大宗購票？</div>
                     <div class="item-body">
@@ -173,6 +164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="title">
                 <h1>預售資訊</h1>
                 <h3>PRE-SALE INFORMATION</h3>
+                <p><center>預購已於 11/26 16:00 結束，請賓客參考下方資訊儘速完成劃位</center></p>
             </div>
     
             <div class="collapse-list">
@@ -347,6 +339,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>退票<br>（已收到劃位序號）</td>
                     <td>購票者的<br>姓名、購買信箱</td>
                     <td>劃位序號</td>
+                </tr>
+                <tr>
+                    <td>退票<br>（線上購票直接劃位）</td>
+                    <td>購票者的<br>姓名、購票信箱、手機</td>
+                    <td>訂單編號</td>
                 </tr>
             </table>
 

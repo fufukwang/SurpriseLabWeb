@@ -1,4 +1,4 @@
-@include('backstage.header',['title' => '巴黎舞會訂單列表'])
+@include('backstage.header',['title' => '落日台北訂單列表'])
 <style>.inv_btn{margin-bottom: 20px;}</style>
 <!-- =======================
              ===== START PAGE ======
@@ -10,7 +10,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">巴黎舞會訂單列表 </h4>
+                        <h4 class="page-title">落日台北訂單列表 </h4>
                     </div>
                 </div>
                 <!-- Page-Title -->
@@ -25,7 +25,7 @@
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group"><form action="/paris/print" id="SearchForm">
+                                        <div class="btn-group focus-btn-group"><form action="/tertp/print" id="SearchForm">
                                             <div class="row">
                                             <div class="form-group col-sm-2">
                                                 <div class="col-sm-12">
@@ -76,9 +76,9 @@
                                             <div class="form-group col-sm-1">
                                                 <select name="ticket" class="form-control">
                                                     <option value="">票券類別</option>
-                                                    <option value="p1"@if(isset($request->ticket) && $request->ticket=='p1') selected @endif>單人獨舞票</option>
-                                                    <option value="p2"@if(isset($request->ticket) && $request->ticket=='p2') selected @endif>雙人共舞票</option>
-                                                    <option value="p4"@if(isset($request->ticket) && $request->ticket=='p4') selected @endif>四人群舞票</option>
+                                                    <option value="p1"@if(isset($request->ticket) && $request->ticket=='p1') selected @endif>單人票</option>
+                                                    <option value="p2"@if(isset($request->ticket) && $request->ticket=='p2') selected @endif>雙人票</option>
+                                                    <option value="p6"@if(isset($request->ticket) && $request->ticket=='p6') selected @endif>六人票</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-1">
@@ -115,7 +115,7 @@
                                         </div>
                                         </form></div>
                                     </div><div class="table-responsive" data-pattern="priority-columns">
-                                        <form action="/paris/order/inv/mult/open" method="post">{!! csrf_field() !!}
+                                        <form action="/tertp/order/inv/mult/open" method="post">{!! csrf_field() !!}
                                     <div class="sticky-table-header fixed-solution"><table id="datatable-buttons" class="table table-striped table-hover">
                                         <thead>
                                             <tr>
@@ -157,12 +157,12 @@
         $price = 0;
 
         switch($row->ticket){
-            case 'p1': $ticket = '單人獨舞票'; $num = $row->pople; $price = $row->p1; break;
-            case 'p2': $ticket = '雙人共舞票'; $num = $row->pople / 2; $price = $row->p2; break;
-            case 'p4': $ticket = '四人群舞票'; $num = $row->pople / 4; $price = $row->p4; break;
+            case 'p1': $ticket = '單人票'; $num = $row->pople; $price = $row->p1; break;
+            case 'p2': $ticket = '雙人票'; $num = $row->pople / 2; $price = $row->p2; break;
+            case 'p6': $ticket = '六人票'; $num = $row->pople / 6; $price = $row->p6; break;
         }
-        $number = App\model\paris\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
-        $inv_count = App\model\paris\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
+        $number = App\model\terTP\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
+        $inv_count = App\model\terTP\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
         if($number){
             $inv_open = true;
         }
@@ -212,7 +212,7 @@
                                                 <td class="editable" style="word-break: break-all;max-width: 200px;" data-id="{{ $row->id }}" contenteditable="true">{!! nl2br($row->notes) !!}</td>
                                                 <!-- <td style="word-break: break-all;max-width: 200px;">{{ $row->notes }}</td> -->
                                                 <th>
-    @forelse(App\model\paris\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} {{--[{{App\model\paris\backme::select('money')->find($coup->b_id)->money}}]--}}<br >@empty 
+    @forelse(App\model\terTP\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} {{--[{{App\model\terTP\backme::select('money')->find($coup->b_id)->money}}]--}}<br >@empty 
     @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
     @if($couponNumber>0) [{{ $couponNumber * 4400 }}] @endif
     <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($inv_money / (1 + (5 / 100))) }}<br>稅額：{{ $inv_money - round($inv_money / (1 + (5 / 100))) }}<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
@@ -229,7 +229,7 @@
                                                     @endif
                                                 </td>
                                                 <td class="actions">
-                                                    @if( Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
+                                                    @if( Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                                                     
                                                     <button type="button" class="btn btn-info btn-xs inv_btn" data-id="{{ $row->id }}" data-sn="{{ $row->sn }}" data-buyeremail="{{ $row->email }}" data-buyername="{{ $row->name }}" data-dial="{{ $row->dial_code }}" data-phone="{{ $row->tel }}" data-totle_money="{{ $totle_money }}" data-people="{{ $row->pople }}" data-last_four="{{ $last_four }}" data-pay_status="{{ $row->pay_status }}" data-dis_money="{{ $row->dis_money }}" data-cut="{{ $row->cut }}" data-handling="{{ $row->handling }}" data-refund="{{ $row->refund }}"
                                                         data-ticket="{{ $ticket }}" 
@@ -241,7 +241,7 @@
                                                         data-tax_name="{{ $row->tax_name }}" @if(($row->pay_status=='已付款' || $row->pay_status=='已付款(部分退款)' || ($row->pay_status=='取消訂位' && $row->refund>0 && $row->handling>0)) && (!$inv_open || ($inv_count>0 && $number->is_cancal)) && !$not_inv) @else style="display:none" @endif>發票開立</button>
                                                     @endif
                                                     <div>
-                                                        <a class="btn btn-primary btn-xs" href="/paris/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
+                                                        <a class="btn btn-primary btn-xs" href="/tertp/order/{{ $row->id }}/edit?{{ Request::getQueryString() }}"><i class="fa fa-pencil"></i></a>
                                                         <a class="btn btn-danger btn-xs remove-order" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
                                                     </div>
                                                 </td>
@@ -253,7 +253,7 @@
 
 
                                         </tbody>
-                                        @if( Session::get('key')->paris == 1 && Session::get('key')->admin == 1)
+                                        @if( Session::get('key')->terTP == 1 && Session::get('key')->admin == 1)
                                         <tfoot>
                                             <tr>
                                                 <td colspan="9"><button type="submit" class="btn btn-info">B2C 發票開立</button> <br/><span> 開立稅額 5% B2C 發票可於[發票資訊] 中預覽金額是否正確</span></td>
@@ -276,12 +276,12 @@
 
                 <div class="col-sm-12">
                         <div class="card-box">
-                            <h4 class="page-title">巴黎舞會訂單資料匯入 </h4>
+                            <h4 class="page-title">落日台北訂單資料匯入 </h4>
                             <div class="table-rep-plugin">
                                 <div class="table-wrapper">
-                                    @if( Session::get('key')->paris == 1 && Session::get('key')->admin == 1 )
+                                    @if( Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                                     <div class="btn-toolbar">
-                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/paris/order/import.xls" method="post" enctype="multipart/form-data">
+                                        <div class="btn-group focus-btn-group" style="width: 100%"><form action="/tertp/order/import.xls" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <div class="form-group col-sm-1">
                                                 <div class="col-sm-12">
@@ -306,7 +306,7 @@
                                     @endif
                                     <div>
                                         <p>
-                                            範例檔案 : <a href="/example/巴黎舞會訂單資料匯入範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
+                                            範例檔案 : <a href="/example/落日台北訂單資料匯入範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
                                         </p>
                                         <p>
                                             說明:<br />
@@ -320,9 +320,9 @@
                                             giftcard 禮物卡序號(無額外檢查直接寫入備註)<br />
                                             type 票券種類(輸入代號或中文都可以) <br>
                                             <dt>
-                                                <li>p1 單人獨舞票</li>
-                                                <li>p2 雙人共舞票</li>
-                                                <li>p4 四人群舞票</li>
+                                                <li>p1 單人票</li>
+                                                <li>p2 雙人票</li>
+                                                <li>p6 六人票</li>
                                             </dt>
                                         </p>
                                     </div>
@@ -362,7 +362,7 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <a href="/paris/xls/emaildata/output" class="btn btn-warning">下載成功付款的 EMail 名單</a>
+                                    <a href="/tertp/xls/emaildata/output" class="btn btn-warning">下載成功付款的 EMail 名單</a>
                                     <span style="font-size: 12px;color:red;"><br>需要較多的伺服器資源.請在離峰時刻使用</span>
                                 </div>
                             </div>
@@ -498,7 +498,7 @@
                                         <tbody id="itemBody"></tbody>
                                         <!-- <tbody>
                                             <tr>
-                                                <td>巴黎舞會(<span id="inv_people"></span>人)</td>
+                                                <td>落日台北(<span id="inv_people"></span>人)</td>
                                                 <td>1</td>
                                                 <td>組</td>
                                                 <td id="inv_price"></td>
@@ -885,7 +885,7 @@ $(function(){
         var id = $(this).data('id');
         if(confirm("確定要刪除此訂單")) {
              $.ajax({
-                url: '/paris/order/'+id+'/delete',
+                url: '/tertp/order/'+id+'/delete',
                 method: 'delete',
                 dataType:'json'
             }).done(function(data){
@@ -903,7 +903,7 @@ $(function(){
         var oid   = $(this).data('oid');
         var sn    = $(this).data('sn');
         var phone = $(this).data('phone');
-        $.post('/paris/order/'+id+'/resent',{
+        $.post('/tertp/order/'+id+'/resent',{
             name  : name,
             email : email,
             pople : pople,
@@ -919,7 +919,7 @@ $(function(){
         var email = $(this).data('email');
         var id    = $(this).data('id');
         var pople = $(this).data('pople');
-        $.post('/paris/order/'+id+'/resent',{
+        $.post('/tertp/order/'+id+'/resent',{
             name  : name,
             email : email,
             pople : pople,
@@ -932,7 +932,7 @@ $(function(){
     $('.editable').bind('blur',function(){
         var val = $(this).html();
         var id  = $(this).data('id');
-        $.post('/paris/order/'+id+'/store/ajax',{
+        $.post('/tertp/order/'+id+'/store/ajax',{
             act: 'upateNotes',
             notes : val
         },function(data){
@@ -1075,7 +1075,7 @@ $(function(){
                 return false;
             }
 
-            $.post('/paris/order/inv/single/open',{
+            $.post('/tertp/order/inv/single/open',{
                 'MerchantOrderNo' : $('input[name="MerchantOrderNo"]').val(),
                 'BuyerName' : $('#BuyerName').val(),
                 'BuyerUBN' : $('#BuyerUBN').val(),
@@ -1172,7 +1172,7 @@ $('#inputModal').on('hide.bs.modal', function (e) {
     $('#sent_inv_cancal').bind('click',function(){
         var id = $('#inv_cancal_id').val();
         if($('#inv_cancal_note').val()!=''){
-            $.post('/paris/order/inv/cancal',{
+            $.post('/tertp/order/inv/cancal',{
                 'InvoiceNumber' : $('#inv_number').val(),
                 'InvalidReason' : $('#inv_cancal_note').val(),
                 'id' : id
@@ -1195,12 +1195,12 @@ $('#inputModal').on('hide.bs.modal', function (e) {
     // master
     $('.MasterBtn').bind('click',function(){
         var id = $(this).data('id');
-        $.post('/paris/getMasterData',{'order_id': id},function(data){
+        $.post('/tertp/getMasterData',{'order_id': id},function(data){
             if(data.success){
                 $('#MasterTitle').html('場次:'+data.master.day+' '+data.master.rang_start+'(第一筆為主揪)');
                 $('#MasterBody').html('<tr><td>'+data.master.name+'</td><td>'+data.master.email+'</td><td>'+data.master.tel+'</td></tr>');
                 for(row of data.slave){
-                    $('#MasterBody').append('<tr><td><a href="/paris/getMasterList?search='+row.name+'" target="_blank">'+row.name+'</a></td><td><a href="/paris/getMasterList?search='+row.email+'" target="_blank">'+row.email+'</a></td><td><a href="/paris/getMasterList?search='+row.tel+'" target="_blank">'+row.tel+'</a></td></tr>');
+                    $('#MasterBody').append('<tr><td><a href="/tertp/getMasterList?search='+row.name+'" target="_blank">'+row.name+'</a></td><td><a href="/tertp/getMasterList?search='+row.email+'" target="_blank">'+row.email+'</a></td><td><a href="/tertp/getMasterList?search='+row.tel+'" target="_blank">'+row.tel+'</a></td></tr>');
                 }
                 $('#SendBody').html('');
                 for(row of data.send){
@@ -1213,7 +1213,7 @@ $('#inputModal').on('hide.bs.modal', function (e) {
                 var Host = 'dev.surpriselab.com.tw';
                 var Protocol = 'http';
                 @endif
-                $("#copyMe").val("{{env('APP_URL')}}/lebaldeparis/invitation?id="+data.master.md5id+"&sn="+data.master.sn);
+                $("#copyMe").val("{{env('APP_URL')}}/terminal/invitation?id="+data.master.md5id+"&sn="+data.master.sn);
                 $('.text-muted .send_mail,.text-muted .send_sms').data('id',id);
                 $('.text-muted .send_mail,.text-muted .send_sms').data('name',data.master.name);
                 $('.text-muted .send_mail').data('email',data.master.email);
@@ -1230,7 +1230,7 @@ $('#inputModal').on('hide.bs.modal', function (e) {
         var type  = $(this).data('type');
         var name  = $(this).data('name');
         var email  = $(this).data('email');
-        $.post('/paris/postReSendMail',{
+        $.post('/tertp/postReSendMail',{
             name: name,
             id: id,
             email: email,
@@ -1249,7 +1249,7 @@ $('#inputModal').on('hide.bs.modal', function (e) {
         var type  = $(this).data('type');
         var name  = $(this).data('name');
         var tel  = $(this).data('tel');
-        $.post('/paris/postReSendSMS',{
+        $.post('/tertp/postReSendSMS',{
             name: name,
             id: id,
             tel: tel,
@@ -1333,7 +1333,7 @@ function calAmt(){
         handling_fee = Math.round((handling * refund) / 100);
     }
     $('#itemBody').html('');
-    addItem('巴黎舞會'+invObject.ticket,invObject.num,'張',invObject.price,invObject.price * invObject.num);
+    addItem('落日台北'+invObject.ticket,invObject.num,'張',invObject.price,invObject.price * invObject.num);
     if(invObject.discount>0){
         addItem('行銷折扣',1,'組',(invObject.discount * -1),(invObject.discount * -1));    
     }
@@ -1358,17 +1358,17 @@ function addItem(name,num,unit,sprice,tprice){
 
 function submitXLSForm(){
     $('#SearchForm').attr('target','_blank')
-    $('#SearchForm').attr('action','/paris/xls/data/output')
+    $('#SearchForm').attr('action','/tertp/xls/data/output')
     $('#SearchForm').submit();
     $('#SearchForm').attr('target','_top');
-    $('#SearchForm').attr('action','/paris/print');
+    $('#SearchForm').attr('action','/tertp/print');
 }
 function submitSearchForm(){
     $('#SearchForm').attr('target','_blank')
-    $('#SearchForm').attr('action','/paris/table')
+    $('#SearchForm').attr('action','/tertp/table')
     $('#SearchForm').submit();
     $('#SearchForm').attr('target','_top');
-    $('#SearchForm').attr('action','/paris/print');
+    $('#SearchForm').attr('action','/tertp/print');
 }
 @if(Session::has('message')) Swal.fire('{!! Session::get('message') !!}'); @endif
 		</script>

@@ -6,9 +6,9 @@ use Exception;
 use Illuminate\Console\Command;
 use Mail;
 use Illuminate\Support\Facades\Storage;
-use App\model\terminal\pro;
-use App\model\terminal\order;
-use App\model\terminal\TeamMail;
+use App\model\terTP\pro;
+use App\model\terTP\order;
+use App\model\terTP\TeamMail;
 use Illuminate\Support\Facades\Log;
 use SLS;
 
@@ -80,7 +80,7 @@ class TerminalTask extends Command
                     SLS::SendTerminalEmailByTemplateName($toData);
                 }
             }
-
+/*
             $hour12 = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/3600)-floor((UNIX_TIMESTAMP()/3600)+8)=3")->get();
             foreach($hour12 as $pro){
@@ -97,6 +97,7 @@ class TerminalTask extends Command
                     }
                 }
             }
+            */
         } catch (Exception $exception) {
             Log::error($exception);
         }
@@ -110,22 +111,53 @@ class TerminalTask extends Command
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=7")->get();
             foreach($pr07day as $pro){
                 // 找出正常的訂單
-                $order07 = order::select('terminalorder.id','name','email','tel','plan')
-                    ->leftJoin('terminal_pro_order', 'terminal_pro_order.order_id', '=', 'terminalorder.id')
-                    ->where('terminal_pro_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
+                $order07 = order::select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn','pay_type')
+                    ->leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
+                    ->where('terTP_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
                 foreach ($order07 as $ord) {
-                    if($ord->email != ''){
+                    if($ord->pay_type !== '合作販售'){
+                        $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_start))));
+                        $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_end))));
                         $toData = [
-                            'name'     => $ord->name,
-                            'email'    => $ord->email,
-                            'id'       => $ord->id,
-                            'template' => 'D7.'.$ord->plan,
+                            'day'   => Carbon::parse($ord->day)->format('Y / m / d'),
+                            'pople' => $ord->pople,
+                            'id'    => $ord->id,
+                            'name'  => $ord->name,
+                            'email' => $ord->email,
+                            'phone' => $ord->tel,
+                            'time'  => substr($ord->rang_start,0,5),
+                            'gday'  => $rangStart.'/'.$rangEnd,
+                            'master'=> "?id=".md5($ord->id)."&sn=".$ord->sn,
+                            'mday'  => $ord->day,
+                            'need_english' => $ord->need_english,
+                            'need_chinese' => $ord->need_chinese,
+                            'template' => 'D7',
                         ];
-                        SLS::SendTerminalEmailByTemplateName($toData);
+                        if($ord->email != ''){
+                            $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                            $needSend = true;
+                            $teamNum = 0;
+                            while($needSend){
+                                if($toData['email'] != ''){ SLS::SendEmailTerTPByTemplateName($toData); }
+                                if($toData['phone'] != ''){ SLS::SendSmsTerTPByTemplateName($toData); }
+                                if($teamMail && count($teamMail)>$teamNum){
+                                    $toData['name'] = $teamMail[$teamNum]->name;
+                                    $toData['email'] = $teamMail[$teamNum]->email;
+                                    $toData['phone'] = $teamMail[$teamNum]->phone;
+                                    $teamNum++;
+                                } else {
+                                    $needSend = false;
+                                }
+                            }
+                        }
                     }
                 }
             }
+            // Xday
 
+            // 後??天體驗後問券
+
+/*
             // 10 天
             $pr10day = pro::select('id')->where('open',1)
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=10")->get();
@@ -147,7 +179,7 @@ class TerminalTask extends Command
                 }
             }
 
-
+*/
 
             /*
             $proday = pro::select('id')->where('open',1)

@@ -18,6 +18,7 @@
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
@@ -57,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     @include('terminal.frontend._nav')
     
     <main>
-
+        <form id="final-form" action="/terminal/Neweb.OrderPay" method="post">
         <section class="section-wrap" id="step1">
             <div class="container-xl">
                 <div class="row">
@@ -104,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
 
                         <div class="content-wrap">
-                            <form class="form-wrap-step-1">
+                            <div class="form-wrap-step-1">
                                 <div class="form-group normal-layout">
                                     <label class="body-04" for="dropdownMenuButtonTicket">票種</label>
                                     <div class="js-dropdown dropdown-wrap dropdown">
@@ -116,11 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <li class="dropdown-item body-04">2,100/人 雙人票</li>
                                             <li class="dropdown-item body-04">2,000/人 六人票</li>
                                             
-                                            <!-- <li class="dropdown-item body-04 @if($train->Count<=0) disabled @endif">微醺列車 @if($train->Count<=0) (完售) @endif</li>
-                                            <li class="dropdown-item body-04 @if($flight->Count<=0) disabled @endif">FLIGHT @if($flight->Count<=0) (完售) @endif</li> -->
-                                            <!-- <li class="dropdown-item body-04 @if($boat->Count<=0) disabled @endif">Boat for ONE @if($train->Count<=0) disabled @endif</li> -->
-                                            <!-- <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0) disabled @endif">套票：車票+飛機票 @if($train->Count<=0 || $flight->Count<=0) (完售) @endif</li> -->
-                                            <!-- <li class="dropdown-item body-04 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif">套票B：車票+飛機票+船票 @if($train->Count<=0 || $flight->Count<=0 || $boat->Count<=0) disabled @endif</li> -->
+
                                         </ul>
                                     </div>
                                 </div>
@@ -133,7 +130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonCount"></ul>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                             <div class="cta-wrap">
                                 <a href="booking_now" class="booking-btn shape-round color-secondary">上一步</a>
                                 <a href="javascript://" id="js-next-btn1" class="booking-btn shape-round color-secondary status-disabled">下一步</a>
@@ -195,7 +192,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div> -->
                                 </div>
                             </div>
-                            <form class="form-wrap-step-2">
+                            <div class="form-wrap-step-2">
                                 <fieldset class="from-block">
                                     <div class="section-heading-wrap">
                                         <h4 class="sub-heading-title">落日月台</h4>
@@ -227,7 +224,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </div>
                                     </div>
                                 </fieldset>
-                            </form>
+                            </div>
                             <div class="cta-wrap">
                                 <a href="javascript://" id="js-prev-btn2" class="booking-btn shape-round color-secondary">上一步</a>
                                 <a href="javascript://" id="js-next-btn2" class="booking-btn shape-round color-secondary status-disabled">下一步</a>
@@ -266,7 +263,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
                                 </div>
                             </div>
-                            <form class="form-wrap-step-3" id="final-form" action="/terminal/Neweb.OrderPay" method="post">
+                            <div class="form-wrap-step-3">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="train">
                                 <input type="hidden" name="flight">
@@ -329,7 +326,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </label>
                                     </div>
                                 </fieldset>
-                            </form>
+                            </div>
                             <div class="cta-wrap">
                                 <a href="javascript://" id="js-prev-btn3" class="booking-btn shape-round color-secondary">上一步</a>
                                 <a href="javascript://" id="js-next-btn3" class="booking-btn shape-round color-secondary status-disabled">下一步</a>
@@ -366,7 +363,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <!-- <p class="notice-text body-01 style-smaller">請確認每個作品的演出區間，前後安排是否重疊。</p> -->
                                         <p class="notice-text body-01 style-smaller">如您在選擇時間時安排有誤，還請自行承擔負責。</p>
                                     </div>
-                                    <div class="notice-item-wrap notice-item-area notice-item">
+                                    <div class="notice-item-wrap notice-item-area notice-item" id="ticket-info">
                                         <div class="item-caption body-01 style-smaller">
                                             單人票
                                         </div>
@@ -378,7 +375,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
                                 </div>
                             </div>
-                            <form class="form-wrap-step-4">
+                            <div class="form-wrap-step-4">
                                 <div class="section-heading-wrap">
                                     <h4 class="heading-content">確認您的資料</h4>
                                 </div>
@@ -405,7 +402,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 尚未輸入 -->
                                             <div class="form-group verify-layout">
                                                 <input type="text" id="coupon" class="body-04" name="coupon" placeholder="請輸入折扣碼">
-                                                <a href="javascript://" class="booking-btn shape-square color-input-use verification-code">確認</a>
+                                                <a href="javascript://" class="booking-btn shape-square color-input-use verification-code" data-type="discount">確認</a>
                                                 <ul class="verify-status-list body-02 style-smaller">
                                                     <li class="status-list-item not-found">找不到此筆折扣序號</li>
                                                     <li class="status-list-item use-discount"></li>
@@ -419,16 +416,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <!-- 尚未輸入 -->
                                             <div class="form-group verify-layout">
                                                 <input type="text" id="allocation" class="body-04" name="allocation" placeholder="請輸入劃位序號">
-                                                <a href="javascript://" class="booking-btn shape-square color-input-use">確認</a>
+                                                <a href="javascript://" class="booking-btn shape-square color-input-use verification-code" data-type="coupon">確認</a>
                                                 <ul class="verify-status-list body-02 style-smaller">
                                                     <li class="status-list-item not-found">找不到此劃位序號</li>
-                                                    <li class="status-list-item use-discount"></li>
+                                                    <li class="status-list-item use-coupon"></li>
                                                 </ul>
                                             </div>
                                         </td>
                                     </tr>
                                 </table>
-                            </form>
+                            </div>
                             <div class="cta-wrap">
                                 <a href="javascript://" id="js-prev-btn4" class="booking-btn shape-round color-secondary">上一步</a>
                                 <a href="javascript://" id="js-next-btn4" class="booking-btn shape-round color-secondary">前往購買</a>
@@ -438,7 +435,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
             </div>
         </section>
-
+        </form>
 
 
 
@@ -566,6 +563,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking.js?v=2311242"></script>
+    <script src="/terminalAssets/js/booking.js?v=231127"></script>
 </body>
 </html>
