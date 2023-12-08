@@ -1304,4 +1304,78 @@ body {
   #main-header .mob-toggle {
     display: none !important;
   }
+}
+
+#sec-group .tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+#sec-group .tabs .tab {
+  margin: 7px 10px;
+  cursor: pointer;
+}
+#sec-group .tabs .tab h3 {
+  margin: 0;
+}
+#sec-group .tabs .tab h3:hover {
+  color: #bb7373;
+}
+#sec-group .tabs .tab.active {
+  border-bottom: 1px solid #bb7373;
+}
+#sec-group .g2, #sec-group .g3, #sec-group .g4 {
+  height: 500px;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  #sec-group .g2, #sec-group .g3, #sec-group .g4 {
+    height: auto;
+  }
+}
+#sec-group .row {
+  max-width: 970px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  #sec-group .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  #sec-group .row .desc {
+    width: calc(50% - 45px);
+  }
+}
+#sec-group .row table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#sec-group .row table td {
+  vertical-align: top;
+  padding: 10px;
+  line-height: 1.5;
+}
+#sec-group .row table td:nth-child(1) {
+  font-weight: 700;
+  width: 140px;
+}
+@media screen and (min-width: 768px) {
+  #sec-group .row table td:nth-child(1) {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+#sec-group .scrollbar-track-y,
+#sec-group .scrollbar-thumb {
+  width: 4px;
+}
+#sec-group .scrollbar-track {
+  background: #F4D9D4;
+}
+#sec-group .scrollbar-thumb {
+  background: #E28A8A;
 }/*# sourceMappingURL=home.css.map */
