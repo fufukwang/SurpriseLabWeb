@@ -23,9 +23,9 @@ $('#step1 select').each(function () {
 $('#step1 .type select').on('change', function (e) {
     var val = $(this).val();
     switch(val){
-        case '單人獨舞票': changeGuestNumber(20); break;
-        case '雙人共舞票': changeGuestNumber(10); break;
-        case '四人群舞票': changeGuestNumber(5); break;
+        case '單人獨舞票': changeGuestNumber(1); break;
+        case '雙人共舞票': changeGuestNumber(1); break;
+        case '四人群舞票': changeGuestNumber(1); break; 
     }
     function changeGuestNumber(num){
         var $guest_select = $('#step1 .guests select');
