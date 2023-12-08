@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket1.png" />
                     </div>
                     <h4>單人獨舞票</h4>
-                    <h2>$2,000</h2>
+                    <h2>$2,000</h2> 
                     <div class="desc">
                         （含一杯調飲）<br>
                         <br><br>
@@ -172,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket2.png" />
                     </div>
                     <h4>雙人共舞票</h4>
-                    <h2>$3,800<span>($1,900/人)</span></h2>
+                    <h2>$3,800<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含兩杯調飲）<br>
                         <span>【雙人預購優惠】購票輸入<br>【twogether】享$100折扣</span>
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket3_old.png" /> 
                     </div>
                     <h4>四人群舞票</h4>
-                    <h2>$7,400<span>($1,850/人)</span></h2>
+                    <h2>$7,400<span>($1,850/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
                         <br><br>
@@ -204,7 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket1.png" />
                     </div>
                     <h4>單人獨舞票</h4>
-                    <h2>$2,000</h2>
+                    <h2>$2,000</h2> 
                     <div class="desc">
                         （含一杯調飲）<br>
                         <br><br>
@@ -218,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket2.png" />
                     </div>
                     <h4>雙人共舞票</h4>
-                    <h2>$3,800<span>($1,900/人)</span></h2>
+                    <h2>$3,800<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含兩杯調飲）<br>
                         <span>【雙人預購優惠】購票輸入<br>【twogether】享$100折扣</span>
@@ -233,7 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket3_old.png" />
                     </div>
                     <h4>四人群舞票</h4>
-                    <h2>$7,400<span>($1,850/人)</span></h2>
+                    <h2>$7,400<span>($1,850/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
                         <br><br>

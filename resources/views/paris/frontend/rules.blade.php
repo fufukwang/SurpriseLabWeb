@@ -106,7 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="collapse-item">
                     <div class="item-title">《巴黎舞會》在哪裡舉辦？</div>
                     <div class="item-body">
-                        <p>舞會位在舞會位在國立臺灣科學教育館（<a class="mailto hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳），從士林捷運站前往巴黎舞會，搭乘公車和計程車距離約 7 分鐘、步行距離約 14 分鐘，確切地點會於體驗日前 7 天得知</p>
+                        <p>舞會位在舞會位在國立臺灣科學教育館（<a class="mailto hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳），從士林捷運站前往巴黎舞會，搭乘公車和計程車距離約 7 分鐘、步行距離約 14 分鐘，確切地點會於體驗日前 7 天得知</p> 
                     </div>
                 </div>
                 <div class="collapse-item">
@@ -121,15 +121,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>單人獨舞票（含一杯調飲）</td>
-                                <td>$2,000</td>
+                                <td>$2,000</td> 
                             </tr>
                             <tr>
                                 <td>雙人共舞票（含兩杯調飲）</td>
-                                <td>$3,800（一人$1,900）</td>
+                                <td>$3,800（一人$1,900）</td> 
                             </tr>
                             <tr>
                                 <td>四人群舞票（含四杯調飲）</td>
-                                <td>$7,400（一人$1,850）</td>
+                                <td>$7,400（一人$1,850）</td> 
                             </tr>
                         </table>
                     </div>
@@ -140,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <p>
                             先預售：歡迎至<a target="_blank" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW"><span>預約舞會</span></a>選購票券種類和數量<br>
                             後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約
-                        </p>
+                        </p> 
                     </div>
                 </div>
                 <!-- <div class="collapse-item">
@@ -171,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <br><br><br>
     
             <div class="title">
-                <h1>預售資訊</h1>
+                <h1>預售資訊</h1> 
                 <h3>PRE-SALE INFORMATION</h3>
             </div>
     
@@ -348,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>購票者的<br>姓名、購買信箱</td>
                     <td>劃位序號</td>
                 </tr>
-            </table>
+            </table> 
 
             <br>
 
