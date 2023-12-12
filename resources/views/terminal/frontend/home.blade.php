@@ -1213,8 +1213,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <h3 class="heading-subtitle">Our Partners</h3>
                             </div>
                             <div class="img-wrap">
-                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png?231206" alt="Partners">
-                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner_mobile.png?231206" alt="Partners">
+                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png?231212" alt="Partners">
+                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner.png?231212" alt="Partners">
                             </div>
                         </div>
                     </div>
