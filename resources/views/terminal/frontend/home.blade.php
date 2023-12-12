@@ -1210,7 +1210,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="col-12">
                         <div class="b-content-wrap">
                             <div class="section-heading-wrap">
-                                <h2 class="heading-title">合作夥伴</h2>
+                                <h2 class="heading-title">共同主辦</h2>
                                 <h3 class="heading-subtitle">Our Partners</h3>
                             </div>
                             <div class="img-wrap">
