@@ -97,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <td>▲</td>
                             </tr>
                             <tr>
-                                <td>未滿12歲無法參與，13-16歲需<br>家長陪同</td>
+                                <td>未滿12歲無法參與，13-16歲需<br>由家長購票陪同體驗</td>
                                 <td>▲</td>
                             </tr>
                         </table>
@@ -127,15 +127,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>單人獨舞票（含一杯調飲）</td>
-                                <td>$2,000</td> 
+                                <td>$2,100</td> 
                             </tr>
                             <tr>
                                 <td>雙人共舞票（含兩杯調飲）</td>
-                                <td>$3,800（一人$1,900）</td> 
+                                <td>$4,000（一人$2,000）</td> 
                             </tr>
                             <tr>
                                 <td>四人群舞票（含四杯調飲）</td>
-                                <td>$7,400（一人$1,850）</td> 
+                                <td>$7,600（一人$1,900）</td> 
                             </tr>
                         </table>
                     </div>
@@ -266,9 +266,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <ul>
                             <li>配戴眼鏡、單眼視力者皆可參與</li>
                             <li>臉部及眼部建議淡妝或素顏</li>
-                            <li>建議以褲裝出席</li>
-                            <li><span>不建議穿著裙裝</span>，若以裙裝出席，<span>裙長請勿超過膝下 5 公分</span></li>
-                            <li>建議穿舒適的鞋子，<span>避免穿著跟鞋、靴子</span></li>
+                            <!-- <li>建議以褲裝出席</li>
+                            <li><span>不建議穿著裙裝</span>，若以裙裝出席，<span>裙長請勿超過膝下 5 公分</span></li> -->
+                            <li>為確保肢體追蹤器效果，請穿著褲裝前來</li>
+                            <li>體驗過程中需翩翩起舞，請穿著球鞋或平底鞋</li>
                             <li><span>請勿綁馬尾、包包頭</span>出席</li>
                         </ul>
                         <br>
@@ -286,7 +287,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="item-body">
                         <p>
                             為維護體驗品質，於進入體驗區域前，所有觀眾都必須寄物<br>
-                            現場無提供較大型的物品（如：行李箱）寄物服務，建議大家輕便前來、放鬆體驗
+                            現場設有寄物區，請自備 10 元零用錢使用，零錢將於取物時退還。<br>
+                            恕無法提供較大型物品（如：行李箱）寄物服務，請輕便前來、放鬆體驗
                         </p>
                     </div>
                 </div>
