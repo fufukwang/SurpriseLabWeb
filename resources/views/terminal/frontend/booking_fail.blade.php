@@ -69,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="text-wrap">
                                 <h6 class="color-o200">很抱歉，購買與劃位流程失敗</h6>
                                 <p class="color-n100 body-04">請確保網路訊號的穩定，再次前往購票。</p>
-                                <p class="color-n100 body-04">有任何問題歡迎來信：<a href="mailto:mindthegap@surpriselab.com" class="link-text" target="_blank">mindthegap@surpriselab.com</a></p>
+                                <p class="color-n100 body-04">有任何問題歡迎來信：<a href="mailto:mindthegap@surpriselab.com.tw" class="link-text" target="_blank">mindthegap@surpriselab.com.tw</a></p>
                             </div>
                             <div class="cta-wrap">
                                 <div class="btn-wrap">

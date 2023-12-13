@@ -388,7 +388,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion3-4" class="accordion-collapse collapse" aria-labelledby="accordion3-4-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>請提早 10 分鐘抵達</p>
+                                                            <p>請提早 20 分鐘抵達</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -402,7 +402,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion3-5" class="accordion-collapse collapse" aria-labelledby="accordion3-5-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>遲到將無法進場，並且無法退費。請注意自身時間安排，並務必提早 10 分鐘抵達</p>
+                                                            <p>遲到將無法進場，並且無法退費。請注意自身時間安排，並務必提早 20 分鐘抵達</p>
                                                         </div>
                                                     </div>
                                                 </div>
