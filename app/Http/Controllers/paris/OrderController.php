@@ -391,7 +391,7 @@ class OrderController extends WebController
                     if($row['pay_type'] == '信用卡'){
                         if($row['is_overseas']>0){
                             $pay_type = '藍新金流';
-                            $coupon = '刷卡付費';
+                            // $coupon = '刷卡付費';
                         } else {
                             $pay_type = '貝殼集器';
                         }
@@ -404,10 +404,27 @@ class OrderController extends WebController
                     }
                     $pay_money = '';
                     $pay_last = '';
+                    $coupons = coupon::select('code','b_id','type')->where('o_id',$row['sn'])->get();
                     $modify_money = '';
                     $return_Tr_time = '';
                     $blue_sn = '';
                     $backme_sn = '';
+                    if(count($coupons)>0){
+                        $couponNumber = 0;
+                        $tmpBackSn = '';
+                        foreach($coupons as $c){
+                            if($coupon!=''){
+                                $coupon .= "\r\n";
+                            }
+                            $coupon .= "{$c->code}";
+                            
+                            $couponNumber++;
+                        }
+                        $pay_money .= ($couponNumber*4400);
+                        if($row['OM']>0){
+                            $pay_money .= "\r\n［{$row['OM']}］";
+                        }
+                    } else {
                         $pay_money = $row['OM'];
                         if($pay_type == '藍新金流' && ($pay_status == '已付款' || $pay_status == '已付款(部分退款)')){
                             $json = json_decode($row['result'],true);
@@ -417,7 +434,7 @@ class OrderController extends WebController
                             $return_Tr_time = $json['data']['Result']['PayTime'] ?? '';
                             $blue_sn = $json['data']['Result']['TradeNo'] ?? '';
                         }
-                    
+                    }
                     $ticket = '';
                     $num = 0;
                     $price = 0;
@@ -464,7 +481,7 @@ class OrderController extends WebController
                         $row['pople'],
                         strip_tags(preg_replace('/\<br(\s*)?\/?\>/i',"\n",$row['notes'])),
                         $row['manage'],
-                        $row['dis_code']."\n".$row['co_code'],
+                        $row['dis_code']."\n".$coupon,
                         $pay_type,
                         $pay_status,
                         ($price * $num),

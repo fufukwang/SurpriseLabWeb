@@ -65,7 +65,7 @@ class BackController extends WebController
                     'coupons'  => $coupons,
                     'template' => 'coupon',
                 ];
-                SLS::SendEmailByTemplateName($data);
+                SLS::SendEmailterTPByTemplateName($data);
                 backme::where('id',$id)->update(['is_sent'=>1]);
             }
             $par = '?';
@@ -196,9 +196,9 @@ class BackController extends WebController
                 'name'     => $xls->name,
                 'xls'      => $xls,
                 'coupons'  => $coupons,
-                'template' => 'coupon'.$pp,
+                'template' => 'coupon',
             ];
-            $success = SLS::SendEmailByTemplateName($data);
+            $success = SLS::SendEmailterTPByTemplateName($data);
             if($success){
                 backme::where('id',$id)->update(['is_sent'=>1]);
                 return Response::json(['message'=> 'success'], 200);
@@ -531,7 +531,7 @@ class BackController extends WebController
                     {
                         $destinationPath = base_path() . '/storage/app';
                         $extension = $request->file('xlsx')->getClientOriginalExtension();
-                        $fileName = 'tgt_' . date('YmdHis') . '.' . $extension;
+                        $fileName = 'tertp_' . date('YmdHis') . '.' . $extension;
                         $request->file('xlsx')->move($destinationPath, $fileName);
                         $filePath = '/storage/app/' . $fileName;
                     }

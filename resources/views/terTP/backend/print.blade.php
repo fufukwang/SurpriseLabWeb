@@ -214,7 +214,7 @@
                                                 <th>
     @forelse(App\model\terTP\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} {{--[{{App\model\terTP\backme::select('money')->find($coup->b_id)->money}}]--}}<br >@empty 
     @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
-    @if($couponNumber>0) [{{ $couponNumber * 4400 }}] @endif
+    {{-- @if($couponNumber>0) [{{ $couponNumber * 4400 }}] @endif --}}
     <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($inv_money / (1 + (5 / 100))) }}<br>稅額：{{ $inv_money - round($inv_money / (1 + (5 / 100))) }}<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
 </th>
                                                 <td>{!! nl2br($row->manage) !!}</td>

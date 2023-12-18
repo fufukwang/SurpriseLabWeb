@@ -94,6 +94,9 @@ class HelperService {
                     case 'undone':
                         $m->subject('【巴黎舞會】慶祝重要日子，還差一步....你完成下訂了嗎？');
                         break;
+                    case 'coupon':
+                        $m->subject('coupon');
+                        break;
                 }
                     
             });
@@ -156,6 +159,9 @@ class HelperService {
                         break;
                     case 'undone':
                         $m->subject('terTP....你完成下訂了嗎？');
+                        break;
+                    case 'coupon':
+                        $m->subject('terTP coupon');
                         break;
                 }
                     
