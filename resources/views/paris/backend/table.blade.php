@@ -71,10 +71,22 @@
    if($pay_type == '公關位' && ($row->pay_status == '已付款' || $row->pay_status == '已付款(部分退款)')){
       $pay_status = '公關位';
    }
-   $pay_money = 0;
+   $pay_money = '-';
    $modify_money = '';
-
+   $coupons = App\model\paris\coupon::where('o_id',$row->sn)->get();
+	if(count($coupons)>0){
+      foreach($coupons as $c){
+         if($coupon!=''){
+            $coupon .= "<br >";
+         }
+         $coupon .= "{$c->code}";
+      }
+      if($row->OM>0){
+         $modify_money = "修改金額:{$row->OM}";
+      }
+   } else {
       $pay_money = $row->OM;
+   }
                     
    if($pay_status !== '已付款' && $pay_status !== '已付款(部分退款)') $pay_money = 0;
    if($row->pople == ($row->vegetarian + $row->meat_eat)){

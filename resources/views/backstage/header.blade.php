@@ -209,7 +209,7 @@
                         <ul class="submenu" style="left:0;right:auto">
 
                             <li><a href="/paris/pros">Activaty</a></li>
-                            <!-- <li><a href="/paris/backmes">Backme</a></li> -->
+                            <li><a href="/paris/backmes">Backme</a></li>
                             <li><a href="/paris/discount/setting">Discount</a></li>
                             <li><a href="/paris/print">Order</a></li>
                             <li><a href="/paris/getMasterList">Master</a></li>
@@ -224,7 +224,7 @@
                         <ul class="submenu" style="left:0;right:auto">
 
                             <li><a href="/tertp/pros">Activaty</a></li>
-                            <!-- <li><a href="/tertp/backmes">Backme</a></li> -->
+                            <li><a href="/tertp/backmes">Backme</a></li>
                             <li><a href="/tertp/discount/setting">Discount</a></li>
                             <li><a href="/tertp/print">Order</a></li>
                             <li><a href="/tertp/getMasterList">Master</a></li>
