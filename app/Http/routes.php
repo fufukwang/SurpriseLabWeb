@@ -294,6 +294,17 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
     // 台北站
     Route::group(['prefix' => 'tertp'], function(){
+        Route::get('backmes','terTP\BackController@BackMes');
+        Route::post('backmes','terTP\BackController@BackMes');
+        Route::get('backme/{id}','terTP\BackController@BackMe');
+        Route::delete('backme/{id}/delete','terTP\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','terTP\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','terTP\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','terTP\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','terTP\BackController@infoUpdate');
+        Route::post('backmes/CanelCoupon','terTP\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','terTP\BackController@NotUseXls');
+        Route::post('uploadxlsx','terTP\BackController@UploadXlsx2Db');
         // coupon
         Route::get('coupons','terTP\BackController@Coupons');
         Route::post('coupons','terTP\BackController@Coupons');
@@ -506,17 +517,17 @@ Route::group(['domain' => 'master.'.$url,'middleware' => ['web']], function() {
 
     // 巴黎舞會
     Route::group(['prefix' => 'paris'], function(){
-        // Route::get('backmes','paris\BackController@BackMes');
-        // Route::post('backmes','paris\BackController@BackMes');
-        // Route::get('backme/{id}','paris\BackController@BackMe');
-        // Route::delete('backme/{id}/delete','paris\BackController@BackMeDelete');
-        // Route::post('backmes/{id}/sentcoupon','paris\BackController@SentCouponCode');
-        // Route::post('backmes/{id}/sendUpdate','paris\BackController@sendUpdate');
-        // Route::post('backmes/{id}/sendManageUpdate','paris\BackController@sendManageUpdate');
-        // Route::post('backmes/{id}/infoUpdate','paris\BackController@infoUpdate');
-        // Route::post('backmes/CanelCoupon','paris\BackController@CanelCoupon');
-        // Route::get('backmenouse/xls','paris\BackController@NotUseXls');
-        // Route::post('uploadxlsx','paris\BackController@UploadXlsx2Db');
+        Route::get('backmes','paris\BackController@BackMes');
+        Route::post('backmes','paris\BackController@BackMes');
+        Route::get('backme/{id}','paris\BackController@BackMe');
+        Route::delete('backme/{id}/delete','paris\BackController@BackMeDelete');
+        Route::post('backmes/{id}/sentcoupon','paris\BackController@SentCouponCode');
+        Route::post('backmes/{id}/sendUpdate','paris\BackController@sendUpdate');
+        Route::post('backmes/{id}/sendManageUpdate','paris\BackController@sendManageUpdate');
+        Route::post('backmes/{id}/infoUpdate','paris\BackController@infoUpdate');
+        Route::post('backmes/CanelCoupon','paris\BackController@CanelCoupon');
+        Route::get('backmenouse/xls','paris\BackController@NotUseXls');
+        Route::post('uploadxlsx','paris\BackController@UploadXlsx2Db');
         
         // coupon
         Route::get('coupons','paris\BackController@Coupons');
