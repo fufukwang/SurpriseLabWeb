@@ -7,7 +7,7 @@ var activeIndex;
 var isAllowToNextStep; // 是否可以進入下一步
 var passTimes = 1; // 票券代碼輸入次數
 var amountToGo = $('.amountToGo'); // 完成劃位金額
-var maxDateVal = "+3m";
+var maxDateVal = "+2m";
 /*
 var ticketInfos = [
     { type: 0, name: '暢行無阻票', price: 2000},
@@ -104,6 +104,12 @@ $(".action-button").on('click', function(){
                 if(enableDays.length>0){
                     minD = enableDays[0];
                 }
+
+                var maxD;
+                const date = new Date();
+                const newDate = addMonths(date, 2);
+                maxD = new Date(newDate.getFullYear(), newDate.getMonth(), lastday(newDate.getFullYear(), newDate.getMonth()));
+
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
                     minDate: minD,
@@ -115,7 +121,13 @@ $(".action-button").on('click', function(){
             },'json');
         }
         
-
+        function addMonths(date, months) {
+            date.setMonth(date.getMonth() + months);
+          
+            return date;
+        }
+        var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
+        
         function enableAllTheseDays(date) {
             var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
             if($.inArray(sdate, enableDays) !== -1) {

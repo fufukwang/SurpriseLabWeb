@@ -156,14 +156,13 @@ $(document).ready(function () {
             }
             var maxD;
             const date = new Date();
-            const newDate = addMonths(date, 4);
-            maxD = new Date(newDate.getFullYear(), newDate.getMonth()-1, lastday(newDate.getFullYear(),newDate.getMonth()-1));
+            const newDate = addMonths(date, 2);
+            maxD = new Date(newDate.getFullYear(), newDate.getMonth(), lastday(newDate.getFullYear(), newDate.getMonth()));
 // console.log(maxD);
             booking_date.datepicker("destroy");
             booking_date.datepicker({
                 minDate: minD,// minD,
-                // maxDate: maxD,//'+3m',// new Date(2022, 1, 28),
-                maxDate: '+2m',
+                maxDate: maxD,//'+3m',// new Date(2022, 1, 28),
                 dateFormat: 'yy-mm-dd', 
                 beforeShowDay: enableAllTheseDays,
                 onSelect: function(dateText) {

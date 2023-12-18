@@ -180,8 +180,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
-                                                                        <source srcset="img/home/about/about-intro-1.webp" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.jpg" data-src-retina="img/home/about/about-intro-1.jpg" alt="無光晚餐體驗內容">
+                                                                        <source srcset="img/home/about/about-intro-1.webp?231214" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.jpg?231214" data-src-retina="img/home/about/about-intro-1.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
                                                             </div>
@@ -190,8 +190,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
-                                                                        <source srcset="img/home/about/about-intro-2.webp" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-2.jpg" data-src-retina="img/home/about/about-intro-2.jpg" alt="無光晚餐體驗內容">
+                                                                        <source srcset="img/home/about/about-intro-2.webp?231214" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-2.jpg?231214" data-src-retina="img/home/about/about-intro-2.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
                                                             </div>
@@ -200,8 +200,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
-                                                                        <source srcset="img/home/about/about-intro-3.webp" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-3.jpg" data-src-retina="img/home/about/about-intro-3.jpg" alt="無光晚餐體驗內容">
+                                                                        <source srcset="img/home/about/about-intro-3.webp?231214" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-3.jpg?231214" data-src-retina="img/home/about/about-intro-3.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
                                                             </div>
@@ -210,8 +210,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
-                                                                        <source srcset="img/home/about/about-intro-4.webp" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-4.jpg" data-src-retina="img/home/about/about-intro-4.jpg" alt="無光晚餐體驗內容">
+                                                                        <source srcset="img/home/about/about-intro-4.webp?231214" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-4.jpg?231214" data-src-retina="img/home/about/about-intro-4.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
                                                             </div>
@@ -220,8 +220,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
-                                                                        <source srcset="img/home/about/about-intro-5.webp" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-5.jpg" data-src-retina="img/home/about/about-intro-5.jpg" alt="無光晚餐體驗內容">
+                                                                        <source srcset="img/home/about/about-intro-5.webp?231214" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-5.jpg?231214" data-src-retina="img/home/about/about-intro-5.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
                                                             </div>
@@ -1361,7 +1361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?date=230802"></script>
+    <script src="js/index.js?date=2312141"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?v=0.11"></script>
     <script src="js/index-slideshow.js?date=230919"></script>

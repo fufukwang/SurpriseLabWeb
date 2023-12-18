@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket1.png" />
                     </div>
                     <h4>單人獨舞票</h4>
-                    <h2>$2,000</h2> 
+                    <h2>$2,100</h2> 
                     <div class="desc">
                         （含一杯調飲）<br>
                         <br><br>
@@ -172,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket2.png" />
                     </div>
                     <h4>雙人共舞票</h4>
-                    <h2>$3,800<span>($1,900/人)</span></h2> 
+                    <h2>$4,000<span>($2,000/人)</span></h2> 
                     <div class="desc">
                         （含兩杯調飲）<br>
                         <span>【雙人預購優惠】購票輸入<br>【twogether】享$100折扣</span>
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket3_old.png" /> 
                     </div>
                     <h4>四人群舞票</h4>
-                    <h2>$7,400<span>($1,850/人)</span></h2> 
+                    <h2>$7,600<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
                         <br><br>
@@ -204,7 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket1.png" />
                     </div>
                     <h4>單人獨舞票</h4>
-                    <h2>$2,000</h2> 
+                    <h2>$2,100</h2> 
                     <div class="desc">
                         （含一杯調飲）<br>
                         <br><br>
@@ -218,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket2.png" />
                     </div>
                     <h4>雙人共舞票</h4>
-                    <h2>$3,800<span>($1,900/人)</span></h2> 
+                    <h2>$4,000<span>($2,000/人)</span></h2> 
                     <div class="desc">
                         （含兩杯調飲）<br>
                         <span>【雙人預購優惠】購票輸入<br>【twogether】享$100折扣</span>
@@ -233,7 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/booking_ticket3_old.png" />
                     </div>
                     <h4>四人群舞票</h4>
-                    <h2>$7,400<span>($1,850/人)</span></h2> 
+                    <h2>$7,600<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
                         <br><br>
@@ -552,7 +552,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>行銷執行</td>
-                                <td>邱瓊頤</td>
+                                <td>Cyong Chiu</td>
                             </tr>
                             <tr>
                                 <td>行銷總監</td>
@@ -772,9 +772,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <p>
                                         現場包含 VR 體驗，為顧及體驗安全：
                                         <ul>
-                                            <li>孕婦、心臟病和高血壓患者不建議體驗</li>
+                                            <li>孕婦、心臟病和高血壓患者禁止體驗</li>
                                             <li>體內有電子儀器者（例：心律調整器、助聽器、除顫器）及患有癲癇容易暈倒、視力受損者下訂前需諮詢專業醫師以維護體驗安全</li>
-                                            <li>未滿 12 歲無法參與、13-16 歲需家長陪同</li>
+                                            <li>未滿 12 歲無法參與、13-16 歲需由家長購票陪同體驗</li>
                                         </ul>
                                     </p>
                                 </li>
