@@ -16,7 +16,9 @@ function addMonths(date, months) {
     date.setMonth(date.getMonth() + months);
     return date;
 }
-var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
+function lastday(y,m){
+    return  new Date(y, m +1, 0).getDate();
+}
 /*
 var ticketInfos = [
     { type: 0, name: '暢行無阻票', price: 2000},
