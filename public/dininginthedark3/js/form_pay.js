@@ -9,6 +9,14 @@ var isAllowToNextStep; // 是否可以進入下一步
 var passTimes = 1; // 票券代碼輸入次數
 var amountToGo = $('.amountToGo'); // 完成劃位金額
 var maxDateVal = "+2m";
+const date = new Date();
+const newDate = addMonths(date, 2);
+maxDateVal = new Date(newDate.getFullYear(), newDate.getMonth(), lastday(newDate.getFullYear(), newDate.getMonth()));
+function addMonths(date, months) {
+    date.setMonth(date.getMonth() + months);
+    return date;
+}
+var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
 /*
 var ticketInfos = [
     { type: 0, name: '暢行無阻票', price: 2000},
