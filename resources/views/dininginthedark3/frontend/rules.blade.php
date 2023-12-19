@@ -690,7 +690,6 @@
                                 <ol>
                                     <li>請依照上述說明附上相關資訊，來信 <a class="default-light" href="mailto:dininginthedark@surpriselab.com.tw" target="_blank">dininginthedark@surpriselab.com.tw</a> 。</li>
                                     <li>無光晚餐因經常客滿，改期請事先查詢剩餘場次，並於來信時提供 3 個可體驗時段。</li>
-                                    <li>退費入帳約需七至十個工作天，實際日期請依購票時使用信用卡銀行規定為主。（特殊情況採 ATM 退費，入帳時間請依照客服人員回信為主）</li>
                                 </ol>
 
                                 <!-- <h5 class="sub-title highlight">
