@@ -1251,7 +1251,7 @@ button.p-btn.secondary:hover:not([disabled]) {
 #booking #step3 .step3-form .ticket-inner .ticket .addr .note {
   width: 100%;
   font-size: 10px;
-  line-height: 200%; /* 20px */
+  line-height: 150%;
 }
 @media screen and (min-width: 495px) {
   #booking #step3 .step3-form .ticket-inner .ticket .addr .note {
@@ -1356,6 +1356,13 @@ button.p-btn.secondary:hover:not([disabled]) {
   text-align: center;
   margin-bottom: 108px;
 }
+#booking-success .info a {
+  color: #FF9C9C;
+  text-decoration: underline;
+}
+#booking-success .info a:hover {
+  text-decoration: none;
+}
 #booking-success .ticket {
   width: 350px;
   height: 235px;
@@ -1438,7 +1445,7 @@ button.p-btn.secondary:hover:not([disabled]) {
 #booking-success .ticket .addr .note {
   width: 100%;
   font-size: 10px;
-  line-height: 200%; /* 20px */
+  line-height: 150%;
 }
 @media screen and (min-width: 495px) {
   #booking-success .ticket .addr .note {
@@ -1458,7 +1465,11 @@ button.p-btn.secondary:hover:not([disabled]) {
   text-align: center;
 }
 #booking-fail .info a {
-  color: #F4D9D4;
+  color: #FF9C9C;
+  text-decoration: underline;
+}
+#booking-fail .info a:hover {
+  text-decoration: none;
 }
 #booking-fail .actions {
   display: flex;
