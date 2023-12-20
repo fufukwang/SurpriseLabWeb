@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/select2.css"/>
-    <link rel="stylesheet" href="/paris/css/booking.css?231108">
+    <link rel="stylesheet" href="/paris/css/booking.css?231220">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -293,7 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div> -->
                     <div class="input-group">
                         <label>備註</label>
-                        <textarea name="notice" rows="8" placeholder="+特殊需求（行動不便等）可提前備註"></textarea>
+                        <textarea name="notice" rows="8" placeholder="若不飲用酒精，請提前備註，飲品不提供現場調整；&#10;VR 體驗提供法文、西班牙文、義大利文、德文，若有需求，請備註語言與對應人數"></textarea>
                     </div>
                     <div class="half-group flex">
                         <div class="input-group">
@@ -367,7 +367,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <path d="M5.5 0C2.46269 0 0 2.51473 0 5.61624C0 8.71775 5.5 16 5.5 16C5.5 16 11 8.71775 11 5.61624C11 2.51473 8.54073 0 5.5 0ZM5.5 8.60249C3.88557 8.60249 2.57898 7.26479 2.57898 5.61973C2.57898 3.97468 3.88899 2.63698 5.5 2.63698C7.11101 2.63698 8.42102 3.97468 8.42102 5.61973C8.42102 7.26479 7.11101 8.60249 5.5 8.60249Z" fill="#016060"/>
                                 </svg>
                                 <div>111 台北市士林區的某棟秘密建築</div>
-                                <div class="note">（詳細地點請容許我們先保密，我們將慢慢向你揭露）</div>
+                                <div class="note">
+                                    （詳細地點請容許我們先保密，我們將慢慢向你揭露）<br>
+                                    <span style="color: #F4115E;">此圖面不代表訂位完成，請往下操作</span>
+                                </div>
                             </div>
                         </div>
                     </div>

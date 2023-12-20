@@ -464,7 +464,7 @@ $('.step-2 input, .step-2 select').on('change', function () {
                 booking_date.datepicker("destroy");
                 booking_date.datepicker({
                     minDate: minD,
-                    maxDate: maxDateVal,
+                    maxDate: maxD,
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: enableAllTheseDays
                 });
