@@ -1008,11 +1008,13 @@ $(function(){
         $('#inv_cut').val($(this).data('cut'));
         $('#inv_handling').val(handling);
         $('#inv_refund').val(refund);
+        /*
         if($(this).data('pay_status') == '已付款(部分退款)'){
             $('#pass_money').show();
         } else {
             $('#pass_money').hide();
         }
+        */
 
         var now_tax = Math.round(totle_money*5/100);
         $('#TaxAmt').val(now_tax);
