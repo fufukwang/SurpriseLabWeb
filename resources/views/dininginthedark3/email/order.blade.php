@@ -121,8 +121,11 @@ switch($time){
 <br>
 <span style="color:#A9A9A9"><span style="font-size:13px">無光晚餐採按時段場次分批入場制，</span><br>
 <strong><u>若超過</u></strong></span><span style="color:#8B5FB3"><strong><u>預約場次時間</u></strong></span><span style="color:#A9A9A9"><strong><u>抵達視為遲到，會錯過部分體驗與餐點，</u></strong><br>
-<span style="font-size:13px"><strong><u>並將無法入場，無法退費或打包</u></strong></span></span></div>
+<span style="font-size:13px"><strong><u>並將無法入場，無法退費或打包</u></strong></span></span>
 
+<br><br>
+<span style="font-size:13px"><strong><u>無光晚餐僅接受雙數入席，請確保預約人數到齊方可入場</u></strong></span></div>
+<br><br>
                         </td>
                     </tr>
                 </tbody></table>
