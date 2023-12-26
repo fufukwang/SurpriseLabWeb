@@ -62,6 +62,7 @@ class BackController extends WebController
                     'email'    => $xls->email,
                     'name'     => $xls->name,
                     'xls'      => $xls,
+                    'id'       => $id,
                     'coupons'  => $coupons,
                     'template' => 'coupon',
                 ];
@@ -188,13 +189,13 @@ class BackController extends WebController
     }
     public function SentCouponCode(Request $request,$id){
         if($request->isMethod('post')){
-            $id = $id;
             $xls     = backme::find($id);
             $coupons = coupon::where('b_id',$id)->get();
             $data = [
                 'email'    => $xls->email,
                 'name'     => $xls->name,
                 'xls'      => $xls,
+                'id'       => $id,
                 'coupons'  => $coupons,
                 'template' => 'coupon',
             ];
