@@ -176,6 +176,7 @@
             $inv_money -= $row->refund;
             $inv_money += $handling_fee;
         }
+        if($inv_money<0) $inv_money = 0;
 
     ?>
                                             <tr id="tr_{{ $row->id }}">
@@ -1031,10 +1032,15 @@ $(function(){
         } else {
             $('#ct2').trigger('click');
         }
+        var ticket = $(this).data('ticket');
+        var price = $(this).data('price');
+        var num = $(this).data('num');
+        if(ticket == '') price = $(this).data('co_money');
+        if(num == 0) num = 1;
         invObject = {
-            'ticket': $(this).data('ticket'),
-            'price': $(this).data('price'),
-            'num': $(this).data('num'),
+            'ticket': ticket,
+            'price': price,
+            'num': num,
             'discount': $(this).data('dis_money'),
             'coupon': $(this).data('co_money'),
             'vehicle': $(this).data('vehicle'),

@@ -330,7 +330,7 @@ class FrontController extends WebController
             }
 
             $pay_status = '未完成';
-            if(intval($money - $cut1 - $cut2)  == 0 && $pople == $cutPeople){
+            if(intval($money - $cut1 - $cut2)  == 0 && $people == $cutPeople){
                 $pay_status = '已付款';
             }
 
@@ -363,7 +363,7 @@ class FrontController extends WebController
             $order = order::create($data);
 
             $sentSuccess = false;
-            if($pople == $cutPeople){
+            if($people == $cutPeople){
                 $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
                     ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
 
