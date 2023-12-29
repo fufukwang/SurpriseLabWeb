@@ -297,7 +297,7 @@ class FrontController extends WebController
                         coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
                         $money += $act->$mytype;
                         $cut1 += $act->$mytype;
-                        $manage .= $value.'折抵 '.$cut1."\n";
+                        $manage .= $value.'折抵 '.$act->$mytype."\n";
 
                         switch($mytype){
                             case 'p1': $cutPeople += 1; break;

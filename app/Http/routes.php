@@ -817,6 +817,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('rules',function(){ return view('paris.frontend.rules'); });
         // 劃位
         Route::get('booking',function(){ return view('paris.frontend.booking'); });
+        Route::get('booking_pay',function(){ return view('paris.frontend.booking_pay'); });
         // 藍新金流路由
         Route::post('Neweb.OrderPay', 'paris\NewPayController@postOrderByNeweb'); // 存訂單
         Route::post('Neweb.ReturnResult', 'paris\NewPayController@postReturnByNeweb'); // 回傳內容
@@ -846,6 +847,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('booking_now',function(){ return view('terminal.frontend.booking_now'); });
         // Route::get('booking',function(){ return view('terminal.frontend.booking'); });
         Route::get('booking',function(){ return view('terminal.frontend.booking'); });
+        Route::get('booking_pay',function(){ return view('terminal.frontend.booking_pay'); });
         // 藍新金流路由
         Route::post('Neweb.OrderPay', 'terTP\NewPayController@postOrderByNeweb'); // 存訂單
         Route::post('Neweb.ReturnResult', 'terTP\NewPayController@postReturnByNeweb'); // 回傳內容

@@ -84,6 +84,7 @@
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D10" data-toggle="tooltip" data-placement="top" data-original-title="寄送11天前的通知信">11</a> -->
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="order" data-toggle="tooltip" data-placement="top" data-original-title="訂位確認">訂位確認</a>
                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D7" data-toggle="tooltip" data-placement="top" data-original-title="寄送7天前的通知信">07</a>
+                                                     <a href="javascript:;" class="btn btn-default btn-xs send_mail" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-email="{{ $row->email }}" data-type="D3" data-toggle="tooltip" data-placement="top" data-original-title="寄送3天前的通知信">03</a>
 
 
                                                     <!-- <a href="javascript:;" class="btn btn-warning btn-xs send_sms" data-id="{{ $row->order_id }}" data-name="{{ $row->name }}" data-tel="{{ $row->tel }}" data-type="DX" data-toggle="tooltip" data-placement="top" data-original-title="開幕酒會簡訊邀請函">邀請函</a>

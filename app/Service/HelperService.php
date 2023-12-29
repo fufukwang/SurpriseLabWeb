@@ -152,7 +152,7 @@ class HelperService {
                 $m->to($data['email'], $data['name']);
                 switch ($data['template']) {
                     case 'order':
-                        $m->subject('【落日轉運站】落日月台 訂位確認信');
+                        $m->subject('【落日月台】 訂位確認信');
                         break;
                     case 'D7':
                         $m->subject('【落日月台】旅程即將啟程，行前您需要知道的十件事');
