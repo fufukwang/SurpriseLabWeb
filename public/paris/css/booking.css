@@ -1113,11 +1113,7 @@ ol {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-<<<<<<< HEAD
-  background-image: url(../img/booking_ticket.png?231222);
-=======
-  background-image: url(../img/booking_ticket.png);
->>>>>>> tk-paris
+  background-image: url(../img/booking_ticket.png?231229);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
@@ -1299,11 +1295,7 @@ ol {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-<<<<<<< HEAD
-  background-image: url(../img/booking_ticket_dark.png);
-=======
   background-image: url(../img/booking_success_ticket.png);
->>>>>>> tk-paris
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
