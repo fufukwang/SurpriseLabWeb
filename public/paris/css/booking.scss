@@ -561,7 +561,7 @@
                     width: 350px;
                     height: 235px;
                     margin: 0 auto;
-                    background-image: url(../img/booking_ticket_m.png);
+                    background-image: url(../img/booking_ticket.png);
                     background-size: contain;
                     background-repeat: no-repeat;
                     padding: 20px 39px 0 48px;
@@ -570,7 +570,7 @@
                     @media screen and (min-width:495px) {
                         width: 448px;
                         height: 301px;
-                        background-image: url(../img/booking_ticket.png);
+                        // background-image: url(../img/booking_ticket.png);
                         padding: 24px 36px 0 192px;
                     }
             
@@ -770,16 +770,16 @@
         width: 350px;
         height: 235px;
         margin: 0 auto;
-        background-image: url(../img/booking_ticket_m.png);
+        background-image: url(../img/booking_success_ticket.png);
         background-size: contain;
         background-repeat: no-repeat;
         padding: 20px 39px 0 48px;
-        color: $color19;
+        color: #fceee4;
         position: relative;
         @media screen and (min-width:495px) {
             width: 448px;
             height: 301px;
-            background-image: url(../img/booking_ticket.png);
+            // background-image: url(../img/booking_ticket.png);
             padding: 24px 36px 0 192px;
         }
 
