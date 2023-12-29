@@ -1173,7 +1173,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-  background-image: url(../img/booking_ticket_m.png);
+  background-image: url(../img/booking_ticket.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
@@ -1184,7 +1184,6 @@ button.p-btn.secondary:hover:not([disabled]) {
   #booking #step3 .step3-form .ticket-inner .ticket {
     width: 448px;
     height: 301px;
-    background-image: url(../img/booking_ticket.png);
     padding: 24px 36px 0 192px;
   }
 }
@@ -1367,18 +1366,17 @@ button.p-btn.secondary:hover:not([disabled]) {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-  background-image: url(../img/booking_ticket_m.png);
+  background-image: url(../img/booking_success_ticket.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
-  color: #016060;
+  color: #fceee4;
   position: relative;
 }
 @media screen and (min-width: 495px) {
   #booking-success .ticket {
     width: 448px;
     height: 301px;
-    background-image: url(../img/booking_ticket.png);
     padding: 24px 36px 0 192px;
   }
 }
