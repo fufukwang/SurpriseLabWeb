@@ -600,13 +600,15 @@ class BackController extends WebController
                     $data['code'] = $this->GenerateGiftCodeSN();
                     coupon::insert($data);
                 }
-            } elseif($row->p1 >= 1){
+            } 
+            if($row->p1 >= 1){
                 for($i=0;$i<$row->p1;$i++){
                     $data['type'] = 'p1';
                     $data['code'] = $this->GenerateGiftCodeSN();
                     coupon::insert($data);
                 }
-            } elseif($row->p4 >= 1){
+            } 
+            if($row->p4 >= 1){
                 for($i=0;$i<$row->p4;$i++){
                     $data['type'] = 'p4';
                     $data['code'] = $this->GenerateGiftCodeSN();

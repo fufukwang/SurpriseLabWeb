@@ -295,6 +295,7 @@ class InvController extends WebController
                 $printFlag = 'N';
             }
             if($request->CarrierType == ''){ $CarrierNum = '';}
+            if($request->CarrierNum!=''){ $printFlag = 'N'; }
             $post_data_array = [
                 'RespondType' => 'JSON',
                 'Version' => '1.4',
