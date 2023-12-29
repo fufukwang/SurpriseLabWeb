@@ -54,42 +54,21 @@ class NewPayController extends WebController
             $manage = '';
             if($request->has('allocation') && $request->allocation !=''){
                 $couponCode = $request->allocation;
-                if(is_array($couponCode)){
-                    foreach ($couponCode as $key => $value) {
-                        $coN = coupon::where('code',$value)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
-                        if($coN>0){
-                            $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
-                            $mytype = $me->type;
-                            if($ticket == $mytype){
-                                coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
-                                $cut1 += $act->$mytype;
-                                $manage .= $value.'折抵 '.$cut1."\n";
-                            } else {
-                                Log::error('giftcard種類不符');    
-                                return view('terminal.frontend.booking_fail');
-                            }
-                        } else {
-                            Log::error('序號驗證錯誤');
-                            return view('terminal.frontend.booking_fail');
-                        }
+                $coN = coupon::where('code',$couponCode)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
+                if($coN>0){
+                    $me = coupon::where('code',$couponCode)->where('o_id',0)->select('type')->first();
+                    $mytype = $me->type;
+                    if($ticket == $mytype){
+                        coupon::where('code',$couponCode)->where('o_id',0)->update(['o_id'=>$count]);
+                        $cut1 = $act->$mytype;
+                        $manage .= $couponCode.'折抵 '.$cut1."\n";
+                    } else {
+                        Log::error('giftcard種類不符');    
+                        return view('terTP.frontend.booking_fail');
                     }
                 } else {
-                    $coN = coupon::where('code',$couponCode)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
-                    if($coN>0){
-                        $me = coupon::where('code',$couponCode)->where('o_id',0)->select('type')->first();
-                        $mytype = $me->type;
-                        if($ticket == $mytype){
-                            coupon::where('code',$couponCode)->where('o_id',0)->update(['o_id'=>$count]);
-                            $cut1 = $act->$mytype;
-                            $manage .= $couponCode.'折抵 '.$cut1."\n";
-                        } else {
-                            Log::error('giftcard種類不符');    
-                            return view('terminal.frontend.booking_fail');
-                        }
-                    } else {
-                        Log::error('序號驗證錯誤');
-                        return view('terminal.frontend.booking_fail');
-                    }
+                    Log::error('序號驗證錯誤');
+                    return view('terTP.frontend.booking_fail');
                 }
             }
 

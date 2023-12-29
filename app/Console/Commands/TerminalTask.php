@@ -153,8 +153,53 @@ class TerminalTask extends Command
                     }
                 }
             }
-            // Xday
-
+            // 3day
+            $pr03day = pro::select('id')->where('open',1)
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=3")->get();
+            foreach($pr03day as $pro){
+                // 找出正常的訂單
+                $order03 = order::select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn','pay_type')
+                    ->leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
+                    ->where('terTP_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
+                foreach ($order03 as $ord) {
+                    if($ord->pay_type !== '合作販售'){
+                        $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_start))));
+                        $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_end))));
+                        $toData = [
+                            'day'   => Carbon::parse($ord->day)->format('Y / m / d'),
+                            'pople' => $ord->pople,
+                            'id'    => $ord->id,
+                            'name'  => $ord->name,
+                            'email' => $ord->email,
+                            'phone' => $ord->tel,
+                            'time'  => substr($ord->rang_start,0,5),
+                            'gday'  => $rangStart.'/'.$rangEnd,
+                            'master'=> "?id=".md5($ord->id)."&sn=".$ord->sn,
+                            'mday'  => $ord->day,
+                            'need_english' => $ord->need_english,
+                            'need_chinese' => $ord->need_chinese,
+                            'template' => 'D3',
+                        ];
+                        if($ord->email != ''){
+                            $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                            $needSend = true;
+                            $teamNum = 0;
+                            while($needSend){
+                                if($toData['email'] != ''){ SLS::SendEmailTerTPByTemplateName($toData); }
+                                if($toData['phone'] != ''){ SLS::SendSmsTerTPByTemplateName($toData); }
+                                if($teamMail && count($teamMail)>$teamNum){
+                                    $toData['name'] = $teamMail[$teamNum]->name;
+                                    $toData['email'] = $teamMail[$teamNum]->email;
+                                    $toData['phone'] = $teamMail[$teamNum]->phone;
+                                    $teamNum++;
+                                } else {
+                                    $needSend = false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             // 後??天體驗後問券
 
 /*

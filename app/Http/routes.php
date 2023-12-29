@@ -831,7 +831,7 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::get('GetAjaxData','paris\FrontController@GetAjaxData');
         Route::post('PostAjaxData','paris\FrontController@PostAjaxData');
-        // Route::post('ReOrderData','paris\FrontController@ReOrderData');
+        Route::post('ReOrderData','paris\FrontController@ReOrderData');
     });
     // terminal 落日轉運站
     Route::group(['prefix' => 'terminal'], function(){
@@ -854,7 +854,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('GetAjaxData','terTP\FrontController@GetAjaxData');
         Route::post('PostAjaxData','terTP\FrontController@PostAjaxData');
         // Route::post('PostAjaxData','terminal\FrontController@PostAjaxData');
-        // Route::post('ReOrderData','terminal\FrontController@ReOrderData');
+        Route::post('ReOrderData','terTP\FrontController@ReOrderData');
     });
     // thegreattipsy S2
     Route::group(['prefix' => 'thegreattipsy'], function(){

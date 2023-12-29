@@ -19,8 +19,7 @@
 
 body {
   margin: 0;
-  background: #260307;
-  background-image: url(../img/pattern.png);
+  background: #222666;
   background-size: 100% auto;
   background-repeat: repeat-y;
   color: #fff;
@@ -39,7 +38,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #FF9C9C;
   word-break: break-all;
 }
 a.hover-underline:hover {
@@ -47,7 +46,6 @@ a.hover-underline:hover {
 }
 
 p {
-  font-family: "Noto Sans TC";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -60,10 +58,9 @@ main {
 }
 
 h1 {
-  color: #F4D9D4;
+  color: #FF9C9C;
   text-align: center;
   /* H1 Heading 36pt */
-  font-family: "Noto Serif TC";
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -79,7 +76,6 @@ h1 {
 }
 
 h2 {
-  font-family: "jeanne-moderno";
   font-size: 40px;
   font-style: italic;
   font-weight: 425;
@@ -96,7 +92,6 @@ h3 {
   color: #E28A8A;
   text-align: center;
   /* H3 Sub Heading 20pt */
-  font-family: "txc-pearl";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -109,7 +104,6 @@ h3 {
 h4 {
   color: #E28A8A;
   /* H4 Title 28pt */
-  font-family: "Noto Sans TC";
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -137,13 +131,12 @@ h4 {
 }
 .input-group label {
   display: block;
-  font-family: "Noto Sans TC";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 36px */
   margin-bottom: 10px;
-  color: #F4D9D4;
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
   .input-group label {
@@ -200,7 +193,6 @@ div.p-btn, a.p-btn {
 }
 @media screen and (min-width: 768px) {
   div.p-btn, a.p-btn {
-    font-size: 21px;
     line-height: 30px;
     letter-spacing: 2.1px;
     text-indent: 2.1px;
@@ -213,16 +205,16 @@ div.p-btn.disabled, a.p-btn.disabled {
   cursor: not-allowed;
 }
 div.p-btn.primary, a.p-btn.primary {
-  color: #F4D9D4;
-  background: #016060;
-  border: 2px solid #016060;
+  color: #000;
+  background: #FF9C9C;
+  border: 2px solid #FF9C9C;
 }
 div.p-btn.primary.outline, a.p-btn.primary.outline {
   background: none;
 }
 div.p-btn.primary:not(.disabled):hover, a.p-btn.primary:not(.disabled):hover {
-  background: #055353;
-  border: 2px solid #055353;
+  background: #d57e7e;
+  border: 2px solid #d57e7e;
 }
 div.p-btn.primary:not(.disabled):hover.outline, a.p-btn.primary:not(.disabled):hover.outline {
   background: none;
@@ -268,16 +260,16 @@ button.p-btn[disabled] {
   cursor: not-allowed;
 }
 button.p-btn.primary {
-  color: #F4D9D4;
-  background: #016060;
-  border: 2px solid #016060;
+  color: #000;
+  background: #FF9C9C;
+  border: 2px solid #FF9C9C;
 }
 button.p-btn.primary.outline {
   background: none;
 }
 button.p-btn.primary:hover:not([disabled]) {
-  background: #055353;
-  border: 2px solid #055353;
+  background: #d57e7e;
+  border: 2px solid #d57e7e;
 }
 button.p-btn.primary:hover:not([disabled]).outline {
   background: none;
@@ -314,7 +306,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   width: 20px;
   height: 20px;
   border-radius: 0;
-  border: solid 1px #F4115D;
+  border: solid 1px #FF9C9C;
   top: 0.1rem;
   background: transparent;
   position: absolute;
@@ -389,9 +381,9 @@ button.p-btn.secondary:hover:not([disabled]) {
 
 .select2-dropdown {
   background: none;
-  border: 1px solid #F4115D !important;
+  border: 1px solid #FF9C9C !important;
   border-radius: 10px !important;
-  background: #260307;
+  background: #222666;
 }
 
 .select2-results {
@@ -403,8 +395,9 @@ button.p-btn.secondary:hover:not([disabled]) {
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background: #016060;
+  background: #FF9C9C;
   border-radius: 10px;
+  color: #222666;
 }
 
 .select2-results__option {
@@ -532,7 +525,6 @@ button.p-btn.secondary:hover:not([disabled]) {
   }
 }
 #main-header nav a {
-  font-family: "Noto Serif TC";
   font-size: 34px;
   font-weight: 600;
   line-height: 120%;
@@ -543,7 +535,6 @@ button.p-btn.secondary:hover:not([disabled]) {
 }
 @media screen and (min-width: 992px) {
   #main-header nav a {
-    font-family: "Noto Sans TC";
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -674,7 +665,7 @@ button.p-btn.secondary:hover:not([disabled]) {
 
 main {
   overflow: hidden;
-  color: #F4D9D4;
+  color: #FF9C9C;
 }
 
 h1 {
@@ -777,6 +768,171 @@ ol {
   border: 1px solid #DE7777;
 }
 
+.progress-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+@media screen and (min-width: 1199.99px) {
+  .progress-wrap {
+    position: fixed;
+    top: 50vh;
+    left: 6.9vw;
+    transform: translateY(-50%);
+  }
+}
+
+.booking-progress-list {
+  --item-border: 8px;
+  list-style-type: none;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list {
+    --item-border: 6px;
+    flex-direction: row;
+  }
+}
+.booking-progress-list .progress-item + .progress-item {
+  margin: 52px 0 0;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item + .progress-item {
+    margin: 0 0 0 24px;
+  }
+}
+.booking-progress-list .progress-item {
+  position: relative;
+}
+.booking-progress-list .progress-item:before {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  z-index: 0;
+  display: block;
+  width: 1px;
+  height: 60px;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item:before {
+    top: 50%;
+    left: -60px;
+    width: 60px;
+    height: 1px;
+  }
+}
+.booking-progress-list .progress-item .item-wrap {
+  position: relative;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  background-color: #dd7777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  border: var(--item-border) solid #232666;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item .item-wrap {
+    width: 30px;
+    height: 30px;
+  }
+}
+.booking-progress-list .progress-item .item-wrap span {
+  font-family: "Shrikhand", cursive;
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: 0.05em;
+  transform: translate(0.5px, 1px);
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item .item-wrap span {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}
+.booking-progress-list .progress-item.status-disabled:before {
+  content: "";
+  border-left: 1px dashed #804E6E;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item.status-disabled:before {
+    border-bottom: 1px dashed #804E6E;
+  }
+}
+.booking-progress-list .progress-item.status-disabled .item-wrap {
+  background-color: #804E6E;
+  border: var(--item-border) solid #232666;
+  box-shadow: 0 0 0 1px #232666;
+}
+.booking-progress-list .progress-item.status-disabled .item-wrap span {
+  color: #232666;
+}
+.booking-progress-list .progress-item.status-active:before {
+  content: "";
+  border-left: 1px solid #dd7777;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item.status-active:before {
+    border-bottom: 1px solid #dd7777;
+  }
+}
+.booking-progress-list .progress-item.status-active .item-wrap {
+  box-shadow: 0 0 0 1px #dd7777;
+}
+.booking-progress-list .progress-item.status-active .item-wrap span {
+  color: #232666;
+}
+.booking-progress-list .progress-item.status-finish:before {
+  content: "";
+  border-left: 1px solid #dd7777;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item.status-finish:before {
+    border-bottom: 1px solid #dd7777;
+  }
+}
+.booking-progress-list .progress-item.status-finish .item-wrap:before {
+  content: "";
+  border-left: 1px solid #dd7777;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item.status-finish .item-wrap:before {
+    border-bottom: 1px solid #dd7777;
+  }
+}
+.booking-progress-list .progress-item.status-finish .item-wrap:after {
+  content: "\e907";
+  font-family: "icomoon" !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-49%, -49%);
+  color: #232666;
+  font-size: 30px;
+  line-height: 1.44;
+}
+@media screen and (max-width: 1199.98px) {
+  .booking-progress-list .progress-item.status-finish .item-wrap:after {
+    font-size: 24px;
+    line-height: 1.43;
+  }
+}
+.booking-progress-list .progress-item.status-finish .item-wrap span {
+  color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.booking-progress-list .progress-item:nth-child(1)::before {
+  content: unset;
+}
+
 #notice .information .information-inner {
   margin: 0 0 40px 0;
 }
@@ -861,8 +1017,8 @@ ol {
   width: calc(100% - 90px);
 }
 #booking #step1 .input-group button {
-  color: #fff;
-  background: #036060;
+  color: #000;
+  background: #FF9C9C;
   border: none;
   width: 70px;
   font-size: 17px;
@@ -888,9 +1044,9 @@ ol {
   top: 5px !important;
   left: 0 !important;
   width: 100%;
-  border: solid 1px #F4115D;
+  border: solid 1px #DE7777;
   border-radius: 10px;
-  background-color: #260307;
+  background-color: #222666;
   padding: 8px;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-header {
@@ -898,7 +1054,6 @@ ol {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
-  background-color: #016060;
   border-radius: 4px;
   padding: 7px 16px;
 }
@@ -909,7 +1064,7 @@ ol {
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-title .ui-datepicker-month,
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-title .ui-datepicker-year {
-  color: #F4D9D4;
+  color: #ff9c9c;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-corner-all .ui-icon {
   display: block;
@@ -939,7 +1094,7 @@ ol {
   position: relative;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar th span {
-  color: #F4D9D4;
+  color: #ff9c9c;
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 1.5;
@@ -949,10 +1104,10 @@ ol {
   border-color: #F4D9D4;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable a, #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable span {
-  color: #4D4D4D;
+  color: #ad4039;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day a {
-  color: #4D4D4D;
+  color: #ad4039;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a {
   position: relative;
@@ -966,7 +1121,7 @@ ol {
   cursor: pointer;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
-  color: #4D4D4D;
+  color: #ad4039;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {
   border-color: #F4D9D4;
@@ -986,16 +1141,6 @@ ol {
   transform: translate(-50%, -50%);
   transition: 0.3s;
   z-index: 0;
-}
-#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:after {
-  position: absolute;
-  content: "";
-  top: 100%;
-  left: 50%;
-  transform: translate(-30%, -30%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
 }
 #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out-soon:after {
   background: #E85455;
@@ -1036,6 +1181,9 @@ ol {
   letter-spacing: 1.6px;
   text-align: left;
   margin: 0 5px;
+}
+#booking #step3 .input-group label {
+  color: #FF9C9C;
 }
 @media screen and (min-width: 768px) {
   #booking #step3 .flex {
@@ -1084,186 +1232,43 @@ ol {
   line-height: 1;
   margin-top: 5px;
 }
-#booking #step4 .step4-form {
-  max-width: 1025px;
-  margin: 0 auto;
-}
-@media screen and (min-width: 1000px) {
-  #booking #step4 .step4-form {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-#booking #step4 .step4-form .ticket-inner {
-  width: 350px;
-  margin: 0 auto 60px auto;
-}
-@media screen and (min-width: 495px) {
-  #booking #step4 .step4-form .ticket-inner {
-    width: 448px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  #booking #step4 .step4-form .ticket-inner {
-    margin: 0;
-  }
-}
-#booking #step4 .step4-form .ticket-inner .ticket {
-  width: 350px;
-  height: 235px;
-  margin: 0 auto;
-  background-image: url(../img/booking_ticket.png?231222);
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding: 20px 39px 0 48px;
-  color: #016060;
-  position: relative;
-}
-@media screen and (min-width: 495px) {
-  #booking #step4 .step4-form .ticket-inner .ticket {
-    width: 448px;
-    height: 301px;
-    padding: 24px 36px 0 192px;
-  }
-}
-#booking #step4 .step4-form .ticket-inner .ticket table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 170px;
-  margin: 0 0 0 auto;
-}
-@media screen and (min-width: 495px) {
-  #booking #step4 .step4-form .ticket-inner .ticket table {
-    max-width: 220px;
-  }
-}
-#booking #step4 .step4-form .ticket-inner .ticket table td {
-  padding: 5px 0;
-  vertical-align: top;
-  line-height: 120%;
-  font-size: 13px;
-}
-@media screen and (min-width: 495px) {
-  #booking #step4 .step4-form .ticket-inner .ticket table td {
-    padding: 5px 0;
-    line-height: 130%;
-    font-size: 16px;
-  }
-}
-#booking #step4 .step4-form .ticket-inner .ticket table td:nth-child(odd) {
-  white-space: nowrap;
-  padding-right: 10px;
-}
-@media screen and (min-width: 495px) {
-  #booking #step4 .step4-form .ticket-inner .ticket table td:nth-child(odd) {
-    padding-right: 16px;
-  }
-}
-#booking #step4 .step4-form .ticket-inner .ticket .addr {
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 200%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+#booking #step4 h4 {
   text-align: center;
-  position: absolute;
-  top: 163px;
-  left: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+#booking #step4 .step4-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+#booking #step4 .step4-form .ticket {
+  border: 2px solid #DE7777;
+  border-radius: 10px;
+  color: #FFDADA;
+}
+#booking #step4 .step4-form .ticket .ticket-title {
+  text-align: center;
+  padding: 15px 20px;
+  border-bottom: 2px solid #DE7777;
+}
+#booking #step4 .step4-form .ticket .ticket-inner {
+  padding: 15px 20px;
+}
+#booking #step4 .step4-form .ticket .ticket-inner ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+#booking #step4 .step4-form .form-inner table {
   width: 100%;
+  border-collapse: collapse;
+  font-weight: 500;
 }
-@media screen and (min-width: 495px) {
-  #booking #step4 .step4-form .ticket-inner .ticket .addr {
-    font-size: 16px;
-    line-height: 200%;
-    top: 214px;
-    left: 0;
-  }
+#booking #step4 .step4-form .form-inner table td:nth-child(2) {
+  color: #FFDADA;
 }
-#booking #step4 .step4-form .ticket-inner .ticket .addr svg {
-  display: block;
-  margin: 0 4px 0 0;
-}
-#booking #step4 .step4-form .ticket-inner .ticket .addr .note {
-  width: 100%;
-  font-size: 10px;
-  line-height: 150%;
-}
-@media screen and (min-width: 495px) {
-  #booking #step4 .step4-form .ticket-inner .ticket .addr .note {
-    font-size: 13px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  #booking #step4 .step4-form .form-inner {
-    width: calc(100% - 448px - 40px);
-  }
-}
-@media screen and (min-width: 1000px) {
-  #booking #step4 .step4-form .form-inner .flex {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-#booking #step4 .step4-form .form-inner .align-items-end {
-  align-items: flex-end;
-}
-#booking #step4 .step4-form .form-inner .phone-group .flex {
-  display: flex;
-  justify-content: space-between;
-}
-#booking #step4 .step4-form .form-inner .phone-group .code {
-  width: 80px;
-}
-@media screen and (min-width: 768px) {
-  #booking #step4 .step4-form .form-inner .phone-group .code {
-    width: 160px;
-  }
-}
-#booking #step4 .step4-form .form-inner .phone-group .phone {
-  width: calc(100% - 80px - 14px);
-}
-@media screen and (min-width: 768px) {
-  #booking #step4 .step4-form .form-inner .phone-group .phone {
-    width: calc(100% - 160px - 32px);
-  }
-}
-#booking #step4 .step4-form .form-inner .half-group .input-group {
-  margin-bottom: 26px;
-}
-@media screen and (min-width: 768px) {
-  #booking #step4 .step4-form .form-inner .half-group .input-group {
-    width: calc(50% - 16px);
-  }
-}
-#booking #step4 .step4-form .form-inner .filed-value {
-  padding-bottom: 2px;
-  border-bottom: 1px solid #F4115D;
-}
-#booking #step4 .step4-form .form-inner .note {
-  font-size: 12px;
-  line-height: 120%; /* 14.4px */
-  color: #E85455;
-  margin-top: -17px;
-}
-@media screen and (min-width: 768px) {
-  #booking #step4 .step4-form .form-inner .note {
-    margin-top: 0;
-    transform: translateX(-15px);
-  }
-}
-#booking #step4 .step4-form .form-inner .notice {
-  margin-top: 72px;
-}
-#booking #step4 .step4-form .form-inner .notice span, #booking #step4 .step4-form .form-inner .notice a {
-  color: #E85455;
-  cursor: pointer;
-}
-#booking #step4 .step4-form .form-inner .notice span:hover, #booking #step4 .step4-form .form-inner .notice a:hover {
-  text-decoration: underline;
+#booking #step4 .step4-form .form-inner table td {
+  vertical-align: top;
 }
 #booking #step4 .actions {
   width: 100%;
@@ -1278,7 +1283,13 @@ ol {
 }
 
 #booking-success {
-  color: #F4D9D4;
+  color: #fff;
+}
+#booking-success img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 40px auto;
 }
 #booking-success .info {
   text-align: center;
@@ -1295,17 +1306,18 @@ ol {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-  background-image: url(../img/booking_ticket_dark.png);
+  background-image: url(../img/booking_ticket_m.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
-  color: #fceee4;
+  color: #016060;
   position: relative;
 }
 @media screen and (min-width: 495px) {
   #booking-success .ticket {
     width: 448px;
     height: 301px;
+    background-image: url(../img/booking_ticket.png);
     padding: 24px 36px 0 192px;
   }
 }
@@ -1386,7 +1398,13 @@ ol {
 }
 
 #booking-fail {
-  color: #F4D9D4;
+  color: #fff;
+}
+#booking-fail img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 40px auto;
 }
 #booking-fail .info {
   text-align: center;
@@ -1404,3 +1422,4 @@ ol {
   margin-top: 60px;
 }/*# sourceMappingURL=booking.css.map */
 input[type="text"]:disabled,button:disabled{cursor: not-allowed;}
+.menu-item a{word-break: normal;}

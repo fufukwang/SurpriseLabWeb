@@ -42,213 +42,146 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
     @include('paris.frontend._nav')
-    
-    <main id="leading" style="display:none;">
-        <div class="title">
-            <img src="/paris/img/deco.svg" />
-            <h1>出示專屬邀請 揭開舞會序幕</h1>
-            <h3>Present your exclusive invitation</h3>
-        </div>
-        <div class="info">
-            親愛的貴賓，歡迎你的蒞臨。<br>
-            <br>
-            這場盛大晚宴，在正式開始之前，<br>
-            唯有收到獨特邀請的你，能優先推開舞會大門。
-        </div>
-        <div class="invite-code">
-            <p>請輸入獲得的專屬邀請碼<br> (找不到邀請碼？回頭看看信件或問卷吧！)</p>
-            <form onsubmit="return onFormSubmit()">
-                <div class="input-wrapper">
-                    <div class="input-group">
-                        <input type="text" name="code" autocomplete="off" />
-                    </div>
-                    <div class="error">
-                        <div class="error-inner">邀請碼未順利開通，請確認受邀身份</div>
-                    </div>
-                </div>
-                <div class="actions">
-                    <button class="p-btn primary go-next" type="submit">進入舞會</button>
-                </div>
-            </form>
-        </div>
-    </main>
-
     <main id="notice">
         <div class="title">
-            <img src="/paris/img/deco.svg" />
-            <h1>舞會須知</h1>
-            <h3>Information</h3>
-        </div>
-        <div class="info">
-            親愛的賓客，我們誠摯邀請你<br>
-            跳一晚最自由的舞、做一場最清醒的夢<br>
-            <br>
-            在這場 80 分鐘 VR 頂級晚宴中<br>
-            你可以期待<br>
-            跨越時空，沉浸在巴黎午夜中<br>
-            戴起面具，穿上數位高級訂製服<br>
-            脫離現實，做你選擇的自己<br>
-            <br>
-            期待與你在美好年代相見<br>
-            請點擊下方按鍵預約入場
+            <h1>巴黎舞會<br>劃位登記</h1>
+            <h3>告訴我們何時可以見到你<br>Pick your date and time</h3>
         </div>
         <div class="information">
+            <center><b>預約前，請花些時間詳讀規則。</b></center>
+            <br><br>
             <div class="information-inner">
                 <div class="col">
                     <div class="grid">
-                        <h4>地點</h4>
-                        <p>地點：國立臺灣科學教育館<br>（<a class="hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳）</p>
-                    </div>
-                    <div class="grid">
-                        <h4>場次</h4>
-                        <p>
-                            每週一 - 二｜公休<br>
-                            每週三 - 五<br>
-                            晚場：18:10｜19:30｜ 20:45 
-                        </p>
-                        <p>
-                            每週六 - 日<br>
-                            午場：12:50｜14:15｜15:30<br>
-                            晚場：18:10｜19:30｜ 20:45
-                        </p>
-                        <p>體驗時長：80 分鐘</p>
+                        <h4>劃位步驟</h4>
+                        <table>
+                            <tr>
+                                <td width="100">STEP 1</td>
+                                <td>輸入劃位序號</td>
+                            </tr>
+                            <tr>
+                                <td width="100">STEP 2</td>
+                                <td>選擇日期、時段</td>
+                            </tr>
+                            <tr>
+                                <td width="100">STEP 3</td>
+                                <td>填寫賓客資料</td>
+                            </tr>
+                            <tr>
+                                <td width="100">STEP 4</td>
+                                <td>確認訂單</td>
+                            </tr>
+                            <tr>
+                                <td width="100">STEP 5</td>
+                                <td>完成預約</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="col">
                     <div class="grid">
                         <h4>注意事項</h4>
-                        <ul>
-                            <li>
-                                <p>
-                                    現場包含 VR 體驗和 1 杯調飲，為顧及體驗安全：
-                                    <ul>
-                                        <li>孕婦、心臟病和高血壓患者禁止體驗</li>
-                                        <li>體內有電子儀器者（例：心律調整器、助聽器、除顫器）及患有癲癇容易暈倒、視力受損者下訂前需諮詢專業醫師以維護體驗安全</li>
-                                        <li>未滿 12 歲無法參與、13-16 歲需由家長購票陪同體驗</li>
-                                    </ul>
-                                </p>
-                            </li>
-                            <li><p>包場需求、其他特殊服務，請來信客服詢問<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
-                            <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" href="/lebaldeparis/rules">[舞會規則]</a></p></li>
-                        </ul>
+                        <ol>
+                            <li>看到 [您已完成預約] 頁面，才代表您已劃位成功</li>
+                            <li>若日期呈現灰色或無法選擇，代表該場次已滿，或是當日不開放。</li>
+                            <li>請確實填寫正確的電子信箱與電話，後續將以此與您聯繫。</li>
+                        </ol>
                     </div>
                 </div>
             </div>
+            <div class="contact">
+                <b>若有任何問題，歡迎來信</b><br>
+                <a href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a>
+            </div>
             <div class="actions">
-                <button class="p-btn primary notice-btn">預約入場</button>
+                <button class="p-btn primary notice-btn">前往劃位</button>
             </div>
         </div>
     </main>
 
-    <main id="booking" style="display:none;">
-        <form id="booking_form" action="booking_success.html" method="post">
-            {{ csrf_field() }}
+    <main id="booking" style="display: none;">
+        <form id="booking_form" action="" method="post">
             <div id="step1" class="step">
                 <div class="title">
-                    <img src="/paris/img/deco.svg" />
-                    <h1>預約體驗</h1>
-                    <h3>Booking</h3>
-                </div>
-                <div class="price">
-                    <div class="item">
-                        <div class="icon">
-                            <img src="/paris/img/booking_ticket1.png" />
-                        </div>
-                        <h4>單人獨舞票</h4>
-                        <h2>$2,000</h2> 
-                        <div class="desc">
-                            （含一杯調飲）<br>
-                            <br>
-                            一個人自由地探索<br>
-                            帶著好奇心闖入花漾年代
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="icon">
-                            <img src="/paris/img/booking_ticket2.png" />
-                        </div>
-                        <h4>雙人共舞票</h4>
-                        <h2>$3,800<span>($1,900/人)</span></h2> 
-                        <div class="desc">
-                            （含兩杯調飲）<br>
-                            <br>
-                            邀請最重要的人<br>
-                            感受奢華絢爛的巴黎午夜
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="icon">
-                            <img src="/paris/img/booking_ticket3.png" />
-                        </div>
-                        <h4>四人群舞票</h4>
-                        <h2>$7,400<span>($1,850/人)</span></h2> 
-                        <div class="desc">
-                            （含四杯調飲）<br>
-                            <br>
-                            與熟悉的人狂歡<br>
-                            摸索與彼此的第一支舞
-                        </div>
-                    </div>
+                    <h1>輸入序號</h1>
+                    <h3>Code</h3>
                 </div>
 
-                <div class="selects">
-                    <div class="type">
-                        <div class="input-group">
-                            <label>票種</label>
-                            <select name="ticket" data-placeholder="選擇">
-                                <option></option>
-                                <option value="單人獨舞票">單人獨舞票</option>
-                                <option value="雙人共舞票">雙人共舞票</option>
-                                <option value="四人群舞票">四人群舞票</option>
-                            </select>
-                            <div class="select-wrapper"></div>
-                        </div>
-                    </div>
-                    <div class="guests">
-                        <div class="input-group">
-                            <label>張數</label>
-                            <select name="num" data-placeholder="選擇張數">
-                                <option></option>
-                                <option value="1">1</option>
-                            </select>
-                            <div class="select-wrapper"></div>
-                        </div>
-                    </div>
-                    <div class="date">
-                        <div class="input-group">
-                            <label>日期 Date</label>
-                            <input type="text" name="booking_date" id="booking_date" autocomplete="off" placeholder="選擇日期" />
-                            <div class="calender-wrapper"></div>
-                        </div>
-                    </div>
-                    <div class="time">
-                        <div class="input-group">
-                            <label>場次時間</label>
-                            <select name="booking_time" id="booking_time" data-placeholder="選擇時間場次"></select>
-                            <div class="select-wrapper"></div>
-                        </div>
-                    </div>
+                <div class="information">
+                    <div class="information-title">劃位小訣竅</div>
+                    <ol>
+                        <li>若您有多個序號（包含不同票種的序號），請依序輸入後按下確認，再於出現的下一個輸入框輸入其他序號</li>
+                        <li>全部的序號都輸入後，請確認每個都按下了確認，並出現了「劃位序號XXXXX XXXX票」的提示文字</li>
+                        <li>系統將依照劃位人數尋找尚有空位的日期與場次，請確實輸入所有序號</li>
+                    </ol>
                 </div>
 
-                <div class="actions">
-                    <div class="p-btn primary go-next disabled">下一步</div>
+                <div class="form-inner">
+                    <div class="tickets">
+                        <div class="tickets-title">劃位序號</div>
+                        <div>
+                            <div>如有多組序號，請一次填入一組劃位序號，按下確認後折抵</div>
+                            <br>
+                            <div class="fields">
+                                <div class="input-group">
+                                    <input type="text" placeholder="輸入序號" />
+                                    <button type="button">確認</button>
+                                    <div class="msg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="p-btn primary go-prev">上一步</div>
+                        <div class="p-btn primary go-next disabled">下一步</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step2" class="step" style="display: none;">
+                <div class="title">
+                    <h1>日期、時段選擇</h1>
+                    <h3>Date and Time</h3>
+                </div>
+
+                <div class="form-inner">
+                    <div class="input-group date">
+                        <label>日期</label>
+                        <input type="text" name="booking_date" id="booking_date" autocomplete="off" placeholder="選擇日期" />
+                        <div class="calender-wrapper"></div>
+                    </div>
+
+                    <div class="input-group time">
+                        <label>場次時間</label>
+                        <select name="booking_time" id="booking_time" data-placeholder="選擇時間場次"></select>
+                        <div class="select-wrapper"></div>
+                    </div>
+    
+                    <div class="actions">
+                        <div class="p-btn primary go-prev">上一步</div>
+                        <div class="p-btn primary go-next disabled">下一步</div>
+                    </div>
                 </div>
             </div>
     
-            <div id="step2" class="step" style="display: none;">
+            <div id="step3" class="step" style="display: none;">
                 <div class="title">
-                    <img src="/paris/img/deco.svg" />
                     <h1>填寫聯絡資訊</h1>
-                    <h3>Info</h3>
-                </div>
+                    <h3>Information</h3>
+                </div>    
 
-                <div class="step2-form">
+                <div class="form-inner">
+
+                    <div><center>請填寫正確電子信箱與電話，預約成功後將寄送行前通知與重要訊息（建議避開 yahoo 與 hotmail 信箱，以免漏信）</center></div>
+                    <br><br>
+
                     <div class="input-group">
-                        <label>* 姓名（為維護你的訂位權益，請留全名）</label>
+                        <label>* 姓名</label>
                         <input class="required" type="text" name="name" placeholder="兔子先生" />
                     </div>
                     <div class="input-group phone-group">
-                        <label>* 手機</label>
+                        <label>* 電話</label>
                         <div class="flex">
                             <!-- <input class="code required" type="text" name="" placeholder="+886" /> -->
                             <div class="code-wrapper">
@@ -279,7 +212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="select-wrapper"></div>
                         </div>
                     </div>
-                    <!-- <div class="input-group">
+                    <div class="input-group">
                         <label>統一編號（無此需求可不須填寫）</label>
                         <input class="tax" type="text" name="company_tax_ID" />
                     </div>
@@ -290,24 +223,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="input-group">
                         <label>手機載具 （無此需求可不須填寫）</label>
                         <input class="invoices" type="text" name="vehicle" />
+<<<<<<< HEAD
                     </div> -->
                     <div class="input-group">
                         <label>備註</label>
                         <textarea name="notice" rows="8" placeholder="若不飲用酒精，請提前備註，飲品不提供現場調整；&#10;VR 體驗提供法文、西班牙文、義大利文、德文，若有需求，請備註語言與對應人數"></textarea>
+=======
+>>>>>>> backme-2312
                     </div>
-                    <div class="half-group flex">
-                        <div class="input-group">
-                            <label>折扣碼</label>
-                            <input type="text" name="discount" id="discount" maxlength="20" />
-                            <span class="discount_note" style="color: #dc3545;"></span>
-                        </div>
-                        <div class="input-group">
-                            <label>劃位序號</label>
-                            <input type="text" name="gift" id="gift" maxlength="20" />
-                            <span class="gift_note" style="color: #dc3545;"></span>
-                        </div>
+                    <div class="input-group">
+                        <label>其他備註</label>
+                        <textarea name="notice" rows="8" placeholder="若不飲用酒精，請提前備註，飲品不提供現場調整；&#10;VR 體驗提供法文、西班牙文、義大利文、德文，若有需求，請備註語言與對應人數"></textarea>
                     </div>
                     <div class="checkboxes">
+                        <div class="checkbox-group">
+                            <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
+                                <input type="checkbox" name="ck_rule" value="1" />
+                                <span>我已詳讀並遵守</span> 
+                            </label>
+                            <a target="_blank" href="/lebaldeparis/rules">巴黎舞會劃位與體驗規則</a>
+                        </div>
                         <div class="checkbox-group">
                             <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
                                 <input type="checkbox" name="ck_privacy" value="1" />
@@ -315,60 +250,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </label>
                             <span class="modal-btn modal-btn-privacy" data-custom-open="modal-privacy">隱私權條款</span>
                         </div>
-                        <div class="checkbox-group">
-                            <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
-                                <input type="checkbox" name="ck_rule" value="1" />
-                                <span>我已詳讀並遵守</span> 
-                            </label>
-                            <a target="_blank" href="/lebaldeparis/rules">舞會規則</a>
-                        </div>
                     </div>
                     <div class="actions">
-                        <div class="p-btn primary go-next disabled">確認聯絡資訊</div>
-                        <div class="p-btn primary outline go-prev">回上一步</div>
+                        <div class="p-btn primary go-prev">上一步</div>
+                        <div class="p-btn primary go-next disabled">下一步</div>
                     </div>
                 </div>
             </div>
 
-            <div id="step3" class="step" style="display: none;">
+            <div id="step4" class="step" style="display:none;">
                 <div class="title">
                     <img src="/paris/img/deco.svg" />
                     <h1>確認資訊</h1>
-                    <h3>Confirmation</h3>
+                    <h3>Confirm</h3>
                 </div>
 
-                <div class="step3-form">
+                <div class="step4-form">
                     <div class="ticket-inner">
                         <div class="ticket">
-                            <table>
+                            <table id="ticket-info">
                                 <tr>
-                                    <td>票種</td>
-                                    <td>巴黎舞會雙人套票</td>
+                                    <td colspan="2">巴黎舞會 Le Bal de Paris de Blanca</td>
                                 </tr>
                                 <tr>
-                                    <td>張數</td>
-                                    <td>2</td>
+                                    <td>人數</td>
+                                    <td class="tPeople">2 人</td>
                                 </tr>
                                 <tr>
                                     <td>預約日期</td>
-                                    <td>2023/11/11</td>
+                                    <td class="tDay">2023/11/11</td>
                                 </tr>
                                 <tr>
                                     <td>預約時段</td>
-                                    <td>18:30-20:00</td>
+                                    <td class="tTime">18:30-20:00</td>
                                 </tr>
                                 <tr>
-                                    <td>金額</td>
-                                    <td>3,900 元</td>
+                                    <td>使用票券</td>
+                                    <td class="tCount">2 張</td>
                                 </tr>
                             </table>
                             <div class="addr">
                                 <svg width="11" height="16" viewBox="0 0 11 16" fill="none">
                                     <path d="M5.5 0C2.46269 0 0 2.51473 0 5.61624C0 8.71775 5.5 16 5.5 16C5.5 16 11 8.71775 11 5.61624C11 2.51473 8.54073 0 5.5 0ZM5.5 8.60249C3.88557 8.60249 2.57898 7.26479 2.57898 5.61973C2.57898 3.97468 3.88899 2.63698 5.5 2.63698C7.11101 2.63698 8.42102 3.97468 8.42102 5.61973C8.42102 7.26479 7.11101 8.60249 5.5 8.60249Z" fill="#016060"/>
                                 </svg>
+<<<<<<< HEAD
                                 <div>111 台北市士林區的某棟秘密建築</div>
                                 <div class="note">
                                     （詳細地點請容許我們先保密，我們將慢慢向你揭露）<br>
+=======
+                                <div>國立臺灣科學教育館</div>
+                                <div class="note">
+                                    111 臺北市士林區士商路189號 B1 兒童廳<br>
+>>>>>>> backme-2312
                                     <span style="color: #F4115E;">此圖面不代表訂位完成，請往下操作</span>
                                 </div>
                             </div>
@@ -400,54 +333,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="filed-value">0</div>
                             </div>
                         </div>
-                        <!-- <div class="input-group">
+                        <div class="input-group">
                             <label>統一編號（無此需求可不須填寫）</label>
                             <div class="filed-value">12345678</div>
                         </div>
                         <div class="input-group">
                             <label>公司抬頭</label>
-                            <div class="filed-value"></div>
+                            <div class="filed-value">-</div>
                         </div>
                         <div class="input-group">
                             <label>手機載具</label>
-                            <div class="filed-value"></div>
-                        </div> -->
+                            <div class="filed-value">-</div>
+                        </div>
                         <div class="input-group">
                             <label>備註</label>
                             <div class="filed-value">需要輪椅，一位孕婦</div>
                         </div>
-                        <div class="half-group flex align-items-end">
-                            <div class="input-group">
-                                <label>折扣碼</label>
-                                <div class="filed-value">HaveANiceDay</div>
-                            </div>
-                            <div class="input-group">
-                                <div class="note discount">已折扣100元</div>
-                            </div>
-                        </div>
-                        <div class="half-group flex align-items-end">
-                            <div class="input-group">
-                                <label>劃位序號</label>
-                                <div class="filed-value">XYZ321</div>
-                            </div>
-                            <div class="input-group">
-                                <div class="note gift">已抵用4000元</div>
-                            </div>
-                        </div>
-                        <div class="notice">按下「前往付款」代表我已閱讀並同意 <span data-custom-open="modal-privacy">隱私權條款</span> 與 <a target="_blank" href="/lebaldeparis/rules">購票規則</a></div>
                     </div>
-                </div>
 
-                <div class="actions">
-                    <button class="p-btn primary go-next submitForm" type="button">前往付款 3,900 元</button>
-                    <div class="p-btn primary outline go-prev">回上一步</div>
+                    <div class="actions">
+                        <div class="p-btn primary go-prev">上一步</div>
+                        <div class="p-btn primary go-next sendOrderBtn">確認劃位</div>
+                    </div>
                 </div>
             </div>
         </form>
     </main>
-
+    <!-- // 成功 -->
+    <main id="booking-success" style="display:none;">
+        <div class="title">
+            <img src="/paris/img/deco.svg" />
+            <h1>預約完成</h1>
+            <h3>Reservation completed</h3>
+        </div>
+        <div class="info">
+            恭喜完成預約，巴黎舞會期待你的蒞臨<br>
+            <br>
+            稍後你將收到訂位確認信<br>
+            當日將依訂位確認信報到入場<br>
+            若未收到信，請優先尋找垃圾信件匣<br>
+            或來信 <a href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a><br>
+            <br>
+            赴約舞會前，你將收到行前須知<br>
+            更多細節，歡迎點擊下方按鍵了解
+        </div>
+        <div class="ticket">
+            <table id="ticket-success">
+                <tr>
+                    <td colspan="2">巴黎舞會 Le Bal de Paris de Blanca</td>
+                </tr>
+                <tr>
+                    <td>人數</td>
+                    <td class="tPeople">2 人</td>
+                </tr>
+                <tr>
+                    <td>預約日期</td>
+                    <td class="tDay">2023/11/11</td>
+                </tr>
+                <tr>
+                    <td>預約時段</td>
+                    <td class="tTime">18:30-20:00</td>
+                </tr>
+                <tr>
+                    <td>使用票券</td>
+                    <td class="tCount">2 張</td>
+                </tr>
+            </table>
+            <div class="addr">
+                <svg width="11" height="16" viewBox="0 0 11 16" fill="none">
+                    <path d="M5.5 0C2.46269 0 0 2.51473 0 5.61624C0 8.71775 5.5 16 5.5 16C5.5 16 11 8.71775 11 5.61624C11 2.51473 8.54073 0 5.5 0ZM5.5 8.60249C3.88557 8.60249 2.57898 7.26479 2.57898 5.61973C2.57898 3.97468 3.88899 2.63698 5.5 2.63698C7.11101 2.63698 8.42102 3.97468 8.42102 5.61973C8.42102 7.26479 7.11101 8.60249 5.5 8.60249Z" fill="#fceee4"/>
+                </svg>
+                <div>國立臺灣科學教育館</div>
+                <div class="note">
+                    111 臺北市士林區士商路189號 B1 兒童廳<br>
+                    <span style="color: #F4115E;">此圖面不代表訂位完成，請往下操作</span>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <a class="p-btn primary" href="/lebaldeparis/rules">關於巴黎舞會</a>
+        </div>
+    </main>
+    <!-- // 失敗 -->
+    <main id="booking-fail" style="display:none;">
+        <div class="title">
+            <img src="/paris/img/deco.svg" />
+            <h1>預約未完成</h1>
+            <h3>Reservation Incompleted</h3>
+        </div>
+        <div class="info">
+            很抱歉，你的舞會預約未完成<br>
+            請確認網路訊號穩定，並於時限內完成付款<br>
+            <br>
+            購票過程若有任何疑問，歡迎來信客服<br>
+            <a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a>
+        </div>
+        <div class="actions">
+            <a target="_blank" class="p-btn primary" href="https://surpriselab.backme.tw/shops/3405?locale=zh-TW">重新購票</a>
+        </div>
+    </main>
     @include('paris.frontend._footer')
-
     <div class="modal micromodal-slide" id="modal-privacy" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-custom-close="modal-privacy">
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title">
