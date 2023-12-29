@@ -194,6 +194,27 @@ class FrontController extends WebController
                 } else {
                     return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
                 }
+             } elseif($request->has('act') && $request->act=='CheckterTPCoupons'){
+                $coupon = coupon::where('code',$request->code)
+                    ->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
+                if($coupon>0){
+                    $me = coupon::where('code',$request->code)->select('type')->first();
+                    $type = '';
+                    $cut = 0;
+                    switch ($me->type) {
+                        case 'p1': $type = '單人票'; $cut = 1; break;
+                        case 'p2': $type = '雙人票'; $cut = 2; break;
+                        case 'p6': $type = '六人票'; $cut = 6; break;
+                    }
+                    $pro = pro::select($me->type.' as money')->find($request->num);
+                    return Response::json([
+                        'success' => 'Y',
+                        'cut' => $cut,
+                        'type' => $type,
+                    ], 200);        
+                } else {
+                    return Response::json(['success'=> 'N','message'=>'序號錯誤或已使用'], 200);
+                }
             } elseif($request->has('act') && $request->act=='CheckterTPDiscount'){
                 $slug = $request->useType ?? 'pay';
                 $discount_obj = false;
@@ -243,6 +264,117 @@ class FrontController extends WebController
             }
         } else {
             return Response::json(['success'=> 'N','message'=>'序號錯誤'], 200);
+        }
+    }
+    public function ReOrderData(Request $request){
+        try {
+            $count = $this->grenOrderSN();
+            $people = $request->people;
+            $act = pro::where('id',$request->pro_id)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts','p1','p2','p6')->first();
+            if($people>$act->Count){
+                Log::error('人數滿了');
+                return Response::json(['success'=> 'N','message'=>'人數滿了'], 200);
+            }
+            
+            $pay_type = '信用卡';
+            // $money = $act->$ticket * $request->num;
+            $money = 0;
+            $cut1 = 0; $cut2 = 0; $cutPeople = 0;
+            // 確認庫碰碼
+            $coupon = 0;
+            $couponCode = '';
+            $manage = '';
+            $ticket = '';
+            if($request->has('coupons') && $request->coupons !=''){
+                $couponCode = $request->coupons;
+                foreach ($couponCode as $key => $value) {
+                    $coN = coupon::where('code',$value)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
+                    if($coN>0){
+                        $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
+                        $mytype = $me->type;
+                        coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
+                        $money += $act->$mytype;
+                        $cut1 += $act->$mytype;
+                        $manage .= $value.'折抵 '.$cut1."\n";
+
+                        switch($mytype){
+                            case 'p1': $cutPeople += 1; break;
+                            case 'p2': $cutPeople += 2; break;
+                            case 'p6': $cutPeople += 6; break;
+                        }
+                        if($key == 0){ $ticket = $mytype;
+                        } else {
+                            if($ticket != $mytype) $ticket = '';
+                        }
+                        /*
+                        if($ticket == $mytype){
+                            coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
+                            $cut1 += $act->$mytype;
+                            $manage .= $value.'折抵 '.$cut1."\n";
+                        } else {
+                            Log::error('giftcard種類不符');    
+                            return view('paris.frontend.booking_fail');
+                        }
+                        */
+                    } else {
+                        Log::error('序號驗證錯誤');
+                        return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
+                    }
+                }
+            }
+            if(count($request->coupons) == 0 ){
+                Log::error('序號驗證錯誤0');
+                return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
+            }
+
+            $pay_status = '未完成';
+            if(intval($money - $cut1 - $cut2)  == 0 && $people == $cutPeople){
+                $pay_status = '已付款';
+            }
+
+            $data = [
+                'pro_id'     => $request->pro_id,
+                'pople'      => $people,
+                'name'       => $request->name,
+                'tel'        => $request->area_code.$request->phone,
+                'email'      => $request->email,
+                'notes'      => $request->notes,
+                'coupon'     => $coupon,
+                'sn'         => $count,
+                'money'      => $money - $cut1 - $cut2,
+                'pay_type'   => $pay_type,
+                'pay_status' => $pay_status,
+                'result'     => '',
+                'manage'     => $manage,
+                'is_overseas'=> 2,
+                'ticket'     => $ticket,
+                'dis_code'   => '',
+                'dis_money'  => 0,
+                'co_code'    => '',
+                'co_money'   => $cut1,
+                'tax_id'     => $request->company_tax_ID ?? '',
+                'tax_name'   => $request->company_name ?? '',
+                'vehicle'    => $request->vehicle ?? '',
+                'need_english' => $request->need_english ?? 0,
+                'need_chinese' => $request->need_chinese ?? 0,
+            ];
+            $order = order::create($data);
+
+            $sentSuccess = false;
+            if($people == $cutPeople){
+                $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                    ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+
+                $this->sendMailCenter($ord);
+                $this->sendSmsCenter($ord);
+                return Response::json(['success'=> 'Y','message'=>'成功登記'], 200);
+            } else {
+                return Response::json(['success'=> 'N','message'=>'人數錯誤'], 200);
+            }
+
+        } catch (\Exception $exception) {
+            Log::error($exception);
+            return Response::json(['success'=> 'N','message'=>'其他錯誤'], 200);
         }
     }
 /*

@@ -443,6 +443,7 @@ class OrderController extends WebController
                         case 'p1': $ticket = '單人獨舞票'; $num = $row['pople']; $price = $row['p1']; break;
                         case 'p2': $ticket = '雙人共舞票'; $num = $row['pople'] / 2; $price = $row['p2']; break;
                         case 'p4': $ticket = '四人群舞票'; $num = $row['pople'] / 4; $price = $row['p4']; break;
+                        default: $ticket = '混合票種'; $num = 1; $price = $row['co_money']; break;
                     }
                     $handling_fee = 0;
                     if($pay_status == '未完成'){

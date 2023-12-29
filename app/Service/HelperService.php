@@ -95,7 +95,7 @@ class HelperService {
                         $m->subject('【巴黎舞會】慶祝重要日子，還差一步....你完成下訂了嗎？');
                         break;
                     case 'coupon':
-                        $m->subject('coupon');
+                        $m->subject('【巴黎舞會】劃位序號信件');
                         break;
                 }
                     
@@ -155,13 +155,16 @@ class HelperService {
                         $m->subject('【落日轉運站】落日月台 訂位確認信');
                         break;
                     case 'D7':
-                        $m->subject('terTP 行前你需要知道的九件事');
+                        $m->subject('【落日月台】旅程即將啟程，行前您需要知道的十件事');
+                        break;
+                    case 'D3':
+                        $m->subject('【落日月台】啟程前，你會需要這個。');
                         break;
                     case 'undone':
                         $m->subject('terTP....你完成下訂了嗎？');
                         break;
                     case 'coupon':
-                        $m->subject('terTP coupon');
+                        $m->subject('【落日月台】劃位序號信件');
                         break;
                 }
                     
