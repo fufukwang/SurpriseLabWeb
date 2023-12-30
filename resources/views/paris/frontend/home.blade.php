@@ -175,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$4,000<span>($2,000/人)</span></h2> 
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <span>【雙人預購優惠】購票輸入<br>【twogether】享$100折扣</span>
+                        <br>
                         <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
@@ -190,7 +190,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,600<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <br><br>
+                        <span>【四人預購優惠】購票輸入<br>【dancefourfun】享 $200 折扣</span>
+                        <br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
@@ -221,7 +222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$4,000<span>($2,000/人)</span></h2> 
                     <div class="desc">
                         （含兩杯調飲）<br>
-                        <span>【雙人預購優惠】購票輸入<br>【twogether】享$100折扣</span>
+                        <br>
                         <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
@@ -236,7 +237,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,600<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <br><br>
+                        <span>【四人預購優惠】購票輸入<br>【dancefourfun】享 $200 折扣</span>
+                        <br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
                     </div>
