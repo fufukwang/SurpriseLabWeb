@@ -385,7 +385,7 @@ class InvController extends WebController
     // 發票報廢
     public function InvClose(Request $request){
         try{
-            $inv = inv::where('order_id',$request->id)->first();
+            // $inv = inv::where('order_id',$request->id)->first();
             $post_data_array = array(
                 'RespondType' => 'JSON',
                 'Version' => '1.0',
@@ -397,8 +397,9 @@ class InvController extends WebController
             $results = json_decode($result['web_info'],true);
             // $r = json_decode($results['Result'],true);
             if($results['Status'] == 'SUCCESS'){
-                $inv->is_cancal = 1;
-                $inv->save();
+                inv::where('order_id',$request->id)->update(['is_cancal'=>1]);
+                // $inv->is_cancal = 1;
+                // $inv->save();
             }
             return Response::json($results, 200);
         } catch (Exception $exception) {
