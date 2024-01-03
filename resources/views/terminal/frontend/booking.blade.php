@@ -232,14 +232,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <label>* 電子信箱</label>
                         <input class="email required" type="text" name="email" placeholder="ex. mindthegap@surpriselab.com.tw" />
                     </div>
-                    <div class="input-group">
+                    <!-- <div class="input-group">
                         <label>公司抬頭</label>
                         <input type="text" name="company_name" placeholder="ex. 驚喜製造股份有限公司" />
                     </div>
                     <div class="input-group">
                         <label>發票統編</label>
                         <input class="tax" type="text" name="company_tax_ID" placeholder="ex. 88888888" />
-                    </div>
+                    </div> -->
                     <div class="input-group">
                         <label>其他備註</label>
                         <textarea name="notice" rows="8" placeholder="ex. 特殊事項備註"></textarea>
@@ -313,14 +313,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <td>電子信箱</td>
                                 <td class="filed-value">mingthegap@surpriselab.com.tw</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>公司抬頭</td>
                                 <td class="filed-value">驚喜製造股份有限公司</td>
                             </tr>
                             <tr>
                                 <td>發票統編</td>
                                 <td class="filed-value">000000000</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>其他備註</td>
                                 <td class="filed-value"></td>
@@ -430,6 +430,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Custom -->
     <script src="/terminalAssets/js/plugins/micromodal.min.js"></script>
     <script src="/terminalAssets/js/phone_code.js"></script>
-    <script src="/terminalAssets/js/booking.js?v=231127"></script>
+    <script src="/terminalAssets/js/booking.js?240103"></script>
 </body>
 </html>
