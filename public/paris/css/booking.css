@@ -1403,3 +1403,4 @@ ol {
   justify-content: center;
   margin-top: 60px;
 }/*# sourceMappingURL=booking.css.map */
+input[type="text"]:disabled,button:disabled{cursor: not-allowed;}

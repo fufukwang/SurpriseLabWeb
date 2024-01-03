@@ -793,3 +793,5 @@ ol {
         margin-top: 60px;
     }
 }
+
+input[type="text"]:disabled,button:disabled{cursor: not-allowed;}

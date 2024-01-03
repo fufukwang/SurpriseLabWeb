@@ -183,7 +183,7 @@
                                     @endif
                                     <div>
                                         <p>
-                                            範例檔案 : <a href="/example/terTP範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
+                                            範例檔案 : <a href="/example/tertp範例檔案.xlsx" target="_blank">xlsx 範例檔案</a>
                                         </p>
                                         <p>
                                             說明:<br />
