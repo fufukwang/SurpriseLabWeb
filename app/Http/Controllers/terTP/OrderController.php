@@ -458,6 +458,7 @@ class OrderController extends WebController
                         }
                     }
                     $imoney = (($price * $num) - $row['dis_money'] - $row['co_money'] - $row['refund'] + $handling_fee);
+                    if($row['pay_type'] == '合作販售'){ $imoney = $pay_money; }
                     // 發票
                     $inv_number = '';
                     $inv_time = '';
