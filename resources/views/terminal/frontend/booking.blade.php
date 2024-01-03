@@ -430,6 +430,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Custom -->
     <script src="/terminalAssets/js/plugins/micromodal.min.js"></script>
     <script src="/terminalAssets/js/phone_code.js"></script>
-    <script src="/terminalAssets/js/booking.js?2401031"></script>
+    <script src="/terminalAssets/js/booking.js?240103"></script>
 </body>
 </html>
