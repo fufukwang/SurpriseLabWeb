@@ -1,251 +1,227 @@
 @import "_default";
 @import "_micromodal.css";
 
-#leading {
+main {
+    overflow: hidden;
     color: $color17;
+}
 
-    .info {
-        text-align: center;
-        margin-bottom: 60px;
-        @media screen and (min-width:1500px) {
-            margin-bottom: 142px;
-        }
+h1 {
+    letter-spacing: 0;
+}
+
+h3 {
+    color: #E28A8A;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-indent: 0;
+    text-transform: none;
+}
+
+h4 {
+    font-size: 16px;
+    letter-spacing: 0;
+    text-indent: 0;
+}
+
+.information {
+    max-width: 850px;
+    margin: 0 auto 70px auto;
+    padding: 0 20px;
+    @media screen and (min-width:768px) {
+        padding: 0;
     }
 
-    .invite-code {
-        max-width: 544px;
-        margin: 0 auto;
+    .information-title {
         text-align: center;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+}
 
-        .input-wrapper {
-            margin-bottom: 30px;
-            @media screen and (min-width:1500px) {
-                margin-bottom: 115px;
-            }
+ol {
+    margin: 0;
+    padding-left: 1.5em;
+}
 
-            .input-group {
-                margin-bottom: 0;
-            }
+.form-inner {
+    max-width: 630px;
+    margin: 0 auto;
+}
 
-            .error {
-                color: $color4;
-                margin-top: 12px;
-                overflow: hidden;
+.actions {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 70px;
+    @media screen and (min-width:768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-                .error-inner {
-                    opacity: 0;
-                    transform: translateY(100%);
-                }
-
-                &.show .error-inner {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        }
-
-        .actions {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .p-btn {
-                margin-bottom: 40px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
+    .p-btn {
+        width: 180px;
+        margin-bottom: 20px;
+        padding: 10px 0;
+        @media screen and (min-width:768px) {
+            margin-bottom: 0;
         }
     }
 }
 
+.checkbox-group {
+    color: #fff;
+
+    .modal-btn, a {
+        color: #FF9C9C;
+    }
+}
+
+.input-group {
+    margin-bottom: 30px;
+
+    input[type=text], 
+    input[type=email],
+    textarea {
+        border-radius: 4px;
+        border: 1px solid #DE7777;
+    }
+
+    button {
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .select2 {
+        border-radius: 4px !important;
+        border: 1px solid #DE7777;
+    }
+}
+
 #notice {
-    color: $color17;
-
-    a {
-        color: $color17;
-    }
-
-    .info {
-        text-align: center;
-        margin-bottom: 88px;
-    }
-
     .information {
-        max-width: 1032px;
-        margin: 0 auto;
-        padding: 0 20px;
-        @media screen and (min-width:768px) {
-            padding: 0;
-        }
-
         .information-inner {
+            margin: 0 0 40px 0;
             @media screen and (min-width:768px) {
                 display: flex;
                 justify-content: space-between;
+                margin: 0 -80px 70px -80px;
             }
 
             .col {
                 @media screen and (min-width:768px) {
-                    width: calc(50% - 16px);
+                    padding: 0 80px;
                 }
             }
 
-            .grid {
-                padding-top: 24px;
-                margin-bottom: 20px;
-            }
-
-            .col:nth-child(1) .grid:nth-child(1) {
+            .col:nth-child(1) {
+                margin-bottom: 40px;
                 @media screen and (min-width:768px) {
-                    margin-bottom: 70px;
+                    margin-bottom: 0;
                 }
             }
 
-            ul {
-                margin: 0;
-                padding-left: 18px;
+            td {
+                white-space: nowrap;
+            }
+        }
 
-                li {
-                    margin-bottom: 2rem;
+        .contact {
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 50px;
+            @media screen and (min-width:768px) {
+                font-size: 20px;
+            }
 
-                    ul {
-                        // list-style: disc;
-                        margin-bottom: 0;
-                        padding-left: 2em;
+            a {
+                color: #FF9C9C;
+                text-decoration: underline;
 
-                        li {
-                            margin-bottom: 0;
-                        }
-                    }
+                &:hover {
+                    text-decoration: none;
                 }
             }
         }
 
         .actions {
-            display: flex;
             justify-content: center;
-            margin-top: 56px;
         }
     }
 }
 
 #booking {
-    color: $color17;
 
-    a {
-        color: $color17;
-    }
-    
     #step1 {
-        max-width: 784px;
-        margin: 0 auto;
-        padding-bottom: 60px;
-
-        .input-group:last-child {
-            margin-bottom: 20px;
+        .information {
+            max-width: 500px;
         }
 
-        .price {
-            text-align: center;
-            margin-bottom: 98px;
+        .tickets {
+            color: #FF9C9C;
             @media screen and (min-width:768px) {
                 display: flex;
                 justify-content: space-between;
-            }
-
-            .item {
-                margin-bottom: 70px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            .icon {
-                margin-bottom: 29px;
-
-                @media screen and (min-width:768px) {
-                    width: 100%;
-                    height: 162px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                img {
-                    max-height: 100%;
-                    object-fit: contain;
-                }
-            }
-
-            h4 {
-                margin-bottom: 10px;
-                @media screen and (min-width:768px) {
-                    margin-bottom: 29px;
-                }
-            }
-
-            h2 {
-                color: $color4;
-
-                span {
-                    font-family: 'Noto Sans TC';
-                    font-weight: 400;
-                    line-height: 200%;
-                    margin-left: 14px;
-                    font-size: 16px;
-                    font-style: normal;
-                    @media screen and (min-width:768px) {
-                        font-size: 18px;
-                    }
-                }
-            }
-
-            .desc {
-                margin-top: 30px;
-                color: $color17;
-                font-family: 'Noto Sans TC';
-                font-weight: 400;
-                line-height: 200%; /* 36px */
-                @media screen and (min-width:768px) {
-                    text-align: left;
-                }
-            }
-        }
-
-        .selects {
-            @media screen and (min-width:768px) {
-                margin-bottom: 60px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: flex-start;
             }
 
             &>div {
                 @media screen and (min-width:768px) {
-                    width: calc(50% - 16px);
+                    flex: 1;
+                }
+            }
+
+            .tickets-title {
+                color: #fff;
+                font-weight: 700;
+                @media screen and (min-width:768px) {
+                    width: 150px;
+                    flex: none;
                 }
             }
         }
 
-        .guests {
-            @media screen and (min-width:768px) {
-                width: 256px;
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            input {
+                width: calc(100% - 90px);
+            }
+
+            button {
+                color: #fff;
+                background: #036060;
+                border: none;
+                width: 70px;
+                font-size: 17px;
+            }
+
+            .msg {
+                width: 100%;
+                color: #C90000;
+                opacity: 0;
             }
         }
+    }
 
+    #step2 {
+        min-height: 600px;
+        
         .date {
-            opacity: 0;
-            pointer-events: none;
+            // opacity: 0;
+            // pointer-events: none;
             transition: opacity .2s;
-            @media screen and (min-width:768px) {
-                width: calc(100% - 256px - 32px);
-            }
-
+            
             .calender-wrapper {
                 position: absolute;
                 right: 0;
@@ -270,18 +246,18 @@
                         border-radius: 4px;
                         padding: 7px 16px;
                     }
-                      
+                        
                     .ui-datepicker-title {
                         font-size: 16px;
                         line-height: 2.25;
                         letter-spacing: 1.6px;
                     }
-                      
+                        
                     .ui-datepicker-title .ui-datepicker-month,
                     .ui-datepicker-title .ui-datepicker-year {
                         color: $color17;
                     }
-                      
+                        
                     .ui-corner-all .ui-icon {
                         display: block;
                         font-size: 0;
@@ -292,12 +268,12 @@
                         border-radius: 50%;
                         background-color: #101010;
                     }
-                      
+                        
                     .ui-datepicker-prev {
                         transform: rotate(90deg);
                         cursor: pointer;
                     }
-                      
+                        
                     .ui-datepicker-next {
                         -webkit-box-ordinal-group: 4;
                         -ms-flex-order: 3;
@@ -305,61 +281,61 @@
                         transform: rotate(-90deg);
                         cursor: pointer;
                     }
-                      
+                        
                     .ui-datepicker-calendar {
                         width: 100%;
                         text-align: center;
                     }
-                      
+                        
                     .ui-datepicker-calendar td, .ui-datepicker-calendar th {
                         height: 36px;
                         position: relative;
                     }
-                      
+                        
                     .ui-datepicker-calendar th span {
                         color: $color17;
                         font-size: 16px;
                         letter-spacing: 1.6px;
                         line-height: 1.5;
                     }
-                      
+                        
                     .ui-datepicker-calendar td.ui-datepicker-today::before {
                         opacity: 1;
                         border-color: $color17;
                     }
-                      
+                        
                     .ui-datepicker-calendar td.ui-datepicker-unselectable a, .ui-datepicker-calendar td.ui-datepicker-unselectable span {
                         color: #4D4D4D;
                     }
-                      
+                        
                     .ui-datepicker-calendar td.ui-datepicker-current-day a {
                         color: #4D4D4D;
                     }
-                      
+                        
                     .ui-datepicker-calendar td a {
                         position: relative;
                     }
-                      
+                        
                     .ui-datepicker-calendar td.ui-datepicker-current-day::before {
                         border-color: $color17;
                         background-color: $color17;
                         opacity: 1;
                     }
-                      
+                        
                     .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {
                         cursor: pointer;
                     }
-                      
+                        
                     .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
                         color: #4D4D4D;
                     }
-                      
+                        
                     .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {
                         border-color: $color17;
                         background-color: $color17;
                         opacity: 1;
                     }
-                      
+                        
                     .ui-datepicker-calendar td::before {
                         position: absolute;
                         opacity: 0;
@@ -374,7 +350,7 @@
                         transition: 0.3s;
                         z-index: 0;
                     }
-                      
+                        
                     .ui-datepicker-calendar td:after {
                         position: absolute;
                         content: "";
@@ -385,19 +361,19 @@
                         height: 6px;
                         border-radius: 50%;
                     }
-                      
+                        
                     .ui-datepicker-calendar td.sold-out-soon:after {
                         background: #E85455;
                     }
-                      
+                        
                     .ui-datepicker-calendar td.still-vacancy:after {
                         background: #EFCEA3;
                     }
-                      
+                        
                     .ui-datepicker-calendar td.sold-out:after {
                         background: #AA8495;
                     }
-                      
+                        
                     .ui-datepicker-calendar td a, .ui-datepicker-calendar td span {
                         /* display: block; */
                         font-size: 16px;
@@ -437,114 +413,71 @@
                 }
             }
         }
-
-        .time {
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .2s;
-        }
-
-        .actions {
-            display: flex;
-            justify-content: center;
-            margin-top: 72px;
-        }
-    }
-
-    #step2 {
-        .step2-form {
-            margin: 0 auto;
-            max-width: 700px;
-            @media screen and (min-width:1500px) {
-                max-width: 928px;
-            }
-            
-            .flex {
-                @media screen and (min-width:768px) {
-                    display: flex;
-                    justify-content: space-between;
-                }
-            }
-
-            .phone-group {
-                .flex {
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-                .code-wrapper {
-                    width: 130px;
-                    position: relative;
-                    @media screen and (min-width:768px) {
-                        width: 245px;
-                    }
-                }
-
-                .select2-container--open .select2-dropdown--below {
-                    width: 255px !important;
-                }
-
-                .phone {
-                    width: calc(100% - 130px - 14px);
-                    @media screen and (min-width:768px) {
-                        width: calc(100% - 245px - 32px);
-                    }
-                }
-            }
-
-            .half-group {
-                .input-group {
-                    margin-bottom: 26px;
-                    @media screen and (min-width:768px) {
-                        width: calc(50% - 16px);
-                    }
-                }
-            }
-
-            .checkboxes {
-                margin-top: 60px;
-            }
-
-            .error {
-                font-size: 14px;
-                color: $color4;
-                line-height: 1;
-                margin-top: 5px;
-            }
-
-            .actions {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                max-width: 200px;
-                margin: 0 auto;
-                margin-top: 63px;
-    
-                .p-btn {
-                    margin-bottom: 40px;
-                    padding-left: 0;
-                    padding-right: 0;
-                    text-align: center;
-                    width: 100%;
-    
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
     }
 
     #step3 {
-        color: $color17;
+        .flex {
+            @media screen and (min-width:768px) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
 
-        .step3-form {
+        .phone-group {
+            .flex {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .code-wrapper {
+                width: 130px;
+                position: relative;
+                @media screen and (min-width:768px) {
+                    width: 245px;
+                }
+            }
+
+            .select2-container--open .select2-dropdown--below {
+                width: 255px !important;
+            }
+
+            .phone {
+                width: calc(100% - 130px - 14px);
+                @media screen and (min-width:768px) {
+                    width: calc(100% - 245px - 32px);
+                }
+            }
+        }
+
+        .half-group {
+            .input-group {
+                margin-bottom: 26px;
+                @media screen and (min-width:768px) {
+                    width: calc(50% - 16px);
+                }
+            }
+        }
+
+        .checkboxes {
+            margin-top: 60px;
+        }
+
+        .error {
+            font-size: 14px;
+            color: $color4;
+            line-height: 1;
+            margin-top: 5px;
+        }
+    }
+
+    #step4 {
+        .step4-form {
             max-width: 1025px;
             margin: 0 auto;
             @media screen and (min-width:1000px) {
                 display: flex;
                 justify-content: space-between;
+                flex-wrap: wrap;
             }
 
             .ticket-inner {
@@ -561,7 +494,7 @@
                     width: 350px;
                     height: 235px;
                     margin: 0 auto;
-                    background-image: url(../img/booking_ticket.png?231229);
+                    background-image: url(../img/booking_ticket.png?231222);
                     background-size: contain;
                     background-repeat: no-repeat;
                     padding: 20px 39px 0 48px;
@@ -570,7 +503,6 @@
                     @media screen and (min-width:495px) {
                         width: 448px;
                         height: 301px;
-                        // background-image: url(../img/booking_ticket.png);
                         padding: 24px 36px 0 181px;
                     }
             
@@ -718,33 +650,16 @@
                 }
             }
         }
-    }
 
-    #step2, #step3 {
         .actions {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            max-width: 200px;
-            margin: 0 auto;
-            margin-top: 63px;
+            width: 100%;
+            @media screen and (min-width:768px) {
+                justify-content: center;
 
-            .p-btn {
-                margin-bottom: 40px;
-                padding-left: 0;
-                padding-right: 0;
-                text-align: center;
-                width: 100%;
-
-                &:last-child {
-                    margin-bottom: 0;
+                .p-btn {
+                    margin: 0 20px;
                 }
             }
-        }
-
-        &#step3 .actions {
-            max-width: 256px;
         }
     }
 }
@@ -770,7 +685,7 @@
         width: 350px;
         height: 235px;
         margin: 0 auto;
-        background-image: url(../img/booking_success_ticket.png);
+        background-image: url(../img/booking_ticket_dark.png);
         background-size: contain;
         background-repeat: no-repeat;
         padding: 20px 39px 0 48px;
@@ -779,7 +694,6 @@
         @media screen and (min-width:495px) {
             width: 448px;
             height: 301px;
-            // background-image: url(../img/booking_ticket.png);
             padding: 24px 36px 0 181px;
         }
 
@@ -878,27 +792,4 @@
         justify-content: center;
         margin-top: 60px;
     }
-}
-
-
-.arm {
-    position: relative;
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
-}
-.arm:before, .arm:after {
-    position: absolute;
-    content: "";
-    height: 80%;
-    width: 3px;
-    background-color: #dc3545;
-    top:2px;
-    left:20px;
-}
-.arm:before {
-    transform: rotate(45deg);
-}
-.arm:after {
-    transform: rotate(-45deg);
 }

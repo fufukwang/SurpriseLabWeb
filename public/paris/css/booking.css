@@ -672,239 +672,219 @@ button.p-btn.secondary:hover:not([disabled]) {
   opacity: 1;
 }
 
-#leading {
-  color: #F4D9D4;
-}
-#leading .info {
-  text-align: center;
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1500px) {
-  #leading .info {
-    margin-bottom: 142px;
-  }
-}
-#leading .invite-code {
-  max-width: 544px;
-  margin: 0 auto;
-  text-align: center;
-}
-#leading .invite-code .input-wrapper {
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 1500px) {
-  #leading .invite-code .input-wrapper {
-    margin-bottom: 115px;
-  }
-}
-#leading .invite-code .input-wrapper .input-group {
-  margin-bottom: 0;
-}
-#leading .invite-code .input-wrapper .error {
-  color: #F4115D;
-  margin-top: 12px;
+main {
   overflow: hidden;
-}
-#leading .invite-code .input-wrapper .error .error-inner {
-  opacity: 0;
-  transform: translateY(100%);
-}
-#leading .invite-code .input-wrapper .error.show .error-inner {
-  opacity: 1;
-  transform: translateY(0);
-}
-#leading .invite-code .actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#leading .invite-code .actions .p-btn {
-  margin-bottom: 40px;
-}
-#leading .invite-code .actions .p-btn:last-child {
-  margin-bottom: 0;
+  color: #F4D9D4;
 }
 
-#notice {
-  color: #F4D9D4;
+h1 {
+  letter-spacing: 0;
 }
-#notice a {
-  color: #F4D9D4;
-}
-#notice .info {
+
+h3 {
+  color: #E28A8A;
   text-align: center;
-  margin-bottom: 88px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  line-height: 150%;
+  letter-spacing: 0;
+  text-indent: 0;
+  text-transform: none;
 }
-#notice .information {
-  max-width: 1032px;
-  margin: 0 auto;
+
+h4 {
+  font-size: 16px;
+  letter-spacing: 0;
+  text-indent: 0;
+}
+
+.information {
+  max-width: 850px;
+  margin: 0 auto 70px auto;
   padding: 0 20px;
 }
 @media screen and (min-width: 768px) {
-  #notice .information {
+  .information {
     padding: 0;
   }
+}
+.information .information-title {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+ol {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.form-inner {
+  max-width: 630px;
+  margin: 0 auto;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 70px;
+}
+@media screen and (min-width: 768px) {
+  .actions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.actions .p-btn {
+  width: 180px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .actions .p-btn {
+    margin-bottom: 0;
+  }
+}
+
+.checkbox-group {
+  color: #fff;
+}
+.checkbox-group .modal-btn, .checkbox-group a {
+  color: #FF9C9C;
+}
+
+.input-group {
+  margin-bottom: 30px;
+}
+.input-group input[type=text],
+.input-group input[type=email],
+.input-group textarea {
+  border-radius: 4px;
+  border: 1px solid #DE7777;
+}
+.input-group button {
+  border-radius: 4px;
+  cursor: pointer;
+}
+.input-group .select2 {
+  border-radius: 4px !important;
+  border: 1px solid #DE7777;
+}
+
+#notice .information .information-inner {
+  margin: 0 0 40px 0;
 }
 @media screen and (min-width: 768px) {
   #notice .information .information-inner {
     display: flex;
     justify-content: space-between;
+    margin: 0 -80px 70px -80px;
   }
 }
 @media screen and (min-width: 768px) {
   #notice .information .information-inner .col {
-    width: calc(50% - 16px);
+    padding: 0 80px;
   }
 }
-#notice .information .information-inner .grid {
-  padding-top: 24px;
-  margin-bottom: 20px;
+#notice .information .information-inner .col:nth-child(1) {
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
-  #notice .information .information-inner .col:nth-child(1) .grid:nth-child(1) {
-    margin-bottom: 70px;
+  #notice .information .information-inner .col:nth-child(1) {
+    margin-bottom: 0;
   }
 }
-#notice .information .information-inner ul {
-  margin: 0;
-  padding-left: 18px;
+#notice .information .information-inner td {
+  white-space: nowrap;
 }
-#notice .information .information-inner ul li {
-  margin-bottom: 2rem;
+#notice .information .contact {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 50px;
 }
-#notice .information .information-inner ul li ul {
-  margin-bottom: 0;
-  padding-left: 2em;
+@media screen and (min-width: 768px) {
+  #notice .information .contact {
+    font-size: 20px;
+  }
 }
-#notice .information .information-inner ul li ul li {
-  margin-bottom: 0;
+#notice .information .contact a {
+  color: #FF9C9C;
+  text-decoration: underline;
+}
+#notice .information .contact a:hover {
+  text-decoration: none;
 }
 #notice .information .actions {
-  display: flex;
   justify-content: center;
-  margin-top: 56px;
 }
 
-#booking {
-  color: #F4D9D4;
+#booking #step1 .information {
+  max-width: 500px;
 }
-#booking a {
-  color: #F4D9D4;
-}
-#booking #step1 {
-  max-width: 784px;
-  margin: 0 auto;
-  padding-bottom: 60px;
-}
-#booking #step1 .input-group:last-child {
-  margin-bottom: 20px;
-}
-#booking #step1 .price {
-  text-align: center;
-  margin-bottom: 98px;
+#booking #step1 .tickets {
+  color: #FF9C9C;
 }
 @media screen and (min-width: 768px) {
-  #booking #step1 .price {
+  #booking #step1 .tickets {
     display: flex;
     justify-content: space-between;
   }
 }
-#booking #step1 .price .item {
-  margin-bottom: 70px;
-}
-#booking #step1 .price .item:last-child {
-  margin-bottom: 0;
-}
-#booking #step1 .price .icon {
-  margin-bottom: 29px;
-}
 @media screen and (min-width: 768px) {
-  #booking #step1 .price .icon {
-    width: 100%;
-    height: 162px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #booking #step1 .tickets > div {
+    flex: 1;
   }
 }
-#booking #step1 .price .icon img {
-  max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-#booking #step1 .price h4 {
-  margin-bottom: 10px;
+#booking #step1 .tickets .tickets-title {
+  color: #fff;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
-  #booking #step1 .price h4 {
-    margin-bottom: 29px;
+  #booking #step1 .tickets .tickets-title {
+    width: 150px;
+    flex: none;
   }
 }
-#booking #step1 .price h2 {
-  color: #F4115D;
+#booking #step1 .input-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-#booking #step1 .price h2 span {
-  font-family: "Noto Sans TC";
-  font-weight: 400;
-  line-height: 200%;
-  margin-left: 14px;
-  font-size: 16px;
-  font-style: normal;
+#booking #step1 .input-group input {
+  width: calc(100% - 90px);
 }
-@media screen and (min-width: 768px) {
-  #booking #step1 .price h2 span {
-    font-size: 18px;
-  }
+#booking #step1 .input-group button {
+  color: #fff;
+  background: #036060;
+  border: none;
+  width: 70px;
+  font-size: 17px;
 }
-#booking #step1 .price .desc {
-  margin-top: 30px;
-  color: #F4D9D4;
-  font-family: "Noto Sans TC";
-  font-weight: 400;
-  line-height: 200%; /* 36px */
-}
-@media screen and (min-width: 768px) {
-  #booking #step1 .price .desc {
-    text-align: left;
-  }
-}
-@media screen and (min-width: 768px) {
-  #booking #step1 .selects {
-    margin-bottom: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-@media screen and (min-width: 768px) {
-  #booking #step1 .selects > div {
-    width: calc(50% - 16px);
-  }
-}
-@media screen and (min-width: 768px) {
-  #booking #step1 .guests {
-    width: 256px;
-  }
-}
-#booking #step1 .date {
+#booking #step1 .input-group .msg {
+  width: 100%;
+  color: #C90000;
   opacity: 0;
-  pointer-events: none;
+}
+#booking #step2 {
+  min-height: 600px;
+}
+#booking #step2 .date {
   transition: opacity 0.2s;
 }
-@media screen and (min-width: 768px) {
-  #booking #step1 .date {
-    width: calc(100% - 256px - 32px);
-  }
-}
-#booking #step1 .date .calender-wrapper {
+#booking #step2 .date .calender-wrapper {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 100%;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div {
   top: 5px !important;
   left: 0 !important;
   width: 100%;
@@ -913,7 +893,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   background-color: #260307;
   padding: 8px;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-header {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -922,16 +902,16 @@ button.p-btn.secondary:hover:not([disabled]) {
   border-radius: 4px;
   padding: 7px 16px;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-title {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-title {
   font-size: 16px;
   line-height: 2.25;
   letter-spacing: 1.6px;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-title .ui-datepicker-month,
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-title .ui-datepicker-year {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-title .ui-datepicker-month,
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-title .ui-datepicker-year {
   color: #F4D9D4;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-corner-all .ui-icon {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-corner-all .ui-icon {
   display: block;
   font-size: 0;
   width: 20px;
@@ -941,59 +921,59 @@ button.p-btn.secondary:hover:not([disabled]) {
   border-radius: 50%;
   background-color: #101010;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-prev {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-prev {
   transform: rotate(90deg);
   cursor: pointer;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-next {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-next {
   order: 3;
   transform: rotate(-90deg);
   cursor: pointer;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar {
   width: 100%;
   text-align: center;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td, #booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar th {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td, #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar th {
   height: 36px;
   position: relative;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar th span {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar th span {
   color: #F4D9D4;
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 1.5;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-today::before {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-today::before {
   opacity: 1;
   border-color: #F4D9D4;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable a, #booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable span {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable a, #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-unselectable span {
   color: #4D4D4D;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day a {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day a {
   color: #4D4D4D;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a {
   position: relative;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.ui-datepicker-current-day::before {
   border-color: #F4D9D4;
   background-color: #F4D9D4;
   opacity: 1;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {
   cursor: pointer;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover a {
   color: #4D4D4D;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover::before {
   border-color: #F4D9D4;
   background-color: #F4D9D4;
   opacity: 1;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td::before {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td::before {
   position: absolute;
   opacity: 0;
   content: "";
@@ -1007,7 +987,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   transition: 0.3s;
   z-index: 0;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:after {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td:after {
   position: absolute;
   content: "";
   top: 100%;
@@ -1017,16 +997,16 @@ button.p-btn.secondary:hover:not([disabled]) {
   height: 6px;
   border-radius: 50%;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out-soon:after {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out-soon:after {
   background: #E85455;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.still-vacancy:after {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.still-vacancy:after {
   background: #EFCEA3;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out:after {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td.sold-out:after {
   background: #AA8495;
 }
-#booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a, #booking #step1 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td span {
+#booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td a, #booking #step2 .date .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar td span {
   /* display: block; */
   font-size: 16px;
   letter-spacing: 1.6px;
@@ -1034,146 +1014,106 @@ button.p-btn.secondary:hover:not([disabled]) {
   transition: 0.3s;
   color: #F4D9D4;
 }
-#booking #step1 .date .calender-wrapper .calender-ps {
+#booking #step2 .date .calender-wrapper .calender-ps {
   width: 100%;
   margin-top: 20px;
   display: flex;
   justify-content: flex-end;
 }
-#booking #step1 .date .calender-wrapper .calender-ps div {
+#booking #step2 .date .calender-wrapper .calender-ps div {
   display: flex;
   align-items: center;
   margin-left: 15px;
 }
-#booking #step1 .date .calender-wrapper .calender-ps span {
+#booking #step2 .date .calender-wrapper .calender-ps span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
 }
-#booking #step1 .date .calender-wrapper .calender-ps p {
+#booking #step2 .date .calender-wrapper .calender-ps p {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 1.6px;
   text-align: left;
   margin: 0 5px;
 }
-#booking #step1 .time {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-}
-#booking #step1 .actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 72px;
-}
-#booking #step2 .step2-form {
-  margin: 0 auto;
-  max-width: 700px;
-}
-@media screen and (min-width: 1500px) {
-  #booking #step2 .step2-form {
-    max-width: 928px;
-  }
-}
 @media screen and (min-width: 768px) {
-  #booking #step2 .step2-form .flex {
+  #booking #step3 .flex {
     display: flex;
     justify-content: space-between;
   }
 }
-#booking #step2 .step2-form .phone-group .flex {
+#booking #step3 .phone-group .flex {
   display: flex;
   justify-content: space-between;
 }
-#booking #step2 .step2-form .phone-group .code-wrapper {
+#booking #step3 .phone-group .code-wrapper {
   width: 130px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
-  #booking #step2 .step2-form .phone-group .code-wrapper {
+  #booking #step3 .phone-group .code-wrapper {
     width: 245px;
   }
 }
-#booking #step2 .step2-form .phone-group .select2-container--open .select2-dropdown--below {
+#booking #step3 .phone-group .select2-container--open .select2-dropdown--below {
   width: 255px !important;
 }
-#booking #step2 .step2-form .phone-group .phone {
+#booking #step3 .phone-group .phone {
   width: calc(100% - 130px - 14px);
 }
 @media screen and (min-width: 768px) {
-  #booking #step2 .step2-form .phone-group .phone {
+  #booking #step3 .phone-group .phone {
     width: calc(100% - 245px - 32px);
   }
 }
-#booking #step2 .step2-form .half-group .input-group {
+#booking #step3 .half-group .input-group {
   margin-bottom: 26px;
 }
 @media screen and (min-width: 768px) {
-  #booking #step2 .step2-form .half-group .input-group {
+  #booking #step3 .half-group .input-group {
     width: calc(50% - 16px);
   }
 }
-#booking #step2 .step2-form .checkboxes {
+#booking #step3 .checkboxes {
   margin-top: 60px;
 }
-#booking #step2 .step2-form .error {
+#booking #step3 .error {
   font-size: 14px;
   color: #F4115D;
   line-height: 1;
   margin-top: 5px;
 }
-#booking #step2 .step2-form .actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 200px;
-  margin: 0 auto;
-  margin-top: 63px;
-}
-#booking #step2 .step2-form .actions .p-btn {
-  margin-bottom: 40px;
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
-  width: 100%;
-}
-#booking #step2 .step2-form .actions .p-btn:last-child {
-  margin-bottom: 0;
-}
-#booking #step3 {
-  color: #F4D9D4;
-}
-#booking #step3 .step3-form {
+#booking #step4 .step4-form {
   max-width: 1025px;
   margin: 0 auto;
 }
 @media screen and (min-width: 1000px) {
-  #booking #step3 .step3-form {
+  #booking #step4 .step4-form {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
-#booking #step3 .step3-form .ticket-inner {
+#booking #step4 .step4-form .ticket-inner {
   width: 350px;
   margin: 0 auto 60px auto;
 }
 @media screen and (min-width: 495px) {
-  #booking #step3 .step3-form .ticket-inner {
+  #booking #step4 .step4-form .ticket-inner {
     width: 448px;
   }
 }
 @media screen and (min-width: 1000px) {
-  #booking #step3 .step3-form .ticket-inner {
+  #booking #step4 .step4-form .ticket-inner {
     margin: 0;
   }
 }
-#booking #step3 .step3-form .ticket-inner .ticket {
+#booking #step4 .step4-form .ticket-inner .ticket {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-  background-image: url(../img/booking_ticket.png?231229);
+  background-image: url(../img/booking_ticket.png?231222);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
@@ -1181,46 +1121,46 @@ button.p-btn.secondary:hover:not([disabled]) {
   position: relative;
 }
 @media screen and (min-width: 495px) {
-  #booking #step3 .step3-form .ticket-inner .ticket {
+  #booking #step4 .step4-form .ticket-inner .ticket {
     width: 448px;
     height: 301px;
     padding: 24px 36px 0 181px;
   }
 }
-#booking #step3 .step3-form .ticket-inner .ticket table {
+#booking #step4 .step4-form .ticket-inner .ticket table {
   border-collapse: collapse;
   width: 100%;
   max-width: 170px;
   margin: 0 0 0 auto;
 }
 @media screen and (min-width: 495px) {
-  #booking #step3 .step3-form .ticket-inner .ticket table {
+  #booking #step4 .step4-form .ticket-inner .ticket table {
     max-width: 220px;
   }
 }
-#booking #step3 .step3-form .ticket-inner .ticket table td {
+#booking #step4 .step4-form .ticket-inner .ticket table td {
   padding: 5px 0;
   vertical-align: top;
   line-height: 120%;
   font-size: 13px;
 }
 @media screen and (min-width: 495px) {
-  #booking #step3 .step3-form .ticket-inner .ticket table td {
+  #booking #step4 .step4-form .ticket-inner .ticket table td {
     padding: 5px 0;
     line-height: 130%;
     font-size: 16px;
   }
 }
-#booking #step3 .step3-form .ticket-inner .ticket table td:nth-child(odd) {
+#booking #step4 .step4-form .ticket-inner .ticket table td:nth-child(odd) {
   white-space: nowrap;
   padding-right: 10px;
 }
 @media screen and (min-width: 495px) {
-  #booking #step3 .step3-form .ticket-inner .ticket table td:nth-child(odd) {
+  #booking #step4 .step4-form .ticket-inner .ticket table td:nth-child(odd) {
     padding-right: 16px;
   }
 }
-#booking #step3 .step3-form .ticket-inner .ticket .addr {
+#booking #step4 .step4-form .ticket-inner .ticket .addr {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -1236,116 +1176,105 @@ button.p-btn.secondary:hover:not([disabled]) {
   width: 100%;
 }
 @media screen and (min-width: 495px) {
-  #booking #step3 .step3-form .ticket-inner .ticket .addr {
+  #booking #step4 .step4-form .ticket-inner .ticket .addr {
     font-size: 16px;
     line-height: 200%;
     top: 214px;
     left: 0;
   }
 }
-#booking #step3 .step3-form .ticket-inner .ticket .addr svg {
+#booking #step4 .step4-form .ticket-inner .ticket .addr svg {
   display: block;
   margin: 0 4px 0 0;
 }
-#booking #step3 .step3-form .ticket-inner .ticket .addr .note {
+#booking #step4 .step4-form .ticket-inner .ticket .addr .note {
   width: 100%;
   font-size: 10px;
   line-height: 150%;
 }
 @media screen and (min-width: 495px) {
-  #booking #step3 .step3-form .ticket-inner .ticket .addr .note {
+  #booking #step4 .step4-form .ticket-inner .ticket .addr .note {
     font-size: 13px;
   }
 }
 @media screen and (min-width: 1000px) {
-  #booking #step3 .step3-form .form-inner {
+  #booking #step4 .step4-form .form-inner {
     width: calc(100% - 448px - 40px);
   }
 }
 @media screen and (min-width: 1000px) {
-  #booking #step3 .step3-form .form-inner .flex {
+  #booking #step4 .step4-form .form-inner .flex {
     display: flex;
     justify-content: space-between;
   }
 }
-#booking #step3 .step3-form .form-inner .align-items-end {
+#booking #step4 .step4-form .form-inner .align-items-end {
   align-items: flex-end;
 }
-#booking #step3 .step3-form .form-inner .phone-group .flex {
+#booking #step4 .step4-form .form-inner .phone-group .flex {
   display: flex;
   justify-content: space-between;
 }
-#booking #step3 .step3-form .form-inner .phone-group .code {
+#booking #step4 .step4-form .form-inner .phone-group .code {
   width: 80px;
 }
 @media screen and (min-width: 768px) {
-  #booking #step3 .step3-form .form-inner .phone-group .code {
+  #booking #step4 .step4-form .form-inner .phone-group .code {
     width: 160px;
   }
 }
-#booking #step3 .step3-form .form-inner .phone-group .phone {
+#booking #step4 .step4-form .form-inner .phone-group .phone {
   width: calc(100% - 80px - 14px);
 }
 @media screen and (min-width: 768px) {
-  #booking #step3 .step3-form .form-inner .phone-group .phone {
+  #booking #step4 .step4-form .form-inner .phone-group .phone {
     width: calc(100% - 160px - 32px);
   }
 }
-#booking #step3 .step3-form .form-inner .half-group .input-group {
+#booking #step4 .step4-form .form-inner .half-group .input-group {
   margin-bottom: 26px;
 }
 @media screen and (min-width: 768px) {
-  #booking #step3 .step3-form .form-inner .half-group .input-group {
+  #booking #step4 .step4-form .form-inner .half-group .input-group {
     width: calc(50% - 16px);
   }
 }
-#booking #step3 .step3-form .form-inner .filed-value {
+#booking #step4 .step4-form .form-inner .filed-value {
   padding-bottom: 2px;
   border-bottom: 1px solid #F4115D;
 }
-#booking #step3 .step3-form .form-inner .note {
+#booking #step4 .step4-form .form-inner .note {
   font-size: 12px;
   line-height: 120%; /* 14.4px */
   color: #E85455;
   margin-top: -17px;
 }
 @media screen and (min-width: 768px) {
-  #booking #step3 .step3-form .form-inner .note {
+  #booking #step4 .step4-form .form-inner .note {
     margin-top: 0;
     transform: translateX(-15px);
   }
 }
-#booking #step3 .step3-form .form-inner .notice {
+#booking #step4 .step4-form .form-inner .notice {
   margin-top: 72px;
 }
-#booking #step3 .step3-form .form-inner .notice span, #booking #step3 .step3-form .form-inner .notice a {
+#booking #step4 .step4-form .form-inner .notice span, #booking #step4 .step4-form .form-inner .notice a {
   color: #E85455;
   cursor: pointer;
 }
-#booking #step3 .step3-form .form-inner .notice span:hover, #booking #step3 .step3-form .form-inner .notice a:hover {
+#booking #step4 .step4-form .form-inner .notice span:hover, #booking #step4 .step4-form .form-inner .notice a:hover {
   text-decoration: underline;
 }
-#booking #step2 .actions, #booking #step3 .actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 200px;
-  margin: 0 auto;
-  margin-top: 63px;
-}
-#booking #step2 .actions .p-btn, #booking #step3 .actions .p-btn {
-  margin-bottom: 40px;
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
+#booking #step4 .actions {
   width: 100%;
 }
-#booking #step2 .actions .p-btn:last-child, #booking #step3 .actions .p-btn:last-child {
-  margin-bottom: 0;
-}
-#booking #step2#step3 .actions, #booking #step3#step3 .actions {
-  max-width: 256px;
+@media screen and (min-width: 768px) {
+  #booking #step4 .actions {
+    justify-content: center;
+  }
+  #booking #step4 .actions .p-btn {
+    margin: 0 20px;
+  }
 }
 
 #booking-success {
@@ -1366,7 +1295,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-  background-image: url(../img/booking_success_ticket.png);
+  background-image: url(../img/booking_ticket_dark.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
@@ -1473,29 +1402,4 @@ button.p-btn.secondary:hover:not([disabled]) {
   display: flex;
   justify-content: center;
   margin-top: 60px;
-}
-
-.arm {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-}
-
-.arm:before, .arm:after {
-  position: absolute;
-  content: "";
-  height: 80%;
-  width: 3px;
-  background-color: #dc3545;
-  top: 2px;
-  left: 20px;
-}
-
-.arm:before {
-  transform: rotate(45deg);
-}
-
-.arm:after {
-  transform: rotate(-45deg);
 }/*# sourceMappingURL=booking.css.map */
