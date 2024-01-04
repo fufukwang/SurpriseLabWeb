@@ -329,7 +329,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                             <div class="cta-wrap">
                                 <div class="btn-wrap">
-                                    <a href="booking" class="booking-btn shape-round color-primary">前往劃位</a>
+                                    <a href="booking_pay" class="booking-btn shape-round color-primary">前往劃位</a>
                                 </div>
                                 <div class="notice-wrap">
                                     有任何問題歡迎來信：<a href="mailto:mindthegap@surpriselab.com.tw" class="link-text" target="_blank">mindthegap@surpriselab.com.tw</a>
