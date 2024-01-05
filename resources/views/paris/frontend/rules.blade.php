@@ -97,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <td>▲</td>
                             </tr>
                             <tr>
-                                <td>未滿12歲無法參與，13-16歲需<br>由家長購票陪同體驗</td>
+                                <td>12歲(含)以下無法參與、13-16歲需<br>由家長簽署同意書，並購票陪同入場體驗</td>
                                 <td>▲</td>
                             </tr>
                         </table>
