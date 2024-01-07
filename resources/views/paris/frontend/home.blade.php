@@ -148,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="/paris/img/deco.svg" />
                 <h1>購票資訊</h1>
                 <h3>Ticket</h3>
-                <p><center>12月座位全數完售，立即購票享 開演前預購早鳥價</center></p>
+                <p><center>12月座位全數完售，立即購票享預購限定優惠</center></p>
                 <p><center>現在預約舞會，可劃「2024/1-2月」座位</center></p>
             </div>
             
@@ -607,7 +607,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>營運執行舞監</td>
-                                <td>符芷瑄</td>
+                                <td>張素芳、符芷瑄</td>
                             </tr>
                             <tr>
                                 <td>前台經理</td>
@@ -627,7 +627,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>舞監助理暨 VR 技術執行</td>
-                                <td>許正姸、劉育雯、李紹庭、方琬婷、林珈含、蘇吉安、孫于崴、林翊柔、徐鈺荃、彭安佐、陳映慈、王瓈萱、許正玟</td>
+                                <td>許正姸、劉育雯、李紹庭、方琬婷、林珈含、蘇吉安、孫于崴</td>
                             </tr>
                         </table>
                     </div>
@@ -655,7 +655,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>前台人員</td>
-                                <td>張惠婷、蕭藝萱、朱珮瀅、林俐瑜、葉柔妡、林語彤</td>
+                                <td>蕭藝萱、林俐瑜、葉柔妡、林語彤、林芳羽、賴郁欣、吳儀瑄、李心瑀、何知臨、張惠婷、朱珮瀅</td>
                             </tr>
                             <tr>
                                 <td>裝台協力</td>
@@ -776,7 +776,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul>
                                             <li>孕婦、心臟病和高血壓患者禁止體驗</li>
                                             <li>體內有電子儀器者（例：心律調整器、助聽器、除顫器）及患有癲癇容易暈倒、視力受損者下訂前需諮詢專業醫師以維護體驗安全</li>
-                                            <li>未滿 12 歲無法參與、13-16 歲需由家長購票陪同體驗</li>
+                                            <li>12歲(含)以下無法參與、13-16歲需由家長簽署同意書，並購票陪同入場體驗</li>
                                         </ul>
                                     </p>
                                 </li>
@@ -810,16 +810,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="/paris/img/partner-chanel.png" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-ministry.png" />
-                </div>
-                <div class="logo">
-                    <img src="/paris/img/partner-taicca.png" />
+                    <img src="/paris/img/partner-surpriseLab.png" />
                 </div>
                 <div class="logo">
                     <img src="/paris/img/partner-vive.png?231027" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-surpriseLab.png" />
+                    <img src="/paris/img/partner-science.png" />
+                </div>
+                <div class="logo">
+                    <img src="/paris/img/partner-ministry.png" />
+                </div>
+                <div class="logo">
+                    <img src="/paris/img/partner-taicca.png" />
                 </div>
             </div>
 

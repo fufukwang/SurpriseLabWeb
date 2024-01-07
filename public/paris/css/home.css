@@ -1143,14 +1143,17 @@ body {
 }
 @media screen and (min-width: 768px) {
   #home .partner .logo {
-    width: 25%;
+    width: 30%;
     margin: 0;
   }
   #home .partner .logo:nth-child(even), #home .partner .logo:nth-child(odd) {
     padding: 0 50px;
   }
-  #home .partner .logo:nth-child(1), #home .partner .logo:nth-child(2), #home .partner .logo:nth-child(3) {
+  #home .partner .logo:nth-child(1), #home .partner .logo:nth-child(2), #home .partner .logo:nth-child(3), #home .partner .logo:nth-child(4), #home .partner .logo:nth-child(5) {
     margin: 0 1px 80px 1px;
+  }
+  #home .partner .logo:nth-child(4), #home .partner .logo:nth-child(5) {
+    margin: 0 30px 80px 30px;
   }
 }
 #home .partner .logo img {
