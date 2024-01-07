@@ -816,6 +816,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="/paris/img/partner-vive.png?231027" />
                 </div>
                 <div class="logo">
+                    <img src="/paris/img/partner-science.png" />
+                </div>
+                <div class="logo">
                     <img src="/paris/img/partner-ministry.png" />
                 </div>
                 <div class="logo">

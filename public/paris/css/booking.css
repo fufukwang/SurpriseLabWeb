@@ -1402,5 +1402,8 @@ ol {
   display: flex;
   justify-content: center;
   margin-top: 60px;
+}
+
+input[type=text]:disabled, button:disabled {
+  cursor: not-allowed;
 }/*# sourceMappingURL=booking.css.map */
-input[type="text"]:disabled,button:disabled{cursor: not-allowed;}
