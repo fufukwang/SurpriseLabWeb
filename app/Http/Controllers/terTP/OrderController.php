@@ -92,15 +92,6 @@ class OrderController extends WebController
         if($request->has('pro_id') && $request->pro_id>0){
             $data['pro_id'] = $request->pro_id;
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
-            // 觸發補寄
-            try {
-                $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
-                    ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
-                if($ord->email != '') $this->sendMailCenter($ord);
-                if($ord->tel != '') $this->sendSmsCenter($ord);
-            } catch (Exception $e){
-                Log::error($e);
-            }
         }
         if(is_numeric($id) && $id>0){
             if($request->pay_type == '後台編輯'){
@@ -127,7 +118,17 @@ class OrderController extends WebController
                 }
             }
             order::where('id',$id)->update($data);
-            
+            if($request->has('pro_id') && $request->pro_id>0){
+                // 觸發補寄
+                try {
+                    $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
+                        ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                    if($ord->email != '') $this->sendMailCenter($ord);
+                    if($ord->tel != '') $this->sendSmsCenter($ord);
+                } catch (Exception $e){
+                    Log::error($e);
+                }
+            }
         } 
         if($request->has('qxx') && $request->qxx != ''){
             return redirect('/tertp/print?'.$request->qxx)->with('message','編輯完成!');
