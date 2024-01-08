@@ -166,11 +166,12 @@
         if($number){
             $inv_open = true;
         }
-        $inv_money = ($price * $num) - $row->dis_money - $row->co_money;
+        // $inv_money = ($price * $num) - $row->dis_money - $row->co_money;
+        $inv_money = $totle_money;
         if($row->pay_status == '未完成'){
             $inv_money = 0;
         } else {
-            if($row->pay_type == '合作販售'){ $inv_money = $totle_money; }
+            // if($row->pay_type == '合作販售'){ $inv_money = $totle_money; }
             $handling_fee = 0;
             if($row->handling > 0 && $row->refund > 0) $handling_fee = round($row->handling * $row->refund / 100);
             $inv_money -= $row->refund;
@@ -216,7 +217,8 @@
     @forelse(App\model\paris\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} <br >@empty 
         @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
     {{-- @if($couponNumber>0) [{{ $couponNumber * 4400 }}] @endif --}}
-    <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($inv_money / (1 + (5 / 100))) }}<br>稅額：{{ $inv_money - round($inv_money / (1 + (5 / 100))) }}<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
+    {{--<br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($inv_money / (1 + (5 / 100))) }}<br>稅額：{{ $inv_money - round($inv_money / (1 + (5 / 100))) }}<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!}--}}
+    <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;"><span style="color:red">(免稅額)</span><br>小計：{{ $inv_money }}<br>稅額：0<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
 </th>
                                                 <td>{!! nl2br($row->manage) !!}</td>
 
