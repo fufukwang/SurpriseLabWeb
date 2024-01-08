@@ -421,10 +421,13 @@ class OrderController extends WebController
                             
                             $couponNumber++;
                         }
+                        /*
                         $pay_money .= ($couponNumber*4400);
                         if($row['OM']>0){
                             $pay_money .= "\r\n［{$row['OM']}］";
                         }
+                        */
+                        $pay_money = $row['OM'];
                     } else {
                         $pay_money = $row['OM'];
                         if($pay_type == '藍新金流' && ($pay_status == '已付款' || $pay_status == '已付款(部分退款)')){
@@ -458,8 +461,9 @@ class OrderController extends WebController
                             $pay_money .= " - " . $row['refund'] . " + " . $handling_fee;
                         }
                     }
-                    $imoney = (($price * $num) - $row['dis_money'] - $row['co_money'] - $row['refund'] + $handling_fee);
-                    if($row['pay_type'] == '合作販售'){ $imoney = $pay_money; }
+                    // $imoney = (($price * $num) - $row['dis_money'] - $row['co_money'] - $row['refund'] + $handling_fee);
+                    // if($row['pay_type'] == '合作販售'){ $imoney = $pay_money; }
+                    $imoney = $pay_money;
                     // 發票
                     $inv_number = '';
                     $inv_time = '';
