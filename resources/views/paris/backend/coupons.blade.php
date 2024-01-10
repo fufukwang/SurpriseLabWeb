@@ -83,14 +83,21 @@
 @elseif( $row->type == 'gift' ) 禮物卡
 @endif</td>
                                                 <th>@if($row->end_at != '') <span @if($row->end_at->timestamp<time()) style="color:red;" @endif>{{$row->end_at}}</span> @else - @endif </th>
-                                                <td>@if($row->o_id > 0) 
-                                                    {{ App\model\paris\order::where('sn',$row->o_id)->first()->created_at }}
+                                                <td class="cc_{{$row->id}}">@if($row->o_id > 0) 
+                                                        @if(App\model\paris\order::where('sn',$row->o_id)->where('pay_status','已付款')->count()>0)
+                                                        {{ App\model\paris\order::where('sn',$row->o_id)->first()->created_at }}
+                                                        @else
+                                                        <span class="badge badge-pill badge-warning">問題票券(訂單未完成)</span>
+                                                        @endif
                                                 @else 尚未兌換
                                                 @endif</td>
-                                                <th>{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
+                                                <th class="cc_{{$row->id}}">{{ $row->o_id }}@if($row->o_id == -1) (訂單已刪除) @endif </th>
                                                 <td class="actions">
                                                     <!--a class="btn btn-primary btn-xs" href="/TableForOne/gift/{{ $row->id }}/edit"><i class="fa fa-pencil"></i></a-->
-                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-o_id={{ $row->o_id }} data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+                                                    @if($row->o_id > 0) 
+                                                    <a class="btn btn-warning btn-xs canelCoupon" href="javascript:;" data-b_id="{{ $row->b_id }}" data-id="{{ $row->id }}" data-code="{{ $row->code }}" data-toggle="tooltip" data-placement="top" data-original-title="刪除使用紀錄，此動作無法復原請謹慎使用!"><i class="fa fa-remove"></i></a>
+                                                    @endif
+                                                    <a class="btn btn-danger btn-xs" href="javascript:;" data-o_id="{{ $row->o_id }}" data-id="{{ $row->id }}" data-toggle="tooltip" data-placement="top" data-original-title="刪除優惠碼"><i class="fa fa-remove"></i></a>
                                                 </td>
                                             </tr>
 @empty
@@ -264,6 +271,23 @@ $(function(){
     });
     $('.glyphicon-search').parent().bind('click',function(){ $('input[name=act]').val(''); });
     $('.glyphicon-print').parent().bind('click',function(){ $('input[name=act]').val('xls'); });
+
+    $('.canelCoupon').bind('click',function(){
+        var b_id = $(this).data('b_id');
+        var id   = $(this).data('id');
+        var code = $(this).data('code');
+        if(confirm("確定要移除此優惠碼的使用紀錄?!(此動作無法復原)")) {
+            $.post('/paris/backmes/CanelCoupon',{
+                b_id : b_id,
+                code : code,
+            },function(data){
+                // $('.canelCoupon[data-id="'+id+'"]').remove();
+                // $('.sendbox[value="'+id+'"]').prop('checked',false);
+                $('.cc_'+id).html('已移除使用紀錄');
+                $.Notification.notify('success','bottom left','已更新', '已移除')
+            },'json');
+        }
+    });
 });
 function Count_number(){
     var perNum = $('#prefix').val().length;

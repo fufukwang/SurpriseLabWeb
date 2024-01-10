@@ -285,6 +285,36 @@ class FrontController extends WebController
             $couponCode = '';
             $manage = '';
             $ticket = '';
+            $pay_status = '未完成';
+
+            $data = [
+                'pro_id'     => $request->pro_id,
+                'pople'      => $people,
+                'name'       => $request->name,
+                'tel'        => $request->area_code.$request->phone,
+                'email'      => $request->email,
+                'notes'      => $request->notes,
+                'coupon'     => $coupon,
+                'sn'         => $count,
+                'money'      => $money - $cut1 - $cut2,
+                'pay_type'   => $pay_type,
+                'pay_status' => $pay_status,
+                'result'     => '',
+                'manage'     => $manage,
+                'is_overseas'=> 2,
+                'ticket'     => $ticket,
+                'dis_code'   => '',
+                'dis_money'  => 0,
+                'co_code'    => '',
+                'co_money'   => $cut1,
+                'tax_id'     => $request->company_tax_ID ?? '',
+                'tax_name'   => $request->company_name ?? '',
+                'vehicle'    => $request->vehicle ?? '',
+                'need_english' => $request->need_english ?? 0,
+                'need_chinese' => $request->need_chinese ?? 0,
+            ];
+            $order = order::create($data);
+
             if($request->has('coupons') && $request->coupons !=''){
                 $couponCode = $request->coupons;
                 foreach ($couponCode as $key => $value) {
@@ -317,6 +347,8 @@ class FrontController extends WebController
                         }
                         */
                     } else {
+                        $manage .= '使用序號列表:'.implode(",", $couponCode);
+                        order::where('id',$order->id)->update(['manage' => $manage,]);
                         Log::error('序號驗證錯誤');
                         return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
                     }
@@ -327,41 +359,20 @@ class FrontController extends WebController
                 return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
             }
 
-            $pay_status = '未完成';
             if(intval($money - $cut1 - $cut2)  == 0 && $people == $cutPeople){
                 $pay_status = '已付款';
             }
 
-            $data = [
-                'pro_id'     => $request->pro_id,
-                'pople'      => $people,
-                'name'       => $request->name,
-                'tel'        => $request->area_code.$request->phone,
-                'email'      => $request->email,
-                'notes'      => $request->notes,
-                'coupon'     => $coupon,
-                'sn'         => $count,
-                'money'      => $money - $cut1 - $cut2,
-                'pay_type'   => $pay_type,
-                'pay_status' => $pay_status,
-                'result'     => '',
-                'manage'     => $manage,
-                'is_overseas'=> 2,
-                'ticket'     => $ticket,
-                'dis_code'   => '',
-                'dis_money'  => 0,
-                'co_code'    => '',
-                'co_money'   => $cut1,
-                'tax_id'     => $request->company_tax_ID ?? '',
-                'tax_name'   => $request->company_name ?? '',
-                'vehicle'    => $request->vehicle ?? '',
-                'need_english' => $request->need_english ?? 0,
-                'need_chinese' => $request->need_chinese ?? 0,
-            ];
-            $order = order::create($data);
-
-            $sentSuccess = false;
             if($people == $cutPeople){
+                $updateData = [
+                    'coupon'     => $coupon,
+                    'money'      => $money - $cut1 - $cut2,
+                    'pay_status' => $pay_status,
+                    'manage'     => $manage,
+                    'ticket'     => $ticket,
+                    'co_money'   => $cut1,
+                ];
+                order::where('id',$order->id)->update($updateData);
                 $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
                     ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
 

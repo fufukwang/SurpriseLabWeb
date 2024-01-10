@@ -287,52 +287,7 @@ class FrontController extends WebController
             $couponCode = '';
             $manage = '';
             $ticket = '';
-            if($request->has('coupons') && $request->coupons !=''){
-                $couponCode = $request->coupons;
-                foreach ($couponCode as $key => $value) {
-                    $coN = coupon::where('code',$value)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
-                    if($coN>0){
-                        $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
-                        $mytype = $me->type;
-                        coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
-                        $money += $act->$mytype;
-                        $cut1 += $act->$mytype;
-                        $manage .= $value.'折抵 '.$act->$mytype."\n";
-
-                        switch($mytype){
-                            case 'p1': $cutPeople += 1; break;
-                            case 'p2': $cutPeople += 2; break;
-                            case 'p4': $cutPeople += 4; break;
-                        }
-                        if($key == 0){ $ticket = $mytype;
-                        } else {
-                            if($ticket != $mytype) $ticket = '';
-                        }
-                        /*
-                        if($ticket == $mytype){
-                            coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
-                            $cut1 += $act->$mytype;
-                            $manage .= $value.'折抵 '.$cut1."\n";
-                        } else {
-                            Log::error('giftcard種類不符');    
-                            return view('paris.frontend.booking_fail');
-                        }
-                        */
-                    } else {
-                        Log::error('序號驗證錯誤');
-                        return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
-                    }
-                }
-            }
-            if(count($request->coupons) == 0 ){
-                Log::error('序號驗證錯誤0');
-                return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
-            }
-
             $pay_status = '未完成';
-            if(intval($money - $cut1 - $cut2)  == 0 && $people == $cutPeople){
-                $pay_status = '已付款';
-            }
 
             $data = [
                 'pro_id'     => $request->pro_id,
@@ -362,8 +317,55 @@ class FrontController extends WebController
             ];
             $order = order::create($data);
 
-            $sentSuccess = false;
+            // 新增訂單後檢查
+            if($request->has('coupons') && $request->coupons !=''){
+                $couponCode = $request->coupons;
+                foreach ($couponCode as $key => $value) {
+                    $coN = coupon::where('code',$value)->whereRaw('(end_at>="'.Carbon::now()->format('Y-m-d H:i:s').'" OR end_at IS NULL)')->where('o_id',0)->count();
+                    if($coN>0){
+                        $me = coupon::where('code',$value)->where('o_id',0)->select('type')->first();
+                        $mytype = $me->type;
+                        coupon::where('code',$value)->where('o_id',0)->update(['o_id'=>$count]);
+                        $money += $act->$mytype;
+                        $cut1 += $act->$mytype;
+                        $manage .= $value.'折抵 '.$act->$mytype."\n";
+
+                        switch($mytype){
+                            case 'p1': $cutPeople += 1; break;
+                            case 'p2': $cutPeople += 2; break;
+                            case 'p4': $cutPeople += 4; break;
+                        }
+                        if($key == 0){ $ticket = $mytype;
+                        } else {
+                            if($ticket != $mytype) $ticket = '';
+                        }
+                    } else {
+                        $manage .= '使用序號列表:'.implode(",", $couponCode);
+                        order::where('id',$order->id)->update(['manage' => $manage,]);
+                        Log::error('序號驗證錯誤');
+                        return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
+                    }
+                }
+            }
+            if(count($request->coupons) == 0 ){
+                Log::error('序號驗證錯誤0');
+                return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
+            }
+
+            if(intval($money - $cut1 - $cut2)  == 0 && $people == $cutPeople){
+                $pay_status = '已付款';
+            }
+
             if($people == $cutPeople){
+                $updateData = [
+                    'coupon'     => $coupon,
+                    'money'      => $money - $cut1 - $cut2,
+                    'pay_status' => $pay_status,
+                    'manage'     => $manage,
+                    'ticket'     => $ticket,
+                    'co_money'   => $cut1,
+                ];
+                order::where('id',$order->id)->update($updateData);
                 $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
                     ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
 
