@@ -128,19 +128,19 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">單人獨舞票</label>
                                                 <div class="col-sm-8" style="padding:0 10px;">
-                                                    <input type="text" value="{{ $pro->p1 or 2000 }}" name="p1" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary "@if(isset($pro->id) && $pro->id>0) disabled @endif/>
+                                                    <input type="text" value="{{ $pro->p1 or 2100 }}" name="p1" data-bts-min="0" data-bts-max="5000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary "@if(isset($pro->id) && $pro->id>0) disabled @endif/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">雙人共舞票</label>
                                                 <div class="col-sm-8" style="padding:0 10px;">
-                                                    <input type="text" value="{{ $pro->p2 or 3800 }}" name="p2" data-bts-min="0" data-bts-max="10000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"@if(isset($pro->id) && $pro->id>0) disabled @endif/>
+                                                    <input type="text" value="{{ $pro->p2 or 4000 }}" name="p2" data-bts-min="0" data-bts-max="10000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"@if(isset($pro->id) && $pro->id>0) disabled @endif/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">四人群舞票</label>
                                                 <div class="col-sm-8" style="padding:0 10px;">
-                                                    <input type="text" value="{{ $pro->p4 or 7400 }}" name="p4" data-bts-min="0" data-bts-max="20000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"@if(isset($pro->id) && $pro->id>0) disabled @endif/>
+                                                    <input type="text" value="{{ $pro->p4 or 7600 }}" name="p4" data-bts-min="0" data-bts-max="20000" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary"@if(isset($pro->id) && $pro->id>0) disabled @endif/>
                                                 </div>
                                             </div>
 
