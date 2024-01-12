@@ -53,6 +53,10 @@ class WebController extends Controller
                     $toData['template'] = 'D7';
                     SLS::SendEmailterTPByTemplateName($toData);
                 }
+                if($day <= 3){
+                    $toData['template'] = 'D3';
+                    SLS::SendEmailterTPByTemplateName($toData);
+                }
             } else {
                 $toData['template'] = $type;
                 if(SLS::SendEmailterTPByTemplateName($toData)){
@@ -80,10 +84,12 @@ class WebController extends Controller
                 $now = time();
                 $lim = strtotime($ord->day.' '.$ord->rang_start);
                 $day = round( ($lim - $now) / 86400 );
+                /*
                 if($day <= 7){
                     $toData['template'] = 'D7';
                     SLS::SendSmsterTPByTemplateName($toData);
                 }
+                */
             } else {
                 $toData['template'] = $type;
                 if(SLS::SendSmsterTPByTemplateName($toData)){

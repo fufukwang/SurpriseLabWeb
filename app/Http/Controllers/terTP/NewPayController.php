@@ -67,7 +67,7 @@ class NewPayController extends WebController
                         return view('terTP.frontend.booking_fail');
                     }
                 } else {
-                    Log::error('序號驗證錯誤');
+                    Log::error('terTP booking pay 序號驗證錯誤'.$couponCode);
                     return view('terTP.frontend.booking_fail');
                 }
             }

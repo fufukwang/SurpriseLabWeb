@@ -342,7 +342,7 @@ class FrontController extends WebController
                     } else {
                         $manage .= '使用序號列表:'.implode(",", $couponCode);
                         order::where('id',$order->id)->update(['manage' => $manage,]);
-                        Log::error('序號驗證錯誤');
+                        Log::error('paris booking 序號驗證錯誤'.$value);
                         return Response::json(['success'=> 'N','message'=>'序號驗證錯誤'], 200);
                     }
                 }

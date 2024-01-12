@@ -66,7 +66,7 @@ class NewPayController extends WebController
                         return view('paris.frontend.booking_fail');
                     }
                 } else {
-                    Log::error('序號驗證錯誤');
+                    Log::error('paris booking pay 序號驗證錯誤'.$couponCode);
                     return view('paris.frontend.booking_fail');
                 }
             }
