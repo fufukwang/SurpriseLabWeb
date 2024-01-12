@@ -277,7 +277,7 @@ $(function(){
         var id   = $(this).data('id');
         var code = $(this).data('code');
         if(confirm("確定要移除此優惠碼的使用紀錄?!(此動作無法復原)")) {
-            $.post('/paris/backmes/CanelCoupon',{
+            $.post('/tertp/backmes/CanelCoupon',{
                 b_id : b_id,
                 code : code,
             },function(data){

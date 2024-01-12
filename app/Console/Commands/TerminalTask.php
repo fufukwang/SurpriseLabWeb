@@ -111,9 +111,9 @@ class TerminalTask extends Command
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=7")->get();
             foreach($pr07day as $pro){
                 // 找出正常的訂單
-                $order07 = order::select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn','pay_type')
-                    ->leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                    ->where('terTP_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
+                $order07 = order::select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn','pay_type')
+                    ->leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                    ->where('tertp_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
                 foreach ($order07 as $ord) {
                     if($ord->pay_type !== '合作販售'){
                         $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_start))));
@@ -158,9 +158,9 @@ class TerminalTask extends Command
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=3")->get();
             foreach($pr03day as $pro){
                 // 找出正常的訂單
-                $order03 = order::select('pople','terTP_pro.day','rang_start','need_english','terTP_order.id','name','email','tel','need_chinese','sn','pay_type')
-                    ->leftJoin('terTP_pro', 'terTP_pro.id', '=', 'terTP_order.pro_id')
-                    ->where('terTP_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
+                $order03 = order::select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn','pay_type')
+                    ->leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                    ->where('tertp_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
                 foreach ($order03 as $ord) {
                     if($ord->pay_type !== '合作販售'){
                         $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_start))));

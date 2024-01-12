@@ -189,9 +189,11 @@ class HelperService {
                 case 'order':
                     $this->sent_single_sms($smsData['phone'],"親愛的旅客，《落日月台》訂位確認信已寄出，請務必前往查看，如未收到，請至垃圾信匣或促銷內容尋找。\n\n一旦踏上旅途，請小心你的腳步，Mind the gap。",$token);
                     break;
+                    /*
                 case 'D7':
                     $this->sent_single_sms($smsData['phone'],"臨。",$token);
                     break;
+                    */
                 case 'DX':
                     $this->sent_single_sms($smsData['phone'],"h",$token);
                     break;
