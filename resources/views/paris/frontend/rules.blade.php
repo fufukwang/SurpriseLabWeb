@@ -144,7 +144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="item-title">如何預約《巴黎舞會》？</div>
                     <div class="item-body">
                         <p>
-                            先預售：歡迎至<a target="_blank" href="https://surpriselab.backme.tw/shops/3497?locale=zh-TW"><span>預約舞會</span></a>選購票券種類和數量<br>
+                            先預售：歡迎至<a target="_blank" href="https://m.me/surpriselabtw?ref=presaleend"><span>預約舞會</span></a>選購票券種類和數量<br>
                             後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約
                         </p> 
                     </div>
@@ -478,7 +478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a target="_blank" id="fixed-booking" href="https://surpriselab.backme.tw/shops/3497?locale=zh-TW">
+    <a target="_blank" id="fixed-booking" href="https://m.me/surpriselabtw?ref=presaleend">
         <img src="/paris/img/fixed-booking.png" />
     </a>
 
