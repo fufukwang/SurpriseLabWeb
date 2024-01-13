@@ -144,8 +144,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="item-title">如何預約《巴黎舞會》？</div>
                     <div class="item-body">
                         <p>
-                            先預售：歡迎至<a target="_blank" href="https://surpriselab.backme.tw/shops/3497?locale=zh-TW"><span>預約舞會</span></a>選購票券種類和數量<br>
-                            後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約
+                            <!-- 先預售：歡迎至<a target="_blank" href="https://surpriselab.backme.tw/shops/3497?locale=zh-TW"><span>預約舞會</span></a>選購票券種類和數量<br>
+                            後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約 -->
+                            《巴黎舞會》採網路購票、線上劃位方式進行<br>
+                            如欲購票，歡迎至<a href="/lebaldeparis/booking_pay"><span>預約舞會</span></a>選購票券種類與數量
                         </p> 
                     </div>
                 </div>
@@ -360,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
                 <li>購買預售票者，尚未收到劃位序號前申請退費，將不扣除10%手續費，可全額退費</li>
                 <li>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</li> -->
-                <li>
+                <!-- <li>
                     預購與劃位注意事項：
                     <ul>
                         <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
@@ -369,7 +371,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</li>
                         <li>收到劃位信件當天，進入劃位網站後，在未使用序號的狀況下，收到劃位信件的 6 小時內可向客服信箱提出延期劃位申請</li>
                     </ul>
-                </li>
+                </li> -->
+                <li>無論是預購或直購，單筆訂單若為1張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
                 <li>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 金流手續處理費）</li>
                 <li>發票若需新增/更改統編、抬頭或電子載具號碼，請先申請進行退款流程（規則同一般退款程序，且需酌收10%金流處理手續費），並重新訂購，再於訂購時填寫正確發票資訊</li>
             </ul>
@@ -392,25 +395,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             
             <p>不可抗力因素之更改訂位及退費辦法：若因天災、國際病毒、戰爭等不可抗力因素，由政府、該縣市主管機關發布停止上班、停演訊息，本專案將暫停演出，並協助改期或全額退費</p>
-            <br>
-
-            <center>
-                <p style="font-size: 1.5em;">未完成劃位</p>
-            </center>
-            <table>
-                <tr>
-                    <th></th>
-                    <th style="white-space: nowrap;">改期</th>
-                    <th style="white-space: nowrap;">轉讓</th>
-                    <th style="white-space: nowrap;">退費</th>
-                </tr>
-                <tr>
-                    <td>已完成預售票購買，收到劃位序號後未使用</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>100%</td>
-                </tr>
-            </table>
             <br>
 
             <center>
@@ -462,12 +446,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </table>
             <br>
 
+            <center>
+                <p style="font-size: 1.5em;">預購 / 未完成劃位</p>
+            </center>
+            <table>
+                <tr>
+                    <th></th>
+                    <th style="white-space: nowrap;">改期</th>
+                    <th style="white-space: nowrap;">轉讓</th>
+                    <th style="white-space: nowrap;">退費</th>
+                </tr>
+                <tr>
+                    <td>已完成預售票購買，收到劃位序號後未使用</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>100%</td>
+                </tr>
+            </table>
+            <br>
+
             <ul>
                 <li>來信申請退費請於下班 18:00 前，超過以隔日計算</li>
                 <li>體驗前 10 日、結帳完成後退還費用 90%，係因 10% 金流手續費</li>
                 <li>申請退費需收到「退費確認信」，才是成功完成程序，後續請靜候金流系統 7-10 個工作天退費</li>
                 <li>票券有效期間為本演出期間內（依網站公告），逾期視同作廢</li>
                 <!-- <li>劃位序號過期未使用，導致序號失效者，不予退費</li> -->
+                <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
             </ul>
             <br>
 
