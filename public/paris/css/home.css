@@ -1159,28 +1159,33 @@ body {
 #home .partner .logo img {
   max-height: 58px;
 }
-#home #sec-play .slider, #home #sec-review .slider {
+#home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider {
   max-width: 970px;
   margin: 0 auto;
   position: relative;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
-  #home #sec-play .slider, #home #sec-review .slider {
+  #home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider {
     padding: 0 66px;
   }
 }
 @media screen and (min-width: 768px) {
-  #home #sec-play .owl-dots, #home #sec-review .owl-dots {
+  #home #sec-play .owl-dots, #home #sec-review .owl-dots, #home #sec-media .owl-dots {
     display: none;
   }
 }
-#home #sec-play .owl-nav, #home #sec-review .owl-nav {
+#home #sec-play .owl-nav, #home #sec-review .owl-nav, #home #sec-media .owl-nav {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  #home #sec-play .owl-nav, #home #sec-review .owl-nav {
+  #home #sec-play .owl-nav, #home #sec-review .owl-nav, #home #sec-media .owl-nav {
     display: block;
   }
+}
+#home #sec-play .s-title, #home #sec-review .s-title, #home #sec-media .s-title {
+  font-size: 22px;
+  margin: 6px 0;
 }
 #home .owl-dots {
   margin-top: 15px;

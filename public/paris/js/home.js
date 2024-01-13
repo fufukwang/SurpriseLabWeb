@@ -25,6 +25,16 @@ $("#sec-play .owl-carousel, #sec-review .owl-carousel").owlCarousel({
     navText: ['<div class="pa-prev"></div>', '<div class="pa-next"></div>']
 });
 
+$("#sec-play .owl-carousel, #sec-media .owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 10,
+    dots: true,
+    nav: true,
+    lazyLoad: true,
+    navText: ['<div class="pa-prev"></div>', '<div class="pa-next"></div>']
+});
+
 // pin
 ScrollTrigger.create({
     trigger: "#banner",
