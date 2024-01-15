@@ -566,11 +566,12 @@ body {
         }
     }
 
-    #sec-play, #sec-review {
+    #sec-play, #sec-review, #sec-media {
         .slider {
             max-width: 838px + 66px + 66px;
             margin: 0 auto;
             position: relative;
+            text-align: center;
             @media screen and (min-width:768px) {
                 padding: 0 66px;
             }
@@ -587,6 +588,11 @@ body {
             @media screen and (min-width:768px) {
                 display: block;
             }
+        }
+
+        .s-title {
+            font-size: 22px;
+            margin: 6px 0;
         }
     }
 
