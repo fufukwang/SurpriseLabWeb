@@ -121,8 +121,8 @@ class OrderController extends WebController
             if($request->has('pro_id') && $request->pro_id>0){
                 // 觸發補寄
                 try {
-                    $ord = order::leftJoin('paris_pro', 'paris_pro.id', '=', 'paris_order.pro_id')
-                        ->select('pople','paris_pro.day','rang_start','need_english','paris_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                    $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                        ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
                     if($ord->email != '') $this->sendMailCenter($ord);
                     if($ord->tel != '') $this->sendSmsCenter($ord);
                 } catch (Exception $e){
