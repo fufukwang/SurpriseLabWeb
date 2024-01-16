@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=231123">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240116">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -187,13 +187,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="text-wrap">
                                     <!-- A Test -->
                                     <p class="color-y200 fw-normal">
-                                        <b>《落日月台 MIND THE GAP》1~2 月預售中</b><br>
+                                        <b>《落日月台 MIND THE GAP》售票中</b><br>
                                         <br>
-                                        歡迎來到巡迴沉浸式計劃《落日轉運站》，<br>
-                                        在此提供各種交通方式，接駁旅客前往終點。於高雄歷時一年後，抵達第二站 ⎯ 台北，<br>
-                                        並推出全新作品《落日月台》，將透過<br>
-                                        多樣場景變化及個人化全感官體驗，引領<br>
-                                        旅客探索落日將近、月升之際的彌留世界。
+                                        巡迴沉浸式計劃《落日轉運站》子作品《落日月台》，將接駁迷途的旅客，窺探屬於自己的終點。<br>
+                                        <br>
+                                        全新原創作品位於台北松山文創園區，並透過多樣場景變化及個人化全感官體驗，引領旅客探索落日將近、月升之際的彌留世界。
                                     </p>
 
                                     <!-- B Test -->
@@ -506,6 +504,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </figure>
                                             </div>
 
+                                            <div class="item">
+                                                <div class="slideshow-video">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-W8PYLETYAI?si=ujMHqt6gfMsVtqsy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                         <!-- Custom Controls -->
@@ -544,7 +548,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
 
                                     <div class="project-desc">
-                                        你遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的九位漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。
+                                        你遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的漂流者，將引導你遊走於多個奇幻空間，尋找離開彌留世界的出口。
                                         <i>──　願你留心腳步</i>
                                     </div>
                                 </div>
@@ -673,7 +677,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">地點 Location</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">台北松菸文創園區藝巷空間</li>
+                                                        <li class="list-item">台北松山文創園區 藝巷空間</li>
                                                         <li class="list-item">110055 台北市信義區光復南路133號</li>
                                                     </ul>
                                                 </div>
@@ -793,7 +797,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">地點 Location</div>
                                                     <ul class="list-wrap">
-                                                        <li class="list-item">台北松菸文創園區藝巷空間</li>
+                                                        <li class="list-item">台北松山文創園區 藝巷空間</li>
                                                         <li class="list-item">110055 台北市信義區光復南路133號</li>
                                                     </ul>
                                                 </div>
@@ -826,7 +830,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="discount-title">《落日月台》雙人結伴同行</div>
                             <div class="discount-p">
                                 找到一位你最熟悉的朋友或親人，一同前往彌留世界《落日月台》。<br>
-                                12/20前，前往預購並輸入折扣碼「2bird」再折200，享91折優惠！
+                                踏出月台後，你身旁的人會是同一位嗎？
                             </div>
                         </div>
                     </div>
@@ -1213,8 +1217,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <h3 class="heading-subtitle">Our Partners</h3>
                             </div>
                             <div class="img-wrap">
-                                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_partner.png?231212" alt="Partners">
-                                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_partner.png?231212" alt="Partners">
+                                <img class="img-fluid d-inline" src="/terminalAssets/images/main/img_partner.png?240116" alt="Partners">
                             </div>
                         </div>
                     </div>
@@ -1284,7 +1287,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
                                 <div class="accordion-body">
                                     <p>
-                                        踏入此處的旅客，皆遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的九位漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。
+                                        踏入此處的旅客，皆遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。
                                     </p>
                                 </div>
                             </div>
@@ -1327,7 +1330,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
     <script src="/terminalAssets/js/index.js?2311231"></script>
-    <script src="/terminalAssets/js/home-slideshow.js?231123"></script>
+    <script src="/terminalAssets/js/home-slideshow.js?240116"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
