@@ -190,7 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,600<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <span>【四人預購優惠】購票輸入<br>【dancefourfun】享 $200 折扣</span>
+                        <span>購票輸入【dancefourfun】<br>享 $200 折扣</span>
                         <br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
@@ -237,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,600<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <span>【四人預購優惠】購票輸入<br>【dancefourfun】享 $200 折扣</span>
+                        <span>購票輸入【dancefourfun】<br>享 $200 折扣</span>
                         <br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
