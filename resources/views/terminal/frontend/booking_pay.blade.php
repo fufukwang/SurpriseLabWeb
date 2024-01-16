@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
     <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
-    <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png"/>
+    <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
@@ -23,7 +23,7 @@
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
     <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
-    <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png">
+    <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
     <title>落日轉運站 The Sunset Terminal</title>

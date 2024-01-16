@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
     <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
-    <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png"/>
+    <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
@@ -22,7 +22,7 @@
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
     <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
-    <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph.png">
+    <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
     <title>落日轉運站 The Sunset Terminal</title>
@@ -402,7 +402,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion3-5" class="accordion-collapse collapse" aria-labelledby="accordion3-5-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>遲到將無法進場，並且無法退費。請注意自身時間安排，並務必提早 20 分鐘抵達</p>
+                                                            <p>本體驗採不同場次分批、陸續入場，為不影響其他乘客的權益與整體流程，遲到將無法入場，也不予退費。錯過的體驗、表演、餐食、酒飲，將無法回溯及外帶。為了您的權益，請務必準時到場。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-6-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-6" aria-expanded="false" aria-controls="accordion3-6">
+                                                            <span class="header-title">關於著裝有什麼要求嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-6" class="accordion-collapse collapse" aria-labelledby="accordion3-6-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>過程中需要走動、躺下，歡迎穿著輕鬆舒適好移動的服裝。另因體驗環節考量，建議勿配戴垂墜大型耳環、綁馬尾及包包頭等髮型，臉部及眼部建議淡妝或素顏。也請輕便前來，避免攜帶大型包包或行李。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-7-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-7" aria-expanded="false" aria-controls="accordion3-7">
+                                                            <span class="header-title">體驗中有飲食環節嗎？有酒精嗎？不喝酒怎麼辦？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-7" class="accordion-collapse collapse" aria-labelledby="accordion3-7-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>
+                                                                體驗包含三道小點及一酒精飲品，食物為蛋奶素。<br>
+                                                                現場僅提供體驗過程會飲用之酒精飲品，不提供其他非酒精之飲料。過程中請斟酌自身狀況，參與、使用。
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-8-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-8" aria-expanded="false" aria-controls="accordion3-8">
+                                                            <span class="header-title">體驗中的肢體碰觸環節</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-8" class="accordion-collapse collapse" aria-labelledby="accordion3-8-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>
+                                                                體驗中將有部分內容與演員會有肢體碰觸，如欲避免與演員肢體碰觸，請於開演前與乘務員確認。<br>
+                                                                過程中如有任何不適狀況，歡迎雙手在胸前比叉，演員將會調整互動環節。
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -582,7 +630,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="sub-block-wrap">
                                                 <div class="notice-list-wrap">
                                                     <ul class="list-wrap">
-                                                        <li class="list-item"><p>退費入帳約需 7 至 1 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</p></li>
+                                                        <li class="list-item"><p>退費入帳約需 7 至 10 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</p></li>
                                                         <li class="list-item">
                                                             <p>預購與劃位注意事項：</p>
                                                             <ul class="list-wrap">
