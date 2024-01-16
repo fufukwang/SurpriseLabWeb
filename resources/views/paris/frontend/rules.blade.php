@@ -144,7 +144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="item-title">如何預約《巴黎舞會》？</div>
                     <div class="item-body">
                         <p>
-                            <!-- 先預售：歡迎至<a target="_blank" href="https://surpriselab.backme.tw/shops/3497?locale=zh-TW"><span>預約舞會</span></a>選購票券種類和數量<br>
+                            <!-- 先預售：歡迎至<a target="_blank" href="/lebaldeparis/booking_pay"><span>預約舞會</span></a>選購票券種類和數量<br>
                             後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約 -->
                             《巴黎舞會》採網路購票、線上劃位方式進行<br>
                             如欲購票，歡迎至<a href="/lebaldeparis/booking_pay"><span>預約舞會</span></a>選購票券種類與數量
@@ -482,7 +482,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a target="_blank" id="fixed-booking" href="https://m.me/surpriselabtw?ref=presaleend">
+    <a target="_blank" id="fixed-booking" href="/lebaldeparis/booking_pay">
         <img src="/paris/img/fixed-booking.png" />
     </a>
 
