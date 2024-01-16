@@ -1386,4 +1386,11 @@ body {
 }
 #sec-group .scrollbar-thumb {
   background: #E28A8A;
+}
+
+#sec-review .ig {
+  margin: 0 -17px;
+}
+#sec-review #eapps-instagram-feed-1 a, #sec-review #eapps-instagram-feed-popup-1 a {
+  color: #fff;
 }/*# sourceMappingURL=home.css.map */

@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css?240108">
+    <link rel="stylesheet" href="/paris/css/home.css?240116">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -255,7 +255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>Review</h3>
             </div>
 
-            <div class="slider">
+            <!-- <div class="slider">
                 <div class="owl-carousel">
                     <div>
                         <img src="/paris/img/review1.png" />
@@ -268,6 +268,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <img src="/paris/img/review3.png" />
                     </div>
                 </div>
+            </div> -->
+            <div class="ig">
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-915c0ed7-8b94-49a4-bce3-8e063bedc1e7" data-elfsight-app-lazy></div>
             </div>
         </section>
 
@@ -904,6 +908,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="/paris/js/main.js?231003"></script>
-    <script src="/paris/js/home.js?2312061"></script>
+    <script src="/paris/js/home.js?240116"></script>
 </body>
 </html>

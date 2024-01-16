@@ -15,7 +15,7 @@ $("#sec-booking .owl-carousel").owlCarousel({
     dots: true
 });
 
-$("#sec-play .owl-carousel, #sec-review .owl-carousel").owlCarousel({
+$("#sec-play .owl-carousel").owlCarousel({
     items: 1,
     loop: true,
     margin: 10,
