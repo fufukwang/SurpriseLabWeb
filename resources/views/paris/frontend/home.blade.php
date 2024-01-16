@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css?240108">
+    <link rel="stylesheet" href="/paris/css/home.css?240116">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -244,6 +244,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         摸索與彼此的第一支舞
                     </div>
                     <a target="_blank" class="p-btn primary" href="/lebaldeparis/booking_pay">預約舞會</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-review">
+            <div class="title">
+                <img src="/paris/img/deco.svg" />
+                <h1>口碑評價</h1>
+                <h3>Review</h3>
+            </div>
+
+            <!-- <div class="slider">
+                <div class="owl-carousel">
+                    <div>
+                        <img src="/paris/img/review1.png" />
+                        <p></p>
+                    </div>
+                    <div>
+                        <img src="/paris/img/review2.png?231020" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/review3.png" />
+                    </div>
+                </div>
+            </div> -->
+            <div class="ig">
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-915c0ed7-8b94-49a4-bce3-8e063bedc1e7" data-elfsight-app-lazy></div>
+            </div>
+        </section>
+
+        <section id="sec-media">
+            <div class="title">
+                <img src="/paris/img/deco.svg" />
+                <h1>各界好評</h1>
+                <h3>Media</h3>
+            </div>
+
+            <div class="slider">
+                <div class="owl-carousel">
+                    <div>
+                        <a target="_blank" href="https://www.vogue.com.tw/article/%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83-%E5%8F%B0%E5%8C%97-%E9%A9%9A%E5%96%9C%E8%A3%BD%E9%80%A0">
+                            <img src="/paris/img/media1.webp" />
+                            <div class="s-title">Vogue</div>
+                            <div>威尼斯影展最佳VR《巴黎舞會》80分鐘擴演版回歸！5大亮點揭秘一票難求的魅力：穿上香奈兒高訂翩翩起舞，和桂綸鎂、陳柏霖同赴奇幻旅程</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://www.elle.com/tw/life/tech/a46233366/vr-paris-ball/">
+                            <img src="/paris/img/media2.webp" />
+                            <div class="s-title">ELLE</div>
+                            <div>超熱門VR沉浸互動展演《巴黎舞會》台北登場！穿上香奈兒虛擬高級訂製服，展開一場華麗冒險！</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://www.adaymag.com/2023/12/15/le-bal-de-paris-experience.html">
+                            <img src="/paris/img/media3.webp" />
+                            <div class="s-title">A Day Magazine</div>
+                            <div>我去看了火紅的「巴黎舞會」虛擬實境秀，穿上 CHANEL 禮服在幻境中穿梭，是近期最震撼的體驗</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://www.stylemaster.com.tw/2023/12/11/%E3%80%8A%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83%E3%80%8B12%E6%9C%88%E7%99%BB%E5%A0%B4%E7%A7%91%E6%95%99%E9%A4%A8%EF%BC%81%E7%A9%BF%E4%B8%8A%E9%A6%99%E5%A5%88%E5%85%92%E9%AB%98%E7%B4%9A%E8%A8%82%E8%A3%BD/">
+                            <img src="/paris/img/media4.webp" />
+                            <div class="s-title">stylemaster</div>
+                            <div>沉浸式《巴黎舞會》12月登場科教館！穿上香奈兒高級訂製服，體驗一場虛實的華麗冒險</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://www.wepeople.club/art/lebaldeparisdeblancaliintaipei/">
+                            <img src="/paris/img/media5.webp" />
+                            <div class="s-title">WEPEOPLE</div>
+                            <div>驚喜製造 x VIVE Arts威尼斯獲獎VR體驗《巴黎舞會》12月重返台北！</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://www.shoppingdesign.com.tw/post/view/9797">
+                            <img src="/paris/img/media6.webp" />
+                            <div class="s-title">Shopping Design</div>
+                            <div>《巴黎舞會》台北登場！打造 80 分鐘 VR 體驗，置身花園迷宮、夜總會等華麗場景</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -826,6 +908,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="/paris/js/main.js?231003"></script>
-    <script src="/paris/js/home.js?2312061"></script>
+    <script src="/paris/js/home.js?240116"></script>
 </body>
 </html>
