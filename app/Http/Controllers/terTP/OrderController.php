@@ -92,15 +92,6 @@ class OrderController extends WebController
         if($request->has('pro_id') && $request->pro_id>0){
             $data['pro_id'] = $request->pro_id;
             $data['manage'] = $data['manage']."\n".date('Y-m-d H:i:s')." 更改場次";
-            // 觸發補寄
-            try {
-                $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
-                    ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
-                if($ord->email != '') $this->sendMailCenter($ord);
-                if($ord->tel != '') $this->sendSmsCenter($ord);
-            } catch (Exception $e){
-                Log::error($e);
-            }
         }
         if(is_numeric($id) && $id>0){
             if($request->pay_type == '後台編輯'){
@@ -127,7 +118,17 @@ class OrderController extends WebController
                 }
             }
             order::where('id',$id)->update($data);
-            
+            if($request->has('pro_id') && $request->pro_id>0){
+                // 觸發補寄
+                try {
+                    $ord = order::leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                        ->select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn')->find($order->id);
+                    if($ord->email != '') $this->sendMailCenter($ord);
+                    if($ord->tel != '') $this->sendSmsCenter($ord);
+                } catch (Exception $e){
+                    Log::error($e);
+                }
+            }
         } 
         if($request->has('qxx') && $request->qxx != ''){
             return redirect('/tertp/print?'.$request->qxx)->with('message','編輯完成!');
@@ -420,10 +421,13 @@ class OrderController extends WebController
                             
                             $couponNumber++;
                         }
+                        /*
                         $pay_money .= ($couponNumber*4400);
                         if($row['OM']>0){
                             $pay_money .= "\r\n［{$row['OM']}］";
                         }
+                        */
+                        $pay_money = $row['OM'];
                     } else {
                         $pay_money = $row['OM'];
                         if($pay_type == '藍新金流' && ($pay_status == '已付款' || $pay_status == '已付款(部分退款)')){
@@ -457,8 +461,9 @@ class OrderController extends WebController
                             $pay_money .= " - " . $row['refund'] . " + " . $handling_fee;
                         }
                     }
-                    $imoney = (($price * $num) - $row['dis_money'] - $row['co_money'] - $row['refund'] + $handling_fee);
-                    if($row['pay_type'] == '合作販售'){ $imoney = $pay_money; }
+                    // $imoney = (($price * $num) - $row['dis_money'] - $row['co_money'] - $row['refund'] + $handling_fee);
+                    // if($row['pay_type'] == '合作販售'){ $imoney = $pay_money; }
+                    $imoney = $pay_money;
                     // 發票
                     $inv_number = '';
                     $inv_time = '';
