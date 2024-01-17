@@ -823,4 +823,12 @@ body {
     #eapps-instagram-feed-1 a, #eapps-instagram-feed-popup-1 a {
         color: #fff;
     }
+
+    #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-template-classic {
+        background: rgba(255, 255, 255, .2);
+    }
+
+    #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-content, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-text, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a:hover {
+        color: #fff;
+    }
 }
