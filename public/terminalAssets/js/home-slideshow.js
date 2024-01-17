@@ -9,8 +9,8 @@ $(function() {
     
         $this.owlCarousel({
             center: true,
-            // loop: true,
-            loop: $this.attr('id') === 'owl-bistro' ? false : true,
+            loop: true,
+            // loop: $this.attr('id') === 'owl-bistro' ? false : true,
             margin: 60,
             nav: false,
             lazyLoad: true,
@@ -38,9 +38,9 @@ $(function() {
             $this.trigger('next.owl.carousel');
         });
 
-        if($this.attr('id') === 'owl-bistro') {
-            $btnPrev.hide();
-            $btnNext.hide();
-        }
+        // if($this.attr('id') === 'owl-bistro') {
+        //     $btnPrev.hide();
+        //     $btnNext.hide();
+        // }
     })
 });
