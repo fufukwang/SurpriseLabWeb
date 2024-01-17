@@ -1393,4 +1393,10 @@ body {
 }
 #sec-review #eapps-instagram-feed-1 a, #sec-review #eapps-instagram-feed-popup-1 a {
   color: #fff;
+}
+#sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-template-classic {
+  background: rgba(255, 255, 255, 0.2);
+}
+#sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item, #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-content, #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-text, #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a, #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a:hover {
+  color: #fff;
 }/*# sourceMappingURL=home.css.map */
