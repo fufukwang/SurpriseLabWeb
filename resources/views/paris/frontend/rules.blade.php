@@ -482,7 +482,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a target="_blank" id="fixed-booking" href="/lebaldeparis/booking_pay">
+    <a id="fixed-booking" href="/lebaldeparis/booking_pay">
         <img src="/paris/img/fixed-booking.png" />
     </a>
 
