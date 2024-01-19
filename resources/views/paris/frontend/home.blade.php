@@ -305,7 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </a>
                     </div>
                     <div>
-                        <a target="_blank" href="https://www.stylemaster.com.tw/2023/12/11/%E3%80%8A%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83%E3%80%8B12%E6%9C%88%E7%99%BB%E5%A0%B4%E7%A7%91%E6%95%99%E9%A4%A8%EF%BC%81%E7%A9%BF%E4%B8%8A%E9%A6%99%E5%A5%88%E5%85%92%E9%AB%98%E7%B4%9A%E8%A8%82%E8%A3%BD/">
+                        <a target="_blank" href="https://www.stylemaster.com.tw/2023/12/07/%E3%80%8A%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83%E3%80%8B12%E6%9C%88%E7%99%BB%E5%A0%B4%E7%A7%91%E6%95%99%E9%A4%A8%EF%BC%81%E7%A9%BF%E4%B8%8A%E9%A6%99%E5%A5%88%E5%85%92%E9%AB%98%E7%B4%9A%E8%A8%82%E8%A3%BD/">
                             <img src="/paris/img/media4.webp" />
                             <div class="s-title">stylemaster</div>
                             <div>沉浸式《巴黎舞會》12月登場科教館！穿上香奈兒高級訂製服，體驗一場虛實的華麗冒險</div>
