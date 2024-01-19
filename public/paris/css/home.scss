@@ -566,11 +566,12 @@ body {
         }
     }
 
-    #sec-play, #sec-review {
+    #sec-play, #sec-review, #sec-media {
         .slider {
             max-width: 838px + 66px + 66px;
             margin: 0 auto;
             position: relative;
+            text-align: center;
             @media screen and (min-width:768px) {
                 padding: 0 66px;
             }
@@ -587,6 +588,11 @@ body {
             @media screen and (min-width:768px) {
                 display: block;
             }
+        }
+
+        .s-title {
+            font-size: 22px;
+            margin: 6px 0;
         }
     }
 
@@ -806,5 +812,23 @@ body {
 
     .scrollbar-thumb {
         background: #E28A8A;
+    }
+}
+
+#sec-review {
+    .ig {
+        margin: 0 -17px;
+    }
+
+    #eapps-instagram-feed-1 a, #eapps-instagram-feed-popup-1 a {
+        color: #fff;
+    }
+
+    #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-template-classic {
+        background: rgba(255, 255, 255, .2);
+    }
+
+    #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-content, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-text, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a, #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a:hover {
+        color: #fff;
     }
 }
