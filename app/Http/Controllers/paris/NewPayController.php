@@ -76,7 +76,7 @@ class NewPayController extends WebController
                 $discountCode = $request->discount;
                 $discount_list = json_decode(setting::where('slug','paris_pay_discount')->first()->json,true);
                 foreach($discount_list as $row){
-                    if(strtoupper($row['code']) == $discountCode){
+                    if(strtoupper($row['code']) == strtoupper($discountCode)){
                         $manage .= $discountCode.'折扣 '.$row['money']."\n";
                         $cut2 = $row['money'];
                         break;
