@@ -869,6 +869,10 @@ button.p-btn.secondary:hover:not([disabled]) {
     text-align: left;
   }
 }
+#booking #step1 .price .desc span {
+  font-weight: bold;
+  color: #E85454;
+}
 @media screen and (min-width: 768px) {
   #booking #step1 .selects {
     margin-bottom: 60px;
