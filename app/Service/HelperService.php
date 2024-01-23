@@ -79,7 +79,7 @@ class HelperService {
                 config(['mail.username' => env('MAIL_USERNAME')]);
                 config(['mail.password' => env('MAIL_PASSWORD')]);
             }
-            Mail::send('paris.email.'.$data['template'],$data,function($m) use ($data){
+            Mail::queue('paris.email.'.$data['template'],$data,function($m) use ($data){
                 $m->from('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
                 $m->sender('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
                 $m->replyTo('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
@@ -145,7 +145,7 @@ class HelperService {
                 config(['mail.username' => env('MAIL_USERNAME')]);
                 config(['mail.password' => env('MAIL_PASSWORD')]);
             }
-            Mail::send('terTP.email.'.$data['template'],$data,function($m) use ($data){
+            Mail::queue('terTP.email.'.$data['template'],$data,function($m) use ($data){
                 $m->from('mindthegap@surpriselab.com.tw', '落日轉運站-台北站');
                 $m->sender('mindthegap@surpriselab.com.tw', '落日轉運站-台北站');
                 $m->replyTo('mindthegap@surpriselab.com.tw', '落日轉運站-台北站');
