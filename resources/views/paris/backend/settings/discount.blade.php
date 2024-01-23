@@ -343,7 +343,7 @@ $('.sp-discuount-store').bind('click',function(){
 
         });
 function checkCode(text){
-    var regex = new RegExp("^[a-zA-Z0-9]+$");
+    var regex = new RegExp("^[a-zA-Z0-9_]+$");
     if (!regex.test(text)) return true;
     else return false;
 }

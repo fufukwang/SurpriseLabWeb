@@ -495,7 +495,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <figure class="slideshow-card">
                                                     <picture>
                                                         <source srcset="/terminalAssets/images/main/img_bistro_231123.webp" type="image/webp" />
-                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日轉運站" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日轉運站 The Sunset Terminal - 落日月台 MIND THE GAP" />
                                                     </picture>
                                                     <!-- <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日轉運站：夜間售票亭"> -->
                                                     <figcaption>
