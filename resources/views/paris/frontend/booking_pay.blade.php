@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/select2.css"/>
-    <link rel="stylesheet" href="/paris/css/booking_pay.css?231108">
+    <link rel="stylesheet" href="/paris/css/booking_pay.css?240122">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h2>$2,100</h2> 
                         <div class="desc">
                             （含一杯調飲）<br>
-                            <br>
+                            <br><br>
                             一個人自由地探索<br>
                             帶著好奇心闖入花漾年代
                         </div>
@@ -171,19 +171,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h2>$4,000<span>($2,000/人)</span></h2> 
                         <div class="desc">
                             （含兩杯調飲）<br>
-                            <br>
+                            <br><br>
                             邀請最重要的人<br>
                             感受奢華絢爛的巴黎午夜
                         </div>
                     </div>
                     <div class="item">
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket3.png" />
+                            <img src="/paris/img/booking_ticket3_old.png" />
                         </div>
                         <h4>四人群舞票</h4>
                         <h2>$7,600<span>($1,900/人)</span></h2> 
                         <div class="desc">
                             （含四杯調飲）<br>
+                            <span>購票輸入【dancefourfun】<br>享 $200 折扣</span>
                             <br>
                             與熟悉的人狂歡<br>
                             摸索與彼此的第一支舞
@@ -366,8 +367,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <svg width="11" height="16" viewBox="0 0 11 16" fill="none">
                                     <path d="M5.5 0C2.46269 0 0 2.51473 0 5.61624C0 8.71775 5.5 16 5.5 16C5.5 16 11 8.71775 11 5.61624C11 2.51473 8.54073 0 5.5 0ZM5.5 8.60249C3.88557 8.60249 2.57898 7.26479 2.57898 5.61973C2.57898 3.97468 3.88899 2.63698 5.5 2.63698C7.11101 2.63698 8.42102 3.97468 8.42102 5.61973C8.42102 7.26479 7.11101 8.60249 5.5 8.60249Z" fill="#016060"/>
                                 </svg>
-                                <div>111 台北市士林區的某棟秘密建築</div>
-                                <div class="note">（詳細地點請容許我們先保密，我們將慢慢向你揭露）</div>
+                                <div>國立臺灣科學教育館</div>
+                                <div class="note">111臺北市士林區士商路189號 B1 兒童廳</div>
+                                <div class="note" style="color: #F4115D; margin-top: -5px;">此圖面不代表訂位完成，請往下操作</div>
                             </div>
                         </div>
                     </div>
