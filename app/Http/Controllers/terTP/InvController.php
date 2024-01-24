@@ -163,7 +163,7 @@ class InvController extends WebController
                     case 'p2': $ticket = '雙人票'; $num = $row->pople / 2; $price = $row->p2; break;
                     case 'p6': $ticket = '六人票'; $num = $row->pople / 6; $price = $row->p6; break;
                 }
-                $taxamt = $totleamt - round($totleamt / (1 + (5 / 100)));
+                $taxamt = 0;//$totleamt - round($totleamt / (1 + (5 / 100)));
                 $ItemName = '';$ItemCount = '';$ItemUnit = '';$ItemPrice = '';$ItemAmt = '';
                 $ItemName .= '落日台北站'.$ticket;$ItemCount .= $num;$ItemUnit .= '張';$ItemPrice .= $price;$ItemAmt .= ($price*$num);
                 if($row->dis_money>0){
@@ -183,11 +183,9 @@ class InvController extends WebController
                     $psn = '_'.$inv_count;
                 }
                 $category = 'B2C'; $buyername = $row->name; $buyerUBN = '';$printFlag = 'N';$CarrierType = '2';$CarrierNum = rawurlencode($row->email);
+                if($row->vehicle!=''){ $printFlag = 'N';$CarrierType = '0';$CarrierNum = rawurlencode($row->vehicle); }
                 if($row->tax_id!='' && $row->tax_name!=''){
                     $category = 'B2B'; $buyername = $row->tax_name; $buyerUBN = $row->tax_id;$printFlag = 'Y';$CarrierType = '';$CarrierNum = '';
-                    if($row->vehicle!=''){
-                        $printFlag = 'N';$CarrierType = '0';$CarrierNum = rawurlencode($row->vehicle);
-                    }
                 }
                 $post_data_array = [
                     'RespondType' => 'JSON',
@@ -201,8 +199,10 @@ class InvController extends WebController
                     'BuyerAddress' => '',
                     'BuyerEmail' => $row->email,
                     'Category' => $category,
-                    'TaxType' => '1',
-                    'TaxRate' => '5',
+                    // 'TaxType' => '1',
+                    // 'TaxRate' => '5',
+                    'TaxType' => '3',
+                    'TaxRate' => '0',
                     'Amt' => $totleamt - $taxamt,
                     'TaxAmt' => $taxamt,
                     'TotalAmt' => $totleamt,

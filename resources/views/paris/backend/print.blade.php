@@ -539,7 +539,7 @@
                                                     <div class="form-group">
                                                         <label class="control-label">課稅別</label><br>
                             <div class="radio radio-info radio-inline">
-                                <input type="radio" name="TaxType" id="taxyes" value="1" checked>
+                                <input type="radio" name="TaxType" id="taxyes" value="1">
                                 <label for="taxyes"> 應稅 </label>
                             </div>
                             <div class="radio radio-info radio-inline">
@@ -547,7 +547,7 @@
                                 <label for="tax0"> 零稅率 </label>
                             </div>
                             <div class="radio radio-info radio-inline">
-                                <input type="radio" name="TaxType" id="taxno" value="3">
+                                <input type="radio" name="TaxType" id="taxno" value="3" checked>
                                 <label for="taxno"> 免稅 </label>
                             </div>
                                                     </div>

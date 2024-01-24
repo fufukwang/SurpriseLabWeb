@@ -216,7 +216,8 @@
     @forelse(App\model\terTP\coupon::where('o_id',$row->sn)->get() as $coup){{ $coup->code }} {{--[{{App\model\terTP\backme::select('money')->find($coup->b_id)->money}}]--}}<br >@empty 
     @if($row->pay_type == '信用卡') 刷卡付費[{{ $row->OM }}] @else 無使用優惠券 @endif @endforelse
     {{-- @if($couponNumber>0) [{{ $couponNumber * 4400 }}] @endif --}}
-    <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($inv_money / (1 + (5 / 100))) }}<br>稅額：{{ $inv_money - round($inv_money / (1 + (5 / 100))) }}<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
+    {{-- <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;">小計：{{ round($inv_money / (1 + (5 / 100))) }}<br>稅額：{{ $inv_money - round($inv_money / (1 + (5 / 100))) }}<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!} --}}
+    <br >[<span data-toggle="tooltip" data-html="true" title='<div style="text-align:left;"><span style="color:red">(免稅額)</span><br>小計：{{ $inv_money }}<br>稅額：0<br>總計：{{$inv_money}}</div>'>發票資訊</span>]{!! $modify_money !!}
 </th>
                                                 <td>{!! nl2br($row->manage) !!}</td>
 
@@ -537,7 +538,7 @@
                                                     <div class="form-group">
                                                         <label class="control-label">課稅別</label><br>
                             <div class="radio radio-info radio-inline">
-                                <input type="radio" name="TaxType" id="taxyes" value="1" checked>
+                                <input type="radio" name="TaxType" id="taxyes" value="1" >
                                 <label for="taxyes"> 應稅 </label>
                             </div>
                             <div class="radio radio-info radio-inline">
@@ -545,7 +546,7 @@
                                 <label for="tax0"> 零稅率 </label>
                             </div>
                             <div class="radio radio-info radio-inline">
-                                <input type="radio" name="TaxType" id="taxno" value="3">
+                                <input type="radio" name="TaxType" id="taxno" value="3" checked>
                                 <label for="taxno"> 免稅 </label>
                             </div>
                                                     </div>
