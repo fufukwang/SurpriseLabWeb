@@ -73,7 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </main>
 
-    <main id="notice">
+    <!-- <main id="notice">
         <div class="title">
             <img src="/paris/img/deco.svg" />
             <h1>舞會須知</h1>
@@ -138,9 +138,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <button class="p-btn primary notice-btn">預約入場</button>
             </div>
         </div>
-    </main>
+    </main> -->
 
-    <main id="booking" style="display:none;">
+    <main id="booking">
         <form id="booking_form" action="booking_success.html" method="post">
             {{ csrf_field() }}
             <div id="step1" class="step">
@@ -232,7 +232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="actions">
-                    <div class="p-btn primary go-next disabled">下一步</div>
+                    <div class="p-btn primary go-next disabled">預約入場</div>
                 </div>
             </div>
     
