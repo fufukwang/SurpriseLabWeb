@@ -479,7 +479,12 @@ class BackController extends WebController
                             case 'p4': $type = '四人群舞票' ; break;
                         }
                         if($row['o_id']>0){
-                            $change_day = order::where('sn',$row['o_id'])->first()->created_at;
+                            $ord = order::select('created_at')->where('sn',$row['o_id'])->first();
+                            if($ord){
+                                $change_day = $ord->created_at;
+                            } else {
+                                $change_day = '訂單有問題';
+                            }
                         } else {
                             $change_day = '尚未兌換';
                         }
