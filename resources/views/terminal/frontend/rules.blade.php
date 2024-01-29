@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </aside>
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
-        <a href="https://surpriselab.backme.tw/shops/3460?locale=zh-TW" class="image-wrap">
+        <a href="https://m.me/surpriselabtw?ref=20230202" class="image-wrap">
             <img src="/terminalAssets/images/general/btn_booking.png" class="pc-style" alt="what's on">
             <img src="/terminalAssets/images/general/btn_booking_mobile.png" class="mobile-style" alt="what's on">
         </a>
