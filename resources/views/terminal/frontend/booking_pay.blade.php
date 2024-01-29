@@ -563,6 +563,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking_pay.js?v=231127"></script>
+    <script src="/terminalAssets/js/booking_pay.js?v=240129"></script>
 </body>
 </html>
