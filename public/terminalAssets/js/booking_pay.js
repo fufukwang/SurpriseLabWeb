@@ -69,22 +69,13 @@ $(function() {
             let html = '';
             for(i=1;i<=max;i++){
                 if($ticket_value == '單人票') {
-                    html += '<li class="dropdown-item body-04">'+i+' 張（'+(i * 1)+'人）</li>';
+                    html += '<li class="dropdown-item body-04" data-cnt="'+i+'">'+i+' 張（'+(i * 1)+'人）</li>';
                 } else if($ticket_value == '雙人票') {
-                    html += '<li class="dropdown-item body-04">'+i+' 張（'+(i * 2)+'人）</li>';
+                    html += '<li class="dropdown-item body-04" data-cnt="'+i+'">'+i+' 張（'+(i * 2)+'人）</li>';
                 } else if($ticket_value == '六人票') {
-                    html += '<li class="dropdown-item body-04">'+i+' 張（'+(i * 6)+'人）</li>';
+                    html += '<li class="dropdown-item body-04" data-cnt="'+i+'">'+i+' 張（'+(i * 6)+'人）</li>';
                 }
             }
-            // if($ticket_value == '單人票') {
-            //     html += '<li class="dropdown-item body-04" data-cnt="1">1張（1人）</li>';
-            // } else if($ticket_value == '雙人票') {
-            //     html += '<li class="dropdown-item body-04" data-cnt="1">1張（2人）</li>';
-            //     // html += '<li class="dropdown-item body-04" data-cnt="2">2張（4人）</li>';
-            // } else if($ticket_value == '六人票') {
-            //     html += '<li class="dropdown-item body-04" data-cnt="1">1張（6人）</li>';
-            //     // html += '<li class="dropdown-item body-04" data-cnt="2">2張（12人）</li>';
-            // }
             $('ul[aria-labelledby=dropdownMenuButtonCount]').html(html);
             $dropdown_count.text('選擇張數');
             $people_value = 0;
