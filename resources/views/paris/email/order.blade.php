@@ -173,7 +173,7 @@ switch ($time) {
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 14px; padding: 14px;">
-                                <a class="mcnButton " title="長按複製邀請函" href="" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">長按複製邀請函</a>
+                                <a class="mcnButton " title="長按複製邀請函" href="{{env('APP_URL')}}/lebaldeparis/invitation{{ $master }}" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">長按複製邀請函</a>
                             </td>
                         </tr>
                     </tbody>
