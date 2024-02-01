@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=230920"/>
+    <link rel="stylesheet" href="css/style.css?date=240201"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -137,6 +137,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <img class="img-fluid" src="img/icon/icon-arrow.svg" alt="scroll-down">
                             </a>
                         </div>
+
+                        <div class="dashboard" data-date="2024-03-31 23:59:59">
+                            <img src="img/home/intro/dashboard.webp" alt="無光晚餐 Dining In The Dark">
+                            <div class="countdown days"></div>
+                            <div class="countdown hours"></div>
+                            <div class="countdown minutes"></div>
+                        </div>
+
+                        <br><br>
+                        
+                        <div class="dashboard" data-date="2024-03-31 23:59:59">
+                            <img src="img/home/intro/dashboard.gif" alt="無光晚餐 Dining In The Dark">
+                            <div class="countdown days"></div>
+                            <div class="countdown hours"></div>
+                            <div class="countdown minutes"></div>
+                        </div>
                     </section>
 
                     <!-- Section1 About -->
@@ -237,9 +253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         <div class="feature-item">90分鐘體驗時間</div>
                                                     </div>
                                                     <div class="experience-desc">
-                                                        “ Everything you can imagine is real.” - <b>Pablo Picasso</b>
-                                                        <br/><br/>
-                                                        踏進黑暗，跟隨想像力展開星際之旅，只要你願意相信，你的想像力，可以把所有不可能，變成可能。
+                                                        踏進黑暗，跟隨想像力展開星際之旅，只要你願意相信，你的想像力，將帶領你探索那些前所未有的體驗。
                                                         <br/><br/>
                                                         最終，你會發現：「想像力，可以創造出一個世界。」
                                                     </div>
@@ -1361,7 +1375,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?date=2312141"></script>
+    <script src="js/index.js?date=240201"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?v=0.11"></script>
     <script src="js/index-slideshow.js?date=230919"></script>
