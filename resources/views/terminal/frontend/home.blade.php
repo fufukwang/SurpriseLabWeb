@@ -85,7 +85,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </aside>
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
-        <a href="https://m.me/surpriselabtw?ref=20230202" class="image-wrap">
+        <a href="/terminal/booking_now" class="image-wrap">
             <img src="/terminalAssets/images/general/btn_booking.png" class="pc-style" alt="what's on">
             <img src="/terminalAssets/images/general/btn_booking_mobile.png" class="mobile-style" alt="what's on">
         </a>
@@ -554,7 +554,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                                 <div class="cta-wrap">
                                     <div class="btn-wrap">
-                                        <a target="_blank" href="https://m.me/surpriselabtw?ref=20230202" class="activity-btn">購票去</a>
+                                        <a target="_blank" href="/terminal/booking_now" class="activity-btn">購票去</a>
                                     </div>
                                 </div>
                             </div>
@@ -565,7 +565,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <!-- <div class="cta-wrap">
                 <div class="btn-wrap">
-                    <a href="https://m.me/surpriselabtw?ref=20230202" class="activity-btn">購票去</a>
+                    <a href="/terminal/booking_now" class="activity-btn">購票去</a>
                 </div>
             </div> -->
             <div class="elfsight-app-bfcc5c1c-9303-4b2c-9427-808555aa10bc js-anchor-section review-section"></div>
@@ -668,8 +668,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">週一至週二｜公休</li>
-                                                        <li class="list-item">週三至週五｜17:30 - 21:15</li>
-                                                        <li class="list-item">週六、週日｜11:00 - 12:45、17:30 - 21:15</li>
+                                                        <li class="list-item">週三至週五｜17:30 - 22:30</li>
+                                                        <li class="list-item">週六、週日｜11:00 - 16:00、17:30 - 22:30</li>
                                                         <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
                                                 </div>
@@ -788,8 +788,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">週一至週二｜公休</li>
-                                                        <li class="list-item">週三至週五｜17:30 - 21:15</li>
-                                                        <li class="list-item">週六、週日｜11:00 - 12:45、17:30 - 21:15</li>
+                                                        <li class="list-item">週三至週五｜17:30 - 22:30</li>
+                                                        <li class="list-item">週六、週日｜11:00 - 16:00、17:30 - 22:30</li>
                                                         <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
                                                 </div>
@@ -821,7 +821,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="owl-carousel owl-theme">
                     
                     <div class="item">
-                        <a href="https://m.me/surpriselabtw?ref=20230202" target="_blank">
+                        <a href="/terminal/booking_now" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount01.svg?231123" data-src="/terminalAssets/images/main/discount01.svg?231123" data-src-retina="/terminalAssets/images/main/discount01.svg?231123" alt="Klook">
                             </figure>
@@ -836,7 +836,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
 
                     <div class="item">
-                        <a href="https://m.me/surpriselabtw?ref=20230202" target="_blank">
+                        <a href="/terminal/booking_now" target="_blank">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount02.svg?231123" data-src="/terminalAssets/images/main/discount02.svg?231123" data-src-retina="/terminalAssets/images/main/discount02.svg?231123" alt="Klook">
                             </figure>

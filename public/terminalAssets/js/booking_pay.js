@@ -60,24 +60,21 @@ $(function() {
             // case 'Boat for ONE': max = 1; $ticket_value = 'boat'; break;
             // case '套票：車票+飛機票': max = 24; $ticket_value = 'A'; break;
             // case '套票B：車票+飛機票+船票': max = 1; $ticket_value = 'B'; break;
-            case '2,200/人 單人票': max = 1; $ticket_value = '單人票'; break;
-            case '2,100/人 雙人票': max = 1; $ticket_value = '雙人票'; break;
+            case '2,200/人 單人票': max = 6; $ticket_value = '單人票'; break;
+            case '2,100/人 雙人票': max = 3; $ticket_value = '雙人票'; break;
             case '2,000/人 六人票': max = 1; $ticket_value = '六人票'; break;
         }
         if(max>0){
             $dropdown_count.prop('disabled',false);
             let html = '';
-            // for(i=1;i<=max;i++){
-            //     html += '<li class="dropdown-item body-04">'+i+' 人</li>';
-            // }
-            if($ticket_value == '單人票') {
-                html += '<li class="dropdown-item body-04" data-cnt="1">1張（1人）</li>';
-            } else if($ticket_value == '雙人票') {
-                html += '<li class="dropdown-item body-04" data-cnt="1">1張（2人）</li>';
-                // html += '<li class="dropdown-item body-04" data-cnt="2">2張（4人）</li>';
-            } else if($ticket_value == '六人票') {
-                html += '<li class="dropdown-item body-04" data-cnt="1">1張（6人）</li>';
-                // html += '<li class="dropdown-item body-04" data-cnt="2">2張（12人）</li>';
+            for(i=1;i<=max;i++){
+                if($ticket_value == '單人票') {
+                    html += '<li class="dropdown-item body-04" data-cnt="'+i+'">'+i+' 張（'+(i * 1)+'人）</li>';
+                } else if($ticket_value == '雙人票') {
+                    html += '<li class="dropdown-item body-04" data-cnt="'+i+'">'+i+' 張（'+(i * 2)+'人）</li>';
+                } else if($ticket_value == '六人票') {
+                    html += '<li class="dropdown-item body-04" data-cnt="'+i+'">'+i+' 張（'+(i * 6)+'人）</li>';
+                }
             }
             $('ul[aria-labelledby=dropdownMenuButtonCount]').html(html);
             $dropdown_count.text('選擇張數');

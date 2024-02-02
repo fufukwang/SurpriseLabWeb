@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </aside>
     <!-- fixed btn - what's on -->
     <aside class="fixed-btn cta-btn js-hidden-target">
-        <a href="https://m.me/surpriselabtw?ref=20230202" class="image-wrap">
+        <a href="/terminal/booking_now" class="image-wrap">
             <img src="/terminalAssets/images/general/btn_booking.png" class="pc-style" alt="what's on">
             <img src="/terminalAssets/images/general/btn_booking_mobile.png" class="mobile-style" alt="what's on">
         </a>
@@ -168,8 +168,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion1-5" class="accordion-collapse collapse" aria-labelledby="accordion1-5-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>先預售：<a class="link-text style-qa" target="_blank" href="https://surpriselab.backme.tw/shops/3460">歡迎至此</a>選購票券種類和數量</p>
-                                                            <p>後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約</p>
+                                                            <p>
+                                                                《落日月台》採網路購票、線上劃位方式進行<br>
+                                                                如欲購票，歡迎至<a class="link-text style-qa" href="/terminal/booking_now">購票去</a>選購票券種類與數量
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -219,7 +221,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </div>
                                         <div class="block-wrap">
                                             <div class="section-heading-wrap">
-                                                <h2 class="heading-accordion-title">購票資訊</h2>
+                                                <h2 class="heading-accordion-title">劃位序號相關資訊</h2>
                                             </div>
 
                                             <div class="accordion rule-accordion-wrap" id="accordionFlushExample-2">
@@ -285,7 +287,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </div>
                                                 </div>
                 
-                                                <div class="accordion-item">
+                                                <!-- <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion2-5-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2-5" aria-expanded="false" aria-controls="accordion2-5">
                                                             <span class="header-title">如果我想買多人票或多張票，有建議的買法嗎？</span>
@@ -327,7 +329,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                         <div class="block-wrap">
@@ -614,15 +616,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <td>將訂位確認信轉寄<br>或截圖給親朋好友即可</td>
                                                             <td>現場須出示確認信<br>及向櫃檯說明<br>原訂票人姓名、電話</td>
                                                         </tr>
-                                                        <tr>
+                                                        <!-- <tr>
                                                             <th>退票<br>（未收到劃位序號）</th>
                                                             <td>購票者的<br>姓名、購買信箱</td>
                                                             <td>訂單編號</td>
-                                                        </tr>
+                                                        </tr> -->
                                                         <tr>
-                                                            <th>退票<br>（已收到劃位序號）</th>
+                                                            <th>退票</th>
                                                             <td>購票者的<br>姓名、購買信箱</td>
-                                                            <td>欲更改場次<br>劃位序號</td>
+                                                            <td>欲更改場次<br>（若有）</td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -668,41 +670,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="sub-block-wrap">
                                                 <div class="text-wrap">
                                                     <p class="body-03">不可抗力因素之更改訂位及退費辦法：若因天災、國際病毒、戰爭等不可抗力因素，由政府、該縣市主管機關發布停止上班、停演訊息，本專案將暫停演出，並協助改期或全額退費</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="sub-block-wrap">
-                                                <div class="section-heading-wrap">
-                                                    <h4 class="heading-content-title">未完成劃位</h4>
-                                                </div>
-
-                                                <div class="table-wrap style-rule layout-refund">
-                                                    <table>
-                                                        <tr>
-                                                            <th></th>
-                                                            <th>改期</th>
-                                                            <th>轉讓</th>
-                                                            <th>退費</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>已完成預售票購買，<br class="mobile-br">未收到劃位序號</th>
-                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
-                                                            <td><i class="icon-cross"></i></td>
-                                                            <td>100%</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>已完成預售票購買，<br class="mobile-br">收到劃位序號後申請退費</th>
-                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
-                                                            <td><i class="icon-cross"></i></td>
-                                                            <td>100%</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>已完成預售票購買，<br class="mobile-br">已收到劃位序號，<br class="mobile-br">劃位序號過期未使用</th>
-                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
-                                                            <td><i class="icon-cross"></i></td>
-                                                            <td><i class="icon-cross"></i></td>
-                                                        </tr>
-                                                    </table>
                                                 </div>
                                             </div>
 
@@ -754,6 +721,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <td><i class="icon-round"></i></td>
                                                             <td><i class="icon-round"></i></td>
                                                             <td>90%</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="sub-block-wrap">
+                                                <div class="section-heading-wrap">
+                                                    <h4 class="heading-content-title">未完成劃位</h4>
+                                                </div>
+
+                                                <div class="table-wrap style-rule layout-refund">
+                                                    <table>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>改期</th>
+                                                            <th>轉讓</th>
+                                                            <th>退費</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>已完成預售票購買，<br class="mobile-br">未收到劃位序號</th>
+                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
+                                                            <td><i class="icon-cross"></i></td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>已完成預售票購買，<br class="mobile-br">收到劃位序號後申請退費</th>
+                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
+                                                            <td><i class="icon-cross"></i></td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>已完成預售票購買，<br class="mobile-br">已收到劃位序號，<br class="mobile-br">劃位序號過期未使用</th>
+                                                            <td><span class="style-bolder"><i class="icon-cross"></i></span></td>
+                                                            <td><i class="icon-cross"></i></td>
+                                                            <td><i class="icon-cross"></i></td>
                                                         </tr>
                                                     </table>
                                                 </div>
