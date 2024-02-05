@@ -64,11 +64,11 @@ class NewPayController extends WebController
                         $manage .= $couponCode.'折抵 '.$cut1."\n";
                     } else {
                         Log::error('giftcard種類不符');    
-                        return view('terTP.frontend.booking_fail');
+                        return view('terminal.frontend.booking_fail');
                     }
                 } else {
                     Log::error('terTP booking pay 序號驗證錯誤'.$couponCode);
-                    return view('terTP.frontend.booking_fail');
+                    return view('terminal.frontend.booking_fail');
                 }
             }
 
@@ -89,6 +89,10 @@ class NewPayController extends WebController
             $pay_status = '未完成';
             if(intval($money - $cut1 - $cut2)  <= 0){
                 $pay_status = '已付款';
+                if($money - $cut1 == 0){
+                    $manage .= "超過金額取消額扣碼使用\n";
+                    $cut2 = 0;
+                }
             }
 
 

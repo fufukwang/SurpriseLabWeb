@@ -505,6 +505,7 @@ $(function() {
         
 
         if(type == 'coupon'){
+            if(usedCoupons.length == 1) return false;
             $.blockUI({message: null});
             $.post('/terminal/PostAjaxData',{
                 'act': 'CheckterTPCoupon',
@@ -532,6 +533,7 @@ $(function() {
         }
 
         if(type == 'discount'){
+            if(coupon.prop('readonly')) return false;
             $.blockUI({message: null});
             $.post('/terminal/PostAjaxData',{
                 'act': 'CheckterTPDiscount',
