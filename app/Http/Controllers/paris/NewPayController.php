@@ -85,8 +85,12 @@ class NewPayController extends WebController
             }
 
             $pay_status = '未完成';
-            if(intval($money - $cut1 - $cut2)  == 0){
+            if(intval($money - $cut1 - $cut2)  <= 0){
                 $pay_status = '已付款';
+                if($money - $cut1 == 0){
+                    $manage .= "超過金額取消額扣碼使用\n";
+                    $cut2 = 0;
+                }
             }
 
 
