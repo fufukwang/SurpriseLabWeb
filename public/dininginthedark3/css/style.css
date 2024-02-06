@@ -3347,3 +3347,57 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   width: 100%;
   height: 100%;
 }
+
+.dashboard {
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+  color: #8C5FB4;
+}
+
+.dashboard img {
+  width: 100%;
+  display: block;
+}
+
+.dashboard .countdown {
+  position: absolute;
+  top: 173px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.dashboard .countdown.days {
+  left: 88px;
+}
+
+.dashboard .countdown.hours {
+  left: 137px;
+}
+
+.dashboard .countdown.minutes {
+  left: 183px;
+}
+
+@media (min-width: 550px) {
+  .dashboard {
+    width: 500px;
+  }
+
+  .dashboard .countdown {
+    top: 288px;
+    font-size: 35px;
+  }
+  
+  .dashboard .countdown.days {
+    left: 142px;
+  }
+
+  .dashboard .countdown.hours {
+    left: 226px;
+  }
+
+  .dashboard .countdown.minutes {
+    left: 304px;
+  }
+}

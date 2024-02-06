@@ -244,3 +244,23 @@ window.addEventListener('DOMContentLoaded', function() {
         document.documentElement.classList.add(hasSupport ? 'webp' : 'no-webp');
     });
 });
+
+setInterval(function() {
+    var end = $('#Intro .dashboard').data('date');
+    var endDate = end.split(' ')[0];
+    var endTime = end.split(' ')[1];
+    endDate = endDate.split('-');
+    endTime = endTime.split(':');
+    var future = new Date(parseInt(endDate[0]), parseInt(endDate[1])-1, parseInt(endDate[2]), parseInt(endTime[0]), parseInt(endTime[1]), parseInt(endTime[2]));
+    var now = new Date();
+    var diff = future - now;
+    var days = Math.floor( diff / (1000*60*60*24) );
+    var hours = Math.floor( diff / (1000*60*60) );
+    var mins = Math.floor( diff / (1000*60) );
+    var d = days;
+    var h = hours - days  * 24;
+    var m = mins  - hours * 60;
+    $('#Intro .dashboard .days').text( d < 10 ? ('0' + d) : d );
+    $('#Intro .dashboard .hours').text( h < 10 ? ('0' + h) : h );
+    $('#Intro .dashboard .minutes').text( m < 10 ? ('0' + m) : m );
+}, 500);
