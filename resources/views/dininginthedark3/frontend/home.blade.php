@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240201"/>
+    <link rel="stylesheet" href="css/style.css?date=240206"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -139,16 +139,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="dashboard" data-date="2024-03-31 23:59:59">
-                            <img src="img/home/intro/dashboard.webp" alt="無光晚餐 Dining In The Dark">
-                            <div class="countdown days"></div>
-                            <div class="countdown hours"></div>
-                            <div class="countdown minutes"></div>
-                        </div>
-
-                        <br><br>
-                        
-                        <div class="dashboard" data-date="2024-03-31 23:59:59">
-                            <img src="img/home/intro/dashboard.gif" alt="無光晚餐 Dining In The Dark">
+                            <!-- <img src="img/home/intro/dashboard.webp" alt="無光晚餐 Dining In The Dark"> -->
+                            <picture>
+                                <source srcset="img/home/intro/intro-count.webp" type="image/webp" />
+                                <img src="img/home/intro/intro-count.png" alt="無光晚餐 Dining In The Dark">
+                            </picture>
                             <div class="countdown days"></div>
                             <div class="countdown hours"></div>
                             <div class="countdown minutes"></div>
