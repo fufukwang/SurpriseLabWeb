@@ -3362,7 +3362,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 .dashboard .countdown {
   position: absolute;
-  top: 176px;
+  top: 173px;
   font-size: 20px;
   line-height: 1;
 }
@@ -3372,11 +3372,11 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 }
 
 .dashboard .countdown.hours {
-  left: 135px;
+  left: 137px;
 }
 
 .dashboard .countdown.minutes {
-  left: 181px;
+  left: 183px;
 }
 
 @media (min-width: 550px) {
@@ -3385,7 +3385,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 
   .dashboard .countdown {
-    top: 292px;
+    top: 288px;
     font-size: 35px;
   }
   
@@ -3394,10 +3394,10 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 
   .dashboard .countdown.hours {
-    left: 223px;
+    left: 226px;
   }
 
   .dashboard .countdown.minutes {
-    left: 300px;
+    left: 304px;
   }
 }
