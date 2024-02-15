@@ -396,7 +396,7 @@ class InvController extends WebController
             $result = $this->inv_cancel($post_data_array);
             $results = json_decode($result['web_info'],true);
             // $r = json_decode($results['Result'],true);
-            if($results['Status'] == 'SUCCESS'){
+            if($results['Status'] == 'SUCCESS' || $results['Status'] == 'LIB10005'){
                 inv::where('order_id',$request->id)->update(['is_cancal'=>1]);
                 // $inv->is_cancal = 1;
                 // $inv->save();
