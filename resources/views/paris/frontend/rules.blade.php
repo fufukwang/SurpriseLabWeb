@@ -350,6 +350,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>購票者的<br>姓名、購買信箱</td>
                     <td>劃位序號</td>
                 </tr>
+                <tr>
+                    <td>退票<br>（線上購票直接劃位）</td>
+                    <td>購票者的<br>姓名、購票信箱、手機</td>
+                    <td>訂單編號</td>
+                </tr>
             </table> 
 
             <br>
