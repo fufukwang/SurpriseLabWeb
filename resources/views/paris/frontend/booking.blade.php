@@ -212,7 +212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="select-wrapper"></div>
                         </div>
                     </div>
-                    <!-- <div class="input-group">
+                    <div class="input-group">
                         <label>統一編號（無此需求可不須填寫）</label>
                         <input class="tax" type="text" name="company_tax_ID" />
                     </div>
@@ -223,10 +223,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="input-group">
                         <label>手機載具 （無此需求可不須填寫）</label>
                         <input class="invoices" type="text" name="vehicle" />
-                    </div> -->
+                    </div>
                     <div class="input-group">
                         <label>其他備註</label>
-                        <textarea name="notice" rows="8" placeholder="若不飲用酒精，請提前備註，飲品不提供現場調整；&#10;VR 體驗提供法文、西班牙文、義大利文、德文，若有需求，請備註語言與對應人數"></textarea>
+                        <textarea name="notice" rows="8" placeholder="若不飲用酒精，請提前備註，飲品不提供現場調整；&#10;體驗提供法文、西班牙文、義大利文、德文，若有需求，請備註語言與對應人數"></textarea>
                     </div>
                     <div class="checkboxes">
                         <div class="checkbox-group">
@@ -320,7 +320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="filed-value">0</div>
                             </div>
                         </div>
-                        <!-- <div class="input-group">
+                        <div class="input-group">
                             <label>統一編號（無此需求可不須填寫）</label>
                             <div class="filed-value">12345678</div>
                         </div>
@@ -331,7 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="input-group">
                             <label>手機載具</label>
                             <div class="filed-value">-</div>
-                        </div> -->
+                        </div>
                         <div class="input-group">
                             <label>備註</label>
                             <div class="filed-value">需要輪椅，一位孕婦</div>
@@ -464,6 +464,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris/js/plugins/micromodal.min.js"></script>
     <script src="/paris/js/main.js?231003"></script>
     <script src="/paris/js/phone_code.js"></script>
-    <script src="/paris/js/booking.js?240103"></script>
+    <script src="/paris/js/booking.js?240220"></script>
 </body>
 </html>
