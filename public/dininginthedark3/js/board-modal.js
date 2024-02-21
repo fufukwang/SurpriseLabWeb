@@ -60,7 +60,12 @@ $(function() {
     $enter_modal_btn.on('click', function(event) {
         $enter_modal.fadeOut(250, function () {
             $('body').removeClass('modal-open');
+            $('#enter-dialog').fadeIn();
         });
+    });
+
+    $('#enter-dialog .dialog-close').on('click', function(event) {
+        $('#enter-dialog').fadeOut();
     });
 
     // Rotate clockwise
