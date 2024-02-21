@@ -177,6 +177,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </div>
 
                                                 <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion1-9-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-9" aria-expanded="false" aria-controls="accordion1-9">
+                                                            <span class="header-title">非中文母語者可以參與體驗嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion1-9" class="accordion-collapse collapse" aria-labelledby="accordion1-9-header" data-bs-parent="#accordionFlushExample-1">
+                                                        <div class="accordion-body">
+                                                            <p>因體驗過程中有閱讀中文文字、聆聽中文指引環節，建議非中文主要使用者斟酌自行情況參與。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion1-6-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-6" aria-expanded="false" aria-controls="accordion1-6">
                                                             <span class="header-title">是否接受團體包場和大宗購票？</span>
@@ -424,6 +438,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </div>
 
                                                 <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-9-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-9" aria-expanded="false" aria-controls="accordion3-9">
+                                                            <span class="header-title">現場可以拍照攝影嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-9" class="accordion-collapse collapse" aria-labelledby="accordion3-9-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>依照著作權法，落日月台內場地未經許可，禁止拍照或錄影，並請將手機調整至靜音或關機，避免影響表演進行。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion3-7-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-7" aria-expanded="false" aria-controls="accordion3-7">
                                                             <span class="header-title">體驗中有飲食環節嗎？有酒精嗎？不喝酒怎麼辦？</span>
@@ -432,10 +460,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion3-7" class="accordion-collapse collapse" aria-labelledby="accordion3-7-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>
-                                                                體驗包含三道小點及一酒精飲品，食物為蛋奶素。<br>
-                                                                現場僅提供體驗過程會飲用之酒精飲品，不提供其他非酒精之飲料。過程中請斟酌自身狀況，參與、使用。
-                                                            </p>
+                                                            <p>體驗包含三道小點及一酒精飲品，食物為五辛蛋奶素。</p>
+                                                            <p>現場僅提供體驗過程會飲用之酒精飲品，不提供其他非酒精之飲料，過程中請斟酌自身狀況，參與、使用。建議準媽媽們先行評估自身情況，而未滿十八歲的朋友，不是不讓你喝，是法律不允許，成年後我們再見。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -632,7 +658,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="sub-block-wrap">
                                                 <div class="notice-list-wrap">
                                                     <ul class="list-wrap">
-                                                        <li class="list-item"><p>退費入帳約需 7 至 10 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</p></li>
+                                                        <li class="list-item"><p>退費入帳約需 14 至 25 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</p></li>
                                                         <li class="list-item">
                                                             <p>預購與劃位注意事項：</p>
                                                             <ul class="list-wrap">

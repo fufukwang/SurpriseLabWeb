@@ -325,6 +325,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <a href="javascript://" class="link-text style-smaller" data-bs-toggle="modal" data-bs-target="#staticBackdrop">隱私權條款</a>
                                         </label>
                                     </div>
+                                    <div class="form-group checkbox-layout" style="flex-wrap: nowrap;">
+                                        <input type="checkbox" id="agree-self" name="agree-self" required>
+                                        <label class="body-04" for="agree-self">
+                                            <span class="body-04">我已理解若評估自身狀況後決定不飲酒，體驗中將不提供臨時更換。</span>
+                                        </label>
+                                    </div>
                                 </fieldset>
                             </div>
                             <div class="cta-wrap">
@@ -563,6 +569,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking_pay.js?v=2401291"></script>
+    <script src="/terminalAssets/js/booking_pay.js?v=240221"></script>
 </body>
 </html>
