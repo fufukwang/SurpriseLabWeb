@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240206"/>
+    <link rel="stylesheet" href="css/style.css?date=240221"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -310,7 +310,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </p>
 
                                 <ul style="
-                                    width: 300px;
+                                    width: 100%;
+                                    max-width: 350px;
                                     align-items: flex-start;
                                     margin-left: auto;
                                     margin-right: auto;
@@ -318,6 +319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <li>以上價格包含 10% 服務費</li>
                                     <li>體驗皆為雙數入席，無法獨售</li>
                                     <li>現場另提供酒水調飲加購</li>
+                                    <li>4月為無光全新菜單更新，須滿18歲以上方可預約。</li>
                                 </ul>
 
                                 <div class="ticket-btn">
@@ -1341,6 +1343,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
     </aside>
 
+    <div id="enter-dialog">
+        <div class="overlay"></div>
+        <div class="content">
+            <img class="d-none d-md-block" src="img/home/enter-dialog.jpg" alt="無光晚餐 Dining In The Dark">
+            <img class="d-block d-md-none" src="img/home/enter-dialog-m.jpg" alt="無光晚餐 Dining In The Dark">
+        </div>
+        <div class="dialog-close"></div>
+    </div>
+
     <!-- Bootstrap -->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>
     <script src="js/plugins/jquery-ui.js"></script>
@@ -1372,7 +1383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Custom Js -->
     <script src="js/index.js?date=240201"></script>
     <script src="js/main.js?v=0.13"></script>
-    <script src="js/board-modal.js?v=0.11"></script>
+    <script src="js/board-modal.js?date=240221"></script>
     <script src="js/index-slideshow.js?date=230919"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 
