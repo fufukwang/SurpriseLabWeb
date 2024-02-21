@@ -388,12 +388,14 @@ $(function() {
     let $input_email = $('#email');
     let $checkbox_agree_rules = $('#agree-rules');
     let $checkbox_agree_privacy = $('#agree-privacy');
+    let $checkbox_agree_self = $('#agree-self');
 
     let flag_name = false;
     let flag_tel = false;
     let flag_email = false;
     let flag_agree_rules = false;
     let flag_agree_privacy = false;
+    let flag_agree_self = false;
 
     let format_flag_tel = false;
     let format_flag_email = false;
@@ -405,7 +407,7 @@ $(function() {
 
     // control next button disabled
     function controlButton() {
-        if ( flag_name && flag_tel && flag_email && flag_agree_rules && flag_agree_privacy ) {
+        if ( flag_name && flag_tel && flag_email && flag_agree_rules && flag_agree_privacy && flag_agree_self ) {
             $btn_next3.removeClass('status-disabled');
         } else {
             $btn_next3.addClass('status-disabled');
@@ -424,6 +426,7 @@ $(function() {
     function verifyCheckbox() {
         flag_agree_rules = $checkbox_agree_rules.prop('checked');
         flag_agree_privacy = $checkbox_agree_privacy.prop('checked');
+        flag_agree_self = $checkbox_agree_self.prop('checked');
         controlButton();
     }
 
