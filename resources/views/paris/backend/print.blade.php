@@ -1188,7 +1188,7 @@ $('#inputModal').on('hide.bs.modal', function (e) {
                 'id' : id
             },function(data){
                 // 顯示發票號碼
-                if(data.Status == 'SUCCESS'){
+                if(data.Status == 'SUCCESS' || data.Status == 'LIB10005'){
                     // var result = JSON.parse(data.Result);
                     $('#inv_cancal_modal').modal('hide');
                     $.Notification.notify('success','bottom left','發票已作廢', '發票已作廢');
