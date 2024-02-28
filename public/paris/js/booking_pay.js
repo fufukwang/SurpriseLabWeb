@@ -283,7 +283,8 @@ function checkStep2Field() {
 
     // 檢查手機格式
     var phone = $('#step2 input.phone').val();
-    if( phone !== '' && !/^09\d{8}$/.test(phone) ) {
+    var area_code = $('[name=area_code]').val();
+    if( area_code == '+886' && !/^09\d{8}$/.test(phone) ) {
         var $inputGroup = $('#step2 input.phone').closest('.input-group');
         if($inputGroup.find('.error').length === 0) {
             $inputGroup.append('<div class="error">手機格式錯誤</div>');
