@@ -181,7 +181,10 @@
                             <li>票價已含10%服務費</li>
                             <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li>
                             <li>若日期無法選擇，代表該場次已滿，或是當日不開放</li>
-                            <li>本季7號菜單與 Zenfone 10 跨界合作，體驗再升級</li>
+                            <li>七號菜單與 Zenfone 10 跨界合作，體驗再升級。</li>
+                            <li>七號菜單將於 4月第一週結束，請把握機會預約。</li>
+                            <li>八號菜單於 2024年 4月18日 - 2024年7月31日 與 格蘭菲迪 提供全新菜單體驗。</li>
+                            <li style="color: #8C5FB4;">未滿18歲不得飲酒，禁止酒駕。</li>
                         </ul>
                         <br/><br/>
 
@@ -410,6 +413,11 @@
                             <label for="notice">其他備註 Other Comments</label>
                             <textarea id="notice" name="notice" rows="2" placeholder="特殊事項備註/孕婦/慶生需求/特殊紀念&#10;Special Request, Birthday or Anniversary Celebration, etc.&#10;飲食禁忌僅能提供以上餐點變動，無提供餐點客製化服務，請評估自身狀況體驗。&#10;We can only make adjustments to the listed meals due to dietary restrictions. We do not offer custom meal services. "></textarea>
                         </div> -->
+
+                        <div class="field-intro">
+                            <br><br>
+                            <p style="color: #8C5FB4; line-height: 1.7;">2024年4月至7月為格蘭菲迪 跨界合作 全新菜單，未滿18歲不得預約體驗，請理性飲酒。</p>
+                        </div>
                         
                         <div class="form-group radio__button">
                             <div class="d-flex align-items-center flex-wrap">
@@ -532,6 +540,8 @@
                         <ul>
                             <li>即將跳轉離開網站，進入結帳流程，完成付款。</li>
                             <li>完成付款後，Email信箱中會收到訂位確認信，請前往確認。</li>
+                            <li>八號全新菜單與 格蘭菲迪 跨界合作。</li>
+                            <li>未滿18歲<span style="color: #8C5FB4;">不得參加、不能飲酒。</span></li>
                         </ul>
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
@@ -679,7 +689,11 @@
                     <div class="modal-body">
                         <p>付款之前請確保所有資料、飲食禁忌填寫完整及正確，一旦送出將無法修改。</p>
                         <p>&nbsp;</p>
-                        <p>再次提醒：不建議<span style="color: #ff4242;">乳糖不耐症嚴重患者</span>前來體驗、<span style="color: #ff4242;">不接受未滿15歲（含）者</span>前來體驗。</p>
+                        <p>
+                            再次提醒：<br>
+                            不建議<span style="color: #ff4242;">乳糖不耐症嚴重患者</span> 及<br>
+                            <span style="color: #ff4242;">未滿18歲</span>不得參加體驗。
+                        </p>
                     </div>
                 </div>
                 <div class="modal-footer">

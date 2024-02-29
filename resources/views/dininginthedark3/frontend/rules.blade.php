@@ -185,6 +185,23 @@
                                     </div>
 
                                     <div class="card">
+                                        <div class="card-header" id="qa15-header">
+                                            <h6 data-toggle="collapse" data-target="#qa15" aria-expanded="false"
+                                                aria-controls="qa15" class="collapsed d-flex align-items-center">
+                                                ・是否有年齡限制？
+                                                <i class="icon icon-arrow"></i>
+                                            </h6>
+                                        </div>
+                                        <div id="qa15" class="collapse" aria-labelledby="qa15-header"
+                                            data-parent="#qa-according">
+                                            <div class="card-body">
+                                                有的！未滿18歲不得參加。報到前請出示適當的身分證明文件以查驗身分。<br/>
+                                                因八號菜單與格蘭菲迪跨界合作，請理性飲酒，飲酒不開車。
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card">
                                         <div class="card-header" id="qa3-header">
                                             <h6 data-toggle="collapse" data-target="#qa3" aria-expanded="false"
                                                 aria-controls="qa3" class="collapsed d-flex align-items-center">
