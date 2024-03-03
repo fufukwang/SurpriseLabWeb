@@ -6,19 +6,19 @@
     <meta name="description" content="巴黎舞會 Le Bal de Paris de Blanca Li 一場前所未有的沉浸式 VR 體驗，邀上你想共舞的人，在巴黎午夜跳場最自由的舞，做場最真實的夢">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="巴黎舞會 Le Bal de Paris de Blanca"/>
-    <meta property="og:site_name" content="巴黎舞會 Le Bal de Paris de Blanca"/>
+    <meta property="og:title" content="巴黎舞會 Le Bal de Paris de Blanca Li"/>
+    <meta property="og:site_name" content="巴黎舞會 Le Bal de Paris de Blanca Li"/>
     <meta property="og:description" content="巴黎舞會 Le Bal de Paris de Blanca Li 一場前所未有的沉浸式 VR 體驗，邀上你想共舞的人，在巴黎午夜跳場最自由的舞，做場最真實的夢"/>
     <meta property="og:url" content="https://surpriselab.com.tw/lebaldeparis/"/>
     <meta property="og:image" content="https://www.surpriselab.com.tw/paris/img/og-image.jpg"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
-    <meta name="twitter:title" content="巴黎舞會 Le Bal de Paris de Blanca">
+    <meta name="twitter:title" content="巴黎舞會 Le Bal de Paris de Blanca Li">
     <meta name="twitter:description" content="巴黎舞會 Le Bal de Paris de Blanca Li 一場前所未有的沉浸式 VR 體驗，邀上你想共舞的人，在巴黎午夜跳場最自由的舞，做場最真實的夢">
     <meta name="twitter:image" content="https://www.surpriselab.com.tw/paris/img/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <title>巴黎舞會 Le Bal de Paris de Blanca</title>
+    <title>巴黎舞會 Le Bal de Paris de Blanca Li</title>
     <link rel="icon" href="/paris/img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
