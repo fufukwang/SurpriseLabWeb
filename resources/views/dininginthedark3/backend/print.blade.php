@@ -134,6 +134,7 @@
         $modify_money = '';
         $couponNumber = 0;
         $not_inv = false;
+        $some_month = "true";
         if(count($coupons)>0){
             foreach($coupons as $coup){
                 $single_money = App\model\dark3\backme::select('money')->find($coup->b_id)->money;
@@ -169,10 +170,11 @@
             }
 
         }
-        $number = App\model\dark3\inv::select('number','is_cancal')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
+        $number = App\model\dark3\inv::select('number','is_cancal','created_at')->where('order_id',$row->id)->orderBy('created_at','desc')->first();
         $inv_count = App\model\dark3\inv::where('order_id',$row->id)->where('is_cancal',1)->count();
         if($number){
             $inv_open = true;
+            if($number->created_at->format('Ym') != date('Ym')) $some_month = "false";
         }
         $inv_money = $totle_money;
         if($row->pay_status == '未完成'){
@@ -197,7 +199,7 @@
 <span id="inv_{{ $row->id }}">{{ $inv_open ? $number->number : '' }}</span> 
 @if($inv_open)
     @if(!$number->is_cancal)
-        <a class="btn btn-danger btn-xs remove-inv" href="javascript:;" data-id={{ $row->id }}><i class="fa fa-remove"></i></a>
+        <a class="btn btn-danger btn-xs remove-inv" href="javascript:;" data-id={{ $row->id }} data-some_month="{{$some_month}}"><i class="fa fa-remove"></i></a>
     @else
         <span id="inv_span_{{ $row->id }}">(已報廢)</span>
     @endif
@@ -1178,10 +1180,23 @@ $('#inputModal').on('hide.bs.modal', function (e) {
     // 報廢訂單確認視窗
     $('.remove-inv').bind('click',function(){
         var id = $(this).data('id');
+        var some_month = $(this).data('some_month');
         $('#inv_cancal_id').val(id);
         $('#inv_cancal_note').val('');
         $('#inv_number').val($('#inv_'+id).text());
-        $('#inv_cancal_modal').modal('show');
+        if(some_month){
+            $('#inv_cancal_modal').modal('show');
+        } else {
+Swal.fire({
+  title: "此發票已過結算月份，請與會計確認",
+  showCancelButton: true,
+  confirmButtonText: "確認報廢"
+}).then((result) => {
+  if (result.isConfirmed) {
+    $('#inv_cancal_modal').modal('show');
+  }
+});
+        }
     });
     $('#sent_inv_cancal').bind('click',function(){
         var id = $('#inv_cancal_id').val();
