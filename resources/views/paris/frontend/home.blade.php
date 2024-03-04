@@ -840,6 +840,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </ul>
                                     </p>
                                 </li>
+                                <li><p>體驗過程含有拍、牽、拉、推等肢體碰觸，若不希望有此互動，可於購票時優先備註，或於體驗當天向工作人員說明，演員與舞者將避免相關肢體碰觸</p></li>
+                                <li><p>體驗過程中，若有任何不舒服、不自在的感受，請隨時向工作人員反應，我們將即時提供協助</p></li>
                                 <li><p>包場需求、其他特殊服務，請來信客服詢問<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
                                 <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" href="/lebaldeparis/rules">[舞會規則]</a></p></li>
                             </ul>
