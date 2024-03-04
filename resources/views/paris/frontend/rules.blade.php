@@ -262,6 +262,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="collapse-item">
+                    <div class="item-title">參與體驗，有什麼需要特別留意的嗎？</div>
+                    <div class="item-body">
+                        <p>
+                            體驗過程含有拍、牽、拉、推等肢體碰觸，若不希望有此互動，可於購票時優先備註，或於體驗當天向工作人員說明，演員與舞者將避免相關肢體碰觸<br>
+                            體驗過程中，若有任何不舒服、不自在的感受，請隨時向工作人員反應，我們將即時提供協助
+                        </p>
+                    </div>
+                </div>
+                <div class="collapse-item">
                     <div class="item-title">當天著裝規定</div>
                     <div class="item-body">
                         <p>體驗過程須<span>穿戴頭顯設備與肢體追蹤器</span>，當天請依以下建議著裝，以免影響實際體驗</p>
@@ -310,18 +319,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="item-title">體驗結束後可以停留嗎？</div>
                     <div class="item-body">
                         <p>80 分鐘體驗結束後，歡迎賓客留下來繼續探索、小酌和聊天，續留時間無限制</p>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">參與體驗，有什麼需要特別留意的嗎？</div>
-                    <div class="item-body">
-                        <p>
-                            體驗過程含有拍、牽、拉、推等肢體碰觸，若不希望有此互動，可於購票時優先備註，或於體驗當天向工作人員說明，演員與舞者將避免相關肢體碰觸<br>
-                            <br>
-                            體驗過程中，若有任何不舒服、不自在的感受，請隨時向工作人員反應，我們將即時提供協助<br>
-                            <br>
-                            ＊順序：安插在「完成預約後，要注意什麼？」題目之後
-                        </p>
                     </div>
                 </div>
             </div>
