@@ -492,6 +492,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <div class="owl-carousel owl-theme" id="owl-bistro">
 
                                             <div class="item">
+                                                <div class="slideshow-video">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oz9A6IxhydM?si=FWC0y6kj3gHH3nTB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+
+                                            <div class="item">
                                                 <figure class="slideshow-card">
                                                     <picture>
                                                         <source srcset="/terminalAssets/images/main/img_bistro_231123.webp" type="image/webp" />
@@ -502,12 +508,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         多場域沉浸 ╳ 全感官體驗
                                                     </figcaption>
                                                 </figure>
-                                            </div>
-
-                                            <div class="item">
-                                                <div class="slideshow-video">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-W8PYLETYAI?si=ujMHqt6gfMsVtqsy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                                </div>
                                             </div>
 
                                         </div>
@@ -821,7 +821,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="owl-carousel owl-theme">
                     
                     <div class="item">
-                        <a href="/terminal/booking_now" target="_blank">
+                        <a href="/terminal/booking_now">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount01.svg?231123" data-src="/terminalAssets/images/main/discount01.svg?231123" data-src-retina="/terminalAssets/images/main/discount01.svg?231123" alt="Klook">
                             </figure>
@@ -836,7 +836,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
 
                     <div class="item">
-                        <a href="/terminal/booking_now" target="_blank">
+                        <a href="/terminal/booking_now">
                             <figure class="slideshow-card">
                                 <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount02.svg?231123" data-src="/terminalAssets/images/main/discount02.svg?231123" data-src-retina="/terminalAssets/images/main/discount02.svg?231123" alt="Klook">
                             </figure>
@@ -846,6 +846,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="discount-p">
                                 《落日月台》一次將開放六人入場，選擇此門票的你，將佔有一個時段。<br>
                                 也許，你們所遇到的人、事、物都將不同。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <a href="https://www.dcard.tw/goods/widgets/240311_dcardxsurpriselab" target="_blank">
+                            <figure class="slideshow-card">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png?240308" data-src="/terminalAssets/images/main/discount03.png?240308" data-src-retina="/terminalAssets/images/main/discount03.png?240308" alt="Klook">
+                            </figure>
+                        </a>
+                        <div class="discount-intro">
+                            <div class="discount-title">Dcard 好物研究室專屬優惠</div>
+                            <div class="discount-p">
+                                3/25 前，至 Dcard Select 下單任一商品，即可抽《落日月台》單人票；<br>
+                                新用戶輸入專屬優惠【GOODYSURPRISE】，再享 $399 折 $100！
                             </div>
                         </div>
                     </div>

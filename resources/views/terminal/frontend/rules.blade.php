@@ -446,7 +446,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion3-9" class="accordion-collapse collapse" aria-labelledby="accordion3-9-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>依照著作權法，落日月台內場地未經許可，禁止拍照或錄影，並請將手機調整至靜音或關機，避免影響表演進行。</p>
+                                                            <p>依照著作權法，落日月台體驗過程未經許可，禁止拍照或錄影；為避免影響表演進行，請將手機放入報到處置物櫃，禁止攜帶入場。</p>
                                                         </div>
                                                     </div>
                                                 </div>
