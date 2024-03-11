@@ -319,7 +319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <li>以上價格包含 10% 服務費</li>
                                     <li>體驗皆為雙數入席，無法獨售</li>
                                     <li>現場另提供酒水調飲加購</li>
-                                    <li>4月為無光全新菜單更新，須滿18歲以上方可預約。</li>
+                                    <li>4/18為無光全新菜單更新，須滿18歲以上方可預約。</li>
                                 </ul>
 
                                 <div class="ticket-btn">

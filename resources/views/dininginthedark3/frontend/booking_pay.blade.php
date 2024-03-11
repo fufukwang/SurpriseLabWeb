@@ -416,7 +416,7 @@
 
                         <div class="field-intro">
                             <br><br>
-                            <p style="color: #8C5FB4; line-height: 1.7;">2024年4月至7月為格蘭菲迪 跨界合作 全新菜單，未滿18歲不得預約體驗，請理性飲酒。</p>
+                            <p style="color: #8C5FB4; line-height: 1.7;">4/18為格蘭菲迪 跨界合作 全新菜單，未滿18歲不得預約體驗，請理性飲酒。</p>
                         </div>
                         
                         <div class="form-group radio__button">
