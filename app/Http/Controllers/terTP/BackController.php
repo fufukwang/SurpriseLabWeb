@@ -391,6 +391,7 @@ class BackController extends WebController
                     'open' => '開放空位',
                     'now'  => '目前訂位',
                     'only' => '剩餘座位',
+                    'pr'   => '公關位置數',
                 ]];
                 foreach($cellData as $row){
                     $day = Carbon::parse($row['day']);
@@ -412,6 +413,7 @@ class BackController extends WebController
                         'open' => $row['sites'],
                         'now'  => $row['now'],
                         'only' => $row['sites'] - $row['now'],
+                        'pr'   => order::where('edit_type','公關位')->where('pay_status','已付款')->where('pro_id',$row['id'])->count()
                     ];
                     array_push($data,$tmp);
                 }
