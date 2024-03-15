@@ -396,6 +396,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </div>
 
                                                 <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-10-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-10" aria-expanded="false" aria-controls="accordion3-10">
+                                                            <span class="header-title">能帶寵物過去體驗嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-10" class="accordion-collapse collapse" aria-labelledby="accordion3-10-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>現場禁止攜帶寵物，亦未提供寵物寄存服務唷！</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion3-4-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-4" aria-expanded="false" aria-controls="accordion3-4">
                                                             <span class="header-title">我應該什麼時候抵達月台？是否需要提早報到？</span>
