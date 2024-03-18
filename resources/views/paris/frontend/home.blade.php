@@ -379,7 +379,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="slider">
                 <div class="owl-carousel">
-                    <div>
+                    <!-- <div>
                         <img src="/paris/img/vr1.jpg" />
                     </div>
                     <div>
@@ -396,6 +396,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div>
                         <img src="/paris/img/vr6.jpg" />
+                    </div> -->
+                    <div style="position: relative;">
+                        <img src="/paris/img/vr7.jpg" />
+                        <div style="position: absolute; bottom: 10px; left: 10px; line-height: 1;">現場畫面</div>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="/paris/img/vr8.jpg" />
+                        <div style="position: absolute; bottom: 10px; left: 10px; line-height: 1;">現場畫面</div>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="/paris/img/vr9.jpg" />
+                        <div style="position: absolute; bottom: 10px; left: 10px; line-height: 1;">現場畫面</div>
                     </div>
                 </div>
             </div>
@@ -687,7 +699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>舞監助理暨 VR 技術執行</td>
-                                <td>許正姸、劉育雯、李紹庭、方琬婷、林珈含、蘇吉安、孫于崴</td>
+                                <td>許正姸、劉育雯、李紹庭、方琬婷、林珈含、蘇吉安、孫于崴、林翊柔</td>
                             </tr>
                         </table>
                     </div>
@@ -703,7 +715,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>排練助理</td>
-                                <td>陳捷、蔡汶璇</td>
+                                <td>陳捷、蔡汶璇、王璽媛</td>
                             </tr>
                             <tr>
                                 <td>燈光技術執行</td>
@@ -715,7 +727,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>前台人員</td>
-                                <td>蕭藝萱、林俐瑜、葉柔妡、林語彤、林芳羽、賴郁欣、吳儀瑄、李心瑀、何知臨、張惠婷、朱珮瀅</td>
+                                <td>蕭藝萱、林俐瑜、葉柔妡、林語彤、林芳羽、賴郁欣、吳儀瑄、李心瑀、何知臨</td>
                             </tr>
                             <tr>
                                 <td>裝台協力</td>
