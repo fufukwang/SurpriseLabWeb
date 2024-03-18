@@ -1,0 +1,93 @@
+@import "_default";
+@import "_micromodal.css";
+
+#invite {
+    color: $color17;
+
+    a {
+        color: $color17;
+    }
+
+    .invite-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 50px auto;
+    }
+
+    .info {
+        text-align: center;
+        margin-bottom: 140px;
+    }
+
+    form {
+        display: block;
+        width: 100%;
+        max-width: 544px;
+        margin: 0 auto;
+        
+    }
+
+    .flex {
+        @media screen and (min-width:768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .phone-group {
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .code-wrapper {
+            width: 130px;
+            position: relative;
+            @media screen and (min-width:768px) {
+                width: 245px;
+            }
+        }
+
+        .select2-container--open .select2-dropdown--below {
+            width: 255px !important;
+        }
+
+        .phone {
+            width: calc(100% - 130px - 14px);
+            @media screen and (min-width:768px) {
+                width: calc(100% - 245px - 32px);
+            }
+        }
+    }
+
+    .error {
+        font-size: 14px;
+        color: $color4;
+        line-height: 1;
+        margin-top: 5px;
+    }
+
+    .checkboxes {
+        margin-top: 100px;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 108px;
+    }
+}
+
+#invite-success {
+    color: $color17;
+    
+    .info {
+        text-align: center;
+    }
+    
+    .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 108px;
+    }
+}

@@ -822,6 +822,12 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('Neweb.OrderPay', 'paris\NewPayController@postOrderByNeweb'); // 存訂單
         Route::post('Neweb.ReturnResult', 'paris\NewPayController@postReturnByNeweb'); // 回傳內容
         Route::post('Neweb.BackReturn', 'paris\NewPayController@postBackReturn'); // 背景回傳
+        // for en
+        Route::get('en',function(){ return view('paris.front_en.home'); });
+        Route::get('rules/en',function(){ return view('paris.front_en.rules'); });
+        Route::get('booking/en',function(){ return view('paris.front_en.booking'); });
+        Route::get('booking_pay/en',function(){ return view('paris.front_en.booking_pay'); });
+
 /*
         // 特別場
         Route::get('booking_special.html', 'paris\SpecialController@getHome'); // 特別場
