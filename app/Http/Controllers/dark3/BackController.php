@@ -445,7 +445,7 @@ class BackController extends Controller
                         'open' => $row['sites'],
                         'now'  => $row['now'],
                         'only' => $row['sites'] - $row['now'],
-                        'pr'   => order::where('edit_type','公關位')->where('pay_status','已付款')->where('pro_id',$row['id'])->count()
+                        'pr'   => order::where('edit_type','公關位')->where('pay_status','已付款')->where('pro_id',$row['id'])->sum('pople') ?? 0
                     ];
                     array_push($data,$tmp);
                 }
