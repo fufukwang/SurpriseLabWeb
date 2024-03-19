@@ -868,7 +868,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="title">
                 <img src="/paris/img/deco.svg" />
                 <h1>合作夥伴</h1>
-                <h3>Partner</h3>
+                <!-- <h3>Partner</h3> -->
             </div>
     
             <div class="partner">
