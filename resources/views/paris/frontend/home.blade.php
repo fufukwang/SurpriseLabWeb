@@ -379,35 +379,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="slider">
                 <div class="owl-carousel">
-                    <!-- <div>
-                        <img src="/paris/img/vr1.jpg" />
+                    <div>
+                        <img src="/paris/img/vr1.jpg?240319" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr2.jpg" />
+                        <img src="/paris/img/vr2.jpg?240319" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr3.jpg" />
+                        <img src="/paris/img/vr3.jpg?240319" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr4.jpg" />
+                        <img src="/paris/img/vr4.jpg?240319" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr5.jpg" />
+                        <img src="/paris/img/vr5.jpg?240319" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr6.jpg" />
-                    </div> -->
-                    <div style="position: relative;">
-                        <img src="/paris/img/vr7.jpg" />
-                        <div style="position: absolute; bottom: 10px; left: 10px; line-height: 1;">現場畫面</div>
-                    </div>
-                    <div style="position: relative;">
-                        <img src="/paris/img/vr8.jpg" />
-                        <div style="position: absolute; bottom: 10px; left: 10px; line-height: 1;">現場畫面</div>
-                    </div>
-                    <div style="position: relative;">
-                        <img src="/paris/img/vr9.jpg" />
-                        <div style="position: absolute; bottom: 10px; left: 10px; line-height: 1;">現場畫面</div>
+                        <img src="/paris/img/vr6.jpg?240319" />
                     </div>
                 </div>
             </div>
