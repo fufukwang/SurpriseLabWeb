@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-    @include('paris.frontend._nav')
+    @include('paris.front_en._nav')
     
     <main id="rules">
         <div class="tabs">
@@ -49,76 +49,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div id="qa" class="tab-content">
             <div class="title">
-                <h1>關於《巴黎舞會》</h1>
-                <h3>ABOUT</h3>
+                <h1>About Us</h1>
+                <!-- <h3>ABOUT</h3> -->
             </div>
             
             <div class="collapse-list">
                 <div class="collapse-item">
-                    <div class="item-title">什麼是巴黎舞會？</div>
+                    <div class="item-title">What is Le Bal de París de Blanca Li?</div>
                     <div class="item-body">
-                        <p>《巴黎舞會》為西班牙編舞家 Blanca Li（布蘭卡・李）歷時四年打造的威尼斯影展獲獎作品，此次與驚喜製造、VIVE 合作結合沉浸式體驗與 VR 演出，帶領賓客穿上香奈兒高級訂製服，穿越到巴黎感受自由、真實體感，讓虛擬成為真實</p>
+                        <p>
+                            Le Bal de París de Blanca Li is a Venice International Film Festival winning work that took the Spanish choreographer, Blanca Li, four years to put onstage.<br>
+                            <br>
+                            Collaborated with Surprise Lab. and VIVE Arts, Le Bal de París de Blanca Li puts together an immersive experience and VR performance, dressing the guests up with digital CHANEL Haute Couture. Here, guests can embark on a transcendental journey to Paris, where they can feel the freedom of that era, and turn the virtual into reality.
+                        </p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">我能在《巴黎舞會》體驗到什麼？</div>
+                    <div class="item-title">What do I get to experience in Le Bal de París de Blanca Li?</div>
                     <div class="item-body">
-                        <p>在 80 分鐘的沉浸式體驗中，你將步入 1 場盛會、飲盡 1 杯調飲、與 2 名舞者和 9 位賓客互動，以及探索更多的狂歡時刻</p>
+                        <p>
+                            Le Bal de París de Blanca Li is an 80-minute immersive experience, including VR and the real world. <br>
+                            <br>
+                            Here you will join a magnificent dinner banquet, where you can enjoy 1 glass of drink, interact with 2 dancers and 9 other guests. Explore and enjoy some of the merriest party moments.
+                        </p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">《巴黎舞會》有任何參加限制嗎？</div>
+                    <div class="item-title">Is there any restriction in participating in Le Bal de París de Blanca Li?</div>
                     <div class="item-body">
-                        <p>現場包含 VR 體驗，為了你的體驗感受並保護你的身心狀況，請參照下表衡量自身狀況參與。若有任何問題，歡迎來信 <a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
+                        <p>VR experience is included in this performance. To ensure the best experience and in order not to harm your physical and mental condition, please refer to the self-evaluation chart below to check if you are suitable for participation or not. If you have any further questions, feel free to email our customer service. (<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a>)</p>
                         <br><br>
                         <table>
                             <tr>
-                                <th>身心狀況</th>
-                                <th>身心狀況</th>
+                                <th>Physical and Mental Condition</th>
+                                <th>Restrictions and Suggestions in Participation</th>
                             </tr>
                             <tr>
-                                <td>孕婦</td>
+                                <td>Pregnancy</td>
                                 <td>Ｘ</td>
                             </tr>
                             <tr>
-                                <td>心臟病、高血壓</td>
+                                <td>Cardiovascular Diseases or Hypertension</td>
                                 <td>Ｘ</td>
                             </tr>
                             <tr>
-                                <td>視力受損、容易暈眩者</td>
+                                <td>Impaired Vision or Frequent Dizziness</td>
                                 <td>▲</td>
                             </tr>
                             <tr>
-                                <td>
-                                    精神疾病、癲癇或重大疾病或體內有電子儀器者<br>
-                                    （例：心律調整器、助聽器、除顫器）<br>
-                                    需諮詢專業醫師以維護體驗安全
-                                </td>
+                                <td>For participants who are of psychiatric/mental disorder, suffer from epilepsy or who have implanted electronic devices in their body (such as pacemakers, hearing aids or cardioverter-defibrillators), we strongly recommend seeing a doctor beforehand for safety concerns.</td>
                                 <td>▲</td>
                             </tr>
                             <tr>
-                                <td>12歲(含)以下無法參與、13-16歲需<br>由家長簽署同意書，並購票陪同入場體驗</td>
+                                <td>This performance is recommended for audiences over 12 of age. For ages 13-16, parental consent is required with a signed authorization form, and ticket purchase is necessary for accompanying entry to the experience.</td>
                                 <td>▲</td>
                             </tr>
                         </table>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">《巴黎舞會》在哪裡舉辦？</div>
+                    <div class="item-title">Where will Le Bal de París de Blanca Li be held?</div>
                     <div class="item-body">
-                        <!--合併衝突保留 master--><!-- <p> 
-                            <b>國立臺灣科學教育館</b><br>
-                            <b>台北市士林區士商路189號</b><br>
-                            <br>
-                            舞會將隱藏於上方建築物中，詳細進入路線，我們將於體驗前告知，敬請期待。
-                        </p> -->
-                        <p>舞會位在舞會位在國立臺灣科學教育館（<a class="mailto hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳），從士林捷運站前往巴黎舞會，搭乘公車和計程車距離約 7 分鐘、步行距離約 14 分鐘</p>
+                        <p>
+                            The ball will be held at National Taiwan Science Education Center(<a class="mailto hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">Children's Hall, B1, No. 189, Shishang Rd., Shilin Dist., Taipei City</a>)<br>
+                            It''s 7 minutes away by bus/taxi or 14 minutes on foot from Jiantan or Shilin MRT Station.
+                        </p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">我想跟朋友一起體驗，有多人票價嗎？</div>
+                    <div class="item-title">I want to experience it with friends. Is there a package price for multiple participants?</div>
                     <div class="item-body">
-                        <p>一人自由、雙人親密、四人狂熱，我們提供 3 種票價組合歡迎所有賓客前來體驗</p>
+                        <p>We are currently offering 3 different types of tickets: Solo for 1 participant, Duet for 2 participants and Quartet for 4 participants.</p>
                         <br><br>
                         <table>
                             <tr>
@@ -126,56 +127,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <th>票價</th>
                             </tr>
                             <tr>
-                                <td>單人獨舞票（含一杯調飲）</td>
-                                <td>$2,100</td> 
+                                <td>Single Ticket (1 Drink Included)</td>
+                                <td>NTD2100</td> 
                             </tr>
                             <tr>
-                                <td>雙人共舞票（含兩杯調飲）</td>
-                                <td>$4,000（一人$2,000）</td> 
+                                <td>Double Ticket(2 Drinks Included)</td>
+                                <td>NTD4000 (NTD2000/person)</td> 
                             </tr>
                             <tr>
-                                <td>四人群舞票（含四杯調飲）</td>
-                                <td>$7,600（一人$1,900）</td> 
+                                <td>Quadruple Ticket(4 Drinks Included)</td>
+                                <td>NTD7600 (NTD1900/person)</td> 
                             </tr>
                         </table>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">如何預約《巴黎舞會》？</div>
+                    <div class="item-title">How do I purchase tickets for Le Bal de París de Blanca Li?</div>
                     <div class="item-body">
                         <p>
-                            <!-- 先預售：歡迎至<a target="_blank" href="/lebaldeparis/booking_pay"><span>預約舞會</span></a>選購票券種類和數量<br>
-                            後劃位：預售完成後，將會收到一封劃位信，請跟隨信內引導流程完成體驗場次預約 -->
-                            《巴黎舞會》採網路購票、線上劃位方式進行<br>
-                            如欲購票，歡迎至<a href="/lebaldeparis/booking_pay"><span>預約舞會</span></a>選購票券種類與數量
+                            Le Bal de París de Blanca Li offers online ticketing.<br>
+                            To purchase tickets, please visit the <a href="/lebaldeparis/booking_pay/en"><span>[Buy Tickets]</span></a> section, where you can select the type and quantity of tickets.
                         </p> 
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">是否接受團體包場和大宗購票？</div>
+                    <div class="item-title">Do you accept block bookings or bulk bookings for groups?</div>
                     <div class="item-body">
-                        <p>包場、大宗購票、客製化特殊需求與票價優惠，歡迎來信 <a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
+                        <p>If you would like to consult services regarding block bookings, bulk bookings, private events or other special services or ticket discounts, please send an email to our customer service: <a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">我有改期、退費的需求</div>
+                    <div class="item-title">I want to request rescheduling/a refund.</div>
                     <div class="item-body">
-                        <p>
-                            關於改期或退費，詳情請參考《巴黎舞會》<span class="clickToChangeRefund">[退換政策]</span>
-                        </p>
+                        <p>Regarding rescheduling and refund, please refer to the <span class="clickToChangeRefund">[Change & Refund]</span> page.</p>
                     </div>
                 </div>
             </div>
 
             <br><br><br>
     
-            <div class="title">
+            <!-- <div class="title">
                 <h1>預售資訊</h1> 
                 <h3>PRE-SALE INFORMATION</h3>
-                <!-- <p><center>預購已於 11/26 16:00 結束，請賓客參考下方資訊儘速完成劃位</center></p> -->
-            </div>
+                <p><center>預購已於 11/26 16:00 結束，請賓客參考下方資訊儘速完成劃位</center></p>
+            </div> -->
     
-            <div class="collapse-list">
+            <!-- <div class="collapse-list">
                 <div class="collapse-item">
                     <div class="item-title">預售票券購買成功，要注意什麼？</div>
                     <div class="item-body">
@@ -247,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
     
-            <br><br><br>
+            <br><br><br> -->
     
             <div class="title">
                 <h1>行前須知</h1>
@@ -256,69 +253,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
             <div class="collapse-list">
                 <div class="collapse-item">
-                    <div class="item-title">完成預約後，要注意什麼？</div>
+                    <div class="item-title">Anything I need to pay attention to after completing the reservation?</div>
                     <div class="item-body">
-                        <p>我們將於<span>體驗日前 7 天寄送行前須知信，告知舞會地點和時間，體驗當天也會寄送提醒簡訊</span>，請記得確認你的信箱與簡訊</p>
+                        <p>We will be <span>sending a pre-show reminder email to you 7 days prior to the performance day. The precise location and time information will also be included in the email. On the day of performance, a reminder text message will be sent to your phone via SMS as well.</span> Please be sure to check your mailbox and text messages.</p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">參與體驗，有什麼需要特別留意的嗎？</div>
+                    <div class="item-title">Is there anything specific to be aware of when participating during the party?</div>
                     <div class="item-body">
                         <p>
-                            體驗過程含有拍、牽、拉、推等肢體碰觸，若不希望有此互動，可於購票時優先備註，或於體驗當天向工作人員說明，演員與舞者將避免相關肢體碰觸<br>
-                            體驗過程中，若有任何不舒服、不自在的感受，請隨時向工作人員反應，我們將即時提供協助
+                            The experience involves physical contact, like patting on your shoulders, guiding, or holding hands to dance.<br>
+                            <br>
+                            If you prefer to avoid such contact, please specify in the note section during ticket purchase.<br>
+                            <br>
+                            During the experience, if you don’t feel comfortable being touched, you are welcome to raise your hand, or make an X in front of you to inform our staff.
                         </p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">當天著裝規定</div>
+                    <div class="item-title">Dress Code</div>
                     <div class="item-body">
-                        <p>體驗過程須<span>穿戴頭顯設備與肢體追蹤器</span>，當天請依以下建議著裝，以免影響實際體驗</p>
+                        <p>During the experience, participants will have to wear a <span>head-mounted device as well as body trackers</span>. Please dress as follows on the day to ensure the best experience.</p>
                         <ul>
-                            <li>配戴眼鏡、單眼視力者皆可參與</li>
-                            <li>臉部及眼部建議淡妝或素顏</li>
-                            <!-- <li>建議以褲裝出席</li>
-                            <li><span>不建議穿著裙裝</span>，若以裙裝出席，<span>裙長請勿超過膝下 5 公分</span></li> -->
-                            <li>為確保肢體追蹤器效果，請穿著褲裝前來</li>
-                            <li>體驗過程中需翩翩起舞，請穿著球鞋或平底鞋</li>
-                            <li><span>請勿綁馬尾、包包頭</span>出席</li>
+                            <li>Audiences with glasses on or with monocular vision can participate.</li>
+                            <li>Light or no makeup is recommended.</li>
+                            <li>For optimal body tracker performance,  please wear shorts/pants.</li>
+                            <li>As part of the party involves dancing, please choose sneakers or flat shoes for your comfort.</li>
+                            <li><span>Please do not attend with a ponytail or a bun/buns.</span></li>
                         </ul>
                         <br>
                         <img width="100%" src="/paris/img/rules.png" />           
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">我可以攜帶手機嗎？</div>
+                    <div class="item-title">Can I bring my phone with me?</div>
                     <div class="item-body">
-                        <p>可以，<span>但手機必須全程維持飛航模式</span>（這是個秘密晚宴，賓客可以自由拍攝，但請於離場後再上網分享）</p>
+                        <p>Yes, <span>you may have your phone with you</span>. However, the phone should be set in flight mode throughout the performance. Also, personal hotspots sharing is strictly prohibited. (This is a secret dinner banquet. You are allowed to take pictures freely during the performance, but please share them online only after leaving the venue.)</p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">現場可以寄物嗎？</div>
+                    <div class="item-title">Is there a baggage deposit on site?</div>
                     <div class="item-body">
                         <p>
-                            為維護體驗品質，於進入體驗區域前，所有觀眾都必須寄物<br>
-                            現場設有寄物區，請自備 10 元零用錢使用，零錢將於取物時退還。<br>
-                            恕無法提供較大型物品（如：行李箱）寄物服務，請輕便前來、放鬆體驗
+                            In order to maintain the quality of the performance, all personal baggage should be deposited before entering the experience area.<br>
+                            <br>
+                            We have a storage area on-site. Please bring NTD10, which will be refunded when you retrieve your items.<br>
+                            <br>
+                            We do not accept large baggage deposits on site (e.g. suitcases, etc.).  We recommend our guests to come with light baggage to best enjoy the performance.
                         </p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">物品遺失怎麼辦？</div>
+                    <div class="item-title">What if I lose my items in the venue?</div>
                     <div class="item-body">
-                        <p>如有物品遺失，現場提供協尋遺失物，但不負保管遺失物責任</p>
+                        <p>We will help with lost and found, but we hold no accountability for custody.</p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">如果遲到怎麼辦？</div>
+                    <div class="item-title">What if I arrive late?</div>
                     <div class="item-body">
-                        <p>遲到將無法進場，並且無法退費。請注意自身時間安排，並務必提早 15 分鐘抵達</p>
+                        <p>No entry for late comers. You will not be allowed to enter the venue if you arrive late, and no refund will be issued. Please manage time and your schedule on the day carefully, and it's a must to arrive on site 15 minutes prior to the performance time.</p>
                     </div>
                 </div>
                 <div class="collapse-item">
-                    <div class="item-title">體驗結束後可以停留嗎？</div>
+                    <div class="item-title">Can I stay at the venue after the performance?</div>
                     <div class="item-body">
-                        <p>80 分鐘體驗結束後，歡迎賓客留下來繼續探索、小酌和聊天，續留時間無限制</p>
+                        <p>After the 80-minute experience, all guests are welcome to stay at the venue to further explore the site, enjoy your drinks and talk. There’s no time limit for this small after party.</p>
                     </div>
                 </div>
             </div>
@@ -327,88 +327,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="change-refund" class="tab-content" style="display: none;">
             <div class="title">
                 <h1>票券異動申請</h1>
-                <h3>Change Your Booking</h3>
+                <!-- <h3>Change Your Booking</h3> -->
             </div>
 
-            <p>購票後若需要退費，或是劃位後需要退費、改期和轉讓，請來信客服詢問並附上所需資料：<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw"><span style="color: #F4D9D4;">lebaldeparis@surpriselab.com.tw</span></a></p>
+            <p>If you need a refund after purchasing tickets, or if you need a refund, reschedule, or transfer after seat allocation, please contact customer service(<a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw"><span style="color: #F4D9D4;">lebaldeparis@surpriselab.com.tw</span></a>) by email and attach relevant information.</p>
             <br>
 
             <table>
                 <tr>
                     <th></th>
-                    <th>你需要附上：</th>
-                    <th>然後再附上：</th>
+                    <th>Please Attach</th>
+                    <th>Then Attach</th>
                 </tr>
                 <tr>
-                    <td>改期（至多 1 次）</td>
-                    <td>購票者的<br>姓名、購買信箱、手機</td>
-                    <td>欲更改場次<br>參考線上剩餘座位，提供 3 個時段</td>
+                    <td>Reschedule <br>(Once-Only)</td>
+                    <td>The ticker purchaser's name, email address and phone number</td>
+                    <td>
+                        Your preferable rescheduled time.<br>
+                        Check ticket availability online and provide us with three of your preferable time slots.
+                    </td>
                 </tr>
                 <tr>
-                    <td>轉讓</td>
-                    <td>將訂位確認信轉寄<br>或截圖給親朋好友即可</td>
-                    <td>現場須出示確認信<br>及向櫃檯說明<br>原訂票人姓名、電話</td>
+                    <td>Transfer</td>
+                    <td>Please forward or screenshot the booking confirmation letter to other attendee(s).</td>
+                    <td>Please present your confirmation letter on site, and provide the front desk with the name and phone number of the ticket purchaser.</td>
                 </tr>
                 <tr>
-                    <td>退票<br>（未收到劃位序號）</td>
-                    <td>購票者的<br>姓名、購買信箱</td>
-                    <td>訂單編號</td>
-                </tr>
-                <tr>
-                    <td>退票<br>（已收到劃位序號）</td>
-                    <td>購票者的<br>姓名、購買信箱</td>
-                    <td>劃位序號</td>
-                </tr>
-                <tr>
-                    <td>退票<br>（線上購票直接劃位）</td>
-                    <td>購票者的<br>姓名、購票信箱、手機</td>
-                    <td>訂單編號</td>
+                    <td>Refund</td>
+                    <td>The ticker purchaser’s name, email address and phone number</td>
+                    <td>Order number</td>
                 </tr>
             </table> 
 
             <br>
 
             <ul>
-                <!-- <li>改期後若仍需退票，退還費用為50%</li>
-                <li>請依照上述說明附上相關資訊，來信客服信箱：<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></li> -->
-                <li>退費入帳約需 7 至 10 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</li>
-                <!-- <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
-                <li>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
-                <li>購買預售票者，尚未收到劃位序號前申請退費，將不扣除10%手續費，可全額退費</li>
-                <li>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</li> -->
-                <!-- <li>
-                    預購與劃位注意事項：
-                    <ul>
-                        <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
-                        <li>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
-                        <li>購買預售票、尚未收到劃位序號前申請退費，將不扣除手續費全額退費</li>
-                        <li>使用序號劃位之座位僅可改期一次，請謹慎選擇日期</li>
-                        <li>收到劃位信件當天，進入劃位網站後，在未使用序號的狀況下，收到劃位信件的 6 小時內可向客服信箱提出延期劃位申請</li>
-                    </ul>
-                </li> -->
-                <li>無論是預購或直購，單筆訂單若為1張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
-                <li>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 金流手續處理費）</li>
-                <li>發票若需新增/更改統編、抬頭或電子載具號碼，請先申請進行退款流程（規則同一般退款程序，且需酌收10%金流處理手續費），並重新訂購，再於訂購時填寫正確發票資訊</li>
+                <li>Once issued, refunds will take up to 7 to 10 business days. When you pay with a credit card, actual processing days needed may vary depending on the card issuer. ( ATM refunds will be issued under special circumstances. An email from our customer service will be sent to you once the refund is processed.)</li>
+                <li>If a single order consists of more than one ticket, refunds will be processed for the entire order. Partial item refunds are not available.</li>
+                <li>If you still would like to request a refund after rescheduling once, the refund fee will be 50% of the exact fare paid.(An additional 10% cash flow processing fee)</li>
+                <li>
+                    If you need to add/change the tax ID number, title, or electronic carrier number on the invoice, please apply for the refund process first (following the standard refund procedure and subject to a 10% cash flow processing fee).<br>
+                    Afterward, you may proceed to reorder and provide the correct invoice information during the purchase.
+                </li>
             </ul>
 
             <br>
 
-            <p class="item-title">多人票種退費/改期規範</p>
+            <p class="item-title">Refund & Rescheduling Policy for Group Tickets</p>
 
             <p>
-                購買多人票種者無法部分退費。如需改期，請提供姓名、購票信箱、手機，參考線上剩餘座位，提供改期時段至信箱<br>
+                For group tickets, requests of partial refund are not accepted. If rescheduling is needed, please provide us with your name, email address, phone number and your preferable rescheduled time (please check the availability online before rescheduling) via email.<br>
                 <br>
-                或是……另外找位新舞伴，給他個驚喜吧！
+                Or…find yourself a new partner and surprise him/her!
             </p>
 
             <br><br><br>
     
             <div class="title">
-                <h1>票券退費規則</h1>
-                <h3>Refund Policy</h3>
+                <h1>Refund Policy</h1>
+                <!-- <h3>Refund Policy</h3> -->
             </div>
             
-            <p>不可抗力因素之更改訂位及退費辦法：若因天災、國際病毒、戰爭等不可抗力因素，由政府、該縣市主管機關發布停止上班、停演訊息，本專案將暫停演出，並協助改期或全額退費</p>
+            <p>Refund and rescheduling policy regarding performance cancellation in the event of force majeure factors:We will cancel the performance(s) in the event of force majeure factors such as acts of nature, international spread of virus, outbreaks of war, or suspension of school and work officially announced by the government. We accept requests of full refund or rescheduling under these circumstances.</p>
             <br>
 
             <center>
@@ -417,34 +397,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <table>
                 <tr>
                     <th></th>
-                    <th>日期舉例</th>
-                    <th>改期</th>
-                    <th>轉讓</th>
-                    <th>退費</th>
+                    <th>Date (example)</th>
+                    <th>Preferable Date for Rescheduling</th>
+                    <th>Ticket Transfer</th>
+                    <th>Refund/Transfer Fee</th>
                 </tr>
                 <tr>
-                    <td>體驗當日</td>
+                    <td>On the Performance Day</td>
                     <td>01/11</td>
                     <td>X</td>
                     <td>○</td>
                     <td>X</td>
                 </tr>
                 <tr>
-                    <td>體驗前二日</td>
+                    <td>2 Days prior to the Performance Day</td>
                     <td>01/09</td>
                     <td>X</td>
                     <td>○</td>
                     <td>X</td>
                 </tr>
                 <tr>
-                    <td>體驗前九日</td>
+                    <td>9 Days prior to the Performance Day</td>
                     <td>01/02</td>
                     <td>X</td>
                     <td>○</td>
                     <td>50%</td>
                 </tr>
                 <tr>
-                    <td>體驗前十日</td>
+                    <td>10 Days prior to the Performance Day</td>
                     <td>01/01</td>
                     <td>○</td>
                     <td>○</td>
@@ -480,23 +460,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <br>
 
             <ul>
-                <li>來信申請退費請於下班 18:00 前，超過以隔日計算</li>
-                <li>體驗前 10 日、結帳完成後退還費用 90%，係因 10% 金流手續費</li>
-                <li>申請退費需收到「退費確認信」，才是成功完成程序，後續請靜候金流系統 7-10 個工作天退費</li>
-                <li>票券有效期間為本演出期間內（依網站公告），逾期視同作廢</li>
+                <li>If a request for a refund is needed, please email us before 18:00 on business days. Any requests of refund sent to us after 18:00 will be regarded as requests sent on the date of the next day.</li>
+                <li>If a request for refund is sent 10 days prior to the performance day, only 90% of the exact fare paid will be refunded since there will be a 10% commission fee generated by the process of refunding.</li>
+                <li>A request of refund can be regarded as successful only when a Refund Confirmation Letter is received by the customer. After receiving the confirmation, please wait patiently for 7 to 10 business days to have your refund returned.</li>
+                <li>Tickets are valid only within this performance schedule (according to the dates announced on our official website). Expired tickets will no longer be regarded as applicable.</li>
                 <!-- <li>劃位序號過期未使用，導致序號失效者，不予退費</li> -->
                 <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
             </ul>
             <br>
 
-            <p class="item-title">線上金流系統</p>
-            <p>本專案之線上付款透過藍新金流第三方平台支付</p>
+            <p class="item-title">Online Cash Flow System</p>
+            <p>The payment will be processed by Newebpay, a third-party payment platform.</p>
         </div>
     </main>
 
     @include('paris.frontend._footer')
 
-    <a id="fixed-booking" href="/lebaldeparis/booking_pay">
+    <a id="fixed-booking" href="/lebaldeparis/booking_pay/en">
         <img src="/paris/img/fixed-booking.png" />
     </a>
 
