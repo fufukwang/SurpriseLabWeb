@@ -20,7 +20,7 @@
 body {
   margin: 0;
   background: #260307;
-  background-image: url(../img/pattern.png);
+  background-image: url(/paris/img/pattern.png);
   background-size: 100% auto;
   background-repeat: repeat-y;
   color: #fff;
@@ -293,6 +293,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   display: flex;
   align-items: center;
   margin-bottom: 26px;
+  font-size: 15px;
 }
 .checkbox-group:last-child {
   margin-bottom: 0;
@@ -347,7 +348,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   text-decoration: none;
 }
 .checkbox-group input:checked ~ span:before {
-  background-image: url(../img/icon-check.svg);
+  background-image: url(/paris/img/icon-check.svg);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -554,7 +555,7 @@ button.p-btn.secondary:hover:not([disabled]) {
     content: "";
     width: 160px;
     height: 160px;
-    background-image: url(../img/nav-active.svg);
+    background-image: url(/paris/img/nav-active.svg);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -940,7 +941,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   font-size: 0;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-arrow.svg") no-repeat;
+  background: url("/paris/img/icon-arrow.svg") no-repeat;
   background-size: cover;
   border-radius: 50%;
   background-color: #101010;
@@ -1132,7 +1133,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 200px;
+  max-width: 400px;
   margin: 0 auto;
   margin-top: 63px;
 }
@@ -1177,7 +1178,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-  background-image: url(../img/booking_ticket_m.png);
+  background-image: url(/paris/img/booking_ticket_m.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
@@ -1188,7 +1189,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   #booking #step3 .step3-form .ticket-inner .ticket {
     width: 448px;
     height: 301px;
-    background-image: url(../img/booking_ticket.png);
+    background-image: url(/paris/img/booking_ticket.png);
     padding: 24px 36px 0 192px;
   }
 }
@@ -1229,7 +1230,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 200%;
+  line-height: 180%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1255,11 +1256,13 @@ button.p-btn.secondary:hover:not([disabled]) {
 #booking #step3 .step3-form .ticket-inner .ticket .addr .note {
   width: 100%;
   font-size: 10px;
-  line-height: 200%; /* 20px */
+  line-height: 120%; /* 20px */
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 495px) {
   #booking #step3 .step3-form .ticket-inner .ticket .addr .note {
     font-size: 13px;
+    margin-bottom: 7px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -1350,7 +1353,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   margin-bottom: 0;
 }
 #booking #step2#step3 .actions, #booking #step3#step3 .actions {
-  max-width: 256px;
+  max-width: 400px;
 }
 
 #booking-success {
@@ -1364,7 +1367,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   width: 350px;
   height: 235px;
   margin: 0 auto;
-  background-image: url(../img/booking_ticket_m.png);
+  background-image: url(/paris/img/booking_ticket_m.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 39px 0 48px;
@@ -1375,7 +1378,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   #booking-success .ticket {
     width: 448px;
     height: 301px;
-    background-image: url(../img/booking_ticket.png);
+    background-image: url(/paris/img/booking_ticket.png);
     padding: 24px 36px 0 192px;
   }
 }
@@ -1493,4 +1496,17 @@ button.p-btn.secondary:hover:not([disabled]) {
 
 .arm:after {
   transform: rotate(-45deg);
-}/*# sourceMappingURL=booking.css.map */
+}
+
+
+@media screen and (min-width: 768px) {
+  #booking #step1 .price .item {
+    width: 33.333%;
+    padding: 0 15px;
+  }
+
+  #booking #step1 .price h4 {
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+}

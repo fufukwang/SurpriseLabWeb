@@ -26,7 +26,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris_en/css/plugins/select2.css"/>
-    <link rel="stylesheet" href="/paris_en/css/booking_pay.css?240122">
+    <link rel="stylesheet" href="/paris_en/css/booking_pay.css?240320">
+
+
+
+
+    <style>
+        #step2, #step3 { display: block !important; }
+    </style>
+
+
+
+
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -41,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
-    @include('paris.frontend._nav')
+    @include('paris.front_en._nav')
     
     <main id="leading" style="display:none;">
         <div class="title">
@@ -146,48 +158,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div id="step1" class="step">
                 <div class="title">
                     <img src="/paris/img/deco.svg" />
-                    <h1>預約體驗</h1>
-                    <h3>Booking</h3>
+                    <h1>Tickets</h1>
+                    <!-- <h3>Booking</h3> -->
                 </div>
                 <div class="price">
                     <div class="item">
                         <div class="icon">
                             <img src="/paris/img/booking_ticket1.png" />
                         </div>
-                        <h4>單人獨舞票</h4>
+                        <h4>Single Ticket</h4>
                         <h2>$2,100</h2> 
                         <div class="desc">
-                            （含一杯調飲）<br>
-                            <br><br>
-                            一個人自由地探索<br>
-                            帶著好奇心闖入花漾年代
+                            （1 Drink Included）<br>
+                            <br>
+                            By yourself, freely explore this charming ball with your best curiosity.
                         </div>
                     </div>
                     <div class="item">
                         <div class="icon">
                             <img src="/paris/img/booking_ticket2.png" />
                         </div>
-                        <h4>雙人共舞票</h4>
+                        <h4>Double Ticket</h4>
                         <h2>$4,000<span>($2,000/人)</span></h2> 
                         <div class="desc">
-                            （含兩杯調飲）<br>
-                            <br><br>
-                            邀請最重要的人<br>
-                            感受奢華絢爛的巴黎午夜
+                            （2 Drinks Included）<br>
+                            <br>
+                            Invite the most significant partner of yours.<br>
+                            Enjoy the fancy, dazzling midnight in Paris.
                         </div>
                     </div>
                     <div class="item">
                         <div class="icon">
                             <img src="/paris/img/booking_ticket3_old.png" />
                         </div>
-                        <h4>四人群舞票</h4>
+                        <h4>Quadruple Ticket</h4>
                         <h2>$7,600<span>($1,900/人)</span></h2> 
                         <div class="desc">
-                            （含四杯調飲）<br>
-                            <span>購票輸入【dancefourfun】<br>享 $200 折扣</span>
+                            （4 Drinks Included）<br>
                             <br>
-                            與熟悉的人狂歡<br>
-                            摸索與彼此的第一支舞
+                            Party with your best team.<br>
+                            Feel the way through your first dance with each other.
                         </div>
                     </div>
                 </div>
@@ -195,19 +205,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="selects">
                     <div class="type">
                         <div class="input-group">
-                            <label>票種</label>
+                            <label>Ticket Type</label>
                             <select name="ticket" data-placeholder="選擇">
                                 <option></option>
-                                <option value="單人獨舞票">單人獨舞票</option>
-                                <option value="雙人共舞票">雙人共舞票</option>
-                                <option value="四人群舞票">四人群舞票</option>
+                                <option value="Single Ticket">Single Ticket</option>
+                                <option value="Double Ticket">Double Ticket</option>
+                                <option value="Quadruple Ticket">Quadruple Ticket</option>
                             </select>
                             <div class="select-wrapper"></div>
                         </div>
                     </div>
                     <div class="guests">
                         <div class="input-group">
-                            <label>張數</label>
+                            <label>Quantity</label>
                             <select name="num" data-placeholder="選擇張數">
                                 <option></option>
                                 <option value="1">1</option>
@@ -217,14 +227,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="date">
                         <div class="input-group">
-                            <label>日期 Date</label>
+                            <label>Date</label>
                             <input type="text" name="booking_date" id="booking_date" autocomplete="off" placeholder="選擇日期" />
                             <div class="calender-wrapper"></div>
                         </div>
                     </div>
                     <div class="time">
                         <div class="input-group">
-                            <label>場次時間</label>
+                            <label>Time</label>
                             <select name="booking_time" id="booking_time" data-placeholder="選擇時間場次"></select>
                             <div class="select-wrapper"></div>
                         </div>
@@ -232,7 +242,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="actions">
-                    <div class="p-btn primary go-next disabled">預約入場</div>
+                    <div class="p-btn primary go-next disabled">Buy Tickets</div>
                 </div>
             </div>
     
@@ -240,16 +250,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="title">
                     <img src="/paris/img/deco.svg" />
                     <h1>填寫聯絡資訊</h1>
-                    <h3>Info</h3>
+                    <!-- <h3>Info</h3> -->
                 </div>
 
                 <div class="step2-form">
                     <div class="input-group">
-                        <label>* 姓名（為維護你的訂位權益，請留全名）</label>
+                        <label>* Name(For the protection of your reservation rights, please provide your full name)</label>
                         <input class="required" type="text" name="name" placeholder="兔子先生" />
                     </div>
                     <div class="input-group phone-group">
-                        <label>* 手機</label>
+                        <label>* Phone Number</label>
                         <div class="flex">
                             <!-- <input class="code required" type="text" name="" placeholder="+886" /> -->
                             <div class="code-wrapper">
@@ -268,42 +278,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="half-group flex">
                         <div class="input-group">
-                            <label>* 體驗語言人數/中文 </label>
+                            <label>* Number of Language Participants/Mandarin</label>
                             <!-- <input class="required" type="text" name="" placeholder="0" /> -->
                             <select class="lang_zh" name="need_chinese" data-placeholder="選擇人數"></select>
                             <div class="select-wrapper"></div>
                         </div>
                         <div class="input-group">
-                            <label>* 體驗語言人數/英文</label>
+                            <label>* Number of Language Participants/English</label>
                             <!-- <input class="required" type="text" name="" placeholder="0" /> -->
                             <select class="lang_en" name="need_english" data-placeholder="選擇人數"></select>
                             <div class="select-wrapper"></div>
                         </div>
                     </div>
                     <div class="input-group">
-                        <label>統一編號（無此需求可不須填寫）</label>
+                        <label>Tax ID number（無此需求可不須填寫）</label>
                         <input class="tax" type="text" name="company_tax_ID" />
                     </div>
                     <div class="input-group">
-                        <label>公司抬頭（無此需求可不須填寫）</label>
+                        <label>Company Title（無此需求可不須填寫）</label>
                         <input type="text" name="company_name" />
                     </div>
                     <div class="input-group">
-                        <label>手機載具 （無此需求可不須填寫）</label>
+                        <label>Carrier （無此需求可不須填寫）</label>
                         <input class="invoices" type="text" name="vehicle" />
                     </div>
                     <div class="input-group">
-                        <label>備註</label>
-                        <textarea name="notice" rows="8" placeholder="若不飲用酒精，請提前備註，飲品不提供現場調整；&#10;如有體驗者為13歲（含）-16歲，請提前備註人數，以利後續安排&#10;體驗提供法文、西班牙文、義大利文、德文，若有需求，請備註語言與對應人數"></textarea>
+                        <label>Note</label>
+                        <textarea name="notice" rows="8" placeholder="If you do not consume alcohol, please make a note in advance as on-site beverage adjustments will not be provided.&#10;If there are participants aged 13 (inclusive) to 16, please make an advance note of the number for subsequent arrangements.&#10;The experience is available in French, Spanish, Italian and German. If there are specific language preferences and corresponding participant numbers, please provide the information in advance."></textarea>
                     </div>
                     <div class="half-group flex">
                         <div class="input-group">
-                            <label>折扣碼</label>
+                            <label>Discount Code</label>
                             <input type="text" name="discount" id="discount" maxlength="20" />
                             <span class="discount_note" style="color: #dc3545;"></span>
                         </div>
                         <div class="input-group">
-                            <label>劃位序號</label>
+                            <label>Seat Reservation Number</label>
                             <input type="text" name="gift" id="gift" maxlength="20" />
                             <span class="gift_note" style="color: #dc3545;"></span>
                         </div>
@@ -312,21 +322,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="checkbox-group">
                             <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
                                 <input type="checkbox" name="ck_privacy" value="1" />
-                                <span>我已詳讀並遵守</span>
+                                <span>I have read and agree to the </span>
                             </label>
-                            <span class="modal-btn modal-btn-privacy" data-custom-open="modal-privacy">隱私權條款</span>
+                            <span class="modal-btn modal-btn-privacy" data-custom-open="modal-privacy">privacy policy.</span>
                         </div>
                         <div class="checkbox-group">
                             <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
                                 <input type="checkbox" name="ck_rule" value="1" />
-                                <span>我已詳讀並遵守</span> 
+                                <span>I have read and agree to the </span> 
                             </label>
-                            <a target="_blank" href="/lebaldeparis/rules">舞會規則</a>
+                            <a target="_blank" href="/lebaldeparis/rules">rules.</a>
                         </div>
                     </div>
                     <div class="actions">
-                        <div class="p-btn primary go-next disabled">確認聯絡資訊</div>
-                        <div class="p-btn primary outline go-prev">回上一步</div>
+                        <div class="p-btn primary go-next disabled">Confirm Contact Information</div>
+                        <div class="p-btn primary outline go-prev">Go Back</div>
                     </div>
                 </div>
             </div>
@@ -343,23 +353,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="ticket">
                             <table>
                                 <tr>
-                                    <td>票種</td>
-                                    <td>巴黎舞會雙人套票</td>
+                                    <td>Ticket Type</td>
+                                    <td>Single Ticket</td>
                                 </tr>
                                 <tr>
-                                    <td>張數</td>
+                                    <td>Quantity</td>
                                     <td>2</td>
                                 </tr>
                                 <tr>
-                                    <td>預約日期</td>
+                                    <td>Date</td>
                                     <td>2023/11/11</td>
                                 </tr>
                                 <tr>
-                                    <td>預約時段</td>
+                                    <td>Time</td>
                                     <td>18:30-20:00</td>
                                 </tr>
                                 <tr>
-                                    <td>金額</td>
+                                    <td>Amount</td>
                                     <td>3,900 元</td>
                                 </tr>
                             </table>
@@ -367,19 +377,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <svg width="11" height="16" viewBox="0 0 11 16" fill="none">
                                     <path d="M5.5 0C2.46269 0 0 2.51473 0 5.61624C0 8.71775 5.5 16 5.5 16C5.5 16 11 8.71775 11 5.61624C11 2.51473 8.54073 0 5.5 0ZM5.5 8.60249C3.88557 8.60249 2.57898 7.26479 2.57898 5.61973C2.57898 3.97468 3.88899 2.63698 5.5 2.63698C7.11101 2.63698 8.42102 3.97468 8.42102 5.61973C8.42102 7.26479 7.11101 8.60249 5.5 8.60249Z" fill="#016060"/>
                                 </svg>
-                                <div>國立臺灣科學教育館</div>
-                                <div class="note">111臺北市士林區士商路189號 B1 兒童廳</div>
-                                <div class="note" style="color: #F4115D; margin-top: -5px;">此圖面不代表訂位完成，請往下操作</div>
+                                <div>National Taiwan Science Education Center</div>
+                                <div class="note">Children's Hall, B1, No. 189, Shishang Rd., Shilin Dist., Taipei City</div>
+                                <div class="note" style="color: #F4115D; margin-top: -5px;">This page does not confirm your reservation.<br>Please proceed with the following steps.</div>
                             </div>
                         </div>
                     </div>
                     <div class="form-inner">
                         <div class="input-group">
-                            <label>* 姓名（為維護你的訂位權益，請留全名）</label>
+                            <label>* Name(For the protection of your reservation rights, please provide your full name)</label>
                             <div class="filed-value">驚喜先生/小姐</div>
                         </div>
                         <div class="input-group phone-group">
-                            <label>* 手機</label>
+                            <label>* Phone Number</label>
                             <div class="flex">
                                 <div class="filed-value code">+886</div>
                                 <div class="filed-value phone">0912345678</div>
@@ -391,33 +401,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="half-group flex">
                             <div class="input-group">
-                                <label>* 體驗語言人數/中文</label>
+                                <label>* Number of Language Participants/Mandarin</label>
                                 <div class="filed-value">0</div>
                             </div>
                             <div class="input-group">
-                                <label>* 體驗語言人數/英文</label>
+                                <label>* Number of Language Participants/English</label>
                                 <div class="filed-value">0</div>
                             </div>
                         </div>
                         <div class="input-group">
-                            <label>統一編號（無此需求可不須填寫）</label>
+                            <label>Tax ID number</label>
                             <div class="filed-value">12345678</div>
                         </div>
                         <div class="input-group">
-                            <label>公司抬頭</label>
+                            <label>Company Title</label>
                             <div class="filed-value"></div>
                         </div>
                         <div class="input-group">
-                            <label>手機載具</label>
+                            <label>Carrier</label>
                             <div class="filed-value"></div>
                         </div>
                         <div class="input-group">
-                            <label>備註</label>
+                            <label>Note</label>
                             <div class="filed-value">需要輪椅，一位孕婦</div>
                         </div>
                         <div class="half-group flex align-items-end">
                             <div class="input-group">
-                                <label>折扣碼</label>
+                                <label>Discount Code</label>
                                 <div class="filed-value">HaveANiceDay</div>
                             </div>
                             <div class="input-group">
@@ -426,20 +436,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="half-group flex align-items-end">
                             <div class="input-group">
-                                <label>劃位序號</label>
+                                <label>Seat Reservation Number</label>
                                 <div class="filed-value">XYZ321</div>
                             </div>
                             <div class="input-group">
                                 <div class="note gift">已抵用4000元</div>
                             </div>
                         </div>
-                        <div class="notice">按下「前往付款」代表我已閱讀並同意 <span data-custom-open="modal-privacy">隱私權條款</span> 與 <a target="_blank" href="/lebaldeparis/rules">購票規則</a></div>
+                        <div class="notice">By clicking 'Proceed to Payment,' I acknowledge that I have read and agree to the <span data-custom-open="modal-privacy">Privacy Policy</span> and Ticket <a target="_blank" href="/lebaldeparis/rules">Purchase Rules</a>.</div>
                     </div>
                 </div>
 
                 <div class="actions">
-                    <button class="p-btn primary go-next submitForm" type="button">前往付款 3,900 元</button>
-                    <div class="p-btn primary outline go-prev">回上一步</div>
+                    <button class="p-btn primary go-next submitForm" type="button">Proceed to Payment NTD 3,900</button>
+                    <div class="p-btn primary outline go-prev">Go Back</div>
                 </div>
             </div>
         </form>
@@ -492,6 +502,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris_en/js/plugins/micromodal.min.js"></script>
     <script src="/paris_en/js/main.js?231003"></script>
     <script src="/paris_en/js/phone_code.js"></script>
-    <script src="/paris_en/js/booking_pay.js?240228"></script>
+    <script src="/paris_en/js/booking_pay.js?240320"></script>
 </body>
 </html>

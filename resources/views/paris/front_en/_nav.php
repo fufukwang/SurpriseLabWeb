@@ -9,14 +9,14 @@
             <div class="mob-toggle m"></div>
         </div>
         <nav>
-            <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">關於舞會</a>
-            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">購票資訊</a>
+            <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">Le Bal</a>
+            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">Tickets</a>
             <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">口碑評價</a>
             <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">各界好評</a>
-            <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">如何享受</a>
-            <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
-            <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
+            <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">How to Play</a>
+            <!-- <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a> -->
+            <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">Information</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
-            <a href="/lebaldeparis/booking_pay">預約舞會</a>
+            <a href="/lebaldeparis/booking_pay">Buy Tickets</a>
         </nav>
     </header>
