@@ -83,7 +83,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a> -->
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">Information</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
-            <a href="/lebaldeparis/booking_pay">Buy Tickets</a>
+            <a href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
         </nav>
     </header>
 
@@ -168,7 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             By yourself, freely explore this charming ball with your best curiosity.
                         </div>
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking_pay">Buy Tickets</a>
+                    <a class="p-btn primary" href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
                 </div>
                 <div class="item">
                     <div>
@@ -184,7 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             Enjoy the fancy, dazzling midnight in Paris.
                         </div>
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking_pay">Buy Tickets</a>
+                    <a class="p-btn primary" href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
                 </div>
                 <div class="item">
                     <div>
@@ -200,7 +200,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             Feel the way through your first dance with each other.
                         </div>
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking_pay">Buy Tickets</a>
+                    <a class="p-btn primary" href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
                 </div>
             </div>
 
@@ -218,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             By yourself, freely explore this charming ball with your best curiosity.
                         </div>
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking_pay">Buy Tickets</a>
+                    <a class="p-btn primary" href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
                 </div>
                 <div class="item">
                     <div>
@@ -234,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             Enjoy the fancy, dazzling midnight in Paris.
                         </div>
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking_pay">Buy Tickets</a>
+                    <a class="p-btn primary" href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
                 </div>
                 <div class="item">
                     <div>
@@ -250,7 +250,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             Feel the way through your first dance with each other.
                         </div>
                     </div>
-                    <a class="p-btn primary" href="/lebaldeparis/booking_pay">Buy Tickets</a>
+                    <a class="p-btn primary" href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
                 </div>
             </div>
         </section>
@@ -853,13 +853,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li><p>The experience involves physical contact, like patting on your shoulders, guiding, or holding hands to dance. <br>If you prefer to avoid such contact, please specify in the note section during ticket purchase.</p></li>
                                 <li><p>During the experience, if you don’t feel comfortable being touched, you are welcome to raise your hand, or make an X in front of you to inform our staff.</p></li>
                                 <li><p>If you would like to consult services regarding block bookings, private events or other special services, please send an email to our customer service email.<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
-                                <li><p>More about ticketing, refunding and rescheduling, please refer to <a class="hover-underline" href="/lebaldeparis/rules">[Rules]</a></p></li>
+                                <li><p>More about ticketing, refunding and rescheduling, please refer to <a class="hover-underline" href="/lebaldeparis/rules/en">[Rules]</a></p></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="actions">
-                    <a class="p-btn primary" href="/lebaldeparis/rules">More Rules</a>
+                    <a class="p-btn primary" href="/lebaldeparis/rules/en">More Rules</a>
                 </div>
             </div>
         </section>
@@ -909,7 +909,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('paris.frontend._footer')
 
-    <a id="fixed-booking" href="/lebaldeparis/booking_pay" style="display: none;">
+    <a id="fixed-booking" href="/lebaldeparis/booking_pay/en" style="display: none;">
         <img src="/paris/img/fixed-booking.png" />
     </a>
 

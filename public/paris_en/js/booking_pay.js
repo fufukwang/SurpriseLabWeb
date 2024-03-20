@@ -23,9 +23,9 @@ $('#step1 select').each(function () {
 $('#step1 .type select').on('change', function (e) {
     var val = $(this).val();
     switch(val){
-        case '單人獨舞票': changeGuestNumber(20); break;
-        case '雙人共舞票': changeGuestNumber(10); break;
-        case '四人群舞票': changeGuestNumber(5); break; 
+        case 'Single Ticket': changeGuestNumber(20); break;
+        case 'Double Ticket': changeGuestNumber(10); break;
+        case 'Quadruple Ticket': changeGuestNumber(5); break; 
     }
     function changeGuestNumber(num){
         var $guest_select = $('#step1 .guests select');
@@ -87,13 +87,13 @@ $('#step1 .guests select').on('select2:select', function (e) {
                     if($('.calender-ps').length == 0){
                         $('#ui-datepicker-div').append(`<div class="calender-ps">
                             <div>
-                                <p style="color: #EFCEA3">好評熱賣</p>
+                                <p style="color: #EFCEA3">Hot-Selling</p>
                             </div>
                             <div>
-                                <p style="color: #E85455">即將完售</p>
+                                <p style="color: #E85455">Almost Sold Out</p>
                             </div>
                             <div>
-                                <p style="color: #AA8495">已售完</p>
+                                <p style="color: #AA8495">Sold Out</p>
                             </div>
                         </div>`)
                     }
@@ -116,18 +116,18 @@ $('#step1 .guests select').on('select2:select', function (e) {
             if(myDateDay === 0 || myDateDay === 6){
                 if(dateSite[sdate]<=50){
                     myDateClass = "sold-out-soon";
-                    myDateTip = "即將完售";
+                    myDateTip = "Almost Sold Out";
                 } else if(dateSite[sdate]<=108){
                     myDateClass = "still-vacancy";
-                    myDateTip = "好評熱賣";
+                    myDateTip = "Hot-Selling";
                 }
             } else {
                 if(dateSite[sdate]<=50){
                     myDateClass = "sold-out-soon";
-                    myDateTip = "即將完售";
+                    myDateTip = "Almost Sold Out";
                 } else if(dateSite[sdate]<=72){
                     myDateClass = "still-vacancy";
-                    myDateTip = "好評熱賣";
+                    myDateTip = "Hot-Selling";
                 }
             }
             return [true, myDateClass, myDateTip];
@@ -156,7 +156,7 @@ $('#step1 .guests select').on('select2:select', function (e) {
             data = data.map(function(item){
                 return {
                     id: item.id,
-                    text: item.rang_start.substring(0,5) + ' - ' + item.rang_end.substring(0,5) + ' 剩餘' + item.sites + '位'
+                    text: item.rang_start.substring(0,5) + ' - ' + item.rang_end.substring(0,5) + ' ' + item.sites + ' Seats Available'
                 }
             });
 
@@ -217,9 +217,9 @@ $('#step1 .go-next').on('click', function (e) {
 
             var maxVal = $('#step1 .guests select').val();
             // 實際人數
-            if($('.type select').val() == '雙人共舞票'){
+            if($('.type select').val() == 'Double Ticket'){
                 maxVal = maxVal * 2;
-            } else if($('.type select').val() == '四人群舞票'){
+            } else if($('.type select').val() == 'Quadruple Ticket'){
                 maxVal = maxVal * 4;
             }
             var data = [];
@@ -442,9 +442,9 @@ function setStep3Contents() {
             $('#step3 .filed-value').eq(idx).text(val);
         }
     });
-    if($('.type select').val() == '雙人共舞票'){
+    if($('.type select').val() == 'Double Ticket'){
         money = parseInt($('select[name=booking_time] option:selected').data('p2')) * parseInt($('.guests select').val());
-    } else if($('.type select').val() == '四人群舞票'){
+    } else if($('.type select').val() == 'Quadruple Ticket'){
         money = parseInt($('select[name=booking_time] option:selected').data('p4')) * parseInt($('.guests select').val());
     } else {
         money = parseInt($('select[name=booking_time] option:selected').data('p1')) * parseInt($('.guests select').val());
