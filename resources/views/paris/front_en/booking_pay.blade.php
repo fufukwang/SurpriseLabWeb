@@ -26,19 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris_en/css/plugins/select2.css"/>
-    <link rel="stylesheet" href="/paris_en/css/booking_pay.css?240320">
-
-
-
-
-    <style>
-        #step2, #step3 { display: block !important; }
-    </style>
-
-
-
-
-
+    <link rel="stylesheet" href="/paris_en/css/booking_pay.css?2403201">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

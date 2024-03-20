@@ -1056,7 +1056,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   border-radius: 50%;
 }
 #booking #step1 .date .calender-wrapper .calender-ps p {
-  font-size: 16px;
+  font-size: 11px;
   line-height: 1.88;
   letter-spacing: 1.6px;
   text-align: left;
