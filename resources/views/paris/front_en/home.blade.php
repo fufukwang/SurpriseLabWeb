@@ -82,7 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">How to Play</a>
             <!-- <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a> -->
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">Information</a>
-            <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
+            <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">Partner</a>
             <a href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
         </nav>
     </header>
