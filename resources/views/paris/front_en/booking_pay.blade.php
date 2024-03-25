@@ -194,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="type">
                         <div class="input-group">
                             <label>Ticket Type</label>
-                            <select name="ticket" data-placeholder="選擇">
+                            <select name="ticket" data-placeholder="Ticket">
                                 <option></option>
                                 <option value="Single Ticket">Single Ticket</option>
                                 <option value="Double Ticket">Double Ticket</option>
@@ -206,7 +206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="guests">
                         <div class="input-group">
                             <label>Quantity</label>
-                            <select name="num" data-placeholder="選擇張數">
+                            <select name="num" data-placeholder="Numbers">
                                 <option></option>
                                 <option value="1">1</option>
                             </select>
@@ -216,14 +216,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="date">
                         <div class="input-group">
                             <label>Date</label>
-                            <input type="text" name="booking_date" id="booking_date" autocomplete="off" placeholder="選擇日期" />
+                            <input type="text" name="booking_date" id="booking_date" autocomplete="off" placeholder="Date" />
                             <div class="calender-wrapper"></div>
                         </div>
                     </div>
                     <div class="time">
                         <div class="input-group">
                             <label>Time</label>
-                            <select name="booking_time" id="booking_time" data-placeholder="選擇時間場次"></select>
+                            <select name="booking_time" id="booking_time" data-placeholder="Time"></select>
                             <div class="select-wrapper"></div>
                         </div>
                     </div>
@@ -237,14 +237,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div id="step2" class="step" style="display: none;">
                 <div class="title">
                     <img src="/paris/img/deco.svg" />
-                    <h1>填寫聯絡資訊</h1>
+                    <h1>Info</h1>
                     <!-- <h3>Info</h3> -->
                 </div>
 
                 <div class="step2-form">
                     <div class="input-group">
                         <label>* Name(For the protection of your reservation rights, please provide your full name)</label>
-                        <input class="required" type="text" name="name" placeholder="兔子先生" />
+                        <input class="required" type="text" name="name" placeholder="Mr. Rabbit" />
                     </div>
                     <div class="input-group phone-group">
                         <label>* Phone Number</label>
@@ -279,20 +279,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                     <div class="input-group">
-                        <label>Tax ID number（無此需求可不須填寫）</label>
+                        <label>Tax ID number (Optional)</label>
                         <input class="tax" type="text" name="company_tax_ID" />
                     </div>
                     <div class="input-group">
-                        <label>Company Title（無此需求可不須填寫）</label>
+                        <label>Company Title (Optional)</label>
                         <input type="text" name="company_name" />
                     </div>
                     <div class="input-group">
-                        <label>Carrier （無此需求可不須填寫）</label>
+                        <label>Carrier (Optional)</label>
                         <input class="invoices" type="text" name="vehicle" />
                     </div>
                     <div class="input-group">
                         <label>Note</label>
-                        <textarea name="notice" rows="8" placeholder="If you do not consume alcohol, please make a note in advance as on-site beverage adjustments will not be provided.&#10;If there are participants aged 13 (inclusive) to 16, please make an advance note of the number for subsequent arrangements.&#10;The experience is available in French, Spanish, Italian and German. If there are specific language preferences and corresponding participant numbers, please provide the information in advance."></textarea>
+                        <textarea name="notice" rows="8" placeholder="No alcohol for those under 18. Please specify the number of minors.&#10;VR offered in French, Spanish, Italian, and German. Specify language and number of users if needed."></textarea>
                     </div>
                     <div class="half-group flex">
                         <div class="input-group">
@@ -332,8 +332,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div id="step3" class="step" style="display: none;">
                 <div class="title">
                     <img src="/paris/img/deco.svg" />
-                    <h1>確認資訊</h1>
-                    <h3>Confirmation</h3>
+                    <h1>Confirmation</h1>
+                    <!-- <h3>Confirmation</h3> -->
                 </div>
 
                 <div class="step3-form">
@@ -436,7 +436,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="actions">
-                    <button class="p-btn primary go-next submitForm" type="button">Proceed to Payment NTD 3,900</button>
+                    <button class="p-btn primary go-next submitForm" type="button">Proceed to Payment $3,900</button>
                     <div class="p-btn primary outline go-prev">Go Back</div>
                 </div>
             </div>
