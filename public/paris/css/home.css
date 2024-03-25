@@ -1400,3 +1400,18 @@ body {
 #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item, #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-content, #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-text, #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a, #sec-review #eapps-instagram-feed-1 .eapps-instagram-feed-posts-item a:hover {
   color: #fff;
 }/*# sourceMappingURL=home.css.map */
+
+#sec-group-party form {
+  max-width: 500px;
+  margin: 30px auto 0 auto;
+}
+
+#sec-group-party form .input-group {
+  display: flex;
+}
+
+#sec-group-party form .input-group label {
+  margin: 0;
+  width: 80px;
+  margin-top: 8px;
+}

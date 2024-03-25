@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css?240117">
+    <link rel="stylesheet" href="/paris/css/home.css?240325">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -417,6 +417,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="/paris/img/more2.png" />
                 </div>
             </div>
+        </section>
+
+        <section id="sec-group-party">
+            <div class="title">
+                <img src="/paris/img/deco.svg" />
+                <h1>包場跳舞</h1>
+                <h3>GROUP PARTY</h3>
+            </div>
+
+            <div style="text-align: center; color: #fff;">
+                號召好友、同事、家人<br>
+                一起探索未知、扮裝跳舞<br>
+                Make an ordinary day a memorable one!<br>
+                <br>
+                若你有 10 人 (含) 以上之需求，歡迎包場<br>
+            </div>
+
+            <div style="text-align: center; color: #E28A8A; text-decoration: underline;">＊多人包場體驗，享專屬票價優惠</div>
+                
+            <form>
+                <div class="input-group">
+                    <label>姓名</label>
+                    <input type="text">
+                </div>
+                <div class="input-group">
+                    <label>電話</label>
+                    <input type="text">
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="text">
+                </div>
+                <div class="input-group">
+                    <label>備註</label>
+                    <textarea rows="6" placeholder="請說明預計人數、日期、時間" style="resize: none;"></textarea>
+                </div>
+                <div class="input-group" style="justify-content: center;">
+                    <button class="p-btn primary">送出</button>
+                </div>
+            </form>
         </section>
         
         <section id="sec-group">
