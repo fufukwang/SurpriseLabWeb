@@ -97,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <td>▲</td>
                             </tr>
                             <tr>
-                                <td>12歲(含)以下無法參與、13-16歲需<br>由家長簽署同意書，並購票陪同入場體驗</td>
+                                <td>12歲以下無法參與，<br>12-17歲建議由家長陪同參與體驗。</td>
                                 <td>▲</td>
                             </tr>
                         </table>
@@ -388,7 +388,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li> -->
                 <li>無論是預購或直購，單筆訂單若為1張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
                 <li>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 金流手續處理費）</li>
-                <li>發票若需新增/更改統編、抬頭或電子載具號碼，請先申請進行退款流程（規則同一般退款程序，且需酌收10%金流處理手續費），並重新訂購，再於訂購時填寫正確發票資訊</li>
+                <li>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</li>
             </ul>
 
             <br>

@@ -294,7 +294,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="input-group">
                         <label>備註</label>
-                        <textarea name="notice" rows="8" placeholder="若不飲用酒精，請提前備註，飲品不提供現場調整；&#10;如有體驗者為13歲（含）-16歲，請提前備註人數，以利後續安排&#10;體驗提供法文、西班牙文、義大利文、德文，若有需求，請備註語言與對應人數"></textarea>
+                        <textarea name="notice" rows="8" placeholder="本體驗為輔導級，12歲以下無法參與；若未滿18歲或不飲用酒精，請提前備註，飲品不提供現場調整。&#10;除中英文外，體驗提供法文、西班牙文、義大利文、德文；若有需求，請備註語言與對應人數。"></textarea>
                     </div>
                     <div class="half-group flex">
                         <div class="input-group">
