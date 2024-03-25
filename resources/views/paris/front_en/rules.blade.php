@@ -247,8 +247,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <br><br><br> -->
     
             <div class="title">
-                <h1>行前須知</h1>
-                <h3>Reminder</h3>
+                <h1>Notes</h1>
+                <!-- <h3>Reminder</h3> -->
             </div>
     
             <div class="collapse-list">
@@ -326,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div id="change-refund" class="tab-content" style="display: none;">
             <div class="title">
-                <h1>票券異動申請</h1>
+                <h1>Change Your Booking</h1>
                 <!-- <h3>Change Your Booking</h3> -->
             </div>
 
@@ -391,7 +391,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Refund and rescheduling policy regarding performance cancellation in the event of force majeure factors:We will cancel the performance(s) in the event of force majeure factors such as acts of nature, international spread of virus, outbreaks of war, or suspension of school and work officially announced by the government. We accept requests of full refund or rescheduling under these circumstances.</p>
             <br>
 
-            <center>
+            <!-- <center>
                 <p style="font-size: 1.5em;">已完成劃位</p>
             </center>
             <table>
@@ -457,7 +457,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>100%</td>
                 </tr>
             </table>
-            <br>
+            <br> -->
 
             <ul>
                 <li>If a request for a refund is needed, please email us before 18:00 on business days. Any requests of refund sent to us after 18:00 will be regarded as requests sent on the date of the next day.</li>
@@ -465,7 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li>A request of refund can be regarded as successful only when a Refund Confirmation Letter is received by the customer. After receiving the confirmation, please wait patiently for 7 to 10 business days to have your refund returned.</li>
                 <li>Tickets are valid only within this performance schedule (according to the dates announced on our official website). Expired tickets will no longer be regarded as applicable.</li>
                 <!-- <li>劃位序號過期未使用，導致序號失效者，不予退費</li> -->
-                <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
+                <!-- <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li> -->
             </ul>
             <br>
 
@@ -477,7 +477,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @include('paris.frontend._footer')
 
     <a id="fixed-booking" href="/lebaldeparis/booking_pay/en">
-        <img src="/paris/img/fixed-booking.png" />
+        <img src="/paris/img/fixed-booking-en.png" />
     </a>
 
     <script src="/paris_en/js/plugins/jquery-3.3.1.min.js"></script>

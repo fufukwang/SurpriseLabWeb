@@ -77,8 +77,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <nav>
             <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">Le Bal</a>
             <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">Tickets</a>
-            <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">口碑評價</a>
-            <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">各界好評</a>
+            <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">Review</a>
+            <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">Media</a>
             <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">How to Play</a>
             <!-- <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a> -->
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">Information</a>
@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section id="sec-review">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
-                <h1>口碑評價</h1>
+                <h1>Review</h1>
                 <!-- <h3>Review</h3> -->
             </div>
 
@@ -284,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section id="sec-media">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
-                <h1>各界好評</h1>
+                <h1>Media</h1>
                 <!-- <h3>Media</h3> -->
             </div>
 
@@ -292,42 +292,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="owl-carousel">
                     <div>
                         <a target="_blank" href="https://www.vogue.com.tw/article/%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83-%E5%8F%B0%E5%8C%97-%E9%A9%9A%E5%96%9C%E8%A3%BD%E9%80%A0">
-                            <img src="/paris/img/media1.webp" />
+                            <img src="/paris/img/media1_en.jpg" />
                             <div class="s-title">Vogue</div>
                             <div>Step into the magical realm of Le Bal, where you are not just an audience, but a key participant.</div>
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.elle.com/tw/life/tech/a46233366/vr-paris-ball/">
-                            <img src="/paris/img/media2.webp" />
+                            <img src="/paris/img/media2_en.jpg" />
                             <div class="s-title">ELLE</div>
                             <div>Dressing up with digital CHANEL Haute Couture, embark on a glamorous adventure!</div>
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.adaymag.com/2023/12/15/le-bal-de-paris-experience.html">
-                            <img src="/paris/img/media3.webp" />
+                            <img src="/paris/img/media3_en.jpg" />
                             <div class="s-title">A Day Magazine</div>
                             <div>It’s safe to say it’s the most mind-blowing experience lately.</div>
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.stylemaster.com.tw/2023/12/07/%E3%80%8A%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83%E3%80%8B12%E6%9C%88%E7%99%BB%E5%A0%B4%E7%A7%91%E6%95%99%E9%A4%A8%EF%BC%81%E7%A9%BF%E4%B8%8A%E9%A6%99%E5%A5%88%E5%85%92%E9%AB%98%E7%B4%9A%E8%A8%82%E8%A3%BD/">
-                            <img src="/paris/img/media4.webp" />
+                            <img src="/paris/img/media4_en.jpg" />
                             <div class="s-title">style master</div>
                             <div>Top-tier actors Gui Lun-Mei and Chen Bolin lend their voices for a fantastic journey together.</div>
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.wepeople.club/art/lebaldeparisdeblancaliintaipei/">
-                            <img src="/paris/img/media5.webp" />
+                            <img src="/paris/img/media5_en.jpg" />
                             <div class="s-title">WE PEOPLE</div>
                             <div>Venice Film Festival Award-Winning VR experience arrives in Taipei.</div>
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.shoppingdesign.com.tw/post/view/9797">
-                            <img src="/paris/img/media6.webp" />
+                            <img src="/paris/img/media6_en.jpg" />
                             <div class="s-title">Shopping Design</div>
                             <div>Creating VR extended scenes, immersing yourself in a magnificent adventure bridging the virtual and the real.</div>
                         </a>
@@ -386,22 +386,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="slider">
                 <div class="owl-carousel">
                     <div>
-                        <img src="/paris/img/vr1.jpg" />
+                        <img src="/paris/img/vr1_en.jpg" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr2.jpg" />
+                        <img src="/paris/img/vr2_en.jpg" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr3.jpg" />
+                        <img src="/paris/img/vr3_en.jpg" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr4.jpg" />
+                        <img src="/paris/img/vr4_en.jpg" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr5.jpg" />
+                        <img src="/paris/img/vr5_en.jpg" />
                     </div>
                     <div>
-                        <img src="/paris/img/vr6.jpg" />
+                        <img src="/paris/img/vr6_en.jpg" />
                     </div>
                 </div>
             </div>
@@ -419,8 +419,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
             <div class="more">
                 <div class="more-inner">
-                    <img src="/paris/img/more1.png" />
-                    <img src="/paris/img/more2.png" />
+                    <img src="/paris/img/more1_en.png" />
+                    <img src="/paris/img/more2_en.png" />
                 </div>
             </div>
         </section>
@@ -910,7 +910,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @include('paris.frontend._footer')
 
     <a id="fixed-booking" href="/lebaldeparis/booking_pay/en" style="display: none;">
-        <img src="/paris/img/fixed-booking.png" />
+        <img src="/paris/img/fixed-booking-en.png" />
     </a>
 
     <script src="/paris_en/js/plugins/jquery-3.3.1.min.js"></script>
