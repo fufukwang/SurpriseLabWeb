@@ -851,16 +851,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
 
                     <div class="item">
-                        <a href="https://www.dcard.tw/goods/widgets/240311_dcardxsurpriselab" target="_blank">
+                        <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" target="_blank">
                             <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png?240308" data-src="/terminalAssets/images/main/discount03.png?240308" data-src-retina="/terminalAssets/images/main/discount03.png?240308" alt="Klook">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png?240325" data-src="/terminalAssets/images/main/discount03.png?240325" data-src-retina="/terminalAssets/images/main/discount03.png?240325" alt="Klook">
                             </figure>
                         </a>
                         <div class="discount-intro">
-                            <div class="discount-title">Dcard 好物研究室專屬優惠</div>
+                            <div class="discount-title">落日月台 X Klook 獨身踏上旅程</div>
                             <div class="discount-p">
-                                3/25 前，至 Dcard Select 下單任一商品，即可抽《落日月台》單人票；<br>
-                                新用戶輸入專屬優惠【GOODYSURPRISE】，再享 $399 折 $100！
+                                持有文化幣的你，歡迎前往 Klook 訂購場次。<br>
+                                我們在落日月台等候著你。
                             </div>
                         </div>
                     </div>
