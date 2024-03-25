@@ -695,7 +695,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <table>
                             <tr>
                                 <td>舞者</td>
-                                <td>牛筱晴、王官穎、呂莛、李奇書、周芊華、周新杰、邱兪懷、施姵君、張靜宜、陳逸恩、曾淯婷、黃婷徽、黃筱庭、詹佩瑄、廖健堯、劉廷音、蔡昀庭、鄭舜文、Alberto Jesus Hipolito Garcia</td>
+                                <td>牛筱晴、王官穎、呂莛、李奇書、周芊華、周新杰、邱兪懷、侯貞聿、洪綺妮、施姵君、施旻雯、陳逸恩、曾行、曾淯婷、黃婷徽、黃筱庭、詹佩瑄、廖健堯、廖炎勇、劉廷音、蔡昀庭、鄭舜文、Alberto Jesus Hipolito Garcia</td>
                             </tr>
                             <tr>
                                 <td>演員</td>
@@ -715,7 +715,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>前台人員</td>
-                                <td>蕭藝萱、林俐瑜、葉柔妡、林語彤、林芳羽、賴郁欣、吳儀瑄、李心瑀、何知臨</td>
+                                <td>蕭藝萱、林俐瑜、葉柔妡、林語彤、林芳羽、李心瑀、何知臨</td>
                             </tr>
                             <tr>
                                 <td>裝台協力</td>
@@ -748,7 +748,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>製作統籌</td>
-                                <td>陳怡蓁</td>
+                                <td>賴畇安、趙曼伶、李欣芸</td>
                             </tr>
                             <tr>
                                 <td>譯配</td>
@@ -836,14 +836,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul>
                                             <li>孕婦、心臟病和高血壓患者禁止體驗</li>
                                             <li>體內有電子儀器者（例：心律調整器、助聽器、除顫器）及患有癲癇容易暈倒、視力受損者下訂前需諮詢專業醫師以維護體驗安全</li>
-                                            <li>12歲(含)以下無法參與、13-16歲需由家長簽署同意書，並購票陪同入場體驗</li>
+                                            <li>本體驗為輔導級，12歲以下無法參與，12-17歲建議家長陪同</li>
                                         </ul>
                                     </p>
                                 </li>
                                 <li><p>體驗過程含有拍、牽、拉、推等肢體碰觸，若不希望有此互動，可於購票時優先備註，或於體驗當天向工作人員說明，演員與舞者將避免相關肢體碰觸</p></li>
                                 <li><p>體驗過程中，若有任何不舒服、不自在的感受，請隨時向工作人員反應，我們將即時提供協助</p></li>
                                 <li><p>包場需求、其他特殊服務，請來信客服詢問<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
-                                <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" href="/lebaldeparis/rules">[舞會規則]</a></p></li>
+                                <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" style="color: #E85455;" href="/lebaldeparis/rules">[更多須知]</a></p></li>
                             </ul>
                         </div>
                     </div>
