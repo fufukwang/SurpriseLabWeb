@@ -11,12 +11,12 @@
         <nav>
             <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">Le Bal</a>
             <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">Tickets</a>
-            <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">口碑評價</a>
-            <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">各界好評</a>
+            <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">Review</a>
+            <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">Media</a>
             <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">How to Play</a>
             <!-- <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a> -->
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">Information</a>
-            <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
+            <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">Partner</a>
             <a href="/lebaldeparis/booking_pay">Buy Tickets</a>
         </nav>
     </header>
