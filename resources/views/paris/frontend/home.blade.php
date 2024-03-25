@@ -546,7 +546,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>製作統籌</td>
-                                <td>賴畇安、趙曼伶</td>
+                                <td>賴畇安、趙曼伶、李欣芸</td>
                             </tr>
                             <tr>
                                 <td>體驗統籌</td>
@@ -748,7 +748,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>製作統籌</td>
-                                <td>賴畇安、趙曼伶、李欣芸</td>
+                                <td>陳怡蓁</td>
                             </tr>
                             <tr>
                                 <td>譯配</td>
