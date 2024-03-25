@@ -1270,13 +1270,21 @@ body.home-modal {
   transition: transform .6s;
 }
 
+#home .btn_enter {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  width: 55%;
+  transform: translate(-50%, 0);
+}
+
 #home .sun-wrapper:hover .sun {
   transform: translateY(-3%);
 }
 
 #home .enter-btn {
   position: absolute;
-  top: calc(50% + 11vh);
+  top: calc(50% + 5vh);
   left: 50%;
   width: auto;
   height: 2vh;
@@ -1297,7 +1305,7 @@ body.home-modal {
   }
 
   #home .enter-btn {
-    top: calc(50% + 20vw);
+    top: calc(50% + 10vw);
     left: 50%;
     width: 13vw;
     height: auto;
@@ -1316,7 +1324,7 @@ body.home-modal {
   }
 
   #home .enter-btn {
-    top: calc(50% + 11vh);
+    top: calc(50% + 3vh);
     left: 50%;
     width: auto;
     height: 2.5vh;
@@ -1325,7 +1333,7 @@ body.home-modal {
 
 @media (min-aspect-ratio: 1920/1025) {
   #home .sun-wrapper {
-    top: calc(50% + 7vw);
+    top: calc(50% + 3vw);
     left: 50%;
   }
 
@@ -1335,9 +1343,13 @@ body.home-modal {
   }
 
   #home .enter-btn {
-    top: calc(50% + 7vw);
+    top: calc(50% - 1vw);
     left: 50%;
     width: 5vw;
     height: auto;
   }
+}
+
+.eapps-instagram-feed-title-container .eapps-instagram-feed-title {
+  display: none !important;
 }

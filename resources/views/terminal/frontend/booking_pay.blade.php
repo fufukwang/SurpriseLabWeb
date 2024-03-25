@@ -10,8 +10,8 @@
     <meta name="description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="落日轉運站 The Sunset Terminal"/>
-    <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
+    <meta property="og:title" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃"/>
+    <meta property="og:site_name" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃"/>
     <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
     <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg"/>
@@ -21,12 +21,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Twitter Metadata -->
-    <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
+    <meta name="twitter:title" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃">
     <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>落日轉運站 The Sunset Terminal</title>
+    <title>落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃</title>
 
     <!-- icon -->
     <link rel="icon" href="/terminalAssets/images/favicon.png" type="image/x-icon">
@@ -407,7 +407,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <td>
                                             <!-- 尚未輸入 -->
                                             <div class="form-group verify-layout">
-                                                <input type="text" id="coupon" class="body-04" name="coupon" placeholder="請輸入折扣碼">
+                                                <input type="text" id="coupon" class="body-04" name="coupon" placeholder="請輸入折扣碼(非必填)">
                                                 <a href="javascript://" class="booking-btn shape-square color-input-use verification-code" data-type="discount">確認</a>
                                                 <ul class="verify-status-list body-02 style-smaller">
                                                     <li class="status-list-item not-found">找不到此筆折扣序號</li>
@@ -421,7 +421,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <td>
                                             <!-- 尚未輸入 -->
                                             <div class="form-group verify-layout">
-                                                <input type="text" id="allocation" class="body-04" name="allocation" placeholder="請輸入劃位序號">
+                                                <input type="text" id="allocation" class="body-04" name="allocation" placeholder="請輸入劃位序號(非必填)">
                                                 <a href="javascript://" class="booking-btn shape-square color-input-use verification-code" data-type="coupon">確認</a>
                                                 <ul class="verify-status-list body-02 style-smaller">
                                                     <li class="status-list-item not-found">找不到此劃位序號</li>
