@@ -853,7 +853,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="item">
                         <a href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" target="_blank">
                             <figure class="slideshow-card">
-                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png?240325" data-src="/terminalAssets/images/main/discount03.png?240325" data-src-retina="/terminalAssets/images/main/discount03.png?240325" alt="Klook">
+                                <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/discount03.png?240326" data-src="/terminalAssets/images/main/discount03.png?240326" data-src-retina="/terminalAssets/images/main/discount03.png?240326" alt="Klook">
                             </figure>
                         </a>
                         <div class="discount-intro">
