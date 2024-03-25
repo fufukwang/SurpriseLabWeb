@@ -455,7 +455,7 @@ function setStep3Contents() {
     $('div.ticket > table > tbody > tr:nth-child(3) > td:nth-child(2)').text($('#booking_date').val());
     $('div.ticket > table > tbody > tr:nth-child(4) > td:nth-child(2)').text($('#booking_time option:selected').text().substr(0, 13));
     $('div.ticket > table > tbody > tr:nth-child(5) > td:nth-child(2)').text(money+' 元');
-    $('.submitForm').text('前往付款 '+money+' 元');
+    $('.submitForm').text('Proceed to Payment $'+money);
     if(discount_money>0){
         $('div.discount').text('已折扣'+discount_money+'元');
     } else {
