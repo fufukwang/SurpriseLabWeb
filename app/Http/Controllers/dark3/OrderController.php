@@ -592,7 +592,7 @@ class OrderController extends Controller
         Excel::create('名單',function ($excel) use ($cellData){
             $excel->sheet('data', function ($sheet) use ($cellData){
                 $data = [];
-                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","原始付款金額","行銷折扣","取消人數","手續費%數","手續費金額","退款金額","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號","貝殼的序號","發票號碼","發票開立時間"]);
+                array_push($data,["體驗日期","體驗場次","訂位姓名","訂位電話","訂位信箱","訂位人數","英文人數","餐飲備註","註記/管理","優惠券","付款方式","付款狀態","原始付款金額","行銷折扣","取消人數","手續費%數","手續費金額","退款金額","實際付款金額","後四碼","訂單時間","回傳交易時間","藍新交易序號","訂單編號","貝殼的序號","發票號碼","發票開立時間"]);
                 foreach($cellData as $row){
                     $coupon = "";
                     $pay_type = $row['pay_type'];
@@ -688,6 +688,7 @@ class OrderController extends Controller
                         $row['tel'],
                         $row['email'],
                         $row['pople'],
+                        $row['need_english'],
                         strip_tags(preg_replace('/\<br(\s*)?\/?\>/i',"\n",$row['notes'])),
                         $row['manage'],
                         $coupon,
