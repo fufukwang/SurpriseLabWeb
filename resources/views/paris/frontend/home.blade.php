@@ -695,7 +695,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <table>
                             <tr>
                                 <td>舞者</td>
-                                <td>牛筱晴、王官穎、呂莛、李奇書、周芊華、周新杰、邱兪懷、侯貞聿、洪綺妮、施姵君、施旻雯、陳逸恩、曾行、曾淯婷、黃婷徽、黃筱庭、詹佩瑄、廖健堯、廖炎勇、劉廷音、蔡昀庭、鄭舜文、Alberto Jesus Hipolito Garcia</td>
+                                <td>牛筱晴、王官穎、呂莛、李奇書、周芊華、周新杰、邱兪懷、侯貞聿、洪綺妮、施姵君、施旻雯、陳逸恩、曾行、曾淯婷、黃婷徽、黃筱庭、詹佩瑄、廖健堯、廖炎勇、劉廷音、蔡昀庭、鄭舜文、Alberto Jesus Hipolito Garcia、張靜宜</td>
                             </tr>
                             <tr>
                                 <td>演員</td>
