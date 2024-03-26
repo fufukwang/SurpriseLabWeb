@@ -49,7 +49,17 @@ class FrontController extends WebController
                 switch ($request->act) {
                     case 'getBypople': // 票種 & 人數 取得 day
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select(DB::raw("(SUM(sites) - SUM(({$this->oquery}))) AS sites,day"))->groupBy('day')->where('day','>=',Carbon::today())->where('special',0);
+                        $pro = $pro->select(DB::raw("(SUM(sites) - SUM(({$this->oquery}))) AS sites,day"))->groupBy('day')->where('day','>',Carbon::today())->where('special',0);
+                        $hour = (int)Carbon::now()->format('H');
+                        if($hour>=15){
+                            // 當天 15 點之後停售當天 22 點前的場次
+                            $pro = $pro->orWhereRaw("(day=? AND rang_start>=?)",[Carbon::today(),'22:00:00']);
+                        } elseif($hour>=9){
+                            // 當天 9 點之後停售當天 17 點前的場次
+                            $pro = $pro->orWhereRaw("(day=? AND rang_start>=?)",[Carbon::today(),'17:00:00']);
+                        } else {
+                            $pro = $pro->where('day',Carbon::today());
+                        }
                         $pro = $pro->get();
                         return $pro->toJson();
                     break;
@@ -72,6 +82,16 @@ class FrontController extends WebController
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
                         $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash,p1,p2,p4"))->where('day',$day)->get();
+                        if($day == Carbon::today()->format('Y-m-d')){
+                            $hour = (int)Carbon::now()->format('H');
+                            if($hour>=15){
+                                // 當天 15 點之後停售當天 22 點前的場次
+                                $pro = $pro->where("rang_start",">=",'22:00:00');
+                            } elseif($hour>=9){
+                                // 當天 9 點之後停售當天 17 點前的場次
+                                $pro = $pro->where("rang_start",">=",'17:00:00');
+                            }
+                        }
                         return $pro->toJson();
                     break;
 /*
