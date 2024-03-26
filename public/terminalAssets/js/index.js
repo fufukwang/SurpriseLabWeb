@@ -141,7 +141,7 @@ var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
 var booking_date = $("#homeDatepicker");
 var enableDays = [];
 var dateSite = [];
-$.get('/dininginthedark3',{ // /GetAjaxData
+$.get('/terminal/GetAjaxData',{
     'act': 'getBypople',
     'pople': 2,
     'ticketType': '',
