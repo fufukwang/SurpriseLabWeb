@@ -1313,50 +1313,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-2-headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseFour" aria-expanded="false" aria-controls="flush-2-collapseFour">
-                                    <span class="header-title">台北站跟高雄站有什麼差別？</span>
-                                    <div class="header-icon"></div>
-                                </button>
-                            </h2>
-                            <div id="flush-2-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-2-headingFour" data-bs-parent="#accordionFlushExample-2">
-                                <div class="accordion-body">
-                                    <p>在巡迴第二站，落日轉運站突現奇幻時空《落日月台》；有別於高雄站的《微醺列車》及《FLIGHT》，將提供旅客探索多樣的場景變化並提供個人化全感官體驗。</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-3-headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
-                                    <span class="header-title">《落日月台》是什麼？</span>
-                                    <div class="header-icon"></div>
-                                </button>
-                            </h2>
-                            <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
-                                <div class="accordion-body">
-                                    <p>
-                                        踏入此處的旅客，皆遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-4-headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-4-collapseFour" aria-expanded="false" aria-controls="flush-4-collapseFour">
-                                    <span class="header-title">《微醺列車》及《FLIGHT》還會回來嗎？</span>
-                                    <div class="header-icon"></div>
-                                </button>
-                            </h2>
-                            <div id="flush-4-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-4-headingFour" data-bs-parent="#accordionFlushExample-4">
-                                <div class="accordion-body">
-                                    <p>會的！請持續關注驚喜製造，獲得最新消息。</p>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-5-headingFour">
@@ -1410,7 +1366,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?2403261"></script>
+    <script src="/terminalAssets/js/index.js?2403262"></script>
     <script src="/terminalAssets/js/home-slideshow.js?240116"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>

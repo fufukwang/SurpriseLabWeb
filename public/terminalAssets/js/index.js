@@ -167,6 +167,13 @@ $.get('/terminal/GetAjaxData',{
         beforeShowDay: enableAllTheseDays,
         onSelect: function(dateText) {
             window.location.href = '/terminal/booking_pay?day='+dateText;
+        },
+        onUpdateDatepicker: function(inst) {
+            var currentYear = inst.selectedYear;
+            var currentMonth = inst.selectedMonth + 1;
+            if (currentYear === 2024 && currentMonth === 3) {
+                booking_date.find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>');
+            }
         }
     });
 },'json');
