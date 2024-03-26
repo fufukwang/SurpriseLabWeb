@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240325">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240326">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -231,6 +231,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="project-flight-tab" data-bs-toggle="tab" data-bs-target="#project-flight" type="button" role="tab" aria-controls="project-flight" aria-selected="false">FLIGHT</button>
                             </li> -->
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="project-order-tab" data-bs-toggle="tab" data-bs-target="#project-order" type="button" role="tab" aria-controls="project-order" aria-selected="false">熱門場次</button>
+                            </li>
                         </ul>
                     </div>
 
@@ -555,6 +558,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="cta-wrap">
                                     <div class="btn-wrap">
                                         <a target="_blank" href="/terminal/booking_now" class="activity-btn">購票去</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="project-order" role="tabpanel" aria-labelledby="project-order-tab">
+                            <div class="tab-content-inner">
+                                <div class="ticket-datepicker">
+                                    <div id="homeDatepicker"></div>
+                                    <div class="datepicker-ps">
+                                        <div>
+                                            <span style="background: #E55D33"></span>
+                                            <p>好評熱賣</p>
+                                        </div>
+                                        <div>
+                                            <span style="background: #A55AFF"></span>
+                                            <p>即將完售</p>
+                                        </div>
+                                        <div>
+                                            <span style="background: #3737FC"></span>
+                                            <p>已售完Sold Out</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1373,6 +1398,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Plugins -->
     <script src="/terminalAssets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="/terminalAssets/js/plugins/jquery-ui-1.13.2/jquery-ui.min.js"></script>
     <script src="/terminalAssets/js/plugins/popper.min.js"></script>
     <script src="/terminalAssets/js/plugins/bootstrap-5.1.3/bootstrap.min.js"></script>
 
@@ -1384,7 +1410,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?2311231"></script>
+    <script src="/terminalAssets/js/index.js?240326"></script>
     <script src="/terminalAssets/js/home-slideshow.js?240116"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>

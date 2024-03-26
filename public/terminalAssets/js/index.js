@@ -136,3 +136,74 @@ $('#home .sun-wrapper, #home .enter-btn').on('click', function() {
         $('body').removeClass('home-modal');
     });
 });
+
+var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
+var booking_date = $("#homeDatepicker");
+var enableDays = [];
+var dateSite = [];
+$.get('/dininginthedark3',{ // /GetAjaxData
+    'act': 'getBypople',
+    'pople': 2,
+    'ticketType': '',
+},function(data){
+    for(i=0;i<data.length;i++){
+        enableDays.push(data[i].day);
+        dateSite[data[i].day] = data[i].sites
+    }
+    var minD = 0;
+    if(enableDays.length>0){
+        minD = enableDays[0];
+    }
+    var maxD;
+    var date = new Date();
+    var newDate = addMonths(date, 2);
+    maxD = new Date(newDate.getFullYear(), newDate.getMonth(), lastday(newDate.getFullYear(), newDate.getMonth()));
+    // console.log(maxD);
+    booking_date.datepicker("destroy");
+    booking_date.datepicker({
+        minDate: minD,// minD,
+        maxDate: maxD,//'+3m',// new Date(2022, 1, 28),
+        dateFormat: 'yy-mm-dd', 
+        beforeShowDay: enableAllTheseDays,
+        onSelect: function(dateText) {
+            window.location.href = '/terminal/booking_pay?day='+dateText;
+        }
+    });
+},'json');
+
+function enableAllTheseDays(date) {
+    var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
+    var getMaxDate = $.datepicker._determineDate( booking_date, booking_date.datepicker( "option", "maxDate" ) );
+    var startDate = new Date(sdate);
+    var endDate   = new Date(getMaxDate);
+
+    if($.inArray(sdate, enableDays) !== -1 && endDate>=startDate) {
+        var myDateClass = ""; // 加入的樣式
+        var myDateTip = "";  // tooltip 文字
+        var myDateDay = date.getDay();
+        if(myDateDay === 0 || myDateDay === 6){
+            if(dateSite[sdate]<=50){
+                myDateClass = "sold-out-soon";
+                myDateTip = "即將完售";
+            } else if(dateSite[sdate]<=108){
+                myDateClass = "still-vacancy";
+                myDateTip = "好評熱賣";
+            }
+        } else {
+            if(dateSite[sdate]<=50){
+                myDateClass = "sold-out-soon";
+                myDateTip = "即將完售";
+            } else if(dateSite[sdate]<=72){
+                myDateClass = "still-vacancy";
+                myDateTip = "好評熱賣";
+            }
+        }
+        return [true,myDateClass,myDateTip];
+    }
+    return [false];
+}
+
+function addMonths(date, months) {
+    date.setMonth(date.getMonth() + months);
+    return date;
+}
