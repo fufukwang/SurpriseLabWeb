@@ -426,7 +426,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>GROUP PARTY</h3>
             </div>
 
-            <div style="text-align: center; color: #fff;">
+            <div style="text-align: center;">
                 號召好友、同事、家人<br>
                 一起探索未知、扮裝跳舞<br>
                 Make an ordinary day a memorable one!<br>
