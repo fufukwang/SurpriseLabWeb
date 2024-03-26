@@ -10,22 +10,22 @@
     <meta name="description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="落日轉運站 The Sunset Terminal"/>
-    <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
+    <meta property="og:title" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃"/>
+    <meta property="og:site_name" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃"/>
     <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
-    <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph1.jpg"/>
+    <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="600"/>
     <meta property="og:image:height" content="315"/>
 
     <!-- Twitter Metadata -->
-    <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
+    <meta name="twitter:title" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃">
     <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
-    <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph1.jpg">
+    <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>落日轉運站 The Sunset Terminal</title>
+    <title>落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃</title>
 
     <!-- Style -->
     <link rel="icon" href="/terminalAssets/images/favicon.png" type="image/x-icon">
@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240116">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240326">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -60,16 +60,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section class="skip-background-light js-hidden-section js-hero-section hero-section" id="home">
         <div class="hero-wrap">
             <div class="hero-img">                
-                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_kv.jpg?231123" alt="落日轉運站">
-                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_kv_mobile.jpg?231123" alt="落日轉運站">
+                <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/img_kv.jpg?240325" alt="落日轉運站">
+                <img class="img-fluid d-xl-none d-inline" src="/terminalAssets/images/main/img_kv_mobile.jpg?240325" alt="落日轉運站">
             </div>
-            <div class="hero-btn">
+            <!-- <div class="hero-btn">
                 <a href="#about">
                     <img class="img-fluid" src="/terminalAssets/images/main/btn_enter.png" alt="落日轉運站">
                 </a>
-            </div>
+            </div> -->
             <div class="sun-wrapper">
                 <img class="sun" src="/terminalAssets/images/main/sun.png" alt="落日轉運站">
+                <img class="btn_enter" src="/terminalAssets/images/main/btn_enter.png" alt="落日轉運站">
             </div>
             <img class="enter-btn" src="/terminalAssets/images/main/kv_enter.png" alt="落日轉運站">
         </div>
@@ -97,10 +98,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="row">
                     <div class="col-12">
                         <div class="b-content-wrap">
-                            <div class="section-heading-wrap">
+                            <!-- <div class="section-heading-wrap">
                                 <h1 class="heading-title">落日轉運站</h1>
                                 <h2 class="heading-subtitle">About</h2>
-                            </div>
+                            </div> -->
                             <div class="timetable" style="display: none;">
                                 <div class="bg">
                                     <img src="/terminalAssets/images/main/timetable.png" alt="">
@@ -179,7 +180,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                             </div>
                             <div class="img-wrap break-grid">
-                                <img class="img-fluid" src="/terminalAssets/images/main/img_about.png?231123" alt="About">
+                                <img class="img-fluid" src="/terminalAssets/images/main/img_about.png?240325" alt="About">
                             </div>
                             
 
@@ -187,11 +188,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="text-wrap">
                                     <!-- A Test -->
                                     <p class="color-y200 fw-normal">
-                                        <b>《落日月台 MIND THE GAP》售票中</b><br>
+                                        正如落日之後，必有黎明，所有終點，必是另一個起點。<br>
                                         <br>
-                                        巡迴沉浸式計劃《落日轉運站》子作品《落日月台》，將接駁迷途的旅客，窺探屬於自己的終點。<br>
+                                        落日月台現身台北松山文創園區，旅客穿梭多個奇幻時空中，將開啟全感官，探索落日將近、月升之際的彌留世界。<br>
                                         <br>
-                                        全新原創作品位於台北松山文創園區，並透過多樣場景變化及個人化全感官體驗，引領旅客探索落日將近、月升之際的彌留世界。
+                                        致迷途的旅客，歡迎前來窺探屬於自己的終點；願你留心腳步、再次啟程。
                                     </p>
 
                                     <!-- B Test -->
@@ -222,13 +223,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <!-- Tab Nav -->
                         <ul class="nav nav-tabs tab-controls" id="projectTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="project-bistro-tab" data-bs-toggle="tab" data-bs-target="#project-bistro" type="button" role="tab" aria-controls="project-bistro" aria-selected="true">落日月台</button>
+                                <button class="nav-link active" id="project-bistro-tab" data-bs-toggle="tab" data-bs-target="#project-bistro" type="button" role="tab" aria-controls="project-bistro" aria-selected="true">體驗導覽</button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="project-train-tab" data-bs-toggle="tab" data-bs-target="#project-train" type="button" role="tab" aria-controls="project-train" aria-selected="false">微醺列車</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="project-flight-tab" data-bs-toggle="tab" data-bs-target="#project-flight" type="button" role="tab" aria-controls="project-flight" aria-selected="false">FLIGHT</button>
+                            </li> -->
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="project-order-tab" data-bs-toggle="tab" data-bs-target="#project-order" type="button" role="tab" aria-controls="project-order" aria-selected="false">熱門場次</button>
                             </li>
                         </ul>
                     </div>
@@ -501,9 +505,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <figure class="slideshow-card">
                                                     <picture>
                                                         <source srcset="/terminalAssets/images/main/img_bistro_231123.webp" type="image/webp" />
-                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日轉運站 The Sunset Terminal - 落日月台 MIND THE GAP" />
+                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃" />
                                                     </picture>
-                                                    <!-- <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日轉運站：夜間售票亭"> -->
                                                     <figcaption>
                                                         多場域沉浸 ╳ 全感官體驗
                                                     </figcaption>
@@ -559,6 +562,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                             </div>
                         </div>
+
+                        <div class="tab-pane fade" id="project-order" role="tabpanel" aria-labelledby="project-order-tab">
+                            <div class="tab-content-inner">
+                                <div class="ticket-datepicker">
+                                    <div id="homeDatepicker"></div>
+                                    <div class="datepicker-ps">
+                                        <div>
+                                            <span style="background: #E55D33"></span>
+                                            <p>好評熱賣</p>
+                                        </div>
+                                        <div>
+                                            <span style="background: #A55AFF"></span>
+                                            <p>即將完售</p>
+                                        </div>
+                                        <div>
+                                            <span style="background: #3737FC"></span>
+                                            <p>已售完Sold Out</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -568,7 +593,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <a href="/terminal/booking_now" class="activity-btn">購票去</a>
                 </div>
             </div> -->
-            <div class="elfsight-app-bfcc5c1c-9303-4b2c-9427-808555aa10bc js-anchor-section review-section"></div>
+            
+            <br><br><br><br>
+            <div class="section-heading-wrap">
+                <h1 class="heading-title">旅客評價</h1>
+                <h2 class="heading-subtitle">Review</h2>
+            </div>
+            <div class="cta-wrap">
+                <div class="elfsight-app-bfcc5c1c-9303-4b2c-9427-808555aa10bc js-anchor-section review-section" style="padding-top: 0; margin-top: 0;"></div>
+            </div>
 
         </section>
         
@@ -582,8 +615,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="step-tab-wrap pc-style">
                                 <div class="step-tab-header">
                                     <div class="section-heading-wrap align-left">
-                                        <h2 class="heading-title">站點導覽</h2>
-                                        <h3 class="heading-subtitle">TOUR</h3>
+                                        <h2 class="heading-title">《落日轉運站》巡迴站點</h2>
+                                        <h3 class="heading-subtitle">TOUR OF SUNSET TERMINAL</h3>
                                     </div>
 
                                     <!-- Tab Nav -->
@@ -696,8 +729,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <!-- mobile style -->
                             <div class="step-tab-wrap mobile-style">
                                 <div class="section-heading-wrap align-center">
-                                    <h2 class="heading-title">站點導覽</h2>
-                                    <h3 class="heading-subtitle">TOUR</h3>
+                                    <h2 class="heading-title">《落日轉運站》巡迴站點</h2>
+                                    <h3 class="heading-subtitle">TOUR OF SUNSET TERMINAL</h3>
                                 </div>
 
                                 <div class="step-tab-header">
@@ -963,6 +996,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                         <div class="tab-pane fade show active" id="intro-surpriselab" role="tabpanel" aria-labelledby="intro-surpriselab-tab">
                             <div class="tab-content-inner">
+                                <br>
+                                <img src="/terminalAssets/images/main/introduce_surprise_lab.png" alt="驚喜製造" style="max-width: 400px; width: 100%; margin: 0 auto; display: block;">
+                                <br><br>
                                 <div class="heading-p">
                                     <p>
                                         出沒時間、地點難以預測的體驗製造商。<br>
@@ -1271,7 +1307,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div id="flush-1-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-1-headingFour" data-bs-parent="#accordionFlushExample-1">
                                 <div class="accordion-body">
                                     <p>
-                                        驚喜製造推出的巡迴沉浸式計畫，即將於2024年1月抵達台北站。<br>
+                                        驚喜製造推出的巡迴沉浸式計畫，於2024年1月抵達台北站。<br>
                                         2022.11.10 - 2023.10.15於首站：高雄，推出包含以交通工具為題的兩項作品，微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT》，超過 40,000 人次參與體驗。
                                     </p>
                                 </div>
@@ -1321,11 +1357,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                             </div>
                         </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-5-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-5-collapseFour" aria-expanded="false" aria-controls="flush-5-collapseFour">
+                                    <span class="header-title">如何抵達落日月台？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-5-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-5-headingFour" data-bs-parent="#accordionFlushExample-5">
+                                <div class="accordion-body">
+                                    <p>請於體驗前 20 分鐘抵達取票處，完成報到。</p>
+                                    <img width="100%" src="/terminalAssets/images/main/qa-map.png" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-6-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-6-collapseFour" aria-expanded="false" aria-controls="flush-6-collapseFour">
+                                    <span class="header-title">如何使用文化幣？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-6-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-6-headingFour" data-bs-parent="#accordionFlushExample-6">
+                                <div class="accordion-body">
+                                    <p>持有文化幣的旅客，歡迎前往 <a target="_blank" href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" style="font-weight: 700; text-decoration: underline;">Klook 購票</a> 折抵。</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn activity-btn" data-bs-dismiss="modal">CLOSE</button> -->
-                    <a target="_blank" class="btn activity-btn" href="https://www.instagram.com/surpriselabtw/">關注驚喜</a>
+                    <a class="btn activity-btn" href="/terminal/rules">更多問題</a>
                 </div>
             </div>
         </div>
@@ -1333,6 +1398,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Plugins -->
     <script src="/terminalAssets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="/terminalAssets/js/plugins/jquery-ui-1.13.2/jquery-ui.min.js"></script>
     <script src="/terminalAssets/js/plugins/popper.min.js"></script>
     <script src="/terminalAssets/js/plugins/bootstrap-5.1.3/bootstrap.min.js"></script>
 
@@ -1344,7 +1410,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?2311231"></script>
+    <script src="/terminalAssets/js/index.js?240326"></script>
     <script src="/terminalAssets/js/home-slideshow.js?240116"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>

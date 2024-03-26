@@ -2,14 +2,14 @@
     <nav id="js-nav-bar" class="nav-wrap js-hidden-target">
         <div class="pc-nav-wrap">
             <a href="/terminal" class="logo-wrap">
-                <img src="/terminalAssets/images/general/brand.png" class="style-normal" alt="落日轉運站">
-                <img src="/terminalAssets/images/general/brand_hover.png" class="style-hover" alt="落日轉運站">
+                <img src="/terminalAssets/images/general/brand240325.png" class="style-normal" alt="落日轉運站">
+                <!-- <img src="/terminalAssets/images/general/brand_hover.png" class="style-hover" alt="落日轉運站"> -->
             </a>
         </div>
         <div class="js-mobile-nav mobile-nav-wrap">
             <div class="mobile-nav-bar-wrap">
                 <a href="/terminal" class="logo-wrap">
-                    <img src="/terminalAssets/images/general/brand.png" alt="落日轉運站">
+                    <img src="/terminalAssets/images/general/brand240325.png" alt="落日轉運站">
                 </a>
                 <div class="js-nav-bar-btn menu-btn">
                     <div class="menu-btn-text">

@@ -10,8 +10,8 @@
     <meta name="description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="落日轉運站 The Sunset Terminal"/>
-    <meta property="og:site_name" content="落日轉運站 The Sunset Terminal"/>
+    <meta property="og:title" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃"/>
+    <meta property="og:site_name" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃"/>
     <meta property="og:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。"/>
     <meta property="og:url" content="https://surpriselab.com.tw/terminal/"/>
     <meta property="og:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg"/>
@@ -20,12 +20,12 @@
     <meta property="og:image:height" content="315"/>
 
     <!-- Twitter Metadata -->
-    <meta name="twitter:title" content="落日轉運站 The Sunset Terminal">
+    <meta name="twitter:title" content="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃">
     <meta name="twitter:description" content="落日轉運站為驚喜製造推出的巡迴沉浸式計畫，在此提供各種交通方式，接駁旅客前往終點；抵達第二站台北，帶來全新原創體驗《落日月台》。">
     <meta name="twitter:image" content="https://surpriselab.com.tw/terminalAssets/images/opengraph240116.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>落日轉運站 The Sunset Terminal</title>
+    <title>落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃</title>
 
     <!-- Style -->
     <link rel="icon" href="/terminalAssets/images/favicon.png" type="image/x-icon">
@@ -111,7 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion1-1" class="accordion-collapse collapse" aria-labelledby="accordion1-1-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>驚喜製造推出的巡迴沉浸式計畫，即將於 2024 年 1 月抵達台北站。</p>
+                                                            <p>驚喜製造推出的巡迴沉浸式計畫，於 2024 年 1 月抵達台北站。</p>
                                                             <p>2022.11.10 - 2023.10.15 於首站：高雄，推出包含以交通工具為題的兩項作品，微醺系列互動表演《微醺列車》及英國團隊 DARKFIELD 的巡演之作《FLIGHT》，超過 40,000 人次參與體驗。</p>
                                                         </div>
                                                     </div>
@@ -369,14 +369,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion3-2-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-2" aria-expanded="false" aria-controls="accordion3-2">
-                                                            <span class="header-title">現場可以寄物嗎？</span>
+                                                            <span class="header-title">現場是否有寄存服務？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
                                                     <div id="accordion3-2" class="accordion-collapse collapse" aria-labelledby="accordion3-2-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>為維護體驗品質，於進入體驗區域前，所有觀眾都必須寄物</p>
-                                                            <p>現場無提供較大型的物品（如：行李箱）寄物服務，建議大家輕便前來、放鬆體驗</p>
+                                                            <p>為維護體驗品質，於進入體驗區域前，所有觀眾都必須寄物。</p>
+                                                            <p>報到處設有密碼鎖寄物櫃，體驗前請將個人物品及手機存放於此處，但無提供較大型的物品（如：行李箱）寄物服務，建議大家輕便前來、放鬆體驗。且現場並未提供任何幼兒及寵物寄存服務。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -398,13 +398,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion3-10-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-10" aria-expanded="false" aria-controls="accordion3-10">
-                                                            <span class="header-title">能帶寵物過去體驗嗎？</span>
+                                                            <span class="header-title">《落日月台》有參與體驗的年齡限制嗎？</span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
                                                     <div id="accordion3-10" class="accordion-collapse collapse" aria-labelledby="accordion3-10-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>現場禁止攜帶寵物，亦未提供寵物寄存服務唷！</p>
+                                                            <p>建議 16 歲以上參與，13 - 16 歲建議家長陪同。體驗過程中未滿 18 歲不得飲酒。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -855,7 +855,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div id="flush-1-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-1-headingFour" data-bs-parent="#accordionFlushExample-1">
                                 <div class="accordion-body">
                                     <p>
-                                        驚喜製造推出的巡迴沉浸式計畫，即將於2024年1月抵達台北站。<br>
+                                        驚喜製造推出的巡迴沉浸式計畫，於2024年1月抵達台北站。<br>
                                         2022.11.10 - 2023.10.15於首站：高雄，推出包含以交通工具為題的兩項作品，微醺系列互動表演《微醺列車》及英國團隊DARKFIELD的巡演之作《FLIGHT》，超過 40,000 人次參與體驗。
                                     </p>
                                 </div>
