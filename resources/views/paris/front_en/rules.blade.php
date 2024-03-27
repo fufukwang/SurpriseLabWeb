@@ -101,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <td>▲</td>
                             </tr>
                             <tr>
-                                <td>This performance is recommended for audiences over 12 of age. For ages 13-16, parental consent is required with a signed authorization form, and ticket purchase is necessary for accompanying entry to the experience.</td>
+                                <td>This experience is Parental Guidance Suggested. Children under 12 years old are not allowed to participate. Parents aged 12-17 are recommended to accompany them.</td>
                                 <td>▲</td>
                             </tr>
                         </table>
@@ -123,8 +123,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <br><br>
                         <table>
                             <tr>
-                                <th>票種</th>
-                                <th>票價</th>
+                                <th>TICKET</th>
+                                <th>PRICE</th>
                             </tr>
                             <tr>
                                 <td>Single Ticket (1 Drink Included)</td>
@@ -165,86 +165,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <br><br><br>
-    
-            <!-- <div class="title">
-                <h1>預售資訊</h1> 
-                <h3>PRE-SALE INFORMATION</h3>
-                <p><center>預購已於 11/26 16:00 結束，請賓客參考下方資訊儘速完成劃位</center></p>
-            </div> -->
-    
-            <!-- <div class="collapse-list">
-                <div class="collapse-item">
-                    <div class="item-title">預售票券購買成功，要注意什麼？</div>
-                    <div class="item-body">
-                        <p>
-                            預售票券購買成功後，驚喜製造將會於至多20天工作日內寄出劃位信至你預售時所留下的信箱，信件內容將提供專屬劃位序號、劃位網站連結<br>
-                            <br>
-                            請密切注意信箱的促銷分頁或垃圾信件匣，以及 <a target="_blank" href="https://www.instagram.com/surpriselabtw/"><span>驚喜製造 Surprise Lab 官方社群</span></a>
-                        </p>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">收到劃位信後，我要做什麼？</div>
-                    <div class="item-body">
-                        <p>劃位步驟與說明請見 <a target="_blank" href="https://drive.google.com/drive/u/1/folders/1dR4GwOH6a25Jo9In48G3NIaLnm35MDkK"><span>劃位序號使用指南</span></a></p>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">劃位序號的注意事項？</div>
-                    <div class="item-body">
-                        <ul>
-                            <li>劃位序號僅適用於預售票券</li>
-                            <li>1 張預售票券只會收到 1 個劃位序號，同時購買 2 張預售票券，則會在劃位信中收到 2 個劃位序號</li>
-                            <li>每次劃位只能使用 1 個劃位序號，若你有 2 個以上劃位序號，請分次劃位</li>
-                            <li>多人票共享 1 個劃位序號，僅能劃位同一場次，無法分開使用</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">劃位序號有兌換期限嗎？</div>
-                    <div class="item-body">
-                        <p>兌換期限將依照劃位序號信件內為準，若超過期限，序號將不再開放使用</p>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">如果我想買多人票或多張票，有建議的買法嗎？</div>
-                    <div class="item-body">
-                        <p>1 個劃位序號只會對應到 1 張預售票券，若你購買 3 張預售票券，須分成 3 次劃位，且不一定預約得到同場次的位置</p>
-                        <p>以下是建議購買方式：</p>
-
-                        <table>
-                            <tr>
-                                <th>參加人數</th>
-                                <th>建議購買方式</th>
-                                <th>劃位方式</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>單人獨舞票*1張</td>
-                                <td>劃位 1 次</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>雙人共舞票*1張</td>
-                                <td>劃位 1 次</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>單人獨舞票*1張+雙人共舞票*1張</td>
-                                <td>劃位 2 次</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>四人群舞票*1張</td>
-                                <td>劃位 1 次</td>
-                            </tr>
-                        </table>
-                        
-                    </div>
-                </div>
-            </div>
-    
-            <br><br><br> -->
     
             <div class="title">
                 <h1>Notes</h1>

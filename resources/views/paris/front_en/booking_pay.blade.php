@@ -73,73 +73,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </main>
 
-    <!-- <main id="notice">
-        <div class="title">
-            <img src="/paris/img/deco.svg" />
-            <h1>舞會須知</h1>
-            <h3>Information</h3>
-        </div>
-        <div class="info">
-            親愛的賓客，我們誠摯邀請你<br>
-            跳一晚最自由的舞、做一場最清醒的夢<br>
-            <br>
-            在這場 80 分鐘 VR 頂級晚宴中<br>
-            你可以期待<br>
-            跨越時空，沉浸在巴黎午夜中<br>
-            戴起面具，穿上數位高級訂製服<br>
-            脫離現實，做你選擇的自己<br>
-            <br>
-            期待與你在美好年代相見<br>
-            請點擊下方按鍵預約入場
-        </div>
-        <div class="information">
-            <div class="information-inner">
-                <div class="col">
-                    <div class="grid">
-                        <h4>地點</h4>
-                        <p>地點：國立臺灣科學教育館<br>（<a class="hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳）</p>
-                    </div>
-                    <div class="grid">
-                        <h4>場次</h4>
-                        <p>
-                            每週一 - 二｜公休<br>
-                            每週三 - 五<br>
-                            晚場：18:10｜19:30｜ 20:45 
-                        </p>
-                        <p>
-                            每週六 - 日<br>
-                            午場：12:50｜14:15｜15:30<br>
-                            晚場：18:10｜19:30｜ 20:45
-                        </p>
-                        <p>體驗時長：80 分鐘</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="grid">
-                        <h4>注意事項</h4>
-                        <ul>
-                            <li>
-                                <p>
-                                    現場包含 VR 體驗和 1 杯調飲，為顧及體驗安全：
-                                    <ul>
-                                        <li>孕婦、心臟病和高血壓患者禁止體驗</li>
-                                        <li>體內有電子儀器者（例：心律調整器、助聽器、除顫器）及患有癲癇容易暈倒、視力受損者下訂前需諮詢專業醫師以維護體驗安全</li>
-                                        <li>12歲(含)以下無法參與、13-16歲需由家長簽署同意書，並購票陪同入場體驗</li>
-                                    </ul>
-                                </p>
-                            </li>
-                            <li><p>包場需求、其他特殊服務，請來信客服詢問<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
-                            <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" href="/lebaldeparis/rules">[舞會規則]</a></p></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="actions">
-                <button class="p-btn primary notice-btn">預約入場</button>
-            </div>
-        </div>
-    </main> -->
-
     <main id="booking">
         <form id="booking_form" action="booking_success.html" method="post">
             {{ csrf_field() }}
@@ -319,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <input type="checkbox" name="ck_rule" value="1" />
                                 <span>I have read and agree to the </span> 
                             </label>
-                            <a target="_blank" href="/lebaldeparis/rules">rules.</a>
+                            <a target="_blank" href="/lebaldeparis/rules/en">rules.</a>
                         </div>
                     </div>
                     <div class="actions">
@@ -431,7 +364,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="note gift">已抵用4000元</div>
                             </div>
                         </div>
-                        <div class="notice">By clicking 'Proceed to Payment,' I acknowledge that I have read and agree to the <span data-custom-open="modal-privacy">Privacy Policy</span> and Ticket <a target="_blank" href="/lebaldeparis/rules">Purchase Rules</a>.</div>
+                        <div class="notice">By clicking 'Proceed to Payment,' I acknowledge that I have read and agree to the <span data-custom-open="modal-privacy">Privacy Policy</span> and Ticket <a target="_blank" href="/lebaldeparis/rules/en">Purchase Rules</a>.</div>
                     </div>
                 </div>
 
@@ -449,36 +382,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="modal__overlay" tabindex="-1" data-custom-close="modal-privacy">
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title">
                 <div class="modal__header">
-                    <div class="modal__title" id="modal-privacy-title">隱私權政策</div>
+                    <div class="modal__title" id="modal-privacy-title">Private Policy</div>
                     <button class="modal__close" aria-label="Close modal" data-custom-close="modal-privacy"></button>
                 </div>
                 <div class="modal__body">
                     <div class="modal__content" id="modal-privacy-content">
                         <p>
-                            《巴黎舞會 Le Bal de Paris》官方網站 <a class="hover-underline" href="https://www.surpriselab.com.tw/lebaldeparis">https://www.surpriselab.com.tw/lebaldeparis</a>（以下稱「本網站」）為驚喜製造股份有限公司（以下稱「本公司」）所經營，本網站尊重您的隱私權，並致力於保護您的個人資料。於使用《巴黎舞會 Le Bal de Paris》官方網站前，請您詳細閱讀本條之「隱私權政策」（以下稱「本政策」），並隨時注意本網站所公告之相關修改或變更，本公司有權於任何時間修改或變更本隱私權政策之內容。當您使用本網站時，或於任何修改、變更後繼續使用本網站，皆表示您已閱讀、瞭解並同意接受本政策，或該修改、變更後之內容，及同意依據本政策蒐集、處理與利用您的個人資料；如果您無法遵守或不同意本政策之內容，或您所屬的國家、地區排除本政策內容之全部或一部時，請您立即停止使用《巴黎舞會 Le Bal de Paris》官方網站。此外，本公司於未經您許可的情形下，絕不會將您的個人資料提供予任何第三方。<br>
-                            若您為未滿二十歲或無完全行為能力，除應符合上述規定外，請於您的法定代理人或監護人閱讀、瞭解並同意本政策及其後修改、變更後之所有內容後，方得使用或繼續使用本網站，否則請立即停止使用。當您使用或繼續使用《巴黎舞會 Le Bal de Paris》官方網站時，即視為您的法定代理人或監護人已閱讀、瞭解並同意接受本政策及其後修改、變更之所有內容。<br>
-                            個人資料之類別：當您使用本網站之服務，本公司會請您提供您下列類別的個人資料，如：<br>
-                            辨識個人者（例如：姓名、住址、電子郵件信箱、行動電話）、<br>
-                            辨識財務者（例如：信用卡或簽帳卡之號碼、銀行帳戶之號碼與姓名）、<br>
-                            生活格調（例如：使用消費品之種類及服務之細節、個人之消費模式）、<br>
-                            資料主體所取得之財貨或服務（例如：貨物或服務之有關細節）、<br>
-                            財務交易（例如：收付金額、支付方式、往來紀錄）、<br>
-                            資料主體之商業活動（例如：商業種類、提供或使用之財貨或服務、商業契約）、<br>
-                            約定或契約（例如：關於交易、商業、法律或其他契約、代理）、<br>
-                            未分類之資料（例如：用餐意見、無法歸類之檔案、報告），<br>
-                            及其他任何得以直接或間接方式識別個人之資料等。<br>
-                            惟請注意，您於《巴黎舞會 Le Bal de Paris》官方網站中進行交易時，所輸入之信用卡卡號、有效日期及授權碼，均僅儲存於您個人之行動裝置中，本網站將不會蒐集、處理或利用您上述個人資料。<br>
-                            個人資料之利用：當您在《巴黎舞會 Le Bal de Paris》官方網站登錄個人資料以進行相關交易時，即視為您已同意本公司蒐集、處理及利用您的個資，不論該筆交易是否完成，您所留下的個人資料包括但不限於姓名、電子郵件地址、手機號碼及發票寄送地址等，將在本網站妥當的保存，所蒐集信用卡資訊或銀行資訊，均經使用安全的SSL加密協議處理，可確保您的隱私。<br>
-                            利用之目的：進行行銷業務、訂單及展演之管理與服務、電子商務服務與調查、統計分析及研究。<br>
-                            不提供個人資料之影響：您可自由選擇是否提供您上述的個人資料，但當您不同意提供時，您將無法享有《巴黎舞會 Le Bal de Paris》官方網站所提供之服務。凡購買本網站供的服務或產品，本公司可能會透過電子郵件傳送您於《巴黎舞會 Le Bal de Paris》官方網站的購買活動，包括但不限於消費者的帳戶、聯絡資訊或查詢、購買優惠的紀錄。您可選擇是否接收電子郵件，但當您不同意接收時，您將無法享有《巴黎舞會 Le Bal de Paris》官方網站提供之服務。<br>
-                            個人資料利用之地區：本公司之個人資料主機、相關網路伺服器主機所在地及本公司/《巴黎舞會 Le Bal de Paris》官方網站相關服務或商品發行或行銷地區，為您個人資料利用之地區。<br>
-                            您對個人資料之權利：在不違反相關法律的情況下，於本公司確認該個人資料為您本人所有後，您可以聯絡本公司∕《巴黎舞會 Le Bal de Paris》官方網站，或將您的需求郵寄至本公司的電子郵件信箱，以行使下列之權利：(1)查詢、閱覽、補充或更正您的個人資料。(2)停止蒐集、處理或利用您的個人資料。(3)刪除您的個人資料。(4)提供您個人資料的複製本。(5)停止寄發給《巴黎舞會Le Bal de Paris》官方網站相關廣告及行銷活動。但請注意，若您已於各該實際交易中提供您的個人資料給商家或交易對象，除法律另有規定之情形外，有關您的上述權利，應向各該商家或交易對象行使。<br>
-                            除下列情形外，本公司不會任意將用戶的個人資料出售、轉讓或揭露予任何第三人：(1)本公司在與其他第三人合辦或協辦活動時，與該第三人共用、傳遞您的資料，才能夠提供您要求的產品或服務。惟《巴黎舞會 Le Bal de Paris》官方網站會於各該活動頁面明確告知您的個人資料將因參與該活動而提供予合辦或協辦之第三人，如您選擇參與該活動，即表示您瞭解並同意將該個人資料為各該活動之目的提供予合辦或協辦之第三人。(2)本公司∕《巴黎舞會 Le Bal de Paris》官方網站將因法律規定、法院命令、行政調查或其他法律程序的要求而提供您的資料，惟在此情形下，該資料只會單純提供予調查單位，並受中華民國相關法律的保護。(3)為了調查和防止非法活動、涉嫌詐欺、對人身安全有潛在威脅的狀況。(4) 對本公司∕《巴黎舞會 Le Bal de Paris》官方網站服務條款的違反，或站或本公司被其他公司收購或合併，我們有權利將您的個人資料移轉給該公司。如果發生這種情況，本公司會在您的個人資料被移轉且將適用不同的隱私權政策前通知您。<br>
-                            本公司∕《巴黎舞會 Le Bal de Paris》官方網站有權視實際情形修訂本政策，本政策有重大變更時，本網站將張貼公告，您有義務隨時注意本政策有無更新或修訂。如您不同意所變更之內容，得隨時選擇退出相關服務，並請您立即停用《巴黎舞會 Le Bal de Paris》官方網站之服務，如您繼續使用本網站，即表示您同意本政策變更之內容。
+                            
+
+                            "Le Bal de Paris" Official Website at <a class="hover-underline" href="https://www.surpriselab.com.tw/lebaldeparis/en">https://www.surpriselab.com.tw/lebaldeparis</a> (hereinafter referred to as "this Website") is operated by Surprise Lab Co., Ltd. (hereinafter referred to as "the Company"). This Website respects your privacy and is committed to protecting your personal information. Before using the "Le Bal de Paris" Official Website, please carefully read this "Privacy Policy" (hereinafter referred to as "this Policy") and be aware of any relevant modifications or changes announced on this Website at any time. The Company reserves the right to modify or change the contents of this Privacy Policy at any time. By using this Website or continuing to use it after any modifications or changes, you indicate that you have read, understood, and agreed to accept this Policy, its modifications, or changes, and consent to the collection, processing, and utilization of your personal information in accordance with this Policy. If you are unable to comply with or do not agree with the contents of this Policy, or if your country or region excludes all or part of the contents of this Policy, please immediately stop using the "Le Bal de Paris" Official Website.<br>
+                            <br>
+                            Furthermore, unless explicitly authorized by you, the Company will never provide your personal information to any third party.<br>
+                            <br>
+                            If you are under the age of twenty or lack full legal capacity, in addition to meeting the above requirements, please have your legal guardian or custodian read, understand, and agree to all the contents of this Policy and its subsequent modifications or changes before using or continuing to use this Website; otherwise, please stop using it immediately. When you use or continue to use the "Le Bal de Paris" Official Website, it is deemed that your legal guardian or custodian has read, understood, and agreed to accept all the contents of this Policy and its subsequent modifications or changes.<br>
+                            <br>
+                            Categories of Personal Data: When you use the services of this Website, the Company may ask you to provide the following categories of personal data:<br>
+                            <ol>
+                                <li>Identifiers (such as: name, address, email address, mobile phone number),</li>
+                                <li>Financial information (such as: credit card or debit card number, bank account number and name),</li>
+                                <li>Lifestyle preferences (such as: types of consumer goods and service details, personal consumption patterns),</li>
+                                <li>Goods or services obtained by the data subject (such as: relevant details of goods or services),</li>
+                                <li>Financial transactions (such as: amounts paid or received, payment methods, transaction records),</li>
+                                <li>Business activities of the data subject (such as: types of businesses, goods or services provided or used, business contracts),</li>
+                                <li>Agreements or contracts (such as: agreements or contracts regarding transactions, business, legal, or others, agency),</li>
+                                <li>Unclassified data (such as: dining preferences, unclassified files, reports), and any other data that can directly or indirectly identify individuals, etc.</li>
+                            </ol>
+                            <br>
+                            However, please note that when you make transactions on the "Le Bal de Paris" Official Website, the credit card number, expiration date, and authorization code you enter are stored only on your personal mobile device, and this Website will not collect, process, or utilize the personal information mentioned above.<br>
+                            <br>
+                            Utilization of Personal Data: When you register personal data on the "Le Bal de Paris" Official Website for relevant transactions, it is deemed that you have agreed to the Company's collection, processing, and utilization of your personal data, regardless of whether the transaction is completed. The personal data you provide, including but not limited to name, email address, mobile phone number, and invoice delivery address, will be properly stored on this Website. Credit card information or bank information collected is processed using secure SSL encryption protocols to ensure your privacy.<br>
+                            <br>
+                            Purposes of Utilization: Conducting marketing activities, managing and servicing orders and exhibitions, e-commerce services and surveys, statistical analysis, and research.<br>
+                            <br>
+                            Impact of Not Providing Personal Data: You are free to choose whether to provide the above-mentioned personal data. However, if you do not agree to provide it, you will not be able to enjoy the services provided by the "Le Bal de Paris" Official Website. When purchasing services or products provided by this Website, the Company may send you purchase activities on the "Le Bal de Paris" Official Website via email, including but not limited to consumer accounts, contact information or inquiries, and records of purchase discounts. You can choose whether to receive emails. However, if you do not agree to receive them, you will not be able to enjoy the services provided by the "Le Bal de Paris" Official Website.<br>
+                            <br>
+                            Region of Personal Data Utilization: The region of personal data utilization includes the personal data host of the Company, the location of relevant network server hosts, and the region where the Company/"Le Bal de Paris" Official Website provides services or distributes products or conducts marketing activities.<br>
+                            <br>
+                            Your Rights Regarding Personal Data: Without violating relevant laws, after the Company confirms that the personal data belongs to you, you may contact the Company/ "Le Bal de Paris" Official Website or send your request to the Company's email mailbox to exercise the following rights: (1) inquire, read, supplement, or correct your personal data, (2) stop collecting, processing, or utilizing your personal data, (3) delete your personal data, (4) provide you with a copy of your personal data, (5) stop sending advertisements and marketing activities related to the "Le Bal de Paris" Official Website. However, please note that if you have already provided your personal data to merchants or transaction parties in actual transactions, except as otherwise provided by law, you should exercise the above-mentioned rights with respect to such merchants or transaction parties.<br>
+                            <br>
+                            Except for the following circumstances, the Company will not sell, transfer, or disclose users' personal data to any third party without authorization: (1) When the Company jointly organizes or cooperates with other third parties in activities, your data will be shared or transmitted to provide the products or services you requested. However, the "Le Bal de Paris" Official Website will clearly inform you on the relevant activity page that your personal data will be provided to third parties jointly organized or cooperated in the activity. By choosing to participate in the activity, you understand and agree to provide the personal data for the purpose of the activity to the third parties jointly organized or cooperated. (2) The Company/"Le Bal de Paris" Official Website will provide your data as required by law, court orders, administrative investigations, or other legal procedures. However, in this case, the data will only be provided to the investigating authorities and will be protected by the relevant laws of the Republic of China. (3) To investigate and prevent illegal activities, suspected fraud, or situations that may pose a potential threat to personal safety. (4) In the event of a violation of the terms of service of the Company/"Le Bal de Paris" Official Website or if the Website or the Company is acquired or merged by another company, we have the right to transfer your personal data to that company. In such a case, the Company will notify you in advance before your personal data is transferred and a different privacy policy applies.<br>
+                            <br>
+                            The Company/"Le Bal de Paris" Official Website reserves the right to revise this Policy based on actual circumstances. When there are significant changes to this Policy, notices will be posted on this Website, and you are obligated to be aware of whether this Policy has been updated or revised at any time. If you do not agree with the modified content, you may choose to withdraw from the relevant services at any time and immediately deactivate the services of the "Le Bal de Paris" Official Website. If you continue to use this Website, it indicates that you agree to the modified content of this Policy.
                         </p>
                     </div>
                 </div>
-                <div class="modal__footer" data-custom-close="modal-privacy">閱讀完畢</div>
+                <div class="modal__footer" data-custom-close="modal-privacy">Finish</div>
             </div>
         </div>
     </div>
@@ -490,6 +438,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/paris_en/js/plugins/micromodal.min.js"></script>
     <script src="/paris_en/js/main.js?231003"></script>
     <script src="/paris_en/js/phone_code.js"></script>
-    <script src="/paris_en/js/booking_pay.js?240325"></script>
+    <script src="/paris_en/js/booking_pay.js?240327"></script>
 </body>
 </html>
