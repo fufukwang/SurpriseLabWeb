@@ -273,9 +273,9 @@ function checkStep2Field() {
         if($(this).val() === '') {
             var $inputGroup = $(this).closest('.input-group');
             if($inputGroup.find('.error').length === 0) {
-                $inputGroup.append('<div class="error">此欄位為必填</div>');
+                $inputGroup.append('<div class="error">Required fields</div>');
             } else {
-                $inputGroup.find('.error').text('此欄位為必填');
+                $inputGroup.find('.error').text('Required fields');
             }
             allowNext = false;
         }
@@ -287,9 +287,9 @@ function checkStep2Field() {
     if( area_code == '+886' && !/^09\d{8}$/.test(phone) ) {
         var $inputGroup = $('#step2 input.phone').closest('.input-group');
         if($inputGroup.find('.error').length === 0) {
-            $inputGroup.append('<div class="error">手機格式錯誤</div>');
+            $inputGroup.append('<div class="error">Incorrect phone format</div>');
         } else {
-            $inputGroup.find('.error').text('手機格式錯誤');
+            $inputGroup.find('.error').text('Incorrect phone format');
         }
         allowNext = false;
     }
@@ -299,9 +299,9 @@ function checkStep2Field() {
     if( email !== '' && !/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email) ) {
         var $inputGroup = $('#step2 input.email').closest('.input-group');
         if($inputGroup.find('.error').length === 0) {
-            $inputGroup.append('<div class="error">Email格式錯誤</div>');
+            $inputGroup.append('<div class="error">Incorrect email format</div>');
         } else {
-            $inputGroup.find('.error').text('Email格式錯誤');
+            $inputGroup.find('.error').text('Incorrect email format');
         }
         allowNext = false;
     }
@@ -311,9 +311,9 @@ function checkStep2Field() {
     if( tax !== '' && !/^[0-9]*$/.test(tax) ) {
         var $inputGroup = $('#step2 input.tax').closest('.input-group');
         if($inputGroup.find('.error').length === 0) {
-            $inputGroup.append('<div class="error">統一編號格式錯誤</div>');
+            $inputGroup.append('<div class="error">Incorrect Tax ID number format</div>');
         } else {
-            $inputGroup.find('.error').text('統一編號格式錯誤');
+            $inputGroup.find('.error').text('Incorrect Tax ID number format');
         }
         allowNext = false;
     }

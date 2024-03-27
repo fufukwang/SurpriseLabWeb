@@ -67,7 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header id="main-header">
         <div class="flex justify-between items-center">
             <div class="brand-logo">
-                <a href="/lebaldeparis">
+                <a href="/lebaldeparis/en">
                     <img class="pc" src="/paris/img/brand-logo.png?231017" alt="巴黎舞會 LE BAL PARIS" />
                     <img class="m" src="/paris/img/brand-logo-m.png?231017" alt="巴黎舞會 LE BAL PARIS" />
                 </a>
@@ -846,7 +846,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul>
                                             <li>If you are pregnant, or suffer from a cardiovascular disease, hypertension or other serious medical conditions, , we will prohibit you from experiencing this performance.</li>
                                             <li>If you have any implanted electronic devices in your body (such as pacemakers, hearing aids or cardioverter-defibrillators), suffer from seizures and epilepsy, or easily suffer from dizziness and syncope, we strongly recommend seeing a doctor before experiencing.</li>
-                                            <li>This performance is recommended for audiences over 12 of age. For ages 13-16, parental consent is required with a signed authorization form, and ticket purchase is necessary for accompanying entry to the experience.</li>
+                                            <li>This experience is Parental Guidance Suggested. Children under 12 years old are not allowed to participate. Parents aged 12-17 are recommended to accompany them.</li>
                                         </ul>
                                     </p>
                                 </li>
