@@ -188,7 +188,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="text-wrap">
                                     <!-- A Test -->
                                     <p class="color-y200 fw-normal">
-                                        正如落日之後，必有黎明，所有終點，必是另一個起點。<br>
+                                        <b>正如落日之後，必有黎明，所有終點，必是另一個起點。</b><br>
                                         <br>
                                         落日月台現身台北松山文創園區，旅客穿梭多個奇幻時空中，將開啟全感官，探索落日將近、月升之際的彌留世界。<br>
                                         <br>
@@ -503,10 +503,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                                             <div class="item">
                                                 <figure class="slideshow-card">
-                                                    <picture>
-                                                        <source srcset="/terminalAssets/images/main/img_bistro_231123.webp" type="image/webp" />
-                                                        <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src="/terminalAssets/images/main/img_bistro_231123.jpg" data-src-retina="/terminalAssets/images/main/img_bistro_231123.jpg" alt="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃" />
-                                                    </picture>
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro1.jpg" data-src="/terminalAssets/images/main/img_bistro1.jpg" data-src-retina="/terminalAssets/images/main/img_bistro1.jpg" alt="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃" />
+                                                    <figcaption>
+                                                        多場域沉浸 ╳ 全感官體驗
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro2.jpg" data-src="/terminalAssets/images/main/img_bistro2.jpg" data-src-retina="/terminalAssets/images/main/img_bistro2.jpg" alt="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃" />
+                                                    <figcaption>
+                                                        多場域沉浸 ╳ 全感官體驗
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro3.jpg" data-src="/terminalAssets/images/main/img_bistro3.jpg" data-src-retina="/terminalAssets/images/main/img_bistro3.jpg" alt="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃" />
+                                                    <figcaption>
+                                                        多場域沉浸 ╳ 全感官體驗
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro4.jpg" data-src="/terminalAssets/images/main/img_bistro4.jpg" data-src-retina="/terminalAssets/images/main/img_bistro4.jpg" alt="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃" />
+                                                    <figcaption>
+                                                        多場域沉浸 ╳ 全感官體驗
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="item">
+                                                <figure class="slideshow-card">
+                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/img_bistro5.jpg" data-src="/terminalAssets/images/main/img_bistro5.jpg" data-src-retina="/terminalAssets/images/main/img_bistro5.jpg" alt="落日月台 Mind The Gap - 落日轉運站巡迴沉浸式計劃" />
                                                     <figcaption>
                                                         多場域沉浸 ╳ 全感官體驗
                                                     </figcaption>
@@ -576,10 +609,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <span style="background: #A55AFF"></span>
                                             <p>即將完售</p>
                                         </div>
-                                        <div>
+                                        <!-- <div>
                                             <span style="background: #3737FC"></span>
                                             <p>已售完Sold Out</p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
