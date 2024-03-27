@@ -384,10 +384,11 @@ $('#discount').bind('blur',function(){
         if(data.success == 'Y'){
             discount_code = disVal;
             discount_money = data.money;
-            $('.discount_note').html('折扣碼' + discount_code + ' 折扣 ' + discount_money + '<!--a href="javascript:;" class="arm"></a-->');
+            $('.discount_note').html('discount code' + discount_code + ' discount ' + discount_money + '<!--a href="javascript:;" class="arm"></a-->');
             $('#discount').attr('readonly',true);
         } else {
-            $('.discount_note').html(data.message);
+            // $('.discount_note').html(data.message);
+            $('.discount_note').html('Wrong code or has been used.');
         }
         $.unblockUI();
     },'json');
@@ -412,10 +413,11 @@ $('#gift').bind('blur',function(){
         if(data.success == 'Y'){
             coupon_code = disVal;
             coupon_money = data.money;
-            $('.gift_note').html('禮物卡' + coupon_code + ' 抵用 ' + coupon_money + '<!--a href="javascript:;" class="arm"></a-->');
+            $('.gift_note').html('GiftCard' + coupon_code + ' discount ' + coupon_money + '<!--a href="javascript:;" class="arm"></a-->');
             $('#gift').attr('readonly',true);
         } else {
-            $('.gift_note').html(data.message);
+            // $('.gift_note').html(data.message);
+            $('.gift_note').html('Wrong code or has been used.');
         }
         $.unblockUI();
     },'json');
@@ -454,15 +456,15 @@ function setStep3Contents() {
     $('div.ticket > table > tbody > tr:nth-child(2) > td:nth-child(2)').text($('.guests select').val());
     $('div.ticket > table > tbody > tr:nth-child(3) > td:nth-child(2)').text($('#booking_date').val());
     $('div.ticket > table > tbody > tr:nth-child(4) > td:nth-child(2)').text($('#booking_time option:selected').text().substr(0, 13));
-    $('div.ticket > table > tbody > tr:nth-child(5) > td:nth-child(2)').text(money+' 元');
+    $('div.ticket > table > tbody > tr:nth-child(5) > td:nth-child(2)').text(money+'');
     $('.submitForm').text('Proceed to Payment $'+money);
     if(discount_money>0){
-        $('div.discount').text('已折扣'+discount_money+'元');
+        $('div.discount').text('discount '+discount_money+'');
     } else {
         $('div.discount').text('');
     }
     if(discount_money>0){
-        $('div.gift').text('已抵用'+coupon_money+'元');
+        $('div.gift').text('discount '+coupon_money+'');
     } else {
         $('div.gift').text('');
     }
