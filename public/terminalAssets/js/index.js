@@ -143,12 +143,12 @@ var enableDays = [];
 var dateSite = [];
 $.get('/terminal/GetAjaxData',{
     'act': 'getBypople',
-    'pople': 2,
+    'pople': 1,
     'ticketType': '',
 },function(data){
     for(i=0;i<data.length;i++){
         enableDays.push(data[i].day);
-        dateSite[data[i].day] = data[i].sites
+        dateSite[data[i].day] = data[i].per
     }
     var minD = 0;
     if(enableDays.length>0){
@@ -171,9 +171,14 @@ $.get('/terminal/GetAjaxData',{
         onUpdateDatepicker: function(inst) {
             var currentYear = inst.selectedYear;
             var currentMonth = inst.selectedMonth + 1;
+            var padd = (currentMonth.toString().length == 1) ? '0' : '';
+            var notOpen = true;
+            enableDays.forEach((val) => { if(val.indexOf(currentYear+'-'+padd+currentMonth)!=-1){ notOpen = false; } });
+            if(notOpen){ booking_date.find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>'); }
+/*
             if (currentYear === 2024 && currentMonth === 3) {
                 booking_date.find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>');
-            }
+            }*/
         }
     });
 },'json');
@@ -188,6 +193,14 @@ function enableAllTheseDays(date) {
         var myDateClass = ""; // 加入的樣式
         var myDateTip = "";  // tooltip 文字
         var myDateDay = date.getDay();
+        if(dateSite[sdate]<50){
+            myDateClass = "sold-out-soon";
+            myDateTip = "即將完售";
+        } else if(dateSite[sdate]>=50){
+            myDateClass = "still-vacancy";
+            myDateTip = "好評熱賣";
+        }
+        /*
         if(myDateDay === 0 || myDateDay === 6){
             if(dateSite[sdate]<=50){
                 myDateClass = "sold-out-soon";
@@ -205,6 +218,7 @@ function enableAllTheseDays(date) {
                 myDateTip = "好評熱賣";
             }
         }
+        */
         return [true,myDateClass,myDateTip];
     }
     return [false];
