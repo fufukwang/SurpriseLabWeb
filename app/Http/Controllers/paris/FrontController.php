@@ -262,6 +262,23 @@ class FrontController extends WebController
                 } else {
                     return Response::json(['success'=> 'N','message'=>'序號錯誤或已額滿'], 200);
                 }
+            } elseif($request->has('act') && $request->act=='BookingAllDay'){
+                $data = [
+                    'name'  => $request->name,
+                    'phone' => $request->phone,
+                    'email' => $request->email,
+                    'notes' => $request->notes,
+                ];
+                Log::info('包場內容.');
+                log::info($data);
+                Mail::send('paris.email.group', $data, function ($m) use ($data){
+                    $m->from('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
+                    $m->sender('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
+                    $m->to('lebaldeparis@surpriselab.com.tw', '巴黎舞會');
+                    $date = date('m/d');
+                    $m->subject("【包場】[{$data['name']}]包場申請-{$date}");
+                });
+                return Response::json(['success'=> 'Y'], 200);
             }
         } else {
             return Response::json(['success'=> 'N','message'=>'序號錯誤'], 200);

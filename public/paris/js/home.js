@@ -134,3 +134,44 @@ $('#sec-group .g2, #sec-group .g3, #sec-group .g4, #sec-group .g5').each(functio
     });
 });
 
+$('form button').bind('click',function(){
+    var message = '';
+
+    var name = $('form input[type=text]:eq(0)').val();
+    if(name == ''){ message += '請輸入姓名<br />'; }
+    var phone = $('form input[type=text]:eq(1)').val();
+    if(phone == ''){ message += '請輸入電話<br />'; }
+    var email = $('form input[type=email]').val();
+    if(email == ''){ message += '請輸入信箱<br />'; }
+    if( email !== '' && !/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email) ) {
+        message += '信箱格式錯誤<br />';
+    }
+    var notes = $('form textarea').val();
+    if(notes == ''){ message += '請輸入備註內容<br />'; }
+    if(message===''){
+        $.blockUI({message: null});
+        $.post('/lebaldeparis/PostAjaxData',{
+            'act':'BookingAllDay',
+            name,
+            phone,
+            email,
+            notes,
+        },function(data){
+            if(data.success == 'Y'){
+                $('form input[type=text]:eq(0),form input[type=text]:eq(1),form input[type=email],form textarea').val('');
+                alert('您的需求已成功送出，我們會盡快回覆!');
+            } else {
+                alert('錯誤請稍後再嘗試一次!');
+            }
+            $.unblockUI();
+        },'json');
+    }
+    $('.form-error').html(message);
+});
+$(function(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+});
