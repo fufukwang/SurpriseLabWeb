@@ -18,6 +18,7 @@
     <meta name="twitter:description" content="巴黎舞會 Le Bal de Paris de Blanca Li 一場前所未有的沉浸式 VR 體驗，邀上你想共舞的人，在巴黎午夜跳場最自由的舞，做場最真實的夢">
     <meta name="twitter:image" content="https://www.surpriselab.com.tw/paris/img/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>巴黎舞會 Le Bal de Paris de Blanca Li</title>
     <link rel="icon" href="/paris/img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -448,14 +449,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="input-group">
                     <label>Email</label>
-                    <input type="text">
+                    <input type="email">
                 </div>
                 <div class="input-group">
                     <label>備註</label>
                     <textarea rows="6" placeholder="請說明預計人數、日期、時間" style="resize: none;"></textarea>
                 </div>
+                <div class="input-group form-error" style="font-size:14px;color:#F4115D;"></div>
                 <div class="input-group" style="justify-content: center;">
-                    <button class="p-btn primary">送出</button>
+                    <button type="button" class="p-btn primary">送出</button>
                 </div>
             </form>
         </section>
@@ -946,11 +948,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
     <script src="/paris/js/plugins/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <script src="/paris/js/main.js?231003"></script>
-    <script src="/paris/js/home.js?240116"></script>
+    <script src="/paris/js/home.js?240329"></script>
 </body>
 </html>
