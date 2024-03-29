@@ -70,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div> -->
             <div class="sun-wrapper">
                 <img class="sun" src="/terminalAssets/images/main/sun.png" alt="落日轉運站">
-                <img class="btn_enter" src="/terminalAssets/images/main/btn_enter.png" alt="落日轉運站">
+                <img class="btn_enter" src="/terminalAssets/images/main/btn_enter.png?v=0329" alt="落日轉運站">
             </div>
             <img class="enter-btn" src="/terminalAssets/images/main/kv_enter.png" alt="落日轉運站">
         </div>
