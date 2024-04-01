@@ -164,7 +164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$2,100</h2> 
                     <div class="desc">
                         （含一杯調飲）<br>
-                        <br><br>
+                        <br>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
@@ -179,7 +179,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="desc">
                         （含兩杯調飲）<br>
                         <br>
-                        <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
@@ -193,7 +192,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$7,600<span>($1,900/人)</span></h2> 
                     <div class="desc">
                         （含四杯調飲）<br> 
-                        <span>購票輸入【dancefourfun】<br>享 $200 折扣</span>
                         <br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
@@ -211,7 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>$2,100</h2> 
                     <div class="desc">
                         （含一杯調飲）<br>
-                        <br><br>
+                        <br>
                         一個人自由地探索<br>
                         帶著好奇心闖入花漾年代
                     </div>
@@ -226,7 +224,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="desc">
                         （含兩杯調飲）<br>
                         <br>
-                        <br>
                         邀請最重要的人<br>
                         感受奢華絢爛的巴黎午夜
                     </div>
@@ -239,8 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h4>四人群舞票</h4>
                     <h2>$7,600<span>($1,900/人)</span></h2> 
                     <div class="desc">
-                        （含四杯調飲）<br> 
-                        <span>購票輸入【dancefourfun】<br>享 $200 折扣</span>
+                        （含四杯調飲）<br>
                         <br>
                         與熟悉的人狂歡<br> 
                         摸索與彼此的第一支舞
