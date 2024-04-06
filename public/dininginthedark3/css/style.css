@@ -40,6 +40,7 @@ body {
   position: relative;
   background-color: #101010;
   color: #CCCCCC;
+  padding-bottom: 10vh;
 }
 
 body.menu-open {
@@ -3348,60 +3349,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   height: 100%;
 }
 
-.dashboard {
-  width: 300px;
-  position: relative;
-  margin: 0 auto;
-  color: #8C5FB4;
-}
-
-.dashboard img {
-  width: 100%;
-  display: block;
-}
-
-.dashboard .countdown {
-  position: absolute;
-  top: 173px;
-  font-size: 20px;
-  line-height: 1;
-}
-
-.dashboard .countdown.days {
-  left: 88px;
-}
-
-.dashboard .countdown.hours {
-  left: 137px;
-}
-
-.dashboard .countdown.minutes {
-  left: 183px;
-}
-
-@media (min-width: 550px) {
-  .dashboard {
-    width: 500px;
-  }
-
-  .dashboard .countdown {
-    top: 288px;
-    font-size: 35px;
-  }
-  
-  .dashboard .countdown.days {
-    left: 142px;
-  }
-
-  .dashboard .countdown.hours {
-    left: 226px;
-  }
-
-  .dashboard .countdown.minutes {
-    left: 304px;
-  }
-}
-
 #enter-dialog {
   position: fixed;
   top: 0;
@@ -3416,16 +3363,50 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, .6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#enter-dialog .content-flex {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #enter-dialog .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
-  max-width: 1440px;
+  position: relative;
+  padding: 30px 10px;
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  #enter-dialog .content {
+    max-width: 800px;
+  }
+}
+
+#enter-dialog .content .img {
+  height: calc(100% - 30px);
+}
+
+#enter-dialog .txt {
+  line-height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid;
+  padding: 0 10px;
+  margin-top: 6px;
+  border-radius: 4px;
+}
+
+#enter-dialog .txt:hover {
+  color: #fff;
 }
 
 #enter-dialog .content img {
@@ -3438,7 +3419,6 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 #enter-dialog .dialog-close {
   width: 36px;
   height: 36px;
-  /* background: red; */
   position: absolute;
   top: 10px;
   right: 10px;
@@ -3459,4 +3439,22 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 #enter-dialog .dialog-close:after {
   transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#notice img {
+  max-width: 100%;
+  max-height: 100%;
 }

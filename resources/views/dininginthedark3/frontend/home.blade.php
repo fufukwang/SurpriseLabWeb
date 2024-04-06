@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240221"/>
+    <link rel="stylesheet" href="css/style.css?date=240405"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -138,8 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </a>
                         </div>
 
-                        <div class="dashboard" data-date="2024-03-31 23:59:59">
-                            <!-- <img src="img/home/intro/dashboard.webp" alt="無光晚餐 Dining In The Dark"> -->
+                        <!-- <div class="dashboard" data-date="2024-03-31 23:59:59">
                             <picture>
                                 <source srcset="img/home/intro/intro-count.webp" type="image/webp" />
                                 <img src="img/home/intro/intro-count.png" alt="無光晚餐 Dining In The Dark">
@@ -147,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="countdown days"></div>
                             <div class="countdown hours"></div>
                             <div class="countdown minutes"></div>
-                        </div>
+                        </div> -->
                     </section>
 
                     <!-- Section1 About -->
@@ -161,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="section-header">
                                 <div class="section-title">
                                     <h3>體驗內容</h3>
-                                    <h4>7 號菜單：Space</h4>
+                                    <h4 style="color: #ede78a;">8號菜單：Cheers!</h4>
                                 </div>
                                 <!-- <p class="section-desc">
                                     <b>6 號菜單 ON AIR</b>
@@ -191,8 +190,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
-                                                                        <source srcset="img/home/about/about-intro-1.webp?231214" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.jpg?231214" data-src-retina="img/home/about/about-intro-1.jpg?231214" alt="無光晚餐體驗內容">
+                                                                        <source srcset="img/home/about/about-intro-1.webp?240405" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.jpg?240405" data-src-retina="img/home/about/about-intro-1.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
                                                             </div>
@@ -248,9 +247,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         <div class="feature-item">90分鐘體驗時間</div>
                                                     </div>
                                                     <div class="experience-desc">
-                                                        踏進黑暗，跟隨想像力展開星際之旅，只要你願意相信，你的想像力，將帶領你探索那些前所未有的體驗。
-                                                        <br/><br/>
-                                                        最終，你會發現：「想像力，可以創造出一個世界。」
+                                                        每年365天，有一天是用來點亮蠟燭的；<br>
+                                                        剩下364天，用來慶祝著不起眼的瞬間，<br>
+                                                        「嘿，祝你非生日快樂！」我們這麼說。<br>
+                                                        <br>
+                                                        在這場魔幻的無光裡，<br>
+                                                        沒有一件事是不值得慶祝的 ⎯ <br>
+                                                        <br>
+                                                        即使是最平凡的日常。
                                                     </div>
                                                 </div>
                                             </div>
@@ -275,10 +279,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <h3>預約體驗</h3>
                                         <h4>Reservation</h4>
                                     </div>
-                                    <!-- <p class="section-desc">
-                                        
-                                    </p> -->
                                 </div>
+
+                                <p class="ticket-area-note">
+                                    <center>
+                                        <b>
+                                            <u>8 號菜單 ：Cheers! </u><br>
+                                            <u>全新體驗 4/18 起正式上線</u>
+                                            <br><br>
+                                        </b>
+                                    </center>
+                                </p>
 
                                 <div class="ticket-datepicker">
                                     <!-- sold-out-soon / still-vacancy / sold-out -->
@@ -302,8 +313,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <p class="ticket-area-note">
                                     <br>
                                     <b>
-                                        <u>雙數訂位，每位 2,200 元
-                                        </u>
+                                        <u>雙數訂位，每位 2,200 元</u>
                                     </b>
                                     <br>
                                     <br>
@@ -945,6 +955,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                        <!-- 4 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="https://everylittled.com/article/191224">
+                                                                    <picture>
+                                                                        <source srcset="img/home/recommend/news/4.webp" type="image/webp">
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/4.jpg" data-src-retina="img/home/recommend/news/3.jpg" alt="Shopping Design">
+                                                                    </picture>
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://everylittled.com/article/191224">
+                                                                        《every little d》全新八號菜單，期間限定跨界合作
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 5 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="https://fashion.ettoday.net/news/2692225">
+                                                                    <picture>
+                                                                        <source srcset="img/home/recommend/news/5.webp" type="image/webp">
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/5.jpg" data-src-retina="img/home/recommend/news/3.jpg" alt="Shopping Design">
+                                                                    </picture>
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="https://fashion.ettoday.net/news/2692225">
+                                                                        《ETtoday》全新八號菜單，黑暗品酩更有驚喜
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1127,12 +1175,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="time-session">
                                     <div class="time-session-inner">
-                                        <p>平日　17:30｜18:00｜18:30｜19:30｜20:00｜20:30</p>
+                                        <p>平日　17:15｜17:45｜18:15｜19:30｜20:00｜20:30</p>
                                         <hr/>
-                                        <p>假日　12:00｜12:30｜13:00</p>
-                                        <p>　　　17:30｜18:00｜18:30｜19:30｜20:00｜20:30</p>
+                                        <p>假日　11:45｜12:15｜12:45</p>
+                                        <p>　　　17:15｜17:45｜18:15｜19:30｜20:00｜20:30</p>
                                         <br/>
-                                        <p>＊週一週二公休</p>
+                                        <p>＊週一週二公休，營業時間異動請關注無光晚餐社群公告。</p>
                                         <div class="feature-btn text-center d-block d-sm-none">
                                             <a class="btn-outline smoothScroll" href="#Ticket-type">我要預約</a>
                                         </div>
@@ -1268,13 +1316,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="partner-sec-wrapper">
 
-                                    <div style="max-width: 460px; margin: 0 auto; text-align: center;">本季 7號菜單 與 Zenfone 10 跨界合作，你將體驗夜拍專用裝置，單手捕捉精彩瞬間，與夥伴留下難忘回憶。</div>
+                                    <div style="max-width: 460px; margin: 0 auto; text-align: center;">本季8號菜單與 格蘭菲迪 Glenfiddich 跨界合作</div>
 
                                     <div class="partners-img">
-                                        <picture>
-                                            <source srcset="img/other/partner-zenfone.webp" type="image/webp">
-                                            <img src="img/other/partner-zenfone.png" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;" />
-                                        </picture>
+                                    <img src="img/other/partner-gf.png" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;" />
                                     </div>
                                 </div>
                             </div>
@@ -1336,7 +1381,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
             </li>
             <li class="social-link">
-                <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
+                <a href="https://www.instagram.com/dininginthedark_tw/" target="_blank">
                     <i class="icon-ig"></i>
                 </a>
             </li>
@@ -1345,11 +1390,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div id="enter-dialog">
         <div class="overlay"></div>
-        <div class="content">
-            <img class="d-none d-md-block" src="img/home/enter-dialog.jpg" alt="無光晚餐 Dining In The Dark">
-            <img class="d-block d-md-none" src="img/home/enter-dialog-m.jpg" alt="無光晚餐 Dining In The Dark">
+        <div class="content-flex">
+            <div class="content">
+                <div class="img">
+                    <img class="d-none d-md-block" src="img/home/enter-dialog.jpg" alt="無光晚餐 Dining In The Dark">
+                    <img class="d-block d-md-none" src="img/home/enter-dialog-m.jpg" alt="無光晚餐 Dining In The Dark">
+                </div>
+                <div class="txt">不要再顯示</div>
+            </div>
         </div>
+        
         <div class="dialog-close"></div>
+    </div>
+
+    <div id="notice">
+        <img class="d-none d-md-block" src="img/general/notice.jpg" alt="無光晚餐 Dining In The Dark">
+        <img class="d-block d-md-none" src="img/general/notice_m.jpg" alt="無光晚餐 Dining In The Dark">
     </div>
 
     <!-- Bootstrap -->
@@ -1381,11 +1437,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?date=240201"></script>
+    <script src="js/index.js?date=240405"></script>
     <script src="js/main.js?v=0.13"></script>
-    <script src="js/board-modal.js?date=240221"></script>
+    <script src="js/board-modal.js?date=240405"></script>
     <script src="js/index-slideshow.js?date=230919"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-
 </body>
 </html>

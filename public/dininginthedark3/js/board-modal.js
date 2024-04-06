@@ -60,11 +60,18 @@ $(function() {
     $enter_modal_btn.on('click', function(event) {
         $enter_modal.fadeOut(250, function () {
             $('body').removeClass('modal-open');
-            $('#enter-dialog').fadeIn();
+            if ( sessionStorage.getItem('dialog_noshow') !== 'true' ) {
+                $('#enter-dialog').fadeIn();
+            }
         });
     });
 
     $('#enter-dialog .dialog-close').on('click', function(event) {
+        $('#enter-dialog').fadeOut();
+    });
+
+    $('#enter-dialog .txt').on('click', function(){
+        sessionStorage.setItem('dialog_noshow', 'true');
         $('#enter-dialog').fadeOut();
     });
 

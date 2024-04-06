@@ -177,7 +177,7 @@ button.btn-outline:focus {
   content: '';
   width: 25%;
   height: 1px;
-  background-color: #8C5FB4;
+  background-color: #ede78a;
   position: absolute;
 }
 
@@ -201,7 +201,7 @@ button.btn-outline:focus {
 }
 
 #progressbar li.active::before {
-  color: #8C5FB4;
+  color: #ede78a;
   text-decoration: underline;
 }
 
@@ -384,12 +384,12 @@ button.btn-outline:focus {
 }
 
 a {
-  color: #8C5FB4;
+  color: #ede78a;
   text-decoration: none;
 }
 
 a:hover {
-  color: #8C5FB4;
+  color: #ede78a;
   text-decoration: underline;
 }
 
@@ -578,7 +578,7 @@ form .btn-outline {
 }
 
 .radio__button .custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-image: url("../img/icon/icon-check.svg");
+  background-image: url("../img/icon/icon-check-yellow.svg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -678,7 +678,7 @@ form .btn-outline {
 
 .food-type .checker {
   position: absolute;
-  border: solid 1px #8C5FB4;
+  border: solid 1px #ede78a;
   border-radius: 100%;
   height: 18px;
   width: 18px;
@@ -736,7 +736,7 @@ form .btn-outline {
   padding: 5px 17px;
   border: solid 1px #CCCCCC;
   border-radius: 6px;
-  color: #8C5FB4;
+  color: #ede78a;
   text-align: left;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -759,7 +759,7 @@ form .btn-outline {
   height: 20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-image: url("../img/icon/icon-arrow.svg");
+  background-image: url("../img/icon/icon-arrow-yellow.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -769,7 +769,7 @@ form .btn-outline {
 }
 
 .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__rendered {
-  border-color: #8C5FB4;
+  border-color: #ede78a;
 }
 
 .select2-container--default.select2-container--open .select2-selection__arrow {
@@ -779,7 +779,7 @@ form .btn-outline {
 
 .select2-container--default.select2-container--open .select2-dropdown {
   border-radius: 6px;
-  border: solid 1px #8C5FB4;
+  border: solid 1px #ede78a;
   background: #101010;
   overflow: hidden;
 }
@@ -802,7 +802,7 @@ form .btn-outline {
 }
 
 .select2-container--default .select2-results__options .select2-results__option.select2-results__option--highlighted {
-  background: #8C5FB4;
+  background: #ede78a;
   color: #39351c;
 }
 
@@ -854,7 +854,7 @@ form .btn-outline {
   border-radius: 6px;
   background: transparent;
   border: solid 1px #9FA0A0;
-  color: #8C5FB4;
+  color: #ede78a;
   cursor: pointer;
   z-index: 10;
   -webkit-transition: 0.3s;
@@ -879,7 +879,7 @@ form .btn-outline {
 
 .with-icon input:focus {
   outline: 0;
-  border-color: #8C5FB4;
+  border-color: #ede78a;
 }
 
 .with-icon .field-icon {
@@ -890,7 +890,7 @@ form .btn-outline {
   height: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-image: url("../img/icon/icon-calendar.svg");
+  background-image: url("../img/icon/icon-calendar-yellow.svg");
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
@@ -921,7 +921,7 @@ form .btn-outline {
   left: inherit !important;
   width: 378px;
   max-width: 100%;
-  border: solid 1px #8C5FB4;
+  border: solid 1px #ede78a;
   border-radius: 6px;
   background-color: #101010;
   padding: 8px;
@@ -959,7 +959,7 @@ form .btn-outline {
   font-size: 0;
   width: 20px;
   height: 20px;
-  background: url("../img/icon/icon-arrow.svg") no-repeat;
+  background: url("../img/icon/icon-arrow-yellow.svg") no-repeat;
   background-size: cover;
   border-radius: 50%;
   background-color: #101010;
@@ -988,7 +988,7 @@ form .btn-outline {
 }
 
 .calender-wrapper #ui-datepicker-div .ui-datepicker-calendar th span {
-  color: #8C5FB4;
+  color: #ede78a;
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 1.5;
@@ -1277,7 +1277,7 @@ fieldset.step-2 .filled-data td:first-child {
   text-align: right;
   padding-right: 48px;
   min-width: 120px;
-  color: #8C5FB4;
+  color: #ede78a;
   font-weight: bold;
 }
 
@@ -1426,7 +1426,7 @@ main.booking fieldset.step-4 .form-group textarea {
   padding: 12px 17px;
   font-size: 16px;
   letter-spacing: 1.6px;
-  color: #8C5FB4;
+  color: #ede78a;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1465,8 +1465,8 @@ main.booking fieldset.step-4 .form-group input:-webkit-autofill,
 main.booking fieldset.step-4 .form-group textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 100px #101010 inset;
   background-color: transparent;
-  color: #8C5FB4;
-  -webkit-text-fill-color: #8C5FB4;
+  color: #ede78a;
+  -webkit-text-fill-color: #ede78a;
 }
 
 fieldset.step-3 .form-group input:focus, fieldset.step-3 .form-group input:-webkit-autofill:focus,
@@ -1476,7 +1476,7 @@ main.booking fieldset.step-4 .form-group input:focus,
 main.booking fieldset.step-4 .form-group input:-webkit-autofill:focus,
 main.booking fieldset.step-4 .form-group textarea:focu,
 main.booking fieldset.step-4 .form-group textarea:-webkit-autofill:focus {
-  border-color: #8C5FB4;
+  border-color: #ede78a;
   box-shadow: none;
   -webkit-box-shadow: 0 0 0 100px #101010 inset;
   outline: 0;
@@ -1588,7 +1588,7 @@ main.booking fieldset.step-5 .filled-data td:first-child {
   text-align: right;
   padding-right: 48px;
   min-width: 120px;
-  color: #8C5FB4;
+  color: #ede78a;
   font-weight: bold;
 }
 
@@ -1604,7 +1604,7 @@ fieldset .coupon-code input {
   padding: 12px 17px;
   font-size: 16px;
   letter-spacing: 1.6px;
-  color: #8C5FB4;
+  color: #ede78a;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   line-height: normal;
@@ -1627,7 +1627,7 @@ fieldset .coupon-code input::placeholder {
 }
 
 fieldset .coupon-code input:focus {
-  border-color: #8C5FB4;
+  border-color: #ede78a;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: 0;
@@ -1644,7 +1644,7 @@ fieldset .coupon-code .submit-coupon {
   font-size: 16px;
   line-height: 2.25;
   letter-spacing: 1.6px;
-  color: #8C5FB4;
+  color: #ede78a;
 }
 
 fieldset .coupon-code .submit-coupon:first-child {
@@ -1682,7 +1682,7 @@ fieldset .prefix-dash li::before {
 
 fieldset .prefix-step .prefix {
   padding-right: 48px;
-  color: #8C5FB4;
+  color: #ede78a;
 }
 
 fieldset.step-3 .form-group:not(.select-food),
@@ -1830,7 +1830,7 @@ main.booking fieldset.step-4 .form-group:not(.select-food) p {
 }
 
 #personalCapital .modal-header {
-  background-color: #8C5FB4;
+  background-color: #ede78a;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1897,7 +1897,7 @@ main.booking fieldset.step-4 .form-group:not(.select-food) p {
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.8px;
-  background-color: #8C5FB4;
+  background-color: #ede78a;
   color: #EFEFEF;
   opacity: 1;
   text-shadow: none;

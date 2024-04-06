@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=230730"/>
-    <link rel="stylesheet" href="css/form.css?date=230828"/>
+    <link rel="stylesheet" href="css/style.css?v=240405"/>
+    <link rel="stylesheet" href="css/form.css?date=240405"/>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -42,6 +42,10 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NKG6X5Z');</script>
     <!-- End Google Tag Manager -->
+
+    <style>
+        .btn-outline { color: #ede78a; border-color: #ede78a; }
+    </style>
 </head>
 
 <body class="loading">
@@ -102,7 +106,7 @@
                 <h3 class="progress-title">
                     預約體驗
                 </h3>
-                <h4 class="progress-sub">Reservation</h4>
+                <h4 class="progress-sub" style="color: #ede78a;">Reservation</h4>
                 <!-- progressbar -->
                 <div class="bar-wrapper hide-steps">
                     <ul id="progressbar">
@@ -181,10 +185,8 @@
                             <li>票價已含10%服務費</li>
                             <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li>
                             <li>若日期無法選擇，代表該場次已滿，或是當日不開放</li>
-                            <li>七號菜單與 Zenfone 10 跨界合作，體驗再升級。</li>
-                            <li>七號菜單將於 4月第一週結束，請把握機會預約。</li>
-                            <li>八號菜單於 2024年 4月18日 - 2024年7月31日 與 格蘭菲迪 提供全新菜單體驗。</li>
-                            <li style="color: #8C5FB4;">未滿18歲不得飲酒，禁止酒駕。</li>
+                            <li>8號菜單於 04 / 18 -  07 /31 與 格蘭菲迪 Glenfiddich  跨界合作期間限定體驗。</li>
+                            <li style="color: #ede78a;">未滿18歲不得飲酒，禁止酒駕。</li>
                         </ul>
                         <br/><br/>
 
@@ -368,6 +370,15 @@
                                         </select>
                                         <label class="unit">位 Guests</label>
                                     </div>
+                                    <div class="form-col amount">
+                                        <label class="form-label" for="meat_food_noAllAlcohol">
+                                            酒精過敏
+                                            <span class="en">Alcohol Allergy</span>
+                                        </label>
+                                        <select id="meat_food_noAllAlcohol" name="meat_food_noAllAlcohol" data-placeholder="選擇人數" required disabled>
+                                        </select>
+                                        <label class="unit">位 Guests</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -404,6 +415,15 @@
                                         </select>
                                         <label class="unit">位 Guests</label>
                                     </div>
+                                    <div class="form-col amount">
+                                        <label class="form-label" for="vegetarian_food_noAlcohol">
+                                            酒精過敏
+                                            <span class="en">No Alcohol</span>
+                                        </label>
+                                        <select id="vegetarian_food_noAlcohol" name="vegetarian_food_noAlcohol" data-placeholder="選擇人數" required disabled>
+                                        </select>
+                                        <label class="unit">位 Guests</label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -416,7 +436,7 @@
 
                         <div class="field-intro">
                             <br><br>
-                            <p style="color: #8C5FB4; line-height: 1.7;">4/18為格蘭菲迪 跨界合作 全新菜單，未滿18歲不得預約體驗，請理性飲酒。</p>
+                            <p style="color: #ede78a; line-height: 1.7;">4/18為格蘭菲迪 跨界合作 全新菜單，未滿18歲不得預約體驗，請理性飲酒。</p>
                         </div>
                         
                         <div class="form-group radio__button">
@@ -541,7 +561,7 @@
                             <li>即將跳轉離開網站，進入結帳流程，完成付款。</li>
                             <li>完成付款後，Email信箱中會收到訂位確認信，請前往確認。</li>
                             <li>八號全新菜單與 格蘭菲迪 跨界合作。</li>
-                            <li>未滿18歲<span style="color: #8C5FB4;">不得參加、不能飲酒。</span></li>
+                            <li>未滿18歲<span style="color: #ede78a;">不得參加、不能飲酒。</span></li>
                         </ul>
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
@@ -687,12 +707,17 @@
                 </div>
                 <div class="modal-body-container">
                     <div class="modal-body">
-                        <p>付款之前請確保所有資料、飲食禁忌填寫完整及正確，一旦送出將無法修改。</p>
+                        <p>
+                            付款之前請確保所有資料、<br>
+                            飲食禁忌填寫完整及正確，<br>
+                            一旦送出將無法修改。
+                        </p>
                         <p>&nbsp;</p>
                         <p>
                             再次提醒：<br>
-                            不建議<span style="color: #ff4242;">乳糖不耐症嚴重患者</span> 及<br>
-                            <span style="color: #ff4242;">未滿18歲</span>不得參加體驗。
+                            若您有嚴重的乳糖不耐症，請斟酌體驗。<br>
+                            素食套餐僅提供<span style="color: #ff4242;">五辛蛋奶素。</span><br>
+                            未滿18歲禁止飲酒，且不得參與體驗。
                         </p>
                     </div>
                 </div>
@@ -712,12 +737,17 @@
                 </a>
             </li>
             <li class="social-link">
-                <a href="https://www.instagram.com/surpriselabtw/" target="_blank">
+                <a href="https://www.instagram.com/dininginthedark_tw/" target="_blank">
                     <i class="icon-ig"></i>
                 </a>
             </li>
         </ul>
     </aside>
+
+    <div id="notice">
+        <img class="d-none d-md-block" src="img/general/notice.jpg" alt="無光晚餐 Dining In The Dark">
+        <img class="d-block d-md-none" src="img/general/notice_m.jpg" alt="無光晚餐 Dining In The Dark">
+    </div>
 
     <!-- Bootstrap -->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>
