@@ -214,7 +214,7 @@ $(document).ready(function () {
         }
 
         $('#homeDatepicker a').on('click',function(){
-            window.location.href = 'https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar'
+            window.location.href = '/dininginthedark3/booking_pay.html?utm_source=website&utm_medium=calendar'
         })
     }
 

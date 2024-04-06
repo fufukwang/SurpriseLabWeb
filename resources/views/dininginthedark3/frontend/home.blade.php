@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240405"/>
+    <link rel="stylesheet" href="css/style.css?date=240406"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -78,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="smoothScroll intro" href="#Intro">Intro</a>
             </li>
             <li>
-                <a class="smoothScroll" href="https://www.surpriselab.com.tw/dininginthedark3/booking_pay.html">Reservation</a>
+                <a class="smoothScroll" href="/dininginthedark3/booking_pay.html">Reservation</a>
             </li>
             <li>
                 <a class="smoothScroll about" href="#About">About</a>
@@ -1388,7 +1388,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
     </aside>
 
-    <div id="enter-dialog">
+    <!-- <div id="enter-dialog">
         <div class="overlay"></div>
         <div class="content-flex">
             <div class="content">
@@ -1400,6 +1400,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         
+        <div class="dialog-close"></div>
+    </div> -->
+
+    <div id="enter-dialog">
+        <div class="overlay"></div>
+        <div class="dialog-inner">
+            <div class="dialog-content">
+                <div class="img">
+                    <img class="d-none d-md-block" src="https://www.surpriselab.com.tw/dininginthedark3/img/home/enter-dialog.jpg" alt="無光晚餐 Dining In The Dark" />
+                    <img class="d-block d-md-none" src="https://www.surpriselab.com.tw/dininginthedark3/img/home/enter-dialog-m.jpg" alt="無光晚餐 Dining In The Dark" />
+                </div>
+                <div class="txt">不要再顯示</div>
+            </div>
+        </div>
         <div class="dialog-close"></div>
     </div>
 
@@ -1437,9 +1451,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?date=240405"></script>
+    <script src="js/index.js?date=240406"></script>
     <script src="js/main.js?v=0.13"></script>
-    <script src="js/board-modal.js?date=240405"></script>
+    <script src="js/board-modal.js?date=240406"></script>
     <script src="js/index-slideshow.js?date=230919"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
