@@ -88,6 +88,9 @@ class HelperService {
                     case 'order':
                         $m->subject('【 巴黎舞會 】訂位確認信件');
                         break;
+                    case 'D2':
+                        $m->subject('【巴黎舞會】兩天前導購信件 ');
+                        break;
                     case 'D7':
                         $m->subject('《巴黎舞會 Le Bal de Paris》即將展開，行前你需要知道的九件事');
                         break;
