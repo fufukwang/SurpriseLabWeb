@@ -138,7 +138,7 @@ class TerminalTask extends Command
                             $needSend = true;
                             $teamNum = 0;
                             while($needSend){
-                                if($toData['email'] != ''){ SLS::SendEmailTerTPByTemplateName($toData); }
+                                if($toData['email'] != ''){ SLS::SendEmailterTPByTemplateName($toData); }
                                 if($toData['phone'] != ''){ SLS::SendSmsTerTPByTemplateName($toData); }
                                 if($teamMail && count($teamMail)>$teamNum){
                                     $toData['name'] = $teamMail[$teamNum]->name;
@@ -185,7 +185,7 @@ class TerminalTask extends Command
                             $needSend = true;
                             $teamNum = 0;
                             while($needSend){
-                                if($toData['email'] != ''){ SLS::SendEmailTerTPByTemplateName($toData); }
+                                if($toData['email'] != ''){ SLS::SendEmailterTPByTemplateName($toData); }
                                 if($toData['phone'] != ''){ SLS::SendSmsTerTPByTemplateName($toData); }
                                 if($teamMail && count($teamMail)>$teamNum){
                                     $toData['name'] = $teamMail[$teamNum]->name;
