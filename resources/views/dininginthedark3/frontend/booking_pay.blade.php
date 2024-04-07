@@ -45,7 +45,7 @@
 
     <style>
         .btn-outline { color: #ede78a; border-color: #ede78a; }
-        .btn-outline:hover { background-color: #ede78a; border-color: #ede78a; }
+        .btn-outline:hover { background-color: #ede78a; border-color: #ede78a; color: #39351c; }
     </style>
 </head>
 
