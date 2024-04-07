@@ -45,6 +45,7 @@
 
     <style>
         .btn-outline { color: #ede78a; border-color: #ede78a; }
+        .btn-outline:hover { background-color: #ede78a; border-color: #ede78a; }
     </style>
 </head>
 
@@ -692,7 +693,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="modal-footer close" data-dismiss="modal" aria-label="Close">
+                <div class="modal-footer close" data-dismiss="modal" aria-label="Close" style="color: #000;">
                     閱讀完畢
                 </div>
             </div>
