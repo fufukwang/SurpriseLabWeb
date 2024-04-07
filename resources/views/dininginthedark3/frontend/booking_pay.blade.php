@@ -703,7 +703,7 @@
     <div class="modal" id="bookingFormModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content text-left">
-                <div class="modal-header">
+                <div class="modal-header" style="background: #ede78a;">
                     <h5 class="modal-title">注意</h5>
                 </div>
                 <div class="modal-body-container">
@@ -717,12 +717,12 @@
                         <p>
                             再次提醒：<br>
                             若您有嚴重的乳糖不耐症，請斟酌體驗。<br>
-                            素食套餐僅提供<span style="color: #ff4242;">五辛蛋奶素。</span><br>
+                            素食套餐僅提供<span style="color: #ff4242;">五辛蛋奶素</span>。<br>
                             未滿18歲禁止飲酒，且不得參與體驗。
                         </p>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer" style="background: #ede78a; color: #000;">
                     我同意，前往付款
                 </div>
             </div>
