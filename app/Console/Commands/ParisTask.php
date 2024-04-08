@@ -160,7 +160,7 @@ class ParisTask extends Command
 
 
             // 2 天
-            $pr02day = pro::select('id')->where('open',1)
+            $pr02day = pro::select('id')
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=2")->get();
             foreach($pr02day as $pro){
                 // 找出正常的訂單
