@@ -238,7 +238,7 @@ class HelperService {
                 config(['mail.username' => env('MAIL_USERNAME')]);
                 config(['mail.password' => env('MAIL_PASSWORD')]);
             }
-            Mail::send('dininginthedark3.email.'.$data['template'],$data,function($m) use ($data){
+            Mail::queue('dininginthedark3.email.'.$data['template'],$data,function($m) use ($data){
                 $m->from('dininginthedark@surpriselab.com.tw', '無光晚餐 Dining In The Dark');
                 $m->sender('dininginthedark@surpriselab.com.tw', '無光晚餐 Dining In The Dark');
                 $m->replyTo('dininginthedark@surpriselab.com.tw', '無光晚餐 Dining In The Dark');
