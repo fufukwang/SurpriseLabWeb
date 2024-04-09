@@ -121,10 +121,10 @@ The show will start at {{$time}}, please arrive at {{$inTime}}.<br>
 <strong>葷食 </strong>Regular Menu<strong> {{ $meat_eat }} 人</strong><br>
 <strong>不吃牛肉 </strong>No beef<strong> {{ $no_beef }} 人 / 不吃豬肉 </strong>No pork<strong> {{ $no_pork }} 人 /<br>
 不吃堅果 </strong>No nut<strong> {{ $no_nut_m }} 人 /不吃帶殼海鮮 </strong>No shell seafood<strong> {{ $no_shell }} 人</strong><br>
-<strong> 不吃所有海鮮 </strong>Seafood allergy<strong> {{ $no_fish }} 人</strong><br>
+<strong> 不吃所有海鮮 </strong>Seafood allergy<strong> {{ $no_fish }} 人 /酒精過敏  </strong>No Alcohol<strong> {{ $no_alcohol }} 人</strong><br>
 <br>
-<strong>蛋奶五辛素 </strong>Five pungent spices &amp; Lacto-vegetarian <strong>{{ $vegetarian }} 人<br>
-不吃堅果 </strong>no nut <strong>{{ $no_nut_v }} 人</strong></span></div>
+<strong>蛋奶五辛素 </strong>Five pungent spices &amp; Lacto-vegetarian <strong>{{ $vegetarian }} 人 <br>
+不吃堅果 </strong>no nut <strong>{{ $no_nut_v }} 人 /酒精過敏  </strong>No Alcohol<strong> {{ $no_alcohol_v }} 人</strong></span></div>
 
 <div style="text-align: left;"><br>
 <a href="https://drive.google.com/file/d/14nU5AjU0Xpj_vbpNiyMDyIG_TvUcup0b/view?usp=drive_link" target="_blank"><span style="font-size:12px"><u><strong><span style="background-color:#D3D3D3">For English Version please click HERE.</span></strong></u></span></a><br>

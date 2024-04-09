@@ -111,10 +111,10 @@ switch($time){
 <span style="color:#A9A9A9">葷食&nbsp;Regular Menu {{ $meat_eat }} 位<br>
 （ 不吃牛肉 No beef {{ $no_beef }} 位，不吃豬肉 No pork {{ $no_pork }} 位 ）<br>
 （ 不吃堅果 No nuts {{ $no_nut_m }}&nbsp;位，不吃帶殼海鮮 No shell seafood&nbsp;{{ $no_shell }} 位 <br>
- 不吃所有海鮮 Seafood allergy {{ $no_fish }}&nbsp;位 ）<br>
+ 不吃所有海鮮 Seafood allergy {{ $no_fish }}&nbsp;位<br> 酒精過敏 No Alcohol {{ $no_alcohol }}&nbsp;位）<br>
 <br>
 奶蛋五辛素&nbsp;Five pungent spices &amp; Lacto-vegetarian {{ $vegetarian }} 位<br>
-（ 不吃堅果&nbsp;No nuts {{ $no_nut_v }} 位 ）</span><br>
+（ 不吃堅果&nbsp;No nuts {{ $no_nut_v }} 位 ， 酒精過敏 No Alcohol {{ $no_alcohol_v }}&nbsp;位）</span><br>
 <br>
 地點 Address<strong>：</strong><a href="https://goo.gl/maps/J8mMoQFdkL1mBPqs9" target="_blank">台北市大安區仁愛路四段345巷4弄3號</a></span><br>
 <br>

@@ -17,6 +17,8 @@ class order extends Model
         'no_shell',
         'no_fish',
         'no_nut_v',
+        'no_alcohol',
+        'no_alcohol_v',
     ];
     protected $guarded = [];
     protected $primaryKey = 'id';
