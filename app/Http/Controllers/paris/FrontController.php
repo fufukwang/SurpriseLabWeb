@@ -53,10 +53,10 @@ class FrontController extends WebController
                         $hour = (int)Carbon::now()->format('H');
                         if($hour>=15){
                             // 當天 15 點之後停售當天 22 點前的場次
-                            $pro = $pro->orWhereRaw("(day=? AND rang_start>=?)",[Carbon::today(),'22:00:00']);
+                            $pro = $pro->orWhereRaw("(day=? AND rang_start>=?) AND ((sites-{$this->oquery})>=?)",[Carbon::today(),'22:00:00',$pople]);
                         } elseif($hour>=9){
                             // 當天 9 點之後停售當天 17 點前的場次
-                            $pro = $pro->orWhereRaw("(day=? AND rang_start>=?)",[Carbon::today(),'17:00:00']);
+                            $pro = $pro->orWhereRaw("(day=? AND rang_start>=?) AND ((sites-{$this->oquery})>=?)",[Carbon::today(),'17:00:00',$pople]);
                         } else {
                             $pro = $pro->where('day',Carbon::today());
                         }
@@ -81,7 +81,7 @@ class FrontController extends WebController
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash,p1,p2,p4"))->where('day',$day)->get();
+                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash,p1,p2,p4"))->where('day',$day);
                         if($day == Carbon::today()->format('Y-m-d')){
                             $hour = (int)Carbon::now()->format('H');
                             if($hour>=15){
@@ -92,7 +92,7 @@ class FrontController extends WebController
                                 $pro = $pro->where("rang_start",">=",'17:00:00');
                             }
                         }
-                        return $pro->toJson();
+                        return $pro->get()->toJson();
                     break;
 /*
                     case 'CheckCoupon':
