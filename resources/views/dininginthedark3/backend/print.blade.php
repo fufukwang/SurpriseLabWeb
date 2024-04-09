@@ -326,6 +326,8 @@
                                             no_fish 葷食/所有海鮮過敏/不吃  <br />
                                             vegetarian 素食  <br />
                                             no_nut_v 素食/不吃堅果  <br />
+                                            no_alcohol 葷食/酒精過敏  <br />
+                                            no_alcohol_v 素食/酒精過敏  <br />
                                         </p>
                                     </div>
                                 </div>

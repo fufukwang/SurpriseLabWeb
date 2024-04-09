@@ -138,6 +138,10 @@
                                                 <div class="col-sm-2">
                                                     <input type="number" name="no_pork" id="no_pork" class="form-control" value="{{ $order->no_pork or '' }}">
                                                 </div>
+                                                <label class="control-label col-sm-4">素食/酒精過敏</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_alcohol_v" id="no_alcohol_v" class="form-control" value="{{ $order->no_alcohol_v or '' }}">
+                                                </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">葷食/不吃堅果</label>
@@ -157,6 +161,13 @@
                                                 <div class="col-sm-2">
                                                     <input type="number" name="no_fish" id="no_fish" class="form-control" value="{{ $order->no_fish or '' }}">
                                                 </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">葷食/酒精過敏</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_alcohol" id="no_alcohol" class="form-control" value="{{ $order->no_alcohol or '' }}">
+                                                </div>
+                                                
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">備註</label>
