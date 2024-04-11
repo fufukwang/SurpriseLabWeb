@@ -160,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="section-header">
                                 <div class="section-title">
                                     <h3>體驗內容</h3>
-                                    <h4 style="color: #ede78a;">8號菜單：Cheers!</h4>
+                                    <h4 style="color: #f7f7c6;">8號菜單：Cheers!</h4>
                                 </div>
                                 <!-- <p class="section-desc">
                                     <b>6 號菜單 ON AIR</b>
@@ -190,51 +190,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
-                                                                        <source srcset="img/home/about/about-intro-1.webp?240405" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.jpg?240405" data-src-retina="img/home/about/about-intro-1.jpg?231214" alt="無光晚餐體驗內容">
+                                                                        <source srcset="img/home/about/about-intro-1.webp?240411" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.jpg?240411" data-src-retina="img/home/about/about-intro-1.jpg?240411" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
                                                             </div>
 
                                                             <!-- 2 -->
-                                                            <div class="item">
+                                                            <!-- <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
                                                                         <source srcset="img/home/about/about-intro-2.webp?231214" type="image/webp" />
                                                                         <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-2.jpg?231214" data-src-retina="img/home/about/about-intro-2.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- 3 -->
-                                                            <div class="item">
+                                                            <!-- <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
                                                                         <source srcset="img/home/about/about-intro-3.webp?231214" type="image/webp" />
                                                                         <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-3.jpg?231214" data-src-retina="img/home/about/about-intro-3.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- 4 -->
-                                                            <div class="item">
+                                                            <!-- <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
                                                                         <source srcset="img/home/about/about-intro-4.webp?231214" type="image/webp" />
                                                                         <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-4.jpg?231214" data-src-retina="img/home/about/about-intro-4.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- 5 -->
-                                                            <div class="item">
+                                                            <!-- <div class="item">
                                                                 <figure class="slideshow-card">
                                                                     <picture>
                                                                         <source srcset="img/home/about/about-intro-5.webp?231214" type="image/webp" />
                                                                         <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-5.jpg?231214" data-src-retina="img/home/about/about-intro-5.jpg?231214" alt="無光晚餐體驗內容">
                                                                     </picture>
                                                                 </figure>
-                                                            </div>
+                                                            </div> -->
 
                                                         </div>
                                                     </div>
@@ -961,8 +961,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <figure class="slideshow-card">
                                                                 <a target="_blank" href="https://everylittled.com/article/191224">
                                                                     <picture>
-                                                                        <source srcset="img/home/recommend/news/4.webp" type="image/webp">
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/4.jpg" data-src-retina="img/home/recommend/news/3.jpg" alt="Shopping Design">
+                                                                        <source srcset="img/home/recommend/news/4.webp?240411" type="image/webp">
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/4.jpg?240411" data-src-retina="img/home/recommend/news/4.jpg?240411" alt="《every little d》全新八號菜單，期間限定跨界合作">
                                                                     </picture>
                                                                 </a>
                                                             </figure>
@@ -980,8 +980,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <figure class="slideshow-card">
                                                                 <a target="_blank" href="https://fashion.ettoday.net/news/2692225">
                                                                     <picture>
-                                                                        <source srcset="img/home/recommend/news/5.webp" type="image/webp">
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/5.jpg" data-src-retina="img/home/recommend/news/3.jpg" alt="Shopping Design">
+                                                                        <source srcset="img/home/recommend/news/5.webp?240411" type="image/webp">
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/5.jpg?240411" data-src-retina="img/home/recommend/news/5.jpg?240411" alt="《ETtoday》全新八號菜單，黑暗品酩更有驚喜">
                                                                     </picture>
                                                                 </a>
                                                             </figure>
