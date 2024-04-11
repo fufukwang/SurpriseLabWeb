@@ -33,7 +33,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=240405"/>
-    <link rel="stylesheet" href="css/form.css?date=240405"/>
+    <link rel="stylesheet" href="css/form.css?date=240411"/>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -44,8 +44,8 @@
     <!-- End Google Tag Manager -->
 
     <style>
-        .btn-outline { color: #ede78a; border-color: #ede78a; }
-        .btn-outline:hover { background-color: #ede78a; border-color: #ede78a; color: #39351c; }
+        .btn-outline { color: #f7f7c6; border-color: #f7f7c6; }
+        .btn-outline:hover { background-color: #f7f7c6; border-color: #f7f7c6; color: #39351c; }
     </style>
 </head>
 
@@ -107,7 +107,7 @@
                 <h3 class="progress-title">
                     預約體驗
                 </h3>
-                <h4 class="progress-sub" style="color: #ede78a;">Reservation</h4>
+                <h4 class="progress-sub" style="color: #f7f7c6;">Reservation</h4>
                 <!-- progressbar -->
                 <div class="bar-wrapper hide-steps">
                     <ul id="progressbar">
@@ -187,7 +187,7 @@
                             <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li>
                             <li>若日期無法選擇，代表該場次已滿，或是當日不開放</li>
                             <li>8號菜單於 04 / 18 -  07 /31 與 格蘭菲迪 Glenfiddich  跨界合作期間限定體驗。</li>
-                            <li style="color: #ede78a;">未滿18歲不得飲酒，禁止酒駕。</li>
+                            <li style="color: #f7f7c6;">未滿18歲不得飲酒，禁止酒駕。</li>
                         </ul>
                         <br/><br/>
 
@@ -345,6 +345,15 @@
                                         <label class="unit">位 Guests</label>
                                     </div>
                                     <div class="form-col amount">
+                                        <label class="form-label" for="meat_food_noLamb">
+                                            不吃羊肉
+                                            <span class="en">No Lamb</span>
+                                        </label>
+                                        <select id="meat_food_noLamb" name="meat_food_noLamb" data-placeholder="選擇人數" required disabled>
+                                        </select>
+                                        <label class="unit">位 Guests</label>
+                                    </div>
+                                    <div class="form-col amount">
                                         <label class="form-label" for="meat_food_noNut">
                                             堅果忌口/過敏
                                             <span class="en">No Nut</span>
@@ -437,7 +446,7 @@
 
                         <div class="field-intro">
                             <br><br>
-                            <p style="color: #ede78a; line-height: 1.7;">4/18為格蘭菲迪 跨界合作 全新菜單，未滿18歲不得預約體驗，請理性飲酒。</p>
+                            <p style="color: #f7f7c6; line-height: 1.7;">4/18為格蘭菲迪 跨界合作 全新菜單，未滿18歲不得預約體驗，請理性飲酒。</p>
                         </div>
                         
                         <div class="form-group radio__button">
@@ -524,6 +533,7 @@
                                     葷食 <span id="filled_pv"></span> 人：
                                     <p>牛肉忌口/過敏 <span class="filled" data-filled="meat_food_noBeef">0</span> 人</p>
                                     <p>豬肉忌口/過敏 <span class="filled" data-filled="meat_food_noPork">0</span> 人</p>
+                                    <p>不吃羊肉 <span class="filled" data-filled="meat_food_noLamb">0</span> 人</p>
                                     <p>堅果忌口/過敏 <span class="filled" data-filled="meat_food_noNut">0</span> 人</p>
                                     <p>甲殼類忌口/過敏 <span class="filled" data-filled="meat_food_noSeafood">0</span> 人</p>
                                     <p>所有海鮮忌口/過敏 <span class="filled" data-filled="meat_food_noAllSeafood">0</span> 人</p>
@@ -562,7 +572,7 @@
                             <li>即將跳轉離開網站，進入結帳流程，完成付款。</li>
                             <li>完成付款後，Email信箱中會收到訂位確認信，請前往確認。</li>
                             <li>八號全新菜單與 格蘭菲迪 跨界合作。</li>
-                            <li>未滿18歲<span style="color: #ede78a;">不得參加、不能飲酒。</span></li>
+                            <li>未滿18歲<span style="color: #f7f7c6;">不得參加、不能飲酒。</span></li>
                         </ul>
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
@@ -703,7 +713,7 @@
     <div class="modal" id="bookingFormModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content text-left">
-                <div class="modal-header" style="background: #ede78a;">
+                <div class="modal-header" style="background: #f7f7c6;">
                     <h5 class="modal-title">注意</h5>
                 </div>
                 <div class="modal-body-container">
@@ -722,7 +732,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="modal-footer" style="background: #ede78a; color: #000;">
+                <div class="modal-footer" style="background: #f7f7c6; color: #000;">
                     我同意，前往付款
                 </div>
             </div>
