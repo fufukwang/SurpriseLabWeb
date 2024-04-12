@@ -50,6 +50,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('terminal:task 25')->hourly();
 
 
-        $schedule->command('paris:task 18')->dailyAt('18:00'); // 落日 行前信寄送
+        $schedule->command('paris:task 18')->dailyAt('18:00'); // 巴黎舞會 行前信寄送
+        $schedule->command('paris:task 25')->hourly(); // 巴黎舞會 自動關閉
     }
 }
