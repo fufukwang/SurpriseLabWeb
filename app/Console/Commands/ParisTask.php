@@ -61,6 +61,14 @@ class ParisTask extends Command
     // 每小時執行
     private function checkEveryHour(){
         try {
+            $hour = (int)Carbon::now()->format('H');
+
+            if($hour==15){
+                pro::where('open',1)->where('day',Carbon::today())->where('rang_start','<=','22:00:00')->update(['open'=>0]);
+            } elseif($hour==9){
+                pro::where('open',1)->where('day',Carbon::today())->where('rang_start','<=','17:00:00')->update(['open'=>0]);
+            }
+
             /*
             $undone = order::select('id','email','name')->where('pay_status','未完成')
                 ->whereRaw("floor(UNIX_TIMESTAMP()/3600)-floor(UNIX_TIMESTAMP(created_at)/3600)=12")->get();
