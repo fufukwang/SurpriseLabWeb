@@ -310,6 +310,7 @@ class FrontController extends Controller
                 'no_nut_v'   => $request->vegetarian_food_noNut ?? 0,
                 'no_alcohol' => $request->meat_food_noAllAlcohol ?? 0,
                 'no_alcohol_v'=> $request->vegetarian_food_noAlcohol ?? 0,
+                'no_lamb'=> $request->meat_food_noLamb ?? 0,
             ];
 
             $order = order::create($data);
@@ -397,6 +398,7 @@ class FrontController extends Controller
                     'no_nut_v' => $data['no_nut_v'],
                     'no_alcohol' => $data['no_alcohol'],
                     'no_alcohol_v' => $data['no_alcohol_v'],
+                    'no_lamb' => $data['no_lamb'],
                     'need_english' => 0, // 前端沒數字
                     'eday'   => Carbon::parse($act->day)->format('d / m / Y'),
                     'template' => 'order',

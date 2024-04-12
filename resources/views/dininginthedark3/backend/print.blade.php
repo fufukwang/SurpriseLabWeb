@@ -328,6 +328,7 @@
                                             no_nut_v 素食/不吃堅果  <br />
                                             no_alcohol 葷食/酒精過敏  <br />
                                             no_alcohol_v 素食/酒精過敏  <br />
+                                            no_lamb 葷食/不吃羊肉  <br />
                                         </p>
                                     </div>
                                 </div>

@@ -144,6 +144,13 @@
                                                 </div>
                                                 
                                             </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">葷食/不吃羊肉</label>
+                                                <div class="col-sm-2">
+                                                    <input type="number" name="no_lamb" id="no_lamb" class="form-control" value="0">
+                                                </div>
+                                                
+                                            </div>
                                             
                                             <div class="form-group">
                                                 <label class="control-label col-sm-4">備註</label>
