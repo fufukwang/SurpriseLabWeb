@@ -19,6 +19,7 @@ class order extends Model
         'no_nut_v',
         'no_alcohol',
         'no_alcohol_v',
+        'no_lamb',
     ];
     protected $guarded = [];
     protected $primaryKey = 'id';

@@ -61,7 +61,7 @@ class OrderController extends Controller
         $order = collect();
         if(is_numeric($id) && $id>0){
             if(order::where('id',$id)->count()>0){
-                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_fish','no_nut_v','no_alcohol','no_alcohol_v','refund','cut','handling','need_english','tax_id','tax_name')->find($id);
+                $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id')->select('dark3order.id','day','day_parts','rang_end','rang_start','name','tel','email','sn','meat','notes','pay_type','pay_status','manage','result','pople','vegetarian','sites','edit_type','dark3order.money','cash','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_fish','no_nut_v','no_alcohol','no_alcohol_v','no_lamb','refund','cut','handling','need_english','tax_id','tax_name')->find($id);
                 $cooperate = order::select('edit_type')->where('pay_type','合作販售')->groupBy('edit_type')->get();
             } else {
                 abort(404);
@@ -92,6 +92,7 @@ class OrderController extends Controller
             'no_nut_v'   => $request->no_nut_v ?? 0,
             'no_alcohol'   => $request->no_alcohol ?? 0,
             'no_alcohol_v'   => $request->no_alcohol_v ?? 0,
+            'no_lamb'   => $request->no_lamb ?? 0,
             'need_english' => $request->need_english ?? 0,
             'tax_id'     => $request->tax_id ?? '',
             'tax_name'   => $request->tax_name ?? '',
@@ -124,6 +125,7 @@ class OrderController extends Controller
                     'no_nut_v' => $request->no_nut_v ?? 0,
                     'no_alcohol'   => $request->no_alcohol ?? 0,
                     'no_alcohol_v'   => $request->no_alcohol_v ?? 0,
+                    'no_lamb'   => $request->no_lamb ?? 0,
                     'need_english' => $request->need_english ?? 0,
                     'template' => 'order',
                     'mday'     => $pro->day,
@@ -270,6 +272,7 @@ class OrderController extends Controller
                 'no_nut_v'   => $request->no_nut_v ?? 0,
                 'no_alcohol'   => $request->no_alcohol ?? 0,
                 'no_alcohol_v'   => $request->no_alcohol_v ?? 0,
+                'no_lamb'   => $request->no_lamb ?? 0,
                 'need_english' => $request->need_english ?? 0,
                 'tax_id'     => $request->tax_id ?? '',
                 'tax_name'   => $request->tax_name ?? '',
@@ -302,6 +305,7 @@ class OrderController extends Controller
                     'no_nut_v' => $request->no_nut_v ?? 0,
                     'no_alcohol'   => $request->no_alcohol ?? 0,
                     'no_alcohol_v'   => $request->no_alcohol_v ?? 0,
+                    'no_lamb'   => $request->no_lamb ?? 0,
                     'need_english' => $request->need_english ?? 0,
                     'template' => 'order',
                     'mday'     => $act->day,
@@ -454,6 +458,7 @@ class OrderController extends Controller
                             'no_nut_v'   => $row['no_nut_v'] ?? 0,
                             'no_alcohol' => $row['no_alcohol'] ?? 0,
                             'no_alcohol_v'=> $row['no_alcohol_v'] ?? 0,
+                            'no_lamb'=> $row['no_lamb'] ?? 0,
                         ];
                         $order = order::create($data);
                         $count++;
@@ -774,6 +779,7 @@ class OrderController extends Controller
             'no_nut_v' => $order->no_nut_v,
             'no_alcohol' => $order->no_alcohol,
             'no_alcohol_v' => $order->no_alcohol_v,
+            'no_lamb' => $order->no_lamb,
             'need_english' => $order->need_english ?? 0,
             'template' => 'order',
             'mday'     => $act->day,
@@ -786,7 +792,7 @@ class OrderController extends Controller
 
     private function orderQuery(Request $request,$isTable=false){
         $order = order::leftJoin('dark3pro', 'dark3pro.id', '=', 'dark3order.pro_id');
-        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_fish','no_nut_v','no_alcohol','no_alcohol_v','refund','handling','cut','tax_id','tax_name','need_english');
+        $order = $order->select('rang_start','rang_end','name','tel','meat','notes','dark3order.manage','dark3pro.money AS PM','dark3order.money AS OM','dark3order.created_at AS created_at','dark3order.pay_status','email','dark3order.sn','dark3order.id','day_parts','day','pay_type','pople','pro_id','is_overseas','vegetarian','edit_type','dis_money','dis_code','result','meat_eat','no_beef','no_pork','no_nut_m','no_shell','no_fish','no_nut_v','no_alcohol','no_alcohol_v','no_lamb','refund','handling','cut','tax_id','tax_name','need_english');
         if($isTable){
             $order = $order->whereIn('pay_status',['已付款','已付款(部分退款)']);
         }
