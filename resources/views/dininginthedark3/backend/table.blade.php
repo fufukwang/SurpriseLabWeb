@@ -122,7 +122,7 @@
 			<td>飲食禁忌</td>
 			<td colspan="6" style="padding: 0px;">
 				<table class="food_list">
-					<tr><td>葷食/不吃牛肉</td><td>葷食/不吃豬肉</td><td>葷食/不吃堅果</td><td>葷食/甲殼類過敏</td><td>葷食/所有海鮮過敏/不吃</td><td>素食/不吃堅果</td><td>葷食/酒精過敏</td><td>素食/酒精過敏</td><td>素食/不吃羊肉</td></tr>
+					<tr><td>葷食/不吃牛肉</td><td>葷食/不吃豬肉</td><td>葷食/不吃堅果</td><td>葷食/甲殼類過敏</td><td>葷食/所有海鮮過敏/不吃</td><td>素食/不吃堅果</td><td>葷食/酒精過敏</td><td>素食/酒精過敏</td><td>葷食/不吃羊肉</td></tr>
 					<tr><td>{{ $no_beef }} 人</td><td>{{ $no_pork }} 人</td><td>{{ $no_nut_m }} 人</td><td>{{ $no_shell }} 人</td><td>{{ $no_fish }} 人</td><td>{{ $no_nut_v }} 人</td><td>{{ $no_alcohol }} 人</td><td>{{ $no_alcohol_v }} 人</td><td>{{ $no_lamb }} 人</td></tr>
 				</table>
 
