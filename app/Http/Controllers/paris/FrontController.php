@@ -33,9 +33,9 @@ class FrontController extends WebController
             if($request->has('act')){
                 $pople = $request->pople;
                 if($request->has('ticketType')){
-                    if($request->ticketType == '雙人共舞票'){
+                    if($request->ticketType == '雙人共舞票' || $request->ticketType == 'Double Ticket'){
                         $pople = $pople * 2;
-                    } elseif($request->ticketType == '四人群舞票'){
+                    } elseif($request->ticketType == '四人群舞票' || $request->ticketType == 'Quadruple Ticket'){
                         $pople = $pople * 4;
                     }
                 }

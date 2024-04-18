@@ -34,9 +34,9 @@ class NewPayController extends WebController
             $count = $this->grenOrderSN();
             $people = $request->num;$ticket = '';
             switch($request->ticket){
-                case '單人獨舞票': $ticket = 'p1'; break;
-                case '雙人共舞票': $ticket = 'p2';$people = $people * 2; break;
-                case '四人群舞票': $ticket = 'p4';$people = $people * 4; break;
+                case '單人獨舞票':case 'Single Ticket': $ticket = 'p1'; break;
+                case '雙人共舞票':case 'Double Ticket': $ticket = 'p2';$people = $people * 2; break;
+                case '四人群舞票':case 'Quadruple Ticket': $ticket = 'p4';$people = $people * 4; break;
             }
             $act = pro::where('id',$request->booking_time)->where('open',1)->select(DB::raw("(sites-{$this->oquery}) AS Count"),'id','money','cash','day','rang_start','rang_end','day_parts','p1','p2','p4')->first();
             if($people>$act->Count){
