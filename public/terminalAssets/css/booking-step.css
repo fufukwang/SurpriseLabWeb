@@ -269,3 +269,49 @@ a {
   max-width: 900px;
   margin: 30px auto 20px auto;
 }
+
+.calender-ps {
+    max-width: 410px;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.calender-ps div {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    font-size: 16px;
+    
+}
+.calender-ps span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 8px 8px;
+}
+.ui-datepicker-calendar td{
+    position: relative;
+}
+
+.ui-datepicker-calendar td:after {
+  position: absolute;
+  content: "";
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -4px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.ui-datepicker-calendar td.sold-out-soon:after {
+  background: #A55AFF;
+}
+
+.ui-datepicker-calendar td.still-vacancy:after {
+  background: #E55D33;
+}
+
+.ui-datepicker-calendar td.sold-out:after {
+  background: #3737FC;
+}
