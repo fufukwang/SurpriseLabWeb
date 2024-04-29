@@ -160,6 +160,16 @@ class HelperService {
                     case 'D7':
                         $m->subject('【落日月台】旅程即將啟程，行前您需要知道的十件事');
                         break;
+                    case 'D5':
+                        $event_time = strtotime(date('Y-m-d').' '.$data['time'].':00');
+                        $base_time = strtotime(date('Y-m-d').' 17:00:00');
+                        // 時間判斷
+                        if($event_time<$base_time){
+                            $m->subject('【落日月台】在太陽落下之前，一場秘密冒險等著你。');
+                        } elseif($event_time>=$base_time){
+                            $m->subject('【落日月台】在月亮升起之後，一場秘密冒險等著你。');
+                        }
+                        break;
                     case 'D3':
                         $m->subject('【落日月台】啟程前，你會需要這個。');
                         break;

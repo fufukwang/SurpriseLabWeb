@@ -53,6 +53,10 @@ class WebController extends Controller
                     $toData['template'] = 'D7';
                     SLS::SendEmailterTPByTemplateName($toData);
                 }
+                if($day <= 5){
+                    $toData['template'] = 'D5';
+                    SLS::SendEmailterTPByTemplateName($toData);
+                }
                 if($day <= 3){
                     $toData['template'] = 'D3';
                     SLS::SendEmailterTPByTemplateName($toData);
