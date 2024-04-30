@@ -1415,3 +1415,10 @@ body {
   width: 80px;
   margin-top: 8px;
 }
+
+#main-header .mob-lang {
+  display: none;
+  @media screen and (min-width:992px) {
+    display: none !important;
+  }
+}

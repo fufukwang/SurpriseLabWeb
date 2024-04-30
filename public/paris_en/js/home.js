@@ -47,12 +47,12 @@ ScrollTrigger.create({
     onToggle: function(self) {
         if(self.isActive) {
             $('#main-header').addClass('fixed');
-            gsap.set('#main-header .mob-toggle, #fixed-booking', {display: 'block', opacity: 0});
-            gsap.to('.mob-toggle', {opacity: 1, duration: 0.3});
+            gsap.set('#main-header .mob-toggle, #main-header .mob-lang, #fixed-booking', {display: 'block', opacity: 0});
+            gsap.to('.mob-toggle, .mob-lang', {opacity: 1, duration: 0.3});
             gsap.to('#fixed-booking', {opacity: 0.95, duration: 0.3});
         } else {
             $('#main-header').removeClass('fixed');
-            gsap.set('#main-header .mob-toggle', {display: 'none'});
+            gsap.set('#main-header .mob-toggle, #main-header .mob-lang', {display: 'none'});
             gsap.to('#fixed-booking', {
                 opacity: 0, 
                 duration: 0.3,
