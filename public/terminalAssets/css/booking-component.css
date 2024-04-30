@@ -1934,3 +1934,57 @@ input[type="checkbox"]:checked::after {
 .ui-datepicker.ui-widget.ui-widget-content .ui-datepicker-calendar tbody tr:last-child td {
   padding-bottom: 0;
 }
+
+.ui-datepicker-calendar td {
+  position: relative;
+}
+
+.ui-datepicker-calendar td:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -4px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.ui-datepicker-calendar td.sold-out-soon:after {
+  background: #A55AFF;
+}
+
+.ui-datepicker-calendar td.still-vacancy:after {
+  background: #E55D33;
+}
+
+.ui-datepicker-calendar td.sold-out:after {
+  background: #3737FC;
+}
+
+.calender-ps {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  color: #efcabf;
+  padding-right: 15px;
+}
+.calender-ps div {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.calender-ps span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.calender-ps p {
+  font-size: 14px;
+  line-height: 1.88;
+  letter-spacing: 1.6px;
+  text-align: left;
+  margin: 0 5px;
+}
