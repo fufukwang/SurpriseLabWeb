@@ -683,8 +683,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                                 <li class="list-item"><p>收到劃位信件當天，進入劃位網站後，若沒有能前來的時段，劃位資格將保留至 3/31（日），逾期劃位序號將無法使用</p></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="list-item"><p>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 金流手續處理費）</p></li>
-                                                        <li class="list-item"><p>開立發票後若需新增/更改統編、抬頭或電子載具號碼，請先申請進行退款流程（規則同一般退款程序，且需酌收 10% 金流處理手續費），並重新訂購，再於訂購時填寫正確發票資訊</p></li>
+                                                        <li class="list-item"><p>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 手續處理費）</p></li>
+                                                        <li class="list-item"><p>若體驗當日因不可抗力之因素，需臨時異動訂單，請於體驗日後三日內來信客服，並出示相關含姓名日期之證明，申請特例改期。特例改期僅開放兩週內日期選擇。</p></li>
+                                                        <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整</p></li>
                                                     </ul>
                                                 </div>
                                             </div>

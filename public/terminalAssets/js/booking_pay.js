@@ -222,7 +222,7 @@ $(function() {
                     onSelect: function(date, inst) {
                         // blockUI
                         $.blockUI({message: null});
-
+    
                         // show datepart
                         $.get('/terminal/GetAjaxData',{
                             'act': 'getByday',
@@ -239,10 +239,10 @@ $(function() {
                             }
                             $('.dropdown-time-train').hide();
                             $('.dropdown-datepart-train').show();
-
+    
                         },'json');
                     }
-
+    
                     // onSelect: function(date, inst){
                     //     $.get('/terminal/GetAjaxData',{
                     //         'act':'getByday',
@@ -269,7 +269,7 @@ $(function() {
                     // }
                 });
                 $.unblockUI();
-            },'json');
+            });
         }
     }
     // setp 2
