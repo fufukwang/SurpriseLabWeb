@@ -1411,3 +1411,10 @@ body {
   justify-content: space-between;
 }
 /*# sourceMappingURL=home.css.map */
+
+#main-header .mob-lang {
+  display: none;
+  @media screen and (min-width:992px) {
+    display: none !important;
+  }
+}

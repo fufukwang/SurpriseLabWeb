@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris_en/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris_en/css/home.css?240319">
+    <link rel="stylesheet" href="/paris_en/css/home.css?240430">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -72,7 +72,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img class="m" src="/paris/img/brand-logo-m.png?231017" alt="巴黎舞會 LE BAL PARIS" />
                 </a>
             </div>
-            <div class="mob-toggle m"></div>
+            <div class="flex">
+                <a class="mob-lang m" href="/lebaldeparis" style="color: #E28A8A; margin-right: 10px;"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />中文</a>
+                <div class="mob-toggle m"></div>
+            </div>
         </div>
         <nav>
             <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">Le Bal</a>
@@ -84,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">Information</a>
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">Partner</a>
             <a href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
-            <a href="/lebaldeparis"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />中文</a>
+            <a class="pc" href="/lebaldeparis"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />中文</a>
         </nav>
     </header>
 
@@ -921,6 +924,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <script src="/paris_en/js/main.js?231003"></script>
-    <script src="/paris_en/js/home.js?240116"></script>
+    <script src="/paris_en/js/home.js?240430"></script>
 </body>
 </html>

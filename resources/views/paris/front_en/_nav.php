@@ -6,7 +6,10 @@
                     <img class="m" src="/paris/img/brand-logo-m.png?231017" alt="巴黎舞會 LE BAL PARIS" />
                 </a>
             </div>
-            <div class="mob-toggle m"></div>
+            <div class="flex">
+                <a class="m" href="/lebaldeparis" style="color: #E28A8A; margin-right: 10px;"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />中文</a>
+                <div class="mob-toggle m"></div>
+            </div>
         </div>
         <nav>
             <a class="scrollto active" href="/lebaldeparis/en#sec-about" data-sec="about">Le Bal</a>
@@ -18,6 +21,6 @@
             <a class="scrollto" href="/lebaldeparis/en#sec-information" data-sec="information">Information</a>
             <a class="scrollto" href="/lebaldeparis/en#sec-partner" data-sec="partner">Partner</a>
             <a href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
-            <a href="/lebaldeparis"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />中文</a>
+            <a class="pc" href="/lebaldeparis"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />中文</a>
         </nav>
     </header>
