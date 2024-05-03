@@ -148,6 +148,7 @@ $(function() {
     function createDatepicker(item,type){
         let booking_date = item;
         let enableDays = [];
+        let dateSite = [];
         if(!isNaN($people_value)){
             $.blockUI();
             $.get('/terminal/GetAjaxData',{
@@ -155,10 +156,30 @@ $(function() {
                 'pople':$people_value,
                 'ticketType': type,
             },function(data){
-                for(i=0;i<data.length;i++){ enableDays.push(data[i].day); }
+                for(i=0;i<data.length;i++){ 
+                    enableDays.push(data[i].day); 
+                    dateSite[data[i].day] = data[i].per
+                }
                 var minD = 0;
                 if(enableDays.length>0){ minD = enableDays[0]; }
                 booking_date.datepicker("destroy");
+                booking_date.on('focus', function () {
+                    $('#ui-datepicker-div').appendTo('.calender-wrapper');
+                    setTimeout(() => {
+                        if($('.calender-ps').length == 0){
+                            $('#ui-datepicker-div').append(`<div class="calender-ps">
+                                <div>
+                                    <span style="background: #E55D33"></span>
+                                    <p>好評熱賣</p>
+                                </div>
+                                <div>
+                                    <span style="background: #A55AFF"></span>
+                                    <p>即將完售</p>
+                                </div>
+                            </div>`)
+                        }
+                    }, 100);
+                });
                 booking_date.datepicker({
                     minDate: minD,
                     maxDate: maxDateVal,
@@ -169,6 +190,16 @@ $(function() {
                         var className = '';
                         if($.inArray(sdate, enableDays) !== -1) {
                             allowSelected = true;
+                        }
+                        var myDateClass = ""; // 加入的樣式
+                        var myDateTip = "";  // tooltip 文字
+                        var myDateDay = date.getDay();
+                        if(dateSite[sdate]<50){
+                            myDateClass = "sold-out-soon";
+                            myDateTip = "即將完售";
+                        } else if(dateSite[sdate]>=50){
+                            myDateClass = "still-vacancy";
+                            myDateTip = "好評熱賣";
                         }
                         // if(type == 'train' || type == 'flight') {
                         //     var startDate = 20230922;
@@ -182,7 +213,7 @@ $(function() {
                         //         className = 'have-bg have-bg-end';
                         //     }
                         // }
-                        return [allowSelected, className];
+                        return [allowSelected, myDateClass,myDateTip];
                     },
                     beforeShow: function (input, inst) {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;
@@ -210,6 +241,14 @@ $(function() {
                             $('.dropdown-datepart-train').show();
 
                         },'json');
+                    },
+                    onUpdateDatepicker: function(inst) {
+                        var currentYear = inst.selectedYear;
+                        var currentMonth = inst.selectedMonth + 1;
+                        var padd = (currentMonth.toString().length == 1) ? '0' : '';
+                        var notOpen = true;
+                        enableDays.forEach((val) => { if(val.indexOf(currentYear+'-'+padd+currentMonth)!=-1){ notOpen = false; } });
+                        if(notOpen){ $('#ui-datepicker-div').find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>'); }
                     }
 
                     // onSelect: function(date, inst){
