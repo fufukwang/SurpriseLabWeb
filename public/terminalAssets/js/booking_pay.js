@@ -241,6 +241,14 @@ $(function() {
                             $('.dropdown-datepart-train').show();
     
                         },'json');
+                    },
+                    onUpdateDatepicker: function(inst) {
+                        var currentYear = inst.selectedYear;
+                        var currentMonth = inst.selectedMonth + 1;
+                        var padd = (currentMonth.toString().length == 1) ? '0' : '';
+                        var notOpen = true;
+                        enableDays.forEach((val) => { if(val.indexOf(currentYear+'-'+padd+currentMonth)!=-1){ notOpen = false; } });
+                        if(notOpen){ $('#ui-datepicker-div').find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>'); }
                     }
     
                     // onSelect: function(date, inst){
