@@ -148,6 +148,7 @@ $(function() {
     function createDatepicker(item,type){
         let booking_date = item;
         let enableDays = [];
+        var dateSite = [];
         if(!isNaN($people_value)){
             $.blockUI();
             $.get('/terminal/GetAjaxData',{
@@ -155,7 +156,10 @@ $(function() {
                 'pople':$people_value,
                 'ticketType': type,
             },function(data){
-                for(i=0;i<data.length;i++){ enableDays.push(data[i].day); }
+                for(i=0;i<data.length;i++){ 
+                    enableDays.push(data[i].day); 
+                    dateSite[data[i].day] = data[i].per;
+                }
                 var minD = 0;
                 if(enableDays.length>0){ minD = enableDays[0]; }
                 booking_date.datepicker("destroy");
@@ -164,25 +168,45 @@ $(function() {
                     maxDate: maxDateVal,
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: function(date){
-                        var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
-                        var allowSelected = false;
-                        var className = '';
-                        if($.inArray(sdate, enableDays) !== -1) {
-                            allowSelected = true;
-                        }
-                        // if(type == 'train' || type == 'flight') {
-                        //     var startDate = 20230922;
-                        //     var endDate = 20231015;
-                        //     var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
-                        //     if (formatedDate == startDate) {
-                        //         className = 'have-bg have-bg-start';
-                        //     } else if (formatedDate > startDate && formatedDate < endDate) {
-                        //         className = 'have-bg';
-                        //     } else if (formatedDate == endDate) {
-                        //         className = 'have-bg have-bg-end';
-                        //     }
+                        // var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
+                        // var allowSelected = false;
+                        // var className = '';
+                        // if($.inArray(sdate, enableDays) !== -1) {
+                        //     allowSelected = true;
                         // }
-                        return [allowSelected, className];
+                        // // if(type == 'train' || type == 'flight') {
+                        // //     var startDate = 20230922;
+                        // //     var endDate = 20231015;
+                        // //     var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
+                        // //     if (formatedDate == startDate) {
+                        // //         className = 'have-bg have-bg-start';
+                        // //     } else if (formatedDate > startDate && formatedDate < endDate) {
+                        // //         className = 'have-bg';
+                        // //     } else if (formatedDate == endDate) {
+                        // //         className = 'have-bg have-bg-end';
+                        // //     }
+                        // // }
+                        // return [allowSelected, className];
+                        
+                        var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
+                        var getMaxDate = $.datepicker._determineDate( booking_date, booking_date.datepicker( "option", "maxDate" ) );
+                        var startDate = new Date(sdate);
+                        var endDate   = new Date(getMaxDate);
+    
+                        if($.inArray(sdate, enableDays) !== -1 && endDate>=startDate) {
+                            var myDateClass = ""; // 加入的樣式
+                            var myDateTip = "";  // tooltip 文字
+                            var myDateDay = date.getDay();
+                            if(dateSite[sdate]<50){
+                                myDateClass = "sold-out-soon";
+                                myDateTip = "即將完售";
+                            } else if(dateSite[sdate]>=50){
+                                myDateClass = "still-vacancy";
+                                myDateTip = "好評熱賣";
+                            }
+                            return [true,myDateClass,myDateTip];
+                        }
+                        return [false];
                     },
                     beforeShow: function (input, inst) {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;
@@ -191,7 +215,7 @@ $(function() {
                     onSelect: function(date, inst) {
                         // blockUI
                         $.blockUI({message: null});
-
+    
                         // show datepart
                         $.get('/terminal/GetAjaxData',{
                             'act': 'getByday',
@@ -208,10 +232,10 @@ $(function() {
                             }
                             $('.dropdown-time-train').hide();
                             $('.dropdown-datepart-train').show();
-
+    
                         },'json');
                     }
-
+    
                     // onSelect: function(date, inst){
                     //     $.get('/terminal/GetAjaxData',{
                     //         'act':'getByday',
@@ -238,7 +262,23 @@ $(function() {
                     // }
                 });
                 $.unblockUI();
-            },'json');
+    
+                booking_date.on('focus', function () {
+                    $('#ui-datepicker-div').appendTo('.calender-wrapper');
+                    setTimeout(() => {
+                        if($('.calender-ps').length == 0){
+                            $('#ui-datepicker-div').append(`<div class="calender-ps">
+                                <div>
+                                    <p><span style="background: #E55D33;"></span> 好評熱賣</p>
+                                </div>
+                                <div>
+                                    <p><span style="background: #A55AFF;"></span> 即將完售</p>
+                                </div>
+                            </div>`)
+                        }
+                    }, 100);
+                });
+            });
         }
     }
     // setp 2
