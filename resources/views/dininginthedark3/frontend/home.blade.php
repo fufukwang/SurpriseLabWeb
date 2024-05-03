@@ -1316,7 +1316,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="partner-sec-wrapper">
 
-                                    <div style="max-width: 460px; margin: 0 auto; text-align: center;">本季8號菜單與 格蘭菲迪 Glenfiddich 跨界合作</div>
+                                    <div style="max-width: 460px; margin: 0 auto; text-align: center;">
+                                        本季8號菜單與 格蘭菲迪 Glenfiddich 跨界合作<br>
+                                        你將體驗 【 精湛工藝呈現的極致風味，感受酒中的獨特奇蹟 】
+                                    </div>
 
                                     <div class="partners-img">
                                     <img src="img/other/partner-gf.png" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;" />
@@ -1388,21 +1391,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
     </aside>
 
-    <!-- <div id="enter-dialog">
-        <div class="overlay"></div>
-        <div class="content-flex">
-            <div class="content">
-                <div class="img">
-                    <img class="d-none d-md-block" src="img/home/enter-dialog.jpg" alt="無光晚餐 Dining In The Dark">
-                    <img class="d-block d-md-none" src="img/home/enter-dialog-m.jpg" alt="無光晚餐 Dining In The Dark">
-                </div>
-                <div class="txt">不要再顯示</div>
-            </div>
-        </div>
-        
-        <div class="dialog-close"></div>
-    </div> -->
-
     <div id="enter-dialog">
         <div class="overlay"></div>
         <div class="dialog-inner">
@@ -1411,7 +1399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img class="d-none d-md-block" src="https://www.surpriselab.com.tw/dininginthedark3/img/home/enter-dialog.jpg" alt="無光晚餐 Dining In The Dark" />
                     <img class="d-block d-md-none" src="https://www.surpriselab.com.tw/dininginthedark3/img/home/enter-dialog-m.jpg" alt="無光晚餐 Dining In The Dark" />
                 </div>
-                <div class="txt">不要再顯示</div>
+                <div class="txt">CLOSE</div>
             </div>
         </div>
         <div class="dialog-close"></div>
