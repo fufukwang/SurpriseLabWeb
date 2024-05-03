@@ -160,6 +160,16 @@ class HelperService {
                     case 'D7':
                         $m->subject('【落日月台】旅程即將啟程，行前您需要知道的十件事');
                         break;
+                    case 'D5':
+                        $event_time = strtotime(date('Y-m-d').' '.$data['time'].':00');
+                        $base_time = strtotime(date('Y-m-d').' 17:00:00');
+                        // 時間判斷
+                        if($event_time<$base_time){
+                            $m->subject('【落日月台】在太陽落下之前，一場秘密冒險等著你。');
+                        } elseif($event_time>=$base_time){
+                            $m->subject('【落日月台】在月亮升起之後，一場秘密冒險等著你。');
+                        }
+                        break;
                     case 'D3':
                         $m->subject('【落日月台】啟程前，你會需要這個。');
                         break;
@@ -215,7 +225,9 @@ class HelperService {
             // if($data['template'] == 'D7') return false;
             // 5/22 (含)的訂單不受到 7 & 14 的信件
             // 0425 (含)的訂單不收到 7 & 14 的信件
-            if($data['template'] == 'D7' || $data['template'] == 'D14'){
+            //if($data['template'] == 'D7' || $data['template'] == 'D14'){
+            // 0429 修改開放 D7 信件
+            if($data['template'] == 'D14'){
                 if(isset($data['mday']) && $data['mday']>='2024-04-25'){
                     return false;
                 }
@@ -282,11 +294,13 @@ class HelperService {
         try{
             // 5/22 (含)的訂單不受到 7 & 14 的信件
             // 0425 (含)的訂單不收到 7 & 14 的簡訊
+            /*
             if($smsData['template'] == 'D7'){
                 if(isset($data['mday']) && $data['mday']>='2024-04-25'){
                     return false;
                 }
             }
+            */
             switch ($smsData['template']) {
                 case 'order':
                     $requestUrl = 'https://api-ssl.bitly.com/v4/shorten';

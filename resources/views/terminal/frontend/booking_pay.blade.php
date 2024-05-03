@@ -41,8 +41,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?240430">
     <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?231123">
+=======
+    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?231116">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?240429">
+>>>>>>> 5c13ee85f7c79ae3c52a06a2fee3e40e5a4bb5b3
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

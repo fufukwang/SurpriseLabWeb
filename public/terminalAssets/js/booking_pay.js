@@ -148,7 +148,11 @@ $(function() {
     function createDatepicker(item,type){
         let booking_date = item;
         let enableDays = [];
+<<<<<<< HEAD
         var dateSite = [];
+=======
+        let dateSite = [];
+>>>>>>> 5c13ee85f7c79ae3c52a06a2fee3e40e5a4bb5b3
         if(!isNaN($people_value)){
             $.blockUI();
             $.get('/terminal/GetAjaxData',{
@@ -158,11 +162,32 @@ $(function() {
             },function(data){
                 for(i=0;i<data.length;i++){ 
                     enableDays.push(data[i].day); 
+<<<<<<< HEAD
                     dateSite[data[i].day] = data[i].per;
+=======
+                    dateSite[data[i].day] = data[i].per
+>>>>>>> 5c13ee85f7c79ae3c52a06a2fee3e40e5a4bb5b3
                 }
                 var minD = 0;
                 if(enableDays.length>0){ minD = enableDays[0]; }
                 booking_date.datepicker("destroy");
+                booking_date.on('focus', function () {
+                    $('#ui-datepicker-div').appendTo('.calender-wrapper');
+                    setTimeout(() => {
+                        if($('.calender-ps').length == 0){
+                            $('#ui-datepicker-div').append(`<div class="calender-ps">
+                                <div>
+                                    <span style="background: #E55D33"></span>
+                                    <p>好評熱賣</p>
+                                </div>
+                                <div>
+                                    <span style="background: #A55AFF"></span>
+                                    <p>即將完售</p>
+                                </div>
+                            </div>`)
+                        }
+                    }, 100);
+                });
                 booking_date.datepicker({
                     minDate: minD,
                     maxDate: maxDateVal,
@@ -206,7 +231,33 @@ $(function() {
                             }
                             return [true,myDateClass,myDateTip];
                         }
+<<<<<<< HEAD
                         return [false];
+=======
+                        var myDateClass = ""; // 加入的樣式
+                        var myDateTip = "";  // tooltip 文字
+                        var myDateDay = date.getDay();
+                        if(dateSite[sdate]<50){
+                            myDateClass = "sold-out-soon";
+                            myDateTip = "即將完售";
+                        } else if(dateSite[sdate]>=50){
+                            myDateClass = "still-vacancy";
+                            myDateTip = "好評熱賣";
+                        }
+                        // if(type == 'train' || type == 'flight') {
+                        //     var startDate = 20230922;
+                        //     var endDate = 20231015;
+                        //     var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
+                        //     if (formatedDate == startDate) {
+                        //         className = 'have-bg have-bg-start';
+                        //     } else if (formatedDate > startDate && formatedDate < endDate) {
+                        //         className = 'have-bg';
+                        //     } else if (formatedDate == endDate) {
+                        //         className = 'have-bg have-bg-end';
+                        //     }
+                        // }
+                        return [allowSelected, myDateClass,myDateTip];
+>>>>>>> 5c13ee85f7c79ae3c52a06a2fee3e40e5a4bb5b3
                     },
                     beforeShow: function (input, inst) {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;
@@ -234,6 +285,14 @@ $(function() {
                             $('.dropdown-datepart-train').show();
     
                         },'json');
+                    },
+                    onUpdateDatepicker: function(inst) {
+                        var currentYear = inst.selectedYear;
+                        var currentMonth = inst.selectedMonth + 1;
+                        var padd = (currentMonth.toString().length == 1) ? '0' : '';
+                        var notOpen = true;
+                        enableDays.forEach((val) => { if(val.indexOf(currentYear+'-'+padd+currentMonth)!=-1){ notOpen = false; } });
+                        if(notOpen){ $('#ui-datepicker-div').find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>'); }
                     }
     
                     // onSelect: function(date, inst){
