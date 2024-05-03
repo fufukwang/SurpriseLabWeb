@@ -223,16 +223,17 @@ $(function() {
                             }
                             return [true,myDateClass,myDateTip];
                         }
-                        var myDateClass = ""; // 加入的樣式
-                        var myDateTip = "";  // tooltip 文字
-                        var myDateDay = date.getDay();
-                        if(dateSite[sdate]<50){
-                            myDateClass = "sold-out-soon";
-                            myDateTip = "即將完售";
-                        } else if(dateSite[sdate]>=50){
-                            myDateClass = "still-vacancy";
-                            myDateTip = "好評熱賣";
-                        }
+                        return [false];
+                        // var myDateClass = ""; // 加入的樣式
+                        // var myDateTip = "";  // tooltip 文字
+                        // var myDateDay = date.getDay();
+                        // if(dateSite[sdate]<50){
+                        //     myDateClass = "sold-out-soon";
+                        //     myDateTip = "即將完售";
+                        // } else if(dateSite[sdate]>=50){
+                        //     myDateClass = "still-vacancy";
+                        //     myDateTip = "好評熱賣";
+                        // }
                         // if(type == 'train' || type == 'flight') {
                         //     var startDate = 20230922;
                         //     var endDate = 20231015;
@@ -245,7 +246,7 @@ $(function() {
                         //         className = 'have-bg have-bg-end';
                         //     }
                         // }
-                        return [allowSelected, myDateClass,myDateTip];
+                        // return [allowSelected, myDateClass,myDateTip];
                     },
                     beforeShow: function (input, inst) {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;
