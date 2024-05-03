@@ -148,7 +148,7 @@ $(function() {
     function createDatepicker(item,type){
         let booking_date = item;
         let enableDays = [];
-        var dateSite = [];
+        let dateSite = [];
         if(!isNaN($people_value)){
             $.blockUI();
             $.get('/terminal/GetAjaxData',{
@@ -185,55 +185,22 @@ $(function() {
                     maxDate: maxDateVal,
                     dateFormat: 'yy-mm-dd', 
                     beforeShowDay: function(date){
-                        // var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
-                        // var allowSelected = false;
-                        // var className = '';
-                        // if($.inArray(sdate, enableDays) !== -1) {
-                        //     allowSelected = true;
-                        // }
-                        // // if(type == 'train' || type == 'flight') {
-                        // //     var startDate = 20230922;
-                        // //     var endDate = 20231015;
-                        // //     var formatedDate = parseInt($.datepicker.formatDate( 'yymmdd', date));
-                        // //     if (formatedDate == startDate) {
-                        // //         className = 'have-bg have-bg-start';
-                        // //     } else if (formatedDate > startDate && formatedDate < endDate) {
-                        // //         className = 'have-bg';
-                        // //     } else if (formatedDate == endDate) {
-                        // //         className = 'have-bg have-bg-end';
-                        // //     }
-                        // // }
-                        // return [allowSelected, className];
-                        
                         var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
-                        var getMaxDate = $.datepicker._determineDate( booking_date, booking_date.datepicker( "option", "maxDate" ) );
-                        var startDate = new Date(sdate);
-                        var endDate   = new Date(getMaxDate);
-    
-                        if($.inArray(sdate, enableDays) !== -1 && endDate>=startDate) {
-                            var myDateClass = ""; // 加入的樣式
-                            var myDateTip = "";  // tooltip 文字
-                            var myDateDay = date.getDay();
-                            if(dateSite[sdate]<50){
-                                myDateClass = "sold-out-soon";
-                                myDateTip = "即將完售";
-                            } else if(dateSite[sdate]>=50){
-                                myDateClass = "still-vacancy";
-                                myDateTip = "好評熱賣";
-                            }
-                            return [true,myDateClass,myDateTip];
+                        var allowSelected = false;
+                        var className = '';
+                        if($.inArray(sdate, enableDays) !== -1) {
+                            allowSelected = true;
                         }
-                        return [false];
-                        // var myDateClass = ""; // 加入的樣式
-                        // var myDateTip = "";  // tooltip 文字
-                        // var myDateDay = date.getDay();
-                        // if(dateSite[sdate]<50){
-                        //     myDateClass = "sold-out-soon";
-                        //     myDateTip = "即將完售";
-                        // } else if(dateSite[sdate]>=50){
-                        //     myDateClass = "still-vacancy";
-                        //     myDateTip = "好評熱賣";
-                        // }
+                        var myDateClass = ""; // 加入的樣式
+                        var myDateTip = "";  // tooltip 文字
+                        var myDateDay = date.getDay();
+                        if(dateSite[sdate]<50){
+                            myDateClass = "sold-out-soon";
+                            myDateTip = "即將完售";
+                        } else if(dateSite[sdate]>=50){
+                            myDateClass = "still-vacancy";
+                            myDateTip = "好評熱賣";
+                        }
                         // if(type == 'train' || type == 'flight') {
                         //     var startDate = 20230922;
                         //     var endDate = 20231015;
@@ -246,7 +213,7 @@ $(function() {
                         //         className = 'have-bg have-bg-end';
                         //     }
                         // }
-                        // return [allowSelected, myDateClass,myDateTip];
+                        return [allowSelected, myDateClass,myDateTip];
                     },
                     beforeShow: function (input, inst) {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;
