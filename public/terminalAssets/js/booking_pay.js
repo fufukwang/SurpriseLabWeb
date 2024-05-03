@@ -1,4 +1,4 @@
-$(function() {
+$(function() { 
     let $step1_scenes = $('#step1');
     let $step2_scenes = $('#step2');
     let $step3_scenes = $('#step3');
