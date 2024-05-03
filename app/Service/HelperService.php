@@ -225,7 +225,9 @@ class HelperService {
             // if($data['template'] == 'D7') return false;
             // 5/22 (含)的訂單不受到 7 & 14 的信件
             // 0425 (含)的訂單不收到 7 & 14 的信件
-            if($data['template'] == 'D7' || $data['template'] == 'D14'){
+            //if($data['template'] == 'D7' || $data['template'] == 'D14'){
+            // 0429 修改開放 D7 信件
+            if($data['template'] == 'D14'){
                 if(isset($data['mday']) && $data['mday']>='2024-04-25'){
                     return false;
                 }
@@ -292,11 +294,13 @@ class HelperService {
         try{
             // 5/22 (含)的訂單不受到 7 & 14 的信件
             // 0425 (含)的訂單不收到 7 & 14 的簡訊
+            /*
             if($smsData['template'] == 'D7'){
                 if(isset($data['mday']) && $data['mday']>='2024-04-25'){
                     return false;
                 }
             }
+            */
             switch ($smsData['template']) {
                 case 'order':
                     $requestUrl = 'https://api-ssl.bitly.com/v4/shorten';
