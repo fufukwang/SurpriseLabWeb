@@ -148,11 +148,7 @@ $(function() {
     function createDatepicker(item,type){
         let booking_date = item;
         let enableDays = [];
-<<<<<<< HEAD
         var dateSite = [];
-=======
-        let dateSite = [];
->>>>>>> 5c13ee85f7c79ae3c52a06a2fee3e40e5a4bb5b3
         if(!isNaN($people_value)){
             $.blockUI();
             $.get('/terminal/GetAjaxData',{
@@ -162,11 +158,7 @@ $(function() {
             },function(data){
                 for(i=0;i<data.length;i++){ 
                     enableDays.push(data[i].day); 
-<<<<<<< HEAD
                     dateSite[data[i].day] = data[i].per;
-=======
-                    dateSite[data[i].day] = data[i].per
->>>>>>> 5c13ee85f7c79ae3c52a06a2fee3e40e5a4bb5b3
                 }
                 var minD = 0;
                 if(enableDays.length>0){ minD = enableDays[0]; }
@@ -231,9 +223,6 @@ $(function() {
                             }
                             return [true,myDateClass,myDateTip];
                         }
-<<<<<<< HEAD
-                        return [false];
-=======
                         var myDateClass = ""; // 加入的樣式
                         var myDateTip = "";  // tooltip 文字
                         var myDateDay = date.getDay();
@@ -257,7 +246,6 @@ $(function() {
                         //     }
                         // }
                         return [allowSelected, myDateClass,myDateTip];
->>>>>>> 5c13ee85f7c79ae3c52a06a2fee3e40e5a4bb5b3
                     },
                     beforeShow: function (input, inst) {
                         let $top = $(this).offset().top + $(this).outerHeight() + 6;
