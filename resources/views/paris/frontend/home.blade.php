@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css?240430">
+    <link rel="stylesheet" href="/paris/css/home.css?240507">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -80,12 +80,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <nav>
             <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">關於舞會</a>
-            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">購票資訊</a>
+            <a class="scrollto" href="/lebaldeparis#sec-experience" data-sec="experience">體驗內容</a>
             <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">口碑評價</a>
-            <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">各界好評</a>
-            <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">如何享受</a>
-            <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
+            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">購票資訊</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
+            <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">各界好評</a>
+            <a class="scrollto" href="/lebaldeparis#sec-group-party" data-sec="group-party">包場跳舞</a>
+            <a class="scrollto" href="/lebaldeparis#sec-more" data-sec="more">舞會嘉賓 </a>
+            <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
+            <!-- <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">如何享受</a> -->
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
             <a href="/lebaldeparis/booking_pay">預約舞會</a>
             <a class="pc" href="/lebaldeparis/en"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />English</a>
@@ -93,6 +96,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
 
     <main id="home">
+        <!-- 關於舞會 -->
         <section id="sec-about">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
@@ -123,32 +127,103 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="icon">
                         <img src="/paris/img/about1.png" />
                     </div>
-                    <h4>威尼斯影展<br>最佳 VR 體驗</h4>
+                    <h4>威尼斯影展<br>最佳VR體驗</h4>
                     <!-- <div class="desc">自由移動、真實互動的感官體驗</div> -->
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/about2.png" />
                     </div>
-                    <h4>香奈兒<br>高級訂製服</h4>
+                    <h4>80分鐘<br>沉浸頂級晚宴</h4>
                     <!-- <div class="desc">自由選擇虛擬世界的舞會服裝</div> -->
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/about3.png" />
                     </div>
-                    <h4>80 分鐘<br>沉浸頂級晚宴</h4>
+                    <h4>12套香奈兒<br>虛擬高訂禮服</h4>
                     <!-- <div class="desc">穿越 1920 年代的花園、舞會和狂歡</div> -->
                 </div>
-            </div>
-
-            <div class="yt">
-                <div class="vid-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/o1VLn3f2jyE?si=C9KgGWZZqoEDphXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="item">
+                    <div class="icon">
+                        <img src="/paris/img/about4.webp" />
+                    </div>
+                    <h4>2杯<br>微醺飲品</h4>
+                    <!-- <div class="desc">穿越 1920 年代的花園、舞會和狂歡</div> -->
                 </div>
             </div>
         </section>
 
+        <!-- 體驗內容 -->
+        <section id="sec-experience">
+            <div class="title">
+                <img src="/paris/img/deco.svg" />
+                <h1>體驗內容</h1>
+                <h3>HAVE YOU EVER？</h3>
+            </div>
+
+            <center><p style="color: #E28A8A; font-size: 18px;">你曾有過這些經歷嗎？</p></center><br>
+
+            <div class="slider">
+                <div class="owl-carousel">
+                    <div>
+                        <img src="/paris/img/have_you_ever_1.webp" />
+                        <div>拋下既有身份與包袱，你會看見名字在眼前消失</div>
+                    </div>
+                    <div>
+                        <img src="/paris/img/have_you_ever_2.webp" />
+                        <div>全身穿戴6個追蹤器，你將一秒飛越10,099公里</div>
+                    </div>
+                    <div>
+                        <img src="/paris/img/have_you_ever_3.webp" />
+                        <div>在這，性別、年齡、身材都不再重要，你可以自由裝扮舞會模樣</div>
+                    </div>
+                    <div>
+                        <img src="/paris/img/have_you_ever_4.webp" />
+                        <div>鏡中的自己不再是熟悉樣貌，拋開顧慮、打開感官、盡情探索吧</div>
+                    </div>
+                    <div>
+                        <img src="/paris/img/have_you_ever_5.webp" />
+                        <div>乾杯之後，願離開舞會的你，能永遠記得－自由且真實的自己</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="yt">
+            <div class="vid-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o1VLn3f2jyE?si=C9KgGWZZqoEDphXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- 口碑評價 -->
+        <section id="sec-review">
+            <div class="title">
+                <img src="/paris/img/deco.svg" />
+                <h1>口碑評價</h1>
+                <h3>Review</h3>
+            </div>
+
+            <!-- <div class="slider">
+                <div class="owl-carousel">
+                    <div>
+                        <img src="/paris/img/review1.png" />
+                        <p></p>
+                    </div>
+                    <div>
+                        <img src="/paris/img/review2.png?231020" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/review3.png" />
+                    </div>
+                </div>
+            </div> -->
+            <div class="ig">
+                <div class="elfsight-app-915c0ed7-8b94-49a4-bce3-8e063bedc1e7" data-elfsight-app-lazy></div>
+            </div>
+        </section>
+
+        <!-- 購票資訊 -->
         <section id="sec-booking">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
@@ -247,34 +322,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a class="p-btn primary" href="/lebaldeparis/booking_pay">預約舞會</a>
                 </div>
             </div>
+
+            <br><br><br><br>
+
+            <img src="/paris/img/cpupon.webp" />
+            <br>
+            <div><center>16 - 22 歲擁有文化幣的你<br>歡迎前往 Klook 訂購場次，千元即可赴約體驗！</center></div>
         </section>
 
-        <section id="sec-review">
+        <!-- 舞會須知 -->
+        <section id="sec-information">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
-                <h1>口碑評價</h1>
-                <h3>Review</h3>
+                <h1>舞會須知</h1>
+                <h3>Information</h3>
             </div>
-
-            <!-- <div class="slider">
-                <div class="owl-carousel">
-                    <div>
-                        <img src="/paris/img/review1.png" />
-                        <p></p>
+    
+            <div class="information">
+                <div class="information-inner">
+                    <div class="col">
+                        <div class="grid">
+                            <h4>地點</h4>
+                            <p>地點：國立臺灣科學教育館<br>（<a class="hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳）</p>
+                        </div>
+                        <div class="grid">
+                            <h4>場次</h4>
+                            <p style="text-align: left;">
+                                週三至週五<br>
+                                晚場：18:10｜19:30｜20:45<br>
+                                <br>
+                                週六與週日<br>
+                                午場：12:50｜14:15｜15:30<br>
+                                晚場：18:10｜19:30｜20:45<br>
+                                <br>
+                                週一、週二｜公休<br>
+                                <br>
+                                體驗時長：80 分鐘
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <img src="/paris/img/review2.png?231020" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/review3.png" />
+                    <div class="col">
+                        <div class="grid">
+                            <h4>注意事項</h4>
+                            <ul>
+                                <li>
+                                    <p>
+                                        現場包含 VR 體驗，為顧及體驗安全：
+                                        <ul>
+                                            <li>孕婦、心臟病和高血壓患者禁止體驗</li>
+                                            <li>體內有電子儀器者（例：心律調整器、助聽器、除顫器）及患有癲癇容易暈倒、視力受損者下訂前需諮詢專業醫師以維護體驗安全</li>
+                                            <li>本體驗為輔導級，12歲以下無法參與，12-17歲建議家長陪同</li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li><p>體驗過程含有拍、牽、拉、推等肢體碰觸，若不希望有此互動，可於購票時優先備註，或於體驗當天向工作人員說明，演員與舞者將避免相關肢體碰觸</p></li>
+                                <li><p>體驗過程中，若有任何不舒服、不自在的感受，請隨時向工作人員反應，我們將即時提供協助</p></li>
+                                <li><p>包場需求、其他特殊服務，請來信客服詢問<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
+                                <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" style="color: #E85455;" href="/lebaldeparis/rules">[更多須知]</a></p></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div> -->
-            <div class="ig">
-                <div class="elfsight-app-915c0ed7-8b94-49a4-bce3-8e063bedc1e7" data-elfsight-app-lazy></div>
+                <div class="actions">
+                    <a class="p-btn primary" href="/lebaldeparis/rules">更多須知</a>
+                </div>
             </div>
         </section>
 
+        <!-- 各界好評 -->
         <section id="sec-media">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
@@ -287,139 +402,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div>
                         <a target="_blank" href="https://www.vogue.com.tw/article/%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83-%E5%8F%B0%E5%8C%97-%E9%A9%9A%E5%96%9C%E8%A3%BD%E9%80%A0">
                             <img src="/paris/img/media1.webp" />
-                            <div class="s-title">Vogue</div>
-                            <div>威尼斯影展最佳VR《巴黎舞會》80分鐘擴演版回歸！5大亮點揭秘一票難求的魅力：穿上香奈兒高訂翩翩起舞，和桂綸鎂、陳柏霖同赴奇幻旅程</div>
+                            <!-- <div class="s-title">Vogue</div>
+                            <div>威尼斯影展最佳VR《巴黎舞會》80分鐘擴演版回歸！5大亮點揭秘一票難求的魅力：穿上香奈兒高訂翩翩起舞，和桂綸鎂、陳柏霖同赴奇幻旅程</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.elle.com/tw/life/tech/a46233366/vr-paris-ball/">
                             <img src="/paris/img/media2.webp" />
-                            <div class="s-title">ELLE</div>
-                            <div>超熱門VR沉浸互動展演《巴黎舞會》台北登場！穿上香奈兒虛擬高級訂製服，展開一場華麗冒險！</div>
+                            <!-- <div class="s-title">ELLE</div>
+                            <div>超熱門VR沉浸互動展演《巴黎舞會》台北登場！穿上香奈兒虛擬高級訂製服，展開一場華麗冒險！</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.adaymag.com/2023/12/15/le-bal-de-paris-experience.html">
                             <img src="/paris/img/media3.webp" />
-                            <div class="s-title">A Day Magazine</div>
-                            <div>我去看了火紅的「巴黎舞會」虛擬實境秀，穿上 CHANEL 禮服在幻境中穿梭，是近期最震撼的體驗</div>
+                            <!-- <div class="s-title">A Day Magazine</div>
+                            <div>我去看了火紅的「巴黎舞會」虛擬實境秀，穿上 CHANEL 禮服在幻境中穿梭，是近期最震撼的體驗</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.stylemaster.com.tw/2023/12/07/%E3%80%8A%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83%E3%80%8B12%E6%9C%88%E7%99%BB%E5%A0%B4%E7%A7%91%E6%95%99%E9%A4%A8%EF%BC%81%E7%A9%BF%E4%B8%8A%E9%A6%99%E5%A5%88%E5%85%92%E9%AB%98%E7%B4%9A%E8%A8%82%E8%A3%BD/">
                             <img src="/paris/img/media4.webp" />
-                            <div class="s-title">stylemaster</div>
-                            <div>沉浸式《巴黎舞會》12月登場科教館！穿上香奈兒高級訂製服，體驗一場虛實的華麗冒險</div>
+                            <!-- <div class="s-title">stylemaster</div>
+                            <div>沉浸式《巴黎舞會》12月登場科教館！穿上香奈兒高級訂製服，體驗一場虛實的華麗冒險</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.wepeople.club/art/lebaldeparisdeblancaliintaipei/">
                             <img src="/paris/img/media5.webp" />
-                            <div class="s-title">WEPEOPLE</div>
-                            <div>驚喜製造 x VIVE Arts威尼斯獲獎VR體驗《巴黎舞會》12月重返台北！</div>
+                            <!-- <div class="s-title">WEPEOPLE</div>
+                            <div>驚喜製造 x VIVE Arts威尼斯獲獎VR體驗《巴黎舞會》12月重返台北！</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.shoppingdesign.com.tw/post/view/9797">
                             <img src="/paris/img/media6.webp" />
-                            <div class="s-title">Shopping Design</div>
-                            <div>《巴黎舞會》台北登場！打造 80 分鐘 VR 體驗，置身花園迷宮、夜總會等華麗場景</div>
+                            <!-- <div class="s-title">Shopping Design</div>
+                            <div>《巴黎舞會》台北登場！打造 80 分鐘 VR 體驗，置身花園迷宮、夜總會等華麗場景</div> -->
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section id="sec-play">
-            <div class="title">
-                <img src="/paris/img/deco.svg" />
-                <h1>如何享受</h1>
-                <h3>PLAY</h3>
-            </div>
-    
-            <div class="play">
-                <div class="item">
-                    <div class="icon">
-                        <img src="/paris/img/play1.png" />
-                    </div>
-                    <h4>玩法一：放下包袱</h4>
-                    <div class="desc">
-                        在面具之下，沒人知道你是誰<br>
-                        丟下所有顧慮，自由起舞吧！
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="icon">
-                        <img src="/paris/img/play2.png" />
-                    </div>
-                    <h4>玩法二：大膽探索</h4>
-                    <div class="desc">
-                        你將戴上頭顯、綁上追蹤器<br>
-                        自由移動在虛擬又巨大的場景中
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="icon">
-                        <img src="/paris/img/play3.png" />
-                    </div>
-                    <h4>玩法三：打開感官</h4>
-                    <div class="desc">
-                        相信當下所有感受<br>
-                        你的聽、嗅、觸覺都將被撩動
-                    </div>
-                </div>
-            </div>
-    
-            <div class="info">
-                <br>
-                <br>
-                <h4>這將是一場你從未歷經過的體驗</h4>
-                <br>
-                <!-- <div>你已受邀請參加巴黎最盛大的舞會！音樂與舞蹈與虛擬現實融合，為你帶來藝術和壯觀的歡樂體驗。無需熟悉舞蹈或虛擬現實，即可投入這場讓你漫遊於不同世界的舞會。</div> -->
-            </div>
 
-            <div class="slider">
-                <div class="owl-carousel">
-                    <div>
-                        <img src="/paris/img/vr1.jpg?240319" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr2.jpg?240319" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr3.jpg?240319" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr4.jpg?240319" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr5.jpg?240319" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr6.jpg?240319" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="sec-more">
-            <div class="title">
-                <img src="/paris/img/deco.svg" />
-                <h1>舞會嘉賓</h1>
-                <h3>MORE</h3>
-            </div>
-
-            <!-- <center><p>期待你的出席<br>我們在巴黎午夜見</p></center> -->
-            <br>
-    
-            <div class="more">
-                <div class="more-inner">
-                    <img src="/paris/img/more1.png" />
-                    <img src="/paris/img/more2.png" />
-                </div>
-            </div>
-        </section>
-
+        <!-- 包場跳舞 -->
         <section id="sec-group-party">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
@@ -460,7 +486,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </form>
         </section>
-        
+
+        <!-- 舞會嘉賓 -->
+        <section id="sec-more">
+            <div class="title">
+                <img src="/paris/img/deco.svg" />
+                <h1>舞會嘉賓</h1>
+                <h3>MORE</h3>
+            </div>
+
+            <!-- <center><p>期待你的出席<br>我們在巴黎午夜見</p></center> -->
+            <br>
+    
+            <div class="more">
+                <div class="more-inner">
+                    <img src="/paris/img/more1.png" />
+                    <img src="/paris/img/more2.png" />
+                </div>
+            </div>
+        </section>
+
+        <!-- 創作團隊 -->
         <section id="sec-group">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
@@ -838,64 +884,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
         
-        <section id="sec-information">
+        <!-- 如何享受 -->
+        <!-- <section id="sec-play">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
-                <h1>舞會須知</h1>
-                <h3>Information</h3>
+                <h1>如何享受</h1>
+                <h3>PLAY</h3>
             </div>
     
-            <div class="information">
-                <div class="information-inner">
-                    <div class="col">
-                        <div class="grid">
-                            <h4>地點</h4>
-                            <p>地點：國立臺灣科學教育館<br>（<a class="hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">臺北市士林區士商路189號</a> B1 兒童廳）</p>
-                        </div>
-                        <div class="grid">
-                            <h4>場次</h4>
-                            <p style="text-align: left;">
-                                週三至週五<br>
-                                晚場：18:10｜19:30｜20:45<br>
-                                <br>
-                                週六與週日<br>
-                                午場：12:50｜14:15｜15:30<br>
-                                晚場：18:10｜19:30｜20:45<br>
-                                <br>
-                                週一、週二｜公休<br>
-                                <br>
-                                體驗時長：80 分鐘
-                            </p>
-                        </div>
+            <div class="play">
+                <div class="item">
+                    <div class="icon">
+                        <img src="/paris/img/play1.png" />
                     </div>
-                    <div class="col">
-                        <div class="grid">
-                            <h4>注意事項</h4>
-                            <ul>
-                                <li>
-                                    <p>
-                                        現場包含 VR 體驗，為顧及體驗安全：
-                                        <ul>
-                                            <li>孕婦、心臟病和高血壓患者禁止體驗</li>
-                                            <li>體內有電子儀器者（例：心律調整器、助聽器、除顫器）及患有癲癇容易暈倒、視力受損者下訂前需諮詢專業醫師以維護體驗安全</li>
-                                            <li>本體驗為輔導級，12歲以下無法參與，12-17歲建議家長陪同</li>
-                                        </ul>
-                                    </p>
-                                </li>
-                                <li><p>體驗過程含有拍、牽、拉、推等肢體碰觸，若不希望有此互動，可於購票時優先備註，或於體驗當天向工作人員說明，演員與舞者將避免相關肢體碰觸</p></li>
-                                <li><p>體驗過程中，若有任何不舒服、不自在的感受，請隨時向工作人員反應，我們將即時提供協助</p></li>
-                                <li><p>包場需求、其他特殊服務，請來信客服詢問<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
-                                <li><p>相關購票、退票、改期規則，請見 <a class="hover-underline" style="color: #E85455;" href="/lebaldeparis/rules">[更多須知]</a></p></li>
-                            </ul>
-                        </div>
+                    <h4>玩法一：放下包袱</h4>
+                    <div class="desc">
+                        在面具之下，沒人知道你是誰<br>
+                        丟下所有顧慮，自由起舞吧！
                     </div>
                 </div>
-                <div class="actions">
-                    <a class="p-btn primary" href="/lebaldeparis/rules">更多須知</a>
+                <div class="item">
+                    <div class="icon">
+                        <img src="/paris/img/play2.png" />
+                    </div>
+                    <h4>玩法二：大膽探索</h4>
+                    <div class="desc">
+                        你將戴上頭顯、綁上追蹤器<br>
+                        自由移動在虛擬又巨大的場景中
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <img src="/paris/img/play3.png" />
+                    </div>
+                    <h4>玩法三：打開感官</h4>
+                    <div class="desc">
+                        相信當下所有感受<br>
+                        你的聽、嗅、觸覺都將被撩動
+                    </div>
                 </div>
             </div>
-        </section>
-        
+    
+            <div class="info">
+                <br>
+                <br>
+                <h4>這將是一場你從未歷經過的體驗</h4>
+                <br>
+            </div>
+
+            <div class="slider">
+                <div class="owl-carousel">
+                    <div>
+                        <img src="/paris/img/vr1.jpg?240319" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr2.jpg?240319" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr3.jpg?240319" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr4.jpg?240319" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr5.jpg?240319" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr6.jpg?240319" />
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- 合作夥伴 -->
         <section id="sec-partner">
             <div class="title">
                 <img src="/paris/img/deco.svg" />

@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
-    <link rel="stylesheet" href="/paris/css/rules.css?231020">
+    <link rel="stylesheet" href="/paris/css/rules.css?240507">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -104,6 +104,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="collapse-item">
+                    <div class="item-title">非中文母語者可以參與體驗嗎？</div>
+                    <div class="item-body">
+                        <p>
+                            當然可以！除中、英文外，巴黎舞會體驗亦提供法文、西班牙文、義大利文、德文，共6種體驗語言。<br>
+                            若有相關需求，可於預約舞會時，備註體驗語言及對應人數。
+                        </p>
+                    </div>
+                </div>
+                <div class="collapse-item">
                     <div class="item-title">《巴黎舞會》在哪裡舉辦？</div>
                     <div class="item-body">
                         <!--合併衝突保留 master--><!-- <p> 
@@ -168,87 +177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <br><br><br>
-    
-            <div class="title">
-                <h1>預售資訊</h1> 
-                <h3>PRE-SALE INFORMATION</h3>
-                <!-- <p><center>預購已於 11/26 16:00 結束，請賓客參考下方資訊儘速完成劃位</center></p> -->
-            </div>
-    
-            <div class="collapse-list">
-                <div class="collapse-item">
-                    <div class="item-title">預售票券購買成功，要注意什麼？</div>
-                    <div class="item-body">
-                        <p>
-                            預售票券購買成功後，驚喜製造將會於至多20天工作日內寄出劃位信至你預售時所留下的信箱，信件內容將提供專屬劃位序號、劃位網站連結<br>
-                            <br>
-                            請密切注意信箱的促銷分頁或垃圾信件匣，以及 <a target="_blank" href="https://www.instagram.com/surpriselabtw/"><span>驚喜製造 Surprise Lab 官方社群</span></a>
-                        </p>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">收到劃位信後，我要做什麼？</div>
-                    <div class="item-body">
-                        <p>劃位步驟與說明請見 <a target="_blank" href="https://drive.google.com/drive/u/1/folders/1dR4GwOH6a25Jo9In48G3NIaLnm35MDkK"><span>劃位序號使用指南</span></a></p>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">劃位序號的注意事項？</div>
-                    <div class="item-body">
-                        <ul>
-                            <li>劃位序號僅適用於預售票券</li>
-                            <li>1 張預售票券只會收到 1 個劃位序號，同時購買 2 張預售票券，則會在劃位信中收到 2 個劃位序號</li>
-                            <li>每次劃位只能使用 1 個劃位序號，若你有 2 個以上劃位序號，請分次劃位</li>
-                            <li>多人票共享 1 個劃位序號，僅能劃位同一場次，無法分開使用</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">劃位序號有兌換期限嗎？</div>
-                    <div class="item-body">
-                        <p>兌換期限將依照劃位序號信件內為準，若超過期限，序號將不再開放使用</p>
-                    </div>
-                </div>
-                <div class="collapse-item">
-                    <div class="item-title">如果我想買多人票或多張票，有建議的買法嗎？</div>
-                    <div class="item-body">
-                        <p>1 個劃位序號只會對應到 1 張預售票券，若你購買 3 張預售票券，須分成 3 次劃位，且不一定預約得到同場次的位置</p>
-                        <p>以下是建議購買方式：</p>
 
-                        <table>
-                            <tr>
-                                <th>參加人數</th>
-                                <th>建議購買方式</th>
-                                <th>劃位方式</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>單人獨舞票*1張</td>
-                                <td>劃位 1 次</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>雙人共舞票*1張</td>
-                                <td>劃位 1 次</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>單人獨舞票*1張+雙人共舞票*1張</td>
-                                <td>劃位 2 次</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>四人群舞票*1張</td>
-                                <td>劃位 1 次</td>
-                            </tr>
-                        </table>
-                        
-                    </div>
-                </div>
-            </div>
-    
-            <br><br><br>
-    
             <div class="title">
                 <h1>行前須知</h1>
                 <h3>Reminder</h3>
@@ -371,7 +300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul>
                 <!-- <li>改期後若仍需退票，退還費用為50%</li>
                 <li>請依照上述說明附上相關資訊，來信客服信箱：<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></li> -->
-                <li>退費入帳約需 7 至 10 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</li>
+                <li>退費入帳約需14 至25 個工作天，實際日期請依購票時使用信用卡銀行規定為主（特殊情況採ATM退費，入帳時間以客服人員回信為主）</li>
                 <!-- <li>劃位序號之使用期限將於劃位序號信中說明，若因個人因素使序號逾期，導致序號無法正常折抵，主辦單位有權利視情況決定該筆訂單的退款額度</li>
                 <li>預購時，單筆訂單若為 1 張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
                 <li>購買預售票者，尚未收到劃位序號前申請退費，將不扣除10%手續費，可全額退費</li>
@@ -387,8 +316,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </ul>
                 </li> -->
                 <li>無論是預購或直購，單筆訂單若為1張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
-                <li>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 金流手續處理費）</li>
+                <li>每筆訂單僅能異動一次，若改期後需退費，將依照改期前原訂日期辦理退費</li>
                 <li>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</li>
+                <li>若體驗當日因不可抗力之因素，需臨時異動訂單，請於體驗日後三日內來信客服，並出示相關含姓名日期之證明，申請特例改期。特例改期僅開放兩週內日期選擇，敬請見諒</li>
+                <li>訂單成立後若發現錯誤，需請於訂單成立後24小時內來信，逾時將一律依照官網退換政策改期辦理，請於結帳前確認再次訂單資訊</li>
             </ul>
 
             <br>

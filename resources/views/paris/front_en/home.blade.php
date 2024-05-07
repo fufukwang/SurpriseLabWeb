@@ -79,12 +79,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <nav>
             <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">Le Bal</a>
-            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">Tickets</a>
             <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">Review</a>
-            <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">Media</a>
-            <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">How to Play</a>
-            <!-- <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a> -->
+            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">Tickets</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">Information</a>
+            <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">Media</a>
+            <a class="scrollto" href="/lebaldeparis#sec-more" data-sec="more">Guests</a>
+            <!-- <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a> -->
+            <!-- <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">How to Play</a> -->
             <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">Partner</a>
             <a href="/lebaldeparis/booking_pay/en">Buy Tickets</a>
             <a class="pc" href="/lebaldeparis"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />中文</a>
@@ -141,11 +142,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- <div class="desc">穿越 1920 年代的花園、舞會和狂歡</div> -->
                 </div>
             </div>
+        </section>
 
-            <div class="yt">
-                <div class="vid-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/o1VLn3f2jyE?si=C9KgGWZZqoEDphXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="yt">
+            <div class="vid-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o1VLn3f2jyE?si=C9KgGWZZqoEDphXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <section id="sec-review">
+            <div class="title">
+                <img src="/paris/img/deco.svg" />
+                <h1>Review</h1>
+                <!-- <h3>Review</h3> -->
+            </div>
+
+            <!-- <div class="slider">
+                <div class="owl-carousel">
+                    <div>
+                        <img src="/paris/img/review1.png" />
+                        <p></p>
+                    </div>
+                    <div>
+                        <img src="/paris/img/review2.png?231020" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/review3.png" />
+                    </div>
                 </div>
+            </div> -->
+            <div class="ig">
+                <div class="elfsight-app-915c0ed7-8b94-49a4-bce3-8e063bedc1e7" data-elfsight-app-lazy></div>
             </div>
         </section>
 
@@ -259,29 +286,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <section id="sec-review">
+        <section id="sec-information">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
-                <h1>Review</h1>
-                <!-- <h3>Review</h3> -->
+                <h1>Information</h1>
+                <!-- <h3>Information</h3> -->
             </div>
-
-            <!-- <div class="slider">
-                <div class="owl-carousel">
-                    <div>
-                        <img src="/paris/img/review1.png" />
-                        <p></p>
+    
+            <div class="information">
+                <div class="information-inner">
+                    <div class="col">
+                        <div class="grid">
+                            <h4>Location</h4>
+                            <p>National Taiwan Science Education Center<br>（<a class="hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">Children's Hall, B1, No. 189, Shishang Rd., Shilin Dist., Taipei City</a>）</p>
+                        </div>
+                        <div class="grid">
+                            <h4>Show Times</h4>
+                            <p style="text-align: left;">
+                                Wednesday to Friday<br>
+                                Soiree/Evening Sessions<br>
+                                18:10｜19:30｜20:45<br>
+                                <br>
+                                Weekends<br>
+                                Matinees/Daytime Sessions<br>
+                                12:50｜14:15｜15:30<br>
+                                Soiree/Evening Sessions<br>
+                                18:10｜19:30｜20:45<br>
+                                <br>
+                                Monday and Tuesday<br>
+                                Closed<br>
+                                <br>
+                                Duration：80 minutes
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <img src="/paris/img/review2.png?231020" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/review3.png" />
+                    <div class="col">
+                        <div class="grid">
+                            <h4>Reminders</h4>
+                            <ul>
+                                <li>
+                                    <p>
+                                        For safety concerns during VR experience:
+                                        <ul>
+                                            <li>If you are pregnant, or suffer from a cardiovascular disease, hypertension or other serious medical conditions, , we will prohibit you from experiencing this performance.</li>
+                                            <li>If you have any implanted electronic devices in your body (such as pacemakers, hearing aids or cardioverter-defibrillators), suffer from seizures and epilepsy, or easily suffer from dizziness and syncope, we strongly recommend seeing a doctor before experiencing.</li>
+                                            <li>This experience is Parental Guidance Suggested. Children under 12 years old are not allowed to participate. Parents aged 12-17 are recommended to accompany them.</li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li><p>The experience involves physical contact, like patting on your shoulders, guiding, or holding hands to dance. <br>If you prefer to avoid such contact, please specify in the note section during ticket purchase.</p></li>
+                                <li><p>During the experience, if you don’t feel comfortable being touched, you are welcome to raise your hand, or make an X in front of you to inform our staff.</p></li>
+                                <li><p>If you would like to consult services regarding block bookings, private events or other special services, please send an email to our customer service email.<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
+                                <li><p>More about ticketing, refunding and rescheduling, please refer to <a class="hover-underline" href="/lebaldeparis/rules/en">[Rules]</a></p></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div> -->
-            <div class="ig">
-                <div class="elfsight-app-915c0ed7-8b94-49a4-bce3-8e063bedc1e7" data-elfsight-app-lazy></div>
+                <div class="actions">
+                    <a class="p-btn primary" href="/lebaldeparis/rules/en">More Rules</a>
+                </div>
             </div>
         </section>
 
@@ -297,120 +360,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div>
                         <a target="_blank" href="https://www.vogue.com.tw/article/%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83-%E5%8F%B0%E5%8C%97-%E9%A9%9A%E5%96%9C%E8%A3%BD%E9%80%A0">
                             <img src="/paris/img/media1_en.jpg" />
-                            <div class="s-title">Vogue</div>
-                            <div>Step into the magical realm of Le Bal, where you are not just an audience, but a key participant.</div>
+                            <!-- <div class="s-title">Vogue</div>
+                            <div>Step into the magical realm of Le Bal, where you are not just an audience, but a key participant.</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.elle.com/tw/life/tech/a46233366/vr-paris-ball/">
                             <img src="/paris/img/media2_en.jpg" />
-                            <div class="s-title">ELLE</div>
-                            <div>Dressing up with digital CHANEL Haute Couture, embark on a glamorous adventure!</div>
+                            <!-- <div class="s-title">ELLE</div>
+                            <div>Dressing up with digital CHANEL Haute Couture, embark on a glamorous adventure!</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.adaymag.com/2023/12/15/le-bal-de-paris-experience.html">
                             <img src="/paris/img/media3_en.jpg" />
-                            <div class="s-title">A Day Magazine</div>
-                            <div>It’s safe to say it’s the most mind-blowing experience lately.</div>
+                            <!-- <div class="s-title">A Day Magazine</div>
+                            <div>It’s safe to say it’s the most mind-blowing experience lately.</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.stylemaster.com.tw/2023/12/07/%E3%80%8A%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83%E3%80%8B12%E6%9C%88%E7%99%BB%E5%A0%B4%E7%A7%91%E6%95%99%E9%A4%A8%EF%BC%81%E7%A9%BF%E4%B8%8A%E9%A6%99%E5%A5%88%E5%85%92%E9%AB%98%E7%B4%9A%E8%A8%82%E8%A3%BD/">
                             <img src="/paris/img/media4_en.jpg" />
-                            <div class="s-title">style master</div>
-                            <div>Top-tier actors Gui Lun-Mei and Chen Bolin lend their voices for a fantastic journey together.</div>
+                            <!-- <div class="s-title">style master</div>
+                            <div>Top-tier actors Gui Lun-Mei and Chen Bolin lend their voices for a fantastic journey together.</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.wepeople.club/art/lebaldeparisdeblancaliintaipei/">
                             <img src="/paris/img/media5_en.jpg" />
-                            <div class="s-title">WE PEOPLE</div>
-                            <div>Venice Film Festival Award-Winning VR experience arrives in Taipei.</div>
+                            <!-- <div class="s-title">WE PEOPLE</div>
+                            <div>Venice Film Festival Award-Winning VR experience arrives in Taipei.</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.shoppingdesign.com.tw/post/view/9797">
                             <img src="/paris/img/media6_en.jpg" />
-                            <div class="s-title">Shopping Design</div>
-                            <div>Creating VR extended scenes, immersing yourself in a magnificent adventure bridging the virtual and the real.</div>
+                            <!-- <div class="s-title">Shopping Design</div>
+                            <div>Creating VR extended scenes, immersing yourself in a magnificent adventure bridging the virtual and the real.</div> -->
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section id="sec-play">
-            <div class="title">
-                <img src="/paris/img/deco.svg" />
-                <h1>How to Play</h1>
-                <!-- <h3>PLAY</h3> -->
-            </div>
-    
-            <div class="play">
-                <div class="item">
-                    <div class="icon">
-                        <img src="/paris/img/play1.png" />
-                    </div>
-                    <h4>1. Put everything behind!</h4>
-                    <div class="desc">
-                        In the ball, you are anonymous.<br>
-                        Leave all your worries behind, and just dance!
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="icon">
-                        <img src="/paris/img/play2.png" />
-                    </div>
-                    <h4>2. Be as bold as you want!</h4>
-                    <div class="desc">
-                        In the ball, you will be wearing a head-mounted device and trackers, which allow you to explore freely within the gigantic virtual settings.
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="icon">
-                        <img src="/paris/img/play3.png" />
-                    </div>
-                    <h4>3. Open up your senses!</h4>
-                    <div class="desc">
-                        Put trust in everything you feel at the moment.<br>
-                        The show will be teasing your hearing, olfaction and tactile perception.
-                    </div>
-                </div>
-            </div>
-    
-            <div class="info">
-                <br>
-                <br>
-                <h4>This will be something you have never experienced before.</h4>
-                <br>
-                <!-- <div>你已受邀請參加巴黎最盛大的舞會！音樂與舞蹈與虛擬現實融合，為你帶來藝術和壯觀的歡樂體驗。無需熟悉舞蹈或虛擬現實，即可投入這場讓你漫遊於不同世界的舞會。</div> -->
-            </div>
 
-            <div class="slider">
-                <div class="owl-carousel">
-                    <div>
-                        <img src="/paris/img/vr1_en.jpg" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr2_en.jpg" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr3_en.jpg" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr4_en.jpg" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr5_en.jpg" />
-                    </div>
-                    <div>
-                        <img src="/paris/img/vr6_en.jpg" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <section id="sec-more">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
@@ -428,7 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </section>
-        
+
         <!-- <section id="sec-group">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
@@ -805,68 +797,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </section> -->
-        
-        <section id="sec-information">
+
+        <!-- <section id="sec-play">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
-                <h1>Information</h1>
-                <!-- <h3>Information</h3> -->
+                <h1>How to Play</h1>
             </div>
     
-            <div class="information">
-                <div class="information-inner">
-                    <div class="col">
-                        <div class="grid">
-                            <h4>Location</h4>
-                            <p>National Taiwan Science Education Center<br>（<a class="hover-underline" target="_blank" href="https://www.google.com/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E5%95%86%E8%B7%AF189%E8%99%9F">Children's Hall, B1, No. 189, Shishang Rd., Shilin Dist., Taipei City</a>）</p>
-                        </div>
-                        <div class="grid">
-                            <h4>Show Times</h4>
-                            <p style="text-align: left;">
-                                Wednesday to Friday<br>
-                                Soiree/Evening Sessions<br>
-                                18:10｜19:30｜20:45<br>
-                                <br>
-                                Weekends<br>
-                                Matinees/Daytime Sessions<br>
-                                12:50｜14:15｜15:30<br>
-                                Soiree/Evening Sessions<br>
-                                18:10｜19:30｜20:45<br>
-                                <br>
-                                Monday and Tuesday<br>
-                                Closed<br>
-                                <br>
-                                Duration：80 minutes
-                            </p>
-                        </div>
+            <div class="play">
+                <div class="item">
+                    <div class="icon">
+                        <img src="/paris/img/play1.png" />
                     </div>
-                    <div class="col">
-                        <div class="grid">
-                            <h4>Reminders</h4>
-                            <ul>
-                                <li>
-                                    <p>
-                                        For safety concerns during VR experience:
-                                        <ul>
-                                            <li>If you are pregnant, or suffer from a cardiovascular disease, hypertension or other serious medical conditions, , we will prohibit you from experiencing this performance.</li>
-                                            <li>If you have any implanted electronic devices in your body (such as pacemakers, hearing aids or cardioverter-defibrillators), suffer from seizures and epilepsy, or easily suffer from dizziness and syncope, we strongly recommend seeing a doctor before experiencing.</li>
-                                            <li>This experience is Parental Guidance Suggested. Children under 12 years old are not allowed to participate. Parents aged 12-17 are recommended to accompany them.</li>
-                                        </ul>
-                                    </p>
-                                </li>
-                                <li><p>The experience involves physical contact, like patting on your shoulders, guiding, or holding hands to dance. <br>If you prefer to avoid such contact, please specify in the note section during ticket purchase.</p></li>
-                                <li><p>During the experience, if you don’t feel comfortable being touched, you are welcome to raise your hand, or make an X in front of you to inform our staff.</p></li>
-                                <li><p>If you would like to consult services regarding block bookings, private events or other special services, please send an email to our customer service email.<br><a class="hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p></li>
-                                <li><p>More about ticketing, refunding and rescheduling, please refer to <a class="hover-underline" href="/lebaldeparis/rules/en">[Rules]</a></p></li>
-                            </ul>
-                        </div>
+                    <h4>1. Put everything behind!</h4>
+                    <div class="desc">
+                        In the ball, you are anonymous.<br>
+                        Leave all your worries behind, and just dance!
                     </div>
                 </div>
-                <div class="actions">
-                    <a class="p-btn primary" href="/lebaldeparis/rules/en">More Rules</a>
+                <div class="item">
+                    <div class="icon">
+                        <img src="/paris/img/play2.png" />
+                    </div>
+                    <h4>2. Be as bold as you want!</h4>
+                    <div class="desc">
+                        In the ball, you will be wearing a head-mounted device and trackers, which allow you to explore freely within the gigantic virtual settings.
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <img src="/paris/img/play3.png" />
+                    </div>
+                    <h4>3. Open up your senses!</h4>
+                    <div class="desc">
+                        Put trust in everything you feel at the moment.<br>
+                        The show will be teasing your hearing, olfaction and tactile perception.
+                    </div>
                 </div>
             </div>
-        </section>
+    
+            <div class="info">
+                <br>
+                <br>
+                <h4>This will be something you have never experienced before.</h4>
+                <br>
+            </div>
+
+            <div class="slider">
+                <div class="owl-carousel">
+                    <div>
+                        <img src="/paris/img/vr1_en.jpg" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr2_en.jpg" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr3_en.jpg" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr4_en.jpg" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr5_en.jpg" />
+                    </div>
+                    <div>
+                        <img src="/paris/img/vr6_en.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section> -->
         
         <section id="sec-partner">
             <div class="title">
