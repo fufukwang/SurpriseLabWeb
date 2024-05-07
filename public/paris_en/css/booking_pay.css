@@ -526,7 +526,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   #main-header nav {
     display: flex !important;
     flex-direction: row;
-    max-width: 970px;
+    max-width: 1040px;
     width: 100%;
     justify-content: space-between;
     margin-top: 10px;

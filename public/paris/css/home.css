@@ -524,7 +524,7 @@ button.p-btn.secondary:hover:not([disabled]) {
   #main-header nav {
     display: flex !important;
     flex-direction: row;
-    max-width: 970px;
+    max-width: 1040px;
     width: 100%;
     justify-content: space-between;
     margin-top: 10px;
@@ -872,7 +872,7 @@ body {
   margin: 60px -17px 0 -17px;
 }
 #home .about, #home .price, #home .play {
-  max-width: 970px;
+  max-width: 1050px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1159,14 +1159,14 @@ body {
 #home .partner .logo img {
   max-height: 58px;
 }
-#home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider {
+#home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider, #home #sec-experience .slider {
   max-width: 970px;
   margin: 0 auto;
   position: relative;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  #home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider {
+  #home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider, #home #sec-experience .slider {
     padding: 0 66px;
   }
 }
