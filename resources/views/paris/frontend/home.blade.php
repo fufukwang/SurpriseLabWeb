@@ -327,7 +327,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div><center>16 - 22 歲擁有文化幣的你<br>歡迎前往 Klook 訂購場次，千元即可赴約體驗！</center></div>
             <br>
-            <img src="/paris/img/cpupon.webp" />
+            <a target="_blank" href="https://www.klook.com/zh-TW/activity/109976-le-bal-de-paris-de-blanca-li/?utm_source=klook&utm_medium=cpc_orangic_web_tickets&utm_id=LBDP">
+                <img src="/paris/img/cpupon.webp" />
+            </a>
         </section>
 
         <!-- 舞會須知 -->
