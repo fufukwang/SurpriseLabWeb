@@ -86,10 +86,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">各界好評</a>
             <a class="scrollto" href="/lebaldeparis#sec-group-party" data-sec="group-party">包場跳舞</a>
-            <a class="scrollto" href="/lebaldeparis#sec-more" data-sec="more">舞會嘉賓 </a>
-            <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a>
+            <!-- <a class="scrollto" href="/lebaldeparis#sec-more" data-sec="more">舞會嘉賓 </a>
+            <a class="scrollto" href="/lebaldeparis#sec-group" data-sec="group">創作團隊</a> -->
             <!-- <a class="scrollto" href="/lebaldeparis#sec-play" data-sec="play">如何享受</a> -->
-            <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a>
+            <!-- <a class="scrollto" href="/lebaldeparis#sec-partner" data-sec="partner">合作夥伴</a> -->
             <a href="/lebaldeparis/booking_pay">預約舞會</a>
             <a class="pc" href="/lebaldeparis/en"><img width="18" height="18" src="/paris/img/globe.png" style="display: inline-block; vertical-align: middle; margin-right: 6px; transform: translateY(-2px);" />English</a>
         </nav>
@@ -325,9 +325,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <br><br><br><br>
 
-            <img src="/paris/img/cpupon.webp" />
-            <br>
             <div><center>16 - 22 歲擁有文化幣的你<br>歡迎前往 Klook 訂購場次，千元即可赴約體驗！</center></div>
+            <br>
+            <img src="/paris/img/cpupon.webp" />
         </section>
 
         <!-- 舞會須知 -->
