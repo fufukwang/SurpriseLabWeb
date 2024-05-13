@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240406"/>
+    <link rel="stylesheet" href="css/style.css?date=240514"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -1405,7 +1405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="dialog-close"></div>
     </div>
 
-    <div id="notice">
+    <div id="notice-banner">
         <img class="d-none d-md-block" src="img/general/notice.jpg" alt="無光晚餐 Dining In The Dark">
         <img class="d-block d-md-none" src="img/general/notice_m.jpg" alt="無光晚餐 Dining In The Dark">
     </div>

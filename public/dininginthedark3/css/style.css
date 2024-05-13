@@ -3439,7 +3439,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-#notice {
+#notice-banner {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -3452,7 +3452,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   z-index: 9999;
 }
 
-#notice img {
+#notice-banner img {
   max-width: 100%;
   max-height: 100%;
 }
