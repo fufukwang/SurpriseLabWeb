@@ -1175,10 +1175,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                 <div class="time-session">
                                     <div class="time-session-inner">
-                                        <p>平日　17:15｜17:45｜18:15｜19:30｜20:00｜20:30</p>
+                                        <p>平日　17:15｜17:45｜18:30｜19:00｜19:45｜20:15</p>
                                         <hr/>
-                                        <p>假日　11:45｜12:15｜12:45</p>
-                                        <p>　　　17:15｜17:45｜18:15｜19:30｜20:00｜20:30</p>
+                                        <p>假日　11:45｜12:15｜13:00</p>
+                                        <p>　　　17:15｜17:45｜18:30｜19:00｜19:45｜20:15</p>
                                         <br/>
                                         <p>＊週一週二公休，營業時間異動請關注無光晚餐社群公告。</p>
                                         <div class="feature-btn text-center d-block d-sm-none">
