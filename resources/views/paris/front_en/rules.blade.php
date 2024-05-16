@@ -108,6 +108,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="collapse-item">
+                    <div class="item-title">How many languages are available for the experience?</div>
+                    <div class="item-body">
+                        <p>This experience is available in six languages, including Mandarin, English, French, Spanish, Italian, and German if needed. Please inform us of the specific language and the corresponding number of participants in advance.</p>
+                    </div>
+                </div>
+                <div class="collapse-item">
                     <div class="item-title">Where will Le Bal de París de Blanca Li be held?</div>
                     <div class="item-body">
                         <p>
@@ -282,13 +288,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <br>
 
             <ul>
-                <li>Once issued, refunds will take up to 7 to 10 business days. When you pay with a credit card, actual processing days needed may vary depending on the card issuer. ( ATM refunds will be issued under special circumstances. An email from our customer service will be sent to you once the refund is processed.)</li>
+                <li>Once issued, refunds will take up to 14 to 25 business days. When you pay with a credit card, actual processing days needed may vary depending on the card issuer. ( ATM refunds will be issued under special circumstances. An email from our customer service will be sent to you once the refund is processed.)</li>
                 <li>If a single order consists of more than one ticket, refunds will be processed for the entire order. Partial item refunds are not available.</li>
-                <li>If you still would like to request a refund after rescheduling once, the refund fee will be 50% of the exact fare paid.(An additional 10% cash flow processing fee)</li>
+                <li>Each order can only be modified once. If a refund is required after rescheduling, it will be processed based on the original booking date.</li>
                 <li>
                     If you need to add/change the tax ID number, title, or electronic carrier number on the invoice, please apply for the refund process first (following the standard refund procedure and subject to a 10% cash flow processing fee).<br>
                     Afterward, you may proceed to reorder and provide the correct invoice information during the purchase.
                 </li>
+                <li>If any errors are discovered after the order is placed, please contact us within 24 hours of order placement. Any requests made after will be subject to the rescheduling policy on the official website. Please verify your order information before checkout.</li>
+                <li>In case of force majeure, if you need to make a last-minute change to your booking, please contact customer service (lebaldeparis@surpriselab.com.tw) within three days after the experience date and provide relevant proof, including name and date, to apply for an exception rescheduling. Exception rescheduling is only available for dates within two weeks. Thank you for your understanding.</li>
             </ul>
 
             <br>

@@ -25,7 +25,7 @@ $("#sec-play .owl-carousel").owlCarousel({
     navText: ['<div class="pa-prev"></div>', '<div class="pa-next"></div>']
 });
 
-$("#sec-play .owl-carousel, #sec-media .owl-carousel").owlCarousel({
+$("#sec-play .owl-carousel, #sec-media .owl-carousel, #sec-experience .owl-carousel").owlCarousel({
     items: 1,
     loop: true,
     margin: 10,

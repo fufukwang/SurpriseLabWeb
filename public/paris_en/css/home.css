@@ -1159,14 +1159,14 @@ body {
 #home .partner .logo img {
   max-height: 58px;
 }
-#home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider {
+#home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider, #home #sec-experience .slider {
   max-width: 970px;
   margin: 0 auto;
   position: relative;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  #home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider {
+  #home #sec-play .slider, #home #sec-review .slider, #home #sec-media .slider, #home #sec-experience .slider {
     padding: 0 66px;
   }
 }
