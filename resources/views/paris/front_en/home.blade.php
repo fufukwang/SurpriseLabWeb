@@ -163,23 +163,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="slider">
                 <div class="owl-carousel">
                     <div>
-                        <img src="/paris/img/have_you_ever_1.webp" />
+                        <img src="/paris/img/have_you_ever_1_en.webp" />
                         <!-- <div>拋下既有身份與包袱，你會看見名字在眼前消失</div> -->
                     </div>
                     <div>
-                        <img src="/paris/img/have_you_ever_2.webp" />
+                        <img src="/paris/img/have_you_ever_2_en.webp" />
                         <!-- <div>全身穿戴6個追蹤器，你將一秒飛越10,099公里</div> -->
                     </div>
                     <div>
-                        <img src="/paris/img/have_you_ever_3.webp" />
+                        <img src="/paris/img/have_you_ever_3_en.webp" />
                         <!-- <div>在這，性別、年齡、身材都不再重要，你可以自由裝扮舞會模樣</div> -->
                     </div>
                     <div>
-                        <img src="/paris/img/have_you_ever_4.webp" />
+                        <img src="/paris/img/have_you_ever_4_en.webp" />
                         <!-- <div>鏡中的自己不再是熟悉樣貌，拋開顧慮、打開感官、盡情探索吧</div> -->
                     </div>
                     <div>
-                        <img src="/paris/img/have_you_ever_5.webp" />
+                        <img src="/paris/img/have_you_ever_5_en.webp" />
                         <!-- <div>乾杯之後，願離開舞會的你，能永遠記得－自由且真實的自己</div> -->
                     </div>
                 </div>
