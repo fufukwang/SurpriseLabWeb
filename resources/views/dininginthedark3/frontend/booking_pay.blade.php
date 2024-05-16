@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=240405"/>
+    <link rel="stylesheet" href="css/style.css?v=240514"/>
     <link rel="stylesheet" href="css/form.css?date=240411"/>
 
     <!-- Google Tag Manager -->
@@ -755,7 +755,7 @@
         </ul>
     </aside>
 
-    <div id="notice">
+    <div id="notice-banner">
         <img class="d-none d-md-block" src="img/general/notice.jpg" alt="無光晚餐 Dining In The Dark">
         <img class="d-block d-md-none" src="img/general/notice_m.jpg" alt="無光晚餐 Dining In The Dark">
     </div>
