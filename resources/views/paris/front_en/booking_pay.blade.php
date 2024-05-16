@@ -176,7 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="step2-form">
                     <div class="input-group">
-                        <label>* Name(For the protection of your reservation rights, please provide your full name)</label>
+                        <label>* Name (For the protection of your reservation rights, please provide your full name)</label>
                         <input class="required" type="text" name="name" placeholder="Mr. Rabbit" />
                     </div>
                     <div class="input-group phone-group">
@@ -306,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="form-inner">
                         <div class="input-group">
-                            <label>* Name(For the protection of your reservation rights, please provide your full name)</label>
+                            <label>* Name (For the protection of your reservation rights, please provide your full name)</label>
                             <div class="filed-value">驚喜先生/小姐</div>
                         </div>
                         <div class="input-group phone-group">
