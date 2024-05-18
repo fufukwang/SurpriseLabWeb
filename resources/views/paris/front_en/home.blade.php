@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris_en/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris_en/css/home.css?240430">
+    <link rel="stylesheet" href="/paris_en/css/home.css?240516">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -101,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
     
             <div class="info">
-                Dear Guest, welcome to Le Bal de Paris de Blanca Li.<br>
+                Dear Guest, <br>welcome to Le Bal de Paris de Blanca Li.<br>
                 <br>
                 Stay anonymous and show your true self.<br>
                 Put on your digital CHANEL Haute Couture.<br>
@@ -109,13 +109,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <br>
                 Walk through the lakeside and the garden.<br>
                 Dance a waltz and enjoy the Moulin Rouge night shows.<br>
-                All the luxury, mystery and fantasy that you are eager to unveil can be found here.<br>
+                All the luxury, mystery and fantasy <br>
+                that you are eager to unveil can be found here.<br>
                 <br>
                 Come on! <br>
                 Bring along with you the one who you would like to dance with.<br>
                 Escape from reality together, and see what's between the real and the surreal.<br>
                 <br>
-                Come to Le Bal de París de Blanca Li., where you can dance however you want, and experience a lucid dream.<br>
+                Come to Le Bal de París de Blanca Li, where you can dance however you want, and experience a lucid dream.<br>
                 <br>
                 Now, Shall we dance?
             </div>
@@ -125,21 +126,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="icon">
                         <img src="/paris/img/about1.png" />
                     </div>
-                    <h4>The Best Interactive VR Experience Award at Venice International Film Festival</h4>
+                    <h4>Venice Film Festival<br>Best Interactive VR Award</h4>
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/about2.png" />
                     </div>
-                    <h4>Digital CHANEL Haute Couture</h4>
+                    <h4>12 Sets of Digital <br>CHANEL Haute Couture</h4>
                     <!-- <div class="desc">自由選擇虛擬世界的舞會服裝</div> -->
                 </div>
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/about3.png" />
                     </div>
-                    <h4>An 80-minute Immersive Top-Class Parisian night life</h4>
+                    <h4>An 80-minute Immersive<br>Top-Class Parisian night life</h4>
                     <!-- <div class="desc">穿越 1920 年代的花園、舞會和狂歡</div> -->
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <img src="/paris/img/about4.webp" />
+                    </div>
+                    <h4>2 Drinks</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- 體驗內容 -->
+        <section id="sec-experience">
+            <div class="title">
+                <img src="/paris/img/deco.svg" />
+                <h1>HAVE YOU EVER ?</h1>
+            </div>
+
+            <center><p style="color: #E28A8A; font-size: 18px;">Have you ever worn a headset and 6 trackers to blend reality with virtuality?</p></center><br>
+
+            <div class="slider">
+                <div class="owl-carousel">
+                    <div>
+                        <img src="/paris/img/have_you_ever_1_en.webp" />
+                        <!-- <div>拋下既有身份與包袱，你會看見名字在眼前消失</div> -->
+                    </div>
+                    <div>
+                        <img src="/paris/img/have_you_ever_2_en.webp" />
+                        <!-- <div>全身穿戴6個追蹤器，你將一秒飛越10,099公里</div> -->
+                    </div>
+                    <div>
+                        <img src="/paris/img/have_you_ever_3_en.webp" />
+                        <!-- <div>在這，性別、年齡、身材都不再重要，你可以自由裝扮舞會模樣</div> -->
+                    </div>
+                    <div>
+                        <img src="/paris/img/have_you_ever_4_en.webp" />
+                        <!-- <div>鏡中的自己不再是熟悉樣貌，拋開顧慮、打開感官、盡情探索吧</div> -->
+                    </div>
+                    <div>
+                        <img src="/paris/img/have_you_ever_5_en.webp" />
+                        <!-- <div>乾杯之後，願離開舞會的你，能永遠記得－自由且真實的自己</div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -923,6 +965,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <script src="/paris_en/js/main.js?231003"></script>
-    <script src="/paris_en/js/home.js?240430"></script>
+    <script src="/paris_en/js/home.js?240516"></script>
 </body>
 </html>
