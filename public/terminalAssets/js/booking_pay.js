@@ -1,4 +1,4 @@
-$(function() { 
+$(function() {
     let $step1_scenes = $('#step1');
     let $step2_scenes = $('#step2');
     let $step3_scenes = $('#step3');
@@ -158,7 +158,7 @@ $(function() {
             },function(data){
                 for(i=0;i<data.length;i++){ 
                     enableDays.push(data[i].day); 
-                    dateSite[data[i].day] = data[i].per;
+                    dateSite[data[i].day] = data[i].per
                 }
                 var minD = 0;
                 if(enableDays.length>0){ minD = enableDays[0]; }
@@ -277,23 +277,7 @@ $(function() {
                     // }
                 });
                 $.unblockUI();
-    
-                booking_date.on('focus', function () {
-                    $('#ui-datepicker-div').appendTo('.calender-wrapper');
-                    setTimeout(() => {
-                        if($('.calender-ps').length == 0){
-                            $('#ui-datepicker-div').append(`<div class="calender-ps">
-                                <div>
-                                    <p><span style="background: #E55D33;"></span> 好評熱賣</p>
-                                </div>
-                                <div>
-                                    <p><span style="background: #A55AFF;"></span> 即將完售</p>
-                                </div>
-                            </div>`)
-                        }
-                    }, 100);
-                });
-            },'json');
+            });
         }
     }
     // setp 2
