@@ -160,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="section-header">
                                 <div class="section-title">
                                     <h3>體驗內容</h3>
-                                    <h4 style="color: #f7f7c6;">8號菜單：Cheers!</h4>
+                                    <h4 style="color: #f7f7c6;">全新8號菜單｜CHEERS！<br>“一場屬於大人的魔幻茶會！”</h4>
                                 </div>
                                 <!-- <p class="section-desc">
                                     <b>6 號菜單 ON AIR</b>
@@ -197,44 +197,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             </div>
 
                                                             <!-- 2 -->
-                                                            <!-- <div class="item">
-                                                                <figure class="slideshow-card">
-                                                                    <picture>
-                                                                        <source srcset="img/home/about/about-intro-2.webp?231214" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-2.jpg?231214" data-src-retina="img/home/about/about-intro-2.jpg?231214" alt="無光晚餐體驗內容">
-                                                                    </picture>
+                                                            <div class="item">
+                                                                <figure class="slideshow-card video">
+                                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iWN77jXK6zs?si=3PzeZebIQEFPRZ9m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                                 </figure>
-                                                            </div> -->
+                                                            </div>
 
                                                             <!-- 3 -->
-                                                            <!-- <div class="item">
+                                                            <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <picture>
-                                                                        <source srcset="img/home/about/about-intro-3.webp?231214" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-3.jpg?231214" data-src-retina="img/home/about/about-intro-3.jpg?231214" alt="無光晚餐體驗內容">
-                                                                    </picture>
+                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-3.png?240527" data-src-retina="img/home/about/about-intro-3.png?240527" alt="無光晚餐體驗內容">
                                                                 </figure>
-                                                            </div> -->
+                                                            </div>
 
                                                             <!-- 4 -->
-                                                            <!-- <div class="item">
+                                                            <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <picture>
-                                                                        <source srcset="img/home/about/about-intro-4.webp?231214" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-4.jpg?231214" data-src-retina="img/home/about/about-intro-4.jpg?231214" alt="無光晚餐體驗內容">
-                                                                    </picture>
+                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-4.png?240527" data-src-retina="img/home/about/about-intro-4.png?240527" alt="無光晚餐體驗內容">
                                                                 </figure>
-                                                            </div> -->
+                                                            </div>
 
                                                             <!-- 5 -->
-                                                            <!-- <div class="item">
+                                                            <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <picture>
-                                                                        <source srcset="img/home/about/about-intro-5.webp?231214" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-5.jpg?231214" data-src-retina="img/home/about/about-intro-5.jpg?231214" alt="無光晚餐體驗內容">
-                                                                    </picture>
+                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-5.png?240527" data-src-retina="img/home/about/about-intro-5.png?240527" alt="無光晚餐體驗內容">
                                                                 </figure>
-                                                            </div> -->
+                                                            </div>
+
+                                                            <!-- 6 -->
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-6.png?240527" data-src-retina="img/home/about/about-intro-6.png?240527" alt="無光晚餐體驗內容">
+                                                                </figure>
+                                                            </div>
 
                                                         </div>
                                                     </div>
@@ -242,9 +237,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <!-- Experience Intro -->
                                                 <div class="experience-intro">
                                                     <div class="feature-wrap">
-                                                        <div class="feature-item">2 人同行</div>
-                                                        <div class="feature-item">5道料理體驗</div>
-                                                        <div class="feature-item">90分鐘體驗時間</div>
+                                                        <div class="feature-item">2人同行，舉杯慶祝</div>
+                                                        <div class="feature-item">5道料理，感官全開饗宴</div>
+                                                        <div class="feature-item">90分鐘，全無光黑暗體驗</div>
                                                     </div>
                                                     <div class="experience-desc">
                                                         每年365天，有一天是用來點亮蠟燭的；<br>
@@ -284,8 +279,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <p class="ticket-area-note">
                                     <center>
                                         <b>
-                                            <u>8 號菜單 ：Cheers! </u><br>
-                                            <u>全新體驗 4/18 起正式上線</u>
+                                            <u>8號菜單：CHEERS！</u><br>
+                                            <u>格蘭菲迪期間限定</u>
                                             <br><br>
                                         </b>
                                     </center>
@@ -329,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <li>以上價格包含 10% 服務費</li>
                                     <li>體驗皆為雙數入席，無法獨售</li>
                                     <li>現場另提供酒水調飲加購</li>
-                                    <li>4/18為無光全新菜單更新，須滿18歲以上方可預約。</li>
+                                    <li>體驗提供2杯格蘭菲迪微醺飲品，須滿18歲以上方可預約</li>
                                 </ul>
 
                                 <div class="ticket-btn">
@@ -1395,7 +1390,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="overlay"></div>
         <div class="dialog-inner">
             <div class="dialog-content">
-                <div class="img">
+                <div class="img" style="cursor: pointer;">
                     <img class="d-none d-md-block" src="https://www.surpriselab.com.tw/dininginthedark3/img/home/enter-dialog.jpg" alt="無光晚餐 Dining In The Dark" />
                     <img class="d-block d-md-none" src="https://www.surpriselab.com.tw/dininginthedark3/img/home/enter-dialog-m.jpg" alt="無光晚餐 Dining In The Dark" />
                 </div>
@@ -1441,7 +1436,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Custom Js -->
     <script src="js/index.js?date=240406"></script>
     <script src="js/main.js?v=0.13"></script>
-    <script src="js/board-modal.js?date=240406"></script>
+    <script src="js/board-modal.js?date=240527"></script>
     <script src="js/index-slideshow.js?date=230919"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>

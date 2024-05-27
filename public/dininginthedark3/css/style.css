@@ -3456,3 +3456,17 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   max-width: 100%;
   max-height: 100%;
 }
+
+#experience-no1 .slideshow-card.video {
+  height: 0;
+  padding-top: 56.25%;
+  position: relative; 
+}
+
+#experience-no1 .slideshow-card.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
