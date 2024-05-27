@@ -85,7 +85,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="price">
                     <div class="item">
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket1.png" />
+                            <img src="/paris/img/booking_ticket1.webp" />
                         </div>
                         <h4>Single Ticket</h4>
                         <h2>$2,100</h2> 
@@ -97,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="item">
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket2.png" />
+                            <img src="/paris/img/booking_ticket2.webp" />
                         </div>
                         <h4>Double Ticket</h4>
                         <h2>$4,000<span>($2,000/人)</span></h2> 
@@ -110,7 +110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="item">
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket3_old.png" />
+                            <img src="/paris/img/booking_ticket3.webp" />
                         </div>
                         <h4>Quadruple Ticket</h4>
                         <h2>$7,600<span>($1,900/人)</span></h2> 

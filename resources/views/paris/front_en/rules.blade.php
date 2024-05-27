@@ -208,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li><span>Please do not attend with a ponytail or a bun/buns.</span></li>
                         </ul>
                         <br>
-                        <img width="100%" src="/paris/img/rules.png" />           
+                        <img width="100%" src="/paris/img/rules.webp" />           
                     </div>
                 </div>
                 <div class="collapse-item">
@@ -405,7 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @include('paris.frontend._footer')
 
     <a id="fixed-booking" href="/lebaldeparis/booking_pay/en">
-        <img src="/paris/img/fixed-booking-en.png" />
+        <img src="/paris/img/fixed-booking-en.webp" />
     </a>
 
     <script src="/paris_en/js/plugins/jquery-3.3.1.min.js"></script>

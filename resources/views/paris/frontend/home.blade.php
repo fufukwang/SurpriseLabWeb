@@ -125,21 +125,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="about">
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/about1.png" />
+                        <img src="/paris/img/about1.webp" />
                     </div>
                     <h4>威尼斯影展<br>最佳VR體驗</h4>
                     <!-- <div class="desc">自由移動、真實互動的感官體驗</div> -->
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/about2.png" />
+                        <img src="/paris/img/about2.webp" />
                     </div>
                     <h4>80分鐘<br>沉浸頂級晚宴</h4>
                     <!-- <div class="desc">自由選擇虛擬世界的舞會服裝</div> -->
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/about3.png" />
+                        <img src="/paris/img/about3.webp" />
                     </div>
                     <h4>12套香奈兒<br>虛擬高訂禮服</h4>
                     <!-- <div class="desc">穿越 1920 年代的花園、舞會和狂歡</div> -->
@@ -236,7 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="price pc">
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket1.png" />
+                        <img src="/paris/img/booking_ticket1.webp" />
                     </div>
                     <h4>單人獨舞票</h4>
                     <h2>$2,100</h2> 
@@ -250,7 +250,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket2.png" />
+                        <img src="/paris/img/booking_ticket2.webp" />
                     </div>
                     <h4>雙人共舞票</h4>
                     <h2>$4,000<span>($2,000/人)</span></h2> 
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket3_old.png" /> 
+                        <img src="/paris/img/booking_ticket3.webp" /> 
                     </div>
                     <h4>四人群舞票</h4>
                     <h2>$7,600<span>($1,900/人)</span></h2> 
@@ -281,7 +281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="owl-carousel price m">
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket1.png" />
+                        <img src="/paris/img/booking_ticket1.webp" />
                     </div>
                     <h4>單人獨舞票</h4>
                     <h2>$2,100</h2> 
@@ -295,7 +295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket2.png" />
+                        <img src="/paris/img/booking_ticket2.webp" />
                     </div>
                     <h4>雙人共舞票</h4>
                     <h2>$4,000<span>($2,000/人)</span></h2> 
@@ -309,7 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/booking_ticket3_old.png" />
+                        <img src="/paris/img/booking_ticket3.webp" />
                     </div>
                     <h4>四人群舞票</h4>
                     <h2>$7,600<span>($1,900/人)</span></h2> 
@@ -502,8 +502,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
             <div class="more">
                 <div class="more-inner">
-                    <img src="/paris/img/more1.png" />
-                    <img src="/paris/img/more2.png" />
+                    <img src="/paris/img/more1.webp" />
+                    <img src="/paris/img/more2.webp" />
                 </div>
             </div>
         </section>
@@ -968,28 +968,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
             <div class="partner">
                 <div class="logo">
-                    <img src="/paris/img/partner-blanca.png" />
+                    <img src="/paris/img/partner-blanca.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-backLight.png" />
+                    <img src="/paris/img/partner-backLight.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-chanel.png" />
+                    <img src="/paris/img/partner-chanel.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-surpriseLab.png" />
+                    <img src="/paris/img/partner-surpriseLab.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-vive.png?231027" />
+                    <img src="/paris/img/partner-vive.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-science.png" />
+                    <img src="/paris/img/partner-science.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-ministry.png" />
+                    <img src="/paris/img/partner-ministry.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-taicca.png" />
+                    <img src="/paris/img/partner-taicca.webp" />
                 </div>
             </div>
 
@@ -997,7 +997,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <h3>威士忌贊助品牌</h3>
             <div class="partner">
-                <img width="270" src="/paris/img/jw-logo.png" />
+                <img width="270" src="/paris/img/jw-logo.webp" />
             </div>
         </section>
     </main>
@@ -1005,7 +1005,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @include('paris.frontend._footer')
 
     <a id="fixed-booking" href="/lebaldeparis/booking_pay" style="display: none;">
-        <img src="/paris/img/fixed-booking.png" />
+        <img src="/paris/img/fixed-booking.webp" />
     </a>
 
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>
