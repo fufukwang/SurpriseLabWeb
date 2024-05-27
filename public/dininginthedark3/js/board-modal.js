@@ -89,6 +89,27 @@ $(function() {
         $('#enter-dialog').fadeOut();
     });
 
+    $('#enter-dialog .img').on('click', function(){
+        $('#enter-dialog').fadeOut();
+
+        $('html, body').animate({
+            scrollTop: $('#About').offset().top - $('.logo').outerHeight() + 0.5
+        }, 800);
+    });
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
     // Rotate clockwise
     function rotateClockwise(change_deg) {
         change_deg = Math.abs(change_deg) == 0 ? 1 : change_deg;
