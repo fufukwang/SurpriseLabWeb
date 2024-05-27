@@ -213,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li><span>請勿綁馬尾、包包頭</span>出席</li>
                         </ul>
                         <br>
-                        <img width="100%" src="/paris/img/rules.png" />           
+                        <img width="100%" src="/paris/img/rules.webp" />           
                     </div>
                 </div>
                 <div class="collapse-item">
@@ -428,7 +428,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @include('paris.frontend._footer')
 
     <a id="fixed-booking" href="/lebaldeparis/booking_pay">
-        <img src="/paris/img/fixed-booking.png" />
+        <img src="/paris/img/fixed-booking.webp" />
     </a>
 
     <script src="/paris/js/plugins/jquery-3.3.1.min.js"></script>

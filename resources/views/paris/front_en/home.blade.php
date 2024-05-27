@@ -124,20 +124,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="about">
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/about1.png" />
+                        <img src="/paris/img/about1.webp" />
                     </div>
                     <h4>Venice Film Festival<br>Best Interactive VR Award</h4>
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/about2.png" />
+                        <img src="/paris/img/about2.webp" />
                     </div>
                     <h4>12 Sets of Digital <br>CHANEL Haute Couture</h4>
                     <!-- <div class="desc">自由選擇虛擬世界的舞會服裝</div> -->
                 </div>
                 <div class="item">
                     <div class="icon">
-                        <img src="/paris/img/about3.png" />
+                        <img src="/paris/img/about3.webp" />
                     </div>
                     <h4>An 80-minute Immersive<br>Top-Class Parisian night life</h4>
                     <!-- <div class="desc">穿越 1920 年代的花園、舞會和狂歡</div> -->
@@ -231,7 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <div>
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket1.png" />
+                            <img src="/paris/img/booking_ticket1.webp" />
                         </div>
                         <h4>Single Ticket</h4>
                         <h2>$2,100</h2> 
@@ -246,7 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <div>
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket2.png" />
+                            <img src="/paris/img/booking_ticket2.webp" />
                         </div>
                         <h4>Double Ticket</h4>
                         <h2>$4,000<span>($2,000/人)</span></h2> 
@@ -262,7 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <div>
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket3_old.png" /> 
+                            <img src="/paris/img/booking_ticket3.webp" /> 
                         </div>
                         <h4>Quadruple Ticket</h4>
                         <h2>$7,600<span>($1,900/人)</span></h2> 
@@ -281,7 +281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <div>
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket1.png" />
+                            <img src="/paris/img/booking_ticket1.webp" />
                         </div>
                         <h4>Single Ticket</h4>
                         <h2>$2,100</h2> 
@@ -296,7 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <div>
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket2.png" />
+                            <img src="/paris/img/booking_ticket2.webp" />
                         </div>
                         <h4>Double Ticket</h4>
                         <h2>$4,000<span>($2,000/人)</span></h2> 
@@ -312,7 +312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <div>
                         <div class="icon">
-                            <img src="/paris/img/booking_ticket3_old.png" />
+                            <img src="/paris/img/booking_ticket3.webp" />
                         </div>
                         <h4>Quadruple Ticket</h4>
                         <h2>$7,600<span>($1,900/人)</span></h2> 
@@ -401,42 +401,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="owl-carousel">
                     <div>
                         <a target="_blank" href="https://www.vogue.com.tw/article/%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83-%E5%8F%B0%E5%8C%97-%E9%A9%9A%E5%96%9C%E8%A3%BD%E9%80%A0">
-                            <img src="/paris/img/media1_en.jpg" />
+                            <img src="/paris/img/media1_en.webp" />
                             <!-- <div class="s-title">Vogue</div>
                             <div>Step into the magical realm of Le Bal, where you are not just an audience, but a key participant.</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.elle.com/tw/life/tech/a46233366/vr-paris-ball/">
-                            <img src="/paris/img/media2_en.jpg" />
+                            <img src="/paris/img/media2_en.webp" />
                             <!-- <div class="s-title">ELLE</div>
                             <div>Dressing up with digital CHANEL Haute Couture, embark on a glamorous adventure!</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.adaymag.com/2023/12/15/le-bal-de-paris-experience.html">
-                            <img src="/paris/img/media3_en.jpg" />
+                            <img src="/paris/img/media3_en.webp" />
                             <!-- <div class="s-title">A Day Magazine</div>
                             <div>It’s safe to say it’s the most mind-blowing experience lately.</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.stylemaster.com.tw/2023/12/07/%E3%80%8A%E5%B7%B4%E9%BB%8E%E8%88%9E%E6%9C%83%E3%80%8B12%E6%9C%88%E7%99%BB%E5%A0%B4%E7%A7%91%E6%95%99%E9%A4%A8%EF%BC%81%E7%A9%BF%E4%B8%8A%E9%A6%99%E5%A5%88%E5%85%92%E9%AB%98%E7%B4%9A%E8%A8%82%E8%A3%BD/">
-                            <img src="/paris/img/media4_en.jpg" />
+                            <img src="/paris/img/media4_en.webp" />
                             <!-- <div class="s-title">style master</div>
                             <div>Top-tier actors Gui Lun-Mei and Chen Bolin lend their voices for a fantastic journey together.</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.wepeople.club/art/lebaldeparisdeblancaliintaipei/">
-                            <img src="/paris/img/media5_en.jpg" />
+                            <img src="/paris/img/media5_en.webp" />
                             <!-- <div class="s-title">WE PEOPLE</div>
                             <div>Venice Film Festival Award-Winning VR experience arrives in Taipei.</div> -->
                         </a>
                     </div>
                     <div>
                         <a target="_blank" href="https://www.shoppingdesign.com.tw/post/view/9797">
-                            <img src="/paris/img/media6_en.jpg" />
+                            <img src="/paris/img/media6_en.webp" />
                             <!-- <div class="s-title">Shopping Design</div>
                             <div>Creating VR extended scenes, immersing yourself in a magnificent adventure bridging the virtual and the real.</div> -->
                         </a>
@@ -457,8 +457,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
             <div class="more">
                 <div class="more-inner">
-                    <img src="/paris/img/more1_en.png" />
-                    <img src="/paris/img/more2_en.png" />
+                    <img src="/paris/img/more1_en.webp" />
+                    <img src="/paris/img/more2_en.webp" />
                 </div>
             </div>
         </section>
@@ -918,28 +918,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
             <div class="partner">
                 <div class="logo">
-                    <img src="/paris/img/partner-blanca.png" />
+                    <img src="/paris/img/partner-blanca.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-backLight.png" />
+                    <img src="/paris/img/partner-backLight.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-chanel.png" />
+                    <img src="/paris/img/partner-chanel.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-surpriseLab.png" />
+                    <img src="/paris/img/partner-surpriseLab.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-vive.png?231027" />
+                    <img src="/paris/img/partner-vive.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-science.png" />
+                    <img src="/paris/img/partner-science.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-ministry.png" />
+                    <img src="/paris/img/partner-ministry.webp" />
                 </div>
                 <div class="logo">
-                    <img src="/paris/img/partner-taicca.png" />
+                    <img src="/paris/img/partner-taicca.webp" />
                 </div>
             </div>
 
@@ -947,7 +947,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <h3>Whiskey Sponsor Brand</h3>
             <div class="partner">
-                <img width="270" src="/paris/img/jw-logo.png" />
+                <img width="270" src="/paris/img/jw-logo.webp" />
             </div>
         </section>
     </main>
@@ -955,7 +955,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @include('paris.frontend._footer')
 
     <a id="fixed-booking" href="/lebaldeparis/booking_pay/en" style="display: none;">
-        <img src="/paris/img/fixed-booking-en.png" />
+        <img src="/paris/img/fixed-booking-en.webp" />
     </a>
 
     <script src="/paris_en/js/plugins/jquery-3.3.1.min.js"></script>
