@@ -189,10 +189,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <!-- 1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <picture>
-                                                                        <source srcset="img/home/about/about-intro-1.webp?240411" type="image/webp" />
-                                                                        <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.jpg?240411" data-src-retina="img/home/about/about-intro-1.jpg?240411" alt="無光晚餐體驗內容">
-                                                                    </picture>
+                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.png?240527" data-src-retina="img/home/about/about-intro-1.png?240527" alt="無光晚餐體驗內容">
                                                                 </figure>
                                                             </div>
 
