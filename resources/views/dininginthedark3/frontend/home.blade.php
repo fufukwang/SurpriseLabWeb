@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240514"/>
+    <link rel="stylesheet" href="css/style.css?date=240527"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -1434,7 +1434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/index.js?date=240406"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?date=240527"></script>
-    <script src="js/index-slideshow.js?date=230919"></script>
+    <script src="js/index-slideshow.js?date=240527"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 </html>
