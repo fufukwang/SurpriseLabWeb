@@ -68,36 +68,30 @@ $(function() {
             }
         });
     });
-
-    // Owl Carousel
-    let $owlExperience = $('#owl-experience-01');
-
-    // 觸發 Owl Carousel
-    $owlExperience.each(function(){
-        $(this).owlCarousel({
-            center: true,
-            loop: false,
-            nav: true,
-            navText: ['<img src="img/home/landing/btn-left.svg" alt="btn-left"/>', '<img src="img/home/landing/btn-right.svg" alt="btn-right"/>'],
-            lazyLoad: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    dots: true,
-                    // margin: 20
-                },
-                1200: {
-                    items: 2.27,
-                    dots: false,
-                    margin: 60
-                },
-                1441: {
-                    items: 2.27,
-                    dots: false,
-                    margin: 60
-                }
+    
+    $('#owl-experience-01').owlCarousel({
+        center: true,
+        loop: true,
+        // margin: 60,
+        nav: true,
+        navText: ['<img src="img/home/landing/btn-left.svg" alt="btn-left"/>', '<img src="img/home/landing/btn-right.svg" alt="btn-right"/>'],
+        lazyLoad: true,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true
+            },
+            1200: {
+                items: 2.27,
+                dots: false,
+                margin: 60
+            },
+            1441: {
+                items: 2.27,
+                dots: false,
+                margin: 60
             }
-        });
+        }
     });
 
     // Owl Carousel
