@@ -41,7 +41,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?240430">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?240529">
     <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?240429">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -312,17 +312,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                                 <fieldset class="checkbox-block">
                                     <div class="form-group checkbox-layout">
-                                        <input type="checkbox" id="agree-rules" name="agree-rules" required>
-                                        <label class="body-04" for="agree-rules">
-                                            <span class="body-04">我已詳讀並遵守</span>
-                                            <a href="/terminal/rules" target="_blank" class="link-text style-smaller">落日轉運站劃位與體驗規則</a>
-                                        </label>
-                                    </div>
-                                    <div class="form-group checkbox-layout">
                                         <input type="checkbox" id="agree-privacy" name="agree-privacy" required>
                                         <label class="body-04" for="agree-privacy">
                                             <span class="body-04">我已詳讀並遵守</span>
                                             <a href="javascript://" class="link-text style-smaller" data-bs-toggle="modal" data-bs-target="#staticBackdrop">隱私權條款</a>
+                                        </label>
+                                    </div>
+                                    <div class="form-group checkbox-layout">
+                                        <input type="checkbox" id="agree-rules" name="agree-rules" required>
+                                        <label class="body-04" for="agree-rules">
+                                            <span class="body-04">我已詳讀並遵守</span>
+                                            <a href="/terminal/rules" target="_blank" class="link-text style-smaller">退換票政策</a> 落日月台退換票政策係依行政院文化部頒定之藝文表演票券定型化契約，第四類級距式退換票方案，收取退換票手續費用。
+                                        </label>
+                                    </div>
+                                    <div class="form-group checkbox-layout" style="flex-wrap: nowrap;">
+                                        <input type="checkbox" id="agree-self" name="agree-self" required>
+                                        <label class="body-04" for="agree-self">
+                                            <span class="body-04">我同意授權落日月台體驗中的拍攝、使用本人之肖像（包含照片及動態影像）。體驗中錄像僅供體驗中使用，不會使用於任何公開平台，並將在一個月內刪除。</span>
                                         </label>
                                     </div>
                                     <div class="form-group checkbox-layout" style="flex-wrap: nowrap;">

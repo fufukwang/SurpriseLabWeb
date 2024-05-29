@@ -683,9 +683,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                                 <li class="list-item"><p>收到劃位信件當天，進入劃位網站後，若沒有能前來的時段，劃位資格將保留至 3/31（日），逾期劃位序號將無法使用</p></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="list-item"><p>若改期後需退費，僅能退還原金額之 50%（另需酌收 10% 手續處理費）</p></li>
-                                                        <li class="list-item"><p>若體驗當日因不可抗力之因素，需臨時異動訂單，請於體驗日後三日內來信客服，並出示相關含姓名日期之證明，申請特例改期。特例改期僅開放兩週內日期選擇。</p></li>
-                                                        <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整</p></li>
+                                                        <li class="list-item"><p>落日月台退換票政策，係依行政院文化部頒定之藝文表演票券定型化契約，第四類級距式退換票方案，收取退換票手續費用。</p></li>
+                                                        <li class="list-item"><p>每筆訂單初次換票，可減免手續費用一次。若換票後，欲再次退換票，需補上前次減免之手續費用。</p></li>
+                                                        <li class="list-item"><p>訂單成立後若發現訂單內容或時段錯誤，需請於訂單成立後24小時內來信，逾時將一律依照退換政策辦理，請於結帳前確認再次訂單資訊。</p></li>
+                                                        <li class="list-item"><p>若體驗當日若因不可抗力之因素，需臨時異動訂單，請於體驗日後三日內來信客服，並出示相關含姓名日期之證明申請特例改期。特例改期僅開放兩週內日期選擇。落日月台保有最終決定權。</p></li>
+                                                        <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:mindthegap@surpriselab.com.tw">mindthegap@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</p></li>
                                                     </ul>
                                                 </div>
                                             </div>

@@ -598,7 +598,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                         <div class="tab-pane fade" id="project-order" role="tabpanel" aria-labelledby="project-order-tab">
                             <div class="tab-content-inner">
-                                <p style="color: #efaf50; text-align: center;">喜歡的日期完售了嗎？歡迎看看下個月的場次</p>
+                                <p style="color: #efaf50; text-align: center;">
+                                    落日月台將於每月 15 日開放隔月場次<br>
+                                    （如遇假日將提前於週間開放）
+                                </p>
                                 <div class="ticket-datepicker">
                                     <div id="homeDatepicker"></div>
                                     <div class="datepicker-ps">
