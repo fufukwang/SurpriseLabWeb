@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/select2.css"/>
-    <link rel="stylesheet" href="/paris/css/booking_pay.css?240507">
+    <link rel="stylesheet" href="/paris/css/booking_pay.css?240529">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -309,18 +309,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="checkboxes">
                         <div class="checkbox-group">
-                            <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
-                                <input type="checkbox" name="ck_privacy" value="1" />
+                            <input type="checkbox" id="ck_privacy" name="ck_privacy" value="1" />
+                            <label class="custom-control custom-checkbox m-0 d-flex align-items-center" for="ck_privacy">
                                 <span>我已詳讀並遵守</span>
+                                <span class="modal-btn modal-btn-privacy" data-custom-open="modal-privacy" onclick="javascript:event.preventDefault();">隱私權條款</span>
                             </label>
-                            <span class="modal-btn modal-btn-privacy" data-custom-open="modal-privacy">隱私權條款</span>
                         </div>
                         <div class="checkbox-group">
-                            <label class="custom-control custom-checkbox m-0 d-flex align-items-center">
-                                <input type="checkbox" name="ck_rule" value="1" />
-                                <span>我已詳讀並遵守</span> 
+                            <input type="checkbox" id="ck_rule" name="ck_rule" value="1" />
+                            <label class="custom-control custom-checkbox m-0 d-flex align-items-center" for="ck_rule">
+                                <span>我已詳讀並遵守</span>
+                                <a target="_blank" href="/lebaldeparis/rules">退換票政策</a> 巴黎舞會退換票政策，係依行政院文化部頒定之藝文表演票券定型化契約，第四類級距式退換票方案，收取退換票手續費用。
                             </label>
-                            <a target="_blank" href="/lebaldeparis/rules">舞會規則</a>
                         </div>
                     </div>
                     <div class="actions">
