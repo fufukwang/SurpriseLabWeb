@@ -113,6 +113,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="collapse-item">
+                    <div class="item-title">行動不便者可以參與體驗嗎？</div>
+                    <div class="item-body">
+                        <p>可以！巴黎舞會每一場次皆有一席「輪椅體驗」名額。如有相關預約需求與疑問，歡迎來信客服信箱 <a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a></p>
+                    </div>
+                </div>
+                <div class="collapse-item">
                     <div class="item-title">《巴黎舞會》在哪裡舉辦？</div>
                     <div class="item-body">
                         <!--合併衝突保留 master--><!-- <p> 
@@ -278,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>將訂位確認信轉寄<br>或截圖給親朋好友即可</td>
                     <td>現場須出示確認信<br>及向櫃檯說明<br>原訂票人姓名、電話</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>退票<br>（未收到劃位序號）</td>
                     <td>購票者的<br>姓名、購買信箱</td>
                     <td>訂單編號</td>
@@ -287,9 +293,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>退票<br>（已收到劃位序號）</td>
                     <td>購票者的<br>姓名、購買信箱</td>
                     <td>劃位序號</td>
-                </tr>
+                </tr> -->
                 <tr>
-                    <td>退票<br>（線上購票直接劃位）</td>
+                    <td>退票</td>
                     <td>購票者的<br>姓名、購票信箱、手機</td>
                     <td>訂單編號</td>
                 </tr>
@@ -316,10 +322,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </ul>
                 </li> -->
                 <li>無論是預購或直購，單筆訂單若為1張以上的票券，退款採整筆訂單退款，恕不開放退訂部分品項</li>
-                <li>每筆訂單僅能異動一次，若改期後需退費，將依照改期前原訂日期辦理退費</li>
+                <!-- <li>每筆訂單僅能異動一次，若改期後需退費，將依照改期前原訂日期辦理退費</li> -->
                 <li>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="mailto hover-underline" href="mailto:lebaldeparis@surpriselab.com.tw">lebaldeparis@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</li>
                 <li>若體驗當日因不可抗力之因素，需臨時異動訂單，請於體驗日後三日內來信客服，並出示相關含姓名日期之證明，申請特例改期。特例改期僅開放兩週內日期選擇，敬請見諒</li>
                 <li>訂單成立後若發現錯誤，需請於訂單成立後24小時內來信，逾時將一律依照官網退換政策改期辦理，請於結帳前確認再次訂單資訊</li>
+                <li>巴黎舞會退換票政策，係依行政院文化部頒定之藝文表演票券定型化契約，第四類級距式退換票方案，收取退換票手續費用。</li>
+                <li>每筆訂單初次換票，可減免手續費用一次。若換票後，欲再次退換票，需補上前次減免之手續費用。</li>
             </ul>
 
             <br>
@@ -391,7 +399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </table>
             <br>
 
-            <center>
+            <!-- <center>
                 <p style="font-size: 1.5em;">預購 / 未完成劃位</p>
             </center>
             <table>
@@ -408,7 +416,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <td>100%</td>
                 </tr>
             </table>
-            <br>
+            <br> -->
 
             <ul>
                 <li>來信申請退費請於下班 18:00 前，超過以隔日計算</li>
