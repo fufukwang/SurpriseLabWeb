@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris_en/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris_en/css/home.css?240516">
+    <link rel="stylesheet" href="/paris_en/css/home.css?240601">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -958,6 +958,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="/paris/img/fixed-booking-en.webp" />
     </a>
 
+    <div id="enter-dialog">
+        <div class="overlay"></div>
+        <div class="dialog-inner">
+            <div class="dialog-content">
+                <div class="img">
+                    <img class="d-none d-md-block" src="/paris/img/enter-dialog_en.jpg" alt="無光晚餐 Dining In The Dark" />
+                    <img class="d-block d-md-none" src="/paris/img/enter-dialog-m_en.jpg" alt="無光晚餐 Dining In The Dark" />
+                </div>
+                <div class="txt">CLOSE</div>
+            </div>
+        </div>
+        <div class="dialog-close"></div>
+    </div>
+
     <script src="/paris_en/js/plugins/jquery-3.3.1.min.js"></script>
     <script src="/paris_en/js/plugins/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -965,6 +979,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <script src="/paris_en/js/main.js?231003"></script>
-    <script src="/paris_en/js/home.js?240516"></script>
+    <script src="/paris_en/js/home.js?240601"></script>
 </body>
 </html>
