@@ -175,3 +175,38 @@ $(function(){
         }
     });
 });
+
+function setEnterDialogSize() {
+    var wrapperRatio = $('#enter-dialog').width() / $('#enter-dialog').height();
+    var contentRatio = $('#enter-dialog .dialog-content').width() / $('#enter-dialog .dialog-content').height();
+    var contentH = $('#enter-dialog .dialog-inner').height();
+    var imgH = contentH - 6 - 32;
+    var maxImgW = window.matchMedia("(min-width: 768px)").matches ? (1440 * imgH / 1024) : (390 * imgH / 844);
+    $('#enter-dialog .dialog-content').css('width', wrapperRatio < contentRatio ? '100%' : (maxImgW + 'px'));
+}
+
+if ( sessionStorage.getItem('paris_dialog_noshow') !== 'true' ) {
+    $('#enter-dialog').fadeIn();
+    setEnterDialogSize();
+}
+
+$(window).on('resize', function(){
+    setEnterDialogSize();
+});
+
+$('#enter-dialog .dialog-close').on('click', function(event) {
+    $('#enter-dialog').fadeOut();
+});
+
+$('#enter-dialog .txt').on('click', function(){
+    sessionStorage.setItem('paris_dialog_noshow', 'true');
+    $('#enter-dialog').fadeOut();
+});
+
+// $('#enter-dialog .img').on('click', function(){
+//     $('#enter-dialog').fadeOut();
+
+//     $('html, body').animate({
+//         scrollTop: $('#About').offset().top - $('.logo').outerHeight() + 0.5
+//     }, 800);
+// });
