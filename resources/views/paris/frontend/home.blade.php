@@ -229,8 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="/paris/img/deco.svg" />
                 <h1>購票資訊</h1>
                 <h3>Ticket</h3>
-                <!-- <p><center>12月座位全數完售，立即購票享預購限定優惠</center></p>
-                <p><center>現在預約舞會，可劃「2024/1-2月」座位</center></p> -->
+                <div><center>巴黎舞會 六月最後倒數<br>06/14 前輸入「finalcall」 享不限票種$200折抵</center></div>
             </div>
             
             <div class="price pc">
