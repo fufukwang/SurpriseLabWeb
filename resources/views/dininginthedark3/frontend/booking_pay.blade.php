@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=240514"/>
+    <link rel="stylesheet" href="css/style.css?v=240603"/>
     <link rel="stylesheet" href="css/form.css?date=240411"/>
 
     <!-- Google Tag Manager -->
@@ -206,7 +206,7 @@
                             </div>
                             <div class="form-group with-icon">
                                 <label class="form-label" for="booking_date">日期 Date</label>
-                                <div class="field-icon-wrapper">
+                                <div class="field-icon-wrapper {{$day == '2024-06-28' ? 'qpower': ''}}">
                                     <input type="text" name="booking_date" id="booking_date" readonly placeholder="選擇日期"/>
                                     <span class="field-icon"></span>
                                 </div>
@@ -740,6 +740,30 @@
         </div>
     </div>
 
+    <div class="modal" id="modalFor0628" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content text-left">
+                <div class="modal-header" style="background: #f7f7c6;">
+                    <h5 class="modal-title">注意</h5>
+                </div>
+                <div class="modal-body-container">
+                    <div class="modal-body">
+                        <p>
+                            嗨！很高興你選擇了6/28這一天前來無光晚餐慶祝～<br>
+                            這一天是無光晚餐x Q power的驚喜慶祝日！<br>
+                            你與同行夥伴將會獲得我們為你們準備的Surprise，以及特別的活動！<br>
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>期待在無光中與你們相見</p>
+                    </div>
+                </div>
+                <div class="modal-footer" data-dismiss="modal" aria-label="Close" style="color: #000; background: #f7f7c6;">
+                太好了！我期待！
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Social Links -->
     <aside class="social-wrapper">
         <ul>
@@ -793,10 +817,13 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?2312193"></script>
+    <script src="js/form_pay.js?240603"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
+        @if($day=='2024-06-28')
+        <script>$('#modalFor0628').modal('show');</script>
+        @endif
     @else
     <script type="text/javascript">alert('該場次人數已達上限!請新開始登記選擇!');</script>
     @endif
