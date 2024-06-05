@@ -561,7 +561,7 @@
                                         <td>01/21</td>
                                         <td>X</td>
                                         <td>X</td>
-                                        <td rowspan="2">50%</td>
+                                        <td rowspan="2">80%</td>
                                     </tr>
                                     <tr>
                                         <td>體驗前1-3天</td>
