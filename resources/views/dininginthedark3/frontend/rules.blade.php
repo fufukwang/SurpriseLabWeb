@@ -558,37 +558,30 @@
 
                                     <tr>
                                         <td>體驗當日</td>
-                                        <td>01/11</td>
+                                        <td>01/21</td>
                                         <td>X</td>
                                         <td>X</td>
-                                        <td>X</td>
-                                    </tr>
-                                    <tr>
-                                        <td>體驗前一日</td>
-                                        <td>01/10</td>
-                                        <td>X</td>
-                                        <td>O</td>
                                         <td rowspan="2">50%</td>
                                     </tr>
                                     <tr>
-                                        <td>體驗前九日</td>
-                                        <td>01/02</td>
+                                        <td>體驗前1-3天</td>
+                                        <td>01/20-01/18</td>
                                         <td>X</td>
                                         <td>O</td>
                                     </tr>
                                     <tr>
-                                        <td>體驗前十日</td>
-                                        <td>01/01</td>
+                                        <td>體驗前4-10天</td>
+                                        <td>01/10-01/17</td>
                                         <td>O</td>
                                         <td>O</td>
                                         <td>90%</td>
                                     </tr>
                                     <tr>
-                                        <td>劃位完成後</td>
+                                        <td>預約完成後</td>
                                         <td>—</td>
                                         <td>O</td>
                                         <td>O</td>
-                                        <td>90%</td>
+                                        <td>98%</td>
                                     </tr>
                                     </tbody>
                                 </table>
