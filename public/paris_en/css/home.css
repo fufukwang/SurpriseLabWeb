@@ -1527,3 +1527,48 @@ body {
     display: none;
   }
 }
+#home .countdown {
+  margin: 0 -17px;
+  color: #C41244;
+  font-family: "txc-pearl";
+  position: relative;
+}
+#home .countdown img {
+  display: block;
+  width: 100%;
+}
+#home .countdown .days {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  font-size: 13vw;
+}
+#home .countdown .hours, #home .countdown .minutes {
+  position: absolute;
+  top: 42.4%;
+  left: 57%;
+  font-size: 5.5vw;
+}
+#home .countdown .minutes {
+  top: 47.6%;
+}
+@media (min-width: 650px) {
+  #home .countdown {
+    margin: 0 auto;
+    width: 600px;
+  }
+  #home .countdown .days {
+    top: 46%;
+    left: 35%;
+    font-size: 85px;
+  }
+  #home .countdown .hours, #home .countdown .minutes {
+    position: absolute;
+    top: 43%;
+    left: 56%;
+    font-size: 36px;
+  }
+  #home .countdown .minutes {
+    top: 48%;
+  }
+}

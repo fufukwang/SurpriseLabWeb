@@ -1576,7 +1576,7 @@ body {
   #home .countdown .hours, #home .countdown .minutes {
     position: absolute;
     top: 43%;
-    left: 57%;
+    left: 56%;
     font-size: 36px;
   }
   #home .countdown .minutes {
