@@ -116,17 +116,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </div>
                                                     <div class="item-unit body-02">每場次</div>
                                                 </div>
-                                                <div class="feature-item">
-                                                    <div class="item-title body-01">
-                                                        <i class="icon-ticket"></i>
-                                                        票價<span class="color-o400">2,200</span>元
+                                                <div class="feature-item" style="display: block;">
+                                                    <div style="display: flex; justify-content: space-between;">
+                                                        <div class="item-title body-01">
+                                                            <i class="icon-ticket"></i>
+                                                            票價<span class="color-o400">2,200</span>元
+                                                        </div>
+                                                        <div class="item-unit body-02">每人　</div>
                                                     </div>
-                                                    <div class="item-unit body-02">每人　</div>
+                                                    <div style="display: flex; justify-content: space-between;">
+                                                        <div class="item-title body-01">
+                                                            <i class="icon-ticket" style="opacity: 0; font-size: 20px; width: 49.8px;"></i>
+                                                            票價<span class="color-o400">2,200</span>元
+                                                        </div>
+                                                        <div class="item-unit body-02">每人　</div>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: space-between;">
+                                                        <div class="item-title body-01">
+                                                            <i class="icon-ticket" style="opacity: 0;"></i>
+                                                            票價<span class="color-o400">2,200</span>元
+                                                        </div>
+                                                        <div class="item-unit body-02">每人　</div>
+                                                    </div>
                                                 </div>
                                                 <div class="feature-item">
                                                     <div class="item-title body-01">
                                                         <i class="icon-drink"></i>
-                                                        <span class="color-o400">3</span>道小點 & <span class="color-o400">1</span>杯酒精飲品
+                                                        <span class="color-o400">3</span>道小點 & <span class="color-o400">1</span>杯微醺飲品
                                                     </div>
                                                     <div class="item-unit body-02">每人　</div>
                                                 </div>

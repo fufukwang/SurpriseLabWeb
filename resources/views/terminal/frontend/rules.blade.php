@@ -239,7 +239,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </div>
 
                                             <div class="accordion rule-accordion-wrap" id="accordionFlushExample-2">
-                                                <div class="accordion-item">
+                                                <!-- <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion2-1-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2-1" aria-expanded="false" aria-controls="accordion2-1">
                                                             <span class="header-title">預售票券購買成功，要注意什麼？</span>
@@ -252,9 +252,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <p>請密切注意信箱的促銷分頁或垃圾信件匣，以及 <a href="https://www.instagram.com/surpriselabtw/" target="_blank" class="link-text style-qa">驚喜製造 Surprise Lab 官方社群</a></p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
 
-                                                <div class="accordion-item">
+                                                <!-- <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion2-2-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2-2" aria-expanded="false" aria-controls="accordion2-2">
                                                             <span class="header-title">收到劃位信後，我要做什麼？</span>
@@ -266,7 +266,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <p>劃位步驟與說明請見 <a href="https://drive.google.com/drive/folders/1YICN9jXa-_QMZjM2-Z-sRUjYpASE6QUM?usp=sharing" target="_blank" class="link-text style-qa">劃位序號使用指南</a></p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
 
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion2-3-header">
@@ -687,7 +687,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item"><p>每筆訂單初次換票，可減免手續費用一次。若換票後，欲再次退換票，需補上前次減免之手續費用。</p></li>
                                                         <li class="list-item"><p>訂單成立後若發現訂單內容或時段錯誤，需請於訂單成立後24小時內來信，逾時將一律依照退換政策辦理，請於結帳前確認再次訂單資訊。</p></li>
                                                         <li class="list-item"><p>若體驗當日若因不可抗力之因素，需臨時異動訂單，請於體驗日後三日內來信客服，並出示相關含姓名日期之證明申請特例改期。特例改期僅開放兩週內日期選擇。落日月台保有最終決定權。</p></li>
-                                                        <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:mindthegap@surpriselab.com.tw">mindthegap@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</p></li>
+                                                        <!-- <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:mindthegap@surpriselab.com.tw">mindthegap@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</p></li> -->
+                                                        <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後五日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:mindthegap@surpriselab.com.tw">mindthegap@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</p></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -774,7 +775,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <h4 class="heading-content-title">未完成劃位</h4>
                                                 </div>
 
-                                                <div class="table-wrap style-rule layout-refund">
+                                                <!-- <div class="table-wrap style-rule layout-refund">
                                                     <table>
                                                         <tr>
                                                             <th></th>
@@ -801,7 +802,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <td><i class="icon-cross"></i></td>
                                                         </tr>
                                                     </table>
-                                                </div>
+                                                </div> -->
                                             </div>
 
                                             <div class="sub-block-wrap">
