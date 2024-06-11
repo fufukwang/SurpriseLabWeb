@@ -211,10 +211,7 @@ $('#enter-dialog .txt').on('click', function(){
 //     }, 800);
 // });
 
-
 var endDate = $('#home .countdown').data('date');
-endDate = '2024-06-11 11:19:00';
-
 function countdown(){
     var endDateDate = new Date(endDate);
     var currentDate = new Date();
