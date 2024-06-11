@@ -213,6 +213,7 @@ $('#enter-dialog .txt').on('click', function(){
 
 
 var endDate = $('#home .countdown').data('date');
+endDate = '2024-06-11 11:19:00';
 
 function countdown(){
     var endDateDate = new Date(endDate);
@@ -223,9 +224,9 @@ function countdown(){
     var hours = Math.floor(totalSeconds / 3600 ) % 24;
     var minutes = Math.floor(totalSeconds / 60 ) % 60;
 
-    $('#home .countdown .days').text(formatTime(days) < 0 ? 0 : formatTime(days));
-    $('#home .countdown .hours').text(formatTime(hours) < 0 ? 0 : formatTime(hours));
-    $('#home .countdown .minutes').text(formatTime(minutes) < 0 ? 0 : formatTime(minutes));   
+    $('#home .countdown .days').text(days < 0 ? '00' : formatTime(days));
+    $('#home .countdown .hours').text(hours < 0 ? '00' : formatTime(hours));
+    $('#home .countdown .minutes').text(minutes < 0 ? '00' : formatTime(minutes));   
 }
 countdown();
 
