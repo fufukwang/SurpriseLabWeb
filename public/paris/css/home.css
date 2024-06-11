@@ -1530,3 +1530,56 @@ body {
     display: none;
   }
 }
+#sec-experience .owl-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  #sec-experience .owl-nav {
+    display: block;
+  }
+}
+#home .countdown {
+  margin: 0 -17px;
+  color: #C41244;
+  font-weight: 700;
+  position: relative;
+}
+#home .countdown img {
+  display: block;
+  width: 100%;
+}
+#home .countdown .days {
+  position: absolute;
+  top: 44%;
+  left: 31%;
+  font-size: 13vw;
+}
+#home .countdown .hours, #home .countdown .minutes {
+  position: absolute;
+  top: 41%;
+  left: 55%;
+  font-size: 5.5vw;
+}
+#home .countdown .minutes {
+  top: 46%;
+}
+@media (min-width: 650px) {
+  #home .countdown {
+    margin: 0 auto;
+    width: 600px;
+  }
+  #home .countdown .days {
+    top: 45%;
+    left: 32%;
+    font-size: 70px;
+  }
+  #home .countdown .hours, #home .countdown .minutes {
+    position: absolute;
+    top: 42%;
+    left: 55%;
+    font-size: 36px;
+  }
+  #home .countdown .minutes {
+    top: 47%;
+  }
+}
