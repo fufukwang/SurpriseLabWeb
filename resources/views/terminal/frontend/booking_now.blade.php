@@ -122,21 +122,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <i class="icon-ticket"></i>
                                                             票價<span class="color-o400">2,200</span>元
                                                         </div>
-                                                        <div class="item-unit body-02">每人　</div>
+                                                        <div class="item-unit body-02">單人票</div>
                                                     </div>
                                                     <div style="display: flex; justify-content: space-between;">
                                                         <div class="item-title body-01">
                                                             <i class="icon-ticket" style="opacity: 0; font-size: 20px; width: 49.8px;"></i>
-                                                            票價<span class="color-o400">2,200</span>元
+                                                            票價<span class="color-o400">4,200</span>元
                                                         </div>
-                                                        <div class="item-unit body-02">每人　</div>
+                                                        <div class="item-unit body-02">雙人票</div>
                                                     </div>
                                                     <div style="display: flex; justify-content: space-between;">
                                                         <div class="item-title body-01">
                                                             <i class="icon-ticket" style="opacity: 0;"></i>
-                                                            票價<span class="color-o400">2,200</span>元
+                                                            票價<span class="color-o400">12,000</span>元
                                                         </div>
-                                                        <div class="item-unit body-02">每人　</div>
+                                                        <div class="item-unit body-02">六人票</div>
                                                     </div>
                                                 </div>
                                                 <div class="feature-item">
