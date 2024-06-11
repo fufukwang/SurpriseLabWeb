@@ -1037,6 +1037,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <script src="/paris/js/main.js?231003"></script>
-    <script src="/paris/js/home.js?240601"></script>
+    <script src="/paris/js/home.js?2406011"></script>
 </body>
 </html>
