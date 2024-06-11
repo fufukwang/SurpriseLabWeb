@@ -210,3 +210,27 @@ $('#enter-dialog .txt').on('click', function(){
 //         scrollTop: $('#About').offset().top - $('.logo').outerHeight() + 0.5
 //     }, 800);
 // });
+
+
+var endDate = $('#home .countdown').data('date');
+
+function countdown(){
+    var endDateDate = new Date(endDate);
+    var currentDate = new Date();
+
+    var totalSeconds = (endDateDate-currentDate)/1000;
+    var days = Math.floor(totalSeconds / 3600 / 24);
+    var hours = Math.floor(totalSeconds / 3600 ) % 24;
+    var minutes = Math.floor(totalSeconds / 60 ) % 60;
+
+    $('#home .countdown .days').text(formatTime(days) < 0 ? 0 : formatTime(days));
+    $('#home .countdown .hours').text(formatTime(hours) < 0 ? 0 : formatTime(hours));
+    $('#home .countdown .minutes').text(formatTime(minutes) < 0 ? 0 : formatTime(minutes));   
+}
+countdown();
+
+function formatTime(time){
+    return time < 10 ? `0${time}` : time;
+}
+
+setInterval(countdown, 500);
