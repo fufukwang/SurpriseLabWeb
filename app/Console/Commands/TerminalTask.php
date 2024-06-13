@@ -50,6 +50,7 @@ class TerminalTask extends Command
         try {
             $hour = $this->argument('hour');
             switch ((int)$hour) {
+                case 10: $this->checkHour10(); break;
                 case 18: $this->checkHour18(); break;
                 case 25: $this->checkEveryHour(); break;
             }
@@ -153,6 +154,7 @@ class TerminalTask extends Command
                     }
                 }
             }
+            /*
             // 5day
             $pr05day = pro::select('id')
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=5")->get();
@@ -200,6 +202,7 @@ class TerminalTask extends Command
                     }
                 }
             }
+            */
             // 3day
             $pr03day = pro::select('id')
                 ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=3")->get();
@@ -294,5 +297,57 @@ class TerminalTask extends Command
             Log::error($exception);
         }
     }
-
+    // 10 點執行
+    private function checkHour10(){
+        // 當天
+        try {
+            // Xday
+            $prXday = pro::select('id')
+                ->whereRaw("floor(UNIX_TIMESTAMP(CONCAT(day,' ',rang_start))/86400)-floor(UNIX_TIMESTAMP()/86400)=0")->get();
+            foreach($prXday as $pro){
+                // 找出正常的訂單
+                $order03 = order::select('pople','tertp_pro.day','rang_start','need_english','tertp_order.id','name','email','tel','need_chinese','sn','pay_type')
+                    ->leftJoin('tertp_pro', 'tertp_pro.id', '=', 'tertp_order.pro_id')
+                    ->where('tertp_order.pro_id',$pro->id)->whereIn('pay_status',['已付款','已付款(部分退款)'])->get();
+                foreach ($order03 as $ord) {
+                    if($ord->pay_type !== '合作販售'){
+                        $toData = [
+                            'day'   => Carbon::parse($ord->day)->format('Y / m / d'),
+                            'pople' => $ord->pople,
+                            'id'    => $ord->id,
+                            'name'  => $ord->name,
+                            'email' => $ord->email,
+                            'phone' => $ord->tel,
+                            'time'  => substr($ord->rang_start,0,5),
+                            'gday'  => $rangStart.'/'.$rangEnd,
+                            'master'=> "?id=".md5($ord->id)."&sn=".$ord->sn,
+                            'mday'  => $ord->day,
+                            'need_english' => $ord->need_english,
+                            'need_chinese' => $ord->need_chinese,
+                            'template' => 'DX',
+                        ];
+                        if($ord->tel != ''){
+                            $teamMail = TeamMail::where('order_id',$ord->id)->get();
+                            $needSend = true;
+                            $teamNum = 0;
+                            while($needSend){
+                                if($toData['phone'] != ''){ SLS::SendSmsTerTPByTemplateName($toData); }
+                                if($teamMail && count($teamMail)>$teamNum){
+                                    $toData['name'] = $teamMail[$teamNum]->name;
+                                    $toData['email'] = $teamMail[$teamNum]->email;
+                                    $toData['phone'] = $teamMail[$teamNum]->phone;
+                                    $teamNum++;
+                                } else {
+                                    $needSend = false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        } catch (Exception $exception) {
+            Log::error($exception);
+        }
+    }
 }

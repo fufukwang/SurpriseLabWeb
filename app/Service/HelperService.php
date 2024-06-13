@@ -139,6 +139,9 @@ class HelperService {
     // terTP 信件寄送
     public function SendEmailterTPByTemplateName($data){
         try{
+            if($data['template'] == 'D5'){
+                return false;
+            }
             if(strpos($data['email'],'@yahoo') || strpos($data['email'],'@hotmail')) {
                 config(['mail.host' => 'smtp.gmail.com']);
                 config(['mail.username' => env('MAIL_TERTP_USER')]);
@@ -197,10 +200,11 @@ class HelperService {
     // terTP 簡訊寄送
     public function SendSmsterTPByTemplateName($smsData){
         try{
-            $token = '';// env('PARIS_SMS');
+            $token = env('TERMINAL_SMS');// env('PARIS_SMS');
             switch ($smsData['template']) {
                 case 'order':
-                    $this->sent_single_sms($smsData['phone'],"親愛的旅客，《落日月台》訂位確認信已寄出，請務必前往查看，如未收到，請至垃圾信匣或促銷內容尋找。\n\n一旦踏上旅途，請小心你的腳步，Mind the gap。",$token);
+                    $this->sent_single_sms($smsData['phone'],"【落日月台】親愛的旅客，訂位確認信已寄出，請務必前往查看，如未收到，請至垃圾信匣或促銷內容尋找。
+願你留心腳步，Mind the gap。",$token);
                     break;
                     /*
                 case 'D7':
@@ -208,7 +212,7 @@ class HelperService {
                     break;
                     */
                 case 'DX':
-                    $this->sent_single_sms($smsData['phone'],"h",$token);
+                    $this->sent_single_sms($smsData['phone'],"【落日月台】親愛的旅客，請於今日預訂場次前20分鐘報到，遲到將無法入場。歡迎參考松菸路線指引➠https://bit.ly/4aoreaT",$token);
                     break;
             }
             return true;

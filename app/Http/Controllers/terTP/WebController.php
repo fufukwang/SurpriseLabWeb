@@ -27,7 +27,7 @@ class WebController extends Controller
     
     public function sendMailCenter($ord,$type='wheel'){
         try{
-            $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_start))));
+            $rangStart = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_start)->subMinutes(20))));
             $rangEnd   = str_replace(' ','T',str_replace(':','',str_replace('-','',Carbon::parse($ord->day.' '.$ord->rang_end))));
             $toData = [
                 'day'   => Carbon::parse($ord->day)->format('Y / m / d'),
