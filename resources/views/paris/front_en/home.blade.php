@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris_en/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris_en/css/home.css?240611">
+    <link rel="stylesheet" href="/paris_en/css/home.css?240613">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -94,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <main id="home">
         <div class="countdown" data-date="2024-06-30 00:00:00">
-            <img src="/paris/img/countdown.webp" />
+            <img src="/paris/img/countdown.webp?20240613" />
             <div class="days"></div>
             <div class="hours"></div>
             <div class="minutes"></div>
