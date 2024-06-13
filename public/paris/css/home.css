@@ -1550,18 +1550,20 @@ body {
 }
 #home .countdown .days {
   position: absolute;
-  top: 45%;
-  left: 35%;
-  font-size: 13vw;
+  top: 38%;
+  left: 31%;
+  font-size: 16vw;
+  width: 16%;
+  text-align: right;
 }
 #home .countdown .hours, #home .countdown .minutes {
   position: absolute;
-  top: 42.4%;
-  left: 57%;
-  font-size: 5.5vw;
+  top: 34%;
+  left: 56%;
+  font-size: 7.3vw;
 }
 #home .countdown .minutes {
-  top: 47.6%;
+  top: 41%;
 }
 @media (min-width: 650px) {
   #home .countdown {
@@ -1569,17 +1571,17 @@ body {
     width: 600px;
   }
   #home .countdown .days {
-    top: 46%;
-    left: 35%;
+    top: 40%;
+    left: 30%;
     font-size: 85px;
   }
   #home .countdown .hours, #home .countdown .minutes {
     position: absolute;
-    top: 43%;
+    top: 35%;
     left: 56%;
-    font-size: 36px;
+    font-size: 45px;
   }
   #home .countdown .minutes {
-    top: 48%;
+    top: 43%;
   }
 }
