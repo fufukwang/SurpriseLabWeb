@@ -1989,3 +1989,10 @@ input[type="checkbox"]:checked::after {
 .form-wrap-step-3 .form-group.checkbox-layout {
   flex-wrap: nowrap;
 }
+
+input[name=allocation]::-ms-input-placeholder {
+  font-size: 10.8px;
+}
+input[name=allocation]::placeholder {
+  font-size: 10.8px;
+}

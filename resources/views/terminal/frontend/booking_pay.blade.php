@@ -41,7 +41,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?240529">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?240611">
     <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?240429">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -332,9 +332,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </label>
                                     </div>
                                     <div class="form-group checkbox-layout" style="flex-wrap: nowrap;">
-                                        <input type="checkbox" id="agree-self" name="agree-self" required>
-                                        <label class="body-04" for="agree-self">
-                                            <span class="body-04">我已理解若評估自身狀況後決定不飲酒，體驗中將不提供臨時更換。</span>
+                                        <input type="checkbox" id="agree-drink" name="agree-self" required>
+                                        <label class="body-04" for="agree-drink">
+                                            <span class="body-04">我已理解若評估自身狀況後決定不飲酒，體驗中將不提供臨時更換。且因體驗中有閱讀中文文字、聆聽中文指引環節，我已斟酌自行情況參與。</span>
                                         </label>
                                     </div>
                                 </fieldset>
@@ -427,7 +427,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <td>
                                             <!-- 尚未輸入 -->
                                             <div class="form-group verify-layout">
-                                                <input type="text" id="allocation" class="body-04" name="allocation" placeholder="請輸入劃位序號(非必填)">
+                                                <input type="text" id="allocation" class="body-04" name="allocation" placeholder="若有可兌換落日月台票券之序號請填入此處(非必填)">
                                                 <a href="javascript://" class="booking-btn shape-square color-input-use verification-code" data-type="coupon">確認</a>
                                                 <ul class="verify-status-list body-02 style-smaller">
                                                     <li class="status-list-item not-found">找不到此劃位序號</li>
@@ -575,6 +575,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking_pay.js?v=240522"></script>
+    <script src="/terminalAssets/js/booking_pay.js?v=240611"></script>
 </body>
 </html>

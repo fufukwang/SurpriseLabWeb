@@ -570,7 +570,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <i class="icon-time"></i> 70-80 分鐘
                                         </div>
                                         <div class="feature-item">
-                                            <i class="icon-user"></i> 6 人
+                                            <i class="icon-user"></i> 單場上限 6 人
                                         </div>
                                         <div class="feature-item">
                                             <i class="icon-drink"></i> 3 道小點
@@ -1376,6 +1376,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div id="flush-6-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-6-headingFour" data-bs-parent="#accordionFlushExample-6">
                                 <div class="accordion-body">
                                     <p>持有文化幣的旅客，歡迎前往 <a target="_blank" href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" style="font-weight: 700; text-decoration: underline;">Klook 購票</a> 折抵。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-7-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-7-collapseFour" aria-expanded="false" aria-controls="flush-7-collapseFour">
+                                    <span class="header-title">可以獨自前往嗎？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-7-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-7-headingFour" data-bs-parent="#accordionFlushExample-7">
+                                <div class="accordion-body">
+                                    <p>落日月台一場次最多6人入場，歡迎獨自前來、雙人同行、或包場探索。</p>
                                 </div>
                             </div>
                         </div>
