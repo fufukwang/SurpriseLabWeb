@@ -148,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="/paris/img/deco.svg" />
                     <h1>預約體驗</h1>
                     <h3>Booking</h3>
-                    <div><center>巴黎舞會 六月最後倒數<br>06/14 前輸入「finalcall」 享不限票種$200折抵</center></div>
+                    <div><center>巴黎舞會 只到 06/29<br>預約  雙人共舞票  輸入「 happytwo 」<br>享 $200 折抵 ──倒數之際，來體驗絕無僅有的第二世界</center></div>
                 </div>
                 <div class="price">
                     <div class="item">
