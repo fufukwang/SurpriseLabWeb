@@ -879,7 +879,7 @@ $(function(){
         },
         startDate: '{{ $request->daystart or Carbon\Carbon::today()->format('Y-m-d H:i:s')}}',
         endDate: '{{ $request->dayend or Carbon\Carbon::today()->format('Y-m-d H:i:s')}}',
-        minDate:moment().add(-1, 'y').format('YYYY-MM-DD'),
+        minDate:moment().add(-2, 'y').format('YYYY-MM-DD'),
         maxDate:moment().add(6, 'M').format('YYYY-MM-DD'),
     }, 
     function(start, end, label) {
