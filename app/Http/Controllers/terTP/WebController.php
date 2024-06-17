@@ -88,12 +88,12 @@ class WebController extends Controller
                 $now = time();
                 $lim = strtotime($ord->day.' '.$ord->rang_start);
                 $day = round( ($lim - $now) / 86400 );
-                /*
-                if($day <= 7){
-                    $toData['template'] = 'D7';
+                
+                if($day <= 0){
+                    $toData['template'] = 'DX';
                     SLS::SendSmsterTPByTemplateName($toData);
                 }
-                */
+                
             } else {
                 $toData['template'] = $type;
                 if(SLS::SendSmsterTPByTemplateName($toData)){

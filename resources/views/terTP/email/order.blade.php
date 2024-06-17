@@ -115,9 +115,9 @@ $inTime = \Carbon\Carbon::parse($mday.' '.$time.':00')->subMinutes(20)->format('
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 14px; padding: 14px;">
 @if($sum)
-                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=落日月台 Mind The Gap&dates={{ $gday }}&details=&location=11072台北市信義區光復南路133號&sf=true" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">加入行事曆</a>
+                                <a class="mcnButton " title="加入行事曆" href="https://www.google.com/calendar/render?action=TEMPLATE&sf=true&output=xml&text=%E8%90%BD%E6%97%A5%E6%9C%88%E5%8F%B0%20Mind%20The%20Gap&location=11072%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%85%89%E5%BE%A9%E5%8D%97%E8%B7%AF133%E8%99%9F&details=&dates={{ $gday }}" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">加入行事曆</a>
 @else
-                                <a class="mcnButton " title="加入行事曆" href="https://calendar.google.com/calendar/event?action=TEMPLATE&text=落日月台 Mind The Gap&dates={{ $gday }}&details=&location=11072台北市信義區光復南路133號&sf=true" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">加入行事曆</a>
+                                <a class="mcnButton " title="加入行事曆" href="https://www.google.com/calendar/render?action=TEMPLATE&sf=true&output=xml&text=%E8%90%BD%E6%97%A5%E6%9C%88%E5%8F%B0%20Mind%20The%20Gap&location=11072%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%85%89%E5%BE%A9%E5%8D%97%E8%B7%AF133%E8%99%9F&details=&dates={{ $gday }}" target="_blank" style="font-weight: bold;letter-spacing: 1px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">加入行事曆</a>
 @endif
                             </td>
                         </tr>
