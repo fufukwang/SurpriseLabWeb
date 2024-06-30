@@ -312,18 +312,9 @@ class TerminalTask extends Command
                 foreach ($order03 as $ord) {
                     if($ord->pay_type !== '合作販售'){
                         $toData = [
-                            'day'   => Carbon::parse($ord->day)->format('Y / m / d'),
-                            'pople' => $ord->pople,
-                            'id'    => $ord->id,
                             'name'  => $ord->name,
                             'email' => $ord->email,
                             'phone' => $ord->tel,
-                            'time'  => substr($ord->rang_start,0,5),
-                            'gday'  => $rangStart.'/'.$rangEnd,
-                            'master'=> "?id=".md5($ord->id)."&sn=".$ord->sn,
-                            'mday'  => $ord->day,
-                            'need_english' => $ord->need_english,
-                            'need_chinese' => $ord->need_chinese,
                             'template' => 'DX',
                         ];
                         if($ord->tel != ''){
