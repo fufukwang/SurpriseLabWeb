@@ -244,3 +244,19 @@ window.addEventListener('DOMContentLoaded', function() {
         document.documentElement.classList.add(hasSupport ? 'webp' : 'no-webp');
     });
 });
+
+$('#owl-team .item').on('mouseenter', function() {
+    $(this).addClass('item-hover');
+});
+
+$('#owl-team .item').on('mouseleave', function() {
+    $(this).removeClass('item-hover');
+});
+
+$('#owl-team .item').on('touchstart', function() {
+    if ( $(this).hasClass('item-hover') ) {
+        $(this).removeClass('item-hover');
+    } else {
+        $(this).addClass('item-hover');
+    }
+});

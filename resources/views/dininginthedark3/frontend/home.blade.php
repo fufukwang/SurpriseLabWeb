@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240528"/>
+    <link rel="stylesheet" href="css/style.css?date=240630"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -1296,6 +1296,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
+                        <div class="section sec-team" id="team">
+
+                            <div class="section-header">
+                                <div class="section-title">
+                                    <h3>團隊介紹</h3>
+                                    <h4>TEAM</h4>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="owl-carousel owl-theme" id="owl-team">
+
+                                    <div class="item">
+                                        <div>
+                                            <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/1.png" />
+                                            <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/1-m.png" />
+                                        </div>
+                                        <div class="hover">
+                                            <img class="img-fluid d-none d-sm-block" src="img/home/team/1-hover.png" />
+                                            <img class="img-fluid d-block d-sm-none" src="img/home/team/1-hover-m.png" />
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div>
+                                            <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/2.png" />
+                                            <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/2-m.png" />
+                                        </div>
+                                        <div class="hover">
+                                            <img class="img-fluid d-none d-sm-block" src="img/home/team/2-hover.png" />
+                                            <img class="img-fluid d-block d-sm-none" src="img/home/team/2-hover-m.png" />
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div>
+                                            <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/3.png" />
+                                            <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/3-m.png" />
+                                        </div>
+                                        <div class="hover">
+                                            <img class="img-fluid d-none d-sm-block" src="img/home/team/3-hover.png" />
+                                            <img class="img-fluid d-block d-sm-none" src="img/home/team/3-hover-m.png" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="section sec-partner">
                             <div class="container">
 
@@ -1431,10 +1480,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?date=240406"></script>
+    <script src="js/index.js?date=240630"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?date=240528"></script>
-    <script src="js/index-slideshow.js?date=240527"></script>
+    <script src="js/index-slideshow.js?date=240630"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 </html>
