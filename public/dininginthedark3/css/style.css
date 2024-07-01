@@ -3548,21 +3548,32 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 
 #team #owl-team .item {
   position: relative;
-  border-radius: 8px;
+  /* border-radius: 8px; */
+  height: 0;
+  padding-top: 133.333%;
+}
+@media (min-width: 576px) {
+  #team #owl-team .item {
+    padding-top: 56.28%;
+  }
 }
 
-#team #owl-team .item img {
-  display: block;
-  width: 100%;
-}
-
-#team #owl-team .item .hover {
-  opacity: 0;
+#team #owl-team .item > div {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#team #owl-team .item > div img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#team #owl-team .item .hover {
+  opacity: 0;
   transition: opacity .4s;
 }
 
