@@ -3546,19 +3546,19 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   }
 }
 
-#team #owl-team .item {
+#team #owl-team .item > div {
   position: relative;
   /* border-radius: 8px; */
   height: 0;
   padding-top: 133.333%;
 }
 @media (min-width: 576px) {
-  #team #owl-team .item {
+  #team #owl-team .item > div {
     padding-top: 56.28%;
   }
 }
 
-#team #owl-team .item > div {
+#team #owl-team .item > div > div {
   position: absolute;
   top: 0;
   left: 0;
@@ -3566,7 +3566,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   height: 100%;
 }
 
-#team #owl-team .item > div img {
+#team #owl-team .item > div > div img {
   display: block;
   width: 100%;
   height: 100%;

@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240701"/>
+    <link rel="stylesheet" href="css/style.css?date=240703"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -1310,35 +1310,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                     <div class="item">
                                         <div>
-                                            <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/1.png" />
-                                            <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/1-m.png" />
-                                        </div>
-                                        <div class="hover">
-                                            <img class="img-fluid d-none d-sm-block" src="img/home/team/1-hover.png" />
-                                            <img class="img-fluid d-block d-sm-none" src="img/home/team/1-hover-m.png" />
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div>
-                                            <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/2.png" />
-                                            <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/2-m.png" />
-                                        </div>
-                                        <div class="hover">
-                                            <img class="img-fluid d-none d-sm-block" src="img/home/team/2-hover.png" />
-                                            <img class="img-fluid d-block d-sm-none" src="img/home/team/2-hover-m.png" />
+                                            <div>
+                                                <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/1.png" />
+                                                <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/1-m.png" />
+                                            </div>
+                                            <div class="hover">
+                                                <img class="img-fluid d-none d-sm-block" src="img/home/team/1-hover.png" />
+                                                <img class="img-fluid d-block d-sm-none" src="img/home/team/1-hover-m.png" />
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div class="item">
                                         <div>
-                                            <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/3.png" />
-                                            <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/3-m.png" />
+                                            <div>
+                                                <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/2.png" />
+                                                <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/2-m.png" />
+                                            </div>
+                                            <div class="hover">
+                                                <img class="img-fluid d-none d-sm-block" src="img/home/team/2-hover.png" />
+                                                <img class="img-fluid d-block d-sm-none" src="img/home/team/2-hover-m.png" />
+                                            </div>
                                         </div>
-                                        <div class="hover">
-                                            <img class="img-fluid d-none d-sm-block" src="img/home/team/3-hover.png" />
-                                            <img class="img-fluid d-block d-sm-none" src="img/home/team/3-hover-m.png" />
+                                        <br>
+                                        <center><a class="btn-outline" target="_blank" href="https://www.instagram.com/surpriselabtw/">前往驚喜製造</a></center>
+                                    </div>
+
+                                    <div class="item">
+                                        <div>
+                                            <div>
+                                                <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/team/3.png" />
+                                                <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/team/3-m.png" />
+                                            </div>
+                                            <div class="hover">
+                                                <img class="img-fluid d-none d-sm-block" src="img/home/team/3-hover.png" />
+                                                <img class="img-fluid d-block d-sm-none" src="img/home/team/3-hover-m.png" />
+                                            </div>
                                         </div>
+                                        <br>
+                                        <center><a class="btn-outline" target="_blank" href="/terminal?utm_source=ditd&utm_medium=ditd_web">前往落日月台</a></center>
                                     </div>
 
                                 </div>
