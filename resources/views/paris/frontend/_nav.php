@@ -15,7 +15,7 @@
             <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">關於舞會</a>
             <a class="scrollto" href="/lebaldeparis#sec-experience" data-sec="experience">體驗內容</a>
             <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">口碑評價</a>
-            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">購票資訊</a>
+            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">賓客登記</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">各界好評</a>
             <a class="scrollto" href="/lebaldeparis#sec-group-party" data-sec="group-party">包場跳舞</a>
