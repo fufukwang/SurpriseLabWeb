@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vpt1inn.css">
     <link rel="stylesheet" href="/paris/css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="/paris/css/home.css?240613">
+    <link rel="stylesheet" href="/paris/css/home.css?240703">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -82,7 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="scrollto active" href="/lebaldeparis#sec-about" data-sec="about">關於舞會</a>
             <a class="scrollto" href="/lebaldeparis#sec-experience" data-sec="experience">體驗內容</a>
             <a class="scrollto" href="/lebaldeparis#sec-review" data-sec="review">口碑評價</a>
-            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">購票資訊</a>
+            <a class="scrollto" href="/lebaldeparis#sec-booking" data-sec="booking">賓客登記</a>
             <a class="scrollto" href="/lebaldeparis#sec-information" data-sec="information">舞會須知</a>
             <a class="scrollto" href="/lebaldeparis#sec-media" data-sec="media">各界好評</a>
             <a class="scrollto" href="/lebaldeparis#sec-group-party" data-sec="group-party">包場跳舞</a>
@@ -96,13 +96,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
 
     <main id="home">
-
-        <div class="countdown" data-date="2024-06-30 00:00:00">
-            <img src="/paris/img/countdown.webp?20240613" />
-            <div class="days"></div>
-            <div class="hours"></div>
-            <div class="minutes"></div>
-        </div>
 
         <!-- 關於舞會 -->
         <section id="sec-about">
@@ -231,16 +224,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- 購票資訊 -->
+        <!-- 賓客登記 -->
         <section id="sec-booking">
             <div class="title">
                 <img src="/paris/img/deco.svg" />
-                <h1>購票資訊</h1>
-                <h3>Ticket</h3>
-                <div><center>巴黎舞會 只到 06/29<br>預約  雙人共舞票  輸入「 happytwo 」<br>享 $200 折抵 ──倒數之際，來體驗絕無僅有的第二世界</center></div>
+                <h1>賓客登記</h1>
+                <h3>Guest Registration</h3>
+                <div><center>舞會大門已關閉！<br>若你仍期待赴約，或參與不同形式的沉浸體驗，<br>歡迎前往登記，讓我們能第一時間和你聯繫。</center></div>
             </div>
+
+            <center><a class="p-btn primary" target="_blank" href="https://surpriselab.typeform.com/to/MKPVEdUv">前往登記</a></center>
             
-            <div class="price pc">
+            <!-- <div class="price pc">
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/booking_ticket1.webp" />
@@ -283,9 +278,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <a class="p-btn primary" href="/lebaldeparis/booking_pay">預約舞會</a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="owl-carousel price m">
+            <!-- <div class="owl-carousel price m">
                 <div class="item">
                     <div class="icon">
                         <img src="/paris/img/booking_ticket1.webp" />
@@ -328,7 +323,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <a class="p-btn primary" href="/lebaldeparis/booking_pay">預約舞會</a>
                 </div>
-            </div>
+            </div> -->
 
             <br><br><br><br>
 
@@ -1037,6 +1032,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <script src="/paris/js/main.js?231003"></script>
-    <script src="/paris/js/home.js?2406011"></script>
+    <script src="/paris/js/home.js?240703"></script>
 </body>
 </html>
