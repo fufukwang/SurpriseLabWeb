@@ -228,3 +228,19 @@ function addMonths(date, months) {
     date.setMonth(date.getMonth() + months);
     return date;
 }
+
+$('#introduce .owl-carousel .item').on('mouseenter', function() {
+    $(this).addClass('item-hover');
+});
+
+$('#introduce .owl-carousel .item').on('mouseleave', function() {
+    $(this).removeClass('item-hover');
+});
+
+$('#introduce .owl-carousel .item').on('touchstart', function() {
+    if ( $(this).hasClass('item-hover') ) {
+        $(this).removeClass('item-hover');
+    } else {
+        $(this).addClass('item-hover');
+    }
+});
