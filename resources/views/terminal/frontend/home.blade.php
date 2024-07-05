@@ -944,7 +944,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                         <div class="tab-pane fade show active" id="intro-surpriselab" role="tabpanel" aria-labelledby="intro-surpriselab-tab">
                             <div class="tab-content-inner">
-                                <br>
+                                <!-- <br>
                                 <img src="/terminalAssets/images/main/introduce_surprise_lab.png" alt="驚喜製造" style="max-width: 400px; width: 100%; margin: 0 auto; display: block;">
                                 <br><br>
                                 <div class="heading-p">
@@ -959,7 +959,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         2022-2024｜黑暗互動餐飲體驗<a href="https://utm.to/5beceh" style="color: #efaf50; text-decoration: underline;">《無光晚餐》</a>
                                     </p>
                                 </div>
-                                <br>
+                                <br> -->
                                 <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-train">
@@ -1079,10 +1079,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                         <div class="tab-pane fade" id="intro-roguewave" role="tabpanel" aria-labelledby="intro-roguewave-tab">
                             <div class="tab-content-inner">
-                                <div class="heading-p">
+                                <!-- <div class="heading-p">
                                     <p>「風狗浪ROGUE WAVE」於2022年成立，<br>是由進港浪製作所的導演洪唯堯帶領的全新沉浸式團隊。<br><br>風狗浪致力研究沉浸式及互動式展演，由多位導演共同組成。<br>表現形式上並不侷限特定媒材、形式、議題，<br><br>目標為找尋更多不同的體驗、活動、事件，<br>期待為觀眾創造新的旅程。</p>
                                 </div>
-                                <br>
+                                <br> -->
                                 <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-bistro">
