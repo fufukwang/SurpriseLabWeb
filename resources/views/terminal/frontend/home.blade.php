@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240326">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240705">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -349,35 +349,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Project Intro -->
-                                <div class="project-intro">
-                                    <div class="feature-wrap">
-                                        <div class="feature-item">
-                                            <i class="icon-ticket"></i> 1,250 元
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="icon-time"></i> 60 分鐘
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="icon-user"></i> 24 人
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="icon-drink"></i> 1 杯調飲
-                                        </div>
-                                        <div class="feature-item has-emoji">
-                                            <i class="icon-feel"></i>
-                                            <img src="/terminalAssets/images/emoji/yellow/woozy-face.png" alt="woozy-face">
-                                            <img src="/terminalAssets/images/emoji/yellow/pleading-face.png" alt="pleading-face">
-                                            <img src="/terminalAssets/images/emoji/yellow/smiling-face-with-hearts.png" alt="smiling-face-with-hearts">
-                                        </div>
-                                    </div>
-
-                                    <div class="project-desc">
-                                    你將穿梭在如電影般的車廂間，遇見四位抱有遺憾的乘客，微醺之際，你也可能一不小心踏入隱藏空間，親自前來，一窺列車上不為人知的秘密吧！<br/><br/>
-                                        <i>──　願你安全到站</i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -460,32 +431,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Project Intro -->
-                                <div class="project-intro">
-                                    <div class="feature-wrap">
-                                        <div class="feature-item">
-                                            <i class="icon-ticket"></i> $500 元
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="icon-time"></i> 30 分鐘
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="icon-user"></i> 30 人
-                                        </div>
-                                        <div class="feature-item has-emoji">
-                                            <i class="icon-feel"></i>
-                                            <img class="img-fluid" src="/terminalAssets/images/emoji/yellow/face-with-peeking-eye.png" alt="face-with-peeking-eye">
-                                            <img class="img-fluid" src="/terminalAssets/images/emoji/yellow/face-screaming-in-fear.png" alt="face-screaming-in-fear">
-                                            <img class="img-fluid" src="/terminalAssets/images/emoji/yellow/shushing-face.png" alt="shushing-face">
-                                        </div>
-                                    </div>
-
-                                    <div class="project-desc">
-                                    在黑暗無光的真實機艙中，繫好安全帶的你將戴上全罩耳機，透過忽遠忽近的聲音以及突如其來的地板震動，體驗飛往未知的恐懼。<br/><br/>
-                                        <i>──　願你順利降落</i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -557,40 +502,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <i class="icon-arrow-slides-right"></i>
                                             </button>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <!-- Project Intro -->
-                                <div class="project-intro">
-                                    <div class="feature-wrap">
-                                        <div class="feature-item">
-                                            <i class="icon-ticket"></i> 2,200 元
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="icon-time"></i> 70-80 分鐘
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="icon-user"></i> 單場上限 6 人
-                                        </div>
-                                        <div class="feature-item">
-                                            <i class="icon-drink"></i> 3 道小點
-                                        </div>
-                                        <div class="feature-item has-emoji">
-                                            <i class="icon-feel"></i>
-                                            <img src="/terminalAssets/images/emoji/svg/face-yellow1.svg" style="width: auto;" />
-                                            <img src="/terminalAssets/images/emoji/svg/face-yellow2.svg" style="width: auto;" />
-                                            <img src="/terminalAssets/images/emoji/svg/face-yellow3.svg" style="width: auto;" />
-                                        </div>
-                                    </div>
-
-                                    <div class="project-desc">
-                                        你遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的漂流者，將引導你遊走於多個奇幻空間，尋找離開彌留世界的出口。
-                                        <i>──　願你留心腳步</i>
-                                    </div>
-                                </div>
-                                <div class="cta-wrap">
-                                    <div class="btn-wrap">
-                                        <a target="_blank" href="/terminal/booking_now" class="activity-btn">購票去</a>
                                     </div>
                                 </div>
                             </div>
@@ -1048,101 +959,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         2022-2024｜黑暗互動餐飲體驗<a href="https://utm.to/5beceh" style="color: #efaf50; text-decoration: underline;">《無光晚餐》</a>
                                     </p>
                                 </div>
-                                <div class="project-slideshow" style="display: none;">
+                                <br>
+                                <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-train">
 
-                                            <!-- 02 -->
                                             <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/intro01_1.jpg" data-src="/terminalAssets/images/main/intro01_1.jpg" data-src-retina="/terminalAssets/images/main/intro01_1.jpg" alt="無光晚餐">
-                                                    <!-- <figcaption>
-                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
-                                                    </figcaption> -->
-                                                </figure>
-                                                <div class="project-intro">
-                                                    <div class="feature-wrap">
-                                                        
-                                                        <div class="feature-item">100% 全黑看不見
-                                                            <!-- <i class="icon-ticket"></i> 1,250 元 -->
-                                                        </div>
-                                                        <div class="feature-item">5 道神秘料理
-                                                            <!-- <i class="icon-time"></i> 60 分鐘 -->
-                                                        </div>
-                                                        <div class="feature-item">∞ 未知驚喜
-                                                            <!-- <i class="icon-user"></i> 24 人 -->
-                                                        </div>
+                                                <div>
+                                                    <div>
+                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="/terminalAssets/images/team/1/1.jpg" />
+                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="/terminalAssets/images/team/1/1-m.jpg" />
                                                     </div>
-                                                    <div class="project-desc">
-                                                        真正重要的事物，是眼睛看不見的 ── 不同於一般用餐環境，《無光晚餐》透過全黑的設定，讓你暫時關閉視覺，探索並挖掘那些生活中被蒙蔽的真實與價值。
-                                                        <br/><br/>
-                                                        你，會想與誰一同經歷黑暗？
+                                                    <div class="hover">
+                                                        <img class="img-fluid d-none d-sm-block" src="/terminalAssets/images/team/1/1-hover.jpg" />
+                                                        <img class="img-fluid d-block d-sm-none" src="/terminalAssets/images/team/1/1-hover-m.jpg" />
                                                     </div>
-
                                                 </div>
-                                                <div class="cta-wrap">
-                                                    <div class="btn-wrap">
-                                                        <a href="https://www.surpriselab.com.tw/dininginthedark3/index.html?utm_source=SunsetTerminal&utm_medium=Website_team" class="activity-btn">現正售票中</a>
+                                                <br>
+                                                <center><a class="activity-btn" target="_blank" href="https://www.instagram.com/surpriselabtw/">前往驚喜製造</a></center>
+                                            </div>
+
+                                            <div class="item">
+                                                <div>
+                                                    <div>
+                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="/terminalAssets/images/team/1/2.jpg" />
+                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="/terminalAssets/images/team/1/2-m.jpg" />
+                                                    </div>
+                                                    <div class="hover">
+                                                        <img class="img-fluid d-none d-sm-block" src="/terminalAssets/images/team/1/2-hover.jpg" />
+                                                        <img class="img-fluid d-block d-sm-none" src="/terminalAssets/images/team/1/2-hover-m.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <!-- 03 -->
                                             <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/intro01_2.jpg" data-src="/terminalAssets/images/main/intro01_2.jpg" data-src-retina="/terminalAssets/images/main/intro01_2.jpg" alt="微醺大飯店：1980s">
-                                                    <!-- <figcaption>
-                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
-                                                    </figcaption> -->
-                                                </figure>
-                                                <div class="project-intro">
-                                                    <div class="feature-wrap">
-                                                        
-                                                        <div class="feature-item">10個月 台灣定目劇紀錄
-                                                            <!-- <i class="icon-ticket"></i> 1,250 元 -->
-                                                        </div>
-                                                        <div class="feature-item">80,000杯酒 在此喝下
-                                                            <!-- <i class="icon-time"></i> 60 分鐘 -->
-                                                        </div>
-                                                        <div class="feature-item">50%觀眾 哭著走出來
-                                                            <!-- <i class="icon-user"></i> 24 人 -->
-                                                        </div>
+                                                <div>
+                                                    <div>
+                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="/terminalAssets/images/team/1/3.jpg" />
+                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="/terminalAssets/images/team/1/3-m.jpg" />
                                                     </div>
-                                                    <div class="project-desc">
-                                                        你將穿梭於真實飯店中的不同客房，近距離參與角色們的喜怒哀樂。隨著故事推進，當那些關於選擇、關於錯過的提問被一一拋出，在與他人互動的同時，你將也挖掘心中曾經的遺憾。
-                                                        <br/><br/>
-                                                        微醺，讓你更清醒。
+                                                    <div class="hover">
+                                                        <img class="img-fluid d-none d-sm-block" src="/terminalAssets/images/team/1/3-hover.jpg" />
+                                                        <img class="img-fluid d-block d-sm-none" src="/terminalAssets/images/team/1/3-hover-m.jpg" />
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <!-- 01 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/intro01_3.jpg" data-src="/terminalAssets/images/main/intro01_3.jpg" data-src-retina="/terminalAssets/images/main/intro01_3.jpg" alt="明日俱樂部">
-                                                    <!-- <figcaption>
-                                                        故事沉浸 ╳ 互動式 ╳ 即時演出
-                                                    </figcaption> -->
-                                                </figure>
-                                                <div class="project-intro">
-                                                    <div class="feature-wrap">
-                                                        
-                                                        <div class="feature-item">400坪 自建場館
-                                                            <!-- <i class="icon-ticket"></i> 1,250 元 -->
-                                                        </div>
-                                                        <div class="feature-item">128種 世界結局
-                                                            <!-- <i class="icon-time"></i> 60 分鐘 -->
-                                                        </div>
-                                                        <div class="feature-item">3大 表演類型
-                                                            <!-- <i class="icon-user"></i> 24 人 -->
-                                                        </div>
-                                                    </div>
-                                                    <div class="project-desc">
-                                                        當我們想要的明天不盡相同，如何沒有輸贏？如何不再分裂？在分裂的五大陣營中，找出讓所有人共同前往明日的可能。在權力面前，你會同意消除異己嗎？為了生存下去，你會向夥伴開槍嗎？
-                                                        <br/><br/>
-                                                        在混亂的世界中，你們將迎接怎樣的明天？
-                                                    </div>
-                                                </div>
+                                                <br>
+                                                <center><a class="activity-btn" href="/dininginthedark3/index.html?utm_source=sunset_mtg&utm_medium=sunset_mtg_web">前往無光晚餐</a></center>
                                             </div>
                                         </div>
 
@@ -1165,6 +1027,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="heading-p">
                                     <p>來自英國的 DARKFIELD 擁有強大的創作能量，<br><br>專精於各形式的聲音劇場創作，<br>同時擁有豐富的國際巡演經驗。<br><br>《FLIGHT》相關系列作品共有 4 項，<br>全球體驗人次累積超過 25 萬人。</p>
                                 </div>
+                                <br>
                                 <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-flight">
@@ -1177,13 +1040,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption> -->
                                                 </figure>
-                                                <div class="project-intro">
-                                                    <!-- <div class="feature-wrap">
-                                                    </div> -->
-                                                    <div class="project-desc">
-                                                        EULOGY 是一個超現實且超凡脫俗的旅程，你將穿越一個完全存在於你腦海中的夢幻般的迷宮酒店。 該如何到達是一個謎，你為什麼在那裡也仍不清楚。確保你有閱讀小冊子即可。
-                                                    </div>
-                                                </div>
                                             </div>
 
                                             <!-- 03 -->
@@ -1194,13 +1050,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption> -->
                                                 </figure>
-                                                <div class="project-intro">
-                                                    <!-- <div class="feature-wrap">
-                                                    </div> -->
-                                                    <div class="project-desc">
-                                                        DARKFIELD RADIO 通過手機APP將 DARKFIELD 的作品和雙聲道音檔帶入觀眾的周圍—他們的家、汽車、附近的公園都成為怪奇世界開展的場景，帶他們遠離現實。
-                                                    </div>
-                                                </div>
                                             </div>
 
                                             <!-- 01 -->
@@ -1211,14 +1060,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         英國製作 ╳ 無光體驗 ╳ 聲音劇場
                                                     </figcaption> -->
                                                 </figure>
-                                                <div class="project-intro">
-                                                    <!-- <div class="feature-wrap">
-                                                    </div> -->
-                                                    <div class="project-desc">
-                                                        SÉANCE(降神會)是DARKFIELD第一個沈浸式作品，將24呎的貨櫃轉變為維多莉雅風格的降神廳。20分鐘的體驗中將探索一群人的心理及信仰，不只關於貨櫃內發生的事，也可能與在降神廳內的想像有關。
-                                                    </div>
-
-                                                </div>
                                             </div>
                                         </div>
 
@@ -1241,50 +1082,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="heading-p">
                                     <p>「風狗浪ROGUE WAVE」於2022年成立，<br>是由進港浪製作所的導演洪唯堯帶領的全新沉浸式團隊。<br><br>風狗浪致力研究沉浸式及互動式展演，由多位導演共同組成。<br>表現形式上並不侷限特定媒材、形式、議題，<br><br>目標為找尋更多不同的體驗、活動、事件，<br>期待為觀眾創造新的旅程。</p>
                                 </div>
-                                <div class="project-slideshow" style="display: none;">
+                                <br>
+                                <div class="project-slideshow">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-bistro">
 
-                                            <!-- 02 -->
                                             <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/intro03_1.jpg" data-src="/terminalAssets/images/main/intro03_1.jpg" data-src-retina="/terminalAssets/images/main/intro03_1.jpg" alt="落日小酒館">
-                                                    <!-- <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption> -->
-                                                </figure>
+                                                <div>
+                                                    <div>
+                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="/terminalAssets/images/team/2/1.jpg" />
+                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="/terminalAssets/images/team/2/1-m.jpg" />
+                                                    </div>
+                                                    <div class="hover">
+                                                        <img class="img-fluid d-none d-sm-block" src="/terminalAssets/images/team/2/1-hover.jpg" />
+                                                        <img class="img-fluid d-block d-sm-none" src="/terminalAssets/images/team/2/1-hover-m.jpg" />
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <!-- 03 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/intro03_1.jpg" data-src="/terminalAssets/images/main/intro03_1.jpg" data-src-retina="/terminalAssets/images/main/intro03_1.jpg" alt="落日小酒館">
-                                                    <!-- <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption> -->
-                                                </figure>
-                                            </div>
-
-                                            <!-- 01 -->
-                                            <div class="item">
-                                                <figure class="slideshow-card">
-                                                    <img class="img-fluid owl-lazy" src="/terminalAssets/images/main/intro03_1.jpg" data-src="/terminalAssets/images/main/intro03_1.jpg" data-src-retina="/terminalAssets/images/main/intro03_1.jpg" alt="落日小酒館">
-                                                    <!-- <figcaption>
-                                                        飲品 ╳ 小點 ╳ 周邊
-                                                    </figcaption> -->
-                                                </figure>
-                                            </div>
                                         </div>
 
                                         <!-- Custom Controls -->
-                                        <div class="custom-owl-nav">
+                                        <!-- <div class="custom-owl-nav">
                                             <button class="custom-owl-prev">
                                                 <i class="icon-arrow-slides-left"></i>
                                             </button>
                                             <button class="custom-owl-next">
                                                 <i class="icon-arrow-slides-right"></i>
                                             </button>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -1417,8 +1243,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?2403262"></script>
-    <script src="/terminalAssets/js/home-slideshow.js?240116"></script>
+    <script src="/terminalAssets/js/index.js?240705"></script>
+    <script src="/terminalAssets/js/home-slideshow.js?240705"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
