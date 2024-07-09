@@ -750,7 +750,7 @@
                 <div class="modal-body-container">
                     <div class="modal-body">
                         <p>
-                        本日為七夕限定場，內含獨家愛情調飲與限量祝福禮，優惠價$2,600/每人
+                        本日為七夕限定場，內含獨家愛情調飲與限量祝福禮，優惠價<span style="color: #ea4533;">$2,600</span>/每人
                         </p>
                         <!-- <p>&nbsp;</p>
                         <p>期待在無光中與你們相見</p> -->
