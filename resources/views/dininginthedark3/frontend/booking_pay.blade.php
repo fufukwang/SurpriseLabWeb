@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=240709"/>
+    <link rel="stylesheet" href="css/style.css?v=2407091"/>
     <link rel="stylesheet" href="css/form.css?date=240411"/>
 
     <!-- Google Tag Manager -->

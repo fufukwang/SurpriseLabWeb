@@ -3530,7 +3530,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   opacity: 0.9;
 }
 
-.field-icon-wrapper.qpower:after {
+/* .field-icon-wrapper.qpower:after {
   content: '(Q Power放膽追尋場)';
   position: absolute;
   top: 50%;
@@ -3538,7 +3538,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   transform: translate(0, -50%);
   font-size: 13px;
   color: #f7f7c6;
-}
+} */
 
 @media (max-width: 575.98px) {
   .field-icon-wrapper.qpower:after {
