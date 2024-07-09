@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/plugins/select2/select2.css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=240603"/>
+    <link rel="stylesheet" href="css/style.css?v=240709"/>
     <link rel="stylesheet" href="css/form.css?date=240411"/>
 
     <!-- Google Tag Manager -->
@@ -186,6 +186,7 @@
                             <li>票價已含10%服務費</li>
                             <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li>
                             <li>若日期無法選擇，代表該場次已滿，或是當日不開放</li>
+                            <li>8/9及8/11七夕限定場｜熱戀慶祝夜，含獨家愛情調飲與限量祝福禮，優惠價$2,600/人</li>
                             <li>今日起至 7月31日為格蘭菲迪 Glenfiddich 跨界合作限定體驗。</li>
                             <li style="color: #f7f7c6;">未滿18歲不得飲酒，禁止酒駕。</li>
                         </ul>
@@ -206,7 +207,7 @@
                             </div>
                             <div class="form-group with-icon">
                                 <label class="form-label" for="booking_date">日期 Date</label>
-                                <div class="field-icon-wrapper {{$day == '2024-06-28' ? 'qpower': ''}}">
+                                <div class="field-icon-wrapper {{ $day == '2024-08-09' || $day == '2024-08-11' ? 'qpower': '' }}">
                                     <input type="text" name="booking_date" id="booking_date" readonly placeholder="選擇日期"/>
                                     <span class="field-icon"></span>
                                 </div>
@@ -740,7 +741,7 @@
         </div>
     </div>
 
-    <div class="modal" id="modalFor0628" tabindex="-1">
+    <div class="modal" id="modalFor0809" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content text-left">
                 <div class="modal-header" style="background: #f7f7c6;">
@@ -749,12 +750,10 @@
                 <div class="modal-body-container">
                     <div class="modal-body">
                         <p>
-                            嗨！很高興你選擇了6/28這一天前來無光晚餐慶祝～<br>
-                            這一天是無光晚餐x Q power的驚喜慶祝日！<br>
-                            你與同行夥伴將會獲得我們為你們準備的Surprise，以及特別的活動！<br>
+                        本日為七夕限定場，內含獨家愛情調飲與限量祝福禮，優惠價$2,600/每人
                         </p>
-                        <p>&nbsp;</p>
-                        <p>期待在無光中與你們相見</p>
+                        <!-- <p>&nbsp;</p>
+                        <p>期待在無光中與你們相見</p> -->
                     </div>
                 </div>
                 <div class="modal-footer" data-dismiss="modal" aria-label="Close" style="color: #000; background: #f7f7c6;">
@@ -817,12 +816,12 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?240603"></script>
+    <script src="js/form_pay.js?240709"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
-        @if($day=='2024-06-28')
-        <script>$('#modalFor0628').modal('show');</script>
+        @if($day=='2024-08-09'||$day=='2024-08-11')
+        <script>$('#modalFor0809').modal('show');</script>
         @endif
     @else
     <script type="text/javascript">alert('該場次人數已達上限!請新開始登記選擇!');</script>

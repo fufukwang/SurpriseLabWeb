@@ -3471,14 +3471,14 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   height: 100%;
 }
 
-#modalFor0628 .modal-content {
+#modalFor0809 .modal-content {
   border-radius: 6px;
   border: 0;
   background-color: #000000;
   overflow: hidden;
 }
 
-#modalFor0628 .modal-header {
+#modalFor0809 .modal-header {
   background-color: #8C5FB4;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -3486,31 +3486,31 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   padding: 21px 0;
   border-bottom: 0;
 }
-#modalFor0628 .modal-header .modal-title {
+#modalFor0809 .modal-header .modal-title {
   font-size: 18px;
   color: #000000;
   line-height: 1;
   letter-spacing: 1.8px;
   font-weight: bold;
 }
-#modalFor0628 .modal-body {
+#modalFor0809 .modal-body {
   margin: 50px 20px;
   padding: 0 100px;
   max-height: 55vh;
 }
 @media (max-width: 1440px) {
-  #modalFor0628 .modal-body {
+  #modalFor0809 .modal-body {
       max-height: 40vh;
       margin: 40px 20px;
       padding: 0 20px;
   }
 }
-#modalFor0628 .modal-body p {
+#modalFor0809 .modal-body p {
   line-height: 1.75;
   letter-spacing: 1.6px;
   color: #CCCCCC;
 }
-#modalFor0628 .modal-footer {
+#modalFor0809 .modal-footer {
   border-top: 0;
   padding: 21px 0;
   -webkit-box-pack: center;
@@ -3526,7 +3526,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   font-weight: bold;
   cursor: pointer;
 }
-#modalFor0628 .modal-footer:hover {
+#modalFor0809 .modal-footer:hover {
   opacity: 0.9;
 }
 
