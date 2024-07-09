@@ -41,7 +41,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css">
-    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/index.css">
+    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/index.css?20240709">
 @endsection
 @section('main')
     <main>
@@ -303,14 +303,18 @@
                     </div>
                     <div class="modal-body">
                         <p class="body-03">
-                            不論是活動通知、異動、重要宣布、隱藏彩蛋……當驚喜製造有消息要與你們宣布時，就會使用此樣式設計！
+                        不論是活動通知、重大宣布、隱藏彩蛋、心情分享，當驚喜製造有消息與你們宣布時，這個視窗就不得了。
                         </p>
                         <p class="body-03">
                             來自驚喜製造的消息 :)
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <a href="https://www.facebook.com/surpriselabtw?utm_source=officialwebsite&utm_medium=SocialFollow" target="_blank" class="surpri-btn size-regular color-orange">前往粉絲專頁</a>
+                        <!-- <a href="https://www.facebook.com/surpriselabtw?utm_source=officialwebsite&utm_medium=SocialFollow" target="_blank" class="surpri-btn size-regular color-orange">前往粉絲專頁</a> -->
+                        <center>
+                            <a target="_blank" href="https://www.facebook.com/surpriselabtw"><i class="icon-fb"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/surpriselabtw/"><i class="icon-ig"></i></a>
+                        </center>
                     </div>
                 </div>
             </div>

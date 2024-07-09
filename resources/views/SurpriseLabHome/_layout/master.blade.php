@@ -23,7 +23,7 @@
                 <li class="menu-item @if(Request::segment(2) == 'index.html' || Request::segment(2) == '')active @endif"><a href="/tw/index.html">HOME</a></li>
                 <li class="menu-item @if(Request::segment(2) == 'team.html')active @endif"><a href="/tw/team.html">TEAM</a></li>
                 <li class="menu-item @if(Request::segment(2) == 'project.html' || Request::segment(2) == 'project')active @endif"><a href="/tw/project.html">PROJECT</a></li>
-                <li class="menu-item @if(Request::segment(2) == 'ticket.html')active @endif"><a href="/tw/ticket.html">TICKET</a></li>
+                <li class="menu-item @if(Request::segment(2) == 'ticket.html')active @endif"><a href="/tw/ticket.html">ON-GOINH</a></li>
             </ul>
         </div>
 
