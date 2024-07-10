@@ -119,54 +119,12 @@
                     <div class="col-xl-10 offset-xl-1 col-12">
                         <div class="surpri-title brackets-regular layout-center style-dark">
                             <div class="title-wrap">
-                                <h2 class="title-en">Ticket</h2>
+                                <h2 class="title-en">ON-GOING</h2>
                                 <h5 class="title-ch">近期體驗</h5>
                             </div>
                         </div>
                         <div class="surpri-content">
                             <div class="owl-carousel owl-theme">
-                                <div class="item">
-                                    <div class="ticket-card">
-
-                                        <!-- 體驗介紹 -->
-                                        <div class="ticket-intro">
-                                            <header class="ticket-header">
-                                                <span class="subtitle">
-                                                    The Great Tipsy 2 : 1980s
-                                                </span>
-                                                <h3 class="title">微醺大飯店：1980s</h3>
-                                                <p class="desc">
-                                                    觀眾好評達 99%<br/>
-                                                    驚喜製造與進港浪製作四號作
-                                                </p>
-                                            </header>
-
-                                            <!-- 體驗 CTA -->
-                                            <div class="ticket-cta">
-                                                <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Home" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="ticket-card-inner">
-
-                                            <!-- 體驗介紹 (Mobile Only) -->
-                                            <div class="ticket-info">
-                                                <span class="subtitle">
-                                                    The Great Tipsy 2 : 1980s
-                                                </span>
-                                                <h3 class="title">微醺大飯店：1980s</h3>
-                                            </div>
-
-                                            <!-- 體驗縮圖 -->
-                                            <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Home" class="ticket-img" target="_blank">
-                                                <picture>
-                                                    <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy2/img_banner.webp" type="image/webp">
-                                                    <img src="/SurpriseLabHome/assets/images/project/thegreattipsy2/img_banner.jpg" alt="微醺大飯店1980s">
-                                                </picture>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="item">
                                     <div class="ticket-card">
 
@@ -185,7 +143,7 @@
 
                                             <!-- 體驗 CTA -->
                                             <div class="ticket-cta">
-                                                <a href="#" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
+                                                <a href="https://www.surpriselab.com.tw/dininginthedark3/index.html?utm_source=sl&utm_medium=web" class="surpri-btn size-regular color-regular arrow-right">前往預約</a>
                                             </div>
                                         </div>
                                         <div class="ticket-card-inner">
@@ -199,10 +157,52 @@
                                             </div>
 
                                             <!-- 體驗縮圖 -->
-                                            <a href="#" class="ticket-img" target="_blank">
+                                            <a href="https://www.surpriselab.com.tw/dininginthedark3/index.html?utm_source=sl&utm_medium=web" class="ticket-img" target="_blank">
                                                 <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/dininginthedark3/img_banner.webp" type="image/webp">
                                                     <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner.jpg" alt="無光晚餐第三季">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="ticket-card">
+
+                                        <!-- 體驗介紹 -->
+                                        <div class="ticket-intro">
+                                            <header class="ticket-header">
+                                                <span class="subtitle">
+                                                    Mind The Gap
+                                                </span>
+                                                <h3 class="title">落日月台</h3>
+                                                <p class="desc">
+                                                    多場域沉浸Ｘ全感官體驗<br/>
+                                                    前往窺探屬於你的終點
+                                                </p>
+                                            </header>
+
+                                            <!-- 體驗 CTA -->
+                                            <div class="ticket-cta">
+                                                <a href="https://bit.ly/3PXnNjP" class="surpri-btn size-regular color-regular arrow-right">前往預約</a>
+                                            </div>
+                                        </div>
+                                        <div class="ticket-card-inner">
+
+                                            <!-- 體驗介紹 (Mobile Only) -->
+                                            <div class="ticket-info">
+                                                <span class="subtitle">
+                                                    Mind The Gap
+                                                </span>
+                                                <h3 class="title">落日月台</h3>
+                                            </div>
+
+                                            <!-- 體驗縮圖 -->
+                                            <a href="https://bit.ly/3PXnNjP" class="ticket-img" target="_blank">
+                                                <picture>
+                                                    <source srcset="/SurpriseLabHome/assets/images/project/mind_the_gap/img_banner.webp" type="image/webp">
+                                                    <img src="/SurpriseLabHome/assets/images/project/mind_the_gap/img_banner.jpg" alt="落日月台">
                                                 </picture>
                                             </a>
                                         </div>
@@ -294,31 +294,7 @@
         </section>
 
         <!-- Modal - Notice -->
-        <div class="surpri-modal notice-modal-wrap modal fade" id="NoticeModal" tabindex="-1" aria-labelledby="NoticeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="NoticeModalLabel">重要訊息</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="body-03">
-                        不論是活動通知、重大宣布、隱藏彩蛋、心情分享，當驚喜製造有消息與你們宣布時，這個視窗就不得了。
-                        </p>
-                        <p class="body-03">
-                            來自驚喜製造的消息 :)
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <!-- <a href="https://www.facebook.com/surpriselabtw?utm_source=officialwebsite&utm_medium=SocialFollow" target="_blank" class="surpri-btn size-regular color-orange">前往粉絲專頁</a> -->
-                        <center>
-                            <a target="_blank" href="https://www.facebook.com/surpriselabtw"><i class="icon-fb"></i></a>
-                            <a target="_blank" href="https://www.instagram.com/surpriselabtw/"><i class="icon-ig"></i></a>
-                        </center>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('SurpriseLabHome._noticeModal')
 
         <!-- Modal - Success -->
         <div class="surpri-modal success-modal-wrap modal fade" id="SuccessModal" tabindex="-1" aria-labelledby="SuccessModalLabel" aria-hidden="true">
