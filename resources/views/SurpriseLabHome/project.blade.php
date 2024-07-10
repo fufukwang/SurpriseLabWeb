@@ -325,4 +325,5 @@
     <script src="/SurpriseLabHome/resources/js/main.js"></script>
     <script src="/SurpriseLabHome/resources/js/preload.js"></script>
     <script src="/SurpriseLabHome/resources/js/project.js"></script>
+    <script>document.addEventListener('touchstart', function () {});</script>
 @endsection
