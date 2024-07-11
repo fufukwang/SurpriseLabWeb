@@ -35,7 +35,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css">
-    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/project.css?20240709">
+    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/project.css?20240711">
 @endsection
 @section('main')
     <main>
@@ -121,7 +121,7 @@
                                     </div>
                                 </a>
 
-                                <a href="./project/sunsetterminal.html" class="js-work-item project-card category-show" data-category="experiment">
+                                <a href="./project/sunsetterminal.html" class="js-work-item project-card category-show" data-category="performance">
                                     <div class="project-image-wrap">
                                         <picture>
                                             <!-- <source srcset="/SurpriseLabHome/assets/images/project/paris/img_banner.webp" type="image/webp"> -->

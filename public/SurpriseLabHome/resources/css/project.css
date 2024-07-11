@@ -183,6 +183,7 @@ h1 {
      object-fit: cover;
   -webkit-transition: all .3s;
   transition: all .3s;
+  border: 1px solid #111111;
 }
 
 .project-wrap .project-dashboard .project-card.on-sell .project-image-wrap img {
@@ -192,7 +193,7 @@ h1 {
 
 .project-wrap .project-dashboard .project-card.on-sell .project-image-wrap:hover img {
   border-top-left-radius: 6px;
-  transform: scale(0.99);
+  border-color: #fd5a00;
 }
 
 .project-wrap .project-dashboard .project-card .project-text {
