@@ -124,7 +124,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Team" target="_blank">
+                                        <a href="/tw/project/sunsetterminal.html">
                                             <div class="reward-img">
                                                 <!-- <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy2/img_banner.webp" type="image/webp">
@@ -173,7 +173,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Team" target="_blank">
+                                        <a href="/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Team">
                                             <div class="reward-img">
                                                 <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy2/img_banner.webp" type="image/webp">
@@ -221,7 +221,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="project/thegreattipsy.html" target="_self">
+                                        <a href="/tw/project/thegreattipsy.html">
                                             <div class="reward-img">
                                                 <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy/img_banner.webp" type="image/webp">
@@ -278,7 +278,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="project/tableforone.html" target="_self">
+                                        <a href="/tw/project/tableforone.html">
                                             <div class="reward-img">
                                                 <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/tableforone/img_banner.webp" type="image/webp">

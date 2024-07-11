@@ -199,7 +199,7 @@
         </section>
 
         <!-- 無體驗 -->
-        <section id="ticket-empty" class="ticket-empty full-page">
+        <!-- <section id="ticket-empty" class="ticket-empty full-page">
             <div class="container-xl">
                 <div class="row">
                     <div class="col-xl-10 offset-xl-1 col-12">
@@ -227,7 +227,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Modal - Notice -->
         @include('SurpriseLabHome._noticeModal')
