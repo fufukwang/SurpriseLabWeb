@@ -331,7 +331,7 @@
                         <div class="surpri-content" data-aos="fade">
                             <div class="data-wrap">
                                 <div class="data-row">
-                                    <div class="data-item item-small show-in-desktop">
+                                    <div class="data-item item-small">
                                         <div class="data-num">
                                             13
                                         </div>
@@ -347,7 +347,7 @@
                                             合作品牌
                                         </div>
                                     </div>
-                                    <div class="data-item item-small show-in-desktop">
+                                    <div class="data-item item-small">
                                         <div class="data-num">
                                             8
                                         </div>

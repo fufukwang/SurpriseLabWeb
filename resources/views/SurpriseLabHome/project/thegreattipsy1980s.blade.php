@@ -270,9 +270,9 @@
                     </div>
                 </div>
                 <div class="project-review-lower-wrap">
-                    <div class="project-review-lower-inner-wrap">
+                    <!-- <div class="project-review-lower-inner-wrap">
                         <a href="#" class="surpri-btn size-regular color-regular" data-bs-toggle="modal" data-bs-target="#VideoModal">查看觀眾影片</a>
-                    </div>
+                    </div> -->
 
                     <!-- custom owl carousel nav -->
                     <div class="custom-carousel-control">

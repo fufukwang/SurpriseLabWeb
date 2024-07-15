@@ -159,8 +159,8 @@
                                             <!-- 體驗縮圖 -->
                                             <a href="https://www.surpriselab.com.tw/dininginthedark3/index.html?utm_source=sl&utm_medium=web" class="ticket-img" target="_blank">
                                                 <picture>
-                                                    <source srcset="/SurpriseLabHome/assets/webps/project/dininginthedark3/img_banner.webp" type="image/webp">
-                                                    <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner.jpg" alt="無光晚餐第三季">
+                                                    <!-- <source srcset="/SurpriseLabHome/assets/webps/project/dininginthedark3/img_banner.webp" type="image/webp"> -->
+                                                    <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner2.png" alt="無光晚餐第三季">
                                                 </picture>
                                             </a>
                                         </div>

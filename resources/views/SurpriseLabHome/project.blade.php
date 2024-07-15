@@ -70,7 +70,7 @@
                             <!-- Project Filter: content -->
                             <div id="js-works-wrap" class="project-dashboard">
 
-                                <a href="/lebaldeparis" class="js-work-item project-card on-sell category-show" data-category="experiment">
+                                <a href="/lebaldeparis" class="js-work-item project-card on-sell category-show" data-category="performance">
                                     <div class="project-image-wrap">
                                         <picture>
                                             <source srcset="/SurpriseLabHome/assets/images/project/paris/img_banner.webp" type="image/webp">
@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="project-status">
                                         <span class="project-year">2024</span>
-                                        <span class="project-category">表演</span>
+                                        <span class="project-category">實驗</span>
                                     </div>
                                 </a>
 

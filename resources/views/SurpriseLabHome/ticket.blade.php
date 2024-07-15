@@ -50,7 +50,7 @@
                     <div class="col-xl-10 offset-xl-1 col-12">
                         <div class="surpri-title brackets-regular layout-center style-dark">
                             <div class="title-wrap">
-                                <h2 class="title-en">ON-GOINH</h2>
+                                <h2 class="title-en">ON-GOING</h2>
                                 <h5 class="title-ch">近期體驗</h5>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                                     <a href="/dininginthedark3/index.html" class="ticket-img" target="_blank">
                                         <picture>
                                             <!-- <source srcset="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner.webp" type="image/webp"> -->
-                                            <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner.jpg" alt="無光晚餐第三季">
+                                            <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner2.png" alt="無光晚餐第三季">
                                         </picture>
                                     </a>
                                 </div>
