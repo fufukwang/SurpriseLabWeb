@@ -186,7 +186,7 @@
                             <li>票價已含10%服務費</li>
                             <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li>
                             <li>若日期無法選擇，代表該場次已滿，或是當日不開放</li>
-                            <li>8/9及8/11七夕限定場｜熱戀慶祝夜，含獨家愛情調飲與限量祝福禮，優惠價$2,600/人</li>
+                            <!-- <li>8/9及8/11七夕限定場｜熱戀慶祝夜，含獨家愛情調飲與限量祝福禮，優惠價$2,600/人</li> -->
                             <li>今日起至 7月31日為格蘭菲迪 Glenfiddich 跨界合作限定體驗。</li>
                             <li style="color: #f7f7c6;">未滿18歲不得飲酒，禁止酒駕。</li>
                         </ul>
@@ -816,12 +816,12 @@
     @endif
     --}}
     <!-- Custom Js -->
-    <script src="js/form_pay.js?240709"></script>
+    <script src="js/form_pay.js?240718"></script>
 @if($day!='')
     @if($code == 'pass')
     <script type="text/javascript">$(function(){ goDay('{{ $day }}'); });</script>
         @if($day=='2024-08-09'||$day=='2024-08-11')
-        <script>$('#modalFor0809').modal('show');</script>
+        <script>//$('#modalFor0809').modal('show');</script>
         @endif
     @else
     <script type="text/javascript">alert('該場次人數已達上限!請新開始登記選擇!');</script>

@@ -318,7 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     margin-left: auto;
                                     margin-right: auto;
                                 ">
-                                    <li>8/9及8/11七夕限定場｜含獨家愛情調飲與限量祝福禮，優惠價格$2,600/人</li>
+                                    <!-- <li>8/9及8/11七夕限定場｜含獨家愛情調飲與限量祝福禮，優惠價格$2,600/人</li> -->
                                     <li>以上價格包含 10% 服務費</li>
                                     <li>體驗皆為雙數入席，無法獨售</li>
                                     <li>現場另提供酒水調飲加購</li>

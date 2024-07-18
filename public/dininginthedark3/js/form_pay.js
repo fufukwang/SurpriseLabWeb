@@ -469,13 +469,13 @@ $('.step-2 input, .step-2 select').on('change', function () {
                     beforeShowDay: enableAllTheseDays
                 });
 
-                booking_date.on("change", function() {
-                    if($(this).val() === '2024-08-09' || $(this).val() === '2024-08-11') {
-                        booking_date.parent().addClass('qpower');
-                    }else{
-                        booking_date.parent().removeClass('qpower');
-                    }
-                });
+                // booking_date.on("change", function() {
+                //     if($(this).val() === '2024-08-09' || $(this).val() === '2024-08-11') {
+                //         booking_date.parent().addClass('qpower');
+                //     }else{
+                //         booking_date.parent().removeClass('qpower');
+                //     }
+                // });
 
                 $.unblockUI();
             },'json');
@@ -554,9 +554,9 @@ $('.step-2 input, .step-2 select').on('change', function () {
             nextField.html('').trigger('change');
             // && $('#booking_time_slot').val() != ''
             if($('#booking_date').val()!=''){
-                if($('#booking_date').val() === '2024-08-09' || $('#booking_date').val() === '2024-08-11') {
-                    $('#modalFor0809').modal('show');
-                }
+                // if($('#booking_date').val() === '2024-08-09' || $('#booking_date').val() === '2024-08-11') {
+                //     $('#modalFor0809').modal('show');
+                // }
                 $.get('/dininginthedark3/GetAjaxData',{
                     'act':'getBydartpart',
                     'ticketType':$('input[name="ticket-type"]:checked').val(),
