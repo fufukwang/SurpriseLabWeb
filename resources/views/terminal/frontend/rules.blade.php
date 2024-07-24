@@ -214,6 +214,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div id="accordion1-7" class="accordion-collapse collapse" aria-labelledby="accordion1-7-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
                                                             <p>關於改期或退費，詳情請參考《落日月台》<a class="link-text style-qa changeToPolicy" href="#">[退換政策]</a></p>
+                                                            <p>任何改期、退費、轉讓等訂單退換票相關異動，敬請來信客服 e-mail ：<a href="mailto:mindthegap@surpriselab.com.tw" class="link-text style-qa">mindthegap@surpriselab.com.tw</a> 申請，客服信箱周一至周二為公休日。社群私訊及留言恕無法辦理。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -475,7 +476,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     <div id="accordion3-7" class="accordion-collapse collapse" aria-labelledby="accordion3-7-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
                                                             <p>體驗包含三道小點及一酒精飲品，食物為五辛蛋奶素。</p>
-                                                            <p>現場僅提供體驗過程會飲用之酒精飲品，不提供其他非酒精之飲料，過程中請斟酌自身狀況，參與、使用。建議準媽媽們先行評估自身情況，而未滿十八歲的朋友，不是不讓你喝，是法律不允許，成年後我們再見。</p>
+                                                            <p>現場僅提供體驗過程會飲用之酒精飲品，不提供其他非酒精之飲料，過程中請斟酌自身狀況，參與、使用。如有任何失態、嘔吐、損毀行為，將收取基本人工清潔費2,000元，並依照實際損壞物品照價賠償。</p>
+                                                            <p>建議準媽媽們先行評估自身情況，而未滿十八歲的朋友，不是不讓你喝，是法律不允許，成年後我們再見。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -684,7 +686,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             </ul>
                                                         </li>
                                                         <li class="list-item"><p>落日月台退換票政策，係依行政院文化部頒定之藝文表演票券定型化契約，第四類級距式退換票方案，收取退換票手續費用。</p></li>
-                                                        <li class="list-item"><p>每筆訂單初次換票，可減免手續費用一次。若換票後，欲再次退換票，需補上前次減免之手續費用。</p></li>
+                                                        <li class="list-item"><p>每筆訂單於演出日十日前申請初次換票，可減免手續費用一次。若換票後，欲再次退換票，需補上前次減免之手續費用。</p></li>
                                                         <li class="list-item"><p>訂單成立後若發現訂單內容或時段錯誤，需請於訂單成立後24小時內來信，逾時將一律依照退換政策辦理，請於結帳前確認再次訂單資訊。</p></li>
                                                         <li class="list-item"><p>若體驗當日若因不可抗力之因素，需臨時異動訂單，請於體驗日後三日內來信客服，並出示相關含姓名日期之證明申請特例改期。特例改期僅開放兩週內日期選擇。落日月台保有最終決定權。</p></li>
                                                         <!-- <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:mindthegap@surpriselab.com.tw">mindthegap@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</p></li> -->
@@ -770,12 +772,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </div>
                                             </div>
 
-                                            <div class="sub-block-wrap">
+                                            <!-- <div class="sub-block-wrap">
                                                 <div class="section-heading-wrap">
                                                     <h4 class="heading-content-title">未完成劃位</h4>
                                                 </div>
 
-                                                <!-- <div class="table-wrap style-rule layout-refund">
+                                                <div class="table-wrap style-rule layout-refund">
                                                     <table>
                                                         <tr>
                                                             <th></th>
@@ -802,7 +804,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <td><i class="icon-cross"></i></td>
                                                         </tr>
                                                     </table>
-                                                </div> -->
+                                                </div>
                                             </div>
 
                                             <div class="sub-block-wrap">
@@ -814,7 +816,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item"><p>票券有效期間為本演出期間內（依網站公告），逾期視同作廢</p></li>
                                                     </ul>
                                                 </div>
-                                            </div>
+                                            </div> -->
 
                                             <div class="sub-block-wrap">
                                                 <div class="section-heading-wrap">
