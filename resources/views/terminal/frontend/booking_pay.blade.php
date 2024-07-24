@@ -322,7 +322,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <input type="checkbox" id="agree-rules" name="agree-rules" required>
                                         <label class="body-04" for="agree-rules">
                                             <span class="body-04">我已詳讀並遵守</span>
-                                            <a href="/terminal/rules" target="_blank" class="link-text style-smaller">退換票政策</a> 落日月台退換票政策係依行政院文化部頒定之藝文表演票券定型化契約，第四類級距式退換票方案，收取退換票手續費用。
+                                            <a href="/terminal/rules" target="_blank" class="link-text style-smaller">退換票政策</a> 落日月台退換票政策係依行政院文化部頒定之藝文表演票券定型化契約，第四類級距式退換票方案，收取退換票手續費用。任何改期、退費、轉讓等訂單退換票相關異動，敬請來信客服e-mail申請。社群私訊及留言恕無法辦理。
                                         </label>
                                     </div>
                                     <div class="form-group checkbox-layout" style="flex-wrap: nowrap;">
@@ -332,9 +332,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </label>
                                     </div>
                                     <div class="form-group checkbox-layout" style="flex-wrap: nowrap;">
-                                        <input type="checkbox" id="agree-drink" name="agree-self" required>
+                                        <input type="checkbox" id="agree-drink" name="agree-drink" required>
                                         <label class="body-04" for="agree-drink">
-                                            <span class="body-04">我已理解若評估自身狀況後決定不飲酒，體驗中將不提供臨時更換。且因體驗中有閱讀中文文字、聆聽中文指引環節，我已斟酌自行情況參與。</span>
+                                            <span class="body-04">我已理解若評估自身狀況後決定不飲酒，體驗中將不提供臨時更換。如有任何失態、嘔吐、損毀行為，將收取基本人工清潔費2,000元，並依照實際損壞物品照價賠償。</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group checkbox-layout" style="flex-wrap: nowrap;">
+                                        <input type="checkbox" id="agree-readzh" name="agree-readzh" required>
+                                        <label class="body-04" for="agree-readzh">
+                                            <span class="body-04">體驗中有閱讀中文文字、聆聽中文指引環節，我已斟酌自行情況參與。</span>
                                         </label>
                                     </div>
                                 </fieldset>
@@ -575,6 +581,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking_pay.js?v=240611"></script>
+    <script src="/terminalAssets/js/booking_pay.js?v=240724"></script>
 </body>
 </html>

@@ -188,11 +188,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="text-wrap">
                                     <!-- A Test -->
                                     <p class="color-y200 fw-normal">
-                                        <b>正如落日之後，必有黎明，所有終點，必是另一個起點。</b><br>
+                                        我們總是在移動，日復一日運轉自己，<br>
+                                        持續追逐日出，在抵達與啟程中練習前行。<br>
                                         <br>
-                                        落日月台現身台北松山文創園區，旅客穿梭多個奇幻時空中，將開啟全感官，探索落日將近、月升之際的彌留世界。<br>
+                                        踏入終點與起點間的中繼站：落日月台，<br>
+                                        你獨自啟程，探索重新定義生命的旅途。<br>
+                                        在這裡，將開啟全感官、穿梭奇幻時空之中。<br>
                                         <br>
-                                        致迷途的旅客，歡迎前來窺探屬於自己的終點；願你留心腳步、再次啟程。
+                                        我們深信，無論黑夜降臨幾次，<br>
+                                        <b>落日之後必有黎明，所有終點必是另個起點。</b><br>
+                                        <br>
+                                        致迷途的旅客，歡迎前來窺探自己的終點；<br>
+                                        願你留心腳步、再次啟程。
                                     </p>
 
                                     <!-- B Test -->
@@ -509,10 +516,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                         <div class="tab-pane fade" id="project-order" role="tabpanel" aria-labelledby="project-order-tab">
                             <div class="tab-content-inner">
-                                <p style="color: #efaf50; text-align: center;">
+                                <!-- <p style="color: #efaf50; text-align: center;">
                                     落日月台將於每月 15 日開放隔月場次<br>
                                     （如遇假日將提前於週間開放）
-                                </p>
+                                </p> -->
                                 <div class="ticket-datepicker">
                                     <div id="homeDatepicker"></div>
                                     <div class="datepicker-ps">
