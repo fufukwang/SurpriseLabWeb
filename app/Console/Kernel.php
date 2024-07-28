@@ -47,7 +47,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('dark3:task 17')->dailyAt('17:00'); // 無光S3 行前信寄送
         $schedule->command('terminal:task 18')->dailyAt('18:00'); // 落日 行前信寄送
         $schedule->command('terminal:task 10')->dailyAt('10:00'); // 落日 XDAY 簡訊
-        $schedule->command('dark3:task 25')->hourly();
+        // $schedule->command('dark3:task 25')->hourly();
         // $schedule->command('terminal:task 25')->hourly();
 
 
