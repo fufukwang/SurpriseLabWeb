@@ -178,17 +178,11 @@
                             請點選你的預約人數
                         </p>
                         <ul class="prefix-dash">
-                            <!-- <li>單一場次最高可容納 12 人</li>
-                            <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li> -->
-                            <li>無光晚餐僅接受雙數訂位，且必須雙數入席。</li>
+                            <li>無光晚餐僅接受雙數訂位、雙數入席；為維護體驗品質，安排兩人一組入座，且無法併桌</li>
                             <li>單一場次最高可容納 12 人，若人數為12人或以上，歡迎預約包場。請來信客服 dininginthedark@surpriselab.com.tw</li>
-                            <li>無光晚餐每人優惠價格為2,200元/人</li>
-                            <li>票價已含10%服務費</li>
-                            <li>為維護體驗品質，體驗時將兩人一組入座，且無法併桌</li>
+                            <li>無光晚餐每人優惠價格為新台幣2,200元/人 (已含10%服務費)，若遇特殊場次除外</li>
                             <li>若日期無法選擇，代表該場次已滿，或是當日不開放</li>
-                            <!-- <li>8/9及8/11七夕限定場｜熱戀慶祝夜，含獨家愛情調飲與限量祝福禮，優惠價$2,600/人</li> -->
-                            <li>今日起至 7月31日為格蘭菲迪 Glenfiddich 跨界合作限定體驗。</li>
-                            <li style="color: #f7f7c6;">未滿18歲不得飲酒，禁止酒駕。</li>
+                            <!-- <li style="color: #f7f7c6;">未滿18歲不得飲酒，禁止酒駕。</li> -->
                         </ul>
                         <br/><br/>
 
@@ -381,7 +375,7 @@
                                         </select>
                                         <label class="unit">位 Guests</label>
                                     </div>
-                                    <div class="form-col amount">
+                                    <!-- <div class="form-col amount">
                                         <label class="form-label" for="meat_food_noAllAlcohol">
                                             酒精過敏
                                             <span class="en">Alcohol Allergy</span>
@@ -389,7 +383,7 @@
                                         <select id="meat_food_noAllAlcohol" name="meat_food_noAllAlcohol" data-placeholder="選擇人數" required disabled>
                                         </select>
                                         <label class="unit">位 Guests</label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="form-row">
@@ -426,7 +420,7 @@
                                         </select>
                                         <label class="unit">位 Guests</label>
                                     </div>
-                                    <div class="form-col amount">
+                                    <!-- <div class="form-col amount">
                                         <label class="form-label" for="vegetarian_food_noAlcohol">
                                             酒精過敏
                                             <span class="en">No Alcohol</span>
@@ -434,7 +428,7 @@
                                         <select id="vegetarian_food_noAlcohol" name="vegetarian_food_noAlcohol" data-placeholder="選擇人數" required disabled>
                                         </select>
                                         <label class="unit">位 Guests</label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 
@@ -447,7 +441,7 @@
 
                         <div class="field-intro">
                             <br><br>
-                            <p style="color: #f7f7c6; line-height: 1.7;">今日起至7月31日為格蘭菲迪 Glenfiddich 跨界合作體驗，未滿18歲禁止飲酒。</p>
+                            <!-- <p style="color: #f7f7c6; line-height: 1.7;">今日起至7月31日為格蘭菲迪 Glenfiddich 跨界合作體驗，未滿18歲禁止飲酒。</p> -->
                         </div>
                         
                         <div class="form-group radio__button">
@@ -480,7 +474,7 @@
                                 </li>
                                 <li>無光晚餐僅依照顧客過敏狀況調整餐點，請確實填寫餐飲過敏狀況與人數。</li>
                                 <li>無光晚餐將依照訂位過敏資訊準備體驗內容，現場無法更改。</li>
-                                <li><u>格蘭菲迪 Glenfiddich 跨界合作</u>，現場提供有酒精飲品，若因其他因素不能飲用，可告知工作人員不能飲用，無提供無酒精飲品替換。</li>
+                                <!-- <li><u>格蘭菲迪 Glenfiddich 跨界合作</u>，現場提供有酒精飲品，若因其他因素不能飲用，可告知工作人員不能飲用，無提供無酒精飲品替換。</li> -->
                             </ul>
                         </div>
 
@@ -573,8 +567,9 @@
                         <ul>
                             <li>即將跳轉離開網站，進入結帳流程，完成付款。</li>
                             <li>完成付款後，Email信箱中會收到訂位確認信，請前往確認。</li>
-                            <li>八號全新菜單與 格蘭菲迪 跨界合作。</li>
-                            <li>未滿18歲<span style="color: #f7f7c6;">不得參加、不能飲酒。</span></li>
+                            <!-- <li>八號全新菜單與 格蘭菲迪 跨界合作。</li> -->
+                            <!-- <li>未滿18歲<span style="color: #f7f7c6;">不得參加、不能飲酒。</span></li> -->
+                            <li>不開放未滿16歲孩童參加</li>
                         </ul>
 
                         <div class="feature-btn d-flex justify-content-between multi-btn">
@@ -728,9 +723,9 @@
                         <p>&nbsp;</p>
                         <p>
                             再次提醒：<br>
-                            若您有嚴重的乳糖不耐症，請斟酌體驗。<br>
-                            素食套餐僅提供<span style="color: #ff4242;">五辛蛋奶素</span>。<br>
-                            未滿18歲禁止飲酒，且不得參與體驗。
+                            若您有嚴重的乳糖不耐症，不建議前來體驗。<br>
+                            素食套餐僅提供<span style="color: #ff4242;">五辛蛋奶素</span>。
+                            <!-- 未滿18歲禁止飲酒，且不得參與體驗。 -->
                         </p>
                     </div>
                 </div>
@@ -779,10 +774,10 @@
         </ul>
     </aside>
 
-    <div id="notice-banner">
+    <!-- <div id="notice-banner">
         <img class="d-none d-md-block" src="img/general/notice.jpg" alt="無光晚餐 Dining In The Dark">
         <img class="d-block d-md-none" src="img/general/notice_m.jpg" alt="無光晚餐 Dining In The Dark">
-    </div>
+    </div> -->
 
     <!-- Bootstrap -->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>
