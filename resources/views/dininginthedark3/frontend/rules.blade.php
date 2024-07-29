@@ -195,8 +195,7 @@
                                         <div id="qa15" class="collapse" aria-labelledby="qa15-header"
                                             data-parent="#qa-according">
                                             <div class="card-body">
-                                                有的！未滿18歲不得參加。報到前請出示適當的身分證明文件以查驗身分。<br/>
-                                                因八號菜單與格蘭菲迪跨界合作，請理性飲酒，飲酒不開車。
+                                                有的！為顧及黑暗中的體驗品質及安全性，不開放年紀低於16歲之孩童前來體驗。
                                             </div>
                                         </div>
                                     </div>

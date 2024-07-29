@@ -160,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="section-header">
                                 <div class="section-title">
                                     <h3>體驗內容</h3>
-                                    <h4 style="color: #f7f7c6;">全新8號菜單｜CHEERS！<br>“一場屬於大人的魔幻茶會！”</h4>
+                                    <h4 style="color: #f7f7c6;">全新8號菜單｜CHEERS！<br>“一場慶祝魔幻茶會！”</h4>
                                 </div>
                                 <!-- <p class="section-desc">
                                     <b>6 號菜單 ON AIR</b>
@@ -189,7 +189,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <!-- 1 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.png?240527" data-src-retina="img/home/about/about-intro-1.png?240527" alt="無光晚餐體驗內容">
+                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-1.jpg?240729" data-src-retina="img/home/about/about-intro-1.jpg?240729" alt="無光晚餐體驗內容">
                                                                 </figure>
                                                             </div>
 
@@ -224,7 +224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <!-- 6 -->
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-6.png?240527" data-src-retina="img/home/about/about-intro-6.png?240527" alt="無光晚餐體驗內容">
+                                                                    <img class="img-fluid owl-lazy" data-src="img/home/about/about-intro-6.png?240729" data-src-retina="img/home/about/about-intro-6.png?240729" alt="無光晚餐體驗內容">
                                                                 </figure>
                                                             </div>
 
@@ -277,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <center>
                                         <b>
                                             <u>8號菜單：CHEERS！</u><br>
-                                            <u>格蘭菲迪期間限定</u>
+                                            <!-- <u>格蘭菲迪期間限定</u> -->
                                             <br><br>
                                         </b>
                                     </center>
@@ -319,10 +319,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     margin-right: auto;
                                 ">
                                     <!-- <li>8/9及8/11七夕限定場｜含獨家愛情調飲與限量祝福禮，優惠價格$2,600/人</li> -->
-                                    <li>以上價格包含 10% 服務費</li>
+                                    <!-- <li>以上價格包含 10% 服務費</li> -->
                                     <li>體驗皆為雙數入席，無法獨售</li>
                                     <li>現場另提供酒水調飲加購</li>
-                                    <li>體驗提供2杯格蘭菲迪微醺飲品，須滿18歲以上方可預約</li>
+                                    <li>全中文體驗服務</li>
+                                    <!-- <li>體驗提供2杯格蘭菲迪微醺飲品，須滿18歲以上方可預約</li> -->
+                                    <li>為維護體驗品質，未滿16歲以上無法進入體驗</li>
                                 </ul>
 
                                 <div class="ticket-btn">
@@ -1356,7 +1358,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
-                        <div class="section sec-partner">
+                        <!-- <div class="section sec-partner">
                             <div class="container">
 
                                 <div class="section-header">
@@ -1378,7 +1380,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </section>
                 </div>
                 
@@ -1457,10 +1459,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="dialog-close"></div>
     </div>
 
-    <div id="notice-banner">
+    <!-- <div id="notice-banner">
         <img class="d-none d-md-block" src="img/general/notice.jpg" alt="無光晚餐 Dining In The Dark">
         <img class="d-block d-md-none" src="img/general/notice_m.jpg" alt="無光晚餐 Dining In The Dark">
-    </div>
+    </div> -->
 
     <!-- Bootstrap -->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>

@@ -60,10 +60,10 @@ $(function() {
     $enter_modal_btn.on('click', function(event) {
         $enter_modal.fadeOut(250, function () {
             $('body').removeClass('modal-open');
-            if ( sessionStorage.getItem('dialog_noshow') !== 'true' ) {
-                $('#enter-dialog').fadeIn();
-                setEnterDialogSize();
-            }
+            // if ( sessionStorage.getItem('dialog_noshow') !== 'true' ) {
+            //     $('#enter-dialog').fadeIn();
+            //     setEnterDialogSize();
+            // }
         });
     });
 
