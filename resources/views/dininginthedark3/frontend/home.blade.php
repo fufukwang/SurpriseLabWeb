@@ -1495,7 +1495,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Custom Js -->
     <script src="js/index.js?date=240630"></script>
     <script src="js/main.js?v=0.13"></script>
-    <script src="js/board-modal.js?date=240528"></script>
+    <script src="js/board-modal.js?date=240731"></script>
     <script src="js/index-slideshow.js?date=240630"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
