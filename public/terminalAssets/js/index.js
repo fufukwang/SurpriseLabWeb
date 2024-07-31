@@ -137,51 +137,51 @@ $('#home .sun-wrapper, #home .enter-btn').on('click', function() {
     });
 });
 
-var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
-var booking_date = $("#homeDatepicker");
-var enableDays = [];
-var dateSite = [];
-$.get('/terminal/GetAjaxData',{
-    'act': 'getBypople',
-    'pople': 1,
-    'ticketType': '',
-},function(data){
-    for(i=0;i<data.length;i++){
-        enableDays.push(data[i].day);
-        dateSite[data[i].day] = data[i].per
-    }
-    var minD = 0;
-    if(enableDays.length>0){
-        minD = enableDays[0];
-    }
-    var maxD;
-    var date = new Date();
-    var newDate = addMonths(date, 2);
-    maxD = new Date(newDate.getFullYear(), newDate.getMonth(), lastday(newDate.getFullYear(), newDate.getMonth()));
-    // console.log(maxD);
-    booking_date.datepicker("destroy");
-    booking_date.datepicker({
-        minDate: minD,// minD,
-        maxDate: maxD,//'+3m',// new Date(2022, 1, 28),
-        dateFormat: 'yy-mm-dd', 
-        beforeShowDay: enableAllTheseDays,
-        onSelect: function(dateText) {
-            window.location.href = '/terminal/booking_pay?day='+dateText;
-        },
-        onUpdateDatepicker: function(inst) {
-            var currentYear = inst.selectedYear;
-            var currentMonth = inst.selectedMonth + 1;
-            var padd = (currentMonth.toString().length == 1) ? '0' : '';
-            var notOpen = true;
-            enableDays.forEach((val) => { if(val.indexOf(currentYear+'-'+padd+currentMonth)!=-1){ notOpen = false; } });
-            if(notOpen){ booking_date.find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>'); }
-/*
-            if (currentYear === 2024 && currentMonth === 3) {
-                booking_date.find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>');
-            }*/
-        }
-    });
-},'json');
+// var lastday = function(y,m){ return  new Date(y, m +1, 0).getDate(); }
+// var booking_date = $("#homeDatepicker");
+// var enableDays = [];
+// var dateSite = [];
+// $.get('/terminal/GetAjaxData',{
+//     'act': 'getBypople',
+//     'pople': 1,
+//     'ticketType': '',
+// },function(data){
+//     for(i=0;i<data.length;i++){
+//         enableDays.push(data[i].day);
+//         dateSite[data[i].day] = data[i].per
+//     }
+//     var minD = 0;
+//     if(enableDays.length>0){
+//         minD = enableDays[0];
+//     }
+//     var maxD;
+//     var date = new Date();
+//     var newDate = addMonths(date, 2);
+//     maxD = new Date(newDate.getFullYear(), newDate.getMonth(), lastday(newDate.getFullYear(), newDate.getMonth()));
+//     // console.log(maxD);
+//     booking_date.datepicker("destroy");
+//     booking_date.datepicker({
+//         minDate: minD,// minD,
+//         maxDate: maxD,//'+3m',// new Date(2022, 1, 28),
+//         dateFormat: 'yy-mm-dd', 
+//         beforeShowDay: enableAllTheseDays,
+//         onSelect: function(dateText) {
+//             window.location.href = '/terminal/booking_pay?day='+dateText;
+//         },
+//         onUpdateDatepicker: function(inst) {
+//             var currentYear = inst.selectedYear;
+//             var currentMonth = inst.selectedMonth + 1;
+//             var padd = (currentMonth.toString().length == 1) ? '0' : '';
+//             var notOpen = true;
+//             enableDays.forEach((val) => { if(val.indexOf(currentYear+'-'+padd+currentMonth)!=-1){ notOpen = false; } });
+//             if(notOpen){ booking_date.find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>'); }
+// /*
+//             if (currentYear === 2024 && currentMonth === 3) {
+//                 booking_date.find('.ui-datepicker-year').after('<span class="datepicker-closed">（尚未開放）</span>');
+//             }*/
+//         }
+//     });
+// },'json');
 
 function enableAllTheseDays(date) {
     var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);

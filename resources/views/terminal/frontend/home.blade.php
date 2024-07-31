@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=2407051">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240731">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -521,7 +521,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     （如遇假日將提前於週間開放）
                                 </p> -->
                                 <div class="ticket-datepicker">
-                                    <div id="homeDatepicker"></div>
+                                    <!-- <div id="homeDatepicker"></div> -->
+
+                                    <div class="tk-datepicker">
+                                        <div class="tk-datepicker-header">
+                                            <div class="tk-datepicker-month">
+                                                <span class="tk-datepicker-month-curr"></span>
+                                                <span class="tk-datepicker-month-slash">/</span>
+                                                <span class="tk-datepicker-month-next"></span>
+                                            </div>
+                                            <div class="tk-datepicker-week">
+                                                <div class="line">
+                                                    <div class="grid">Su</div>
+                                                    <div class="grid">Mo</div>
+                                                    <div class="grid">Tu</div>
+                                                    <div class="grid">We</div>
+                                                    <div class="grid">Th</div>
+                                                    <div class="grid">Fr</div>
+                                                    <div class="grid">Sa</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tk-datepicker-body"></div>
+                                    </div>
+
                                     <div class="datepicker-ps">
                                         <div>
                                             <span style="background: #E55D33"></span>
@@ -1250,9 +1273,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Custom -->
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?240705"></script>
+    <script src="/terminalAssets/js/index.js?240731"></script>
     <script src="/terminalAssets/js/home-slideshow.js?240705"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <script src="/terminalAssets/js/tk-datepicker.js"></script>
 </body>
 </html>
