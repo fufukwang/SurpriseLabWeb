@@ -226,7 +226,7 @@ class HelperService {
     public function SendEmailByTemplateName($data){
         try{
             // 暫停發送 D7 信件
-            if($data['template'] == 'D7' || $data['template'] == 'undone') return false;
+            if($data['template'] == 'undone') return false;
             // 5/22 (含)的訂單不受到 7 & 14 的信件
             // 0425 (含)的訂單不收到 7 & 14 的信件
             //if($data['template'] == 'D7' || $data['template'] == 'D14'){
