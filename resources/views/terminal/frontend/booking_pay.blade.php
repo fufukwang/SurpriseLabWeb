@@ -41,7 +41,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?240611">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?240809">
     <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?240429">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -203,6 +203,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <label class="body-04" for="js-datepicker">日期</label>
                                         <div class="datepicker-wrap">
                                             <input type="text" id="js-datepicker" class="datepicker body-04" placeholder="選擇日期" readonly required>
+                                            
+                                            <div class="ticket-datepicker">
+                                                <!-- <div id="homeDatepicker"></div> -->
+
+                                                <div class="tk-datepicker">
+                                                    <div class="tk-datepicker-header">
+                                                        <div class="tk-datepicker-month">
+                                                            <span class="tk-datepicker-month-curr"></span>
+                                                            <span class="tk-datepicker-month-slash">/</span>
+                                                            <span class="tk-datepicker-month-next"></span>
+                                                        </div>
+                                                        <div class="tk-datepicker-week">
+                                                            <div class="line">
+                                                                <div class="grid">Su</div>
+                                                                <div class="grid">Mo</div>
+                                                                <div class="grid">Tu</div>
+                                                                <div class="grid">We</div>
+                                                                <div class="grid">Th</div>
+                                                                <div class="grid">Fr</div>
+                                                                <div class="grid">Sa</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tk-datepicker-body"></div>
+
+                                                    <div class="datepicker-ps">
+                                                        <div>
+                                                            <span style="background: #E55D33"></span>
+                                                            <p>好評熱賣</p>
+                                                        </div>
+                                                        <div>
+                                                            <span style="background: #A55AFF"></span>
+                                                            <p>即將完售</p>
+                                                        </div>
+                                                        <!-- <div>
+                                                            <span style="background: #3737FC"></span>
+                                                            <p>已售完Sold Out</p>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="form-group normal-layout dropdown-time dropdown-datepart-train">
@@ -580,7 +622,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/terminalAssets/js/plugins/imagesloaded.pkgd.min.js"></script>
 
     <!-- Custom -->
+    <script src="/terminalAssets/js/tk-datepicker.js?240809"></script>
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking_pay.js?v=240724"></script>
+    <script src="/terminalAssets/js/booking_pay.js?v=240809"></script>
 </body>
 </html>

@@ -183,6 +183,63 @@ $('#home .sun-wrapper, #home .enter-btn').on('click', function() {
 //     });
 // },'json');
 
+$.get('/terminal/GetAjaxData',{
+    'act': 'getBypople',
+    'pople': 1,
+    'ticketType': '',
+},function(data){
+    var dateSite = {};
+    var allData = data;
+    var allowDates = allData.map(function(item){
+        return item.day;
+    });
+    allData.forEach(function(item){
+        dateSite[item.day] = item.per;
+    });
+
+    if (allData.length > 0) {
+        var startDate = allData[0].day.split('-');
+        var startYear = parseInt(startDate[0]);
+        var startMonth = parseInt(startDate[1]) - 1;
+    } else {
+        var today = new Date();
+        var startYear = today.getFullYear();
+        var startMonth = today.getMonth();
+    }
+
+    $('.tk-datepicker').tkdatepicker({
+        startYear: startYear,
+        startMonth: startMonth,
+        allowDates: allowDates,
+        onInit: function(datepicker) {
+            loading = false;
+
+            datepicker.find('.tk-datepicker-body .grid').each(function(idx, el) {
+                var date = $(el).data('date');
+                
+                if (allowDates.indexOf(date) < 0) {
+                    $(el).addClass('disabled');
+                } else {
+                    if(dateSite[date]<50){
+                        $(el).addClass('sold-out-soon');
+                        $(el).attr('title', '即將完售');
+                    } else if(dateSite[date]>=50){
+                        $(el).addClass('still-vacancy');
+                        $(el).attr('title', '好評熱賣');
+                    }
+                    
+                    $(el).on('click', function() {
+                        var date = $(this).data('date');
+                        window.location.href = '/terminal/booking_pay?day=' + date;
+                    })
+                }
+            });
+
+            datepicker.css({height: 'auto', opacity: 1});
+        },
+    });
+},'json');
+
 function enableAllTheseDays(date) {
     var sdate = $.datepicker.formatDate( 'yy-mm-dd', date);
     var getMaxDate = $.datepicker._determineDate( booking_date, booking_date.datepicker( "option", "maxDate" ) );

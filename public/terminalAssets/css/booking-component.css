@@ -1996,3 +1996,137 @@ input[name=allocation]::-ms-input-placeholder {
 input[name=allocation]::placeholder {
   font-size: 10.8px;
 }
+
+
+.tk-datepicker {
+  text-align: center;
+  background-color: #232666;
+  border: 2px solid #ff9c9c;
+  border-radius: 6px;
+  color: #ff9c9c;
+  width: 312px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin: 10px 0 0 0;
+  position: absolute;
+}
+@media (max-width: 345px) {
+  .tk-datepicker {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+.tk-datepicker .line {
+  display: flex;
+}
+.tk-datepicker .grid {
+  width: 36px;
+  line-height: 36px;
+  margin: 0 4px;
+  position: relative;
+}
+.tk-datepicker .tk-datepicker-header {
+  border-bottom: 1px solid #ff9c9c;
+}
+.tk-datepicker .tk-datepicker-header .tk-datepicker-month {
+  padding: 16px 0 8px 0;
+  display: flex;
+  justify-content: center;
+  height: 52px;
+}
+.tk-datepicker .tk-datepicker-header .tk-datepicker-month span {
+  display: block;
+  margin: 0 0.5em;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+}
+.tk-datepicker .tk-datepicker-header .tk-datepicker-month-curr, .tk-datepicker .tk-datepicker-header .tk-datepicker-month-next {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+}
+.tk-datepicker .tk-datepicker-header small {
+  font-size: 10px;
+  line-height: 1;
+  display: block;
+  margin-top: 5px;
+}
+.tk-datepicker .tk-datepicker-body {
+  padding: 10px 0;
+  height: 200px;
+  overflow-y: auto;
+}
+.tk-datepicker .tk-datepicker-body::-webkit-scrollbar {
+  width: 6px;
+}
+.tk-datepicker .tk-datepicker-body::-webkit-scrollbar-track {
+  background: #5a5cbb;
+}
+.tk-datepicker .tk-datepicker-body::-webkit-scrollbar-thumb {
+  background: #37398b;
+  border-radius: 10px;
+}
+.tk-datepicker .tk-datepicker-body::-webkit-scrollbar-thumb:hover {
+  background: #37398b;
+}
+.tk-datepicker .tk-datepicker-body .grid {
+  border-radius: 50%;
+  cursor: pointer;
+}
+.tk-datepicker .tk-datepicker-body .grid:hover:not(.disabled),
+.tk-datepicker .tk-datepicker-body .grid.active {
+  background-color: #efcabf;
+  color: #ad4039;
+}
+.tk-datepicker .tk-datepicker-body .grid:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.tk-datepicker .tk-datepicker-body .grid.disabled {
+  color: #ad4039;
+  cursor: no-drop;
+}
+.tk-datepicker .tk-datepicker-body .grid.sold-out-soon:after {
+  background: #A55AFF;
+}
+.tk-datepicker .tk-datepicker-body .grid.still-vacancy:after {
+  background: #E55D33;
+}
+.tk-datepicker .tk-datepicker-body .grid.sold-out:after {
+  background: #3737FC;
+}
+.tk-datepicker .datepicker-ps {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px 10px 0;
+}
+.tk-datepicker .datepicker-ps div {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+@media (max-width: 1199.98px) {
+  .tk-datepicker .datepicker-ps div {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+}
+.tk-datepicker .datepicker-ps span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.tk-datepicker .datepicker-ps p {
+  margin: 0 5px;
+  font-size: 12px;
+  color: #ff9c9c;
+}
