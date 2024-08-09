@@ -19,7 +19,7 @@
                     var grid = document.querySelectorAll('.tk-datepicker .grid')[i];
                     if (isInViewport(grid)) {
                         var date = grid.getAttribute('data-date');
-                        if (date !== '') {
+                        if (date && date !== '') {
                             var month = parseInt(date.split('-')[1]) - 1;
                             if (months.indexOf(month) < 0) {
                                 months.push(month);
