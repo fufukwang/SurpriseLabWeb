@@ -11,7 +11,7 @@ use Carbon\Carbon;
 class WebController extends Controller
 {
     // +8hr - 900 sec = 27900
-    protected $oquery = "IFNULL((SELECT SUM(pople)-SUM(cut) FROM(tertp_order) WHERE tertp_order.pro_id=tertp_pro.id AND pay_status IN ('已付款','已付款(部分退款)') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()+interval 27900 second and SYSDATE()+interval 28800 second))),0)";
+    protected $oquery = "IFNULL((SELECT SUM(pople)-SUM(cut) FROM(tertp_order) WHERE tertp_order.pro_id=tertp_pro.id AND (pay_status IN ('已付款','已付款(部分退款)') OR (pay_status='未完成' AND created_at BETWEEN SYSDATE()+interval 27900 second and SYSDATE()+interval 28800 second))),0)";
 
 
     public function grenOrderSN(){
