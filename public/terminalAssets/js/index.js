@@ -184,7 +184,7 @@ $('#home .sun-wrapper, #home .enter-btn').on('click', function() {
 // },'json');
 
 $.get('/terminal/GetAjaxData',{
-    'act': 'getBypople',
+    'act': 'getBypopleHome',
     'pople': 1,
     'ticketType': '',
 },function(data){

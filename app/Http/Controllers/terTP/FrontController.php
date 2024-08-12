@@ -49,6 +49,12 @@ class FrontController extends WebController
                 switch ($request->act) {
                     case 'getBypople': // 票種 & 人數 取得 day
                         $ticketType = $request->ticketType;
+                        $pro = $pro->select('day')->groupBy('day')->where('day','>=',Carbon::today())->where('special',0);
+                        $pro = $pro->get();
+                        return $pro->toJson();
+                    break;
+                    case 'getBypopleHome': // 票種 & 人數 取得 day
+                        $ticketType = $request->ticketType;
                         $pro = $pro->select(DB::raw("(SUM(sites) - SUM(({$this->oquery}))) AS sites,day,((SUM(sites) - SUM(({$this->oquery}))) / SUM(sites))*100 AS per"))->groupBy('day')->where('day','>=',Carbon::today())->where('special',0);
                         $pro = $pro->get();
                         return $pro->toJson();
