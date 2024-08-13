@@ -163,10 +163,13 @@ $(".action-button").on('click', function(){
     allowChecker(next_fs);
 
     if (current_fs.hasClass('step-4') && !prev_fs) {
-        if (verificationChecker()) {
-            current_fs.hide();
-            next_fs.show();
-        }
+        // if (verificationChecker()) {
+        //     current_fs.hide();
+        //     next_fs.show();
+        // }
+        current_fs.hide();
+        next_fs.show();
+        $(window).scrollTop(0);
     } else {
         // 隱藏目前欄位，並顯示下一步的欄位
         current_fs.hide();
