@@ -45,6 +45,17 @@ main {
   color: #ff7ea4;
 }
 
+.btn-outline {
+  color: #f7f7c6;
+  border-color: #f7f7c6;
+}
+
+.btn-outline:hover {
+  background-color: #f7f7c6;
+  border-color: #f7f7c6;
+  color: #39351c;
+}
+
 .multi-btn button.btn-outline {
   width: calc((100% - 30px) / 2);
   max-width: 210px;
@@ -1367,7 +1378,7 @@ main.booking fieldset.step-4 .field-intro {
 
 fieldset.step-3 .form-group label,
 fieldset.step-3 .form-group .table-label,
-main.booking fieldset.step-4 .form-group label,
+/* main.booking fieldset.step-4 .form-group label, */
 main.booking fieldset.step-4 .form-group .table-label{
   font-size: 16px;
   /* line-height: 1; */
@@ -1381,6 +1392,10 @@ main.booking fieldset.step-4 .form-group .table-label{
           align-items: center;
   margin-bottom: 10px;
   flex: 1% 1 0;
+}
+
+main.booking fieldset.step-4 .form-group label {
+  text-align: left;
 }
 
 fieldset.step-3 .form-group label .error-msg,
