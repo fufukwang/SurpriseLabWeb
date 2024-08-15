@@ -390,11 +390,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <button class="nav-link" id="menu-no5-tab" data-toggle="tab" data-target="#menu-no5" type="button" role="tab" aria-controls="menu-no5" aria-selected="false">5</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
+                                                <button class="nav-link" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
                                             </li>
-                                            {{--<!--li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="menu-no7-tab" data-toggle="tab" data-target="#menu-no7" type="button" role="tab" aria-controls="menu-no7" aria-selected="false">7</button>
-                                            </li-->--}}
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="menu-no7-tab" data-toggle="tab" data-target="#menu-no7" type="button" role="tab" aria-controls="menu-no7" aria-selected="false">7</button>
+                                            </li>
                                         </ul>
                                     </div>
 
@@ -714,7 +714,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </div>
 
                                         <!-- 06 -->
-                                        <div class="tab-pane fade show active" id="menu-no6" role="tabpanel" aria-labelledby="menu-no6-tab">
+                                        <div class="tab-pane fade" id="menu-no6" role="tabpanel" aria-labelledby="menu-no6-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -791,8 +791,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             </div>
                                         </div>
 
-                                        {{--<!-- 07 -->
-                                        <!--div class="tab-pane fade" id="menu-no7" role="tabpanel" aria-labelledby="menu-no7-tab">
+                                        <!-- 07 -->
+                                        <div class="tab-pane fade show active" id="menu-no7" role="tabpanel" aria-labelledby="menu-no7-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -800,30 +800,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-1">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-1">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/0.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no7/0.png" data-src-retina="img/home/menu/no7/0.png" alt="7號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/0-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no7/0-m.png" data-src-retina="img/home/menu/no7/0-m.png" alt="7號菜單">
+                                                                    </picture>
                                                                 </figure>
                                                             </div>
 
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-2">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-2">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/1.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no7/1.png" data-src-retina="img/home/menu/no7/1.png" alt="7號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/1-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no7/1-m.png" data-src-retina="img/home/menu/no7/1-m.png" alt="7號菜單">
+                                                                    </picture>
                                                                 </figure>
                                                             </div>
 
                                                             <div class="item">
                                                                 <figure class="slideshow-card">
-                                                                    <img class="img-fluid owl-lazy d-none d-sm-block" src="img/home/menu/no1/menu-1.jpg" data-src="img/home/menu/no1/menu-1.jpg" data-src-retina="img/home/menu/no1/menu-1.jpg" alt="7-3">
-                                                                    <img class="img-fluid owl-lazy d-block d-sm-none" src="img/home/menu/no1/menu-1-mobile.jpg" data-src="img/home/menu/no1/menu-1-mobile.jpg" data-src-retina="img/home/menu/no1/menu-1-mobile.jpg" alt="7-3">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/2.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no7/2.png" data-src-retina="img/home/menu/no7/2.png" alt="7號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/2-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no7/2-m.png" data-src-retina="img/home/menu/no7/2-m.png" alt="7號菜單">
+                                                                    </picture>
                                                                 </figure>
                                                             </div>
-                                                            
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/3.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no7/3.png" data-src-retina="img/home/menu/no7/3.png" alt="7號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/3-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no7/3-m.png" data-src-retina="img/home/menu/no7/3-m.png" alt="7號菜單">
+                                                                    </picture>
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/4.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no7/4.png" data-src-retina="img/home/menu/no7/4.png" alt="7號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no7/4-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no7/4-m.png" data-src-retina="img/home/menu/no7/4-m.png" alt="6號菜單">
+                                                                    </picture>
+                                                                </figure>
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div-->--}}
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -988,6 +1033,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                        <!-- 6 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="#">
+                                                                    <picture>
+                                                                        <source srcset="img/home/recommend/news/6.webp?240411" type="image/webp">
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/6.jpg?240411" data-src-retina="img/home/recommend/news/6.jpg?240411" alt="《500輯》八號菜單以「非日常」為題，每個平凡時刻都值得被牢記">
+                                                                    </picture>
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="#">
+                                                                        《500輯》八號菜單以「非日常」為題，每個平凡時刻都值得被牢記
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 7 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="#">
+                                                                    <picture>
+                                                                        <source srcset="img/home/recommend/news/7.webp?240411" type="image/webp">
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/7.jpg?240411" data-src-retina="img/home/recommend/news/7.jpg?240411" alt="《A Day Magazine》全新菜單讓用餐蛻變成 —— 超乎日常的精彩體驗">
+                                                                    </picture>
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="#">
+                                                                        《A Day Magazine》全新菜單讓用餐蛻變成 —— 超乎日常的精彩體驗
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1051,6 +1134,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                 <div class="experience-desc">
                                                                     <a target="_blank" href="https://yenliving.com/taiwan-immersive-theatre-dininginthedark3/">
                                                                         《Yen的邊走邊說》六號菜單驚喜回顧
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 4 -->
+                                                        <div class="item">
+                                                            <figure class="slideshow-card">
+                                                                <a target="_blank" href="#">
+                                                                    <picture>
+                                                                        <source srcset="img/home/recommend/blog/4.webp" type="image/webp">
+                                                                        <img class="img-fluid owl-lazy" data-src="img/home/recommend/blog/4.jpg" data-src-retina="img/home/recommend/blog/4.jpg" alt="《百度人》無光探索提醒了我們，時時刻刻都有慶祝的理由">
+                                                                    </picture>
+                                                                </a>
+                                                            </figure>
+                                                            <div class="experience-intro">
+                                                                <div class="experience-desc">
+                                                                    <a target="_blank" href="#">
+                                                                        《百度人》無光探索提醒了我們，時時刻刻都有慶祝的理由
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -1496,7 +1598,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/index.js?date=240630"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?date=240731"></script>
-    <script src="js/index-slideshow.js?date=240630"></script>
+    <script src="js/index-slideshow.js?date=240815"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 </html>
