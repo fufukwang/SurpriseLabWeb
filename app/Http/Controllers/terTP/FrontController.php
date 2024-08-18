@@ -69,14 +69,16 @@ class FrontController extends WebController
                     case 'getByday': // 日期 取得 時段
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select('day_parts','day')->groupBy('day_parts')->where('day',$day)->get();
+                        $chkeckStart = Carbon::now()->addMinutes(30)->format('H:i:s');
+                        $pro = $pro->select('day_parts','day')->groupBy('day_parts')->where('rang_start','>=',$chkeckStart)->where('day',$day)->get();
                         return $pro->toJson();
                     break;
                     case 'getBydartpart': // 日期 時段 取得 range
                         $dayparts   = $request->day_parts;
                         $day        = $request->day;
                         $ticketType = $request->ticketType;
-                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash,p1,p2,p6"))->where('day',$day)->get();
+                        $chkeckStart = Carbon::now()->addMinutes(30)->format('H:i:s');
+                        $pro = $pro->select(DB::raw("(sites-{$this->oquery}) AS sites,id,rang_start,rang_end,money,cash,p1,p2,p6"))->where('rang_start','>=',$chkeckStart)->where('day',$day)->get();
                         return $pro->toJson();
                     break;
 /*
