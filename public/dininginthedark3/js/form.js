@@ -972,6 +972,7 @@ function SendOrderData(Pay,prime){
         'meat_food_noNut': $('#meat_food_noNut').val(),
         'meat_food_noSeafood': $('#meat_food_noSeafood').val(),
         'meat_food_noAllSeafood': $('#meat_food_noAllSeafood').val(),
+        'meat_food_noLamb': $('#meat_food_noLamb').val(),
         'vegetarian_food_noNut': $('#vegetarian_food_noNut').val(),
     };
     $.post('/dininginthedark3/ReOrderData',obj,function(data){
