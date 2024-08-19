@@ -1037,7 +1037,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         <!-- 6 -->
                                                         <div class="item">
                                                             <figure class="slideshow-card">
-                                                                <a target="_blank" href="#">
+                                                                <a target="_blank" href="https://500times.udn.com/wtimes/story/12671/8006960">
                                                                     <picture>
                                                                         <source srcset="img/home/recommend/news/6.webp?240411" type="image/webp">
                                                                         <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/6.jpg?240411" data-src-retina="img/home/recommend/news/6.jpg?240411" alt="《500輯》八號菜單以「非日常」為題，每個平凡時刻都值得被牢記">
@@ -1046,7 +1046,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             </figure>
                                                             <div class="experience-intro">
                                                                 <div class="experience-desc">
-                                                                    <a target="_blank" href="#">
+                                                                    <a target="_blank" href="https://500times.udn.com/wtimes/story/12671/8006960">
                                                                         《500輯》八號菜單以「非日常」為題，每個平凡時刻都值得被牢記
                                                                     </a>
                                                                 </div>
@@ -1056,7 +1056,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         <!-- 7 -->
                                                         <div class="item">
                                                             <figure class="slideshow-card">
-                                                                <a target="_blank" href="#">
+                                                                <a target="_blank" href="https://www.adaymag.com/2024/06/07/dining-in-the-dark-no8-menu.html">
                                                                     <picture>
                                                                         <source srcset="img/home/recommend/news/7.webp?240411" type="image/webp">
                                                                         <img class="img-fluid owl-lazy" data-src="img/home/recommend/news/7.jpg?240411" data-src-retina="img/home/recommend/news/7.jpg?240411" alt="《A Day Magazine》全新菜單讓用餐蛻變成 —— 超乎日常的精彩體驗">
@@ -1065,7 +1065,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             </figure>
                                                             <div class="experience-intro">
                                                                 <div class="experience-desc">
-                                                                    <a target="_blank" href="#">
+                                                                    <a target="_blank" href="https://www.adaymag.com/2024/06/07/dining-in-the-dark-no8-menu.html">
                                                                         《A Day Magazine》全新菜單讓用餐蛻變成 —— 超乎日常的精彩體驗
                                                                     </a>
                                                                 </div>
@@ -1142,7 +1142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         <!-- 4 -->
                                                         <div class="item">
                                                             <figure class="slideshow-card">
-                                                                <a target="_blank" href="#">
+                                                                <a target="_blank" href="https://www.dcard.tw/f/persona_doo100/p/255718758">
                                                                     <picture>
                                                                         <source srcset="img/home/recommend/blog/4.webp" type="image/webp">
                                                                         <img class="img-fluid owl-lazy" data-src="img/home/recommend/blog/4.jpg" data-src-retina="img/home/recommend/blog/4.jpg" alt="《百度人》無光探索提醒了我們，時時刻刻都有慶祝的理由">
@@ -1151,7 +1151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             </figure>
                                                             <div class="experience-intro">
                                                                 <div class="experience-desc">
-                                                                    <a target="_blank" href="#">
+                                                                    <a target="_blank" href="https://www.dcard.tw/f/persona_doo100/p/255718758">
                                                                         《百度人》無光探索提醒了我們，時時刻刻都有慶祝的理由
                                                                     </a>
                                                                 </div>
