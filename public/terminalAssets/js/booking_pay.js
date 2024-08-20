@@ -220,6 +220,8 @@ $(function() {
                                             for(i=0;i<data.length;i++){ html += '<li class="dropdown-item body-04">'+data[i].day_parts+'</li>'; }
                                             $('#dropdownMenuButtonPeriod-train').html('選擇時段');
                                             $('ul[aria-labelledby=dropdownMenuButtonPeriod-train]').html(html);
+                                        } else {
+                                            $('#dropdownMenuButtonPeriod-train').html('無可用時段，請選擇其他日期');
                                         }
                                         $('.dropdown-time-train').hide();
                                         $('.dropdown-datepart-train').show();
