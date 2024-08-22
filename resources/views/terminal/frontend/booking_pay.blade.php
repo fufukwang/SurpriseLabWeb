@@ -41,7 +41,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?2408091">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?240822">
     <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?240429">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -215,6 +215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <span class="tk-datepicker-month-next"></span>
                                                         </div>
                                                         <div class="tk-datepicker-week">
+                                                            <div class="notice">⬇︎請在日曆中下滑查看更多場次⬇︎</div>
                                                             <div class="line">
                                                                 <div class="grid">Su</div>
                                                                 <div class="grid">Mo</div>
