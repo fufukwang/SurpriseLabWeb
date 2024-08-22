@@ -2049,6 +2049,21 @@ input[name=allocation]::placeholder {
   font-size: 18px;
   line-height: 1;
 }
+.tk-datepicker .tk-datepicker-header .tk-datepicker-week {
+  position: relative;
+}
+.tk-datepicker .tk-datepicker-header .tk-datepicker-week .notice {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 10px;
+  background: #6F3D57;
+  color: #fff;
+  z-index: 1;
+  transform: translateY(100%);
+  padding: 3px;
+}
 .tk-datepicker .tk-datepicker-header small {
   font-size: 10px;
   line-height: 1;
@@ -2056,7 +2071,7 @@ input[name=allocation]::placeholder {
   margin-top: 5px;
 }
 .tk-datepicker .tk-datepicker-body {
-  padding: 10px 0;
+  padding: 30px 0 10px 0;
   height: 200px;
   overflow-y: auto;
 }
