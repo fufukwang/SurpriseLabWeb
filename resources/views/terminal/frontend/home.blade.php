@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240731">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=240822">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -531,6 +531,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <span class="tk-datepicker-month-next"></span>
                                             </div>
                                             <div class="tk-datepicker-week">
+                                                <div class="notice">⬇︎請在日曆中下滑查看更多場次⬇︎</div>
                                                 <div class="line">
                                                     <div class="grid">Su</div>
                                                     <div class="grid">Mo</div>
