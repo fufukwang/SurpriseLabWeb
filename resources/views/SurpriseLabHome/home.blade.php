@@ -69,13 +69,13 @@
 
                     <!-- Desktop -->
                     <video class="video video-h" poster="/SurpriseLabHome/assets/images/home/img_thumbnails-video.jpg" muted defaultmuted autoplay loop playsinline>
-                        <source src="/SurpriseLabHome/assets/video/hero.mp4" type="video/mp4">
+                        <source src="/SurpriseLabHome/assets/video/hero.mov?240905">
                         <p>Your browser does not support the video tag.</p>
                     </video>
 
                     <!-- Mobile -->
                     <video class="video video-v" poster="/SurpriseLabHome/assets/images/home/img_thumbnails-video.jpg" muted defaultmuted autoplay loop playsinline>
-                        <source src="/SurpriseLabHome/assets/video/hero_mobile.mp4" type="video/mp4">
+                        <source src="/SurpriseLabHome/assets/video/hero_mobile.mov?240905">
                         <p>Your browser does not support the video tag.</p>
                     </video>
                 </div>
