@@ -1191,7 +1191,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <a href="https://www.facebook.com/surpriselabtw/posts/pfbid0JNf62LDHYG3So29CteN6e2qYMrDNzhTYFCnBNV1syHcj3CE7HvPqdQRvGCBYVk7ul" target="_blank"><img src="/terminalAssets/images/other/notice_460x310.jpg" class="mobile-style" alt="message"></a>
                     </div> -->
                     <div class="accordion-wrap">
-                        <div class="accordion-item">
+                        <!-- <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-1-headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseFour" aria-expanded="false" aria-controls="flush-1-collapseFour">
                                     <span class="header-title">落日轉運站是什麼？</span>
@@ -1206,7 +1206,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-5-headingFour">
@@ -1247,6 +1247,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div id="flush-7-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-7-headingFour" data-bs-parent="#accordionFlushExample-7">
                                 <div class="accordion-body">
                                     <p>落日月台一場次最多6人入場，歡迎獨自前來、雙人同行、或包場探索。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-8-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-8-collapseFour" aria-expanded="false" aria-controls="flush-8-collapseFour">
+                                    <span class="header-title">參與落日月台有年齡限制嗎？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-8-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-8-headingFour" data-bs-parent="#accordionFlushExample-8">
+                                <div class="accordion-body">
+                                    <p>為維護體驗中的品質與安全，建議 16 歲以上參與，13 - 16 歲建議家長陪同，不開放年紀低於 12 歲之孩童前來體驗。體驗過程中未滿 18 歲不得飲酒。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-9-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-9-collapseFour" aria-expanded="false" aria-controls="flush-9-collapseFour">
+                                    <span class="header-title">
+                                        非中文母語者可以參與體驗嗎？<br>
+                                        Can non-native Chinese speakers participate in the experience?
+                                    </span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-9-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-9-headingFour" data-bs-parent="#accordionFlushExample-9">
+                                <div class="accordion-body">
+                                    <p>因體驗過程中有閱讀中文文字、聆聽中文指引環節，且建議非中文主要使用者斟酌自行情況參與。</p>
+                                    <br>
+                                    <p>“Ｍind the Gap” do not provide foreign language versions. It is recommended that non-Chinese primary users carefully consider their own situation before participating.</p>
                                 </div>
                             </div>
                         </div>
