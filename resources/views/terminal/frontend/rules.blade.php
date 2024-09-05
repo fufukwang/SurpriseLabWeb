@@ -102,7 +102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </div>
 
                                             <div class="accordion rule-accordion-wrap" id="accordionFlushExample-1">
-                                                <div class="accordion-item">
+                                                <!-- <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion1-1-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-1" aria-expanded="false" aria-controls="accordion1-1">
                                                             <span class="header-title">落日轉運站是什麼？</span>
@@ -115,7 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                             <p>2022.11.10 - 2023.10.15 於首站：高雄，推出包含以交通工具為題的兩項作品，微醺系列互動表演《微醺列車》及英國團隊 DARKFIELD 的巡演之作《FLIGHT》，超過 40,000 人次參與體驗。</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
 
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion1-2-header">
@@ -179,13 +179,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="accordion1-9-header">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1-9" aria-expanded="false" aria-controls="accordion1-9">
-                                                            <span class="header-title">非中文母語者可以參與體驗嗎？</span>
+                                                            <span class="header-title">
+                                                                非中文母語者可以參與體驗嗎？<br>
+                                                                Can non-native Chinese speakers participate in the experience?
+                                                            </span>
                                                             <div class="header-icon"></div>
                                                         </button>
                                                     </h2>
                                                     <div id="accordion1-9" class="accordion-collapse collapse" aria-labelledby="accordion1-9-header" data-bs-parent="#accordionFlushExample-1">
                                                         <div class="accordion-body">
-                                                            <p>因體驗過程中有閱讀中文文字、聆聽中文指引環節，建議非中文主要使用者斟酌自行情況參與。</p>
+                                                            <p>因體驗過程中有閱讀中文文字、聆聽中文指引環節，且建議非中文主要使用者斟酌自行情況參與。</p>
+                                                            <p>“Ｍind the Gap” do not provide foreign language versions. It is recommended that non-Chinese primary users carefully consider their own situation before participating.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -405,7 +409,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion3-10" class="accordion-collapse collapse" aria-labelledby="accordion3-10-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>建議 16 歲以上參與，13 - 16 歲建議家長陪同。體驗過程中未滿 18 歲不得飲酒。</p>
+                                                            <p>為維護體驗中的品質與安全，建議 16 歲以上參與，13 - 16 歲建議家長陪同，不開放年紀低於 12 歲之孩童前來體驗。體驗過程中未滿 18 歲不得飲酒。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -851,7 +855,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <a href="https://www.facebook.com/surpriselabtw/posts/pfbid0JNf62LDHYG3So29CteN6e2qYMrDNzhTYFCnBNV1syHcj3CE7HvPqdQRvGCBYVk7ul" target="_blank"><img src="/terminalAssets/images/other/notice_460x310.jpg" class="mobile-style" alt="message"></a>
                     </div> -->
                     <div class="accordion-wrap">
-                        <div class="accordion-item">
+                        <!-- <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-1-headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1-collapseFour" aria-expanded="false" aria-controls="flush-1-collapseFour">
                                     <span class="header-title">落日轉運站是什麼？</span>
@@ -866,48 +870,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        
+                        </div> -->
+
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-2-headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2-collapseFour" aria-expanded="false" aria-controls="flush-2-collapseFour">
-                                    <span class="header-title">台北站跟高雄站有什麼差別？</span>
+                            <h2 class="accordion-header" id="flush-5-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-5-collapseFour" aria-expanded="false" aria-controls="flush-5-collapseFour">
+                                    <span class="header-title">如何抵達落日月台？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-2-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-2-headingFour" data-bs-parent="#accordionFlushExample-2">
+                            <div id="flush-5-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-5-headingFour" data-bs-parent="#accordionFlushExample-5">
                                 <div class="accordion-body">
-                                    <p>在巡迴第二站，落日轉運站突現奇幻時空《落日月台》；有別於高雄站的《微醺列車》及《FLIGHT》，將提供旅客探索多樣的場景變化並提供個人化全感官體驗。</p>
+                                    <p>請於體驗前 20 分鐘抵達取票處，完成報到。</p>
+                                    <img width="100%" src="/terminalAssets/images/main/qa-map.png" />
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-3-headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3-collapseFour" aria-expanded="false" aria-controls="flush-3-collapseFour">
-                                    <span class="header-title">《落日月台》是什麼？</span>
+                            <h2 class="accordion-header" id="flush-6-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-6-collapseFour" aria-expanded="false" aria-controls="flush-6-collapseFour">
+                                    <span class="header-title">如何使用文化幣？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-3-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-3-headingFour" data-bs-parent="#accordionFlushExample-3">
+                            <div id="flush-6-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-6-headingFour" data-bs-parent="#accordionFlushExample-6">
                                 <div class="accordion-body">
-                                    <p>
-                                        踏入此處的旅客，皆遺失了前往終點的車票，困在未知的月台。但別擔心，久留於此的九位漂流者，將帶領你遊走於多個奇幻空間，尋找離開彌留世界的出口。
-                                    </p>
+                                    <p>持有文化幣的旅客，歡迎前往 <a target="_blank" href="https://www.klook.com/zh-TW/activity/81847-the-sunset-terminal/?spm=Home.SearchSuggest_LIST&clickId=95f98eb1c5" style="font-weight: 700; text-decoration: underline;">Klook 購票</a> 折抵。</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-4-headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-4-collapseFour" aria-expanded="false" aria-controls="flush-4-collapseFour">
-                                    <span class="header-title">《微醺列車》及《FLIGHT》還會回來嗎？</span>
+                            <h2 class="accordion-header" id="flush-7-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-7-collapseFour" aria-expanded="false" aria-controls="flush-7-collapseFour">
+                                    <span class="header-title">可以獨自前往嗎？</span>
                                     <div class="header-icon"></div>
                                 </button>
                             </h2>
-                            <div id="flush-4-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-4-headingFour" data-bs-parent="#accordionFlushExample-4">
+                            <div id="flush-7-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-7-headingFour" data-bs-parent="#accordionFlushExample-7">
                                 <div class="accordion-body">
-                                    <p>會的！請持續關注驚喜製造，獲得最新消息。</p>
+                                    <p>落日月台一場次最多6人入場，歡迎獨自前來、雙人同行、或包場探索。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-8-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-8-collapseFour" aria-expanded="false" aria-controls="flush-8-collapseFour">
+                                    <span class="header-title">參與落日月台有年齡限制嗎？</span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-8-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-8-headingFour" data-bs-parent="#accordionFlushExample-8">
+                                <div class="accordion-body">
+                                    <p>為維護體驗中的品質與安全，建議 16 歲以上參與，13 - 16 歲建議家長陪同，不開放年紀低於 12 歲之孩童前來體驗。體驗過程中未滿 18 歲不得飲酒。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-9-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-9-collapseFour" aria-expanded="false" aria-controls="flush-9-collapseFour">
+                                    <span class="header-title">
+                                        非中文母語者可以參與體驗嗎？<br>
+                                        Can non-native Chinese speakers participate in the experience?
+                                    </span>
+                                    <div class="header-icon"></div>
+                                </button>
+                            </h2>
+                            <div id="flush-9-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-9-headingFour" data-bs-parent="#accordionFlushExample-9">
+                                <div class="accordion-body">
+                                    <p>因體驗過程中有閱讀中文文字、聆聽中文指引環節，且建議非中文主要使用者斟酌自行情況參與。</p>
+                                    <br>
+                                    <p>“Ｍind the Gap” do not provide foreign language versions. It is recommended that non-Chinese primary users carefully consider their own situation before participating.</p>
                                 </div>
                             </div>
                         </div>
@@ -915,7 +951,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn activity-btn" data-bs-dismiss="modal">CLOSE</button> -->
-                    <a target="_blank" class="btn activity-btn" href="https://www.instagram.com/surpriselabtw/">關注驚喜</a>
+                    <a class="btn activity-btn" href="/terminal/rules">更多問題</a>
                 </div>
             </div>
         </div>
