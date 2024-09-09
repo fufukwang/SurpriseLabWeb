@@ -706,7 +706,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>行銷執行</td>
-                                <td>Cyong Chiu</td>
+                                <td>Cyong Chiu、林郁芳</td>
                             </tr>
                             <tr>
                                 <td>行銷總監</td>
@@ -763,7 +763,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>前台經理</td>
-                                <td>李靜如</td>
+                                <td>李靜如、蕭藝萱</td>
                             </tr>
                             <tr>
                                 <td>動作指導</td>
@@ -775,11 +775,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>Game Masters</td>
-                                <td>陳大再、楊慶之、楊子慕、陳韋安、謝潔明、韓希妶</td>
+                                <td>陳大再、楊慶之、楊子慕、陳韋安、謝潔明、韓希妶、孫旻、林品嫺</td>
                             </tr>
                             <tr>
                                 <td>舞監助理暨 VR 技術執行</td>
-                                <td>許正姸、劉育雯、李紹庭、方琬婷、林珈含、蘇吉安、孫于崴、林翊柔</td>
+                                <td>許正姸、劉育雯、李紹庭、方琬婷、林珈含、蘇吉安、孫于崴、林翊柔、宋祉葳、黃則叡</td>
                             </tr>
                         </table>
                     </div>
@@ -807,7 +807,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </tr>
                             <tr>
                                 <td>前台人員</td>
-                                <td>蕭藝萱、林俐瑜、葉柔妡、林語彤、林芳羽、李心瑀、何知臨</td>
+                                <td>蕭藝萱、林俐瑜、葉柔妡、林語彤、林芳羽、李心瑀、何知臨、東沐學、朱耘萱</td>
                             </tr>
                             <tr>
                                 <td>裝台協力</td>
