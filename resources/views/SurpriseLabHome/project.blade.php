@@ -35,7 +35,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css">
-    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/project.css">
+    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/project.css?20240711">
 @endsection
 @section('main')
     <main>
@@ -70,11 +70,45 @@
                             <!-- Project Filter: content -->
                             <div id="js-works-wrap" class="project-dashboard">
 
-                                <a href="#" target="_blank" class="js-work-item project-card on-sell category-show" data-category="food">
+                                <a href="/lebaldeparis" class="js-work-item project-card on-sell category-show" data-category="performance">
                                     <div class="project-image-wrap">
                                         <picture>
-                                            <source srcset="/SurpriseLabHome/assets/webps/project/dininginthedark3/img_banner.webp" type="image/webp">
-                                            <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner.jpg" alt="dininginthedark3">
+                                            <source srcset="/SurpriseLabHome/assets/images/project/paris/img_banner.webp" type="image/webp">
+                                            <img src="/SurpriseLabHome/assets/images/project/paris/img_banner.png" alt="巴黎舞會">
+                                        </picture>
+                                    </div>
+                                    <div class="project-text">
+                                        <span class="project-sub-title">Le Bal de Paris de Blanca Li</span>
+                                        <span class="project-title">巴黎舞會</span>
+                                    </div>
+                                    <div class="project-status">
+                                        <span class="project-year">2024</span>
+                                        <span class="project-category">表演</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://bit.ly/3PXnNjP" class="js-work-item project-card on-sell category-show" data-category="experiment">
+                                    <div class="project-image-wrap">
+                                        <picture>
+                                            <source srcset="/SurpriseLabHome/assets/images/project/mind_the_gap/img_banner.webp" type="image/webp">
+                                            <img src="/SurpriseLabHome/assets/images/project/mind_the_gap/img_banner.png" alt="落日月台">
+                                        </picture>
+                                    </div>
+                                    <div class="project-text">
+                                        <span class="project-sub-title">Mind The Gap</span>
+                                        <span class="project-title">落日月台</span>
+                                    </div>
+                                    <div class="project-status">
+                                        <span class="project-year">2024</span>
+                                        <span class="project-category">實驗</span>
+                                    </div>
+                                </a>
+
+                                <a href="/dininginthedark3/index.html" class="js-work-item project-card on-sell category-show" data-category="food">
+                                    <div class="project-image-wrap">
+                                        <picture>
+                                            <!-- <source srcset="/SurpriseLabHome/assets/webps/project/dininginthedark3/img_banner.webp" type="image/webp"> -->
+                                            <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner2.png" alt="dininginthedark3">
                                         </picture>
                                     </div>
                                     <div class="project-text">
@@ -87,7 +121,24 @@
                                     </div>
                                 </a>
 
-                                <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Project" target="_blank" class="js-work-item project-card on-sell category-show" data-category="performance">
+                                <a href="./project/sunsetterminal.html" class="js-work-item project-card category-show" data-category="performance">
+                                    <div class="project-image-wrap">
+                                        <picture>
+                                            <!-- <source srcset="/SurpriseLabHome/assets/images/project/paris/img_banner.webp" type="image/webp"> -->
+                                            <img src="/SurpriseLabHome/assets/images/project/terminal/img_banner.png" alt="落日轉運站">
+                                        </picture>
+                                    </div>
+                                    <div class="project-text">
+                                        <span class="project-sub-title">The Sunset Terminal</span>
+                                        <span class="project-title">落日轉運站</span>
+                                    </div>
+                                    <div class="project-status">
+                                        <span class="project-year">2022</span>
+                                        <span class="project-category">表演</span>
+                                    </div>
+                                </a>
+
+                                <a href="./project/thegreattipsy1980s.html" class="js-work-item project-card category-show" data-category="performance">
                                     <div class="project-image-wrap">
                                         <picture>
                                             <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy2/img_banner.webp" type="image/webp">
@@ -255,27 +306,7 @@
         </section>
 
         <!-- Modal - Notice -->
-        <div class="surpri-modal notice-modal-wrap modal fade" id="NoticeModal" tabindex="-1" aria-labelledby="NoticeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="NoticeModalLabel">重要訊息</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="body-03">
-                            不論是活動通知、異動、重要宣布、隱藏彩蛋……當驚喜製造有消息要與你們宣布時，就會使用此樣式設計！
-                        </p>
-                        <p class="body-03">
-                            來自驚喜製造的消息 :)
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://www.facebook.com/surpriselabtw?utm_source=officialwebsite&utm_medium=SocialFollow" target="_blank" class="surpri-btn size-regular color-orange">前往粉絲專頁</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('SurpriseLabHome._noticeModal')
 
     </main>
 @endsection
@@ -294,4 +325,5 @@
     <script src="/SurpriseLabHome/resources/js/main.js"></script>
     <script src="/SurpriseLabHome/resources/js/preload.js"></script>
     <script src="/SurpriseLabHome/resources/js/project.js"></script>
+    <script>document.addEventListener('touchstart', function () {});</script>
 @endsection

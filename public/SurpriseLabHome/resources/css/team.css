@@ -216,25 +216,37 @@ h1 {
 }
 
 .team-reward .reward-wrap .reward-card {
-  width: 33.33%;
+  width: 50%;
   padding: 0 22px;
   text-align: left;
+  margin-bottom: 60px;
+}
+
+.team-reward .reward-wrap .reward-card:nth-last-child(1),
+.team-reward .reward-wrap .reward-card:nth-last-child(2) {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1199.98px) {
-  .team-reward .reward-wrap .reward-card {
+  .team-reward .reward-wrap .reward-card,
+  .team-reward .reward-wrap .reward-card:nth-last-child(2) {
     width: 100%;
     padding: 0;
+    margin-bottom: 42px;
+  }
+
+  .team-reward .reward-wrap .reward-card:last-child {
+    margin-bottom: 0;
   }
 }
 
-@media screen and (max-width: 1199.98px) {
+/* @media screen and (max-width: 1199.98px) {
   .team-reward .reward-wrap .reward-card + .reward-card {
     margin-top: 42px;
   }
-}
+} */
 
-.team-reward .reward-wrap .reward-card:nth-child(n+4) {
+/* .team-reward .reward-wrap .reward-card:nth-child(n+4) {
   margin-top: 60px;
 }
 
@@ -242,7 +254,7 @@ h1 {
   .team-reward .reward-wrap .reward-card:nth-child(n+4) {
     margin-top: 42px;
   }
-}
+} */
 
 .team-reward .reward-wrap .reward-card .reward-inner {
   border-radius: 6px;
@@ -472,7 +484,7 @@ h1 {
 
 .team-data .data-wrap .data-row .data-item.item-small {
   min-width: 120px;
-  margin: 0 24px;
+  margin: 0 45px;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -672,3 +684,31 @@ h1 {
   }
 }
 /*# sourceMappingURL=team.css.map */
+
+#NoticeModal i {
+  font-size: 50px;
+  color: #010002;
+  transition: color .2s;
+}
+#NoticeModal i:hover {
+  color: #4e4e4e;
+}
+
+main.background-fixed {
+  position: static;
+}
+main.background-fixed:before {
+  display: none;
+}
+#team-hero {
+  background-image: var(--hero-bg-path);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1199.98px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}

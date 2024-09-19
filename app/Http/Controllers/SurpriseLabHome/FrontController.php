@@ -19,7 +19,7 @@ class FrontController extends Controller
         try {
             $name = str_replace('.html','',$name);
             $projects = [
-                'badassonly','clubtomorrow','dininginthedark','dininginthedark2','tableforone','tgtnextstop','thegreattipsy','whee',
+                'badassonly','clubtomorrow','dininginthedark','dininginthedark2','tableforone','tgtnextstop','thegreattipsy','whee','thegreattipsy1980s','sunsetterminal'
             ];
             if(in_array($name, $projects)){
                 return view('SurpriseLabHome.project.'.$name);

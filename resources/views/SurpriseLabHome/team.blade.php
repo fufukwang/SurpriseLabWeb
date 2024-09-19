@@ -37,7 +37,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css">
-    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/team.css">
+    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/team.css?20240709">
 @endsection
 @section('main')
     <main class="background-fixed" data-banner="url('/SurpriseLabHome/assets/images/team/img_brand.png')">
@@ -54,14 +54,19 @@
                             </div>
                             <div class="hero-desc">
                                 <p>
-                                    出沒時間、地點難以預測的體驗製造商。
+                                    <i>創造最啟發人心的時刻</i><br />
+                                    <i>Create the most inspiring moments</i>
                                 </p>
                                 <p>
-                                    用娛樂傳遞價值，以體驗拋出提問，<br class="only-desktop"/>在日常生活中，實現那些難以想像的畫面。
+                                    出沒時間、地點難以預測的體驗製造商
+                                </p>
+                                <p>
+                                    我們用娛樂傳遞價值，以體驗拋出提問<br />
+                                    在日常之中，實現那些難以想像的畫面
                                 </p>
                                 <p class="font-lightorange">
-                                    期待在不遠的未來，<br/>
-                                    所有人都將變成驚喜製造。
+                                    我們相信，每座城市，都是樂園<br />
+                                    所有人，都是驚喜製造
                                 </p>
                             </div>
                             <div class="hero-reward">
@@ -111,6 +116,55 @@
                                         <!-- 得獎作品名稱 (Mobile) -->
                                         <header class="reward-header show-in-mobile">
                                             <span class="reward-work-subtitle">
+                                                Sunset Terminal
+                                            </span>
+                                            <h5 class="reward-work-title">
+                                                落日轉運站
+                                            </h5>
+                                        </header>
+
+                                        <!-- 得獎作品縮圖 -->
+                                        <a href="/tw/project/sunsetterminal.html">
+                                            <div class="reward-img">
+                                                <!-- <picture>
+                                                    <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy2/img_banner.webp" type="image/webp">
+                                                    <img class="img-fluid" src="/SurpriseLabHome/assets/images/project/thegreattipsy2/img_banner.jpg" alt="微醺大飯店：1980s">
+                                                </picture> -->
+                                                <img class="img-fluid" src="/SurpriseLabHome/assets/images/project/terminal/img_banner.png" alt="落日轉運站">
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 得獎作品名稱 (Desktop) -->
+                                    <header class="reward-header show-in-desktop">
+                                        <span class="reward-work-subtitle">
+                                            Sunset Terminal
+                                        </span>
+                                        <h5 class="reward-work-title">
+                                            落日轉運站
+                                        </h5>
+                                    </header>
+                                    
+                                    <!-- 得獎項目 -->
+                                    <div class="reward-content">
+                                        <div class="reward-item">
+                                            <div class="reward-year">
+                                                2022
+                                            </div>
+                                            <div class="reward-title">
+                                                <span class="font-lightorange">Shopping Design 2023 Taiwan Design Best 100</span>
+                                                <span>年度概念展演活動</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reward-card">
+                                    <div class="reward-inner">
+                                        
+                                        <!-- 得獎作品名稱 (Mobile) -->
+                                        <header class="reward-header show-in-mobile">
+                                            <span class="reward-work-subtitle">
                                                 The Great Tipsy 2 : 1980s
                                             </span>
                                             <h5 class="reward-work-title">
@@ -119,7 +173,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Team" target="_blank">
+                                        <a href="/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Team">
                                             <div class="reward-img">
                                                 <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy2/img_banner.webp" type="image/webp">
@@ -159,54 +213,6 @@
                                         <!-- 得獎作品名稱 (Mobile) -->
                                         <header class="reward-header show-in-mobile">
                                             <span class="reward-work-subtitle">
-                                                table for ONE
-                                            </span>
-                                            <h5 class="reward-work-title">
-                                                一人餐桌
-                                            </h5>
-                                        </header>
-
-                                        <!-- 得獎作品縮圖 -->
-                                        <a href="project/tableforone.html" target="_self">
-                                            <div class="reward-img">
-                                                <picture>
-                                                    <source srcset="/SurpriseLabHome/assets/webps/project/tableforone/img_banner.webp" type="image/webp">
-                                                    <img class="img-fluid" src="/SurpriseLabHome/assets/images/project/tableforone/img_banner.jpg" alt="一人餐桌">
-                                                </picture>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <!-- 得獎作品名稱 (Desktop) -->
-                                    <header class="reward-header show-in-desktop">
-                                        <span class="reward-work-subtitle">
-                                            table for ONE
-                                        </span>
-                                        <h5 class="reward-work-title">
-                                            一人餐桌
-                                        </h5>
-                                    </header>
-                                    
-                                    <!-- 得獎項目 -->
-                                    <div class="reward-content">
-                                        <div class="reward-item">
-                                            <div class="reward-year">
-                                                2018
-                                            </div>
-                                            <div class="reward-title">
-                                                <span class="font-lightorange">金點設計獎</span>
-                                                <span>整合設計類</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="reward-card">
-                                    <div class="reward-inner">
-                                        
-                                        <!-- 得獎作品名稱 (Mobile) -->
-                                        <header class="reward-header show-in-mobile">
-                                            <span class="reward-work-subtitle">
                                                 The Great Tipsy
                                             </span>
                                             <h5 class="reward-work-title">
@@ -215,7 +221,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="project/thegreattipsy.html" target="_self">
+                                        <a href="/tw/project/thegreattipsy.html">
                                             <div class="reward-img">
                                                 <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy/img_banner.webp" type="image/webp">
@@ -257,6 +263,54 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="reward-card">
+                                    <div class="reward-inner">
+                                        
+                                        <!-- 得獎作品名稱 (Mobile) -->
+                                        <header class="reward-header show-in-mobile">
+                                            <span class="reward-work-subtitle">
+                                                table for ONE
+                                            </span>
+                                            <h5 class="reward-work-title">
+                                                一人餐桌
+                                            </h5>
+                                        </header>
+
+                                        <!-- 得獎作品縮圖 -->
+                                        <a href="/tw/project/tableforone.html">
+                                            <div class="reward-img">
+                                                <picture>
+                                                    <source srcset="/SurpriseLabHome/assets/webps/project/tableforone/img_banner.webp" type="image/webp">
+                                                    <img class="img-fluid" src="/SurpriseLabHome/assets/images/project/tableforone/img_banner.jpg" alt="一人餐桌">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 得獎作品名稱 (Desktop) -->
+                                    <header class="reward-header show-in-desktop">
+                                        <span class="reward-work-subtitle">
+                                            table for ONE
+                                        </span>
+                                        <h5 class="reward-work-title">
+                                            一人餐桌
+                                        </h5>
+                                    </header>
+                                    
+                                    <!-- 得獎項目 -->
+                                    <div class="reward-content">
+                                        <div class="reward-item">
+                                            <div class="reward-year">
+                                                2018
+                                            </div>
+                                            <div class="reward-title">
+                                                <span class="font-lightorange">金點設計獎</span>
+                                                <span>整合設計類</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -277,9 +331,9 @@
                         <div class="surpri-content" data-aos="fade">
                             <div class="data-wrap">
                                 <div class="data-row">
-                                    <div class="data-item item-small show-in-desktop">
+                                    <div class="data-item item-small">
                                         <div class="data-num">
-                                            7
+                                            13
                                         </div>
                                         <div class="data-title">
                                             專案
@@ -287,15 +341,15 @@
                                     </div>
                                     <div class="data-item item-small">
                                         <div class="data-num">
-                                            18
+                                            28
                                         </div>
                                         <div class="data-title">
                                             合作品牌
                                         </div>
                                     </div>
-                                    <div class="data-item item-small show-in-desktop">
+                                    <div class="data-item item-small">
                                         <div class="data-num">
-                                            6
+                                            8
                                         </div>
                                         <div class="data-title">
                                             獎項
@@ -306,7 +360,7 @@
                                 <div class="data-row">
                                     <div class="data-item item-large">
                                         <div class="data-num">
-                                            4993+
+                                            12299+
                                         </div>
                                         <div class="data-title">
                                             體驗場次
@@ -314,7 +368,7 @@
                                     </div>
                                     <div class="data-item item-large">
                                         <div class="data-num">
-                                            66768+
+                                            148131+
                                         </div>
                                         <div class="data-title">
                                             參與人數
@@ -590,27 +644,7 @@
         </section>
 
         <!-- Modal - Notice -->
-        <div class="surpri-modal notice-modal-wrap modal fade" id="NoticeModal" tabindex="-1" aria-labelledby="NoticeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="NoticeModalLabel">重要訊息</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="body-03">
-                            不論是活動通知、異動、重要宣布、隱藏彩蛋……當驚喜製造有消息要與你們宣布時，就會使用此樣式設計！
-                        </p>
-                        <p class="body-03">
-                            來自驚喜製造的消息 :)
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://www.facebook.com/surpriselabtw?utm_source=officialwebsite&utm_medium=SocialFollow" target="_blank" class="surpri-btn size-regular color-orange">前往粉絲專頁</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('SurpriseLabHome._noticeModal')
 
     </main>
 @endsection

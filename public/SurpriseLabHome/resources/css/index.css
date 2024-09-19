@@ -712,3 +712,13 @@ h1 {
   }
 }
 /*# sourceMappingURL=index.css.map */
+
+#NoticeModal i {
+  font-size: 50px;
+  color: #010002;
+  transition: color .2s;
+}
+
+#NoticeModal i:hover {
+  color: #4e4e4e;
+}

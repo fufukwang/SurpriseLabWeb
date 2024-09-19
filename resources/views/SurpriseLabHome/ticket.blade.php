@@ -37,7 +37,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css">
-    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/ticket.css">
+    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/ticket.css?20240709">
 @endsection
 @section('main')
     <main>
@@ -50,81 +50,11 @@
                     <div class="col-xl-10 offset-xl-1 col-12">
                         <div class="surpri-title brackets-regular layout-center style-dark">
                             <div class="title-wrap">
-                                <h2 class="title-en">Ticket</h2>
+                                <h2 class="title-en">ON-GOING</h2>
                                 <h5 class="title-ch">近期體驗</h5>
                             </div>
                         </div>
                         <div class="surpri-content">
-                            <div class="ticket-card" data-aos="fade">
-                                <div class="ticket-card-inner">
-
-                                    <!-- 體驗介紹 -->
-                                    <div class="ticket-intro">
-                                        <header class="ticket-header">
-                                            <span class="subtitle">
-                                                The Great Tipsy 2 : 1980s
-                                            </span>
-                                            <h3 class="title">
-                                                微醺大飯店：1980s
-                                            </h3>
-                                            <p class="desc">
-                                                來過的人，都會想起一段過去<br/>
-                                                而你，又會想起哪一天呢？
-                                            </p>
-                                        </header>
-
-                                        <!-- 體驗數據、CTA (Desktop) -->
-                                        <div class="ticket-footer show-in-desktop">
-                                            <div class="ticket-footer-inner">
-                                                <div class="ticket-cta">
-                                                    <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Ticket" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
-                                                </div>
-                                                <div class="ticket-data">
-                                                    <div class="data-item">
-                                                        <div class="data-num">{{ $drink2['day'] }}</div>
-                                                        <div class="data-title">演出天數</div>
-                                                    </div>
-                                                    <div class="data-item">
-                                                        <div class="data-num">{{ $drink2['people'] }}</div>
-                                                        <div class="data-title">參與人數</div>
-                                                    </div>
-                                                    <div class="data-item">
-                                                        <div class="data-num">{{ $drink2['time'] }}</div>
-                                                        <div class="data-title">體驗場次</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 體驗縮圖 -->
-                                    <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Ticket" class="ticket-img" target="_blank">
-                                        <picture>
-                                            <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy2/img_banner.webp" type="image/webp">
-                                            <img src="/SurpriseLabHome/assets/images/project/thegreattipsy2/img_banner.jpg" alt="微醺大飯店1980s">
-                                        </picture>
-                                    </a>
-                                </div>
-
-                                <!-- 體驗數據、CTA (Mobile) -->
-                                <div class="ticket-footer show-in-mobile">
-                                    <div class="ticket-footer-inner">
-                                        <div class="ticket-data">
-                                            <div class="data-item">
-                                                <div class="data-num">{{ $drink2['day'] }}</div>
-                                                <div class="data-title">演出天數</div>
-                                            </div>
-                                            <div class="data-item">
-                                                <div class="data-num">{{ $drink2['people'] }}</div>
-                                                <div class="data-title">參與人數</div>
-                                            </div>
-                                        </div>
-                                        <div class="ticket-cta">
-                                            <a href="https://www.surpriselab.com.tw/thegreattipsy/index.html?utm_source=officialwebsite&utm_medium=Ticket" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="ticket-card" data-aos="fade">
                                 <div class="ticket-card-inner">
 
@@ -138,8 +68,8 @@
                                                 無光晚餐第三季
                                             </h3>
                                             <p class="desc">
-                                                We don’t see in darkness.<br/>
-                                                We remember.
+                                                WE DON’T MEET PEOPLE BY ACCIDENT.<br />
+                                                WE MEET FOR A REASON.
                                             </p>
                                         </header>
 
@@ -147,16 +77,87 @@
                                         <div class="ticket-footer show-in-desktop">
                                             <div class="ticket-footer-inner">
                                                 <div class="ticket-cta">
-                                                    <a href="#" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
+                                                    <a href="/dininginthedark3/index.html" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
                                                 </div>
                                                 <div class="ticket-data">
                                                     <div class="data-item">
-                                                        <div class="data-num">{{ $dark3['day'] }}</div>
+                                                        <div class="data-num">356天</div>
                                                         <div class="data-title">營業天數</div>
                                                     </div>
                                                     <div class="data-item">
-                                                        <div class="data-num">{{ $dark3['people'] }}</div>
+                                                        <div class="data-num">30,724人</div>
                                                         <div class="data-title">用餐人數</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 體驗縮圖 -->
+                                    <a href="/dininginthedark3/index.html" class="ticket-img" target="_blank">
+                                        <picture>
+                                            <!-- <source srcset="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner.webp" type="image/webp"> -->
+                                            <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner2.png" alt="無光晚餐第三季">
+                                        </picture>
+                                    </a>
+                                </div>
+
+                                <!-- 體驗數據、CTA (Mobile) -->
+                                <div class="ticket-footer show-in-mobile">
+                                    <div class="ticket-footer-inner">
+                                        <!-- <div class="ticket-data">
+                                            <div class="data-item">
+                                                <div class="data-num">356天</div>
+                                                <div class="data-title">營業天數</div>
+                                            </div>
+                                            <div class="data-item">
+                                                <div class="data-num">30,724人</div>
+                                                <div class="data-title">用餐人數</div>
+                                            </div>
+                                        </div> -->
+                                        <div class="ticket-cta">
+                                            <a href="/dininginthedark3/index.html" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ticket-card" data-aos="fade">
+                                <div class="ticket-card-inner">
+
+                                    <!-- 體驗介紹 -->
+                                    <div class="ticket-intro">
+                                        <header class="ticket-header">
+                                            <span class="subtitle">
+                                                Mind The Gap
+                                            </span>
+                                            <h3 class="title">
+                                                落日月台
+                                            </h3>
+                                            <p class="desc">
+                                                正如落日之後，必有黎明<br />
+                                                所有終點，必是另個起點
+                                            </p>
+                                        </header>
+
+                                        <!-- 體驗數據、CTA (Desktop) -->
+                                        <div class="ticket-footer show-in-desktop">
+                                            <div class="ticket-footer-inner">
+                                                <div class="ticket-cta">
+                                                    <a href="https://bit.ly/3PXnNjP" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
+                                                </div>
+                                                <div class="ticket-data">
+                                                    <div class="data-item">
+                                                        <div class="data-num">70-80分鐘</div>
+                                                        <div class="data-title">一場體驗</div>
+                                                    </div>
+                                                    <div class="data-item">
+                                                        <div class="data-num">每週三~日</div>
+                                                        <div class="data-title">展演時間</div>
+                                                    </div>
+                                                    <div class="data-item">
+                                                        <div class="data-num">5,500+</div>
+                                                        <div class="data-title">參與人數</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -166,8 +167,8 @@
                                     <!-- 體驗縮圖 -->
                                     <a href="#" class="ticket-img" target="_blank">
                                         <picture>
-                                            <source srcset="/SurpriseLabHome/assets/webps/project/dininginthedark3/img_banner.webp" type="image/webp">
-                                            <img src="/SurpriseLabHome/assets/images/project/dininginthedark3/img_banner.jpg" alt="無光晚餐第三季">
+                                            <source srcset="/SurpriseLabHome/assets/images/project/mind_the_gap/img_banner.webp" type="image/webp">
+                                            <img src="/SurpriseLabHome/assets/images/project/mind_the_gap/img_banner.jpg" alt="落日月台">
                                         </picture>
                                     </a>
                                 </div>
@@ -175,18 +176,18 @@
                                 <!-- 體驗數據、CTA (Mobile) -->
                                 <div class="ticket-footer show-in-mobile">
                                     <div class="ticket-footer-inner">
-                                        <div class="ticket-data">
+                                        <!-- <div class="ticket-data">
                                             <div class="data-item">
-                                                <div class="data-num">{{ $dark3['day'] }}</div>
-                                                <div class="data-title">營業天數</div>
+                                                <div class="data-num">70-80分鐘</div>
+                                                <div class="data-title">一場體驗</div>
                                             </div>
                                             <div class="data-item">
-                                                <div class="data-num">{{ $dark3['people'] }}</div>
-                                                <div class="data-title">用餐人數</div>
+                                                <div class="data-num">每週三~日</div>
+                                                <div class="data-title">展演時間</div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="ticket-cta">
-                                            <a href="#" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
+                                            <a href="https://bit.ly/3PXnNjP" class="surpri-btn size-regular color-regular arrow-right" target="_blank">前往預約</a>
                                         </div>
                                     </div>
                                 </div>
@@ -198,7 +199,7 @@
         </section>
 
         <!-- 無體驗 -->
-        <section id="ticket-empty" class="ticket-empty full-page">
+        <!-- <section id="ticket-empty" class="ticket-empty full-page">
             <div class="container-xl">
                 <div class="row">
                     <div class="col-xl-10 offset-xl-1 col-12">
@@ -226,30 +227,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Modal - Notice -->
-        <div class="surpri-modal notice-modal-wrap modal fade" id="NoticeModal" tabindex="-1" aria-labelledby="NoticeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="NoticeModalLabel">重要訊息</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="body-03">
-                            不論是活動通知、異動、重要宣布、隱藏彩蛋……當驚喜製造有消息要與你們宣布時，就會使用此樣式設計！
-                        </p>
-                        <p class="body-03">
-                            來自驚喜製造的消息 :)
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://www.facebook.com/surpriselabtw?utm_source=officialwebsite&utm_medium=SocialFollow" target="_blank" class="surpri-btn size-regular color-orange">前往粉絲專頁</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('SurpriseLabHome._noticeModal')
 
     </main>
 @endsection
