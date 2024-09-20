@@ -314,7 +314,7 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <a href="/tw/index.html" class="surpri-btn size-regular color-orange"  data-bs-dismiss="modal" aria-label="Close">回到首頁</a>
+                        <a href="/index.html" class="surpri-btn size-regular color-orange"  data-bs-dismiss="modal" aria-label="Close">回到首頁</a>
                     </div>
                 </div>
             </div>
