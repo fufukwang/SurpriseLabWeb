@@ -611,9 +611,9 @@ Route::group(['middleware' => ['web']], function () {
     //     Route::get('/fail','SurpriseController@fail');
     // }
     
-    Route::get('/',function(){  return redirect("/tw"); });
+    // Route::get('/',function(){  return redirect("/tw"); });
     // Route::get('/',function(){ return view('landingPage.home'); });
-    Route::group(['prefix' => 'tw'], function(){
+    // Route::group(['prefix' => 'tw'], function(){
         Route::get('/',function(){ return view('SurpriseLabHome.home'); });
         Route::get('/index.html',function(){ return view('SurpriseLabHome.home'); });
         Route::get('/project.html',function(){ return view('SurpriseLabHome.project'); });
@@ -622,7 +622,7 @@ Route::group(['middleware' => ['web']], function () {
         // Route::get('/ticket.html','SurpriseLabHome\FrontController@getTicket');
         Route::get('/ticket.html',function(){ return view('SurpriseLabHome.ticket'); });
         Route::get('/project/{name?}','SurpriseLabHome\FrontController@projects');
-    });
+    // });
     Route::post('/storeWish','SurpriseLabHome\FrontController@storeWish');
     
     Route::get('dininginthedark/{everything?}', function ($everything = null) {
