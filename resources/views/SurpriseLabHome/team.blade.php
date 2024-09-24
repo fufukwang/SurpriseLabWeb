@@ -124,7 +124,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="/tw/project/sunsetterminal.html">
+                                        <a href="/project/sunsetterminal.html">
                                             <div class="reward-img">
                                                 <!-- <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy2/img_banner.webp" type="image/webp">
@@ -221,7 +221,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="/tw/project/thegreattipsy.html">
+                                        <a href="/project/thegreattipsy.html">
                                             <div class="reward-img">
                                                 <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/thegreattipsy/img_banner.webp" type="image/webp">
@@ -278,7 +278,7 @@
                                         </header>
 
                                         <!-- 得獎作品縮圖 -->
-                                        <a href="/tw/project/tableforone.html">
+                                        <a href="/project/tableforone.html">
                                             <div class="reward-img">
                                                 <picture>
                                                     <source srcset="/SurpriseLabHome/assets/webps/project/tableforone/img_banner.webp" type="image/webp">

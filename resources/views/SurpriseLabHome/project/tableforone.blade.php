@@ -581,10 +581,10 @@
                     <div class="col-12">
                         <div class="project-cta-wrap">
                             <div class="cta-item">
-                                <a href="/tw/project.html" class="surpri-btn size-regular color-regular arrow-left">了解過往計畫</a>
+                                <a href="/project.html" class="surpri-btn size-regular color-regular arrow-left">了解過往計畫</a>
                             </div>
                             <div class="cta-item">
-                                <a href="/tw/ticket.html" class="surpri-btn size-regular color-regular arrow-right">參與最新計畫</a>
+                                <a href="/ticket.html" class="surpri-btn size-regular color-regular arrow-right">參與最新計畫</a>
                             </div>
                         </div>
                     </div>
