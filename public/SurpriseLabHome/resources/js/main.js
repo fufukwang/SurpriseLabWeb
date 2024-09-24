@@ -182,4 +182,23 @@ $(function() {
             document.body.classList.remove('loading');
         })
     }, 1000);
+
+    $('.sign-up-link').on('click', function(e) {
+        e.preventDefault();
+
+        $nav_mobile_menu_btn.removeClass('open');
+        $nav_mobile_menu_content.removeClass('active');
+
+        $('#signupModal').modal('show');
+    });
+
+    $('#signupModal .btn-primary').on('click', function() {
+        $('#signupModal').modal('hide');
+        $('#signinModal').modal('show');
+    });
+
+    $('#signinModal .btn-primary').on('click', function() {
+        $('#signupModal').modal('show');
+        $('#signinModal').modal('hide');
+    });
 });

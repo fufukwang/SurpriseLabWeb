@@ -34,7 +34,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css">
+    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css?240924">
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/project.css?20240711">
 @endsection
 @section('main')
@@ -322,7 +322,7 @@
     <script src="/SurpriseLabHome/resources/js/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
     <!-- Custom -->
-    <script src="/SurpriseLabHome/resources/js/main.js"></script>
+    <script src="/SurpriseLabHome/resources/js/main.js?240924"></script>
     <script src="/SurpriseLabHome/resources/js/preload.js"></script>
     <script src="/SurpriseLabHome/resources/js/project.js"></script>
     <script>document.addEventListener('touchstart', function () {});</script>

@@ -218,6 +218,68 @@
         </a>
     </aside>
 
+    <!-- sign up modal -->
+    <div class="modal fade cus-modal" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header p-0 mb-4 border-0">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>登入</b></h5>
+                    <div class="google-login"><b>快速登入</b></div>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <form action="">
+                        <div class="input-group">
+                            <span class="input-group-text p-0 me-3 bg-transparent border-0"><b>帳號</b></span>
+                            <input type="text" class="form-control border-0 bg-transparent">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text p-0 me-3 bg-transparent border-0"><b>密碼</b></span>
+                            <input type="text" class="form-control border-0 bg-transparent">
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-center align-items-start text-center mt-5">
+                            <button type="button" class="btn btn-primary mx-2 mb-2 rounded-pill"><b>註冊</b></button>
+                            <div class="mx-2 mb-2">
+                                <button type="submit" class="btn btn-secondary rounded-pill"><b>登入</b></button>
+                                <div><span class="signup-forget">忘記密碼</span></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade cus-modal" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header p-0 mb-4 border-0">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>註冊</b></h5>
+                    <div class="google-login"><b>快速登入</b></div>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <form action="">
+                        <div class="input-group">
+                            <span class="input-group-text p-0 me-3 bg-transparent border-0"><b>帳號</b></span>
+                            <input type="text" class="form-control border-0 bg-transparent" placeholder="輸入可用信箱，請避免使用Yahoo、Hotmail信箱">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text p-0 me-3 bg-transparent border-0"><b>密碼</b></span>
+                            <input type="text" class="form-control border-0 bg-transparent" placeholder="6位以上英數混合">
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-center align-items-start text-center mt-5">
+                            <button type="button" class="btn btn-primary mx-2 mb-2 rounded-pill"><b>已有帳號，登入</b></button>
+                            <div class="mx-2 mb-2">
+                                <button type="submit" class="btn btn-secondary rounded-pill"><b>註冊</b></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     @yield('script')
     
 </body>
