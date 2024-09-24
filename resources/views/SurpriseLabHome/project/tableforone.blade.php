@@ -42,7 +42,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/plugins/icomoon/style.css">
-    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css">
+    <link rel="stylesheet" href="/SurpriseLabHome/resources/css/style.css?240924">
     <link rel="stylesheet" href="/SurpriseLabHome/resources/css/introduction.css?20240710">
 @endsection
 @section('main')
@@ -692,7 +692,7 @@
     <script src="/SurpriseLabHome/resources/js/plugins/aos-2.0.0/aos.js"></script>
 
     <!-- Custom -->
-    <script src="/SurpriseLabHome/resources/js/main.js"></script>
+    <script src="/SurpriseLabHome/resources/js/main.js?240924"></script>
     <script src="/SurpriseLabHome/resources/js/preload.js"></script>
     <script src="/SurpriseLabHome/resources/js/introduction.js"></script>
 @endsection
