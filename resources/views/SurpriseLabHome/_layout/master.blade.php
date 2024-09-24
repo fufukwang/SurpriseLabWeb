@@ -24,6 +24,7 @@
                 <li class="menu-item @if(Request::segment(2) == 'team.html')active @endif"><a href="/team.html">TEAM</a></li>
                 <li class="menu-item @if(Request::segment(2) == 'project.html' || Request::segment(2) == 'project')active @endif"><a href="/project.html">PROJECT</a></li>
                 <li class="menu-item @if(Request::segment(2) == 'ticket.html')active @endif"><a href="/ticket.html">ON-GOING</a></li>
+                <li class="menu-item"><a class="sign-up-link" href="#">SIGN UP</a></li>
             </ul>
         </div>
 
@@ -41,6 +42,7 @@
                     <li class="menu-item  @if(Request::segment(2) == 'team.html')active @endif"><a href="/team.html">TEAM</a></li>
                     <li class="menu-item  @if(Request::segment(2) == 'project.html' || Request::segment(2) == 'project')active @endif"><a href="/project.html">PROJECT</a></li>
                     <li class="menu-item  @if(Request::segment(2) == 'ticket.html')active @endif"><a href="/ticket.html">ON-GOING</a></li>
+                    <li class="menu-item"><a class="sign-up-link" href="#">SIGN UP</a></li>
                 </ul>
 
                 <!-- footer -->
