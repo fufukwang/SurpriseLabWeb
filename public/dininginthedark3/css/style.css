@@ -3660,3 +3660,21 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   background-color: #CCCCCC;
   opacity: 0.5;
 }
+
+.experience-award2024 {
+  margin: 6em 0;
+}
+.experience-award2024 p {
+  text-align: center;
+  color: #F7F7C6;
+}
+.experience-award2024 img {
+  width: 110px;
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .experience-award2024 img {
+    width: 275px;
+  }
+}

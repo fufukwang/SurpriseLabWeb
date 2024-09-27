@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240703"/>
+    <link rel="stylesheet" href="css/style.css?date=240927"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -248,6 +248,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         <br>
                                                         即使是最平凡的日常。
                                                     </div>
+                                                </div>
+
+                                                <div class="experience-award2024">
+                                                    <p>榮獲2024 金點設計獎標章肯定</p>
+                                                    <br>
+                                                    <img width="275" src="img/home/about/award2024.webp" alt="榮獲2024 金點設計獎標章肯定">
                                                 </div>
                                             </div>
                                         </div>
