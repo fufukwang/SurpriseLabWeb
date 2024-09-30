@@ -1170,6 +1170,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
+        <section class="section-wrap skip-background-light text-sction" id="collaboration">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="b-content-wrap">
+                            <div class="section-heading-wrap">
+                                <h2 class="heading-title">合作夥伴</h2>
+                                <h3 class="heading-subtitle">COLLAB WITH</h3>
+                            </div>
+                            <div class="img-wrap" style="text-align: center;">
+                                <br><br>
+                                <img width="150" class="img-fluid d-inline" src="/terminalAssets/images/main/collaboration.webp" alt="collaboration">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Background Scroll Effect -->
         <div class="js-background-light background-light">
             <img class="img-fluid d-xl-inline d-none" src="/terminalAssets/images/main/background_red.png" alt="light">
