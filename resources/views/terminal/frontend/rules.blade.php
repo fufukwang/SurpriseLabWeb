@@ -451,7 +451,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion3-6" class="accordion-collapse collapse" aria-labelledby="accordion3-6-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>過程中需要走動、躺下，歡迎穿著輕鬆舒適好移動的服裝。另因體驗環節考量，建議勿配戴垂墜大型耳環、綁馬尾及包包頭等髮型，臉部及眼部建議淡妝或素顏。也請輕便前來，避免攜帶大型包包或行李。</p>
+                                                            <p>過程中需要走動、躺下，歡迎穿著輕鬆舒適好移動的服裝。</p>
+                                                            <p>另因體驗環節考量，建議勿配戴垂墜大型耳環、綁馬尾及包包頭等髮型，臉部及眼部建議淡妝或素顏，並請穿鞋入場。最後，請輕便前來，避免攜帶大型包包或行李。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-10-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-10" aria-expanded="false" aria-controls="accordion3-10">
+                                                            <span class="header-title">可以攜帶水、食物入場嗎？</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-10" class="accordion-collapse collapse" aria-labelledby="accordion3-10-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>為確保體驗順利進行，禁止攜帶任何飲食，包含飲用水。請將所有物品放入報到處置物櫃，禁止攜帶入場。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -465,7 +480,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h2>
                                                     <div id="accordion3-9" class="accordion-collapse collapse" aria-labelledby="accordion3-9-header" data-bs-parent="#accordionFlushExample-3">
                                                         <div class="accordion-body">
-                                                            <p>依照著作權法，落日月台體驗過程未經許可，禁止拍照或錄影；為避免影響表演進行，請將手機放入報到處置物櫃，禁止攜帶入場。</p>
+                                                            <p>依照著作權法，落日月台體驗過程未經許可，禁止拍照或錄影；為避免影響表演進行，請將手機放入報到處置物櫃，禁止攜帶入場，場內禁止使用手機。</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -499,6 +514,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                                 體驗中將有部分內容與演員會有肢體碰觸，如欲避免與演員肢體碰觸，請於開演前與乘務員確認。<br>
                                                                 過程中如有任何不適狀況，歡迎雙手在胸前比叉，演員將會調整互動環節。
                                                             </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="accordion3-11-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3-11" aria-expanded="false" aria-controls="accordion3-11">
+                                                            <span class="header-title">體驗中的躺下環節</span>
+                                                            <div class="header-icon"></div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="accordion3-11" class="accordion-collapse collapse" aria-labelledby="accordion3-11-header" data-bs-parent="#accordionFlushExample-3">
+                                                        <div class="accordion-body">
+                                                            <p>體驗中有部分環節需要躺下，考量體驗完整性，不接受躺下者將無法入場，請各位旅客斟酌自身情況參與。</p>
                                                         </div>
                                                     </div>
                                                 </div>
