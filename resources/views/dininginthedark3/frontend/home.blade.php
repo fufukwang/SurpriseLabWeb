@@ -140,10 +140,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="dashboard" data-date="2024-11-30 23:59:59">
-                            <img src="img/home/intro/intro-count.webp" alt="無光晚餐 Dining In The Dark">
-                            <div class="countdown days tk-minion-pro">00</div>
-                            <div class="countdown hours tk-minion-pro">00</div>
-                            <div class="countdown minutes tk-minion-pro">00</div>
+                            <img src="img/home/intro/intro-count.webp?241004" alt="無光晚餐 Dining In The Dark">
+                            <div class="countdown days tk-minion-pro"></div>
+                            <div class="countdown hours tk-minion-pro"></div>
+                            <div class="countdown minutes tk-minion-pro"></div>
                         </div>
                     </section>
 
