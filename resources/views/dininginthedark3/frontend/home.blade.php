@@ -16,6 +16,7 @@
     <meta property="og:image:height" content="315"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="facebook-domain-verification" content="mmtxvobzbh451wck03upjlbgtj1i2n" />
+    <link rel="stylesheet" href="https://use.typekit.net/dsp5wfh.css">
     <title>無光晚餐 Dining In The Dark - 驚喜製造 Surprise Lab.</title>
 
     <!-- Style -->
@@ -34,7 +35,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=240927"/>
+    <link rel="stylesheet" href="css/style.css?date=241004"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
@@ -133,20 +134,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
 
-                            <a class="smoothScroll btn-scroll-down" href="#Experience">
+                            <!-- <a class="smoothScroll btn-scroll-down" href="#Experience">
                                 <img class="img-fluid" src="img/icon/icon-arrow.svg" alt="scroll-down">
-                            </a>
+                            </a> -->
                         </div>
 
-                        <!-- <div class="dashboard" data-date="2024-03-31 23:59:59">
-                            <picture>
-                                <source srcset="img/home/intro/intro-count.webp" type="image/webp" />
-                                <img src="img/home/intro/intro-count.png" alt="無光晚餐 Dining In The Dark">
-                            </picture>
-                            <div class="countdown days"></div>
-                            <div class="countdown hours"></div>
-                            <div class="countdown minutes"></div>
-                        </div> -->
+                        <div class="dashboard" data-date="2024-11-30 23:59:59">
+                            <img src="img/home/intro/intro-count.webp" alt="無光晚餐 Dining In The Dark">
+                            <div class="countdown days tk-minion-pro">00</div>
+                            <div class="countdown hours tk-minion-pro">00</div>
+                            <div class="countdown minutes tk-minion-pro">00</div>
+                        </div>
                     </section>
 
                     <!-- Section1 About -->
@@ -1558,8 +1556,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="dialog-inner">
             <div class="dialog-content">
                 <div class="img" style="cursor: pointer;">
-                    <img class="d-none d-md-block" src="https://www.surpriselab.com.tw/dininginthedark3/img/home/enter-dialog.jpg" alt="無光晚餐 Dining In The Dark" />
-                    <img class="d-block d-md-none" src="https://www.surpriselab.com.tw/dininginthedark3/img/home/enter-dialog-m.jpg" alt="無光晚餐 Dining In The Dark" />
+                    <a target="_blank" href="https://bit.ly/3Y3ux4h">
+                        <img class="d-none d-md-block" src="img/home/enter-dialog.jpg?241004" alt="無光晚餐 Dining In The Dark" />
+                        <img class="d-block d-md-none" src="img/home/enter-dialog-m.jpg?241004" alt="無光晚餐 Dining In The Dark" />
+                    </a>
                 </div>
                 <div class="txt">CLOSE</div>
             </div>
@@ -1581,14 +1581,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Loading Animation JS -->
     <script src="js/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script>
-        document.body.classList.add('render');
-        setTimeout(function(){
-            imagesLoaded(document.body, function(){
-                document.body.classList.remove('loading');
-            })
-        }, 0);
-    </script>
 
     <!-- Aos -->
     <script src="js/plugins/aos/aos.min.js"></script>
@@ -1601,9 +1593,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?date=240630"></script>
+    <script src="js/index.js?date=241004"></script>
     <script src="js/main.js?v=0.13"></script>
-    <script src="js/board-modal.js?date=240731"></script>
+    <script src="js/board-modal.js?date=241004"></script>
     <script src="js/index-slideshow.js?date=240815"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
