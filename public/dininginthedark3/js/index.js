@@ -260,3 +260,65 @@ $('#owl-team .item').on('touchstart', function() {
         $(this).addClass('item-hover');
     }
 });
+
+function setEnterDialogSize() {
+    var wrapperRatio = $('#enter-dialog').width() / $('#enter-dialog').height();
+    var contentRatio = $('#enter-dialog .dialog-content').width() / $('#enter-dialog .dialog-content').height();
+    var contentH = $('#enter-dialog .dialog-inner').height();
+    var imgH = contentH - 6 - 32;
+    var maxImgW = window.matchMedia("(min-width: 768px)").matches ? (1440 * imgH / 1024) : (390 * imgH / 844);
+    $('#enter-dialog .dialog-content').css('width', wrapperRatio < contentRatio ? '100%' : (maxImgW + 'px'));
+}
+
+document.body.classList.add('render');
+setTimeout(function(){
+    imagesLoaded(document.body, function(){
+        document.body.classList.remove('loading');
+        
+        setTimeout(function() {
+            if ( sessionStorage.getItem('dialog_noshow') !== 'true' ) {
+                $('#enter-dialog').fadeIn();
+                setEnterDialogSize();
+            }
+        }, 500);
+    })
+}, 0);
+
+$(window).on('resize', function(){
+    setEnterDialogSize();
+});
+
+$('#enter-dialog .dialog-close').on('click', function(event) {
+    $('#enter-dialog').fadeOut();
+});
+
+$('#enter-dialog .txt').on('click', function(){
+    sessionStorage.setItem('dialog_noshow', 'true');
+    $('#enter-dialog').fadeOut();
+});
+
+var second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+var countDown = $('.dashboard').data('date');
+if (countDown) {
+    countDown = new Date(countDown).getTime();
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDown - now;
+    
+        $('.dashboard .days').text( Math.floor(distance / (day)) );
+        $('.dashboard .hours').text( Math.floor((distance % (day)) / (hour)) );
+        $('.dashboard .minutes').text( Math.floor((distance % (hour)) / (minute)) );
+        $('.dashboard .seconds').text( Math.floor((distance % (minute)) / second) );
+        
+        if (distance < 0) {
+            clearInterval(x);
+            $('.dashboard .days').text('0');
+            $('.dashboard .hours').text('0');
+            $('.dashboard .minutes').text('0');
+            $('.dashboard .seconds').text('0');
+        }
+    }, 50);
+}

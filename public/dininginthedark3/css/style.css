@@ -3387,7 +3387,7 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 #enter-dialog .img {
   width: 100%;
   height: 0;
-  padding-top: 216.410256%;
+  padding-top: 157.14285714%;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -3677,4 +3677,61 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
   .experience-award2024 img {
     width: 275px;
   }
+}
+
+.dashboard {
+  width: 82%;
+  margin: 0 auto;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .dashboard {
+    width: 615px;
+  }
+}
+@media (min-width: 1450px) {
+  .dashboard {
+    width: 950px;
+  }
+}
+.dashboard img {
+  display: block;
+  width: 100%;
+}
+.dashboard .countdown {
+  position: absolute;
+  font-weight: 600;
+  font-size: 7.5vw;
+  top: 40%;
+  right: 70%;
+  right: 36%;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .dashboard .countdown {
+    font-size: 57px;
+  }
+}
+@media (min-width: 1450px) {
+  .dashboard .countdown {
+    font-size: 88px;
+  }
+}
+.dashboard .countdown.days {
+  font-size: 13vw;
+  top: 41%;
+  right: 54%;
+}
+@media (min-width: 768px) {
+  .dashboard .countdown.days {
+    font-size: 97px;
+  }
+}
+@media (min-width: 1450px) {
+  .dashboard .countdown.days {
+    font-size: 150px;
+  }
+}
+.dashboard .countdown.minutes {
+  top: 51.5%;
 }
