@@ -232,14 +232,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <label>* 電子信箱</label>
                         <input class="email required" type="text" name="email" placeholder="ex. mindthegap@surpriselab.com.tw" />
                     </div>
-                    <!-- <div class="input-group">
+                    <div class="input-group">
                         <label>公司抬頭</label>
                         <input type="text" name="company_name" placeholder="ex. 驚喜製造股份有限公司" />
                     </div>
                     <div class="input-group">
                         <label>發票統編</label>
                         <input class="tax" type="text" name="company_tax_ID" placeholder="ex. 88888888" />
-                    </div> -->
+                    </div>
                     <div class="input-group">
                         <label>其他備註</label>
                         <textarea name="notice" rows="8" placeholder="ex. 特殊事項備註"></textarea>
