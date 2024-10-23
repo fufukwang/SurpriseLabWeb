@@ -710,6 +710,7 @@ $(function() {
                 'act': 'CheckterTPDiscount',
                 'ticket': $ticket_value,
                 'num': $pro_train,
+                'need': ($people_value * singleMoney),
                 'code': couponVal
             },function(data){
                 if(data.success == 'Y'){
