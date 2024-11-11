@@ -365,7 +365,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <input type="checkbox" id="agree-rules" name="agree-rules" required>
                                         <label class="body-04" for="agree-rules">
                                             <span class="body-04">我已詳讀並遵守</span>
-                                            <a href="/terminal/rules" target="_blank" class="link-text style-smaller">退換票政策</a>。任何訂單異動，敬請來信客服e-mail申請，社群私訊及留言恕無法辦理。
+                                            <a href="/terminal/rules" target="_blank" class="link-text style-smaller">退換票政策</a>，並同意第四類級距式退換票法規。任何訂單異動，敬請來信客服信箱申請，社群私訊及留言恕無法辦理。
                                         </label>
                                     </div>
                                     <!-- <div class="form-group checkbox-layout" style="flex-wrap: nowrap;">

@@ -668,6 +668,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             <div class="sub-block-wrap">
                                                 <div class="text-wrap">
                                                     <p class="body-03">
+                                                        落日月台票券預購已結束，現購買之所有票券皆屬已劃位票券。<br>
                                                         購票後若需要退費，或是劃位後需要退費、改期和轉讓，請來信客服詢問並附上所需資料：<br>
                                                         <a href="mailto:mindthegap@surpriselab.com.tw" class="link-text style-regular">mindthegap@surpriselab.com.tw</a>
                                                     </p>
@@ -720,10 +721,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         </li>
                                                         <li class="list-item"><p>落日月台退換票政策，係依行政院文化部頒定之藝文表演票券定型化契約，第四類級距式退換票方案，收取退換票手續費用。</p></li>
                                                         <li class="list-item"><p>每筆訂單於演出日十日前申請初次換票，可減免手續費用一次。若換票後，欲再次退換票，需補上前次減免之手續費用。</p></li>
-                                                        <li class="list-item"><p>訂單成立後若發現訂單內容或時段錯誤，需請於訂單成立後24小時內來信，逾時將一律依照退換政策辦理，請於結帳前確認再次訂單資訊。</p></li>
+                                                        <li class="list-item"><p>訂單成立後若發現訂單內容或時段錯誤，請於訂單成立後24小時內來信，逾時將一律依照退換政策辦理，請於結帳前確認再次訂單資訊。</p></li>
+                                                        <li class="list-item"><p>如欲退票，請務必回覆並確認退票要求。未經購票者確認者，將暫緩退票流程，無法自動完成退款。如需協助，請聯繫客服信箱。</p></li>
                                                         <li class="list-item"><p>若體驗當日若因不可抗力之因素，需臨時異動訂單，請於體驗日後三日內來信客服，並出示相關含姓名日期之證明申請特例改期。特例改期僅開放兩週內日期選擇。落日月台保有最終決定權。</p></li>
-                                                        <!-- <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後５日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:mindthegap@surpriselab.com.tw">mindthegap@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</p></li> -->
                                                         <li class="list-item"><p>發票若需新增／更改統編、抬頭或電子載具號碼，請於下單後五日（含）內，來信客服信箱：<a class="link-text style-regular" href="mailto:mindthegap@surpriselab.com.tw">mindthegap@surpriselab.com.tw</a> 提出需求。逾期及發票一旦開立，恕無法再做調整。</p></li>
+                                                        <li class="list-item"><p>若您對本演出的票務或退票政策有疑義，請於購票後10日內向客服信箱提出申訴，我們將於7個工作日內回覆並協助處理。如有進一步申訴需求，可依據《消費者保護法》之規定，向主管機關提出申訴，我們將配合協助解決。</p></li>
                                                     </ul>
                                                 </div>
                                             </div>
