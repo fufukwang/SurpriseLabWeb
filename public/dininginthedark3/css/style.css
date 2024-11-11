@@ -3735,3 +3735,78 @@ header.logo .hamburger .icon-bar.active + .icon-bar {
 .dashboard .countdown.minutes {
   top: 51.5%;
 }
+
+.sec-credit .nav {
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 14px;
+  border: none;
+}
+
+.sec-credit .nav-tabs .nav-link {
+  background: none;
+  color: #8C5FB4;
+  border: 1px solid #8C5FB4;
+  border-radius: 50px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.sec-credit .nav-tabs .nav-link:focus {
+  outline: none;
+}
+
+.sec-credit .nav-tabs .nav-link.active {
+  background: #8C5FB4;
+  color: #fff;
+  border-color: #8C5FB4;
+}
+
+.sec-credit .nav-tabs.nav-inner {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sec-credit .nav-tabs.nav-inner .nav-link {
+  background: none;
+  border: none;
+  padding: 0 0 2px 0;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+}
+
+.sec-credit .nav-tabs.nav-inner .nav-link.active {
+  color: #8C5FB4;
+  border-color: transparent;
+}
+
+.sec-credit table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.sec-credit table td {
+  padding: 10px 0;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.sec-credit table td:nth-child(1) {
+  width: 160px;
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .tables {
+    display: flex;
+    justify-content: space-between;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .sec-credit table {
+    max-width: 330px;
+  }
+}
