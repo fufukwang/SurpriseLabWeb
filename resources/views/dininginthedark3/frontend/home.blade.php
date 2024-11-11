@@ -1464,6 +1464,738 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div>
 
+                        <div class="section sec-credit">
+                            <div class="container">
+
+                                <div class="section-header">
+                                    <div class="section-title">
+                                        <h3>團隊介紹</h3>
+                                        <h4>CREDIT</h4>
+                                    </div>
+                                </div>
+
+                                <div class="credit-sec-wrapper">
+
+                                    <div style="max-width: 460px; margin: 0 auto; text-align: center;">
+                                        總策劃<br>
+                                        <b>驚喜製造 Surprise Lab.</b>
+                                    </div>
+
+                                    <nav>
+                                        <div class="nav nav-tabs" role="tablist">
+                                            <button class="nav-link active" id="menu6-tab" data-toggle="tab" data-target="#menu6" type="button" role="tab" aria-controls="menu6" aria-selected="true">六號菜單：DARK RADIO</button>
+                                            <button class="nav-link" id="menu7-tab" data-toggle="tab" data-target="#menu7" type="button" role="tab" aria-controls="menu7" aria-selected="false">七號菜單：SPACE</button>
+                                            <button class="nav-link" id="menu8-tab" data-toggle="tab" data-target="#menu8" type="button" role="tab" aria-controls="menu8" aria-selected="false">八號菜單：CHEERS</button>
+                                        </div>
+                                    </nav>
+
+                                    <div class="tab-content">
+                                        <!-- Menu 6 Start -->
+                                        <div class="tab-pane fade show active" id="menu6" role="tabpanel" aria-labelledby="menu6-tab">
+                                            
+                                            <nav>
+                                                <div class="nav nav-tabs nav-inner" role="tablist">
+                                                    <button class="nav-link active" id="menu6-1-tab" data-toggle="tab" data-target="#menu6-1" type="button" role="tab" aria-controls="menu6-1" aria-selected="true">驚喜製造</button>
+                                                    <button class="nav-link" id="menu6-2-tab" data-toggle="tab" data-target="#menu6-2" type="button" role="tab" aria-controls="menu6-2" aria-selected="false">食藝設計股份有限公司</button>
+                                                    <button class="nav-link" id="menu6-3-tab" data-toggle="tab" data-target="#menu6-3" type="button" role="tab" aria-controls="menu6-3" aria-selected="false">特別感謝</button>
+                                                </div>
+                                            </nav>
+
+                                            <div class="tab-content">
+                                                
+                                                <!-- Menu 6 驚喜製造 Start -->
+                                                <div class="tab-pane fade show active" id="menu6-1" role="tabpanel" aria-labelledby="menu6-1-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>製作人</td>
+                                                                <td>黃馨儀</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>體驗統籌</td>
+                                                                <td>胡芷寧</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>啟動期製作統籌</td>
+                                                                <td>張乃藴</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>營運期製作統籌</td>
+                                                                <td>覃莉妏</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>製作執行</td>
+                                                                <td>周芸廷</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>票務統籌</td>
+                                                                <td>周芸廷、覃莉妏</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>行銷統籌</td>
+                                                                <td>黃馨儀</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>行銷執行</td>
+                                                                <td>簡晞恩、楊庭芸</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>商業開發</td>
+                                                                <td>郭庭珊</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>主視覺設計</td>
+                                                                <td>葉佳欣</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>平面設計統籌</td>
+                                                                <td>葉佳欣</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>平面設計執行</td>
+                                                                <td>林家興、王子豪</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>空間設計統籌</td>
+                                                                <td>葉佳欣</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>空間工程</td>
+                                                                <td>真空製作 / 喜哲羅</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>音樂設計</td>
+                                                                <td>脈絡音樂工作室 / 鄭兆恩</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>音響技術</td>
+                                                                <td>埔頂音響 / 陳宇謙</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>燈光技術</td>
+                                                                <td>葉佳欣</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>平面攝影</td>
+                                                                <td>鍾睿年</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>網站統籌</td>
+                                                                <td>黃馨儀、洪馨</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>網站設計</td>
+                                                                <td>
+                                                                    火曜日設計 / 謝馥羽、周妙音<br>
+                                                                    Randy
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>聲音演員</td>
+                                                                <td>陳以恩</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 6 驚喜製造 End -->
+
+                                                <!-- Menu 6 食藝設計股份有限公司 Start -->
+                                                <div class="tab-pane fade" id="menu6-2" role="tabpanel" aria-labelledby="menu6-2-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>營運總監</td>
+                                                                <td>蔡佩倫</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>食物設計總監</td>
+                                                                <td>鄭淇文</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>經理</td>
+                                                                <td>蕭世祐<br>蔡佩倫</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>主廚</td>
+                                                                <td>鄭淇文<br>張晉維</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>內場夥伴</td>
+                                                                <td>
+                                                                    江子豪<br>
+                                                                    葉仲軒<br>
+                                                                    張鈞平<br>
+                                                                    吳書萱<br>
+                                                                    張宸禎<br>
+                                                                    陳柏宏
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>外場演出夥伴</td>
+                                                                <td>
+                                                                    楊舒晴<br>
+                                                                    李燦彤<br>
+                                                                    阮以竹<br>
+                                                                    王唯真<br>
+                                                                    林潔民
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 6 食藝設計股份有限公司 End -->
+
+                                                <!-- Menu 6 特別感謝 Start -->
+                                                <div class="tab-pane fade" id="menu6-3" role="tabpanel" aria-labelledby="menu6-3-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>驚喜製造</td>
+                                                                <td>陳依文、蘇紐</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>漾格科技股份有限公司</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>合作夥伴</td>
+                                                                <td>茶籽堂</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>
+                                                                    陳麗安<br>
+                                                                    王昭榮<br>
+                                                                    賴瑀欣<br>
+                                                                    鄭欹予<br>
+                                                                    盧冠穎<br>
+                                                                    劉祐安<br>
+                                                                    小冠<br>
+                                                                    董子豪<br>
+                                                                    Kevin
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>
+                                                                    鈦強環保科技<br>
+                                                                    挑食鮮物<br>
+                                                                    芙蓉蔬果<br>
+                                                                    大永行銷<br>
+                                                                    聯馥食品<br>
+                                                                    社緯國際<br>
+                                                                    吉洋水產<br>
+                                                                    Purebread<br>
+                                                                    Daoori道地康普茶<br>
+                                                                    大倉捷有限公司<br>
+                                                                    大華氣體<br>
+                                                                    三華行<br>
+                                                                    第一餐具<br>
+                                                                    嘉政餐具設備<br>
+                                                                    巨沅國際<br>
+                                                                    東利環保<br>
+                                                                    大名洗衣<br>
+                                                                    威翔環衛
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 6 特別感謝 End -->
+                                                 
+                                            </div>
+                                            
+                                        </div>
+                                        <!-- Menu 6 End -->
+
+                                        <!-- Menu 7 Start -->
+                                        <div class="tab-pane fade" id="menu7" role="tabpanel" aria-labelledby="menu7-tab">
+                                            
+                                            <nav>
+                                                <div class="nav nav-tabs nav-inner" role="tablist">
+                                                    <button class="nav-link active" id="menu7-1-tab" data-toggle="tab" data-target="#menu7-1" type="button" role="tab" aria-controls="menu7-1" aria-selected="true">驚喜製造</button>
+                                                    <button class="nav-link" id="menu7-2-tab" data-toggle="tab" data-target="#menu7-2" type="button" role="tab" aria-controls="menu7-2" aria-selected="false">食藝設計股份有限公司</button>
+                                                    <button class="nav-link" id="menu7-3-tab" data-toggle="tab" data-target="#menu7-3" type="button" role="tab" aria-controls="menu7-3" aria-selected="false">特別感謝</button>
+                                                </div>
+                                            </nav>
+
+                                            <div class="tab-content">
+                                                
+                                                <!-- Menu 7 驚喜製造 Start -->
+                                                <div class="tab-pane fade show active" id="menu7-1" role="tabpanel" aria-labelledby="menu7-1-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>製作人</td>
+                                                                <td>覃莉妏</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>體驗統籌</td>
+                                                                <td>陳心龍</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>營運期製作統籌</td>
+                                                                <td>覃莉妏</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>製作執行</td>
+                                                                <td>廖經文、游琳鈞、范姜佳鈺</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>票務統籌</td>
+                                                                <td>覃莉妏</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>分銷平台票務</td>
+                                                                <td>張涵</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>行銷統籌</td>
+                                                                <td>李可慧</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>行銷執行</td>
+                                                                <td>林群鈞、Cyong Chiu</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>商業開發</td>
+                                                                <td>郭庭珊</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>主視覺設計</td>
+                                                                <td>葉佳欣</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>平面設計統籌</td>
+                                                                <td>葉佳欣、詹佩倫</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>平面設計執行</td>
+                                                                <td>王子豪、林泓錞</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>空間設計統籌</td>
+                                                                <td>葉佳欣</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>音樂設計</td>
+                                                                <td>脈絡音樂工作室 / 鄭兆恩</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>音響技術</td>
+                                                                <td>鄭兆恩</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>燈光技術</td>
+                                                                <td>黃彥勳</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>平面攝影</td>
+                                                                <td>Jeff Liang 梁耕華</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>網站統籌</td>
+                                                                <td>洪馨</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>網站設計</td>
+                                                                <td>
+                                                                    火曜日設計 / 謝馥羽、周妙音<br>
+                                                                    芮騰數位科技<br>
+                                                                    Randy
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>聲音演員</td>
+                                                                <td>陳以恩、藍紫綾</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>現場技術維護</td>
+                                                                <td>李家騏</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 7 驚喜製造 End -->
+
+                                                <!-- Menu 7 食藝設計股份有限公司 Start -->
+                                                <div class="tab-pane fade" id="menu7-2" role="tabpanel" aria-labelledby="menu7-2-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>營運總監</td>
+                                                                <td>蔡佩倫</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>食物設計總監</td>
+                                                                <td>鄭淇文</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>經理</td>
+                                                                <td>蕭世祐<br>賴瑀欣</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>主廚</td>
+                                                                <td>鄭淇文<br>張晉維</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>內場夥伴</td>
+                                                                <td>
+                                                                    江子豪<br>
+                                                                    蘇哲緯<br>
+                                                                    陳鴻臻<br>
+                                                                    黃薇如<br>
+                                                                    林育如
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>外場演出夥伴</td>
+                                                                <td>
+                                                                    楊舒晴<br>
+                                                                    李燦彤<br>
+                                                                    盧冠穎<br>
+                                                                    柯瑞峰<br>
+                                                                    邱筠庭<br>
+                                                                    阮意婷<br>
+                                                                    陳沛晴<br>
+                                                                    嚴玉芬<br>
+                                                                    林雁霓<br>
+                                                                    張芷璇<br>
+                                                                    潘綾緹<br>
+                                                                    馮珮芝<br>
+                                                                    唐家昀<br>
+                                                                    林雅琇
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 7 食藝設計股份有限公司 End -->
+
+                                                <!-- Menu 7 特別感謝 Start -->
+                                                <div class="tab-pane fade" id="menu7-3" role="tabpanel" aria-labelledby="menu7-3-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>驚喜製造</td>
+                                                                <td>林業軒、吳允方、許順凱、湯京樺、趙曼伶、賴畇安、
+                                                                買永信、林郁芳、李語珮、陳羿昕、陳彩靜、江舒韵、游琳鈞</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>柯裕順、漾格科技股份有限公司</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>合作夥伴</td>
+                                                                <td>ASUS Zenfone 10</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>
+                                                                    大倉捷有限公司<br>
+                                                                    大華氣體<br>
+                                                                    三華行<br>
+                                                                    第一餐具<br>
+                                                                    嘉政餐具設備<br>
+                                                                    巨沅國際<br>
+                                                                    東利環保<br>
+                                                                    大名洗衣<br>
+                                                                    威翔環衛
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>
+                                                                    信哥<br>
+                                                                    鈦強環保科技<br>
+                                                                    阮以竹<br>
+                                                                    陳麗安<br>
+                                                                    Anita Su<br>
+                                                                    Salon et tutu 酴塗小酒館<br>
+                                                                    跳舞大象<br>
+                                                                    奕輝貿易有限公司<br>
+                                                                    班諾葡萄酒<br>
+                                                                    芳時品味<br>
+                                                                    Kai康普茶<br>
+                                                                    Libreadry 巢屋<br>
+                                                                    挑食鮮物<br>
+                                                                    芙蓉蔬果<br>
+                                                                    大永行銷<br>
+                                                                    聯馥食品<br>
+                                                                    社緯國際<br>
+                                                                    吉洋水產<br>
+                                                                    Purebread<br>
+                                                                    Daoori道地康普茶
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 7 特別感謝 End -->
+                                                 
+                                            </div>
+
+                                        </div>
+                                        <!-- Menu 7 End -->
+
+                                        <!-- Menu 8 Start -->
+                                        <div class="tab-pane fade" id="menu8" role="tabpanel" aria-labelledby="menu8-tab">
+                                            
+                                            <nav>
+                                                <div class="nav nav-tabs nav-inner" role="tablist">
+                                                    <button class="nav-link active" id="menu8-1-tab" data-toggle="tab" data-target="#menu8-1" type="button" role="tab" aria-controls="menu8-1" aria-selected="true">驚喜製造</button>
+                                                    <button class="nav-link" id="menu8-2-tab" data-toggle="tab" data-target="#menu8-2" type="button" role="tab" aria-controls="menu8-2" aria-selected="false">食藝設計股份有限公司</button>
+                                                    <button class="nav-link" id="menu8-3-tab" data-toggle="tab" data-target="#menu8-3" type="button" role="tab" aria-controls="menu8-3" aria-selected="false">特別感謝</button>
+                                                </div>
+                                            </nav>
+
+                                            <div class="tab-content">
+                                                
+                                                <!-- Menu 8 驚喜製造 Start -->
+                                                <div class="tab-pane fade show active" id="menu8-1" role="tabpanel" aria-labelledby="menu8-1-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>製作人</td>
+                                                                <td>覃莉妏</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>體驗統籌</td>
+                                                                <td>林家興、陳心龍</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>營運期製作統籌</td>
+                                                                <td>覃莉妏</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>製作執行</td>
+                                                                <td>魏岑安、張素芳</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>票務統籌</td>
+                                                                <td>覃莉妏、張素芳</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>分銷平台票務</td>
+                                                                <td>張涵</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>行銷統籌</td>
+                                                                <td>王姵文、楊庭芸</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>行銷執行</td>
+                                                                <td>林群鈞</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>商業開發</td>
+                                                                <td>郭庭珊</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>主視覺設計</td>
+                                                                <td>詹佩倫</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>平面設計統籌</td>
+                                                                <td>詹佩倫</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>平面設計執行</td>
+                                                                <td>林泓錞</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>空間設計統籌</td>
+                                                                <td>龍莉敏</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>音樂設計</td>
+                                                                <td>脈絡音樂工作室 / 鄭兆恩</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>音響技術</td>
+                                                                <td>鄭兆恩</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>平面攝影</td>
+                                                                <td>王子豪</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>網站統籌</td>
+                                                                <td>洪馨</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>網站設計</td>
+                                                                <td>
+                                                                    火曜日設計 / 謝馥羽、周妙音<br>
+                                                                    芮騰數位科技<br>
+                                                                    Randy
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>聲音演員</td>
+                                                                <td>陳以恩</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>現場技術維護</td>
+                                                                <td>李家騏</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 8 驚喜製造 End -->
+
+                                                <!-- Menu 8 食藝設計股份有限公司 Start -->
+                                                <div class="tab-pane fade" id="menu8-2" role="tabpanel" aria-labelledby="menu8-2-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>營運總監</td>
+                                                                <td>蔡佩倫</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>食物設計總監</td>
+                                                                <td>鄭淇文</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>經理</td>
+                                                                <td>蕭世祐<br>賴瑀欣</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>主廚</td>
+                                                                <td>鄭淇文<br>張晉維</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>內場夥伴</td>
+                                                                <td>
+                                                                    江子豪<br>
+                                                                    蘇哲緯<br>
+                                                                    陳鴻臻<br>
+                                                                    黃薇如<br>
+                                                                    林育如
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>外場演出夥伴</td>
+                                                                <td>
+                                                                    楊舒晴<br>
+                                                                    李燦彤<br>
+                                                                    盧冠穎<br>
+                                                                    柯瑞峰<br>
+                                                                    邱筠庭<br>
+                                                                    阮意婷<br>
+                                                                    陳沛晴<br>
+                                                                    嚴玉芬<br>
+                                                                    林雁霓<br>
+                                                                    張芷璇<br>
+                                                                    潘綾緹<br>
+                                                                    馮珮芝<br>
+                                                                    唐家昀<br>
+                                                                    林雅琇
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 8 食藝設計股份有限公司 End -->
+
+                                                <!-- Menu 8 特別感謝 Start -->
+                                                <div class="tab-pane fade" id="menu8-3" role="tabpanel" aria-labelledby="menu8-3-tab">
+                                                    <div class="tables">
+                                                        <table>
+                                                            <tr>
+                                                                <td>驚喜製造</td>
+                                                                <td>林業軒、吳允方、許順凱、湯京樺、趙曼伶、賴畇安、
+                                                                買永信、林郁芳、李語珮、陳羿昕、陳彩靜、江舒韵、游琳鈞</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>柯裕順、漾格科技股份有限公司</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>合作夥伴</td>
+                                                                <td>ASUS Zenfone 10</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>
+                                                                    大倉捷有限公司<br>
+                                                                    大華氣體<br>
+                                                                    三華行<br>
+                                                                    第一餐具<br>
+                                                                    嘉政餐具設備<br>
+                                                                    巨沅國際<br>
+                                                                    東利環保<br>
+                                                                    大名洗衣<br>
+                                                                    威翔環衛
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>特別感謝</td>
+                                                                <td>
+                                                                    信哥<br>
+                                                                    鈦強環保科技<br>
+                                                                    阮以竹<br>
+                                                                    陳麗安<br>
+                                                                    Anita Su<br>
+                                                                    Salon et tutu 酴塗小酒館<br>
+                                                                    跳舞大象<br>
+                                                                    奕輝貿易有限公司<br>
+                                                                    班諾葡萄酒<br>
+                                                                    芳時品味<br>
+                                                                    Kai康普茶<br>
+                                                                    Libreadry 巢屋<br>
+                                                                    挑食鮮物<br>
+                                                                    芙蓉蔬果<br>
+                                                                    大永行銷<br>
+                                                                    聯馥食品<br>
+                                                                    社緯國際<br>
+                                                                    吉洋水產<br>
+                                                                    Purebread<br>
+                                                                    Daoori道地康普茶
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- Menu 8 特別感謝 End -->
+                                                 
+                                            </div>
+
+                                        </div>
+                                        <!-- Menu 8 End -->
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- <div class="section sec-partner">
                             <div class="container">
 
