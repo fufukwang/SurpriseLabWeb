@@ -212,7 +212,8 @@ class HelperService {
                     break;
                     */
                 case 'DX':
-                    $this->sent_single_sms($smsData['phone'],"【落日月台】親愛的旅客，請於今日預訂場次前20分鐘報到，遲到將無法入場。歡迎參考松菸路線指引➠https://bit.ly/4aoreaT",$token);
+                    // $this->sent_single_sms($smsData['phone'],"【落日月台】親愛的旅客，請於今日預訂場次前20分鐘報到，遲到將無法入場。歡迎參考松菸路線指引➠https://bit.ly/4aoreaT",$token);
+                    $this->sent_single_sms($smsData['phone'],"【落日月台】今日場次的旅客需於20分鐘前報到，恕無法提前與代為取票，遲到將無法入場。路線指引歡迎查看落日月台IG精選限動「如何前往月台」。",$token);
                     break;
             }
             return true;
