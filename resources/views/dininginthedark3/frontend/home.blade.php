@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="css/flashlight.css?231206"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?date=241004"/>
+    <link rel="stylesheet" href="css/style.css?date=2411111"/>
     <link rel="stylesheet" href="css/board-modal.css?v=0.1">
 
     <!-- Google Tag Manager -->
