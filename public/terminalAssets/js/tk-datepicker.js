@@ -32,7 +32,7 @@
                             }
                             document.querySelector('.tk-datepicker-month-curr').innerHTML = html;
             
-                            if (months[1]) {
+                            if (months.length > 1) {
                                 document.querySelector('.tk-datepicker-month-next').style.display = 'block';
                                 document.querySelector('.tk-datepicker-month-slash').style.display = 'block';
             

@@ -1325,7 +1325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/terminalAssets/js/plugins/imagesloaded.pkgd.min.js"></script>
 
     <!-- Custom -->
-    <script src="/terminalAssets/js/tk-datepicker.js?240809"></script>
+    <script src="/terminalAssets/js/tk-datepicker.js?241127"></script>
     <script src="/terminalAssets/js/main.js"></script>
     <script src="/terminalAssets/js/index.js?240812"></script>
     <script src="/terminalAssets/js/home-slideshow.js?240705"></script>
