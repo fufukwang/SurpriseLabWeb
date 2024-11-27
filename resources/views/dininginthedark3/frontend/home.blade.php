@@ -140,10 +140,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                         <div class="dashboard" data-date="2024-11-30 23:59:59">
-                            <img src="img/home/intro/intro-count.webp?241004" alt="無光晚餐 Dining In The Dark">
-                            <div class="countdown days tk-minion-pro"></div>
+                            <img src="img/home/intro/intro-count-end.png?241127" alt="無光晚餐 Dining In The Dark">
+                            <!-- <div class="countdown days tk-minion-pro"></div>
                             <div class="countdown hours tk-minion-pro"></div>
-                            <div class="countdown minutes tk-minion-pro"></div>
+                            <div class="countdown minutes tk-minion-pro"></div> -->
                         </div>
                     </section>
 
@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="section-header">
                                 <div class="section-title">
                                     <h3>體驗內容</h3>
-                                    <h4 style="color: #f7f7c6;">全新8號菜單｜CHEERS！<br>“一場慶祝魔幻茶會！”</h4>
+                                    <!-- <h4 style="color: #f7f7c6;">全新8號菜單｜CHEERS！<br>“一場慶祝魔幻茶會！”</h4> -->
                                 </div>
                                 <!-- <p class="section-desc">
                                     <b>6 號菜單 ON AIR</b>
@@ -277,18 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                 </div>
 
-                                <p class="ticket-area-note">
-                                    <center>
-                                        <b>
-                                            <u>8號菜單：CHEERS！</u><br>
-                                            <!-- <u>格蘭菲迪期間限定</u> -->
-                                            <br><br>
-                                        </b>
-                                    </center>
-                                </p>
-
-                                <div class="ticket-datepicker">
-                                    <!-- sold-out-soon / still-vacancy / sold-out -->
+                                <!-- <div class="ticket-datepicker">
                                     <div id="homeDatepicker"></div>
                                     <div class="datepicker-ps">
                                         <div>
@@ -304,7 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <p>已售完Sold Out</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <p class="ticket-area-note">
                                     <br>
@@ -315,44 +304,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <br>
                                 </p>
 
-                                <ul style="
+                                <!-- <ul style="
                                     width: 100%;
                                     max-width: 350px;
                                     align-items: flex-start;
                                     margin-left: auto;
                                     margin-right: auto;
                                 ">
-                                    <!-- <li>8/9及8/11七夕限定場｜含獨家愛情調飲與限量祝福禮，優惠價格$2,600/人</li> -->
-                                    <!-- <li>以上價格包含 10% 服務費</li> -->
                                     <li>體驗皆為雙數入席，無法獨售</li>
                                     <li>現場另提供酒水調飲加購</li>
                                     <li>全中文體驗服務</li>
-                                    <!-- <li>體驗提供2杯格蘭菲迪微醺飲品，須滿18歲以上方可預約</li> -->
                                     <li>為維護體驗品質，未滿16歲以上無法進入體驗</li>
-                                </ul>
+                                </ul> -->
+
+                                <p>
+                                    嗨，謝謝看到這裡的你，<br>
+                                    無光晚餐已於 2024/11/30 劃下句點<br>
+                                    <br>
+                                    在那之前，來看看更多 驚喜製造 的計劃，<br>
+                                    期待總有一天與你相見。
+                                </p>
 
                                 <div class="ticket-btn">
-                                    <a class="btn-outline" href="/dininginthedark3/booking_pay.html">立即預約</a>
+                                    <a class="btn-outline" href="https://www.surpriselab.com.tw/?utm_source=project&utm_medium=ditd">立即探索</a>
                                 </div>
-
-                                <p class="ticket-area-note">
-                                    Click for Reservation
-                                    <br>
-                                    <br>
-                                    <!-- 單一場次最高可容納人數 12 人，
-                                    <br>
-                                    若人數為12人或以上，歡迎預約包場。
-                                    <br>
-                                    請來信客服 <a href="mailto:dininginthedark@surpriselab.com.tw" >dininginthedark@surpriselab.com.tw</a> -->
-
-                                    <!-- <b><u>雙數訂位，每位 2,200 元</u></b>
-                                    以上價格包含 10% 服務費<br/>
-                                    現場提供 pairing 加購<br/><br/> -->
-                                    <!-- <span class="btn-link" id="js-open-btn">點此查看票券差異比較</span><br/><br/> -->
-                                    <!-- 單一場次最高可容納人數 12 人，<br/>
-                                    若人數超過 12 人可來信客服信箱，由我們協助劃位 -->
-                                </p>
-                                
                             </div>
                         </div>
 
@@ -397,7 +372,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <button class="nav-link" id="menu-no6-tab" data-toggle="tab" data-target="#menu-no6" type="button" role="tab" aria-controls="menu-no6" aria-selected="false">6</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="menu-no7-tab" data-toggle="tab" data-target="#menu-no7" type="button" role="tab" aria-controls="menu-no7" aria-selected="false">7</button>
+                                                <button class="nav-link" id="menu-no7-tab" data-toggle="tab" data-target="#menu-no7" type="button" role="tab" aria-controls="menu-no7" aria-selected="false">7</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="menu-no8-tab" data-toggle="tab" data-target="#menu-no8" type="button" role="tab" aria-controls="menu-no8" aria-selected="false">8</button>
                                             </li>
                                         </ul>
                                     </div>
@@ -796,7 +774,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </div>
 
                                         <!-- 07 -->
-                                        <div class="tab-pane fade show active" id="menu-no7" role="tabpanel" aria-labelledby="menu-no7-tab">
+                                        <div class="tab-pane fade" id="menu-no7" role="tabpanel" aria-labelledby="menu-no7-tab">
                                             <div class="tab-content-inner">
                                                 <div class="menu-slideshow">
                                                     <div class="content-inner--slideshow-cover">
@@ -863,6 +841,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                     <picture>
                                                                         <source srcset="img/home/menu/no7/4-m.webp" type="image/webp" />
                                                                         <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no7/4-m.png" data-src-retina="img/home/menu/no7/4-m.png" alt="6號菜單">
+                                                                    </picture>
+                                                                </figure>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 08 -->
+                                        <div class="tab-pane fade show active" id="menu-no8" role="tabpanel" aria-labelledby="menu-no8-tab">
+                                            <div class="tab-content-inner">
+                                                <div class="menu-slideshow">
+                                                    <div class="content-inner--slideshow-cover">
+                                                        <div class="owl-carousel owl-theme" id="owl-08">
+                                                            
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/0.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no8/0.png" data-src-retina="img/home/menu/no8/0.png" alt="8號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/0-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no8/0-m.png" data-src-retina="img/home/menu/no8/0-m.png" alt="8號菜單">
+                                                                    </picture>
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/1.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no8/1.png" data-src-retina="img/home/menu/no8/1.png" alt="8號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/1-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no8/1-m.png" data-src-retina="img/home/menu/no8/1-m.png" alt="8號菜單">
+                                                                    </picture>
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/2.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no8/2.png" data-src-retina="img/home/menu/no8/2.png" alt="8號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/2-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no8/2-m.png" data-src-retina="img/home/menu/no8/2-m.png" alt="8號菜單">
+                                                                    </picture>
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/3.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no8/3.png" data-src-retina="img/home/menu/no8/3.png" alt="8號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/3-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no8/3-m.png" data-src-retina="img/home/menu/no8/3-m.png" alt="8號菜單">
+                                                                    </picture>
+                                                                </figure>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <figure class="slideshow-card">
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/4.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-none d-sm-block" data-src="img/home/menu/no8/4.png" data-src-retina="img/home/menu/no8/4.png" alt="8號菜單">
+                                                                    </picture>
+                                                                    <picture>
+                                                                        <source srcset="img/home/menu/no8/4-m.webp" type="image/webp" />
+                                                                        <img class="img-fluid owl-lazy d-block d-sm-none" data-src="img/home/menu/no8/4-m.png" data-src-retina="img/home/menu/no8/4-m.png" alt="8號菜單">
                                                                     </picture>
                                                                 </figure>
                                                             </div>
@@ -1260,7 +1316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                         </div-->--}}
 
-                        <!-- 營業時間 -->
+                        {{--<!-- 營業時間 -->
                         <div class="section sec-ticket-slots">
                             <div class="container">
 
@@ -1289,7 +1345,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
 
                             </div>
-                        </div>
+                        </div>--}}
 
                         {{--<!-- 時程表 -->
                         <!--div class="section sec-ticket-schedule">
@@ -2283,7 +2339,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
     </aside>
 
-    <div id="enter-dialog">
+    <!-- <div id="enter-dialog">
         <div class="overlay"></div>
         <div class="dialog-inner">
             <div class="dialog-content">
@@ -2297,7 +2353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         <div class="dialog-close"></div>
-    </div>
+    </div> -->
 
     <!-- <div id="notice-banner">
         <img class="d-none d-md-block" src="img/general/notice.jpg" alt="無光晚餐 Dining In The Dark">
@@ -2325,10 +2381,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/flashlight/lighting.js"></script>
 
     <!-- Custom Js -->
-    <script src="js/index.js?date=241004"></script>
+    <script src="js/index.js?date=241127"></script>
     <script src="js/main.js?v=0.13"></script>
     <script src="js/board-modal.js?date=241004"></script>
-    <script src="js/index-slideshow.js?date=240815"></script>
+    <script src="js/index-slideshow.js?date=241127"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 </html>
