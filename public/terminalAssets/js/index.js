@@ -287,18 +287,34 @@ function addMonths(date, months) {
     return date;
 }
 
-$('#introduce .project-item').on('mouseenter', function() {
+$('#introduce .owl-carousel .item').on('mouseenter', function() {
     $(this).addClass('item-hover');
 });
 
-$('#introduce .project-item').on('mouseleave', function() {
+$('#introduce .owl-carousel .item').on('mouseleave', function() {
     $(this).removeClass('item-hover');
 });
 
-$('#introduce .project-item').on('touchstart', function() {
+$('#introduce .owl-carousel .item').on('touchstart', function() {
     if ( $(this).hasClass('item-hover') ) {
         $(this).removeClass('item-hover');
     } else {
         $(this).addClass('item-hover');
     }
 });
+
+// $('#introduce .project-item').on('mouseenter', function() {
+//     $(this).addClass('item-hover');
+// });
+
+// $('#introduce .project-item').on('mouseleave', function() {
+//     $(this).removeClass('item-hover');
+// });
+
+// $('#introduce .project-item').on('touchstart', function() {
+//     if ( $(this).hasClass('item-hover') ) {
+//         $(this).removeClass('item-hover');
+//     } else {
+//         $(this).addClass('item-hover');
+//     }
+// });

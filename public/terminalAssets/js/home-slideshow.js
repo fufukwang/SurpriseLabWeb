@@ -10,7 +10,7 @@ $(function() {
         $this.owlCarousel({
             center: true,
             // loop: true,
-            loop: $this.attr('id') === 'owl-bistro' ? false : true,
+            loop: $this.attr('id') === 'owl-train' || $this.attr('id') === 'owl-bistro' ? false : true,
             margin: 60,
             nav: false,
             lazyLoad: true,
