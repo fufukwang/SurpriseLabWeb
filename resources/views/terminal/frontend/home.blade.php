@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=2408221">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=250121">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -179,10 +179,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
                                 </div>
                             </div>
-                            <div class="img-wrap break-grid">
-                                <img class="img-fluid" src="/terminalAssets/images/main/img_about.png?240325" alt="About">
+
+                            <div class="main-kv">
+                                <img class="kv-title" src="/terminalAssets/images/main/kv-title.webp" />
+                                <div class="kv-marquee">
+                                    <img class="kv-marquee-bg" src="/terminalAssets/images/main/kv-marquee-bg.webp" />
+                                    <div class="kv-marquee-inner"></div>
+                                </div>
+                                <img class="kv-door" src="/terminalAssets/images/main/kv-door.webp" />
                             </div>
-                            
 
                             <div class="prograssbar">
                                 <div class="text-wrap">
@@ -516,10 +521,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                         <div class="tab-pane fade" id="project-order" role="tabpanel" aria-labelledby="project-order-tab">
                             <div class="tab-content-inner">
-                                <!-- <p style="color: #efaf50; text-align: center;">
-                                    落日月台將於每月 15 日開放隔月場次<br>
-                                    （如遇假日將提前於週間開放）
-                                </p> -->
+                                <p style="color: #fff; text-align: center;">場次已開放至 2025.03.30</p>
                                 <div class="ticket-datepicker">
                                     <!-- <div id="homeDatepicker"></div> -->
 
@@ -991,7 +993,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </p>
                                 </div>
                                 <br> -->
-                                <div class="project-slideshow">
+                                <div class="project-slideshow" style="display: none;">
                                     <div class="content-inner--slideshow-cover">
                                         <div class="owl-carousel owl-theme" id="owl-train">
 
@@ -1007,10 +1009,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </div>
                                                 </div>
                                                 <br>
-                                                <center><a class="activity-btn" target="_blank" href="https://www.instagram.com/surpriselabtw/">前往驚喜製造</a></center>
+                                                <center><a class="activity-btn" target="_blank" href="https://www.surpriselab.com.tw/">前往驚喜製造</a></center>
                                             </div>
 
-                                            <div class="item">
+                                            <!-- <div class="item">
                                                 <div>
                                                     <div>
                                                         <img class="img-fluid owl-lazy d-none d-sm-block" data-src="/terminalAssets/images/team/1/2.jpg" />
@@ -1036,7 +1038,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                 </div>
                                                 <br>
                                                 <center><a class="activity-btn" href="/dininginthedark3/index.html?utm_source=sunset_mtg&utm_medium=sunset_mtg_web">前往無光晚餐</a></center>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                         <!-- Custom Controls -->
@@ -1049,6 +1051,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </button>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="project-item">
+                                    <div>
+                                        <div>
+                                            <img class="img-fluid d-none d-sm-block" src="/terminalAssets/images/team/1/1.jpg" />
+                                            <img class="img-fluid d-block d-sm-none" src="/terminalAssets/images/team/1/1-m.jpg" />
+                                        </div>
+                                        <div class="hover">
+                                            <img class="img-fluid d-none d-sm-block" src="/terminalAssets/images/team/1/1-hover.jpg" />
+                                            <img class="img-fluid d-block d-sm-none" src="/terminalAssets/images/team/1/1-hover-m.jpg" />
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <center><a class="activity-btn" target="_blank" href="https://www.surpriselab.com.tw/">前往驚喜製造</a></center>
                                 </div>
                             </div>
                         </div>
@@ -1327,7 +1344,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Custom -->
     <script src="/terminalAssets/js/tk-datepicker.js?241127"></script>
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?240812"></script>
+    <script src="/terminalAssets/js/index.js?250121"></script>
     <script src="/terminalAssets/js/home-slideshow.js?240705"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>

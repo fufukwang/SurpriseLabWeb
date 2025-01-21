@@ -134,6 +134,7 @@ $(function(){
 $('#home .sun-wrapper, #home .enter-btn').on('click', function() {
     $('#home').fadeOut(600, function() {
         $('body').removeClass('home-modal');
+        $('.main-kv').addClass('animating');
     });
 });
 
@@ -286,15 +287,15 @@ function addMonths(date, months) {
     return date;
 }
 
-$('#introduce .owl-carousel .item').on('mouseenter', function() {
+$('#introduce .project-item').on('mouseenter', function() {
     $(this).addClass('item-hover');
 });
 
-$('#introduce .owl-carousel .item').on('mouseleave', function() {
+$('#introduce .project-item').on('mouseleave', function() {
     $(this).removeClass('item-hover');
 });
 
-$('#introduce .owl-carousel .item').on('touchstart', function() {
+$('#introduce .project-item').on('touchstart', function() {
     if ( $(this).hasClass('item-hover') ) {
         $(this).removeClass('item-hover');
     } else {

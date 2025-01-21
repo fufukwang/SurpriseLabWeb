@@ -1648,7 +1648,17 @@ body.home-modal {
   }
 }
 
-#introduce .owl-carousel .item > div > div {
+#introduce .project-item {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#introduce .project-item > div {
+  position: relative;
+}
+
+#introduce .owl-carousel .item > div > div,
+#introduce .project-item .hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -1656,19 +1666,22 @@ body.home-modal {
   height: 100%;
 }
 
-#introduce .owl-carousel .item > div > div img {
+#introduce .owl-carousel .item > div > div img,
+#introduce .project-item .hover img {
   display: block;
   width: 100%;
   height: calc(100% + 1px);
   object-fit: cover;
 }
 
-#introduce .owl-carousel .item .hover {
+#introduce .owl-carousel .item .hover,
+#introduce .project-item .hover {
   opacity: 0;
   transition: opacity .4s;
 }
 
-#introduce .owl-carousel .item.item-hover .hover {
+#introduce .owl-carousel .item.item-hover .hover,
+#introduce .project-item.item-hover .hover {
   opacity: 1;
 }
 
@@ -1784,4 +1797,77 @@ body.home-modal {
 }
 .tk-datepicker .tk-datepicker-body .grid.sold-out:after {
   background: #3737FC;
+}
+
+#about {
+  width: 100%;
+  max-width: 650px;
+}
+
+.main-kv {
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+}
+
+.main-kv .kv-title {
+  width: 100%;
+  /* max-width: 500px; */
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.main-kv .kv-marquee {
+  position: relative;
+  max-width: 227px;
+  margin: 0 auto 40px auto;
+}
+
+@keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: var(--text-x, 0);
+  }
+}
+
+.main-kv .kv-marquee .kv-marquee-inner {
+  --text-x: -668px;
+  width: calc(100% - 10px);
+  height: 18px;
+  background-image: url(/terminalAssets/images/main/kv-marquee-text.png?2);
+  background-repeat: repeat;
+  background-size: auto 100%;
+  /* animation: marquee 20s infinite linear; */
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  display: inline-flex;
+}
+
+.main-kv.animating .kv-marquee .kv-marquee-inner {
+  animation: marquee 20s infinite linear;
+}
+
+@media (min-width: 576px) {
+  .main-kv .kv-marquee {
+    max-width: 290px;
+  }
+
+  .main-kv .kv-marquee .kv-marquee-inner {
+    width: calc(100% - 10px);
+    top: 19px;
+    left: 5px;
+  }
+}
+
+.main-kv .kv-marquee .kv-marquee-bg {
+  width: 100%;
+  display: block;
+}
+
+.main-kv .kv-door {
+  width: 100%;
+  display: block;
 }
