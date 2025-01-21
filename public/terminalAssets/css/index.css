@@ -1648,17 +1648,7 @@ body.home-modal {
   }
 }
 
-#introduce .project-item {
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-#introduce .project-item > div {
-  position: relative;
-}
-
-#introduce .owl-carousel .item > div > div,
-#introduce .project-item .hover {
+#introduce .owl-carousel .item > div > div {
   position: absolute;
   top: 0;
   left: 0;
@@ -1666,22 +1656,19 @@ body.home-modal {
   height: 100%;
 }
 
-#introduce .owl-carousel .item > div > div img,
-#introduce .project-item .hover img {
+#introduce .owl-carousel .item > div > div img {
   display: block;
   width: 100%;
   height: calc(100% + 1px);
   object-fit: cover;
 }
 
-#introduce .owl-carousel .item .hover,
-#introduce .project-item .hover {
+#introduce .owl-carousel .item .hover {
   opacity: 0;
   transition: opacity .4s;
 }
 
-#introduce .owl-carousel .item.item-hover .hover,
-#introduce .project-item.item-hover .hover {
+#introduce .owl-carousel .item.item-hover .hover {
   opacity: 1;
 }
 
