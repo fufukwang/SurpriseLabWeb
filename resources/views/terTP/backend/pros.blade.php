@@ -112,8 +112,10 @@
                                         <table id="tech-companies-1-clone" class="table table-striped table-hover">
                                             <thead>
                                                 <tr>
+                                                    @if( Session::has('key') && Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                                                     <th><input type="checkbox" id="checkAll"></th>
                                                     <th>開放訂位</th>
+                                                    @endif
                                                     <th>營業日期</th>
                                                     <th>營業時段</th>
                                                     <th class="text-center">剩餘空位 / 目前訂位 / 開放位置</th>
@@ -124,11 +126,13 @@
                                             <tbody>
                                                 @forelse ($pros as $row)
                                                 <tr id="tr_{{ $row->id }}">
+                                                    @if( Session::has('key') && Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                                                     <td><input type="checkbox" name="id[]" value="{{ $row->id }}"></td>
                                                     <td>
                                                         <input type="checkbox" data-plugin="switchery" data-size="small" data-color="#00b19d" data-id="{{ $row->id }}" @if($row->open>0) checked @endif class="soclink" />
                                                         <!-- <a href="javascript:;" class="oclink" data-id="{{ $row->id }}">@if($row->open>0) 開放中 @else 關閉中 @endif</a> -->
                                                     </td>
+                                                    @endif
                                                     <td>{{ $row->day }}<br> {{ $row->id }}</td>
                                                     <td>{{ $row->day_parts }}<br />
 {{ str_replace('03:','27:',str_replace('01:','25:',str_replace('02:','26:',str_replace('00:','24:',substr($row->rang_start,0,5))))) }} ~ 
@@ -155,10 +159,12 @@
                                                 @endforelse
                                             </tbody>
                                         </table>
+                                        @if( Session::has('key') && Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                                         <div>
                                             <button class="btn btn-primary ocBtn" data-oc="1" type="button">開放前台訂位</button>
                                             <button class="btn btn-primary ocBtn" data-oc="0" type="button">關閉前台訂位</button>
                                         </div>
+                                        @endif
                                     </form>
 
                                     <div align="center">{{ $pros->appends(Request::capture()->except('page'))->links() }}</div>
