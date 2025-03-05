@@ -230,10 +230,12 @@ class BackController extends WebController
         if($request->isMethod('post') && $request->has('id')){
             $act = $request->act;
             if($act == 'muUpdate'){
+                if(!$this->user->admin) { return Response::json(['success'=> false], 403); }
                 foreach($request->id as $row){
                     pro::where('id',$row)->update(['open'=>$request->muopVal]);
                 }    
             } elseif($act == 'oneUpdate'){
+                if(!$this->user->admin) { return Response::json(['success'=> false], 200); }
                 pro::where('id',$request->id)->update(['open'=>$request->muopVal]);
                 return Response::json(['success'=> true], 200);
             }
