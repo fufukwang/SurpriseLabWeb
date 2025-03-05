@@ -114,8 +114,8 @@
                                                 <tr>
                                                     @if( Session::has('key') && Session::get('key')->terTP == 1 && Session::get('key')->admin == 1 )
                                                     <th><input type="checkbox" id="checkAll"></th>
-                                                    <th>開放訂位</th>
                                                     @endif
+                                                    <th>開放訂位</th>
                                                     <th>營業日期</th>
                                                     <th>營業時段</th>
                                                     <th class="text-center">剩餘空位 / 目前訂位 / 開放位置</th>
@@ -132,6 +132,8 @@
                                                         <input type="checkbox" data-plugin="switchery" data-size="small" data-color="#00b19d" data-id="{{ $row->id }}" @if($row->open>0) checked @endif class="soclink" />
                                                         <!-- <a href="javascript:;" class="oclink" data-id="{{ $row->id }}">@if($row->open>0) 開放中 @else 關閉中 @endif</a> -->
                                                     </td>
+                                                    @else
+                                                    <td>@if($row->open>0) 開放中 @else 關閉中 @endif</td>
                                                     @endif
                                                     <td>{{ $row->day }}<br> {{ $row->id }}</td>
                                                     <td>{{ $row->day_parts }}<br />
