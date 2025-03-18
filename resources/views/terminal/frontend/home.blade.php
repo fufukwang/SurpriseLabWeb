@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=2501211">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=250318">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -245,6 +245,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </li> -->
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="project-order-tab" data-bs-toggle="tab" data-bs-target="#project-order" type="button" role="tab" aria-controls="project-order" aria-selected="false">熱門場次</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="project-klook-tab" data-bs-toggle="tab" data-bs-target="#project-klook" type="button" role="tab" aria-controls="project-klook" aria-selected="false">Final Call</button>
                             </li>
                         </ul>
                     </div>
@@ -565,6 +568,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                             </div>
                         </div>
+
+                        <div class="tab-pane fade" id="project-klook" role="tabpanel" aria-labelledby="project-klook-tab">
+                            <div class="tab-content-inner">
+                                <p style="color: #fff; text-align: center;">點擊票券前往預約</p>
+
+                                <div class="imgs">
+                                    <a target="_blank" href="https://www.klook.com/zh-TW/activity/149183/">
+                                        <img src="/terminalAssets/images/main/ticket1.webp" />
+                                    </a>
+                                    <a target="_blank" href="https://www.klook.com/zh-TW/activity/149183/">
+                                        <img src="/terminalAssets/images/main/ticket2.webp" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1314,6 +1333,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </div>
 
+    <div id="end-modal">
+        <div class="end-modal-bg"></div>
+        <div class="inner">
+            <img class="paper" src="/terminalAssets/images/general/end-paper.jpg" alt="">
+            <a target="_blank" href="https://www.klook.com/zh-TW/activity/149183/">
+                <img class="btn" src="/terminalAssets/images/general/end-btn.webp" alt="">
+            </a>
+        </div>
+    </div>
+
     <!-- Plugins -->
     <script src="/terminalAssets/js/plugins/jquery-3.5.1.min.js"></script>
     <script src="/terminalAssets/js/plugins/jquery-ui-1.13.2/jquery-ui.min.js"></script>
@@ -1327,9 +1356,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/terminalAssets/js/plugins/imagesloaded.pkgd.min.js"></script>
 
     <!-- Custom -->
-    <script src="/terminalAssets/js/tk-datepicker.js?241127"></script>
+    <script src="/terminalAssets/js/tk-datepicker.js?250318"></script>
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/index.js?2501211"></script>
+    <script src="/terminalAssets/js/index.js?250318"></script>
     <script src="/terminalAssets/js/home-slideshow.js?2501211"></script>
     <script src="/terminalAssets/js/home-scroll-background.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>

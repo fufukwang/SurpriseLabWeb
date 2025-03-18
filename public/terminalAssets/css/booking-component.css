@@ -2091,6 +2091,7 @@ input[name=allocation]::placeholder {
 .tk-datepicker .tk-datepicker-body .grid {
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
 }
 .tk-datepicker .tk-datepicker-body .grid:hover:not(.disabled),
 .tk-datepicker .tk-datepicker-body .grid.active {

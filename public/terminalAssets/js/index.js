@@ -236,6 +236,8 @@ $.get('/terminal/GetAjaxData',{
                 }
             });
 
+            datepicker.find('.tk-datepicker-body .grid[data-date=2025-04-27]').append('<div class="mask"></div>');
+
             datepicker.css({height: 'auto', opacity: 1});
         },
     });
@@ -318,3 +320,28 @@ $('#introduce .owl-carousel .item').on('touchstart', function() {
 //         $(this).addClass('item-hover');
 //     }
 // });
+
+$(window).on('resize', function() {
+    setPaper();
+});
+
+setPaper();
+
+function setPaper() {
+    var paperRatio = 1821 / 2312;
+    var windowW = $('#end-modal').width();
+    var windowH = $('#end-modal').height();
+    if (windowW/windowH >= paperRatio) {
+        var h = $('#end-modal').height() - 60;
+        var w = h * paperRatio;
+        $('#end-modal .inner').css('width', w + 'px').css('height', h + 'px');
+    } else {
+        var w = $('#end-modal').width() - 40;
+        var h = w / paperRatio;
+        $('#end-modal .inner').css('width', w + 'px').css('height', h + 'px');
+    }
+}
+
+$('#end-modal .end-modal-bg').on('click', function() {
+    $('#end-modal').fadeOut();
+});

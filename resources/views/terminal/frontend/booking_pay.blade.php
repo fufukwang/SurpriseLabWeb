@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/booking-component.css?2408221">
-    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?240429">
+    <link rel="stylesheet" href="/terminalAssets/css/booking-step.css?250318">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -623,8 +623,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/terminalAssets/js/plugins/imagesloaded.pkgd.min.js"></script>
 
     <!-- Custom -->
-    <script src="/terminalAssets/js/tk-datepicker.js?241127"></script>
+    <script src="/terminalAssets/js/tk-datepicker.js?250318"></script>
     <script src="/terminalAssets/js/main.js"></script>
-    <script src="/terminalAssets/js/booking_pay.js?v=241023"></script>
+    <script src="/terminalAssets/js/booking_pay.js?v=250318"></script>
 </body>
 </html>

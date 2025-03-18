@@ -232,6 +232,8 @@ $(function() {
                             }
                         });
 
+                        datepicker.find('.tk-datepicker-body .grid[data-date=2025-04-27]').append('<div class="mask"></div>');
+
                         datepicker.css({height: 'auto', opacity: 1});
                         datepicker.hide();
 

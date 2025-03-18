@@ -137,3 +137,14 @@ a {
   }
 }
 /*# sourceMappingURL=booking-now.css.map */
+
+.ticket-wrap {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1199.98px) {
+  .ticket-wrap {
+    width: 100%;
+  }
+}

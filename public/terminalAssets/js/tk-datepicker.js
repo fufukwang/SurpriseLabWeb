@@ -66,7 +66,8 @@
             }
             var endMonthDays = new Date(endYear, endMonth+1, 0).getDate();
             var startDate = new Date(startYear, startMonth, 1);
-            var endDate = new Date(endYear, endMonth, endMonthDays);
+            // var endDate = new Date(endYear, endMonth, endMonthDays);
+            var endDate = new Date(2025, 3, 30);
             var dates = [startDate];
             var date = new Date(startYear, startMonth, 1);
 

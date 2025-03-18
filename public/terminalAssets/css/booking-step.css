@@ -315,3 +315,18 @@ a {
 .ui-datepicker-calendar td.sold-out:after {
   background: #3737FC;
 }
+
+.tk-datepicker .tk-datepicker-body .grid .mask {
+  position: absolute;
+  bottom: -10px;
+  left: -4px;
+  width: 302px;
+  height: 142px;
+  background: #232666;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url(/terminalAssets/images/main/end-img.webp);
+  background-size: 187px;
+  background-position: 37px -23px;
+  background-repeat: no-repeat;
+}
