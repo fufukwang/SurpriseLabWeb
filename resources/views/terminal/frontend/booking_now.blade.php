@@ -280,7 +280,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <!-- id: #ticket-story-train -->
                                                         <!-- class: .icon-arrow-down-1 -->
                                                         <button class="collapsed" id="ticket-story-train" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-                                                            你能順利啟程嗎？
+                                                            謝謝你，一直以來的參與。
                                                             <div class="accrodion-arrow">
                                                                 <i class="icon-arrow-down icon-arrow-1"></i>
                                                             </div>
@@ -289,7 +289,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </h6>
                                                     <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#accordionExample-1">
                                                         <div class="accordion-body body-04" style="text-align: left;">
-                                                            <b>謝謝你，一直以來的參與。</b><br>
                                                             這個特別的時間，不同於一般體驗，你可以自由走動、拍攝所有空間，但請注意，漂流者們是不在的，不包含即時互動演出與餐飲。<br>
                                                             仔細聽、仔細看，漂流者們雖然不在，但留下了不一樣的訊息給你。
                                                         </div>

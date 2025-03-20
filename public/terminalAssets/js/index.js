@@ -342,6 +342,6 @@ function setPaper() {
     }
 }
 
-$('#end-modal .end-modal-bg').on('click', function() {
+$('#end-modal .end-modal-bg, #end-modal .close').on('click', function() {
     $('#end-modal').fadeOut();
 });
