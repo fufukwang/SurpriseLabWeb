@@ -1824,7 +1824,7 @@ body.home-modal {
   --text-x: -668px;
   width: calc(100% - 10px);
   height: 18px;
-  background-image: url(/terminalAssets/images/main/kv-marquee-text.webp?0317);
+  background-image: url(/terminalAssets/images/main/kv-marquee-text.webp?0410);
   background-repeat: repeat;
   background-size: auto 100%;
   /* animation: marquee 20s infinite linear; */
@@ -1889,12 +1889,23 @@ body.home-modal {
   width: 100%;
 }
 
-#end-modal .inner .btn {
+#end-modal .inner .end-btn {
+  display: block;
   position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 37%;
+  top: 85%;
+  width: 30%;
+}
+
+#end-modal .inner .end-btn.end-spl-btn {
+  left: 14%;
+}
+
+#end-modal .inner .end-btn.end-love-btn {
+  right: 14%;
+}
+
+#end-modal .inner .end-btn img {
+  width: 100%;
 }
 
 #end-modal .close {

@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/terminalAssets/css/plugins/icomoon/style.css">
     <link rel="stylesheet" href="/terminalAssets/css/main-component.css?231123">
     <link rel="stylesheet" href="/terminalAssets/css/activity-component.css?date=0218">
-    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=250320">
+    <link rel="stylesheet" href="/terminalAssets/css/index.css?date=250410">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -246,9 +246,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="project-order-tab" data-bs-toggle="tab" data-bs-target="#project-order" type="button" role="tab" aria-controls="project-order" aria-selected="false">熱門場次</button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="project-klook-tab" data-bs-toggle="tab" data-bs-target="#project-klook" type="button" role="tab" aria-controls="project-klook" aria-selected="false">Final Call</button>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 
@@ -569,7 +569,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="project-klook" role="tabpanel" aria-labelledby="project-klook-tab">
+                        <!-- <div class="tab-pane fade" id="project-klook" role="tabpanel" aria-labelledby="project-klook-tab">
                             <div class="tab-content-inner">
                                 <p style="color: #fff; text-align: center;">點擊票券前往預約</p>
 
@@ -582,7 +582,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -697,7 +697,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </ul>
                                                 </div>
                     
-                                                <div class="tour-list-wrap">
+                                                <!-- <div class="tour-list-wrap">
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">週一至週二｜公休</li>
@@ -705,13 +705,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item">週六、週日｜11:00 - 16:00、17:30 - 22:30</li>
                                                         <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
-                                                </div>
+                                                </div> -->
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">地點 Location</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">台北松山文創園區 藝巷空間</li>
                                                         <li class="list-item">110055 台北市信義區光復南路133號</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="tour-list-wrap">
+                                                    <div class="list-caption">展演資訊 Information</div>
+                                                    <ul class="list-wrap">
+                                                        <li class="list-item">《落日轉運站》於第二站台北，推出沉浸式體驗《落日月台》，歷經 15 個月，留下超過 30,000 份故事後，現已正式閉站。</li>
+                                                        <!-- <li class="list-item">110055 台北市信義區光復南路133號</li> -->
                                                     </ul>
                                                 </div>
                                             </div>
@@ -817,7 +825,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                     </ul>
                                                 </div>
                     
-                                                <div class="tour-list-wrap">
+                                                <!-- <div class="tour-list-wrap">
                                                     <div class="list-caption">時間 Time</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">週一至週二｜公休</li>
@@ -825,13 +833,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                                         <li class="list-item">週六、週日｜11:00 - 16:00、17:30 - 22:30</li>
                                                         <li class="list-item">連假期間與週末營業時間相同</li>
                                                     </ul>
-                                                </div>
+                                                </div> -->
                     
                                                 <div class="tour-list-wrap">
                                                     <div class="list-caption">地點 Location</div>
                                                     <ul class="list-wrap">
                                                         <li class="list-item">台北松山文創園區 藝巷空間</li>
                                                         <li class="list-item">110055 台北市信義區光復南路133號</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="tour-list-wrap">
+                                                    <div class="list-caption">展演資訊 Information</div>
+                                                    <ul class="list-wrap">
+                                                        <li class="list-item">《落日轉運站》於第二站台北，推出沉浸式體驗《落日月台》，歷經 15 個月，留下超過 30,000 份故事後，現已正式閉站。</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1336,9 +1351,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="end-modal">
         <div class="end-modal-bg"></div>
         <div class="inner">
-            <img class="paper" src="/terminalAssets/images/general/end-paper.jpg" alt="">
-            <a target="_blank" href="https://www.klook.com/zh-TW/activity/149183/">
-                <img class="btn" src="/terminalAssets/images/general/end-btn.webp" alt="">
+            <img class="paper" src="/terminalAssets/images/general/end-paper.webp" alt="">
+            <a class="end-btn end-spl-btn" href="https://www.surpriselab.com.tw/">
+                <img src="/terminalAssets/images/general/end-spl-btn.webp" alt="">
+            </a>
+            <a class="end-btn end-love-btn" href="https://www.surpriselab.com.tw/loveandthecity?utm_campaign=&utm_source=Web_TST&utm_medium=Own">
+                <img src="/terminalAssets/images/general/end-love-btn.webp" alt="">
             </a>
             <div class="close"></div>
         </div>
